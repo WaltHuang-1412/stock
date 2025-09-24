@@ -220,7 +220,7 @@ class StockAnalyzer:
                 else:
                     recommendation = "⚠️ 觀望"
                 
-                analysis += f"**{i}. {name} ({symbol})** - {recommendation}\n"
+                analysis += f"**{i}. [{symbol}] {name}** - {recommendation}\n"
                 analysis += f"   評分: {score:.1f}\n"
                 
                 # 法人動向描述
