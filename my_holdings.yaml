@@ -1,0 +1,52 @@
+# 個人持股清單
+# 請填入你的實際持股資訊
+
+holdings:
+  - symbol: "2382"           # 股票代號
+    name: "廣達"             # 公司名稱
+    buy_price: 270.384       # 買入價格
+    quantity: 1              # 持有張數 (1000股=1張)
+    buy_date: ""             # 買入日期 (可後續填入)
+    notes: "實際持股"        # 備註
+    
+  - symbol: "2884"           # 股票代號
+    name: "玉山金"           # 公司名稱  
+    buy_price: 33.848        # 買入價格
+    quantity: 1              # 持有張數 (1000股=1張)
+    buy_date: ""             # 買入日期
+    notes: "實際持股"        # 備註
+    
+  - symbol: "2886"           # 股票代號
+    name: "兆豐金"           # 公司名稱
+    buy_price: 41.058        # 買入價格
+    quantity: 1              # 持有張數 (1000股=1張)
+    buy_date: ""             # 買入日期
+    notes: "實際持股"        # 備註
+    
+  - symbol: "2890"           # 股票代號
+    name: "永豐金"           # 公司名稱
+    buy_price: 24.034        # 買入價格
+    quantity: 1              # 持有張數 (1000股=1張)
+    buy_date: ""             # 買入日期
+    notes: "實際持股"        # 備註
+    
+  - symbol: "6770"           # 股票代號
+    name: "力積電"           # 公司名稱
+    buy_price: 21.53         # 買入價格
+    quantity: 1              # 持有張數 (1000股=1張)
+    buy_date: ""             # 買入日期
+    notes: "實際持股"        # 備註
+    
+  # 如有其他持股請繼續添加
+  # - symbol: "股票代號"
+  #   name: "公司名稱"  
+  #   buy_price: 買入價格
+  #   quantity: 持有張數
+  #   buy_date: "買入日期"
+  #   notes: "備註"
+
+# 投資策略設定
+strategy:
+  stop_loss_percent: -10     # 停損比例 (%)
+  take_profit_percent: 20    # 停利比例 (%)
+  risk_tolerance: "medium"   # 風險承受度: low/medium/high
