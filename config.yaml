@@ -1,0 +1,31 @@
+api:
+  openai_api_key: ""  # 設置你的 OpenAI API key
+  yahoo_finance_timeout: 30
+
+data_sources:
+  taiwan_stock:
+    twse_url: "https://www.twse.com.tw"
+    tdcc_url: "https://www.tdcc.com.tw" 
+    
+  news:
+    cnyes_rss: "https://news.cnyes.com/rss"
+    yahoo_finance_news: "https://tw.finance.yahoo.com/news/"
+    
+  market_data:
+    yahoo_finance: true
+    alpha_vantage_key: ""  # 可選
+
+scraping:
+  request_timeout: 15
+  delay_between_requests: 1
+  max_retries: 3
+  user_agent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+
+analysis:
+  sentiment_analysis: true
+  institutional_analysis: true
+  technical_analysis: true
+  
+logging:
+  level: "INFO"
+  file: "stock_analyzer.log"
