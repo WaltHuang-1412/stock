@@ -136,6 +136,11 @@ class QueryParser:
         if any(keyword in query for keyword in fundamental_keywords):
             analysis_types.append('fundamental')
         
+        # 籌碼面分析關鍵詞
+        chip_keywords = ['籌碼', '融資', '融券', '散戶', '大戶', '籌碼面', '資券', '借券', '當沖', '籌碼集中度']
+        if any(keyword in query for keyword in chip_keywords):
+            analysis_types.append('chip')
+        
         # 綜合分析關鍵詞
         general_keywords = ['分析', '看法', '建議', '評估', '怎麼看', '如何']
         if any(keyword in query for keyword in general_keywords) and not analysis_types:

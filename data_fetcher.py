@@ -370,8 +370,115 @@ class DataFetcher:
         news_data = self.fetch_news_data(symbol, market)
         if news_data:
             all_data['news_data'] = news_data
+        time.sleep(delay)
+        
+        # 獲取融資融券數據
+        margin_data = self.fetch_margin_data(symbol, market)
+        if margin_data:
+            all_data['margin_data'] = margin_data
         
         return all_data
+    
+    def fetch_margin_data(self, symbol, market='taiwan'):
+        """獲取融資融券數據"""
+        try:
+            if market != 'taiwan':
+                return None
+                
+            # 嘗試獲取最近幾個交易日的融資融券數據
+            today = datetime.now()
+            
+            for i in range(7):  # 最多往前找7天
+                check_date = (today - timedelta(days=i)).strftime('%Y%m%d')
+                
+                url = "https://www.twse.com.tw/rwd/zh/marginTrading/MI_MARGN"
+                params = {
+                    'response': 'json',
+                    'date': check_date,
+                    'selectType': 'ALL'  # 所有股票資料
+                }
+                
+                try:
+                    response = self.session.get(url, params=params, timeout=self.config['scraping']['request_timeout'])
+                    if response.status_code == 200:
+                        data = response.json()
+                        
+                        if 'tables' in data and data['tables']:
+                            # 解析tables結構的數據
+                            for table in data['tables']:
+                                if 'data' in table and table['data']:
+                                    for row in table['data']:
+                                        if len(row) > 0 and row[0] == symbol:
+                                            # 成功找到數據
+                                            margin_data = {
+                                                'symbol': symbol,
+                                                'name': row[1] if len(row) > 1 else '',  # 公司名稱
+                                                'date': check_date,
+                                                'margin_buy': self._safe_convert_to_float(row[2]) if len(row) > 2 else 0,  # 融資買進
+                                                'margin_sell': self._safe_convert_to_float(row[3]) if len(row) > 3 else 0, # 融資賣出  
+                                                'margin_net': self._safe_convert_to_float(row[4]) if len(row) > 4 else 0,  # 融資淨額
+                                                'margin_balance': self._safe_convert_to_float(row[5]) if len(row) > 5 else 0, # 融資餘額
+                                                'short_sell': self._safe_convert_to_float(row[8]) if len(row) > 8 else 0,  # 融券賣出
+                                                'short_buy': self._safe_convert_to_float(row[9]) if len(row) > 9 else 0,   # 融券買進
+                                                'short_net': self._safe_convert_to_float(row[10]) if len(row) > 10 else 0,  # 融券淨額
+                                                'short_balance': self._safe_convert_to_float(row[11]) if len(row) > 11 else 0, # 融券餘額
+                                                'source': 'twse_margin',
+                                                'timestamp': datetime.now().isoformat()
+                                            }
+                                            
+                                            # 計算籌碼面指標
+                                            margin_data['margin_ratio'] = self._calculate_margin_ratio(margin_data)
+                                            margin_data['short_ratio'] = self._calculate_short_ratio(margin_data)
+                                            margin_data['retail_sentiment'] = self._calculate_retail_sentiment(margin_data)
+                                            
+                                            return margin_data
+                except:
+                    continue
+            
+            # 無法獲取數據
+            return None
+            
+        except Exception as e:
+            self.logger.error(f"獲取融資融券數據失敗: {e}")
+            return None
+    
+    def _calculate_margin_ratio(self, margin_data):
+        """計算融資比率"""
+        try:
+            margin_balance = margin_data.get('margin_balance', 0)
+            if margin_balance > 0:
+                return round(margin_balance, 2)
+            return 0
+        except:
+            return 0
+    
+    def _calculate_short_ratio(self, margin_data):
+        """計算融券比率"""
+        try:
+            short_balance = margin_data.get('short_balance', 0)
+            if short_balance > 0:
+                return round(short_balance, 2)
+            return 0
+        except:
+            return 0
+    
+    def _calculate_retail_sentiment(self, margin_data):
+        """計算散戶情緒指標"""
+        try:
+            margin_net = margin_data.get('margin_net', 0)
+            short_net = margin_data.get('short_net', 0)
+            
+            # 簡化的散戶情緒計算：融資增加表示樂觀，融券增加表示悲觀
+            if margin_net > 0 and short_net <= 0:
+                return "樂觀"
+            elif margin_net <= 0 and short_net > 0:
+                return "悲觀" 
+            elif margin_net > 0 and short_net > 0:
+                return "混合"
+            else:
+                return "中性"
+        except:
+            return "中性"
     
     def fetch_institutional_recommendations(self, top_count=10):
         """動態獲取法人投資動向最強的股票推薦"""

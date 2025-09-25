@@ -43,6 +43,11 @@ class StockAnalyzer:
                 if technical_analysis:
                     analysis_results.append(technical_analysis)
             
+            if 'chip' in analysis_types:
+                chip_analysis = self._analyze_chip_data(query_info, data)
+                if chip_analysis:
+                    analysis_results.append(chip_analysis)
+            
             if 'recommendation' in analysis_types:
                 recommendation_analysis = self._analyze_recommendation_data(query_info, data)
                 if recommendation_analysis:
@@ -189,6 +194,76 @@ class StockAnalyzer:
         except Exception as e:
             self.logger.error(f"一般數據分析失敗: {e}")
             return "❌ 一般數據分析失敗"
+    
+    def _analyze_chip_data(self, query_info: Dict, data: Dict) -> str:
+        """分析籌碼面數據"""
+        try:
+            margin_data = data.get('margin_data')
+            if not margin_data:
+                return "❌ 無法獲取籌碼面數據"
+            
+            symbol = query_info.get('stock_symbol', 'N/A')
+            stock_name = query_info.get('stock_name', '')
+            
+            analysis = f"💰 **籌碼面分析 ({symbol} {stock_name})**\n\n"
+            
+            # 融資分析
+            margin_balance = margin_data.get('margin_balance', 0)
+            margin_net = margin_data.get('margin_net', 0)
+            
+            if margin_balance > 0:
+                analysis += f"📊 **融資餘額**: {margin_balance:,.0f} 張\n"
+                if margin_net > 0:
+                    analysis += f"🔴 **融資變化**: 增加 {margin_net:,.0f} 張\n"
+                elif margin_net < 0:
+                    analysis += f"🔵 **融資變化**: 減少 {abs(margin_net):,.0f} 張\n"
+                else:
+                    analysis += f"⚪ **融資變化**: 無變化\n"
+            
+            # 融券分析
+            short_balance = margin_data.get('short_balance', 0)
+            short_net = margin_data.get('short_net', 0)
+            
+            if short_balance > 0:
+                analysis += f"📊 **融券餘額**: {short_balance:,.0f} 張\n"
+                if short_net > 0:
+                    analysis += f"🔴 **融券變化**: 增加 {short_net:,.0f} 張\n"
+                elif short_net < 0:
+                    analysis += f"🔵 **融券變化**: 減少 {abs(short_net):,.0f} 張\n"
+                else:
+                    analysis += f"⚪ **融券變化**: 無變化\n"
+            
+            # 散戶情緒分析
+            retail_sentiment = margin_data.get('retail_sentiment', '中性')
+            analysis += f"\n🎯 **散戶情緒**: {retail_sentiment}\n"
+            
+            # 籌碼面解讀
+            analysis += "\n💡 **籌碼面解讀**:\n"
+            
+            if margin_net > 500:
+                analysis += "• 融資大幅增加，散戶追高情緒濃厚，需注意反轉風險\n"
+            elif margin_net < -500:
+                analysis += "• 融資大幅減少，散戶恐慌賣出，可能接近底部\n"
+            
+            if short_net > 100:
+                analysis += "• 融券增加，看空力道增強\n"
+            elif short_net < -100:
+                analysis += "• 融券回補，空方力道減弱\n"
+            
+            if retail_sentiment == "樂觀":
+                analysis += "• 散戶情緒樂觀，但需防範追高風險\n"
+            elif retail_sentiment == "悲觀":
+                analysis += "• 散戶情緒悲觀，可能是逢低布局時機\n"
+            
+            # 數據日期
+            date = margin_data.get('date', 'N/A')
+            analysis += f"\n📅 **數據日期**: {date}\n"
+            
+            return analysis
+            
+        except Exception as e:
+            self.logger.error(f"分析籌碼面數據失敗: {e}")
+            return "❌ 籌碼面數據分析失敗"
     
     def _analyze_recommendation_data(self, query_info: Dict, data: Dict) -> str:
         """分析推薦數據"""
