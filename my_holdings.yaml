@@ -2,13 +2,28 @@
 # 請填入你的實際持股資訊
 
 holdings:
+  # 已賣出股票 (保留記錄)
   - symbol: "2382"           # 股票代號
     name: "廣達"             # 公司名稱
     buy_price: 270.384       # 買入價格
-    quantity: 1              # 持有張數 (1000股=1張)
-    buy_date: ""             # 買入日期 (可後續填入)
-    notes: "實際持股"        # 備註
+    sell_price: 285.5        # 賣出價格
+    quantity: 0              # 已清倉
+    buy_date: ""             # 買入日期
+    sell_date: "2025-09-25"  # 賣出日期
+    profit_loss: 15100       # 獲利 +15,100元
+    notes: "已獲利賣出"      # 備註
     
+  - symbol: "6770"           # 股票代號
+    name: "力積電"           # 公司名稱
+    buy_price: 21.53         # 買入價格
+    sell_price: 23.75        # 賣出價格
+    quantity: 0              # 已清倉
+    buy_date: ""             # 買入日期
+    sell_date: "2025-09-25"  # 賣出日期
+    profit_loss: 2250        # 獲利 +2,250元
+    notes: "已獲利賣出"      # 備註
+    
+  # 目前持有股票
   - symbol: "2884"           # 股票代號
     name: "玉山金"           # 公司名稱  
     buy_price: 33.848        # 買入價格
@@ -30,12 +45,12 @@ holdings:
     buy_date: ""             # 買入日期
     notes: "實際持股"        # 備註
     
-  - symbol: "6770"           # 股票代號
-    name: "力積電"           # 公司名稱
-    buy_price: 21.53         # 買入價格
+  - symbol: "6239"           # 股票代號
+    name: "力成"             # 公司名稱
+    buy_price: 150.213       # 買入價格
     quantity: 1              # 持有張數 (1000股=1張)
-    buy_date: ""             # 買入日期
-    notes: "實際持股"        # 備註
+    buy_date: "2025-09-25"   # 買入日期
+    notes: "新買入持股"      # 備註
     
   # 如有其他持股請繼續添加
   # - symbol: "股票代號"
