@@ -172,8 +172,12 @@ class DataFetcher:
             date_str = today.strftime('%Y%m%d')
             
             # 嘗試當日數據，如果是假日則往前推
-            for i in range(7):  # 最多往前找7天
-                check_date = (today - timedelta(days=i)).strftime('%Y%m%d')
+            for i in range(10):  # 最多往前找10天
+                check_date_obj = today - timedelta(days=i)
+                # 跳過週六日
+                if check_date_obj.weekday() >= 5:  # 5=週六, 6=週日
+                    continue
+                check_date = check_date_obj.strftime('%Y%m%d')
                 
                 url = "https://www.twse.com.tw/rwd/zh/fund/T86"
                 params = {
@@ -194,10 +198,10 @@ class DataFetcher:
                                     institutional_data = {
                                         'symbol': symbol,
                                         'date': check_date,
-                                        'foreign_net': self._safe_convert_to_float(row[4]) if len(row) > 4 else 0,
-                                        'investment_trust_net': self._safe_convert_to_float(row[7]) if len(row) > 7 else 0,
-                                        'dealer_net': self._safe_convert_to_float(row[10]) if len(row) > 10 else 0,
-                                        'total_net': self._safe_convert_to_float(row[13]) if len(row) > 13 else 0,
+                                        'foreign_net': (self._safe_convert_to_float(row[4]) / 1000) if len(row) > 4 else 0,
+                                        'investment_trust_net': (self._safe_convert_to_float(row[7]) / 1000) if len(row) > 7 else 0,
+                                        'dealer_net': (self._safe_convert_to_float(row[10]) / 1000) if len(row) > 10 else 0,
+                                        'total_net': (self._safe_convert_to_float(row[13]) / 1000) if len(row) > 13 else 0,
                                         'source': 'twse',
                                         'timestamp': datetime.now().isoformat()
                                     }
@@ -488,9 +492,13 @@ class DataFetcher:
             # 直接從證交所API獲取所有股票的法人買賣超數據
             today = datetime.now()
             
-            # 嘗試最近幾個交易日的數據
-            for i in range(7):
-                check_date = (today - timedelta(days=i)).strftime('%Y%m%d')
+            # 嘗試最近幾個交易日的數據 (跳過週末)
+            for i in range(10):  # 增加搜尋範圍
+                check_date_obj = today - timedelta(days=i)
+                # 跳過週六日
+                if check_date_obj.weekday() >= 5:  # 5=週六, 6=週日
+                    continue
+                check_date = check_date_obj.strftime('%Y%m%d')
                 
                 url = "https://www.twse.com.tw/rwd/zh/fund/T86"
                 params = {
@@ -514,11 +522,11 @@ class DataFetcher:
                                         symbol = row[0]
                                         name = row[1]
                                         
-                                        # 提取法人數據
-                                        foreign_net = self._safe_convert_to_float(row[4])
-                                        trust_net = self._safe_convert_to_float(row[7]) 
-                                        dealer_net = self._safe_convert_to_float(row[10])
-                                        total_net = self._safe_convert_to_float(row[13])
+                                        # 提取法人數據 (轉換股數為張數)
+                                        foreign_net = self._safe_convert_to_float(row[4]) / 1000  # 股數轉張數
+                                        trust_net = self._safe_convert_to_float(row[7]) / 1000
+                                        dealer_net = self._safe_convert_to_float(row[10]) / 1000
+                                        total_net = self._safe_convert_to_float(row[13]) / 1000
                                         
                                         # 計算推薦分數
                                         score = (foreign_net * 0.6) + (trust_net * 0.3) + (dealer_net * 0.1)
