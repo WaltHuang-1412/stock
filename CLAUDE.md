@@ -13,24 +13,65 @@
 
 ## 核心架構
 
-### 主要模組
-- `main.py` - 股票查詢分析入口
-- `portfolio_analyzer.py` - 個人持股分析  
-- `data_fetcher.py` - 數據獲取(證交所API + Yahoo Finance)
-- `analyzer.py` - 多維分析引擎(法人40% + 技術30% + 新聞20% + 基本面10% + 籌碼面)
-- `query_parser.py` - 自然語言查詢解析
-- `my_holdings.yaml` - 個人持股配置
+### 📁 目錄結構
+```
+stock/
+├── src/                          # 主程式目錄
+│   ├── main.py                   # 股票查詢分析入口
+│   ├── portfolio_analyzer.py     # 個人持股分析
+│   ├── data_fetcher.py           # 數據獲取(證交所API + Yahoo Finance)
+│   ├── analyzer.py               # 多維分析引擎(法人40% + 技術30% + 新聞20% + 基本面10%)
+│   ├── query_parser.py           # 自然語言查詢解析
+│   ├── utils.py                  # 工具函數
+│   └── examples.py               # 使用範例腳本
+├── check_institutional.py        # 單一股票法人查詢工具（不受TOP50限制）
+├── portfolio/
+│   └── my_holdings.yaml          # 個人持股配置
+├── data/                         # 每日分析報告存放處
+│   ├── YYYY-MM-DD/
+│   │   ├── before_market_analysis.md    # 盤前分析
+│   │   ├── intraday_analysis.md         # 盤中分析
+│   │   └── after_market_analysis.md     # 盤後分析
+├── config.yaml                   # 系統設定
+├── requirements.txt              # 依賴套件
+└── CLAUDE.md                     # 本文件
+```
+
+### 主要模組說明
+
+#### 核心分析系統（src/）
+- **main.py** - 股票查詢分析入口，支援自然語言查詢
+- **portfolio_analyzer.py** - 個人持股分析，計算損益並提供離場建議
+- **data_fetcher.py** - 數據獲取模組，串接證交所API和Yahoo Finance
+- **analyzer.py** - 多維分析引擎，整合法人、技術、新聞、基本面分析
+- **query_parser.py** - 查詢解析器，支援自然語言理解
+- **utils.py** - 工具函數集合
+- **examples.py** - 使用範例和測試腳本
+
+#### 獨立工具
+- **check_institutional.py** - 單一股票法人買賣超查詢工具
+  - 解決只能看TOP50的限制
+  - 可查詢任何股票的法人數據
+  - 直接查證交所API，買賣超都能看
+
+#### 設定與數據
+- **portfolio/my_holdings.yaml** - 個人持股配置檔案
+- **config.yaml** - 系統設定（分析權重、數據來源等）
+- **data/** - 每日分析報告自動存放目錄
 
 ### 基本使用
 ```bash
 # 安裝依賴
 pip install -r requirements.txt
 
-# 股票分析
-python3 main.py -q "台積電法人分析"
+# 股票分析（需加 src/ 路徑）
+python3 src/main.py -q "台積電法人分析"
 
-# 持股分析  
-python3 portfolio_analyzer.py
+# 持股分析
+python3 src/portfolio_analyzer.py
+
+# 查詢單一股票法人數據（新工具）
+python3 check_institutional.py 2208 20251001
 ```
 
 ## 重要特性
