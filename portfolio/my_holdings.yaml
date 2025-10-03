@@ -55,9 +55,12 @@ holdings:
   - symbol: "2208"           # 股票代號
     name: "台船"             # 公司名稱
     buy_price: 24.084        # 買入價格
-    quantity: 1              # 持有張數 (1000股=1張)
+    sell_price: 22.7         # 賣出價格
+    quantity: 0              # 已清倉
     buy_date: "2025-09-25"   # 買入日期
-    notes: "第一優先推薦股"   # 備註
+    sell_date: "2025-10-03"  # 賣出日期
+    profit_loss: -1384       # 虧損 -1,384元
+    notes: "已停損賣出"      # 備註
     
   # 如有其他持股請繼續添加
   # - symbol: "股票代號"
