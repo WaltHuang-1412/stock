@@ -20,10 +20,14 @@ def fetch_institutional_trading(stock_code, date=None):
         # 預設查詢昨天
         date = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
     
-    url = f'https://www.twse.com.tw/rwd/zh/fund/T86?date={date}&selectType=ALL&response=json'
-    
+    # 試試英文版API
+    url = f'https://www.twse.com.tw/rwd/en/fund/T86?date={date}&selectType=ALL&response=json'
+
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'application/json',
+        'Accept-Language': 'en-US,en;q=0.9',
+        'Referer': 'https://www.twse.com.tw/',
     }
     
     try:
