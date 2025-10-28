@@ -61,7 +61,28 @@ holdings:
     quantity: 1              # 持有張數 (1000股=1張)
     buy_date: "2025-10-17"   # 買入日期
     notes: "Nvidia高階PCB轉單受益股" # 備註
-    
+
+  - symbol: "2324"           # 股票代號
+    name: "仁寶"             # 公司名稱
+    buy_price: 34.749        # 買入價格
+    quantity: 1              # 持有張數 (1000股=1張)
+    buy_date: "2025-10-28"   # 買入日期
+    notes: "AI筆電供應鏈"    # 備註
+
+  - symbol: "2330"           # 股票代號
+    name: "台積電"           # 公司名稱
+    buy_price: 1462.00       # 買入價格
+    quantity: 0.01           # 持有張數 (10股=0.01張)
+    buy_date: "2025-10-28"   # 買入日期
+    notes: "零股交易 (10股)" # 備註
+
+  - symbol: "2883"           # 股票代號
+    name: "凱基金"           # 公司名稱
+    buy_price: 17.772        # 買入價格
+    quantity: 1              # 持有張數 (1000股=1張)
+    buy_date: "2025-10-28"   # 買入日期
+    notes: "金融股 殖利率6%" # 備註
+
   - symbol: "2208"           # 股票代號
     name: "台船"             # 公司名稱
     buy_price: 24.084        # 買入價格
