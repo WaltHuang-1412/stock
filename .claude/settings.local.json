@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "mode": "bypassPermissions",
+    "allow": [
+      "Bash(*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Glob(*)",
+      "Grep(*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
+      "Task(*)",
+      "NotebookEdit(*)",
+      "KillShell(*)",
+      "BashOutput(*)",
+      "TodoWrite(*)",
+      "SlashCommand(*)",
+      "Skill(*)"
+    ],
+    "additionalDirectories": [
+      "../*"
+    ],
+    "deny": []
+  },
+  "sandbox": {
+    "enabled": false
+  },
+  "model": "claude-sonnet-4-5-20250929"
+}
