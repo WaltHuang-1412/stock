@@ -9,7 +9,7 @@ from data_fetcher import DataFetcher
 from analyzer import StockAnalyzer
 
 class PortfolioAnalyzer:
-    def __init__(self, holdings_file="my_holdings.yaml"):
+    def __init__(self, holdings_file="../portfolio/my_holdings.yaml"):
         self.holdings_file = holdings_file
         self.data_fetcher = DataFetcher()
         self.analyzer = StockAnalyzer()

@@ -51,9 +51,12 @@ holdings:
   - symbol: "6239"           # 股票代號
     name: "力成"             # 公司名稱
     buy_price: 150.213       # 買入價格
-    quantity: 1              # 持有張數 (1000股=1張)
+    sell_price: 180.00       # 賣出價格（約）
+    quantity: 0              # 已清倉
     buy_date: "2025-09-25"   # 買入日期
-    notes: "HBM封裝轉單受益股" # 備註
+    sell_date: "2025-10-31"  # 賣出日期
+    profit_loss: 29787       # 獲利 +29,787元
+    notes: "已獲利賣出 HBM封裝受益股 +19.83%" # 備註
 
   - symbol: "3037"           # 股票代號
     name: "欣興"             # 公司名稱
@@ -78,7 +81,7 @@ holdings:
 
   - symbol: "2883"           # 股票代號
     name: "凱基金"           # 公司名稱
-    buy_price: 17.772        # 買入價格
+    buy_price: 15.95         # 買入價格
     quantity: 1              # 持有張數 (1000股=1張)
     buy_date: "2025-10-28"   # 買入日期
     notes: "金融股 殖利率6%" # 備註
