@@ -15,7 +15,7 @@ holdings:
     
   - symbol: "6770"           # 股票代號
     name: "力積電"           # 公司名稱
-    buy_price: 21.53         # 買入價格
+    buy_price: 21.53         # 買入價格（第一次）
     sell_price: 23.75        # 賣出價格
     quantity: 0              # 已清倉
     buy_date: ""             # 買入日期
@@ -51,19 +51,22 @@ holdings:
   - symbol: "6239"           # 股票代號
     name: "力成"             # 公司名稱
     buy_price: 150.213       # 買入價格
-    sell_price: 180.00       # 賣出價格（約）
+    sell_price: 171.00       # 賣出價格
     quantity: 0              # 已清倉
     buy_date: "2025-09-25"   # 買入日期
     sell_date: "2025-10-31"  # 賣出日期
-    profit_loss: 29787       # 獲利 +29,787元
-    notes: "已獲利賣出 HBM封裝受益股 +19.83%" # 備註
+    profit_loss: 20787       # 獲利 +20,787元
+    notes: "已獲利賣出 HBM封裝受益股 +13.84%" # 備註
 
   - symbol: "3037"           # 股票代號
     name: "欣興"             # 公司名稱
     buy_price: 161.00        # 買入價格
-    quantity: 1              # 持有張數 (1000股=1張)
+    sell_price: 177.50       # 賣出價格
+    quantity: 0              # 已清倉
     buy_date: "2025-10-17"   # 買入日期
-    notes: "Nvidia高階PCB轉單受益股" # 備註
+    sell_date: "2025-11-03"  # 賣出日期
+    profit_loss: 16500       # 獲利 +16,500元
+    notes: "已獲利賣出 +10.25% | 外資11天0張、投信出貨中，產業邏輯對但法人不認同" # 備註
 
   - symbol: "2324"           # 股票代號
     name: "仁寶"             # 公司名稱
@@ -74,10 +77,10 @@ holdings:
 
   - symbol: "2330"           # 股票代號
     name: "台積電"           # 公司名稱
-    buy_price: 1462.00       # 買入價格
-    quantity: 0.01           # 持有張數 (10股=0.01張)
-    buy_date: "2025-10-28"   # 買入日期
-    notes: "零股交易 (10股)" # 備註
+    buy_price: 1458.50       # 平均買入價格 ((1462*10 + 1455*10)/20)
+    quantity: 0.02           # 持有張數 (20股=0.02張)
+    buy_date: "2025-10-28"   # 首次買入日期
+    notes: "零股交易 (20股：10股@1462 + 10股@1455)" # 備註
 
   - symbol: "2883"           # 股票代號
     name: "凱基金"           # 公司名稱
@@ -85,6 +88,13 @@ holdings:
     quantity: 1              # 持有張數 (1000股=1張)
     buy_date: "2025-10-28"   # 買入日期
     notes: "金融股 殖利率6%" # 備註
+
+  - symbol: "6770"           # 股票代號
+    name: "力積電"           # 公司名稱
+    buy_price: 31.645        # 買入價格
+    quantity: 1              # 持有張數 (1000股=1張)
+    buy_date: "2025-10-31"   # 買入日期
+    notes: "DRAM漲價受益股" # 備註
 
   - symbol: "2208"           # 股票代號
     name: "台船"             # 公司名稱

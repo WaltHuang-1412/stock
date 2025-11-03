@@ -16,12 +16,36 @@
       "BashOutput(*)",
       "TodoWrite(*)",
       "SlashCommand(*)",
-      "Skill(*)"
+      "Skill(*)",
+      "python3 *",
+      "pip *",
+      "curl *",
+      "wget *",
+      "find *",
+      "grep *",
+      "rg *",
+      "git *",
+      "ls *",
+      "cat *",
+      "head *",
+      "tail *",
+      "wc *",
+      "date",
+      "cal",
+      "echo *",
+      "which *"
     ],
     "additionalDirectories": [
       "../*"
     ],
-    "deny": []
+    "deny": [
+      "rm -rf /*",
+      "rm -rf ~/*",
+      "sudo rm *",
+      "chmod 777 *",
+      "chmod -R 777 *",
+      "killall *"
+    ]
   },
   "sandbox": {
     "enabled": false
