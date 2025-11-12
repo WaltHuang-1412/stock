@@ -1,55 +1,18 @@
 {
   "permissions": {
-    "mode": "bypassPermissions",
     "allow": [
-      "Bash(*)",
       "Bash(python3:*)",
-      "Read(*)",
-      "Write(*)",
-      "Edit(*)",
-      "Glob(*)",
-      "Grep(*)",
-      "WebFetch(*)",
-      "WebSearch(*)",
-      "Task(*)",
-      "NotebookEdit(*)",
-      "KillShell(*)",
-      "BashOutput(*)",
-      "TodoWrite(*)",
-      "SlashCommand(*)",
-      "Skill(*)",
-      "python3 *",
-      "pip *",
-      "curl *",
-      "wget *",
-      "find *",
-      "grep *",
-      "rg *",
-      "git *",
-      "ls *",
-      "cat *",
-      "head *",
-      "tail *",
-      "wc *",
-      "date",
-      "cal",
-      "echo *",
-      "which *"
+      "Bash(git add:*)"
     ],
+    "deny": [],
+    "ask": [],
     "additionalDirectories": [
       "../*"
     ],
-    "deny": [
-      "rm -rf /*",
-      "rm -rf ~/*",
-      "sudo rm *",
-      "chmod 777 *",
-      "chmod -R 777 *",
-      "killall *"
-    ]
+    "mode": "bypassPermissions"
   },
+  "model": "claude-sonnet-4-5-20250929",
   "sandbox": {
     "enabled": false
-  },
-  "model": "claude-sonnet-4-5-20250929"
+  }
 }
