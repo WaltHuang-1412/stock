@@ -5,7 +5,12 @@
       "Bash(git:*)",
       "Bash(mkdir:*)",
       "Bash(mv:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(for date in 20251117 20251115 20251114)",
+      "Bash(do echo \"=== $date ===\")",
+      "Bash(done)",
+      "Bash(for date in 20251114 20251113 20251112)",
+      "Bash(do echo \"=== 檢查 $date ===\")"
     ],
     "deny": [],
     "ask": [],
