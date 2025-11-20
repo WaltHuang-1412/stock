@@ -38,16 +38,30 @@ stock/
 │   ├── data_fetcher.py           # 數據獲取(證交所API + Yahoo Finance)
 │   ├── analyzer.py               # 多維分析引擎
 │   └── utils.py                  # 工具函數
+├── scripts/                      # 🆕 分析工具腳本
+│   └── stock_tracker.py          # 🔥 個股追蹤系統（每日14:30執行）
 ├── check_institutional.py        # 單一股票法人查詢工具
 ├── intraday_scanner.py           # 🔥 盤中量能掃描器（12:30執行）
 ├── portfolio/my_holdings.yaml    # 個人持股配置
-├── data/YYYY-MM-DD/              # 每日分析報告
-│   ├── before_market_analysis.md
-│   ├── intraday_analysis.md
-│   └── after_market_analysis.md
+├── data/
+│   ├── YYYY-MM-DD/               # 每日分析報告
+│   │   ├── before_market_analysis.md
+│   │   ├── intraday_analysis.md
+│   │   └── after_market_analysis.md
+│   ├── tracking/                 # 🆕 個股追蹤數據
+│   │   ├── tracking_YYYY-MM-DD.json
+│   │   └── reports/              # 7日追蹤報告
+│   ├── weekly/                   # 🆕 週報
+│   ├── monthly/                  # 🆕 月報
+│   └── backtest/                 # 🆕 策略回測（規劃中）
+├── templates/                    # 🆕 分析範本
+│   └── weekly_report_template.md
 └── docs/                         # 規範文件
     ├── CONVERSATION_START_CHECKLIST.md
+    ├── MARKET_NEWS_CHECKLIST.md
     ├── ANALYSIS_STANDARDS_V2.md
+    ├── ENHANCED_ANALYSIS_SYSTEM_PLAN.md  # 🆕 強化系統規劃
+    ├── ENHANCED_SYSTEM_USAGE.md          # 🆕 使用指南
     └── archive/plans/PREDICTION_ACCURACY_TRACKING.md
 ```
 
@@ -65,6 +79,138 @@ stock/
 - 用法：`python3 intraday_scanner.py`
 
 詳細使用指南：本文件「盤中量能掃描器」章節
+
+**stock_tracker.py** - 個股追蹤系統 🆕
+- 執行時機：每日盤後14:30後
+- 核心邏輯：追蹤推薦股票7日表現，驗證準確率
+- 功能：自動更新價格+法人數據、產生7日追蹤報告
+- 用法：`python3 scripts/stock_tracker.py`
+
+詳細使用指南：`docs/ENHANCED_SYSTEM_USAGE.md`
+
+---
+
+## 🆕 強化分析系統（2025-11-20新增）
+
+### 系統概述
+
+**問題診斷**：
+- ❌ 盤前盤中盤後不夠、缺少週期性總結
+- ❌ 推薦股票後沒追蹤、不知道是否成功
+- ❌ 無法驗證策略有效性、憑感覺選股
+
+**解決方案（B+C+E組合）**：
+```
+1️⃣ 週報/月報系統
+   - 每週五產出週報
+   - 統計本週推薦績效、法人動向
+   - 產業輪動分析、下週展望
+
+2️⃣ 個股追蹤系統 ⭐ (已上線)
+   - 推薦後自動追蹤7日
+   - 每日更新價格+法人數據
+   - 7日後產生追蹤報告、驗證準確率
+
+3️⃣ 策略回測系統 (規劃中)
+   - 驗證「法人一致買超」等策略有效性
+   - 量化準確率、持續改進
+   - 累積30日數據後啟用
+```
+
+---
+
+### 個股追蹤系統使用流程
+
+**Step 1: 盤前推薦時建立追蹤記錄**
+```json
+// data/tracking/tracking_2025-11-20.json
+{
+  "recommendations": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "recommend_price": 52.5,
+      "target_price": 58.0,
+      "stop_loss": 48.3,
+      "tracking_days": 7,
+      "status": "tracking"
+    }
+  ]
+}
+```
+
+**Step 2: 每日盤後自動更新**
+```bash
+# 執行追蹤更新（14:30後）
+python3 scripts/stock_tracker.py
+
+# 輸出範例：
+✅ 南亞(1303): 56.2元 (+7.05%) - 📈 法人買超+3,421張 追蹤中 (2/7日)
+```
+
+**Step 3: 7日後產生追蹤報告**
+- 報告位置：`data/tracking/reports/2025-11-20_1303_7day_report.md`
+- 包含：最終漲跌幅、法人7日累計、成功/失敗分析
+- 用途：驗證推薦準確率
+
+**Step 4: 整合至盤後分析**
+```markdown
+## 九、追蹤中股票更新
+
+| 股票 | 推薦日 | 推薦價 | 現價 | 漲跌% | 天數 | 狀態 |
+|------|--------|--------|------|-------|------|------|
+| 南亞 | 11/20 | 52.5 | 56.2 | +7.0% | 2/7 | ✅追蹤中 |
+```
+
+---
+
+### 週報系統使用流程
+
+**時間**：每週五15:00後
+
+**範本**：`templates/weekly_report_template.md`
+
+**核心內容**：
+1. 本週市場總結（20%）
+2. 本週法人動向（30%）- 投信/外資策略、一致買超
+3. **本週推薦股票績效（30%）** - 成功/失敗案例、準確率
+4. 產業輪動分析（10%）
+5. 下週展望（10%）
+
+**輸出位置**：`data/weekly/YYYY-MM-DD_weekly_report.md`
+
+---
+
+### 每日工作流程（整合後）
+
+**09:00前 - 盤前分析**：
+1. 執行市場時事檢查
+2. 查詢法人數據、美股表現
+3. 撰寫盤前分析
+4. 🆕 **推薦股票時建立追蹤記錄**
+
+**12:30 - 盤中分析**：
+1. 執行 intraday_scanner.py
+2. 分析盤前預測股票
+3. 給出尾盤策略
+
+**14:30後 - 盤後分析**：
+1. 查詢今日法人數據
+2. 🆕 **執行 stock_tracker.py 更新追蹤**
+3. 撰寫盤後分析
+4. 🆕 **新增「追蹤中股票更新」章節**
+
+**週五15:00後 - 週報**：
+1. 🆕 **統計本週推薦績效**
+2. 🆕 **法人動向總結、產業輪動**
+3. 🆕 **下週展望**
+
+---
+
+### 詳細文件
+
+**完整規劃**：`docs/ENHANCED_ANALYSIS_SYSTEM_PLAN.md`（規劃文件、系統架構）
+**使用指南**：`docs/ENHANCED_SYSTEM_USAGE.md`（執行步驟、故障排除）
 
 ---
 
@@ -459,10 +605,16 @@ python3 check_institutional.py 2883 20251111
 - `templates/before_market_template.md` - 盤前分析範本
 - `templates/intraday_template.md` - 盤中分析範本
 - `templates/after_market_template.md` - 盤後分析範本
+- `templates/weekly_report_template.md` - 週報範本 🆕
+
+**強化系統文件** 🆕：
+- `docs/ENHANCED_ANALYSIS_SYSTEM_PLAN.md` - 強化系統規劃
+- `docs/ENHANCED_SYSTEM_USAGE.md` - 使用指南
+- `docs/MARKET_NEWS_CHECKLIST.md` - 時事檢查清單
 
 ---
 
-**最後更新**：2025-11-12
-**版本**：v3.0（激進壓縮版）
-**壓縮成果**：628行 → 398行（-37%）
+**最後更新**：2025-11-20
+**版本**：v3.1（新增強化分析系統）
+**新功能**：個股追蹤、週報、策略回測（規劃中）
 
