@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 盤中分析自動化任務 -->
+    <key>Label</key>
+    <string>com.stock.intraday</string>
+
+    <!-- 執行的程式 -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>/Users/walter/Documents/GitHub/stock/intraday_analyzer_v2.py</string>
+    </array>
+
+    <!-- 工作目錄 -->
+    <key>WorkingDirectory</key>
+    <string>/Users/walter/Documents/GitHub/stock</string>
+
+    <!-- 執行時間：每天中午12:30 -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>12</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+
+    <!-- 標準輸出日誌 -->
+    <key>StandardOutPath</key>
+    <string>/Users/walter/Documents/GitHub/stock/logs/intraday.log</string>
+
+    <!-- 錯誤輸出日誌 -->
+    <key>StandardErrorPath</key>
+    <string>/Users/walter/Documents/GitHub/stock/logs/intraday.error.log</string>
+
+    <!-- 失敗後自動重啟 -->
+    <key>KeepAlive</key>
+    <false/>
+
+    <!-- 開機自動啟動 -->
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
