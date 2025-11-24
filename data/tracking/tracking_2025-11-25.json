@@ -1,0 +1,173 @@
+{
+  "date": "2025-11-25",
+  "analysis_time": "08:00",
+  "market_context": {
+    "us_market": "NASDAQ +0.89%, S&P500 +0.98%",
+    "tsm_adr": "$275.06 (-0.88%)",
+    "tw_index_prev": "26,434.94 (-3.62%)",
+    "major_news": ["美股週五反彈", "台積電法說會後調節壓力", "金融股年底作帳行情"]
+  },
+  "recommendations": [
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "recommend_price": 20.0,
+      "current_price": 19.95,
+      "target_price": 22.0,
+      "stop_loss": 18.4,
+      "position": "15-20%",
+      "rating": "5stars",
+      "score": 87,
+      "五維度": {
+        "法人數據": 30,
+        "時事現況": 24,
+        "產業邏輯": 14,
+        "價格位置": 10,
+        "技術面": 9
+      },
+      "reason": "投信+9,254連續買超、大盤跌-3.62%僅跌-0.50%超強抗跌",
+      "institutional_data": {
+        "trust": 9254,
+        "total": 7785
+      },
+      "status": "pending",
+      "tracking_days": 7
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "recommend_price": 26.7,
+      "current_price": 26.70,
+      "target_price": 29.5,
+      "stop_loss": 24.5,
+      "position": "15-20%",
+      "rating": "5stars",
+      "score": 85,
+      "五維度": {
+        "法人數據": 27,
+        "時事現況": 24,
+        "產業邏輯": 14,
+        "價格位置": 10,
+        "技術面": 8
+      },
+      "reason": "投信+10,069大買、金融股年底作帳行情",
+      "institutional_data": {
+        "trust": 10069,
+        "total": -967
+      },
+      "status": "pending",
+      "tracking_days": 7
+    },
+    {
+      "stock_code": "2885",
+      "stock_name": "元大金",
+      "recommend_price": 35.5,
+      "current_price": 35.65,
+      "target_price": 38.5,
+      "stop_loss": 32.5,
+      "position": "10-15%",
+      "rating": "4stars",
+      "score": 82,
+      "五維度": {
+        "法人數據": 27,
+        "時事現況": 24,
+        "產業邏輯": 14,
+        "價格位置": 9,
+        "技術面": 8
+      },
+      "reason": "投信+2,909、三大+6,580續買",
+      "institutional_data": {
+        "trust": 2909,
+        "total": 6580
+      },
+      "status": "pending",
+      "tracking_days": 7
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "recommend_price": 160.0,
+      "current_price": 160.00,
+      "target_price": 175.0,
+      "stop_loss": 150.0,
+      "position": "10-15%",
+      "rating": "4stars",
+      "score": 76,
+      "五維度": {
+        "法人數據": 15,
+        "時事現況": 24,
+        "產業邏輯": 18,
+        "價格位置": 10,
+        "技術面": 9
+      },
+      "reason": "回檔至建議區間155-160元、ABF載板供不應求",
+      "institutional_data": {
+        "trust": 213,
+        "total": -11932
+      },
+      "status": "pending",
+      "tracking_days": 7
+    }
+  ],
+  "watch_stocks": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "current_price": 1385,
+      "watch_price": 1350,
+      "reason": "法說會後三大法人-30,540大賣超，等企穩",
+      "score": 65
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "current_price": 45.00,
+      "watch_price": 44.0,
+      "reason": "投信-2,679續賣但三大+8,979，法人分歧",
+      "score": 68
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "reason": "三大法人-13,050、投信-1,729、記憶體產業弱",
+      "score": 35
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "三大法人-17,829、投信-633、記憶體產業弱",
+      "score": 32
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "reason": "三大法人-10,272、投信-615、建議停損",
+      "score": 48
+    }
+  ],
+  "holdings_action": [
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "action": "stop_loss",
+      "trigger_price": 15.2,
+      "reason": "接近15元停損線、法人轉空"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "action": "watch",
+      "trigger_price": 44.0,
+      "reason": "投信續賣、跌破44元停損"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "action": "watch",
+      "trigger_price": 1350,
+      "reason": "法說會後壓力、跌破1350元減碼"
+    }
+  ]
+}
