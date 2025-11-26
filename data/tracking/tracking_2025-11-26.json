@@ -1,9 +1,10 @@
 {
   "date": "2025-11-26",
   "created_at": "2025-11-25 15:00（盤後）",
-  "status": "⚠️ 暫定版本（需19:00後更新）",
+  "updated_at": "2025-11-26 12:30（修正外資數據錯誤）",
+  "status": "✅ 已修正（外資數據正確）",
   "purpose": "記錄盤後推薦股票（for 11/26），防止盤中事後諸葛",
-  "data_limitation": "11/25法人數據尚未公布（19:00後才有），本追蹤記錄基於11/24法人數據，需19:00後補充更新",
+  "data_limitation": "⚠️ 11/26已開盤，部分建議已錯過執行時機",
 
   "market_context": {
     "tw_market": {
@@ -20,30 +21,40 @@
       "金融股V型反轉（早盤弱勢→收盤小漲）",
       "元大金投信轉賣超影響持續"
     ],
-    "data_status": "⚠️ 11/25法人數據未公布，需19:00後更新"
+    "data_status": "✅ 11/25法人數據已補充（2025-11-26 09:30）"
   },
 
   "recommendations": [
     {
       "rank": 1,
+      "type": "stable",
       "symbol": "2890",
       "name": "永豐金",
-      "score": 82,
-      "score_note": "下調（原86分，因11/25法人數據未公布）",
+      "score": 85,
+      "score_note": "上調（原82分，確認11/25投信續買超+12,137張）",
       "rating": "⭐⭐⭐⭐",
-      "rating_text": "推薦（待11/25法人數據確認）",
+      "rating_text": "推薦（確認）",
       "recommend_price": "26.8-27.2",
       "current_price": 26.95,
       "target_price": 29.0,
       "stop_loss": 26.0,
       "position": "10-15%",
-      "reason": "11/24投信+13,449K（第1名）、11/25收盤+0.94%（V型反轉）",
+      "time_horizon": "1-3個月",
+      "target_return": "+6-8%",
+      "reason": "投信連續2日大買超（11/24: +13,449K、11/25: +12,137K）",
       "institutional_data": {
-        "date": "2025-11-24",
-        "trust": 13449,
-        "foreign": 0,
-        "dealer": "數據異常",
-        "total": 5374
+        "date_11_24": {
+          "trust": 13449,
+          "foreign": -9246,
+          "dealer": 1171,
+          "total": 5374
+        },
+        "date_11_25": {
+          "trust": 12137,
+          "foreign": -16159,
+          "dealer": 395,
+          "total": -3627
+        }
       },
       "price_data": {
         "close_11_25": 26.95,
@@ -54,30 +65,40 @@
         "sub_type": "綜合型",
         "drivers": ["年底作帳", "銀行+證券綜合", "分散風險"]
       },
-      "action": "⚠️ 等11/25法人數據：若投信續買超→開盤進場；若轉賣超→觀望",
-      "warning": "11/25法人數據未公布、需19:00後確認投信態度",
-      "status": "pending_data"
+      "action": "✅ 確認推薦（但已錯過11/26開盤進場）",
+      "warning": "🚨 投信vs外資激烈對決（投信+12K vs 外資-16K）、外資主導三大賣超-3,627張",
+      "status": "confirmed_but_missed_entry"
     },
     {
       "rank": 2,
+      "type": "stable",
       "symbol": "2801",
       "name": "彰銀",
-      "score": 80,
-      "score_note": "下調（原85分，因11/25法人數據未公布）",
+      "score": 83,
+      "score_note": "上調（原80分，確認11/25投信續買超+12,409張）",
       "rating": "⭐⭐⭐⭐",
-      "rating_text": "推薦（待11/25法人數據確認）",
+      "rating_text": "推薦（確認）",
       "recommend_price": "20.0-20.3",
       "current_price": 20.15,
       "target_price": 22.0,
       "stop_loss": 19.2,
       "position": "10-15%",
-      "reason": "11/24投信+12,399K、11/25收盤+1.00%（穩健上漲）",
+      "time_horizon": "1-3個月",
+      "target_return": "+7-9%",
+      "reason": "投信連續2日大買超（11/24: +12,399K、11/25: +12,409K）",
       "institutional_data": {
-        "date": "2025-11-24",
-        "trust": 12399,
-        "foreign": 0,
-        "dealer": "數據異常",
-        "total": -244
+        "date_11_24": {
+          "trust": 12399,
+          "foreign": -13765,
+          "dealer": 1122,
+          "total": -244
+        },
+        "date_11_25": {
+          "trust": 12409,
+          "foreign": -13525,
+          "dealer": 12,
+          "total": -1104
+        }
       },
       "price_data": {
         "close_11_25": 20.15,
@@ -88,9 +109,9 @@
         "sub_type": "純銀行",
         "drivers": ["利差", "放款成長", "央行政策"]
       },
-      "action": "⚠️ 等11/25法人數據：若投信續買超→開盤進場；若轉賣超→觀望",
-      "warning": "11/25法人數據未公布、需19:00後確認投信態度",
-      "status": "pending_data"
+      "action": "✅ 確認推薦（但已錯過11/26開盤進場）",
+      "warning": "🚨 投信vs外資勢均力敵（投信+12K vs 外資-13K）、外資略佔上風三大賣超-1,104張",
+      "status": "confirmed_but_missed_entry"
     }
   ],
 
@@ -98,39 +119,54 @@
     {
       "symbol": "3037",
       "name": "欣興",
-      "score": 75,
-      "reason": "11/25爆發+9.50%、盤中買盤61.8%，但11/24法人力道極弱（投信僅+266張）",
+      "score": 82,
+      "score_note": "上調（原75分，三大法人+19,402張大買超確認）",
+      "reason": "11/25爆發+9.50%、盤中買盤61.8%、三大法人+19,402張大買超",
       "institutional_data": {
-        "date": "2025-11-24",
-        "trust": 266,
-        "foreign": 0,
-        "dealer": 268,
-        "total": 2057
+        "date_11_24": {
+          "trust": 266,
+          "foreign": 1522,
+          "dealer": 268,
+          "total": 2057
+        },
+        "date_11_25": {
+          "trust": 155,
+          "foreign": 18582,
+          "dealer": 666,
+          "total": 19402
+        }
       },
       "price_data": {
         "cost": 160.728,
         "close_11_25": 176.00,
         "profit_pct": "+9.50%"
       },
-      "strategy": "⚠️ 最關鍵：等11/25法人數據",
-      "decision_tree": {
-        "if_trust_buy_over_5000": "確認法人進場 → 續抱（停利178、停損172）",
-        "if_total_sell": "散戶追價 → 明日開盤獲利了結175-177元"
-      },
-      "warning": "外資0張、11/24投信僅+266張（力道極弱）、需確認是法人還是散戶",
-      "holding": true
+      "strategy": "✅ 續抱（三大+19,402張確認法人進場）",
+      "decision": "續抱",
+      "stop_profit": 178.00,
+      "stop_loss": 172.00,
+      "warning": "✅ 外資11/25大買超+18,582張（主導）、投信力道仍弱（僅+155張）",
+      "holding": true,
+      "status": "hold_confirmed"
     },
     {
       "symbol": "2330",
       "name": "台積電",
       "score": 65,
-      "reason": "收盤1415元（-2.98%）、法人持續賣超",
+      "reason": "11/25收盤1415元、三大法人+6,314張（外資+6,458張買超、投信-52張賣超）",
       "institutional_data": {
-        "date": "2025-11-24",
-        "trust": 412,
-        "foreign": 0,
-        "dealer": "數據異常",
-        "total": -16253
+        "date_11_24": {
+          "trust": 412,
+          "foreign": -18933,
+          "dealer": 2268,
+          "total": -16253
+        },
+        "date_11_25": {
+          "trust": -52,
+          "foreign": 6458,
+          "dealer": -92,
+          "total": 6314
+        }
       },
       "price_data": {
         "cost": 1458.5,
@@ -139,6 +175,29 @@
       },
       "strategy": "零股續抱、停損1340元",
       "holding": true
+    },
+    {
+      "symbol": "2883",
+      "name": "凱基金",
+      "score": 72,
+      "score_note": "上調（原0分，11/25三大+14,106張大買超）",
+      "reason": "11/25三大+14,106張大買超（外資+13,107張主導、投信+447張）",
+      "institutional_data": {
+        "date_11_25": {
+          "trust": 447,
+          "foreign": 13107,
+          "dealer": 552,
+          "total": 14106
+        }
+      },
+      "price_data": {
+        "cost": 15.95,
+        "close_11_25": 15.55,
+        "profit_pct": "-2.51%"
+      },
+      "strategy": "✅ 可續抱觀察（三大大買超）",
+      "holding": true,
+      "status": "hold"
     }
   ],
 
@@ -146,17 +205,25 @@
     {
       "symbol": "2885",
       "name": "元大金",
-      "reason": "11/24投信轉賣超-1,823張、11/25收盤-1.12%",
+      "reason": "11/25投信-10,709張、三大-12,684張（連續賣超）",
       "score": 0,
       "institutional_data": {
-        "date": "2025-11-24",
-        "trust": -1823,
-        "total": 6008
+        "date_11_24": {
+          "trust": -1823,
+          "total": 6008
+        },
+        "date_11_25": {
+          "trust": -10709,
+          "foreign": -1906,
+          "dealer": -69,
+          "total": -12684
+        }
       },
       "price_data": {
         "close_11_25": 35.25,
         "change_11_25": "-1.12%"
-      }
+      },
+      "status": "avoid_confirmed"
     }
   ],
 
@@ -167,11 +234,12 @@
       "cost": 160.728,
       "current_price": 176.00,
       "return_pct": 9.50,
-      "action": "watch_data",
-      "reason": "⚠️ 等11/25法人數據確認",
-      "strategy": "投信>5K→續抱；三大賣超→獲利了結",
+      "action": "hold",
+      "reason": "✅ 三大法人+19,402張大買超確認",
+      "strategy": "續抱、停利178元、停損172元",
       "stop_profit": 178.00,
-      "stop_loss": 172.00
+      "stop_loss": 172.00,
+      "status": "✅ 確認續抱"
     },
     {
       "symbol": "2884",
@@ -180,8 +248,13 @@
       "current_price": 30.10,
       "return_pct": -11.07,
       "action": "watch",
-      "reason": "深套-11.07%、投信力道極弱（11/24僅+441張）",
-      "strategy": "等明日開盤，跌破30元→停損"
+      "reason": "🚨 深套-11.07%、11/25投信-237張、三大-13,304張",
+      "strategy": "查看盤況，跌破30元→立即停損",
+      "institutional_data_11_25": {
+        "trust": -237,
+        "total": -13304
+      },
+      "status": "🚨 高風險"
     },
     {
       "symbol": "2886",
@@ -190,8 +263,13 @@
       "current_price": 39.55,
       "return_pct": -3.67,
       "action": "stop_loss",
-      "reason": "11/24投信轉賣超-6,776張",
-      "execute_price": "39.5-40.0"
+      "reason": "🚨 11/25投信-5,244張、三大-3,054張（連續賣超）",
+      "execute_price": "39.5-40.0",
+      "institutional_data_11_25": {
+        "trust": -5244,
+        "total": -3054
+      },
+      "status": "❌ 應已停損（但已錯過開盤）"
     },
     {
       "symbol": "2303",
@@ -200,8 +278,13 @@
       "current_price": 45.10,
       "return_pct": -2.52,
       "action": "stop_loss",
-      "reason": "11/24投信連續賣超-5,634張",
-      "execute_price": "45.0-45.5"
+      "reason": "🚨 11/25投信-6,910張、三大-14,731張（連續賣超）",
+      "execute_price": "45.0-45.5",
+      "institutional_data_11_25": {
+        "trust": -6910,
+        "total": -14731
+      },
+      "status": "❌ 應已停損（但已錯過開盤）"
     },
     {
       "symbol": "2883",
@@ -209,9 +292,14 @@
       "cost": 15.95,
       "current_price": 15.55,
       "return_pct": -2.51,
-      "action": "watch",
-      "reason": "等11/25法人數據",
-      "strategy": "若投信轉賣超→停損"
+      "action": "hold",
+      "reason": "✅ 11/25投信+447張、三大+14,106張（大買超）",
+      "strategy": "可續抱觀察",
+      "institutional_data_11_25": {
+        "trust": 447,
+        "total": 14106
+      },
+      "status": "✅ 可續抱"
     },
     {
       "symbol": "2330",
@@ -226,31 +314,38 @@
   ],
 
   "risk_warnings": [
-    "⚠️ 11/25法人數據未公布（19:00後才有）",
-    "🚨 欣興需確認法人態度（投信>5K→續抱；賣超→獲利了結）",
-    "⚠️ 永豐金、彰銀推薦需等11/25投信數據確認",
-    "🚨 玉山金深套-11.07%（投信力道極弱）",
-    "⚠️ 兆豐金、聯電投信轉賣超（建議明日停損）"
+    "⚠️ 11/26已開盤（09:00），部分建議已錯過執行時機",
+    "🚨 兆豐金、聯電應於開盤停損（已錯過）",
+    "🚨 玉山金深套-11.07%（11/25法人-13,304張）",
+    "✅ 欣興外資11/25大買超+18,582張（主導）、ABF載板需求強勁確認",
+    "🚨 永豐金投信vs外資激烈對決（投信+12K vs 外資-16K）、外資主導三大賣超-3,627張",
+    "🚨 彰銀投信vs外資勢均力敵（投信+12K vs 外資-13K）、外資略佔上風三大賣超-1,104張"
   ],
 
-  "update_schedule": {
-    "next_update": "2025-11-25 19:00後",
-    "update_items": [
-      "補充11/25法人數據（投信、外資、自營商）",
-      "更新欣興操作策略（續抱或獲利了結）",
-      "更新永豐金、彰銀推薦（續買超→推薦；轉賣超→取消）",
-      "更新凱基金操作策略"
+  "update_summary": {
+    "update_time": "2025-11-26 09:30",
+    "completed_items": [
+      "✅ 補充11/25法人數據（投信、外資、自營商）",
+      "✅ 確認欣興操作策略：三大+19,402張 → 續抱",
+      "✅ 確認永豐金、彰銀推薦：投信連續2日大買超 → 推薦",
+      "✅ 確認凱基金策略：三大+14,106張 → 可續抱",
+      "✅ 確認兆豐金、聯電、玉山金：法人賣超 → 停損"
+    ],
+    "missed_actions": [
+      "❌ 兆豐金、聯電開盤停損（已錯過09:00）",
+      "❌ 永豐金、彰銀開盤進場（已錯過09:00）"
     ]
   },
 
   "intraday_rules": {
     "mandatory": "11/26盤中12:30執行intraday_analyzer_v2.py時，只能分析tracking中的股票",
-    "forbidden": "禁止分析盤前沒推薦的股票（防止事後諸葛）"
+    "forbidden": "禁止分析盤前沒推薦的股票（防止事後諸葛）",
+    "stocks_to_analyze": ["2890", "2801", "3037", "2883", "2330"]
   },
 
   "success_criteria": {
     "verification_baseline": "11/25盤前準確率：66.7%（2/3）、盤中準確率：100%（3/3）",
     "accuracy_target": "60%+",
-    "data_dependency": "⚠️ 本次推薦高度依賴11/25法人數據，需19:00後更新"
+    "data_status": "✅ 11/25法人數據已修正（外資數據正確、2025-11-26 12:30）"
   }
 }

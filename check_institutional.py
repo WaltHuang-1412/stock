@@ -44,8 +44,8 @@ def fetch_institutional_trading(stock_code, date=None):
                         print('=' * 70)
                         
                         # 解析數據（單位：股）
-                        foreign_net = int(row[4].replace(',', ''))  # 外資買賣超
-                        trust_net = int(row[9].replace(',', ''))    # 投信買賣超  
+                        foreign_net = int(row[3].replace(',', ''))  # 外資買賣超（修正：row[3]不是row[4]）
+                        trust_net = int(row[9].replace(',', ''))    # 投信買賣超
                         dealer_net = int(row[10].replace(',', ''))  # 自營商買賣超
                         total_net = int(row[17].replace(',', ''))   # 三大法人合計
                         
