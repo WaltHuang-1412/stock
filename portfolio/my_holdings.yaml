@@ -102,9 +102,12 @@ holdings:
   - symbol: "3037"           # 股票代號
     name: "欣興"             # 公司名稱
     buy_price: 160.728       # 買入價格
-    quantity: 1              # 持有張數 (1000股=1張)
+    sell_price: 187.50       # 賣出價格
+    quantity: 0              # 已清倉
     buy_date: "2025-11-18~22" # 買入日期（上禮拜）
-    notes: "PCB載板 ABF供應鏈" # 備註
+    sell_date: "2025-11-27"  # 賣出日期
+    profit_loss: 26772       # 獲利 +26,772元
+    notes: "已獲利賣出 +16.65% | ABF載板、費半+2.76%帶動 | 時事驅動型成功案例" # 備註
 
   - symbol: "2317"           # 股票代號
     name: "鴻海"             # 公司名稱
