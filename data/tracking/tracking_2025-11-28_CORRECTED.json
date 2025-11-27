@@ -1,0 +1,352 @@
+{
+  "date": "2025-11-28",
+  "created_at": "2025-11-28 修正版",
+  "purpose": "修正主觀選股錯誤，建立全市場掃描推薦清單",
+  "correction_reason": "原版只推薦金融股，遺漏TOP買超機會股，重蹈2025/10/13主觀選股覆轍",
+  "data_status": "使用11/27法人數據",
+
+  "market_context": {
+    "tw_market": {
+      "date": "2025-11-27",
+      "close": 23214,
+      "change": "+0.15%",
+      "volume": "正常"
+    },
+    "us_market": {
+      "date": "2025-11-26",
+      "nasdaq": "+0.82%",
+      "sp500": "+0.69%",
+      "sox": "+2.76%"
+    },
+    "key_news": ["費半大漲+2.76%", "AI伺服器需求強勁", "年底作帳行情啟動"]
+  },
+
+  "recommendations": [
+    {
+      "rank": 1,
+      "type": "stable",
+      "symbol": "1303",
+      "name": "南亞",
+      "score": 75,
+      "rating": "⭐⭐⭐⭐",
+      "recommend_price": "52.0-52.5",
+      "current_price": 52.30,
+      "target_price": 56.0,
+      "stop_loss": 48.5,
+      "position": "15%",
+      "time_horizon": "1-3個月",
+      "target_return": "+7%",
+      "reason": "外資+41,173K張超大買超，法人買超冠軍",
+      "dual_track": {
+        "news_track": 30,
+        "institutional_track": 45
+      },
+      "institutional_data": {
+        "date": "2025-11-27",
+        "trust": 0,
+        "foreign": 41173,
+        "dealer": 90,
+        "total": 43951
+      },
+      "industry": {
+        "sector": "塑化",
+        "sub_type": "塑化龍頭",
+        "drivers": ["景氣復甦", "中國需求", "原料成本"]
+      },
+      "status": "recommended"
+    },
+    {
+      "rank": 2,
+      "type": "stable",
+      "symbol": "2801",
+      "name": "彰銀",
+      "score": 87,
+      "rating": "⭐⭐⭐⭐⭐",
+      "recommend_price": "20.3-20.5",
+      "current_price": 20.45,
+      "target_price": 22.0,
+      "stop_loss": 19.5,
+      "position": "15%",
+      "time_horizon": "1-3個月",
+      "target_return": "+8%",
+      "reason": "投信連4日買超、純銀行利差受惠",
+      "dual_track": {
+        "news_track": 32,
+        "institutional_track": 42
+      },
+      "institutional_data": {
+        "date": "2025-11-27",
+        "trust": 3621,
+        "foreign": -459,
+        "dealer": -24,
+        "total": 3138
+      },
+      "industry": {
+        "sector": "金融",
+        "sub_type": "純銀行",
+        "drivers": ["利差", "年底作帳"]
+      },
+      "status": "recommended"
+    },
+    {
+      "rank": 3,
+      "type": "stable",
+      "symbol": "3231",
+      "name": "緯創",
+      "score": 80,
+      "rating": "⭐⭐⭐⭐",
+      "recommend_price": "144-146",
+      "current_price": 145.50,
+      "target_price": 150.0,
+      "stop_loss": 142.0,
+      "position": "10%",
+      "time_horizon": "1-3個月",
+      "target_return": "+3%",
+      "reason": "外資+16,739張大買、AI伺服器龍頭",
+      "dual_track": {
+        "news_track": 40,
+        "institutional_track": 40
+      },
+      "institutional_data": {
+        "date": "2025-11-27",
+        "trust": -413,
+        "foreign": 16739,
+        "dealer": 810,
+        "total": 17136
+      },
+      "industry": {
+        "sector": "電子",
+        "sub_type": "伺服器代工",
+        "drivers": ["AI伺服器", "雲端資本支出"]
+      },
+      "status": "recommended"
+    },
+    {
+      "rank": 4,
+      "type": "stable",
+      "symbol": "2890",
+      "name": "永豐金",
+      "score": 80,
+      "rating": "⭐⭐⭐⭐",
+      "recommend_price": "27.0-27.3",
+      "current_price": 27.25,
+      "target_price": 29.0,
+      "stop_loss": 26.2,
+      "position": "10%",
+      "time_horizon": "1-3個月",
+      "target_return": "+7%",
+      "reason": "投信連續買超、但外資11/27轉賣",
+      "dual_track": {
+        "news_track": 30,
+        "institutional_track": 35
+      },
+      "institutional_data": {
+        "date": "2025-11-27",
+        "trust": 4466,
+        "foreign": -3528,
+        "dealer": -161,
+        "total": 777
+      },
+      "industry": {
+        "sector": "金融",
+        "sub_type": "綜合型",
+        "drivers": ["年底作帳", "銀行+證券"]
+      },
+      "warning": "外資11/27轉賣，倉位降低",
+      "status": "recommended"
+    },
+    {
+      "rank": 5,
+      "type": "stable",
+      "symbol": "2344",
+      "name": "華邦電",
+      "score": 67,
+      "rating": "⭐⭐⭐",
+      "recommend_price": "27.0-27.5",
+      "current_price": 27.30,
+      "target_price": 29.5,
+      "stop_loss": 25.8,
+      "position": "8%",
+      "time_horizon": "1-3個月",
+      "target_return": "+8%",
+      "reason": "外資+16,177K張大買，記憶體龍頭",
+      "dual_track": {
+        "news_track": 32,
+        "institutional_track": 35
+      },
+      "institutional_data": {
+        "date": "2025-11-27",
+        "trust": -735,
+        "foreign": 16177,
+        "dealer": 153,
+        "total": 17722
+      },
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "記憶體",
+        "drivers": ["DRAM價格", "AI記憶體需求"]
+      },
+      "warning": "投信vs外資對決",
+      "status": "recommended"
+    },
+    {
+      "rank": 6,
+      "type": "stable",
+      "symbol": "2885",
+      "name": "元大金",
+      "score": 66,
+      "rating": "⭐⭐⭐",
+      "recommend_price": "30.5-31.0",
+      "current_price": 30.80,
+      "target_price": 33.0,
+      "stop_loss": 29.5,
+      "position": "8%",
+      "time_horizon": "1-3個月",
+      "target_return": "+7%",
+      "reason": "外資+15,032K張大買，券商龍頭",
+      "dual_track": {
+        "news_track": 28,
+        "institutional_track": 38
+      },
+      "institutional_data": {
+        "date": "2025-11-27",
+        "trust": -3120,
+        "foreign": 15032,
+        "dealer": -176,
+        "total": 11814
+      },
+      "industry": {
+        "sector": "金融",
+        "sub_type": "證券型",
+        "drivers": ["成交量", "ETF規模", "自營績效"]
+      },
+      "warning": "投信vs外資對決",
+      "status": "recommended"
+    }
+  ],
+
+  "secondary_watchlist": [
+    {
+      "symbol": "2891",
+      "name": "中信金",
+      "score": 67,
+      "reason": "外資+19,314K張但投信大賣-8,838K，激烈對決",
+      "institutional_data": {
+        "trust": -8838,
+        "foreign": 19314,
+        "total": 9144
+      },
+      "action": "觀察1-2日法人態度"
+    },
+    {
+      "symbol": "2316",
+      "name": "楠梓電",
+      "score": 65,
+      "reason": "外資+11,200K張，電子通路",
+      "institutional_data": {
+        "foreign": 11200,
+        "total": 11720
+      },
+      "action": "小倉位5%可考慮"
+    }
+  ],
+
+  "avoid_stocks": [
+    {
+      "symbol": "2317",
+      "name": "鴻海",
+      "reason": "11/27三大法人全面賣超-7,243張",
+      "institutional_data": {
+        "trust": -207,
+        "foreign": -6587,
+        "dealer": -449,
+        "total": -7243
+      }
+    }
+  ],
+
+  "watchlist": [
+    {
+      "symbol": "3037",
+      "name": "欣興",
+      "holding": false,
+      "sold_date": "2025-11-27",
+      "sold_price": 187.50,
+      "cost": 160.728,
+      "profit_pct": 16.65,
+      "profit_amount": 26772,
+      "institutional_data": {
+        "trust": 562,
+        "foreign": 13245,
+        "total": 16304
+      },
+      "strategy": "已停利出場",
+      "notes": "時事驅動型成功案例"
+    },
+    {
+      "symbol": "2883",
+      "name": "凱基金",
+      "holding": true,
+      "cost": 15.95,
+      "current_price": 15.90,
+      "return_pct": -0.31,
+      "institutional_data": {
+        "trust": 86,
+        "foreign": 9105,
+        "total": 9137
+      },
+      "strategy": "續抱",
+      "stop_loss": 15.0,
+      "notes": "外資+9,105張大買！"
+    },
+    {
+      "symbol": "2303",
+      "name": "聯電",
+      "holding": true,
+      "cost": 46.265,
+      "current_price": 45.95,
+      "return_pct": -0.68,
+      "institutional_data": {
+        "trust": -9534,
+        "foreign": 17439,
+        "total": 7781
+      },
+      "strategy": "續抱觀察",
+      "notes": "外資+17,439張大買但投信大賣"
+    }
+  ],
+
+  "holdings_warning": [
+    {
+      "symbol": "2884",
+      "name": "玉山金",
+      "cost": 33.848,
+      "current_price": 30.40,
+      "return_pct": -10.19,
+      "institutional_data": {
+        "trust": -1274,
+        "foreign": 2271,
+        "total": 752
+      },
+      "warning": "深套-10.19%、投信連續賣超",
+      "action": "守30元、跌破停損"
+    }
+  ],
+
+  "analysis_improvement": {
+    "original_problem": "只推薦4檔金融股+緯創，遺漏TOP買超機會股",
+    "correction": "新增南亞、華邦電、元大金等法人大買股票",
+    "lesson_learned": "必須全市場掃描，不可主觀篩選",
+    "coverage": {
+      "sectors": ["塑化", "金融", "半導體", "電子"],
+      "market_cap": ["大型股", "中型股"],
+      "strategies": ["法人驅動", "時事驅動"]
+    }
+  },
+
+  "intraday_rules": {
+    "mandatory": "11/28盤中12:30只能分析tracking中的股票",
+    "forbidden": "禁止分析盤前沒推薦的股票（防止事後諸葛）",
+    "stocks_to_analyze": ["1303", "2801", "3231", "2890", "2344", "2885"]
+  }
+}
