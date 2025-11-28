@@ -14,8 +14,22 @@
     ]
   },
   "sync_check": {
-    "before_market_recommendations": ["6770", "2337", "2408", "2327", "1301", "2344"],
-    "tracking_recommendations": ["6770", "2337", "2408", "2327", "1301", "2344"],
+    "before_market_recommendations": [
+      "6770",
+      "2337",
+      "2408",
+      "2327",
+      "1301",
+      "2344"
+    ],
+    "tracking_recommendations": [
+      "6770",
+      "2337",
+      "2408",
+      "2327",
+      "1301",
+      "2344"
+    ],
     "is_synced": true
   },
   "recommendations": [
@@ -33,12 +47,18 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "記憶體/晶圓代工",
-        "drivers": ["記憶體價格回穩", "AI需求", "法人一致買超"]
+        "drivers": [
+          "記憶體價格回穩",
+          "AI需求",
+          "法人一致買超"
+        ]
       },
       "time_horizon": "1-2個月",
       "target_return": "+10%",
       "reason": "法人狂買+59,637K、三方一致買超、近5日僅+0.6%未追高",
-      "status": "pending"
+      "status": "day_1_completed",
+      "closing_price": 34.1,
+      "daily_return": 2.71
     },
     {
       "type": "stable",
@@ -54,12 +74,17 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "NOR Flash",
-        "drivers": ["NOR Flash供需改善", "費半強勢"]
+        "drivers": [
+          "NOR Flash供需改善",
+          "費半強勢"
+        ]
       },
       "time_horizon": "1-2個月",
       "target_return": "+10%",
       "reason": "法人買超+24,957K、近5日-1.74%逢低佈局",
-      "status": "pending"
+      "status": "day_1_completed",
+      "closing_price": 34.1,
+      "daily_return": 0.59
     },
     {
       "type": "stable",
@@ -75,12 +100,17 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "DRAM",
-        "drivers": ["DRAM價格回穩", "AI需求"]
+        "drivers": [
+          "DRAM價格回穩",
+          "AI需求"
+        ]
       },
       "time_horizon": "1-2個月",
       "target_return": "+8%",
       "reason": "法人買超+39,992K、DRAM價格回穩",
-      "status": "pending"
+      "status": "day_1_completed",
+      "closing_price": 146.0,
+      "daily_return": 0.69
     },
     {
       "type": "stable",
@@ -96,12 +126,16 @@
       "industry": {
         "sector": "電子",
         "sub_type": "被動元件",
-        "drivers": ["被動元件庫存回補"]
+        "drivers": [
+          "被動元件庫存回補"
+        ]
       },
       "time_horizon": "1-2個月",
       "target_return": "+10%",
       "reason": "法人買超+11,796K、被動元件庫存回補",
-      "status": "pending"
+      "status": "day_1_completed",
+      "closing_price": 235.0,
+      "daily_return": -0.84
     },
     {
       "type": "stable",
@@ -117,12 +151,16 @@
       "industry": {
         "sector": "塑化",
         "sub_type": "塑膠龍頭",
-        "drivers": ["塑化族群輪動"]
+        "drivers": [
+          "塑化族群輪動"
+        ]
       },
       "time_horizon": "1-2個月",
       "target_return": "+8%",
       "reason": "塑化族群輪動、法人買超+14,614K",
-      "status": "pending"
+      "status": "day_1_completed",
+      "closing_price": 41.65,
+      "daily_return": 0.6
     },
     {
       "type": "explosive",
@@ -138,13 +176,18 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "記憶體",
-        "drivers": ["費半強勢", "記憶體需求"]
+        "drivers": [
+          "費半強勢",
+          "記憶體需求"
+        ]
       },
       "time_horizon": "1-3天",
       "target_return": "+8%",
       "reason": "法人大買+49,169K、費半+2.76%",
       "risk_note": "近5日已漲+8.4%，追高風險",
-      "status": "pending"
+      "status": "day_1_completed",
+      "closing_price": 58.0,
+      "daily_return": 6.42
     }
   ],
   "avoid_stocks": [
@@ -168,5 +211,20 @@
       "stock_name": "第一金",
       "reason": "投信+外資同賣"
     }
-  ]
+  ],
+  "day_1_summary": {
+    "date": "2025-11-28",
+    "total_recommendations": 6,
+    "winners": 5,
+    "losers": 1,
+    "success_rate": 83.3,
+    "best_performer": {
+      "stock": "華邦電",
+      "return": 6.42
+    },
+    "worst_performer": {
+      "stock": "國巨",
+      "return": -0.84
+    }
+  }
 }
