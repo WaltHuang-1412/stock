@@ -1,0 +1,199 @@
+{
+  "date": "2025-12-01",
+  "version": "v2.0",
+  "analysis_basis": "基於11/28歷史成功經驗延續（83.3%準確率）",
+  "market_context": {
+    "us_market": {
+      "sox": "+1.82%",
+      "nasdaq": "+0.65%",
+      "nvda": "-1.81%（獲利了結）",
+      "continuation": "費半強勢延續支撐記憶體族群"
+    },
+    "historical_success": {
+      "reference_date": "2025-11-28",
+      "success_rate": "83.3%",
+      "best_performer": "華邦電 +6.42%",
+      "key_factor": "記憶體族群法人一致大買超"
+    },
+    "data_limitation": "11/29法人數據未公布，基於歷史成功延續性推估"
+  },
+  "sync_check": {
+    "before_market_recommendations": ["6770", "1301", "2408", "2337"],
+    "tracking_recommendations": ["6770", "1301", "2408", "2337"],
+    "is_synced": true
+  },
+  "recommendations": [
+    {
+      "type": "historical_continuation",
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "historical_performance": {
+        "date": "2025-11-28",
+        "recommend_price": 33.2,
+        "actual_result": 34.1,
+        "return": 2.71,
+        "institutional_support": 59637000
+      },
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "記憶體/晶圓代工",
+        "drivers": ["DRAM價格企穩", "AI需求延續", "法人一致買超"]
+      },
+      "recommend_price": 33.8,
+      "current_price": 33.6,
+      "target_price": 37.0,
+      "stop_loss": 32.8,
+      "position": "20%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "confidence": "最高",
+      "score": 95,
+      "time_horizon": "1個月延續追蹤",
+      "target_return": "+10%",
+      "reason": "11/28驗證成功+法人最大買超+記憶體主流延續",
+      "risk_note": "已驗證成功模式，風險最低",
+      "status": "pending"
+    },
+    {
+      "type": "historical_continuation",
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "historical_performance": {
+        "date": "2025-11-28",
+        "recommend_price": 41.4,
+        "actual_result": 41.65,
+        "return": 0.60,
+        "institutional_support": 14614000
+      },
+      "industry": {
+        "sector": "塑化",
+        "sub_type": "塑膠龍頭",
+        "drivers": ["塑化產業輪動", "原油成本穩定", "龍頭優勢"]
+      },
+      "recommend_price": 41.8,
+      "current_price": 41.5,
+      "target_price": 45.0,
+      "stop_loss": 39.5,
+      "position": "15%",
+      "rating": "⭐⭐⭐⭐",
+      "confidence": "高",
+      "score": 88,
+      "time_horizon": "1-2個月",
+      "target_return": "+8%",
+      "reason": "11/28成功+塑化輪動+龍頭地位",
+      "status": "pending"
+    },
+    {
+      "type": "historical_continuation",
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "historical_performance": {
+        "date": "2025-11-28",
+        "recommend_price": 145.0,
+        "actual_result": 146.0,
+        "return": 0.69,
+        "institutional_support": 39992000
+      },
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "DRAM",
+        "drivers": ["DRAM價格回穩", "AI記憶體需求", "技術領先"]
+      },
+      "recommend_price": 147.0,
+      "current_price": 145.0,
+      "target_price": 158.0,
+      "stop_loss": 140.0,
+      "position": "12%",
+      "rating": "⭐⭐⭐⭐",
+      "confidence": "高",
+      "score": 85,
+      "time_horizon": "1-2個月",
+      "target_return": "+8%",
+      "reason": "11/28成功+DRAM龍頭+法人持續買超",
+      "status": "pending"
+    },
+    {
+      "type": "observation",
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "historical_performance": {
+        "date": "2025-11-28",
+        "recommend_price": 33.9,
+        "actual_result": 34.1,
+        "return": 0.59,
+        "institutional_support": 24957000
+      },
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "NOR Flash",
+        "drivers": ["記憶體概念延續", "NOR Flash需求穩定"]
+      },
+      "recommend_price": 34.0,
+      "current_price": 33.9,
+      "target_price": 37.0,
+      "stop_loss": 32.0,
+      "position": "5-8%",
+      "rating": "⭐⭐⭐",
+      "confidence": "中",
+      "score": 78,
+      "time_horizon": "1個月",
+      "target_return": "+8%",
+      "reason": "11/28成功但漲幅較小，記憶體概念延續",
+      "status": "pending"
+    }
+  ],
+  "watch_list": [
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "status": "等待回檔",
+      "current_price": 58.0,
+      "entry_target": "55.0以下",
+      "reason": "11/28最佳表現+6.42%，但已追高，等回檔"
+    }
+  ],
+  "removed_from_original": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "removal_reason": "價格1425元過高，偏離合理價值區間",
+      "original_recommend": 1430.0,
+      "market_price": 1425.0
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "removal_reason": "金融股非當前主流，未在11/28成功清單"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "removal_reason": "11/28被列為避開（已大漲），追高風險高"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "removal_reason": "11/28被列為避開（已大漲），已錯過最佳時點"
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨",
+      "reason": "11/28唯一失敗股票（-0.84%），被動元件族群弱勢",
+      "historical_failure": true
+    }
+  ],
+  "portfolio_allocation": {
+    "核心持股": "20%（力積電）",
+    "穩健配置": "27%（台塑15% + 南亞科12%）",
+    "彈性配置": "8%（旺宏）",
+    "現金保留": "45%",
+    "風險控制": "單一個股不超過20%，嚴格停損"
+  },
+  "key_insights": {
+    "historical_basis": "基於11/28成功經驗（83.3%準確率）",
+    "main_theme": "記憶體族群主流延續",
+    "risk_management": "避免追高，專注歷史驗證成功標的",
+    "success_factors": ["法人一致買超", "產業邏輯延續", "價格合理區間"]
+  }
+}

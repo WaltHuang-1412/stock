@@ -10,6 +10,6 @@ export PATH="/Users/walter/.nvm/versions/node/v20.11.1/bin:/opt/homebrew/bin:/us
 export HOME="/Users/walter"
 
 # 直接執行 Python 腳本
-python3 intraday_analyzer_v2.py
+python3 scripts/intraday_analyzer_v2.py
 
 echo "盤中分析完成：$(date)"
