@@ -237,8 +237,8 @@ class StockTracker:
 - **推薦價**：{recommend_price}元
 - **目標價**：{recommendation['target_price']}元（+{((recommendation['target_price']/recommend_price-1)*100):.1f}%）
 - **停損價**：{recommendation['stop_loss']}元（-{((1-recommendation['stop_loss']/recommend_price)*100):.1f}%）
-- **建議倉位**：{recommendation['position_size']}
-- **推薦理由**：{recommendation['recommend_reason']}
+- **建議倉位**：{recommendation.get('position_size') or recommendation.get('position', '未指定')}
+- **推薦理由**：{recommendation.get('recommend_reason') or recommendation.get('reason', '未指定')}
 
 ---
 
