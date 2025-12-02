@@ -22,8 +22,16 @@
     }
   },
   "sync_check": {
-    "before_market_recommendations": ["2408", "2382", "2454"],
-    "tracking_recommendations": ["2408", "2382", "2454"],
+    "before_market_recommendations": [
+      "2408",
+      "2382",
+      "2454"
+    ],
+    "tracking_recommendations": [
+      "2408",
+      "2382",
+      "2454"
+    ],
     "is_synced": true
   },
   "recommendations": [
@@ -31,10 +39,15 @@
       "type": "stable",
       "stock_code": "2408",
       "stock_name": "南亞科",
+      "recommend_date": "2025-12-02",
       "industry": {
         "sector": "半導體",
         "sub_type": "DRAM",
-        "drivers": ["DRAM價格企穩", "AI記憶體需求", "法人持續買超"]
+        "drivers": [
+          "DRAM價格企穩",
+          "AI記憶體需求",
+          "法人持續買超"
+        ]
       },
       "recommend_price": 146.0,
       "current_price": 146.0,
@@ -59,16 +72,37 @@
         "dealer": 565,
         "total": 5263
       },
-      "status": "pending"
+      "status": "pending",
+      "daily_updates": [
+        {
+          "date": "2025-12-02",
+          "day": 0,
+          "close_price": 149.5,
+          "gain_loss_pct": 2.4,
+          "volume": 122023179,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     },
     {
       "type": "stable",
       "stock_code": "2382",
       "stock_name": "廣達",
+      "recommend_date": "2025-12-02",
       "industry": {
         "sector": "電子",
         "sub_type": "AI伺服器",
-        "drivers": ["雲端資本支出", "AI伺服器組裝", "營收成長"]
+        "drivers": [
+          "雲端資本支出",
+          "AI伺服器組裝",
+          "營收成長"
+        ]
       },
       "recommend_price": 289.5,
       "current_price": 289.5,
@@ -93,16 +127,37 @@
         "dealer": 298,
         "total": 5937
       },
-      "status": "pending"
+      "status": "pending",
+      "daily_updates": [
+        {
+          "date": "2025-12-02",
+          "day": 0,
+          "close_price": 288.5,
+          "gain_loss_pct": -0.35,
+          "volume": 15807103,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     },
     {
       "type": "stable",
       "stock_code": "2454",
       "stock_name": "聯發科",
+      "recommend_date": "2025-12-02",
       "industry": {
         "sector": "半導體",
         "sub_type": "IC設計",
-        "drivers": ["手機晶片復甦", "天璣9400訂單", "AI邊緣運算"]
+        "drivers": [
+          "手機晶片復甦",
+          "天璣9400訂單",
+          "AI邊緣運算"
+        ]
       },
       "recommend_price": 1440.0,
       "current_price": 1440.0,
@@ -127,7 +182,23 @@
         "dealer": 377,
         "total": 5508
       },
-      "status": "pending"
+      "status": "pending",
+      "daily_updates": [
+        {
+          "date": "2025-12-02",
+          "day": 0,
+          "close_price": 1415.0,
+          "gain_loss_pct": -1.74,
+          "volume": 11862401,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     }
   ],
   "watch_list": [
@@ -185,7 +256,21 @@
   "key_insights": {
     "main_correction": "欣興法人數據錯誤，需重新評估",
     "main_theme": "DRAM+AI伺服器為主軸",
-    "risk_factors": ["台積電除息影響", "法人數據需仔細驗證"],
-    "success_factors": ["南亞科延續強勢", "廣達外資認同", "聯發科手機復甦"]
+    "risk_factors": [
+      "台積電除息影響",
+      "法人數據需仔細驗證"
+    ],
+    "success_factors": [
+      "南亞科延續強勢",
+      "廣達外資認同",
+      "聯發科手機復甦"
+    ]
+  },
+  "metadata": {
+    "updated_at": "2025-12-02 16:40:10",
+    "tracking_active": 0,
+    "tracking_completed": 0,
+    "success_count": 0,
+    "stop_loss_count": 0
   }
 }

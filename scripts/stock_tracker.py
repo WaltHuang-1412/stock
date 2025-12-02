@@ -19,7 +19,7 @@ import requests
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
-from src.data_fetcher import get_institutional_data
+from src.data_fetcher import DataFetcher
 
 
 class StockTracker:
@@ -68,8 +68,9 @@ class StockTracker:
     def get_institutional_data_safe(self, stock_code, date_str):
         """安全獲取法人數據（處理錯誤）"""
         try:
-            date_obj = datetime.strptime(date_str, "%Y%m%d")
-            data = get_institutional_data(stock_code, date_obj)
+            # 使用 DataFetcher 獲取法人數據
+            fetcher = DataFetcher()
+            data = fetcher.fetch_institutional_data(stock_code)
 
             if data:
                 return {
@@ -87,11 +88,32 @@ class StockTracker:
 
     def update_tracking_record(self, recommendation, today_str):
         """更新單一推薦股票的追蹤記錄"""
-        stock_code = recommendation['stock_code']
-        stock_name = recommendation['stock_name']
-        recommend_price = recommendation['recommend_price']
-        target_price = recommendation['target_price']
-        stop_loss = recommendation['stop_loss']
+        # 支援新舊兩種格式：stock_code (新) 或 symbol (舊)
+        stock_code = recommendation.get('stock_code') or recommendation.get('symbol')
+        stock_name = recommendation.get('stock_name') or recommendation.get('name')
+
+        # 處理價格（可能是字串 "26.8-27.2" 或數字）
+        recommend_price_raw = recommendation.get('recommend_price')
+        if isinstance(recommend_price_raw, str):
+            # 如果是範圍，取中間值
+            if '-' in str(recommend_price_raw):
+                prices = recommend_price_raw.split('-')
+                recommend_price = float(prices[0])
+            else:
+                recommend_price = float(recommend_price_raw)
+        else:
+            recommend_price = float(recommend_price_raw) if recommend_price_raw else None
+
+        target_price = float(recommendation.get('target_price', 0))
+        stop_loss = float(recommendation.get('stop_loss', 0))
+
+        # 檢查必要欄位
+        if not stock_code:
+            print(f"⚠️ 缺少股票代碼，跳過此筆記錄")
+            return False
+        if not recommend_price:
+            print(f"⚠️ {stock_code} 缺少推薦價格，跳過此筆記錄")
+            return False
 
         # 獲取今日股價
         price_data = self.get_stock_price(stock_code)
@@ -107,8 +129,22 @@ class StockTracker:
         # 獲取法人數據
         institutional = self.get_institutional_data_safe(stock_code, today_str)
 
-        # 計算追蹤天數
-        recommend_date = datetime.strptime(recommendation['recommend_date'], "%Y-%m-%d")
+        # 計算追蹤天數（支援不同的日期欄位名稱）
+        recommend_date_str = recommendation.get('recommend_date') or recommendation.get('date')
+        if not recommend_date_str:
+            print(f"⚠️ {stock_code} 缺少推薦日期，跳過此筆記錄")
+            return False
+
+        # 處理不同的日期格式
+        try:
+            if '-' in recommend_date_str:
+                recommend_date = datetime.strptime(recommend_date_str, "%Y-%m-%d")
+            else:
+                recommend_date = datetime.strptime(recommend_date_str, "%Y%m%d")
+        except ValueError:
+            print(f"⚠️ {stock_code} 日期格式錯誤：{recommend_date_str}")
+            return False
+
         today_date = datetime.strptime(today_str, "%Y%m%d")
         days_tracked = (today_date - recommend_date).days
 
@@ -130,7 +166,7 @@ class StockTracker:
         elif close_price <= stop_loss:
             today_update['notes'] = f"🚨 觸發停損{stop_loss}元（{gain_loss_pct}%）"
             recommendation['status'] = 'stop_loss'
-        elif days_tracked >= recommendation['tracking_days']:
+        elif days_tracked >= recommendation.get('tracking_days', 7):  # 預設追蹤7天
             if gain_loss_pct >= 3:
                 today_update['notes'] = f"✅ 7日追蹤完成、成功（+{gain_loss_pct}%）"
                 recommendation['status'] = 'success'
@@ -149,9 +185,12 @@ class StockTracker:
                     today_update['notes'] = f"📉 法人賣超{total:,}張"
                 else:
                     today_update['notes'] = "⚠️ 法人買賣互抵"
-            today_update['notes'] += f" 追蹤中 ({days_tracked}/{recommendation['tracking_days']}日)"
+            tracking_days = recommendation.get('tracking_days', 7)
+            today_update['notes'] += f" 追蹤中 ({days_tracked}/{tracking_days}日)"
 
-        # 加入每日更新列表
+        # 加入每日更新列表（初始化如果不存在）
+        if 'daily_updates' not in recommendation:
+            recommendation['daily_updates'] = []
         recommendation['daily_updates'].append(today_update)
 
         # 輸出更新資訊
@@ -317,8 +356,9 @@ class StockTracker:
             recommendations = data['recommendations']
 
             for rec in recommendations:
-                # 跳過已完成的
-                if rec['status'] in ['success', 'failed', 'neutral', 'stop_loss']:
+                # 跳過已完成的（支援有或沒有 status 欄位的情況）
+                status = rec.get('status', 'tracking')
+                if status in ['success', 'failed', 'neutral', 'stop_loss']:
                     continue
 
                 # 更新追蹤記錄
@@ -326,16 +366,18 @@ class StockTracker:
                     total_updated += 1
 
                     # 如果追蹤完成，產生報告
-                    if rec['status'] in ['success', 'failed', 'neutral', 'stop_loss']:
+                    if rec.get('status') in ['success', 'failed', 'neutral', 'stop_loss']:
                         self.generate_7day_report(rec)
                         total_completed += 1
 
-            # 更新metadata
+            # 更新metadata（如果存在）
+            if 'metadata' not in data:
+                data['metadata'] = {}
             data['metadata']['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            data['metadata']['tracking_active'] = len([r for r in recommendations if r['status'] == 'tracking'])
-            data['metadata']['tracking_completed'] = len([r for r in recommendations if r['status'] in ['success', 'failed', 'neutral', 'stop_loss']])
-            data['metadata']['success_count'] = len([r for r in recommendations if r['status'] == 'success'])
-            data['metadata']['stop_loss_count'] = len([r for r in recommendations if r['status'] == 'stop_loss'])
+            data['metadata']['tracking_active'] = len([r for r in recommendations if r.get('status', 'tracking') == 'tracking'])
+            data['metadata']['tracking_completed'] = len([r for r in recommendations if r.get('status') in ['success', 'failed', 'neutral', 'stop_loss']])
+            data['metadata']['success_count'] = len([r for r in recommendations if r.get('status') == 'success'])
+            data['metadata']['stop_loss_count'] = len([r for r in recommendations if r.get('status') == 'stop_loss'])
 
             # 保存更新
             self.save_tracking_data(file_path, data)
