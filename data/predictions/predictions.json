@@ -263,5 +263,257 @@
     ],
     "framework": "五維度評分系統",
     "accuracy": 0.0
+  },
+  "2025-11-28": {
+    "date": "2025-11-28",
+    "predictions": [
+      {
+        "symbol": "6770",
+        "name": "力積電",
+        "prev_close": 33.2,
+        "direction": "up",
+        "target_range": "32.8-33.5",
+        "confidence": 0.88,
+        "reasons": [
+          "法人狂買+59,637K",
+          "三方一致買超",
+          "記憶體價格回穩",
+          "近5日僅+0.6%未追高"
+        ],
+        "verification": {
+          "actual_close": 34.1,
+          "actual_change": 2.71,
+          "result": "success",
+          "notes": "DRAM邏輯最強，法人一致買超延續"
+        }
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "prev_close": 54.5,
+        "direction": "up",
+        "target_range": "54-56",
+        "confidence": 0.86,
+        "reasons": [
+          "記憶體族群主流",
+          "費半+2.76%支撐",
+          "法人買超延續"
+        ],
+        "verification": {
+          "actual_close": 58.0,
+          "actual_change": 6.42,
+          "result": "success",
+          "notes": "當日最佳表現，記憶體族群爆發"
+        }
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "prev_close": 33.9,
+        "direction": "up",
+        "target_range": "33.5-34.2",
+        "confidence": 0.85,
+        "reasons": [
+          "法人買超+24,957K",
+          "NOR Flash供需改善",
+          "近5日-1.74%逢低佈局"
+        ],
+        "verification": {
+          "actual_close": 34.1,
+          "actual_change": 0.59,
+          "result": "success",
+          "notes": "小幅上漲，記憶體概念延續"
+        }
+      },
+      {
+        "symbol": "2408",
+        "name": "南亞科",
+        "prev_close": 145.0,
+        "direction": "up",
+        "target_range": "143-146",
+        "confidence": 0.82,
+        "reasons": [
+          "DRAM龍頭",
+          "法人買超+39,992K",
+          "記憶體價格企穩"
+        ],
+        "verification": {
+          "actual_close": 146.0,
+          "actual_change": 0.69,
+          "result": "success",
+          "notes": "穩健上漲，DRAM龍頭地位"
+        }
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "prev_close": 41.4,
+        "direction": "up",
+        "target_range": "41-42",
+        "confidence": 0.8,
+        "reasons": [
+          "塑化龍頭",
+          "法人買超+14,614K",
+          "產業輪動概念"
+        ],
+        "verification": {
+          "actual_close": 41.65,
+          "actual_change": 0.6,
+          "result": "success",
+          "notes": "小幅上漲，塑化族群穩健"
+        }
+      },
+      {
+        "symbol": "2327",
+        "name": "國巨",
+        "prev_close": 237.0,
+        "direction": "up",
+        "target_range": "235-240",
+        "confidence": 0.75,
+        "reasons": [
+          "被動元件龍頭",
+          "法人買超支撐"
+        ],
+        "verification": {
+          "actual_close": 235.0,
+          "actual_change": -0.84,
+          "result": "fail",
+          "notes": "唯一失敗股票，被動元件族群弱勢"
+        }
+      }
+    ],
+    "framework": "五維度評分系統",
+    "accuracy": 0.833,
+    "notes": "歷史最高準確率83.3%（5/6成功），記憶體族群表現亮眼，華邦電當日最佳+6.42%"
+  },
+  "2025-12-01": {
+    "date": "2025-12-01",
+    "predictions": [
+      {
+        "symbol": "6770",
+        "name": "力積電",
+        "prev_close": 33.8,
+        "direction": "up",
+        "target_range": "33.8-35.0",
+        "confidence": 0.95,
+        "reasons": [
+          "延續11/28成功模式",
+          "歷史驗證最高信心",
+          "記憶體族群主流"
+        ],
+        "verification": {
+          "actual_close": 34.0,
+          "actual_change": -0.29,
+          "result": "fail",
+          "notes": "法人態度轉變，外資大賣-17,550張"
+        }
+      },
+      {
+        "symbol": "2408",
+        "name": "南亞科",
+        "prev_close": 147.0,
+        "direction": "up",
+        "target_range": "148-150",
+        "confidence": 0.88,
+        "reasons": [
+          "DRAM龍頭延續",
+          "11/28成功驗證",
+          "記憶體價格支撐"
+        ],
+        "verification": {
+          "actual_close": 149.5,
+          "actual_change": 2.40,
+          "result": "success",
+          "notes": "當日最佳表現，法人持續買超+5,263張"
+        }
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "prev_close": 41.8,
+        "direction": "up",
+        "target_range": "41.8-43.0",
+        "confidence": 0.85,
+        "reasons": [
+          "延續11/28成功",
+          "塑化龍頭穩健",
+          "法人支撐"
+        ],
+        "verification": {
+          "actual_close": 41.9,
+          "actual_change": 0.60,
+          "result": "success",
+          "notes": "小幅上漲，法人買超+2,914張支撐"
+        }
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "prev_close": 34.0,
+        "direction": "up",
+        "target_range": "34-36",
+        "confidence": 0.78,
+        "reasons": [
+          "11/28成功延續",
+          "記憶體概念股"
+        ],
+        "verification": {
+          "actual_close": 33.85,
+          "actual_change": -0.73,
+          "result": "fail",
+          "notes": "法人轉賣，投信賣超-3,263張"
+        }
+      }
+    ],
+    "framework": "歷史驗證優先系統",
+    "accuracy": 0.50,
+    "notes": "準確率下降至50%（2/4），歷史成功不一定延續，記憶體族群分化明顯"
+  },
+  "2025-12-02": {
+    "date": "2025-12-02",
+    "predictions": [
+      {
+        "symbol": "2408",
+        "name": "南亞科",
+        "prev_close": 146.0,
+        "direction": "up",
+        "target_range": "145-148",
+        "confidence": 0.86,
+        "reasons": [
+          "DRAM龍頭，昨日法人買超5,263張",
+          "12/01驗證成功+2.40%",
+          "記憶體價格企穩延續"
+        ]
+      },
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "prev_close": 289.5,
+        "direction": "up",
+        "target_range": "288-291",
+        "confidence": 0.85,
+        "reasons": [
+          "AI伺服器龍頭",
+          "外資買超5,319張",
+          "雲端資本支出續增"
+        ]
+      },
+      {
+        "symbol": "2454",
+        "name": "聯發科",
+        "prev_close": 1440.0,
+        "direction": "up",
+        "target_range": "1445-1455",
+        "confidence": 0.82,
+        "reasons": [
+          "IC設計龍頭",
+          "法人買超5,508張",
+          "手機市場回溫，天璣9400訂單強"
+        ]
+      }
+    ],
+    "framework": "五維度評分系統（修正版）",
+    "accuracy": "pending",
+    "notes": "修正版：原誤報欣興法人買超18,142張，實際僅237張。調整為DRAM+AI伺服器+IC設計組合"
   }
 }
