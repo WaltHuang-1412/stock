@@ -1,0 +1,159 @@
+{
+  "date": "2025-12-03",
+  "market_context": {
+    "us_market": "NASDAQ +0.59%, S&P500 +0.25%, 費半 +1.84%",
+    "major_news": [
+      "費城半導體指數大漲+1.84%",
+      "台積電ADR上漲+1.53%，聯電ADR飆升+3.32%",
+      "史上罕見：50檔股票投信+外資一致買超",
+      "傳產全面復甦，塑化四寶領軍"
+    ]
+  },
+  "recommendations": [
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "recommend_price": 16.5,
+      "current_price": 16.35,
+      "target_price": 18.0,
+      "stop_loss": 15.5,
+      "position": "15-20%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 92,
+      "五維度": {
+        "法人數據": 30,
+        "時事現況": 26,
+        "產業邏輯": 18,
+        "價格位置": 10,
+        "技術面": 8
+      },
+      "reason": "投信+外資一致買超32,187K，面板景氣復甦，庫存去化完成",
+      "status": "pending",
+      "industry": {
+        "sector": "電子",
+        "sub_type": "面板",
+        "drivers": ["面板價格上漲", "庫存去化", "TV需求復甦"]
+      }
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "recommend_price": 1080,
+      "current_price": 1075,
+      "target_price": 1120,
+      "stop_loss": 1040,
+      "position": "15-20%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 90,
+      "五維度": {
+        "法人數據": 26,
+        "時事現況": 28,
+        "產業邏輯": 18,
+        "價格位置": 10,
+        "技術面": 8
+      },
+      "reason": "投信+外資一致買超5,931K，費半+1.84%，ADR+1.53%，AI需求強勁",
+      "status": "pending",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "晶圓代工",
+        "drivers": ["AI需求", "先進製程", "CoWoS擴產"]
+      }
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "recommend_price": 54.0,
+      "current_price": 53.8,
+      "target_price": 58.0,
+      "stop_loss": 51.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 85,
+      "五維度": {
+        "法人數據": 28,
+        "時事現況": 22,
+        "產業邏輯": 17,
+        "價格位置": 10,
+        "技術面": 8
+      },
+      "reason": "投信+外資一致買超23,297K，塑化龍頭，原料價格上漲受惠",
+      "status": "pending",
+      "industry": {
+        "sector": "傳產",
+        "sub_type": "塑化",
+        "drivers": ["原料漲價", "景氣循環", "中國需求"]
+      }
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "recommend_price": 340,
+      "current_price": 338,
+      "target_price": 360,
+      "stop_loss": 325,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 83,
+      "五維度": {
+        "法人數據": 25,
+        "時事現況": 25,
+        "產業邏輯": 16,
+        "價格位置": 9,
+        "技術面": 8
+      },
+      "reason": "投信+外資一致買超5,325K，AI伺服器龍頭，受惠雲端資本支出",
+      "status": "pending",
+      "industry": {
+        "sector": "電子",
+        "sub_type": "伺服器/AI",
+        "drivers": ["AI伺服器", "雲端資本支出", "GPU需求"]
+      }
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "recommend_price": 20.0,
+      "current_price": 19.95,
+      "target_price": 21.5,
+      "stop_loss": 19.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 80,
+      "五維度": {
+        "法人數據": 26,
+        "時事現況": 20,
+        "產業邏輯": 16,
+        "價格位置": 10,
+        "技術面": 8
+      },
+      "reason": "投信+外資一致買超6,013K，純銀行股，受惠升息循環",
+      "status": "pending",
+      "industry": {
+        "sector": "金融",
+        "sub_type": "純銀行",
+        "drivers": ["利差改善", "放款成長", "央行政策"]
+      }
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "三大法人賣超-71,090K，記憶體產業弱勢",
+      "score": 35
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "三大法人賣超-38,926K，記憶體逆風",
+      "score": 38
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "reason": "投信+外資雙賣，航空業逆風",
+      "score": 42
+    }
+  ]
+}

@@ -54,6 +54,14 @@ date "+%Y-%m-%d %A"  # 確認系統當前日期和星期
 
 ### 🚨 強制分析流程（必須按順序執行）
 
+**Step 0: 國際市場數據（盤前必須執行）**
+```bash
+# 盤前分析第一步：獲取最新國際市場數據
+python3 scripts/fetch_us_asia_markets.py
+```
+⚠️ **禁止使用「資料更新中」** - 必須獲取真實即時數據
+⚠️ **禁止硬編碼數據** - 所有國際市場數據必須即時查詢
+
 **Step 1: 歷史成功驗證（第一優先）**
 ```bash
 # 必須先查看最近推薦結果
@@ -823,6 +831,8 @@ recommended_stocks = [r['stock_code'] for r in tracking['recommendations']]
 ### 📰 時事軌評分細則（50分）
 
 **國際面（20分）**
+⚠️ **注意**：必須執行 `python3 scripts/fetch_us_asia_markets.py` 獲取真實數據
+
 | 條件 | 分數 |
 |------|------|
 | 費半 ≥+2% | 18-20 |
@@ -830,6 +840,8 @@ recommended_stocks = [r['stock_code'] for r in tracking['recommendations']]
 | 費半 0~1% | 10-13 |
 | 費半 負 | 5-9 |
 | 輝達大漲加分 | +2 |
+| 台積電ADR+2%加分 | +1 |
+| 多數ADR正成長 | +1 |
 
 **產業催化（20分）**
 | 條件 | 分數 |
