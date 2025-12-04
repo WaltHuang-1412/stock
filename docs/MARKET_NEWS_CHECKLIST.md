@@ -168,7 +168,7 @@ WebSearch("Taiwan stock market news semiconductor")
 
 **盤中分析**（12:30）：
 - [ ] 執行WebSearch盤中重大突發新聞
-- [ ] 執行intraday_scanner.py驗證時事利多是否發酵
+- [ ] 執行intraday_dual_track.py驗證時事利多是否發酵
 
 **盤後分析**（14:30後）：
 - [ ] 執行WebSearch當日收盤新聞

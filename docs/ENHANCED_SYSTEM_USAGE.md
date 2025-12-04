@@ -305,7 +305,7 @@ cp templates/weekly_report_template.md data/weekly/2025-11-18_weekly_report.md
 4. 🆕 **推薦股票時建立追蹤記錄**（tracking_YYYY-MM-DD.json）
 
 ### 12:30 - 盤中分析
-1. ✅ 執行 intraday_scanner.py
+1. ✅ 執行 intraday_dual_track.py
 2. ✅ 分析盤前預測股票
 3. ✅ 給出尾盤策略
 

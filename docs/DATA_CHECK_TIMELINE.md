@@ -151,7 +151,7 @@ python3 check_institutional.py 1303 20251119
 
 #### 誰檢查：系統自動 + AI
 
-**系統自動檢查**（intraday_scanner.py）：
+**系統自動檢查**（intraday_dual_track.py）：
 ```python
 # 程式會自動檢查：
 - Yahoo Finance是否連接成功
@@ -165,7 +165,7 @@ python3 check_institutional.py 1303 20251119
 
 **我（AI）必須做**：
 ```markdown
-執行intraday_scanner.py後：
+執行intraday_dual_track.py後：
 
 1️⃣ 檢查輸出合理性
 - 量比是否合理（不會>10x）
@@ -189,7 +189,7 @@ python3 check_institutional.py 1303 20251119
 
 **觸發條件**：
 - ✅ 用戶說「盤中分析」
-- ✅ 執行intraday_scanner.py
+- ✅ 執行intraday_dual_track.py
 
 **檢查項目**：
 - [ ] 股價數據可用
@@ -530,7 +530,7 @@ data/tracking/:
    - 驗證外資0張、法人對決
 
 3️⃣ **盤中分析時**（自動+建議）
-   - intraday_scanner.py自動檢查
+   - intraday_dual_track.py自動檢查
    - 用戶對照券商軟體（建議）
 
 4️⃣ **盤後分析時**（自動）

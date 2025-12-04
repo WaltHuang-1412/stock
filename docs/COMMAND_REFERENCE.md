@@ -56,13 +56,13 @@ python3 check_institutional.py 1303 20251119
 
 ---
 
-### 2. intraday_scanner.py - 盤中量能掃描器
+### 2. intraday_dual_track.py - 盤中雙軌分析
 
-**用途**：盤中掃描「法人正在佈局、但還沒大漲」的機會股
+**用途**：雙軌並行 - Track A追蹤盤前推薦股表現 + Track B全市場掃描新機會
 
 **執行方式**：
 ```bash
-python3 intraday_scanner.py
+python3 intraday_dual_track.py
 ```
 
 **執行時機**：
@@ -71,26 +71,31 @@ python3 intraday_scanner.py
 
 **核心邏輯**：
 ```
-昨日法人買超 + 今日爆量(3x) + 小漲(<3%) = ✅ 法人吸貨中（機會）
-昨日法人買超 + 今日爆量(3x) + 大漲(>5%) = ❌ 已大漲（太晚）
-昨日法人賣超 + 今日爆量(3x) + 下跌 = ❌ 法人出貨（避開）
+Track A：分析盤前推薦股票表現
+- 給出操作建議（續抱/停損/加碼）而非成功失敗判斷
+- 根據價量變化提供實用的尾盤策略
+
+Track B：全市場掃描（100+股票）
+- 發現盤中異動股票，標註漲幅與量比
+- 明確標示是否為盤前推薦，防止事後諸葛
 ```
 
 **輸出範例**：
 ```
-📊 盤中量能掃描報告 - 2025-11-20 12:30
+📊 Track A：盤前推薦股票追蹤
 
-✅ 機會股（吸貨中）：
-1. 南亞(1303)：+1.2%、量比3.5x、昨日法人+18,075張
-   → 法人吸貨中、尾盤可買
+| 股票 | 昨收 | 現價 | 漲跌% | 量比 | 操作建議 |
+|------|------|------|-------|------|---------|
+| 南亞(1303) | 67.70 | 63.40 | -6.35% | 0.9x | ⚠️ 接近停損64.5，觀察是否破64 |
+| 群創(3481) | 14.20 | 14.35 | +1.06% | 0.8x | ✅ 續抱，面板邏輯仍在 |
 
-⚠️ 法人對決：
-1. 富邦金(2881)：-0.3%、量比2.1x
-   → 投信買vs外資賣、等盤後數據
+🌐 Track B：全市場機會掃描（新發現）
 
-❌ 已大漲（太晚）：
-1. 聯電(2303)：+5.8%、量比4.2x
-   → 已大漲、不追高
+📈 漲幅TOP5（盤中新發現）
+| 股票 | 漲跌% | 量比 | 分析 | 行動 |
+|------|-------|------|------|------|
+| 華邦電(2344) | +3.58% | 1.5x | 記憶體反彈 | ❌ 不追高 |
+| 台新金(2887) | +2.13% | 1.2x | 金融輪動 | 🔍 觀察 |
 ```
 
 **使用時機**：
@@ -392,7 +397,7 @@ cat data/tracking/reports/2025-11-18_1303_7day_report.md
 |------|------|------|
 | 09:00前 | 盤前分析 | - |
 | - | 驗證法人數據 | `python3 check_institutional.py 1303 20251119` |
-| 12:30 | 盤中分析 | `python3 intraday_scanner.py` |
+| 12:30 | 盤中分析 | `python3 intraday_dual_track.py` |
 | 14:30後 | 盤後分析 | - |
 | - | 更新追蹤 | `python3 scripts/stock_tracker.py` |
 | 週五15:00 | 週報 | 手動製作（參考範本） |
@@ -405,7 +410,7 @@ cat data/tracking/reports/2025-11-18_1303_7day_report.md
 |------|------|
 | 驗證外資0張 | `python3 check_institutional.py 2891 20251119` |
 | 查詢法人數據 | `python3 check_institutional.py 2330 20251119` |
-| 盤中掃描機會 | `python3 intraday_scanner.py` |
+| 盤中雙軌分析 | `python3 intraday_dual_track.py` |
 | 更新追蹤記錄 | `python3 scripts/stock_tracker.py` |
 | 查看Git狀態 | `git status` |
 | 查看今日分析 | `cat data/2025-11-20/before_market_analysis.md` |
@@ -454,18 +459,19 @@ python3 check_institutional.py 1303 20251119
 ### 情境2：盤中12:30想找機會股
 
 ```bash
-# 1. 執行盤中掃描
-python3 intraday_scanner.py
+# 1. 執行盤中雙軌分析
+python3 intraday_dual_track.py
 
-# 2. 查看機會股
-# 輸出會顯示：✅ 機會股（吸貨中）
+# 2. 查看Track A（盤前推薦股）
+# 輸出會顯示：續抱觀察、大跌檢查停損位等
 
-# 3. 驗證法人數據
-python3 check_institutional.py 1303 20251119
+# 3. 查看Track B（全市場掃描）
+# 輸出會顯示：新發現漲幅TOP5、跌幅TOP5等
 
-# 4. 對照券商軟體確認股價、量能
+# 4. 驗證法人數據（如有需要）
+python3 check_institutional.py 1303 20251204
 
-# 5. 決定尾盤策略
+# 5. 決定尾盤策略（基於Track A+B）
 ```
 
 ---
@@ -627,8 +633,8 @@ curl "https://www.twse.com.tw/rwd/en/fund/T86?date=20251119&selectType=ALL&respo
 # 驗證法人數據
 python3 check_institutional.py <代號> <日期>
 
-# 盤中掃描
-python3 intraday_scanner.py
+# 盤中雙軌分析
+python3 intraday_dual_track.py
 
 # 更新追蹤
 python3 scripts/stock_tracker.py
