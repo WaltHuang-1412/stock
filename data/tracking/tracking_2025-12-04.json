@@ -1,0 +1,192 @@
+{
+  "date": "2025-12-04",
+  "market_context": {
+    "us_market": "NASDAQ +0.17%, S&P500 +0.30%, 費半 +1.83%",
+    "major_news": [
+      "費城半導體指數大漲+1.83%",
+      "台積電ADR上漲+1.15%",
+      "南亞法人狂買34,830張創單日新高",
+      "面板雙雄群創、友達同獲法人買超"
+    ]
+  },
+  "recommendations": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "recommend_price": 68.0,
+      "current_price": 67.70,
+      "target_price": 72.0,
+      "stop_loss": 64.5,
+      "position": "15-20%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 92,
+      "五維度": {
+        "法人數據": 30,
+        "時事現況": 27,
+        "產業邏輯": 18,
+        "價格位置": 9,
+        "技術面": 8
+      },
+      "reason": "昨日+5.12%大漲，法人狂買34,830張，塑化景氣循環向上",
+      "status": "pending",
+      "type": "stable",
+      "time_horizon": "1-3個月",
+      "target_return": "+6%",
+      "industry": {
+        "sector": "傳產",
+        "sub_type": "塑化",
+        "drivers": ["原料漲價", "景氣循環", "中國需求"]
+      }
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "recommend_price": 14.2,
+      "current_price": 14.20,
+      "target_price": 15.2,
+      "stop_loss": 13.5,
+      "position": "15-20%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 88,
+      "五維度": {
+        "法人數據": 28,
+        "時事現況": 25,
+        "產業邏輯": 17,
+        "價格位置": 10,
+        "技術面": 8
+      },
+      "reason": "法人連買24,730張，面板價格上漲週期，庫存去化完成",
+      "status": "pending",
+      "type": "stable",
+      "time_horizon": "1-3個月",
+      "target_return": "+6%",
+      "industry": {
+        "sector": "電子",
+        "sub_type": "面板",
+        "drivers": ["面板漲價", "TV需求", "庫存去化"]
+      }
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "recommend_price": 46.3,
+      "current_price": 46.0,
+      "target_price": 48.5,
+      "stop_loss": 44.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 85,
+      "五維度": {
+        "法人數據": 27,
+        "時事現況": 26,
+        "產業邏輯": 16,
+        "價格位置": 8,
+        "技術面": 8
+      },
+      "reason": "法人買超18,193張排第三，費半+1.83%利多，成熟製程需求穩",
+      "status": "pending",
+      "type": "stable",
+      "time_horizon": "1-2個月",
+      "target_return": "+5%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "晶圓代工",
+        "drivers": ["成熟製程", "車用晶片", "費半指數"]
+      }
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "recommend_price": 179,
+      "current_price": 178.5,
+      "target_price": 188,
+      "stop_loss": 170,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 83,
+      "五維度": {
+        "法人數據": 26,
+        "時事現況": 25,
+        "產業邏輯": 16,
+        "價格位置": 8,
+        "技術面": 8
+      },
+      "reason": "法人買超11,161張，AI伺服器需求強，iPhone銷售佳",
+      "status": "pending",
+      "type": "stable",
+      "time_horizon": "1-2個月",
+      "target_return": "+5%",
+      "industry": {
+        "sector": "電子",
+        "sub_type": "代工/AI伺服器",
+        "drivers": ["AI伺服器", "iPhone", "電動車"]
+      }
+    },
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "recommend_price": 61.8,
+      "current_price": 61.5,
+      "target_price": 64.5,
+      "stop_loss": 59.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 80,
+      "五維度": {
+        "法人數據": 26,
+        "時事現況": 20,
+        "產業邏輯": 16,
+        "價格位置": 10,
+        "技術面": 8
+      },
+      "reason": "法人買超16,198張排第四，綜合金控優於純銀行",
+      "status": "pending",
+      "type": "stable",
+      "time_horizon": "2-3個月",
+      "target_return": "+4%",
+      "industry": {
+        "sector": "金融",
+        "sub_type": "綜合金控",
+        "drivers": ["壽險復甦", "股市上漲", "利差改善"]
+      }
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "法人賣超-16,456張，記憶體產業持續弱勢",
+      "score": 35
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "reason": "法人賣超-16,330張，DRAM產業逆風",
+      "score": 38
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "reason": "法人賣超-15,767張，純銀行股缺乏題材",
+      "score": 40
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "reason": "昨日失準，純銀行股動能不足",
+      "score": 45
+    }
+  ],
+  "sync_check": {
+    "before_market_recommendations": ["1303", "3481", "2303", "2317", "2882"],
+    "tracking_recommendations": ["1303", "3481", "2303", "2317", "2882"],
+    "is_synced": true
+  },
+  "metadata": {
+    "created_at": "2025-12-04 08:35",
+    "based_on_historical_validation": true,
+    "yesterday_accuracy": "80%",
+    "success_patterns": ["塑化", "面板", "AI伺服器"],
+    "failure_patterns": ["純銀行", "記憶體"]
+  }
+}
