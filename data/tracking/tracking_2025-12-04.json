@@ -14,7 +14,7 @@
       "stock_code": "1303",
       "stock_name": "南亞",
       "recommend_price": 68.0,
-      "current_price": 67.70,
+      "current_price": 67.7,
       "target_price": 72.0,
       "stop_loss": 64.5,
       "position": "15-20%",
@@ -35,14 +35,18 @@
       "industry": {
         "sector": "傳產",
         "sub_type": "塑化",
-        "drivers": ["原料漲價", "景氣循環", "中國需求"]
+        "drivers": [
+          "原料漲價",
+          "景氣循環",
+          "中國需求"
+        ]
       }
     },
     {
       "stock_code": "3481",
       "stock_name": "群創",
       "recommend_price": 14.2,
-      "current_price": 14.20,
+      "current_price": 14.2,
       "target_price": 15.2,
       "stop_loss": 13.5,
       "position": "15-20%",
@@ -63,7 +67,11 @@
       "industry": {
         "sector": "電子",
         "sub_type": "面板",
-        "drivers": ["面板漲價", "TV需求", "庫存去化"]
+        "drivers": [
+          "面板漲價",
+          "TV需求",
+          "庫存去化"
+        ]
       }
     },
     {
@@ -91,7 +99,11 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工",
-        "drivers": ["成熟製程", "車用晶片", "費半指數"]
+        "drivers": [
+          "成熟製程",
+          "車用晶片",
+          "費半指數"
+        ]
       }
     },
     {
@@ -119,7 +131,11 @@
       "industry": {
         "sector": "電子",
         "sub_type": "代工/AI伺服器",
-        "drivers": ["AI伺服器", "iPhone", "電動車"]
+        "drivers": [
+          "AI伺服器",
+          "iPhone",
+          "電動車"
+        ]
       }
     },
     {
@@ -147,7 +163,11 @@
       "industry": {
         "sector": "金融",
         "sub_type": "綜合金控",
-        "drivers": ["壽險復甦", "股市上漲", "利差改善"]
+        "drivers": [
+          "壽險復甦",
+          "股市上漲",
+          "利差改善"
+        ]
       }
     }
   ],
@@ -178,15 +198,39 @@
     }
   ],
   "sync_check": {
-    "before_market_recommendations": ["1303", "3481", "2303", "2317", "2882"],
-    "tracking_recommendations": ["1303", "3481", "2303", "2317", "2882"],
+    "before_market_recommendations": [
+      "1303",
+      "3481",
+      "2303",
+      "2317",
+      "2882"
+    ],
+    "tracking_recommendations": [
+      "1303",
+      "3481",
+      "2303",
+      "2317",
+      "2882"
+    ],
     "is_synced": true
   },
   "metadata": {
     "created_at": "2025-12-04 08:35",
     "based_on_historical_validation": true,
     "yesterday_accuracy": "80%",
-    "success_patterns": ["塑化", "面板", "AI伺服器"],
-    "failure_patterns": ["純銀行", "記憶體"]
+    "success_patterns": [
+      "塑化",
+      "面板",
+      "AI伺服器"
+    ],
+    "failure_patterns": [
+      "純銀行",
+      "記憶體"
+    ],
+    "updated_at": "2025-12-05 19:35:22",
+    "tracking_active": 0,
+    "tracking_completed": 0,
+    "success_count": 0,
+    "stop_loss_count": 0
   }
 }

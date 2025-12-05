@@ -36,7 +36,11 @@
       "industry": {
         "sector": "金融",
         "sub_type": "綜合金控",
-        "drivers": ["金融輪動", "壽險復甦", "外資買超"]
+        "drivers": [
+          "金融輪動",
+          "壽險復甦",
+          "外資買超"
+        ]
       },
       "historical_success_pattern": "延續國泰金昨日+2.07%成功模式"
     },
@@ -58,14 +62,20 @@
         "技術面": 7
       },
       "reason": "投信+外資一致買超+38,062張，記憶體底部復甦，延續聯電成功模式",
-      "status": "pending",
+      "status": "tracking",
+      "actual_buy_price": 58.082,
+      "actual_buy_date": "2025-12-05",
       "type": "stable",
       "time_horizon": "1-2週",
       "target_return": "+7%",
       "industry": {
         "sector": "半導體",
         "sub_type": "記憶體",
-        "drivers": ["記憶體復甦", "AI應用", "庫存去化"]
+        "drivers": [
+          "記憶體復甦",
+          "AI應用",
+          "庫存去化"
+        ]
       },
       "historical_success_pattern": "延續聯電昨日+3.67%成功模式"
     },
@@ -87,14 +97,20 @@
         "技術面": 8
       },
       "reason": "昨日推薦+1.06%成功，外資續買+24,528張，面板復甦確認",
-      "status": "pending",
+      "status": "tracking",
+      "actual_buy_price": 14.02,
+      "actual_buy_date": "2025-12-05",
       "type": "stable",
       "time_horizon": "2-3週",
       "target_return": "+6%",
       "industry": {
         "sector": "電子",
         "sub_type": "面板",
-        "drivers": ["面板漲價", "庫存去化", "TV需求復甦"]
+        "drivers": [
+          "面板漲價",
+          "庫存去化",
+          "TV需求復甦"
+        ]
       },
       "historical_success_pattern": "延續昨日自身推薦成功模式"
     },
@@ -123,7 +139,11 @@
       "industry": {
         "sector": "金融",
         "sub_type": "綜合金控",
-        "drivers": ["金融輪動", "壽險復甦", "銀行穩健"]
+        "drivers": [
+          "金融輪動",
+          "壽險復甦",
+          "銀行穩健"
+        ]
       },
       "historical_success_pattern": "延續昨日自身推薦成功模式"
     },
@@ -152,7 +172,11 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工",
-        "drivers": ["成熟製程", "車用晶片", "ADR強勢"]
+        "drivers": [
+          "成熟製程",
+          "車用晶片",
+          "ADR強勢"
+        ]
       },
       "historical_success_pattern": "延續昨日自身推薦成功模式"
     }
@@ -186,16 +210,35 @@
     }
   ],
   "sync_check": {
-    "before_market_recommendations": ["2887", "2344", "3481", "2882", "2303"],
-    "tracking_recommendations": ["2887", "2344", "3481", "2882", "2303"],
+    "before_market_recommendations": [
+      "2887",
+      "2344",
+      "3481",
+      "2882",
+      "2303"
+    ],
+    "tracking_recommendations": [
+      "2887",
+      "2344",
+      "3481",
+      "2882",
+      "2303"
+    ],
     "is_synced": true
   },
   "metadata": {
     "created_at": "2025-12-05 08:45",
     "based_on_historical_validation": true,
     "yesterday_accuracy": "80%",
-    "success_patterns": ["金融股輪動", "半導體復甦", "面板復甦"],
-    "failure_patterns": ["塑化股系統風險", "純銀行缺題材"],
+    "success_patterns": [
+      "金融股輪動",
+      "半導體復甦",
+      "面板復甦"
+    ],
+    "failure_patterns": [
+      "塑化股系統風險",
+      "純銀行缺題材"
+    ],
     "key_insights": [
       "歷史驗證優先：成功模式延續有效",
       "法人態度可能急轉：南亞從大買到大賣的教訓",
@@ -206,6 +249,11 @@
       "cash_reserve": "30-45%",
       "stop_loss": "-5% for all positions",
       "position_limit": "20% per stock"
-    }
+    },
+    "updated_at": "2025-12-05 19:35:27",
+    "tracking_active": 2,
+    "tracking_completed": 0,
+    "success_count": 0,
+    "stop_loss_count": 0
   }
 }
