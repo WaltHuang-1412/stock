@@ -201,11 +201,20 @@ stock/
 - 用法：`python3 scripts/institutional_positioning_detector.py`
 - 優勢：即時機會發現、量能異動偵測、新標的挖掘
 
-**intraday_analyzer_v2.py** - 盤中五維度分析工具
-- 執行時機：12:30
-- 功能：驗證盤前推薦表現、給出尾盤策略
-- 特色：防事後諸葛（只分析tracking.json中的股票）
+**intraday_analyzer_v2.py** - Track A測試工具 🔧 **測試專用**
+- 執行時機：開發測試時
+- 功能：僅Track A（追蹤推薦股表現）
+- 特色：快速驗證、防事後諸葛
 - 用法：`python3 scripts/intraday_analyzer_v2.py`
+- ⚠️ **正式分析請用 intraday_dual_track.py**
+
+**intraday_dual_track.py** - 正式盤中雙軌分析 🆕 **推薦使用**
+- 執行時機：12:30（正式分析）
+- 功能：完整雙軌系統（Track A + Track B）
+- Track A：追蹤盤前推薦股表現
+- Track B：全市場掃描異動、發現新機會
+- 用法：`python3 scripts/intraday_dual_track.py`
+- 輸出：雙軌分析結果 + 尾盤操作建議
 
 **stock_tracker.py** - 個股追蹤系統 🆕
 - 執行時機：每日盤後14:30後
@@ -329,10 +338,12 @@ python3 scripts/stock_tracker.py
 4. 🆕 **推薦股票時建立追蹤記錄**
 
 **12:30 - 盤中分析（雙軌模式）**：
-1. 執行 intraday_dual_track.py
+1. 執行 `python3 scripts/intraday_dual_track.py` （正式雙軌工具）
 2. Track A：追蹤盤前推薦股表現，給操作建議（非判斷對錯）
 3. Track B：全市場掃描異動，發現新機會
 4. 整合雙軌結果，提供尾盤操作建議
+
+⚠️ 注意：不要使用 `intraday_analyzer_v2.py`（僅Track A測試用）
 
 **14:30後 - 盤後分析**：
 1. 查詢今日法人數據

@@ -339,14 +339,25 @@ def generate_trading_suggestions(tracking_results, market_scan, tracking):
 
 def save_analysis_report(tracking_results, market_scan, date_str):
     """儲存分析報告"""
+
+    # 轉換numpy類型為Python原生類型
+    def convert_numpy(obj):
+        if hasattr(obj, 'item'):
+            return obj.item()
+        elif isinstance(obj, dict):
+            return {k: convert_numpy(v) for k, v in obj.items()}
+        elif isinstance(obj, list):
+            return [convert_numpy(item) for item in obj]
+        return obj
+
     report = {
         'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-        'tracking_results': tracking_results,
+        'tracking_results': convert_numpy(tracking_results) if tracking_results else [],
         'market_scan': {
-            'gainers': market_scan['gainers'][:10],
-            'losers': market_scan['losers'][:10],
-            'volume_burst': market_scan['volume_burst'][:10],
-            'suspicious': market_scan['suspicious'][:10]
+            'gainers': convert_numpy(market_scan['gainers'][:10]),
+            'losers': convert_numpy(market_scan['losers'][:10]),
+            'volume_burst': convert_numpy(market_scan['volume_burst'][:10]),
+            'suspicious': convert_numpy(market_scan['suspicious'][:10])
         }
     }
 
@@ -355,8 +366,12 @@ def save_analysis_report(tracking_results, market_scan, date_str):
         os.makedirs(output_dir)
 
     output_file = f'{output_dir}/dual_track_analysis.json'
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(report, f, ensure_ascii=False, indent=2)
+    try:
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(report, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"⚠️ 儲存報告失敗: {e}")
+        print("分析結果已顯示完畢")
 
     print(f"\n💾 分析報告已儲存至: {output_file}")
 

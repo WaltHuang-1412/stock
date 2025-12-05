@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 """
-盤中五維度分析工具 v2.0
-整合五維度評分系統，防止事後諸葛
+Track A測試工具 v2.0 - 僅測試用途
+⚠️ 注意：這是測試專用工具，僅包含Track A
+⚠️ 正式盤中分析請使用：intraday_dual_track.py
 
-執行時機：12:30
-強制規則：只分析盤前推薦股票（從tracking.json讀取）
-輸出：推薦等級 + 明確倉位 + 進場價 + 停損
+功能：僅Track A（追蹤盤前推薦股表現）
+適用：開發測試、快速驗證
+執行時機：開發測試時
+正式分析：請使用 intraday_dual_track.py 完整雙軌系統
 
 作者：Claude Code
-最後更新：2025-11-21
+最後更新：2025-12-05
 """
 
 import yfinance as yf
