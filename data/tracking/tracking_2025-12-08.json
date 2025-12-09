@@ -15,6 +15,8 @@
       "stock_code": "3481",
       "stock_name": "群創",
       "recommend_price": 14.65,
+      "buy_date": "2025-12-08",
+      "recommend_date": "2025-12-08",
       "current_price": 14.35,
       "target_price": 16.0,
       "stop_loss": 13.8,
@@ -42,12 +44,30 @@
           "庫存去化"
         ]
       },
-      "historical_success_pattern": "延續面板復甦成功模式"
+      "historical_success_pattern": "延續面板復甦成功模式",
+      "daily_updates": [
+        {
+          "date": "2025-12-08",
+          "day": 0,
+          "close_price": 14.2,
+          "gain_loss_pct": -3.07,
+          "volume": 54165696,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     },
     {
       "stock_code": "2881",
       "stock_name": "富邦金",
       "recommend_price": 95.75,
+      "buy_date": "2025-12-08",
+      "recommend_date": "2025-12-08",
       "current_price": null,
       "target_price": 102.0,
       "stop_loss": 91.0,
@@ -75,12 +95,30 @@
           "綜合經營"
         ]
       },
-      "historical_success_pattern": "延續金融股輪動成功模式"
+      "historical_success_pattern": "延續金融股輪動成功模式",
+      "daily_updates": [
+        {
+          "date": "2025-12-08",
+          "day": 0,
+          "close_price": 95.5,
+          "gain_loss_pct": -0.26,
+          "volume": 15689877,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     },
     {
       "stock_code": "3231",
       "stock_name": "緯創",
       "recommend_price": 122.0,
+      "buy_date": "2025-12-08",
+      "recommend_date": "2025-12-08",
       "current_price": null,
       "target_price": 130.0,
       "stop_loss": 116.0,
@@ -95,7 +133,7 @@
         "技術面": 6
       },
       "reason": "外資買超+9,871張，AI伺服器需求強勁，費半+1.09%",
-      "status": "pending",
+      "status": "success",
       "type": "stable",
       "time_horizon": "2-3週",
       "target_return": "+6-8%",
@@ -107,12 +145,30 @@
           "輝達供應鏈",
           "雲端資本支出"
         ]
-      }
+      },
+      "daily_updates": [
+        {
+          "date": "2025-12-08",
+          "day": 0,
+          "close_price": 149.0,
+          "gain_loss_pct": 22.13,
+          "volume": 38388723,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "✅ 達目標價130.0元（+22.13%）"
+        }
+      ]
     },
     {
       "stock_code": "2883",
       "stock_name": "玉山金",
       "recommend_price": 16.05,
+      "buy_date": "2025-12-08",
+      "recommend_date": "2025-12-08",
       "current_price": null,
       "target_price": 17.0,
       "stop_loss": 15.2,
@@ -139,12 +195,30 @@
           "財富管理",
           "信用卡業務"
         ]
-      }
+      },
+      "daily_updates": [
+        {
+          "date": "2025-12-08",
+          "day": 0,
+          "close_price": 16.2,
+          "gain_loss_pct": 0.93,
+          "volume": 33965545,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     },
     {
       "stock_code": "2303",
       "stock_name": "聯電",
       "recommend_price": 48.0,
+      "buy_date": "2025-12-08",
+      "recommend_date": "2025-12-08",
       "current_price": 48.0,
       "target_price": 50.5,
       "stop_loss": 45.5,
@@ -171,7 +245,23 @@
           "車用晶片",
           "ADR強勢"
         ]
-      }
+      },
+      "daily_updates": [
+        {
+          "date": "2025-12-08",
+          "day": 0,
+          "close_price": 49.3,
+          "gain_loss_pct": 2.71,
+          "volume": 66703520,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     }
   ],
   "avoid_stocks": [
@@ -246,10 +336,10 @@
       "stop_loss": "-5% for all positions",
       "position_limit": "20% per stock"
     },
-    "updated_at": "2025-12-08 17:49:14",
+    "updated_at": "2025-12-08 17:56:17",
     "tracking_active": 0,
-    "tracking_completed": 0,
-    "success_count": 0,
+    "tracking_completed": 1,
+    "success_count": 1,
     "stop_loss_count": 0
   }
 }
