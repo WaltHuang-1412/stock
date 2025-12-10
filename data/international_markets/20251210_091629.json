@@ -1,0 +1,139 @@
+{
+  "query_info": {
+    "query_time": "2025-12-10T09:16:25.910885+08:00",
+    "session_info": {
+      "us_session": "盤後交易",
+      "tw_session": "正常交易",
+      "query_time_ny": "2025-12-09 20:16:25 EST",
+      "query_time_taipei": "2025-12-10 09:16:25 CST"
+    }
+  },
+  "us_markets": {
+    "NASDAQ綜合指數": {
+      "symbol": "^IXIC",
+      "close_price": 23576.49,
+      "change": 30.59,
+      "change_pct": 0.13,
+      "status": "closed"
+    },
+    "S&P 500": {
+      "symbol": "^GSPC",
+      "close_price": 6840.51,
+      "change": -6.0,
+      "change_pct": -0.09,
+      "status": "closed"
+    },
+    "道瓊工業指數": {
+      "symbol": "^DJI",
+      "close_price": 47560.29,
+      "change": -179.03,
+      "change_pct": -0.38,
+      "status": "closed"
+    },
+    "費城半導體指數": {
+      "symbol": "^SOX",
+      "close_price": 7372.51,
+      "change": -2.71,
+      "change_pct": -0.04,
+      "status": "closed"
+    }
+  },
+  "taiwan_adrs": {
+    "台積電ADR": {
+      "symbol": "TSM",
+      "close_price": 303.41,
+      "change_pct": 0.51,
+      "premarket_price": null,
+      "premarket_change_pct": 0,
+      "status": "closed"
+    },
+    "聯電ADR": {
+      "symbol": "UMC",
+      "close_price": 8.09,
+      "change_pct": 0.5,
+      "premarket_price": null,
+      "premarket_change_pct": 0,
+      "status": "closed"
+    },
+    "日月光ADR": {
+      "symbol": "ASX",
+      "close_price": 15.97,
+      "change_pct": 1.46,
+      "premarket_price": null,
+      "premarket_change_pct": 0,
+      "status": "closed"
+    },
+    "中華電ADR": {
+      "symbol": "CHT",
+      "close_price": 41.4,
+      "change_pct": -0.17,
+      "premarket_price": null,
+      "premarket_change_pct": 0,
+      "status": "closed"
+    }
+  },
+  "asia_markets": {
+    "日經225": {
+      "symbol": "^N225",
+      "price": 50752.0,
+      "change_pct": 0.0,
+      "status": "updated"
+    },
+    "韓國KOSPI": {
+      "symbol": "^KS11",
+      "price": 4135.0,
+      "change_pct": 0.0,
+      "status": "updated"
+    },
+    "香港恆生": {
+      "symbol": "^HSI",
+      "price": 25434.0,
+      "change_pct": -1.29,
+      "status": "updated"
+    },
+    "上證指數": {
+      "symbol": "000001.SS",
+      "price": 3910.0,
+      "change_pct": -0.37,
+      "status": "updated"
+    },
+    "新加坡STI": {
+      "symbol": "^STI",
+      "price": 4513.0,
+      "change_pct": 0.0,
+      "status": "updated"
+    }
+  },
+  "key_indicators": {
+    "VIX恐慌指數": {
+      "symbol": "^VIX",
+      "price": 16.93,
+      "change_pct": 1.62,
+      "status": "updated"
+    },
+    "美元指數": {
+      "symbol": "DX-Y.NYB",
+      "price": 99.21,
+      "change_pct": 0.12,
+      "status": "updated"
+    },
+    "WTI原油": {
+      "symbol": "CL=F",
+      "price": 58.35,
+      "change_pct": -0.9,
+      "status": "updated"
+    },
+    "黃金": {
+      "symbol": "GC=F",
+      "price": 4238.9,
+      "change_pct": 1.23,
+      "status": "updated"
+    },
+    "美元/台幣匯率": {
+      "symbol": "TWD=X",
+      "rate": 31.171,
+      "change": 0.006,
+      "status": "updated"
+    }
+  }
+}
