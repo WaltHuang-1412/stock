@@ -184,7 +184,7 @@
         "dealer": 298,
         "total": 5937
       },
-      "status": "pending",
+      "status": "neutral",
       "daily_updates": [
         {
           "date": "2025-12-02",
@@ -269,6 +269,20 @@
             "total": 0
           },
           "notes": "⚠️ 法人買賣互抵 追蹤中 (6/7日)"
+        },
+        {
+          "date": "2025-12-09",
+          "day": 7,
+          "close_price": 296.0,
+          "gain_loss_pct": 2.25,
+          "volume": 15205195,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 7日追蹤完成、震盪（2.25%）"
         }
       ],
       "tracking_days": 7
@@ -310,7 +324,7 @@
         "dealer": 377,
         "total": 5508
       },
-      "status": "pending",
+      "status": "neutral",
       "daily_updates": [
         {
           "date": "2025-12-02",
@@ -395,6 +409,20 @@
             "total": 0
           },
           "notes": "⚠️ 法人買賣互抵 追蹤中 (6/7日)"
+        },
+        {
+          "date": "2025-12-09",
+          "day": 7,
+          "close_price": 1420.0,
+          "gain_loss_pct": -1.39,
+          "volume": 5242823,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 7日追蹤完成、震盪（-1.39%）"
         }
       ],
       "tracking_days": 7
@@ -466,9 +494,9 @@
     ]
   },
   "metadata": {
-    "updated_at": "2025-12-08 17:56:28",
+    "updated_at": "2025-12-09 22:07:08",
     "tracking_active": 0,
-    "tracking_completed": 1,
+    "tracking_completed": 3,
     "success_count": 1,
     "stop_loss_count": 0,
     "normalized_at": "2025-12-02 16:51:24",
