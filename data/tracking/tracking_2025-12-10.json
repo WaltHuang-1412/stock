@@ -336,10 +336,18 @@
       "stop_loss": "-5% for all positions",
       "position_limit": "20% per stock"
     },
-    "updated_at": "2025-12-10 18:27:39",
+    "updated_at": "2025-12-11 18:35:00",
     "tracking_active": 4,
     "tracking_completed": 1,
     "success_count": 0,
-    "stop_loss_count": 1
+    "stop_loss_count": 1,
+    "positioning_strategy_results": {
+      "date": "2025-12-11",
+      "accuracy": "25%",
+      "total": 4,
+      "success": 1,
+      "failure": 3,
+      "lesson": "佈局股策略在大盤下跌日效果差，需加入大盤環境過濾"
+    }
   }
 }
