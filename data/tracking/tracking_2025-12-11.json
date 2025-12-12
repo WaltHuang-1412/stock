@@ -5,69 +5,150 @@
     "taiwan_adr": "台積電ADR +0.51%, 日月光ADR +1.46%",
     "major_news": [
       "費半-0.04%中性偏弱",
-      "佈局股策略首測日"
+      "佈局股策略首測日",
+      "大盤-0.57%下跌"
     ]
   },
-  "positioning_stocks": [
+  "recommendations": [
     {
+      "type": "positioning",
       "stock_code": "2382",
       "stock_name": "廣達",
-      "consecutive_days": 3,
-      "cumulative_buy": 17867,
-      "five_day_change": -1.4,
+      "recommend_price": 325.0,
       "recommend_date": "2025-12-11",
       "close_price": 323.0,
       "daily_change": -0.86,
+      "target_price": 340.0,
+      "stop_loss": 310.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 78,
+      "五維度": {
+        "時事軌": 35,
+        "法人軌": 43
+      },
+      "reason": "連3日買超+17.9M，5日漲幅-1.4%，佈局中",
+      "time_horizon": "1-2週",
+      "status": "completed",
       "result": "failure",
-      "status": "completed"
+      "industry": {
+        "sector": "電子",
+        "sub_type": "AI伺服器",
+        "drivers": ["AI需求", "法人連買"]
+      }
     },
     {
+      "type": "positioning",
       "stock_code": "2303",
       "stock_name": "聯電",
-      "consecutive_days": 3,
-      "cumulative_buy": 85207,
-      "five_day_change": 1.5,
+      "recommend_price": 49.5,
       "recommend_date": "2025-12-11",
       "close_price": 49.35,
       "daily_change": -0.10,
+      "target_price": 52.0,
+      "stop_loss": 47.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 76,
+      "五維度": {
+        "時事軌": 33,
+        "法人軌": 43
+      },
+      "reason": "連3日買超+85.2M，5日漲幅+1.5%，佈局中",
+      "time_horizon": "1-2週",
+      "status": "completed",
       "result": "failure",
-      "status": "completed"
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "晶圓代工",
+        "drivers": ["成熟製程", "法人連買"]
+      }
     },
     {
+      "type": "positioning",
       "stock_code": "2887",
       "stock_name": "台新金",
-      "consecutive_days": 3,
-      "cumulative_buy": 66643,
-      "five_day_change": 0.8,
+      "recommend_price": 23.1,
       "recommend_date": "2025-12-11",
       "close_price": 22.95,
       "daily_change": -0.26,
+      "target_price": 24.5,
+      "stop_loss": 22.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 75,
+      "五維度": {
+        "時事軌": 32,
+        "法人軌": 43
+      },
+      "reason": "連3日買超+66.6M，5日漲幅+0.8%，佈局中",
+      "time_horizon": "1-2週",
+      "status": "completed",
       "result": "failure",
-      "status": "completed"
+      "industry": {
+        "sector": "金融",
+        "sub_type": "綜合型金控",
+        "drivers": ["新光金合併", "法人連買"]
+      }
     },
     {
+      "type": "positioning",
       "stock_code": "2881",
       "stock_name": "富邦金",
-      "consecutive_days": 3,
-      "cumulative_buy": 11500,
-      "five_day_change": 0.2,
+      "recommend_price": 92.2,
       "recommend_date": "2025-12-11",
       "close_price": 92.4,
       "daily_change": 0.21,
+      "target_price": 96.0,
+      "stop_loss": 89.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 74,
+      "五維度": {
+        "時事軌": 31,
+        "法人軌": 43
+      },
+      "reason": "連3日買超+11.5M，5日漲幅+0.2%，佈局中",
+      "time_horizon": "1-2週",
+      "status": "completed",
       "result": "success",
-      "status": "completed"
+      "industry": {
+        "sector": "金融",
+        "sub_type": "壽險型金控",
+        "drivers": ["金融穩健", "法人連買"]
+      }
     }
   ],
   "avoid_stocks": [
     {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "法人大賣-49.8K，記憶體出貨",
+      "score": 30
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "法人反轉-18.2K",
+      "score": 35
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "法人賣超-13.8K",
+      "score": 38
+    },
+    {
       "stock_code": "2330",
       "stock_name": "台積電",
-      "reason": "外資轉賣-5,417張"
+      "reason": "外資轉賣-5.4K",
+      "score": 55
     },
     {
       "stock_code": "2317",
       "stock_name": "鴻海",
-      "reason": "外資大賣-9,275張"
+      "reason": "外資大賣-9.3K",
+      "score": 40
     }
   ],
   "user_holdings_update": {

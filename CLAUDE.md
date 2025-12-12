@@ -160,6 +160,30 @@ python3 scripts/fetch_us_asia_markets.py
 - ❌ **歷史失敗模式扣分** - 類似昨日失敗股票-5-15分
 - **最終決定推薦順序**
 
+**Step 6: 🚨 強制建檔（分析完成後立即執行）** 🆕
+```bash
+# 6.1 建立分析報告
+mkdir -p data/YYYY-MM-DD/
+# 寫入 before_market_analysis.md
+
+# 6.2 建立/更新 tracking 記錄
+# 寫入 data/tracking/tracking_YYYY-MM-DD.json
+```
+
+**🔥 強制建檔規則（2025-12-12新增）**：
+1. **分析完成 = 立即建檔**，不是兩個步驟，是同一個動作
+2. **絕對禁止**：分析完成後等用戶問「有建檔嗎」才建檔
+3. **絕對禁止**：只輸出分析內容但沒有寫入檔案
+4. **必須同時建立**：
+   - `data/YYYY-MM-DD/before_market_analysis.md`
+   - `data/tracking/tracking_YYYY-MM-DD.json`
+5. **建檔後回報**：「已建立 before_market_analysis.md 和 tracking.json」
+
+**⚠️ 血淚教訓（2025-12-12）**：
+- 問題：分析完成後沒有主動建檔，用戶問「有建file嗎」才發現漏了
+- 原因：把「輸出分析」和「寫入檔案」當成兩件事
+- 解決：分析完成後，**立即**執行 Write 工具建檔
+
 ### ❌ 絕對禁止的錯誤
 
 **❌ 錯誤流程（12/03前的舊模式）**：
@@ -174,16 +198,19 @@ python3 scripts/fetch_us_asia_markets.py
 3. 獲取國際市場數據 →
 4. 獲取法人數據 →
 5. 五維度評分 + 歷史驗證加減分 →
-6. 最終推薦排序
+6. 最終推薦排序 →
+7. **🚨 立即建檔**（before_market_analysis.md + tracking.json）
 
 **核心規則提醒**：
 - ✅ **歷史驗證 > 理論分析**（最重要原則）
 - ✅ **延續成功 > 尋找新標的**
-- ✅ **參考 PREDICTION 歷史教訓**（🆕 避免重蹈覆轍）
+- ✅ **參考 PREDICTION 歷史教訓**（避免重蹈覆轍）
+- ✅ **分析完成 = 立即建檔**（🆕 不等用戶提醒）
 - ❌ 絕不事後諸葛（盤前沒推薦的股票，盤中/盤後不能說「應該推薦」）
 - ❌ 絕不追高推薦（近5日漲幅>10%不推薦）
 - ❌ 絕不憑印象報價（必須查詢實際股價）
-- ❌ 絕不忽略 PREDICTION 記錄的失敗模式（🆕）
+- ❌ 絕不忽略 PREDICTION 記錄的失敗模式
+- ❌ 絕不只輸出分析而不建檔（🆕 2025-12-12教訓）
 
 ---
 
@@ -283,6 +310,21 @@ python3 scripts/intraday_dual_track.py
 - 🔥 **Track B市場發現** - 遺漏機會分析+策略驗證
 - 🔥 **風險提醒** - 量能、追高、週五效應等
 
+**Step 5: 🚨 強制建檔（分析完成後立即執行）** 🆕
+```bash
+# 寫入盤中分析報告
+# data/YYYY-MM-DD/intraday_analysis.md
+
+# 更新 tracking 記錄（加入盤中表現）
+# data/tracking/tracking_YYYY-MM-DD.json
+```
+
+**🔥 盤中強制建檔規則（2025-12-12新增）**：
+1. **分析完成 = 立即建檔**，不等用戶提醒
+2. **必須建立**：`data/YYYY-MM-DD/intraday_analysis.md`
+3. **必須更新**：`data/tracking/tracking_YYYY-MM-DD.json`（加入盤中價格）
+4. **建檔後回報**：「已建立 intraday_analysis.md」
+
 ### ❌ 絕對禁止的錯誤
 
 **❌ 錯誤流程（12/05前的問題）**：
@@ -294,17 +336,20 @@ python3 scripts/intraday_dual_track.py
 1. **🔥 Step 0-4完整執行**（強制順序）→
 2. **🔥 Track A + Track B都有深度分析**→
 3. 雙軌整合輸出尾盤策略 →
-4. 完整記錄供盤後分析使用
+4. 完整記錄供盤後分析使用 →
+5. **🚨 立即建檔**（intraday_analysis.md + 更新tracking.json）
 
 **核心規則提醒**：
 - ✅ **Track B 先看量，再看方向，最後看漲跌**
 - ✅ **量大的股票 = 資金在關注的股票**
 - ✅ **外盤主導 = 買盤；內盤主導 = 賣盤**
-- ✅ **盤中異常要對照 PREDICTION 歷史教訓**（🆕）
+- ✅ **盤中異常要對照 PREDICTION 歷史教訓**
+- ✅ **分析完成 = 立即建檔**（🆕 不等用戶提醒）
 - ❌ 絕不能只看「誰漲了」，要看「誰的量大」
 - ❌ 絕不能跳過內外盤比分析
 - ❌ 絕不能沒有「資金流向結論」
-- ❌ 絕不能忽略歷史失敗模式警示（🆕）
+- ❌ 絕不能忽略歷史失敗模式警示
+- ❌ 絕不只輸出分析而不建檔（🆕）
 
 ---
 
@@ -438,6 +483,25 @@ python3 scripts/stock_tracker.py
 4. **評分權重調整** - 五維度權重是否需要微調？
 5. **明日推薦邏輯** - 結合今日所有發現制定明日策略
 
+**Step 7: 🚨 強制建檔（分析完成後立即執行）** 🆕
+```bash
+# 寫入盤後分析報告
+# data/YYYY-MM-DD/after_market_analysis.md
+
+# 更新 tracking 記錄（加入收盤價、結果判定）
+# data/tracking/tracking_YYYY-MM-DD.json
+
+# 更新 PREDICTION_TRACKING
+# docs/PREDICTION_ACCURACY_TRACKING.md
+```
+
+**🔥 盤後強制建檔規則（2025-12-12新增）**：
+1. **分析完成 = 立即建檔**，不等用戶提醒
+2. **必須建立**：`data/YYYY-MM-DD/after_market_analysis.md`
+3. **必須更新**：`data/tracking/tracking_YYYY-MM-DD.json`（加入收盤價+結果）
+4. **必須更新**：`docs/PREDICTION_ACCURACY_TRACKING.md`（加入當日記錄）
+5. **建檔後回報**：「已建立 after_market_analysis.md，已更新 tracking.json 和 PREDICTION_TRACKING.md」
+
 ### ❌ 絕對禁止的錯誤
 
 **❌ 錯誤流程（12/05前的問題）**：
@@ -449,19 +513,22 @@ python3 scripts/stock_tracker.py
 **✅ 正確流程（12/10後的新模式）**：
 1. **🔥 Step 0-6完整執行**（強制順序）→
 2. **🔥 Track A驗證 + Track B整合 + 雙軌對比**→
-3. **🆕 更新 PREDICTION_TRACKING（每日強制）**→
+3. **更新 PREDICTION_TRACKING（每日強制）**→
 4. 基於完整發現調整明日策略 →
-5. 不浪費任何已收集數據
+5. 不浪費任何已收集數據 →
+6. **🚨 立即建檔**（after_market_analysis.md + tracking.json + PREDICTION_TRACKING.md）
 
 **核心規則提醒**：
 - ✅ **完整驗證 > 只看推薦股**
 - ✅ **數據整合 > 分散分析**
-- 🆕 **每日更新 PREDICTION_TRACKING**（不再遺漏）
+- ✅ **每日更新 PREDICTION_TRACKING**（不再遺漏）
+- ✅ **分析完成 = 立即建檔**（🆕 不等用戶提醒）
 - ❌ 絕不能跳過Track B市場發現整合
 - ❌ 絕不能沒有「遺漏機會根本原因」分析
 - ❌ 絕不能沒有「雙軌對比驗證」
 - ❌ 絕不能沒有「基於發現調整明日策略」
 - ❌ 絕不能忘記更新 PREDICTION_TRACKING
+- ❌ 絕不只輸出分析而不建檔（🆕）
 
 ---
 

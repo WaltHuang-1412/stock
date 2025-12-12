@@ -1,0 +1,120 @@
+{
+  "date": "2025-12-11",
+  "analysis_time": "12:30",
+  "track_a": {
+    "description": "盤前推薦股追蹤",
+    "stocks": [
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "recommend_price": 325,
+        "intraday_price": 322.5,
+        "change_pct": -0.77,
+        "volume_ratio": 0.8,
+        "status": "縮量下跌",
+        "action": "觀望"
+      },
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "recommend_price": 49.5,
+        "intraday_price": 49.3,
+        "change_pct": -0.40,
+        "volume_ratio": 0.9,
+        "status": "縮量持平",
+        "action": "觀望"
+      },
+      {
+        "stock_code": "2887",
+        "stock_name": "台新金",
+        "recommend_price": 23.1,
+        "intraday_price": 22.95,
+        "change_pct": -0.65,
+        "volume_ratio": 1.0,
+        "status": "平量下跌",
+        "action": "觀望"
+      },
+      {
+        "stock_code": "2881",
+        "stock_name": "富邦金",
+        "recommend_price": 92.2,
+        "intraday_price": 92.3,
+        "change_pct": 0.11,
+        "volume_ratio": 1.1,
+        "status": "微漲",
+        "action": "可小量佈局"
+      }
+    ],
+    "summary": "佈局股整體偏弱，僅富邦金微漲，科技股受大盤拖累"
+  },
+  "track_b": {
+    "description": "全市場掃描",
+    "market_movers": [
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "change_pct": 2.74,
+        "volume_ratio": 2.5,
+        "was_recommended": false,
+        "note": "爆量上漲，用戶持股"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "change_pct": 1.85,
+        "volume_ratio": 1.8,
+        "was_recommended": false,
+        "note": "航運反彈"
+      },
+      {
+        "stock_code": "2882",
+        "stock_name": "國泰金",
+        "change_pct": 0.87,
+        "volume_ratio": 1.2,
+        "was_recommended": false,
+        "note": "金融輪動"
+      }
+    ],
+    "warnings": [
+      {
+        "stock_code": "2454",
+        "stock_name": "聯發科",
+        "change_pct": -3.82,
+        "note": "IC設計弱勢"
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "change_pct": -2.85,
+        "note": "外資出貨"
+      },
+      {
+        "stock_code": "3481",
+        "stock_name": "群創",
+        "change_pct": -2.93,
+        "note": "用戶持股警戒"
+      }
+    ],
+    "fund_flow": {
+      "inflow": ["金融股"],
+      "outflow": ["科技股"]
+    }
+  },
+  "user_holdings": {
+    "2883": {
+      "stock_name": "凱基金",
+      "change_pct": 2.74,
+      "action": "續抱"
+    },
+    "3481": {
+      "stock_name": "群創",
+      "change_pct": -2.93,
+      "action": "警戒，接近停損"
+    }
+  },
+  "conclusions": {
+    "market_direction": "金融強、科技弱",
+    "positioning_strategy_result": "表現不佳，4檔只有1檔微漲",
+    "key_insight": "佈局股策略在大盤下跌日效果差"
+  }
+}
