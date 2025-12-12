@@ -1,0 +1,106 @@
+{
+  "date": "2025-12-11",
+  "market_context": {
+    "us_market": "NASDAQ +0.13%, S&P500 -0.09%, 費半 -0.04%",
+    "taiwan_adr": "台積電ADR +0.51%, 日月光ADR +1.46%",
+    "major_news": [
+      "費半-0.04%中性偏弱",
+      "佈局股策略首測日"
+    ]
+  },
+  "positioning_stocks": [
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "consecutive_days": 3,
+      "cumulative_buy": 17867,
+      "five_day_change": -1.4,
+      "recommend_date": "2025-12-11",
+      "close_price": 323.0,
+      "daily_change": -0.86,
+      "result": "failure",
+      "status": "completed"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "consecutive_days": 3,
+      "cumulative_buy": 85207,
+      "five_day_change": 1.5,
+      "recommend_date": "2025-12-11",
+      "close_price": 49.35,
+      "daily_change": -0.10,
+      "result": "failure",
+      "status": "completed"
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新金",
+      "consecutive_days": 3,
+      "cumulative_buy": 66643,
+      "five_day_change": 0.8,
+      "recommend_date": "2025-12-11",
+      "close_price": 22.95,
+      "daily_change": -0.26,
+      "result": "failure",
+      "status": "completed"
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "consecutive_days": 3,
+      "cumulative_buy": 11500,
+      "five_day_change": 0.2,
+      "recommend_date": "2025-12-11",
+      "close_price": 92.4,
+      "daily_change": 0.21,
+      "result": "success",
+      "status": "completed"
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "reason": "外資轉賣-5,417張"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "reason": "外資大賣-9,275張"
+    }
+  ],
+  "user_holdings_update": {
+    "2883": {
+      "stock_name": "凱基金",
+      "cost": 15.95,
+      "close_price": 16.95,
+      "gain_loss_pct": 6.27,
+      "institutional": "+66,801K",
+      "action": "續抱"
+    },
+    "3481": {
+      "stock_name": "群創",
+      "cost": 14.35,
+      "close_price": 13.87,
+      "gain_loss_pct": -3.34,
+      "institutional": "-12,402K",
+      "action": "接近停損警示"
+    }
+  },
+  "sync_check": {
+    "before_market_recommendations": ["2382", "2303", "2887", "2881"],
+    "tracking_recommendations": ["2382", "2303", "2887", "2881"],
+    "is_synced": true
+  },
+  "metadata": {
+    "created_at": "2025-12-11 09:00",
+    "updated_at": "2025-12-11 18:30",
+    "strategy_type": "positioning_detection",
+    "accuracy": "25%",
+    "total_recommendations": 4,
+    "success_count": 1,
+    "failure_count": 3,
+    "lesson": "佈局股策略在大盤下跌日效果差，需加入大盤環境過濾"
+  }
+}
