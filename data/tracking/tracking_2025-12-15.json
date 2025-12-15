@@ -1,0 +1,243 @@
+{
+  "date": "2025-12-15",
+  "market_context": {
+    "us_market": "NASDAQ -1.69%, S&P500 -1.07%, 道瓊 -0.51%, 費半 -5.10%",
+    "taiwan_adr": "台積電ADR -4.20%, 聯電ADR -0.25%, 日月光ADR -3.90%",
+    "vix": "15.74 (+5.99%)",
+    "major_news": [
+      "費半重挫-5.10%，半導體面臨壓力",
+      "台積電ADR大跌-4.20%，預估今日開低",
+      "道瓊相對抗跌-0.51%，金融股防禦屬性",
+      "VIX恐慌指數上升至15.74"
+    ]
+  },
+  "closing_summary": {
+    "index": 22871,
+    "index_change": -0.5,
+    "note": "大盤僅跌-0.5%，比預期好（原估-1.5%~-2.5%），台股展現韌性"
+  },
+  "recommendations": [
+    {
+      "type": "stable",
+      "stock_code": "2887",
+      "stock_name": "台新金",
+      "recommend_price": 19.35,
+      "closing_price": 19.35,
+      "closing_change": -0.26,
+      "target_price": 20.5,
+      "stop_loss": 18.5,
+      "position": "15-20%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 86,
+      "institutional_1212": "+50,024K",
+      "institutional_1215": "+12,329K",
+      "institutional_trend": "5天連買",
+      "reason": "金融龍頭，法人連續狂買，防禦屬性強",
+      "result": "❌",
+      "result_note": "法人續買但收盤微跌"
+    },
+    {
+      "type": "stable",
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "recommend_price": 17.05,
+      "closing_price": 17.15,
+      "closing_change": 0.59,
+      "target_price": 18.0,
+      "stop_loss": 16.0,
+      "position": "續抱",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 85,
+      "institutional_1212": "+24,152K",
+      "institutional_1215": "+17,294K",
+      "institutional_trend": "5天連買",
+      "reason": "連續買超，用戶持股獲利中",
+      "result": "✅",
+      "result_note": "逆勢上漲+0.59%",
+      "user_cost": 15.95,
+      "user_gain_loss_pct": 7.52
+    },
+    {
+      "type": "stable",
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "recommend_price": 41.15,
+      "closing_price": 41.45,
+      "closing_change": 0.73,
+      "target_price": 43.0,
+      "stop_loss": 40.0,
+      "position": "續抱",
+      "rating": "⭐⭐⭐⭐",
+      "score": 82,
+      "institutional_1212": "+7,480K",
+      "institutional_1215": "+891K",
+      "institutional_trend": "3天連買",
+      "reason": "純銀行龍頭，法人持續買超",
+      "result": "✅",
+      "result_note": "強勢上漲+0.73%",
+      "user_cost": 41.06,
+      "user_gain_loss_pct": 0.95
+    },
+    {
+      "type": "stable",
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "recommend_price": 46.5,
+      "closing_price": 46.75,
+      "closing_change": 0.54,
+      "target_price": 48.0,
+      "stop_loss": 44.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 80,
+      "institutional_1212": "+17,917K",
+      "institutional_1215": "-1,479K",
+      "institutional_trend": "法人轉賣",
+      "reason": "綜合型金融",
+      "result": "✅",
+      "result_note": "散戶買盤支撐，法人轉賣但股價仍漲"
+    },
+    {
+      "type": "intraday",
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "recommend_price": 48.0,
+      "closing_price": 48.85,
+      "closing_change": 0.10,
+      "target_price": 52.0,
+      "stop_loss": 45.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 88,
+      "institutional_1212": "+21,556K",
+      "institutional_1215": "+15,726K",
+      "institutional_trend": "🔥 9天連買！",
+      "reason": "盤中低接建議，8天連買+縮量下跌=洗盤",
+      "result": "✅",
+      "result_note": "低接成功，收盤反彈+0.10%，法人續買+15.7K"
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "12/12單日買+94K，但法人態度不穩",
+      "institutional_1212": "+94,364K",
+      "institutional_1215": "-107,227K",
+      "closing_price": 71.10,
+      "closing_change": -4.69,
+      "verification": "✅ 正確避開",
+      "verification_note": "法人大反轉！12/12買+94K → 12/15狂賣-107K"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "12/12單日買+73K，但法人態度不穩",
+      "institutional_1212": "+72,811K",
+      "institutional_1215": "-1,623K",
+      "closing_price": 34.95,
+      "closing_change": -0.43,
+      "verification": "✅ 正確避開"
+    },
+    {
+      "stock_code": "1605",
+      "stock_name": "華新",
+      "reason": "12/12單日買+42K，但之前連賣4天，最不穩定",
+      "institutional_1212": "+42,227K",
+      "institutional_1215": "-1,806K",
+      "closing_price": 30.90,
+      "closing_change": -2.98,
+      "verification": "✅ 正確避開"
+    },
+    {
+      "stock_code": "2329",
+      "stock_name": "華泰",
+      "reason": "爆量2.5x下跌-4%，可能是出貨不是佈局",
+      "institutional_1212": "+14,042K",
+      "institutional_1215": "-989K",
+      "closing_price": 49.00,
+      "closing_change": -3.73,
+      "verification": "✅ 正確避開"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "法人連續3日賣超，用戶持股警戒",
+      "institutional_1212": "-5,441K",
+      "institutional_1215": "-5,071K",
+      "closing_price": 13.30,
+      "closing_change": -0.37,
+      "verification": "✅ 正確避開",
+      "user_alert": "🔴 連4日賣超！用戶持股需停損"
+    }
+  ],
+  "user_holdings_closing": {
+    "2883": {
+      "stock_name": "凱基金",
+      "cost": 15.95,
+      "closing_price": 17.15,
+      "gain_loss_pct": 7.52,
+      "institutional_1215": "+17,294K",
+      "institutional_trend": "5天連買",
+      "action": "✅ 續抱"
+    },
+    "2886": {
+      "stock_name": "兆豐金",
+      "cost": 41.06,
+      "closing_price": 41.45,
+      "gain_loss_pct": 0.95,
+      "institutional_1215": "+891K",
+      "institutional_trend": "3天連買",
+      "action": "✅ 續抱"
+    },
+    "2330": {
+      "stock_name": "台積電",
+      "cost": 1458.5,
+      "closing_price": 1450.0,
+      "gain_loss_pct": -0.58,
+      "institutional_1215": "-10,169K",
+      "institutional_trend": "外資撤退",
+      "action": "⚠️ 觀望"
+    },
+    "3481": {
+      "stock_name": "群創",
+      "cost": 14.35,
+      "closing_price": 13.30,
+      "gain_loss_pct": -7.32,
+      "institutional_1215": "-5,071K",
+      "institutional_trend": "連4日賣超",
+      "action": "🔴 明日停損13.0",
+      "stop_loss_price": 13.0
+    }
+  },
+  "accuracy_summary": {
+    "recommendations_accuracy": "75% (3/4)",
+    "avoid_accuracy": "100% (5/5)",
+    "intraday_accuracy": "100% (1/1)",
+    "total_accuracy": "90% (9/10)"
+  },
+  "key_learnings": {
+    "success": [
+      "金融股防禦策略成功：在費半-5.1%環境下，金融股全面抗跌",
+      "「法人不穩定」判斷正確：華邦電12/12買+94K→12/15狂賣-107K",
+      "聯電低接建議正確：9天連買+縮量下跌=洗盤，收盤反彈"
+    ],
+    "lessons": [
+      "華邦電反轉教訓：單日大買但之前連賣=法人波段操作，不是真正佈局",
+      "連續買超 vs 單日大買：連續多日買超更穩定、更可信賴"
+    ]
+  },
+  "tomorrow_outlook": {
+    "watch": ["2303 聯電（9天連買）", "2883 凱基金（5天連買）"],
+    "hold": ["2886 兆豐金"],
+    "stop_loss": ["3481 群創（跌破13.0出場）"],
+    "key_factors": ["美股今晚表現", "聯電是否續強", "金融股法人是否持續買超"]
+  },
+  "metadata": {
+    "created_at": "2025-12-15 09:10",
+    "updated_at": "2025-12-15 14:50",
+    "strategy_type": "金融股防禦策略",
+    "market_condition": "美股大跌但台股韌性強",
+    "verification_completed": true
+  }
+}
