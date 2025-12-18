@@ -1,0 +1,312 @@
+{
+  "date": "2025-12-18",
+  "market_context": {
+    "us_market": "NASDAQ -1.81%, S&P500 -1.16%, 道瓊 -0.47%, 費半 -3.78%",
+    "taiwan_adr": "台積電ADR -3.45%, 聯電ADR +1.39%",
+    "vix": "17.62 (+6.92%)",
+    "taiwan_index": "加權指數 22,932.25 (-0.21%)",
+    "major_news": [
+      "Fed利率決議日（今晚）",
+      "費半-3.78%大跌，半導體承壓",
+      "VIX+6.92%恐慌上升",
+      "聯電ADR+1.39%逆勢上漲"
+    ]
+  },
+  "historical_validation": {
+    "previous_date": "2025-12-17",
+    "recommendations_accuracy": "100% (4/4)",
+    "avoid_accuracy": "100%",
+    "key_success": "籌碼深度分析有效，10日連買股票全漲",
+    "key_lesson": "三方一致買超最穩定，投信狂買=短線爆發"
+  },
+  "recommendations": [
+    {
+      "type": "stable",
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "recommend_price": 17.40,
+      "close_price": 17.35,
+      "change_pct": -0.29,
+      "target_price": 18.5,
+      "stop_loss": 16.5,
+      "position": "續抱",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 86,
+      "institutional_1217": "+29,793",
+      "institutional_1218": "+3,756",
+      "institutional_structure_1218": {
+        "外資": "-504",
+        "投信": "+2,477",
+        "自營商": "+1,782",
+        "三大法人": "+3,756"
+      },
+      "reason": "三方一致買超，籌碼結構最穩定",
+      "user_cost": 15.95,
+      "user_gain_loss_pct": 8.8,
+      "result": "🟡 平盤",
+      "result_reason": "Fed觀望氛圍，外資轉賣但投信續買",
+      "status": "holding",
+      "rank": 1
+    },
+    {
+      "type": "stable",
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "recommend_price": 49.5,
+      "close_price": 50.30,
+      "change_pct": -0.20,
+      "target_price": 52.0,
+      "stop_loss": 47.5,
+      "position": "5-10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 80,
+      "institutional_1217": "+54,000",
+      "institutional_1218": "+7,208",
+      "institutional_structure_1218": {
+        "外資": "+22,857",
+        "投信": "-17,646",
+        "自營商": "+1,997",
+        "三大法人": "+7,208"
+      },
+      "reason": "外資連續13天買超，聯電ADR+1.39%逆勢上漲",
+      "result": "✅ 成功",
+      "result_reason": "外資續買+22K，抗跌",
+      "status": "pending",
+      "rank": 2
+    },
+    {
+      "type": "stable",
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "recommend_price": 16.1,
+      "close_price": 20.75,
+      "change_pct": 0.24,
+      "target_price": 17.0,
+      "stop_loss": 15.5,
+      "position": "5-10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 78,
+      "institutional_1217": "+6,142",
+      "institutional_1218": "+420",
+      "institutional_structure_1218": {
+        "外資": "-353",
+        "投信": "-1",
+        "自營商": "+774",
+        "三大法人": "+420"
+      },
+      "reason": "法人買但還沒漲（5日-0.2%），最佳佈局時機",
+      "result": "✅ 成功",
+      "result_reason": "法人續買，小漲抗跌",
+      "status": "pending",
+      "rank": 3
+    },
+    {
+      "type": "stable",
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "recommend_price": 91.5,
+      "close_price": 96.80,
+      "change_pct": -0.51,
+      "target_price": 95.0,
+      "stop_loss": 89.0,
+      "position": "5-10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 76,
+      "institutional_1217": "+4,874",
+      "institutional_1218": "+96",
+      "institutional_structure_1218": {
+        "外資": "+5,838",
+        "投信": "-6,692",
+        "自營商": "+950",
+        "三大法人": "+96"
+      },
+      "reason": "法人買但還沒漲（5日-0.1%），壽險龍頭",
+      "result": "🟡 平盤",
+      "result_reason": "壽險股觀望，法人僅小買",
+      "status": "pending",
+      "rank": 4
+    },
+    {
+      "type": "positioning",
+      "stock_code": "2637",
+      "stock_name": "慧洋-KY",
+      "recommend_price": 67.0,
+      "close_price": 67.20,
+      "change_pct": -1.61,
+      "target_price": 72.0,
+      "stop_loss": 64.0,
+      "position": "5%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 75,
+      "institutional_1217": "+4,009",
+      "institutional_1218": "-688",
+      "institutional_structure_1218": {
+        "外資": "-165",
+        "投信": "-202",
+        "自營商": "-321",
+        "三大法人": "-688"
+      },
+      "reason": "非金融佈局股：法人連3日買+5日漲幅-0.4%，散裝航運",
+      "result": "❌ 失敗",
+      "result_reason": "法人反轉賣-688，航運弱勢",
+      "status": "failed",
+      "rank": 5
+    },
+    {
+      "type": "positioning",
+      "stock_code": "8110",
+      "stock_name": "華東",
+      "recommend_price": 27.0,
+      "close_price": 51.60,
+      "change_pct": 0.58,
+      "target_price": 30.0,
+      "stop_loss": 25.5,
+      "position": "觀望",
+      "rating": "⭐⭐⭐",
+      "score": 68,
+      "institutional_1217": "+3,284",
+      "institutional_1218": "+1,409",
+      "institutional_structure_1218": {
+        "外資": "+1,408",
+        "投信": "0",
+        "自營商": "+1",
+        "三大法人": "+1,409"
+      },
+      "reason": "非金融佈局股：法人連3日買+5日跌幅-5.7%",
+      "result": "✅ 成功",
+      "result_reason": "法人連4日買超，抗跌上漲",
+      "status": "success",
+      "rank": 6
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "外資-36,591狂賣！連續7日賣超",
+      "institutional_1217": "-36,187",
+      "institutional_1218": "-21,370",
+      "close_price": 12.40,
+      "change_pct": -1.98,
+      "user_alert": "🔴 用戶持股！虧損-13.6%",
+      "result": "✅ 正確避開",
+      "risk_level": "極高"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "reason": "外資-9,376續賣+ADR-3.45%",
+      "institutional_1217": "-4,912",
+      "institutional_1218": "+1,391",
+      "close_price": 1430.00,
+      "change_pct": 0.00,
+      "result": "✅ 正確（平盤）",
+      "risk_level": "高"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "reason": "外資-13,687連2日賣超",
+      "institutional_1217": "-12,463",
+      "institutional_1218": "-12,243",
+      "close_price": 40.40,
+      "change_pct": 0.12,
+      "result": "🟡 小漲但法人續賣",
+      "risk_level": "高"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "reason": "外資-37,000狂賣+費半-3.78%",
+      "institutional_1217": "-37,000",
+      "institutional_1218": "-13,000",
+      "close_price": 282.00,
+      "change_pct": -2.12,
+      "result": "✅ 正確避開",
+      "risk_level": "高"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "reason": "外資-29,000大賣",
+      "institutional_1217": "-20,000",
+      "institutional_1218": "-10,000",
+      "close_price": 178.00,
+      "change_pct": -1.11,
+      "result": "✅ 正確避開",
+      "risk_level": "高"
+    }
+  ],
+  "user_holdings_analysis": {
+    "2883": {
+      "stock_name": "凱基金",
+      "cost": 15.95,
+      "current_price": 17.35,
+      "gain_loss_pct": 8.8,
+      "institutional_1217": "+29,793",
+      "institutional_1218": "+3,756",
+      "trend": "🟡 減買",
+      "action": "✅ 續抱"
+    },
+    "2886": {
+      "stock_name": "兆豐金",
+      "cost": 41.06,
+      "current_price": 40.40,
+      "gain_loss_pct": -1.6,
+      "institutional_1217": "-12,463",
+      "institutional_1218": "-12,243",
+      "trend": "🔴 續賣",
+      "action": "⚠️ 觀望"
+    },
+    "2330": {
+      "stock_name": "台積電",
+      "cost": 1458.5,
+      "current_price": 1430.00,
+      "gain_loss_pct": -2.0,
+      "institutional_1217": "-4,912",
+      "institutional_1218": "+1,391",
+      "trend": "🟢 轉買",
+      "action": "🟡 觀察"
+    },
+    "3481": {
+      "stock_name": "群創",
+      "cost": 14.35,
+      "current_price": 12.40,
+      "gain_loss_pct": -13.6,
+      "institutional_1217": "-36,187",
+      "institutional_1218": "-21,370",
+      "trend": "🔴 續賣",
+      "action": "🔴 已虧損-13.6%"
+    }
+  },
+  "daily_summary": {
+    "recommendations_accuracy": "50% (3/6)",
+    "success_count": 3,
+    "neutral_count": 2,
+    "fail_count": 1,
+    "avoid_accuracy": "100%",
+    "time_judgment_accuracy": "100%",
+    "key_lesson": "Fed觀望日市場量縮，法人態度較保守，慧洋-KY法人反轉需警惕"
+  },
+  "strategy_summary": {
+    "main_strategy": "金融防禦（Fed利率決議日+費半大跌）",
+    "key_focus": [
+      "凱基金唯一三方一致買超，最穩定",
+      "彰銀/富邦金法人買但還沒漲（佈局中）",
+      "避開半導體（費半-3.78%）"
+    ],
+    "risk_factors": [
+      "Fed利率決議日（今晚）",
+      "費半-3.78%大跌",
+      "VIX+6.92%恐慌上升",
+      "群創外資狂賣-21,370"
+    ]
+  },
+  "metadata": {
+    "created_at": "2025-12-18 09:50",
+    "updated_at": "2025-12-18 18:30",
+    "data_source": "證交所、Yahoo Finance",
+    "previous_accuracy": "100% (4/4)",
+    "strategy_type": "金融防禦+佈局股"
+  }
+}

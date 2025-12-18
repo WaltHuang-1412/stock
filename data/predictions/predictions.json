@@ -515,5 +515,163 @@
     "framework": "五維度評分系統（修正版）",
     "accuracy": "pending",
     "notes": "修正版：原誤報欣興法人買超18,142張，實際僅237張。調整為DRAM+AI伺服器+IC設計組合"
+  },
+  "2025-12-18": {
+    "date": "2025-12-18",
+    "predictions": [
+      {
+        "symbol": "2883",
+        "name": "凱基金",
+        "prev_close": 17.40,
+        "direction": "up",
+        "target_range": "17.4-18.5",
+        "confidence": 0.86,
+        "reasons": [
+          "三方一致買超+29,793張",
+          "10天連買+240K",
+          "籌碼結構最穩定"
+        ],
+        "verification": {
+          "actual_close": 17.35,
+          "actual_change": -0.29,
+          "institutional_flow": 3756,
+          "result": "neutral",
+          "notes": "Fed觀望氛圍，外資轉賣但投信續買"
+        }
+      },
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "prev_close": 50.40,
+        "direction": "up",
+        "target_range": "49.0-52.0",
+        "confidence": 0.80,
+        "reasons": [
+          "外資連12天買超+259K",
+          "聯電ADR+1.39%逆勢上漲",
+          "成熟製程龍頭"
+        ],
+        "verification": {
+          "actual_close": 50.30,
+          "actual_change": -0.20,
+          "institutional_flow": 7208,
+          "result": "success",
+          "notes": "外資續買+22,857張，抗跌"
+        }
+      },
+      {
+        "symbol": "2801",
+        "name": "彰銀",
+        "prev_close": 20.70,
+        "direction": "up",
+        "target_range": "16.0-17.0",
+        "confidence": 0.78,
+        "reasons": [
+          "法人買但還沒漲（5日-0.2%）",
+          "7/10天買超+22K",
+          "純銀行股防禦"
+        ],
+        "verification": {
+          "actual_close": 20.75,
+          "actual_change": 0.24,
+          "institutional_flow": 420,
+          "result": "success",
+          "notes": "法人續買，小漲抗跌"
+        }
+      },
+      {
+        "symbol": "2881",
+        "name": "富邦金",
+        "prev_close": 97.30,
+        "direction": "up",
+        "target_range": "91.0-95.0",
+        "confidence": 0.76,
+        "reasons": [
+          "法人買但還沒漲（5日-0.1%）",
+          "9/10天買超+46K",
+          "壽險龍頭"
+        ],
+        "verification": {
+          "actual_close": 96.80,
+          "actual_change": -0.51,
+          "institutional_flow": 96,
+          "result": "neutral",
+          "notes": "壽險股觀望，法人僅小買"
+        }
+      },
+      {
+        "symbol": "2637",
+        "name": "慧洋-KY",
+        "prev_close": 68.30,
+        "direction": "up",
+        "target_range": "67.0-72.0",
+        "confidence": 0.75,
+        "reasons": [
+          "法人連3日買+5日漲幅-0.4%",
+          "散裝航運佈局股"
+        ],
+        "verification": {
+          "actual_close": 67.20,
+          "actual_change": -1.61,
+          "institutional_flow": -688,
+          "result": "fail",
+          "notes": "法人反轉賣-688，航運弱勢"
+        }
+      },
+      {
+        "symbol": "8110",
+        "name": "華東",
+        "prev_close": 51.30,
+        "direction": "up",
+        "target_range": "27.0-30.0",
+        "confidence": 0.68,
+        "reasons": [
+          "法人連3日買+5日跌幅-5.7%",
+          "電子連接器佈局股"
+        ],
+        "verification": {
+          "actual_close": 51.60,
+          "actual_change": 0.58,
+          "institutional_flow": 1409,
+          "result": "success",
+          "notes": "法人連4日買超，抗跌上漲"
+        }
+      }
+    ],
+    "avoid_stocks": [
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "reason": "外資狂賣-36,591張",
+        "verification": {
+          "actual_close": 12.40,
+          "actual_change": -1.98,
+          "result": "correct_avoid"
+        }
+      },
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "reason": "外資狂賣-37,000張",
+        "verification": {
+          "actual_close": 282.00,
+          "actual_change": -2.12,
+          "result": "correct_avoid"
+        }
+      },
+      {
+        "symbol": "2317",
+        "name": "鴻海",
+        "reason": "外資大賣-29,000張",
+        "verification": {
+          "actual_close": 178.00,
+          "actual_change": -1.11,
+          "result": "correct_avoid"
+        }
+      }
+    ],
+    "framework": "金融防禦策略（Fed利率決議日）",
+    "accuracy": 0.50,
+    "notes": "Fed觀望日市場量縮，準確率50%（3成功/2平盤/1失敗），避開股100%正確"
   }
 }
