@@ -26,7 +26,9 @@
       "Bash(for date in 20251209 20251210 20251211 20251212 20251215)",
       "Bash(do python3 /Users/walter/Documents/GitHub/stock/scripts/check_institutional.py $stock $date)",
       "Bash(for date in 20251202 20251203 20251204 20251205 20251206 20251209 20251210 20251211 20251212 20251215)",
-      "Bash(do echo -n '$date: ')"
+      "Bash(do echo -n '$date: ')",
+      "Bash(for date in 20251216 20251217 20251218)",
+      "Bash(do echo \"=== $date ===\" python3 scripts/fetch_institutional_top30.py $date)"
     ],
     "additionalDirectories": [
       "/**"
