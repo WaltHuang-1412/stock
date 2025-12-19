@@ -673,5 +673,95 @@
     "framework": "金融防禦策略（Fed利率決議日）",
     "accuracy": 0.50,
     "notes": "Fed觀望日市場量縮，準確率50%（3成功/2平盤/1失敗），避開股100%正確"
+  },
+  "2025-12-19": {
+    "date": "2025-12-19",
+    "predictions": [
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "prev_close": 50.30,
+        "direction": "up",
+        "target_range": "51.5-55.5",
+        "confidence": 0.88,
+        "reasons": [
+          "費半+2.51%強勢反彈",
+          "外資連14天買超+238K",
+          "5日漲幅+1.4%還沒大漲"
+        ]
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "prev_close": 1430,
+        "direction": "up",
+        "target_range": "1430-1510",
+        "confidence": 0.85,
+        "reasons": [
+          "ADR+2.79%大漲",
+          "法人轉買+3,245張",
+          "跌深反彈+費半利多"
+        ]
+      },
+      {
+        "symbol": "3037",
+        "name": "欣興",
+        "prev_close": 207,
+        "direction": "up",
+        "target_range": "207-231",
+        "confidence": 0.82,
+        "reasons": [
+          "法人9/10天買超+47K",
+          "5日-6.5%法人買但還沒漲",
+          "ABF載板+AI伺服器"
+        ]
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "prev_close": 37.95,
+        "direction": "up",
+        "target_range": "37.5-41.5",
+        "confidence": 0.78,
+        "reasons": [
+          "投信+外資同買",
+          "記憶體價格回穩",
+          "5日+2.3%小漲可買"
+        ]
+      },
+      {
+        "symbol": "2883",
+        "name": "凱基金",
+        "prev_close": 17.35,
+        "direction": "up",
+        "target_range": "17.35-18.0",
+        "confidence": 0.76,
+        "reasons": [
+          "用戶持股+8.8%獲利",
+          "法人續買+16,541張",
+          "年底作帳延續"
+        ]
+      }
+    ],
+    "avoid_stocks": [
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "reason": "法人連續賣超+用戶虧損-13.6%"
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "reason": "法人反轉賣超-6,720張"
+      },
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "reason": "5日漲幅>8%追高風險"
+      }
+    ],
+    "framework": "時事先行策略（費半+2.51%半導體利多）",
+    "accuracy": "pending",
+    "notes": "Fed鴿派+費半強勁反彈，半導體產業明確利多，產業佔比80%合理"
   }
 }

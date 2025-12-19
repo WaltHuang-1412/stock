@@ -1,0 +1,184 @@
+{
+  "date": "2025-12-19",
+  "analysis_time": "09:10",
+  "market_context": {
+    "us_market": {
+      "nasdaq": "+1.38%",
+      "sp500": "+0.79%",
+      "sox": "+2.51%",
+      "tsm_adr": "+2.79%"
+    },
+    "key_indicators": {
+      "vix": 16.87,
+      "vix_change": "-4.26%",
+      "usd_twd": 31.53
+    },
+    "market_sentiment": "半導體強勢反彈，費半+2.51%帶動"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "type": "stable",
+      "score": 88,
+      "rating": "⭐⭐⭐⭐⭐",
+      "recommend_price": 52.0,
+      "target_price": 55.5,
+      "stop_loss": 49.5,
+      "position": "15-20%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "晶圓代工",
+        "drivers": ["費半+2.51%", "外資連買14天"]
+      },
+      "dual_track": {
+        "news_track": 42,
+        "institutional_track": 46
+      },
+      "chip_analysis": {
+        "consecutive_buy_days": 10,
+        "net_buy_10d": 238456,
+        "status": "強力佈局"
+      },
+      "reason": "外資超強連買+費半強勢+還沒大漲",
+      "status": "pending"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "type": "stable",
+      "score": 85,
+      "rating": "⭐⭐⭐⭐⭐",
+      "recommend_price": 1440,
+      "target_price": 1510,
+      "stop_loss": 1385,
+      "position": "10-15%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "晶圓代工龍頭",
+        "drivers": ["ADR+2.79%", "法人轉買"]
+      },
+      "dual_track": {
+        "news_track": 44,
+        "institutional_track": 41
+      },
+      "reason": "ADR大漲+費半強勢+跌深反彈",
+      "status": "pending",
+      "user_holding": true,
+      "user_cost": 1458.5
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "type": "stable",
+      "score": 82,
+      "rating": "⭐⭐⭐⭐",
+      "recommend_price": 210,
+      "target_price": 231,
+      "stop_loss": 197,
+      "position": "10-15%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "載板/PCB",
+        "drivers": ["ABF載板需求", "AI伺服器"]
+      },
+      "dual_track": {
+        "news_track": 38,
+        "institutional_track": 44
+      },
+      "chip_analysis": {
+        "buy_days_10d": 9,
+        "net_buy_10d": 47234,
+        "five_day_change": "-6.5%",
+        "status": "佈局中"
+      },
+      "reason": "法人悄悄吸貨+5日-6.5%還沒反映",
+      "status": "pending"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "type": "stable",
+      "score": 78,
+      "rating": "⭐⭐⭐⭐",
+      "recommend_price": 38.0,
+      "target_price": 41.5,
+      "stop_loss": 36.0,
+      "position": "10%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "記憶體",
+        "drivers": ["記憶體價格回穩", "法人同買"]
+      },
+      "dual_track": {
+        "news_track": 35,
+        "institutional_track": 43
+      },
+      "reason": "投信+外資同買+記憶體復甦題材",
+      "status": "pending"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "type": "holding",
+      "score": 76,
+      "rating": "⭐⭐⭐⭐",
+      "recommend_price": 17.35,
+      "target_price": 18.0,
+      "stop_loss": 16.5,
+      "position": "續抱",
+      "industry": {
+        "sector": "金融",
+        "sub_type": "證券型",
+        "drivers": ["年底作帳", "投信續買"]
+      },
+      "reason": "用戶持股+8.8%獲利中+法人續買",
+      "status": "holding",
+      "user_holding": true,
+      "user_cost": 15.95,
+      "user_profit_pct": 8.8
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "法人連續賣超+用戶虧損-13.6%",
+      "action": "考慮停損",
+      "user_holding": true,
+      "user_cost": 14.35,
+      "user_loss_pct": -13.6
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "reason": "法人反轉賣超",
+      "action": "觀察今日表現",
+      "user_holding": true,
+      "user_cost": 41.06,
+      "user_loss_pct": -1.6
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "reason": "5日漲幅>8%、追高風險",
+      "action": "不追高"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "reason": "法人賣超",
+      "action": "避開"
+    }
+  ],
+  "industry_distribution": {
+    "半導體": 4,
+    "金融": 1,
+    "check": "費半+2.51%強勢，半導體佔比較高合理"
+  },
+  "previous_day_validation": {
+    "date": "2025-12-18",
+    "accuracy": "50%",
+    "details": "2/4成功（持平不計）"
+  }
+}
