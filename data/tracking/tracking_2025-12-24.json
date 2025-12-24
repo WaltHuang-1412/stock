@@ -188,5 +188,34 @@
     "聖誕假期外資放假，量能可能偏低",
     "昨日費半利多但台股不跟，需觀察",
     "佈局邏輯需要時間驗證，不追高"
-  ]
+  ],
+  "after_market_update": {
+    "update_time": "16:28",
+    "market_close": {
+      "taiex": 22371.98,
+      "taiex_change": "+0.22%"
+    },
+    "closing_verification": {
+      "new_recommendation_hit_rate": "1/4 = 25%",
+      "results": [
+        {"code": "2344", "name": "華邦電", "recommend": 73.0, "close": 76.90, "change": "+5.34%", "result": "success"},
+        {"code": "8046", "name": "南電", "recommend": 239, "close": 239.00, "change": "+0.00%", "result": "neutral"},
+        {"code": "2303", "name": "聯電", "recommend": 50.0, "close": 49.65, "change": "-0.70%", "result": "fail"},
+        {"code": "2454", "name": "聯發科", "recommend": 1390, "close": 1380.00, "change": "-0.72%", "result": "fail"}
+      ]
+    },
+    "user_holdings_close": [
+      {"code": "2330", "name": "台積電", "cost": 1458.5, "close": 1495, "profit_pct": 2.50, "today_change": "+0.34%"},
+      {"code": "2637", "name": "慧洋", "cost": 66.90, "close": 68.0, "profit_pct": 1.64, "today_change": "+0.00%"},
+      {"code": "8046", "name": "南電", "cost": 239.5, "close": 239.0, "profit_pct": -0.21, "today_change": "+0.00%", "note": "今日買進"},
+      {"code": "3481", "name": "群創", "cost": 14.35, "close": 13.25, "profit_pct": -7.67, "today_change": "+1.53%", "note": "連3日反彈，虧損收窄"},
+      {"code": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.70, "profit_pct": -0.88, "today_change": "-0.61%"}
+    ],
+    "lessons": [
+      "華邦電+5.34%大漲，記憶體最強，但盤中已建議不追高",
+      "聯電-0.70%，佈局邏輯正確但短線弱勢",
+      "群創連3日反彈，虧損從-11.8%收窄至-7.67%"
+    ],
+    "tomorrow_focus": ["華邦電記憶體續強？", "聯電50元支撐", "南電載板走勢", "群創13.5元減碼點"]
+  }
 }
