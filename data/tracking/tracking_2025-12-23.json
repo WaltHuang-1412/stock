@@ -1,0 +1,318 @@
+{
+  "date": "2025-12-23",
+  "analysis_time": "09:00",
+  "strategy": "全產業鏈模式（時事先行策略）",
+  "market_context": {
+    "us_market": {
+      "nasdaq": "+0.52%",
+      "sp500": "+0.64%",
+      "sox": "+1.10%",
+      "tsm_adr": "+1.50%"
+    },
+    "key_indicators": {
+      "vix": 14.08,
+      "vix_change": "-5.57%",
+      "sox_5d": "+2.69%"
+    },
+    "market_sentiment": "費半連續正報酬（+2.98%→+1.10%），半導體持續利多"
+  },
+  "yesterday_verification": {
+    "track_a_hit_rate": "5/6 = 83%",
+    "track_b_hit_rate": "3/10 = 30%",
+    "missed_stocks": ["6770 力積電+9.92%", "6239 力成+9.12%", "3189 景碩+7.78%"],
+    "lesson": "費半強勢時使用全產業鏈模式，每個子產業推2-3檔"
+  },
+  "industry_priority": [
+    {
+      "rank": 1,
+      "industry": "半導體",
+      "catalyst": "費半+1.10%持續強勢、台積電ADR+1.50%",
+      "stocks": ["2303", "2330", "2454"]
+    },
+    {
+      "rank": 2,
+      "industry": "載板PCB",
+      "catalyst": "AI伺服器封裝、CoWoS產能吃緊",
+      "stocks": ["3037", "3189"]
+    },
+    {
+      "rank": 3,
+      "industry": "記憶體",
+      "catalyst": "HBM供應吃緊、華邦電營收新高",
+      "stocks": ["2344", "2337"]
+    },
+    {
+      "rank": 4,
+      "industry": "散裝航運",
+      "catalyst": "BDI高檔、傳統旺季",
+      "stocks": ["2637"]
+    }
+  ],
+  "recommendations": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "type": "stable",
+      "score": 90,
+      "rating": "強力推薦",
+      "recommend_price": 50.3,
+      "target_price": 54.0,
+      "stop_loss": 48.0,
+      "position": "15-20%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "成熟製程",
+        "drivers": ["費半+1.10%", "法人連10日買+238K", "5日-0.2%佈局"]
+      },
+      "reason": "法人狂買但股價沒漲=佈局中，成熟製程龍頭",
+      "status": "pending",
+      "five_day_change": "-0.20%",
+      "layout_signal": true
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "type": "stable",
+      "score": 88,
+      "rating": "強力推薦",
+      "recommend_price": 1475,
+      "target_price": 1550,
+      "stop_loss": 1420,
+      "position": "10-15%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "晶圓代工龍頭",
+        "drivers": ["費半+1.10%", "ADR+1.50%", "法人+8,300"]
+      },
+      "reason": "晶圓代工龍頭、AI算力核心、費半連續利多",
+      "status": "pending",
+      "user_holding": true,
+      "user_cost": 1458.5,
+      "five_day_change": "+3.15%"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "type": "stable",
+      "score": 86,
+      "rating": "強力推薦",
+      "recommend_price": 72.9,
+      "target_price": 80.0,
+      "stop_loss": 69.0,
+      "position": "10-15%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "記憶體",
+        "drivers": ["HBM供應吃緊", "11月營收新高", "5日-1.35%佈局"]
+      },
+      "reason": "5日-1.35%佈局機會、記憶體超級循環",
+      "status": "pending",
+      "five_day_change": "-1.35%",
+      "layout_signal": true
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "type": "stable",
+      "score": 82,
+      "rating": "推薦",
+      "recommend_price": 219,
+      "target_price": 240,
+      "stop_loss": 205,
+      "position": "10%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "載板/PCB",
+        "drivers": ["ABF載板", "AI伺服器封裝", "GB200"]
+      },
+      "reason": "ABF載板龍頭、GB200受惠",
+      "status": "pending",
+      "five_day_change": "+3.30%"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "type": "stable",
+      "score": 80,
+      "rating": "推薦",
+      "recommend_price": 38.7,
+      "target_price": 43.0,
+      "stop_loss": 36.5,
+      "position": "10%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "記憶體",
+        "drivers": ["NOR Flash龍頭", "車用/工控"]
+      },
+      "reason": "NOR Flash龍頭、昨日+4.85%延續",
+      "status": "pending",
+      "five_day_change": "+2.79%"
+    },
+    {
+      "stock_code": "2637",
+      "stock_name": "慧洋-KY",
+      "type": "stable",
+      "score": 78,
+      "rating": "推薦",
+      "recommend_price": 69.2,
+      "target_price": 75.0,
+      "stop_loss": 66.0,
+      "position": "10%",
+      "industry": {
+        "sector": "航運",
+        "sub_type": "散裝航運",
+        "drivers": ["BDI高檔", "傳統旺季"]
+      },
+      "reason": "散裝龍頭、旺季題材",
+      "status": "pending",
+      "user_holding": true,
+      "user_cost": 66.895,
+      "five_day_change": "+1.32%"
+    },
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科",
+      "type": "stable",
+      "score": 76,
+      "rating": "可考慮",
+      "recommend_price": 1395,
+      "target_price": 1500,
+      "stop_loss": 1330,
+      "position": "5-8%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "IC設計",
+        "drivers": ["天璣9400", "費半利多"]
+      },
+      "reason": "IC設計龍頭、5日-2.11%佈局機會",
+      "status": "pending",
+      "five_day_change": "-2.11%",
+      "layout_signal": true
+    },
+    {
+      "stock_code": "3189",
+      "stock_name": "景碩",
+      "type": "risky",
+      "score": 74,
+      "rating": "觀察",
+      "recommend_price": null,
+      "target_price": null,
+      "stop_loss": null,
+      "position": "5%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "載板/PCB",
+        "drivers": ["ABF載板", "跟隨欣興"]
+      },
+      "reason": "12/22+7.78%大漲後觀察，等回檔再進",
+      "status": "watch",
+      "risk_note": "昨日大漲後需觀察回檔"
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "5日+15.52%已大漲，追高風險極高",
+      "five_day_change": "+15.52%",
+      "action": "不追高"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "法人連8日賣超-125K張，面板弱勢",
+      "action": "考慮停損",
+      "user_holding": true,
+      "user_cost": 14.35,
+      "user_loss_pct": -11.5
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "reason": "5日+5.43%追高風險",
+      "five_day_change": "+5.43%",
+      "action": "不追高"
+    }
+  ],
+  "user_holdings_status": [
+    {
+      "code": "2330",
+      "name": "台積電",
+      "cost": 1458.5,
+      "current": 1475,
+      "profit_pct": 1.1,
+      "action": "續抱，費半利多"
+    },
+    {
+      "code": "2637",
+      "name": "慧洋",
+      "cost": 66.90,
+      "current": 69.20,
+      "profit_pct": 3.4,
+      "action": "續抱，旺季題材"
+    },
+    {
+      "code": "2886",
+      "name": "兆豐金",
+      "cost": 41.06,
+      "current": 40.80,
+      "profit_pct": -0.6,
+      "action": "觀察，設停損40元"
+    },
+    {
+      "code": "3481",
+      "name": "群創",
+      "cost": 14.35,
+      "current": 12.70,
+      "profit_pct": -11.5,
+      "action": "考慮停損"
+    }
+  ],
+  "industry_distribution": {
+    "半導體": 5,
+    "載板PCB": 2,
+    "記憶體": 2,
+    "散裝航運": 1,
+    "check": "半導體佔比較高但拆分為子產業，符合全產業鏈模式"
+  },
+  "sync_check": {
+    "before_market_recommendations": ["2303", "2330", "2344", "3037", "2337", "2637", "2454", "3189"],
+    "tracking_recommendations": ["2303", "2330", "2344", "3037", "2337", "2637", "2454", "3189"],
+    "is_synced": true
+  },
+  "after_market_update": {
+    "update_time": "15:26",
+    "closing_verification": {
+      "track_a": {
+        "hit_rate": "2/8 = 25%",
+        "results": [
+          {"code": "2330", "name": "台積電", "recommend": 1475, "close": 1490, "change": "+1.71%", "result": "success"},
+          {"code": "2637", "name": "慧洋", "recommend": 69.2, "close": 69.0, "change": "+0.44%", "result": "success"},
+          {"code": "2344", "name": "華邦電", "recommend": 72.9, "close": 73.0, "change": "-0.14%", "result": "neutral"},
+          {"code": "2303", "name": "聯電", "recommend": 50.3, "close": 50.0, "change": "-1.77%", "result": "fail"},
+          {"code": "2337", "name": "旺宏", "recommend": 38.7, "close": 38.5, "change": "-1.16%", "result": "fail"},
+          {"code": "3037", "name": "欣興", "recommend": 219, "close": 215.5, "change": "-2.27%", "result": "fail"},
+          {"code": "2454", "name": "聯發科", "recommend": 1395, "close": 1390, "change": "-0.71%", "result": "fail"},
+          {"code": "3189", "name": "景碩", "recommend": null, "close": 142.5, "change": "-1.04%", "result": "fail"}
+        ]
+      },
+      "avoid_verification": [
+        {"code": "6770", "name": "力積電", "close_change": "-3.58%", "result": "correct_avoid"},
+        {"code": "3231", "name": "緯創", "close_change": "-1.02%", "result": "correct_avoid"},
+        {"code": "3481", "name": "群創", "close_change": "+3.16%", "result": "wrong_avoid"}
+      ]
+    },
+    "user_holdings_close": [
+      {"code": "2330", "name": "台積電", "cost": 1458.5, "close": 1490, "profit_pct": 2.2, "today_change": "+1.71%"},
+      {"code": "2637", "name": "慧洋", "cost": 66.90, "close": 69.0, "profit_pct": 3.1, "today_change": "+0.44%"},
+      {"code": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.95, "profit_pct": -0.3, "today_change": "-0.61%"},
+      {"code": "3481", "name": "群創", "cost": 14.35, "close": 13.05, "profit_pct": -9.1, "today_change": "+3.16%", "note": "虧損收窄，觀察反彈"}
+    ],
+    "lessons": [
+      "群創法人狂賣但今日大漲+3.16%，超跌股可能反彈",
+      "費半利多不代表台股半導體必漲",
+      "法人買但股價跌=佈局機會，不是壞事"
+    ],
+    "tomorrow_focus": ["群創反彈持續性", "聯電50元支撐", "華邦電記憶體走向"]
+  }
+}
