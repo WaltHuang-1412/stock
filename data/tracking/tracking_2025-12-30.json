@@ -131,5 +131,25 @@
     "群創昨日漲停+10%，今日可能高開後回檔",
     "南電法人全面賣超-1,579張，需留意停損235",
     "兆豐金40元關鍵支撐"
-  ]
+  ],
+  "after_market_update": {
+    "update_time": "18:30",
+    "taiex": {
+      "close": 28794,
+      "change": "-0.06%",
+      "note": "平盤整理"
+    },
+    "holdings_close": [
+      {"code": "2330", "name": "台積電", "cost": 1458.5, "close": 1520, "today_change": "-0.65%", "profit_pct": 4.22},
+      {"code": "3481", "name": "群創", "cost": 14.35, "close": 16.30, "today_change": "+9.76%", "profit_pct": 13.59, "note": "連2天漲停！"},
+      {"code": "2637", "name": "慧洋", "cost": 66.90, "close": 69.00, "today_change": "0%", "profit_pct": 3.14},
+      {"code": "8046", "name": "南電", "cost": 239.5, "close": 240, "today_change": "-0.2%", "profit_pct": 0.21},
+      {"code": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.30, "today_change": "-0.1%", "profit_pct": -1.85}
+    ],
+    "strategy_update": {
+      "群創": "建議賣1張鎖定獲利，剩5張續抱，目標17-18元",
+      "台積電": "小回正常，續抱",
+      "兆豐金": "40元關鍵支撐，持續觀察"
+    }
+  }
 }
