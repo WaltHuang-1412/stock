@@ -1,0 +1,136 @@
+{
+  "date": "2025-12-29",
+  "analysis_time": "09:00",
+  "strategy": "年底最後交易週+佈局股優先",
+  "market_context": {
+    "us_market": {
+      "nasdaq": "-0.09%",
+      "sp500": "-0.03%",
+      "sox": "+0.05%",
+      "nvda": "+1.02%",
+      "tsm_adr": "+1.35%"
+    },
+    "market_sentiment": "美股平盤，台積電ADR+1.35%利多"
+  },
+  "yesterday_verification": {
+    "date": "2025-12-26",
+    "new_recommendation_hit_rate": "1/1 = 100%",
+    "results": [
+      {"code": "2303", "name": "聯電", "recommend": 49.25, "close": 49.75, "change": "+0.20%", "result": "success"}
+    ]
+  },
+  "recommendations": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "type": "layout",
+      "score": 78,
+      "rating": "強力推薦",
+      "recommend_price": 49.25,
+      "target_price": 52.5,
+      "stop_loss": 47.5,
+      "position": "10-15%",
+      "status": "tracking"
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "type": "momentum",
+      "score": 76,
+      "rating": "強力推薦",
+      "recommend_price": 33.75,
+      "target_price": 35.5,
+      "stop_loss": 32.5,
+      "position": "10-15%",
+      "status": "tracking"
+    }
+  ],
+  "hold_stocks": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "user_cost": 1458.5,
+      "action": "續抱",
+      "stop_loss": 1430,
+      "target": 1600
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "user_cost": 14.35,
+      "action": "續抱",
+      "note": "SpaceX利多，漲停"
+    },
+    {
+      "stock_code": "2637",
+      "stock_name": "慧洋",
+      "user_cost": 66.90,
+      "action": "續抱",
+      "stop_loss": 66
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "user_cost": 239.5,
+      "action": "續抱",
+      "stop_loss": 235,
+      "target": 260
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "user_cost": 41.06,
+      "action": "觀察",
+      "stop_loss": 40,
+      "note": "40元關鍵支撐"
+    }
+  ],
+  "avoid_stocks": [
+    {"stock_code": "2344", "stock_name": "華邦電", "reason": "法人狂賣+已大漲"},
+    {"stock_code": "3006", "stock_name": "晶豪科", "reason": "已大漲，今日-6.57%驗證正確"},
+    {"stock_code": "1605", "stock_name": "華新", "reason": "已大漲，今日-3.44%驗證正確"}
+  ],
+  "after_market_update": {
+    "update_time": "18:23",
+    "taiex": {
+      "close": 28810.89,
+      "change": "+0.89%",
+      "note": "創歷史新高"
+    },
+    "recommendation_verification": {
+      "hit_rate": "1/2 = 50%",
+      "results": [
+        {"code": "2303", "name": "聯電", "recommend": 49.25, "close": 49.65, "change": "+0.81%", "result": "success"},
+        {"code": "2884", "name": "玉山金", "recommend": 33.75, "close": 33.65, "change": "-0.30%", "result": "fail"}
+      ]
+    },
+    "holdings_close": [
+      {"code": "2330", "name": "台積電", "cost": 1458.5, "close": 1530, "today_change": "+1.32%", "profit_pct": 4.90},
+      {"code": "3481", "name": "群創", "cost": 14.35, "close": 14.85, "today_change": "+10.00%", "profit_pct": 3.48, "note": "漲停"},
+      {"code": "2637", "name": "慧洋", "cost": 66.90, "close": 69.00, "today_change": "-0.43%", "profit_pct": 3.14},
+      {"code": "8046", "name": "南電", "cost": 239.5, "close": 240.50, "today_change": "-2.43%", "profit_pct": 0.42},
+      {"code": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.35, "today_change": "-0.62%", "profit_pct": -1.73}
+    ],
+    "avoid_verification": [
+      {"code": "3006", "name": "晶豪科", "close_change": "-6.57%", "result": "correct_avoid"},
+      {"code": "1605", "name": "華新", "close_change": "-3.44%", "result": "correct_avoid"}
+    ],
+    "track_b_discoveries": [
+      {"code": "3663", "name": "鑫科", "change": "+9.92%", "note": "FOPLP獨家供應商，發現太晚"},
+      {"code": "2409", "name": "友達", "change": "+3.51%", "note": "FOPLP面板"},
+      {"code": "3711", "name": "日月光", "change": "+4.37%", "note": "先進封裝"}
+    ],
+    "lessons": [
+      "群創漲停+10%，盤前建議減碼是錯的，沒查SpaceX新聞",
+      "鑫科+9.92%發現太晚，應該在發現群創題材時就查供應鏈",
+      "避開股正確：晶豪科-6.57%、華新-3.44%",
+      "兆豐金收40.35元，暫時守住40元"
+    ],
+    "tomorrow_strategy": {
+      "群創": "續抱，看明日法人是否反轉買",
+      "台積電": "續抱，目標1600",
+      "兆豐金": "觀察40元支撐",
+      "鑫科": "納入觀察，等回檔"
+    }
+  }
+}

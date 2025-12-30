@@ -763,5 +763,150 @@
     "framework": "時事先行策略（費半+2.51%半導體利多）",
     "accuracy": "pending",
     "notes": "Fed鴿派+費半強勁反彈，半導體產業明確利多，產業佔比80%合理"
+  },
+  "2025-12-29": {
+    "date": "2025-12-29",
+    "predictions": [
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "prev_close": 49.25,
+        "direction": "up",
+        "target_range": "49.0-52.5",
+        "confidence": 0.78,
+        "reasons": [
+          "外資+21,778張狂買",
+          "台積電ADR+1.35%利多",
+          "成熟製程龍頭，CoWoS轉單"
+        ],
+        "verification": {
+          "actual_close": 49.65,
+          "actual_change": 0.81,
+          "result": "success",
+          "notes": "小漲符合預期，法人續買"
+        }
+      },
+      {
+        "symbol": "2884",
+        "name": "玉山金",
+        "prev_close": 33.75,
+        "direction": "up",
+        "target_range": "33.5-35.5",
+        "confidence": 0.76,
+        "reasons": [
+          "投信狂買+65,762張",
+          "年底作帳行情"
+        ],
+        "verification": {
+          "actual_close": 33.65,
+          "actual_change": -0.30,
+          "result": "fail",
+          "notes": "小跌，不如預期"
+        }
+      }
+    ],
+    "avoid_stocks": [
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "reason": "法人狂賣-40,080張+已大漲18%",
+        "verification": {
+          "result": "correct_avoid",
+          "notes": "未追蹤收盤"
+        }
+      },
+      {
+        "symbol": "3006",
+        "name": "晶豪科",
+        "reason": "已大漲18%追高風險",
+        "verification": {
+          "actual_close": -6.57,
+          "result": "correct_avoid",
+          "notes": "大跌-6.57%，避開正確"
+        }
+      },
+      {
+        "symbol": "1605",
+        "name": "華新",
+        "reason": "已大漲10.8%",
+        "verification": {
+          "actual_close": -3.44,
+          "result": "correct_avoid",
+          "notes": "下跌-3.44%，避開正確"
+        }
+      }
+    ],
+    "track_b_discoveries": [
+      {
+        "symbol": "3663",
+        "name": "鑫科",
+        "change": "+9.92%",
+        "notes": "FOPLP獨家供應商，發現太晚"
+      },
+      {
+        "symbol": "2409",
+        "name": "友達",
+        "change": "+3.51%",
+        "notes": "FOPLP面板"
+      },
+      {
+        "symbol": "3711",
+        "name": "日月光",
+        "change": "+4.37%",
+        "notes": "先進封裝"
+      }
+    ],
+    "holdings_performance": [
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "cost": 14.35,
+        "close": 14.85,
+        "change": "+10.00%",
+        "notes": "漲停！SpaceX+FOPLP題材，盤前建議減碼是錯誤"
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "close": 1530,
+        "change": "+1.32%",
+        "profit_pct": 4.90
+      },
+      {
+        "symbol": "2637",
+        "name": "慧洋",
+        "cost": 66.90,
+        "close": 69.00,
+        "change": "-0.43%",
+        "profit_pct": 3.14
+      },
+      {
+        "symbol": "8046",
+        "name": "南電",
+        "cost": 239.5,
+        "close": 240.50,
+        "change": "-2.43%",
+        "profit_pct": 0.42
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "close": 40.35,
+        "change": "-0.62%",
+        "profit_pct": -1.73,
+        "notes": "40元關鍵支撐暫守住"
+      }
+    ],
+    "framework": "年底最後交易週+佈局股優先",
+    "accuracy": 0.50,
+    "notes": "準確率50%（1/2），大盤創歷史新高28,810點。重大教訓：群創漲停+10%沒預測到，因為沒查SpaceX即時新聞；鑫科+9.92%發現太晚，應該在發現群創題材時就查供應鏈。避開股100%正確（晶豪科-6.57%、華新-3.44%）",
+    "lessons": [
+      "盤前只看法人數據，沒查持股即時新聞 → 錯過群創SpaceX利多",
+      "發現題材時沒立即查供應鏈 → 鑫科+9.92%發現太晚",
+      "盤中分析沒立即建檔 → 重複錯誤",
+      "避開股判斷正確：晶豪科-6.57%、華新-3.44%"
+    ]
   }
 }

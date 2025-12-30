@@ -1,0 +1,135 @@
+{
+  "date": "2025-12-30",
+  "analysis_time": "09:00",
+  "strategy": "年底最後2交易日+持股續抱為主",
+  "market_context": {
+    "us_market": {
+      "nasdaq": "-0.09%",
+      "sp500": "-0.03%",
+      "sox": "+0.05%",
+      "tsm_adr": "+1.35%"
+    },
+    "market_sentiment": "美股平盤，費半微漲，台股創歷史新高後延續"
+  },
+  "yesterday_verification": {
+    "date": "2025-12-29",
+    "new_recommendation_hit_rate": "1/2 = 50%",
+    "results": [
+      {"code": "2303", "name": "聯電", "recommend": 49.25, "close": 49.65, "change": "+0.81%", "result": "success"},
+      {"code": "2884", "name": "玉山金", "recommend": 33.75, "close": 33.65, "change": "-0.30%", "result": "fail"}
+    ]
+  },
+  "recommendations": [
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "type": "momentum",
+      "score": 82,
+      "rating": "強力推薦",
+      "recommend_price": 14.85,
+      "target_price": 16.0,
+      "stop_loss": 13.5,
+      "position": "已持有續抱",
+      "status": "tracking",
+      "note": "SpaceX/FOPLP題材，外資12/29狂買+29,219張"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "type": "layout",
+      "score": 78,
+      "rating": "強力推薦",
+      "recommend_price": 27.25,
+      "target_price": 29.0,
+      "stop_loss": 26.0,
+      "position": "10%",
+      "status": "tracking",
+      "note": "外資12/29買超+22,941張"
+    }
+  ],
+  "hold_stocks": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "user_cost": 1458.5,
+      "yesterday_close": 1530,
+      "profit_pct": 4.90,
+      "action": "續抱",
+      "stop_loss": 1430,
+      "target": 1600,
+      "institutional_1229": "+4,378",
+      "note": "三方買超，法人續買"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "user_cost": 14.35,
+      "yesterday_close": 14.85,
+      "profit_pct": 3.48,
+      "action": "續抱",
+      "stop_loss": 13.5,
+      "target": 16.0,
+      "institutional_1229": "+40,881",
+      "note": "外資狂買+29,219張，SpaceX題材"
+    },
+    {
+      "stock_code": "2637",
+      "stock_name": "慧洋",
+      "user_cost": 66.90,
+      "yesterday_close": 69.00,
+      "profit_pct": 3.14,
+      "action": "續抱",
+      "stop_loss": 66,
+      "institutional_1229": "+344",
+      "note": "外資+476張"
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "user_cost": 239.5,
+      "yesterday_close": 240.50,
+      "profit_pct": 0.42,
+      "action": "觀察",
+      "stop_loss": 235,
+      "target": 260,
+      "institutional_1229": "-1,579",
+      "note": "法人全面賣超，需觀察停損"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "user_cost": 41.06,
+      "yesterday_close": 40.35,
+      "profit_pct": -1.73,
+      "action": "觀察",
+      "stop_loss": 40,
+      "institutional_1229": "-1,897",
+      "note": "外資賣超-2,431，40元關鍵支撐"
+    }
+  ],
+  "avoid_stocks": [
+    {"stock_code": "8046", "stock_name": "南電", "reason": "法人12/29全面賣超-1,579張"}
+  ],
+  "institutional_highlights": {
+    "foreign_buy_top5": [
+      {"code": "3481", "name": "群創", "amount": "+29,219"},
+      {"code": "0050", "name": "元大50", "amount": "+28,813"},
+      {"code": "2002", "name": "中鋼", "amount": "+22,941"},
+      {"code": "2610", "name": "華航", "amount": "+19,377"},
+      {"code": "2892", "name": "第一金", "amount": "+14,403"}
+    ],
+    "trust_buy_top5": [
+      {"code": "2891", "name": "中信金", "amount": "+11,233"},
+      {"code": "2317", "name": "鴻海", "amount": "+10,497"},
+      {"code": "2885", "name": "元大金", "amount": "+8,817"},
+      {"code": "2882", "name": "國泰金", "amount": "+8,454"},
+      {"code": "2371", "name": "大同", "amount": "+8,027"}
+    ]
+  },
+  "risk_notes": [
+    "年底最後2個交易日，量能可能萎縮",
+    "群創昨日漲停+10%，今日可能高開後回檔",
+    "南電法人全面賣超-1,579張，需留意停損235",
+    "兆豐金40元關鍵支撐"
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "date": "2025-12-26",
+  "analysis_time": "09:00",
+  "strategy": "佈局股優先（法人買+股價跌）",
+  "market_context": {
+    "us_market": {
+      "nasdaq": "+0.22%",
+      "sp500": "+0.32%",
+      "sox": "+0.28%",
+      "sox_5d": "+4.96%",
+      "tsm_adr": "+0.62%",
+      "tsm_adr_5d": "+4.96%",
+      "nvda": "-0.32%",
+      "nvda_5d": "+8.31%"
+    },
+    "key_indicators": {
+      "note": "美股12/25聖誕節休市，數據為12/24"
+    },
+    "market_sentiment": "費半5日+4.96%強勢，但台股半導體不一定跟漲"
+  },
+  "yesterday_verification": {
+    "date": "2025-12-24",
+    "new_recommendation_hit_rate": "1/4 = 25%",
+    "results": [
+      {"code": "2344", "name": "華邦電", "recommend": 73.0, "close": 76.90, "change": "+5.34%", "result": "success"},
+      {"code": "8046", "name": "南電", "recommend": 239, "close": 239.0, "change": "+0.00%", "result": "neutral"},
+      {"code": "2303", "name": "聯電", "recommend": 50.0, "close": 49.65, "change": "-0.70%", "result": "fail"},
+      {"code": "2454", "name": "聯發科", "recommend": 1390, "close": 1380, "change": "-0.72%", "result": "fail"}
+    ],
+    "lessons": [
+      "華邦電+5.34%大成功，記憶體最強",
+      "聯電佈局邏輯正確，但短線仍弱勢",
+      "佈局需耐心，法人買+股價跌=更好進場點"
+    ]
+  },
+  "recommendations": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "type": "layout",
+      "score": 85,
+      "rating": "強力推薦",
+      "recommend_price": 49.25,
+      "target_price": 54.0,
+      "stop_loss": 47.0,
+      "position": "15%",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "成熟製程",
+        "drivers": ["費半5日+4.96%", "法人連10日買+238K", "5日-1.49%佈局訊號"]
+      },
+      "reason": "法人狂買但股價沒漲=佈局中，50元心理關卡支撐",
+      "status": "pending",
+      "five_day_change": "-1.49%",
+      "layout_signal": true
+    }
+  ],
+  "hold_stocks": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "type": "hold",
+      "score": 82,
+      "user_cost": 1458.5,
+      "current_price": 1495,
+      "profit_pct": 2.50,
+      "action": "續抱",
+      "stop_loss": 1430,
+      "target": 1550
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "type": "hold",
+      "score": 76,
+      "user_cost": 239.5,
+      "current_price": 239.0,
+      "profit_pct": -0.21,
+      "action": "續抱觀察",
+      "stop_loss": 225,
+      "target": 260,
+      "note": "12/24新買進"
+    },
+    {
+      "stock_code": "2637",
+      "stock_name": "慧洋",
+      "type": "hold",
+      "user_cost": 66.90,
+      "current_price": 68.0,
+      "profit_pct": 1.64,
+      "action": "續抱",
+      "stop_loss": 66
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "type": "watch",
+      "user_cost": 14.35,
+      "current_price": 13.25,
+      "profit_pct": -7.67,
+      "action": "觀察減碼點",
+      "note": "連3日反彈，若站穩13.5元減碼1-2張",
+      "reduce_point": 13.5,
+      "stop_loss": 12.5
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "type": "watch",
+      "user_cost": 41.06,
+      "current_price": 40.70,
+      "profit_pct": -0.88,
+      "action": "觀察",
+      "stop_loss": 40
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "12/24已+5.34%大漲，追高風險"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "法人持續賣超"
+    }
+  ],
+  "industry_distribution": {
+    "半導體": 2,
+    "載板": 1,
+    "check": "產業分散合格"
+  },
+  "sync_check": {
+    "before_market_recommendations": ["2303"],
+    "tracking_recommendations": ["2303"],
+    "is_synced": true
+  },
+  "risk_notes": [
+    "年底週五，法人可能提前獲利了結",
+    "外資放假，量能可能偏低",
+    "華邦電已大漲+5.34%，不追高",
+    "佈局邏輯需耐心等待"
+  ],
+  "after_market_update": {
+    "update_time": "15:30",
+    "market_close": {
+      "taiex": 28556.02,
+      "taiex_change": "+0.65%",
+      "taiex_high": 28590.91,
+      "note": "創歷史新高"
+    },
+    "closing_verification": {
+      "new_recommendation_hit_rate": "1/1 = 100%",
+      "results": [
+        {"code": "2303", "name": "聯電", "recommend": 49.25, "close": 49.75, "change": "+0.20%", "result": "success"}
+      ],
+      "avoid_verification": [
+        {"code": "2344", "name": "華邦電", "close_change": "-0.78%", "result": "correct_avoid"}
+      ]
+    },
+    "user_holdings_close": [
+      {"code": "2330", "name": "台積電", "cost": 1458.5, "close": 1505, "profit_pct": 3.19, "today_change": "+0.67%"},
+      {"code": "8046", "name": "南電", "cost": 239.5, "close": 247.0, "profit_pct": 3.13, "today_change": "+3.35%"},
+      {"code": "2637", "name": "慧洋", "cost": 66.90, "close": 69.0, "profit_pct": 3.14, "today_change": "+1.47%"},
+      {"code": "3481", "name": "群創", "cost": 14.35, "close": 13.80, "profit_pct": -3.83, "today_change": "+2.22%", "note": "連4日反彈"},
+      {"code": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.50, "profit_pct": -1.36, "today_change": "-0.49%"}
+    ],
+    "track_b_discoveries": [
+      {"code": "3006", "name": "晶豪科", "change": "+9.44%", "note": "記憶體IC設計爆發"},
+      {"code": "1605", "name": "華新", "change": "+5.37%", "note": "電纜/銅價連4漲"},
+      {"code": "8150", "name": "南茂", "change": "+4.70%", "note": "封測強勢"}
+    ],
+    "lessons": [
+      "南電+3.35%大漲，12/24買進成功",
+      "群創連4日反彈，虧損收窄至-3.83%",
+      "華邦電避開正確，今日-0.78%",
+      "晶豪科+9.44%遺漏，記憶體IC設計應納入觀察"
+    ],
+    "next_week_focus": [
+      "群創減碼：站穩13.5元減碼2-3張",
+      "兆豐金停損：跌破40元出場",
+      "聯電觀察：50元支撐",
+      "記憶體IC：晶豪科等回檔"
+    ]
+  }
+}
