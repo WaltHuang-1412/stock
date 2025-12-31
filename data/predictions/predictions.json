@@ -908,5 +908,108 @@
       "盤中分析沒立即建檔 → 重複錯誤",
       "避開股判斷正確：晶豪科-6.57%、華新-3.44%"
     ]
+  },
+  "2025-12-30": {
+    "date": "2025-12-30",
+    "predictions": [
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "type": "hold_continue",
+        "prev_close": 14.85,
+        "direction": "up",
+        "target_range": "16.0-17.0",
+        "confidence": 0.82,
+        "reasons": [
+          "SpaceX/FOPLP題材延續",
+          "外資連2日狂買+29K→+83K",
+          "12/29漲停驗證成功"
+        ],
+        "verification": {
+          "actual_close": 16.30,
+          "actual_change": 9.76,
+          "result": "success",
+          "notes": "連2天漲停！+9.76%，外資買超第1名+83,153張"
+        }
+      },
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "type": "new_recommend",
+        "prev_close": 27.25,
+        "direction": "up",
+        "target_range": "27.5-29.0",
+        "confidence": 0.78,
+        "reasons": [
+          "外資買超+22,941張",
+          "鋼鐵龍頭"
+        ],
+        "verification": {
+          "actual_close": 27.00,
+          "actual_change": -0.92,
+          "result": "fail",
+          "notes": "小跌-0.92%，鋼鐵族群弱勢"
+        }
+      }
+    ],
+    "holdings_performance": [
+      {"symbol": "2330", "name": "台積電", "cost": 1458.5, "close": 1520, "change": "-0.65%", "profit_pct": 4.22},
+      {"symbol": "3481", "name": "群創", "cost": 14.35, "close": 16.30, "change": "+9.76%", "profit_pct": 13.59, "notes": "連2天漲停"},
+      {"symbol": "2637", "name": "慧洋", "cost": 66.90, "close": 69.00, "change": "0%", "profit_pct": 3.14},
+      {"symbol": "8046", "name": "南電", "cost": 239.5, "close": 240, "change": "-0.2%", "profit_pct": 0.21},
+      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.30, "change": "-0.1%", "profit_pct": -1.85}
+    ],
+    "framework": "年底最後2交易日+持股續抱",
+    "accuracy": 0.50,
+    "notes": "準確率50%（1/2），群創連2天漲停大成功，中鋼推薦失敗"
+  },
+  "2025-12-31": {
+    "date": "2025-12-31",
+    "market_summary": {
+      "taiex_close": 28963,
+      "taiex_change": "+0.89%",
+      "notes": "2025封關日強勢收紅，台積電創歷史新高1550元"
+    },
+    "predictions": [],
+    "note": "封關日不推薦新股，以持股驗證為主",
+    "news_verification": {
+      "news_judgments": [
+        {"judgment": "FOPLP/SpaceX熱門", "result": "群創+4.60%連5漲，成交量93萬張第1", "correct": true},
+        {"judgment": "記憶體超級循環", "result": "旺宏+2.84%、華邦電+0.36%", "correct": true},
+        {"judgment": "金融弱勢", "result": "兆豐金-1.72%跌破40元", "correct": true},
+        {"judgment": "台積電核心撐盤", "result": "創歷史新高1550元，+3.68%", "correct": true}
+      ],
+      "accuracy": "4/4 = 100%"
+    },
+    "holdings_performance": [
+      {"symbol": "3481", "name": "群創", "cost": 14.35, "close": 17.05, "change": "+4.60%", "profit_pct": 18.8, "notes": "連5漲+28%，成交量93萬張第1"},
+      {"symbol": "2330", "name": "台積電", "cost": 1458.5, "close": 1550, "change": "+3.68%", "profit_pct": 6.3, "notes": "創歷史新高！市值破40兆"},
+      {"symbol": "8046", "name": "南電", "cost": 239.5, "close": 241, "change": "+0.84%", "profit_pct": 0.6},
+      {"symbol": "2637", "name": "慧洋", "cost": 66.90, "close": 67.90, "change": "-0.22%", "profit_pct": 1.5},
+      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.00, "change": "-1.72%", "profit_pct": -2.6, "alert": "觸及停損40元"}
+    ],
+    "track_b_volume_top5": [
+      {"rank": 1, "symbol": "3481", "name": "群創", "volume": "93萬張", "change": "+4.60%", "held": true},
+      {"rank": 2, "symbol": "2344", "name": "華邦電", "volume": "27萬張", "change": "+0.36%", "held": false},
+      {"rank": 3, "symbol": "2337", "name": "旺宏", "volume": "22萬張", "change": "+2.84%", "held": false},
+      {"rank": 4, "symbol": "2409", "name": "友達", "volume": "19萬張", "change": "+1.66%", "held": false},
+      {"rank": 5, "symbol": "6770", "name": "力積電", "volume": "15萬張", "change": "+0.99%", "held": false}
+    ],
+    "portfolio_summary": {
+      "winning_stocks": 4,
+      "losing_stocks": 1,
+      "total_estimated_profit": "+19,470元",
+      "best_performer": {"symbol": "2330", "name": "台積電", "change": "+3.68%", "notes": "歷史新高"},
+      "worst_performer": {"symbol": "2886", "name": "兆豐金", "change": "-1.72%", "notes": "觸停損"},
+      "accuracy": "4/5 = 80%"
+    },
+    "action_items_2026": [
+      "兆豐金觸停損40元，建議2026開盤執行停損",
+      "群創若今日未減碼，2026優先賣1張鎖定獲利",
+      "台積電續抱，目標1800-2000"
+    ],
+    "framework": "2025封關日+持股驗證",
+    "accuracy": "N/A（無新推薦）",
+    "notes": "封關日完美收官！台積電創歷史新高1550元，群創連5漲+28%成交量93萬張第1。時事判斷準確率100%（4/4）。唯兆豐金跌破40元觸停損需處理。"
   }
 }

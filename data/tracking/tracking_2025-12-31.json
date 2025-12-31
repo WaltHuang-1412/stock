@@ -1,0 +1,156 @@
+{
+  "date": "2025-12-31",
+  "analysis_time": "18:30",
+  "strategy": "2025封關日+持股續抱為主",
+  "market_context": {
+    "taiex": {
+      "close": 28963,
+      "change": "+256",
+      "change_pct": "+0.89%"
+    },
+    "us_market": {
+      "nasdaq": "-0.24%",
+      "sp500": "-0.14%",
+      "dow": "-0.20%"
+    },
+    "market_sentiment": "封關日強勢收紅，台積電創歷史新高"
+  },
+  "yesterday_verification": {
+    "date": "2025-12-30",
+    "results": [
+      {"code": "3481", "name": "群創", "recommend": 14.85, "close": 16.30, "change": "+9.76%", "result": "success", "note": "漲停"},
+      {"code": "2002", "name": "中鋼", "recommend": 27.25, "close": 27.00, "change": "-0.92%", "result": "fail"}
+    ],
+    "accuracy": "1/2 = 50%"
+  },
+  "recommendations": [],
+  "note": "封關日不推薦新股，以持股驗證為主",
+  "hold_stocks": [
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "user_cost": 14.35,
+      "today_close": 17.05,
+      "today_change": "+4.60%",
+      "profit_pct": 18.8,
+      "action": "減碼1張已執行/若未執行2026優先減碼",
+      "stop_loss": 15.0,
+      "target": 18.0,
+      "volume_rank": 1,
+      "note": "連5漲+28%，成交量93萬張全市場第1，SpaceX/FOPLP題材"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "user_cost": 1458.5,
+      "today_close": 1550,
+      "today_change": "+3.68%",
+      "profit_pct": 6.3,
+      "action": "續抱",
+      "stop_loss": 1480,
+      "target": 1800,
+      "note": "創歷史新高1550元，市值突破40兆"
+    },
+    {
+      "stock_code": "2637",
+      "stock_name": "慧洋",
+      "user_cost": 66.90,
+      "today_close": 67.90,
+      "today_change": "-0.22%",
+      "profit_pct": 1.5,
+      "action": "續抱",
+      "stop_loss": 66,
+      "note": "航運資金未關注，平盤整理"
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "user_cost": 239.5,
+      "today_close": 241,
+      "today_change": "+0.84%",
+      "profit_pct": 0.6,
+      "action": "續抱觀察",
+      "stop_loss": 235,
+      "target": 260,
+      "note": "小漲+0.84%，穩定表現"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "user_cost": 41.06,
+      "today_close": 40.00,
+      "today_change": "-1.72%",
+      "profit_pct": -2.6,
+      "action": "觸及停損，建議2026開盤出場",
+      "stop_loss": 40.0,
+      "alert": "🔴 跌破40元支撐，外資連10日賣超",
+      "note": "收盤剛好40元，觸及停損線，建議紀律執行"
+    }
+  ],
+  "today_highlights": {
+    "best_performer": {
+      "code": "2330",
+      "name": "台積電",
+      "change": "+3.68%",
+      "note": "創歷史新高1550元"
+    },
+    "worst_performer": {
+      "code": "2886",
+      "name": "兆豐金",
+      "change": "-1.72%",
+      "note": "觸及停損40元"
+    },
+    "volume_king": {
+      "code": "3481",
+      "name": "群創",
+      "volume": "93萬張",
+      "note": "連續多日成交量第1"
+    }
+  },
+  "portfolio_summary": {
+    "winning_stocks": 4,
+    "losing_stocks": 1,
+    "total_estimated_profit": "+19,470元",
+    "accuracy": "4/5 = 80%"
+  },
+  "risk_notes": [
+    "群創連5漲+28%，短線超買，需留意回檔風險",
+    "兆豐金跌破40元停損，建議2026開盤執行停損",
+    "2026年開盤可能有年初調整效應"
+  ],
+  "action_items_2026": [
+    "兆豐金停損決策（建議執行出場）",
+    "群創若未減碼，優先賣1張鎖定獲利",
+    "觀察法人數據是否持續看好群創"
+  ],
+  "market_discoveries": {
+    "top_gainers": [
+      {"code": "3219", "name": "倚強科", "change": "+10.00%", "sector": "連接器"},
+      {"code": "3623", "name": "富晶通", "change": "+10.00%", "sector": "面板驅動IC"},
+      {"code": "7734", "name": "印能科技", "change": "+10.00%", "sector": "電池模組"},
+      {"code": "3624", "name": "光頡", "change": "+9.98%", "sector": "被動元件", "note": "連2天漲停"},
+      {"code": "5289", "name": "宜鼎", "change": "+9.92%", "sector": "工業SSD", "note": "AI邊緣運算"},
+      {"code": "4967", "name": "十銓", "change": "+9.88%", "sector": "記憶體模組"},
+      {"code": "8131", "name": "福懋科", "change": "+9.85%", "sector": "IC基板", "note": "先進封裝"}
+    ],
+    "volume_leaders": [
+      {"code": "3481", "name": "群創", "volume": "92.9萬張", "change": "+4.60%", "held": true},
+      {"code": "2344", "name": "華邦電", "volume": "33.8萬張", "change": "+1.31%"},
+      {"code": "2337", "name": "旺宏", "volume": "25.7萬張", "change": "+1.81%"},
+      {"code": "8422", "name": "可寧衛", "volume": "19萬張", "change": "+4.98%", "note": "環保爆量"},
+      {"code": "3715", "name": "定穎投控", "volume": "6.9萬張", "change": "+5.37%", "note": "PCB"}
+    ],
+    "hot_sectors": [
+      {"sector": "記憶體", "stocks": ["華邦電", "旺宏", "十銓", "宜鼎"], "outlook": "超級循環延續"},
+      {"sector": "先進封裝", "stocks": ["福懋科", "定穎", "京元電子"], "outlook": "CoWoS/FOPLP"},
+      {"sector": "被動元件", "stocks": ["光頡", "方土昶"], "outlook": "庫存回補"}
+    ],
+    "watchlist_2026": [
+      {"code": "8131", "name": "福懋科", "reason": "IC基板/先進封裝", "priority": 3},
+      {"code": "5289", "name": "宜鼎", "reason": "工業SSD/AI邊緣", "priority": 3},
+      {"code": "4967", "name": "十銓", "reason": "記憶體模組", "priority": 2},
+      {"code": "3624", "name": "光頡", "reason": "被動元件", "priority": 2},
+      {"code": "8422", "name": "可寧衛", "reason": "環保", "priority": 1}
+    ]
+  }
+}
