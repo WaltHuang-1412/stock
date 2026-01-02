@@ -20,6 +20,8 @@ import os
 from datetime import datetime, timedelta
 import requests
 import time
+import warnings
+warnings.filterwarnings('ignore')
 
 def read_tracking_file(date_str):
     """
@@ -55,7 +57,7 @@ def get_institutional_data(date_str):
     headers = {'User-Agent': 'Mozilla/5.0'}
 
     try:
-        response = requests.get(url, headers=headers, timeout=10)
+        response = requests.get(url, headers=headers, timeout=10, verify=False)
         if response.status_code == 200:
             data = response.json()
             if 'data' in data and len(data['data']) > 0:

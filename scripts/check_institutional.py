@@ -7,6 +7,8 @@
 import requests
 import sys
 from datetime import datetime, timedelta
+import warnings
+warnings.filterwarnings('ignore')
 
 def fetch_institutional_trading(stock_code, date=None):
     """
@@ -31,7 +33,7 @@ def fetch_institutional_trading(stock_code, date=None):
     }
     
     try:
-        response = requests.get(url, headers=headers, timeout=10)
+        response = requests.get(url, headers=headers, timeout=10, verify=False)
         
         if response.status_code == 200:
             data = response.json()

@@ -16,6 +16,8 @@ import pandas as pd
 from datetime import datetime, timedelta
 import requests
 import time
+import warnings
+warnings.filterwarnings('ignore')
 
 def get_institutional_data(date_str):
     """獲取指定日期的法人數據"""
@@ -23,7 +25,7 @@ def get_institutional_data(date_str):
     headers = {'User-Agent': 'Mozilla/5.0'}
 
     try:
-        response = requests.get(url, headers=headers, timeout=10)
+        response = requests.get(url, headers=headers, timeout=10, verify=False)
         if response.status_code == 200:
             data = response.json()
             if 'data' in data and len(data['data']) > 0:

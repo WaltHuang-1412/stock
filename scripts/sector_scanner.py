@@ -15,6 +15,8 @@
 import requests
 import json
 from datetime import datetime
+import warnings
+warnings.filterwarnings('ignore')
 
 # 產業鏈定義
 SECTORS = {
@@ -85,7 +87,7 @@ def get_sox_change():
     """查詢費半漲跌幅"""
     try:
         url = 'https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?interval=1d&range=2d'
-        r = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=10)
+        r = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=10, verify=False)
         data = r.json()
         result = data['chart']['result'][0]
         closes = result['indicators']['quote'][0]['close']
@@ -102,7 +104,7 @@ def get_stock_price(stock_code):
     """查詢個股即時行情"""
     try:
         url = f'https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_{stock_code}.tw'
-        r = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=5)
+        r = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=5, verify=False)
         data = r.json()
 
         if 'msgArray' in data and len(data['msgArray']) > 0:

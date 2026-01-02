@@ -20,6 +20,8 @@ import requests
 import sys
 from datetime import datetime, timedelta
 import time
+import warnings
+warnings.filterwarnings('ignore')
 
 def get_trading_days(n_days=10):
     """取得最近N個交易日的日期列表"""
@@ -45,7 +47,7 @@ def fetch_institutional_data(stock_code, date):
     }
 
     try:
-        response = requests.get(url, headers=headers, timeout=15)
+        response = requests.get(url, headers=headers, timeout=15, verify=False)
         data = response.json()
 
         if 'data' not in data or not data['data']:

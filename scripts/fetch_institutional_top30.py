@@ -21,7 +21,9 @@ import requests
 import sys
 from datetime import datetime, timedelta
 import warnings
+import urllib3
 warnings.filterwarnings('ignore')
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # 股票名稱對照表
 STOCK_NAMES = {
@@ -119,7 +121,7 @@ def fetch_institutional_top30(date=None):
     }
 
     try:
-        response = requests.get(url, headers=headers, timeout=15)
+        response = requests.get(url, headers=headers, timeout=15, verify=False)
         data = response.json()
 
         if 'data' not in data or not data['data']:
