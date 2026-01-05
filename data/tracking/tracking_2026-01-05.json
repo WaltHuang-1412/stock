@@ -1,0 +1,218 @@
+{
+  "date": "2026-01-05",
+  "analysis_time": "09:15",
+  "intraday_time": "13:00",
+  "aftermarket_time": "14:30",
+  "strategy": "CES 2026開幕前+佈局股優先+持股停損減碼",
+  "market_context": {
+    "us_market": {
+      "nasdaq": "-1.60%",
+      "sp500": "-1.06%",
+      "dow": "-0.72%",
+      "sox": "+2.26%"
+    },
+    "taiwan_adr": {
+      "tsmc": "+6.96%",
+      "ase": "+8.42%",
+      "umc": "-2.00%"
+    },
+    "key_events": [
+      "CES 2026 明天開幕（1/6-9）",
+      "輝達H200解禁，中企下單200萬顆",
+      "台積電1/15法說會",
+      "DDR4 Q1漲價50%"
+    ],
+    "market_sentiment": "美股弱但費半強，半導體大利多"
+  },
+  "hold_stocks": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "user_cost": 1458.5,
+      "prev_close": 1585,
+      "intraday_price": 1685,
+      "close_price": 1670,
+      "intraday_change": 6.31,
+      "close_change": 5.36,
+      "profit_pct": 14.49,
+      "quantity": 0.02,
+      "prev_institutional_flow": -2324,
+      "today_institutional_flow": -92,
+      "institutional_change": "小賣",
+      "chip_status": "偏多",
+      "action": "續抱",
+      "intraday_action": "續抱",
+      "aftermarket_action": "續抱",
+      "target": 1800,
+      "stop_loss": 1480,
+      "note": "ADR+6.96%超強，收盤+5.36%",
+      "result": "success"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "user_cost": 14.35,
+      "prev_close": 18.10,
+      "intraday_price": 19.90,
+      "close_price": 19.90,
+      "intraday_change": 9.94,
+      "close_change": 9.94,
+      "profit_pct": 38.68,
+      "quantity": 6,
+      "prev_institutional_flow": 69968,
+      "today_institutional_flow": -40231,
+      "institutional_change": "🔴 反轉大賣！",
+      "chip_status": "法人反轉",
+      "action": "減碼1-2張",
+      "intraday_action": "尾盤減碼1張",
+      "aftermarket_action": "⚠️ 明日考慮減碼",
+      "action_price": "19.5-20.0",
+      "note": "今日法人反轉-40K，外資狂倒46K",
+      "priority": 1,
+      "alert": "法人反轉警訊！"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "user_cost": 41.058,
+      "prev_close": 40.30,
+      "intraday_price": 40.35,
+      "close_price": 40.30,
+      "intraday_change": 0.12,
+      "close_change": 0.00,
+      "profit_pct": -1.85,
+      "quantity": 1,
+      "prev_institutional_flow": -4719,
+      "today_institutional_flow": -1150,
+      "institutional_change": "🔴 續賣",
+      "chip_status": "連5日賣超",
+      "action": "停損賣出",
+      "intraday_action": "暫緩停損",
+      "aftermarket_action": "40元出場",
+      "stop_loss": 40.0,
+      "note": "法人連5日賣超，無反彈理由",
+      "priority": 3
+    },
+    {
+      "stock_code": "2637",
+      "stock_name": "慧洋",
+      "user_cost": 66.895,
+      "prev_close": 67.80,
+      "intraday_price": 66.30,
+      "close_price": 65.80,
+      "intraday_change": -2.21,
+      "close_change": -2.95,
+      "profit_pct": -1.63,
+      "quantity": 1,
+      "prev_institutional_flow": 207,
+      "today_institutional_flow": -437,
+      "institutional_change": "🔴 反轉賣！",
+      "chip_status": "連9日買超終結",
+      "action": "續抱",
+      "intraday_action": "警戒，設停損65元",
+      "aftermarket_action": "⚠️ 觀察65元支撐",
+      "stop_loss": 65,
+      "target": 72,
+      "note": "法人反轉！連9日買超終結",
+      "alert": "法人反轉警訊！",
+      "result": "fail"
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "user_cost": 239.5,
+      "prev_close": 237,
+      "intraday_price": 245.5,
+      "close_price": 241.5,
+      "intraday_change": 3.59,
+      "close_change": 1.90,
+      "profit_pct": 0.84,
+      "quantity": 1,
+      "prev_institutional_flow": -954,
+      "today_institutional_flow": -649,
+      "institutional_change": "🔴 續賣",
+      "chip_status": "出貨中",
+      "action": "設定停損觀察",
+      "intraday_action": "意外反彈，觀察",
+      "aftermarket_action": "觀察",
+      "stop_loss": 235,
+      "note": "法人續賣但跟隨產業鏈收漲",
+      "priority": 4
+    }
+  ],
+  "intraday_discoveries": [
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "intraday_price": 155,
+      "close_price": 155,
+      "intraday_change": 0.00,
+      "close_change": 0.00,
+      "discovery": "連10日買超！今日+9,806張",
+      "chip_10d": 89000,
+      "today_chip": 9806,
+      "consecutive_days": 10,
+      "recommendation": "⭐ 明日優先觀察"
+    },
+    {
+      "stock_code": "6239",
+      "stock_name": "力成",
+      "intraday_price": 201.5,
+      "close_price": 201.5,
+      "intraday_change": 24.38,
+      "close_change": 9.81,
+      "discovery": "今日黑馬！封測CoWoS受惠",
+      "recommendation": "太高不追"
+    },
+    {
+      "stock_code": "3189",
+      "stock_name": "景碩",
+      "intraday_price": 170.5,
+      "close_price": 168,
+      "intraday_change": 12.54,
+      "close_change": 7.69,
+      "discovery": "載板籌碼好",
+      "today_chip": 6993,
+      "recommendation": "太高不追，等回檔"
+    }
+  ],
+  "intraday_lessons": [
+    "台積電效應帶動整個供應鏈",
+    "法人出貨股（欣興、南電）也跟漲",
+    "時事極強時，法人態度權重應降低",
+    "緯創連10日買超，盤前應納入佈局股"
+  ],
+  "aftermarket_lessons": [
+    "🔴 群創法人反轉：昨日+69K → 今日-40K",
+    "🔴 慧洋連9日買超終結：今日轉賣-437",
+    "連續買超不代表會續買，隨時可能翻臉",
+    "緯創連10日買超+三方一致，籌碼最強"
+  ],
+  "avoid_stocks": [
+    {"code": "2344", "name": "華邦電", "reason": "今日法人-20K"},
+    {"code": "2337", "name": "旺宏", "reason": "追高陷阱"},
+    {"code": "2408", "name": "南亞科", "reason": "今日法人-14K"},
+    {"code": "6239", "name": "力成", "reason": "太高不追"},
+    {"code": "3189", "name": "景碩", "reason": "太高不追"},
+    {"code": "3037", "name": "欣興", "reason": "法人出貨中"}
+  ],
+  "tomorrow_watchlist": [
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "reason": "連10日買超+89K，三方一致",
+      "entry_price": "153-155",
+      "priority": 1
+    }
+  ],
+  "risk_notes": [
+    "群創法人今日反轉-40K，明日觀察",
+    "慧洋法人反轉，連9日買超終結",
+    "兆豐金連5日賣超，無反彈理由"
+  ],
+  "accuracy": {
+    "premarket": "40%",
+    "details": "台積電✅、群創減碼✅、慧洋❌、南電🟡、兆豐金🟡"
+  },
+  "note": "重大發現：群創、慧洋法人反轉！緯創連10日買超籌碼最強。"
+}

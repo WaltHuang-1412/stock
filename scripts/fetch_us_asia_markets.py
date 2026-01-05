@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-美國亞洲市場數據獲取工具
+美國亞洲市場數據獲取工具 (v2.0 - 使用 requests)
 用於盤前分析時獲取最新的國際市場數據
 
 功能：
@@ -11,14 +11,53 @@
 - 大宗商品（WTI原油, 黃金）
 
 使用方法：
-python3 scripts/fetch_us_asia_markets.py
+python scripts/fetch_us_asia_markets.py
 """
 
-import yfinance as yf
+import requests
 import datetime
-import pytz
-from typing import Dict, Any, List
 import json
+import os
+from typing import Dict, Any
+
+# 設定 requests headers
+HEADERS = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+}
+
+
+def fetch_yahoo_quote(symbol: str) -> Dict[str, Any]:
+    """從 Yahoo Finance API 獲取報價"""
+    try:
+        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?interval=1d&range=5d'
+        response = requests.get(url, headers=HEADERS, timeout=10)
+        data = response.json()
+
+        result = data['chart']['result'][0]
+        meta = result['meta']
+
+        current_price = meta.get('regularMarketPrice', 0)
+        prev_close = meta.get('chartPreviousClose', meta.get('previousClose', current_price))
+
+        if prev_close and prev_close > 0:
+            change = current_price - prev_close
+            change_pct = (change / prev_close) * 100
+        else:
+            change = 0
+            change_pct = 0
+
+        return {
+            'price': round(current_price, 2),
+            'prev_close': round(prev_close, 2),
+            'change': round(change, 2),
+            'change_pct': round(change_pct, 2),
+            'status': 'ok'
+        }
+    except Exception as e:
+        return {
+            'status': 'error',
+            'error': str(e)
+        }
 
 
 class InternationalMarketFetcher:
@@ -26,7 +65,7 @@ class InternationalMarketFetcher:
 
     def __init__(self):
         self.data = {}
-        self.query_time = datetime.datetime.now(pytz.timezone('Asia/Taipei'))
+        self.query_time = datetime.datetime.now()
 
     def fetch_us_markets(self) -> Dict[str, Any]:
         """獲取美股市場數據"""
@@ -42,55 +81,19 @@ class InternationalMarketFetcher:
         us_data = {}
 
         for name, symbol in us_symbols.items():
-            try:
-                ticker = yf.Ticker(symbol)
-
-                # 獲取最新價格數據
-                hist = ticker.history(period='2d')
-                if not hist.empty:
-                    latest_price = hist['Close'].iloc[-1]
-                    prev_price = hist['Close'].iloc[-2] if len(hist) > 1 else latest_price
-                    change = latest_price - prev_price
-                    change_pct = (change / prev_price * 100) if prev_price else 0
-
-                    # 獲取盤前數據（如果有）
-                    try:
-                        info = ticker.info
-                        premarket_price = info.get('preMarketPrice')
-                        premarket_change_pct = info.get('preMarketChangePercent', 0)
-
-                        if premarket_price and premarket_change_pct:
-                            us_data[name] = {
-                                'symbol': symbol,
-                                'close_price': round(latest_price, 2),
-                                'change': round(change, 2),
-                                'change_pct': round(change_pct, 2),
-                                'premarket_price': round(premarket_price, 2),
-                                'premarket_change_pct': round(premarket_change_pct, 2),
-                                'status': 'premarket'
-                            }
-                        else:
-                            us_data[name] = {
-                                'symbol': symbol,
-                                'close_price': round(latest_price, 2),
-                                'change': round(change, 2),
-                                'change_pct': round(change_pct, 2),
-                                'status': 'closed'
-                            }
-                    except:
-                        us_data[name] = {
-                            'symbol': symbol,
-                            'close_price': round(latest_price, 2),
-                            'change': round(change, 2),
-                            'change_pct': round(change_pct, 2),
-                            'status': 'closed'
-                        }
-
-                    print(f"✅ {name}: {latest_price:.2f} ({change_pct:+.2f}%)")
-
-            except Exception as e:
-                print(f"❌ {name}: 數據獲取失敗 - {e}")
-                us_data[name] = {'status': 'error', 'error': str(e)}
+            result = fetch_yahoo_quote(symbol)
+            if result['status'] == 'ok':
+                us_data[name] = {
+                    'symbol': symbol,
+                    'close_price': result['price'],
+                    'change': result['change'],
+                    'change_pct': result['change_pct'],
+                    'status': 'closed'
+                }
+                print(f"✅ {name}: {result['price']:,.2f} ({result['change_pct']:+.2f}%)")
+            else:
+                print(f"❌ {name}: 數據獲取失敗 - {result.get('error', 'Unknown')}")
+                us_data[name] = result
 
         return us_data
 
@@ -108,43 +111,18 @@ class InternationalMarketFetcher:
         adr_data = {}
 
         for name, symbol in adr_symbols.items():
-            try:
-                ticker = yf.Ticker(symbol)
-
-                # 獲取最新數據
-                hist = ticker.history(period='2d')
-                if not hist.empty:
-                    latest_price = hist['Close'].iloc[-1]
-                    prev_price = hist['Close'].iloc[-2] if len(hist) > 1 else latest_price
-                    change_pct = ((latest_price - prev_price) / prev_price * 100) if prev_price else 0
-
-                    # 獲取盤前數據
-                    try:
-                        info = ticker.info
-                        premarket_price = info.get('preMarketPrice')
-                        premarket_change_pct = info.get('preMarketChangePercent', 0)
-
-                        adr_data[name] = {
-                            'symbol': symbol,
-                            'close_price': round(latest_price, 2),
-                            'change_pct': round(change_pct, 2),
-                            'premarket_price': round(premarket_price, 2) if premarket_price else None,
-                            'premarket_change_pct': round(premarket_change_pct, 2) if premarket_change_pct else 0,
-                            'status': 'premarket' if premarket_price else 'closed'
-                        }
-                    except:
-                        adr_data[name] = {
-                            'symbol': symbol,
-                            'close_price': round(latest_price, 2),
-                            'change_pct': round(change_pct, 2),
-                            'status': 'closed'
-                        }
-
-                    print(f"✅ {name}: ${latest_price:.2f} ({change_pct:+.2f}%)")
-
-            except Exception as e:
-                print(f"❌ {name}: 數據獲取失敗 - {e}")
-                adr_data[name] = {'status': 'error', 'error': str(e)}
+            result = fetch_yahoo_quote(symbol)
+            if result['status'] == 'ok':
+                adr_data[name] = {
+                    'symbol': symbol,
+                    'close_price': result['price'],
+                    'change_pct': result['change_pct'],
+                    'status': 'closed'
+                }
+                print(f"✅ {name}: ${result['price']:.2f} ({result['change_pct']:+.2f}%)")
+            else:
+                print(f"❌ {name}: 數據獲取失敗 - {result.get('error', 'Unknown')}")
+                adr_data[name] = result
 
         return adr_data
 
@@ -163,27 +141,18 @@ class InternationalMarketFetcher:
         asia_data = {}
 
         for name, symbol in asia_symbols.items():
-            try:
-                ticker = yf.Ticker(symbol)
-                hist = ticker.history(period='2d')
-
-                if not hist.empty:
-                    latest_price = hist['Close'].iloc[-1]
-                    prev_price = hist['Close'].iloc[-2] if len(hist) > 1 else latest_price
-                    change_pct = ((latest_price - prev_price) / prev_price * 100) if prev_price else 0
-
-                    asia_data[name] = {
-                        'symbol': symbol,
-                        'price': round(latest_price, 0),
-                        'change_pct': round(change_pct, 2),
-                        'status': 'updated'
-                    }
-
-                    print(f"✅ {name}: {latest_price:,.0f} ({change_pct:+.2f}%)")
-
-            except Exception as e:
-                print(f"❌ {name}: 數據獲取失敗 - {e}")
-                asia_data[name] = {'status': 'error', 'error': str(e)}
+            result = fetch_yahoo_quote(symbol)
+            if result['status'] == 'ok':
+                asia_data[name] = {
+                    'symbol': symbol,
+                    'price': round(result['price'], 0),
+                    'change_pct': result['change_pct'],
+                    'status': 'updated'
+                }
+                print(f"✅ {name}: {result['price']:,.0f} ({result['change_pct']:+.2f}%)")
+            else:
+                print(f"❌ {name}: 數據獲取失敗 - {result.get('error', 'Unknown')}")
+                asia_data[name] = result
 
         return asia_data
 
@@ -195,100 +164,73 @@ class InternationalMarketFetcher:
             'VIX恐慌指數': '^VIX',
             '美元指數': 'DX-Y.NYB',
             'WTI原油': 'CL=F',
-            '黃金': 'GC=F'
+            '黃金': 'GC=F',
+            '輝達': 'NVDA'
         }
 
         indicator_data = {}
 
         for name, symbol in indicators.items():
-            try:
-                ticker = yf.Ticker(symbol)
-                hist = ticker.history(period='2d')
-
-                if not hist.empty:
-                    latest_price = hist['Close'].iloc[-1]
-                    prev_price = hist['Close'].iloc[-2] if len(hist) > 1 else latest_price
-                    change_pct = ((latest_price - prev_price) / prev_price * 100) if prev_price else 0
-
-                    indicator_data[name] = {
-                        'symbol': symbol,
-                        'price': round(latest_price, 2),
-                        'change_pct': round(change_pct, 2),
-                        'status': 'updated'
-                    }
-
-                    print(f"✅ {name}: {latest_price:.2f} ({change_pct:+.2f}%)")
-
-            except Exception as e:
-                print(f"❌ {name}: 數據獲取失敗 - {e}")
-                indicator_data[name] = {'status': 'error', 'error': str(e)}
-
-        # 特別處理USD/TWD匯率
-        try:
-            usdtwd = yf.Ticker('TWD=X')
-            hist = usdtwd.history(period='5d')
-            if not hist.empty:
-                rate = hist['Close'].iloc[-1]
-                prev = hist['Close'].iloc[-2] if len(hist) > 1 else rate
-                change = rate - prev
-
-                indicator_data['美元/台幣匯率'] = {
-                    'symbol': 'TWD=X',
-                    'rate': round(rate, 3),
-                    'change': round(change, 3),
+            result = fetch_yahoo_quote(symbol)
+            if result['status'] == 'ok':
+                indicator_data[name] = {
+                    'symbol': symbol,
+                    'price': result['price'],
+                    'change_pct': result['change_pct'],
                     'status': 'updated'
                 }
+                print(f"✅ {name}: {result['price']:.2f} ({result['change_pct']:+.2f}%)")
+            else:
+                print(f"❌ {name}: 數據獲取失敗 - {result.get('error', 'Unknown')}")
+                indicator_data[name] = result
 
-                print(f"✅ 美元/台幣: {rate:.3f} ({change:+.3f})")
-
-        except Exception as e:
-            print(f"❌ 美元/台幣: 數據獲取失敗 - {e}")
-            indicator_data['美元/台幣匯率'] = {'status': 'error', 'error': str(e)}
+        # 特別處理USD/TWD匯率
+        result = fetch_yahoo_quote('TWD=X')
+        if result['status'] == 'ok':
+            indicator_data['美元/台幣匯率'] = {
+                'symbol': 'TWD=X',
+                'rate': round(result['price'], 3),
+                'change': result['change'],
+                'status': 'updated'
+            }
+            print(f"✅ 美元/台幣: {result['price']:.3f} ({result['change']:+.3f})")
+        else:
+            print(f"❌ 美元/台幣: 數據獲取失敗")
+            indicator_data['美元/台幣匯率'] = result
 
         return indicator_data
 
     def get_market_session_info(self) -> Dict[str, str]:
         """獲取市場交易時段資訊"""
-        now_ny = datetime.datetime.now(pytz.timezone('America/New_York'))
-        now_taipei = self.query_time
+        now = self.query_time
 
-        # 美股交易時間判斷 (EST: 9:30-16:00)
-        market_open = now_ny.replace(hour=9, minute=30, second=0, microsecond=0)
-        market_close = now_ny.replace(hour=16, minute=0, second=0, microsecond=0)
-        premarket_start = now_ny.replace(hour=4, minute=0, second=0, microsecond=0)
+        # 簡單判斷 (台北時間)
+        hour = now.hour
+        weekday = now.weekday()
 
-        if now_ny.weekday() >= 5:  # 週末
-            us_session = "週末休市"
-        elif premarket_start <= now_ny < market_open:
-            us_session = "盤前交易"
-        elif market_open <= now_ny <= market_close:
-            us_session = "正常交易"
-        elif market_close < now_ny:
-            us_session = "盤後交易"
-        else:
-            us_session = "休市"
-
-        # 台股交易時間判斷
-        if now_taipei.weekday() >= 5:  # 週末
+        if weekday >= 5:  # 週末
             tw_session = "週末休市"
-        elif 9 <= now_taipei.hour < 13 or (now_taipei.hour == 13 and now_taipei.minute <= 30):
+            us_session = "週末休市"
+        elif 9 <= hour < 14:
             tw_session = "正常交易"
-        elif now_taipei.hour < 9:
+            us_session = "休市"
+        elif hour < 9:
             tw_session = "盤前"
+            us_session = "盤後交易" if hour >= 5 else "正常交易"
         else:
             tw_session = "盤後"
+            us_session = "盤前" if hour >= 21 else "休市"
 
         return {
             'us_session': us_session,
             'tw_session': tw_session,
-            'query_time_ny': now_ny.strftime('%Y-%m-%d %H:%M:%S EST'),
-            'query_time_taipei': now_taipei.strftime('%Y-%m-%d %H:%M:%S CST')
+            'query_time_taipei': now.strftime('%Y-%m-%d %H:%M:%S CST')
         }
 
     def fetch_all_data(self) -> Dict[str, Any]:
         """獲取所有國際市場數據"""
         print("🌐 開始獲取國際市場數據")
-        print(f"📅 查詢時間：{self.query_time.strftime('%Y-%m-%d %H:%M:%S CST')}")
+        print(f"📅 查詢時間：{self.query_time.strftime('%Y-%m-%d %H:%M:%S')}")
         print("=" * 60)
 
         # 獲取市場時段資訊
@@ -324,24 +266,18 @@ class InternationalMarketFetcher:
 
         output = []
         output.append(f"## 🌐 國際市場概況")
-        output.append(f"**數據更新時間**：{query_time} ({session_info['tw_session']})")
+        output.append(f"**數據更新時間**：{query_time}")
         output.append("")
 
         # 美股市場
         output.append("### 📊 美股表現")
-        output.append(f"**美股狀態**：{session_info['us_session']} ({session_info['query_time_ny']})")
         output.append("")
 
         for name, info in data['us_markets'].items():
             if info.get('status') == 'error':
                 output.append(f"- **{name}**：數據獲取失敗")
             else:
-                close_info = f"{info['close_price']:,} ({info['change_pct']:+.2f}%)"
-                if info.get('premarket_price'):
-                    premarket_info = f"盤前 {info['premarket_price']:,} ({info['premarket_change_pct']:+.2f}%)"
-                    output.append(f"- **{name}**：{close_info} | {premarket_info}")
-                else:
-                    output.append(f"- **{name}**：{close_info}")
+                output.append(f"- **{name}**：{info['close_price']:,} ({info['change_pct']:+.2f}%)")
 
         output.append("")
 
@@ -351,12 +287,7 @@ class InternationalMarketFetcher:
             if info.get('status') == 'error':
                 output.append(f"- **{name}**：數據獲取失敗")
             else:
-                close_info = f"${info['close_price']:.2f} ({info['change_pct']:+.2f}%)"
-                if info.get('premarket_price'):
-                    premarket_info = f"盤前 ${info['premarket_price']:.2f} ({info['premarket_change_pct']:+.2f}%)"
-                    output.append(f"- **{name}**：{close_info} | {premarket_info}")
-                else:
-                    output.append(f"- **{name}**：{close_info}")
+                output.append(f"- **{name}**：${info['close_price']:.2f} ({info['change_pct']:+.2f}%)")
 
         output.append("")
 
@@ -389,15 +320,6 @@ def main():
 
     # 獲取所有數據
     data = fetcher.fetch_all_data()
-
-    # 保存原始數據到JSON（供其他工具使用）
-    timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
-    json_filename = f"/Users/walter/Documents/GitHub/stock/data/international_markets/{timestamp}.json"
-
-    with open(json_filename, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-
-    print(f"\n📁 原始數據已保存至：{json_filename}")
 
     # 輸出格式化的分析文本
     analysis_text = fetcher.format_for_analysis(data)
