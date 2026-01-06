@@ -294,5 +294,62 @@
       {"code": "2327", "name": "國巨", "change": "+4.1%", "reason": "超過推薦價250"}
     ]
   },
-  "note": "重做版：完整遵循CLAUDE.md流程。CES開幕日，費半+3.31%超強。緯創連10日買超籌碼最強。群創、慧洋法人反轉考慮出場。盤前避開股今日全部漲停，時事權重應提高。"
+  "note": "重做版：完整遵循CLAUDE.md流程。CES開幕日，費半+3.31%超強。緯創連10日買超籌碼最強。群創、慧洋法人反轉考慮出場。盤前避開股今日全部漲停，時事權重應提高。",
+  "after_market_update": {
+    "time": "16:50",
+    "close_prices": {
+      "2330": {"close": 1705, "change": "+2.10%", "institutional": -7074655},
+      "3481": {"close": 21.85, "change": "+9.80%", "institutional": -14917104},
+      "2886": {"close": 40.55, "change": "+0.62%", "institutional": 57480},
+      "2637": {"close": 66.30, "change": "+0.76%", "institutional": 430987},
+      "3231": {"close": 154.50, "change": "+0.98%", "institutional": 1696545},
+      "3037": {"close": 230.50, "change": "+2.90%", "institutional": -2325760},
+      "2303": {"close": 49.20, "change": "+1.34%", "institutional": 17097544},
+      "2327": {"close": 253.50, "change": "+4.75%", "institutional": 22662351}
+    },
+    "verification": {
+      "new_recommendations": {
+        "total": 4,
+        "success": 3,
+        "accuracy": 0.75,
+        "details": [
+          {"code": "3231", "result": "success", "notes": "區間內進場"},
+          {"code": "3037", "result": "success_warning", "notes": "漲但法人反轉"},
+          {"code": "2303", "result": "success", "notes": "區間內"},
+          {"code": "2327", "result": "correct_avoid", "notes": "不追高正確"}
+        ]
+      },
+      "holdings_actions": {
+        "2330": {"action": "續抱", "result": "success"},
+        "3481": {"action": "減碼", "result": "correct", "notes": "法人-14.9M大賣"},
+        "2886": {"action": "出場", "result": "neutral", "notes": "法人轉買+57K"},
+        "2637": {"action": "出場", "result": "wrong", "notes": "法人反轉買+430K"}
+      },
+      "avoid_stocks_verification": {
+        "total": 4,
+        "wrong_avoid": 3,
+        "correct_avoid": 1,
+        "lesson": "費半+3.31%時事太強，避開股全漲停"
+      }
+    },
+    "track_b_discoveries": [
+      {"code": "2409", "name": "友達", "change": "+12%+", "institutional": -42853464},
+      {"code": "2337", "name": "旺宏", "change": "+10%+", "institutional": -4070474},
+      {"code": "2408", "name": "南亞科", "change": "+10%+", "institutional": 415050},
+      {"code": "6770", "name": "力積電", "change": "+10%+", "institutional": 7075590},
+      {"code": "2344", "name": "華邦電", "change": "+9%+", "institutional": 1081159}
+    ],
+    "lessons_learned": [
+      "費半>+3%時，記憶體/面板即使法人賣超仍可能大漲",
+      "時事催化劑可逆轉法人態度",
+      "慧洋出場錯誤：法人反轉買超+430K",
+      "群創減碼正確：法人連2日大賣-14.9M"
+    ],
+    "tomorrow_focus": [
+      {"code": "2303", "name": "聯電", "reason": "法人大買+17M"},
+      {"code": "3231", "name": "緯創", "reason": "連11日買超"},
+      {"code": "2382", "name": "廣達", "reason": "法人+4.2M"},
+      {"code": "3037", "name": "欣興", "reason": "觀望，法人反轉"}
+    ]
+  }
 }
