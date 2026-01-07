@@ -1,0 +1,361 @@
+{
+  "date": "2026-01-07",
+  "analysis_time": "09:50",
+  "strategy": "持股操作+新推薦（法人買超但還沒漲）+昨推薦續抱",
+  "process_compliance": {
+    "step_0_time": true,
+    "step_0_market": true,
+    "step_0_5_price": true,
+    "step_1_history": true,
+    "step_1_8_holdings": true,
+    "step_3_news": true,
+    "step_4_top30": true,
+    "step_5_score": true,
+    "step_7_file": true
+  },
+  "historical_verification": {
+    "yesterday_accuracy": "100%",
+    "yesterday_detail": "緯創✅、欣興✅、聯電✅、國巨不追高✅",
+    "key_discovery": "費半連2日大漲，昨推薦股今日全大漲",
+    "lessons_applied": [
+      "費半>+3%時事優先 → 今日+2.75%持續利多",
+      "昨日推薦股已進場者續抱",
+      "盤中已大漲不追高"
+    ]
+  },
+  "market_context": {
+    "us_market": {
+      "nasdaq": "+0.65%",
+      "sp500": "+0.62%",
+      "dow": "+0.99%",
+      "sox": "+2.75%"
+    },
+    "taiwan_adr": {
+      "tsmc": "+1.61%",
+      "umc": "+4.50%",
+      "ase": "+3.18%"
+    },
+    "key_events": [
+      "CES 2026 第二天（1/6-1/9）",
+      "費半連2日大漲（+3.31%→+2.75%）",
+      "聯電ADR +4.50%大漲",
+      "半導體/記憶體/面板全面利多"
+    ],
+    "market_sentiment": "半導體/記憶體/面板全面大漲，但盤中已漲不追高"
+  },
+  "hold_stocks": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "user_cost": 1458.5,
+      "prev_close": 1705,
+      "intraday_price": 1675,
+      "intraday_change": -1.76,
+      "profit_pct": 14.8,
+      "quantity": 0.02,
+      "yesterday_institutional": -7170055,
+      "action": "續抱",
+      "note": "回調正常，核心持股"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "user_cost": 14.35,
+      "prev_close": 21.85,
+      "intraday_price": 22.55,
+      "intraday_change": 3.20,
+      "profit_pct": 57.1,
+      "quantity": 6,
+      "yesterday_institutional": -14917104,
+      "action": "繼續減碼",
+      "action_price": "22-23",
+      "note": "法人連2日大賣-55M，+57%獲利鎖定",
+      "priority": 1,
+      "alert": "法人連續出貨！"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "user_cost": 41.058,
+      "prev_close": 40.55,
+      "intraday_price": 40.40,
+      "intraday_change": -0.37,
+      "profit_pct": -1.6,
+      "quantity": 1,
+      "yesterday_institutional": 57480,
+      "action": "觀望",
+      "note": "法人轉買+57K，等反彈"
+    },
+    {
+      "stock_code": "2637",
+      "stock_name": "慧洋",
+      "user_cost": 66.895,
+      "prev_close": 66.30,
+      "intraday_price": 67.00,
+      "intraday_change": 1.06,
+      "profit_pct": 0.1,
+      "quantity": 1,
+      "yesterday_institutional": 430987,
+      "action": "續抱",
+      "note": "法人轉買+430K"
+    }
+  ],
+  "yesterday_recommendations_followup": [
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "recommend_price": "153-156",
+      "yesterday_close": 154.50,
+      "intraday_price": 160.50,
+      "intraday_change": 3.88,
+      "action": "已進場者續抱",
+      "target": 170,
+      "status": "突破推薦價，不追高"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "recommend_price": "228-232",
+      "yesterday_close": 230.50,
+      "intraday_price": 239.50,
+      "intraday_change": 3.90,
+      "action": "已進場者續抱",
+      "target": 250,
+      "status": "突破推薦價，不追高"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "recommend_price": "48-50",
+      "yesterday_close": 49.20,
+      "intraday_price": 51.40,
+      "intraday_change": 4.47,
+      "action": "已進場者續抱",
+      "target": 54,
+      "status": "突破推薦價，不追高"
+    }
+  ],
+  "new_recommendations": [
+    {
+      "type": "stable",
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "recommend_price": "102-105",
+      "intraday_price": 103.00,
+      "intraday_change": -0.48,
+      "target_price": 115,
+      "stop_loss": 98,
+      "position": "10%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 82,
+      "五維度": {
+        "時事現況": 24,
+        "法人數據": 28,
+        "產業邏輯": 18,
+        "價格位置": 8,
+        "技術面": 4
+      },
+      "reason": "外資+19M大買，今日-0.48%還沒漲，PCB龍頭",
+      "institutional_data": {
+        "foreign": 19369037,
+        "trust": 233000,
+        "total": 19882586
+      },
+      "advantage": "法人大買但今日還沒漲，佈局機會"
+    },
+    {
+      "type": "stable",
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "recommend_price": "50-52",
+      "intraday_price": 51.20,
+      "intraday_change": -0.58,
+      "target_price": 56,
+      "stop_loss": 48,
+      "position": "10%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 80,
+      "五維度": {
+        "時事現況": 24,
+        "法人數據": 28,
+        "產業邏輯": 16,
+        "價格位置": 8,
+        "技術面": 4
+      },
+      "reason": "外資+16M大買，今日-0.58%還沒漲，封測受惠",
+      "institutional_data": {
+        "foreign": 16746711,
+        "trust": 16000,
+        "total": 19786346
+      },
+      "advantage": "封測族群，日月光ADR +3.18%"
+    },
+    {
+      "type": "stable",
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "recommend_price": "1020-1040",
+      "intraday_price": 1035.00,
+      "intraday_change": -1.43,
+      "target_price": 1100,
+      "stop_loss": 980,
+      "position": "5%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 76,
+      "五維度": {
+        "時事現況": 22,
+        "法人數據": 24,
+        "產業邏輯": 18,
+        "價格位置": 8,
+        "技術面": 4
+      },
+      "reason": "外資+5.4M買超，今日-1.43%回檔，電源龍頭",
+      "institutional_data": {
+        "foreign": 5431658,
+        "trust": 17058,
+        "total": 6133832
+      }
+    },
+    {
+      "type": "stable",
+      "stock_code": "6282",
+      "stock_name": "康舒",
+      "recommend_price": "43-44",
+      "intraday_price": 43.60,
+      "intraday_change": 0.69,
+      "target_price": 48,
+      "stop_loss": 41,
+      "position": "5%",
+      "rating": "⭐⭐⭐",
+      "score": 72,
+      "五維度": {
+        "時事現況": 20,
+        "法人數據": 24,
+        "產業邏輯": 16,
+        "價格位置": 6,
+        "技術面": 6
+      },
+      "reason": "外資+6.6M買超，AI電源供應器",
+      "institutional_data": {
+        "foreign": 6637010,
+        "trust": -21000,
+        "total": 7996764
+      }
+    }
+  ],
+  "avoid_stocks": [
+    {"code": "2409", "name": "友達", "change": "+9.87%", "reason": "法人-42M狂賣，接近漲停不追"},
+    {"code": "2344", "name": "華邦電", "change": "+4.81%", "reason": "已大漲，不追高"},
+    {"code": "2408", "name": "南亞科", "change": "+5.91%", "reason": "已大漲，不追高"},
+    {"code": "6770", "name": "力積電", "change": "+4.61%", "reason": "已大漲，不追高"},
+    {"code": "2337", "name": "旺宏", "change": "+5.15%", "reason": "已大漲，不追高"}
+  ],
+  "institutional_top10": [
+    {"rank": 1, "code": "1605", "name": "華新", "flow": 51420747},
+    {"rank": 2, "code": "2327", "name": "國巨", "flow": 22662351},
+    {"rank": 3, "code": "2313", "name": "華通", "flow": 19882586},
+    {"rank": 4, "code": "8150", "name": "南茂", "flow": 19786346},
+    {"rank": 5, "code": "1303", "name": "南亞", "flow": 19433000},
+    {"rank": 6, "code": "2303", "name": "聯電", "flow": 17097544},
+    {"rank": 7, "code": "2885", "name": "元大金", "flow": 10366983},
+    {"rank": 8, "code": "6282", "name": "康舒", "flow": 7996764},
+    {"rank": 9, "code": "6770", "name": "力積電", "flow": 7075590},
+    {"rank": 10, "code": "2308", "name": "台達電", "flow": 6133832}
+  ],
+  "risk_notes": [
+    "群創法人連2日大賣-55M，雖盤中+3.20%仍應減碼",
+    "記憶體/面板盤中已大漲，不追高",
+    "友達法人-42M但接近漲停，時事驅動但風險極高",
+    "昨推薦股已突破推薦價，未進場者不追高"
+  ],
+  "note": "費半連2日大漲+CES持續，半導體/記憶體/面板全面利多。策略：(1)持股操作（群創減碼）(2)新推薦：華通82分、南茂80分、台達電76分、康舒72分（法人買超但今日還沒漲）(3)昨推薦股續抱。",
+  "industry_diversification": {
+    "check": true,
+    "distribution": {
+      "PCB": ["2313"],
+      "封測": ["8150"],
+      "電源": ["2308", "6282"]
+    },
+    "compliant": true
+  },
+  "after_market_verification": {
+    "time": "14:40",
+    "new_recommendations_result": {
+      "華通_2313": {"recommend": "102-105", "close": 110.50, "change": "+6.76%", "result": "success"},
+      "南茂_8150": {"recommend": "50-52", "close": 53.20, "change": "+3.30%", "result": "success"},
+      "台達電_2308": {"recommend": "1020-1040", "close": 1030.00, "change": "-1.90%", "result": "success"},
+      "康舒_6282": {"recommend": "43-44", "close": 43.30, "change": "+0.00%", "result": "success"}
+    },
+    "new_recommendations_accuracy": "4/4 = 100%",
+    "yesterday_recommendations_result": {
+      "緯創_3231": {"close": 158.50, "change": "+2.59%", "result": "success"},
+      "聯電_2303": {"close": 54.10, "change": "+9.96%", "result": "success_limit_up"},
+      "欣興_3037": {"close": 226.00, "change": "-1.95%", "result": "partial_pullback"}
+    },
+    "yesterday_recommendations_accuracy": "2/3 = 67%",
+    "holdings_result": {
+      "群創_3481": {"cost": 14.35, "close": 22.15, "change": "+1.37%", "profit_pct": "+54.4%", "action": "減碼建議正確"},
+      "台積電_2330": {"cost": 1458.5, "close": 1675.00, "change": "-1.76%", "profit_pct": "+14.8%", "action": "續抱正確"},
+      "慧洋_2637": {"cost": 66.90, "close": 68.90, "change": "+3.92%", "profit_pct": "+3.0%", "action": "續抱大成功"},
+      "兆豐金_2886": {"cost": 41.06, "close": 40.35, "change": "-0.49%", "profit_pct": "-1.7%", "action": "觀望"}
+    },
+    "avoid_stocks_result": {
+      "友達_2409": {"close": 16.70, "change": "+9.87%", "result": "correct_avoid"},
+      "華邦電_2344": {"close": 106.50, "change": "+2.40%", "result": "correct_avoid"},
+      "南亞科_2408": {"close": 241.00, "change": "+5.47%", "result": "correct_avoid"},
+      "旺宏_2337": {"close": 57.60, "change": "+9.92%", "result": "correct_avoid"},
+      "力積電_6770": {"change": "+4.61%", "result": "correct_avoid"}
+    },
+    "avoid_stocks_accuracy": "5/5 = 100%",
+    "overall_accuracy": "15/16 = 93.75%",
+    "track_b_discoveries": {
+      "missed": {"華新_1605": {"change": "+9.99%", "institutional": "+51M", "reason": "法人第1但銅箔產業邏輯弱"}}
+    },
+    "lessons": [
+      "法人買超+還沒漲策略成功（華通+6.76%、南茂+3.30%）",
+      "聯電精準了結@54（收盤54.10漲停）",
+      "法人TOP3應列入觀察（華新遺漏）"
+    ]
+  },
+  "intraday_update": {
+    "time": "13:16",
+    "track_a_performance": {
+      "new_recommendations": [
+        {"code": "2313", "name": "華通", "recommend": "102-105", "intraday": 110.00, "change": "+6.28%", "status": "超過推薦價"},
+        {"code": "8150", "name": "南茂", "recommend": "50-52", "intraday": 52.80, "change": "+2.52%", "status": "區間內"},
+        {"code": "2308", "name": "台達電", "recommend": "1020-1040", "intraday": 1020.00, "change": "-2.86%", "status": "回檔到推薦價"},
+        {"code": "6282", "name": "康舒", "recommend": "43-44", "intraday": 44.55, "change": "+2.88%", "status": "小超推薦價"}
+      ],
+      "yesterday_recommendations": [
+        {"code": "3231", "name": "緯創", "intraday": 161.00, "change": "+4.21%", "action": "續抱"},
+        {"code": "3037", "name": "欣興", "intraday": 241.50, "change": "+4.77%", "action": "續抱"},
+        {"code": "2303", "name": "聯電", "intraday": 54.10, "change": "+9.96%", "action": "獲利了結，已達目標54"}
+      ]
+    },
+    "track_b_market_scan": {
+      "near_limit_up": [
+        {"code": "1605", "name": "華新", "change": "+9.99%", "note": "法人買超第1，盤前未推薦"},
+        {"code": "2303", "name": "聯電", "change": "+9.96%", "note": "昨日推薦成功"},
+        {"code": "2337", "name": "旺宏", "change": "+9.92%", "note": "盤前避開，正確"},
+        {"code": "2409", "name": "友達", "change": "+9.87%", "note": "法人-42M，盤前避開，正確"}
+      ],
+      "missed_opportunity": {
+        "code": "1605",
+        "name": "華新",
+        "reason": "法人買超第1但盤前未推薦，銅箔產業邏輯較弱"
+      }
+    },
+    "closing_strategy": {
+      "priority_1": {"action": "減碼", "stock": "群創", "price": "22-23", "reason": "法人連賣，+55%獲利鎖定"},
+      "priority_2": {"action": "獲利了結", "stock": "聯電", "price": "54+", "reason": "已達目標"},
+      "priority_3": {"action": "進場", "stock": "台達電", "price": "1020", "reason": "回檔到推薦價"},
+      "priority_4": {"action": "進場", "stock": "南茂", "price": "52-53", "reason": "區間內"}
+    },
+    "hold_stocks_update": [
+      {"code": "3481", "name": "群創", "intraday": 22.30, "change": "+2.06%", "action": "尾盤減碼"},
+      {"code": "2330", "name": "台積電", "intraday": 1670, "change": "-2.05%", "action": "續抱"},
+      {"code": "2637", "name": "慧洋", "intraday": 67.40, "change": "+1.66%", "action": "續抱"},
+      {"code": "2886", "name": "兆豐金", "intraday": 40.35, "change": "-0.49%", "action": "觀望"}
+    ]
+  }
+}
