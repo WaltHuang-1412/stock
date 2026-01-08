@@ -1348,5 +1348,124 @@
       "慧洋出場錯誤：法人反轉買超+430K",
       "群創減碼正確：法人連2日大賣"
     ]
+  },
+  "2026-01-08": {
+    "date": "2026-01-08",
+    "predictions": [
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "prev_close": 155.00,
+        "direction": "up",
+        "target_range": "175-180",
+        "confidence": 0.90,
+        "reasons": [
+          "連10日買超+115K",
+          "CES第三天AI伺服器",
+          "外資+投信同步"
+        ],
+        "verification": {
+          "actual_close": 151.00,
+          "actual_change": -2.58,
+          "institutional_flow": -19000,
+          "result": "fail",
+          "notes": "法人反轉-19K出貨，籌碼最強但被獲利了結"
+        }
+      },
+      {
+        "symbol": "2308",
+        "name": "台達電",
+        "prev_close": 995.00,
+        "direction": "up",
+        "target_range": "1015-1030",
+        "confidence": 0.75,
+        "reasons": [
+          "10日累計買超+13K",
+          "CES第三天"
+        ],
+        "verification": {
+          "actual_close": 1010.00,
+          "actual_change": 1.51,
+          "result": "success",
+          "notes": "區間內穩健"
+        }
+      },
+      {
+        "symbol": "8150",
+        "name": "南茂",
+        "prev_close": 48.60,
+        "direction": "up",
+        "target_range": "52-54",
+        "confidence": 0.70,
+        "reasons": [
+          "封測受惠費半",
+          "日月光ADR+9.92%"
+        ],
+        "verification": {
+          "actual_close": 53.00,
+          "actual_change": 9.05,
+          "institutional_flow": 116,
+          "result": "success",
+          "notes": "超預期，封測受惠費半大漲"
+        }
+      }
+    ],
+    "avoid_stocks": [
+      {
+        "symbol": "2409",
+        "name": "友達",
+        "reason": "連日大漲，不追",
+        "verification": {
+          "actual_change": 24.21,
+          "institutional_flow": -95000,
+          "result": "correct_avoid",
+          "notes": "漲+24%但法人狂賣-95K！避開正確"
+        }
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "reason": "連日大漲，不追",
+        "verification": {
+          "actual_change": 46.02,
+          "institutional_flow": 6557,
+          "result": "wrong_avoid",
+          "notes": "連2漲停+46%，但追高風險極高"
+        }
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "reason": "連日大漲，不追",
+        "verification": {
+          "actual_change": 19.49,
+          "institutional_flow": 40000,
+          "result": "wrong_avoid",
+          "notes": "連2漲停，法人+40K"
+        }
+      }
+    ],
+    "holdings_performance": [
+      {"symbol": "3481", "name": "群創", "cost": 16.14, "close": 20.75, "change": 14.64, "profit_pct": 28.6, "institutional_flow": 20000, "action": "減碼建議但用戶加碼", "result": "user_win", "notes": "用戶判斷正確！法人翻多+20K"},
+      {"symbol": "3231", "name": "緯創", "cost": 155.72, "close": 151.00, "change": -2.58, "profit_pct": -3.03, "institutional_flow": -19000, "action": "強力推薦", "result": "fail", "notes": "法人反轉出貨"},
+      {"symbol": "2330", "name": "台積電", "cost": 1458.50, "close": 1685.00, "change": 6.31, "profit_pct": 15.5, "institutional_flow": -3810, "action": "續抱", "result": "success"},
+      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.45, "change": 0.37, "profit_pct": -1.5, "institutional_flow": -3452, "action": "觀望", "result": "neutral"},
+      {"symbol": "2637", "name": "慧洋", "cost": 66.90, "close": 69.50, "change": 2.51, "profit_pct": 3.9, "institutional_flow": 2403, "action": "續抱", "result": "success"},
+      {"symbol": "8150", "name": "南茂", "cost": 52.57, "close": 53.00, "change": 9.05, "profit_pct": 0.8, "institutional_flow": 116, "action": "今日進場", "result": "success"}
+    ],
+    "track_b_discoveries": [
+      {"symbol": "1303", "name": "南亞", "change": 17.54, "institutional_flow": 45000, "notes": "🔴遺漏！法人買超第1"},
+      {"symbol": "1605", "name": "華新", "change": 16.41, "institutional_flow": 7131, "notes": "🔴遺漏！銅箔題材"},
+      {"symbol": "2303", "name": "聯電", "change": 8.42, "institutional_flow": 76000, "notes": "法人買超第1名+76K"}
+    ],
+    "framework": "費半連3日大漲+CES第三天+籌碼優先",
+    "accuracy": 0.667,
+    "notes": "推薦準確率66.7%（2/3）。緯創失敗：籌碼最強但法人反轉-19K。群創：建議減碼但用戶加碼，用戶判斷正確！法人翻多+20K。",
+    "lessons": [
+      "籌碼最強≠今日最強，連續買超後警惕獲利了結",
+      "費半大漲時資金優先流入彈性大的記憶體/面板，而非AI伺服器",
+      "友達法人-95K狂賣但漲+24%=散戶接盤，避開策略正確",
+      "用戶群創加碼判斷正確，說明市場經驗比模型更敏銳"
+    ]
   }
 }
