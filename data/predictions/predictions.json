@@ -1584,5 +1584,122 @@
       "佈局要看多日籌碼+時事驗證：台塑連4日買超+景氣轉折題材",
       "盤中推薦要謹慎：凱基金/漢翔今日法人反轉賣"
     ]
+  },
+  "2026-01-13": {
+    "date": "2026-01-13",
+    "data_correction": {
+      "corrected_at": "2026-01-14 00:50",
+      "reason": "01/12盤後分析數據錯誤，繼承至盤前分析",
+      "corrections": [
+        {"stock": "台積電", "field": "prev_close", "wrong": 1700, "correct": 1690},
+        {"stock": "台塑", "field": "prev_close", "wrong": 41.75, "correct": 41.50},
+        {"stock": "緯創", "field": "prev_close", "wrong": 149, "correct": 146},
+        {"stock": "南茂", "field": "prev_close", "wrong": 61.1, "correct": 59.2}
+      ],
+      "critical_error": "緯創01/12實際收盤146元，早已跌破148停損位，但分析記錄149元導致延誤停損"
+    },
+    "market_summary": {
+      "taiex_close": 30535,
+      "taiex_change": "+0.81%",
+      "notes": "台積電法說會前樂觀，力成漲停+10%帶動封測族群"
+    },
+    "predictions": [
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "prev_close": 1690,
+        "prev_close_wrong": 1700,
+        "direction": "up",
+        "target_range": "1680-1710",
+        "confidence": 0.75,
+        "reasons": ["1/15法說會前佈局", "費半創歷史新高"],
+        "verification": {
+          "actual_close": 1710,
+          "actual_change": 1.18,
+          "result": "success",
+          "notes": "法說會前樂觀"
+        }
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "prev_close": 41.50,
+        "prev_close_wrong": 41.75,
+        "direction": "up",
+        "target_range": "40.5-42.5",
+        "confidence": 0.90,
+        "reasons": ["連5日買超+35K", "籌碼分析最強"],
+        "verification": {
+          "actual_close": 40.20,
+          "actual_change": -3.13,
+          "institutional_flow": -8808,
+          "result": "fail",
+          "notes": "🚨 法人反轉賣超-8.8K！連5日買超訊號失效，傳產股在科技大漲日被邊緣化"
+        }
+      },
+      {
+        "symbol": "6239",
+        "name": "力成",
+        "prev_close": 220,
+        "direction": "up",
+        "target_range": "市價分批",
+        "confidence": 0.85,
+        "reasons": ["連3日買超+4.7K", "記憶體超級循環", "外資投信同買"],
+        "verification": {
+          "actual_close": 242,
+          "actual_change": 10.0,
+          "institutional_flow": 6643,
+          "result": "big_success",
+          "notes": "🔥🔥🔥 漲停+10%！記憶體封測邏輯完美驗證"
+        }
+      }
+    ],
+    "avoid_stocks": [
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "reason": "01/12反轉賣超-22K",
+        "verification": {
+          "actual_change": 1.5,
+          "institutional_flow": 26000,
+          "result": "wrong_avoid",
+          "notes": "法人反轉買超+26K，避開錯誤"
+        }
+      },
+      {
+        "symbol": "2409",
+        "name": "友達",
+        "reason": "處置風險",
+        "verification": {
+          "institutional_flow": -54000,
+          "result": "correct_avoid",
+          "notes": "法人狂賣-54K，避開正確"
+        }
+      }
+    ],
+    "holdings_performance": [
+      {"symbol": "3481", "name": "群創", "cost": 16.14, "prev_close": 22.00, "close": 22.65, "change": 2.95, "profit_pct": 40.3, "institutional_flow": -18000, "action": "減碼建議", "result": "success_but_warning", "notes": "獲利+40%但法人賣超-18K"},
+      {"symbol": "3231", "name": "緯創", "cost": 155.72, "prev_close": 146.00, "prev_close_wrong": 149.00, "close": 143.50, "change": -1.71, "profit_pct": -7.8, "institutional_flow": -13000, "action": "停損執行", "result": "fail", "notes": "🚨 數據錯誤！01/12實際146元已跌破停損148元，延誤1天停損"},
+      {"symbol": "8150", "name": "南茂", "cost": 52.57, "prev_close": 59.20, "prev_close_wrong": 61.10, "close": 59.00, "change": -0.34, "profit_pct": 12.2, "institutional_flow": -5899, "action": "觀察", "result": "success", "notes": "獲利從16.2%修正為12.2%"},
+      {"symbol": "2330", "name": "台積電", "cost": 1458.50, "prev_close": 1690, "prev_close_wrong": 1700, "close": 1710, "change": 1.18, "profit_pct": 17.2, "action": "續抱", "result": "success"},
+      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "prev_close": 40.30, "close": 40.40, "change": 0.25, "profit_pct": -1.6, "action": "觀望", "result": "neutral"},
+      {"symbol": "1301", "name": "台塑", "cost": 40.76, "prev_close": 41.50, "prev_close_wrong": 41.75, "close": 40.20, "change": -3.13, "profit_pct": -1.4, "institutional_flow": -8808, "action": "觀望", "result": "fail", "notes": "法人反轉賣超"}
+    ],
+    "track_b_discoveries": [
+      {"symbol": "2312", "name": "金寶", "change": 9.98, "institutional_flow": 20000, "notes": "光電族群爆發，盤前遺漏"},
+      {"symbol": "6443", "name": "元晶", "change": 8.62, "institutional_flow": 9333, "notes": "太陽能爆發，盤前遺漏"},
+      {"symbol": "6282", "name": "康舒", "institutional_flow": 31000, "notes": "法人買超第1，盤前遺漏"}
+    ],
+    "framework": "台積電法說會前佈局+籌碼分析+記憶體超級循環",
+    "accuracy": 0.667,
+    "notes": "【修正版】推薦準確率66.7%（2/3）。力成漲停大成功，台塑法人反轉失敗。🚨重大數據錯誤：01/12收盤價記錄錯誤導致緯創停損判斷延誤。",
+    "lessons": [
+      "🚨 數據驗證失敗：01/12收盤價記錄錯誤（緯創149→146、南茂61.1→59.2）",
+      "🚨 緯創停損延誤：實際01/12已跌破148元，但記錄149元導致沒執行停損",
+      "連5日買超≠必漲：台塑90分→-3.13%，法人尾盤反轉賣超-8.8K",
+      "產業催化劑>籌碼天數：力成85分→+10%漲停，記憶體封測邏輯完美驗證",
+      "傳產股在科技大漲日容易被邊緣化",
+      "✅ 改進措施：盤前/盤後必須用Yahoo Finance即時查詢驗證股價"
+    ]
   }
 }
