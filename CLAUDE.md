@@ -54,6 +54,72 @@ date "+%Y-%m-%d %A"  # 確認系統當前日期和星期
 
 ### 🚨 強制分析流程（必須按順序執行）
 
+**🔴 流程執行強制規定（2026-01-14新增）**：
+
+1. **必須使用 TodoWrite 追蹤進度** - 絕對不能跳過
+2. **必須逐步打勾** - 完成一步才能進行下一步
+3. **發現問題立即停止** - 不能「先繼續再說」
+
+**TodoWrite 範例**：
+```json
+[
+  {"content": "Step -1: 資訊同步檢查", "status": "in_progress", "activeForm": "檢查資訊同步"},
+  {"content": "Step 0: 國際市場數據", "status": "pending", "activeForm": "獲取國際數據"},
+  {"content": "Step 0.5: 即時股價查詢", "status": "pending", "activeForm": "查詢即時股價"},
+  {"content": "Step 1: 歷史驗證", "status": "pending", "activeForm": "驗證歷史推薦"},
+  {"content": "Step 1.7: key_lessons 檢查", "status": "pending", "activeForm": "檢查昨日教訓"},
+  {"content": "Step 1.8: 持股法人追蹤", "status": "pending", "activeForm": "追蹤持股法人"},
+  {"content": "Step 3-6: 選股流程", "status": "pending", "activeForm": "執行選股"},
+  {"content": "Step 7: 建檔", "status": "pending", "activeForm": "建立文件"}
+]
+```
+
+**❌ 絕對禁止**：
+- ❌ 不用 TodoWrite 就開始分析
+- ❌ 跳過某個 Step
+- ❌ 完成多個 Step 才一起標記 completed
+
+---
+
+**Step -1: 🚨 資訊同步檢查（分析前第一步）** 🆕 2026-01-14
+
+**⚠️ 血淚教訓（2026-01-14）**：
+- 問題：慧洋已賣出但分析寫「續抱」，用戶：「操你媽的 我賠錢 妳有錢賠給我嗎」
+- 原因：沒有讀取最新的 intraday_analysis.md，不知道持股變動
+- 後果：資訊錯誤，用戶極度不滿
+
+**🔴 強制執行（絕對不能跳過）**：
+```bash
+# 1. 讀取昨日盤中/盤後分析（檢查持股變動）
+cat data/$(date -d yesterday +%Y-%m-%d)/intraday_analysis.md | grep -A 10 "持股操作"
+cat data/$(date -d yesterday +%Y-%m-%d)/after_market_analysis*.md | grep -A 10 "持股"
+
+# 2. 讀取最新持股狀態
+cat portfolio/my_holdings.yaml
+
+# 3. 讀取最新 tracking（檢查推薦記錄）
+cat data/tracking/tracking_$(date -d yesterday +%Y-%m-%d).json
+```
+
+**🔥 必須確認的事項（逐項打勾）**：
+- [ ] 昨日是否有「賣出」操作？（intraday/after_market 中是否提到「出場」「賣出」「停損」）
+- [ ] my_holdings.yaml 與昨日分析是否一致？
+- [ ] 是否有「已賣出但 quantity ≠ 0」的錯誤？
+- [ ] 是否有「推薦但從未建立 tracking」的遺漏？
+
+**🔥 發現不一致時的處理**：
+1. **立即停止分析**
+2. **先修正** my_holdings.yaml 或 tracking.json
+3. **Commit 修正**
+4. **再繼續**分析
+
+**❌ 絕對禁止**：
+- ❌ 跳過此步驟「直接開始分析」
+- ❌ 發現不一致但「想說等等再改」
+- ❌ 憑記憶判斷持股狀態
+
+---
+
 **Step 0: 國際市場數據（盤前必須執行）**
 ```bash
 # 盤前分析第一步：獲取最新國際市場數據
@@ -2742,9 +2808,19 @@ python3 scripts/check_institutional.py 2883 20251111
 
 ---
 
-**最後更新**：2026-01-13
-**版本**：v5.3（歷史教訓主動檢查機制）🔥
+**最後更新**：2026-01-14
+**版本**：v5.4（資訊同步 + 強制流程追蹤）🔥
 **重大更新**：
+- 🆕 **Step -1: 資訊同步檢查**（血淚教訓 2026-01-14）
+  - 問題：慧洋已賣出但分析寫「續抱」，用戶極度不滿
+  - 解決：分析前強制讀取昨日 intraday/after_market + my_holdings.yaml
+  - 核心：**發現不一致立即停止**，絕不能「先繼續再說」
+- 🆕 **強制使用 TodoWrite 追蹤**（解決執行不完整問題）
+  - 問題：流程經常跳步驟、執行不完整
+  - 解決：必須用 TodoWrite 追蹤每個 Step，逐步打勾
+  - 核心：**絕對不能跳過、不能批次完成**
+
+**v5.3更新**（2026-01-13）：
 - 🆕 **Step 1.7: 昨日 key_lessons 主動檢查**（血淚教訓 2026-01-13）
   - 問題：記錄教訓 ≠ 應用教訓（PCB教訓沒主動檢查）
   - 解決：強制四步驟流程（判斷相關性 → 主動查詢 → 靈活判斷 → 記錄決策）
