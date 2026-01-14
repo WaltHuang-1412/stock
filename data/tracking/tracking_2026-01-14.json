@@ -1,0 +1,156 @@
+{
+  "date": "2026-01-14",
+  "analysis_time": "08:40",
+  "market_context": {
+    "us_market": {
+      "philadelphia_semi": "+1.27%",
+      "nasdaq": "-0.38%",
+      "dow_jones": "+0.52%"
+    },
+    "adr": {
+      "tsmc": "+1.15%",
+      "umc": "+6.65%",
+      "ase": "+6.86%"
+    },
+    "major_news": [
+      "費半+1.27%利多成熟製程",
+      "聯電ADR+6.65%大漲",
+      "日月光ADR+6.86%封測利多",
+      "台積電1/15法說會"
+    ]
+  },
+  "previous_day_verification": {
+    "date": "2026-01-13",
+    "accuracy": "66.7%",
+    "details": [
+      {"symbol": "2330", "name": "台積電", "result": "success", "change": "+1.18%"},
+      {"symbol": "6239", "name": "力成", "result": "success", "change": "+10.0%"},
+      {"symbol": "1301", "name": "台塑", "result": "fail", "change": "-3.13%"}
+    ],
+    "lesson": "連續買超天數不保證延續，產業催化劑更重要"
+  },
+  "holdings_tracking": {
+    "must_stop_loss": [
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "reason": "連4日法人賣超-50K",
+        "action": "開盤立即出場",
+        "estimated_loss": -12200
+      }
+    ],
+    "reduce_position": [
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "reason": "連2日法人賣超-32K",
+        "action": "出4張@22-23元",
+        "estimated_profit": 26000
+      }
+    ],
+    "hold": [
+      {"symbol": "2637", "name": "慧洋", "reason": "連5日買超", "status": "safe"},
+      {"symbol": "2330", "name": "台積電", "reason": "1/15法說會", "status": "wait"},
+      {"symbol": "8150", "name": "南茂", "reason": "觀察法人態度", "status": "watch"},
+      {"symbol": "2886", "name": "兆豐金", "reason": "守40元支撐", "status": "safe"}
+    ]
+  },
+  "recommendations": [
+    {
+      "type": "stable",
+      "stock_code": "2327",
+      "stock_name": "國巨",
+      "industry": {
+        "sector": "電子",
+        "sub_type": "被動元件",
+        "drivers": ["AI伺服器", "庫存去化", "被動元件需求回溫"]
+      },
+      "recommend_price": "258-262",
+      "current_price": 260.50,
+      "target_price": 280,
+      "stop_loss": 248,
+      "position": "15-20%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 86,
+      "五維度": {
+        "時事現況": 22,
+        "法人數據": 28,
+        "產業邏輯": 16,
+        "價格位置": 9,
+        "技術面": 8
+      },
+      "chip_analysis": {
+        "10day_net_buy": "+87K",
+        "buy_days": 9,
+        "sell_days": 1,
+        "consecutive_buy": 3,
+        "foreign_trust_sync": true
+      },
+      "reason": "籌碼最穩健、10日累計+87K、5日漲幅+2.76%尚未大漲",
+      "time_horizon": "1-3週",
+      "status": "pending"
+    },
+    {
+      "type": "stable",
+      "stock_code": "2887",
+      "stock_name": "台新金",
+      "industry": {
+        "sector": "金融",
+        "sub_type": "證券型",
+        "drivers": ["年底作帳", "資金輪動", "成交量受惠"]
+      },
+      "recommend_price": "20.8-21.2",
+      "current_price": 21.05,
+      "target_price": 22.5,
+      "stop_loss": 19.8,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐",
+      "score": 73,
+      "五維度": {
+        "時事現況": 20,
+        "法人數據": 22,
+        "產業邏輯": 14,
+        "價格位置": 10,
+        "技術面": 7
+      },
+      "chip_analysis": {
+        "10day_net_buy": "+67K",
+        "buy_days": 5,
+        "sell_days": 5,
+        "consecutive_buy": 1,
+        "note": "01/13單日大買+31K"
+      },
+      "reason": "5日+0.72%最佳佈局價位、01/13單日大買+31K",
+      "time_horizon": "1-3個月",
+      "status": "pending"
+    }
+  ],
+  "watch_list": [
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光",
+      "score": 70,
+      "reason": "ADR+6.86%利多但5日+6.63%追高風險",
+      "action": "觀察等回檔",
+      "entry_if_pullback": "285-290"
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "5日漲幅+11.59%超過10%紅線",
+      "note": "即使ADR+6.65%也不追高"
+    },
+    {
+      "stock_code": "6282",
+      "stock_name": "康舒",
+      "reason": "5日漲幅+20.1%已大漲"
+    }
+  ],
+  "sync_check": {
+    "before_market_recommendations": ["2327", "2887"],
+    "tracking_recommendations": ["2327", "2887"],
+    "is_synced": true
+  }
+}
