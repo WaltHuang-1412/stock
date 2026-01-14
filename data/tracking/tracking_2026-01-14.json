@@ -106,7 +106,13 @@
       "target_price": "+8-10%",
       "time_horizon": "1-2週",
       "tracking_days": 7,
-      "status": "pending",
+      "status": "success",
+      "actual_close": 278.50,
+      "actual_change": 7.49,
+      "verification": {
+        "result": "success",
+        "notes": "大漲+7.49%，成交量#10，爆量2.1倍，法人大買+30K，MLCC漲價週期驗證成功"
+      },
       "catalysts": [
         "MLCC漲價週期啟動",
         "庫存回補需求強勁",
@@ -141,7 +147,13 @@
       "target_price": "+5-7%",
       "time_horizon": "1-2週",
       "tracking_days": 7,
-      "status": "pending",
+      "status": "partial",
+      "actual_close": 21.25,
+      "actual_change": 2.41,
+      "verification": {
+        "result": "partial",
+        "notes": "小漲+2.41%但量能不足，未進TOP20，資金集中電子股，投信賣超-6,171張"
+      },
       "catalysts": [
         "台股量能回升",
         "外資回流跡象",

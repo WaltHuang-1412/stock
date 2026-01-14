@@ -1701,5 +1701,145 @@
       "傳產股在科技大漲日容易被邊緣化",
       "✅ 改進措施：盤前/盤後必須用Yahoo Finance即時查詢驗證股價"
     ]
+  },
+  "2026-01-14": {
+    "date": "2026-01-14",
+    "day_of_week": "Tuesday",
+    "analysis_version": "v5.3",
+    "market_context": {
+      "us_market": "NASDAQ +1.51%, 道瓊 +0.04%, S&P500 +0.53%",
+      "phlx_semiconductor": "+0.86%",
+      "taiwan_adr": "台積電ADR +2.50%, 聯電ADR +6.65%, 日月光ADR +7.72%",
+      "major_catalysts": ["封測爆發", "晶圓代工續強", "半導體回穩"]
+    },
+    "predictions": [
+      {
+        "symbol": "2327",
+        "name": "國巨",
+        "prev_close": 259.00,
+        "direction": "up",
+        "confidence": 0.86,
+        "score": 86,
+        "type": "stable",
+        "rating": "⭐⭐⭐⭐⭐",
+        "reasons": ["MLCC漲價週期啟動", "被動元件龍頭", "庫存回補需求"],
+        "recommend_price": "開盤價附近",
+        "target_price": "+8-10%",
+        "time_horizon": "1-2週",
+        "verification": {
+          "actual_close": 278.50,
+          "actual_change": 7.49,
+          "institutional_flow": 30008,
+          "volume_rank": 10,
+          "volume_ratio": 2.1,
+          "result": "success",
+          "notes": "大漲+7.49%，成交量#10，爆量2.1倍，法人大買+30K，MLCC漲價週期驗證成功"
+        }
+      },
+      {
+        "symbol": "2887",
+        "name": "台新金",
+        "prev_close": 20.75,
+        "direction": "up",
+        "confidence": 0.73,
+        "score": 73,
+        "type": "stable",
+        "rating": "⭐⭐⭐",
+        "reasons": ["成交量放大", "證券型金融", "ETF規模成長"],
+        "recommend_price": "開盤價附近",
+        "target_price": "+5-7%",
+        "time_horizon": "1-2週",
+        "verification": {
+          "actual_close": 21.25,
+          "actual_change": 2.41,
+          "institutional_flow": 31011,
+          "volume_rank": null,
+          "volume_ratio": 0.8,
+          "result": "partial",
+          "notes": "小漲+2.41%但量能不足（0.8x），未進TOP20，資金集中電子股，投信賣超-6,171張"
+        }
+      }
+    ],
+    "track_b_discoveries": [
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "change": 7.06,
+        "institutional_flow": -18000,
+        "volume_rank": 6,
+        "notes": "盤前未推薦（持股），爆量續漲+7.06%，成交量#6，但法人賣超-18K"
+      },
+      {
+        "symbol": "6191",
+        "name": "精成科",
+        "change": 10.00,
+        "volume_rank": 11,
+        "notes": "半導體設備爆發，盤前遺漏"
+      },
+      {
+        "symbol": "3707",
+        "name": "漢磊",
+        "change": 8.42,
+        "volume_rank": 13,
+        "notes": "半導體設備爆發，盤前遺漏"
+      },
+      {
+        "symbol": "6488",
+        "name": "環球晶",
+        "change": 5.75,
+        "volume_rank": 5,
+        "notes": "矽晶圓爆量大漲，盤前遺漏"
+      }
+    ],
+    "holdings_performance": [
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "cost": 16.14,
+        "prev_close": 21.50,
+        "close": 23.02,
+        "change": 7.06,
+        "profit_pct": 42.6,
+        "institutional_flow": -18000,
+        "action": "減碼4張",
+        "result": "success_but_warning",
+        "notes": "獲利+42.6%，盤前建議減碼已執行"
+      },
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "cost": 155.72,
+        "prev_close": 143.50,
+        "close": 145.00,
+        "change": 1.05,
+        "profit_pct": -6.9,
+        "action": "已停損",
+        "result": "executed",
+        "notes": "01/14開盤停損執行"
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "cost": 40.76,
+        "prev_close": 39.55,
+        "close": 39.45,
+        "change": -0.25,
+        "profit_pct": -3.2,
+        "institutional_flow": -6000,
+        "action": "已停損",
+        "result": "executed",
+        "notes": "跌破39元停損執行"
+      }
+    ],
+    "framework": "時事先行+產業展開+法人驗證",
+    "accuracy": 0.50,
+    "notes": "推薦準確率50%（1成功1部分成功）。國巨驗證MLCC漲價週期成功，台新金量能不足。Track B遺漏半導體設備族群（精成科+10%、漢磊+8.42%）。",
+    "lessons": [
+      "✅ 產業展開法則驗證：封測爆發（日月光ADR +7.72%）→ 盤中榮科+9.96%、矽格+9.21%",
+      "✅ MLCC漲價週期：國巨+7.49%爆量驗證產業邏輯正確",
+      "⚠️ 盤前遺漏半導體設備：精成科+10%、漢磊+8.42%（未展開設備族群）",
+      "⚠️ 量能驗證重要性：台新金評分73但量能0.8x，應降低信心度",
+      "⚠️ 金融股在電子大漲日被邊緣化：資金集中電子，金融量能不足"
+    ]
   }
 }
