@@ -104,7 +104,7 @@
       "target_price": "250（+8%）",
       "time_horizon": "1-2週",
       "tracking_days": 7,
-      "status": "pending",
+      "status": "failure",
       "catalysts": [
         "法人反轉買+28K",
         "5日僅+1.74%，未追高",
@@ -120,6 +120,12 @@
         "volume_ratio": 0.54,
         "timestamp": "2026-01-15 12:42",
         "status": "🟡 小漲+縮量"
+      },
+      "closing": {
+        "price": 233.5,
+        "change_pct": -0.43,
+        "result": "failure",
+        "timestamp": "2026-01-15 13:30"
       }
     },
     {
@@ -150,7 +156,7 @@
       "target_price": "1800-1850",
       "time_horizon": "法說會後1週",
       "tracking_days": 7,
-      "status": "pending",
+      "status": "failure",
       "event": {
         "name": "台積電法說會",
         "date": "2026-01-15 14:00",
@@ -172,6 +178,12 @@
         "volume_ratio": 0.8,
         "timestamp": "2026-01-15 12:42",
         "status": "🟡 小漲"
+      },
+      "closing": {
+        "price": 1690.0,
+        "change_pct": -1.17,
+        "result": "failure",
+        "timestamp": "2026-01-15 13:30"
       }
     },
     {
@@ -201,13 +213,19 @@
       "target_price": "55（+8%）",
       "time_horizon": "1-2週",
       "tracking_days": 7,
-      "status": "pending",
+      "status": "success",
       "intraday": {
         "price": 34.1,
         "change_pct": 6.9,
         "volume_ratio": 2.14,
         "timestamp": "2026-01-15 12:42",
         "status": "🔥 大漲+爆量"
+      },
+      "closing": {
+        "price": 34.45,
+        "change_pct": 7.99,
+        "result": "success",
+        "timestamp": "2026-01-15 13:30"
       }
     },
     {
@@ -237,13 +255,19 @@
       "target_price": "70（+10%）",
       "time_horizon": "1-2週",
       "tracking_days": 7,
-      "status": "pending",
+      "status": "success",
       "intraday": {
         "price": 69.7,
         "change_pct": 12.6,
         "volume_ratio": 2.15,
         "timestamp": "2026-01-15 12:42",
         "status": "🔥 大漲+爆量"
+      },
+      "closing": {
+        "price": 69.7,
+        "change_pct": 9.94,
+        "result": "success",
+        "timestamp": "2026-01-15 13:30"
       }
     },
     {
@@ -273,13 +297,19 @@
       "target_price": "38（+10%）",
       "time_horizon": "1-2週",
       "tracking_days": 7,
-      "status": "pending",
+      "status": "success",
       "intraday": {
         "price": 60.7,
         "change_pct": 4.12,
         "volume_ratio": 0.09,
         "timestamp": "2026-01-15 12:42",
         "status": "✅ 上漲"
+      },
+      "closing": {
+        "price": 61.9,
+        "change_pct": 3.0,
+        "result": "success",
+        "timestamp": "2026-01-15 13:30"
       }
     }
   ],
@@ -422,5 +452,11 @@
     ],
     "is_synced": true
   },
-  "analysis_completed_at": "2026-01-15 08:30"
+  "analysis_completed_at": "2026-01-15 08:30",
+  "daily_result": {
+    "total": 5,
+    "success": 3,
+    "failure": 2,
+    "accuracy": 0.6
+  }
 }
