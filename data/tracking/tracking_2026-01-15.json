@@ -92,7 +92,11 @@
       "industry": {
         "sector": "電子",
         "sub_type": "AI伺服器/組裝代工",
-        "drivers": ["法人反轉買", "台積電法說會受惠", "GB200量產"]
+        "drivers": [
+          "法人反轉買",
+          "台積電法說會受惠",
+          "GB200量產"
+        ]
       },
       "recommend_price": "232-236",
       "position": "15%",
@@ -109,7 +113,14 @@
       "risks": [
         "輝達-3.16%可能影響AI概念",
         "需確認法說會後續影響"
-      ]
+      ],
+      "intraday": {
+        "price": 232.0,
+        "change_pct": 0.65,
+        "volume_ratio": 0.54,
+        "timestamp": "2026-01-15 12:42",
+        "status": "🟡 小漲+縮量"
+      }
     },
     {
       "stock_code": "2330",
@@ -127,7 +138,11 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工",
-        "drivers": ["法說會", "ADR+2.65%", "3奈米/CoWoS供不應求"]
+        "drivers": [
+          "法說會",
+          "ADR+2.65%",
+          "3奈米/CoWoS供不應求"
+        ]
       },
       "recommend_price": "1700-1720",
       "position": "10%（零股5-10股）",
@@ -150,7 +165,14 @@
         "5日已漲10.32%，有追高風險",
         "法人連9日賣超",
         "若法說會不如預期可能回檔"
-      ]
+      ],
+      "intraday": {
+        "price": 1685.0,
+        "change_pct": 0.3,
+        "volume_ratio": 0.8,
+        "timestamp": "2026-01-15 12:42",
+        "status": "🟡 小漲"
+      }
     },
     {
       "stock_code": "1326",
@@ -168,7 +190,10 @@
       "industry": {
         "sector": "傳產",
         "sub_type": "塑化",
-        "drivers": ["油價上漲", "景氣循環"]
+        "drivers": [
+          "油價上漲",
+          "景氣循環"
+        ]
       },
       "recommend_price": "50-52",
       "position": "10%",
@@ -176,7 +201,14 @@
       "target_price": "55（+8%）",
       "time_horizon": "1-2週",
       "tracking_days": 7,
-      "status": "pending"
+      "status": "pending",
+      "intraday": {
+        "price": 34.1,
+        "change_pct": 6.9,
+        "volume_ratio": 2.14,
+        "timestamp": "2026-01-15 12:42",
+        "status": "🔥 大漲+爆量"
+      }
     },
     {
       "stock_code": "1303",
@@ -194,7 +226,10 @@
       "industry": {
         "sector": "傳產",
         "sub_type": "塑化/電子材料",
-        "drivers": ["油價上漲", "電子材料需求"]
+        "drivers": [
+          "油價上漲",
+          "電子材料需求"
+        ]
       },
       "recommend_price": "63-65",
       "position": "10%",
@@ -202,7 +237,14 @@
       "target_price": "70（+10%）",
       "time_horizon": "1-2週",
       "tracking_days": 7,
-      "status": "pending"
+      "status": "pending",
+      "intraday": {
+        "price": 69.7,
+        "change_pct": 12.6,
+        "volume_ratio": 2.15,
+        "timestamp": "2026-01-15 12:42",
+        "status": "🔥 大漲+爆量"
+      }
     },
     {
       "stock_code": "2337",
@@ -220,7 +262,10 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "記憶體",
-        "drivers": ["法人佈局", "記憶體週期"]
+        "drivers": [
+          "法人佈局",
+          "記憶體週期"
+        ]
       },
       "recommend_price": "33-35",
       "position": "5-10%",
@@ -228,7 +273,14 @@
       "target_price": "38（+10%）",
       "time_horizon": "1-2週",
       "tracking_days": 7,
-      "status": "pending"
+      "status": "pending",
+      "intraday": {
+        "price": 60.7,
+        "change_pct": 4.12,
+        "volume_ratio": 0.09,
+        "timestamp": "2026-01-15 12:42",
+        "status": "✅ 上漲"
+      }
     }
   ],
   "avoid_stocks": [
@@ -262,7 +314,7 @@
       "stock_code": "3481",
       "stock_name": "群創",
       "user_cost": 16.14,
-      "current_price": 24.40,
+      "current_price": 24.4,
       "quantity": 4,
       "unrealized_profit": 33040,
       "return_rate": 51.2,
@@ -275,7 +327,7 @@
       "stock_code": "8150",
       "stock_name": "南茂",
       "user_cost": 52.574,
-      "current_price": 59.40,
+      "current_price": 59.4,
       "quantity": 1,
       "unrealized_profit": 6826,
       "return_rate": 13.0,
@@ -288,7 +340,7 @@
       "stock_code": "2886",
       "stock_name": "兆豐金",
       "user_cost": 41.058,
-      "current_price": 40.50,
+      "current_price": 40.5,
       "quantity": 1,
       "unrealized_profit": -558,
       "return_rate": -1.4,
@@ -300,7 +352,7 @@
     {
       "stock_code": "2330",
       "stock_name": "台積電",
-      "user_cost": 1458.50,
+      "user_cost": 1458.5,
       "current_price": 1710,
       "quantity": 0.02,
       "unrealized_profit": 5030,
@@ -315,22 +367,31 @@
     "電子（AI/組裝）": {
       "count": 1,
       "percentage": 20,
-      "stocks": ["鴻海"]
+      "stocks": [
+        "鴻海"
+      ]
     },
     "半導體（晶圓代工）": {
       "count": 1,
       "percentage": 20,
-      "stocks": ["台積電"]
+      "stocks": [
+        "台積電"
+      ]
     },
     "傳產（塑化）": {
       "count": 2,
       "percentage": 40,
-      "stocks": ["台化", "南亞"]
+      "stocks": [
+        "台化",
+        "南亞"
+      ]
     },
     "半導體（記憶體）": {
       "count": 1,
       "percentage": 20,
-      "stocks": ["旺宏"]
+      "stocks": [
+        "旺宏"
+      ]
     }
   },
   "risk_warnings": [
@@ -345,8 +406,20 @@
     "data/tracking/tracking_2026-01-15.json"
   ],
   "sync_check": {
-    "before_market_recommendations": ["2317", "2330", "1326", "1303", "2337"],
-    "tracking_recommendations": ["2317", "2330", "1326", "1303", "2337"],
+    "before_market_recommendations": [
+      "2317",
+      "2330",
+      "1326",
+      "1303",
+      "2337"
+    ],
+    "tracking_recommendations": [
+      "2317",
+      "2330",
+      "1326",
+      "1303",
+      "2337"
+    ],
     "is_synced": true
   },
   "analysis_completed_at": "2026-01-15 08:30"
