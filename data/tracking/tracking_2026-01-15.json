@@ -1,0 +1,353 @@
+{
+  "date": "2026-01-15",
+  "day_of_week": "Thursday",
+  "analysis_version": "v5.3",
+  "process_compliance": {
+    "step_0_time_verification": true,
+    "step_0_5_international_data": true,
+    "step_1_historical_verification": true,
+    "step_1_5_predictions_reference": true,
+    "step_1_7_key_lessons_check": true,
+    "step_1_8_holdings_tracking": true,
+    "step_3_to_6_selection_process": true,
+    "step_7_file_creation": true
+  },
+  "market_context": {
+    "us_market": {
+      "nasdaq": "-0.48%",
+      "dow": "+0.31%",
+      "sp500": "+0.08%",
+      "phlx_semiconductor": "+1.67%"
+    },
+    "taiwan_adr": {
+      "tsm": "+2.65%",
+      "umc": "-1.57%",
+      "asx": "+7.15%"
+    },
+    "key_indicators": {
+      "vix": "+8.91%",
+      "nvidia": "-3.16%",
+      "wti_oil": "+2.94%"
+    },
+    "major_catalysts": [
+      "台積電法說會（14:00）- 利多機率85%",
+      "費半+1.67% - 利多半導體",
+      "日月光ADR+7.15% - 封測利多",
+      "輝達-3.16% - AI伺服器可能受壓"
+    ]
+  },
+  "historical_verification": {
+    "previous_date": "2026-01-14",
+    "accuracy_rate": "100%",
+    "success_count": 2,
+    "total_count": 2,
+    "success_cases": [
+      {
+        "stock": "國巨(2327)",
+        "result": "+6.91%",
+        "reason": "MLCC漲價週期、法人連續買超"
+      },
+      {
+        "stock": "台新金(2887)",
+        "result": "+0.95%",
+        "reason": "法人買超+34K"
+      }
+    ],
+    "failure_cases": []
+  },
+  "key_lessons_checked": [
+    {
+      "lesson": "5日>10%不追高",
+      "relevance": "高度相關",
+      "action": "避開日月光、群創、南茂",
+      "decision": "雖然ADR大漲，但5日已漲17-43%，不推薦"
+    },
+    {
+      "lesson": "法說會前進場，不等結果",
+      "relevance": "極度相關",
+      "action": "今日法說會前推薦台積電",
+      "decision": "法說會利多85%，法說會前進場"
+    },
+    {
+      "lesson": "法人反轉訊號重要",
+      "relevance": "高度相關",
+      "action": "觀察鴻海、台塑反轉買",
+      "decision": "鴻海反轉買+28K，優先推薦"
+    }
+  ],
+  "recommendations": [
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "type": "stable",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 82,
+      "五維度": {
+        "時事現況": 26,
+        "產業邏輯": 18,
+        "法人數據": 22,
+        "價格位置": 9,
+        "技術面": 7
+      },
+      "industry": {
+        "sector": "電子",
+        "sub_type": "AI伺服器/組裝代工",
+        "drivers": ["法人反轉買", "台積電法說會受惠", "GB200量產"]
+      },
+      "recommend_price": "232-236",
+      "position": "15%",
+      "stop_loss": "220（-5%）",
+      "target_price": "250（+8%）",
+      "time_horizon": "1-2週",
+      "tracking_days": 7,
+      "status": "pending",
+      "catalysts": [
+        "法人反轉買+28K",
+        "5日僅+1.74%，未追高",
+        "台積電法說會受惠"
+      ],
+      "risks": [
+        "輝達-3.16%可能影響AI概念",
+        "需確認法說會後續影響"
+      ]
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "type": "event_driven",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 78,
+      "五維度": {
+        "時事現況": 28,
+        "產業邏輯": 20,
+        "法人數據": 12,
+        "價格位置": 5,
+        "技術面": 8
+      },
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "晶圓代工",
+        "drivers": ["法說會", "ADR+2.65%", "3奈米/CoWoS供不應求"]
+      },
+      "recommend_price": "1700-1720",
+      "position": "10%（零股5-10股）",
+      "stop_loss": "1650（-4%）",
+      "target_price": "1800-1850",
+      "time_horizon": "法說會後1週",
+      "tracking_days": 7,
+      "status": "pending",
+      "event": {
+        "name": "台積電法說會",
+        "date": "2026-01-15 14:00",
+        "prediction": "利多機率85%"
+      },
+      "catalysts": [
+        "法說會利多預測85%",
+        "ADR+2.65%正面預期",
+        "Q4財報預期超預期"
+      ],
+      "risks": [
+        "5日已漲10.32%，有追高風險",
+        "法人連9日賣超",
+        "若法說會不如預期可能回檔"
+      ]
+    },
+    {
+      "stock_code": "1326",
+      "stock_name": "台化",
+      "type": "stable",
+      "rating": "⭐⭐⭐⭐",
+      "score": 75,
+      "五維度": {
+        "時事現況": 18,
+        "產業邏輯": 14,
+        "法人數據": 20,
+        "價格位置": 10,
+        "技術面": 6
+      },
+      "industry": {
+        "sector": "傳產",
+        "sub_type": "塑化",
+        "drivers": ["油價上漲", "景氣循環"]
+      },
+      "recommend_price": "50-52",
+      "position": "10%",
+      "stop_loss": "47（-8%）",
+      "target_price": "55（+8%）",
+      "time_horizon": "1-2週",
+      "tracking_days": 7,
+      "status": "pending"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "type": "stable",
+      "rating": "⭐⭐⭐⭐",
+      "score": 73,
+      "五維度": {
+        "時事現況": 16,
+        "產業邏輯": 15,
+        "法人數據": 18,
+        "價格位置": 10,
+        "技術面": 6
+      },
+      "industry": {
+        "sector": "傳產",
+        "sub_type": "塑化/電子材料",
+        "drivers": ["油價上漲", "電子材料需求"]
+      },
+      "recommend_price": "63-65",
+      "position": "10%",
+      "stop_loss": "60（-5%）",
+      "target_price": "70（+10%）",
+      "time_horizon": "1-2週",
+      "tracking_days": 7,
+      "status": "pending"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "type": "stable",
+      "rating": "⭐⭐⭐",
+      "score": 68,
+      "五維度": {
+        "時事現況": 14,
+        "產業邏輯": 14,
+        "法人數據": 16,
+        "價格位置": 10,
+        "技術面": 6
+      },
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "記憶體",
+        "drivers": ["法人佈局", "記憶體週期"]
+      },
+      "recommend_price": "33-35",
+      "position": "5-10%",
+      "stop_loss": "31（-8%）",
+      "target_price": "38（+10%）",
+      "time_horizon": "1-2週",
+      "tracking_days": 7,
+      "status": "pending"
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光",
+      "reason": "5日+17.56%已大漲，追高風險",
+      "five_day_change": "+17.56%"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "法人反轉賣-31K",
+      "institutional_flow": "-31K"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "5日+43.11%嚴重追高",
+      "five_day_change": "+43.11%"
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "reason": "5日+25.98%嚴重追高",
+      "five_day_change": "+25.98%"
+    }
+  ],
+  "holdings_tracking": [
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "user_cost": 16.14,
+      "current_price": 24.40,
+      "quantity": 4,
+      "unrealized_profit": 33040,
+      "return_rate": 51.2,
+      "five_day_change": 43.11,
+      "status": "reduce",
+      "action": "減碼50%鎖利",
+      "reason": "5日+43%，獲利51%，太快"
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "user_cost": 52.574,
+      "current_price": 59.40,
+      "quantity": 1,
+      "unrealized_profit": 6826,
+      "return_rate": 13.0,
+      "five_day_change": 25.98,
+      "status": "reduce",
+      "action": "減碼鎖利",
+      "reason": "5日+26%，獲利13%"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "user_cost": 41.058,
+      "current_price": 40.50,
+      "quantity": 1,
+      "unrealized_profit": -558,
+      "return_rate": -1.4,
+      "five_day_change": 1.25,
+      "status": "hold",
+      "action": "續抱",
+      "reason": "官股金控穩健"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "user_cost": 1458.50,
+      "current_price": 1710,
+      "quantity": 0.02,
+      "unrealized_profit": 5030,
+      "return_rate": 17.2,
+      "five_day_change": 10.32,
+      "status": "hold",
+      "action": "續抱+觀察法說會",
+      "reason": "法說會利多85%"
+    }
+  ],
+  "industry_distribution": {
+    "電子（AI/組裝）": {
+      "count": 1,
+      "percentage": 20,
+      "stocks": ["鴻海"]
+    },
+    "半導體（晶圓代工）": {
+      "count": 1,
+      "percentage": 20,
+      "stocks": ["台積電"]
+    },
+    "傳產（塑化）": {
+      "count": 2,
+      "percentage": 40,
+      "stocks": ["台化", "南亞"]
+    },
+    "半導體（記憶體）": {
+      "count": 1,
+      "percentage": 20,
+      "stocks": ["旺宏"]
+    }
+  },
+  "risk_warnings": [
+    "法說會風險：若台積電法說會不如預期，半導體股可能回檔",
+    "追高風險：群創、南茂、日月光已大漲，不建議追",
+    "輝達下跌：-3.16%，AI伺服器股可能受壓",
+    "VIX上升：+8.91%，市場恐慌情緒上升"
+  ],
+  "next_analysis": "盤中分析（12:30）",
+  "files_created": [
+    "data/2026-01-15/before_market_analysis.md",
+    "data/tracking/tracking_2026-01-15.json"
+  ],
+  "sync_check": {
+    "before_market_recommendations": ["2317", "2330", "1326", "1303", "2337"],
+    "tracking_recommendations": ["2317", "2330", "1326", "1303", "2337"],
+    "is_synced": true
+  },
+  "analysis_completed_at": "2026-01-15 08:30"
+}
