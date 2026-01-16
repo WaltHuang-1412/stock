@@ -144,6 +144,12 @@
         "volume_ratio": 1.37,
         "timestamp": "2026-01-16 12:31",
         "status": "🔥 大漲+突破推薦價"
+      },
+      "closing": {
+        "price": 58.50,
+        "change_pct": 5.79,
+        "result": "success",
+        "timestamp": "2026-01-16 13:30"
       }
     },
     {
@@ -199,6 +205,12 @@
         "volume_ratio": 0.54,
         "timestamp": "2026-01-16 12:31",
         "status": "🟡 小漲+縮量"
+      },
+      "closing": {
+        "price": 17.75,
+        "change_pct": 0.57,
+        "result": "neutral",
+        "timestamp": "2026-01-16 13:30"
       }
     },
     {
@@ -250,6 +262,12 @@
         "volume_ratio": 1.29,
         "timestamp": "2026-01-16 12:31",
         "status": "🔥 爆發+嚴重追高"
+      },
+      "closing": {
+        "price": 56.40,
+        "change_pct": 13.25,
+        "result": "success",
+        "timestamp": "2026-01-16 13:30"
       }
     },
     {
@@ -302,6 +320,12 @@
         "volume_ratio": 0.86,
         "timestamp": "2026-01-16 12:31",
         "status": "✅ 小漲+可進場"
+      },
+      "closing": {
+        "price": 29.30,
+        "change_pct": 1.91,
+        "result": "success",
+        "timestamp": "2026-01-16 13:30"
       }
     },
     {
@@ -359,6 +383,12 @@
         "volume_ratio": 0.86,
         "timestamp": "2026-01-16 12:31",
         "status": "🟡 小漲+矛盾訊號"
+      },
+      "closing": {
+        "price": 43.00,
+        "change_pct": 3.61,
+        "result": "success",
+        "timestamp": "2026-01-16 13:30"
       }
     }
   ],
@@ -524,5 +554,13 @@
     "is_synced": true
   },
   "analysis_completed_at": "2026-01-16 07:30",
-  "intraday_completed_at": "2026-01-16 12:31"
+  "intraday_completed_at": "2026-01-16 12:31",
+  "after_market_completed_at": "2026-01-16 17:54",
+  "daily_result": {
+    "total": 5,
+    "success": 4,
+    "neutral": 1,
+    "failure": 0,
+    "accuracy": 0.8
+  }
 }

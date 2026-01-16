@@ -1841,5 +1841,167 @@
       "⚠️ 量能驗證重要性：台新金評分73但量能0.8x，應降低信心度",
       "⚠️ 金融股在電子大漲日被邊緣化：資金集中電子，金融量能不足"
     ]
+  },
+  "2026-01-16": {
+    "date": "2026-01-16",
+    "day_of_week": "Friday",
+    "predictions": [
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "prev_close": 54.70,
+        "direction": "up",
+        "target_range": "53-55",
+        "confidence": 0.84,
+        "reasons": [
+          "台積電法說會受惠",
+          "費半+3.45%、台積電ADR+4.44%",
+          "外資10天累積+236K"
+        ],
+        "verification": {
+          "actual_close": 58.50,
+          "actual_change": 5.79,
+          "result": "success",
+          "notes": "台積電法說會利多延續，半導體供應鏈受惠"
+        }
+      },
+      {
+        "symbol": "2883",
+        "name": "凱基金",
+        "prev_close": 17.55,
+        "direction": "up",
+        "target_range": "17.3-17.7",
+        "confidence": 0.75,
+        "reasons": [
+          "法人連續4天買超+78K",
+          "證券型受益市場活絡"
+        ],
+        "verification": {
+          "actual_close": 17.75,
+          "actual_change": 0.57,
+          "result": "neutral",
+          "notes": "縮量影響，佈局型符合預期但表現平淡"
+        }
+      },
+      {
+        "symbol": "6770",
+        "name": "力積電",
+        "prev_close": 51.30,
+        "direction": "up",
+        "target_range": "50-52",
+        "confidence": 0.75,
+        "reasons": [
+          "費半+3.45%、半導體利多",
+          "記憶體成功模式（昨日旺宏+3.00%驗證）"
+        ],
+        "verification": {
+          "actual_close": 56.40,
+          "actual_change": 13.25,
+          "result": "success",
+          "notes": "記憶體族群爆發"
+        }
+      },
+      {
+        "symbol": "2890",
+        "name": "永豐金",
+        "prev_close": 29.00,
+        "direction": "up",
+        "target_range": "28.5-29.5",
+        "confidence": 0.66,
+        "reasons": [
+          "法人昨日反轉買超+16K",
+          "5日-0.68%（佈局中）"
+        ],
+        "verification": {
+          "actual_close": 29.30,
+          "actual_change": 1.91,
+          "result": "success",
+          "notes": "法人反轉買超驗證有效"
+        }
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "prev_close": 42.60,
+        "direction": "up",
+        "target_range": "41.5-42.5",
+        "confidence": 0.63,
+        "reasons": [
+          "法人昨日加速買超+36K",
+          "10天累積+91K"
+        ],
+        "verification": {
+          "actual_close": 43.00,
+          "actual_change": 3.61,
+          "result": "success",
+          "notes": "法人買超+36K力道>油價-4.28%利空"
+        }
+      }
+    ],
+    "avoid_stocks": [
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "reason": "法人反轉賣-12,219張",
+        "verification": {
+          "actual_close": 26.60,
+          "actual_change": 20.91,
+          "result": "failure",
+          "notes": "重大失誤：法人單日反轉≠趨勢反轉，面板FOPLP利多仍在"
+        }
+      },
+      {
+        "symbol": "1303",
+        "name": "南亞",
+        "reason": "5日+4.03% + 油價-4.28%利空",
+        "verification": {
+          "actual_close": 73.80,
+          "actual_change": 14.06,
+          "result": "failure",
+          "notes": "重大失誤：法人史詩級買超+69K力道>油價利空"
+        }
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "reason": "法人連續10日賣超-7,897",
+        "verification": {
+          "actual_close": 1740.00,
+          "actual_change": 2.96,
+          "result": "partial",
+          "notes": "保守避開：法說會利多>法人賣超"
+        }
+      }
+    ],
+    "track_b_discoveries": [
+      {
+        "symbol": "3037",
+        "name": "欣興",
+        "change": 12.53,
+        "reason": "載板受惠台積電法說會CoWoS利多",
+        "institutional_flow": -4619,
+        "notes": "法人在賣，散戶追價，✅正確避開"
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "change": 9.48,
+        "reason": "記憶體族群爆發",
+        "institutional_flow": 3054,
+        "notes": "⚠️小遺漏：法人買超+3K雖弱，但記憶體族群共振應推薦"
+      }
+    ],
+    "framework": "v5.4（時事先行+雙軌分析）",
+    "accuracy": 0.80,
+    "notes": "推薦準確率80%（4成功1中性）。半導體時事判斷正確，聯電、力積電大漲驗證。避開股準確率40%（2/5），群創、南亞避開失誤。",
+    "lessons": [
+      "🚨 教訓1：法人史詩級買超（>50K）>時事利空 - 南亞法人+69K vs 油價-4.28%，應信法人",
+      "🚨 教訓2：法人單日反轉 ≠ 趨勢反轉 - 群創法人-12K但產業邏輯強（FOPLP），應小倉位觀察",
+      "🚨 教訓3：記憶體族群應全面覆蓋 - 只推薦力積電，漏掉旺宏+9.48%，應推薦2-3檔",
+      "🚨 教訓4：產業爆發期放寬5日漲幅限制 - 群創5日+20%但產業邏輯強，可小倉位推薦",
+      "✅ 時事先行策略有效：費半+3.45% → 半導體全面大漲，聯電+5.79%驗證",
+      "✅ 法人連續買超有效：永豐金反轉買超+16K → +1.91%驗證",
+      "✅ 雙軌系統完整：Track A追蹤80%準確率，Track B發現遺漏機會"
+    ]
   }
 }
