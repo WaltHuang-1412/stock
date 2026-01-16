@@ -137,6 +137,13 @@
         "foreign": "+236K",
         "trust": "-55K",
         "status": "法人偏多但不連續"
+      },
+      "intraday": {
+        "price": 58.90,
+        "change_pct": 7.68,
+        "volume_ratio": 1.37,
+        "timestamp": "2026-01-16 12:31",
+        "status": "🔥 大漲+突破推薦價"
       }
     },
     {
@@ -185,6 +192,13 @@
         "foreign": "+103K",
         "trust": "-26K",
         "status": "法人短線買進中（最強籌碼）"
+      },
+      "intraday": {
+        "price": 17.70,
+        "change_pct": 0.85,
+        "volume_ratio": 0.54,
+        "timestamp": "2026-01-16 12:31",
+        "status": "🟡 小漲+縮量"
       }
     },
     {
@@ -229,6 +243,13 @@
       "historical_adjustment": {
         "reason": "記憶體成功模式加分",
         "amount": "+2分"
+      },
+      "intraday": {
+        "price": 56.40,
+        "change_pct": 9.94,
+        "volume_ratio": 1.29,
+        "timestamp": "2026-01-16 12:31",
+        "status": "🔥 爆發+嚴重追高"
       }
     },
     {
@@ -274,6 +295,13 @@
         "foreign": "+1.5K",
         "trust": "-8.7K",
         "status": "法人態度不明確（昨日反轉）"
+      },
+      "intraday": {
+        "price": 29.20,
+        "change_pct": 0.69,
+        "volume_ratio": 0.86,
+        "timestamp": "2026-01-16 12:31",
+        "status": "✅ 小漲+可進場"
       }
     },
     {
@@ -324,6 +352,13 @@
       "historical_adjustment": {
         "reason": "油價轉利空扣分",
         "amount": "-3分"
+      },
+      "intraday": {
+        "price": 42.95,
+        "change_pct": 0.82,
+        "volume_ratio": 0.86,
+        "timestamp": "2026-01-16 12:31",
+        "status": "🟡 小漲+矛盾訊號"
       }
     }
   ],
@@ -465,9 +500,10 @@
     "週五效應：本週最後交易日，可能獲利了結",
     "金融股籌碼不穩：外資買、投信賣（法人對決）"
   ],
-  "next_analysis": "盤中分析（12:30）",
+  "next_analysis": "盤後分析（14:30）",
   "files_created": [
     "data/2026-01-16/before_market_analysis.md",
+    "data/2026-01-16/intraday_analysis.md",
     "data/tracking/tracking_2026-01-16.json"
   ],
   "sync_check": {
@@ -487,5 +523,6 @@
     ],
     "is_synced": true
   },
-  "analysis_completed_at": "2026-01-16 07:30"
+  "analysis_completed_at": "2026-01-16 07:30",
+  "intraday_completed_at": "2026-01-16 12:31"
 }
