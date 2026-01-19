@@ -1,0 +1,496 @@
+{
+  "date": "2026-01-19",
+  "day_of_week": "Monday",
+  "analysis_version": "v5.4",
+  "process_compliance": {
+    "step_minus_1_info_sync": true,
+    "step_0_time_verification": true,
+    "step_0_5_international_data": true,
+    "step_1_historical_verification": true,
+    "step_1_5_predictions_reference": true,
+    "step_1_7_key_lessons_check": true,
+    "step_1_8_holdings_tracking": true,
+    "step_3_to_6_selection_process": true,
+    "step_4_3_chip_analysis": true,
+    "step_7_file_creation": true
+  },
+  "market_context": {
+    "us_market": {
+      "dow": "-0.29%",
+      "sp500": "-0.38%",
+      "nasdaq": "-0.66%",
+      "phlx_semiconductor": "+3.78%"
+    },
+    "taiwan_adr": {
+      "tsm": "+5.80%",
+      "umc": "+5.80%",
+      "asx": "+10.03%"
+    },
+    "key_indicators": {
+      "wti_oil": "-2.96%",
+      "vix": "+9.45%",
+      "nvidia": "+0.67%"
+    },
+    "major_catalysts": [
+      "費半+3.78%（半導體大利多）",
+      "台積電ADR+5.80%（法說會利多延續）",
+      "日月光ADR+10.03%（封測超級利多）",
+      "WTI原油-2.96%（塑化利空）"
+    ]
+  },
+  "historical_verification": {
+    "previous_date": "2026-01-16",
+    "accuracy_rate": "80%",
+    "success_count": 4,
+    "neutral_count": 1,
+    "total_count": 5,
+    "success_cases": [
+      {
+        "stock": "聯電(2303)",
+        "result": "+5.79%",
+        "reason": "費半利多+法人買超"
+      },
+      {
+        "stock": "力積電(6770)",
+        "result": "+13.25%",
+        "reason": "記憶體族群爆發"
+      },
+      {
+        "stock": "永豐金(2890)",
+        "result": "+1.91%",
+        "reason": "法人反轉買超見效"
+      },
+      {
+        "stock": "台塑(1301)",
+        "result": "+3.61%",
+        "reason": "法人買超>油價利空"
+      }
+    ],
+    "neutral_cases": [
+      {
+        "stock": "凱基金(2883)",
+        "result": "+0.57%",
+        "reason": "縮量影響"
+      }
+    ]
+  },
+  "key_lessons_checked": [
+    {
+      "lesson": "法人史詩級買超>時事利空",
+      "relevance": "高度相關",
+      "action": "南亞+69K vs 油價利空",
+      "decision": "信法人"
+    },
+    {
+      "lesson": "費半大漲→半導體全面利多",
+      "relevance": "極度相關",
+      "action": "費半+3.78%",
+      "decision": "必推半導體"
+    },
+    {
+      "lesson": "台積電ADR大漲=開盤利多",
+      "relevance": "極度相關",
+      "action": "ADR+5.80%",
+      "decision": "推薦台積電"
+    }
+  ],
+  "recommendations": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "type": "event_driven",
+      "rating": "5star",
+      "score": 88,
+      "五維度": {
+        "時事現況": 28,
+        "產業邏輯": 18,
+        "法人數據": 24,
+        "價格位置": 8,
+        "技術面": 10
+      },
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "晶圓代工",
+        "drivers": [
+          "費半+3.78%",
+          "ADR+5.80%",
+          "法人01/16反轉買+9K"
+        ]
+      },
+      "recommend_price": "1830-1860",
+      "position": "10%",
+      "stop_loss": "1750（-5%）",
+      "target_price": "1950-2000（+8%）",
+      "time_horizon": "1-2週",
+      "tracking_days": 7,
+      "status": "pending",
+      "catalysts": [
+        "費半+3.78%連2日大漲",
+        "ADR+5.80%大漲",
+        "法人01/16反轉買+9K結束連10日賣超"
+      ],
+      "risks": [
+        "開盤跳空高開追高風險",
+        "VIX+9.45%波動加大"
+      ],
+      "chip_analysis": {
+        "consecutive_days": 0,
+        "total_10_days": "-65K",
+        "foreign": "-76K",
+        "trust": "+5.5K",
+        "status": "01/16反轉買+9K（重大訊號）"
+      }
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光",
+      "type": "event_driven",
+      "rating": "5star",
+      "score": 87,
+      "五維度": {
+        "時事現況": 28,
+        "產業邏輯": 17,
+        "法人數據": 26,
+        "價格位置": 6,
+        "技術面": 10
+      },
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "封測",
+        "drivers": [
+          "ADR+10.03%",
+          "連6日買超",
+          "外資+投信同步買"
+        ]
+      },
+      "recommend_price": "325-335",
+      "position": "10%",
+      "stop_loss": "310（-5%）",
+      "target_price": "360-370（+10%）",
+      "time_horizon": "1-2週",
+      "tracking_days": 7,
+      "status": "pending",
+      "catalysts": [
+        "ADR+10.03%超強利多",
+        "連6日買超",
+        "外資+投信三方一致"
+      ],
+      "risks": [
+        "已漲追高風險",
+        "開盤跳空高開"
+      ],
+      "chip_analysis": {
+        "consecutive_days": 6,
+        "total_10_days": "+21K",
+        "foreign": "+18K",
+        "trust": "+3.6K",
+        "status": "法人持續佈局中（最佳）"
+      }
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "type": "stable",
+      "rating": "4star",
+      "score": 82,
+      "五維度": {
+        "時事現況": 18,
+        "產業邏輯": 14,
+        "法人數據": 28,
+        "價格位置": 12,
+        "技術面": 10
+      },
+      "industry": {
+        "sector": "金融",
+        "sub_type": "證券型",
+        "drivers": [
+          "連5日買超",
+          "累計+94K",
+          "5日僅+0.6%佈局中"
+        ]
+      },
+      "recommend_price": "17.6-17.9",
+      "position": "15%",
+      "stop_loss": "17.0（-4%）",
+      "target_price": "18.8-19.2（+6%）",
+      "time_horizon": "1-2週",
+      "tracking_days": 7,
+      "status": "pending",
+      "catalysts": [
+        "連5日買超（最強籌碼）",
+        "累計+94K",
+        "5日僅+0.6%（佈局中）"
+      ],
+      "risks": [
+        "金融無特別催化劑",
+        "投信賣超-23K（法人對決）"
+      ],
+      "chip_analysis": {
+        "consecutive_days": 5,
+        "total_10_days": "+94K",
+        "foreign": "+116K",
+        "trust": "-23K",
+        "status": "法人持續佈局中"
+      }
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "type": "event_driven",
+      "rating": "4star",
+      "score": 79,
+      "五維度": {
+        "時事現況": 26,
+        "產業邏輯": 16,
+        "法人數據": 22,
+        "價格位置": 5,
+        "技術面": 10
+      },
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "晶圓代工",
+        "drivers": [
+          "費半+3.78%",
+          "外資累計+234K"
+        ]
+      },
+      "recommend_price": "61-63",
+      "position": "10%",
+      "stop_loss": "58（-5%）",
+      "target_price": "67-70（+10%）",
+      "time_horizon": "1-2週",
+      "tracking_days": 7,
+      "status": "pending",
+      "catalysts": [
+        "費半+3.78%大漲",
+        "ADR+5.80%",
+        "外資累計+234K"
+      ],
+      "risks": [
+        "5日已+5.8%追高風險",
+        "投信賣超-64K（法人對決）"
+      ],
+      "chip_analysis": {
+        "consecutive_days": 1,
+        "total_10_days": "+189K",
+        "foreign": "+234K",
+        "trust": "-64K",
+        "status": "法人偏多但不連續"
+      }
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "type": "stable",
+      "rating": "3star",
+      "score": 68,
+      "五維度": {
+        "時事現況": 12,
+        "產業邏輯": 12,
+        "法人數據": 24,
+        "價格位置": 10,
+        "技術面": 10
+      },
+      "industry": {
+        "sector": "傳產",
+        "sub_type": "塑化",
+        "drivers": [
+          "法人01/16買超+19K"
+        ]
+      },
+      "recommend_price": "42-43",
+      "position": "持股續抱",
+      "stop_loss": "39",
+      "target_price": "44-45",
+      "time_horizon": "1-2週",
+      "tracking_days": 7,
+      "status": "holding",
+      "catalysts": [
+        "法人01/16買超+19K"
+      ],
+      "risks": [
+        "WTI原油-2.96%利空"
+      ]
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "reason": "5日+14.1%已大漲，追高風險極高",
+      "five_day_change": "+14.1%",
+      "institutional_flow": "+42K"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "5日+20.9%已大漲",
+      "five_day_change": "+20.9%",
+      "institutional_flow": "+6.6K"
+    },
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "reason": "10日累計賣超-294K，籌碼不穩",
+      "five_day_change": "+2.6%",
+      "institutional_flow": "+46K（單日反轉）"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "5日+13.3%已大漲",
+      "five_day_change": "+13.3%",
+      "institutional_flow": "+18K"
+    },
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨",
+      "reason": "5日+14.3%已大漲",
+      "five_day_change": "+14.3%",
+      "institutional_flow": "+13K"
+    }
+  ],
+  "holdings_tracking": [
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "user_cost": 41.058,
+      "current_price": null,
+      "quantity": 1,
+      "institutional_01_15": 2568,
+      "institutional_01_16": 4303,
+      "change_type": "續買",
+      "status": "hold",
+      "action": "續抱",
+      "reason": "法人續買+4.3K"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "user_cost": 66.895,
+      "current_price": 73.80,
+      "quantity": 1,
+      "institutional_01_15": 69119,
+      "institutional_01_16": 42528,
+      "change_type": "續買",
+      "status": "reduce",
+      "action": "減碼50%鎖利",
+      "reason": "已漲14%，鎖定利潤"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "user_cost": 16.14,
+      "current_price": 26.60,
+      "quantity": 4,
+      "institutional_01_15": -12219,
+      "institutional_01_16": 6634,
+      "change_type": "轉買",
+      "status": "reduce",
+      "action": "減碼50%鎖利",
+      "reason": "已漲65%，風險極高"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "user_cost": 40.757,
+      "current_price": 43.00,
+      "quantity": 1,
+      "institutional_01_15": 36820,
+      "institutional_01_16": 19359,
+      "change_type": "續買",
+      "status": "hold",
+      "action": "續抱",
+      "reason": "法人續買+19K"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "user_cost": 1458.5,
+      "current_price": 1740.0,
+      "quantity": 0.02,
+      "institutional_01_15": -7897,
+      "institutional_01_16": 9181,
+      "change_type": "反轉買",
+      "status": "add",
+      "action": "續抱+可加碼",
+      "reason": "法人反轉買+9K結束連10日賣超"
+    }
+  ],
+  "industry_distribution": {
+    "半導體": {
+      "count": 3,
+      "percentage": 60,
+      "stocks": [
+        "台積電",
+        "日月光",
+        "聯電"
+      ]
+    },
+    "金融": {
+      "count": 1,
+      "percentage": 20,
+      "stocks": [
+        "凱基金"
+      ]
+    },
+    "傳產（塑化）": {
+      "count": 1,
+      "percentage": 20,
+      "stocks": [
+        "台塑"
+      ]
+    }
+  },
+  "risk_warnings": [
+    "半導體追高風險：費半連2日大漲，開盤可能跳空高開",
+    "VIX上升：+9.45%市場恐慌上升，波動加大",
+    "塑化油價利空：WTI-2.96%，塑化股可能承壓",
+    "週一效應：週末消息可能影響開盤"
+  ],
+  "next_analysis": "盤中分析（12:30）",
+  "files_created": [
+    "data/2026-01-19/before_market_analysis.md",
+    "data/tracking/tracking_2026-01-19.json"
+  ],
+  "sync_check": {
+    "before_market_recommendations": [
+      "2330",
+      "3711",
+      "2883",
+      "2303",
+      "1301"
+    ],
+    "tracking_recommendations": [
+      "2330",
+      "3711",
+      "2883",
+      "2303",
+      "1301"
+    ],
+    "is_synced": true
+  },
+  "analysis_completed_at": "2026-01-19 08:55",
+  "after_market_verification": {
+    "verification_time": "2026-01-19 14:30",
+    "track_a_results": [
+      {"symbol": "2303", "name": "聯電", "close": 62.50, "change_pct": 6.84, "result": "success"},
+      {"symbol": "2883", "name": "凱基金", "close": 18.10, "change_pct": 1.97, "result": "success"},
+      {"symbol": "2330", "name": "台積電", "close": 1760.00, "change_pct": 1.15, "result": "success"},
+      {"symbol": "1301", "name": "台塑", "close": 43.70, "change_pct": 1.63, "result": "success"},
+      {"symbol": "3711", "name": "日月光", "close": 299.00, "change_pct": -1.48, "result": "neutral"}
+    ],
+    "accuracy": 0.80,
+    "track_b_discoveries": [
+      {"symbol": "2337", "name": "旺宏", "change_pct": 10.00, "notes": "記憶體漲停"},
+      {"symbol": "2408", "name": "南亞科", "change_pct": 10.00, "notes": "記憶體漲停"},
+      {"symbol": "3189", "name": "景碩", "change_pct": 9.87, "notes": "載板大漲"}
+    ],
+    "lessons": [
+      "費半+3.78%時事判斷正確",
+      "法人佈局股策略有效",
+      "ADR大漲≠現股必漲",
+      "記憶體族群覆蓋不足"
+    ]
+  }
+}
