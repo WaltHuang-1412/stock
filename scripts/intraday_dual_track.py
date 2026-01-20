@@ -101,6 +101,37 @@ def get_realtime_data(stock_code):
     except Exception:
         return None
 
+def parse_recommend_price(price_str):
+    """解析推薦價格，支援範圍格式如 '18.0-18.3' 或單一數值"""
+    if price_str is None:
+        return None
+
+    # 如果已經是數字，直接返回
+    if isinstance(price_str, (int, float)):
+        return float(price_str)
+
+    price_str = str(price_str).strip()
+
+    # 處理「觀察開盤」等非數值情況
+    if not any(c.isdigit() for c in price_str):
+        return None
+
+    # 處理範圍格式 "18.0-18.3"
+    if '-' in price_str:
+        parts = price_str.split('-')
+        try:
+            low = float(parts[0].strip())
+            high = float(parts[1].strip())
+            return (low + high) / 2  # 返回中間價
+        except (ValueError, IndexError):
+            pass
+
+    # 嘗試直接轉換
+    try:
+        return float(price_str)
+    except ValueError:
+        return None
+
 def analyze_tracking_stocks(tracking):
     """Track A: 分析盤前推薦股表現"""
     results = []
@@ -111,14 +142,19 @@ def analyze_tracking_stocks(tracking):
     for rec in recommendations:
         stock_code = rec['stock_code']
         stock_name = rec['stock_name']
-        recommend_price = rec['recommend_price']
+        recommend_price_raw = rec.get('recommend_price')
+        recommend_price = parse_recommend_price(recommend_price_raw)
 
         data = get_realtime_data(stock_code)
         if not data:
             continue
 
-        # 計算相對推薦價的表現
-        price_vs_recommend = ((data['current_price'] - recommend_price) / recommend_price) * 100
+        # 計算相對推薦價的表現（若無有效推薦價則跳過比較）
+        if recommend_price and recommend_price > 0:
+            price_vs_recommend = ((data['current_price'] - recommend_price) / recommend_price) * 100
+        else:
+            price_vs_recommend = 0
+            recommend_price = data['prev_close']  # 用昨收作為參考
 
         # 給出操作建議而非判斷
         if data['change_pct'] < -5:

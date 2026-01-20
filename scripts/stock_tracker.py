@@ -104,8 +104,30 @@ class StockTracker:
         else:
             recommend_price = float(recommend_price_raw) if recommend_price_raw else None
 
-        target_price = float(recommendation.get('target_price', 0))
-        stop_loss = float(recommendation.get('stop_loss', 0))
+        # 處理目標價（可能是 "250" 或 "250（+8%）"）
+        target_price_raw = recommendation.get('target_price', 0)
+        try:
+            if isinstance(target_price_raw, str):
+                # 只取數字部分
+                import re
+                match = re.match(r'^[\d.]+', str(target_price_raw))
+                target_price = float(match.group()) if match else 0
+            else:
+                target_price = float(target_price_raw)
+        except (ValueError, AttributeError):
+            target_price = 0
+
+        # 處理停損價
+        stop_loss_raw = recommendation.get('stop_loss', 0)
+        try:
+            if isinstance(stop_loss_raw, str):
+                import re
+                match = re.match(r'^[\d.]+', str(stop_loss_raw))
+                stop_loss = float(match.group()) if match else 0
+            else:
+                stop_loss = float(stop_loss_raw)
+        except (ValueError, AttributeError):
+            stop_loss = 0
 
         # 檢查必要欄位
         if not stock_code:
@@ -353,7 +375,12 @@ class StockTracker:
             print("-"*60)
 
             data = self.load_tracking_data(file_path)
-            recommendations = data['recommendations']
+
+            # 支援不同格式：有些用 'recommendations'，有些直接存資料
+            recommendations = data.get('recommendations', [])
+            if not recommendations:
+                print(f"ℹ️ 此檔案無推薦記錄或格式不同，跳過")
+                continue
 
             for rec in recommendations:
                 # 跳過已完成的（支援有或沒有 status 欄位的情況）
