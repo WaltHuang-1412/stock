@@ -1,29 +1,31 @@
 #!/usr/bin/env python3
 """
-台股時事分析工具 v2.0
-功能：
-1. 查詢 MOPS 當日全市場重大訊息（不限特定股票）
-2. 查詢近期法說會/股東會
-3. 分析熱門題材
-4. 整合財經新聞
+台股時事分析工具 v3.0
+整合多來源動態獲取台股資訊：
+1. 證交所新聞 API - 官方公告
+2. 證交所公告 API - 重大訊息
+3. 鉅亨網新聞 API - 財經新聞 + 關鍵字
+4. 經濟日報 RSS - 補充新聞
+
+所有資料皆從即時來源動態獲取，無硬編碼
 
 用法：
-  python3 scripts/fetch_tw_market_news.py           # 今日時事
-  python3 scripts/fetch_tw_market_news.py --days 3  # 近3日時事
+  python3 scripts/fetch_tw_market_news.py
 """
 
 import requests
 import sys
-from datetime import datetime, timedelta
+from datetime import datetime
 from bs4 import BeautifulSoup
 import json
 import re
+import xml.etree.ElementTree as ET
 
 # 忽略 SSL 警告
 import warnings
 warnings.filterwarnings('ignore')
 
-# 重點股票名稱對照（用於標註，不用於過濾）
+# 重點股票名稱對照（用於標註）
 STOCK_NAMES = {
     # 半導體
     '2330': '台積電', '2303': '聯電', '2454': '聯發科', '3711': '日月光投控',
@@ -44,147 +46,62 @@ STOCK_NAMES = {
 }
 
 
-def get_mops_all_announcements():
-    """查詢 MOPS 當日全市場重大訊息"""
-    announcements = []
-
-    # MOPS 即時重大訊息（全市場）
-    url = 'https://mops.twse.com.tw/mops/web/t05sr01_1'
-
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-        'Accept-Language': 'zh-TW,zh;q=0.9,en;q=0.8',
-    }
+def get_twse_news():
+    """從證交所獲取官方新聞"""
+    news = []
+    url = 'https://www.twse.com.tw/rwd/zh/news/newsList?limit=15'
 
     try:
-        r = requests.get(url, headers=headers, timeout=20, verify=False)
-        r.encoding = 'utf-8'
-
+        r = requests.get(url, timeout=10)
         if r.status_code == 200:
-            soup = BeautifulSoup(r.text, 'html.parser')
-
-            # 找到重大訊息表格
-            tables = soup.find_all('table', class_='hasBorder')
-
-            for table in tables:
-                rows = table.find_all('tr')
-                for row in rows[1:]:  # 跳過表頭
-                    cols = row.find_all('td')
-                    if len(cols) >= 4:
-                        try:
-                            date = cols[0].get_text(strip=True)
-                            time = cols[1].get_text(strip=True) if len(cols) > 1 else ''
-                            code = cols[2].get_text(strip=True) if len(cols) > 2 else ''
-                            name = cols[3].get_text(strip=True) if len(cols) > 3 else ''
-                            subject = cols[4].get_text(strip=True) if len(cols) > 4 else ''
-
-                            if code and subject:
-                                # 清理股票代號（移除空白）
-                                code = code.strip()
-
-                                announcements.append({
-                                    'date': date,
-                                    'time': time,
-                                    'stock_code': code,
-                                    'stock_name': name,
-                                    'subject': subject[:100],
-                                    'is_major': code in STOCK_NAMES  # 標註是否為重點股票
-                                })
-                        except Exception:
-                            continue
-
+            data = r.json()
+            if data.get('stat') == 'ok' and 'data' in data:
+                for item in data['data'][:10]:
+                    if len(item) >= 3:
+                        news.append({
+                            'title': item[1][:80] if len(item) > 1 else '',
+                            'date': item[2] if len(item) > 2 else '',
+                            'source': '證交所',
+                            'type': 'official'
+                        })
     except Exception as e:
-        print(f"⚠️ MOPS 全市場查詢: {e}")
+        print(f"  ⚠️ 證交所新聞: {e}")
+
+    return news
+
+
+def get_twse_announcements():
+    """從證交所獲取公告"""
+    announcements = []
+    url = 'https://www.twse.com.tw/rwd/zh/announcement/announcement?limit=10'
+
+    try:
+        r = requests.get(url, timeout=10)
+        if r.status_code == 200:
+            data = r.json()
+            if data.get('stat') == 'ok' and 'data' in data:
+                for item in data['data'][:8]:
+                    if len(item) >= 4:
+                        announcements.append({
+                            'date': item[1] if len(item) > 1 else '',
+                            'doc_no': item[2] if len(item) > 2 else '',
+                            'subject': item[3][:100] if len(item) > 3 else '',
+                            'source': '證交所公告'
+                        })
+    except Exception as e:
+        print(f"  ⚠️ 證交所公告: {e}")
 
     return announcements
 
 
-def get_mops_investor_conferences():
-    """查詢 MOPS 法說會/業績發表會"""
-    conferences = []
-
-    today = datetime.now()
-
-    # MOPS 法人說明會查詢
-    url = 'https://mops.twse.com.tw/mops/web/t100sb02_1'
-
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
-        'Content-Type': 'application/x-www-form-urlencoded',
-    }
-
-    try:
-        # 查詢未來7天
-        for i in range(7):
-            check_date = today + timedelta(days=i)
-            year = check_date.year - 1911  # 民國年
-            month = check_date.month
-            day = check_date.day
-
-            data = {
-                'encodeURIComponent': '1',
-                'step': '1',
-                'firstin': '1',
-                'off': '1',
-                'TYPEK': 'all',
-                'year': str(year),
-                'month': f'{month:02d}',
-                'day': f'{day:02d}',
-            }
-
-            r = requests.post(url, headers=headers, data=data, timeout=10, verify=False)
-            r.encoding = 'utf-8'
-
-            if r.status_code == 200:
-                soup = BeautifulSoup(r.text, 'html.parser')
-                tables = soup.find_all('table', class_='hasBorder')
-
-                for table in tables:
-                    rows = table.find_all('tr')
-                    for row in rows[1:]:
-                        cols = row.find_all('td')
-                        if len(cols) >= 5:
-                            try:
-                                code = cols[0].get_text(strip=True)
-                                name = cols[1].get_text(strip=True)
-                                conf_type = cols[2].get_text(strip=True) if len(cols) > 2 else ''
-                                time = cols[3].get_text(strip=True)
-                                location = cols[4].get_text(strip=True) if len(cols) > 4 else ''
-
-                                if code and name:
-                                    conferences.append({
-                                        'date': check_date.strftime('%Y-%m-%d'),
-                                        'stock_code': code.strip(),
-                                        'stock_name': name,
-                                        'type': conf_type,
-                                        'time': time,
-                                        'location': location,
-                                        'is_major': code.strip() in STOCK_NAMES
-                                    })
-                            except Exception:
-                                continue
-    except Exception as e:
-        print(f"⚠️ 法說會查詢: {e}")
-
-    return conferences
-
-
 def get_cnyes_news():
-    """從鉅亨網查詢財經新聞"""
+    """從鉅亨網獲取財經新聞"""
     news = []
-
     url = 'https://news.cnyes.com/api/v3/news/category/tw_stock'
 
     try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0',
-            'Accept': 'application/json'
-        }
-        params = {
-            'page': 1,
-            'limit': 20
-        }
+        headers = {'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json'}
+        params = {'page': 1, 'limit': 20}
 
         r = requests.get(url, headers=headers, params=params, timeout=10)
 
@@ -192,143 +109,146 @@ def get_cnyes_news():
             data = r.json()
             if 'items' in data and 'data' in data['items']:
                 for item in data['items']['data'][:15]:
+                    publish_time = item.get('publishAt', 0)
+                    date_str = datetime.fromtimestamp(publish_time).strftime('%Y-%m-%d %H:%M') if publish_time else ''
+
                     news.append({
                         'title': item.get('title', ''),
-                        'date': datetime.fromtimestamp(item.get('publishAt', 0)).strftime('%Y-%m-%d %H:%M') if item.get('publishAt') else '',
-                        'summary': item.get('summary', '')[:100]
+                        'date': date_str,
+                        'summary': item.get('summary', '')[:100],
+                        'keywords': item.get('keyword', []),
+                        'source': '鉅亨網'
                     })
     except Exception as e:
-        print(f"⚠️ 鉅亨網查詢: {e}")
+        print(f"  ⚠️ 鉅亨網新聞: {e}")
 
     return news
 
 
-def get_upcoming_events():
-    """查詢近期重要事件（手動維護）"""
+def get_udn_rss():
+    """從經濟日報 RSS 獲取新聞"""
+    news = []
+    url = 'https://money.udn.com/rssfeed/news/1001/5590'
+
+    try:
+        r = requests.get(url, timeout=10)
+        if r.status_code == 200:
+            root = ET.fromstring(r.content)
+
+            for item in root.findall('.//item')[:10]:
+                title = item.find('title')
+                pub_date = item.find('pubDate')
+
+                if title is not None:
+                    news.append({
+                        'title': title.text[:80] if title.text else '',
+                        'date': pub_date.text[:25] if pub_date is not None and pub_date.text else '',
+                        'source': '經濟日報'
+                    })
+    except Exception as e:
+        print(f"  ⚠️ 經濟日報 RSS: {e}")
+
+    return news
+
+
+def detect_conferences(all_news):
+    """從新聞中偵測法說會資訊"""
+    conferences = []
+    conf_keywords = ['法說', '法人說明', '業績發表', '業績說明會']
+
+    seen = set()
+    for news in all_news:
+        title = news.get('title', '')
+
+        if any(kw in title for kw in conf_keywords):
+            # 嘗試提取股票名稱
+            for code, name in STOCK_NAMES.items():
+                if name in title and code not in seen:
+                    seen.add(code)
+                    conferences.append({
+                        'stock_code': code,
+                        'stock_name': name,
+                        'title': title[:60],
+                        'date': news.get('date', ''),
+                        'source': news.get('source', '')
+                    })
+                    break
+
+    return conferences
+
+
+def detect_events(all_news):
+    """從新聞中偵測重要事件"""
     events = []
 
-    today = datetime.now()
-    today_str = today.strftime('%Y-%m-%d')
+    event_keywords = {
+        'Fed': ('Fed利率決議', '金融股', '⚠️ 高'),
+        '升息': ('央行升息', '金融股', '⚠️ 高'),
+        '降息': ('央行降息', '金融股', '⚠️ 高'),
+        'CPI': ('CPI公布', '全市場', '📌 注意'),
+        '非農': ('非農就業數據', '全市場', '📌 注意'),
+        '財報': ('財報季', '全市場', '📌 注意'),
+        '除息': ('除權息旺季', '高息股', '📌 注意'),
+    }
 
-    # 重要事件日曆（可手動更新）
-    important_events = [
-        ('2026-01-20', '台積電法說會', '2330,2303,3711', '⚠️ 高'),
-        ('2026-01-22', '聯發科法說會', '2454,3034', '⚠️ 高'),
-        ('2026-01-29', 'Fed利率決議', '金融股', '⚠️ 高'),
-        ('2026-02-05', '農曆春節前', '全市場', '📌 注意'),
-    ]
+    detected = set()
+    for news in all_news:
+        title = news.get('title', '') + news.get('summary', '')
 
-    for date, event, stocks, impact in important_events:
-        if date >= today_str:
-            days_until = (datetime.strptime(date, '%Y-%m-%d') - today).days
-            events.append({
-                'date': date,
-                'event': event,
-                'stocks': stocks,
-                'impact': impact,
-                'days_until': days_until
-            })
+        for keyword, (event_name, stocks, impact) in event_keywords.items():
+            if keyword in title and event_name not in detected:
+                detected.add(event_name)
+                events.append({
+                    'event': event_name,
+                    'stocks': stocks,
+                    'impact': impact,
+                    'source_title': news.get('title', '')[:40],
+                    'date': news.get('date', '')
+                })
 
     return events[:5]
 
 
-def analyze_news_keywords(news_list):
-    """分析新聞關鍵字，找出熱門題材"""
+def analyze_hot_topics(all_news):
+    """分析熱門題材"""
     keywords = {}
 
     hot_topics = {
-        'AI': ['AI', '人工智慧', 'GPU', '輝達', 'NVIDIA', 'ChatGPT'],
+        'AI': ['AI', '人工智慧', 'GPU', '輝達', 'NVIDIA', 'ChatGPT', 'Blackwell'],
         '記憶體': ['記憶體', 'DRAM', 'HBM', 'NAND', '美光', 'Micron'],
         '半導體': ['半導體', '晶片', '晶圓', 'CoWoS', '先進封裝', '台積電'],
         '面板': ['面板', 'LCD', 'OLED', '顯示器', '群創', '友達'],
         '電動車': ['電動車', 'EV', '特斯拉', '電池', '充電'],
         '航運': ['航運', '運價', '貨櫃', 'BDI', '長榮', '陽明'],
-        '金融': ['升息', '降息', 'Fed', '央行', '金融', '銀行'],
+        '金融': ['升息', '降息', 'Fed', '央行', '金融', '銀行', '壽險'],
         '併購': ['併購', '收購', '合併', '股權'],
+        'ETF': ['ETF', '成分股', '調整', '納入'],
     }
 
-    for news in news_list:
-        title = news.get('title', '') + news.get('summary', '')
+    for news in all_news:
+        text = news.get('title', '') + news.get('summary', '')
+        # 也使用鉅亨網提供的關鍵字
+        if news.get('keywords'):
+            text += ' '.join(news.get('keywords', []))
+
         for topic, kws in hot_topics.items():
             for kw in kws:
-                if kw in title:
+                if kw in text:
                     keywords[topic] = keywords.get(topic, 0) + 1
                     break
 
-    sorted_topics = sorted(keywords.items(), key=lambda x: x[1], reverse=True)
-    return sorted_topics[:5]
+    return sorted(keywords.items(), key=lambda x: x[1], reverse=True)[:6]
 
 
-def categorize_announcement(subject):
-    """分類重大訊息"""
-    if any(kw in subject for kw in ['法說會', '法人說明會', '業績發表', '業績說明']):
-        return '📅 法說會', 1
-    elif any(kw in subject for kw in ['合併', '收購', '併購', '股權轉讓', '公開收購']):
-        return '🔗 併購', 2
-    elif any(kw in subject for kw in ['訂單', '合約', '簽約', '接單', '得標']):
-        return '📝 訂單', 3
-    elif any(kw in subject for kw in ['擴產', '建廠', '投資', '產能', '新廠']):
-        return '🏭 擴產', 4
-    elif any(kw in subject for kw in ['庫藏股', '買回']):
-        return '💰 庫藏股', 5
-    elif any(kw in subject for kw in ['財報', '財務報告', '營收', '獲利', '盈餘']):
-        return '📊 財報', 6
-    elif any(kw in subject for kw in ['股利', '配息', '除權', '除息']):
-        return '💵 股利', 7
-    elif any(kw in subject for kw in ['董事', '監察人', '經理人', '總經理', '董事長']):
-        return '👔 人事', 8
-    elif any(kw in subject for kw in ['停工', '停產', '火災', '地震', '災害']):
-        return '⚠️ 風險', 0  # 最高優先
-    else:
-        return '📌 其他', 9
-
-
-def print_summary(announcements, conferences, cnyes_news, events, hot_topics):
+def print_summary(twse_news, twse_announcements, cnyes_news, udn_news, conferences, events, hot_topics):
     """輸出時事摘要"""
     today = datetime.now().strftime('%Y-%m-%d')
     weekday = ['一', '二', '三', '四', '五', '六', '日'][datetime.now().weekday()]
     time_now = datetime.now().strftime('%H:%M')
 
     print("\n" + "=" * 60)
-    print(f"📢 台股時事掃描（{today} 週{weekday} {time_now}）")
+    print(f"📢 台股時事掃描 v3.0（{today} 週{weekday} {time_now}）")
     print("=" * 60)
-
-    # 近期重要事件
-    print("\n【⏰ 近期重要事件】")
-    if events:
-        for e in events:
-            days = e['days_until']
-            if days == 0:
-                day_str = "⚠️ 今日"
-            elif days == 1:
-                day_str = "📍 明日"
-            else:
-                day_str = f"{days}日後"
-            print(f"  {e['impact']} {e['date']} ({day_str}): {e['event']}")
-            print(f"      影響：{e['stocks']}")
-    else:
-        print("  （近期無重大事件）")
-
-    # 法說會（從 MOPS 查詢）
-    print("\n【📅 近期法說會】")
-    today_str = datetime.now().strftime('%Y-%m-%d')
-    if conferences:
-        today_conf = [c for c in conferences if c['date'] == today_str]
-        future_conf = [c for c in conferences if c['date'] > today_str][:5]
-
-        if today_conf:
-            print("  ⚠️ 今日法說會：")
-            for c in today_conf:
-                major_mark = "⭐" if c.get('is_major') else ""
-                print(f"    {major_mark} {c['stock_name']}({c['stock_code']}) {c['time']}")
-
-        if future_conf:
-            print("  📆 近期法說會：")
-            for c in future_conf[:5]:
-                major_mark = "⭐" if c.get('is_major') else ""
-                print(f"    {major_mark} {c['date']} {c['stock_name']}({c['stock_code']})")
-    else:
-        print("  （近7日無法說會資料）")
 
     # 熱門題材
     print("\n【🔥 熱門題材】")
@@ -339,101 +259,108 @@ def print_summary(announcements, conferences, cnyes_news, events, hot_topics):
     else:
         print("  （分析中...）")
 
-    # 重大訊息（全市場，按類別分組）
-    print("\n【📣 重大訊息】（全市場）")
-    if announcements:
-        # 按優先級分類
-        categorized = {}
-        for a in announcements:
-            cat, priority = categorize_announcement(a['subject'])
-            if cat not in categorized:
-                categorized[cat] = {'items': [], 'priority': priority}
-            categorized[cat]['items'].append(a)
-
-        # 按優先級排序
-        sorted_cats = sorted(categorized.items(), key=lambda x: x[1]['priority'])
-
-        shown = 0
-        for cat, data in sorted_cats:
-            if shown >= 15:  # 最多顯示15筆
-                break
-            items = data['items'][:3]  # 每類最多3筆
-            if items:
-                print(f"\n  {cat}")
-                for a in items:
-                    major_mark = "⭐" if a.get('is_major') else ""
-                    name = a.get('stock_name', '')[:4]
-                    code = a.get('stock_code', '')
-                    subject = a['subject'][:35]
-                    print(f"    {major_mark} {name}({code}): {subject}...")
-                    shown += 1
+    # 偵測到的重要事件
+    print("\n【⏰ 偵測到的事件】")
+    if events:
+        for e in events:
+            print(f"  {e['impact']} {e['event']} - 影響：{e['stocks']}")
+            print(f"      來源：{e['source_title']}...")
     else:
-        print("  （今日暫無重大訊息或非交易日）")
+        print("  （今日新聞未偵測到重大事件）")
 
-    # 財經新聞
+    # 偵測到的法說會
+    print("\n【📅 偵測到的法說會】")
+    if conferences:
+        for c in conferences:
+            print(f"  ⭐ {c['stock_name']}({c['stock_code']})")
+            print(f"      {c['title'][:50]}...")
+    else:
+        print("  （今日新聞未提及法說會）")
+
+    # 證交所官方公告
+    print("\n【📣 證交所公告】")
+    if twse_announcements:
+        for a in twse_announcements[:5]:
+            print(f"  • {a['subject'][:55]}...")
+    else:
+        print("  （無最新公告）")
+
+    # 證交所新聞
+    print("\n【📰 證交所新聞】")
+    if twse_news:
+        for n in twse_news[:5]:
+            print(f"  • {n['title'][:55]}...")
+    else:
+        print("  （無最新新聞）")
+
+    # 財經新聞（鉅亨網 + 經濟日報）
     print("\n【📰 財經新聞】")
-    if cnyes_news:
+    all_financial_news = cnyes_news + udn_news
+    if all_financial_news:
         seen = set()
         count = 0
-        for n in cnyes_news:
-            title = n.get('title', '')[:45]
-            if title and title not in seen and count < 8:
+        for n in all_financial_news:
+            title = n.get('title', '')[:50]
+            if title and title not in seen and count < 10:
                 seen.add(title)
-                print(f"  • {title}...")
+                source = n.get('source', '')
+                print(f"  [{source}] {title}...")
                 count += 1
     else:
-        print("  （新聞載入中...）")
+        print("  （載入中...）")
 
     print("\n" + "=" * 60)
-    print("✅ 掃描完成")
+    print("✅ 掃描完成（資料來源：證交所、鉅亨網、經濟日報）")
     print("=" * 60)
-
-    # 圖例說明
-    print("\n📌 說明：⭐ = 重點股票（市值前50）")
 
     return {
         'date': today,
+        'hot_topics': hot_topics,
         'events': events,
         'conferences': conferences,
-        'hot_topics': hot_topics,
-        'announcements': announcements,
+        'announcements': twse_announcements,
+        'twse_news': twse_news,
         'news': cnyes_news[:10]
     }
 
 
 def main():
-    days = 1
+    print("⏳ 正在掃描台股時事...")
 
-    # 解析參數
-    if len(sys.argv) > 1:
-        if sys.argv[1] == '--days' and len(sys.argv) > 2:
-            days = int(sys.argv[2])
-        elif sys.argv[1] == '--help':
-            print(__doc__)
-            sys.exit(0)
+    # 查詢各來源
+    print("📡 查詢證交所新聞...")
+    twse_news = get_twse_news()
+    print(f"   找到 {len(twse_news)} 則")
 
-    print("⏳ 正在掃描台股時事（全市場）...")
-
-    # 查詢各資料源
-    print("📡 查詢 MOPS 重大訊息（全市場）...")
-    announcements = get_mops_all_announcements()
-    print(f"   找到 {len(announcements)} 則訊息")
-
-    print("📡 查詢 MOPS 法說會...")
-    conferences = get_mops_investor_conferences()
-    print(f"   找到 {len(conferences)} 場法說會")
+    print("📡 查詢證交所公告...")
+    twse_announcements = get_twse_announcements()
+    print(f"   找到 {len(twse_announcements)} 則")
 
     print("📡 查詢鉅亨網新聞...")
     cnyes_news = get_cnyes_news()
+    print(f"   找到 {len(cnyes_news)} 則")
 
-    print("📡 整理重要事件...")
-    events = get_upcoming_events()
+    print("📡 查詢經濟日報...")
+    udn_news = get_udn_rss()
+    print(f"   找到 {len(udn_news)} 則")
+
+    # 整合所有新聞進行分析
+    all_news = twse_news + cnyes_news + udn_news
 
     print("📡 分析熱門題材...")
-    hot_topics = analyze_news_keywords(cnyes_news)
+    hot_topics = analyze_hot_topics(all_news)
+
+    print("📡 偵測法說會...")
+    conferences = detect_conferences(all_news)
+    print(f"   偵測到 {len(conferences)} 場")
+
+    print("📡 偵測重要事件...")
+    events = detect_events(all_news)
+    print(f"   偵測到 {len(events)} 個")
 
     # 輸出摘要
-    result = print_summary(announcements, conferences, cnyes_news, events, hot_topics)
+    result = print_summary(twse_news, twse_announcements, cnyes_news, udn_news,
+                          conferences, events, hot_topics)
 
     # 儲存結果
     today = datetime.now().strftime('%Y-%m-%d')
