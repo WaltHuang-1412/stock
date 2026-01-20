@@ -1,0 +1,220 @@
+{
+  "date": "2026-01-20",
+  "day_of_week": "Tuesday",
+  "analysis_version": "v5.4",
+  "process_compliance": {
+    "step_0_time_verification": true,
+    "step_0_5_international_data": true,
+    "step_0_5_tw_market_news": true,
+    "step_1_historical_verification": true,
+    "step_1_5_predictions_reference": true,
+    "step_1_8_holdings_tracking": true,
+    "step_3_time_driven": true,
+    "step_3_5_industry_expansion": true,
+    "step_4_institutional_top30": true,
+    "step_4_3_chip_analysis": false,
+    "step_4_5_price_filter": true,
+    "step_5_five_dimensions": true,
+    "step_5_5_industry_distribution": true,
+    "step_6_historical_adjustment": true,
+    "step_7_file_creation": true
+  },
+  "market_context": {
+    "us_market": {
+      "dow": "-0.29%",
+      "sp500": "-0.38%",
+      "nasdaq": "-0.66%",
+      "phlx_semiconductor": "+3.78%"
+    },
+    "taiwan_adr": {
+      "tsm": "+5.80%",
+      "umc": "+5.80%",
+      "asx": "+10.03%"
+    },
+    "key_indicators": {
+      "wti_oil": "-2.93%",
+      "vix": "+17.90%"
+    },
+    "tw_market_news": {
+      "hot_topics": ["AI(7)", "ETF(5)", "半導體(5)", "記憶體(3)"],
+      "key_news": [
+        "三大法人賣超天價台股",
+        "南亞科今年資本支出暴增",
+        "00912納記憶體雙雄",
+        "上週外資買超台新新光金15.81萬張"
+      ]
+    }
+  },
+  "historical_verification": {
+    "previous_date": "2026-01-19",
+    "accuracy_rate": "80%",
+    "success_count": 4,
+    "neutral_count": 1,
+    "total_count": 5,
+    "key_lessons": [
+      "ADR大漲≠現股必漲（日月光教訓）",
+      "記憶體族群覆蓋不足",
+      "法人佈局股策略有效"
+    ]
+  },
+  "recommendations": [
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "type": "stable",
+      "rating": "5star",
+      "score": 87,
+      "五維度": {
+        "時事現況": 18,
+        "產業邏輯": 14,
+        "法人數據": 30,
+        "價格位置": 12,
+        "技術面": 10,
+        "歷史加分": 3
+      },
+      "industry": {
+        "sector": "金融",
+        "sub_type": "證券型"
+      },
+      "recommend_price": "18.0-18.3",
+      "position": "15%",
+      "stop_loss": "17.3（-4%）",
+      "target_price": "19.5（+7%）",
+      "catalysts": ["連續買超+35K", "累計>100K", "5日+2.5%佈局中"],
+      "status": "pending"
+    },
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "type": "stable",
+      "rating": "4star",
+      "score": 81,
+      "五維度": {
+        "時事現況": 18,
+        "產業邏輯": 14,
+        "法人數據": 28,
+        "價格位置": 12,
+        "技術面": 8,
+        "歷史加分": 1
+      },
+      "industry": {
+        "sector": "金融",
+        "sub_type": "壽險型"
+      },
+      "recommend_price": "77-78",
+      "position": "10%",
+      "stop_loss": "74（-4%）",
+      "target_price": "82（+6%）",
+      "catalysts": ["+13K", "5日+0%佈局中"],
+      "status": "pending"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "type": "stable",
+      "rating": "4star",
+      "score": 76,
+      "五維度": {
+        "時事現況": 16,
+        "產業邏輯": 14,
+        "法人數據": 26,
+        "價格位置": 12,
+        "技術面": 8
+      },
+      "industry": {
+        "sector": "傳產",
+        "sub_type": "鋼鐵"
+      },
+      "recommend_price": "19.5-20.0",
+      "position": "10%",
+      "stop_loss": "18.8（-5%）",
+      "target_price": "21.5（+8%）",
+      "catalysts": ["+22K", "5日+1.0%"],
+      "status": "pending"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "type": "event_driven",
+      "rating": "3star",
+      "score": 72,
+      "五維度": {
+        "時事現況": 22,
+        "產業邏輯": 16,
+        "法人數據": 18,
+        "價格位置": 6,
+        "技術面": 7,
+        "歷史加分": 3
+      },
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "記憶體"
+      },
+      "recommend_price": "觀察開盤",
+      "position": "5%",
+      "stop_loss": "-5%",
+      "target_price": "+8%",
+      "catalysts": ["費半+3.78%", "記憶體族群補充", "法人+1.8K"],
+      "status": "pending"
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "reason": "ADR+5.80%但法人-11K賣超",
+      "institutional_flow": "-11K"
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光",
+      "reason": "ADR+10%但昨日現股-1.48%（教訓驗證）",
+      "institutional_flow": "待查"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "5日+13.8%追高風險",
+      "five_day_change": "+13.8%"
+    }
+  ],
+  "holdings_alerts": [
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "institutional_flow": "-62K",
+      "alert_level": "critical",
+      "action": "建議出場（已破停損）"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "institutional_flow": "-33K",
+      "alert_level": "high",
+      "action": "建議減碼50%"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "institutional_flow": "-18K",
+      "alert_level": "medium",
+      "action": "考慮減碼"
+    }
+  ],
+  "industry_distribution": {
+    "金融": {"count": 2, "percentage": 50},
+    "傳產": {"count": 1, "percentage": 25},
+    "半導體": {"count": 1, "percentage": 25}
+  },
+  "sync_check": {
+    "before_market_recommendations": ["2883", "2882", "2002", "2344"],
+    "tracking_recommendations": ["2883", "2882", "2002", "2344"],
+    "is_synced": true
+  },
+  "analysis_completed_at": "2026-01-20 08:15",
+  "files_created": [
+    "data/2026-01-20/before_market_analysis.md",
+    "data/2026-01-20/tw_market_news.json",
+    "data/tracking/tracking_2026-01-20.json"
+  ]
+}
