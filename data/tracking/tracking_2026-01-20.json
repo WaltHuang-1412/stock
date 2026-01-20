@@ -3,16 +3,19 @@
   "day_of_week": "Tuesday",
   "analysis_version": "v5.4",
   "process_compliance": {
+    "step_minus_1_info_sync": true,
     "step_0_time_verification": true,
     "step_0_5_international_data": true,
     "step_0_5_tw_market_news": true,
+    "step_0_5_realtime_price": true,
     "step_1_historical_verification": true,
     "step_1_5_predictions_reference": true,
+    "step_1_7_key_lessons_check": true,
     "step_1_8_holdings_tracking": true,
     "step_3_time_driven": true,
     "step_3_5_industry_expansion": true,
     "step_4_institutional_top30": true,
-    "step_4_3_chip_analysis": false,
+    "step_4_3_chip_analysis": true,
     "step_4_5_price_filter": true,
     "step_5_five_dimensions": true,
     "step_5_5_industry_distribution": true,
@@ -55,6 +58,62 @@
       "ADR大漲≠現股必漲（日月光教訓）",
       "記憶體族群覆蓋不足",
       "法人佈局股策略有效"
+    ]
+  },
+  "key_lessons_checked": [
+    {
+      "lesson": "ADR大漲≠現股必漲",
+      "relevance": "高度相關",
+      "today_situation": "台積電ADR+5.80%、日月光ADR+10.03%、聯電ADR+5.80%",
+      "action": "列入觀望區，標註風險",
+      "decision": "✅ 已檢查並應用：台積電、日月光列入觀望"
+    },
+    {
+      "lesson": "記憶體族群覆蓋不足",
+      "relevance": "高度相關",
+      "today_situation": "台股新聞3則記憶體相關（南亞科資本支出暴增、00912納記憶體雙雄、劉德音加碼美光）",
+      "action": "補充推薦華邦電(2344)",
+      "decision": "✅ 已補充：華邦電72分（記憶體族群代表）"
+    },
+    {
+      "lesson": "法人佈局股策略有效",
+      "relevance": "極度相關",
+      "today_situation": "凱基金連續4天買超、國泰金5日+0%佈局中",
+      "action": "延續佈局股策略",
+      "decision": "✅ 已延續：推薦凱基金87分、國泰金81分"
+    }
+  ],
+  "realtime_prices": {
+    "query_time": "2026-01-20 09:35",
+    "data": [
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "previous_close": 18.10,
+        "current_price": 18.20,
+        "change_percent": 0.55
+      },
+      {
+        "stock_code": "2882",
+        "stock_name": "國泰金",
+        "previous_close": 77.40,
+        "current_price": 77.90,
+        "change_percent": 0.65
+      },
+      {
+        "stock_code": "2002",
+        "stock_name": "中鋼",
+        "previous_close": 19.65,
+        "current_price": 19.35,
+        "change_percent": -1.53
+      },
+      {
+        "stock_code": "2344",
+        "stock_name": "華邦電",
+        "previous_close": 116.50,
+        "current_price": 113.50,
+        "change_percent": -2.58
+      }
     ]
   },
   "recommendations": [
