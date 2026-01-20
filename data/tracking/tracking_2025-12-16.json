@@ -259,7 +259,7 @@
     "3481": {
       "stock_name": "群創",
       "cost": 14.35,
-      "current_price": 13.30,
+      "current_price": 13.3,
       "gain_loss_pct": -7.32,
       "institutional_1212": "-5,441K",
       "institutional_1215": "-5,071K",
@@ -313,7 +313,7 @@
         "code": "2890",
         "name": "永豐金",
         "recommend_price": 27.15,
-        "intraday_price": 28.10,
+        "intraday_price": 28.1,
         "change_pct": 1.26,
         "volume_ratio": 0.89,
         "note": "穩健上漲"
@@ -321,7 +321,7 @@
       {
         "code": "2883",
         "name": "凱基金",
-        "recommend_price": 17.10,
+        "recommend_price": 17.1,
         "intraday_price": 17.05,
         "change_pct": -0.29,
         "volume_ratio": 0.28,
@@ -330,7 +330,7 @@
       {
         "code": "2303",
         "name": "聯電",
-        "recommend_price": 48.50,
+        "recommend_price": 48.5,
         "intraday_price": 48.25,
         "change_pct": -0.52,
         "volume_ratio": 1.05,
@@ -372,8 +372,8 @@
       {
         "code": "2303",
         "name": "聯電",
-        "recommend_price": 48.50,
-        "closing_price": 49.20,
+        "recommend_price": 48.5,
+        "closing_price": 49.2,
         "change_pct": 1.44,
         "institutional": "+22,829",
         "result": "✅ 成功"
@@ -381,9 +381,9 @@
       {
         "code": "2883",
         "name": "凱基金",
-        "recommend_price": 17.10,
-        "closing_price": 17.10,
-        "change_pct": 0.00,
+        "recommend_price": 17.1,
+        "closing_price": 17.1,
+        "change_pct": 0.0,
         "institutional": "+12,900",
         "result": "✅ 成功"
       },
@@ -406,11 +406,15 @@
   },
   "metadata": {
     "created_at": "2025-12-16 09:40",
-    "updated_at": "2025-12-16 18:30",
+    "updated_at": "2026-01-20 20:58:55",
     "data_source": "證交所、Yahoo Finance",
     "previous_accuracy": "75% (3/4)",
     "today_accuracy": "80% (4/5)",
     "strategy_type": "金融防禦+連續買超+法人結構",
-    "new_feature": "新增法人結構分析（外資vs投信）"
+    "new_feature": "新增法人結構分析（外資vs投信）",
+    "tracking_active": 0,
+    "tracking_completed": 0,
+    "success_count": 0,
+    "stop_loss_count": 0
   }
 }

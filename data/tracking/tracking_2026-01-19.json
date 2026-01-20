@@ -368,7 +368,7 @@
       "stock_code": "1303",
       "stock_name": "南亞",
       "user_cost": 66.895,
-      "current_price": 73.80,
+      "current_price": 73.8,
       "quantity": 1,
       "institutional_01_15": 69119,
       "institutional_01_16": 42528,
@@ -381,7 +381,7 @@
       "stock_code": "3481",
       "stock_name": "群創",
       "user_cost": 16.14,
-      "current_price": 26.60,
+      "current_price": 26.6,
       "quantity": 4,
       "institutional_01_15": -12219,
       "institutional_01_16": 6634,
@@ -394,7 +394,7 @@
       "stock_code": "1301",
       "stock_name": "台塑",
       "user_cost": 40.757,
-      "current_price": 43.00,
+      "current_price": 43.0,
       "quantity": 1,
       "institutional_01_15": 36820,
       "institutional_01_16": 19359,
@@ -474,17 +474,62 @@
   "after_market_verification": {
     "verification_time": "2026-01-19 14:30",
     "track_a_results": [
-      {"symbol": "2303", "name": "聯電", "close": 62.50, "change_pct": 6.84, "result": "success"},
-      {"symbol": "2883", "name": "凱基金", "close": 18.10, "change_pct": 1.97, "result": "success"},
-      {"symbol": "2330", "name": "台積電", "close": 1760.00, "change_pct": 1.15, "result": "success"},
-      {"symbol": "1301", "name": "台塑", "close": 43.70, "change_pct": 1.63, "result": "success"},
-      {"symbol": "3711", "name": "日月光", "close": 299.00, "change_pct": -1.48, "result": "neutral"}
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "close": 62.5,
+        "change_pct": 6.84,
+        "result": "success"
+      },
+      {
+        "symbol": "2883",
+        "name": "凱基金",
+        "close": 18.1,
+        "change_pct": 1.97,
+        "result": "success"
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "close": 1760.0,
+        "change_pct": 1.15,
+        "result": "success"
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "close": 43.7,
+        "change_pct": 1.63,
+        "result": "success"
+      },
+      {
+        "symbol": "3711",
+        "name": "日月光",
+        "close": 299.0,
+        "change_pct": -1.48,
+        "result": "neutral"
+      }
     ],
-    "accuracy": 0.80,
+    "accuracy": 0.8,
     "track_b_discoveries": [
-      {"symbol": "2337", "name": "旺宏", "change_pct": 10.00, "notes": "記憶體漲停"},
-      {"symbol": "2408", "name": "南亞科", "change_pct": 10.00, "notes": "記憶體漲停"},
-      {"symbol": "3189", "name": "景碩", "change_pct": 9.87, "notes": "載板大漲"}
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "change_pct": 10.0,
+        "notes": "記憶體漲停"
+      },
+      {
+        "symbol": "2408",
+        "name": "南亞科",
+        "change_pct": 10.0,
+        "notes": "記憶體漲停"
+      },
+      {
+        "symbol": "3189",
+        "name": "景碩",
+        "change_pct": 9.87,
+        "notes": "載板大漲"
+      }
     ],
     "lessons": [
       "費半+3.78%時事判斷正確",
@@ -492,5 +537,12 @@
       "ADR大漲≠現股必漲",
       "記憶體族群覆蓋不足"
     ]
+  },
+  "metadata": {
+    "updated_at": "2026-01-20 20:59:12",
+    "tracking_active": 0,
+    "tracking_completed": 0,
+    "success_count": 0,
+    "stop_loss_count": 0
   }
 }
