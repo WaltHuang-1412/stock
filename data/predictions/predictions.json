@@ -422,7 +422,7 @@
         ],
         "verification": {
           "actual_close": 149.5,
-          "actual_change": 2.40,
+          "actual_change": 2.4,
           "result": "success",
           "notes": "當日最佳表現，法人持續買超+5,263張"
         }
@@ -441,7 +441,7 @@
         ],
         "verification": {
           "actual_close": 41.9,
-          "actual_change": 0.60,
+          "actual_change": 0.6,
           "result": "success",
           "notes": "小幅上漲，法人買超+2,914張支撐"
         }
@@ -466,7 +466,7 @@
       }
     ],
     "framework": "歷史驗證優先系統",
-    "accuracy": 0.50,
+    "accuracy": 0.5,
     "notes": "準確率下降至50%（2/4），歷史成功不一定延續，記憶體族群分化明顯"
   },
   "2025-12-02": {
@@ -522,7 +522,7 @@
       {
         "symbol": "2883",
         "name": "凱基金",
-        "prev_close": 17.40,
+        "prev_close": 17.4,
         "direction": "up",
         "target_range": "17.4-18.5",
         "confidence": 0.86,
@@ -542,18 +542,18 @@
       {
         "symbol": "2303",
         "name": "聯電",
-        "prev_close": 50.40,
+        "prev_close": 50.4,
         "direction": "up",
         "target_range": "49.0-52.0",
-        "confidence": 0.80,
+        "confidence": 0.8,
         "reasons": [
           "外資連12天買超+259K",
           "聯電ADR+1.39%逆勢上漲",
           "成熟製程龍頭"
         ],
         "verification": {
-          "actual_close": 50.30,
-          "actual_change": -0.20,
+          "actual_close": 50.3,
+          "actual_change": -0.2,
           "institutional_flow": 7208,
           "result": "success",
           "notes": "外資續買+22,857張，抗跌"
@@ -562,7 +562,7 @@
       {
         "symbol": "2801",
         "name": "彰銀",
-        "prev_close": 20.70,
+        "prev_close": 20.7,
         "direction": "up",
         "target_range": "16.0-17.0",
         "confidence": 0.78,
@@ -582,7 +582,7 @@
       {
         "symbol": "2881",
         "name": "富邦金",
-        "prev_close": 97.30,
+        "prev_close": 97.3,
         "direction": "up",
         "target_range": "91.0-95.0",
         "confidence": 0.76,
@@ -592,7 +592,7 @@
           "壽險龍頭"
         ],
         "verification": {
-          "actual_close": 96.80,
+          "actual_close": 96.8,
           "actual_change": -0.51,
           "institutional_flow": 96,
           "result": "neutral",
@@ -602,7 +602,7 @@
       {
         "symbol": "2637",
         "name": "慧洋-KY",
-        "prev_close": 68.30,
+        "prev_close": 68.3,
         "direction": "up",
         "target_range": "67.0-72.0",
         "confidence": 0.75,
@@ -611,7 +611,7 @@
           "散裝航運佈局股"
         ],
         "verification": {
-          "actual_close": 67.20,
+          "actual_close": 67.2,
           "actual_change": -1.61,
           "institutional_flow": -688,
           "result": "fail",
@@ -621,7 +621,7 @@
       {
         "symbol": "8110",
         "name": "華東",
-        "prev_close": 51.30,
+        "prev_close": 51.3,
         "direction": "up",
         "target_range": "27.0-30.0",
         "confidence": 0.68,
@@ -630,7 +630,7 @@
           "電子連接器佈局股"
         ],
         "verification": {
-          "actual_close": 51.60,
+          "actual_close": 51.6,
           "actual_change": 0.58,
           "institutional_flow": 1409,
           "result": "success",
@@ -644,7 +644,7 @@
         "name": "群創",
         "reason": "外資狂賣-36,591張",
         "verification": {
-          "actual_close": 12.40,
+          "actual_close": 12.4,
           "actual_change": -1.98,
           "result": "correct_avoid"
         }
@@ -654,7 +654,7 @@
         "name": "廣達",
         "reason": "外資狂賣-37,000張",
         "verification": {
-          "actual_close": 282.00,
+          "actual_close": 282.0,
           "actual_change": -2.12,
           "result": "correct_avoid"
         }
@@ -664,14 +664,14 @@
         "name": "鴻海",
         "reason": "外資大賣-29,000張",
         "verification": {
-          "actual_close": 178.00,
+          "actual_close": 178.0,
           "actual_change": -1.11,
           "result": "correct_avoid"
         }
       }
     ],
     "framework": "金融防禦策略（Fed利率決議日）",
-    "accuracy": 0.50,
+    "accuracy": 0.5,
     "notes": "Fed觀望日市場量縮，準確率50%（3成功/2平盤/1失敗），避開股100%正確"
   },
   "2025-12-19": {
@@ -680,7 +680,7 @@
       {
         "symbol": "2303",
         "name": "聯電",
-        "prev_close": 50.30,
+        "prev_close": 50.3,
         "direction": "up",
         "target_range": "51.5-55.5",
         "confidence": 0.88,
@@ -799,7 +799,7 @@
         ],
         "verification": {
           "actual_close": 33.65,
-          "actual_change": -0.30,
+          "actual_change": -0.3,
           "result": "fail",
           "notes": "小跌，不如預期"
         }
@@ -871,13 +871,13 @@
         "cost": 1458.5,
         "close": 1530,
         "change": "+1.32%",
-        "profit_pct": 4.90
+        "profit_pct": 4.9
       },
       {
         "symbol": "2637",
         "name": "慧洋",
-        "cost": 66.90,
-        "close": 69.00,
+        "cost": 66.9,
+        "close": 69.0,
         "change": "-0.43%",
         "profit_pct": 3.14
       },
@@ -885,7 +885,7 @@
         "symbol": "8046",
         "name": "南電",
         "cost": 239.5,
-        "close": 240.50,
+        "close": 240.5,
         "change": "-2.43%",
         "profit_pct": 0.42
       },
@@ -900,7 +900,7 @@
       }
     ],
     "framework": "年底最後交易週+佈局股優先",
-    "accuracy": 0.50,
+    "accuracy": 0.5,
     "notes": "準確率50%（1/2），大盤創歷史新高28,810點。重大教訓：群創漲停+10%沒預測到，因為沒查SpaceX即時新聞；鑫科+9.92%發現太晚，應該在發現群創題材時就查供應鏈。避開股100%正確（晶豪科-6.57%、華新-3.44%）",
     "lessons": [
       "盤前只看法人數據，沒查持股即時新聞 → 錯過群創SpaceX利多",
@@ -926,7 +926,7 @@
           "12/29漲停驗證成功"
         ],
         "verification": {
-          "actual_close": 16.30,
+          "actual_close": 16.3,
           "actual_change": 9.76,
           "result": "success",
           "notes": "連2天漲停！+9.76%，外資買超第1名+83,153張"
@@ -945,7 +945,7 @@
           "鋼鐵龍頭"
         ],
         "verification": {
-          "actual_close": 27.00,
+          "actual_close": 27.0,
           "actual_change": -0.92,
           "result": "fail",
           "notes": "小跌-0.92%，鋼鐵族群弱勢"
@@ -953,14 +953,50 @@
       }
     ],
     "holdings_performance": [
-      {"symbol": "2330", "name": "台積電", "cost": 1458.5, "close": 1520, "change": "-0.65%", "profit_pct": 4.22},
-      {"symbol": "3481", "name": "群創", "cost": 14.35, "close": 16.30, "change": "+9.76%", "profit_pct": 13.59, "notes": "連2天漲停"},
-      {"symbol": "2637", "name": "慧洋", "cost": 66.90, "close": 69.00, "change": "0%", "profit_pct": 3.14},
-      {"symbol": "8046", "name": "南電", "cost": 239.5, "close": 240, "change": "-0.2%", "profit_pct": 0.21},
-      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.30, "change": "-0.1%", "profit_pct": -1.85}
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "close": 1520,
+        "change": "-0.65%",
+        "profit_pct": 4.22
+      },
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "cost": 14.35,
+        "close": 16.3,
+        "change": "+9.76%",
+        "profit_pct": 13.59,
+        "notes": "連2天漲停"
+      },
+      {
+        "symbol": "2637",
+        "name": "慧洋",
+        "cost": 66.9,
+        "close": 69.0,
+        "change": "0%",
+        "profit_pct": 3.14
+      },
+      {
+        "symbol": "8046",
+        "name": "南電",
+        "cost": 239.5,
+        "close": 240,
+        "change": "-0.2%",
+        "profit_pct": 0.21
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "close": 40.3,
+        "change": "-0.1%",
+        "profit_pct": -1.85
+      }
     ],
     "framework": "年底最後2交易日+持股續抱",
-    "accuracy": 0.50,
+    "accuracy": 0.5,
     "notes": "準確率50%（1/2），群創連2天漲停大成功，中鋼推薦失敗"
   },
   "2025-12-31": {
@@ -974,33 +1010,132 @@
     "note": "封關日不推薦新股，以持股驗證為主",
     "news_verification": {
       "news_judgments": [
-        {"judgment": "FOPLP/SpaceX熱門", "result": "群創+4.60%連5漲，成交量93萬張第1", "correct": true},
-        {"judgment": "記憶體超級循環", "result": "旺宏+2.84%、華邦電+0.36%", "correct": true},
-        {"judgment": "金融弱勢", "result": "兆豐金-1.72%跌破40元", "correct": true},
-        {"judgment": "台積電核心撐盤", "result": "創歷史新高1550元，+3.68%", "correct": true}
+        {
+          "judgment": "FOPLP/SpaceX熱門",
+          "result": "群創+4.60%連5漲，成交量93萬張第1",
+          "correct": true
+        },
+        {
+          "judgment": "記憶體超級循環",
+          "result": "旺宏+2.84%、華邦電+0.36%",
+          "correct": true
+        },
+        {
+          "judgment": "金融弱勢",
+          "result": "兆豐金-1.72%跌破40元",
+          "correct": true
+        },
+        {
+          "judgment": "台積電核心撐盤",
+          "result": "創歷史新高1550元，+3.68%",
+          "correct": true
+        }
       ],
       "accuracy": "4/4 = 100%"
     },
     "holdings_performance": [
-      {"symbol": "3481", "name": "群創", "cost": 14.35, "close": 17.05, "change": "+4.60%", "profit_pct": 18.8, "notes": "連5漲+28%，成交量93萬張第1"},
-      {"symbol": "2330", "name": "台積電", "cost": 1458.5, "close": 1550, "change": "+3.68%", "profit_pct": 6.3, "notes": "創歷史新高！市值破40兆"},
-      {"symbol": "8046", "name": "南電", "cost": 239.5, "close": 241, "change": "+0.84%", "profit_pct": 0.6},
-      {"symbol": "2637", "name": "慧洋", "cost": 66.90, "close": 67.90, "change": "-0.22%", "profit_pct": 1.5},
-      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.00, "change": "-1.72%", "profit_pct": -2.6, "alert": "觸及停損40元"}
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "cost": 14.35,
+        "close": 17.05,
+        "change": "+4.60%",
+        "profit_pct": 18.8,
+        "notes": "連5漲+28%，成交量93萬張第1"
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "close": 1550,
+        "change": "+3.68%",
+        "profit_pct": 6.3,
+        "notes": "創歷史新高！市值破40兆"
+      },
+      {
+        "symbol": "8046",
+        "name": "南電",
+        "cost": 239.5,
+        "close": 241,
+        "change": "+0.84%",
+        "profit_pct": 0.6
+      },
+      {
+        "symbol": "2637",
+        "name": "慧洋",
+        "cost": 66.9,
+        "close": 67.9,
+        "change": "-0.22%",
+        "profit_pct": 1.5
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "close": 40.0,
+        "change": "-1.72%",
+        "profit_pct": -2.6,
+        "alert": "觸及停損40元"
+      }
     ],
     "track_b_volume_top5": [
-      {"rank": 1, "symbol": "3481", "name": "群創", "volume": "93萬張", "change": "+4.60%", "held": true},
-      {"rank": 2, "symbol": "2344", "name": "華邦電", "volume": "27萬張", "change": "+0.36%", "held": false},
-      {"rank": 3, "symbol": "2337", "name": "旺宏", "volume": "22萬張", "change": "+2.84%", "held": false},
-      {"rank": 4, "symbol": "2409", "name": "友達", "volume": "19萬張", "change": "+1.66%", "held": false},
-      {"rank": 5, "symbol": "6770", "name": "力積電", "volume": "15萬張", "change": "+0.99%", "held": false}
+      {
+        "rank": 1,
+        "symbol": "3481",
+        "name": "群創",
+        "volume": "93萬張",
+        "change": "+4.60%",
+        "held": true
+      },
+      {
+        "rank": 2,
+        "symbol": "2344",
+        "name": "華邦電",
+        "volume": "27萬張",
+        "change": "+0.36%",
+        "held": false
+      },
+      {
+        "rank": 3,
+        "symbol": "2337",
+        "name": "旺宏",
+        "volume": "22萬張",
+        "change": "+2.84%",
+        "held": false
+      },
+      {
+        "rank": 4,
+        "symbol": "2409",
+        "name": "友達",
+        "volume": "19萬張",
+        "change": "+1.66%",
+        "held": false
+      },
+      {
+        "rank": 5,
+        "symbol": "6770",
+        "name": "力積電",
+        "volume": "15萬張",
+        "change": "+0.99%",
+        "held": false
+      }
     ],
     "portfolio_summary": {
       "winning_stocks": 4,
       "losing_stocks": 1,
       "total_estimated_profit": "+19,470元",
-      "best_performer": {"symbol": "2330", "name": "台積電", "change": "+3.68%", "notes": "歷史新高"},
-      "worst_performer": {"symbol": "2886", "name": "兆豐金", "change": "-1.72%", "notes": "觸停損"},
+      "best_performer": {
+        "symbol": "2330",
+        "name": "台積電",
+        "change": "+3.68%",
+        "notes": "歷史新高"
+      },
+      "worst_performer": {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "change": "-1.72%",
+        "notes": "觸停損"
+      },
       "accuracy": "4/5 = 80%"
     },
     "action_items_2026": [
@@ -1027,7 +1162,11 @@
         "recommend_price": "235-240",
         "direction": "up",
         "confidence": 0.92,
-        "reasons": ["CES AI利多", "外資+投信同步買", "5日-2.67%佈局中"],
+        "reasons": [
+          "CES AI利多",
+          "外資+投信同步買",
+          "5日-2.67%佈局中"
+        ],
         "verification": {
           "actual_close": 1455,
           "actual_change": -3.64,
@@ -1043,7 +1182,11 @@
         "recommend_price": "51-52",
         "direction": "up",
         "confidence": 0.78,
-        "reasons": ["成熟製程復甦", "外資連買+107K張", "5日-2.32%佈局中"],
+        "reasons": [
+          "成熟製程復甦",
+          "外資連買+107K張",
+          "5日-2.32%佈局中"
+        ],
         "verification": {
           "actual_close": 48.7,
           "actual_change": -1.12,
@@ -1054,23 +1197,114 @@
       }
     ],
     "holdings_performance": [
-      {"symbol": "3481", "name": "群創", "cost": 14.35, "close": 18.10, "change": "+6.16%", "profit_pct": 26.1, "institutional_flow": 69968, "notes": "🔥法人反轉大買！昨-721萬→今+6.9萬"},
-      {"symbol": "2330", "name": "台積電", "cost": 1458.5, "close": 1585, "change": "+2.26%", "profit_pct": 8.7, "institutional_flow": -2324, "notes": "創新高"},
-      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.30, "change": "+0.75%", "profit_pct": -1.85, "institutional_flow": -4719, "notes": "暫守40元，但法人續賣"},
-      {"symbol": "8046", "name": "南電", "cost": 239.5, "close": 237, "change": "-1.66%", "profit_pct": -1.04, "institutional_flow": -954, "notes": "⚠️接近停損235"},
-      {"symbol": "2637", "name": "慧洋", "cost": 66.90, "close": 67.8, "change": "-0.15%", "profit_pct": 1.35}
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "cost": 14.35,
+        "close": 18.1,
+        "change": "+6.16%",
+        "profit_pct": 26.1,
+        "institutional_flow": 69968,
+        "notes": "🔥法人反轉大買！昨-721萬→今+6.9萬"
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "close": 1585,
+        "change": "+2.26%",
+        "profit_pct": 8.7,
+        "institutional_flow": -2324,
+        "notes": "創新高"
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "close": 40.3,
+        "change": "+0.75%",
+        "profit_pct": -1.85,
+        "institutional_flow": -4719,
+        "notes": "暫守40元，但法人續賣"
+      },
+      {
+        "symbol": "8046",
+        "name": "南電",
+        "cost": 239.5,
+        "close": 237,
+        "change": "-1.66%",
+        "profit_pct": -1.04,
+        "institutional_flow": -954,
+        "notes": "⚠️接近停損235"
+      },
+      {
+        "symbol": "2637",
+        "name": "慧洋",
+        "cost": 66.9,
+        "close": 67.8,
+        "change": "-0.15%",
+        "profit_pct": 1.35
+      }
     ],
     "institutional_reversal": [
-      {"symbol": "3481", "name": "群創", "yesterday": -7215309, "today": 69968, "notes": "反轉大買"},
-      {"symbol": "2344", "name": "華邦電", "yesterday": -4024020, "today": 77000, "notes": "反轉大買"},
-      {"symbol": "6770", "name": "力積電", "yesterday": -3903506, "today": 104000, "notes": "反轉大買"}
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "yesterday": -7215309,
+        "today": 69968,
+        "notes": "反轉大買"
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "yesterday": -4024020,
+        "today": 77000,
+        "notes": "反轉大買"
+      },
+      {
+        "symbol": "6770",
+        "name": "力積電",
+        "yesterday": -3903506,
+        "today": 104000,
+        "notes": "反轉大買"
+      }
     ],
     "track_b_top5": [
-      {"rank": 1, "symbol": "6770", "name": "力積電", "flow": 104000, "notes": "反轉大買"},
-      {"rank": 2, "symbol": "2344", "name": "華邦電", "flow": 77000, "notes": "反轉大買"},
-      {"rank": 3, "symbol": "3481", "name": "群創", "flow": 69968, "notes": "反轉大買，持股"},
-      {"rank": 4, "symbol": "3231", "name": "緯創", "flow": 40000, "notes": "AI伺服器"},
-      {"rank": 5, "symbol": "2409", "name": "友達", "flow": 38000, "notes": "面板同步"}
+      {
+        "rank": 1,
+        "symbol": "6770",
+        "name": "力積電",
+        "flow": 104000,
+        "notes": "反轉大買"
+      },
+      {
+        "rank": 2,
+        "symbol": "2344",
+        "name": "華邦電",
+        "flow": 77000,
+        "notes": "反轉大買"
+      },
+      {
+        "rank": 3,
+        "symbol": "3481",
+        "name": "群創",
+        "flow": 69968,
+        "notes": "反轉大買，持股"
+      },
+      {
+        "rank": 4,
+        "symbol": "3231",
+        "name": "緯創",
+        "flow": 40000,
+        "notes": "AI伺服器"
+      },
+      {
+        "rank": 5,
+        "symbol": "2409",
+        "name": "友達",
+        "flow": 38000,
+        "notes": "面板同步"
+      }
     ],
     "lessons_learned": [
       "⚠️ 推薦前必須查詢即時股價（奇鋐進場價錯誤6倍）",
@@ -1096,9 +1330,13 @@
         "recommend_price": "102-105",
         "direction": "up",
         "confidence": 0.82,
-        "reasons": ["外資+19M大買", "今日-0.48%還沒漲", "PCB龍頭"],
+        "reasons": [
+          "外資+19M大買",
+          "今日-0.48%還沒漲",
+          "PCB龍頭"
+        ],
         "verification": {
-          "actual_close": 110.50,
+          "actual_close": 110.5,
           "actual_change": 6.76,
           "result": "success",
           "notes": "大成功！超過推薦價"
@@ -1110,11 +1348,15 @@
         "type": "new_recommend",
         "recommend_price": "50-52",
         "direction": "up",
-        "confidence": 0.80,
-        "reasons": ["外資+16M大買", "今日-0.58%還沒漲", "封測受惠"],
+        "confidence": 0.8,
+        "reasons": [
+          "外資+16M大買",
+          "今日-0.58%還沒漲",
+          "封測受惠"
+        ],
         "verification": {
-          "actual_close": 53.20,
-          "actual_change": 3.30,
+          "actual_close": 53.2,
+          "actual_change": 3.3,
           "result": "success",
           "notes": "成功進場"
         }
@@ -1126,10 +1368,14 @@
         "recommend_price": "1020-1040",
         "direction": "up",
         "confidence": 0.76,
-        "reasons": ["外資+5.4M買超", "今日-1.43%回檔", "電源龍頭"],
+        "reasons": [
+          "外資+5.4M買超",
+          "今日-1.43%回檔",
+          "電源龍頭"
+        ],
         "verification": {
-          "actual_close": 1030.00,
-          "actual_change": -1.90,
+          "actual_close": 1030.0,
+          "actual_change": -1.9,
           "result": "success",
           "notes": "區間內進場成功"
         }
@@ -1141,10 +1387,13 @@
         "recommend_price": "43-44",
         "direction": "up",
         "confidence": 0.72,
-        "reasons": ["外資+6.6M買超", "AI電源供應器"],
+        "reasons": [
+          "外資+6.6M買超",
+          "AI電源供應器"
+        ],
         "verification": {
-          "actual_close": 43.30,
-          "actual_change": 0.00,
+          "actual_close": 43.3,
+          "actual_change": 0.0,
           "result": "success",
           "notes": "區間內"
         }
@@ -1156,7 +1405,7 @@
         "name": "緯創",
         "status": "continue_hold",
         "verification": {
-          "actual_close": 158.50,
+          "actual_close": 158.5,
           "actual_change": 2.59,
           "result": "success"
         }
@@ -1166,7 +1415,7 @@
         "name": "聯電",
         "status": "target_reached",
         "verification": {
-          "actual_close": 54.10,
+          "actual_close": 54.1,
           "actual_change": 9.96,
           "result": "success_limit_up",
           "notes": "漲停達標！建議獲利了結"
@@ -1177,7 +1426,7 @@
         "name": "欣興",
         "status": "pullback",
         "verification": {
-          "actual_close": 226.00,
+          "actual_close": 226.0,
           "actual_change": -1.95,
           "result": "partial",
           "notes": "回調但未觸停損"
@@ -1185,20 +1434,98 @@
       }
     ],
     "avoid_stocks": [
-      {"symbol": "2409", "name": "友達", "reason": "法人-42M狂賣", "verification": {"actual_change": 9.87, "result": "correct_avoid"}},
-      {"symbol": "2344", "name": "華邦電", "reason": "盤前已大漲", "verification": {"actual_change": 2.40, "result": "correct_avoid"}},
-      {"symbol": "2408", "name": "南亞科", "reason": "盤前已大漲", "verification": {"actual_change": 5.47, "result": "correct_avoid"}},
-      {"symbol": "2337", "name": "旺宏", "reason": "盤前已大漲", "verification": {"actual_change": 9.92, "result": "correct_avoid"}},
-      {"symbol": "6770", "name": "力積電", "reason": "盤前已大漲", "verification": {"actual_change": 4.61, "result": "correct_avoid"}}
+      {
+        "symbol": "2409",
+        "name": "友達",
+        "reason": "法人-42M狂賣",
+        "verification": {
+          "actual_change": 9.87,
+          "result": "correct_avoid"
+        }
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "reason": "盤前已大漲",
+        "verification": {
+          "actual_change": 2.4,
+          "result": "correct_avoid"
+        }
+      },
+      {
+        "symbol": "2408",
+        "name": "南亞科",
+        "reason": "盤前已大漲",
+        "verification": {
+          "actual_change": 5.47,
+          "result": "correct_avoid"
+        }
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "reason": "盤前已大漲",
+        "verification": {
+          "actual_change": 9.92,
+          "result": "correct_avoid"
+        }
+      },
+      {
+        "symbol": "6770",
+        "name": "力積電",
+        "reason": "盤前已大漲",
+        "verification": {
+          "actual_change": 4.61,
+          "result": "correct_avoid"
+        }
+      }
     ],
     "track_b_discoveries": [
-      {"symbol": "1605", "name": "華新", "change": "+9.99%", "institutional_flow": "+51M", "notes": "法人第1但盤前未推薦，銅箔產業邏輯弱"}
+      {
+        "symbol": "1605",
+        "name": "華新",
+        "change": "+9.99%",
+        "institutional_flow": "+51M",
+        "notes": "法人第1但盤前未推薦，銅箔產業邏輯弱"
+      }
     ],
     "holdings_performance": [
-      {"symbol": "3481", "name": "群創", "cost": 14.35, "close": 22.15, "change": "+1.37%", "profit_pct": 54.4, "action": "減碼建議正確"},
-      {"symbol": "2330", "name": "台積電", "cost": 1458.5, "close": 1675, "change": "-1.76%", "profit_pct": 14.8, "action": "續抱"},
-      {"symbol": "2637", "name": "慧洋", "cost": 66.90, "close": 68.90, "change": "+3.92%", "profit_pct": 3.0, "action": "續抱大成功"},
-      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.35, "change": "-0.49%", "profit_pct": -1.7, "action": "觀望"}
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "cost": 14.35,
+        "close": 22.15,
+        "change": "+1.37%",
+        "profit_pct": 54.4,
+        "action": "減碼建議正確"
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "close": 1675,
+        "change": "-1.76%",
+        "profit_pct": 14.8,
+        "action": "續抱"
+      },
+      {
+        "symbol": "2637",
+        "name": "慧洋",
+        "cost": 66.9,
+        "close": 68.9,
+        "change": "+3.92%",
+        "profit_pct": 3.0,
+        "action": "續抱大成功"
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "close": 40.35,
+        "change": "-0.49%",
+        "profit_pct": -1.7,
+        "action": "觀望"
+      }
     ],
     "framework": "CES第二天+費半連漲+法人買超但還沒漲",
     "accuracy": 0.9375,
@@ -1224,9 +1551,13 @@
         "recommend_price": "153-156",
         "direction": "up",
         "confidence": 0.88,
-        "reasons": ["連10日買超+104K", "CES+AI伺服器利多", "籌碼最強"],
+        "reasons": [
+          "連10日買超+104K",
+          "CES+AI伺服器利多",
+          "籌碼最強"
+        ],
         "verification": {
-          "actual_close": 154.50,
+          "actual_close": 154.5,
           "actual_change": 0.98,
           "institutional_flow": 1696545,
           "result": "success",
@@ -1240,10 +1571,13 @@
         "recommend_price": "228-232",
         "direction": "up",
         "confidence": 0.75,
-        "reasons": ["載板龍頭", "費半利多"],
+        "reasons": [
+          "載板龍頭",
+          "費半利多"
+        ],
         "verification": {
-          "actual_close": 230.50,
-          "actual_change": 2.90,
+          "actual_close": 230.5,
+          "actual_change": 2.9,
           "institutional_flow": -2325760,
           "result": "success_but_warning",
           "notes": "漲+2.90%但法人反轉賣超-2.3M，明日需警惕"
@@ -1256,9 +1590,12 @@
         "recommend_price": "48-50",
         "direction": "up",
         "confidence": 0.75,
-        "reasons": ["成熟製程復甦", "外資連買"],
+        "reasons": [
+          "成熟製程復甦",
+          "外資連買"
+        ],
         "verification": {
-          "actual_close": 49.20,
+          "actual_close": 49.2,
           "actual_change": 1.34,
           "institutional_flow": 17097544,
           "result": "success",
@@ -1272,10 +1609,13 @@
         "recommend_price": "245-250",
         "direction": "up",
         "confidence": 0.72,
-        "reasons": ["CES概念", "連4日買超"],
+        "reasons": [
+          "CES概念",
+          "連4日買超"
+        ],
         "warning": "5日已漲10%追高風險",
         "verification": {
-          "actual_close": 253.50,
+          "actual_close": 253.5,
           "actual_change": 4.75,
           "institutional_flow": 22662351,
           "result": "correct_avoid",
@@ -1319,7 +1659,7 @@
         "name": "群創",
         "reason": "法人反轉-40K",
         "verification": {
-          "actual_change": 9.80,
+          "actual_change": 9.8,
           "institutional_flow": -14917104,
           "result": "correct_avoid",
           "notes": "漲+9.8%但法人-14.9M大賣，減碼建議正確"
@@ -1327,17 +1667,88 @@
       }
     ],
     "holdings_performance": [
-      {"symbol": "2330", "name": "台積電", "cost": 1458.5, "close": 1705, "change": "+2.10%", "profit_pct": 16.9, "institutional_flow": -7074655, "action": "續抱", "result": "success"},
-      {"symbol": "3481", "name": "群創", "cost": 14.35, "close": 21.85, "change": "+9.80%", "profit_pct": 52.3, "institutional_flow": -14917104, "action": "減碼建議", "result": "correct"},
-      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.55, "change": "+0.62%", "profit_pct": -1.2, "institutional_flow": 57480, "action": "出場建議", "result": "neutral"},
-      {"symbol": "2637", "name": "慧洋", "cost": 66.90, "close": 66.30, "change": "+0.76%", "profit_pct": -0.9, "institutional_flow": 430987, "action": "出場建議", "result": "wrong", "notes": "法人反轉買超，出場錯誤"}
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "close": 1705,
+        "change": "+2.10%",
+        "profit_pct": 16.9,
+        "institutional_flow": -7074655,
+        "action": "續抱",
+        "result": "success"
+      },
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "cost": 14.35,
+        "close": 21.85,
+        "change": "+9.80%",
+        "profit_pct": 52.3,
+        "institutional_flow": -14917104,
+        "action": "減碼建議",
+        "result": "correct"
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "close": 40.55,
+        "change": "+0.62%",
+        "profit_pct": -1.2,
+        "institutional_flow": 57480,
+        "action": "出場建議",
+        "result": "neutral"
+      },
+      {
+        "symbol": "2637",
+        "name": "慧洋",
+        "cost": 66.9,
+        "close": 66.3,
+        "change": "+0.76%",
+        "profit_pct": -0.9,
+        "institutional_flow": 430987,
+        "action": "出場建議",
+        "result": "wrong",
+        "notes": "法人反轉買超，出場錯誤"
+      }
     ],
     "track_b_discoveries": [
-      {"symbol": "2409", "name": "友達", "change": "+12%+", "institutional_flow": -42853464, "notes": "漲停但法人狂賣！"},
-      {"symbol": "2337", "name": "旺宏", "change": "+10%+", "institutional_flow": -4070474, "notes": "漲停但法人賣"},
-      {"symbol": "2408", "name": "南亞科", "change": "+10%+", "institutional_flow": 415050, "notes": "漲停"},
-      {"symbol": "6770", "name": "力積電", "change": "+10%+", "institutional_flow": 7075590, "notes": "漲停"},
-      {"symbol": "2344", "name": "華邦電", "change": "+9%+", "institutional_flow": 1081159, "notes": "接近漲停"}
+      {
+        "symbol": "2409",
+        "name": "友達",
+        "change": "+12%+",
+        "institutional_flow": -42853464,
+        "notes": "漲停但法人狂賣！"
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "change": "+10%+",
+        "institutional_flow": -4070474,
+        "notes": "漲停但法人賣"
+      },
+      {
+        "symbol": "2408",
+        "name": "南亞科",
+        "change": "+10%+",
+        "institutional_flow": 415050,
+        "notes": "漲停"
+      },
+      {
+        "symbol": "6770",
+        "name": "力積電",
+        "change": "+10%+",
+        "institutional_flow": 7075590,
+        "notes": "漲停"
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "change": "+9%+",
+        "institutional_flow": 1081159,
+        "notes": "接近漲停"
+      }
     ],
     "framework": "CES開幕日+費半超強+時事優先",
     "accuracy": 0.75,
@@ -1355,17 +1766,17 @@
       {
         "symbol": "3231",
         "name": "緯創",
-        "prev_close": 155.00,
+        "prev_close": 155.0,
         "direction": "up",
         "target_range": "175-180",
-        "confidence": 0.90,
+        "confidence": 0.9,
         "reasons": [
           "連10日買超+115K",
           "CES第三天AI伺服器",
           "外資+投信同步"
         ],
         "verification": {
-          "actual_close": 151.00,
+          "actual_close": 151.0,
           "actual_change": -2.58,
           "institutional_flow": -19000,
           "result": "fail",
@@ -1375,7 +1786,7 @@
       {
         "symbol": "2308",
         "name": "台達電",
-        "prev_close": 995.00,
+        "prev_close": 995.0,
         "direction": "up",
         "target_range": "1015-1030",
         "confidence": 0.75,
@@ -1384,7 +1795,7 @@
           "CES第三天"
         ],
         "verification": {
-          "actual_close": 1010.00,
+          "actual_close": 1010.0,
           "actual_change": 1.51,
           "result": "success",
           "notes": "區間內穩健"
@@ -1393,16 +1804,16 @@
       {
         "symbol": "8150",
         "name": "南茂",
-        "prev_close": 48.60,
+        "prev_close": 48.6,
         "direction": "up",
         "target_range": "52-54",
-        "confidence": 0.70,
+        "confidence": 0.7,
         "reasons": [
           "封測受惠費半",
           "日月光ADR+9.92%"
         ],
         "verification": {
-          "actual_close": 53.00,
+          "actual_close": 53.0,
           "actual_change": 9.05,
           "institutional_flow": 116,
           "result": "success",
@@ -1446,17 +1857,97 @@
       }
     ],
     "holdings_performance": [
-      {"symbol": "3481", "name": "群創", "cost": 16.14, "close": 20.75, "change": 14.64, "profit_pct": 28.6, "institutional_flow": 20000, "action": "減碼建議但用戶加碼", "result": "user_win", "notes": "用戶判斷正確！法人翻多+20K"},
-      {"symbol": "3231", "name": "緯創", "cost": 155.72, "close": 151.00, "change": -2.58, "profit_pct": -3.03, "institutional_flow": -19000, "action": "強力推薦", "result": "fail", "notes": "法人反轉出貨"},
-      {"symbol": "2330", "name": "台積電", "cost": 1458.50, "close": 1685.00, "change": 6.31, "profit_pct": 15.5, "institutional_flow": -3810, "action": "續抱", "result": "success"},
-      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.45, "change": 0.37, "profit_pct": -1.5, "institutional_flow": -3452, "action": "觀望", "result": "neutral"},
-      {"symbol": "2637", "name": "慧洋", "cost": 66.90, "close": 69.50, "change": 2.51, "profit_pct": 3.9, "institutional_flow": 2403, "action": "續抱", "result": "success"},
-      {"symbol": "8150", "name": "南茂", "cost": 52.57, "close": 53.00, "change": 9.05, "profit_pct": 0.8, "institutional_flow": 116, "action": "今日進場", "result": "success"}
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "cost": 16.14,
+        "close": 20.75,
+        "change": 14.64,
+        "profit_pct": 28.6,
+        "institutional_flow": 20000,
+        "action": "減碼建議但用戶加碼",
+        "result": "user_win",
+        "notes": "用戶判斷正確！法人翻多+20K"
+      },
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "cost": 155.72,
+        "close": 151.0,
+        "change": -2.58,
+        "profit_pct": -3.03,
+        "institutional_flow": -19000,
+        "action": "強力推薦",
+        "result": "fail",
+        "notes": "法人反轉出貨"
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "close": 1685.0,
+        "change": 6.31,
+        "profit_pct": 15.5,
+        "institutional_flow": -3810,
+        "action": "續抱",
+        "result": "success"
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "close": 40.45,
+        "change": 0.37,
+        "profit_pct": -1.5,
+        "institutional_flow": -3452,
+        "action": "觀望",
+        "result": "neutral"
+      },
+      {
+        "symbol": "2637",
+        "name": "慧洋",
+        "cost": 66.9,
+        "close": 69.5,
+        "change": 2.51,
+        "profit_pct": 3.9,
+        "institutional_flow": 2403,
+        "action": "續抱",
+        "result": "success"
+      },
+      {
+        "symbol": "8150",
+        "name": "南茂",
+        "cost": 52.57,
+        "close": 53.0,
+        "change": 9.05,
+        "profit_pct": 0.8,
+        "institutional_flow": 116,
+        "action": "今日進場",
+        "result": "success"
+      }
     ],
     "track_b_discoveries": [
-      {"symbol": "1303", "name": "南亞", "change": 17.54, "institutional_flow": 45000, "notes": "🔴遺漏！法人買超第1"},
-      {"symbol": "1605", "name": "華新", "change": 16.41, "institutional_flow": 7131, "notes": "🔴遺漏！銅箔題材"},
-      {"symbol": "2303", "name": "聯電", "change": 8.42, "institutional_flow": 76000, "notes": "法人買超第1名+76K"}
+      {
+        "symbol": "1303",
+        "name": "南亞",
+        "change": 17.54,
+        "institutional_flow": 45000,
+        "notes": "🔴遺漏！法人買超第1"
+      },
+      {
+        "symbol": "1605",
+        "name": "華新",
+        "change": 16.41,
+        "institutional_flow": 7131,
+        "notes": "🔴遺漏！銅箔題材"
+      },
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "change": 8.42,
+        "institutional_flow": 76000,
+        "notes": "法人買超第1名+76K"
+      }
     ],
     "framework": "費半連3日大漲+CES第三天+籌碼優先",
     "accuracy": 0.667,
@@ -1475,7 +1966,7 @@
       {
         "symbol": "2330",
         "name": "台積電",
-        "prev_close": 1685.00,
+        "prev_close": 1685.0,
         "direction": "up",
         "target_range": "1660-1680",
         "confidence": 0.65,
@@ -1484,8 +1975,8 @@
           "唯一還沒漲的半導體股"
         ],
         "verification": {
-          "actual_close": 1680.00,
-          "actual_change": -0.30,
+          "actual_close": 1680.0,
+          "actual_change": -0.3,
           "institutional_flow": -11000,
           "result": "neutral",
           "notes": "小跌-0.3%，法人賣-11K"
@@ -1542,7 +2033,7 @@
         "name": "旺宏",
         "reason": "連3漲停，不追",
         "verification": {
-          "actual_change": -7.90,
+          "actual_change": -7.9,
           "institutional_flow": 19000,
           "result": "correct_avoid",
           "notes": "✅ 暴跌-7.90%，雖法人買但追高會大虧！避開正確"
@@ -1561,18 +2052,112 @@
       }
     ],
     "holdings_performance": [
-      {"symbol": "3481", "name": "群創", "cost": 16.14, "close": 20.00, "change": -3.61, "profit_pct": 23.9, "institutional_flow": 10000, "action": "續抱", "result": "success", "notes": "法人續買+10K"},
-      {"symbol": "3231", "name": "緯創", "cost": 155.72, "close": 149.00, "change": -1.32, "profit_pct": -4.3, "institutional_flow": -12000, "action": "嚴守148停損", "result": "warning", "notes": "🔴 法人連2日賣-31K！下週觀察"},
-      {"symbol": "8150", "name": "南茂", "cost": 52.57, "close": 58.30, "change": 10.00, "profit_pct": 10.9, "institutional_flow": 8983, "action": "續抱", "result": "big_success", "notes": "⭐ 漲停+10%！封測判斷正確"},
-      {"symbol": "2637", "name": "慧洋", "cost": 66.90, "close": 71.30, "change": 2.59, "profit_pct": 6.6, "institutional_flow": 5306, "action": "續抱", "result": "success", "notes": "法人連4日買"},
-      {"symbol": "2330", "name": "台積電", "cost": 1458.50, "close": 1680.00, "change": -0.30, "profit_pct": 15.2, "institutional_flow": -11000, "action": "續抱", "result": "neutral", "notes": "法人續賣"},
-      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.65, "change": 0.49, "profit_pct": -1.0, "institutional_flow": null, "action": "觀望", "result": "neutral"},
-      {"symbol": "1301", "name": "台塑", "cost": 40.757, "close": 41.00, "change": -1.68, "profit_pct": 0.6, "institutional_flow": 7692, "action": "今日進場", "result": "success", "notes": "法人連4日買+7.7K，佈局正確"}
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "cost": 16.14,
+        "close": 20.0,
+        "change": -3.61,
+        "profit_pct": 23.9,
+        "institutional_flow": 10000,
+        "action": "續抱",
+        "result": "success",
+        "notes": "法人續買+10K"
+      },
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "cost": 155.72,
+        "close": 149.0,
+        "change": -1.32,
+        "profit_pct": -4.3,
+        "institutional_flow": -12000,
+        "action": "嚴守148停損",
+        "result": "warning",
+        "notes": "🔴 法人連2日賣-31K！下週觀察"
+      },
+      {
+        "symbol": "8150",
+        "name": "南茂",
+        "cost": 52.57,
+        "close": 58.3,
+        "change": 10.0,
+        "profit_pct": 10.9,
+        "institutional_flow": 8983,
+        "action": "續抱",
+        "result": "big_success",
+        "notes": "⭐ 漲停+10%！封測判斷正確"
+      },
+      {
+        "symbol": "2637",
+        "name": "慧洋",
+        "cost": 66.9,
+        "close": 71.3,
+        "change": 2.59,
+        "profit_pct": 6.6,
+        "institutional_flow": 5306,
+        "action": "續抱",
+        "result": "success",
+        "notes": "法人連4日買"
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "close": 1680.0,
+        "change": -0.3,
+        "profit_pct": 15.2,
+        "institutional_flow": -11000,
+        "action": "續抱",
+        "result": "neutral",
+        "notes": "法人續賣"
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "close": 40.65,
+        "change": 0.49,
+        "profit_pct": -1.0,
+        "institutional_flow": null,
+        "action": "觀望",
+        "result": "neutral"
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "cost": 40.757,
+        "close": 41.0,
+        "change": -1.68,
+        "profit_pct": 0.6,
+        "institutional_flow": 7692,
+        "action": "今日進場",
+        "result": "success",
+        "notes": "法人連4日買+7.7K，佈局正確"
+      }
     ],
     "intraday_recommendations": [
-      {"symbol": "1301", "name": "台塑", "reason": "連3日法人買超+籌碼乾淨", "result": "success", "notes": "用戶進場40.757，收41.00，法人續買+7.7K"},
-      {"symbol": "2883", "name": "凱基金", "reason": "法人+14K，觀望", "result": "correct_wait", "notes": "今日法人反轉-8.3K！幸好沒進場"},
-      {"symbol": "2634", "name": "漢翔", "reason": "法人+10K，觀望", "result": "correct_wait", "notes": "今日法人反轉-8.2K！幸好沒進場"}
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "reason": "連3日法人買超+籌碼乾淨",
+        "result": "success",
+        "notes": "用戶進場40.757，收41.00，法人續買+7.7K"
+      },
+      {
+        "symbol": "2883",
+        "name": "凱基金",
+        "reason": "法人+14K，觀望",
+        "result": "correct_wait",
+        "notes": "今日法人反轉-8.3K！幸好沒進場"
+      },
+      {
+        "symbol": "2634",
+        "name": "漢翔",
+        "reason": "法人+10K，觀望",
+        "result": "correct_wait",
+        "notes": "今日法人反轉-8.2K！幸好沒進場"
+      }
     ],
     "framework": "不追高策略+籌碼驗證+時事判斷",
     "accuracy": 0.85,
@@ -1591,10 +2176,30 @@
       "corrected_at": "2026-01-14 00:50",
       "reason": "01/12盤後分析數據錯誤，繼承至盤前分析",
       "corrections": [
-        {"stock": "台積電", "field": "prev_close", "wrong": 1700, "correct": 1690},
-        {"stock": "台塑", "field": "prev_close", "wrong": 41.75, "correct": 41.50},
-        {"stock": "緯創", "field": "prev_close", "wrong": 149, "correct": 146},
-        {"stock": "南茂", "field": "prev_close", "wrong": 61.1, "correct": 59.2}
+        {
+          "stock": "台積電",
+          "field": "prev_close",
+          "wrong": 1700,
+          "correct": 1690
+        },
+        {
+          "stock": "台塑",
+          "field": "prev_close",
+          "wrong": 41.75,
+          "correct": 41.5
+        },
+        {
+          "stock": "緯創",
+          "field": "prev_close",
+          "wrong": 149,
+          "correct": 146
+        },
+        {
+          "stock": "南茂",
+          "field": "prev_close",
+          "wrong": 61.1,
+          "correct": 59.2
+        }
       ],
       "critical_error": "緯創01/12實際收盤146元，早已跌破148停損位，但分析記錄149元導致延誤停損"
     },
@@ -1612,7 +2217,10 @@
         "direction": "up",
         "target_range": "1680-1710",
         "confidence": 0.75,
-        "reasons": ["1/15法說會前佈局", "費半創歷史新高"],
+        "reasons": [
+          "1/15法說會前佈局",
+          "費半創歷史新高"
+        ],
         "verification": {
           "actual_close": 1710,
           "actual_change": 1.18,
@@ -1623,14 +2231,17 @@
       {
         "symbol": "1301",
         "name": "台塑",
-        "prev_close": 41.50,
+        "prev_close": 41.5,
         "prev_close_wrong": 41.75,
         "direction": "up",
         "target_range": "40.5-42.5",
-        "confidence": 0.90,
-        "reasons": ["連5日買超+35K", "籌碼分析最強"],
+        "confidence": 0.9,
+        "reasons": [
+          "連5日買超+35K",
+          "籌碼分析最強"
+        ],
         "verification": {
-          "actual_close": 40.20,
+          "actual_close": 40.2,
           "actual_change": -3.13,
           "institutional_flow": -8808,
           "result": "fail",
@@ -1644,7 +2255,11 @@
         "direction": "up",
         "target_range": "市價分批",
         "confidence": 0.85,
-        "reasons": ["連3日買超+4.7K", "記憶體超級循環", "外資投信同買"],
+        "reasons": [
+          "連3日買超+4.7K",
+          "記憶體超級循環",
+          "外資投信同買"
+        ],
         "verification": {
           "actual_close": 242,
           "actual_change": 10.0,
@@ -1678,17 +2293,106 @@
       }
     ],
     "holdings_performance": [
-      {"symbol": "3481", "name": "群創", "cost": 16.14, "prev_close": 22.00, "close": 22.65, "change": 2.95, "profit_pct": 40.3, "institutional_flow": -18000, "action": "減碼建議", "result": "success_but_warning", "notes": "獲利+40%但法人賣超-18K"},
-      {"symbol": "3231", "name": "緯創", "cost": 155.72, "prev_close": 146.00, "prev_close_wrong": 149.00, "close": 143.50, "change": -1.71, "profit_pct": -7.8, "institutional_flow": -13000, "action": "停損執行", "result": "fail", "notes": "🚨 數據錯誤！01/12實際146元已跌破停損148元，延誤1天停損"},
-      {"symbol": "8150", "name": "南茂", "cost": 52.57, "prev_close": 59.20, "prev_close_wrong": 61.10, "close": 59.00, "change": -0.34, "profit_pct": 12.2, "institutional_flow": -5899, "action": "觀察", "result": "success", "notes": "獲利從16.2%修正為12.2%"},
-      {"symbol": "2330", "name": "台積電", "cost": 1458.50, "prev_close": 1690, "prev_close_wrong": 1700, "close": 1710, "change": 1.18, "profit_pct": 17.2, "action": "續抱", "result": "success"},
-      {"symbol": "2886", "name": "兆豐金", "cost": 41.06, "prev_close": 40.30, "close": 40.40, "change": 0.25, "profit_pct": -1.6, "action": "觀望", "result": "neutral"},
-      {"symbol": "1301", "name": "台塑", "cost": 40.76, "prev_close": 41.50, "prev_close_wrong": 41.75, "close": 40.20, "change": -3.13, "profit_pct": -1.4, "institutional_flow": -8808, "action": "觀望", "result": "fail", "notes": "法人反轉賣超"}
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "cost": 16.14,
+        "prev_close": 22.0,
+        "close": 22.65,
+        "change": 2.95,
+        "profit_pct": 40.3,
+        "institutional_flow": -18000,
+        "action": "減碼建議",
+        "result": "success_but_warning",
+        "notes": "獲利+40%但法人賣超-18K"
+      },
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "cost": 155.72,
+        "prev_close": 146.0,
+        "prev_close_wrong": 149.0,
+        "close": 143.5,
+        "change": -1.71,
+        "profit_pct": -7.8,
+        "institutional_flow": -13000,
+        "action": "停損執行",
+        "result": "fail",
+        "notes": "🚨 數據錯誤！01/12實際146元已跌破停損148元，延誤1天停損"
+      },
+      {
+        "symbol": "8150",
+        "name": "南茂",
+        "cost": 52.57,
+        "prev_close": 59.2,
+        "prev_close_wrong": 61.1,
+        "close": 59.0,
+        "change": -0.34,
+        "profit_pct": 12.2,
+        "institutional_flow": -5899,
+        "action": "觀察",
+        "result": "success",
+        "notes": "獲利從16.2%修正為12.2%"
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "prev_close": 1690,
+        "prev_close_wrong": 1700,
+        "close": 1710,
+        "change": 1.18,
+        "profit_pct": 17.2,
+        "action": "續抱",
+        "result": "success"
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "prev_close": 40.3,
+        "close": 40.4,
+        "change": 0.25,
+        "profit_pct": -1.6,
+        "action": "觀望",
+        "result": "neutral"
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "cost": 40.76,
+        "prev_close": 41.5,
+        "prev_close_wrong": 41.75,
+        "close": 40.2,
+        "change": -3.13,
+        "profit_pct": -1.4,
+        "institutional_flow": -8808,
+        "action": "觀望",
+        "result": "fail",
+        "notes": "法人反轉賣超"
+      }
     ],
     "track_b_discoveries": [
-      {"symbol": "2312", "name": "金寶", "change": 9.98, "institutional_flow": 20000, "notes": "光電族群爆發，盤前遺漏"},
-      {"symbol": "6443", "name": "元晶", "change": 8.62, "institutional_flow": 9333, "notes": "太陽能爆發，盤前遺漏"},
-      {"symbol": "6282", "name": "康舒", "institutional_flow": 31000, "notes": "法人買超第1，盤前遺漏"}
+      {
+        "symbol": "2312",
+        "name": "金寶",
+        "change": 9.98,
+        "institutional_flow": 20000,
+        "notes": "光電族群爆發，盤前遺漏"
+      },
+      {
+        "symbol": "6443",
+        "name": "元晶",
+        "change": 8.62,
+        "institutional_flow": 9333,
+        "notes": "太陽能爆發，盤前遺漏"
+      },
+      {
+        "symbol": "6282",
+        "name": "康舒",
+        "institutional_flow": 31000,
+        "notes": "法人買超第1，盤前遺漏"
+      }
     ],
     "framework": "台積電法說會前佈局+籌碼分析+記憶體超級循環",
     "accuracy": 0.667,
@@ -1710,24 +2414,32 @@
       "us_market": "NASDAQ +1.51%, 道瓊 +0.04%, S&P500 +0.53%",
       "phlx_semiconductor": "+0.86%",
       "taiwan_adr": "台積電ADR +2.50%, 聯電ADR +6.65%, 日月光ADR +7.72%",
-      "major_catalysts": ["封測爆發", "晶圓代工續強", "半導體回穩"]
+      "major_catalysts": [
+        "封測爆發",
+        "晶圓代工續強",
+        "半導體回穩"
+      ]
     },
     "predictions": [
       {
         "symbol": "2327",
         "name": "國巨",
-        "prev_close": 259.00,
+        "prev_close": 259.0,
         "direction": "up",
         "confidence": 0.86,
         "score": 86,
         "type": "stable",
         "rating": "⭐⭐⭐⭐⭐",
-        "reasons": ["MLCC漲價週期啟動", "被動元件龍頭", "庫存回補需求"],
+        "reasons": [
+          "MLCC漲價週期啟動",
+          "被動元件龍頭",
+          "庫存回補需求"
+        ],
         "recommend_price": "開盤價附近",
         "target_price": "+8-10%",
         "time_horizon": "1-2週",
         "verification": {
-          "actual_close": 278.50,
+          "actual_close": 278.5,
           "actual_change": 7.49,
           "institutional_flow": 30008,
           "volume_rank": 10,
@@ -1745,7 +2457,11 @@
         "score": 73,
         "type": "stable",
         "rating": "⭐⭐⭐",
-        "reasons": ["成交量放大", "證券型金融", "ETF規模成長"],
+        "reasons": [
+          "成交量放大",
+          "證券型金融",
+          "ETF規模成長"
+        ],
         "recommend_price": "開盤價附近",
         "target_price": "+5-7%",
         "time_horizon": "1-2週",
@@ -1772,7 +2488,7 @@
       {
         "symbol": "6191",
         "name": "精成科",
-        "change": 10.00,
+        "change": 10.0,
         "volume_rank": 11,
         "notes": "半導體設備爆發，盤前遺漏"
       },
@@ -1796,7 +2512,7 @@
         "symbol": "3481",
         "name": "群創",
         "cost": 16.14,
-        "prev_close": 21.50,
+        "prev_close": 21.5,
         "close": 23.02,
         "change": 7.06,
         "profit_pct": 42.6,
@@ -1809,8 +2525,8 @@
         "symbol": "3231",
         "name": "緯創",
         "cost": 155.72,
-        "prev_close": 143.50,
-        "close": 145.00,
+        "prev_close": 143.5,
+        "close": 145.0,
         "change": 1.05,
         "profit_pct": -6.9,
         "action": "已停損",
@@ -1832,7 +2548,7 @@
       }
     ],
     "framework": "時事先行+產業展開+法人驗證",
-    "accuracy": 0.50,
+    "accuracy": 0.5,
     "notes": "推薦準確率50%（1成功1部分成功）。國巨驗證MLCC漲價週期成功，台新金量能不足。Track B遺漏半導體設備族群（精成科+10%、漢磊+8.42%）。",
     "lessons": [
       "✅ 產業展開法則驗證：封測爆發（日月光ADR +7.72%）→ 盤中榮科+9.96%、矽格+9.21%",
@@ -1849,7 +2565,7 @@
       {
         "symbol": "2303",
         "name": "聯電",
-        "prev_close": 54.70,
+        "prev_close": 54.7,
         "direction": "up",
         "target_range": "53-55",
         "confidence": 0.84,
@@ -1859,7 +2575,7 @@
           "外資10天累積+236K"
         ],
         "verification": {
-          "actual_close": 58.50,
+          "actual_close": 58.5,
           "actual_change": 5.79,
           "result": "success",
           "notes": "台積電法說會利多延續，半導體供應鏈受惠"
@@ -1886,7 +2602,7 @@
       {
         "symbol": "6770",
         "name": "力積電",
-        "prev_close": 51.30,
+        "prev_close": 51.3,
         "direction": "up",
         "target_range": "50-52",
         "confidence": 0.75,
@@ -1895,7 +2611,7 @@
           "記憶體成功模式（昨日旺宏+3.00%驗證）"
         ],
         "verification": {
-          "actual_close": 56.40,
+          "actual_close": 56.4,
           "actual_change": 13.25,
           "result": "success",
           "notes": "記憶體族群爆發"
@@ -1904,7 +2620,7 @@
       {
         "symbol": "2890",
         "name": "永豐金",
-        "prev_close": 29.00,
+        "prev_close": 29.0,
         "direction": "up",
         "target_range": "28.5-29.5",
         "confidence": 0.66,
@@ -1913,7 +2629,7 @@
           "5日-0.68%（佈局中）"
         ],
         "verification": {
-          "actual_close": 29.30,
+          "actual_close": 29.3,
           "actual_change": 1.91,
           "result": "success",
           "notes": "法人反轉買超驗證有效"
@@ -1922,7 +2638,7 @@
       {
         "symbol": "1301",
         "name": "台塑",
-        "prev_close": 42.60,
+        "prev_close": 42.6,
         "direction": "up",
         "target_range": "41.5-42.5",
         "confidence": 0.63,
@@ -1931,7 +2647,7 @@
           "10天累積+91K"
         ],
         "verification": {
-          "actual_close": 43.00,
+          "actual_close": 43.0,
           "actual_change": 3.61,
           "result": "success",
           "notes": "法人買超+36K力道>油價-4.28%利空"
@@ -1944,7 +2660,7 @@
         "name": "群創",
         "reason": "法人反轉賣-12,219張",
         "verification": {
-          "actual_close": 26.60,
+          "actual_close": 26.6,
           "actual_change": 20.91,
           "result": "failure",
           "notes": "重大失誤：法人單日反轉≠趨勢反轉，面板FOPLP利多仍在"
@@ -1955,7 +2671,7 @@
         "name": "南亞",
         "reason": "5日+4.03% + 油價-4.28%利空",
         "verification": {
-          "actual_close": 73.80,
+          "actual_close": 73.8,
           "actual_change": 14.06,
           "result": "failure",
           "notes": "重大失誤：法人史詩級買超+69K力道>油價利空"
@@ -1966,7 +2682,7 @@
         "name": "台積電",
         "reason": "法人連續10日賣超-7,897",
         "verification": {
-          "actual_close": 1740.00,
+          "actual_close": 1740.0,
           "actual_change": 2.96,
           "result": "partial",
           "notes": "保守避開：法說會利多>法人賣超"
@@ -1992,7 +2708,7 @@
       }
     ],
     "framework": "v5.4（時事先行+雙軌分析）",
-    "accuracy": 0.80,
+    "accuracy": 0.8,
     "notes": "推薦準確率80%（4成功1中性）。半導體時事判斷正確，聯電、力積電大漲驗證。避開股準確率40%（2/5），群創、南亞避開失誤。",
     "lessons": [
       "🚨 教訓1：法人史詩級買超（>50K）>時事利空 - 南亞法人+69K vs 油價-4.28%，應信法人",
@@ -2010,13 +2726,16 @@
       {
         "symbol": "2303",
         "name": "聯電",
-        "prev_close": 58.50,
+        "prev_close": 58.5,
         "direction": "up",
         "target_range": "61-63",
         "confidence": 0.79,
-        "reasons": ["費半+3.78%", "外資累計+234K"],
+        "reasons": [
+          "費半+3.78%",
+          "外資累計+234K"
+        ],
         "verification": {
-          "actual_close": 62.50,
+          "actual_close": 62.5,
           "actual_change": 6.84,
           "result": "success",
           "notes": "半導體利多驗證"
@@ -2029,9 +2748,12 @@
         "direction": "up",
         "target_range": "17.6-17.9",
         "confidence": 0.82,
-        "reasons": ["連5日買超+94K", "5日僅+0.6%佈局中"],
+        "reasons": [
+          "連5日買超+94K",
+          "5日僅+0.6%佈局中"
+        ],
         "verification": {
-          "actual_close": 18.10,
+          "actual_close": 18.1,
           "actual_change": 1.97,
           "result": "success",
           "notes": "法人佈局驗證成功"
@@ -2040,13 +2762,17 @@
       {
         "symbol": "2330",
         "name": "台積電",
-        "prev_close": 1740.00,
+        "prev_close": 1740.0,
         "direction": "up",
         "target_range": "1830-1860",
         "confidence": 0.88,
-        "reasons": ["費半+3.78%", "ADR+5.80%", "法人反轉買+9K"],
+        "reasons": [
+          "費半+3.78%",
+          "ADR+5.80%",
+          "法人反轉買+9K"
+        ],
         "verification": {
-          "actual_close": 1760.00,
+          "actual_close": 1760.0,
           "actual_change": 1.15,
           "result": "success",
           "notes": "上漲但未達推薦價區間"
@@ -2055,13 +2781,15 @@
       {
         "symbol": "1301",
         "name": "台塑",
-        "prev_close": 43.00,
+        "prev_close": 43.0,
         "direction": "up",
         "target_range": "42-43",
         "confidence": 0.68,
-        "reasons": ["法人01/16買超+19K"],
+        "reasons": [
+          "法人01/16買超+19K"
+        ],
         "verification": {
-          "actual_close": 43.70,
+          "actual_close": 43.7,
           "actual_change": 1.63,
           "result": "success",
           "notes": "續抱策略正確"
@@ -2070,13 +2798,16 @@
       {
         "symbol": "3711",
         "name": "日月光",
-        "prev_close": 303.50,
+        "prev_close": 303.5,
         "direction": "up",
         "target_range": "325-335",
         "confidence": 0.87,
-        "reasons": ["ADR+10.03%", "連6日買超+21K"],
+        "reasons": [
+          "ADR+10.03%",
+          "連6日買超+21K"
+        ],
         "verification": {
-          "actual_close": 299.00,
+          "actual_close": 299.0,
           "actual_change": -1.48,
           "result": "neutral",
           "notes": "ADR大漲但現股未跟"
@@ -2106,12 +2837,27 @@
       }
     ],
     "track_b_discoveries": [
-      {"symbol": "2337", "name": "旺宏", "change": 10.00, "notes": "記憶體漲停"},
-      {"symbol": "2408", "name": "南亞科", "change": 10.00, "notes": "記憶體漲停"},
-      {"symbol": "3189", "name": "景碩", "change": 9.87, "notes": "載板大漲"}
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "change": 10.0,
+        "notes": "記憶體漲停"
+      },
+      {
+        "symbol": "2408",
+        "name": "南亞科",
+        "change": 10.0,
+        "notes": "記憶體漲停"
+      },
+      {
+        "symbol": "3189",
+        "name": "景碩",
+        "change": 9.87,
+        "notes": "載板大漲"
+      }
     ],
     "framework": "v5.4（時事先行+雙軌分析）",
-    "accuracy": 0.80,
+    "accuracy": 0.8,
     "notes": "推薦準確率80%（4成功1中性）。日月光ADR大漲但現股未跟是特例。",
     "lessons": [
       "✅ 費半+3.78%時事判斷正確",
@@ -2119,5 +2865,120 @@
       "⚠️ ADR大漲≠現股必漲",
       "🚨 記憶體族群覆蓋不足"
     ]
+  },
+  "2026-01-20": {
+    "date": "2026-01-20",
+    "predictions": [
+      {
+        "symbol": "2883",
+        "name": "凱基金",
+        "prev_close": 17.5,
+        "recommend_price": "18.0-18.3",
+        "direction": "up",
+        "confidence": 0.87,
+        "reasons": [
+          "連續買超+35K",
+          "累計>100K",
+          "5日+2.5%佈局中"
+        ],
+        "verification": {
+          "actual_close": 18.1,
+          "actual_change": 3.43,
+          "institutional_flow": 11000,
+          "result": "success",
+          "notes": "金融佈局股策略有效"
+        }
+      },
+      {
+        "symbol": "2882",
+        "name": "國泰金",
+        "prev_close": 74.7,
+        "recommend_price": "77-78",
+        "direction": "up",
+        "confidence": 0.81,
+        "reasons": [
+          "+13K",
+          "5日+0%佈局中"
+        ],
+        "verification": {
+          "actual_close": 76.6,
+          "actual_change": 2.54,
+          "result": "success",
+          "notes": "金融股表現穩定"
+        }
+      },
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "prev_close": 19.4,
+        "recommend_price": "19.5-20.0",
+        "direction": "up",
+        "confidence": 0.76,
+        "reasons": [
+          "+22K",
+          "5日+1.0%"
+        ],
+        "verification": {
+          "actual_close": 19.15,
+          "actual_change": -1.29,
+          "institutional_flow": -31000,
+          "result": "fail",
+          "notes": "法人反轉大賣-31K，傳產資金流出"
+        }
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "prev_close": 99.8,
+        "recommend_price": "觀察開盤",
+        "direction": "up",
+        "confidence": 0.72,
+        "reasons": [
+          "費半+3.78%",
+          "記憶體族群補充",
+          "法人+1.8K"
+        ],
+        "verification": {
+          "actual_close": 113.0,
+          "actual_change": 13.23,
+          "result": "success",
+          "notes": "記憶體族群爆發，費半帶動"
+        }
+      }
+    ],
+    "avoid_stocks": [
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "reason": "ADR+5.80%但法人-11K",
+        "actual_change": 3.8,
+        "judgment": "missed_opportunity"
+      },
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "reason": "5日+13.8%追高風險",
+        "actual_change": 25.56,
+        "judgment": "missed_opportunity"
+      },
+      {
+        "symbol": "3711",
+        "name": "日月光",
+        "reason": "ADR+10%但昨日現股-1.48%",
+        "actual_change": 0.51,
+        "judgment": "correct"
+      }
+    ],
+    "accuracy": 0.75,
+    "market_summary": {
+      "taiex_change": "+2.64%",
+      "key_driver": "費半+3.78%帶動半導體全面噴發"
+    },
+    "key_lessons": [
+      "費半+3.78%時不應過度觀望半導體，ADR大漲會帶動現股",
+      "持股警示過度保守，市場氛圍>單日法人數據",
+      "傳產股在半導體狂歡時表現弱勢"
+    ],
+    "notes": "準確率75%（3/4），觀望策略過度保守錯過聯電+25%"
   }
 }
