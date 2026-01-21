@@ -1,7 +1,7 @@
 {
   "date": "2026-01-21",
   "day_of_week": "Wednesday",
-  "analysis_version": "v5.4",
+  "analysis_version": "v5.6",
   "process_compliance": {
     "step_0_time_verification": true,
     "step_0_5_international_data": true,
@@ -30,6 +30,28 @@
   },
   "recommendations": [
     {
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "type": "stable",
+      "score": 85,
+      "recommend_price": "開盤價附近",
+      "stop_loss": "-5%",
+      "target_price": "+8-10%",
+      "position": "10-15%",
+      "reason": "AI電源供應龍頭、受惠AI伺服器需求"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "type": "stable",
+      "score": 82,
+      "recommend_price": "開盤價附近",
+      "stop_loss": "-5%",
+      "target_price": "+8-10%",
+      "position": "10-15%",
+      "reason": "費半+1.56%、ABF載板龍頭受惠"
+    },
+    {
       "stock_code": "2356",
       "stock_name": "英業達",
       "type": "stable",
@@ -39,6 +61,28 @@
       "target_price": 63,
       "position": "10-15%",
       "reason": "外資連3日買、累計+13K、5日漲幅僅+1.5%"
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新金",
+      "type": "stable",
+      "score": 76,
+      "recommend_price": "開盤價附近",
+      "stop_loss": "-5%",
+      "target_price": "+6-8%",
+      "position": "10-15%",
+      "reason": "美股跌、防禦性佳、法人大買超+54K"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "type": "stable",
+      "score": 74,
+      "recommend_price": "開盤價附近",
+      "stop_loss": "-5%",
+      "target_price": "+8%",
+      "position": "5-10%",
+      "reason": "AI伺服器龍頭、輝達合作夥伴"
     },
     {
       "stock_code": "2618",
@@ -89,7 +133,11 @@
     "費半強勢時半導體可獨強（即使美股跌）",
     "傳產股在科技狂歡時弱勢",
     "外資連續買超是重要訊號",
-    "追高風險：5日漲幅>10%不推薦"
+    "追高風險：5日漲幅>10%不推薦",
+    "v5.6更新：14個產業掃描避免遺漏（如昨日康舒+17%）",
+    "v5.6更新：推薦6-8檔提高覆蓋率",
+    "電源供應產業受惠AI伺服器（台達電、光寶科）",
+    "PCB載板跟隨半導體（欣興、景碩）"
   ],
   "files_created": [
     "data/2026-01-21/before_market_analysis.md",
