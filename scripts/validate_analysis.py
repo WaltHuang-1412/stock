@@ -3,7 +3,7 @@
 分析完整性驗證工具
 
 功能：
-- 驗證盤前/盤中/盤後分析是否符合v5.6規範
+- 驗證盤前/盤中/盤後分析是否符合v5.7規範
 - 檢查推薦數量、產業分散、檔案完整性
 - 不符合規範 → 禁止commit
 
@@ -23,7 +23,7 @@ import os
 from datetime import datetime
 
 def validate_before_market(date_str):
-    """驗證盤前分析完整性（v5.6規範）"""
+    """驗證盤前分析完整性（v5.7規範）"""
     errors = []
     warnings = []
 
@@ -41,10 +41,10 @@ def validate_before_market(date_str):
     with open(json_file, 'r', encoding='utf-8') as f:
         tracking = json.load(f)
 
-    # 2.1 檢查版本
+    # 2.1 檢查版本（允許 v5.6 或 v5.7）
     version = tracking.get('analysis_version', '')
-    if version != 'v5.6':
-        errors.append(f"❌ 版本錯誤: {version}（應為 v5.6）")
+    if version not in ['v5.6', 'v5.7']:
+        errors.append(f"❌ 版本錯誤: {version}（應為 v5.7）")
 
     # 2.2 檢查推薦數量
     recs = tracking.get('recommendations', [])
