@@ -1,0 +1,66 @@
+{
+  "phase": "after_market",
+  "version": "v5.6",
+  "todos": [
+    {
+      "content": "Step 0: 前置檢查（intraday_analysis.md 和 dual_track_analysis.json 存在？）",
+      "status": "pending",
+      "activeForm": "前置檢查"
+    },
+    {
+      "content": "Step 1: Track A驗證（逐檔推薦股驗證：推薦價vs收盤價、成功/失敗統計、準確率計算）",
+      "status": "pending",
+      "activeForm": "Track A驗證"
+    },
+    {
+      "content": "Step 2: Track B整合（市場發現TOP5深度分析、遺漏機會根本原因、產業共振驗證）",
+      "status": "pending",
+      "activeForm": "Track B整合"
+    },
+    {
+      "content": "Step 2.3: 時事判斷驗證（盤前時事判斷vs今日實際表現）",
+      "status": "pending",
+      "activeForm": "時事判斷驗證"
+    },
+    {
+      "content": "Step 2.5: 佈局股驗證（盤前佈局股今日表現、成功/失敗分類、準確率統計）",
+      "status": "pending",
+      "activeForm": "佈局股驗證"
+    },
+    {
+      "content": "Step 3: 雙軌對比驗證（盤前預測vs盤中發現vs最終收盤、時間軸完整驗證）",
+      "status": "pending",
+      "activeForm": "雙軌對比驗證"
+    },
+    {
+      "content": "Step 4: 追蹤系統更新（執行 stock_tracker.py）",
+      "status": "pending",
+      "activeForm": "更新追蹤系統"
+    },
+    {
+      "content": "Step 5: 更新predictions.json（新增當日記錄、準確率統計、重大教訓記錄）",
+      "status": "pending",
+      "activeForm": "更新predictions"
+    },
+    {
+      "content": "Step 6: 明日預測調整（延續成功模式、避開失敗模式、新發現整合）",
+      "status": "pending",
+      "activeForm": "明日預測調整"
+    },
+    {
+      "content": "Step 7: 建檔（after_market_analysis.md + 更新tracking.json收盤價 + 更新predictions.json）",
+      "status": "pending",
+      "activeForm": "建立文件"
+    }
+  ],
+  "validation": {
+    "required_files": [
+      "data/YYYY-MM-DD/after_market_analysis.md",
+      "data/tracking/tracking_YYYY-MM-DD.json",
+      "data/predictions/predictions.json"
+    ],
+    "accuracy_calculation_required": true,
+    "tracking_must_have_close_price": true,
+    "tracking_must_have_result": true
+  }
+}

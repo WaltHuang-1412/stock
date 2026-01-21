@@ -1,0 +1,92 @@
+{
+  "phase": "before_market",
+  "version": "v5.6",
+  "todos": [
+    {
+      "content": "Step -1: 資訊同步檢查（讀取昨日intraday/after_market + my_holdings.yaml）",
+      "status": "pending",
+      "activeForm": "檢查資訊同步"
+    },
+    {
+      "content": "Step 0: 國際市場數據（執行 fetch_us_asia_markets.py）",
+      "status": "pending",
+      "activeForm": "獲取國際數據"
+    },
+    {
+      "content": "Step 0.5: 即時股價查詢（推薦股的現價）",
+      "status": "pending",
+      "activeForm": "查詢即時股價"
+    },
+    {
+      "content": "Step 1: 歷史驗證（讀取昨日tracking.json）",
+      "status": "pending",
+      "activeForm": "驗證歷史推薦"
+    },
+    {
+      "content": "Step 1.5: 參考predictions教訓",
+      "status": "pending",
+      "activeForm": "檢查歷史教訓"
+    },
+    {
+      "content": "Step 1.7: 昨日key_lessons主動檢查",
+      "status": "pending",
+      "activeForm": "檢查昨日教訓"
+    },
+    {
+      "content": "Step 1.8: 持股法人追蹤（比對前日和昨日法人數據）",
+      "status": "pending",
+      "activeForm": "追蹤持股法人"
+    },
+    {
+      "content": "Step 2: 法人TOP50查詢（fetch_institutional_top50.py）",
+      "status": "pending",
+      "activeForm": "查詢法人TOP50"
+    },
+    {
+      "content": "Step 3: 時事→產業對照（14產業掃描）",
+      "status": "pending",
+      "activeForm": "掃描14產業"
+    },
+    {
+      "content": "Step 4: 法人驗證+籌碼分析（chip_analysis.py 深度分析3-5檔）",
+      "status": "pending",
+      "activeForm": "籌碼深度分析"
+    },
+    {
+      "content": "Step 4.5: 價格篩選（排除5日漲幅>10%）",
+      "status": "pending",
+      "activeForm": "價格篩選"
+    },
+    {
+      "content": "Step 5: 五維度評分（推薦6-8檔）",
+      "status": "pending",
+      "activeForm": "評分推薦"
+    },
+    {
+      "content": "Step 5.5: 產業分散檢查（單一產業≤50%、至少4個產業）",
+      "status": "pending",
+      "activeForm": "檢查產業分散"
+    },
+    {
+      "content": "Step 6: 歷史驗證加減分",
+      "status": "pending",
+      "activeForm": "調整評分"
+    },
+    {
+      "content": "Step 7: 建檔（before_market_analysis.md + tracking.json 同步建立）",
+      "status": "pending",
+      "activeForm": "建立文件"
+    }
+  ],
+  "validation": {
+    "min_recommendations": 6,
+    "max_recommendations": 8,
+    "min_industries": 4,
+    "max_single_industry_ratio": 0.5,
+    "required_version": "v5.6",
+    "required_files": [
+      "data/YYYY-MM-DD/before_market_analysis.md",
+      "data/tracking/tracking_YYYY-MM-DD.json"
+    ]
+  }
+}

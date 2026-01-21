@@ -1,0 +1,61 @@
+{
+  "phase": "intraday",
+  "version": "v5.6",
+  "todos": [
+    {
+      "content": "Step 0: 前置檢查（tracking.json存在？）",
+      "status": "pending",
+      "activeForm": "前置檢查"
+    },
+    {
+      "content": "Step 0.5: 參考predictions歷史教訓（盤中異常判斷）",
+      "status": "pending",
+      "activeForm": "檢查歷史教訓"
+    },
+    {
+      "content": "Step 1: 執行雙軌腳本（intraday_dual_track.py）",
+      "status": "pending",
+      "activeForm": "執行雙軌腳本"
+    },
+    {
+      "content": "Step 2: Track A分析（盤前推薦股五維度盤中評分）",
+      "status": "pending",
+      "activeForm": "Track A分析"
+    },
+    {
+      "content": "Step 3: Track B分析（成交量TOP20 + 量比TOP20 + 買賣方向判斷）",
+      "status": "pending",
+      "activeForm": "Track B分析"
+    },
+    {
+      "content": "Step 3.3: Track B時事驗證（爆量股是否符合今日時事）",
+      "status": "pending",
+      "activeForm": "時事驗證"
+    },
+    {
+      "content": "Step 3.5: 盤中佈局偵測（法人連續買超+今日爆量+漲幅<3%）",
+      "status": "pending",
+      "activeForm": "佈局偵測"
+    },
+    {
+      "content": "Step 4: 雙軌整合輸出（Track A操作建議 + Track B市場發現）",
+      "status": "pending",
+      "activeForm": "整合輸出"
+    },
+    {
+      "content": "Step 5: 建檔（intraday_analysis.md + 更新tracking.json盤中價格）",
+      "status": "pending",
+      "activeForm": "建立文件"
+    }
+  ],
+  "validation": {
+    "required_files": [
+      "data/YYYY-MM-DD/intraday_analysis.md"
+    ],
+    "required_sections": [
+      "Track A",
+      "Track B",
+      "尾盤策略"
+    ]
+  }
+}

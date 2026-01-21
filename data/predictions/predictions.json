@@ -2980,5 +2980,175 @@
       "傳產股在半導體狂歡時表現弱勢"
     ],
     "notes": "準確率75%（3/4），觀望策略過度保守錯過聯電+25%"
+  },
+  "2026-01-21": {
+    "date": "2026-01-21",
+    "predictions": [
+      {
+        "symbol": "3037",
+        "name": "欣興",
+        "prev_close": 308.0,
+        "direction": "up",
+        "confidence": 0.82,
+        "reasons": [
+          "費半+1.56%",
+          "ABF載板龍頭",
+          "AI伺服器需求"
+        ],
+        "verification": {
+          "actual_close": 401.2,
+          "actual_change": 30.26,
+          "institutional_flow": 7689,
+          "result": "success",
+          "notes": "爆發式上漲，法人一致買超"
+        }
+      },
+      {
+        "symbol": "2308",
+        "name": "台達電",
+        "prev_close": 1130.0,
+        "direction": "up",
+        "confidence": 0.85,
+        "reasons": [
+          "AI電源供應龍頭",
+          "受惠AI伺服器需求"
+        ],
+        "verification": {
+          "actual_close": 1238.14,
+          "actual_change": 9.57,
+          "institutional_flow": 2588,
+          "result": "success",
+          "notes": "大漲，法人買超"
+        }
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "prev_close": 44.8,
+        "direction": "up",
+        "confidence": 0.78,
+        "reasons": [
+          "外資連3日買+13K",
+          "5日漲幅僅+1.5%",
+          "AI伺服器"
+        ],
+        "verification": {
+          "actual_close": 47.49,
+          "actual_change": 6.0,
+          "institutional_flow": 2732,
+          "result": "success",
+          "notes": "佈局成功"
+        }
+      },
+      {
+        "symbol": "2887",
+        "name": "台新金",
+        "prev_close": 22.9,
+        "direction": "up",
+        "confidence": 0.76,
+        "reasons": [
+          "美股跌、防禦性佳",
+          "法人大買超+54K"
+        ],
+        "verification": {
+          "actual_close": 23.75,
+          "actual_change": 3.7,
+          "institutional_flow": -20601,
+          "result": "partial",
+          "notes": "上漲但法人-20K大賣超，散戶追高、法人出貨"
+        }
+      },
+      {
+        "symbol": "2618",
+        "name": "長榮航",
+        "prev_close": 38.2,
+        "direction": "up",
+        "confidence": 0.72,
+        "reasons": [
+          "外資+73K累計",
+          "春節航空旺季"
+        ],
+        "verification": {
+          "actual_close": 39.27,
+          "actual_change": 2.8,
+          "institutional_flow": 12863,
+          "result": "success",
+          "notes": "外資續買+20K"
+        }
+      },
+      {
+        "symbol": "2609",
+        "name": "陽明",
+        "prev_close": 55.1,
+        "direction": "up",
+        "confidence": 0.7,
+        "reasons": [
+          "外資+21K累計",
+          "5日-0.5%佈局中"
+        ],
+        "verification": {
+          "actual_close": 54.9,
+          "actual_change": -0.36,
+          "institutional_flow": 3085,
+          "result": "fail",
+          "notes": "佈局失敗，航運題材不足"
+        }
+      },
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "prev_close": 277.5,
+        "direction": "up",
+        "confidence": 0.74,
+        "reasons": [
+          "AI伺服器龍頭",
+          "輝達合作夥伴"
+        ],
+        "verification": {
+          "actual_close": 275.0,
+          "actual_change": -0.9,
+          "institutional_flow": -865,
+          "result": "fail",
+          "notes": "法人賣超，題材未發酵"
+        }
+      }
+    ],
+    "avoided_stocks": [
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "reason": "5日已+25.6%追高風險",
+        "actual_change": 25.23,
+        "institutional_flow": -59492,
+        "judgment": "correct",
+        "notes": "避開正確，今日再漲+25%但法人-59K獲利了結"
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "reason": "昨日+13%今日可能回檔",
+        "actual_change": 5.85,
+        "institutional_flow": -2826,
+        "judgment": "missed_opportunity",
+        "notes": "續漲+5.85%但法人賣超，記憶體族群遺漏"
+      }
+    ],
+    "accuracy": 0.714,
+    "framework": "v5.6（時事30% + 法人30% + 產業25% + 技術10% + 價格5%）",
+    "market_summary": {
+      "philadelphia_semi": "+1.56%",
+      "nasdaq": "-3.28%",
+      "vix": "+19.94%",
+      "umc_adr": "+21.81%",
+      "key_driver": "費半+1.56%帶動載板/電源供應爆發"
+    },
+    "key_lessons": [
+      "費半利多時，載板/電源供應/AI伺服器判斷精準（欣興+30%、台達電+9.57%）",
+      "ADR大漲股票避開正確（聯電+25%但法人-59K出貨）",
+      "金融防禦策略有效但短暫（台新金+3.7%但法人-20K快速出貨）",
+      "記憶體族群遺漏（華邦電+5.85%），需擴大產業掃描",
+      "佈局股需要「法人買超 + 產業催化劑」雙重條件（陽明失敗）"
+    ],
+    "notes": "準確率71.4%（5/7），費半→半導體次產業判斷成功，但遺漏記憶體族群"
   }
 }
