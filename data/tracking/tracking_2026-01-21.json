@@ -1,0 +1,99 @@
+{
+  "date": "2026-01-21",
+  "day_of_week": "Wednesday",
+  "analysis_version": "v5.4",
+  "process_compliance": {
+    "step_0_time_verification": true,
+    "step_0_5_international_data": true,
+    "step_0_5_tw_market_news": true,
+    "step_0_5_realtime_price": true,
+    "step_1_historical_verification": true,
+    "step_1_5_predictions_reference": true,
+    "step_1_8_holdings_tracking": true,
+    "step_2_track_b_integration": false,
+    "step_2_3_time_judgment_verification": false,
+    "step_2_5_layout_stock_verification": false,
+    "step_3_dual_track_comparison": false,
+    "step_4_tracking_system_update": false,
+    "step_5_predictions_json_update": false,
+    "step_6_tomorrow_strategy": false,
+    "step_7_file_creation": true
+  },
+  "market_summary": {
+    "philadelphia_semi": "+1.56%",
+    "nasdaq": "-3.28%",
+    "vix": "+19.94%",
+    "tsmc_adr": "-1.39%",
+    "umc_adr": "+21.81%",
+    "oil_wti": "-4.03%",
+    "key_driver": "費半+1.56%但美股大跌，聯電ADR+21.81%"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "type": "stable",
+      "score": 78,
+      "recommend_price": "58-59",
+      "stop_loss": 55.5,
+      "target_price": 63,
+      "position": "10-15%",
+      "reason": "外資連3日買、累計+13K、5日漲幅僅+1.5%"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "type": "stable",
+      "score": 72,
+      "recommend_price": "42.5-43",
+      "stop_loss": 40.5,
+      "target_price": 46,
+      "position": "5-10%",
+      "reason": "外資+73K累計、春節航空旺季、但投信對決"
+    },
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "type": "layout",
+      "score": 70,
+      "recommend_price": "84-85",
+      "stop_loss": 80,
+      "target_price": 92,
+      "position": "5%",
+      "reason": "外資+21K累計、5日-0.5%法人買但股價跌"
+    }
+  ],
+  "avoid_stocks": [
+    {"stock_code": "2303", "reason": "5日已+25.6%追高風險"},
+    {"stock_code": "2344", "reason": "昨日+13%今日可能回檔"},
+    {"stock_code": "3481", "reason": "法人-36K大賣"}
+  ],
+  "holdings_alerts": [
+    {"stock_code": "3231", "alert": "critical", "action": "今日出場", "reason": "已破停損-12.66%，法人-32K"},
+    {"stock_code": "3481", "alert": "high", "action": "設停損25元", "reason": "法人-36K大賣"},
+    {"stock_code": "2886", "alert": "medium", "action": "觀察", "reason": "法人-12K，破39.95減碼"}
+  ],
+  "yesterday_verification": {
+    "accuracy": "75%",
+    "success": 3,
+    "fail": 1,
+    "total": 4,
+    "results": [
+      {"stock_code": "2883", "result": "success", "change": "+3.43%"},
+      {"stock_code": "2882", "result": "success", "change": "+2.54%"},
+      {"stock_code": "2344", "result": "success", "change": "+13.23%"},
+      {"stock_code": "2002", "result": "fail", "change": "-1.29%"}
+    ]
+  },
+  "key_lessons": [
+    "費半強勢時半導體可獨強（即使美股跌）",
+    "傳產股在科技狂歡時弱勢",
+    "外資連續買超是重要訊號",
+    "追高風險：5日漲幅>10%不推薦"
+  ],
+  "files_created": [
+    "data/2026-01-21/before_market_analysis.md",
+    "data/tracking/tracking_2026-01-21.json"
+  ],
+  "analysis_completed_at": "2026-01-21 08:20"
+}
