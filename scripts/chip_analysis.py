@@ -121,13 +121,25 @@ def analyze_chip_history(stock_code, n_days=10):
         print(f"❌ 查無 {stock_code} 的法人數據")
         return None
 
-    # 計算統計
+    # 數據完整性檢查
+    if len(history) < n_days:
+        print(f"⚠️ 警告：要求{n_days}天，只取得{len(history)}天數據")
+
+    # 計算統計（全期間）
     total_net = sum(d['total'] for d in history)
     foreign_net = sum(d['foreign'] for d in history)
     trust_net = sum(d['trust'] for d in history)
 
     buy_days = sum(1 for d in history if d['total'] > 0)
     sell_days = sum(1 for d in history if d['total'] < 0)
+
+    # 🆕 計算近5天趨勢（重要！用於偵測反轉）
+    recent_5d = history[:5] if len(history) >= 5 else history
+    recent_5d_total = sum(d['total'] for d in recent_5d)
+    recent_5d_foreign = sum(d['foreign'] for d in recent_5d)
+    recent_5d_trust = sum(d['trust'] for d in recent_5d)
+    recent_5d_buy_days = sum(1 for d in recent_5d if d['total'] > 0)
+    recent_5d_sell_days = sum(1 for d in recent_5d if d['total'] < 0)
 
     # 計算「真連續」買超天數（從最近一天往回算，遇到賣超就停）
     consecutive_buy = 0
@@ -145,6 +157,7 @@ def analyze_chip_history(stock_code, n_days=10):
         'stock_code': stock_code,
         'stock_name': stock_name,
         'days': len(history),
+        'requested_days': n_days,  # 🆕 記錄要求天數，用於完整性檢查
         'history': history,
         'summary': {
             'total_net': total_net,
@@ -154,7 +167,15 @@ def analyze_chip_history(stock_code, n_days=10):
             'sell_days': sell_days,
             'consecutive_buy': consecutive_buy,
             'max_buy': max_buy,
-            'max_sell': min_buy if min_buy['total'] < 0 else None
+            'max_sell': min_buy if min_buy['total'] < 0 else None,
+            # 🆕 近5天趨勢（用於偵測反轉）
+            'recent_5d': {
+                'total': recent_5d_total,
+                'foreign': recent_5d_foreign,
+                'trust': recent_5d_trust,
+                'buy_days': recent_5d_buy_days,
+                'sell_days': recent_5d_sell_days
+            }
         }
     }
 
@@ -199,8 +220,14 @@ def print_chip_report(result):
     print("-" * 60)
 
     # 統計摘要
+    # 🆕 數據完整性警告
+    if result.get('requested_days') and result['days'] < result['requested_days']:
+        print()
+        print(f"⚠️ 數據不完整：要求 {result['requested_days']} 天，只取得 {result['days']} 天")
+        print("-" * 60)
+
     print()
-    print("【統計摘要】")
+    print(f"【統計摘要】（{result['days']}天）")
     print("-" * 60)
     print(f"  累計淨買超（三大法人）: {format_number(summary['total_net'])} 張")
     print(f"  累計淨買超（外資）    : {format_number(summary['foreign_net'])} 張")
@@ -209,6 +236,17 @@ def print_chip_report(result):
     print(f"  買超天數: {summary['buy_days']} 天")
     print(f"  賣超天數: {summary['sell_days']} 天")
     print(f"  真連續買超: {summary['consecutive_buy']} 天（從最近一天往回算）")
+
+    # 🆕 近5天趨勢（重要！用於偵測反轉）
+    if 'recent_5d' in summary:
+        r5 = summary['recent_5d']
+        print()
+        print("【近5天趨勢】⚠️ 重要")
+        print("-" * 60)
+        print(f"  近5天淨買超（三大法人）: {format_number(r5['total'])} 張")
+        print(f"  近5天淨買超（外資）    : {format_number(r5['foreign'])} 張")
+        print(f"  近5天淨買超（投信）    : {format_number(r5['trust'])} 張")
+        print(f"  近5天買/賣：{r5['buy_days']}買 / {r5['sell_days']}賣")
     print()
 
     if summary['max_buy']:
@@ -225,7 +263,13 @@ def print_chip_report(result):
     print("【籌碼判斷】")
     print("-" * 60)
 
-    # 判斷邏輯
+    # 🆕 取得近5天趨勢數據
+    r5 = summary.get('recent_5d', {})
+    r5_total = r5.get('total', 0)
+    r5_foreign = r5.get('foreign', 0)
+    r5_trust = r5.get('trust', 0)
+
+    # 判斷邏輯（加入反轉偵測）
     if summary['consecutive_buy'] >= 5 and summary['total_net'] > 0:
         print("  ✅ 法人持續佈局中（連續買超≥5天）")
         verdict = "佈局"
@@ -245,7 +289,14 @@ def print_chip_report(result):
         print("  ➖ 法人態度不明確")
         verdict = "觀望"
 
-    # 外資 vs 投信
+    # 🆕 反轉警告（累計正但近5天負）
+    if summary['total_net'] > 0 and r5_total < 0:
+        print(f"  🚨 反轉警告：累計+{format_number(summary['total_net'])}，但近5天{format_number(r5_total)}")
+        verdict = "反轉警告"
+
+    # 外資 vs 投信（累計判斷）
+    print()
+    print("  【累計判斷】")
     if summary['foreign_net'] > 0 and summary['trust_net'] > 0:
         print("  🔥 外資+投信同步買超（最佳）")
     elif summary['foreign_net'] > 0 and summary['trust_net'] < 0:
@@ -254,6 +305,19 @@ def print_chip_report(result):
         print("  ⚠️ 投信買、外資賣（法人對決）")
     elif summary['foreign_net'] < 0 and summary['trust_net'] < 0:
         print("  🔴 外資+投信同步賣超（避開）")
+
+    # 🆕 近5天外資 vs 投信（更準確的近期態度）
+    if r5:
+        print()
+        print("  【近5天判斷】⚠️ 更重要")
+        if r5_foreign > 0 and r5_trust > 0:
+            print("  🔥 近5天外資+投信同步買超")
+        elif r5_foreign > 0 and r5_trust < 0:
+            print("  ⚠️ 近5天外資買、投信賣（對決中）")
+        elif r5_foreign < 0 and r5_trust > 0:
+            print("  ⚠️ 近5天投信買、外資賣（對決中）")
+        elif r5_foreign < 0 and r5_trust < 0:
+            print("  🔴 近5天外資+投信同步賣超")
 
     print()
     print("=" * 60)

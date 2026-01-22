@@ -1,0 +1,238 @@
+{
+  "date": "2026-01-23",
+  "day_of_week": "Friday",
+  "analysis_version": "v5.9",
+  "market_context": {
+    "us_market": "NASDAQ -2.05%, 費半 +3.80%",
+    "major_news": ["費半連續利多+3.80%", "台積電ADR-1.54%", "日月光ADR+1.50%", "春節前最後交易週"],
+    "time_event": "費半利多延續，封測補漲機會"
+  },
+  "industry_scan": {
+    "semiconductor_packaging": {"status": "bullish", "reason": "日月光法人買超+佈局中"},
+    "semiconductor_foundry": {"status": "avoid", "reason": "聯電已大漲+15.6%"},
+    "semiconductor_pcb": {"status": "avoid", "reason": "欣興已大漲+19.3%"},
+    "semiconductor_memory": {"status": "avoid", "reason": "華邦電法人賣超-7.8K"},
+    "semiconductor_power": {"status": "avoid", "reason": "台達電已大漲+10.7%"},
+    "airline": {"status": "caution", "reason": "長榮航5日+4.4%已小漲"},
+    "shipping": {"status": "watch", "reason": "法人買但無產業催化劑"},
+    "plastics": {"status": "watch", "reason": "南亞+33K但無明顯催化"},
+    "finance": {"status": "avoid", "reason": "教訓：金融短期弱勢"},
+    "panel": {"status": "avoid", "reason": "群創法人狂賣-126K"},
+    "ai_server": {"status": "watch", "reason": "廣達累計+36K但法人對決"}
+  },
+  "sync_check": {
+    "before_market_recommendations": ["3711", "2382", "2618"],
+    "tracking_recommendations": ["3711", "2382", "2618"],
+    "watch_stocks": ["2603"],
+    "is_synced": true,
+    "notes": "長榮(2603)因法人數據修正降級為觀望"
+  },
+  "recommendations": [
+    {
+      "type": "stable",
+      "stock_code": "3711",
+      "stock_name": "日月光",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "封測",
+        "drivers": ["CoWoS封裝", "HBM需求", "費半利多"]
+      },
+      "recommend_price": "開盤觀察",
+      "target_price": "+10%",
+      "stop_loss": "-5%",
+      "position": "15%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 88,
+      "五維度": {
+        "法人數據": 26,
+        "時事現況": 28,
+        "產業邏輯": 18,
+        "價格位置": 10,
+        "技術面": 6
+      },
+      "institutional_flow_10d": 19000,
+      "recent_5d_trust": -1179,
+      "reason": "10天累計+19K，但近5天投信-1,179張（對決中），5日-1.8%佈局中",
+      "time_horizon": "1-3個月",
+      "target_return": "+10%",
+      "status": "tracking"
+    },
+    {
+      "type": "stable",
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": {
+        "sector": "電子",
+        "sub_type": "AI伺服器",
+        "drivers": ["GB200出貨", "AI伺服器需求"]
+      },
+      "recommend_price": "開盤觀察",
+      "target_price": "+8%",
+      "stop_loss": "-5%",
+      "position": "10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 78,
+      "五維度": {
+        "法人數據": 22,
+        "時事現況": 24,
+        "產業邏輯": 16,
+        "價格位置": 10,
+        "技術面": 6
+      },
+      "institutional_flow_10d": 36000,
+      "reason": "10天累計+36K，但外資買投信賣對決，5日-2.2%佈局中",
+      "time_horizon": "1-2個月",
+      "target_return": "+8%",
+      "status": "tracking"
+    },
+    {
+      "type": "watch",
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "industry": {
+        "sector": "航運",
+        "sub_type": "貨櫃",
+        "drivers": ["航運旺季"]
+      },
+      "recommend_price": "觀望",
+      "target_price": "+8%",
+      "stop_loss": "-5%",
+      "position": "0%",
+      "rating": "⭐⭐⭐",
+      "score": 65,
+      "五維度": {
+        "法人數據": 14,
+        "時事現況": 22,
+        "產業邏輯": 14,
+        "價格位置": 9,
+        "技術面": 6
+      },
+      "institutional_flow_10d": -11000,
+      "recent_5d_total": -9517,
+      "reason": "⚠️ 10天累計-11K、近5天-9.5K、投信狂賣-15K，降級為觀望",
+      "time_horizon": "觀望",
+      "target_return": "待法人態度明確",
+      "notes": "外資買但投信狂賣，法人對決中",
+      "status": "watch"
+    },
+    {
+      "type": "explosive",
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "industry": {
+        "sector": "航空",
+        "sub_type": "客運",
+        "drivers": ["春節旺季", "外資連續買超"]
+      },
+      "recommend_price": "開盤觀察",
+      "target_price": "+8%",
+      "stop_loss": "-3%",
+      "position": "10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 78,
+      "五維度": {
+        "時事現況": 28,
+        "產業邏輯": 24,
+        "技術面": 12,
+        "法人數據": 10,
+        "價格位置": 4
+      },
+      "institutional_flow": 22210,
+      "reason": "春節航空旺季，外資連續買超+22K",
+      "time_horizon": "1-2週",
+      "target_return": "+8%",
+      "notes": "5日已漲+4.4%，追高風險",
+      "status": "tracking"
+    }
+  ],
+  "watch_stocks": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "reason": "法人+33K但無產業催化劑，觀察",
+      "score": 70
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "reason": "法人+21K但無產業催化劑，觀察",
+      "score": 68
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "已大漲+15.6%，法人-4K開始賣超",
+      "score": 0
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "reason": "已大漲+19.3%，法人-2K開始賣超",
+      "score": 0
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "reason": "法人10天累計賣超-60K，出貨中",
+      "score": 0
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "法人-7.8K出貨，記憶體弱勢",
+      "score": 0
+    }
+  ],
+  "holdings_alert": [
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "prev_institutional": -49428,
+      "current_institutional": -125407,
+      "change": "狂賣！",
+      "alert_level": "極高危",
+      "suggestion": "獲利了結！法人連4日狂賣-253K"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "prev_institutional": -21028,
+      "current_institutional": -12210,
+      "change": "連10日賣",
+      "alert_level": "極高危",
+      "suggestion": "停損出場！法人連續10天賣超-198K"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "prev_institutional": -7378,
+      "current_institutional": -6876,
+      "change": "續賣",
+      "alert_level": "警戒",
+      "suggestion": "金融短期弱勢，設停損觀察"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "prev_institutional": 2702,
+      "current_institutional": 14086,
+      "change": "大買！",
+      "alert_level": "安全",
+      "suggestion": "續抱！連5日買超+31K，漲停"
+    }
+  ],
+  "key_lessons": [
+    "封測是半導體補漲機會（日月光佈局中驗證）",
+    "無產業催化劑的佈局股要謹慎（01/21陽明教訓）",
+    "群創法人狂賣-253K，持股極高危",
+    "緯創連10天賣超-198K，必須停損",
+    "金融股短期弱勢，避開或小倉位"
+  ],
+  "files_created": [
+    "data/2026-01-23/before_market_analysis.md",
+    "data/tracking/tracking_2026-01-23.json"
+  ],
+  "analysis_completed_at": "2026-01-22 20:45"
+}
