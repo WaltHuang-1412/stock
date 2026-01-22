@@ -1,19 +1,24 @@
 #!/usr/bin/env python3
 """
-籌碼分析工具 - N天法人歷史查詢
-Chip Analysis Tool
+籌碼分析工具 v2.0 - N天法人歷史查詢 + 動能分析
+Chip Analysis Tool with Momentum Analysis
 
 功能：
 - 查詢指定股票近N天的法人買賣超歷史
 - 計算累計淨買超、連買天數
 - 判斷是否「真連續」（中間有沒有賣）
+- 🆕 籌碼動能分析（前5日 vs 近5日平均）
+- 🆕 五層動能等級判斷
 
 使用方式：
     python3 scripts/chip_analysis.py 2883              # 單檔，預設10天
     python3 scripts/chip_analysis.py 2883 2887 2303   # 多檔
     python3 scripts/chip_analysis.py 2883 --days 20   # 指定天數
 
-最後更新：2026-01-22（跨平台修復）
+v2.0 更新（2026-01-22）：
+- 🆕 新增籌碼動能分析
+- 🆕 五層動能等級：⭐⭐⭐ 加速 / ⭐⭐ 增強 / ⭐ 持續 / ⚠️ 減弱 / 🔴 大幅減弱
+- 🆕 整合至籌碼判斷邏輯
 """
 
 import requests
@@ -153,6 +158,47 @@ def analyze_chip_history(stock_code, n_days=10):
     max_buy = max(history, key=lambda x: x['total'])
     min_buy = min(history, key=lambda x: x['total'])
 
+    # 🆕 籌碼動能分析
+    momentum = None
+    if len(history) >= 10:
+        # 前5日平均 vs 近5日平均
+        recent_5 = history[:5]  # 最近5天
+        previous_5 = history[5:10]  # 前5天
+
+        recent_avg = sum(d['total'] for d in recent_5) / 5
+        previous_avg = sum(d['total'] for d in previous_5) / 5
+
+        # 計算動能變化率
+        if previous_avg != 0:
+            momentum_change = ((recent_avg - previous_avg) / abs(previous_avg)) * 100
+        else:
+            momentum_change = 0
+
+        # 判斷動能等級
+        if momentum_change > 50:
+            momentum_level = "⭐⭐⭐ 加速買超（強力佈局）"
+            momentum_rating = 3
+        elif momentum_change > 20:
+            momentum_level = "⭐⭐ 買超增強"
+            momentum_rating = 2
+        elif momentum_change > -20:
+            momentum_level = "⭐ 持續買超"
+            momentum_rating = 1
+        elif momentum_change > -50:
+            momentum_level = "⚠️ 買超減弱"
+            momentum_rating = -1
+        else:
+            momentum_level = "🔴 買超大幅減弱"
+            momentum_rating = -2
+
+        momentum = {
+            'recent_avg': recent_avg,
+            'previous_avg': previous_avg,
+            'change_pct': momentum_change,
+            'level': momentum_level,
+            'rating': momentum_rating
+        }
+
     return {
         'stock_code': stock_code,
         'stock_name': stock_name,
@@ -176,7 +222,8 @@ def analyze_chip_history(stock_code, n_days=10):
                 'buy_days': recent_5d_buy_days,
                 'sell_days': recent_5d_sell_days
             }
-        }
+        },
+        'momentum': momentum  # 🆕 加入動能分析
     }
 
 
@@ -259,6 +306,18 @@ def print_chip_report(result):
 
     print()
 
+    # 🆕 籌碼動能分析
+    if result.get('momentum'):
+        momentum = result['momentum']
+        print("【籌碼動能分析】")
+        print("-" * 60)
+        print(f"  前5日平均: {format_number(int(momentum['previous_avg']))} 張/日")
+        print(f"  近5日平均: {format_number(int(momentum['recent_avg']))} 張/日")
+        print(f"  動能變化: {momentum['change_pct']:+.1f}%")
+        print()
+        print(f"  動能等級: {momentum['level']}")
+        print()
+
     # 籌碼判斷
     print("【籌碼判斷】")
     print("-" * 60)
@@ -269,13 +328,23 @@ def print_chip_report(result):
     r5_foreign = r5.get('foreign', 0)
     r5_trust = r5.get('trust', 0)
 
-    # 判斷邏輯（加入反轉偵測）
+    # 判斷邏輯（加入動能判斷 + 反轉偵測）
     if summary['consecutive_buy'] >= 5 and summary['total_net'] > 0:
-        print("  ✅ 法人持續佈局中（連續買超≥5天）")
         verdict = "佈局"
+        # 🆕 根據動能調整判斷
+        if result.get('momentum') and result['momentum']['rating'] >= 2:
+            print("  ✅ 法人加速佈局中（連續買超≥5天 + 動能強）")
+        else:
+            print("  ✅ 法人持續佈局中（連續買超≥5天）")
     elif summary['consecutive_buy'] >= 3 and summary['total_net'] > 0:
-        print("  ✅ 法人短線買進中（連續買超3-4天）")
         verdict = "買進"
+        # 🆕 根據動能調整判斷
+        if result.get('momentum') and result['momentum']['rating'] >= 2:
+            print("  ✅ 法人加速買進中（連續買超3-4天 + 動能強）")
+        elif result.get('momentum') and result['momentum']['rating'] <= -1:
+            print("  ⚠️ 法人買超減弱中（連續買超但力道減弱）")
+        else:
+            print("  ✅ 法人短線買進中（連續買超3-4天）")
     elif summary['buy_days'] > summary['sell_days'] and summary['total_net'] > 0:
         print("  🟡 法人偏多但不連續（買多於賣）")
         verdict = "偏多"
