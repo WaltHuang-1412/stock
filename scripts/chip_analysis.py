@@ -13,20 +13,39 @@ Chip Analysis Tool
     python3 scripts/chip_analysis.py 2883 2887 2303   # 多檔
     python3 scripts/chip_analysis.py 2883 --days 20   # 指定天數
 
-日期：2025-12-17
+最後更新：2026-01-22（跨平台修復）
 """
 
 import requests
 import sys
+from pathlib import Path
 from datetime import datetime, timedelta
 import time
 import warnings
 warnings.filterwarnings('ignore')
 
+# 添加 scripts 目錄到路徑
+sys.path.insert(0, str(Path(__file__).parent))
+
+# 導入跨平台工具（P0 修復）
+try:
+    from utils import get_tw_now
+    USE_CROSS_PLATFORM = True
+except ImportError:
+    USE_CROSS_PLATFORM = False
+
 def get_trading_days(n_days=10):
-    """取得最近N個交易日的日期列表"""
+    """
+    取得最近N個交易日的日期列表
+
+    P0修復：使用跨平台時區
+    """
     dates = []
-    current = datetime.now()
+    # P0-2: 使用跨平台時區
+    if USE_CROSS_PLATFORM:
+        current = get_tw_now()
+    else:
+        current = datetime.now()
 
     while len(dates) < n_days:
         # 跳過週末

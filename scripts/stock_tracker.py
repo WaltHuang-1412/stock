@@ -5,6 +5,8 @@
 
 執行時機：每日盤後14:30後
 執行方式：python3 scripts/stock_tracker.py [--date YYYYMMDD]
+
+最後更新：2026-01-22（跨平台修復）
 """
 
 import json
@@ -12,35 +14,82 @@ import os
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
-import yfinance as yf
 import requests
+
+# yfinance 可選依賴（P0 修復：解決 Python 3.15 相容性問題）
+try:
+    import yfinance as yf
+    HAS_YFINANCE = True
+except ImportError:
+    HAS_YFINANCE = False
+    print("⚠️ 警告: yfinance 未安裝，部分功能可能受限")
 
 # 添加專案根目錄到路徑
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
+
+# 添加 scripts 目錄到路徑（P0 修復）
+sys.path.insert(0, str(Path(__file__).parent))
+
+# 導入跨平台工具（P0 修復）
+try:
+    from utils import (
+        get_tw_now,
+        get_data_path,
+        ensure_dir,
+        read_json,
+        write_json
+    )
+    USE_CROSS_PLATFORM = True
+except ImportError:
+    USE_CROSS_PLATFORM = False
 
 from src.data_fetcher import DataFetcher
 
 
 class StockTracker:
     def __init__(self, tracking_dir="data/tracking", reports_dir="data/tracking/reports"):
-        self.tracking_dir = Path(tracking_dir)
-        self.reports_dir = Path(reports_dir)
-        self.reports_dir.mkdir(parents=True, exist_ok=True)
+        """
+        初始化追蹤器
+
+        P0修復：使用跨平台路徑
+        """
+        if USE_CROSS_PLATFORM:
+            self.tracking_dir = get_data_path('tracking')
+            self.reports_dir = get_data_path('tracking', 'reports')
+            ensure_dir(self.reports_dir)
+        else:
+            self.tracking_dir = Path(tracking_dir)
+            self.reports_dir = Path(reports_dir)
+            self.reports_dir.mkdir(parents=True, exist_ok=True)
 
     def get_all_tracking_files(self):
         """獲取所有追蹤中的JSON文件"""
         return list(self.tracking_dir.glob("tracking_*.json"))
 
     def load_tracking_data(self, file_path):
-        """讀取追蹤數據"""
-        with open(file_path, 'r', encoding='utf-8') as f:
-            return json.load(f)
+        """
+        讀取追蹤數據
+
+        P0修復：使用跨平台檔案讀取
+        """
+        if USE_CROSS_PLATFORM:
+            return read_json(file_path)
+        else:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                return json.load(f)
 
     def save_tracking_data(self, file_path, data):
-        """保存追蹤數據"""
-        with open(file_path, 'w', encoding='utf-8') as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
+        """
+        保存追蹤數據
+
+        P0修復：使用跨平台檔案寫入
+        """
+        if USE_CROSS_PLATFORM:
+            write_json(file_path, data)
+        else:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
 
     def get_stock_price(self, stock_code):
         """獲取股票今日收盤價"""
@@ -344,12 +393,20 @@ class StockTracker:
         print(f"📄 已產生7日追蹤報告：{report_file}")
 
     def run(self, target_date=None):
-        """執行追蹤更新"""
+        """
+        執行追蹤更新
+
+        P0修復：使用跨平台時區
+        """
         # 確定追蹤日期
         if target_date:
             today = datetime.strptime(target_date, "%Y%m%d")
         else:
-            today = datetime.now()
+            # P0-2: 使用跨平台時區
+            if USE_CROSS_PLATFORM:
+                today = get_tw_now()
+            else:
+                today = datetime.now()
 
         today_str = today.strftime("%Y%m%d")
         today_display = today.strftime("%Y-%m-%d")
@@ -400,7 +457,11 @@ class StockTracker:
             # 更新metadata（如果存在）
             if 'metadata' not in data:
                 data['metadata'] = {}
-            data['metadata']['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+            # P0-2: 使用跨平台時區
+            if USE_CROSS_PLATFORM:
+                data['metadata']['updated_at'] = get_tw_now().strftime('%Y-%m-%d %H:%M:%S')
+            else:
+                data['metadata']['updated_at'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             data['metadata']['tracking_active'] = len([r for r in recommendations if r.get('status', 'tracking') == 'tracking'])
             data['metadata']['tracking_completed'] = len([r for r in recommendations if r.get('status') in ['success', 'failed', 'neutral', 'stop_loss']])
             data['metadata']['success_count'] = len([r for r in recommendations if r.get('status') == 'success'])

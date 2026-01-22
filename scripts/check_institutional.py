@@ -2,25 +2,43 @@
 """
 查詢個股法人買賣超
 直接查證交所API，不依賴TOP50篩選
+
+最後更新：2026-01-22（跨平台修復）
 """
 
 import requests
 import sys
+from pathlib import Path
 from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings('ignore')
 
+# 添加 scripts 目錄到路徑
+sys.path.insert(0, str(Path(__file__).parent))
+
+# 導入跨平台工具（P0 修復）
+try:
+    from utils import get_tw_yesterday_compact
+    USE_CROSS_PLATFORM = True
+except ImportError:
+    USE_CROSS_PLATFORM = False
+
 def fetch_institutional_trading(stock_code, date=None):
     """
     查詢個股法人買賣超
-    
+
     Args:
         stock_code: 股票代號，例如 '2208'
         date: 日期，格式 'YYYYMMDD'，預設為最近交易日
+
+    P0修復：使用跨平台時區處理
     """
     if not date:
-        # 預設查詢昨天
-        date = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
+        # P0-2: 使用跨平台時區
+        if USE_CROSS_PLATFORM:
+            date = get_tw_yesterday_compact()
+        else:
+            date = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
     
     # 試試英文版API
     url = f'https://www.twse.com.tw/rwd/en/fund/T86?date={date}&selectType=ALL&response=json'

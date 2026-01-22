@@ -10,14 +10,41 @@ Track B: 全市場即時掃描（發現新機會）
 輸出：雙軌分析結果 + 可執行建議（非判斷對錯）
 
 作者：Claude Code
-日期：2025-12-04
+最後更新：2026-01-22（跨平台修復）
 """
 
-import yfinance as yf
 import json
-import os
+import sys
+from pathlib import Path
 from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
+
+# yfinance 可選依賴（P0 修復：解決 Python 3.15 相容性問題）
+try:
+    import yfinance as yf
+    HAS_YFINANCE = True
+except ImportError:
+    HAS_YFINANCE = False
+    print("⚠️ 警告: yfinance 未安裝，將使用 Yahoo Finance API 直接查詢")
+
+# 添加 scripts 目錄到路徑
+sys.path.insert(0, str(Path(__file__).parent))
+
+# 導入跨平台工具（P0 修復）
+try:
+    from utils import (
+        get_tracking_file,
+        get_tw_now,
+        get_tw_today,
+        get_analysis_dir,
+        ensure_dir,
+        read_json,
+        write_json
+    )
+    USE_CROSS_PLATFORM = True
+except ImportError:
+    import os
+    USE_CROSS_PLATFORM = False
 
 # 全市場掃描清單（200檔活躍股票）
 MARKET_UNIVERSE = [
@@ -50,44 +77,78 @@ MARKET_UNIVERSE = [
 ]
 
 def read_tracking_file(date_str):
-    """讀取盤前推薦追蹤記錄"""
-    tracking_file = f'data/tracking/tracking_{date_str}.json'
+    """
+    讀取盤前推薦追蹤記錄
 
-    if not os.path.exists(tracking_file):
-        print("⚠️ 找不到tracking檔案，將只執行Track B全市場掃描")
-        return None
-
-    try:
-        with open(tracking_file, 'r', encoding='utf-8') as f:
-            tracking = json.load(f)
+    P0修復：使用跨平台路徑和檔案讀取
+    """
+    # P0-1: 使用跨平台路徑
+    if USE_CROSS_PLATFORM:
+        tracking_file = get_tracking_file(date_str)
+        tracking = read_json(tracking_file)
+        if tracking is None:
+            print("⚠️ 找不到tracking檔案，將只執行Track B全市場掃描")
         return tracking
-    except Exception as e:
-        print(f"讀取tracking檔案失敗: {e}")
-        return None
+    else:
+        tracking_file = f'data/tracking/tracking_{date_str}.json'
 
-def get_realtime_data(stock_code):
-    """獲取即時股價數據"""
-    try:
-        ticker = yf.Ticker(f"{stock_code}.TW")
-        hist = ticker.history(period='5d')
-
-        if hist.empty or len(hist) < 2:
+        if not os.path.exists(tracking_file):
+            print("⚠️ 找不到tracking檔案，將只執行Track B全市場掃描")
             return None
 
-        current_price = hist['Close'].iloc[-1]
-        prev_close = hist['Close'].iloc[-2]
-        current_volume = hist['Volume'].iloc[-1]
+        try:
+            with open(tracking_file, 'r', encoding='utf-8') as f:
+                tracking = json.load(f)
+            return tracking
+        except Exception as e:
+            print(f"讀取tracking檔案失敗: {e}")
+            return None
+
+def get_realtime_data_api(stock_code):
+    """使用 Yahoo Finance API 直接查詢（無需 yfinance 套件）"""
+    import requests
+    try:
+        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{stock_code}.TW?interval=1d&range=5d"
+        headers = {'User-Agent': 'Mozilla/5.0'}
+        response = requests.get(url, headers=headers, timeout=10)
+
+        if response.status_code != 200:
+            return None
+
+        data = response.json()
+        result = data.get('chart', {}).get('result', [])
+
+        if not result:
+            return None
+
+        quote = result[0]
+        meta = quote.get('meta', {})
+        indicators = quote.get('indicators', {}).get('quote', [{}])[0]
+
+        closes = indicators.get('close', [])
+        volumes = indicators.get('volume', [])
+
+        # 過濾掉 None 值
+        valid_closes = [c for c in closes if c is not None]
+        valid_volumes = [v for v in volumes if v is not None]
+
+        if len(valid_closes) < 2:
+            return None
+
+        current_price = valid_closes[-1]
+        prev_close = valid_closes[-2] if len(valid_closes) >= 2 else current_price
+        current_volume = valid_volumes[-1] if valid_volumes else 0
 
         # 計算指標
-        change_pct = ((current_price - prev_close) / prev_close) * 100
-        avg_volume_5d = hist['Volume'].iloc[:-1].mean()
+        change_pct = ((current_price - prev_close) / prev_close) * 100 if prev_close else 0
+
+        # 計算 5 日平均量
+        recent_volumes = [v for v in valid_volumes[:-1] if v is not None]
+        avg_volume_5d = sum(recent_volumes) / len(recent_volumes) if recent_volumes else 0
         volume_ratio = current_volume / avg_volume_5d if avg_volume_5d > 0 else 0
 
         # 獲取股票名稱
-        info = ticker.info
-        stock_name = info.get('longName', stock_code)
-        if not stock_name or stock_name == stock_code:
-            stock_name = info.get('shortName', stock_code)
+        stock_name = meta.get('longName', '') or meta.get('shortName', '') or stock_code
 
         return {
             'code': stock_code,
@@ -100,6 +161,48 @@ def get_realtime_data(stock_code):
         }
     except Exception:
         return None
+
+
+def get_realtime_data(stock_code):
+    """獲取即時股價數據（P0修復：支援無 yfinance 環境）"""
+    # 優先使用 yfinance（如果可用）
+    if HAS_YFINANCE:
+        try:
+            ticker = yf.Ticker(f"{stock_code}.TW")
+            hist = ticker.history(period='5d')
+
+            if hist.empty or len(hist) < 2:
+                return get_realtime_data_api(stock_code)  # 降級到 API
+
+            current_price = hist['Close'].iloc[-1]
+            prev_close = hist['Close'].iloc[-2]
+            current_volume = hist['Volume'].iloc[-1]
+
+            # 計算指標
+            change_pct = ((current_price - prev_close) / prev_close) * 100
+            avg_volume_5d = hist['Volume'].iloc[:-1].mean()
+            volume_ratio = current_volume / avg_volume_5d if avg_volume_5d > 0 else 0
+
+            # 獲取股票名稱
+            info = ticker.info
+            stock_name = info.get('longName', stock_code)
+            if not stock_name or stock_name == stock_code:
+                stock_name = info.get('shortName', stock_code)
+
+            return {
+                'code': stock_code,
+                'name': stock_name,
+                'current_price': round(current_price, 2),
+                'prev_close': round(prev_close, 2),
+                'change_pct': round(change_pct, 2),
+                'volume': current_volume,
+                'volume_ratio': round(volume_ratio, 2)
+            }
+        except Exception:
+            return get_realtime_data_api(stock_code)  # 降級到 API
+    else:
+        # 無 yfinance，直接使用 API
+        return get_realtime_data_api(stock_code)
 
 def parse_recommend_price(price_str):
     """解析推薦價格，支援範圍格式如 '18.0-18.3' 或單一數值"""
@@ -374,7 +477,11 @@ def generate_trading_suggestions(tracking_results, market_scan, tracking):
             print(f"  • {s}")
 
 def save_analysis_report(tracking_results, market_scan, date_str):
-    """儲存分析報告"""
+    """
+    儲存分析報告
+
+    P0修復：使用跨平台路徑和檔案寫入
+    """
 
     # 轉換numpy類型為Python原生類型
     def convert_numpy(obj):
@@ -386,8 +493,14 @@ def save_analysis_report(tracking_results, market_scan, date_str):
             return [convert_numpy(item) for item in obj]
         return obj
 
+    # P0-2: 使用跨平台時區
+    if USE_CROSS_PLATFORM:
+        timestamp = get_tw_now().strftime('%Y-%m-%d %H:%M:%S')
+    else:
+        timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+
     report = {
-        'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+        'timestamp': timestamp,
         'tracking_results': convert_numpy(tracking_results) if tracking_results else [],
         'market_scan': {
             'gainers': convert_numpy(market_scan['gainers'][:10]),
@@ -397,17 +510,27 @@ def save_analysis_report(tracking_results, market_scan, date_str):
         }
     }
 
-    output_dir = f'data/{date_str}'
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+    # P0-1: 使用跨平台路徑
+    if USE_CROSS_PLATFORM:
+        output_dir = get_analysis_dir(date_str)
+        ensure_dir(output_dir)
+        output_file = output_dir / 'dual_track_analysis.json'
+        success = write_json(output_file, report)
+        if not success:
+            print("⚠️ 儲存報告失敗")
+            print("分析結果已顯示完畢")
+    else:
+        output_dir = f'data/{date_str}'
+        if not os.path.exists(output_dir):
+            os.makedirs(output_dir)
 
-    output_file = f'{output_dir}/dual_track_analysis.json'
-    try:
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(report, f, ensure_ascii=False, indent=2)
-    except Exception as e:
-        print(f"⚠️ 儲存報告失敗: {e}")
-        print("分析結果已顯示完畢")
+        output_file = f'{output_dir}/dual_track_analysis.json'
+        try:
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(report, f, ensure_ascii=False, indent=2)
+        except Exception as e:
+            print(f"⚠️ 儲存報告失敗: {e}")
+            print("分析結果已顯示完畢")
 
     print(f"\n💾 分析報告已儲存至: {output_file}")
 
@@ -417,9 +540,14 @@ def main():
     print("🚀 盤中雙軌分析系統")
     print("=" * 80)
 
-    # 獲取日期
-    date_str = datetime.now().strftime('%Y-%m-%d')
-    current_time = datetime.now().strftime('%H:%M:%S')
+    # P0-2: 使用跨平台時區
+    if USE_CROSS_PLATFORM:
+        now = get_tw_now()
+        date_str = get_tw_today()
+    else:
+        now = datetime.now()
+        date_str = now.strftime('%Y-%m-%d')
+    current_time = now.strftime('%H:%M:%S')
 
     print(f"📅 日期: {date_str}")
     print(f"🕐 時間: {current_time}")

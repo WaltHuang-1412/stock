@@ -10,27 +10,60 @@ Track A測試工具 v2.0 - 僅測試用途
 正式分析：請使用 intraday_dual_track.py 完整雙軌系統
 
 作者：Claude Code
-最後更新：2025-12-05
+最後更新：2026-01-22（跨平台修復）
 """
 
-import yfinance as yf
-import pandas as pd
 import json
-import os
+import sys
+from pathlib import Path
 from datetime import datetime, timedelta
 import requests
 import time
 import warnings
 warnings.filterwarnings('ignore')
 
+# yfinance/pandas 可選依賴（P0 修復：解決 Python 3.15 相容性問題）
+try:
+    import yfinance as yf
+    import pandas as pd
+    HAS_YFINANCE = True
+except ImportError:
+    HAS_YFINANCE = False
+    print("⚠️ 警告: yfinance/pandas 未安裝，將使用 Yahoo Finance API 直接查詢")
+
+# 添加 scripts 目錄到路徑，以便導入 utils
+sys.path.insert(0, str(Path(__file__).parent))
+
+# 導入跨平台工具（P0 修復）
+try:
+    from utils import (
+        get_tracking_file,
+        get_tw_now,
+        get_tw_today,
+        get_tw_yesterday_compact,
+        read_json,
+        format_datetime_tw,
+    )
+    USE_CROSS_PLATFORM = True
+except ImportError:
+    USE_CROSS_PLATFORM = False
+    print("⚠️ 警告: 跨平台工具模組未載入，使用降級方案")
+
 def read_tracking_file(date_str):
     """
     讀取盤前推薦追蹤記錄
     防止事後諸葛：只分析tracking.json中的股票
-    """
-    tracking_file = f'data/tracking/tracking_{date_str}.json'
 
-    if not os.path.exists(tracking_file):
+    P0修復：使用 pathlib 統一路徑處理
+    """
+    # P0-1: 使用跨平台路徑
+    if USE_CROSS_PLATFORM:
+        tracking_file = get_tracking_file(date_str)
+    else:
+        # 降級方案
+        tracking_file = Path('data') / 'tracking' / f'tracking_{date_str}.json'
+
+    if not tracking_file.exists():
         print("=" * 80)
         print("⚠️ 警告：今日盤前分析未建立追蹤記錄")
         print("=" * 80)
@@ -43,13 +76,16 @@ def read_tracking_file(date_str):
         print("=" * 80)
         return None
 
-    try:
-        with open(tracking_file, 'r', encoding='utf-8') as f:
-            tracking = json.load(f)
-        return tracking
-    except Exception as e:
-        print(f"讀取追蹤文件失敗: {e}")
-        return None
+    # P0-3: 使用跨平台讀取（統一 UTF-8）
+    if USE_CROSS_PLATFORM:
+        return read_json(tracking_file)
+    else:
+        try:
+            with open(tracking_file, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"讀取追蹤文件失敗: {e}")
+            return None
 
 def get_institutional_data(date_str):
     """獲取指定日期的法人數據（前一日）"""
@@ -86,25 +122,49 @@ def get_institutional_data(date_str):
 
     return {}
 
-def get_intraday_data(stock_code):
-    """獲取盤中股價量能數據"""
+def get_intraday_data_api(stock_code):
+    """使用 Yahoo Finance API 直接查詢（無需 yfinance 套件）"""
     try:
-        ticker = yf.Ticker(f"{stock_code}.TW")
-        hist = ticker.history(period='10d')
+        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{stock_code}.TW?interval=1d&range=10d"
+        headers = {'User-Agent': 'Mozilla/5.0'}
+        response = requests.get(url, headers=headers, timeout=10)
 
-        if len(hist) < 2:
+        if response.status_code != 200:
             return None
 
-        # 今日數據（最後一筆）
-        current_price = hist['Close'].iloc[-1]
-        prev_close = hist['Close'].iloc[-2]
-        current_volume = hist['Volume'].iloc[-1]
-        today_high = hist['High'].iloc[-1]
-        today_low = hist['Low'].iloc[-1]
+        data = response.json()
+        result = data.get('chart', {}).get('result', [])
+
+        if not result:
+            return None
+
+        quote = result[0]
+        indicators = quote.get('indicators', {}).get('quote', [{}])[0]
+
+        closes = indicators.get('close', [])
+        volumes = indicators.get('volume', [])
+        highs = indicators.get('high', [])
+        lows = indicators.get('low', [])
+
+        # 過濾掉 None 值
+        valid_closes = [c for c in closes if c is not None]
+        valid_volumes = [v for v in volumes if v is not None]
+
+        if len(valid_closes) < 2:
+            return None
+
+        current_price = valid_closes[-1]
+        prev_close = valid_closes[-2] if len(valid_closes) >= 2 else current_price
+        current_volume = valid_volumes[-1] if valid_volumes else 0
+        today_high = highs[-1] if highs and highs[-1] else current_price
+        today_low = lows[-1] if lows and lows[-1] else current_price
 
         # 計算指標
-        change_pct = ((current_price - prev_close) / prev_close) * 100
-        avg_volume_5d = hist['Volume'].iloc[-6:-1].mean()
+        change_pct = ((current_price - prev_close) / prev_close) * 100 if prev_close else 0
+
+        # 計算 5 日平均量
+        recent_volumes = [v for v in valid_volumes[-6:-1] if v is not None]
+        avg_volume_5d = sum(recent_volumes) / len(recent_volumes) if recent_volumes else 0
         volume_ratio = current_volume / avg_volume_5d if avg_volume_5d > 0 else 0
 
         return {
@@ -117,8 +177,48 @@ def get_intraday_data(stock_code):
             'low': today_low
         }
     except Exception as e:
-        print(f"查詢 {stock_code} 失敗: {e}")
+        print(f"API查詢 {stock_code} 失敗: {e}")
         return None
+
+
+def get_intraday_data(stock_code):
+    """獲取盤中股價量能數據（P0修復：支援無 yfinance 環境）"""
+    # 優先使用 yfinance（如果可用）
+    if HAS_YFINANCE:
+        try:
+            ticker = yf.Ticker(f"{stock_code}.TW")
+            hist = ticker.history(period='10d')
+
+            if len(hist) < 2:
+                return get_intraday_data_api(stock_code)  # 降級到 API
+
+            # 今日數據（最後一筆）
+            current_price = hist['Close'].iloc[-1]
+            prev_close = hist['Close'].iloc[-2]
+            current_volume = hist['Volume'].iloc[-1]
+            today_high = hist['High'].iloc[-1]
+            today_low = hist['Low'].iloc[-1]
+
+            # 計算指標
+            change_pct = ((current_price - prev_close) / prev_close) * 100
+            avg_volume_5d = hist['Volume'].iloc[-6:-1].mean()
+            volume_ratio = current_volume / avg_volume_5d if avg_volume_5d > 0 else 0
+
+            return {
+                'current_price': current_price,
+                'prev_close': prev_close,
+                'change_pct': change_pct,
+                'volume': current_volume,
+                'volume_ratio': volume_ratio,
+                'high': today_high,
+                'low': today_low
+            }
+        except Exception as e:
+            print(f"yfinance 查詢 {stock_code} 失敗: {e}，嘗試 API")
+            return get_intraday_data_api(stock_code)
+    else:
+        # 無 yfinance，直接使用 API
+        return get_intraday_data_api(stock_code)
 
 def calculate_five_dimensions_intraday(stock_data, inst_data, market_context):
     """
@@ -232,13 +332,22 @@ def analyze_intraday():
     """主程式：盤中五維度分析"""
 
     print("=" * 80)
-    print("盤中五維度分析工具 v2.0")
+    print("盤中五維度分析工具 v2.1（跨平台修復版）")
     print("=" * 80)
-    print(f"執行時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+    # P0-2: 使用跨平台時間
+    if USE_CROSS_PLATFORM:
+        print(f"執行時間: {format_datetime_tw()}")
+        today = get_tw_today()
+        yesterday = get_tw_yesterday_compact()
+    else:
+        print(f"執行時間: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        today = datetime.now().strftime('%Y-%m-%d')
+        yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
+
     print()
 
     # 1. 讀取盤前追蹤記錄
-    today = datetime.now().strftime('%Y-%m-%d')
     print(f"正在讀取盤前推薦記錄：{today}")
     tracking = read_tracking_file(today)
 
@@ -255,7 +364,6 @@ def analyze_intraday():
     print()
 
     # 2. 獲取昨日法人數據
-    yesterday = (datetime.now() - timedelta(days=1)).strftime('%Y%m%d')
     print(f"正在載入 {yesterday} 法人數據...")
     institutional_data = get_institutional_data(yesterday)
     print(f"已載入 {len(institutional_data)} 檔股票法人數據")
@@ -445,8 +553,15 @@ def output_analysis_results(results):
 
 def output_stock_detail(r, category):
     """輸出個股詳細資訊"""
+    # P0修復：處理 recommend_price 可能是字串的情況
+    recommend_price = r.get('recommend_price', 'N/A')
+    if isinstance(recommend_price, (int, float)):
+        recommend_price_str = f"{recommend_price:.2f}元"
+    else:
+        recommend_price_str = str(recommend_price)
+
     print(f"{r['rating']} {r['name']}({r['code']}) - 總分：{r['scores']['總分']}分")
-    print(f"  盤前推薦價：{r['recommend_price']:.2f}元")
+    print(f"  盤前推薦價：{recommend_price_str}")
     print(f"  盤中價位：{r['current_price']:.2f}元（{r['change_pct']:+.2f}%）")
     print(f"  量比：{r['volume_ratio']:.1f}x")
     print()
