@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 """
-台股時事分析工具 v3.0
+台股時事分析工具 v4.0（2026-01-22 升級）
 整合多來源動態獲取台股資訊：
-1. 證交所新聞 API - 官方公告
-2. 證交所公告 API - 重大訊息
-3. 鉅亨網新聞 API - 財經新聞 + 關鍵字
-4. 經濟日報 RSS - 補充新聞
+
+🔴 重要來源（v4.0 新增）：
+1. MOPS 公開資訊觀測站 - 重大訊息（併購、訂單、法說會）⬅️ 最重要！
+2. Yahoo 股市新聞 - 即時新聞
+
+📰 原有來源：
+3. 證交所新聞 API - 官方公告
+4. 證交所公告 API - 重大訊息
+5. 鉅亨網新聞 API - 財經新聞 + 關鍵字
+6. 經濟日報 RSS - 補充新聞
 
 所有資料皆從即時來源動態獲取，無硬編碼
 
@@ -15,6 +21,10 @@
 
 import requests
 import sys
+import urllib3
+
+# 忽略 SSL 警告（公司網路環境需要）
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 from datetime import datetime
 from bs4 import BeautifulSoup
 import json
@@ -52,7 +62,7 @@ def get_twse_news():
     url = 'https://www.twse.com.tw/rwd/zh/news/newsList?limit=15'
 
     try:
-        r = requests.get(url, timeout=10)
+        r = requests.get(url, timeout=10, verify=False)
         if r.status_code == 200:
             data = r.json()
             if data.get('stat') == 'ok' and 'data' in data:
@@ -76,7 +86,7 @@ def get_twse_announcements():
     url = 'https://www.twse.com.tw/rwd/zh/announcement/announcement?limit=10'
 
     try:
-        r = requests.get(url, timeout=10)
+        r = requests.get(url, timeout=10, verify=False)
         if r.status_code == 200:
             data = r.json()
             if data.get('stat') == 'ok' and 'data' in data:
@@ -103,7 +113,7 @@ def get_cnyes_news():
         headers = {'User-Agent': 'Mozilla/5.0', 'Accept': 'application/json'}
         params = {'page': 1, 'limit': 20}
 
-        r = requests.get(url, headers=headers, params=params, timeout=10)
+        r = requests.get(url, headers=headers, params=params, timeout=10, verify=False)
 
         if r.status_code == 200:
             data = r.json()
@@ -131,7 +141,7 @@ def get_udn_rss():
     url = 'https://money.udn.com/rssfeed/news/1001/5590'
 
     try:
-        r = requests.get(url, timeout=10)
+        r = requests.get(url, timeout=10, verify=False)
         if r.status_code == 200:
             root = ET.fromstring(r.content)
 
@@ -147,6 +157,106 @@ def get_udn_rss():
                     })
     except Exception as e:
         print(f"  ⚠️ 經濟日報 RSS: {e}")
+
+    return news
+
+
+def get_mops_announcements():
+    """
+    從 MOPS 公開資訊觀測站獲取重大訊息（v4.0 新增）
+    這是最重要的資料來源：併購、訂單、擴產、減資、法說會公告
+    """
+    announcements = []
+    today = datetime.now().strftime('%Y%m%d')
+
+    # MOPS 重大訊息 API
+    url = 'https://mops.twse.com.tw/mops/web/ajax_t05st01'
+
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0',
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+
+        # 查詢今日重大訊息
+        data = {
+            'encodeURIComponent': '1',
+            'step': '1',
+            'firstin': '1',
+            'off': '1',
+            'TYPEK': 'all',
+            'year': str(int(today[:4]) - 1911),  # 民國年
+            'month': today[4:6],
+            'day': today[6:8]
+        }
+
+        r = requests.post(url, headers=headers, data=data, timeout=15, verify=False)
+
+        if r.status_code == 200:
+            soup = BeautifulSoup(r.text, 'html.parser')
+
+            # 找到資料表格
+            tables = soup.find_all('table', class_='hasBorder')
+
+            for table in tables:
+                rows = table.find_all('tr')
+                for row in rows[1:]:  # 跳過表頭
+                    cols = row.find_all('td')
+                    if len(cols) >= 4:
+                        stock_code = cols[0].get_text(strip=True)
+                        stock_name = cols[1].get_text(strip=True)
+                        subject = cols[2].get_text(strip=True)
+                        pub_date = cols[3].get_text(strip=True) if len(cols) > 3 else ''
+
+                        # 過濾重點訊息
+                        important_keywords = ['法說', '訂單', '營收', '合併', '收購',
+                                            '擴產', '減資', '增資', '股利', '配息',
+                                            '財報', '董事會', '重大', '簽約', '出貨']
+
+                        is_important = any(kw in subject for kw in important_keywords)
+
+                        if stock_code and subject:
+                            announcements.append({
+                                'stock_code': stock_code,
+                                'stock_name': stock_name,
+                                'subject': subject[:80],
+                                'date': pub_date,
+                                'source': 'MOPS',
+                                'is_important': is_important
+                            })
+
+    except Exception as e:
+        print(f"  ⚠️ MOPS 重大訊息: {e}")
+
+    return announcements[:20]  # 最多20則
+
+
+def get_yahoo_tw_news():
+    """
+    從 Yahoo 股市獲取即時新聞（v4.0 新增）
+    """
+    news = []
+    url = 'https://tw.stock.yahoo.com/rss?category=tw-market'
+
+    try:
+        r = requests.get(url, timeout=10, verify=False)
+        if r.status_code == 200:
+            root = ET.fromstring(r.content)
+
+            for item in root.findall('.//item')[:12]:
+                title = item.find('title')
+                pub_date = item.find('pubDate')
+                description = item.find('description')
+
+                if title is not None and title.text:
+                    news.append({
+                        'title': title.text[:80],
+                        'date': pub_date.text[:25] if pub_date is not None and pub_date.text else '',
+                        'summary': description.text[:100] if description is not None and description.text else '',
+                        'source': 'Yahoo股市'
+                    })
+    except Exception as e:
+        print(f"  ⚠️ Yahoo股市新聞: {e}")
 
     return news
 
@@ -240,15 +350,33 @@ def analyze_hot_topics(all_news):
     return sorted(keywords.items(), key=lambda x: x[1], reverse=True)[:6]
 
 
-def print_summary(twse_news, twse_announcements, cnyes_news, udn_news, conferences, events, hot_topics):
-    """輸出時事摘要"""
+def print_summary(twse_news, twse_announcements, cnyes_news, udn_news, conferences, events, hot_topics, mops_announcements=None, yahoo_news=None):
+    """輸出時事摘要（v4.0 新增 MOPS + Yahoo）"""
     today = datetime.now().strftime('%Y-%m-%d')
     weekday = ['一', '二', '三', '四', '五', '六', '日'][datetime.now().weekday()]
     time_now = datetime.now().strftime('%H:%M')
 
     print("\n" + "=" * 60)
-    print(f"📢 台股時事掃描 v3.0（{today} 週{weekday} {time_now}）")
+    print(f"📢 台股時事掃描 v4.0（{today} 週{weekday} {time_now}）")
     print("=" * 60)
+
+    # 🔴 MOPS 重大訊息（最重要！）
+    print("\n【🔴 MOPS 重大訊息】（公開資訊觀測站）")
+    if mops_announcements:
+        important = [a for a in mops_announcements if a.get('is_important')]
+        others = [a for a in mops_announcements if not a.get('is_important')]
+
+        if important:
+            print("  ⚠️ 重點訊息：")
+            for a in important[:8]:
+                print(f"    • {a['stock_name']}({a['stock_code']}): {a['subject'][:45]}...")
+
+        if others:
+            print("  📋 其他訊息：")
+            for a in others[:5]:
+                print(f"    • {a['stock_name']}({a['stock_code']}): {a['subject'][:45]}...")
+    else:
+        print("  （今日尚無重大訊息或查詢失敗）")
 
     # 熱門題材
     print("\n【🔥 熱門題材】")
@@ -285,23 +413,15 @@ def print_summary(twse_news, twse_announcements, cnyes_news, udn_news, conferenc
     else:
         print("  （無最新公告）")
 
-    # 證交所新聞
-    print("\n【📰 證交所新聞】")
-    if twse_news:
-        for n in twse_news[:5]:
-            print(f"  • {n['title'][:55]}...")
-    else:
-        print("  （無最新新聞）")
-
-    # 財經新聞（鉅亨網 + 經濟日報）
+    # 財經新聞（整合所有來源）
     print("\n【📰 財經新聞】")
-    all_financial_news = cnyes_news + udn_news
+    all_financial_news = cnyes_news + udn_news + (yahoo_news or [])
     if all_financial_news:
         seen = set()
         count = 0
         for n in all_financial_news:
             title = n.get('title', '')[:50]
-            if title and title not in seen and count < 10:
+            if title and title not in seen and count < 12:
                 seen.add(title)
                 source = n.get('source', '')
                 print(f"  [{source}] {title}...")
@@ -310,7 +430,7 @@ def print_summary(twse_news, twse_announcements, cnyes_news, udn_news, conferenc
         print("  （載入中...）")
 
     print("\n" + "=" * 60)
-    print("✅ 掃描完成（資料來源：證交所、鉅亨網、經濟日報）")
+    print("✅ 掃描完成（資料來源：MOPS、證交所、鉅亨網、Yahoo、經濟日報）")
     print("=" * 60)
 
     return {
@@ -325,9 +445,14 @@ def print_summary(twse_news, twse_announcements, cnyes_news, udn_news, conferenc
 
 
 def main():
-    print("⏳ 正在掃描台股時事...")
+    print("⏳ 正在掃描台股時事 v4.0...")
 
-    # 查詢各來源
+    # 🔴 MOPS 重大訊息（最重要來源）
+    print("📡 查詢 MOPS 重大訊息（公開資訊觀測站）...")
+    mops_announcements = get_mops_announcements()
+    print(f"   找到 {len(mops_announcements)} 則")
+
+    # 證交所
     print("📡 查詢證交所新聞...")
     twse_news = get_twse_news()
     print(f"   找到 {len(twse_news)} 則")
@@ -336,16 +461,23 @@ def main():
     twse_announcements = get_twse_announcements()
     print(f"   找到 {len(twse_announcements)} 則")
 
+    # 財經媒體
     print("📡 查詢鉅亨網新聞...")
     cnyes_news = get_cnyes_news()
     print(f"   找到 {len(cnyes_news)} 則")
+
+    print("📡 查詢 Yahoo 股市...")
+    yahoo_news = get_yahoo_tw_news()
+    print(f"   找到 {len(yahoo_news)} 則")
 
     print("📡 查詢經濟日報...")
     udn_news = get_udn_rss()
     print(f"   找到 {len(udn_news)} 則")
 
-    # 整合所有新聞進行分析
-    all_news = twse_news + cnyes_news + udn_news
+    # 整合所有新聞進行分析（包含 MOPS 訊息）
+    mops_as_news = [{'title': f"{a['stock_name']}: {a['subject']}", 'summary': '', 'source': 'MOPS'}
+                    for a in mops_announcements]
+    all_news = twse_news + cnyes_news + udn_news + yahoo_news + mops_as_news
 
     print("📡 分析熱門題材...")
     hot_topics = analyze_hot_topics(all_news)
@@ -358,9 +490,14 @@ def main():
     events = detect_events(all_news)
     print(f"   偵測到 {len(events)} 個")
 
-    # 輸出摘要
+    # 輸出摘要（v4.0 新增 MOPS + Yahoo）
     result = print_summary(twse_news, twse_announcements, cnyes_news, udn_news,
-                          conferences, events, hot_topics)
+                          conferences, events, hot_topics,
+                          mops_announcements, yahoo_news)
+
+    # 補充 MOPS 到結果
+    result['mops_announcements'] = mops_announcements
+    result['yahoo_news'] = yahoo_news[:10]
 
     # 儲存結果
     today = datetime.now().strftime('%Y-%m-%d')
