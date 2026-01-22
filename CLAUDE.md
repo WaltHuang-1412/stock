@@ -3079,8 +3079,13 @@ python3 scripts/check_institutional.py 2883 20251111
 **核心規範**（必讀）：
 - `CLAUDE.md` - 本文件（主規範，包含所有核心流程）
 
-**詳細規範**（需要時參考）：
-- `docs/FIVE_DIMENSIONS_SCORING.md` - 五維度評分系統完整版+實戰案例
+**詳細參考**（docs/reference/）🆕：
+- `docs/reference/SCORING_SYSTEM.md` - 雙軌評分+雙層推薦+佈局股驗證
+- `docs/reference/TOOLS_GUIDE.md` - 腳本工具使用指南（12+工具）
+- `docs/reference/INDUSTRY_NEWS_MAPPING.md` - 時事→產業對照表+14產業掃描
+- `docs/reference/HISTORICAL_LESSONS.md` - 歷史血淚教訓彙整
+
+**預測追蹤**：
 - `data/predictions/predictions.json` - 預測追蹤記錄
 
 **範本文件**：
@@ -3091,7 +3096,6 @@ python3 scripts/check_institutional.py 2883 20251111
 **輔助文件**（偶爾參考）：
 - `docs/ENHANCED_SYSTEM_USAGE.md` - 追蹤系統使用指南
 - `docs/MARKET_NEWS_CHECKLIST.md` - 時事檢查清單
-- `docs/COMMAND_REFERENCE.md` - 完整指令參考
 
 ---
 

@@ -1,0 +1,247 @@
+# 腳本工具使用指南
+
+**版本**: v5.7
+**最後更新**: 2026-01-22
+
+---
+
+## 一、常用工具（每日使用）
+
+### 1. fetch_institutional_top50.py - 法人買賣超TOP50
+
+**用途**: 盤前分析第一步，查詢法人買賣超數據
+
+**執行方式**:
+```bash
+python3 scripts/fetch_institutional_top50.py [日期YYYYMMDD]
+```
+
+**範例**:
+```bash
+python3 scripts/fetch_institutional_top50.py 20260121
+```
+
+**輸出**:
+- 法人買超TOP50 + 5日漲幅 + 狀態標註
+- 自動過濾「已大漲」股票
+- 標註「佈局中/可進場/追高風險」
+
+**狀態標註規則**:
+| 5日漲幅 | 狀態 | 說明 |
+|--------|------|------|
+| < 0% | ⭐ 佈局中 | 法人買但還沒漲，最佳 |
+| 0-3% | ✅ 可進場 | 小漲，可買 |
+| 3-5% | ⚠️ 已小漲 | 注意追高 |
+| 5-8% | 🟡 追高風險 | 考慮等回檔 |
+| > 8% | 🔴 已大漲 | 不建議追 |
+
+---
+
+### 2. chip_analysis.py - 籌碼分析（N天歷史）
+
+**用途**: 對有興趣的股票做深度籌碼分析，驗證「真連續買超」
+
+**執行方式**:
+```bash
+# 單檔，預設10天
+python3 scripts/chip_analysis.py 2883
+
+# 多檔
+python3 scripts/chip_analysis.py 2883 2887 2303
+
+# 指定天數
+python3 scripts/chip_analysis.py 2883 --days 20
+```
+
+**輸出重點**:
+1. **真連續買超** - 中間有沒有賣？連買幾天？
+2. **累計淨買超** - 10天加總多少？
+3. **外資vs投信** - 同步買？還是對決？
+
+**籌碼判斷標準**:
+| 判斷 | 條件 | 建議 |
+|------|------|------|
+| ✅ 佈局 | 連續買超≥5天 + 累計淨買>0 | 可進場 |
+| ✅ 買進 | 連續買超3-4天 + 累計淨買>0 | 可進場 |
+| 🟡 偏多 | 買多於賣但不連續 | 觀察 |
+| ⚠️ 反轉 | 累計買超但最近開始賣 | 警戒 |
+| 🔴 出貨 | 累計賣超且最近在賣 | 避開 |
+
+---
+
+### 3. check_institutional.py - 單一股票法人查詢
+
+**用途**: 查詢任意股票的單日法人數據
+
+**執行方式**:
+```bash
+python3 scripts/check_institutional.py <股票代號> [日期YYYYMMDD]
+```
+
+**範例**:
+```bash
+# 查詢群創昨日法人
+python3 scripts/check_institutional.py 3481
+
+# 查詢指定日期
+python3 scripts/check_institutional.py 2330 20260120
+```
+
+---
+
+### 4. intraday_dual_track.py - 盤中雙軌分析（正式版）
+
+**用途**: 12:30 執行，完整 Track A + Track B 分析
+
+**執行方式**:
+```bash
+python3 scripts/intraday_dual_track.py
+```
+
+**功能**:
+- **Track A**: 追蹤盤前推薦股表現（防事後諸葛）
+- **Track B**: 全市場掃描異動、發現新機會
+
+**輸出**:
+- 雙軌分析結果
+- 尾盤操作建議
+- 儲存至 `data/YYYY-MM-DD/dual_track_analysis.json`
+
+---
+
+### 5. stock_tracker.py - 個股追蹤系統
+
+**用途**: 盤後14:30執行，追蹤推薦股7日表現
+
+**執行方式**:
+```bash
+python3 scripts/stock_tracker.py [--date YYYYMMDD]
+```
+
+**功能**:
+- 自動更新價格+法人數據
+- 追蹤7日後產生報告
+- 驗證推薦準確率
+
+---
+
+## 二、偶爾使用工具
+
+### 6. fetch_us_asia_markets.py - 國際市場數據
+
+**用途**: 盤前獲取美股、費半、ADR數據
+
+**執行方式**:
+```bash
+python3 scripts/fetch_us_asia_markets.py
+```
+
+**輸出**:
+- 美股三大指數
+- 費半指數
+- 台股ADR表現
+
+---
+
+### 7. holdings_analysis.py - 法人持股水位分析
+
+**用途**: 分析外資持股比例、出場壓力評估
+
+**執行方式**:
+```bash
+# 單檔
+python3 scripts/holdings_analysis.py 2330
+
+# 多檔
+python3 scripts/holdings_analysis.py 2886 1303 3481
+
+# 指定天數
+python3 scripts/holdings_analysis.py 2330 --days 20
+```
+
+**輸出**:
+- 外資持股量和持股比例
+- 賣超佔持股比例（關鍵指標）
+- 出場壓力等級（🔴高壓/🟠中高壓/🟡中壓/⚪低壓/🟢吸籌/🔥強力吸籌）
+
+**觸發關鍵詞**: 「出場壓力分析」「持股水位分析」「外資持股比例」
+
+---
+
+### 8. fetch_tw_market_news.py - 台股時事分析
+
+**用途**: 掃描台股重大訊息、法說會、熱門題材
+
+**執行方式**:
+```bash
+# 今日時事
+python3 scripts/fetch_tw_market_news.py
+
+# 近3日
+python3 scripts/fetch_tw_market_news.py --days 3
+```
+
+**輸出**:
+- 近期重要事件（法說會、財報、Fed決議）
+- 熱門題材（AI、記憶體、半導體等）
+- 重大訊息（併購、訂單、擴產）
+
+**觸發關鍵詞**: 「台股時事」「重大訊息」「法說會日期」
+
+---
+
+### 9. my_holdings_analyzer.py - 個人持股分析
+
+**用途**: 分析個人持股表現，整合四維度評分
+
+**執行方式**:
+```bash
+python3 scripts/my_holdings_analyzer.py
+```
+
+**功能**:
+- 即時價格+法人數據
+- 健康度評分
+- 操作建議（續抱/減碼/停損）
+
+---
+
+## 三、測試/備用工具
+
+### 10. intraday_analyzer_v2.py - Track A測試工具
+
+**用途**: 開發測試用，僅 Track A（追蹤推薦股表現）
+
+**注意**: 正式分析請用 `intraday_dual_track.py`
+
+---
+
+### 11. sector_scanner.py - 產業掃描器
+
+**用途**: 基於費半走勢推薦產業股票
+
+**觸發情境**: 費半大漲/大跌時自動選擇對應產業
+
+---
+
+### 12. holdings_pressure_analysis.py - 持股出場壓力
+
+**用途**: 分析個人持股的出場壓力（基於獲利/虧損+法人）
+
+**與 holdings_analysis.py 差異**:
+- `holdings_analysis.py`: 查詢「法人手上有多少」
+- `holdings_pressure_analysis.py`: 查詢「我應該什麼時候出場」
+
+---
+
+## 四、工具執行時機對照表
+
+| 時間 | 工具 | 用途 |
+|------|------|------|
+| 08:00-09:00 | `fetch_us_asia_markets.py` | 獲取國際市場數據 |
+| 08:00-09:00 | `fetch_institutional_top50.py` | 法人TOP50篩選 |
+| 08:00-09:00 | `chip_analysis.py` | 深度籌碼分析 |
+| 12:30-13:00 | `intraday_dual_track.py` | 盤中雙軌分析 |
+| 14:30後 | `stock_tracker.py` | 追蹤更新 |
+| 任何時候 | `check_institutional.py` | 單股法人查詢 |
+| 任何時候 | `my_holdings_analyzer.py` | 持股分析 |
