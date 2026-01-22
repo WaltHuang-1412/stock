@@ -3084,6 +3084,7 @@ python3 scripts/check_institutional.py 2883 20251111
 - `docs/reference/TOOLS_GUIDE.md` - 腳本工具使用指南（12+工具）
 - `docs/reference/INDUSTRY_NEWS_MAPPING.md` - 時事→產業對照表+14產業掃描
 - `docs/reference/HISTORICAL_LESSONS.md` - 歷史血淚教訓彙整
+- `docs/reference/MAINTENANCE_GUIDE.md` - **CLAUDE.md 維護指南**（更新時必讀）
 
 **預測追蹤**：
 - `data/predictions/predictions.json` - 預測追蹤記錄
