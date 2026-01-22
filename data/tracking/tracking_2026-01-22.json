@@ -1,317 +1,274 @@
 {
   "date": "2026-01-22",
   "day_of_week": "Thursday",
-  "analysis_version": "v5.7",
-  "process_compliance": {
-    "step_0_time_verification": true,
-    "step_minus1_sync_check": true,
-    "step_0_international_data": true,
-    "step_0_5_international_data": true,
-    "step_0_5_tw_market_news": true,
-    "step_0_5_realtime_price": true,
-    "step_1_historical_verification": true,
-    "step_1_yesterday_verification": {
-      "date": "2026-01-21",
-      "accuracy": "71.4%",
-      "success_count": 5,
-      "partial_count": 1,
-      "fail_count": 2,
-      "success_stocks": ["3037", "2308", "2356", "2618"],
-      "partial_stocks": ["2887"],
-      "fail_stocks": ["2609", "2382"],
-      "continue_success": ["2618", "2356"],
-      "avoid_failure": ["2887", "2609", "2382"]
-    },
-    "step_1_5_predictions_reference": true,
-    "step_1_7_key_lessons_check": true,
-    "step_1_8_holdings_tracking": true,
-    "step_3_industry_scan": true,
-    "step_4_chip_analysis": true,
-    "step_5_scoring": true,
-    "step_5_5_industry_diversification": true,
-    "step_7_file_creation": true
-  },
+  "analysis_version": "v5.9",
   "market_context": {
-    "philadelphia_semi": "+3.80%",
-    "nasdaq": "-2.05%",
-    "sp500": "-1.27%",
-    "vix": "+6.69%",
-    "tsmc_adr": "-1.54%",
-    "umc_adr": "+28.52%",
-    "asm_adr": "+1.50%",
-    "oil_wti": "+2.20%",
-    "key_driver": "費半+3.80%強勢但多數半導體已大漲"
+    "us_market": "NASDAQ +1.28%, 費半 +3.80%",
+    "major_news": ["費半大漲+3.80%", "聯電ADR暴漲+28.52%", "台積電ADR+3.73%", "日月光ADR+5.88%"],
+    "time_event": "時事利多半導體，封測補漲"
+  },
+  "sync_check": {
+    "before_market_recommendations": ["6239", "2610", "2880", "6257", "2618"],
+    "tracking_recommendations": ["6239", "2610", "2880", "6257", "2618"],
+    "is_synced": true
   },
   "recommendations": [
     {
-      "stock_code": "3711",
-      "stock_name": "日月光",
       "type": "stable",
-      "industry": "半導體-封測",
-      "score": 82,
-      "prev_close": 291.00,
-      "recommend_price": "288-292",
-      "stop_loss": 275,
-      "target_price": "310-315",
-      "position": "10-15%",
+      "stock_code": "6239",
+      "stock_name": "力成",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "封測",
+        "drivers": ["CoWoS封裝", "HBM需求", "費半利多"]
+      },
+      "recommend_price": 146.5,
+      "actual_close": 257.50,
+      "change_pct": 7.52,
+      "target_price": 165,
+      "stop_loss": 140,
+      "position": "15%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 87,
       "五維度": {
-        "時事現況": 26,
-        "法人數據": 25,
+        "法人數據": 26,
+        "時事現況": 28,
         "產業邏輯": 18,
-        "價格位置": 8,
-        "技術面": 5
-      },
-      "reason": "費半+3.80%利多、ADR+1.50%、封測龍頭、10日法人+14K、外資+投信同步買",
-      "chip_analysis": {
-        "cumulative_10d": 14000,
-        "foreign_10d": 12000,
-        "trust_10d": 3041,
-        "consecutive_buy_days": 0,
-        "judgment": "法人偏多，外資+投信同步買超"
-      }
-    },
-    {
-      "stock_code": "2618",
-      "stock_name": "長榮航",
-      "type": "layout",
-      "industry": "航空",
-      "score": 78,
-      "prev_close": 38.30,
-      "recommend_price": "38-38.5",
-      "stop_loss": 36,
-      "target_price": "41-42",
-      "position": "10-15%",
-      "五維度": {
-        "時事現況": 22,
-        "法人數據": 26,
-        "產業邏輯": 16,
         "價格位置": 9,
-        "技術面": 5
+        "技術面": 6
       },
-      "reason": "外資10日+81K大買、春節航空旺季、5日+2.1%佈局中",
-      "chip_analysis": {
-        "cumulative_10d": 30000,
-        "foreign_10d": 81000,
-        "trust_10d": -52000,
-        "consecutive_buy_days": 2,
-        "judgment": "外資大買但投信對決"
-      }
+      "institutional_flow": 1801,
+      "reason": "8天買超累計+24K，費半+3.80%利多封測",
+      "time_horizon": "1-3個月",
+      "target_return": "+12%",
+      "result": "success",
+      "status": "tracking"
     },
     {
-      "stock_code": "2605",
-      "stock_name": "新興",
-      "type": "layout",
-      "industry": "航運",
-      "score": 76,
-      "prev_close": 20.80,
-      "recommend_price": "20.5-21",
-      "stop_loss": 19.5,
-      "target_price": "22.5-23",
-      "position": "10%",
-      "五維度": {
-        "時事現況": 20,
-        "法人數據": 26,
-        "產業邏輯": 16,
-        "價格位置": 9,
-        "技術面": 5
-      },
-      "reason": "10日法人+24K、外資+投信同步買超、5日+1.2%佈局中",
-      "chip_analysis": {
-        "cumulative_10d": 24000,
-        "foreign_10d": 22000,
-        "trust_10d": 1210,
-        "consecutive_buy_days": 3,
-        "judgment": "法人短線買進中，外資+投信同步"
-      }
-    },
-    {
-      "stock_code": "2312",
-      "stock_name": "金寶",
       "type": "stable",
-      "industry": "電子代工",
-      "score": 75,
-      "prev_close": 30.15,
-      "recommend_price": "30-30.5",
-      "stop_loss": 28.5,
-      "target_price": "33",
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "industry": {
+        "sector": "航空",
+        "sub_type": "客運",
+        "drivers": ["春節旺季", "國際航線復甦", "外資連續買超"]
+      },
+      "recommend_price": 25.75,
+      "actual_close": 22.70,
+      "change_pct": 2.02,
+      "target_price": 28,
+      "stop_loss": 24.5,
       "position": "10%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 85,
       "五維度": {
-        "時事現況": 18,
-        "法人數據": 24,
-        "產業邏輯": 15,
+        "法人數據": 28,
+        "時事現況": 24,
+        "產業邏輯": 16,
+        "價格位置": 10,
+        "技術面": 7
+      },
+      "institutional_flow": 13209,
+      "reason": "連6日買超累計+116K，春節航空旺季",
+      "time_horizon": "1-2個月",
+      "target_return": "+8%",
+      "result": "success",
+      "status": "tracking"
+    },
+    {
+      "type": "stable",
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "industry": {
+        "sector": "金融",
+        "sub_type": "純銀行",
+        "drivers": ["利差改善", "央行政策", "法人持續買超"]
+      },
+      "recommend_price": 26,
+      "actual_close": 33.25,
+      "change_pct": -0.30,
+      "target_price": 28,
+      "stop_loss": 25,
+      "position": "10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 82,
+      "五維度": {
+        "法人數據": 26,
+        "時事現況": 22,
+        "產業邏輯": 16,
         "價格位置": 10,
         "技術面": 8
       },
-      "reason": "10日外資+34K買超、5日+1.4%未漲",
-      "chip_analysis": {
-        "cumulative_10d": 29000,
-        "foreign_10d": 34000,
-        "trust_10d": -1497,
-        "consecutive_buy_days": 2,
-        "judgment": "法人偏多"
-      }
+      "institutional_flow": 1283,
+      "reason": "連6日買超累計+17K，純銀行受惠利差",
+      "time_horizon": "1-3個月",
+      "target_return": "+8%",
+      "result": "partial",
+      "status": "tracking"
+    },
+    {
+      "type": "stable",
+      "stock_code": "6257",
+      "stock_name": "矽格",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "封測",
+        "drivers": ["CoWoS產能擴張", "外資+投信同步買"]
+      },
+      "recommend_price": 68,
+      "actual_close": 135.00,
+      "change_pct": 0.37,
+      "target_price": 75,
+      "stop_loss": 64,
+      "position": "10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 80,
+      "五維度": {
+        "法人數據": 24,
+        "時事現況": 26,
+        "產業邏輯": 14,
+        "價格位置": 10,
+        "技術面": 6
+      },
+      "institutional_flow": -1568,
+      "reason": "外資+投信同步買累計+9K，費半利多",
+      "time_horizon": "1-2個月",
+      "target_return": "+10%",
+      "result": "partial",
+      "notes": "法人01/22反轉賣超-1,568張，需觀察",
+      "status": "tracking"
+    },
+    {
+      "type": "explosive",
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "industry": {
+        "sector": "航空",
+        "sub_type": "客運",
+        "drivers": ["春節旺季", "外資連續買超"]
+      },
+      "recommend_price": 42.5,
+      "actual_close": 39.20,
+      "change_pct": 2.35,
+      "target_price": 46,
+      "stop_loss": 40,
+      "position": "10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 78,
+      "五維度": {
+        "時事現況": 28,
+        "產業邏輯": 24,
+        "技術面": 12,
+        "法人數據": 10,
+        "價格位置": 4
+      },
+      "institutional_flow": 22210,
+      "reason": "春節航空旺季，外資連續買超+22K",
+      "time_horizon": "1-2週",
+      "target_return": "+8%",
+      "result": "success",
+      "status": "tracking"
+    }
+  ],
+  "watch_stocks": [
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "reason": "5日+8.5%追高風險，等回檔190元以下",
+      "score": 76
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "用戶持股，法人-126K狂賣需獲利了結",
+      "score": 55
+    }
+  ],
+  "avoid_stocks": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "已大漲，法人-4K開始出貨",
+      "score": 0
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "法人-7.8K出貨，記憶體已反映利多",
+      "score": 0
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新金",
+      "reason": "法人-16K出貨，金融防禦失效",
+      "score": 0
+    },
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "reason": "法人-85K狂賣，面板弱勢",
+      "score": 0
+    }
+  ],
+  "holdings_alert": [
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "prev_institutional": -49428,
+      "current_institutional": -125407,
+      "change": "狂賣！",
+      "alert_level": "極高危",
+      "suggestion": "獲利了結！法人連續大賣-126K"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "prev_institutional": -21028,
+      "current_institutional": -12210,
+      "change": "續賣",
+      "alert_level": "警戒",
+      "suggestion": "觀察明日，設停損130元"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "prev_institutional": -7378,
+      "current_institutional": -6876,
+      "change": "續賣",
+      "alert_level": "警戒",
+      "suggestion": "金融短期弱勢，觀察"
     },
     {
       "stock_code": "2356",
       "stock_name": "英業達",
-      "type": "holding",
-      "industry": "AI伺服器",
-      "score": 78,
-      "prev_close": 46.55,
-      "buy_price": 45.765,
-      "recommend_price": "持股續抱（無新進場價）",
-      "current_pnl": "+1.7%",
-      "stop_loss": 43,
-      "target_price": "50-52",
-      "action": "續抱",
-      "五維度": {
-        "時事現況": 22,
-        "法人數據": 26,
-        "產業邏輯": 16,
-        "價格位置": 7,
-        "技術面": 7
-      },
-      "reason": "連續4日買超+12K、AI伺服器受惠",
-      "chip_analysis": {
-        "cumulative_10d": 12000,
-        "foreign_10d": 14000,
-        "trust_10d": -5011,
-        "consecutive_buy_days": 4,
-        "judgment": "法人短線買進中"
-      }
-    },
-    {
-      "stock_code": "2330",
-      "stock_name": "台積電",
-      "type": "observation",
-      "industry": "晶圓代工",
-      "score": 74,
-      "prev_close": 1740.00,
-      "recommend_price": "1720-1740",
-      "stop_loss": 1650,
-      "target_price": "1850",
-      "position": "5-10%",
-      "五維度": {
-        "時事現況": 24,
-        "法人數據": 18,
-        "產業邏輯": 18,
-        "價格位置": 7,
-        "技術面": 7
-      },
-      "reason": "費半+3.80%利多、但ADR-1.54%、法人-6K觀望"
+      "prev_institutional": 2702,
+      "current_institutional": 14086,
+      "change": "大買！",
+      "alert_level": "安全",
+      "suggestion": "續抱！漲停+法人大買"
     }
   ],
-  "avoid_stocks": [
-    {"stock_code": "2303", "reason": "ADR+28%但法人-59K出貨、5日+25%追高"},
-    {"stock_code": "3037", "reason": "5日+30%追高風險"},
-    {"stock_code": "2344", "reason": "法人-9K賣超"},
-    {"stock_code": "2408", "reason": "法人-5K賣超"},
-    {"stock_code": "3189", "reason": "法人-18K出貨"},
-    {"stock_code": "2887", "reason": "昨法人-20K出貨"}
-  ],
-  "holdings_alerts": [
-    {"stock_code": "3231", "alert": "critical", "action": "今日出場", "reason": "連10日賣-205K"},
-    {"stock_code": "3481", "alert": "high", "action": "設停損25元", "reason": "連3日賣-120K"},
-    {"stock_code": "2886", "alert": "medium", "action": "破39.5減碼", "reason": "連3日賣-22K"},
-    {"stock_code": "2356", "alert": "safe", "action": "續抱", "reason": "連4日買+12K"}
-  ],
-  "industry_diversification": {
-    "半導體": 2,
-    "航空航運": 2,
-    "電子": 2,
-    "check_passed": true,
-    "max_single_industry_pct": 33
+  "today_verification": {
+    "date": "2026-01-22",
+    "accuracy": "60%",
+    "success": 3,
+    "partial": 2,
+    "fail": 0,
+    "total": 5,
+    "success_stocks": ["6239", "2610", "2618"],
+    "partial_stocks": ["2880", "6257"],
+    "fail_stocks": []
   },
-  "key_lessons_applied": [
-    "費半+3.80%強勢但多數已大漲→只推日月光",
-    "聯電ADR+28%→避開（法人出貨）",
-    "金融防禦不需要（費半強勢）",
-    "記憶體法人都賣超→避開",
-    "佈局股雙重驗證：長榮航（外資+催化劑）✅"
+  "key_lessons": [
+    "封測是半導體補漲機會（力成+7.52%驗證）",
+    "航空春節旺季策略有效（華航+2.02%、長榮航+2.35%）",
+    "群創法人狂賣-126K，持股獲利了結時機",
+    "矽格法人反轉賣超-1,568張，需觀察",
+    "金融股短期弱勢（兆豐金-6.8K、台新金-16K）"
   ],
   "files_created": [
-    "data/2026-01-22/before_market_analysis.md",
+    "data/2026-01-22/after_market_analysis.md",
     "data/tracking/tracking_2026-01-22.json"
   ],
-  "analysis_completed_at": "2026-01-22 10:30",
-  "rerun_version": "v5.7_rerun",
-  "rerun_updates": {
-    "added_stocks": ["6239", "6257", "2880"],
-    "removed_stocks": ["2312", "2330"],
-    "reason": "重新執行後深度籌碼分析發現力成、矽格、華南金更符合條件"
-  },
-  "recommendations_v2": [
-    {
-      "stock_code": "3711",
-      "stock_name": "日月光",
-      "type": "stable",
-      "industry": "半導體-封測",
-      "score": 82,
-      "recommend_price": "300-305",
-      "stop_loss": 290,
-      "target_price": "325-330",
-      "position": "10-15%",
-      "reason": "費半+3.80%、ADR+1.50%、10日+15K、5日僅+1.34%還沒漲"
-    },
-    {
-      "stock_code": "6239",
-      "stock_name": "力成",
-      "type": "stable",
-      "industry": "半導體-封測",
-      "score": 80,
-      "recommend_price": "260-265",
-      "stop_loss": 250,
-      "target_price": "285-290",
-      "position": "10-15%",
-      "reason": "費半利多、HBM封裝、10日+21K、連2日買、5日僅+1.36%還沒漲"
-    },
-    {
-      "stock_code": "6257",
-      "stock_name": "矽格",
-      "type": "stable",
-      "industry": "半導體-封測",
-      "score": 76,
-      "recommend_price": "137-140",
-      "stop_loss": 132,
-      "target_price": "150-155",
-      "position": "5-10%",
-      "reason": "封測受惠、10日+9K、外資+投信同買、5日僅+2.22%"
-    },
-    {
-      "stock_code": "2880",
-      "stock_name": "華南金",
-      "type": "layout",
-      "industry": "金融-純銀行",
-      "score": 72,
-      "recommend_price": "33.3-33.7",
-      "stop_loss": 32.5,
-      "target_price": "35",
-      "position": "5-10%",
-      "reason": "連6日買超、10日+17K、5日僅+1.82%佈局中"
-    },
-    {
-      "stock_code": "2618",
-      "stock_name": "長榮航",
-      "type": "layout",
-      "industry": "航空",
-      "score": 70,
-      "recommend_price": "38.5-39",
-      "stop_loss": 37,
-      "target_price": "41-42",
-      "position": "5%",
-      "reason": "春節旺季、外資+81K、但投信對決"
-    },
-    {
-      "stock_code": "2610",
-      "stock_name": "華航",
-      "type": "observation",
-      "industry": "航空",
-      "score": 68,
-      "recommend_price": "等回檔22-22.5",
-      "stop_loss": 21,
-      "target_price": "24-25",
-      "position": "5%",
-      "reason": "春節旺季、連4日買+117K、但5日+6.32%已漲"
-    }
-  ]
+  "analysis_completed_at": "2026-01-22 16:40"
 }
