@@ -24,7 +24,10 @@
         "today": 307.0,
         "change_pct": 3.02,
         "result": "✅ 成功"
-      }
+      },
+      "close_price": 307.0,
+      "change_percent": 3.02,
+      "result": "success"
     },
     {
       "stock_code": "1303",
@@ -37,7 +40,10 @@
         "today": 77.5,
         "change_pct": -0.39,
         "result": "❌ 失敗"
-      }
+      },
+      "close_price": 77.5,
+      "change_percent": -0.39,
+      "result": "fail"
     },
     {
       "stock_code": "1301",
@@ -50,7 +56,10 @@
         "today": 44.5,
         "change_pct": 1.95,
         "result": "✅ 成功"
-      }
+      },
+      "close_price": 44.5,
+      "change_percent": 1.95,
+      "result": "success"
     },
     {
       "stock_code": "2356",
@@ -63,10 +72,59 @@
         "today": 48.3,
         "change_pct": -5.66,
         "result": "❌ 失敗"
-      }
+      },
+      "close_price": 48.3,
+      "change_percent": -5.66,
+      "result": "fail"
     }
   ],
   "created_at": "2026-01-23 13:22",
   "intraday_completed_at": "2026-01-23 13:22",
-  "accuracy": "50% (2/4)"
+  "accuracy": "50% (2/4)",
+  "yesterday_verification": {
+    "date": "2026-01-22",
+    "accuracy": 0.6,
+    "results": [
+      {
+        "stock_code": "6239",
+        "stock_name": "力成",
+        "recommend_price": 146.5,
+        "close_price": 257.5,
+        "change_percent": 7.52,
+        "result": "success"
+      },
+      {
+        "stock_code": "2610",
+        "stock_name": "華航",
+        "recommend_price": 25.75,
+        "close_price": 22.7,
+        "change_percent": 2.02,
+        "result": "success"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "recommend_price": 42.5,
+        "close_price": 39.2,
+        "change_percent": 2.35,
+        "result": "success"
+      },
+      {
+        "stock_code": "6257",
+        "stock_name": "矽格",
+        "recommend_price": 68,
+        "close_price": 135.0,
+        "change_percent": 0.37,
+        "result": "neutral"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "recommend_price": 26,
+        "close_price": 33.25,
+        "change_percent": -0.3,
+        "result": "fail"
+      }
+    ]
+  }
 }
