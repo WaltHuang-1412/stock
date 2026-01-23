@@ -3150,5 +3150,134 @@
       "佈局股需要「法人買超 + 產業催化劑」雙重條件（陽明失敗）"
     ],
     "notes": "準確率71.4%（5/7），費半→半導體次產業判斷成功，但遺漏記憶體族群"
+  },
+  "2026-01-23": {
+    "date": "2026-01-23",
+    "day_of_week": "Friday",
+    "analysis_version": "v5.9.3",
+    "predictions": [
+      {
+        "symbol": "3711",
+        "name": "日月光",
+        "recommend_price": 307.0,
+        "direction": "up",
+        "confidence": 0.88,
+        "reasons": [
+          "ADR+0.95%封測利多",
+          "費半+4.59%利多半導體",
+          "CoWoS封裝需求強勁"
+        ],
+        "verification": {
+          "actual_close": 307.0,
+          "actual_change": 3.02,
+          "institutional_flow": 2885,
+          "result": "success",
+          "notes": "封測補漲策略成功"
+        }
+      },
+      {
+        "symbol": "1303",
+        "name": "南亞",
+        "recommend_price": 77.6,
+        "direction": "up",
+        "confidence": 0.77,
+        "reasons": [
+          "法人買超第1名+33K",
+          "外資+投信同步買超"
+        ],
+        "verification": {
+          "actual_close": 77.5,
+          "actual_change": -0.39,
+          "institutional_flow": 33000,
+          "result": "fail",
+          "notes": "法人買超但無產業催化劑，股價不漲"
+        }
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "recommend_price": 44.5,
+        "direction": "up",
+        "confidence": 0.75,
+        "reasons": [
+          "法人買超+21K",
+          "外資主導買超"
+        ],
+        "verification": {
+          "actual_close": 44.5,
+          "actual_change": 1.95,
+          "institutional_flow": 21000,
+          "result": "success",
+          "notes": "法人驅動小漲"
+        }
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 48.4,
+        "direction": "up",
+        "confidence": 0.75,
+        "reasons": [
+          "法人買超+14K",
+          "籌碼動能+616%",
+          "連續買超4天"
+        ],
+        "verification": {
+          "actual_close": 48.3,
+          "actual_change": -5.66,
+          "institutional_flow": 14000,
+          "result": "fail",
+          "notes": "昨漲停+9.99%追高風險，今獲利了結"
+        }
+      }
+    ],
+    "avoided_stocks": [
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "reason": "法人狂賣-125K",
+        "actual_change": -5.51,
+        "institutional_flow": -125407,
+        "judgment": "correct",
+        "notes": "避開正確，法人連續大賣"
+      },
+      {
+        "symbol": "6257",
+        "name": "矽格",
+        "reason": "法人反轉賣超-1.6K",
+        "actual_change": -1.11,
+        "institutional_flow": -1568,
+        "judgment": "correct",
+        "notes": "避開正確"
+      },
+      {
+        "symbol": "2454",
+        "name": "聯發科",
+        "reason": "未推薦（遺漏）",
+        "actual_change": 9.76,
+        "institutional_flow": "需查詢",
+        "judgment": "missed_opportunity",
+        "notes": "昨漲停創高，今+9.76%，重大遺漏"
+      }
+    ],
+    "accuracy": 0.5,
+    "framework": "v5.9.3（五維度評分：時事35% + 法人30% + 產業20% + 技術10% + 價格5%）",
+    "market_summary": {
+      "philadelphia_semi": "+4.59%",
+      "nasdaq": "-0.15%",
+      "umc_adr": "+24.00%",
+      "ase_adr": "+0.95%",
+      "key_driver": "費半+4.59%大利多，IC設計領漲（聯發科漲停+9.76%）"
+    },
+    "key_lessons": [
+      "英業達教訓：動能+616%但昨漲停+9.99% = 追高風險（今-5.66%）",
+      "南亞教訓：法人買超第1名+33K但-0.39%，需要產業催化劑配合",
+      "遺漏IC設計教訓：聯發科昨漲停創高但未推薦，今+9.76%重大遺漏",
+      "台股+國際時事雙驗證：聯電ADR+24% + 聯發科漲停 = IC設計最強訊號",
+      "費半利多時，必須掃描全部5個半導體次產業（晶圓代工/載板/記憶體/封測/電源供應）",
+      "產業優先級判斷：IC設計 > 封測，不能只推薦封測",
+      "必須執行 fetch_tw_market_news.py 掃描台股本地時事"
+    ],
+    "notes": "準確率50%（2/4），封測補漲成功（日月光+3.02%）但遺漏IC設計最強次產業（聯發科+9.76%）"
   }
 }
