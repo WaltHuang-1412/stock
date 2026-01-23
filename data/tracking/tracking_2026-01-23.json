@@ -1,352 +1,72 @@
 {
   "date": "2026-01-23",
   "day_of_week": "Friday",
-  "analysis_version": "v5.9",
+  "analysis_version": "v5.9.3",
   "market_context": {
     "us_market": "NASDAQ -0.15%, 費半 +4.59%",
-    "major_news": ["費半大漲+4.59%", "聯電ADR暴漲+24%", "日月光ADR+0.95%", "韓國KOSPI+2.31%"],
-    "time_event": "費半大漲利多半導體，封測補漲機會"
-  },
-  "sync_check": {
-    "before_market_recommendations": ["6239", "3711", "2609", "2382", "1301", "8150", "2884"],
-    "tracking_recommendations": ["6239", "3711", "2609", "2382", "1301", "8150", "2884"],
-    "is_synced": true
+    "major_news": [
+      "費半+4.59%",
+      "聯電ADR+24%",
+      "日月光ADR+0.95%",
+      "韓國KOSPI+2.31%"
+    ],
+    "time_event": "費半大漲利多封測"
   },
   "recommendations": [
     {
-      "type": "stable",
-      "stock_code": "6239",
-      "stock_name": "力成",
-      "industry": {
-        "sector": "半導體",
-        "sub_type": "封測",
-        "drivers": ["CoWoS封裝", "HBM封測", "費半+4.59%"]
-      },
-      "recommend_price": 260.0,
-      "target_price": 285.0,
-      "stop_loss": 250.0,
-      "position": "15%",
-      "rating": "⭐⭐⭐⭐⭐",
-      "score": 85,
-      "五維度": {
-        "法人數據": 25,
-        "時事現況": 27,
-        "產業邏輯": 17,
-        "價格位置": 9,
-        "技術面": 7
-      },
-      "institutional_flow_7d": 10000,
-      "consecutive_buy_days": 3,
-      "five_day_change": -2.09,
-      "reason": "連3日買超+10K，費半+4.59%利多封測，封測龍頭補漲",
-      "time_horizon": "1-3週",
-      "target_return": "+10%",
-      "status": "pending"
-    },
-    {
-      "type": "stable",
       "stock_code": "3711",
       "stock_name": "日月光",
-      "industry": {
-        "sector": "半導體",
-        "sub_type": "封測",
-        "drivers": ["全球封測龍頭", "ADR+0.95%", "先進封裝"]
-      },
-      "recommend_price": 300.0,
-      "target_price": 330.0,
-      "stop_loss": 290.0,
-      "position": "10%",
-      "rating": "⭐⭐⭐⭐",
-      "score": 80,
-      "五維度": {
-        "法人數據": 22,
-        "時事現況": 26,
-        "產業邏輯": 16,
-        "價格位置": 9,
-        "技術面": 7
-      },
-      "institutional_flow_7d": 11000,
-      "consecutive_buy_days": 1,
-      "five_day_change": -1.8,
-      "reason": "日月光ADR+0.95%利多，全球封測龍頭，5日-1.8%佈局中",
-      "time_horizon": "1-3週",
-      "target_return": "+10%",
-      "status": "pending"
+      "recommend_price": 307.0,
+      "institutional_flow": 2885,
+      "reason": "ADR+0.95%封測利多",
+      "actual": {
+        "yesterday": 298.0,
+        "today": 307.0,
+        "change_pct": 3.02,
+        "result": "✅ 成功"
+      }
     },
     {
-      "type": "stable",
-      "stock_code": "2609",
-      "stock_name": "陽明",
-      "industry": {
-        "sector": "航運",
-        "sub_type": "貨櫃",
-        "drivers": ["航運旺季", "紅海繞道", "外資連續買超"]
-      },
-      "recommend_price": 56.0,
-      "target_price": 62.0,
-      "stop_loss": 53.0,
-      "position": "10%",
-      "rating": "⭐⭐⭐⭐",
-      "score": 78,
-      "五維度": {
-        "法人數據": 24,
-        "時事現況": 22,
-        "產業邏輯": 16,
-        "價格位置": 9,
-        "技術面": 7
-      },
-      "institutional_flow_7d": 3200,
-      "consecutive_buy_days": 4,
-      "five_day_change": 1.8,
-      "reason": "連4日買超，外資主導+10K，航運旺季",
-      "time_horizon": "1-2週",
-      "target_return": "+10%",
-      "status": "pending"
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "recommend_price": 77.6,
+      "institutional_flow": 33000,
+      "reason": "法人買超第1名+33K",
+      "actual": {
+        "yesterday": 77.8,
+        "today": 77.5,
+        "change_pct": -0.39,
+        "result": "❌ 失敗"
+      }
     },
     {
-      "type": "stable",
-      "stock_code": "2382",
-      "stock_name": "廣達",
-      "industry": {
-        "sector": "電子",
-        "sub_type": "AI伺服器",
-        "drivers": ["AI伺服器龍頭", "GB200訂單", "輝達合作夥伴"]
-      },
-      "recommend_price": 285.0,
-      "target_price": 310.0,
-      "stop_loss": 275.0,
-      "position": "10%",
-      "rating": "⭐⭐⭐⭐",
-      "score": 77,
-      "五維度": {
-        "法人數據": 21,
-        "時事現況": 25,
-        "產業邏輯": 16,
-        "價格位置": 9,
-        "技術面": 6
-      },
-      "institutional_flow_7d": 17000,
-      "consecutive_buy_days": 1,
-      "five_day_change": -2.2,
-      "reason": "7日+17K，外資買超，AI伺服器代工龍頭，5日-2.2%佈局中",
-      "time_horizon": "1-3週",
-      "target_return": "+10%",
-      "status": "pending"
-    },
-    {
-      "type": "stable",
       "stock_code": "1301",
       "stock_name": "台塑",
-      "industry": {
-        "sector": "塑化",
-        "sub_type": "塑化龍頭",
-        "drivers": ["外資大買+98K", "油價穩定", "景氣循環"]
-      },
-      "recommend_price": 43.5,
-      "target_price": 48.0,
-      "stop_loss": 41.0,
-      "position": "10%",
-      "rating": "⭐⭐⭐⭐",
-      "score": 76,
-      "五維度": {
-        "法人數據": 24,
-        "時事現況": 20,
-        "產業邏輯": 14,
-        "價格位置": 10,
-        "技術面": 8
-      },
-      "institutional_flow_7d": 98000,
-      "consecutive_buy_days": 2,
-      "five_day_change": 1.4,
-      "reason": "7日累計+98K！外資大買，塑化龍頭，5日+1.4%可進場",
-      "time_horizon": "1-2個月",
-      "target_return": "+10%",
-      "status": "pending"
-    },
-    {
-      "type": "stable",
-      "stock_code": "8150",
-      "stock_name": "南茂",
-      "industry": {
-        "sector": "半導體",
-        "sub_type": "封測",
-        "drivers": ["封測補漲", "記憶體封測", "費半利多"]
-      },
-      "recommend_price": 60.0,
-      "target_price": 66.0,
-      "stop_loss": 57.0,
-      "position": "5%",
-      "rating": "⭐⭐⭐",
-      "score": 76,
-      "五維度": {
-        "法人數據": 19,
-        "時事現況": 26,
-        "產業邏輯": 15,
-        "價格位置": 10,
-        "技術面": 6
-      },
-      "institutional_flow_7d": 9200,
-      "consecutive_buy_days": 1,
-      "five_day_change": -2.7,
-      "reason": "7日+9K，5日-2.7%佈局中，但近5日-776反轉警告，小倉位",
-      "time_horizon": "1-2週",
-      "target_return": "+10%",
-      "notes": "⚠️ 反轉警告，小倉位觀察",
-      "status": "pending"
-    },
-    {
-      "type": "stable",
-      "stock_code": "2884",
-      "stock_name": "玉山金",
-      "industry": {
-        "sector": "金融",
-        "sub_type": "綜合型",
-        "drivers": ["外資連4日買超", "綜合型金控", "利差穩定"]
-      },
-      "recommend_price": 32.0,
-      "target_price": 35.0,
-      "stop_loss": 30.5,
-      "position": "10%",
-      "rating": "⭐⭐⭐",
-      "score": 75,
-      "五維度": {
-        "法人數據": 23,
-        "時事現況": 20,
-        "產業邏輯": 14,
-        "價格位置": 9,
-        "技術面": 9
-      },
-      "institutional_flow_7d": 16000,
-      "consecutive_buy_days": 4,
-      "five_day_change": 2.6,
-      "reason": "連4日買超+27K，綜合型金控，5日+2.6%可進場",
-      "time_horizon": "1-2個月",
-      "target_return": "+8%",
-      "status": "pending"
-    }
-  ],
-  "avoid_stocks": [
-    {
-      "stock_code": "2303",
-      "stock_name": "聯電",
-      "reason": "ADR+24%追高風險，台股已漲+15.6%，法人-4K出貨",
-      "five_day_change": 15.6,
-      "institutional_flow": -4200
-    },
-    {
-      "stock_code": "3037",
-      "stock_name": "欣興",
-      "reason": "5日+19.3%已大漲，法人-2K賣超",
-      "five_day_change": 19.3,
-      "institutional_flow": -2147
-    },
-    {
-      "stock_code": "8046",
-      "stock_name": "南電",
-      "reason": "5日+28%已大漲",
-      "five_day_change": 28.0
-    },
-    {
-      "stock_code": "2344",
-      "stock_name": "華邦電",
-      "reason": "法人出貨中，7日累計-14K",
-      "five_day_change": -1.9,
-      "institutional_flow": -14000
-    },
-    {
-      "stock_code": "2317",
-      "stock_name": "鴻海",
-      "reason": "法人同步賣超-70K（近5日），7日累計-42K",
-      "five_day_change": -4.7,
-      "institutional_flow": -42000
-    },
-    {
-      "stock_code": "6257",
-      "stock_name": "矽格",
-      "reason": "反轉警告，近5日-1.9K，法人態度轉變",
-      "five_day_change": -1.8,
-      "institutional_flow": -1949
-    }
-  ],
-  "holdings_alert": [
-    {
-      "stock_code": "3481",
-      "stock_name": "群創",
-      "cost": 19.59,
-      "current_price": 25.40,
-      "profit_pct": 29.7,
-      "institutional_5d": -237000,
-      "alert_level": "極高危",
-      "suggestion": "獲利了結！法人連4日狂賣-237K"
-    },
-    {
-      "stock_code": "3231",
-      "stock_name": "緯創",
-      "cost": 155.72,
-      "current_price": 135.50,
-      "profit_pct": -13.0,
-      "institutional_5d": -130000,
-      "alert_level": "高危",
-      "suggestion": "設停損130元，法人連5日賣超-130K"
-    },
-    {
-      "stock_code": "2886",
-      "stock_name": "兆豐金",
-      "cost": 41.06,
-      "current_price": 39.75,
-      "profit_pct": -3.2,
-      "institutional_5d": -25000,
-      "alert_level": "警戒",
-      "suggestion": "觀察，設停損38元"
+      "recommend_price": 44.5,
+      "institutional_flow": 21000,
+      "reason": "法人買超+21K",
+      "actual": {
+        "yesterday": 43.6,
+        "today": 44.5,
+        "change_pct": 1.95,
+        "result": "✅ 成功"
+      }
     },
     {
       "stock_code": "2356",
       "stock_name": "英業達",
-      "cost": 45.77,
-      "current_price": 51.20,
-      "profit_pct": 11.9,
-      "institutional_5d": 25000,
-      "alert_level": "安全",
-      "suggestion": "續抱！法人連5日買超+25K"
+      "recommend_price": 48.4,
+      "institutional_flow": 14000,
+      "reason": "法人買超+14K",
+      "actual": {
+        "yesterday": 51.2,
+        "today": 48.3,
+        "change_pct": -5.66,
+        "result": "❌ 失敗"
+      }
     }
   ],
-  "industry_distribution": {
-    "半導體/封測": {"count": 3, "percentage": 42.9},
-    "AI伺服器": {"count": 1, "percentage": 14.3},
-    "航運": {"count": 1, "percentage": 14.3},
-    "塑化": {"count": 1, "percentage": 14.3},
-    "金融": {"count": 1, "percentage": 14.3}
-  },
-  "key_lessons_check": [
-    {
-      "lesson": "封測是半導體補漲機會",
-      "relevance": "相關",
-      "action": "今日重點推薦封測（力成、日月光、南茂）"
-    },
-    {
-      "lesson": "航空春節旺季策略",
-      "relevance": "已漲5%+",
-      "action": "不追高航空"
-    },
-    {
-      "lesson": "群創法人狂賣-126K",
-      "relevance": "持股警示",
-      "action": "建議獲利了結"
-    },
-    {
-      "lesson": "記憶體族群遺漏",
-      "relevance": "華邦電法人賣超-14K",
-      "action": "不推薦（出貨中）"
-    },
-    {
-      "lesson": "ADR大漲避開",
-      "relevance": "聯電+24%",
-      "action": "不追高"
-    }
-  ],
-  "files_created": [
-    "data/2026-01-23/before_market_analysis.md",
-    "data/tracking/tracking_2026-01-23.json"
-  ],
-  "analysis_completed_at": "2026-01-23 08:35"
+  "created_at": "2026-01-23 13:22",
+  "intraday_completed_at": "2026-01-23 13:22",
+  "accuracy": "50% (2/4)"
 }
