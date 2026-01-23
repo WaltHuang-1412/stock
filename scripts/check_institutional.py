@@ -7,11 +7,15 @@
 """
 
 import requests
+import urllib3
 import sys
 from pathlib import Path
 from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings('ignore')
+
+# 關閉 SSL 警告
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # 添加 scripts 目錄到路徑
 sys.path.insert(0, str(Path(__file__).parent))

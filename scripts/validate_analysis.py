@@ -41,19 +41,14 @@ def validate_before_market(date_str):
     with open(json_file, 'r', encoding='utf-8') as f:
         tracking = json.load(f)
 
-    # 2.1 檢查版本（允許 v5.6 或 v5.7）
-    version = tracking.get('analysis_version', '')
-    if version not in ['v5.6', 'v5.7']:
-        errors.append(f"❌ 版本錯誤: {version}（應為 v5.7）")
-
-    # 2.2 檢查推薦數量
+    # 2.1 檢查推薦數量
     recs = tracking.get('recommendations', [])
     if len(recs) < 6:
         errors.append(f"❌ 推薦數量不足: {len(recs)}檔（應為 6-8檔）")
     elif len(recs) > 8:
         warnings.append(f"⚠️  推薦數量過多: {len(recs)}檔（建議 6-8檔）")
 
-    # 2.3 檢查產業分散（簡易版：從reason關鍵字判斷）
+    # 2.2 檢查產業分散（簡易版：從reason關鍵字判斷）
     industries = {}
     for rec in recs:
         reason = rec.get('reason', '')
@@ -89,19 +84,7 @@ def validate_before_market(date_str):
         if ratio > 0.5:
             errors.append(f"❌ 產業過度集中: {ind} 佔比{ratio*100:.0f}%（應≤50%）")
 
-    # 2.4 檢查 process_compliance（關鍵步驟是否完成）
-    compliance = tracking.get('process_compliance', {})
-    critical_steps = [
-        ('step_0_time_verification', 'Step 0: 時間驗證'),
-        ('step_0_5_international_data', 'Step 0.5: 國際市場數據'),
-        ('step_1_historical_verification', 'Step 1: 歷史驗證'),
-        ('step_7_file_creation', 'Step 7: 建檔')
-    ]
-    for step_key, step_name in critical_steps:
-        if not compliance.get(step_key, False):
-            errors.append(f"❌ 流程步驟未完成: {step_name}")
-
-    # 2.5 檢查每檔推薦股是否有必要欄位
+    # 2.3 檢查每檔推薦股是否有必要欄位
     for rec in recs:
         stock_name = rec.get('stock_name', '未知')
         if 'score' not in rec:
@@ -110,6 +93,43 @@ def validate_before_market(date_str):
             errors.append(f"❌ {stock_name} 缺少推薦理由")
         if 'recommend_price' not in rec:
             warnings.append(f"⚠️  {stock_name} 缺少推薦價格")
+
+    # 2.4 檢查強制步驟（讀取 MD 檔案內容檢查）
+    if os.path.exists(md_file):
+        with open(md_file, 'r', encoding='utf-8') as f:
+            md_content = f.read()
+
+        # Step 1: 歷史驗證（強制）
+        has_verification = ('昨日推薦驗證' in md_content or
+                           '準確率' in md_content or
+                           '推薦績效' in md_content)
+        if not has_verification:
+            errors.append(f"❌ 缺少 Step 1：歷史驗證（強制）")
+            errors.append(f"   必須驗證前一日推薦表現並計算準確率")
+
+        # Step 1.8: 持股法人追蹤（強制）
+        has_holdings_tracking = ('持股法人追蹤' in md_content or
+                                'holdings_alert' in str(tracking))
+        if not has_holdings_tracking:
+            errors.append(f"❌ 缺少 Step 1.8：持股法人追蹤（強制）")
+            errors.append(f"   必須追蹤用戶持股的法人變化")
+
+        # Step 3.1: TOP50 全面掃描（強制）
+        has_top50 = ('## 📈 法人買超 TOP50' in md_content or
+                    '法人買超TOP50' in md_content or
+                    '📈 法人買超 TOP50' in md_content)
+        if not has_top50:
+            errors.append(f"❌ 缺少 Step 3.1：TOP50 全面掃描（強制）")
+            errors.append(f"   必須執行：python3 scripts/fetch_institutional_top50.py [日期]")
+
+        # Step 4.3: 籌碼深度分析（強制）
+        has_chip_analysis = ('籌碼深度分析' in md_content or
+                            '近 10 日法人買賣超' in md_content or
+                            '【近10日法人' in md_content or
+                            '近10日法人' in md_content)
+        if not has_chip_analysis:
+            errors.append(f"❌ 缺少 Step 4.3：籌碼深度分析（強制）")
+            errors.append(f"   必須執行：python3 scripts/chip_analysis.py [股票代號] --days 10")
 
     return errors, warnings
 

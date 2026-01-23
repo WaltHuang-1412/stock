@@ -15,7 +15,11 @@
       "Bash(git:*)",
       "Bash(powershell:*)",
       "Bash(cmd.exe:*)",
-      "Bash(choco:*)"
+      "Bash(choco:*)",
+      "Bash(if [ -f \"data/predictions/predictions.json\" ])",
+      "Bash(then cat data/predictions/predictions.json)",
+      "Bash(else echo \"predictions.json 不存在\")",
+      "Bash(fi)"
     ],
     "additionalDirectories": [
       "/**"
