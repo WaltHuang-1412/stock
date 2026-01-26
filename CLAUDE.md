@@ -48,7 +48,7 @@ python3 scripts/validate_analysis.py after_market 2026-01-21
 
 | 階段 | 最低要求 |
 |------|---------|
-| **盤前** | TOP50全面掃描、推薦 6-8檔、產業分散≥4個、單一產業≤50%、建檔 .md + tracking.json |
+| **盤前** | TOP30全面掃描、推薦 6-8檔、產業分散≥4個、單一產業≤50%、建檔 .md + tracking.json |
 | **盤中** | Track A + Track B、尾盤策略、建檔 intraday_analysis.md |
 | **盤後** | Track A驗證 + Track B整合 + 雙軌對比、更新 tracking + predictions、建檔 after_market_analysis.md |
 
@@ -66,6 +66,40 @@ python3 scripts/validate_analysis.py after_market 2026-01-21
 ## 系統概述
 
 基於真實法人數據的台股分析系統，提供多維度股票分析和個人持股管理。
+
+## 📋 盤前分析流程（簡化版 - 2026-01-26更新）
+
+**🎯 目標**：從 14+ 步驟/145+ 分鐘 → 5 步驟/60 分鐘
+
+### 簡化流程總覽
+
+| 步驟 | 內容 | 時間 | 關鍵輸出 |
+|------|------|------|----------|
+| **Step -1** | 資訊同步檢查 | 5分鐘 | 確認持股/tracking一致性 |
+| **Step 0** | 國際+國內時事 | 5分鐘 | 美股/費半/ADR + 台股重大訊息/法說會 |
+| **Step 1** | 歷史驗證（整合）| 15分鐘 | 昨日準確率+教訓+持股追蹤 |
+| **Step 3** | TOP30掃描+評分 | 30分鐘 | 推薦6-8檔+五維度評分 |
+| **Step 7** | 建檔 | 5分鐘 | .md + tracking.json |
+| **總計** | | **60分鐘** | |
+
+### Step 1 整合內容（15分鐘）
+雖然顯示為 1 個步驟，但仍需執行：
+1. 歷史驗證（昨日推薦表現）
+2. predictions.json 參考（歷史教訓）
+3. key_lessons 檢查（主動檢查+靈活判斷）
+4. 持股法人追蹤（前日vs昨日比對）
+
+### Step 3 整合內容（30分鐘）
+雖然顯示為 1 個步驟，但仍需執行：
+1. TOP30 輸出（買超30+賣超30）
+2. 快速時事驗證（逐檔檢查催化劑）
+3. 五維度評分（達標≥75分推薦）
+4. 籌碼深度分析（chip_analysis.py）
+5. 產業分散檢查（≥4產業、單一≤50%）
+
+**⚠️ 重要**：詳細執行細節請參考下方完整步驟說明，此處僅簡化追蹤流程。
+
+---
 
 ## 🚨 每次對話開始強制流程
 
@@ -121,19 +155,20 @@ date "+%Y-%m-%d %A"  # 確認系統當前日期和星期
 2. **必須逐步打勾** - 完成一步才能進行下一步
 3. **發現問題立即停止** - 不能「先繼續再說」
 
-**TodoWrite 範例**：
+**TodoWrite 範例（簡化流程 - 5步驟/60分鐘）**：
 ```json
 [
   {"content": "Step -1: 資訊同步檢查", "status": "in_progress", "activeForm": "檢查資訊同步"},
-  {"content": "Step 0: 國際市場數據", "status": "pending", "activeForm": "獲取國際數據"},
-  {"content": "Step 0.5: 即時股價查詢", "status": "pending", "activeForm": "查詢即時股價"},
-  {"content": "Step 1: 歷史驗證", "status": "pending", "activeForm": "驗證歷史推薦"},
-  {"content": "Step 1.7: key_lessons 檢查", "status": "pending", "activeForm": "檢查昨日教訓"},
-  {"content": "Step 1.8: 持股法人追蹤", "status": "pending", "activeForm": "追蹤持股法人"},
-  {"content": "Step 3-6: 選股流程", "status": "pending", "activeForm": "執行選股"},
+  {"content": "Step 0: 國際+國內時事", "status": "pending", "activeForm": "獲取時事數據"},
+  {"content": "Step 1: 歷史驗證（含key_lessons+持股追蹤）", "status": "pending", "activeForm": "驗證歷史推薦"},
+  {"content": "Step 3: TOP30掃描+五維度評分", "status": "pending", "activeForm": "執行選股"},
   {"content": "Step 7: 建檔", "status": "pending", "activeForm": "建立文件"}
 ]
 ```
+
+**⚠️ 注意**：雖然簡化為5步驟，但以下內容仍需執行（整合在相應步驟中）：
+- Step 1 包含：歷史驗證 + predictions參考 + key_lessons檢查 + 持股法人追蹤
+- Step 3 包含：TOP30輸出 + 快速時事驗證 + 五維度評分 + 籌碼分析 + 產業分散檢查
 
 **❌ 絕對禁止**：
 - ❌ 不用 TodoWrite 就開始分析
@@ -181,13 +216,20 @@ cat data/tracking/tracking_$(date -d yesterday +%Y-%m-%d).json
 
 ---
 
-**Step 0: 國際市場數據（盤前必須執行）**
+**Step 0: 國際+國內時事數據（盤前必須執行）**
 ```bash
-# 盤前分析第一步：獲取最新國際市場數據
+# Step 0.1: 獲取國際市場數據（美股、費半、ADR）
 python3 scripts/fetch_us_asia_markets.py
+
+# Step 0.2: 獲取台股時事（重大訊息、法說會、熱門題材）
+python3 scripts/fetch_tw_market_news.py
 ```
-⚠️ **禁止使用「資料更新中」** - 必須獲取真實即時數據
-⚠️ **禁止硬編碼數據** - 所有國際市場數據必須即時查詢
+
+**⚠️ 強制規則**：
+- ✅ **必須查詢國際+國內雙重時事**
+- ❌ **禁止使用「資料更新中」** - 必須獲取真實即時數據
+- ❌ **禁止硬編碼數據** - 所有時事數據必須即時查詢
+- ❌ **禁止只看國際忽略國內** - 兩者同樣重要
 
 **Step 0.5: 🚨 即時股價查詢（強制執行）** 🆕 2025-12-19血淚教訓
 ```python
@@ -400,30 +442,30 @@ python3 scripts/check_institutional.py [股票代號] [昨日日期]
 - 🔥 **避開失敗模式** - 避免重複昨日失敗股票的特質
 - 🔥 **優先級調整** - 成功延續型 > 全新挖掘型
 
-**Step 3: 🔥 TOP50 全面掃描（v5.9 重構）** 🔴 **核心步驟**
+**Step 3: 🔥 TOP30 全面掃描（v5.9 重構）** 🔴 **核心步驟**
 
 **⚠️ 重大教訓（2026-01-22）**：
 - 問題：用「時事→產業」限縮視野，只看半導體，漏掉正達(3149)
-- 原因：正達在 TOP50 #30，但因為不屬於「半導體次產業」被跳過
-- 結論：**TOP50 是選股的起點，不是產業**
+- 原因：正達在 TOP30 #30，但因為不屬於「半導體次產業」被跳過
+- 結論：**TOP30 是選股的起點，不是產業**
 
 **🔴 正確流程（v5.9）**：
 ```
-1. 先查 TOP50 法人買賣超（全部 50 檔）
-2. 對 TOP50 每一檔快速檢查個股新聞
+1. 先查 TOP30 法人買賣超（全部 30 檔）
+2. 對 TOP30 每一檔快速檢查個股新聞
 3. 有催化劑的 → 五維度評分
 4. 評分 ≥75分 → 推薦
 5. 時事→產業對照表只是「確保不遺漏」，不是「限制範圍」
 ```
 
-**🔥 Step 3.1: 輸出 TOP50 法人買賣超（強制）**
+**🔥 Step 3.1: 輸出 TOP30 法人買賣超（強制）**
 ```bash
-python3 scripts/fetch_institutional_top50.py [日期YYYYMMDD]
+python3 scripts/fetch_institutional_top30.py [日期YYYYMMDD]
 ```
 
-**必須輸出完整 TOP50 表格**，讓用戶看到全貌：
+**必須輸出完整 TOP30 表格**，讓用戶看到全貌：
 ```markdown
-## 📈 法人買超 TOP50（YYYY-MM-DD）
+## 📈 法人買超 TOP30（YYYY-MM-DD）
 
 | 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |
 |------|------|------|---------|------|------|--------|------|
@@ -431,12 +473,12 @@ python3 scripts/fetch_institutional_top50.py [日期YYYYMMDD]
 | 2 | 2887 | 台新金 | +78K | +136K | -53K | +3.6% | ⚠️ 已小漲 |
 | ... | ... | ... | ... | ... | ... | ... | ... |
 | 30 | 3149 | 正達 | +2.5K | +0 | +2.5K | +2.1% | ✅ 可進場 |
-（完整 50 檔）
+（完整 30 檔）
 ```
 
-**🔥 Step 3.2: TOP50 每檔快速時事驗證（強制）**
+**🔥 Step 3.2: TOP30 每檔快速時事驗證（強制）**
 
-對 TOP50 每一檔，快速檢查：
+對 TOP30 每一檔，快速檢查：
 1. 有無重大新聞（法說會、訂單、合作案、漲價）
 2. 有無產業催化劑
 
@@ -462,8 +504,8 @@ python3 scripts/fetch_institutional_top50.py [日期YYYYMMDD]
 | 面板漲價 | 面板 | 群創、友達 |
 
 **⚠️ 重要**：這張表是「加分項」，不是「篩選條件」
-- TOP50 裡有股票符合這張表 → 加分
-- TOP50 裡有股票不在這張表但有個股催化劑 → **一樣要評分**
+- TOP30 裡有股票符合這張表 → 加分
+- TOP30 裡有股票不在這張表但有個股催化劑 → **一樣要評分**
 
 **🔴 金融防禦策略特殊規則**：
 
@@ -478,7 +520,7 @@ python3 scripts/fetch_institutional_top50.py [日期YYYYMMDD]
 
 對 Step 3.2 標註「⭐有重大催化劑」或「🔥產業利多」或「✅法人買+還沒漲」的股票：
 ```bash
-# 對 TOP50 每一檔，快速搜尋個股新聞
+# 對 TOP30 每一檔，快速搜尋個股新聞
 # 方法：Google搜尋「股票代號 + 近期」或查看個股新聞
 ```
 
@@ -491,7 +533,7 @@ python3 scripts/fetch_institutional_top50.py [日期YYYYMMDD]
 | 法說會/財報 | 業績展望 | 營收創高 |
 
 **🔴 強制執行**：
-- ✅ TOP50 每一檔都要快速掃一眼有無重大新聞
+- ✅ TOP30 每一檔都要快速掃一眼有無重大新聞
 - ✅ 發現有重大催化劑 → 進行完整五維度評分
 - ✅ 評分達標（≥75分）才納入推薦
 - ❌ 不能只看排名前10-20就停止
@@ -499,7 +541,7 @@ python3 scripts/fetch_institutional_top50.py [日期YYYYMMDD]
 
 **Step 4.3: 🆕 籌碼深度分析（對有興趣的3-5檔）**
 
-對 TOP50 篩選出的候選股，做籌碼深度分析：
+對 TOP30 篩選出的候選股，做籌碼深度分析：
 ```bash
 # 查詢近10天法人買賣超歷史
 python3 scripts/chip_analysis.py 2883 2887 2303
@@ -1443,16 +1485,17 @@ stock/
 ### 核心工具
 
 **check_institutional.py** - 法人數據查詢（單日）
-- 解決只能看TOP50限制
+- 解決只能看TOP30限制
 - 可查詢任何股票單日法人數據
 - 用法：`python3 scripts/check_institutional.py 2330 20251111`
 
-**fetch_institutional_top50.py** - 法人買賣超TOP50 🆕 2025-12-17（2026-01-20檔名更新）
+**fetch_institutional_top30.py** - 法人買賣超TOP30 🆕 2026-01-26（從TOP50優化）
 - 執行時機：盤前分析
-- 功能：查詢法人買賣超TOP50 + 5日漲幅 + 狀態標註
+- 功能：查詢法人買賣超TOP30 + 5日漲幅 + 狀態標註
 - 自動過濾「已大漲」股票，標註「佈局中/可進場/追高風險」
-- 用法：`python3 scripts/fetch_institutional_top50.py [日期YYYYMMDD]`
-- 範例：`python3 scripts/fetch_institutional_top50.py 20251216`
+- 用法：`python3 scripts/fetch_institutional_top30.py [日期YYYYMMDD]`
+- 範例：`python3 scripts/fetch_institutional_top30.py 20260123`
+- ⚠️ 5日漲幅功能需要 yfinance 模組（需安裝編譯器）
 
 **chip_analysis.py** - 籌碼分析工具（N天歷史）🆕 2025-12-17 **重要**
 - 執行時機：盤前選股後，對有興趣的3-5檔做深度分析
@@ -2635,9 +2678,9 @@ Track B 全市場發現：
 curl "https://www.twse.com.tw/rwd/en/fund/T86?date=YYYYMMDD&selectType=ALL&response=json"
 ```
 
-**Step 2: 輸出法人買超/賣超 TOP50（強制）** 🆕 2025-12-17更新
+**Step 2: 輸出法人買超/賣超 TOP30（強制）** 🆕 2026-01-26更新
 ```markdown
-## 📈 法人買超 TOP50（YYYY-MM-DD）
+## 📈 法人買超 TOP30（YYYY-MM-DD）
 
 | 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |
 |------|------|------|---------|------|------|--------|------|
@@ -2646,7 +2689,7 @@ curl "https://www.twse.com.tw/rwd/en/fund/T86?date=YYYYMMDD&selectType=ALL&respo
 | 3 | ... | ... | ... | ... | ... | ... | ... |
 （完整30檔）
 
-## 📉 法人賣超 TOP50（YYYY-MM-DD）
+## 📉 法人賣超 TOP30（YYYY-MM-DD）
 
 | 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 解讀 |
 |------|------|------|---------|------|------|------|
@@ -2663,9 +2706,9 @@ curl "https://www.twse.com.tw/rwd/en/fund/T86?date=YYYYMMDD&selectType=ALL&respo
 | 5-8% | 🟡 追高風險 | 考慮等回檔 |
 | > 8% | 🔴 已大漲 | 不建議追 |
 
-**Step 3: 從 TOP50 中評分推薦**
+**Step 3: 從 TOP30 中評分推薦**
 ```
-展示完整TOP50給用戶，用戶可自行判斷：
+展示完整TOP30給用戶，用戶可自行判斷：
 1. 哪些「法人買超 + 還沒漲」→ 進場機會
 2. 哪些「法人買超 + 已大漲」→ 觀望或等回檔
 3. 不強制只推薦3-5檔，給用戶更多選擇
@@ -2717,7 +2760,7 @@ curl "https://www.twse.com.tw/rwd/en/fund/T86?date=YYYYMMDD&selectType=ALL&respo
 | 2 | 2454 | 聯發科 | +4.20% | ❌ 否 | +8,234 | 未推薦 |
 （完整10檔）
 
-## 📈 法人買超 TOP50（今日）
+## 📈 法人買超 TOP30（今日）
 
 （完整30檔，用於明日盤前分析）
 ```
@@ -2760,8 +2803,8 @@ curl "https://www.twse.com.tw/rwd/en/fund/T86?date=YYYYMMDD&selectType=ALL&respo
 
 **盤前分析**：
 - [ ] 查詢了全市場法人數據？
-- [ ] 輸出了買超TOP50 + 賣超TOP50？
-- [ ] 從TOP50中標註狀態（5日漲幅）？
+- [ ] 輸出了買超TOP30 + 賣超TOP30？
+- [ ] 從TOP30中標註狀態（5日漲幅）？
 - [ ] tracking.json 已同步更新？
 
 **盤中分析**：
@@ -2771,7 +2814,7 @@ curl "https://www.twse.com.tw/rwd/en/fund/T86?date=YYYYMMDD&selectType=ALL&respo
 
 **盤後分析**：
 - [ ] 輸出了漲幅TOP10？
-- [ ] 輸出了法人買超TOP50（明日用）？
+- [ ] 輸出了法人買超TOP30（明日用）？
 - [ ] 驗證了tracking與盤前推薦是否一致？
 
 ---
@@ -2795,8 +2838,8 @@ curl "https://www.twse.com.tw/rwd/en/fund/T86?date=YYYYMMDD&selectType=ALL&respo
 url = 'https://www.twse.com.tw/rwd/en/fund/T86?date=YYYYMMDD&selectType=ALL&response=json'
 
 # 必須輸出：
-📈 買超TOP50（依三大法人合計排序）
-📉 賣超TOP50（依三大法人合計排序）
+📈 買超TOP30（依三大法人合計排序）
+📉 賣超TOP30（依三大法人合計排序）
 
 # 絕對禁止：
 ❌ 只查持股中的5-10檔
@@ -3201,14 +3244,14 @@ python3 scripts/check_institutional.py 2883 20251111
   - 效果：區分「真佈局」vs「假佈局」，提升佈局股成功率
 - 🆕 **v5.9 選股流程重構**（2026-01-22）
   - 問題：用「時事→產業」限縮視野，只看半導體，漏掉正達(3149)
-  - 原因：正達在 TOP50 #30，但不屬於「半導體次產業」所以被跳過
-  - 解決：**重構 Step 3，TOP50 是選股起點，不是產業**
+  - 原因：正達在 TOP30 #30，但不屬於「半導體次產業」所以被跳過
+  - 解決：**重構 Step 3，TOP30 是選股起點，不是產業**
   - 新流程：
-    1. Step 3.1：輸出完整 TOP50（強制）
-    2. Step 3.2：對 TOP50 每一檔快速時事驗證
+    1. Step 3.1：輸出完整 TOP30（強制）
+    2. Step 3.2：對 TOP30 每一檔快速時事驗證
     3. Step 3.3：時事→產業對照表（輔助用，不是限制）
     4. Step 4：對有催化劑的股票五維度評分
-  - 核心：**TOP50 每一檔都要看，有催化劑就評分，達標（≥75分）才推薦**
+  - 核心：**TOP30 每一檔都要看，有催化劑就評分，達標（≥75分）才推薦**
 - 🆕 **v5.7 產業掃描矩陣完善**（2026-01-21）
   - 問題：費半利多只推薦載板，遺漏記憶體（華邦電+5.85%）
   - 解決：費半利多時必須掃描全部5個次產業（晶圓代工/載板/記憶體/封測/電源供應）
@@ -3259,10 +3302,10 @@ python3 scripts/check_institutional.py 2883 20251111
 
 **v5.2更新**（2025-12-17）：
 - 🆕 **籌碼分析工具**：`chip_analysis.py` 查詢N天法人歷史，驗證「真連續買超」
-- 🆕 **法人TOP50篩選**：`fetch_institutional_top50.py` 自動標註5日漲幅+狀態（2026-01-20檔名更新）
+- 🆕 **法人TOP30篩選**：`fetch_institutional_top30.py` 自動標註5日漲幅+狀態（2026-01-26從TOP50優化）
 - 🆕 **時事先行策略**：從產業找股票，不是從法人找股票
 - 🆕 **產業分散規則**：單一產業≤50%
-- 🔧 **盤前流程優化**：TOP50快速篩選 → 籌碼深度分析 → 最終推薦
+- 🔧 **盤前流程優化**：TOP30快速篩選 → 籌碼深度分析 → 最終推薦
 
 **v5.1更新**（2025-12-12）：
 - 個人持股分析工具：`my_holdings_analyzer.py`
