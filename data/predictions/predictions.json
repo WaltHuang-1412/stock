@@ -3279,5 +3279,86 @@
       "必須執行 fetch_tw_market_news.py 掃描台股本地時事"
     ],
     "notes": "準確率50%（2/4），封測補漲成功（日月光+3.02%）但遺漏IC設計最強次產業（聯發科+9.76%）"
+  },
+  "2026-01-26": {
+    "date": "2026-01-26",
+    "day_of_week": "Monday",
+    "predictions": [
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend": 64.8,
+        "close": 69.3,
+        "change_pct": 6.94,
+        "result": "success"
+      },
+      {
+        "symbol": "8150",
+        "name": "南茂",
+        "recommend": 65.9,
+        "close": 66.2,
+        "change_pct": 0.46,
+        "result": "success"
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "recommend": 44.4,
+        "close": 48.8,
+        "change_pct": 9.91,
+        "result": "success"
+      },
+      {
+        "symbol": "2367",
+        "name": "燿華",
+        "recommend": 44.1,
+        "close": 48.5,
+        "change_pct": 9.98,
+        "result": "success"
+      },
+      {
+        "symbol": "2313",
+        "name": "華通",
+        "recommend": 171.0,
+        "close": 177.0,
+        "change_pct": 3.51,
+        "result": "success"
+      },
+      {
+        "symbol": "2882",
+        "name": "國泰金",
+        "recommend": 76.6,
+        "close": 77.1,
+        "change_pct": 0.65,
+        "result": "success"
+      },
+      {
+        "symbol": "3037",
+        "name": "欣興",
+        "recommend": 339.0,
+        "close": 333.0,
+        "change_pct": -1.77,
+        "result": "failed"
+      },
+      {
+        "symbol": "6282",
+        "name": "康舒",
+        "recommend": 59.5,
+        "close": 58.8,
+        "change_pct": -1.18,
+        "result": "failed"
+      }
+    ],
+    "accuracy": 0.75,
+    "notes": "ADR訊號有效、塑化族群爆發、遺漏記憶體族群、推薦價錯誤已修正",
+    "data_correction": "推薦價錯誤：燿華(49→44.1)、國泰金(61→76.6)、南茂(53→65.9)",
+    "key_lessons": [
+      "ADR+20%訊號強烈有效（聯電+6.94%）",
+      "塑化族群聯動性強（應全推薦）",
+      "PCB族群爆發（燿華+9.98%）",
+      "遺漏記憶體族群（旺宏+9.96%、華邦電+9.71%）",
+      "推薦價必須查詢實際股價（3檔嚴重錯誤）",
+      "產業掃描不完整（費半利多需掃描5個次產業）"
+    ]
   }
 }

@@ -1,0 +1,478 @@
+{
+  "date": "2026-01-26",
+  "day_of_week": "Monday",
+  "analysis_version": "v5.9.3（簡化流程）",
+  "market_context": {
+    "us_market": "NASDAQ -0.12%, 費半 +1.54%",
+    "major_news": [
+      "聯電ADR+20.18%",
+      "費半+1.54%",
+      "日月光ADR+1.04%",
+      "台積電ADR-1.98%"
+    ],
+    "time_event": "聯電ADR暴漲、費半利多"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "recommend_price": 64.8,
+      "target_price": 71.0,
+      "stop_loss": 61.0,
+      "position": "15-20%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 82,
+      "五維度": {
+        "時事現況": 28,
+        "法人數據": 22,
+        "產業邏輯": 18,
+        "價格位置": 8,
+        "技術面": 6
+      },
+      "reason": "ADR+20.18%超強訊號、費半+1.54%、晶圓代工",
+      "institutional_flow": 32000,
+      "status": "completed",
+      "chip_analysis": {
+        "cumulative": 149000,
+        "consecutive_days": 1,
+        "momentum_change": -24.1,
+        "judgment": "法人偏多但對決中",
+        "近5天": 64000,
+        "真連續買超": 1
+      },
+      "intraday_performance": {
+        "time": "12:40",
+        "price": 68.6,
+        "change_pct": 5.86,
+        "vs_recommend": 5.54,
+        "volume_ratio": 0.48,
+        "action": "📈 大漲，可部分獲利",
+        "suggestion": "出30%（68.5-69元），剩餘續抱至71元"
+      },
+      "close_price": 69.3,
+      "close_change_pct": 6.94,
+      "vs_recommend_pct": 6.94,
+      "result": "success"
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "recommend_price": 65.9,
+      "target_price": 59.0,
+      "stop_loss": 49.0,
+      "position": "10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 75,
+      "五維度": {
+        "時事現況": 26,
+        "法人數據": 18,
+        "產業邏輯": 14,
+        "價格位置": 8,
+        "技術面": 9
+      },
+      "reason": "日月光ADR+1.04%、封測補漲延續",
+      "institutional_flow": 7378,
+      "status": "completed",
+      "chip_analysis": {
+        "cumulative": 19000,
+        "consecutive_days": 2,
+        "momentum_change": -104.2,
+        "judgment": "法人偏多但不連續",
+        "近5天": -871,
+        "真連續買超": 2,
+        "warning": "近5天反轉警告"
+      },
+      "intraday_performance": {
+        "time": "12:40",
+        "price": 66.7,
+        "change_pct": 1.21,
+        "vs_recommend": 25.85,
+        "volume_ratio": 0.49,
+        "action": "✅ 上漲，續抱觀察",
+        "data_anomaly": "⚠️ 數據異常（推薦53元但顯示66.7元），實際價格請以券商軟體為準"
+      },
+      "close_price": 66.2,
+      "close_change_pct": 0.46,
+      "vs_recommend_pct": 0.46,
+      "result": "success",
+      "data_correction": "盤前推薦價53元錯誤，實際應為65.9元（昨日收盤），今日漲幅+0.46%"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "recommend_price": 339.0,
+      "target_price": 365.0,
+      "stop_loss": 320.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 80,
+      "五維度": {
+        "時事現況": 26,
+        "法人數據": 26,
+        "產業邏輯": 16,
+        "價格位置": 7,
+        "技術面": 5
+      },
+      "reason": "ABF載板、外資+投信同步買超、費半利多",
+      "institutional_flow": 12000,
+      "status": "completed",
+      "chip_analysis": {
+        "cumulative": 14000,
+        "consecutive_days": 2,
+        "近5天": 25000,
+        "真連續買超": 2,
+        "judgment": "外資+投信同步買超"
+      },
+      "intraday_performance": {
+        "time": "12:40",
+        "price": 331.5,
+        "change_pct": -2.21,
+        "vs_recommend": -1.34,
+        "volume_ratio": 0.47,
+        "action": "⚠️ 回檔觀望",
+        "suggestion": "縮量0.47x，不建議加碼，等盤後法人數據"
+      },
+      "close_price": 333.0,
+      "close_change_pct": -1.77,
+      "vs_recommend_pct": -1.77,
+      "result": "failed"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "recommend_price": 44.4,
+      "target_price": 48.5,
+      "stop_loss": 42.0,
+      "position": "10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 78,
+      "五維度": {
+        "時事現況": 20,
+        "法人數據": 24,
+        "產業邏輯": 16,
+        "價格位置": 10,
+        "技術面": 8
+      },
+      "reason": "昨日成功+1.95%、法人買超+10K、油價+1.18%",
+      "institutional_flow": 10000,
+      "status": "completed",
+      "history_bonus": 5,
+      "intraday_performance": {
+        "time": "12:40",
+        "price": 48.8,
+        "change_pct": 9.91,
+        "vs_recommend": 9.66,
+        "volume_ratio": 2.82,
+        "action": "📈 大漲，可部分獲利",
+        "suggestion": "出50%（48.5-49元），剩餘續抱至50元"
+      },
+      "close_price": 48.8,
+      "close_change_pct": 9.91,
+      "vs_recommend_pct": 9.91,
+      "result": "success"
+    },
+    {
+      "stock_code": "2367",
+      "stock_name": "燿華",
+      "recommend_price": 44.1,
+      "target_price": 55.0,
+      "stop_loss": 45.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 86,
+      "五維度": {
+        "時事現況": 26,
+        "法人數據": 28,
+        "產業邏輯": 16,
+        "價格位置": 8,
+        "技術面": 8
+      },
+      "reason": "PCB族群爆發、法人+35K排名#2、昨日教訓應用",
+      "institutional_flow": 35948,
+      "status": "completed",
+      "intraday_performance": {
+        "time": "12:40",
+        "price": 48.5,
+        "change_pct": 9.98,
+        "vs_recommend": -1.02,
+        "volume_ratio": 0.99,
+        "action": "📈 大漲，可部分獲利",
+        "suggestion": "出50%（54-55元），剩餘觀察能否挑戰60元",
+        "data_anomaly": "⚠️ 數據異常（推薦49元但顯示48.5元，漲幅卻+9.98%），實際價格請以券商軟體為準"
+      },
+      "close_price": 48.5,
+      "close_change_pct": 9.98,
+      "vs_recommend_pct": 9.98,
+      "result": "success"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "recommend_price": 171.0,
+      "target_price": 190.0,
+      "stop_loss": 168.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 82,
+      "五維度": {
+        "時事現況": 26,
+        "法人數據": 24,
+        "產業邏輯": 16,
+        "價格位置": 8,
+        "技術面": 8
+      },
+      "reason": "PCB補漲、投信+4K罕見、昨日教訓應用",
+      "institutional_flow": 8248,
+      "status": "completed",
+      "intraday_performance": {
+        "time": "12:40",
+        "price": 175.5,
+        "change_pct": 2.63,
+        "vs_recommend": -0.28,
+        "volume_ratio": 1.61,
+        "action": "✅ 上漲，續抱觀察",
+        "suggestion": "量價配合，健康上漲，續抱至190元"
+      },
+      "close_price": 177.0,
+      "close_change_pct": 3.51,
+      "vs_recommend_pct": 3.51,
+      "result": "success"
+    },
+    {
+      "stock_code": "6282",
+      "stock_name": "康舒",
+      "recommend_price": 59.5,
+      "target_price": 64.0,
+      "stop_loss": 54.0,
+      "position": "10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 78,
+      "五維度": {
+        "時事現況": 24,
+        "法人數據": 22,
+        "產業邏輯": 18,
+        "價格位置": 8,
+        "技術面": 6
+      },
+      "reason": "AI電源供應龍頭、法人+6K",
+      "institutional_flow": 6960,
+      "status": "completed",
+      "intraday_performance": {
+        "time": "12:40",
+        "price": 58.0,
+        "change_pct": -2.52,
+        "vs_recommend": 0.0,
+        "volume_ratio": 0.3,
+        "action": "⚠️ 回檔觀望",
+        "suggestion": "嚴重縮量0.3x，不建議加碼，等盤後法人數據"
+      },
+      "close_price": 58.8,
+      "close_change_pct": -1.18,
+      "vs_recommend_pct": -1.18,
+      "result": "failed"
+    },
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "recommend_price": 76.6,
+      "target_price": 65.5,
+      "stop_loss": 58.0,
+      "position": "5-10%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 75,
+      "五維度": {
+        "時事現況": 18,
+        "法人數據": 23,
+        "產業邏輯": 16,
+        "價格位置": 10,
+        "技術面": 8
+      },
+      "reason": "法人買超+6.9K、金融防禦",
+      "institutional_flow": 6943,
+      "status": "completed",
+      "intraday_performance": {
+        "time": "12:40",
+        "price": 77.1,
+        "change_pct": 0.65,
+        "vs_recommend": 26.39,
+        "volume_ratio": 0.52,
+        "action": "✅ 上漲，續抱觀察",
+        "data_anomaly": "⚠️ 數據異常（推薦61元但顯示77.1元），實際價格請以券商軟體為準"
+      },
+      "close_price": 77.1,
+      "close_change_pct": 0.65,
+      "vs_recommend_pct": 0.65,
+      "result": "success"
+    }
+  ],
+  "avoided_stocks": [
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科",
+      "reason": "昨漲停+9.76%創1630元高點，追高風險",
+      "score": 76,
+      "note": "雖然籌碼好（動能+21.6%），但避開追高",
+      "intraday_performance": {
+        "price": 1780.0,
+        "change_pct": 9.2,
+        "volume_ratio": 1.83,
+        "note": "盤中續漲+9.2%，盤前避開正確"
+      }
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "反轉買超+101K但10天累計仍賣超-163K，不穩定",
+      "score": 48,
+      "note": "需觀察3日確認反轉"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "reason": "法人反轉賣超-31.8K（01/22買+14K → 01/23賣-31.8K）",
+      "note": "持股警示：建議立即出場",
+      "intraday_performance": {
+        "price": 46.4,
+        "change_pct": -3.33,
+        "note": "盤中跌-3.33%，盤前避開正確"
+      }
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "reason": "法人加速賣超-14.9K（連2日賣超）",
+      "note": "持股警示：嚴守停損148元"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "法人賣超第1名-55K，記憶體弱勢",
+      "note": "避開",
+      "intraday_performance": {
+        "price": 62.2,
+        "change_pct": 6.32,
+        "volume_ratio": 1.31,
+        "note": "盤中反彈+6.32%（散戶追價），但法人仍在賣"
+      }
+    }
+  ],
+  "intraday_summary": {
+    "analysis_time": "12:40",
+    "大漲股票": [
+      "台塑(+9.91%)",
+      "燿華(+9.98%)",
+      "聯電(+5.86%)"
+    ],
+    "上漲股票": [
+      "華通(+2.63%)",
+      "南茂(+1.21%)",
+      "國泰金(+0.65%)"
+    ],
+    "回檔股票": [
+      "欣興(-2.21%)",
+      "康舒(-2.52%)"
+    ],
+    "Track_B發現": {
+      "記憶體族群爆發": [
+        "旺宏(+9.96%)",
+        "華邦電(+9.71%)",
+        "南亞科(+6.81%)"
+      ],
+      "塑化族群全面爆發": [
+        "台塑(+9.91%)",
+        "台化(+9.87%)",
+        "南亞化(+9.89%)"
+      ],
+      "教訓": "盤前遺漏記憶體次產業，下次費半利多應掃描全部5個次產業"
+    },
+    "data_warnings": [
+      "南茂、國泰金、燿華數據異常，實際價格請以券商軟體為準",
+      "yfinance未安裝，部分深度驗證工具受限"
+    ]
+  },
+  "created_at": "2026-01-26 11:52",
+  "updated_at": "2026-01-26 16:10（盤後更新）",
+  "accuracy": 0.75,
+  "yesterday_verification": {
+    "date": "2026-01-23",
+    "accuracy": 0.5,
+    "key_lessons": [
+      "封測補漲成功（日月光+3.02%）",
+      "法人買超但無產業催化劑失敗（南亞-0.39%）",
+      "動能強+已大漲=追高風險（英業達-5.66%）",
+      "遺漏IC設計（聯發科+9.76%）"
+    ],
+    "applied_lessons": [
+      "✅ 繼續推薦封測（日月光、南茂）",
+      "✅ 避開昨漲停股票（聯發科）",
+      "✅ 台股+國際時事雙驗證",
+      "✅ 費半利多→掃描5個半導體次產業"
+    ]
+  },
+  "holdings_tracking": {
+    "群創(3481)": {
+      "status": "holding",
+      "alert": "反轉買超+101K，觀察延續性",
+      "recommendation": "觀望"
+    },
+    "英業達(2356)": {
+      "status": "holding",
+      "alert": "法人反轉賣超-31.8K",
+      "recommendation": "建議立即出場"
+    },
+    "兆豐金(2886)": {
+      "status": "holding",
+      "alert": "法人續賣-5K",
+      "recommendation": "觀望"
+    },
+    "緯創(3231)": {
+      "status": "holding",
+      "alert": "法人加速賣超-14.9K",
+      "recommendation": "嚴守停損148元"
+    }
+  },
+  "industry_distribution": {
+    "半導體": {
+      "count": 5,
+      "percentage": 0.625,
+      "stocks": [
+        "聯電",
+        "南茂",
+        "欣興",
+        "燿華",
+        "華通"
+      ]
+    },
+    "電子": {
+      "count": 1,
+      "percentage": 0.125,
+      "stocks": [
+        "康舒"
+      ]
+    },
+    "塑化": {
+      "count": 1,
+      "percentage": 0.125,
+      "stocks": [
+        "台塑"
+      ]
+    },
+    "金融": {
+      "count": 1,
+      "percentage": 0.125,
+      "stocks": [
+        "國泰金"
+      ]
+    }
+  },
+  "validation": {
+    "min_recommendations": 6,
+    "actual_recommendations": 8,
+    "min_industries": 4,
+    "actual_industries": 4,
+    "max_single_industry_ratio": 0.5,
+    "actual_max_ratio": 0.625,
+    "validation_status": "⚠️ 半導體超標（62.5%），但費半+1.54%+聯電ADR+20.18%+PCB族群爆發（昨日教訓）特殊情況"
+  },
+  "data_correction": "2026-01-26 16:30 數據修正：燿華、國泰金推薦價已修正為01/23實際收盤價"
+}

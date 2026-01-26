@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-法人買賣超 TOP50 查詢工具
+法人買賣超 TOP30 查詢工具
 
 功能：
 - 查詢證交所法人買賣超數據
@@ -8,13 +8,13 @@
 - 標註狀態（佈局中/可進場/已小漲/追高風險/已大漲）
 
 使用方式：
-    python3 scripts/fetch_institutional_top50.py [日期YYYYMMDD]
+    python3 scripts/fetch_institutional_top30.py [日期YYYYMMDD]
 
 範例：
-    python3 scripts/fetch_institutional_top50.py           # 查詢最近交易日
-    python3 scripts/fetch_institutional_top50.py 20251216  # 查詢指定日期
+    python3 scripts/fetch_institutional_top30.py           # 查詢最近交易日
+    python3 scripts/fetch_institutional_top30.py 20251216  # 查詢指定日期
 
-修改日期：2026-01-20（TOP30→TOP50 + 檔名更新）
+修改日期：2026-01-26（TOP50→TOP30 效率優化）
 """
 
 import requests
@@ -85,19 +85,19 @@ def get_status(pct):
     if pct is None:
         return '--'
     if pct < 0:
-        return '⭐ 佈局中'
+        return '[佈局中]'
     elif pct < 3:
-        return '✅ 可進場'
+        return '[可進場]'
     elif pct < 5:
-        return '⚠️ 已小漲'
+        return '[已小漲]'
     elif pct < 8:
-        return '🟡 追高風險'
+        return '[追高風險]'
     else:
-        return '🔴 已大漲'
+        return '[已大漲]'
 
 
-def fetch_institutional_top50(date=None):
-    """查詢法人買賣超 TOP50"""
+def fetch_institutional_top30(date=None):
+    """查詢法人買賣超 TOP30"""
 
     # 日期處理
     if not date:
@@ -125,7 +125,7 @@ def fetch_institutional_top50(date=None):
         data = response.json()
 
         if 'data' not in data or not data['data']:
-            print(f'❌ 查無 {formatted_date} 的法人數據')
+            print(f'[錯誤] 查無 {formatted_date} 的法人數據')
             print('可能原因：非交易日或數據尚未公布')
             return None
 
@@ -157,20 +157,20 @@ def fetch_institutional_top50(date=None):
             except:
                 continue
 
-        # 買超 TOP50
-        stocks_buy = sorted(stocks, key=lambda x: x['total'], reverse=True)[:50]
+        # 買超 TOP30
+        stocks_buy = sorted(stocks, key=lambda x: x['total'], reverse=True)[:30]
 
-        # 賣超 TOP50
-        stocks_sell = sorted(stocks, key=lambda x: x['total'])[:50]
+        # 賣超 TOP30
+        stocks_sell = sorted(stocks, key=lambda x: x['total'])[:30]
 
         return {
             'date': formatted_date,
-            'buy_top50': stocks_buy,
-            'sell_top50': stocks_sell
+            'buy_top30': stocks_buy,
+            'sell_top30': stocks_sell
         }
 
     except Exception as e:
-        print(f'❌ 查詢錯誤: {e}')
+        print(f'[錯誤] 查詢錯誤: {e}')
         return None
 
 
@@ -190,23 +190,23 @@ def format_value(v):
         return f'+{v_lot:,}' if v_lot >= 0 else f'{v_lot:,}'
 
 
-def print_top50_report(result, include_price=True):
-    """輸出 TOP50 報告"""
+def print_top30_report(result, include_price=True):
+    """輸出 TOP30 報告"""
 
     if not result:
         return
 
     date = result['date']
-    buy_top50 = result['buy_top50']
-    sell_top50 = result['sell_top50']
+    buy_top30 = result['buy_top30']
+    sell_top30 = result['sell_top30']
 
-    # 買超 TOP50
-    print(f'\n## 📈 法人買超 TOP50（{date}）')
+    # 買超 TOP30
+    print(f'\n## 法人買超 TOP30（{date}）')
     print()
     print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
     print('|------|------|------|---------|------|------|--------|------|')
 
-    for i, s in enumerate(buy_top50, 1):
+    for i, s in enumerate(buy_top30, 1):
         if include_price:
             pct = get_5day_change(s['code'])
             pct_str = f'{pct:+.1f}%' if pct is not None else '--'
@@ -221,13 +221,13 @@ def print_top50_report(result, include_price=True):
     print('---')
     print()
 
-    # 賣超 TOP50
-    print(f'## 📉 法人賣超 TOP50（{date}）')
+    # 賣超 TOP30
+    print(f'## 法人賣超 TOP30（{date}）')
     print()
     print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
     print('|------|------|------|---------|------|------|--------|------|')
 
-    for i, s in enumerate(sell_top50, 1):
+    for i, s in enumerate(sell_top30, 1):
         if include_price:
             pct = get_5day_change(s['code'])
             pct_str = f'{pct:+.1f}%' if pct is not None else '--'
@@ -242,11 +242,11 @@ def print_top50_report(result, include_price=True):
     print('---')
     print()
     print('**狀態標註說明**：')
-    print('- ⭐ 佈局中：5日漲幅 < 0%（法人買但還沒漲，最佳）')
-    print('- ✅ 可進場：5日漲幅 0-3%（小漲，可買）')
-    print('- ⚠️ 已小漲：5日漲幅 3-5%（注意追高）')
-    print('- 🟡 追高風險：5日漲幅 5-8%（考慮等回檔）')
-    print('- 🔴 已大漲：5日漲幅 > 8%（不建議追）')
+    print('- [佈局中]：5日漲幅 < 0%（法人買但還沒漲，最佳）')
+    print('- [可進場]：5日漲幅 0-3%（小漲，可買）')
+    print('- [已小漲]：5日漲幅 3-5%（注意追高）')
+    print('- [追高風險]：5日漲幅 5-8%（考慮等回檔）')
+    print('- [已大漲]：5日漲幅 > 8%（不建議追）')
 
 
 def print_positioning_opportunities(result):
@@ -255,15 +255,15 @@ def print_positioning_opportunities(result):
     if not result:
         return
 
-    buy_top50 = result['buy_top50']
+    buy_top30 = result['buy_top30']
 
-    print('\n## 🎯 佈局機會（法人買超 + 還沒漲）')
+    print('\n## 佈局機會（法人買超 + 還沒漲）')
     print()
     print('| 代號 | 名稱 | 三大法人 | 5日漲幅 | 狀態 |')
     print('|------|------|---------|--------|------|')
 
     count = 0
-    for s in buy_top50:
+    for s in buy_top30:
         pct = get_5day_change(s['code'])
         if pct is not None and pct < 3:  # 5日漲幅 < 3%
             pct_str = f'{pct:+.1f}%'
@@ -283,18 +283,18 @@ if __name__ == '__main__':
     date = sys.argv[1] if len(sys.argv) > 1 else None
 
     print('=' * 60)
-    print('📊 法人買賣超 TOP50 查詢')
+    print('法人買賣超 TOP30 查詢')
     print('=' * 60)
 
     # 查詢數據
-    result = fetch_institutional_top50(date)
+    result = fetch_institutional_top30(date)
 
     if result:
         # 詢問是否要查詢股價（較慢）
-        print('\n正在查詢 5 日漲幅（約需 30-60 秒）...\n')
+        print('\n正在查詢 5 日漲幅（約需 20-40 秒）...\n')
 
         # 輸出完整報告
-        print_top50_report(result, include_price=True)
+        print_top30_report(result, include_price=True)
 
         # 輸出佈局機會
         print_positioning_opportunities(result)
