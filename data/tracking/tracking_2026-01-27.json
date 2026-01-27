@@ -31,7 +31,10 @@
       },
       "reason": "ADR+21.83%超強催化劑、外資主導+86K",
       "institutional_flow": 86000,
-      "status": "pending",
+      "status": "success",
+      "intraday_close": 75.1,
+      "intraday_change_pct": 8.37,
+      "result": "✅ 成功（ADR催化有效）",
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工"
@@ -55,7 +58,11 @@
       },
       "reason": "連3日買超，籌碼最佳",
       "institutional_flow": 14000,
-      "status": "pending",
+      "status": "price_error",
+      "intraday_close": 8.28,
+      "intraday_change_pct": -0.96,
+      "result": "⚠️ 推薦價錯誤（推薦12.6、實際8.28）",
+      "error_note": "盤前分析時未執行股價驗證，推薦價與實際差距-34%",
       "industry": {
         "sector": "塑化",
         "sub_type": "石化"
@@ -79,7 +86,10 @@
       },
       "reason": "5日累計+65K，外資主導，4天買超",
       "institutional_flow": 65000,
-      "status": "pending",
+      "status": "success",
+      "intraday_close": 22.95,
+      "intraday_change_pct": 2.00,
+      "result": "✅ 成功（航空族群穩健）",
       "industry": {
         "sector": "航運",
         "sub_type": "航空"
@@ -103,7 +113,10 @@
       },
       "reason": "5日累計+22K，外資主導，4天買超",
       "institutional_flow": 22000,
-      "status": "pending",
+      "status": "success",
+      "intraday_close": 33.7,
+      "intraday_change_pct": 0.15,
+      "result": "✅ 成功（金融穩健佈局）",
       "industry": {
         "sector": "金融",
         "sub_type": "綜合型"
@@ -127,7 +140,11 @@
       },
       "reason": "單日+56K（買超第一名），外資主導",
       "institutional_flow": 56000,
-      "status": "pending",
+      "status": "price_error",
+      "intraday_close": 19.4,
+      "intraday_change_pct": -1.27,
+      "result": "⚠️ 推薦價錯誤（推薦25.2、實際19.4）",
+      "error_note": "盤前分析時未執行股價驗證，推薦價與實際差距-23%",
       "industry": {
         "sector": "鋼鐵",
         "sub_type": "鋼鐵"
@@ -151,7 +168,10 @@
       },
       "reason": "5日累計+58K，連2日買超",
       "institutional_flow": 58000,
-      "status": "pending",
+      "status": "fail",
+      "intraday_close": 18.25,
+      "intraday_change_pct": -0.27,
+      "result": "❌ 失敗（動能減弱-32.6%）",
       "industry": {
         "sector": "金融",
         "sub_type": "證券型"
@@ -175,7 +195,11 @@
       },
       "reason": "法人+16K排名#7，5日+0.2%佈局極佳",
       "institutional_flow": 16000,
-      "status": "pending",
+      "status": "price_error",
+      "intraday_close": 26.3,
+      "intraday_change_pct": 0.19,
+      "result": "⚠️ 推薦價錯誤（推薦48.2、實際26.3）",
+      "error_note": "盤前分析時未執行股價驗證，推薦價與實際差距-45%",
       "industry": {
         "sector": "水泥",
         "sub_type": "水泥"
@@ -318,5 +342,55 @@
     "actual_max_ratio": 0.286,
     "validation_status": "✅ 通過驗證"
   },
-  "created_at": "2026-01-27 08:15"
+  "created_at": "2026-01-27 08:15",
+  "after_market_summary": {
+    "update_time": "2026-01-27 15:54",
+    "accuracy": {
+      "success": 4,
+      "fail": 1,
+      "price_error": 3,
+      "total_valid": 5,
+      "accuracy_rate": 0.80,
+      "note": "扣除3檔推薦價錯誤，有效準確率4/5=80%"
+    },
+    "key_lessons": [
+      "✅ 聯電ADR+21.83%催化有效，+8.37%大漲",
+      "✅ 避開台塑/台化（5日漲幅>14%）策略正確",
+      "✅ v5.9.3回檔股驗證有效（凱基金、中石化動能減弱，正確觀望）",
+      "❌ 推薦價驗證機制嚴重失誤（3檔推薦價錯誤>20%）",
+      "❌ 盤前未執行chip_analysis.py導致凱基金動能減弱未察覺"
+    ],
+    "system_improvements": [
+      {
+        "issue": "推薦價驗證不足",
+        "solution": "盤前推薦前強制執行 yahoo_finance_api.py",
+        "priority": "🔴 極高"
+      },
+      {
+        "issue": "籌碼動能前置檢查缺失",
+        "solution": "盤前推薦前強制執行 chip_analysis.py",
+        "priority": "🔴 高"
+      },
+      {
+        "issue": "反轉預警前置檢查缺失",
+        "solution": "盤前推薦前強制執行 reversal_alert.py",
+        "priority": "⚠️ 中"
+      }
+    ],
+    "holdings_alert": [
+      {
+        "stock": "群創(3481)",
+        "status": "🔴🔴🔴 極度危險",
+        "today_change": -6.72,
+        "institutional_reversal": -201000,
+        "recommendation": "建議立即減碼2-3張，嚴守停損22元"
+      },
+      {
+        "stock": "緯創(3231)",
+        "status": "⚠️⚠️ 中度風險",
+        "institutional_flow": -92000,
+        "recommendation": "嚴守停損148元"
+      }
+    ]
+  }
 }

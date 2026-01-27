@@ -3360,5 +3360,104 @@
       "推薦價必須查詢實際股價（3檔嚴重錯誤）",
       "產業掃描不完整（費半利多需掃描5個次產業）"
     ]
+  },
+  "2026-01-27": {
+    "date": "2026-01-27",
+    "day_of_week": "Tuesday",
+    "analysis_version": "v5.9.3",
+    "market_context": "NASDAQ +0.37%, 聯電ADR+21.83%",
+    "recommendations": [
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend": 70.0,
+        "close": 75.1,
+        "change_pct": 8.37,
+        "result": "success",
+        "score": 88
+      },
+      {
+        "symbol": "2610",
+        "name": "華航",
+        "recommend": 24.8,
+        "close": 22.95,
+        "change_pct": 2.0,
+        "result": "success",
+        "score": 77
+      },
+      {
+        "symbol": "2884",
+        "name": "玉山金",
+        "recommend": 29.2,
+        "close": 33.7,
+        "change_pct": 0.15,
+        "result": "success",
+        "score": 76
+      },
+      {
+        "symbol": "2883",
+        "name": "凱基金",
+        "recommend": 15.6,
+        "close": 18.25,
+        "change_pct": -0.27,
+        "result": "failed",
+        "score": 74
+      },
+      {
+        "symbol": "1314",
+        "name": "中石化",
+        "recommend": 12.6,
+        "close": 8.28,
+        "change_pct": -0.96,
+        "result": "price_error",
+        "score": 80
+      },
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "recommend": 25.2,
+        "close": 19.4,
+        "change_pct": -1.27,
+        "result": "price_error",
+        "score": 74
+      },
+      {
+        "symbol": "1101",
+        "name": "台泥",
+        "recommend": 48.2,
+        "close": 26.3,
+        "change_pct": 0.19,
+        "result": "price_error",
+        "score": 74
+      }
+    ],
+    "accuracy": 0.8,
+    "valid_recommendations": 4,
+    "price_errors": 3,
+    "notes": "ADR催化有效、推薦價驗證失誤、佈局股成功率25%",
+    "critical_issues": [
+      {
+        "issue": "推薦價驗證失誤",
+        "severity": "極高",
+        "solution": "盤前強制執行yahoo_finance_api.py"
+      },
+      {
+        "issue": "籌碼動能檢查缺失",
+        "severity": "高",
+        "solution": "盤前強制執行chip_analysis.py"
+      },
+      {
+        "issue": "佈局股成功率低",
+        "severity": "中",
+        "solution": "佈局股評分-10~15分、倉位降至5-10%"
+      }
+    ],
+    "key_lessons": [
+      "ADR+21.83%催化劑完美發揮（聯電+8.37%）",
+      "避開已大漲策略正確（台塑/台化續漲但不追）",
+      "v5.9.3回檔股驗證有效",
+      "推薦價驗證機制嚴重失誤（3檔錯誤>20%）",
+      "佈局股成功率遠低於催化型（25% vs 100%）"
+    ]
   }
 }
