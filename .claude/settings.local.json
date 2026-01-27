@@ -19,7 +19,11 @@
       "Bash(if [ -f \"data/predictions/predictions.json\" ])",
       "Bash(then cat data/predictions/predictions.json)",
       "Bash(else echo \"predictions.json 不存在\")",
-      "Bash(fi)"
+      "Bash(fi)",
+      "Bash(C:Userswalter.huangAppDataLocalMicrosoftWindowsAppspython3.exe --version)",
+      "Bash(./python3:*)",
+      "Bash(./python3.bat:*)",
+      "Bash(chmod:*)"
     ],
     "additionalDirectories": [
       "/**"
