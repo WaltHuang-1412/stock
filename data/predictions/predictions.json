@@ -3640,5 +3640,129 @@
       "面板產業風險沒有提前防範"
     ],
     "conclusion": "群創完整展示了題材股的生命週期：底部佈局→題材爆發→瘋狂追高→題材退潮→暴跌回檔。早期低價買入提供了安全墊，但高點追高(01/21@26.5)和忽視法人出貨訊號是最大失誤。核心教訓：賺錢要會賣，不是會買。"
+  },
+  "2026-01-28": {
+    "date": "2026-01-28",
+    "analysis_version": "v6.0",
+    "accuracy": 0.43,
+    "accuracy_detail": "3/7 = 43% (3 up, 2 flat, 2 down)",
+    "intraday_strategy_accuracy": 0.83,
+    "framework": "v6.0雙入口選股（費半+4.14%超強催化日）",
+    "notes": "方向判斷正確但選股43%。記憶體族群法人一日反轉遺漏。Level 2預警力成兌現。國巨單日轉正不可信。",
+    "lessons": [
+      "費半>3%法人可一日反轉（記憶體昨全賣今全買）",
+      "單日法人轉正不可信（國巨前日+7K今日-18K）",
+      "Level 2預警有效（力成-7,269確認）",
+      "金融佈局需耐心（三商壽/玉山金平盤）",
+      "油價利空>法人買超（華航投信-7,990）",
+      "入口B方向正確但排除標準費半>3%可放寬"
+    ],
+    "predictions": [
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "type": "explosive",
+        "prev_close": 1760,
+        "direction": "up",
+        "confidence": 0.75,
+        "verification": {
+          "actual_close": 1820,
+          "actual_change": 3.41,
+          "institutional_flow": 8796,
+          "result": "success",
+          "notes": "ADR+3.42%催化有效，法人轉買+8,796"
+        }
+      },
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "type": "stable",
+        "prev_close": 283,
+        "direction": "up",
+        "confidence": 0.86,
+        "verification": {
+          "actual_close": 287,
+          "actual_change": 1.41,
+          "institutional_flow": 1715,
+          "result": "partial",
+          "notes": "小漲+1.41%低於推薦價290"
+        }
+      },
+      {
+        "symbol": "6239",
+        "name": "力成",
+        "type": "explosive",
+        "prev_close": 257.5,
+        "direction": "up",
+        "confidence": 0.78,
+        "verification": {
+          "actual_close": 261.5,
+          "actual_change": 1.55,
+          "institutional_flow": -7269,
+          "result": "partial_warning",
+          "notes": "法人-7,269確認反轉！Level 2兌現"
+        }
+      },
+      {
+        "symbol": "2327",
+        "name": "國巨",
+        "type": "stable",
+        "prev_close": 296,
+        "direction": "up",
+        "confidence": 0.78,
+        "verification": {
+          "actual_close": 285.5,
+          "actual_change": -3.55,
+          "institutional_flow": -18000,
+          "result": "fail",
+          "notes": "法人-18K反轉大賣"
+        }
+      },
+      {
+        "symbol": "2867",
+        "name": "三商壽",
+        "type": "stable",
+        "prev_close": 7.93,
+        "direction": "up",
+        "confidence": 0.82,
+        "verification": {
+          "actual_close": 7.93,
+          "actual_change": 0.0,
+          "institutional_flow": 1818,
+          "result": "neutral",
+          "notes": "平盤，金融被冷落"
+        }
+      },
+      {
+        "symbol": "2884",
+        "name": "玉山金",
+        "type": "stable",
+        "prev_close": 33.5,
+        "direction": "up",
+        "confidence": 0.71,
+        "verification": {
+          "actual_close": 33.5,
+          "actual_change": 0.0,
+          "institutional_flow": 270,
+          "result": "neutral",
+          "notes": "平盤"
+        }
+      },
+      {
+        "symbol": "2610",
+        "name": "華航",
+        "type": "stable",
+        "prev_close": 22.7,
+        "direction": "up",
+        "confidence": 0.71,
+        "verification": {
+          "actual_close": 22.5,
+          "actual_change": -0.88,
+          "institutional_flow": -4974,
+          "result": "fail",
+          "notes": "油價利空+投信-7,990大賣"
+        }
+      }
+    ]
   }
 }

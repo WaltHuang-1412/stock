@@ -422,5 +422,148 @@
     },
     "fund_flow_conclusion": "資金極度集中半導體上游+塑化，全面棄守面板/PC/金融/航運。記憶體法人在賣但散戶追價。"
   },
-  "intraday_updated_at": "2026-01-28 12:45"
+  "intraday_updated_at": "2026-01-28 12:45",
+  "after_market": {
+    "updated_at": "2026-01-28 15:30",
+    "closing_verification": [
+      {
+        "stock_code": "2330",
+        "stock_name": "台積電",
+        "recommend_price": 1800,
+        "closing_price": 1820,
+        "daily_change_pct": 3.41,
+        "vs_recommend_pct": 1.11,
+        "today_institutional": 8796,
+        "chip_momentum": "+120.1%",
+        "result": "success"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "recommend_price": 290,
+        "closing_price": 287,
+        "daily_change_pct": 1.41,
+        "vs_recommend_pct": -1.03,
+        "today_institutional": 1715,
+        "chip_momentum": "+11643%",
+        "result": "partial"
+      },
+      {
+        "stock_code": "6239",
+        "stock_name": "力成",
+        "recommend_price": 262,
+        "closing_price": 261.5,
+        "daily_change_pct": 1.55,
+        "vs_recommend_pct": -0.19,
+        "today_institutional": -7269,
+        "chip_momentum": "-205.1%",
+        "result": "partial_with_warning",
+        "warning": "法人-7,269大賣確認反轉"
+      },
+      {
+        "stock_code": "2327",
+        "stock_name": "國巨",
+        "recommend_price": 293.5,
+        "closing_price": 285.5,
+        "daily_change_pct": -3.55,
+        "vs_recommend_pct": -2.73,
+        "today_institutional": -18000,
+        "chip_momentum": "反轉",
+        "result": "fail"
+      },
+      {
+        "stock_code": "2867",
+        "stock_name": "三商壽",
+        "recommend_price": 7.94,
+        "closing_price": 7.93,
+        "daily_change_pct": 0.00,
+        "vs_recommend_pct": -0.13,
+        "today_institutional": 1818,
+        "chip_momentum": "+86.1%",
+        "result": "neutral"
+      },
+      {
+        "stock_code": "2884",
+        "stock_name": "玉山金",
+        "recommend_price": 33.45,
+        "closing_price": 33.5,
+        "daily_change_pct": 0.00,
+        "vs_recommend_pct": 0.15,
+        "today_institutional": 270,
+        "chip_momentum": "-35.2%",
+        "result": "neutral"
+      },
+      {
+        "stock_code": "2610",
+        "stock_name": "華航",
+        "recommend_price": 23.15,
+        "closing_price": 22.5,
+        "daily_change_pct": -0.88,
+        "vs_recommend_pct": -2.81,
+        "today_institutional": -4974,
+        "chip_momentum": "-30%",
+        "result": "fail"
+      }
+    ],
+    "accuracy": {
+      "direction": "3/7 = 43%",
+      "up": 3,
+      "neutral": 2,
+      "down": 2,
+      "total": 7
+    },
+    "holdings_update": {
+      "群創(3481)": {
+        "closing_price": 22.3,
+        "daily_change_pct": -12.20,
+        "cost": 19.59,
+        "profit_pct": 13.8,
+        "today_institutional": 4342,
+        "alert": "暴跌但法人反買+4,342",
+        "action": "設21.5保利停損"
+      },
+      "緯創(3231)": {
+        "closing_price": 134.5,
+        "daily_change_pct": -0.74,
+        "cost": 155.72,
+        "profit_pct": -13.6,
+        "today_institutional": -7958,
+        "alert": "連10日賣-182K",
+        "action": "強烈建議出場"
+      },
+      "兆豐金(2886)": {
+        "closing_price": 39.4,
+        "daily_change_pct": -0.88,
+        "cost": 41.06,
+        "profit_pct": -4.0,
+        "today_institutional": -3679,
+        "alert": "連8日賣-38K",
+        "action": "建議減碼或出場"
+      },
+      "台積電(2330)": {
+        "closing_price": 1820,
+        "daily_change_pct": 3.41,
+        "cost": 43.71,
+        "profit_pct": 4064,
+        "today_institutional": 8796,
+        "alert": "法人轉買！連2日+15K",
+        "action": "續抱"
+      }
+    },
+    "key_lessons": [
+      "費半>3%時法人可一日反轉（記憶體昨全賣→今全買）",
+      "單日法人轉正不可信（國巨前日+7K→今日-18K）",
+      "Level 2預警持續有效（力成L2→今日-7,269確認）",
+      "金融股短期無催化（三商壽/玉山金全天平盤）",
+      "塑化趨勢超預期（台化5日+26%仍漲+7.9%）",
+      "入口B方向100%正確但排除標準可能過嚴",
+      "聯電外資-55K大舉獲利了結（大漲後反手）"
+    ],
+    "tomorrow_strategy": {
+      "maintain": ["廣達(2382)", "三商壽(2867)"],
+      "watch": ["台積電(2330)", "台泥(1101)"],
+      "avoid": ["力成(6239)", "國巨(2327)", "航運股"],
+      "note": "半導體已大漲可能獲利了結，金融/AI Server等輪動"
+    }
+  }
 }
