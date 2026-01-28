@@ -21,8 +21,14 @@ v2.0 更新（2026-01-22）：
 - 🆕 整合至籌碼判斷邏輯
 """
 
-import requests
 import sys
+import io
+
+# Windows 環境 stdout 編碼修正（避免中文/emoji 輸出時 cp950 報錯）
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+
+import requests
 from pathlib import Path
 from datetime import datetime, timedelta
 import time

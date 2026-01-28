@@ -14,6 +14,13 @@
 python scripts/fetch_us_asia_markets.py
 """
 
+import sys
+import io
+
+# Windows 環境 stdout 編碼修正（避免 emoji 輸出時 cp950 報錯）
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+
 import requests
 import datetime
 import json

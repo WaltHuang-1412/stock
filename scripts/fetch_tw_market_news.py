@@ -19,8 +19,14 @@
   python3 scripts/fetch_tw_market_news.py
 """
 
-import requests
 import sys
+import io
+
+# Windows 環境 stdout 編碼修正（避免 emoji 輸出時 cp950 報錯）
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+
+import requests
 import urllib3
 
 # 忽略 SSL 警告（公司網路環境需要）

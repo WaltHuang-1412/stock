@@ -3459,5 +3459,66 @@
       "推薦價驗證機制嚴重失誤（3檔錯誤>20%）",
       "佈局股成功率遠低於催化型（25% vs 100%）"
     ]
+  },
+  "2026-01-28_lesson": {
+    "date": "2026-01-28",
+    "type": "pre_market_quality_issue",
+    "severity": "嚴重",
+    "issue_count": 9,
+    "issues": [
+      {
+        "id": 1,
+        "desc": "國巨(2327)投信賣-913寫成同買",
+        "category": "data_mismatch"
+      },
+      {
+        "id": 2,
+        "desc": "玉山金(2884)投信賣-2.3K未標註",
+        "category": "data_mismatch"
+      },
+      {
+        "id": 3,
+        "desc": "廣達(2382)投信小賣-264未標註",
+        "category": "data_mismatch"
+      },
+      {
+        "id": 4,
+        "desc": "台積電(2330)投信-285細節遺漏",
+        "category": "data_mismatch"
+      },
+      {
+        "id": 5,
+        "desc": "國巨降分78但仍放在>=80分區段",
+        "category": "section_error"
+      },
+      {
+        "id": 6,
+        "desc": "賣超TOP30整段漏寫",
+        "category": "missing_section"
+      },
+      {
+        "id": 7,
+        "desc": "2515中工寫成中環(字典缺)",
+        "category": "name_error"
+      },
+      {
+        "id": 8,
+        "desc": "tracking.json漏台積電持股",
+        "category": "sync_error"
+      },
+      {
+        "id": 9,
+        "desc": "avoided_stocks漏華邦電",
+        "category": "missing_entry"
+      }
+    ],
+    "root_cause": "chip_analysis 5日累計數據 vs TOP30單日數據混用，未逐檔交叉比對投信/外資拆分",
+    "prevention": [
+      "盤前分析時，每檔推薦股必須回查TOP30單日數據確認投信/外資方向",
+      "chip_analysis累計數據不能直接描述為單日法人態度",
+      "修改分數後必須同步檢查區段位置",
+      "建檔後必須.md和.json交叉比對一致性"
+    ],
+    "status": "已修正全部9項"
   }
 }

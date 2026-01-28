@@ -17,8 +17,14 @@
 修改日期：2026-01-26（TOP50→TOP30 效率優化）
 """
 
-import requests
 import sys
+import io
+
+# Windows 環境 stdout 編碼修正（避免中文輸出時 cp950 報錯）
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+
+import requests
 from datetime import datetime, timedelta
 import warnings
 import urllib3
@@ -57,6 +63,7 @@ STOCK_NAMES = {
 
     # 其他
     '8110': '華東', '8422': '可寧衛', '6443': '元晶', '2371': '大同',
+    '2515': '中工',
     '5521': '工信', '5522': '遠雄', '5871': '中租-KY', '9105': '泰金寶',
     '9904': '寶成', '4916': '事欣科', '4927': '泰鼎', '6191': '精成科',
     '6257': '矽格', '2329': '華泰', '2449': '京元電', '2481': '強茂',
