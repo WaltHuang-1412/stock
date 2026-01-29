@@ -3764,5 +3764,110 @@
         }
       }
     ]
+  },
+  "2026-01-29": {
+    "date": "2026-01-29",
+    "analysis_version": "v6.1",
+    "catalyst_strength": "super_strong",
+    "catalyst_indicator": "費半 +3.29%",
+    "predictions": [
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "type": "stable",
+        "phase": "core",
+        "prev_close": 1820,
+        "recommend_price": "1820-1850",
+        "direction": "up",
+        "confidence": 0.88,
+        "reasons": ["ADR+4.96%", "費半+3.29%", "法人反轉+8.7K"],
+        "verification": {
+          "actual_close": 1805,
+          "actual_change": -0.82,
+          "result": "partial",
+          "notes": "Intel-10.08%拖累晶圓代工"
+        }
+      },
+      {
+        "symbol": "1303",
+        "name": "南亞",
+        "type": "stable",
+        "phase": "core",
+        "prev_close": 80.5,
+        "recommend_price": "80-82",
+        "direction": "up",
+        "confidence": 0.82,
+        "reasons": ["油價+4.04%", "10天+158K外資主導"],
+        "verification": {
+          "actual_close": 77.10,
+          "actual_change": -4.22,
+          "result": "fail",
+          "notes": "塑化利多但量縮不買單"
+        }
+      },
+      {
+        "symbol": "2880",
+        "name": "華南金",
+        "type": "stable",
+        "phase": "core",
+        "prev_close": 33.5,
+        "recommend_price": "33-34",
+        "direction": "up",
+        "confidence": 0.76,
+        "reasons": ["佈局股", "法人+4.4K", "5日+0.8%還沒漲"],
+        "verification": {
+          "actual_close": 33.75,
+          "actual_change": 0.75,
+          "result": "success",
+          "notes": "佈局股策略有效"
+        }
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "type": "explosive",
+        "phase": "core",
+        "prev_close": 83.8,
+        "recommend_price": "83-85",
+        "direction": "up",
+        "confidence": 0.74,
+        "reasons": ["費半+3.29%超強催化", "昨日+40K反轉", "v6.1規則放寬"],
+        "verification": {
+          "actual_close": 92.10,
+          "actual_change": 9.90,
+          "result": "success",
+          "notes": "Micron+11.87%強力催化，v6.1規則正確"
+        }
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "type": "stable",
+        "phase": "conditional",
+        "trigger_condition": "量比>1.5x且漲幅<3%",
+        "prev_close": 51.3,
+        "recommend_price": "50.5-52",
+        "direction": "up",
+        "confidence": 0.80,
+        "reasons": ["連5日+68K", "油價+4.04%"],
+        "verification": {
+          "actual_close": 49.30,
+          "actual_change": -3.90,
+          "result": "not_triggered",
+          "notes": "量比0.49x未達觸發條件"
+        }
+      }
+    ],
+    "accuracy": 0.50,
+    "key_lessons": [
+      "費半強勢≠半導體全面強勢，必須看Micron/Intel個股",
+      "半導體分化：記憶體強(Micron+11.87%)、代工弱(Intel-10.08%)、載板崩",
+      "催化劑+量能確認缺一不可",
+      "v6.1超強催化規則：旺宏5日+14.2%仍可推薦→成功+9.90%"
+    ],
+    "avoided_stocks_verification": {
+      "聯電(2303)": "-9.88% ✅ 正確避開（法人-55K大賣）"
+    },
+    "notes": "費半+3.29%超強催化日，但Intel-10.08%導致半導體分化，記憶體強勢代工弱勢"
   }
 }

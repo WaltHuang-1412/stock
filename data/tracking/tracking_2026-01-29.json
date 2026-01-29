@@ -47,7 +47,11 @@
       "chip_momentum": "反轉買超",
       "reversal_alert": "✅ 無預警",
       "institutional_flow": 8763,
-      "status": "pending",
+      "status": "verified",
+      "closing_price": 1805.0,
+      "closing_change": -0.82,
+      "result": "partial",
+      "result_notes": "Intel-10.08%拖累晶圓代工",
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工"
@@ -75,7 +79,11 @@
       "chip_momentum": "-22.7%減弱但仍買超",
       "reversal_alert": "✅ 無預警",
       "institutional_flow": 20000,
-      "status": "pending",
+      "status": "verified",
+      "closing_price": 77.10,
+      "closing_change": -4.22,
+      "result": "failed",
+      "result_notes": "塑化利多但量縮不買單",
       "industry": {
         "sector": "塑化",
         "sub_type": "綜合塑化"
@@ -103,7 +111,11 @@
       "chip_momentum": "佈局中",
       "reversal_alert": "✅ 無預警",
       "institutional_flow": 4405,
-      "status": "pending",
+      "status": "verified",
+      "closing_price": 33.75,
+      "closing_change": 0.75,
+      "result": "success",
+      "result_notes": "佈局股策略有效",
       "industry": {
         "sector": "金融",
         "sub_type": "純銀行"
@@ -131,7 +143,11 @@
       "chip_momentum": "-43.3%減弱但同步買超",
       "reversal_alert": "✅ 無預警",
       "institutional_flow": 40000,
-      "status": "pending",
+      "status": "verified",
+      "closing_price": 92.10,
+      "closing_change": 9.90,
+      "result": "success",
+      "result_notes": "Micron+11.87%強力催化，v6.1超強催化規則正確",
       "warning": "⚠️ 5日+14.2%已大漲，v6.1超強催化可推薦，倉位限5%、停損-3%",
       "v6_1_relaxed": true,
       "industry": {
@@ -162,7 +178,11 @@
       "chip_momentum": "✅ 連5日買超",
       "reversal_alert": "✅ 無預警",
       "institutional_flow": 68000,
-      "status": "pending_trigger",
+      "status": "not_triggered",
+      "closing_price": 49.30,
+      "closing_change": -3.90,
+      "result": "not_triggered",
+      "result_notes": "量比0.49x未達1.5x觸發條件",
       "warning": "⚠️ 5日+17.7%已大漲，需觀察盤中量能",
       "v6_1_relaxed": true,
       "industry": {
@@ -311,6 +331,26 @@
     "chip_analysis_executed": true,
     "reversal_alert_executed": true,
     "validation_status": "✅ 通過驗證（v6.1超強催化）"
+  },
+  "after_market_verification": {
+    "verified_at": "2026-01-29 14:50",
+    "accuracy": 0.50,
+    "results_summary": {
+      "success": 2,
+      "failed": 1,
+      "partial": 1,
+      "not_triggered": 1
+    },
+    "key_lessons_today": [
+      "費半強勢≠半導體全面強勢，必須看Micron/Intel個股",
+      "半導體分化：記憶體強(Micron)、代工弱(Intel)、載板崩",
+      "催化劑+量能確認缺一不可",
+      "盤中發現Intel-10.08%關鍵訊號"
+    ],
+    "time_event_accuracy": 0.20,
+    "avoided_stocks_verification": {
+      "聯電(2303)": "-9.88% ✅ 正確避開"
+    }
   },
   "created_at": "2026-01-29 08:30",
   "predictions_reference": {
