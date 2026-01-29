@@ -163,6 +163,80 @@ class InternationalMarketFetcher:
 
         return asia_data
 
+    def fetch_semiconductor_stocks(self) -> Dict[str, Any]:
+        """獲取半導體/科技關鍵個股（v2.1 新增）"""
+        print("🔬 正在獲取半導體/科技關鍵個股...")
+
+        # 7大產業、20檔關鍵美股
+        stocks = {
+            # 記憶體 → 南亞科、華邦電、旺宏
+            'Micron': 'MU',
+            'Western Digital': 'WDC',
+
+            # AI/晶片 → 聯發科、IC設計
+            'AMD': 'AMD',
+            'Intel': 'INTC',
+
+            # 設備 → 弘塑、辛耘、家登
+            'ASML': 'ASML',
+            'Applied Materials': 'AMAT',
+            'Lam Research': 'LRCX',
+            'KLA': 'KLAC',
+
+            # 網通 → 智邦、啟碁
+            'Broadcom': 'AVGO',
+            'Marvell': 'MRVL',
+            'Cisco': 'CSCO',
+            'Arista': 'ANET',
+
+            # 消費電子 → 鴻海、大立光、和碩
+            'Apple': 'AAPL',
+            'Qualcomm': 'QCOM',
+
+            # AI伺服器/雲端 → 廣達、緯創、緯穎
+            'Super Micro': 'SMCI',
+            'Dell': 'DELL',
+            'Amazon': 'AMZN',
+            'Microsoft': 'MSFT',
+            'Google': 'GOOGL',
+            'Meta': 'META',
+
+            # 電動車 → 鴻海、和大、貿聯
+            'Tesla': 'TSLA',
+        }
+
+        stock_data = {}
+
+        for name, symbol in stocks.items():
+            result = fetch_yahoo_quote(symbol)
+            if result['status'] == 'ok':
+                change_pct = result['change_pct']
+                # 標註漲跌幅度
+                if change_pct >= 5:
+                    emoji = '🔥'
+                elif change_pct >= 2:
+                    emoji = '⭐'
+                elif change_pct > 0:
+                    emoji = '✅'
+                elif change_pct > -2:
+                    emoji = '➖'
+                else:
+                    emoji = '🔴'
+
+                stock_data[name] = {
+                    'symbol': symbol,
+                    'price': result['price'],
+                    'change_pct': change_pct,
+                    'status': 'ok',
+                    'emoji': emoji
+                }
+                print(f"{emoji} {name}({symbol}): ${result['price']:.2f} ({change_pct:+.2f}%)")
+            else:
+                print(f"❌ {name}({symbol}): 數據獲取失敗")
+                stock_data[name] = {'status': 'error', 'symbol': symbol}
+
+        return stock_data
+
     def fetch_key_indicators(self) -> Dict[str, Any]:
         """獲取關鍵指標"""
         print("📊 正在獲取關鍵指標...")
@@ -246,6 +320,7 @@ class InternationalMarketFetcher:
         # 獲取各市場數據
         us_data = self.fetch_us_markets()
         adr_data = self.fetch_taiwan_adrs()
+        semiconductor_data = self.fetch_semiconductor_stocks()  # v2.1 新增
         asia_data = self.fetch_asia_markets()
         indicators = self.fetch_key_indicators()
 
@@ -257,6 +332,7 @@ class InternationalMarketFetcher:
             },
             'us_markets': us_data,
             'taiwan_adrs': adr_data,
+            'semiconductor_stocks': semiconductor_data,  # v2.1 新增
             'asia_markets': asia_data,
             'key_indicators': indicators
         }
@@ -297,6 +373,34 @@ class InternationalMarketFetcher:
                 output.append(f"- **{name}**：${info['close_price']:.2f} ({info['change_pct']:+.2f}%)")
 
         output.append("")
+
+        # 半導體/科技關鍵個股 (v2.1 新增)
+        if 'semiconductor_stocks' in data:
+            output.append("### 🔬 半導體/科技關鍵個股")
+            output.append("")
+
+            # 按產業分組顯示
+            categories = {
+                '記憶體': ['Micron', 'Western Digital'],
+                'AI/晶片': ['AMD', 'Intel'],
+                '設備': ['ASML', 'Applied Materials', 'Lam Research', 'KLA'],
+                '網通': ['Broadcom', 'Marvell', 'Cisco', 'Arista'],
+                '消費電子': ['Apple', 'Qualcomm'],
+                'AI伺服器/雲端': ['Super Micro', 'Dell', 'Amazon', 'Microsoft', 'Google', 'Meta'],
+                '電動車': ['Tesla'],
+            }
+
+            for category, stocks in categories.items():
+                output.append(f"**{category}**：")
+                for name in stocks:
+                    if name in data['semiconductor_stocks']:
+                        info = data['semiconductor_stocks'][name]
+                        if info.get('status') == 'error':
+                            output.append(f"- {name}：數據獲取失敗")
+                        else:
+                            emoji = info.get('emoji', '')
+                            output.append(f"- {emoji} {name}({info['symbol']}): ${info['price']:.2f} ({info['change_pct']:+.2f}%)")
+                output.append("")
 
         # 亞洲市場
         output.append("### 🌏 亞洲市場")
