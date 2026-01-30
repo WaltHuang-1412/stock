@@ -1,0 +1,340 @@
+{
+  "date": "2026-01-30",
+  "day_of_week": "Friday",
+  "analysis_version": "v6.1",
+  "market_context": {
+    "us_market": "NASDAQ +2.72%, 費半 +3.29%（🔴 超強催化）",
+    "major_news": [
+      "費半 +3.29%（🔴 超強催化）",
+      "Micron +9.61%（記憶體財報超預期）",
+      "Intel -10.42%（代工業務虧損）",
+      "日月光ADR +6.74%（封測強勁）",
+      "油價 +8.21%（OPEC+減產）",
+      "台積電ADR +4.96%",
+      "KOSPI +5.31%"
+    ],
+    "time_event": "費半+3.29%超強→v6.1規則適用、Micron+9.61%→記憶體爆發、油價+8.21%→塑化利多"
+  },
+  "catalyst_strength": {
+    "level": "super_strong",
+    "indicator": "費半 +3.29%",
+    "rules": {
+      "industry_concentration_max": 0.70,
+      "price_threshold_relaxed": true,
+      "affected_industries": ["記憶體", "封測", "面板"]
+    }
+  },
+  "recommendations": [
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "type": "explosive",
+      "phase": "core",
+      "recommend_price": 92.0,
+      "target_price": 98.0,
+      "stop_loss": 88.0,
+      "position": "5%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 89,
+      "五維度": {
+        "時事現況": 34,
+        "籌碼動能": 17,
+        "產業邏輯": 23,
+        "法人數據": 13,
+        "價格位置": 2
+      },
+      "reason": "Micron+9.61%、費半+3.29%超強催化、昨日+58K買超TOP30#2",
+      "chip_momentum": "動能-43.3%減弱但仍買超",
+      "reversal_alert": "✅ 無預警",
+      "institutional_flow": 58000,
+      "status": "pending",
+      "warning": "⚠️ 5日+32.9%已大漲，v6.1超強催化可推薦，倉位限5%、停損-3%",
+      "v6_1_relaxed": true,
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "記憶體"
+      }
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "type": "stable",
+      "phase": "core",
+      "recommend_price": 14.2,
+      "target_price": 17.0,
+      "stop_loss": 13.0,
+      "position": "15-20%",
+      "rating": "⭐⭐⭐⭐⭐",
+      "score": 82,
+      "五維度": {
+        "時事現況": 22,
+        "法人數據": 28,
+        "產業邏輯": 14,
+        "價格位置": 10,
+        "技術面": 8
+      },
+      "reason": "法人暴買+96.4K（TOP30#1、暴增+2,120%）、FOPLP技術題材",
+      "chip_momentum": "+2,120.9%爆發加速",
+      "reversal_alert": "✅ 無預警",
+      "institutional_flow": 96400,
+      "status": "pending",
+      "holding": true,
+      "industry": {
+        "sector": "面板",
+        "sub_type": "FOPLP載板"
+      }
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "type": "stable",
+      "phase": "core",
+      "recommend_price": 49.0,
+      "target_price": 56.0,
+      "stop_loss": 45.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 79,
+      "五維度": {
+        "時事現況": 24,
+        "法人數據": 22,
+        "產業邏輯": 16,
+        "價格位置": 10,
+        "技術面": 7
+      },
+      "reason": "日月光ADR+6.74%、昨日+7.6K買超、5日-5.6%佈局中",
+      "chip_momentum": "買超中",
+      "reversal_alert": "✅ 無預警",
+      "institutional_flow": 7600,
+      "status": "pending",
+      "industry": {
+        "sector": "半導體",
+        "sub_type": "封測"
+      }
+    },
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "type": "stable",
+      "phase": "core",
+      "recommend_price": 14.2,
+      "target_price": 16.5,
+      "stop_loss": 13.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 75,
+      "五維度": {
+        "時事現況": 20,
+        "法人數據": 26,
+        "產業邏輯": 12,
+        "價格位置": 10,
+        "技術面": 7
+      },
+      "reason": "法人買超+37K（TOP30#3）、面板回溫、5日-8.3%佈局中",
+      "chip_momentum": "買超中",
+      "reversal_alert": "✅ 無預警",
+      "institutional_flow": 37300,
+      "status": "pending",
+      "industry": {
+        "sector": "面板",
+        "sub_type": "面板"
+      }
+    },
+    {
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "type": "stable",
+      "phase": "core",
+      "recommend_price": 33.7,
+      "target_price": 36.5,
+      "stop_loss": 32.5,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐⭐",
+      "score": 73,
+      "五維度": {
+        "時事現況": 18,
+        "法人數據": 24,
+        "產業邏輯": 14,
+        "價格位置": 9,
+        "技術面": 8
+      },
+      "reason": "佈局股策略、昨日驗證成功、10天連買4日、動能+60.4%",
+      "chip_momentum": "+60.4%加速買超",
+      "reversal_alert": "✅ 無預警",
+      "institutional_flow": 6000,
+      "status": "pending",
+      "industry": {
+        "sector": "金融",
+        "sub_type": "純銀行"
+      }
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "type": "stable",
+      "phase": "conditional",
+      "trigger_condition": "量比>1.5x 且 漲幅<3% 且 外盤>55%",
+      "recommend_price": 77.0,
+      "target_price": 84.0,
+      "stop_loss": 73.0,
+      "position": "10-15%",
+      "rating": "⭐⭐⭐",
+      "score": 71,
+      "五維度": {
+        "時事現況": 26,
+        "法人數據": 18,
+        "產業邏輯": 16,
+        "價格位置": 6,
+        "技術面": 5
+      },
+      "reason": "油價+8.21%超強催化、但昨日法人反轉-3.5K、需確認量能",
+      "chip_momentum": "⚠️ 反轉賣超",
+      "reversal_alert": "⚠️ Level 1（前日+20K→昨日-3.5K）",
+      "institutional_flow": -3500,
+      "status": "pending_trigger",
+      "holding": true,
+      "warning": "⚠️ 法人反轉賣超，必須確認盤中量能才進場",
+      "industry": {
+        "sector": "塑化",
+        "sub_type": "綜合塑化"
+      }
+    }
+  ],
+  "avoided_stocks": [
+    {"stock_code": "2303", "stock_name": "聯電", "reason": "昨日法人-55K大賣", "five_day_change": 12.3},
+    {"stock_code": "2408", "stock_name": "南亞科", "reason": "10天法人對決（投信買+3.2K vs 外資賣-31K）", "five_day_change": 11.4},
+    {"stock_code": "2344", "stock_name": "華邦電", "reason": "10天法人對決（投信買+19K vs 外資賣-40K）", "five_day_change": 21.5},
+    {"stock_code": "1326", "stock_name": "台化", "reason": "5日+26%已大漲", "five_day_change": 26.0},
+    {"stock_code": "1301", "stock_name": "台塑", "reason": "5日+17.7%已大漲", "five_day_change": 17.7},
+    {"stock_code": "3711", "stock_name": "日月光", "reason": "法人對決（外資買+16K vs 投信賣-4.8K）", "five_day_change": 5.0},
+    {"stock_code": "3583", "stock_name": "辛耘", "reason": "10天累計賣超-966張（法人出貨）", "five_day_change": 0},
+    {"stock_code": "2330", "stock_name": "台積電", "reason": "Intel-10.42%拖累代工、昨日-0.82%驗證弱勢", "five_day_change": 1.8},
+    {"stock_code": "2327", "stock_name": "國巨", "reason": "昨日教訓：單日反轉不可信", "five_day_change": -3.5},
+    {"stock_code": "2610", "stock_name": "華航", "reason": "油價+8.21%利空航空", "five_day_change": -0.9},
+    {"stock_code": "3231", "stock_name": "緯創", "reason": "連10日賣-182K、強烈建議出場（持股）", "five_day_change": -0.7}
+  ],
+  "entry_b_stocks": [
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "Micron+9.61%→記憶體",
+      "institutional_10days": "+32K（外資+34K、投信+4.7K）",
+      "momentum": "-43.3%減弱但仍買超",
+      "verdict": "✅ 推薦（v6.1超強催化可推，倉位5%）"
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "reason": "日月光ADR+6.74%→封測",
+      "institutional_10days": "昨日+7.6K",
+      "momentum": "買超中",
+      "verdict": "✅ 推薦（佈局股）"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "reason": "油價+8.21%→塑化",
+      "institutional_10days": "昨日-3.5K反轉",
+      "momentum": "⚠️ 反轉賣超",
+      "verdict": "⚠️ 條件單（需確認量能）"
+    }
+  ],
+  "holdings_tracking": {
+    "群創(3481)": {
+      "status": "holding",
+      "yesterday_institutional": 96400,
+      "day_before_institutional": 4343,
+      "momentum_change": "+2,120%",
+      "alert": "🔥 法人逢低爆買+96.4K",
+      "recommendation": "續抱或加碼，進場14.0-14.5元"
+    },
+    "緯創(3231)": {
+      "status": "holding",
+      "yesterday_institutional": -7957,
+      "continuous_selling_days": 10,
+      "cumulative_10days": -182000,
+      "alert": "🚨 連10日賣-182K",
+      "recommendation": "強烈建議出場"
+    },
+    "兆豐金(2886)": {
+      "status": "holding",
+      "yesterday_institutional": 8314,
+      "foreign_buying": 10400,
+      "alert": "✅ 外資轉買+10.4K（反轉訊號）",
+      "recommendation": "觀察今日是否延續，若續買>5K續抱"
+    },
+    "南亞(1303)": {
+      "status": "holding",
+      "yesterday_institutional": -3500,
+      "day_before_institutional": 20000,
+      "alert": "⚠️ 法人反轉賣超-3.5K",
+      "recommendation": "執行條件單策略，量比>1.5x且漲<3%才續抱"
+    },
+    "台積電(2330)": {
+      "status": "holding",
+      "yesterday_institutional": 8763,
+      "alert": "✅ ADR+4.96%但Intel拖累",
+      "recommendation": "零股續抱，不加碼"
+    }
+  },
+  "industry_distribution": {
+    "面板": {"count": 2, "percentage": 0.33, "stocks": ["群創", "友達"]},
+    "記憶體": {"count": 1, "percentage": 0.17, "stocks": ["旺宏"]},
+    "封測": {"count": 1, "percentage": 0.17, "stocks": ["南茂"]},
+    "金融": {"count": 1, "percentage": 0.17, "stocks": ["華南金"]},
+    "塑化": {"count": 1, "percentage": 0.17, "stocks": ["南亞條件單"]}
+  },
+  "yesterday_verification": {
+    "date": "2026-01-29",
+    "accuracy": 0.40,
+    "key_lessons": [
+      "旺宏+9.90% ✅ v6.1超強催化規則有效",
+      "華南金+0.75% ✅ 佈局股策略成功",
+      "台積電-0.82% ⚠️ Intel-10.08%拖累代工",
+      "南亞-4.22% ❌ 塑化利多但量縮不買單",
+      "台塑條件單未觸發 ⚪ 量比0.49x未達1.5x"
+    ]
+  },
+  "key_lessons_checked": {
+    "教訓1_半導體分化": {
+      "lesson": "費半強勢≠全面強勢，必須看Micron/Intel個股",
+      "checked": true,
+      "result": "Micron+9.61% ✅、Intel-10.42% ✅，分化延續，推薦記憶體股旺宏"
+    },
+    "教訓2_記憶體代工分化": {
+      "lesson": "半導體分化：記憶體強(Micron)、代工弱(Intel)",
+      "checked": true,
+      "result": "分化持續，優先推薦記憶體股，避開代工股"
+    },
+    "教訓3_催化量能缺一不可": {
+      "lesson": "催化劑+量能確認缺一不可",
+      "checked": true,
+      "result": "油價+8.21%更強催化，但南亞設為條件單（需確認量能）"
+    }
+  },
+  "validation": {
+    "min_recommendations": 6,
+    "actual_recommendations": 6,
+    "min_industries": 4,
+    "actual_industries": 5,
+    "max_single_industry_ratio": 0.50,
+    "actual_max_ratio": 0.33,
+    "v6_1_super_catalyst": true,
+    "v6_1_max_ratio_relaxed": 0.70,
+    "catalyst_industry_ratio": 0.67,
+    "price_verified": false,
+    "chip_analysis_executed": true,
+    "reversal_alert_executed": true,
+    "validation_status": "✅ 通過驗證（v6.1超強催化）"
+  },
+  "created_at": "2026-01-30 08:45",
+  "predictions_reference": {
+    "checked": true,
+    "lessons_applied": [
+      {"date": "01/29", "lesson": "v6.1超強催化規則有效", "applied_to": "今日費半+3.29%繼續套用v6.1，旺宏可小倉位推薦"},
+      {"date": "01/29", "lesson": "佈局股策略成功", "applied_to": "今日推薦華南金（佈局股）"},
+      {"date": "01/29", "lesson": "Intel拖累代工", "applied_to": "今日避開台積電、聯電"},
+      {"date": "01/29", "lesson": "塑化需量能確認", "applied_to": "南亞設為條件單（需量比>1.5x）"}
+    ]
+  }
+}
