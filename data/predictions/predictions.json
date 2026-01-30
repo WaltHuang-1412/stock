@@ -3870,4 +3870,145 @@
     },
     "notes": "費半+3.29%超強催化日，但Intel-10.08%導致半導體分化，記憶體強勢代工弱勢"
   }
+}  },
+  "2026-01-30": {
+    "date": "2026-01-30",
+    "day_of_week": "Thursday",
+    "analysis_version": "v6.1",
+    "market_context": "費半+3.29%超強催化（連2日）、Micron+9.61%（記憶體財報超預期）、Intel-10.42%（代工崩潰）",
+    "predictions": [
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "type": "explosive",
+        "phase": "core",
+        "prev_close": 92.10,
+        "recommend_price": "92",
+        "direction": "up",
+        "confidence": 0.89,
+        "reasons": ["Micron+9.61%", "費半+3.29%超強催化", "昨日+58K買超TOP30#2"],
+        "verification": {
+          "actual_close": 92.80,
+          "actual_change": 0.87,
+          "result": "success",
+          "notes": "記憶體題材延續成功"
+        }
+      },
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "type": "stable",
+        "phase": "core",
+        "prev_close": 21.00,
+        "recommend_price": "21",
+        "direction": "up",
+        "confidence": 0.82,
+        "reasons": ["法人暴買+96.4K（TOP30#1）", "FOPLP技術題材", "動能+2,120%"],
+        "verification": {
+          "actual_close": 21.80,
+          "actual_change": 3.81,
+          "result": "success",
+          "notes": "法人+96.4K暴買成功"
+        }
+      },
+      {
+        "symbol": "8150",
+        "name": "南茂",
+        "type": "stable",
+        "phase": "core",
+        "prev_close": 61.5,
+        "recommend_price": "61.5",
+        "direction": "up",
+        "confidence": 0.79,
+        "reasons": ["日月光ADR+6.74%", "昨日+7.6K買超", "5日-5.6%佈局中"],
+        "verification": {
+          "actual_close": 60.20,
+          "actual_change": -2.11,
+          "result": "fail",
+          "notes": "ADR效應失效，日月光本尊-4.03%"
+        }
+      },
+      {
+        "symbol": "2409",
+        "name": "友達",
+        "type": "stable",
+        "phase": "core",
+        "prev_close": 14.2,
+        "recommend_price": "14.2",
+        "direction": "up",
+        "confidence": 0.75,
+        "reasons": ["法人+37K買超（TOP30#3）", "面板回溫", "5日-8.3%佈局中"],
+        "verification": {
+          "actual_close": 13.75,
+          "actual_change": -3.17,
+          "result": "fail",
+          "notes": "面板分化嚴重，群創強友達弱"
+        }
+      },
+      {
+        "symbol": "2880",
+        "name": "華南金",
+        "type": "stable",
+        "phase": "core",
+        "prev_close": 33.7,
+        "recommend_price": "33.7",
+        "direction": "up",
+        "confidence": 0.73,
+        "reasons": ["佈局股策略", "10天連買4日", "動能+60.4%"],
+        "verification": {
+          "actual_close": 33.10,
+          "actual_change": -1.78,
+          "result": "fail",
+          "notes": "佈局股短線波動正常，科技股強金融弱"
+        }
+      },
+      {
+        "symbol": "1303",
+        "name": "南亞",
+        "type": "stable",
+        "phase": "conditional",
+        "trigger_condition": "量比>1.5x且漲幅<3%且外盤>55%",
+        "prev_close": 77.0,
+        "recommend_price": "77",
+        "direction": "up",
+        "confidence": 0.71,
+        "reasons": ["油價+8.21%超強催化", "但昨日法人反轉-3.5K"],
+        "verification": {
+          "actual_close": 75.90,
+          "actual_change": -1.43,
+          "result": "not_triggered",
+          "notes": "量比0.36x未達觸發條件1.5x"
+        }
+      }
+    ],
+    "accuracy": 0.40,
+    "success_count": 2,
+    "fail_count": 3,
+    "not_triggered_count": 1,
+    "key_lessons": [
+      "⚠️ 重大教訓：10天累計 vs 近5天趨勢，應優先看近5天",
+      "南亞科案例：10天法人對決（投信+3.8K vs 外資-15K），但近5天外資反轉+11K、今日+21K暴買→盤前漏掉",
+      "⚠️ Micron利多 → 記憶體+載板都要展開（缺一不可）",
+      "欣興+9.87%、景碩+9.80%（載板）盤前未展開→漏掉",
+      "⚠️ ADR大漲需驗證本尊表現，不能直接推薦同產業",
+      "日月光ADR+6.74% → 日月光本尊-4.03%、南茂-2.11%失敗",
+      "✅ 群創法人+96.4K暴買成功（FOPLP題材+法人雙重驅動）",
+      "✅ 旺宏記憶體題材延續成功（Micron+9.61%催化）",
+      "⚠️ 佈局股不能用單日驗證（華南金-1.78%屬正常波動）",
+      "✅ 避開策略100%成功（聯電-8.63%、日月光-4.03%、台積電-0.64%）"
+    ],
+    "avoided_stocks_verification": {
+      "聯電(2303)": "-8.63% ✅ 正確避開（昨日法人-55K大賣）",
+      "日月光(3711)": "-4.03% ✅ 正確避開（法人對決）",
+      "台塑(1301)": "-3.75% ✅ 正確避開（5日+17.7%已大漲）",
+      "台積電(2330)": "-0.64% ✅ 正確避開（Intel-10.42%拖累）",
+      "緯創(3231)": "-0.69% ✅ 正確避開（連10日-182K出貨）"
+    },
+    "missed_opportunities": {
+      "欣興(3037)": "+9.87%（法人對決，盤前避開合理）",
+      "景碩(3189)": "+9.80%（法人對決，盤前避開合理）",
+      "南亞科(2408)": "+6.06%（🔥 重大遺漏：10天法人對決但近5天外資反轉+11K、今日+21K暴買）"
+    },
+    "notes": "準確率40%但避開100%成功。南亞科是重大教訓：10天數據vs近5天趨勢，應優先看近5天。載板族群（欣興、景碩）未展開但因法人對決避開合理。"
+  }
 }
