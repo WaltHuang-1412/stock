@@ -28,9 +28,9 @@
       "stock_name": "旺宏",
       "type": "explosive",
       "phase": "core",
-      "recommend_price": 84.80,
-      "target_price": 95.00,
-      "stop_loss": 82.00,
+      "recommend_price": 84.8,
+      "target_price": 95.0,
+      "stop_loss": 82.0,
       "position": "5%",
       "rating": "⭐⭐⭐⭐⭐",
       "score": 86,
@@ -55,20 +55,25 @@
       },
       "institutional_flow": 8604,
       "warning": "⚠️ 5日+11.29%已大漲，v6.1強催化例外，快速停損-3%",
-      "status": "pending",
+      "status": "intraday_tracked",
       "industry": {
         "sector": "半導體",
         "sub_type": "記憶體"
-      }
+      },
+      "intraday_price": 83.4,
+      "intraday_change_pct": -1.65,
+      "intraday_volume_ratio": 1.02,
+      "intraday_action": "📍 小跌，正常波動",
+      "intraday_priority": 3
     },
     {
       "stock_code": "2883",
       "stock_name": "凱基金",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 18.00,
-      "target_price": 19.50,
-      "stop_loss": 17.00,
+      "recommend_price": 18.0,
+      "target_price": 19.5,
+      "stop_loss": 17.0,
       "position": "15%",
       "rating": "⭐⭐⭐⭐",
       "score": 82,
@@ -93,20 +98,25 @@
       },
       "institutional_flow": 10000,
       "warning": "⚠️ 昨日失敗-0.83%，動能減弱-38.5%",
-      "status": "pending",
+      "status": "intraday_tracked",
       "industry": {
         "sector": "金融",
         "sub_type": "證券"
-      }
+      },
+      "intraday_price": 18.25,
+      "intraday_change_pct": 1.39,
+      "intraday_volume_ratio": 0.98,
+      "intraday_action": "✅ 上漲，續抱觀察",
+      "intraday_priority": 4
     },
     {
       "stock_code": "8150",
       "stock_name": "南茂",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 57.90,
-      "target_price": 65.00,
-      "stop_loss": 54.00,
+      "recommend_price": 57.9,
+      "target_price": 65.0,
+      "stop_loss": 54.0,
       "position": "15%",
       "rating": "⭐⭐⭐⭐",
       "score": 77,
@@ -130,10 +140,40 @@
         "momentum_level": "⭐⭐⭐ 加速買超（強力佈局）"
       },
       "institutional_flow": 6198,
-      "status": "pending",
+      "status": "intraday_tracked",
       "industry": {
         "sector": "半導體",
         "sub_type": "封測"
+      },
+      "intraday_price": 55.9,
+      "intraday_change_pct": -3.45,
+      "intraday_volume_ratio": 0.73,
+      "intraday_action": "✅ 回檔，可考慮加碼",
+      "intraday_priority": 2,
+      "intraday_4step_verification": {
+        "verified": true,
+        "step1_institutional_momentum": {
+          "yesterday": 6198,
+          "day_before": 6030,
+          "change_pct": 2.8,
+          "status": "pass"
+        },
+        "step2_chip_momentum": {
+          "momentum": "+199.8%",
+          "continuous_days": 3,
+          "5days_cumulative": 15000,
+          "status": "pass"
+        },
+        "step3_reversal_alert": {
+          "alert_level": "none",
+          "status": "pass"
+        },
+        "step4_price_level": {
+          "drawdown": -3.45,
+          "volume_ratio": 0.73,
+          "status": "pass"
+        },
+        "conclusion": "all_pass_can_add_position"
       }
     },
     {
@@ -141,9 +181,9 @@
       "stock_name": "聯發科",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 1705.00,
-      "target_price": 1800.00,
-      "stop_loss": 1630.00,
+      "recommend_price": 1705.0,
+      "target_price": 1800.0,
+      "stop_loss": 1630.0,
       "position": "10%",
       "rating": "⭐⭐⭐⭐",
       "score": 74,
@@ -168,20 +208,25 @@
       },
       "institutional_flow": -2098,
       "warning": "⚠️ 動能大幅減弱-94.5%，觀察買盤延續性",
-      "status": "pending",
+      "status": "intraday_tracked",
       "industry": {
         "sector": "半導體",
         "sub_type": "IC設計"
-      }
+      },
+      "intraday_price": 1790.0,
+      "intraday_change_pct": 4.99,
+      "intraday_volume_ratio": 0.86,
+      "intraday_action": "📈 大漲，可部分獲利",
+      "intraday_priority": 5
     },
     {
       "stock_code": "2382",
       "stock_name": "廣達",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 273.00,
-      "target_price": 285.00,
-      "stop_loss": 265.00,
+      "recommend_price": 273.0,
+      "target_price": 285.0,
+      "stop_loss": 265.0,
       "position": "10%",
       "rating": "⭐⭐⭐",
       "score": 68,
@@ -206,20 +251,25 @@
       },
       "institutional_flow": -1509,
       "warning": "⚠️ 昨日Meta+8.76%但廣達-3.36%失敗，動能減弱-38.6%，法人對決",
-      "status": "pending",
+      "status": "intraday_tracked",
       "industry": {
         "sector": "AI伺服器",
         "sub_type": "AI伺服器組裝"
-      }
+      },
+      "intraday_price": 275.0,
+      "intraday_change_pct": 0.73,
+      "intraday_volume_ratio": 0.49,
+      "intraday_action": "✅ 上漲，續抱觀察",
+      "intraday_priority": 4
     },
     {
       "stock_code": "2324",
       "stock_name": "仁寶",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 32.30,
-      "target_price": 35.00,
-      "stop_loss": 31.00,
+      "recommend_price": 32.3,
+      "target_price": 35.0,
+      "stop_loss": 31.0,
       "position": "10%",
       "rating": "⭐⭐⭐",
       "score": 68,
@@ -244,19 +294,49 @@
       },
       "institutional_flow": 1063,
       "warning": "⚠️ 法人對決（外資買、投信賣），延續昨日成功模式",
-      "status": "pending",
+      "status": "intraday_tracked",
       "industry": {
         "sector": "AI PC",
         "sub_type": "NB代工"
-      }
+      },
+      "intraday_price": 32.2,
+      "intraday_change_pct": -0.31,
+      "intraday_volume_ratio": 0.61,
+      "intraday_action": "📍 小跌，正常波動",
+      "intraday_priority": 3
     }
   ],
   "avoided_stocks": [
-    {"stock_code": "2408", "stock_name": "南亞科", "reason": "10天累計-45K，02/02反轉賣超-33K", "institutional_flow": -33000},
-    {"stock_code": "2344", "stock_name": "華邦電", "reason": "10天累計-77K，動能-281.8%", "institutional_flow": -31000},
-    {"stock_code": "6770", "stock_name": "力積電", "reason": "10天累計-68K，02/02反轉賣超-68K", "institutional_flow": -68000},
-    {"stock_code": "2303", "stock_name": "聯電", "reason": "動能-84.9%，ADR續跌-11.39%", "institutional_flow": 3892},
-    {"stock_code": "3037", "stock_name": "欣興", "reason": "反轉警告，動能-139.9%，近5天-4,496", "institutional_flow": -7226}
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "reason": "10天累計-45K，02/02反轉賣超-33K",
+      "institutional_flow": -33000
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "10天累計-77K，動能-281.8%",
+      "institutional_flow": -31000
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "10天累計-68K，02/02反轉賣超-68K",
+      "institutional_flow": -68000
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "動能-84.9%，ADR續跌-11.39%",
+      "institutional_flow": 3892
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "reason": "反轉警告，動能-139.9%，近5天-4,496",
+      "institutional_flow": -7226
+    }
   ],
   "holdings_tracking": {
     "群創(3481)": {
@@ -293,25 +373,67 @@
     }
   },
   "industry_distribution": {
-    "記憶體": {"count": 1, "percentage": 0.167, "stocks": ["旺宏"]},
-    "封測": {"count": 1, "percentage": 0.167, "stocks": ["南茂"]},
-    "IC設計": {"count": 1, "percentage": 0.167, "stocks": ["聯發科"]},
-    "AI伺服器": {"count": 1, "percentage": 0.167, "stocks": ["廣達"]},
-    "AI PC": {"count": 1, "percentage": 0.167, "stocks": ["仁寶"]},
-    "金融": {"count": 1, "percentage": 0.167, "stocks": ["凱基金"]}
+    "記憶體": {
+      "count": 1,
+      "percentage": 0.167,
+      "stocks": [
+        "旺宏"
+      ]
+    },
+    "封測": {
+      "count": 1,
+      "percentage": 0.167,
+      "stocks": [
+        "南茂"
+      ]
+    },
+    "IC設計": {
+      "count": 1,
+      "percentage": 0.167,
+      "stocks": [
+        "聯發科"
+      ]
+    },
+    "AI伺服器": {
+      "count": 1,
+      "percentage": 0.167,
+      "stocks": [
+        "廣達"
+      ]
+    },
+    "AI PC": {
+      "count": 1,
+      "percentage": 0.167,
+      "stocks": [
+        "仁寶"
+      ]
+    },
+    "金融": {
+      "count": 1,
+      "percentage": 0.167,
+      "stocks": [
+        "凱基金"
+      ]
+    }
   },
   "yesterday_verification": {
     "date": "2026-02-02",
-    "accuracy": 0.20,
-    "success_patterns": ["仁寶AI PC成功+1.73%"],
-    "failure_patterns": ["Meta大漲但AI伺服器股廣達反而下跌", "記憶體台股脫鉤", "聯電大跌-11.84%"]
+    "accuracy": 0.2,
+    "success_patterns": [
+      "仁寶AI PC成功+1.73%"
+    ],
+    "failure_patterns": [
+      "Meta大漲但AI伺服器股廣達反而下跌",
+      "記憶體台股脫鉤",
+      "聯電大跌-11.84%"
+    ]
   },
   "validation": {
     "min_recommendations": 6,
     "actual_recommendations": 6,
     "min_industries": 4,
     "actual_industries": 6,
-    "max_single_industry_ratio": 0.60,
+    "max_single_industry_ratio": 0.6,
     "actual_max_ratio": 0.167,
     "catalyst_level": "strong",
     "validation_status": "✅ 通過驗證（強催化日，6檔推薦，6產業分散）"
@@ -328,8 +450,10 @@
   "catalyst_strength_v6_1": {
     "phlx_semiconductor_change": 2.62,
     "catalyst_level": "strong",
-    "industry_concentration_limit": 0.60,
+    "industry_concentration_limit": 0.6,
     "price_screening_adjustment": "記憶體產業5日>10%可保留（標註風險、小倉位5%、停損-3%）",
     "notes": "v6.1規則：強催化日記憶體產業放寬篩選，旺宏5日+11.29%例外推薦"
-  }
+  },
+  "intraday_analysis_time": "2026-02-03 12:30",
+  "intraday_analysis_completed": true
 }
