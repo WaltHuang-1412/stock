@@ -1,6 +1,6 @@
 {
   "phase": "after_market",
-  "version": "v5.6",
+  "version": "v7.0",
   "todos": [
     {
       "content": "Step 0: 前置檢查（intraday_analysis.md 和 dual_track_analysis.json 存在？）",
@@ -48,12 +48,23 @@
       "activeForm": "明日預測調整"
     },
     {
+      "content": "Step 6.5: 深度驗證（推薦股chip_analysis.py --days 10 + 遺漏機會深度檢討 + 產業輪動分析）",
+      "status": "pending",
+      "activeForm": "深度驗證"
+    },
+    {
       "content": "Step 7: 建檔（after_market_analysis.md + 更新tracking.json收盤價 + 更新predictions.json）",
       "status": "pending",
       "activeForm": "建立文件"
+    },
+    {
+      "content": "Step 7.5: 驗證分析（執行 validate_analysis.py after_market YYYY-MM-DD）",
+      "status": "pending",
+      "activeForm": "驗證分析完整性"
     }
   ],
   "validation": {
+    "required_version": "v7.0",
     "required_files": [
       "data/YYYY-MM-DD/after_market_analysis.md",
       "data/tracking/tracking_YYYY-MM-DD.json",

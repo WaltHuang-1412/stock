@@ -1,6 +1,6 @@
 {
   "phase": "intraday",
-  "version": "v5.6",
+  "version": "v7.0",
   "todos": [
     {
       "content": "Step 0: 前置檢查（tracking.json存在？）",
@@ -21,6 +21,11 @@
       "content": "Step 2: Track A分析（盤前推薦股五維度盤中評分）",
       "status": "pending",
       "activeForm": "Track A分析"
+    },
+    {
+      "content": "Step 2.5: 回檔股深度驗證（當準備建議加碼時：查昨日vs前日法人力道 + chip_analysis.py動能 + reversal_alert.py預警）",
+      "status": "pending",
+      "activeForm": "回檔股深度驗證"
     },
     {
       "content": "Step 3: Track B分析（成交量TOP20 + 量比TOP20 + 買賣方向判斷）",
@@ -46,9 +51,15 @@
       "content": "Step 5: 建檔（intraday_analysis.md + 更新tracking.json盤中價格）",
       "status": "pending",
       "activeForm": "建立文件"
+    },
+    {
+      "content": "Step 5.5: 驗證分析（執行 validate_analysis.py intraday YYYY-MM-DD）",
+      "status": "pending",
+      "activeForm": "驗證分析完整性"
     }
   ],
   "validation": {
+    "required_version": "v7.0",
     "required_files": [
       "data/YYYY-MM-DD/intraday_analysis.md"
     ],
