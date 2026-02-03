@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-法人買賣超 TOP30 查詢工具
+法人買賣超 TOP50 查詢工具（v2.0 擴大掃描範圍）
 
 功能：
 - 查詢證交所法人買賣超數據
 - 計算 5 日漲幅
 - 標註狀態（佈局中/可進場/已小漲/追高風險/已大漲）
+- 🆕 擴大為 TOP50，分三層級輸出
 
 使用方式：
     python3 scripts/fetch_institutional_top30.py [日期YYYYMMDD]
@@ -14,7 +15,7 @@
     python3 scripts/fetch_institutional_top30.py           # 查詢最近交易日
     python3 scripts/fetch_institutional_top30.py 20251216  # 查詢指定日期
 
-修改日期：2026-01-26（TOP50→TOP30 效率優化）
+修改日期：2026-02-03（TOP30→TOP50 擴大掃描）
 """
 
 import sys
@@ -104,7 +105,7 @@ def get_status(pct):
 
 
 def fetch_institutional_top30(date=None):
-    """查詢法人買賣超 TOP30"""
+    """查詢法人買賣超 TOP50（向下相容保留函數名）"""
 
     # 日期處理
     if not date:
@@ -164,15 +165,15 @@ def fetch_institutional_top30(date=None):
             except:
                 continue
 
-        # 買超 TOP30
-        stocks_buy = sorted(stocks, key=lambda x: x['total'], reverse=True)[:30]
+        # 買超 TOP50（v2.0 擴大掃描）
+        stocks_buy = sorted(stocks, key=lambda x: x['total'], reverse=True)[:50]
 
-        # 賣超 TOP30
-        stocks_sell = sorted(stocks, key=lambda x: x['total'])[:30]
+        # 賣超 TOP50
+        stocks_sell = sorted(stocks, key=lambda x: x['total'])[:50]
 
         return {
             'date': formatted_date,
-            'buy_top30': stocks_buy,
+            'buy_top30': stocks_buy,  # 保留key名稱向下相容
             'sell_top30': stocks_sell
         }
 
@@ -198,22 +199,64 @@ def format_value(v):
 
 
 def print_top30_report(result, include_price=True):
-    """輸出 TOP30 報告"""
+    """輸出 TOP50 報告（v2.0 分三層級）"""
 
     if not result:
         return
 
     date = result['date']
-    buy_top30 = result['buy_top30']
-    sell_top30 = result['sell_top30']
+    buy_top50 = result['buy_top30']  # 實際是TOP50，key名保留向下相容
+    sell_top50 = result['sell_top30']
 
-    # 買超 TOP30
-    print(f'\n## 法人買超 TOP30（{date}）')
+    # 買超 TOP50（分三層級）
+    print(f'\n## 法人買超 TOP50（{date}）')
+    print()
+
+    # 第一層級：TOP20（優先推薦）
+    print('### 📌 TOP 1-20（優先推薦）')
     print()
     print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
     print('|------|------|------|---------|------|------|--------|------|')
 
-    for i, s in enumerate(buy_top30, 1):
+    for i, s in enumerate(buy_top50[:20], 1):
+        if include_price:
+            pct = get_5day_change(s['code'])
+            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
+            status = get_status(pct)
+        else:
+            pct_str = '--'
+            status = '--'
+
+        print(f"| {i} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_value(s['trust'])} | {format_value(s['foreign'])} | {pct_str} | {status} |")
+
+    print()
+
+    # 第二層級：21-35（可考慮）
+    print('### 🔍 TOP 21-35（可考慮）')
+    print()
+    print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
+    print('|------|------|------|---------|------|------|--------|------|')
+
+    for i, s in enumerate(buy_top50[20:35], 21):
+        if include_price:
+            pct = get_5day_change(s['code'])
+            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
+            status = get_status(pct)
+        else:
+            pct_str = '--'
+            status = '--'
+
+        print(f"| {i} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_value(s['trust'])} | {format_value(s['foreign'])} | {pct_str} | {status} |")
+
+    print()
+
+    # 第三層級：36-50（觀察備用）
+    print('### 👀 TOP 36-50（觀察備用）')
+    print()
+    print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
+    print('|------|------|------|---------|------|------|--------|------|')
+
+    for i, s in enumerate(buy_top50[35:50], 36):
         if include_price:
             pct = get_5day_change(s['code'])
             pct_str = f'{pct:+.1f}%' if pct is not None else '--'
@@ -228,13 +271,55 @@ def print_top30_report(result, include_price=True):
     print('---')
     print()
 
-    # 賣超 TOP30
-    print(f'## 法人賣超 TOP30（{date}）')
+    # 賣超 TOP50（分三層級）
+    print(f'## 法人賣超 TOP50（{date}）')
+    print()
+
+    # 第一層級：TOP20（重點避開）
+    print('### 🔴 TOP 1-20（重點避開）')
     print()
     print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
     print('|------|------|------|---------|------|------|--------|------|')
 
-    for i, s in enumerate(sell_top30, 1):
+    for i, s in enumerate(sell_top50[:20], 1):
+        if include_price:
+            pct = get_5day_change(s['code'])
+            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
+            status = get_status(pct)
+        else:
+            pct_str = '--'
+            status = '--'
+
+        print(f"| {i} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_value(s['trust'])} | {format_value(s['foreign'])} | {pct_str} | {status} |")
+
+    print()
+
+    # 第二層級：21-35（注意風險）
+    print('### ⚠️ TOP 21-35（注意風險）')
+    print()
+    print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
+    print('|------|------|------|---------|------|------|--------|------|')
+
+    for i, s in enumerate(sell_top50[20:35], 21):
+        if include_price:
+            pct = get_5day_change(s['code'])
+            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
+            status = get_status(pct)
+        else:
+            pct_str = '--'
+            status = '--'
+
+        print(f"| {i} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_value(s['trust'])} | {format_value(s['foreign'])} | {pct_str} | {status} |")
+
+    print()
+
+    # 第三層級：36-50（觀察參考）
+    print('### 👁️ TOP 36-50（觀察參考）')
+    print()
+    print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
+    print('|------|------|------|---------|------|------|--------|------|')
+
+    for i, s in enumerate(sell_top50[35:50], 36):
         if include_price:
             pct = get_5day_change(s['code'])
             pct_str = f'{pct:+.1f}%' if pct is not None else '--'
