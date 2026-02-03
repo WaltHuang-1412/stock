@@ -13,8 +13,15 @@
   python3 scripts/holdings_analysis.py 2409 --days 15 # 指定天數
 """
 
-import requests
 import sys
+import io
+
+# Windows 環境 stdout/stderr 編碼修正（避免中文/emoji 輸出時 cp950 報錯）
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
+
+import requests
 import json
 from datetime import datetime, timedelta
 import time

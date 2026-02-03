@@ -16,9 +16,10 @@ Track B: 全市場即時掃描（發現新機會）
 import sys
 import io
 
-# Windows 環境 stdout 編碼修正（避免中文/emoji 輸出時 cp950 報錯）
+# Windows 環境 stdout/stderr 編碼修正（避免中文/emoji 輸出時 cp950 報錯）
 if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 import json
 from pathlib import Path
@@ -113,6 +114,11 @@ def read_tracking_file(date_str):
 def get_realtime_data_api(stock_code):
     """使用 Yahoo Finance API 直接查詢（無需 yfinance 套件）"""
     import requests
+    import warnings
+
+    # 抑制所有警告和錯誤輸出
+    warnings.filterwarnings('ignore')
+
     try:
         url = f"https://query1.finance.yahoo.com/v8/finance/chart/{stock_code}.TW?interval=1d&range=5d"
         headers = {'User-Agent': 'Mozilla/5.0'}
@@ -171,6 +177,16 @@ def get_realtime_data_api(stock_code):
 
 def get_realtime_data(stock_code):
     """獲取即時股價數據（P0修復：支援無 yfinance 環境）"""
+    import warnings
+    import os
+
+    # 抑制所有警告
+    warnings.filterwarnings('ignore')
+
+    # 抑制 yfinance 的錯誤輸出（重定向 stderr）
+    original_stderr = sys.stderr
+    sys.stderr = open(os.devnull, 'w')
+
     # 優先使用 yfinance（如果可用）
     if HAS_YFINANCE:
         try:
@@ -195,7 +211,7 @@ def get_realtime_data(stock_code):
             if not stock_name or stock_name == stock_code:
                 stock_name = info.get('shortName', stock_code)
 
-            return {
+            result = {
                 'code': stock_code,
                 'name': stock_name,
                 'current_price': round(current_price, 2),
@@ -204,9 +220,19 @@ def get_realtime_data(stock_code):
                 'volume': current_volume,
                 'volume_ratio': round(volume_ratio, 2)
             }
+            # 恢復 stderr
+            sys.stderr.close()
+            sys.stderr = original_stderr
+            return result
         except Exception:
+            # 恢復 stderr
+            sys.stderr.close()
+            sys.stderr = original_stderr
             return get_realtime_data_api(stock_code)  # 降級到 API
     else:
+        # 恢復 stderr
+        sys.stderr.close()
+        sys.stderr = original_stderr
         # 無 yfinance，直接使用 API
         return get_realtime_data_api(stock_code)
 

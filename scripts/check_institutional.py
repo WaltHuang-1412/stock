@@ -3,16 +3,22 @@
 查詢個股法人買賣超
 直接查證交所API，不依賴TOP50篩選
 
-最後更新：2026-01-22（跨平台修復）
+最後更新：2026-02-03（編碼修復）
 """
 
 import requests
 import urllib3
 import sys
+import io
 from pathlib import Path
 from datetime import datetime, timedelta
 import warnings
 warnings.filterwarnings('ignore')
+
+# Windows 環境 stdout/stderr 編碼修正（避免 emoji 輸出時 cp950 報錯）
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 # 關閉 SSL 警告
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
