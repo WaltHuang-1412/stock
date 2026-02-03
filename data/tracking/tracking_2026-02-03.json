@@ -64,7 +64,10 @@
       "intraday_change_pct": -1.65,
       "intraday_volume_ratio": 1.02,
       "intraday_action": "📍 小跌，正常波動",
-      "intraday_priority": 3
+      "intraday_priority": 3,
+      "actual_close": 84.5,
+      "actual_change_pct": -0.35,
+      "result": "fail"
     },
     {
       "stock_code": "2883",
@@ -107,7 +110,10 @@
       "intraday_change_pct": 1.39,
       "intraday_volume_ratio": 0.98,
       "intraday_action": "✅ 上漲，續抱觀察",
-      "intraday_priority": 4
+      "intraday_priority": 4,
+      "actual_close": 18.25,
+      "actual_change_pct": 1.39,
+      "result": "success"
     },
     {
       "stock_code": "8150",
@@ -174,7 +180,10 @@
           "status": "pass"
         },
         "conclusion": "all_pass_can_add_position"
-      }
+      },
+      "actual_close": 56.3,
+      "actual_change_pct": -2.76,
+      "result": "fail"
     },
     {
       "stock_code": "2454",
@@ -217,7 +226,10 @@
       "intraday_change_pct": 4.99,
       "intraday_volume_ratio": 0.86,
       "intraday_action": "📈 大漲，可部分獲利",
-      "intraday_priority": 5
+      "intraday_priority": 5,
+      "actual_close": 1795.0,
+      "actual_change_pct": 5.28,
+      "result": "success"
     },
     {
       "stock_code": "2382",
@@ -260,7 +272,10 @@
       "intraday_change_pct": 0.73,
       "intraday_volume_ratio": 0.49,
       "intraday_action": "✅ 上漲，續抱觀察",
-      "intraday_priority": 4
+      "intraday_priority": 4,
+      "actual_close": 276.5,
+      "actual_change_pct": 1.28,
+      "result": "success"
     },
     {
       "stock_code": "2324",
@@ -303,7 +318,10 @@
       "intraday_change_pct": -0.31,
       "intraday_volume_ratio": 0.61,
       "intraday_action": "📍 小跌，正常波動",
-      "intraday_priority": 3
+      "intraday_priority": 3,
+      "actual_close": 32.0,
+      "actual_change_pct": -0.93,
+      "result": "fail"
     }
   ],
   "avoided_stocks": [
@@ -455,5 +473,7 @@
     "notes": "v6.1規則：強催化日記憶體產業放寬篩選，旺宏5日+11.29%例外推薦"
   },
   "intraday_analysis_time": "2026-02-03 12:30",
-  "intraday_analysis_completed": true
+  "intraday_analysis_completed": true,
+  "after_market_analysis_time": "2026-02-03 16:30",
+  "after_market_analysis_completed": true
 }
