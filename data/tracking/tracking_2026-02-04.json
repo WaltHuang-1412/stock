@@ -69,7 +69,13 @@
         "current": 1800.0,
         "change_pct": 0.28
       },
-      "intraday_status": "up"
+      "intraday_status": "up",
+      "closing_data": {
+        "close": 1800.0,
+        "change_pct": 0.28
+      },
+      "closing_status": "success",
+      "result": "success"
     },
     {
       "stock_code": "2610",
@@ -115,7 +121,13 @@
         "current": 22.65,
         "change_pct": 1.57
       },
-      "intraday_status": "up"
+      "intraday_status": "up",
+      "closing_data": {
+        "close": 22.65,
+        "change_pct": 1.57
+      },
+      "closing_status": "success",
+      "result": "success"
     },
     {
       "stock_code": "2618",
@@ -161,7 +173,13 @@
         "current": 38.2,
         "change_pct": 0.39
       },
-      "intraday_status": "up"
+      "intraday_status": "up",
+      "closing_data": {
+        "close": 38.4,
+        "change_pct": 0.92
+      },
+      "closing_status": "success",
+      "result": "success"
     },
     {
       "stock_code": "1303",
@@ -209,7 +227,13 @@
         "current": 77.7,
         "change_pct": 6.44
       },
-      "intraday_status": "up"
+      "intraday_status": "up",
+      "closing_data": {
+        "close": 77.6,
+        "change_pct": 6.3
+      },
+      "closing_status": "success",
+      "result": "success"
     },
     {
       "stock_code": "2887",
@@ -255,7 +279,13 @@
         "current": 23.15,
         "change_pct": 1.76
       },
-      "intraday_status": "up"
+      "intraday_status": "up",
+      "closing_data": {
+        "close": 23.05,
+        "change_pct": 1.32
+      },
+      "closing_status": "success",
+      "result": "success"
     },
     {
       "stock_code": "2883",
@@ -303,7 +333,13 @@
         "current": 18.35,
         "change_pct": 0.55
       },
-      "intraday_status": "up"
+      "intraday_status": "up",
+      "closing_data": {
+        "close": 18.4,
+        "change_pct": 0.82
+      },
+      "closing_status": "success",
+      "result": "success"
     }
   ],
   "avoided_stocks": [
@@ -485,5 +521,23 @@
       "change_pct": 0.28
     },
     "intraday_analysis_completed": true
+  },
+  "after_market_summary": {
+    "total_stocks": 6,
+    "success_count": 6,
+    "fail_count": 0,
+    "accuracy": 1.0,
+    "avg_change_pct": 1.87,
+    "best_performer": {
+      "code": "1303",
+      "name": "南亞",
+      "change_pct": 6.3
+    },
+    "worst_performer": {
+      "code": "2454",
+      "name": "聯發科",
+      "change_pct": 0.28
+    },
+    "after_market_analysis_completed": true
   }
 }

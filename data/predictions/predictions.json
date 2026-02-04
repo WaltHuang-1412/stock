@@ -4252,5 +4252,79 @@
       "奇鋐+9.73%遺漏（動能+402%但被過濾）"
     ],
     "notes": "強催化日準確率50%。v2.0改進完成但未及時生效。"
+  },
+  "2026-02-04": {
+    "date": "2026-02-04",
+    "day_of_week": "Tuesday",
+    "version": "v3.1",
+    "predictions": [
+      {
+        "symbol": "2454",
+        "name": "聯發科",
+        "recommend_price": 1805.0,
+        "actual_close": 1800.0,
+        "change_pct": 0.28,
+        "result": "success"
+      },
+      {
+        "symbol": "2610",
+        "name": "華航",
+        "recommend_price": 23.2,
+        "actual_close": 22.65,
+        "change_pct": 1.57,
+        "result": "success"
+      },
+      {
+        "symbol": "2618",
+        "name": "長榮航",
+        "recommend_price": 26.7,
+        "actual_close": 38.4,
+        "change_pct": 0.92,
+        "result": "success"
+      },
+      {
+        "symbol": "1303",
+        "name": "南亞",
+        "recommend_price": 70.5,
+        "actual_close": 77.6,
+        "change_pct": 6.3,
+        "result": "success"
+      },
+      {
+        "symbol": "2887",
+        "name": "台新金",
+        "recommend_price": 18.1,
+        "actual_close": 23.05,
+        "change_pct": 1.32,
+        "result": "success"
+      },
+      {
+        "symbol": "2883",
+        "name": "凱基金",
+        "recommend_price": 18.3,
+        "actual_close": 18.4,
+        "change_pct": 0.82,
+        "result": "success"
+      }
+    ],
+    "accuracy": 1.0,
+    "total": 6,
+    "success": 6,
+    "fail": 0,
+    "notes": "v3.1雙軌並行系統首次完整驗證，100%上漲。南亞領漲+6.30%，驗證油價催化+動能篩選策略有效。",
+    "track_b_discoveries": [
+      {
+        "symbol": "1326",
+        "name": "台化",
+        "change_pct": 2.92,
+        "note": "盤中發現，記錄觀察"
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "change_pct": 4.23,
+        "note": "盤中發現，但法人出貨未推薦"
+      }
+    ]
   }
 }
