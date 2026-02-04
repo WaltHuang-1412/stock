@@ -182,28 +182,36 @@ def analyze_chip_history(stock_code, n_days=10):
             momentum_change = 0
 
         # 判斷動能等級
-        if momentum_change > 50:
-            momentum_level = "⭐⭐⭐ 加速買超（強力佈局）"
+        # 🆕 2026-02-04 驗證結果：動能減弱 = 佈局完成 = 準備漲
+        # 驗證數據：動能<-30%準確率100% vs 動能>+100%準確率0%
+        if momentum_change < -30:
+            momentum_level = "⭐⭐⭐⭐⭐ 佈局完成（準備漲）"
+            momentum_rating = 5
+            recommendation = "🔥 強烈推薦"
+        elif -30 <= momentum_change <= 0:
+            momentum_level = "⭐⭐⭐⭐ 佈局完成中（推薦）"
+            momentum_rating = 4
+            recommendation = "✅ 推薦"
+        elif 0 < momentum_change <= 50:
+            momentum_level = "⭐⭐⭐ 佈局中（可觀察）"
             momentum_rating = 3
-        elif momentum_change > 20:
-            momentum_level = "⭐⭐ 買超增強"
+            recommendation = "⚠️ 小倉位"
+        elif 50 < momentum_change <= 100:
+            momentum_level = "⭐⭐ 動能增強（謹慎）"
             momentum_rating = 2
-        elif momentum_change > -20:
-            momentum_level = "⭐ 持續買超"
-            momentum_rating = 1
-        elif momentum_change > -50:
-            momentum_level = "⚠️ 買超減弱"
-            momentum_rating = -1
-        else:
-            momentum_level = "🔴 買超大幅減弱"
-            momentum_rating = -2
+            recommendation = "⚠️ 觀望"
+        else:  # > 100
+            momentum_level = "🔴 動能爆發（追高風險）"
+            momentum_rating = 0
+            recommendation = "❌ 避開"
 
         momentum = {
             'recent_avg': recent_avg,
             'previous_avg': previous_avg,
             'change_pct': momentum_change,
             'level': momentum_level,
-            'rating': momentum_rating
+            'rating': momentum_rating,
+            'recommendation': recommendation  # 🆕 2026-02-04 加入推薦建議
         }
 
     return {
@@ -323,6 +331,7 @@ def print_chip_report(result):
         print(f"  動能變化: {momentum['change_pct']:+.1f}%")
         print()
         print(f"  動能等級: {momentum['level']}")
+        print(f"  推薦建議: {momentum.get('recommendation', 'N/A')}")  # 🆕 2026-02-04
         print()
 
     # 籌碼判斷
