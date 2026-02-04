@@ -63,7 +63,13 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "IC設計"
-      }
+      },
+      "intraday_data": {
+        "prev_close": 1795.0,
+        "current": 1800.0,
+        "change_pct": 0.28
+      },
+      "intraday_status": "up"
     },
     {
       "stock_code": "2610",
@@ -103,7 +109,13 @@
       "industry": {
         "sector": "航空",
         "sub_type": "航空運輸"
-      }
+      },
+      "intraday_data": {
+        "prev_close": 22.3,
+        "current": 22.65,
+        "change_pct": 1.57
+      },
+      "intraday_status": "up"
     },
     {
       "stock_code": "2618",
@@ -143,7 +155,13 @@
       "industry": {
         "sector": "航空",
         "sub_type": "航空運輸"
-      }
+      },
+      "intraday_data": {
+        "prev_close": 38.05,
+        "current": 38.2,
+        "change_pct": 0.39
+      },
+      "intraday_status": "up"
     },
     {
       "stock_code": "1303",
@@ -185,7 +203,13 @@
       "industry": {
         "sector": "塑化",
         "sub_type": "塑膠"
-      }
+      },
+      "intraday_data": {
+        "prev_close": 73.0,
+        "current": 77.7,
+        "change_pct": 6.44
+      },
+      "intraday_status": "up"
     },
     {
       "stock_code": "2887",
@@ -225,7 +249,13 @@
       "industry": {
         "sector": "金融",
         "sub_type": "金控"
-      }
+      },
+      "intraday_data": {
+        "prev_close": 22.75,
+        "current": 23.15,
+        "change_pct": 1.76
+      },
+      "intraday_status": "up"
     },
     {
       "stock_code": "2883",
@@ -267,7 +297,13 @@
       "industry": {
         "sector": "金融",
         "sub_type": "證券"
-      }
+      },
+      "intraday_data": {
+        "prev_close": 18.25,
+        "current": 18.35,
+        "change_pct": 0.55
+      },
+      "intraday_status": "up"
     }
   ],
   "avoided_stocks": [
@@ -342,22 +378,32 @@
     "航空": {
       "count": 2,
       "percentage": 0.333,
-      "stocks": ["華航", "長榮航"]
+      "stocks": [
+        "華航",
+        "長榮航"
+      ]
     },
     "金融": {
       "count": 2,
       "percentage": 0.333,
-      "stocks": ["台新金", "凱基金"]
+      "stocks": [
+        "台新金",
+        "凱基金"
+      ]
     },
     "塑化": {
       "count": 1,
       "percentage": 0.167,
-      "stocks": ["南亞"]
+      "stocks": [
+        "南亞"
+      ]
     },
     "IC設計": {
       "count": 1,
       "percentage": 0.167,
-      "stocks": ["聯發科"]
+      "stocks": [
+        "聯發科"
+      ]
     }
   },
   "yesterday_verification": {
@@ -370,13 +416,21 @@
         "count": 3,
         "success": 3,
         "accuracy": 1.0,
-        "stocks": ["聯發科", "凱基金", "廣達"]
+        "stocks": [
+          "聯發科",
+          "凱基金",
+          "廣達"
+        ]
       },
       "momentum_above_plus_100": {
         "count": 3,
         "success": 0,
         "accuracy": 0.0,
-        "stocks": ["旺宏", "南茂", "仁寶"]
+        "stocks": [
+          "旺宏",
+          "南茂",
+          "仁寶"
+        ]
       },
       "conclusion": "如果昨日使用新策略，準確率將是100%"
     },
@@ -400,7 +454,10 @@
     "enabled": true,
     "first_use": true,
     "excluded_count": 2,
-    "excluded_stocks": ["彰銀", "國泰金"],
+    "excluded_stocks": [
+      "彰銀",
+      "國泰金"
+    ],
     "momentum_adjustment": {
       "below_minus_30": "+12~25分",
       "minus_30_to_0": "+8~10分",
@@ -411,5 +468,22 @@
     "expected_accuracy": "70-80%",
     "improvement": "+20-30%"
   },
-  "created_at": "2026-02-04 07:45"
+  "created_at": "2026-02-04 07:45",
+  "intraday_summary": {
+    "total_stocks": 6,
+    "up_count": 6,
+    "down_count": 0,
+    "avg_change_pct": 1.83,
+    "best_performer": {
+      "code": "1303",
+      "name": "南亞",
+      "change_pct": 6.44
+    },
+    "worst_performer": {
+      "code": "2454",
+      "name": "聯發科",
+      "change_pct": 0.28
+    },
+    "intraday_analysis_completed": true
+  }
 }

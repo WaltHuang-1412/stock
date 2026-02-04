@@ -1,0 +1,108 @@
+{
+  "date": "2026-02-04",
+  "summary": {
+    "total": 7,
+    "dual_confirmed": 2,
+    "only_institutional": 4,
+    "only_catalyst": 1
+  },
+  "dual_confirmed_stocks": [
+    "2610",
+    "2618"
+  ],
+  "all_candidates": [
+    {
+      "code": "2610",
+      "name": "華航",
+      "rank": 2,
+      "institutional_total": 30000,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [
+        "航空"
+      ]
+    },
+    {
+      "code": "2618",
+      "name": "長榮航",
+      "rank": 3,
+      "institutional_total": 13000,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [
+        "航空"
+      ]
+    },
+    {
+      "code": "2883",
+      "name": "凱基金",
+      "rank": 1,
+      "institutional_total": 36000,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high"
+    },
+    {
+      "code": "2454",
+      "name": "聯發科",
+      "rank": 4,
+      "institutional_total": 12000,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high"
+    },
+    {
+      "code": "2887",
+      "name": "台新金",
+      "rank": 5,
+      "institutional_total": 11000,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high"
+    },
+    {
+      "code": "1303",
+      "name": "南亞",
+      "rank": 6,
+      "institutional_total": 8000,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high"
+    },
+    {
+      "code": "2712",
+      "name": "遠雄",
+      "category": "地勤",
+      "industry": "航空",
+      "industry_name": "航空運輸",
+      "tier": "tier_1",
+      "tier_name": "航空相關",
+      "industries": [
+        "航空"
+      ],
+      "sources": [
+        "industry_catalyst"
+      ],
+      "dual_confirmed": false,
+      "priority": "medium"
+    }
+  ]
+}

@@ -426,21 +426,111 @@ class InternationalMarketFetcher:
         return "\n".join(output)
 
 
+def create_simple_json(data: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    創建簡化的 JSON 格式供 identify_hotspots.py 使用
+
+    Returns:
+        簡化的 dict，包含關鍵指標的漲跌幅
+    """
+    simple_data = {}
+
+    # 美股市場
+    if 'us_markets' in data:
+        for name, info in data['us_markets'].items():
+            if info.get('status') != 'error':
+                # 移除中文字，使用簡化鍵名
+                key = name.replace('綜合指數', '').replace('工業指數', '').replace('指數', '').strip()
+                # 特殊處理費城半導體
+                if '費城半導體' in key:
+                    key = '費城半導體'
+                simple_data[key] = info['change_pct']
+
+    # 台股ADR
+    if 'taiwan_adrs' in data:
+        for name, info in data['taiwan_adrs'].items():
+            if info.get('status') != 'error':
+                # ADR 數據不放入簡化 JSON（避免混淆）
+                pass
+
+    # 半導體/科技個股
+    if 'semiconductor_stocks' in data:
+        for name, info in data['semiconductor_stocks'].items():
+            if info.get('status') != 'error':
+                simple_data[name] = info['change_pct']
+
+    # 關鍵指標
+    if 'key_indicators' in data:
+        for name, info in data['key_indicators'].items():
+            if info.get('status') != 'error':
+                # 特殊處理輝達（重要催化劑）
+                if name == '輝達':
+                    simple_data['NVIDIA'] = info['change_pct']
+                elif name == 'WTI原油':
+                    simple_data['WTI原油'] = info['change_pct']
+                elif name == '黃金':
+                    simple_data['黃金'] = info['change_pct']
+                elif name == 'VIX恐慌指數':
+                    simple_data['VIX'] = info['change_pct']
+
+    return simple_data
+
+
 def main():
     """主執行函數"""
+    import argparse
+
+    parser = argparse.ArgumentParser(description='獲取國際市場數據')
+    parser.add_argument('--format', choices=['json', 'markdown', 'both'], default='both',
+                        help='輸出格式：json（JSON格式）, markdown（Markdown格式）, both（兩者都輸出）')
+    parser.add_argument('--output-dir', type=str, default=None,
+                        help='輸出目錄（如果指定，會寫入文件而非stdout）')
+    args = parser.parse_args()
+
     fetcher = InternationalMarketFetcher()
 
     # 獲取所有數據
     data = fetcher.fetch_all_data()
 
-    # 輸出格式化的分析文本
-    analysis_text = fetcher.format_for_analysis(data)
-    print("\n" + "="*60)
-    print("📋 盤前分析格式輸出：")
-    print("="*60)
-    print(analysis_text)
+    # 創建簡化 JSON
+    simple_json = create_simple_json(data)
 
-    return data, analysis_text
+    # 根據格式輸出
+    if args.output_dir:
+        # 輸出到文件
+        import os
+        os.makedirs(args.output_dir, exist_ok=True)
+
+        if args.format in ['json', 'both']:
+            json_file = os.path.join(args.output_dir, 'us_asia_markets.json')
+            with open(json_file, 'w', encoding='utf-8') as f:
+                json.dump(simple_json, f, ensure_ascii=False, indent=2)
+            print(f"✅ JSON 已保存：{json_file}", file=sys.stderr)
+
+        if args.format in ['markdown', 'both']:
+            md_file = os.path.join(args.output_dir, 'us_asia_markets.md')
+            analysis_text = fetcher.format_for_analysis(data)
+            with open(md_file, 'w', encoding='utf-8') as f:
+                f.write(analysis_text)
+            print(f"✅ Markdown 已保存：{md_file}", file=sys.stderr)
+    else:
+        # 輸出到 stdout
+        if args.format == 'json':
+            print(json.dumps(simple_json, ensure_ascii=False, indent=2))
+        elif args.format == 'markdown':
+            analysis_text = fetcher.format_for_analysis(data)
+            print(analysis_text)
+        else:  # both
+            # 先輸出 JSON（供管道使用）
+            print(json.dumps(simple_json, ensure_ascii=False, indent=2))
+            # Markdown 輸出到 stderr（不干擾 JSON）
+            analysis_text = fetcher.format_for_analysis(data)
+            print("\n" + "="*60, file=sys.stderr)
+            print("📋 Markdown 格式（人類閱讀）：", file=sys.stderr)
+            print("="*60, file=sys.stderr)
+            print(analysis_text, file=sys.stderr)
+
+    return data, simple_json
 
 
 if __name__ == "__main__":

@@ -1,0 +1,589 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-02-04",
+  "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
+  "industries": {
+    "AI": {
+      "name": "AI/人工智慧",
+      "catalysts": ["輝達", "NVIDIA", "AMD", "AI", "人工智慧", "ChatGPT", "OpenAI"],
+      "tiers": {
+        "tier_0": {
+          "name": "AI晶片製造",
+          "description": "最直接受惠，輝達晶片製造供應鏈",
+          "stocks": [
+            {"code": "3711", "name": "日月光", "category": "CoWoS先進封裝"},
+            {"code": "2449", "name": "京元電", "category": "CoWoS封裝測試"},
+            {"code": "3037", "name": "欣興", "category": "AI晶片ABF載板"},
+            {"code": "3189", "name": "景碩", "category": "AI晶片FC-BGA載板"},
+            {"code": "8046", "name": "南電", "category": "AI晶片載板"}
+          ]
+        },
+        "tier_1": {
+          "name": "AI伺服器組裝",
+          "description": "AI伺服器代工廠",
+          "stocks": [
+            {"code": "2382", "name": "廣達", "category": "AI伺服器龍頭"},
+            {"code": "3231", "name": "緯創", "category": "AI伺服器"},
+            {"code": "2317", "name": "鴻海", "category": "AI伺服器"},
+            {"code": "2356", "name": "英業達", "category": "AI伺服器"}
+          ]
+        },
+        "tier_2": {
+          "name": "AI核心零組件",
+          "description": "散熱、光模組、PCB、記憶體",
+          "stocks": [
+            {"code": "3017", "name": "奇鋐", "category": "AI散熱模組"},
+            {"code": "3324", "name": "雙鴻", "category": "AI散熱模組"},
+            {"code": "6230", "name": "超眾", "category": "AI散熱模組"},
+            {"code": "2368", "name": "金像電", "category": "AI伺服器PCB"},
+            {"code": "2367", "name": "燿華", "category": "AI伺服器高階PCB"},
+            {"code": "3234", "name": "光環", "category": "光模組400G/800G"},
+            {"code": "4977", "name": "眾達-KY", "category": "光模組"},
+            {"code": "2392", "name": "正崴", "category": "高速連接器"},
+            {"code": "3023", "name": "信邦", "category": "連接器"},
+            {"code": "2408", "name": "南亞科", "category": "HBM/DDR5記憶體"},
+            {"code": "6239", "name": "力成", "category": "HBM封裝測試"}
+          ]
+        },
+        "tier_3": {
+          "name": "其他零組件",
+          "description": "風扇、機殼、電源",
+          "stocks": [
+            {"code": "2421", "name": "建準", "category": "散熱風扇"},
+            {"code": "2354", "name": "鴻準", "category": "機殼"},
+            {"code": "5264", "name": "鎧勝-KY", "category": "機殼"},
+            {"code": "2308", "name": "台達電", "category": "電源供應器"},
+            {"code": "6282", "name": "康舒", "category": "電源供應器"},
+            {"code": "2301", "name": "光寶科", "category": "電源供應器"}
+          ]
+        }
+      }
+    },
+    "半導體": {
+      "name": "半導體產業",
+      "catalysts": ["費半", "費城半導體", "SOX", "半導體"],
+      "tiers": {
+        "tier_0": {
+          "name": "晶圓代工",
+          "description": "核心製造",
+          "stocks": [
+            {"code": "2330", "name": "台積電", "category": "晶圓代工龍頭"},
+            {"code": "2303", "name": "聯電", "category": "晶圓代工"},
+            {"code": "3661", "name": "世芯-KY", "category": "ASIC設計服務"}
+          ]
+        },
+        "tier_1": {
+          "name": "記憶體/封測",
+          "description": "記憶體製造、封裝測試",
+          "stocks": [
+            {"code": "2408", "name": "南亞科", "category": "DRAM"},
+            {"code": "2344", "name": "華邦電", "category": "DRAM/Flash"},
+            {"code": "2337", "name": "旺宏", "category": "NOR Flash"},
+            {"code": "3711", "name": "日月光", "category": "封測"},
+            {"code": "6239", "name": "力成", "category": "封測"},
+            {"code": "2449", "name": "京元電", "category": "測試"},
+            {"code": "8150", "name": "南茂", "category": "封測"}
+          ]
+        },
+        "tier_2": {
+          "name": "載板/PCB",
+          "description": "IC載板供應鏈",
+          "stocks": [
+            {"code": "3037", "name": "欣興", "category": "IC載板"},
+            {"code": "3189", "name": "景碩", "category": "IC載板"},
+            {"code": "8046", "name": "南電", "category": "IC載板"},
+            {"code": "2313", "name": "華通", "category": "PCB"}
+          ]
+        },
+        "tier_3": {
+          "name": "材料/設備",
+          "description": "上游材料與設備",
+          "stocks": [
+            {"code": "2383", "name": "台光電", "category": "ABF載板材料"},
+            {"code": "6213", "name": "聯茂", "category": "CCL銅箔基板"},
+            {"code": "3131", "name": "弘塑", "category": "半導體設備"},
+            {"code": "3583", "name": "辛耘", "category": "半導體設備"},
+            {"code": "3680", "name": "家登", "category": "晶圓盒"}
+          ]
+        }
+      }
+    },
+    "衛星通訊": {
+      "name": "衛星通訊",
+      "catalysts": ["衛星", "Starlink", "SpaceX", "OneWeb", "低軌衛星", "LEO"],
+      "tiers": {
+        "tier_0": {
+          "name": "衛星通訊設備",
+          "description": "衛星天線、模組製造",
+          "stocks": [
+            {"code": "3491", "name": "昇達科", "category": "衛星天線"},
+            {"code": "6285", "name": "啟碁", "category": "衛星通訊模組"},
+            {"code": "3380", "name": "明泰", "category": "衛星地面設備"}
+          ]
+        },
+        "tier_1": {
+          "name": "地面終端設備",
+          "description": "衛星接收器、終端設備",
+          "stocks": [
+            {"code": "2312", "name": "金寶", "category": "衛星接收器"},
+            {"code": "2352", "name": "佳世達", "category": "通訊設備"},
+            {"code": "3596", "name": "智易", "category": "網通設備"},
+            {"code": "4906", "name": "正文", "category": "衛星通訊模組"}
+          ]
+        },
+        "tier_2": {
+          "name": "RF/微波元件",
+          "description": "射頻、微波關鍵元件",
+          "stocks": [
+            {"code": "3105", "name": "穩懋", "category": "GaAs砷化鎵"},
+            {"code": "8086", "name": "宏捷科", "category": "GaAs PA功率放大器"},
+            {"code": "2455", "name": "全新", "category": "光通訊元件"},
+            {"code": "2454", "name": "聯發科", "category": "衛星通訊晶片"},
+            {"code": "2379", "name": "瑞昱", "category": "網路晶片"}
+          ]
+        },
+        "tier_3": {
+          "name": "高頻PCB/材料",
+          "description": "高頻電路板與材料",
+          "stocks": [
+            {"code": "2367", "name": "燿華", "category": "高頻PCB"},
+            {"code": "2368", "name": "金像電", "category": "高頻PCB"},
+            {"code": "2383", "name": "台光電", "category": "高頻材料"}
+          ]
+        }
+      }
+    },
+    "電動車": {
+      "name": "電動車",
+      "catalysts": ["電動車", "EV", "Tesla", "特斯拉", "BYD", "比亞迪"],
+      "tiers": {
+        "tier_0": {
+          "name": "電源/馬達/控制",
+          "description": "核心動力系統",
+          "stocks": [
+            {"code": "2308", "name": "台達電", "category": "電動車電源"},
+            {"code": "1503", "name": "士電", "category": "電動車馬達"},
+            {"code": "2049", "name": "上銀", "category": "精密傳動"},
+            {"code": "2231", "name": "為升", "category": "電動車控制器"}
+          ]
+        },
+        "tier_1": {
+          "name": "電池/充電樁",
+          "description": "儲能與充電設備",
+          "stocks": [
+            {"code": "5284", "name": "jpp-KY", "category": "鋰電池"},
+            {"code": "3706", "name": "神達", "category": "充電樁"},
+            {"code": "2371", "name": "大同", "category": "充電系統"}
+          ]
+        },
+        "tier_2": {
+          "name": "車用電子/PCB",
+          "description": "車用電子零組件",
+          "stocks": [
+            {"code": "3037", "name": "欣興", "category": "車用PCB"},
+            {"code": "8111", "name": "至上", "category": "車用IC載板"},
+            {"code": "2327", "name": "國巨", "category": "車用MLCC"},
+            {"code": "2049", "name": "上銀", "category": "車用傳動"}
+          ]
+        },
+        "tier_3": {
+          "name": "連接器/塑料",
+          "description": "其他零組件",
+          "stocks": [
+            {"code": "2347", "name": "聯強", "category": "車用連接器"},
+            {"code": "1477", "name": "聚陽", "category": "車用塑料"}
+          ]
+        }
+      }
+    },
+    "蘋果供應鏈": {
+      "name": "蘋果供應鏈",
+      "catalysts": ["蘋果", "Apple", "iPhone", "Mac", "iPad", "Vision Pro", "庫克"],
+      "tiers": {
+        "tier_0": {
+          "name": "組裝代工",
+          "description": "蘋果產品組裝",
+          "stocks": [
+            {"code": "2317", "name": "鴻海", "category": "iPhone組裝"},
+            {"code": "3231", "name": "緯創", "category": "Mac組裝"},
+            {"code": "4938", "name": "和碩", "category": "iPhone組裝"}
+          ]
+        },
+        "tier_1": {
+          "name": "鏡頭/聲學/觸控",
+          "description": "關鍵零組件",
+          "stocks": [
+            {"code": "3008", "name": "大立光", "category": "iPhone鏡頭"},
+            {"code": "3035", "name": "智原", "category": "ASIC"},
+            {"code": "2474", "name": "可成", "category": "金屬機殼"}
+          ]
+        },
+        "tier_2": {
+          "name": "PCB/連接器",
+          "description": "電路板與連接器",
+          "stocks": [
+            {"code": "3037", "name": "欣興", "category": "iPhone PCB"},
+            {"code": "2392", "name": "正崴", "category": "iPhone連接器"},
+            {"code": "3023", "name": "信邦", "category": "連接器"}
+          ]
+        },
+        "tier_3": {
+          "name": "其他零組件",
+          "description": "散熱、機構件",
+          "stocks": [
+            {"code": "3017", "name": "奇鋐", "category": "散熱"},
+            {"code": "2354", "name": "鴻準", "category": "機構件"}
+          ]
+        }
+      }
+    },
+    "塑化": {
+      "name": "石化塑膠",
+      "catalysts": ["油價", "WTI", "原油", "石化"],
+      "tiers": {
+        "tier_0": {
+          "name": "石化原料",
+          "description": "塑化龍頭",
+          "stocks": [
+            {"code": "1301", "name": "台塑", "category": "塑化龍頭"},
+            {"code": "1303", "name": "南亞", "category": "塑化"},
+            {"code": "1326", "name": "台化", "category": "化纖"}
+          ]
+        },
+        "tier_1": {
+          "name": "塑膠製品",
+          "description": "下游塑膠產品",
+          "stocks": [
+            {"code": "4766", "name": "南寶", "category": "樹脂"},
+            {"code": "4712", "name": "永記", "category": "塑膠製品"}
+          ]
+        },
+        "tier_2": {
+          "name": "化工材料",
+          "description": "特殊化學品",
+          "stocks": [
+            {"code": "1718", "name": "中纖", "category": "化學纖維"},
+            {"code": "1313", "name": "聯成", "category": "化學材料"}
+          ]
+        }
+      }
+    },
+    "航空": {
+      "name": "航空運輸",
+      "catalysts": ["油價", "WTI", "原油", "航空", "旅遊"],
+      "note": "油價上漲=利空，油價下跌=利多",
+      "tiers": {
+        "tier_0": {
+          "name": "航空公司",
+          "description": "客運貨運",
+          "stocks": [
+            {"code": "2610", "name": "華航", "category": "航空客運"},
+            {"code": "2618", "name": "長榮航", "category": "航空客運"}
+          ]
+        },
+        "tier_1": {
+          "name": "航空相關",
+          "description": "地勤、旅遊",
+          "stocks": [
+            {"code": "2712", "name": "遠雄", "category": "地勤"}
+          ]
+        }
+      }
+    },
+    "金融": {
+      "name": "金融產業",
+      "catalysts": ["Fed", "降息", "升息", "股市成交量", "金融"],
+      "tiers": {
+        "tier_0": {
+          "name": "金控",
+          "description": "綜合金融",
+          "stocks": [
+            {"code": "2881", "name": "富邦金", "category": "金控龍頭"},
+            {"code": "2882", "name": "國泰金", "category": "金控"},
+            {"code": "2886", "name": "兆豐金", "category": "金控"},
+            {"code": "2887", "name": "台新金", "category": "金控"},
+            {"code": "2883", "name": "凱基金", "category": "金控"},
+            {"code": "2880", "name": "華南金", "category": "金控"}
+          ]
+        },
+        "tier_1": {
+          "name": "銀行/證券",
+          "description": "專業銀行與證券",
+          "stocks": [
+            {"code": "2801", "name": "彰銀", "category": "銀行"},
+            {"code": "2809", "name": "京城銀", "category": "銀行"},
+            {"code": "2895", "name": "台新金", "category": "銀行"},
+            {"code": "6005", "name": "元大證", "category": "證券"},
+            {"code": "6008", "name": "凱基證", "category": "證券"}
+          ]
+        },
+        "tier_2": {
+          "name": "保險",
+          "description": "壽險產險",
+          "stocks": [
+            {"code": "2823", "name": "中壽", "category": "壽險"},
+            {"code": "2851", "name": "中再保", "category": "再保險"}
+          ]
+        }
+      }
+    },
+    "網通設備": {
+      "name": "網通設備",
+      "catalysts": ["5G", "Wi-Fi", "網通", "交換機"],
+      "tiers": {
+        "tier_0": {
+          "name": "網通設備",
+          "description": "交換機、路由器",
+          "stocks": [
+            {"code": "2345", "name": "智邦", "category": "交換機"},
+            {"code": "3380", "name": "明泰", "category": "網通設備"},
+            {"code": "2332", "name": "友訊", "category": "網通設備"},
+            {"code": "3596", "name": "智易", "category": "網通設備"}
+          ]
+        },
+        "tier_1": {
+          "name": "網路晶片",
+          "description": "網路控制晶片",
+          "stocks": [
+            {"code": "2379", "name": "瑞昱", "category": "乙太網路晶片"},
+            {"code": "2454", "name": "聯發科", "category": "Wi-Fi晶片"}
+          ]
+        }
+      }
+    },
+    "面板顯示": {
+      "name": "面板顯示",
+      "catalysts": ["面板", "OLED", "Mini LED", "顯示器"],
+      "tiers": {
+        "tier_0": {
+          "name": "面板製造",
+          "description": "LCD/OLED面板",
+          "stocks": [
+            {"code": "2409", "name": "友達", "category": "LCD面板"},
+            {"code": "3481", "name": "群創", "category": "LCD面板"},
+            {"code": "3504", "name": "揚明光", "category": "背光模組"}
+          ]
+        },
+        "tier_1": {
+          "name": "觸控/驅動IC",
+          "description": "觸控面板與驅動IC",
+          "stocks": [
+            {"code": "3005", "name": "神基", "category": "觸控面板"},
+            {"code": "3034", "name": "聯詠", "category": "面板驅動IC"}
+          ]
+        }
+      }
+    },
+    "記憶體": {
+      "name": "記憶體產業",
+      "catalysts": ["Micron", "美光", "SK海力士", "記憶體", "DRAM", "NAND"],
+      "tiers": {
+        "tier_0": {
+          "name": "記憶體製造",
+          "description": "DRAM/Flash製造",
+          "stocks": [
+            {"code": "2408", "name": "南亞科", "category": "DRAM"},
+            {"code": "2344", "name": "華邦電", "category": "DRAM/Flash"},
+            {"code": "2337", "name": "旺宏", "category": "NOR Flash"}
+          ]
+        },
+        "tier_1": {
+          "name": "記憶體模組",
+          "description": "記憶體模組組裝",
+          "stocks": [
+            {"code": "4967", "name": "十銓", "category": "記憶體模組"},
+            {"code": "2451", "name": "創見", "category": "記憶體模組"},
+            {"code": "3260", "name": "威剛", "category": "記憶體模組"}
+          ]
+        },
+        "tier_2": {
+          "name": "記憶體封測",
+          "description": "記憶體封裝測試",
+          "stocks": [
+            {"code": "6239", "name": "力成", "category": "記憶體封測"},
+            {"code": "2449", "name": "京元電", "category": "記憶體測試"}
+          ]
+        }
+      }
+    },
+    "光通訊": {
+      "name": "光通訊",
+      "catalysts": ["光模組", "矽光子", "資料中心", "400G", "800G"],
+      "tiers": {
+        "tier_0": {
+          "name": "光模組",
+          "description": "高速光模組",
+          "stocks": [
+            {"code": "3234", "name": "光環", "category": "400G/800G光模組"},
+            {"code": "4977", "name": "眾達-KY", "category": "光模組"},
+            {"code": "4908", "name": "前鼎", "category": "光通訊"}
+          ]
+        },
+        "tier_1": {
+          "name": "光通訊元件",
+          "description": "光電元件",
+          "stocks": [
+            {"code": "2455", "name": "全新", "category": "光通訊元件"},
+            {"code": "3406", "name": "玉晶光", "category": "光學元件"}
+          ]
+        }
+      }
+    },
+    "綠能儲能": {
+      "name": "綠能/儲能",
+      "catalysts": ["綠能", "太陽能", "風電", "儲能", "ESS"],
+      "tiers": {
+        "tier_0": {
+          "name": "太陽能/風電",
+          "description": "再生能源",
+          "stocks": [
+            {"code": "6405", "name": "悅城", "category": "太陽能"},
+            {"code": "3711", "name": "日月光", "category": "太陽能"},
+            {"code": "2367", "name": "燿華", "category": "風電PCB"}
+          ]
+        },
+        "tier_1": {
+          "name": "儲能系統",
+          "description": "電池儲能",
+          "stocks": [
+            {"code": "2308", "name": "台達電", "category": "儲能系統"},
+            {"code": "3706", "name": "神達", "category": "儲能"}
+          ]
+        }
+      }
+    },
+    "電信": {
+      "name": "電信服務",
+      "catalysts": ["5G", "電信", "資費", "NCC"],
+      "tiers": {
+        "tier_0": {
+          "name": "電信商",
+          "description": "三大電信",
+          "stocks": [
+            {"code": "2412", "name": "中華電", "category": "電信龍頭"},
+            {"code": "4904", "name": "遠傳", "category": "電信"},
+            {"code": "3045", "name": "台灣大", "category": "電信"}
+          ]
+        }
+      }
+    },
+    "生技醫療": {
+      "name": "生技醫療",
+      "catalysts": ["生技", "醫療", "新藥", "疫苗"],
+      "tiers": {
+        "tier_0": {
+          "name": "製藥/新藥",
+          "description": "藥品研發製造",
+          "stocks": [
+            {"code": "4123", "name": "晟德", "category": "製藥"},
+            {"code": "1789", "name": "神隆", "category": "原料藥"},
+            {"code": "6547", "name": "高端疫苗", "category": "疫苗"}
+          ]
+        },
+        "tier_1": {
+          "name": "醫材/醫療器材",
+          "description": "醫療設備",
+          "stocks": [
+            {"code": "4157", "name": "太景*-KY", "category": "醫療器材"}
+          ]
+        }
+      }
+    },
+    "鋼鐵原物料": {
+      "name": "鋼鐵/原物料",
+      "catalysts": ["鋼鐵", "鐵礦", "銅價", "原物料"],
+      "tiers": {
+        "tier_0": {
+          "name": "鋼鐵",
+          "description": "鋼鐵製造",
+          "stocks": [
+            {"code": "2002", "name": "中鋼", "category": "鋼鐵龍頭"},
+            {"code": "2006", "name": "東和鋼鐵", "category": "鋼鐵"}
+          ]
+        },
+        "tier_1": {
+          "name": "鋼鐵加工",
+          "description": "鋼鐵下游",
+          "stocks": [
+            {"code": "2009", "name": "第一銅", "category": "銅線"},
+            {"code": "9938", "name": "百和", "category": "鋼纜"}
+          ]
+        }
+      }
+    },
+    "營建水泥": {
+      "name": "營建/水泥",
+      "catalysts": ["營建", "房地產", "建案", "水泥"],
+      "tiers": {
+        "tier_0": {
+          "name": "營建公司",
+          "description": "建設公司",
+          "stocks": [
+            {"code": "2501", "name": "國建", "category": "營建"},
+            {"code": "2506", "name": "太設", "category": "營建"}
+          ]
+        },
+        "tier_1": {
+          "name": "水泥",
+          "description": "水泥製造",
+          "stocks": [
+            {"code": "1101", "name": "台泥", "category": "水泥"},
+            {"code": "1102", "name": "亞泥", "category": "水泥"}
+          ]
+        }
+      }
+    },
+    "AR_VR": {
+      "name": "AR/VR/XR",
+      "catalysts": ["AR", "VR", "XR", "元宇宙", "Meta", "Vision Pro"],
+      "tiers": {
+        "tier_0": {
+          "name": "頭戴裝置組裝",
+          "description": "AR/VR裝置代工",
+          "stocks": [
+            {"code": "2317", "name": "鴻海", "category": "VR代工"},
+            {"code": "3231", "name": "緯創", "category": "VR代工"},
+            {"code": "4938", "name": "和碩", "category": "VR代工"}
+          ]
+        },
+        "tier_1": {
+          "name": "光學鏡頭",
+          "description": "AR/VR鏡頭",
+          "stocks": [
+            {"code": "3008", "name": "大立光", "category": "AR鏡頭"},
+            {"code": "3406", "name": "玉晶光", "category": "光學元件"}
+          ]
+        },
+        "tier_2": {
+          "name": "顯示/感測",
+          "description": "Micro OLED、感測器",
+          "stocks": [
+            {"code": "3481", "name": "群創", "category": "面板"},
+            {"code": "3034", "name": "聯詠", "category": "顯示驅動IC"}
+          ]
+        }
+      }
+    },
+    "遊戲電競": {
+      "name": "遊戲/電競",
+      "catalysts": ["遊戲", "電競", "Steam", "遊戲機"],
+      "tiers": {
+        "tier_0": {
+          "name": "遊戲主機代工",
+          "description": "遊戲機製造",
+          "stocks": [
+            {"code": "2317", "name": "鴻海", "category": "遊戲機代工"},
+            {"code": "4938", "name": "和碩", "category": "遊戲機代工"}
+          ]
+        },
+        "tier_1": {
+          "name": "電競週邊",
+          "description": "電競鍵盤、滑鼠",
+          "stocks": [
+            {"code": "3406", "name": "玉晶光", "category": "電競週邊"}
+          ]
+        }
+      }
+    }
+  }
+}
