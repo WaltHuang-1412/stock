@@ -371,6 +371,10 @@ def print_positioning_opportunities(result):
 
 
 if __name__ == '__main__':
+    import json
+    from pathlib import Path
+    from datetime import datetime
+
     # 解析命令列參數
     date = sys.argv[1] if len(sys.argv) > 1 else None
 
@@ -390,3 +394,27 @@ if __name__ == '__main__':
 
         # 輸出佈局機會
         print_positioning_opportunities(result)
+
+        # 保存 JSON（供 merge_candidates.py 使用）
+        if date:
+            date_str = f"{date[:4]}-{date[4:6]}-{date[6:8]}"
+        else:
+            date_str = datetime.now().strftime("%Y-%m-%d")
+
+        output_dir = Path(__file__).parent.parent / "data" / date_str
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        json_file = output_dir / "institutional_top50.json"
+        json_data = {
+            "date": date_str,
+            "query_date": date,
+            "total_buy": len(result['buy_top30']),
+            "total_sell": len(result['sell_top30']),
+            "stocks": result['buy_top30']  # TOP50 買超
+        }
+
+        with open(json_file, 'w', encoding='utf-8') as f:
+            json.dump(json_data, f, ensure_ascii=False, indent=2)
+
+        print()
+        print(f"💾 已保存：{json_file}")

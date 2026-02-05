@@ -22,12 +22,14 @@ def load_institutional_top50(date_str):
         with open(top50_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
             stocks = []
-            for stock in data.get('top50_buy', []):
+            # 兼容兩種格式：top50_buy（舊）或 stocks（新）
+            stock_list = data.get('top50_buy', data.get('stocks', []))
+            for idx, stock in enumerate(stock_list, 1):
                 stocks.append({
                     'code': stock['code'],
                     'name': stock['name'],
-                    'rank': stock.get('rank', 999),
-                    'institutional_total': stock.get('institutional_total', 0),
+                    'rank': idx,  # 使用順序作為排名
+                    'institutional_total': stock.get('total', stock.get('institutional_total', 0)),
                     'source': 'institutional_top50'
                 })
             return stocks
