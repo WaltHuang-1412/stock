@@ -31,6 +31,7 @@
       "type": "stable",
       "phase": "core",
       "recommend_price": 108.0,
+      "actual_entry_price": 102.145,
       "target_price": 125.0,
       "stop_loss": 100.0,
       "position": "20%",
@@ -59,12 +60,22 @@
         "recommendation": "🔥 強烈推薦"
       },
       "institutional_flow": 11902,
-      "status": "pending",
+      "status": "filled",
+      "entry_time": "2026-02-05 09:00-10:00",
+      "entry_note": "實際買入102.145元，優於推薦價105元（成本優勢-2.72%）",
       "industry": {
         "sector": "記憶體",
         "sub_type": "DRAM/Flash"
       },
-      "dual_confirmed": true
+      "dual_confirmed": true,
+      "intraday_price": 103.0,
+      "intraday_time": "2026-02-05 12:30",
+      "close_price": 102.5,
+      "close_time": "2026-02-05 13:30",
+      "vs_recommend": -5.5,
+      "vs_recommend_pct": -5.09,
+      "result": "fail",
+      "institutional_today": 1065
     },
     {
       "stock_code": "2317",
@@ -104,7 +115,14 @@
       "industry": {
         "sector": "電子組裝",
         "sub_type": "蘋果供應鏈"
-      }
+      },
+      "intraday_price": 216.0,
+      "intraday_time": "2026-02-05 12:30",
+      "close_price": 215.5,
+      "close_time": "2026-02-05 13:30",
+      "vs_recommend": -3.5,
+      "vs_recommend_pct": -1.6,
+      "result": "fail"
     },
     {
       "stock_code": "1326",
@@ -144,7 +162,15 @@
       "industry": {
         "sector": "塑化",
         "sub_type": "石化"
-      }
+      },
+      "intraday_price": 40.5,
+      "intraday_time": "2026-02-05 12:30",
+      "close_price": 40.25,
+      "close_time": "2026-02-05 13:30",
+      "vs_recommend": 0.25,
+      "vs_recommend_pct": 0.62,
+      "result": "success",
+      "institutional_today": -5655
     },
     {
       "stock_code": "1301",
@@ -184,7 +210,14 @@
       "industry": {
         "sector": "塑化",
         "sub_type": "石化"
-      }
+      },
+      "intraday_price": 47.25,
+      "intraday_time": "2026-02-05 12:30",
+      "close_price": 47.2,
+      "close_time": "2026-02-05 13:30",
+      "vs_recommend": 0.2,
+      "vs_recommend_pct": 0.43,
+      "result": "success"
     },
     {
       "stock_code": "3711",
@@ -225,7 +258,15 @@
         "sector": "封測",
         "sub_type": "半導體封裝"
       },
-      "warning": "⚠️ 費半-8.28%壓力，小倉位應對"
+      "warning": "⚠️ 費半-8.28%壓力，小倉位應對",
+      "intraday_price": 281.5,
+      "intraday_time": "2026-02-05 12:30",
+      "close_price": 284.0,
+      "close_time": "2026-02-05 13:30",
+      "vs_recommend": -18.0,
+      "vs_recommend_pct": -5.96,
+      "result": "fail",
+      "institutional_today": -12107
     },
     {
       "stock_code": "2610",
@@ -266,7 +307,15 @@
       "industry": {
         "sector": "航空",
         "sub_type": "航空運輸"
-      }
+      },
+      "intraday_price": 22.7,
+      "intraday_time": "2026-02-05 12:30",
+      "close_price": 22.75,
+      "close_time": "2026-02-05 13:30",
+      "vs_recommend": -0.25,
+      "vs_recommend_pct": -1.09,
+      "result": "fail",
+      "institutional_today": 9785
     }
   ],
   "avoided_stocks": [
@@ -379,27 +428,38 @@
     "記憶體": {
       "count": 1,
       "percentage": 0.167,
-      "stocks": ["華邦電"]
+      "stocks": [
+        "華邦電"
+      ]
     },
     "電子組裝": {
       "count": 1,
       "percentage": 0.167,
-      "stocks": ["鴻海"]
+      "stocks": [
+        "鴻海"
+      ]
     },
     "塑化": {
       "count": 2,
       "percentage": 0.333,
-      "stocks": ["台化", "台塑"]
+      "stocks": [
+        "台化",
+        "台塑"
+      ]
     },
     "封測": {
       "count": 1,
       "percentage": 0.167,
-      "stocks": ["日月光"]
+      "stocks": [
+        "日月光"
+      ]
     },
     "航空": {
       "count": 1,
       "percentage": 0.167,
-      "stocks": ["華航"]
+      "stocks": [
+        "華航"
+      ]
     }
   },
   "yesterday_verification": {
@@ -436,7 +496,11 @@
     "merged_total": 65,
     "dual_confirmed": 9,
     "dual_confirmed_after_momentum_screening": 1,
-    "industries_expanded": ["面板顯示", "記憶體", "金融"],
+    "industries_expanded": [
+      "面板顯示",
+      "記憶體",
+      "金融"
+    ],
     "momentum_screening_pass_rate": "8/19 = 42%"
   },
   "momentum_screening_v7_1": {
