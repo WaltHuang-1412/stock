@@ -28,6 +28,7 @@
     {
       "stock_code": "2344",
       "stock_name": "華邦電",
+      "recommend_date": "2026-02-05",
       "type": "stable",
       "phase": "core",
       "recommend_price": 108.0,
@@ -75,11 +76,28 @@
       "vs_recommend": -5.5,
       "vs_recommend_pct": -5.09,
       "result": "fail",
-      "institutional_today": 1065
+      "institutional_today": 1065,
+      "daily_updates": [
+        {
+          "date": "2026-02-05",
+          "day": 0,
+          "close_price": 102.5,
+          "gain_loss_pct": -5.09,
+          "volume": 146932420,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     },
     {
       "stock_code": "2317",
       "stock_name": "鴻海",
+      "recommend_date": "2026-02-05",
       "type": "stable",
       "phase": "core",
       "recommend_price": 219.0,
@@ -122,11 +140,28 @@
       "close_time": "2026-02-05 13:30",
       "vs_recommend": -3.5,
       "vs_recommend_pct": -1.6,
-      "result": "fail"
+      "result": "fail",
+      "daily_updates": [
+        {
+          "date": "2026-02-05",
+          "day": 0,
+          "close_price": 215.5,
+          "gain_loss_pct": -1.6,
+          "volume": 43214475,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     },
     {
       "stock_code": "1326",
       "stock_name": "台化",
+      "recommend_date": "2026-02-05",
       "type": "stable",
       "phase": "core",
       "recommend_price": 40.0,
@@ -170,11 +205,28 @@
       "vs_recommend": 0.25,
       "vs_recommend_pct": 0.62,
       "result": "success",
-      "institutional_today": -5655
+      "institutional_today": -5655,
+      "daily_updates": [
+        {
+          "date": "2026-02-05",
+          "day": 0,
+          "close_price": 40.25,
+          "gain_loss_pct": 0.62,
+          "volume": 22959229,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     },
     {
       "stock_code": "1301",
       "stock_name": "台塑",
+      "recommend_date": "2026-02-05",
       "type": "stable",
       "phase": "core",
       "recommend_price": 47.0,
@@ -217,11 +269,28 @@
       "close_time": "2026-02-05 13:30",
       "vs_recommend": 0.2,
       "vs_recommend_pct": 0.43,
-      "result": "success"
+      "result": "success",
+      "daily_updates": [
+        {
+          "date": "2026-02-05",
+          "day": 0,
+          "close_price": 47.2,
+          "gain_loss_pct": 0.43,
+          "volume": 25592843,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     },
     {
       "stock_code": "3711",
       "stock_name": "日月光",
+      "recommend_date": "2026-02-05",
       "type": "stable",
       "phase": "satellite",
       "recommend_price": 302.0,
@@ -253,7 +322,7 @@
         "recommendation": "🔥 強烈推薦"
       },
       "institutional_flow": 2108,
-      "status": "pending",
+      "status": "stop_loss",
       "industry": {
         "sector": "封測",
         "sub_type": "半導體封裝"
@@ -266,11 +335,28 @@
       "vs_recommend": -18.0,
       "vs_recommend_pct": -5.96,
       "result": "fail",
-      "institutional_today": -12107
+      "institutional_today": -12107,
+      "daily_updates": [
+        {
+          "date": "2026-02-05",
+          "day": 0,
+          "close_price": 284.0,
+          "gain_loss_pct": -5.96,
+          "volume": 39674848,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "🚨 觸發停損290.0元（-5.96%）"
+        }
+      ]
     },
     {
       "stock_code": "2610",
       "stock_name": "華航",
+      "recommend_date": "2026-02-05",
       "type": "stable",
       "phase": "satellite",
       "recommend_price": 23.0,
@@ -315,7 +401,23 @@
       "vs_recommend": -0.25,
       "vs_recommend_pct": -1.09,
       "result": "fail",
-      "institutional_today": 9785
+      "institutional_today": 9785,
+      "daily_updates": [
+        {
+          "date": "2026-02-05",
+          "day": 0,
+          "close_price": 22.75,
+          "gain_loss_pct": -1.09,
+          "volume": 21727387,
+          "institutional_data": {
+            "investment_trust": 0,
+            "dealer": 0,
+            "foreign": 0,
+            "total": 0
+          },
+          "notes": "⚠️ 法人買賣互抵 追蹤中 (0/7日)"
+        }
+      ]
     }
   ],
   "avoided_stocks": [
@@ -516,5 +618,12 @@
     "expected_accuracy": "80-90%",
     "yesterday_actual_accuracy": "100%"
   },
-  "created_at": "2026-02-05 08:30"
+  "created_at": "2026-02-05 08:30",
+  "metadata": {
+    "updated_at": "2026-02-05 22:44:19",
+    "tracking_active": 0,
+    "tracking_completed": 1,
+    "success_count": 0,
+    "stop_loss_count": 1
+  }
 }

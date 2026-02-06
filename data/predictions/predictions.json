@@ -4326,5 +4326,73 @@
         "note": "盤中發現，但法人出貨未推薦"
       }
     ]
+  },
+  "2026-02-05": {
+    "date": "2026-02-05",
+    "predictions": [
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "recommend_price": 108.0,
+        "actual_close": 102.5,
+        "change_pct": -5.09,
+        "result": "fail"
+      },
+      {
+        "symbol": "2317",
+        "name": "鴻海",
+        "recommend_price": 219.0,
+        "actual_close": 215.5,
+        "change_pct": -1.6,
+        "result": "fail"
+      },
+      {
+        "symbol": "1326",
+        "name": "台化",
+        "recommend_price": 40.0,
+        "actual_close": 40.25,
+        "change_pct": 0.62,
+        "result": "success"
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "recommend_price": 47.0,
+        "actual_close": 47.2,
+        "change_pct": 0.43,
+        "result": "success"
+      },
+      {
+        "symbol": "3711",
+        "name": "日月光",
+        "recommend_price": 302.0,
+        "actual_close": 284.0,
+        "change_pct": -5.96,
+        "result": "fail"
+      },
+      {
+        "symbol": "2610",
+        "name": "華航",
+        "recommend_price": 23.0,
+        "actual_close": 22.75,
+        "change_pct": -1.09,
+        "result": "fail"
+      }
+    ],
+    "accuracy": 0.333,
+    "total": 6,
+    "success": 2,
+    "fail": 4,
+    "notes": "v7.1動能篩選策略準確率33.3%。失敗原因：費半-8.28%壓力導致半導體股（華邦電-5.09%、日月光-5.96%觸發停損）、鴻海-1.6%、華航-1.09%下跌。成功：塑化股（台化+0.62%、台塑+0.43%）受油價-1.24%利多。昨日100% vs 今日33.3%，主因半導體產業逆風。7日追蹤系統將驗證真實表現。",
+    "stop_loss_triggered": [
+      {
+        "symbol": "3711",
+        "name": "日月光",
+        "recommend_price": 302.0,
+        "stop_loss": 290.0,
+        "actual_close": 284.0,
+        "note": "首日即觸發停損，費半壓力嚴重"
+      }
+    ]
   }
 }

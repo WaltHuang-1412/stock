@@ -28,12 +28,12 @@
       "stock_name": "廣達",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 273.50,
-      "close_price": 273.50,
-      "vs_recommend": 0.00,
+      "recommend_price": 273.5,
+      "close_price": 273.5,
+      "vs_recommend": 0.0,
       "intraday_change": -3.36,
-      "target_price": 300.00,
-      "stop_loss": 260.00,
+      "target_price": 300.0,
+      "stop_loss": 260.0,
       "position": "15-20%",
       "rating": "⭐⭐⭐⭐⭐",
       "score": 85,
@@ -66,12 +66,12 @@
       "stock_name": "凱基金",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 18.00,
-      "close_price": 18.00,
-      "vs_recommend": 0.00,
+      "recommend_price": 18.0,
+      "close_price": 18.0,
+      "vs_recommend": 0.0,
       "intraday_change": -0.83,
-      "target_price": 19.50,
-      "stop_loss": 17.00,
+      "target_price": 19.5,
+      "stop_loss": 17.0,
       "position": "10-15%",
       "rating": "⭐⭐⭐⭐",
       "score": 82,
@@ -104,12 +104,12 @@
       "stock_name": "聯電",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 60.40,
-      "close_price": 60.30,
+      "recommend_price": 60.4,
+      "close_price": 60.3,
       "vs_recommend": -0.17,
       "intraday_change": -11.84,
-      "target_price": 66.00,
-      "stop_loss": 56.00,
+      "target_price": 66.0,
+      "stop_loss": 56.0,
       "position": "5-10%",
       "rating": "⭐⭐⭐",
       "score": 73,
@@ -138,10 +138,10 @@
       "phase": "core",
       "recommend_price": 32.35,
       "close_price": 32.35,
-      "vs_recommend": 0.00,
+      "vs_recommend": 0.0,
       "intraday_change": 1.73,
-      "target_price": 35.00,
-      "stop_loss": 30.50,
+      "target_price": 35.0,
+      "stop_loss": 30.5,
       "position": "5-10%",
       "rating": "⭐⭐⭐",
       "score": 73,
@@ -168,11 +168,11 @@
       "type": "stable",
       "phase": "core",
       "recommend_price": 48.65,
-      "close_price": 48.60,
-      "vs_recommend": -0.10,
+      "close_price": 48.6,
+      "vs_recommend": -0.1,
       "intraday_change": -8.99,
-      "target_price": 54.00,
-      "stop_loss": 46.00,
+      "target_price": 54.0,
+      "stop_loss": 46.0,
       "position": "3-5%",
       "rating": "⭐⭐⭐",
       "score": 70,
@@ -203,12 +203,48 @@
     }
   ],
   "avoided_stocks": [
-    {"stock_code": "2408", "stock_name": "南亞科", "reason": "記憶體大逃殺、台股脫鉤", "institutional_flow": 22000, "five_day_change": 6.1},
-    {"stock_code": "6770", "stock_name": "力積電", "reason": "5日+5.4%追高風險", "institutional_flow": 82000, "five_day_change": 5.4},
-    {"stock_code": "2337", "stock_name": "旺宏", "reason": "法人對決+5日+11.4%已大漲", "institutional_flow": -26000, "five_day_change": 11.4},
-    {"stock_code": "3231", "stock_name": "緯創", "reason": "10天連賣-126K、持股建議出場", "institutional_flow": -126000, "five_day_change": -0.7},
-    {"stock_code": "2356", "stock_name": "英業達", "reason": "近5天賣-17K、動能減弱-43%", "institutional_flow": -17000, "five_day_change": 0},
-    {"stock_code": "2308", "stock_name": "台達電", "reason": "累計買但近5天反轉賣-2,867", "institutional_flow": -2867, "five_day_change": 0}
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "reason": "記憶體大逃殺、台股脫鉤",
+      "institutional_flow": 22000,
+      "five_day_change": 6.1
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "5日+5.4%追高風險",
+      "institutional_flow": 82000,
+      "five_day_change": 5.4
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "法人對決+5日+11.4%已大漲",
+      "institutional_flow": -26000,
+      "five_day_change": 11.4
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "reason": "10天連賣-126K、持股建議出場",
+      "institutional_flow": -126000,
+      "five_day_change": -0.7
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "reason": "近5天賣-17K、動能減弱-43%",
+      "institutional_flow": -17000,
+      "five_day_change": 0
+    },
+    {
+      "stock_code": "2308",
+      "stock_name": "台達電",
+      "reason": "累計買但近5天反轉賣-2,867",
+      "institutional_flow": -2867,
+      "five_day_change": 0
+    }
   ],
   "holdings_tracking": {
     "群創(3481)": {
@@ -245,25 +281,62 @@
     }
   },
   "industry_distribution": {
-    "AI伺服器": {"count": 1, "percentage": 0.20, "stocks": ["廣達"]},
-    "金融": {"count": 1, "percentage": 0.20, "stocks": ["凱基金"]},
-    "晶圓代工": {"count": 1, "percentage": 0.20, "stocks": ["聯電"]},
-    "NB代工": {"count": 1, "percentage": 0.20, "stocks": ["仁寶"]},
-    "電源供應": {"count": 1, "percentage": 0.20, "stocks": ["康舒"]}
+    "AI伺服器": {
+      "count": 1,
+      "percentage": 0.2,
+      "stocks": [
+        "廣達"
+      ]
+    },
+    "金融": {
+      "count": 1,
+      "percentage": 0.2,
+      "stocks": [
+        "凱基金"
+      ]
+    },
+    "晶圓代工": {
+      "count": 1,
+      "percentage": 0.2,
+      "stocks": [
+        "聯電"
+      ]
+    },
+    "NB代工": {
+      "count": 1,
+      "percentage": 0.2,
+      "stocks": [
+        "仁寶"
+      ]
+    },
+    "電源供應": {
+      "count": 1,
+      "percentage": 0.2,
+      "stocks": [
+        "康舒"
+      ]
+    }
   },
   "yesterday_verification": {
     "date": "2026-01-30",
-    "accuracy": 0.40,
-    "success_patterns": ["記憶體題材延續", "法人暴買有效"],
-    "failure_patterns": ["ADR效應失效", "面板分化", "佈局股短線波動"]
+    "accuracy": 0.4,
+    "success_patterns": [
+      "記憶體題材延續",
+      "法人暴買有效"
+    ],
+    "failure_patterns": [
+      "ADR效應失效",
+      "面板分化",
+      "佈局股短線波動"
+    ]
   },
   "validation": {
     "min_recommendations": 6,
     "actual_recommendations": 5,
     "min_industries": 3,
     "actual_industries": 5,
-    "max_single_industry_ratio": 0.50,
-    "actual_max_ratio": 0.20,
+    "max_single_industry_ratio": 0.5,
+    "actual_max_ratio": 0.2,
     "weak_catalyst_day": true,
     "validation_status": "✅ 通過驗證（弱催化日，推薦數略少可接受）"
   },
@@ -280,9 +353,16 @@
     "total_recommendations": 5,
     "success": 1,
     "failure": 4,
-    "accuracy": 0.20,
-    "success_stocks": ["仁寶(2324)"],
-    "failure_stocks": ["廣達(2382)", "凱基金(2883)", "聯電(2303)", "康舒(6282)"],
+    "accuracy": 0.2,
+    "success_stocks": [
+      "仁寶(2324)"
+    ],
+    "failure_stocks": [
+      "廣達(2382)",
+      "凱基金(2883)",
+      "聯電(2303)",
+      "康舒(6282)"
+    ],
     "key_lessons": [
       "✅ v7.0首日：強制腳本執行、TodoWrite追蹤、無數據編造",
       "✅ 回檔股4步驗證有效：UMC動能-21.3%、Acbel底子-9K，正確判斷不加碼",
@@ -292,5 +372,12 @@
     ],
     "notes": "v7.0首日執行完整，但準確率偏低。主因：弱催化日+記憶體脫鉤+大盤下跌。4步驗證回檔股邏輯正確。",
     "updated_at": "2026-02-02 17:40"
+  },
+  "metadata": {
+    "updated_at": "2026-02-05 22:43:59",
+    "tracking_active": 0,
+    "tracking_completed": 0,
+    "success_count": 0,
+    "stop_loss_count": 0
   }
 }

@@ -19,9 +19,12 @@
     "level": "super_strong",
     "indicator": "費半 +3.29%",
     "rules": {
-      "industry_concentration_max": 0.70,
+      "industry_concentration_max": 0.7,
       "price_threshold_relaxed": true,
-      "affected_industries": ["半導體", "塑化"]
+      "affected_industries": [
+        "半導體",
+        "塑化"
+      ]
     }
   },
   "recommendations": [
@@ -80,7 +83,7 @@
       "reversal_alert": "✅ 無預警",
       "institutional_flow": 20000,
       "status": "verified",
-      "closing_price": 77.10,
+      "closing_price": 77.1,
       "closing_change": -4.22,
       "result": "failed",
       "result_notes": "塑化利多但量縮不買單",
@@ -144,8 +147,8 @@
       "reversal_alert": "✅ 無預警",
       "institutional_flow": 40000,
       "status": "verified",
-      "closing_price": 92.10,
-      "closing_change": 9.90,
+      "closing_price": 92.1,
+      "closing_change": 9.9,
       "result": "success",
       "result_notes": "Micron+11.87%強力催化，v6.1超強催化規則正確",
       "warning": "⚠️ 5日+14.2%已大漲，v6.1超強催化可推薦，倉位限5%、停損-3%",
@@ -179,8 +182,8 @@
       "reversal_alert": "✅ 無預警",
       "institutional_flow": 68000,
       "status": "not_triggered",
-      "closing_price": 49.30,
-      "closing_change": -3.90,
+      "closing_price": 49.3,
+      "closing_change": -3.9,
       "result": "not_triggered",
       "result_notes": "量比0.49x未達1.5x觸發條件",
       "warning": "⚠️ 5日+17.7%已大漲，需觀察盤中量能",
@@ -211,14 +214,54 @@
     }
   ],
   "avoided_stocks": [
-    {"stock_code": "2303", "stock_name": "聯電", "reason": "昨日法人-55K大賣", "five_day_change": 12.3},
-    {"stock_code": "2408", "stock_name": "南亞科", "reason": "10天法人對決（投信買+3.2K、外資賣-31K）", "five_day_change": 11.4},
-    {"stock_code": "2344", "stock_name": "華邦電", "reason": "10天法人對決（投信買+19K、外資賣-40K）", "five_day_change": 21.5},
-    {"stock_code": "1326", "stock_name": "台化", "reason": "5日+26%已大漲", "five_day_change": 26.0},
-    {"stock_code": "1605", "stock_name": "華新", "reason": "5日+10.1%已大漲", "five_day_change": 10.1},
-    {"stock_code": "2327", "stock_name": "國巨", "reason": "昨日教訓：單日反轉不可信", "five_day_change": -3.5},
-    {"stock_code": "2610", "stock_name": "華航", "reason": "油價+4.04%利空", "five_day_change": -0.9},
-    {"stock_code": "3231", "stock_name": "緯創", "reason": "連10日賣-182K", "five_day_change": -0.7}
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "昨日法人-55K大賣",
+      "five_day_change": 12.3
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "reason": "10天法人對決（投信買+3.2K、外資賣-31K）",
+      "five_day_change": 11.4
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "10天法人對決（投信買+19K、外資賣-40K）",
+      "five_day_change": 21.5
+    },
+    {
+      "stock_code": "1326",
+      "stock_name": "台化",
+      "reason": "5日+26%已大漲",
+      "five_day_change": 26.0
+    },
+    {
+      "stock_code": "1605",
+      "stock_name": "華新",
+      "reason": "5日+10.1%已大漲",
+      "five_day_change": 10.1
+    },
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨",
+      "reason": "昨日教訓：單日反轉不可信",
+      "five_day_change": -3.5
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "reason": "油價+4.04%利空",
+      "five_day_change": -0.9
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "reason": "連10日賣-182K",
+      "five_day_change": -0.7
+    }
   ],
   "entry_b_stocks": [
     {
@@ -287,10 +330,36 @@
     }
   },
   "industry_distribution": {
-    "半導體": {"count": 2, "percentage": 0.33, "stocks": ["台積電", "旺宏"]},
-    "塑化": {"count": 2, "percentage": 0.33, "stocks": ["南亞", "台塑條件單"]},
-    "金融": {"count": 1, "percentage": 0.17, "stocks": ["華南金"]},
-    "其他": {"count": 1, "percentage": 0.17, "stocks": ["台積電加碼單"]}
+    "半導體": {
+      "count": 2,
+      "percentage": 0.33,
+      "stocks": [
+        "台積電",
+        "旺宏"
+      ]
+    },
+    "塑化": {
+      "count": 2,
+      "percentage": 0.33,
+      "stocks": [
+        "南亞",
+        "台塑條件單"
+      ]
+    },
+    "金融": {
+      "count": 1,
+      "percentage": 0.17,
+      "stocks": [
+        "華南金"
+      ]
+    },
+    "其他": {
+      "count": 1,
+      "percentage": 0.17,
+      "stocks": [
+        "台積電加碼單"
+      ]
+    }
   },
   "yesterday_verification": {
     "date": "2026-01-28",
@@ -323,10 +392,10 @@
     "actual_recommendations": 6,
     "min_industries": 4,
     "actual_industries": 4,
-    "max_single_industry_ratio": 0.50,
+    "max_single_industry_ratio": 0.5,
     "actual_max_ratio": 0.33,
     "v6_1_super_catalyst": true,
-    "v6_1_max_ratio_relaxed": 0.70,
+    "v6_1_max_ratio_relaxed": 0.7,
     "price_verified": false,
     "chip_analysis_executed": true,
     "reversal_alert_executed": true,
@@ -334,7 +403,7 @@
   },
   "after_market_verification": {
     "verified_at": "2026-01-29 14:50",
-    "accuracy": 0.50,
+    "accuracy": 0.5,
     "results_summary": {
       "success": 2,
       "failed": 1,
@@ -347,7 +416,7 @@
       "催化劑+量能確認缺一不可",
       "盤中發現Intel-10.08%關鍵訊號"
     ],
-    "time_event_accuracy": 0.20,
+    "time_event_accuracy": 0.2,
     "avoided_stocks_verification": {
       "聯電(2303)": "-9.88% ✅ 正確避開"
     }
@@ -356,9 +425,28 @@
   "predictions_reference": {
     "checked": true,
     "lessons_applied": [
-      {"date": "01/28", "lesson": "台積電ADR催化有效", "applied_to": "今日ADR+4.96%繼續推薦台積電"},
-      {"date": "01/28", "lesson": "國巨單日反轉不可信", "applied_to": "今日避開國巨"},
-      {"date": "01/28", "lesson": "費半>3%法人可反轉", "applied_to": "記憶體股昨日+40K反轉，旺宏推薦"}
+      {
+        "date": "01/28",
+        "lesson": "台積電ADR催化有效",
+        "applied_to": "今日ADR+4.96%繼續推薦台積電"
+      },
+      {
+        "date": "01/28",
+        "lesson": "國巨單日反轉不可信",
+        "applied_to": "今日避開國巨"
+      },
+      {
+        "date": "01/28",
+        "lesson": "費半>3%法人可反轉",
+        "applied_to": "記憶體股昨日+40K反轉，旺宏推薦"
+      }
     ]
+  },
+  "metadata": {
+    "updated_at": "2026-02-05 22:43:46",
+    "tracking_active": 0,
+    "tracking_completed": 0,
+    "success_count": 0,
+    "stop_loss_count": 0
   }
 }

@@ -117,7 +117,7 @@
       "intraday": {
         "time": "12:25",
         "price": 7.89,
-        "change_pct": -0.50,
+        "change_pct": -0.5,
         "volume_ratio": 0.5,
         "day_high": 7.98,
         "day_low": 7.87,
@@ -225,7 +225,7 @@
       "intraday": {
         "time": "12:25",
         "price": 33.4,
-        "change_pct": -0.30,
+        "change_pct": -0.3,
         "volume_ratio": 0.5,
         "day_high": 33.7,
         "day_low": 33.25,
@@ -270,13 +270,48 @@
     }
   ],
   "avoided_stocks": [
-    {"stock_code": "2303", "stock_name": "聯電", "reason": "5日+14.6%已大漲", "five_day_change": 14.6},
-    {"stock_code": "1301", "stock_name": "台塑", "reason": "5日+20.2%已大漲", "five_day_change": 20.2},
-    {"stock_code": "1326", "stock_name": "台化", "reason": "5日+18.9%已大漲", "five_day_change": 18.9},
-    {"stock_code": "2337", "stock_name": "旺宏", "reason": "法人賣超-39K", "five_day_change": 14.2},
-    {"stock_code": "2344", "stock_name": "華邦電", "reason": "法人賣超-19K", "five_day_change": 18.7},
-    {"stock_code": "2371", "stock_name": "大同", "reason": "動能-126.8%、累計-40K", "five_day_change": -2.1},
-    {"stock_code": "2883", "stock_name": "凱基金", "reason": "昨日教訓：動能-32.6%", "five_day_change": 0.9}
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "5日+14.6%已大漲",
+      "five_day_change": 14.6
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "reason": "5日+20.2%已大漲",
+      "five_day_change": 20.2
+    },
+    {
+      "stock_code": "1326",
+      "stock_name": "台化",
+      "reason": "5日+18.9%已大漲",
+      "five_day_change": 18.9
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "法人賣超-39K",
+      "five_day_change": 14.2
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "法人賣超-19K",
+      "five_day_change": 18.7
+    },
+    {
+      "stock_code": "2371",
+      "stock_name": "大同",
+      "reason": "動能-126.8%、累計-40K",
+      "five_day_change": -2.1
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "reason": "昨日教訓：動能-32.6%",
+      "five_day_change": 0.9
+    }
   ],
   "entry_b_stocks": [
     {
@@ -302,7 +337,7 @@
       "stock_name": "日月光",
       "reason": "ADR+6.19%→封裝",
       "intraday_price": 313.5,
-      "intraday_change": 5.20,
+      "intraday_change": 5.2,
       "excluded_reason": "Level 2反轉+動能-58%",
       "verdict": "正確排除"
     }
@@ -354,21 +389,64 @@
   "predictions_reference": {
     "checked": true,
     "lessons_applied": [
-      {"date": "01/27", "lesson": "推薦價驗證不足（3檔錯>20%）", "applied_to": "今日全部執行即時股價查詢"},
-      {"date": "01/27", "lesson": "chip_analysis未前置執行", "applied_to": "今日9檔候選股全部執行"},
-      {"date": "01/27", "lesson": "reversal_alert未前置", "applied_to": "今日7檔已執行"},
-      {"date": "01/27", "lesson": "凱基金動能-32.6%失敗", "applied_to": "今日排除凱基金、大同(-126.8%)等動能弱股"}
+      {
+        "date": "01/27",
+        "lesson": "推薦價驗證不足（3檔錯>20%）",
+        "applied_to": "今日全部執行即時股價查詢"
+      },
+      {
+        "date": "01/27",
+        "lesson": "chip_analysis未前置執行",
+        "applied_to": "今日9檔候選股全部執行"
+      },
+      {
+        "date": "01/27",
+        "lesson": "reversal_alert未前置",
+        "applied_to": "今日7檔已執行"
+      },
+      {
+        "date": "01/27",
+        "lesson": "凱基金動能-32.6%失敗",
+        "applied_to": "今日排除凱基金、大同(-126.8%)等動能弱股"
+      }
     ]
   },
   "industry_distribution": {
-    "電子": {"count": 2, "percentage": 0.286, "stocks": ["廣達", "國巨"]},
-    "半導體": {"count": 2, "percentage": 0.286, "stocks": ["台積電", "力成"]},
-    "金融": {"count": 2, "percentage": 0.286, "stocks": ["三商壽", "玉山金"]},
-    "航運": {"count": 1, "percentage": 0.143, "stocks": ["華航"]}
+    "電子": {
+      "count": 2,
+      "percentage": 0.286,
+      "stocks": [
+        "廣達",
+        "國巨"
+      ]
+    },
+    "半導體": {
+      "count": 2,
+      "percentage": 0.286,
+      "stocks": [
+        "台積電",
+        "力成"
+      ]
+    },
+    "金融": {
+      "count": 2,
+      "percentage": 0.286,
+      "stocks": [
+        "三商壽",
+        "玉山金"
+      ]
+    },
+    "航運": {
+      "count": 1,
+      "percentage": 0.143,
+      "stocks": [
+        "華航"
+      ]
+    }
   },
   "yesterday_verification": {
     "date": "2026-01-27",
-    "accuracy": 0.80,
+    "accuracy": 0.8,
     "key_lessons": [
       "聯電ADR+21.83%催化有效+8.37%",
       "推薦價驗證嚴重失誤（3檔錯>20%）",
@@ -392,31 +470,145 @@
   "track_b_market_scan": {
     "scan_time": "12:30",
     "gainers_top10": [
-      {"code": "1326", "name": "台化", "change_pct": 25.00, "volume_ratio": 1.7, "recommended": false, "news_match": "非半導體"},
-      {"code": "2344", "name": "華邦電", "change_pct": 21.53, "volume_ratio": 1.6, "recommended": false, "news_match": "費半→記憶體"},
-      {"code": "2454", "name": "聯發科", "change_pct": 20.54, "volume_ratio": 0.5, "recommended": false, "news_match": "費半→IC設計"},
-      {"code": "3189", "name": "景碩", "change_pct": 18.25, "volume_ratio": 2.1, "recommended": false, "news_match": "費半→載板"},
-      {"code": "1301", "name": "台塑", "change_pct": 17.66, "volume_ratio": 0.9, "recommended": false, "news_match": "非半導體"},
-      {"code": "2337", "name": "旺宏", "change_pct": 14.17, "volume_ratio": 1.2, "recommended": false, "news_match": "費半→記憶體"},
-      {"code": "3037", "name": "欣興", "change_pct": 12.39, "volume_ratio": 0.7, "recommended": false, "news_match": "費半→載板"},
-      {"code": "2303", "name": "聯電", "change_pct": 12.13, "volume_ratio": 1.4, "recommended": false, "news_match": "費半→晶圓代工"},
-      {"code": "2313", "name": "華通", "change_pct": 11.90, "volume_ratio": 0.5, "recommended": false, "news_match": "費半→PCB"},
-      {"code": "2408", "name": "南亞科", "change_pct": 11.07, "volume_ratio": 1.1, "recommended": false, "news_match": "費半→記憶體"}
+      {
+        "code": "1326",
+        "name": "台化",
+        "change_pct": 25.0,
+        "volume_ratio": 1.7,
+        "recommended": false,
+        "news_match": "非半導體"
+      },
+      {
+        "code": "2344",
+        "name": "華邦電",
+        "change_pct": 21.53,
+        "volume_ratio": 1.6,
+        "recommended": false,
+        "news_match": "費半→記憶體"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "change_pct": 20.54,
+        "volume_ratio": 0.5,
+        "recommended": false,
+        "news_match": "費半→IC設計"
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "change_pct": 18.25,
+        "volume_ratio": 2.1,
+        "recommended": false,
+        "news_match": "費半→載板"
+      },
+      {
+        "code": "1301",
+        "name": "台塑",
+        "change_pct": 17.66,
+        "volume_ratio": 0.9,
+        "recommended": false,
+        "news_match": "非半導體"
+      },
+      {
+        "code": "2337",
+        "name": "旺宏",
+        "change_pct": 14.17,
+        "volume_ratio": 1.2,
+        "recommended": false,
+        "news_match": "費半→記憶體"
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "change_pct": 12.39,
+        "volume_ratio": 0.7,
+        "recommended": false,
+        "news_match": "費半→載板"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "change_pct": 12.13,
+        "volume_ratio": 1.4,
+        "recommended": false,
+        "news_match": "費半→晶圓代工"
+      },
+      {
+        "code": "2313",
+        "name": "華通",
+        "change_pct": 11.9,
+        "volume_ratio": 0.5,
+        "recommended": false,
+        "news_match": "費半→PCB"
+      },
+      {
+        "code": "2408",
+        "name": "南亞科",
+        "change_pct": 11.07,
+        "volume_ratio": 1.1,
+        "recommended": false,
+        "news_match": "費半→記憶體"
+      }
     ],
     "losers_top5": [
-      {"code": "3481", "name": "群創", "change_pct": -12.20, "is_holding": true},
-      {"code": "2356", "name": "英業達", "change_pct": -10.25, "is_holding": false},
-      {"code": "2409", "name": "友達", "change_pct": -8.14, "is_holding": false},
-      {"code": "6282", "name": "康舒", "change_pct": -8.09, "is_holding": false},
-      {"code": "2377", "name": "微星", "change_pct": -5.45, "is_holding": false}
+      {
+        "code": "3481",
+        "name": "群創",
+        "change_pct": -12.2,
+        "is_holding": true
+      },
+      {
+        "code": "2356",
+        "name": "英業達",
+        "change_pct": -10.25,
+        "is_holding": false
+      },
+      {
+        "code": "2409",
+        "name": "友達",
+        "change_pct": -8.14,
+        "is_holding": false
+      },
+      {
+        "code": "6282",
+        "name": "康舒",
+        "change_pct": -8.09,
+        "is_holding": false
+      },
+      {
+        "code": "2377",
+        "name": "微星",
+        "change_pct": -5.45,
+        "is_holding": false
+      }
     ],
     "volume_burst_top3": [
-      {"code": "1605", "name": "華新", "volume_ratio": 2.4, "change_pct": 10.37},
-      {"code": "3189", "name": "景碩", "volume_ratio": 2.1, "change_pct": 18.25},
-      {"code": "1326", "name": "台化", "volume_ratio": 1.7, "change_pct": 25.00}
+      {
+        "code": "1605",
+        "name": "華新",
+        "volume_ratio": 2.4,
+        "change_pct": 10.37
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "volume_ratio": 2.1,
+        "change_pct": 18.25
+      },
+      {
+        "code": "1326",
+        "name": "台化",
+        "volume_ratio": 1.7,
+        "change_pct": 25.0
+      }
     ],
     "positioning_detection": {
-      "candidates_checked": ["2317", "6770", "6239"],
+      "candidates_checked": [
+        "2317",
+        "6770",
+        "6239"
+      ],
       "qualified": 0,
       "conclusion": "今日無符合佈局條件標的，市場為散戶追價日"
     },
@@ -476,7 +668,7 @@
         "stock_name": "三商壽",
         "recommend_price": 7.94,
         "closing_price": 7.93,
-        "daily_change_pct": 0.00,
+        "daily_change_pct": 0.0,
         "vs_recommend_pct": -0.13,
         "today_institutional": 1818,
         "chip_momentum": "+86.1%",
@@ -487,7 +679,7 @@
         "stock_name": "玉山金",
         "recommend_price": 33.45,
         "closing_price": 33.5,
-        "daily_change_pct": 0.00,
+        "daily_change_pct": 0.0,
         "vs_recommend_pct": 0.15,
         "today_institutional": 270,
         "chip_momentum": "-35.2%",
@@ -515,7 +707,7 @@
     "holdings_update": {
       "群創(3481)": {
         "closing_price": 22.3,
-        "daily_change_pct": -12.20,
+        "daily_change_pct": -12.2,
         "cost": 19.59,
         "profit_pct": 13.8,
         "today_institutional": 4342,
@@ -560,10 +752,27 @@
       "聯電外資-55K大舉獲利了結（大漲後反手）"
     ],
     "tomorrow_strategy": {
-      "maintain": ["廣達(2382)", "三商壽(2867)"],
-      "watch": ["台積電(2330)", "台泥(1101)"],
-      "avoid": ["力成(6239)", "國巨(2327)", "航運股"],
+      "maintain": [
+        "廣達(2382)",
+        "三商壽(2867)"
+      ],
+      "watch": [
+        "台積電(2330)",
+        "台泥(1101)"
+      ],
+      "avoid": [
+        "力成(6239)",
+        "國巨(2327)",
+        "航運股"
+      ],
       "note": "半導體已大漲可能獲利了結，金融/AI Server等輪動"
     }
+  },
+  "metadata": {
+    "updated_at": "2026-02-05 22:43:53",
+    "tracking_active": 0,
+    "tracking_completed": 0,
+    "success_count": 0,
+    "stop_loss_count": 0
   }
 }
