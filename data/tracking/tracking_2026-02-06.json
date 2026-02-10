@@ -46,13 +46,24 @@
       },
       "reason": "油價 +1.27% 利多、法人買超 +9,785、昨日近損平、VIX 升高防禦性產業",
       "institutional_flow": 9785,
-      "status": "pending",
+      "status": "verified",
       "industry": {
         "sector": "航空",
         "sub_type": "航空客運"
       },
       "dual_confirmed": true,
-      "yesterday_performance": "-1.09%"
+      "yesterday_performance": "-1.09%",
+      "yesterday_close": 22.75,
+      "intraday_price": 22.65,
+      "intraday_change_pct": -0.44,
+      "vs_recommend_pct": -1.52,
+      "volume_ratio": 0.56,
+      "intraday_strategy": "✅ 續抱",
+      "close_price": 22.65,
+      "change_pct": -0.44,
+      "result": "fail",
+      "today_institutional_flow": 4539,
+      "reversal_alert": "無"
     },
     {
       "stock_code": "2618",
@@ -75,13 +86,24 @@
       },
       "reason": "油價利多、法人買超 +8,504、5日 +2.8% 稍高",
       "institutional_flow": 8504,
-      "status": "pending",
+      "status": "verified",
       "industry": {
         "sector": "航空",
         "sub_type": "航空客運"
       },
       "dual_confirmed": true,
-      "warning": "⚠️ 昨日動能爆發 +236.0%，追高風險"
+      "warning": "⚠️ 昨日動能爆發 +236.0%，追高風險",
+      "yesterday_close": 38.4,
+      "intraday_price": 38.5,
+      "intraday_change_pct": 0.26,
+      "vs_recommend_pct": 0.52,
+      "volume_ratio": 0.71,
+      "intraday_strategy": "✅ 續抱",
+      "close_price": 38.6,
+      "change_pct": 0.52,
+      "result": "success",
+      "today_institutional_flow": 10452,
+      "reversal_alert": "無（加速買超 +294.9%）"
     },
     {
       "stock_code": "1301",
@@ -104,12 +126,29 @@
       },
       "reason": "油價 +1.27% 利多、昨日成功 +0.43%、5日 -0.2% 佈局中、法人買超 +2,675",
       "institutional_flow": 2675,
-      "status": "pending",
+      "status": "verified",
       "industry": {
         "sector": "塑化",
         "sub_type": "石化"
       },
-      "yesterday_performance": "+0.43%"
+      "yesterday_performance": "+0.43%",
+      "yesterday_close": 47.2,
+      "intraday_price": 45.85,
+      "intraday_change_pct": -2.86,
+      "vs_recommend_pct": -2.66,
+      "volume_ratio": 0.89,
+      "intraday_strategy": "⚠️ 觀望，嚴守停損 44.5",
+      "intraday_verification": {
+        "momentum_change": -147.0,
+        "institutional_trend": "昨日 +2,676（-13.4%）",
+        "reversal_alert": "無",
+        "risk_level": "中"
+      },
+      "close_price": 45.75,
+      "change_pct": -3.07,
+      "result": "fail",
+      "today_institutional_flow": -4060,
+      "reversal_alert": "⚠️ Level 1（買超減速 -166.3%）"
     },
     {
       "stock_code": "2883",
@@ -132,13 +171,24 @@
       },
       "reason": "法人買超第1名 +31K、VIX +28.97% 防禦性利多",
       "institutional_flow": 31000,
-      "status": "pending",
+      "status": "verified",
       "industry": {
         "sector": "金融",
         "sub_type": "金控"
       },
       "dual_confirmed": true,
-      "warning": "⚠️ 昨日動能爆發 +41219.5%，追高風險高，建議小倉位"
+      "warning": "⚠️ 昨日動能爆發 +41219.5%，追高風險高，建議小倉位",
+      "yesterday_close": 18.1,
+      "intraday_price": 18.3,
+      "intraday_change_pct": 1.1,
+      "vs_recommend_pct": 1.1,
+      "volume_ratio": 0.71,
+      "intraday_strategy": "✅ 續抱",
+      "close_price": 18.3,
+      "change_pct": 1.1,
+      "result": "success",
+      "today_institutional_flow": 1244,
+      "reversal_alert": "無"
     }
   ],
   "avoided_stocks": [
@@ -195,7 +245,7 @@
   "industry_distribution": {
     "航空": {
       "count": 2,
-      "percentage": 0.50,
+      "percentage": 0.5,
       "stocks": [
         "華航",
         "長榮航"
@@ -236,7 +286,7 @@
     "min_industries": 3,
     "actual_industries": 3,
     "max_single_industry_ratio": 0.5,
-    "actual_max_ratio": 0.50,
+    "actual_max_ratio": 0.5,
     "validation_status": "⚠️ 推薦數量4檔（低於標準6-8檔），保守策略應對高波動環境"
   },
   "dual_track_system": {
@@ -249,5 +299,19 @@
       "航空"
     ]
   },
-  "created_at": "2026-02-06 08:00"
+  "created_at": "2026-02-06 08:00",
+  "today_verification": {
+    "success_count": 2,
+    "fail_count": 2,
+    "accuracy": 0.5,
+    "average_performance": -0.62,
+    "success_stocks": [
+      "長榮航 +0.52%",
+      "凱基金 +1.10%"
+    ],
+    "fail_stocks": [
+      "華航 -1.52%",
+      "台塑 -2.66%"
+    ]
+  }
 }

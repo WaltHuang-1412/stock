@@ -4395,6 +4395,72 @@
       }
     ]
   },
+  "2026-02-06": {
+    "date": "2026-02-06",
+    "day_of_week": "Friday",
+    "analysis_version": "v7.1",
+    "predictions": [
+      {
+        "symbol": "2610",
+        "name": "華航",
+        "recommend_price": 23.0,
+        "actual_close": 22.65,
+        "change_pct": -0.44,
+        "vs_recommend_pct": -1.52,
+        "result": "fail",
+        "today_institutional": 4539,
+        "fail_reason": "系統性風險、法人力道減弱 -53.6%"
+      },
+      {
+        "symbol": "2618",
+        "name": "長榮航",
+        "recommend_price": 38.4,
+        "actual_close": 38.6,
+        "change_pct": 0.52,
+        "vs_recommend_pct": 0.52,
+        "result": "success",
+        "today_institutional": 10452,
+        "success_reason": "法人加速買超 +294.9%、油價利多"
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "recommend_price": 47.0,
+        "actual_close": 45.75,
+        "change_pct": -3.07,
+        "vs_recommend_pct": -2.66,
+        "result": "fail",
+        "today_institutional": -4060,
+        "fail_reason": "Level 1 預警、法人反轉賣超"
+      },
+      {
+        "symbol": "2883",
+        "name": "凱基金",
+        "recommend_price": 18.1,
+        "actual_close": 18.3,
+        "change_pct": 1.1,
+        "vs_recommend_pct": 1.1,
+        "result": "success",
+        "today_institutional": 1244,
+        "success_reason": "VIX 利多、金融股最強防禦"
+      }
+    ],
+    "accuracy": 0.5,
+    "success_count": 2,
+    "fail_count": 2,
+    "average_performance": -0.62,
+    "notes": "系統性風險下50%準確率已屬正常。費半-8.48%、VIX +28.97%。金融股防禦性最強。台塑Level 1預警未提前發現。",
+    "market_context": {
+      "us_market": "費半 -8.48%（連續2日）、VIX +28.97%、輝達 -10.72%",
+      "tw_market": "系統性風險、恐慌賣壓",
+      "key_learnings": [
+        "VIX升高時，金融股 > 航空股",
+        "系統性風險下，產業利多效果有限",
+        "Level 1預警（買超減速）應提前排除",
+        "法人內部分歧（外資買、投信賣）增加不確定性"
+      ]
+    }
+  },
   "2026-02-09": {
     "date": "2026-02-09",
     "predictions": [
