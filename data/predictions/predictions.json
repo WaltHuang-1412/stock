@@ -4557,10 +4557,10 @@
         "symbol": "3037",
         "name": "欣興",
         "prev_close": 347.5,
-        "recommend_price": 347.50,
-        "target_price": 375.00,
-        "stop_loss": 330.00,
-        "actual_close": 371.50,
+        "recommend_price": 347.5,
+        "target_price": 375.0,
+        "stop_loss": 330.0,
+        "actual_close": 371.5,
         "result": "success",
         "change_pct": 6.91,
         "score": 96,
@@ -4571,10 +4571,10 @@
         "symbol": "2382",
         "name": "廣達",
         "prev_close": 284.0,
-        "recommend_price": 284.00,
-        "target_price": 305.00,
-        "stop_loss": 270.00,
-        "actual_close": 285.00,
+        "recommend_price": 284.0,
+        "target_price": 305.0,
+        "stop_loss": 270.0,
+        "actual_close": 285.0,
         "result": "success",
         "change_pct": 0.35,
         "score": 100,
@@ -4584,9 +4584,9 @@
         "symbol": "2610",
         "name": "華航",
         "prev_close": 22.8,
-        "recommend_price": 22.80,
-        "target_price": 24.50,
-        "stop_loss": 21.50,
+        "recommend_price": 22.8,
+        "target_price": 24.5,
+        "stop_loss": 21.5,
         "actual_close": 22.95,
         "result": "success",
         "change_pct": 0.66,
@@ -4598,8 +4598,8 @@
         "name": "彰銀",
         "prev_close": 20.55,
         "recommend_price": 20.55,
-        "target_price": 22.00,
-        "stop_loss": 19.50,
+        "target_price": 22.0,
+        "stop_loss": 19.5,
         "actual_close": 20.65,
         "result": "success",
         "change_pct": 0.49,
@@ -4610,12 +4610,12 @@
         "symbol": "2303",
         "name": "聯電",
         "prev_close": 62.4,
-        "recommend_price": 62.40,
-        "target_price": 67.00,
-        "stop_loss": 59.00,
-        "actual_close": 62.40,
+        "recommend_price": 62.4,
+        "target_price": 67.0,
+        "stop_loss": 59.0,
+        "actual_close": 62.4,
         "result": "fail",
-        "change_pct": 0.00,
+        "change_pct": 0.0,
         "score": 80,
         "rating": "⭐⭐⭐⭐",
         "fail_reason": "平盤，無漲跌"
@@ -4624,10 +4624,10 @@
         "symbol": "2408",
         "name": "南亞科",
         "prev_close": 274.5,
-        "recommend_price": 274.50,
-        "target_price": 290.00,
-        "stop_loss": 260.00,
-        "actual_close": 271.00,
+        "recommend_price": 274.5,
+        "target_price": 290.0,
+        "stop_loss": 260.0,
+        "actual_close": 271.0,
         "result": "fail",
         "change_pct": -1.28,
         "score": 85,
@@ -4690,5 +4690,91 @@
       "name": "南亞科",
       "change_pct": -1.28
     }
+  },
+  "2026-02-11": {
+    "date": "2026-02-11",
+    "predictions": [
+      {
+        "symbol": "3037",
+        "name": "欣興",
+        "recommend_price": 371.5,
+        "actual_close": 369.0,
+        "change_pct": -0.67,
+        "result": "fail",
+        "notes": "量縮整理+0.96%，但收盤低於推薦價"
+      },
+      {
+        "symbol": "2367",
+        "name": "燿華",
+        "recommend_price": 51.6,
+        "actual_close": 52.5,
+        "change_pct": 1.74,
+        "result": "success",
+        "notes": "大幅回檔日收盤仍高於推薦價，但日跌-8.85%"
+      },
+      {
+        "symbol": "2449",
+        "name": "京元電",
+        "recommend_price": 302.0,
+        "actual_close": 313.5,
+        "change_pct": 3.81,
+        "result": "success",
+        "notes": "封測題材兌現+11.76%，日月光ADR +15.99%帶動"
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "recommend_price": 1880.0,
+        "actual_close": 1915.0,
+        "change_pct": 1.86,
+        "result": "success",
+        "notes": "ADR +7.79%完全兌現，收盤+8.50%"
+      },
+      {
+        "symbol": "2313",
+        "name": "華通",
+        "recommend_price": 183.0,
+        "actual_close": 186.5,
+        "change_pct": 1.91,
+        "result": "success",
+        "notes": "法人爆買+17K帶動，+5.97%"
+      },
+      {
+        "symbol": "2454",
+        "name": "聯發科",
+        "recommend_price": 1845.0,
+        "actual_close": 1855.0,
+        "change_pct": 0.54,
+        "result": "success",
+        "notes": "Marvell +8.56%催化，+4.80%"
+      }
+    ],
+    "accuracy": 0.833,
+    "total_recommended": 6,
+    "success_count": 5,
+    "fail_count": 1,
+    "market_context": {
+      "taiex_change": 5.67,
+      "taiex_close": 22644.68
+    },
+    "missed_opportunities": [
+      {
+        "symbol": "3711",
+        "name": "日月光",
+        "change_pct": 24.82,
+        "reason": "動能+302.4%排除，但ADR催化太強"
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "change_pct": 12.06,
+        "reason": "NOR Flash被歸類記憶體排除"
+      }
+    ],
+    "lessons": [
+      "ADR催化>+15%時，應作為動能排除的例外條件",
+      "NOR Flash與DRAM應區分評估，不應被Micron連帶排除",
+      "大盤+5.67%全面反彈日，動能排除策略會錯失最強股（日月光+24.82%）"
+    ]
   }
 }
