@@ -3,13 +3,21 @@
 產業展開工具 - 靈活展開指定產業的所有股票
 用法1：python3 expand_industry.py 塑化 --depth 2
 用法2：python3 expand_industry.py --stock 1303
+用法3：python3 expand_industry.py 塑化 --auto（自動判斷深度）🆕 v2.0
 """
 
 import json
 import sys
+import io
 import argparse
 from pathlib import Path
 from datetime import datetime
+import os
+
+# Windows 環境 stdout 編碼修正（避免 emoji 輸出時 cp950 報錯）
+if sys.platform == 'win32':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 # 添加項目根目錄到 sys.path
 project_root = Path(__file__).parent.parent
@@ -21,6 +29,104 @@ def load_industry_chains():
     chains_file = project_root / "data" / "industry_chains.json"
     with open(chains_file, 'r', encoding='utf-8') as f:
         return json.load(f)
+
+
+def load_us_market_data(date_str):
+    """
+    讀取美股市場數據
+
+    Args:
+        date_str: 日期（YYYY-MM-DD）
+
+    Returns:
+        美股數據字典（key=指標名稱, value=漲跌幅）
+    """
+    data_dir = project_root / "data" / date_str
+    json_file = data_dir / "us_asia_markets.json"
+
+    if not json_file.exists():
+        print(f"⚠️  找不到美股數據：{json_file}", file=sys.stderr)
+        print(f"   請先執行：python scripts/fetch_us_asia_markets.py --output-dir data/{date_str}", file=sys.stderr)
+        return {}
+
+    # 讀取檔案內容（可能包含混合格式：終端輸出 + JSON）
+    with open(json_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    # 嘗試直接解析 JSON
+    try:
+        data = json.loads(content)
+    except json.JSONDecodeError:
+        # 如果失敗，嘗試提取 JSON 部分（從第一個 { 到最後一個 }）
+        json_start = content.find('{')
+        json_end = content.rfind('}')
+        if json_start != -1 and json_end != -1:
+            json_content = content[json_start:json_end + 1]
+            data = json.loads(json_content)
+        else:
+            print(f"❌ 無法從檔案中提取 JSON：{json_file}", file=sys.stderr)
+            return {}
+
+    return data
+
+
+def determine_depth_auto(industry_key, us_market_data, industry_chains):
+    """
+    根據催化劑強度自動判斷深度
+
+    Args:
+        industry_key: 產業代號（如 "塑化"、"AI"）
+        us_market_data: 美股數據字典
+        industry_chains: 產業鏈知識庫
+
+    Returns:
+        depth (0-3) 和 catalyst_info（催化資訊）
+    """
+    if industry_key not in industry_chains["industries"]:
+        return 2, None  # 找不到產業，預設 depth 2
+
+    industry_info = industry_chains["industries"][industry_key]
+    catalysts = industry_info.get("catalysts", [])
+
+    if not catalysts or not us_market_data:
+        return 2, None  # 沒有催化劑資訊或美股數據，預設 depth 2
+
+    # 找出最大變化幅度的催化劑
+    max_change = 0
+    max_catalyst = None
+    max_value = 0
+
+    for catalyst in catalysts:
+        if catalyst in us_market_data:
+            change = abs(us_market_data[catalyst])
+            if change > max_change:
+                max_change = change
+                max_catalyst = catalyst
+                max_value = us_market_data[catalyst]
+
+    # 根據變化幅度判斷深度
+    if max_change >= 5:
+        depth = 3  # 強烈催化（> ±5%）
+        strength = "強烈"
+    elif max_change >= 2:
+        depth = 2  # 中等催化（±2% ~ ±5%）
+        strength = "中等"
+    elif max_change >= 0.5:
+        depth = 1  # 微弱催化（±0.5% ~ ±2%）
+        strength = "微弱"
+    else:
+        depth = 0  # 幾乎無催化（< ±0.5%）
+        strength = "幾乎無"
+
+    catalyst_info = {
+        "catalyst": max_catalyst,
+        "value": max_value,
+        "abs_change": max_change,
+        "strength": strength,
+        "depth": depth
+    }
+
+    return depth, catalyst_info
 
 
 def find_stock_industry(stock_code, industry_chains):
@@ -80,10 +186,11 @@ def expand_industry(industry_key, depth, industry_chains):
 
 def main():
     """主函數"""
-    parser = argparse.ArgumentParser(description='產業展開工具')
+    parser = argparse.ArgumentParser(description='產業展開工具 v2.0（支援自動判斷深度）')
     parser.add_argument('industry', nargs='?', help='產業名稱（如：塑化、AI、半導體）')
     parser.add_argument('--stock', help='股票代號（自動識別產業）')
-    parser.add_argument('--depth', type=int, default=2, help='展開深度（0-3，預設2）')
+    parser.add_argument('--depth', type=int, default=None, help='展開深度（0-3），如不指定則預設2，如使用 --auto 則自動判斷')
+    parser.add_argument('--auto', action='store_true', help='自動判斷深度（根據美股數據）🆕')
     parser.add_argument('--date', help='日期（YYYY-MM-DD，預設今日）')
 
     args = parser.parse_args()
@@ -127,11 +234,42 @@ def main():
         parser.print_help()
         sys.exit(1)
 
+    # 決定深度（手動 or 自動）
+    catalyst_info = None
+    if args.auto:
+        # 自動判斷深度
+        print(f"🤖 自動判斷深度模式（根據美股數據）")
+        print("=" * 60)
+
+        # 載入美股數據
+        us_market_data = load_us_market_data(date_str)
+
+        if not us_market_data:
+            print(f"⚠️  無法載入美股數據，使用預設深度 2", file=sys.stderr)
+            depth = 2
+        else:
+            # 自動判斷深度
+            depth, catalyst_info = determine_depth_auto(industry_key, us_market_data, industry_chains)
+
+            if catalyst_info:
+                print(f"✅ 催化劑：{catalyst_info['catalyst']} ({catalyst_info['value']:+.2f}%)")
+                print(f"✅ 催化強度：{catalyst_info['strength']}（絕對值 {catalyst_info['abs_change']:.2f}%）")
+                print(f"✅ 自動深度：{depth}")
+            else:
+                print(f"⚠️  找不到催化劑資訊，使用預設深度 2")
+                depth = 2
+
+        print("=" * 60)
+        print()
+    else:
+        # 手動指定深度
+        depth = args.depth if args.depth is not None else 2
+
     # 展開產業
-    print(f"📊 展開產業：{industry_name}（Tier 0-{args.depth}）")
+    print(f"📊 展開產業：{industry_name}（Tier 0-{depth}）")
     print("=" * 60)
 
-    stocks = expand_industry(industry_key, args.depth, industry_chains)
+    stocks = expand_industry(industry_key, depth, industry_chains)
 
     if not stocks:
         print(f"⚠️  產業「{industry_key}」無股票資料")
@@ -173,11 +311,17 @@ def main():
     industry_data = {
         "industry_key": industry_key,
         "industry_name": industry_name,
-        "depth": args.depth,
+        "depth": depth,
+        "auto_mode": args.auto,
         "date": date_str,
         "total_stocks": len(stocks),
         "stocks": stocks
     }
+
+    # 如果有催化劑資訊，加入 JSON
+    if catalyst_info:
+        industry_data["catalyst_info"] = catalyst_info
+
     with open(industry_json_file, 'w', encoding='utf-8') as f:
         json.dump(industry_data, f, ensure_ascii=False, indent=2)
 
@@ -197,12 +341,20 @@ def main():
     # 更新產業清單（避免重複）
     existing_industries = [ind["industry_key"] for ind in all_expanded["industries"]]
     if industry_key not in existing_industries:
-        all_expanded["industries"].append({
+        industry_entry = {
             "industry_key": industry_key,
             "industry_name": industry_name,
-            "depth": args.depth,
+            "depth": depth,
+            "auto_mode": args.auto,
             "stock_count": len(stocks)
-        })
+        }
+        # 如果有催化劑資訊，加入
+        if catalyst_info:
+            industry_entry["catalyst"] = catalyst_info["catalyst"]
+            industry_entry["catalyst_change"] = catalyst_info["value"]
+            industry_entry["catalyst_strength"] = catalyst_info["strength"]
+
+        all_expanded["industries"].append(industry_entry)
 
     # 更新股票清單（去重）
     existing_codes = [s["code"] for s in all_expanded["stocks"]]

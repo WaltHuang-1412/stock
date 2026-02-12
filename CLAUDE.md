@@ -1,16 +1,21 @@
-# 台股分析執行流程（v7.2 流程整合版）
+# 台股分析執行流程（v7.3 龍頭預警版）
 
-**版本**：v7.2
-**更新日期**：2026-02-11
+**版本**：v7.3
+**更新日期**：2026-02-12
 **目的**：提供清晰、可執行的盤前/盤中/盤後分析流程
 
-**🆕 v7.2 更新重點**：
+**🆕 v7.3 更新重點**：
+1. ✅ 盤前 Step 1.5：新增 us_leader_alert.py（美股龍頭預警機制）🔥
+   - Micron < -10% → DRAM股直接排除
+   - NVIDIA < -10% → AI股直接排除
+   - Apple < -8% → 蘋概股直接排除
+   - 預期效果：+10% 準確率（最高優先級優化）
+
+**v7.2 更新重點**（已整合）：
 1. ✅ 盤前 Step 7：整合 reversal_alert.py（法人反轉預警篩選）
 2. ✅ 盤前 Step 8：新增反轉預警確認機制
 3. ✅ 盤中 Step 2：整合 exit_signal_checker.py（強制停損機制）
 4. ✅ 盤後 Step 2：整合 holdings_pressure_analysis.py（持股壓力分析）
-
-**核心改變**：工具已存在（v2.0），v7.2 將工具強制整合到執行流程中
 
 ---
 
@@ -26,7 +31,7 @@
 ### 📁 驗證機制
 
 每次分析完成後，必須存在以下文件：
-- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `tw_market_news.json` + `tracking_YYYY-MM-DD.json`
+- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json`🆕 + `tw_market_news.json` + `tracking_YYYY-MM-DD.json`
 - 盤中：`data/YYYY-MM-DD/intraday_analysis.md` + 更新 `tracking_YYYY-MM-DD.json`
 - 盤後：`data/YYYY-MM-DD/after_market_analysis.md` + 更新 `tracking_YYYY-MM-DD.json` + 更新 `predictions.json`
 
@@ -48,16 +53,17 @@
 **TodoWrite 內容**：
 ```json
 [
-  {"content": "Step 1: 獲取國際市場數據", "status": "pending"},
-  {"content": "Step 2: 獲取台股時事數據", "status": "pending"},
-  {"content": "Step 3: 即時股價查詢（推薦股票）", "status": "pending"},
-  {"content": "Step 4: 歷史驗證（昨日推薦表現）", "status": "pending"},
-  {"content": "Step 5: 法人 TOP30 掃描", "status": "pending"},
-  {"content": "Step 6: 時事展開（受惠產業代表股）", "status": "pending"},
-  {"content": "Step 7: 五維度評分", "status": "pending"},
-  {"content": "Step 8: 籌碼深度分析", "status": "pending"},
-  {"content": "Step 9: 產業分散檢查", "status": "pending"},
-  {"content": "Step 10: 建檔", "status": "pending"}
+  {"content": "Step 1: 獲取國際市場數據", "status": "pending", "activeForm": "正在獲取國際市場數據"},
+  {"content": "Step 1.5: 美股龍頭預警🆕", "status": "pending", "activeForm": "正在執行美股龍頭預警"},
+  {"content": "Step 2: 獲取台股時事數據", "status": "pending", "activeForm": "正在獲取台股時事數據"},
+  {"content": "Step 3: 即時股價查詢（推薦股票）", "status": "pending", "activeForm": "正在查詢即時股價"},
+  {"content": "Step 4: 歷史驗證（昨日推薦表現）", "status": "pending", "activeForm": "正在執行歷史驗證"},
+  {"content": "Step 5: 法人 TOP50 掃描", "status": "pending", "activeForm": "正在掃描法人 TOP50"},
+  {"content": "Step 6: 時事展開（受惠產業代表股）", "status": "pending", "activeForm": "正在執行時事展開"},
+  {"content": "Step 7: 五維度評分", "status": "pending", "activeForm": "正在執行五維度評分"},
+  {"content": "Step 8: 籌碼深度分析", "status": "pending", "activeForm": "正在執行籌碼深度分析"},
+  {"content": "Step 9: 產業分散檢查", "status": "pending", "activeForm": "正在檢查產業分散"},
+  {"content": "Step 10: 建檔", "status": "pending", "activeForm": "正在建檔"}
 ]
 ```
 
@@ -82,6 +88,87 @@ python3 scripts/fetch_us_asia_markets.py > data/$(date +%Y-%m-%d)/us_asia_market
 - 輝達漲跌 → 判斷 AI 伺服器股機會
 
 **完成後**：更新 TodoWrite，標記 Step 1 為 `completed`
+
+---
+
+### 🔴 Step 1.5: 美股龍頭預警（強制）🆕 v7.3
+
+**目的**：自動偵測美股龍頭股暴跌，直接排除受影響的台股產業（一票否決機制）
+
+**執行命令**：
+```bash
+python3 scripts/us_leader_alert.py --date $(date +%Y-%m-%d) --output-dir data/$(date +%Y-%m-%d)
+```
+
+**驗證**：
+- ✅ 必須生成 `data/YYYY-MM-DD/us_leader_alerts.json`
+- ✅ 文件內必須包含：預警等級、受影響產業、排除清單
+- ❌ **如果文件不存在 = 步驟未執行 = 禁止繼續**
+
+---
+
+**預警等級（龍頭股→台股對應）**：
+
+| 龍頭股 | 台股產業 | Level 3 門檻 | 受影響股票範例 |
+|--------|---------|-------------|---------------|
+| **Micron** | DRAM | < -10% | 南亞(1303)、華邦電(2344)、旺宏(2337) |
+| **NVIDIA** | AI伺服器 | < -10% | 廣達(2382)、緯創(3231)、緯穎(6669) |
+| **Apple** | 蘋果供應鏈 | < -8% | 大立光(3008)、可成(2474)、鴻海(2317) |
+| **AMD** | AI晶片/IC設計 | < -10% | 聯發科(2454)、世芯-KY(3661)、創意(3443) |
+| **Tesla** | 電動車 | < -10% | 鴻海(2317)、中興電(1513)、台達電(2308) |
+| **Super Micro** | AI伺服器 | < -15% | 廣達(2382)、緯創(3231)、技嘉(2376) |
+| **Broadcom** | 網通 | < -10% | 智邦(2345)、中華電(2412)、京元電子(2449) |
+
+---
+
+**預警分級處理**：
+
+| 等級 | 條件 | 動作 | 評分調整 |
+|------|------|------|---------|
+| **Level 3** | 龍頭股暴跌（觸及門檻） | 🚫 **直接排除，不進入評分** | N/A |
+| **Level 2** | 龍頭股明顯下跌（-5% ~ 門檻） | ⚠️ 降級評分 | **-15分** |
+| **Level 1** | 龍頭股小跌（-2% ~ -5%） | ℹ️ 提示注意 | **-5分** |
+| **Level 0** | 龍頭股正常/上漲 | ✅ 不調整 | 0分 |
+
+---
+
+**輸出格式範例**：
+```markdown
+## 🚨 美股龍頭預警
+
+### 🔴 Level 3：直接排除
+
+**Micron (-12.40%)**
+- 受影響產業：DRAM
+- 受影響股票：南亞(1303)、華邦電(2344)、旺宏(2337)、世界(5347)
+- 動作：🚫 直接排除，不進入評分
+
+### 🟡 Level 2：降級評分
+
+（無）
+
+### 📊 總結
+
+- 總預警數：1 個
+- Level 3（直接排除）：1 個
+- 被排除股票：4 檔
+```
+
+---
+
+**重要**：
+1. ✅ Level 3 預警股票會在 Step 6（時事展開）和 Step 7（五維度評分）中自動跳過
+2. ✅ Level 2 預警股票仍可評分，但五維度總分自動扣 15 分
+3. ✅ 一票否決優先級：龍頭預警 > 法人數據 > 產業邏輯
+4. ❌ **禁止忽略 Level 3 預警**（即使法人大買超也要排除）
+
+---
+
+**效果驗證**（02/10 案例）：
+- Micron -12.40% → 南亞(1303) 被排除 → 避開 -6.3% 失敗 ✅
+- 預期準確率提升：+10%
+
+**完成後**：更新 TodoWrite，標記 Step 1.5 為 `completed`
 
 ---
 
