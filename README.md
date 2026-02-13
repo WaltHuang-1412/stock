@@ -8,7 +8,8 @@
 - **雙軌並行篩選** — 法人籌碼(A組) + 時事催化劑(B組) 雙重確認
 - **美股龍頭預警** — NVIDIA/Micron/Apple 暴跌自動排除對應台股（一票否決）
 - **法人反轉預警** — 偵測連續賣超、爆量出貨，強制排除風險股
-- **假日輕量模式** — 台股休市日自動切換，只抓美股快照供開盤參考
+- **假日輕量模式** — 台股休市日＋週末自動切換，只抓美股快照供開盤參考
+- **LINE 推送通知** — 分析完成自動推送重點摘要（推薦股/盤中追蹤/準確率驗證）
 - **動態產業分類** — 不硬編碼產業清單，新產業自動適應
 
 ## 快速開始
@@ -47,11 +48,13 @@ Get-ScheduledTask -TaskName "Stock_*"
 
 安裝後每日自動執行：
 
-| 排程 | 時間 | 交易日 | 休市日 |
-|------|------|--------|--------|
+| 排程 | 時間 | 交易日 | 休市日/週末 |
+|------|------|--------|------------|
 | Stock_BeforeMarket | 08:30 | 完整盤前分析 (~25min) | 美股快照 (~2min) |
 | Stock_Intraday | 12:30 | 完整盤中分析 | 跳過 |
 | Stock_AfterMarket | 14:30 | 完整盤後分析 | 跳過 |
+
+每階段完成後自動推送 LINE 摘要通知（需設定 `.env`，見下方）。
 
 ### 排程管理
 
@@ -90,6 +93,8 @@ stock/
 │   ├── reversal_alert.py        #   法人反轉預警
 │   ├── merge_candidates.py      #   候選股合併
 │   ├── validate_analysis.py     #   分析驗證（commit 前執行）
+│   ├── notify_line.py           #   LINE 推送通知
+│   ├── generate_line_summary.py #   LINE 摘要產生器
 │   ├── my_holdings_analyzer.py  #   個人持股分析
 │   └── stock_tracker.py         #   7日追蹤系統
 ├── data/                        # 每日分析數據
@@ -137,9 +142,20 @@ Step 10: 建檔 + git commit + push
 
 `automation/holidays.json` 包含台股休市日，每年 12 月台灣證交所公布次年行事曆後需更新。
 
-休市日排程行為：
-- 08:30 自動抓美股快照（指數 + 龍頭股 + 預警等級）
+休市日/週末排程行為：
+- 08:30 自動抓美股快照（指數 + 龍頭股 + 預警等級）→ LINE 推送
 - 12:30 / 14:30 自動跳過
+
+## LINE 通知設定
+
+在專案根目錄建立 `.env` 檔案（已在 `.gitignore`，不會上傳）：
+
+```
+LINE_CHANNEL_TOKEN=你的channel_access_token
+LINE_USER_ID=你的user_id
+```
+
+取得方式：[LINE Developers Console](https://developers.line.biz/console/) → Messaging API channel。
 
 ## 注意事項
 
