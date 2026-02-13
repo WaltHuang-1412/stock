@@ -17,16 +17,13 @@ if (Test-Path "$ProjectDir\automation\PAUSED") {
     exit 0
 }
 
-# === 週末檢查 ===
+# === 週末/假日檢查 ===
 $DayOfWeek = (Get-Date).DayOfWeek
-if ($DayOfWeek -eq 'Saturday' -or $DayOfWeek -eq 'Sunday') {
-    Write-Output "[$(Get-Date -Format 'HH:mm:ss')] 週末，跳過"
-    exit 0
-}
+$IsWeekend = ($DayOfWeek -eq 'Saturday' -or $DayOfWeek -eq 'Sunday')
 
-# === 台股假日檢查 ===
 $HolidayFile = "$ProjectDir\automation\holidays.json"
 $IsHoliday = $false
+$HolidayName = ""
 if (Test-Path $HolidayFile) {
     $Holidays = Get-Content $HolidayFile -Raw -Encoding UTF8 | ConvertFrom-Json
     $Year = (Get-Date).Year.ToString()
@@ -37,6 +34,12 @@ if (Test-Path $HolidayFile) {
             $IsHoliday = $true
         }
     }
+}
+
+# 週末或假日都進入假日模式
+if ($IsWeekend) {
+    $IsHoliday = $true
+    if (-not $HolidayName) { $HolidayName = "週末" }
 }
 
 # === 準備目錄 ===
@@ -80,10 +83,10 @@ if ($IsHoliday) {
     Write-Output "" | Tee-Object -FilePath $LogFile -Append
     if ($AllExist) {
         Write-Output "假日快照完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-        # LINE 通知
-        $SnapshotFile = "$ProjectDir\data\$Date\holiday_snapshot.md"
-        if (Test-Path $SnapshotFile) {
-            python "$ProjectDir\scripts\notify_line.py" --file $SnapshotFile
+        # LINE 推送假日摘要
+        $Summary = python "$ProjectDir\scripts\generate_line_summary.py" holiday $Date 2>&1
+        if ($Summary) {
+            python "$ProjectDir\scripts\notify_line.py" $Summary
         } else {
             python "$ProjectDir\scripts\notify_line.py" "假日美股快照完成 ($Date $HolidayName)"
         }
@@ -132,7 +135,13 @@ if ($IsHoliday) {
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
     if ($AllExist) {
         Write-Output "盤前分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-        python "$ProjectDir\scripts\notify_line.py" "盤前分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
+        # LINE 推送推薦摘要
+        $Summary = python "$ProjectDir\scripts\generate_line_summary.py" before_market $Date 2>&1
+        if ($Summary) {
+            python "$ProjectDir\scripts\notify_line.py" $Summary
+        } else {
+            python "$ProjectDir\scripts\notify_line.py" "盤前分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
+        }
     } else {
         Write-Output "盤前分析有缺漏檔案！請檢查 log (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
         python "$ProjectDir\scripts\notify_line.py" "盤前分析失敗 ($Date) 有缺漏檔案，請檢查 log"

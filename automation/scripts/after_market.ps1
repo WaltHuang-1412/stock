@@ -93,7 +93,13 @@ Write-Output "" | Tee-Object -FilePath $LogFile -Append
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 if ($AllExist) {
     Write-Output "盤後分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-    python "$ProjectDir\scripts\notify_line.py" "盤後分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
+    # LINE 推送準確率 + 結果摘要
+    $Summary = python "$ProjectDir\scripts\generate_line_summary.py" after_market $Date 2>&1
+    if ($Summary) {
+        python "$ProjectDir\scripts\notify_line.py" $Summary
+    } else {
+        python "$ProjectDir\scripts\notify_line.py" "盤後分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
+    }
 } else {
     Write-Output "盤後分析有缺漏檔案！請檢查 log (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
     python "$ProjectDir\scripts\notify_line.py" "盤後分析失敗 ($Date) 有缺漏檔案，請檢查 log"
