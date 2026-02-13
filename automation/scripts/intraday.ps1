@@ -92,7 +92,9 @@ Write-Output "" | Tee-Object -FilePath $LogFile -Append
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 if ($AllExist) {
     Write-Output "盤中分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
+    python "$ProjectDir\scripts\notify_line.py" "盤中分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
 } else {
     Write-Output "盤中分析有缺漏檔案！請檢查 log (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
+    python "$ProjectDir\scripts\notify_line.py" "盤中分析失敗 ($Date) 有缺漏檔案，請檢查 log"
 }
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append

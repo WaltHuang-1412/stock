@@ -80,8 +80,16 @@ if ($IsHoliday) {
     Write-Output "" | Tee-Object -FilePath $LogFile -Append
     if ($AllExist) {
         Write-Output "假日快照完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
+        # LINE 通知
+        $SnapshotFile = "$ProjectDir\data\$Date\holiday_snapshot.md"
+        if (Test-Path $SnapshotFile) {
+            python "$ProjectDir\scripts\notify_line.py" --file $SnapshotFile
+        } else {
+            python "$ProjectDir\scripts\notify_line.py" "假日美股快照完成 ($Date $HolidayName)"
+        }
     } else {
         Write-Output "假日快照有缺漏！(耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
+        python "$ProjectDir\scripts\notify_line.py" "假日美股快照失敗 ($Date) 請檢查 log"
     }
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 
@@ -124,8 +132,10 @@ if ($IsHoliday) {
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
     if ($AllExist) {
         Write-Output "盤前分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
+        python "$ProjectDir\scripts\notify_line.py" "盤前分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
     } else {
         Write-Output "盤前分析有缺漏檔案！請檢查 log (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
+        python "$ProjectDir\scripts\notify_line.py" "盤前分析失敗 ($Date) 有缺漏檔案，請檢查 log"
     }
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 }
