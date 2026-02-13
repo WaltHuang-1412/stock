@@ -1,0 +1,62 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Apple",
+      "change_pct": -5.14,
+      "level": 2,
+      "level_name": "🟡 降級評分",
+      "tw_industry": "蘋果供應鏈",
+      "affected_stocks": {
+        "3008": "大立光",
+        "2474": "可成",
+        "2317": "鴻海",
+        "4938": "和碩",
+        "3673": "TPK-KY",
+        "2353": "宏碁",
+        "6415": "矽力-KY"
+      },
+      "action": "downgrade",
+      "score_adjustment": -15,
+      "reason": "Apple 跌幅 -5.14%，蘋果供應鏈產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-02-13",
+    "total_alerts": 1,
+    "level_3_count": 0,
+    "level_2_count": 1,
+    "level_1_count": 0,
+    "excluded_stocks": [],
+    "downgraded_stocks": {
+      "3008": {
+        "reason": "Apple 跌幅 -5.14%",
+        "adjustment": -15
+      },
+      "2474": {
+        "reason": "Apple 跌幅 -5.14%",
+        "adjustment": -15
+      },
+      "2317": {
+        "reason": "Apple 跌幅 -5.14%",
+        "adjustment": -15
+      },
+      "4938": {
+        "reason": "Apple 跌幅 -5.14%",
+        "adjustment": -15
+      },
+      "3673": {
+        "reason": "Apple 跌幅 -5.14%",
+        "adjustment": -15
+      },
+      "2353": {
+        "reason": "Apple 跌幅 -5.14%",
+        "adjustment": -15
+      },
+      "6415": {
+        "reason": "Apple 跌幅 -5.14%",
+        "adjustment": -15
+      }
+    },
+    "warning_stocks": {}
+  }
+}
