@@ -48,32 +48,19 @@ def validate_before_market(date_str):
     elif len(recs) > 8:
         warnings.append(f"⚠️  推薦數量過多: {len(recs)}檔（建議 6-8檔）")
 
-    # 2.2 檢查產業分散（簡易版：從reason關鍵字判斷）
+    # 2.2 檢查產業分散（動態：直接讀取 industry 欄位，不硬編碼產業清單）
     industries = {}
+    missing_industry = 0
     for rec in recs:
-        reason = rec.get('reason', '')
-
-        # 產業識別關鍵字
-        if any(kw in reason for kw in ['半導體', '晶圓', '封測', 'IC', '記憶體', '載板', 'PCB', 'ABF']):
-            industries['半導體'] = industries.get('半導體', 0) + 1
-        elif any(kw in reason for kw in ['AI伺服器', '伺服器', '電腦', '筆電', 'NB']):
-            industries['AI伺服器'] = industries.get('AI伺服器', 0) + 1
-        elif any(kw in reason for kw in ['電源供應', '電源', '散熱']):
-            industries['電源供應'] = industries.get('電源供應', 0) + 1
-        elif any(kw in reason for kw in ['金融', '銀行', '壽險', '證券', '作帳']):
-            industries['金融'] = industries.get('金融', 0) + 1
-        elif any(kw in reason for kw in ['航運', '貨櫃', '散裝']):
-            industries['航運'] = industries.get('航運', 0) + 1
-        elif any(kw in reason for kw in ['航空', '旅遊']):
-            industries['航空'] = industries.get('航空', 0) + 1
-        elif any(kw in reason for kw in ['塑化', '化工', '油價']):
-            industries['塑化'] = industries.get('塑化', 0) + 1
-        elif any(kw in reason for kw in ['鋼鐵', '鋼價']):
-            industries['鋼鐵'] = industries.get('鋼鐵', 0) + 1
-        elif any(kw in reason for kw in ['營建', '建設', '房市']):
-            industries['營建'] = industries.get('營建', 0) + 1
+        industry = rec.get('industry', '')
+        if industry:
+            industries[industry] = industries.get(industry, 0) + 1
         else:
-            industries['其他'] = industries.get('其他', 0) + 1
+            missing_industry += 1
+            industries['未分類'] = industries.get('未分類', 0) + 1
+
+    if missing_industry > 0:
+        warnings.append(f"⚠️  {missing_industry} 檔推薦缺少 industry 欄位（tracking.json 每檔應包含 industry）")
 
     if len(industries) < 4:
         errors.append(f"❌ 產業數量不足: {len(industries)}個（應至少4個）")

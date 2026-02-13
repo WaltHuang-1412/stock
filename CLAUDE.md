@@ -721,6 +721,7 @@ python3 scripts/reversal_alert.py [推薦股1] [推薦股2] ...
     {
       "stock_code": "2303",
       "stock_name": "聯電",
+      "industry": "半導體",
       "recommend_price": 52.5,
       "target_price": 58.0,
       "stop_loss": 48.3,
