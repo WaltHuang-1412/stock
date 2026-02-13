@@ -1495,12 +1495,14 @@ python3 scripts/institutional_positioning_detector.py
 
 ### 關於評分系統、歷史教訓等
 
-這些內容已移至：
-- `docs/reference/SCORING_SYSTEM.md`（評分系統）
-- `docs/reference/HISTORICAL_LESSONS.md`（歷史教訓）
-- `docs/reference/TOOLS_GUIDE.md`（工具指南）
+這些內容已整合/移至：
+- 評分系統：整合於本文件 Step 7（五維度評分）
+- 歷史教訓：`docs/HISTORICAL_LESSONS.md`（v7.3 最新）
+- 工具指南：整合於本文件「四、隨時可用工具」
 
 本文件**只專注於執行流程**。
+
+**文件導航**：查看 `docs/README.md` 了解完整文件結構。
 
 ---
 

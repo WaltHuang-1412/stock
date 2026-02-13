@@ -8,35 +8,21 @@
 
 ## 📁 文件清單
 
-### 1. [v7.3_test_report_0210.md](./v7.3_test_report_0210.md) 🆕
+### 1. [HISTORICAL_LESSONS.md](./HISTORICAL_LESSONS.md) 🔥
 
-**v7.3 完整測試報告（02/10 回測）**
+**歷史教訓總結（v7.3 最新）**
 
-- **用途**：驗證 v7.3 新功能效果
+- **用途**：歷史失敗案例分析與教訓總結
 - **內容**：
-  - 優化 A：美股龍頭預警測試（成功排除南亞）
-  - 優化 B：產業展開自動深度測試（正確判斷）
-  - 準確率預測：66.7% → 80.0%（+13.3%）
-- **狀態**：✅ 測試完成（2026-02-12）
-- **大小**：4.4K
+  - 災難級教訓（數據編造、事後諸葛、追高推薦等）
+  - v7.1-v7.3 優化與教訓（雙軌並行、龍頭預警、自動深度）
+  - 核心禁令與原則
+- **狀態**：✅ 已更新到 v7.3（2026-02-13）
+- **大小**：14K
 
 ---
 
-### 2. [strategy_optimization_v2.md](./strategy_optimization_v2.md)
-
-**v7.2 策略優化分析（流程整合版）**
-
-- **用途**：v7.2 完整優化分析報告
-- **內容**：
-  - 問題診斷：工具已存在但未整合到流程
-  - 優化方案：整合 reversal_alert.py、exit_signal_checker.py 等工具
-  - 實施步驟：Phase 1 流程整合（已完成）
-- **狀態**：✅ 已實施（v7.2 已完成，2026-02-11）
-- **大小**：17K
-
----
-
-### 3. [remaining_optimizations.md](./remaining_optimizations.md)
+### 2. [remaining_optimizations.md](./remaining_optimizations.md)
 
 **剩餘優化清單（v7.4+ 規劃）**
 
@@ -54,38 +40,37 @@
 
 ---
 
-### 4. [HISTORICAL_LESSONS.md](./HISTORICAL_LESSONS.md)
+### 3. [archive/](./archive/) 📦
 
-**歷史教訓總結**
+**歷史報告封存**
 
-- **用途**：歷史失敗案例分析與教訓總結
-- **內容**：
-  - 數據編造案例（南亞油價數據錯誤）
-  - 跳過步驟案例
-  - 法人反轉案例
-  - 動能篩選案例
-- **狀態**：📖 參考資料
-- **大小**：9.6K
+- **v7.2 策略優化報告**：[strategy_optimization_v2.md](./archive/strategy_optimization_v2.md)
+  - v7.2 流程整合優化（已完成，2026-02-11）
+  - 大小：17K
+
+- **v7.3 測試報告**：[v7.3_test_report_0210.md](./archive/v7.3_test_report_0210.md)
+  - v7.3 功能回測驗證（已完成，2026-02-12）
+  - 大小：4.4K
 
 ---
 
 ## 🗂️ 版本演進
 
 ```
-v7.1 準確率 59.3%（基準）
+v7.1 準確率 59.3%（基準，2026-02-04）
     ↓
-[strategy_optimization_v2.md]
-    ↓ Phase 1A：流程整合
+[archive/strategy_optimization_v2.md]
+    ↓ Phase 1A：流程整合（反轉預警、強制停損、持股壓力）
     ↓
-v7.2 準確率 預期 75-80%（2026-02-11）
+v7.2 準確率 83.3%（2026-02-11）
     ↓
-[v7.3_test_report_0210.md]
+[archive/v7.3_test_report_0210.md]
     ↓ Phase 1B：龍頭預警 + 自動深度
     ↓
 v7.3 準確率 預期 72-73%（2026-02-12）✅ 目前狀態
     ↓
 [remaining_optimizations.md]
-    ↓ Phase 2：籌碼趨勢 + 技術面
+    ↓ Phase 2：多日籌碼趨勢 + 技術面
     ↓
 v7.4+ 準確率 預期 78-83%（規劃中）
 ```
@@ -96,23 +81,27 @@ v7.4+ 準確率 預期 78-83%（規劃中）
 
 ### 我想知道...
 
-**Q: v7.3 做了哪些優化？**
-→ 查看 [v7.3_test_report_0210.md](./v7.3_test_report_0210.md)
-
-**Q: v7.2 做了哪些優化？**
-→ 查看 [strategy_optimization_v2.md](./strategy_optimization_v2.md)
+**Q: 歷史上有哪些失敗案例和教訓？**
+→ 查看 [HISTORICAL_LESSONS.md](./HISTORICAL_LESSONS.md)
+- 災難級教訓（數據編造、事後諸葛、追高推薦等）
+- v7.1-v7.3 優化與教訓
+- 核心禁令與原則
 
 **Q: 接下來要做什麼優化？**
 → 查看 [remaining_optimizations.md](./remaining_optimizations.md)
+- 優化 C-G（多日籌碼趨勢、技術面等）
+- 預期效果：+10-15% 準確率
 
-**Q: 歷史上有哪些失敗案例？**
-→ 查看 [HISTORICAL_LESSONS.md](./HISTORICAL_LESSONS.md)
-
-**Q: v7.3 的測試效果如何？**
-→ 查看 [v7.3_test_report_0210.md](./v7.3_test_report_0210.md)
+**Q: v7.3 做了哪些優化？**
+→ 查看 [archive/v7.3_test_report_0210.md](./archive/v7.3_test_report_0210.md)
+- 優化 A：美股龍頭預警（+10%）
+- 優化 B：產業展開自動深度（+3%）
 - 成功排除 02/10 南亞失敗案例
-- 自動深度判斷正確（塑化=1, AI=3）
-- 預期準確率：72-73%
+
+**Q: v7.2 做了哪些優化？**
+→ 查看 [archive/strategy_optimization_v2.md](./archive/strategy_optimization_v2.md)
+- 反轉預警篩選、強制停損機制、持股壓力分析
+- 準確率：83.3%（2026-02-11）
 
 ---
 
