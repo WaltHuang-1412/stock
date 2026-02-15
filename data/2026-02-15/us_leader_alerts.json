@@ -1,0 +1,107 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Apple",
+      "change_pct": -8.03,
+      "level": 3,
+      "level_name": "🔴 直接排除",
+      "tw_industry": "蘋果供應鏈",
+      "affected_stocks": {
+        "3008": "大立光",
+        "2474": "可成",
+        "2317": "鴻海",
+        "4938": "和碩",
+        "3673": "TPK-KY",
+        "2353": "宏碁",
+        "6415": "矽力-KY"
+      },
+      "action": "exclude",
+      "score_adjustment": 0,
+      "reason": "Apple 跌幅 -8.03%，蘋果供應鏈產業受壓"
+    },
+    {
+      "us_stock": "Super Micro",
+      "change_pct": -11.17,
+      "level": 2,
+      "level_name": "🟡 降級評分",
+      "tw_industry": "AI伺服器",
+      "affected_stocks": {
+        "2382": "廣達",
+        "3231": "緯創",
+        "6669": "緯穎",
+        "2376": "技嘉"
+      },
+      "action": "downgrade",
+      "score_adjustment": -15,
+      "reason": "Super Micro 跌幅 -11.17%，AI伺服器產業受壓"
+    },
+    {
+      "us_stock": "Broadcom",
+      "change_pct": -2.33,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "網通",
+      "affected_stocks": {
+        "2345": "智邦",
+        "2412": "中華電",
+        "3042": "晶技",
+        "2449": "京元電子"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Broadcom 跌幅 -2.33%，網通產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-02-15",
+    "total_alerts": 3,
+    "level_3_count": 1,
+    "level_2_count": 1,
+    "level_1_count": 1,
+    "excluded_stocks": [
+      "4938",
+      "6415",
+      "3008",
+      "3673",
+      "2474",
+      "2353",
+      "2317"
+    ],
+    "downgraded_stocks": {
+      "2382": {
+        "reason": "Super Micro 跌幅 -11.17%",
+        "adjustment": -15
+      },
+      "3231": {
+        "reason": "Super Micro 跌幅 -11.17%",
+        "adjustment": -15
+      },
+      "6669": {
+        "reason": "Super Micro 跌幅 -11.17%",
+        "adjustment": -15
+      },
+      "2376": {
+        "reason": "Super Micro 跌幅 -11.17%",
+        "adjustment": -15
+      }
+    },
+    "warning_stocks": {
+      "2345": {
+        "reason": "Broadcom 跌幅 -2.33%",
+        "adjustment": -5
+      },
+      "2412": {
+        "reason": "Broadcom 跌幅 -2.33%",
+        "adjustment": -5
+      },
+      "3042": {
+        "reason": "Broadcom 跌幅 -2.33%",
+        "adjustment": -5
+      },
+      "2449": {
+        "reason": "Broadcom 跌幅 -2.33%",
+        "adjustment": -5
+      }
+    }
+  }
+}
