@@ -1,0 +1,47 @@
+{
+  "alerts": [
+    {
+      "us_stock": "AMD",
+      "change_pct": -2.81,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "AI晶片/IC設計",
+      "affected_stocks": {
+        "3707": "漢磊",
+        "3661": "世芯-KY",
+        "2454": "聯發科",
+        "3443": "創意"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "AMD 跌幅 -2.81%，AI晶片/IC設計產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-02-22",
+    "total_alerts": 1,
+    "level_3_count": 0,
+    "level_2_count": 0,
+    "level_1_count": 1,
+    "excluded_stocks": [],
+    "downgraded_stocks": {},
+    "warning_stocks": {
+      "3707": {
+        "reason": "AMD 跌幅 -2.81%",
+        "adjustment": -5
+      },
+      "3661": {
+        "reason": "AMD 跌幅 -2.81%",
+        "adjustment": -5
+      },
+      "2454": {
+        "reason": "AMD 跌幅 -2.81%",
+        "adjustment": -5
+      },
+      "3443": {
+        "reason": "AMD 跌幅 -2.81%",
+        "adjustment": -5
+      }
+    }
+  }
+}
