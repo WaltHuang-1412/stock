@@ -152,6 +152,39 @@ def intraday_summary(date):
             lines.append(f"  策略:{short}")
         lines.append("")
 
+    # === Track B：盤中發現 + 佈局機會 ===
+    intraday_data = tracking.get("intraday_analysis", {})
+    discoveries = intraday_data.get("track_b_discoveries", [])
+    if discoveries:
+        lines.append("---")
+        lines.append("🔍 盤中發現（佈局機會）")
+        lines.append("")
+        for d in discoveries:
+            name = d.get("stock_name", d.get("name", "?"))
+            code = d.get("stock_code", d.get("symbol", "?"))
+            chg = d.get("intraday_change", "?")
+            vol = d.get("volume_ratio", "")
+            chip = d.get("chip_data", "")
+            action = d.get("action", "")
+            vol_str = f" 量比{vol}x" if vol else ""
+            lines.append(f"📌 {name}({code}) {chg}{vol_str}")
+            if chip:
+                lines.append(f"  {chip}")
+            if action:
+                lines.append(f"  → {action}")
+            lines.append("")
+
+    # === Track A 警告摘要 ===
+    track_a = intraday_data.get("track_a_summary", {})
+    warnings = track_a.get("warnings", [])
+    forced_stops = track_a.get("forced_stops", 0)
+    if forced_stops > 0 or warnings:
+        lines.append("---")
+        if forced_stops > 0:
+            lines.append(f"🛑 強制停損：{forced_stops} 檔")
+        for w in warnings:
+            lines.append(f"⚠️ {w}")
+
     return "\n".join(lines)
 
 
