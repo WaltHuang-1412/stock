@@ -22,6 +22,15 @@ PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
 
 
+def _get(rec, *keys, default="?"):
+    """從推薦中讀取欄位，依序嘗試多個欄位名"""
+    for k in keys:
+        v = rec.get(k)
+        if v is not None and v != "":
+            return v
+    return default
+
+
 def load_json(filepath):
     """讀取 JSON 檔案"""
     if not filepath.exists():
@@ -43,17 +52,17 @@ def before_market_summary(date):
     lines = [f"[{date}] 盤前分析完成", f"推薦 {len(recs)} 檔：", ""]
 
     for r in recs:
-        code = r.get("stock_code", "?")
-        name = r.get("stock_name", "?")
-        score = r.get("score", "?")
-        entry = r.get("recommend_price", "?")
-        target = r.get("target_price", "?")
-        stop = r.get("stop_loss", "?")
-        position = r.get("position", "?")
-        industry = r.get("industry", "")
-        rating = r.get("rating", "")
-        reason = r.get("reason", "")
-        risk = r.get("risk", "")
+        code = _get(r, "stock_code", "symbol")
+        name = _get(r, "stock_name", "name")
+        score = _get(r, "score")
+        entry = _get(r, "recommend_price", "entry_price")
+        target = _get(r, "target_price", "target")
+        stop = _get(r, "stop_loss")
+        position = _get(r, "position")
+        industry = _get(r, "industry", default="")
+        rating = _get(r, "rating", default="")
+        reason = _get(r, "reason", default="")
+        risk = _get(r, "risk_note", "risk", "warning", default="")
 
         # 計算目標/停損漲跌%
         target_pct = ""
@@ -101,12 +110,20 @@ def intraday_summary(date):
     lines = [f"[{date}] 盤中分析完成", ""]
 
     for r in recs:
-        code = r.get("stock_code", "?")
-        name = r.get("stock_name", "?")
-        entry = r.get("recommend_price", "?")
-        intraday = r.get("intraday_price", "?")
-        change = r.get("intraday_vs_recommend_pct", "?")
-        strategy = r.get("intraday_strategy", "")
+        code = _get(r, "stock_code", "symbol")
+        name = _get(r, "stock_name", "name")
+        entry = _get(r, "recommend_price", "entry_price")
+
+        # 支援巢狀結構 intraday{} 和平層 intraday_price
+        intra = r.get("intraday", {})
+        if isinstance(intra, dict) and intra:
+            intraday = intra.get("price", "?")
+            change = intra.get("vs_recommend_pct", "?")
+            strategy = intra.get("intraday_strategy", "")
+        else:
+            intraday = r.get("intraday_price", "?")
+            change = r.get("intraday_vs_recommend_pct", r.get("intraday_change", "?"))
+            strategy = r.get("intraday_strategy", "")
 
         if isinstance(change, (int, float)):
             sign = "+" if change >= 0 else ""
@@ -174,14 +191,14 @@ def after_market_summary(date):
             if result == "success":
                 success += 1
 
-        code = r.get("stock_code", "?")
-        name = r.get("stock_name", "?")
-        score = r.get("score", "?")
-        entry = r.get("recommend_price", "?")
-        close = r.get("closing_price", "?")
-        change = r.get("vs_recommend_pct", "?")
-        reason = r.get("reason", "")
-        catalyst = r.get("catalyst", "")
+        code = _get(r, "stock_code", "symbol")
+        name = _get(r, "stock_name", "name")
+        score = _get(r, "score")
+        entry = _get(r, "recommend_price", "entry_price")
+        close = _get(r, "closing_price", "close_price")
+        change = _get(r, "vs_recommend_pct")
+        reason = _get(r, "reason", default="")
+        catalyst = _get(r, "catalyst", default="")
 
         if isinstance(change, (int, float)):
             sign = "+" if change >= 0 else ""
@@ -192,8 +209,12 @@ def after_market_summary(date):
         icon = "✅" if result == "success" else "❌" if result == "fail" else "⚪"
         short = _short_reason(reason) or _short_reason(catalyst)
 
+        # 格式化價格（避免浮點數過長）
+        entry_fmt = f"{entry:.1f}" if isinstance(entry, float) else str(entry)
+        close_fmt = f"{close:.1f}" if isinstance(close, float) else str(close)
+
         entry_info = {
-            "line": f"{icon} {name}({code}) {change_str} ({entry}→{close}) {score}分",
+            "line": f"{icon} {name}({code}) {change_str} ({entry_fmt}→{close_fmt}) {score}分",
             "reason": short,
             "name": name,
             "code": code,
