@@ -163,11 +163,13 @@ def intraday_summary(date):
             name = d.get("stock_name", d.get("name", "?"))
             code = d.get("stock_code", d.get("symbol", "?"))
             chg = d.get("intraday_change", "?")
+            price = d.get("price", "")
             vol = d.get("volume_ratio", "")
             chip = d.get("chip_data", "")
             action = d.get("action", "")
             vol_str = f" 量比{vol}x" if vol else ""
-            lines.append(f"📌 {name}({code}) {chg}{vol_str}")
+            price_str = f" 現價:{price}" if price else ""
+            lines.append(f"📌 {name}({code}) {chg}{price_str}{vol_str}")
             if chip:
                 lines.append(f"  {chip}")
             if action:

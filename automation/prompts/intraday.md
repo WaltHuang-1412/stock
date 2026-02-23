@@ -10,3 +10,17 @@
 5. 所有輸出檔案必須保存
 6. 完成後 git add 相關檔案並 git commit，然後 git push
 7. 禁止修改 scripts/ 目錄下的任何 .py 檔案，只能執行不能改
+
+Track B 數據格式要求：
+tracking JSON 的 track_b_discoveries 每檔必須包含 price（盤中現價），格式如下：
+```json
+{
+  "stock_code": "2801",
+  "stock_name": "彰銀",
+  "price": 27.55,
+  "intraday_change": "+3.86%",
+  "volume_ratio": 3.4,
+  "chip_data": "7天連續買超+36K、外資+投信同步",
+  "action": "明日盤前重點評估"
+}
+```
