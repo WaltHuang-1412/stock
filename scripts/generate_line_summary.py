@@ -277,6 +277,10 @@ def after_market_summary(date):
         lines.append("")
 
     # === 失敗原因深度分析 ===
+    after_summary = tracking.get("after_market_summary", {})
+    if not isinstance(after_summary, dict):
+        after_summary = {}
+
     if fail_list:
         lines.append("---")
         lines.append("失敗分析：")
@@ -284,28 +288,58 @@ def after_market_summary(date):
             name = item["name"]
             code = item["code"]
             change = item["change_str"]
-            # 從 tracking 找更多失敗資訊
-            rec = next((r for r in recs if r.get("stock_code") == code), {})
-            fail_reason = rec.get("fail_reason", "")
+            # 從 tracking 找失敗資訊
+            rec = next((r for r in recs if _get(r, "stock_code", "symbol") == code), {})
+            fail_reason = rec.get("fail_reason", "") or rec.get("fail_analysis", "")
             if fail_reason:
                 lines.append(f"  {name}({code}) {change}")
                 short_fail = _short_reason(fail_reason, 80)
                 lines.append(f"  → {short_fail}")
             else:
-                lines.append(f"  {name}({code}) {change}（原因待分析）")
+                # fallback: 從 after_market_summary.lessons 找相關教訓
+                lessons = after_summary.get("lessons", [])
+                related = [l for l in lessons if code in str(l) or name in str(l)]
+                if related:
+                    lines.append(f"  {name}({code}) {change}")
+                    lines.append(f"  → {_short_reason(related[0], 80)}")
+                else:
+                    lines.append(f"  {name}({code}) {change}（原因待分析）")
             lines.append("")
 
+    # === 教訓 ===
+    lessons = after_summary.get("lessons", [])
+    if lessons:
+        lines.append("---")
+        lines.append("今日教訓：")
+        for lesson in lessons[:5]:
+            lines.append(f"  • {_short_reason(str(lesson), 80)}")
+
+    # === 法人警示 ===
+    alerts = after_summary.get("institutional_alerts", {})
+    if alerts:
+        sell_alerts = {k: v for k, v in alerts.items() if "sell" in k}
+        buy_alerts = {k: v for k, v in alerts.items() if "buy" in k}
+        if sell_alerts or buy_alerts:
+            lines.append("")
+            lines.append("法人動態：")
+            for k, v in sell_alerts.items():
+                code = k.replace("_sell", "")
+                lines.append(f"  🔴 {code} 賣超 {v:+,}")
+            for k, v in buy_alerts.items():
+                code = k.replace("_buy", "")
+                lines.append(f"  🟢 {code} 買超 {v:+,}")
+
     # === 明日重點 ===
-    after_summary = tracking.get("after_market_summary", {})
-    tomorrow = ""
-    if isinstance(after_summary, dict):
-        tomorrow = after_summary.get("tomorrow_focus", "")
-        if not tomorrow:
-            tomorrow = after_summary.get("next_day_prediction", "")
-        if not tomorrow:
-            tomorrow = after_summary.get("notes", after_summary.get("summary", ""))
+    tomorrow = after_summary.get("tomorrow_focus", "")
+    if not tomorrow:
+        tomorrow = after_summary.get("next_day_prediction", "")
+    if not tomorrow:
+        tomorrow = after_summary.get("next_trading_day_focus", "")
+    if not tomorrow:
+        tomorrow = after_summary.get("notes", after_summary.get("summary", ""))
 
     if tomorrow:
+        lines.append("")
         lines.append("---")
         lines.append("明日重點：")
         short = str(tomorrow)[:200] + ("..." if len(str(tomorrow)) > 200 else "")
