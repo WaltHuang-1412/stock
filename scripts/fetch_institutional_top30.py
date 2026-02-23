@@ -72,19 +72,62 @@ STOCK_NAMES = {
 }
 
 
-def get_5day_change(code):
-    """取得 5 日漲幅（使用 Yahoo Finance）"""
+def get_stock_market_data(code):
+    """
+    一次查詢取得股價、成交量、5日漲幅（Yahoo Finance range=6d）
+
+    Returns:
+        dict: {
+            'close_price': float,    # 收盤價（元）
+            'daily_volume': int,     # 當日成交量（股）
+            '5day_change': float,    # 5日漲幅（%）
+        }
+        失敗返回 None
+    """
     try:
-        import yfinance as yf
-        stock = yf.Ticker(f'{code}.TW')
-        hist = stock.history(period='5d')
-        if len(hist) >= 2:
-            first = hist['Close'].iloc[0]
-            last = hist['Close'].iloc[-1]
-            pct = (last - first) / first * 100
-            return pct
+        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW?interval=1d&range=6d'
+        headers = {'User-Agent': 'Mozilla/5.0'}
+        response = requests.get(url, headers=headers, timeout=10)
+        data = response.json()
+
+        if 'chart' not in data or 'result' not in data['chart'] or not data['chart']['result']:
+            return None
+
+        result = data['chart']['result'][0]
+        info = {}
+
+        # 收盤價
+        if 'meta' in result and 'regularMarketPrice' in result['meta']:
+            info['close_price'] = result['meta']['regularMarketPrice']
+
+        # 成交量 + 5日漲幅
+        if 'indicators' in result and 'quote' in result['indicators']:
+            quote = result['indicators']['quote'][0]
+
+            # 成交量（最後一天）
+            if 'volume' in quote:
+                volumes = [v for v in quote['volume'] if v is not None]
+                if volumes:
+                    info['daily_volume'] = volumes[-1]
+
+            # 5日漲幅
+            if 'close' in quote:
+                closes = [c for c in quote['close'] if c is not None]
+                if len(closes) >= 2:
+                    first = closes[0]
+                    last = closes[-1]
+                    info['5day_change'] = (last - first) / first * 100
+
+        return info if 'close_price' in info else None
     except:
-        pass
+        return None
+
+
+def get_5day_change(code):
+    """取得 5 日漲幅（向下相容包裝）"""
+    data = get_stock_market_data(code)
+    if data and '5day_change' in data:
+        return data['5day_change']
     return None
 
 
@@ -171,6 +214,50 @@ def fetch_institutional_top30(date=None):
         # 賣超 TOP50
         stocks_sell = sorted(stocks, key=lambda x: x['total'])[:50]
 
+        # v3.0：為 TOP50 買超補充股價、成交量、金額資訊
+        print('\n正在查詢股價與成交量（約需 30-60 秒）...\n')
+        for s in stocks_buy:
+            market_data = get_stock_market_data(s['code'])
+            if market_data:
+                s['close_price'] = market_data.get('close_price')
+                s['daily_volume'] = market_data.get('daily_volume')
+                s['5day_change'] = market_data.get('5day_change')
+
+                # 買超金額 = 買超股數 × 收盤價
+                if s['close_price']:
+                    s['buy_amount'] = s['total'] * s['close_price']
+                    # 當日成交金額 ≈ 成交量(股) × 收盤價
+                    if s.get('daily_volume') and s['daily_volume'] > 0:
+                        s['daily_turnover'] = s['daily_volume'] * s['close_price']
+                        s['buy_ratio'] = abs(s['buy_amount']) / s['daily_turnover'] * 100
+                    else:
+                        s['daily_turnover'] = None
+                        s['buy_ratio'] = None
+                else:
+                    s['buy_amount'] = None
+                    s['daily_turnover'] = None
+                    s['buy_ratio'] = None
+            else:
+                s['close_price'] = None
+                s['daily_volume'] = None
+                s['5day_change'] = None
+                s['buy_amount'] = None
+                s['daily_turnover'] = None
+                s['buy_ratio'] = None
+
+        # 張數排名
+        for i, s in enumerate(stocks_buy, 1):
+            s['volume_rank'] = i
+
+        # 金額排名
+        stocks_by_amount = sorted(
+            stocks_buy,
+            key=lambda x: abs(x['buy_amount']) if x.get('buy_amount') else 0,
+            reverse=True
+        )
+        for i, s in enumerate(stocks_by_amount, 1):
+            s['amount_rank'] = i
+
         return {
             'date': formatted_date,
             'buy_top30': stocks_buy,  # 保留key名稱向下相容
@@ -198,74 +285,117 @@ def format_value(v):
         return f'+{v_lot:,}' if v_lot >= 0 else f'{v_lot:,}'
 
 
+def format_amount(amount):
+    """格式化金額為億元"""
+    if amount is None:
+        return '--'
+    v = abs(amount) / 1e8  # 轉為億
+    sign = '+' if amount >= 0 else '-'
+    if v >= 10:
+        return f'{sign}{v:.0f}億'
+    elif v >= 1:
+        return f'{sign}{v:.1f}億'
+    else:
+        return f'{sign}{v:.2f}億'
+
+
+def format_ratio(ratio):
+    """格式化佔成交比例"""
+    if ratio is None:
+        return '--'
+    return f'{ratio:.1f}%'
+
+
+def format_price(price):
+    """格式化股價"""
+    if price is None:
+        return '--'
+    if price >= 100:
+        return f'{price:.0f}'
+    else:
+        return f'{price:.1f}'
+
+
+def print_buy_tier(stocks, start_rank, title, include_price=True):
+    """輸出買超單一層級（v3.0 含金額排名）"""
+    print(f'### {title}')
+    print()
+    print('| 排名(張) | 排名(額) | 代號 | 名稱 | 三大法人 | 買超金額 | 佔成交% | 收盤價 | 5日漲幅 | 狀態 |')
+    print('|---------|---------|------|------|---------|---------|--------|-------|--------|------|')
+
+    for i, s in enumerate(stocks, start_rank):
+        if include_price:
+            pct = s.get('5day_change')
+            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
+            status = get_status(pct)
+        else:
+            pct_str = '--'
+            status = '--'
+
+        amt_rank = s.get('amount_rank', '--')
+        amt_rank_str = f'{amt_rank}' if isinstance(amt_rank, int) else '--'
+
+        print(f"| {i} | {amt_rank_str} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_amount(s.get('buy_amount'))} | {format_ratio(s.get('buy_ratio'))} | {format_price(s.get('close_price'))} | {pct_str} | {status} |")
+
+    print()
+
+
+def print_sell_tier(stocks, start_rank, title, include_price=True):
+    """輸出賣超單一層級"""
+    print(f'### {title}')
+    print()
+    print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
+    print('|------|------|------|---------|------|------|--------|------|')
+
+    for i, s in enumerate(stocks, start_rank):
+        if include_price:
+            pct = get_5day_change(s['code'])
+            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
+            status = get_status(pct)
+        else:
+            pct_str = '--'
+            status = '--'
+
+        print(f"| {i} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_value(s['trust'])} | {format_value(s['foreign'])} | {pct_str} | {status} |")
+
+    print()
+
+
 def print_top30_report(result, include_price=True):
-    """輸出 TOP50 報告（v2.0 分三層級）"""
+    """輸出 TOP50 報告（v3.0 含金額排名）"""
 
     if not result:
         return
 
     date = result['date']
-    buy_top50 = result['buy_top30']  # 實際是TOP50，key名保留向下相容
+    buy_top50 = result['buy_top30']
     sell_top50 = result['sell_top30']
 
-    # 買超 TOP50（分三層級）
+    # 買超 TOP50（分三層級，含金額排名）
     print(f'\n## 法人買超 TOP50（{date}）')
     print()
 
-    # 第一層級：TOP20（優先推薦）
-    print('### 📌 TOP 1-20（優先推薦）')
+    print_buy_tier(buy_top50[:20], 1, '📌 TOP 1-20（優先推薦）', include_price)
+    print_buy_tier(buy_top50[20:35], 21, '🔍 TOP 21-35（可考慮）', include_price)
+    print_buy_tier(buy_top50[35:50], 36, '👀 TOP 36-50（觀察備用）', include_price)
+
+    # 金額排名 TOP20（新增）
+    stocks_by_amount = sorted(
+        buy_top50,
+        key=lambda x: abs(x['buy_amount']) if x.get('buy_amount') else 0,
+        reverse=True
+    )
+    print('### 💰 金額排名 TOP20（法人真金白銀）')
     print()
-    print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
-    print('|------|------|------|---------|------|------|--------|------|')
+    print('| 排名(額) | 排名(張) | 代號 | 名稱 | 買超金額 | 佔成交% | 三大法人 | 收盤價 | 5日漲幅 | 狀態 |')
+    print('|---------|---------|------|------|---------|--------|---------|-------|--------|------|')
 
-    for i, s in enumerate(buy_top50[:20], 1):
-        if include_price:
-            pct = get_5day_change(s['code'])
-            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
-            status = get_status(pct)
-        else:
-            pct_str = '--'
-            status = '--'
+    for s in stocks_by_amount[:20]:
+        pct = s.get('5day_change')
+        pct_str = f'{pct:+.1f}%' if pct is not None else '--'
+        status = get_status(pct)
 
-        print(f"| {i} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_value(s['trust'])} | {format_value(s['foreign'])} | {pct_str} | {status} |")
-
-    print()
-
-    # 第二層級：21-35（可考慮）
-    print('### 🔍 TOP 21-35（可考慮）')
-    print()
-    print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
-    print('|------|------|------|---------|------|------|--------|------|')
-
-    for i, s in enumerate(buy_top50[20:35], 21):
-        if include_price:
-            pct = get_5day_change(s['code'])
-            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
-            status = get_status(pct)
-        else:
-            pct_str = '--'
-            status = '--'
-
-        print(f"| {i} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_value(s['trust'])} | {format_value(s['foreign'])} | {pct_str} | {status} |")
-
-    print()
-
-    # 第三層級：36-50（觀察備用）
-    print('### 👀 TOP 36-50（觀察備用）')
-    print()
-    print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
-    print('|------|------|------|---------|------|------|--------|------|')
-
-    for i, s in enumerate(buy_top50[35:50], 36):
-        if include_price:
-            pct = get_5day_change(s['code'])
-            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
-            status = get_status(pct)
-        else:
-            pct_str = '--'
-            status = '--'
-
-        print(f"| {i} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_value(s['trust'])} | {format_value(s['foreign'])} | {pct_str} | {status} |")
+        print(f"| {s.get('amount_rank', '--')} | {s.get('volume_rank', '--')} | {s['code']} | {s['name']} | {format_amount(s.get('buy_amount'))} | {format_ratio(s.get('buy_ratio'))} | {format_value(s['total'])} | {format_price(s.get('close_price'))} | {pct_str} | {status} |")
 
     print()
     print('---')
@@ -275,62 +405,10 @@ def print_top30_report(result, include_price=True):
     print(f'## 法人賣超 TOP50（{date}）')
     print()
 
-    # 第一層級：TOP20（重點避開）
-    print('### 🔴 TOP 1-20（重點避開）')
-    print()
-    print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
-    print('|------|------|------|---------|------|------|--------|------|')
+    print_sell_tier(sell_top50[:20], 1, '🔴 TOP 1-20（重點避開）', include_price)
+    print_sell_tier(sell_top50[20:35], 21, '⚠️ TOP 21-35（注意風險）', include_price)
+    print_sell_tier(sell_top50[35:50], 36, '👁️ TOP 36-50（觀察參考）', include_price)
 
-    for i, s in enumerate(sell_top50[:20], 1):
-        if include_price:
-            pct = get_5day_change(s['code'])
-            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
-            status = get_status(pct)
-        else:
-            pct_str = '--'
-            status = '--'
-
-        print(f"| {i} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_value(s['trust'])} | {format_value(s['foreign'])} | {pct_str} | {status} |")
-
-    print()
-
-    # 第二層級：21-35（注意風險）
-    print('### ⚠️ TOP 21-35（注意風險）')
-    print()
-    print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
-    print('|------|------|------|---------|------|------|--------|------|')
-
-    for i, s in enumerate(sell_top50[20:35], 21):
-        if include_price:
-            pct = get_5day_change(s['code'])
-            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
-            status = get_status(pct)
-        else:
-            pct_str = '--'
-            status = '--'
-
-        print(f"| {i} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_value(s['trust'])} | {format_value(s['foreign'])} | {pct_str} | {status} |")
-
-    print()
-
-    # 第三層級：36-50（觀察參考）
-    print('### 👁️ TOP 36-50（觀察參考）')
-    print()
-    print('| 排名 | 代號 | 名稱 | 三大法人 | 投信 | 外資 | 5日漲幅 | 狀態 |')
-    print('|------|------|------|---------|------|------|--------|------|')
-
-    for i, s in enumerate(sell_top50[35:50], 36):
-        if include_price:
-            pct = get_5day_change(s['code'])
-            pct_str = f'{pct:+.1f}%' if pct is not None else '--'
-            status = get_status(pct)
-        else:
-            pct_str = '--'
-            status = '--'
-
-        print(f"| {i} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_value(s['trust'])} | {format_value(s['foreign'])} | {pct_str} | {status} |")
-
-    print()
     print('---')
     print()
     print('**狀態標註說明**：')
@@ -339,6 +417,11 @@ def print_top30_report(result, include_price=True):
     print('- [已小漲]：5日漲幅 3-5%（注意追高）')
     print('- [追高風險]：5日漲幅 5-8%（考慮等回檔）')
     print('- [已大漲]：5日漲幅 > 8%（不建議追）')
+    print()
+    print('**排名說明**：')
+    print('- 排名(張)：依買超張數排序（傳統排名）')
+    print('- 排名(額)：依買超金額排序（張數×股價，反映實際資金投入）')
+    print('- 佔成交%：買超金額÷當日成交金額（越高=法人主導力越強）')
 
 
 def print_positioning_opportunities(result):
@@ -351,20 +434,20 @@ def print_positioning_opportunities(result):
 
     print('\n## 佈局機會（法人買超 + 還沒漲）')
     print()
-    print('| 代號 | 名稱 | 三大法人 | 5日漲幅 | 狀態 |')
-    print('|------|------|---------|--------|------|')
+    print('| 代號 | 名稱 | 三大法人 | 買超金額 | 佔成交% | 5日漲幅 | 狀態 |')
+    print('|------|------|---------|---------|--------|--------|------|')
 
     count = 0
     for s in buy_top30:
-        pct = get_5day_change(s['code'])
+        pct = s.get('5day_change')
         if pct is not None and pct < 3:  # 5日漲幅 < 3%
             pct_str = f'{pct:+.1f}%'
             status = get_status(pct)
-            print(f"| {s['code']} | {s['name']} | {format_value(s['total'])} | {pct_str} | {status} |")
+            print(f"| {s['code']} | {s['name']} | {format_value(s['total'])} | {format_amount(s.get('buy_amount'))} | {format_ratio(s.get('buy_ratio'))} | {pct_str} | {status} |")
             count += 1
 
     if count == 0:
-        print('| -- | 無符合條件 | -- | -- | -- |')
+        print('| -- | 無符合條件 | -- | -- | -- | -- | -- |')
 
     print()
     print(f'共 {count} 檔符合「佈局中」或「可進場」條件')
@@ -386,10 +469,7 @@ if __name__ == '__main__':
     result = fetch_institutional_top30(date)
 
     if result:
-        # 詢問是否要查詢股價（較慢）
-        print('\n正在查詢 5 日漲幅（約需 20-40 秒）...\n')
-
-        # 輸出完整報告
+        # 輸出完整報告（股價/成交量已在 fetch 階段查詢完畢）
         print_top30_report(result, include_price=True)
 
         # 輸出佈局機會
