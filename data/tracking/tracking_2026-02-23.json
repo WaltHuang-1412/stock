@@ -89,6 +89,7 @@
       "closing_price": 283.5,
       "vs_recommend_pct": -0.87,
       "result": "fail",
+      "fail_reason": "AI伺服器催化（SMCI+6.54%/Dell+8.38%）效果不如預期，量比0.85x量能不足，資金優先流入金融/PCB",
       "intraday": {
         "price": 286.5,
         "vs_recommend_pct": 0.17,
@@ -251,6 +252,7 @@
       "closing_price": 21.95,
       "vs_recommend_pct": -3.3,
       "result": "fail",
+      "fail_reason": "油價+5.79%為航空股直接利空（燃油成本上升），跌破MA5/MA10，即使法人7天連買+81K也無法對抗外部利空",
       "intraday": {
         "price": 21.8,
         "vs_recommend_pct": -3.96,
@@ -450,6 +452,18 @@
         "net_buy_pct": "+8.19%",
         "note": "外資大量吸籌+90K，但油價利空壓制"
       }
-    }
+    },
+    "tomorrow_recommendations": [
+      {"stock_code": "2801", "stock_name": "彰銀", "score": 86, "rating": "⭐⭐⭐⭐⭐", "action": "新增"},
+      {"stock_code": "2886", "stock_name": "兆豐金", "score": 85, "rating": "⭐⭐⭐⭐⭐", "action": "續推"},
+      {"stock_code": "2317", "stock_name": "鴻海", "score": 82, "rating": "⭐⭐⭐⭐", "action": "續推"},
+      {"stock_code": "5880", "stock_name": "合庫金", "score": 80, "rating": "⭐⭐⭐⭐", "action": "續推"},
+      {"stock_code": "2382", "stock_name": "廣達", "score": 79, "rating": "⭐⭐⭐⭐", "action": "續推觀察"},
+      {"stock_code": "6213", "stock_name": "聯茂", "score": 78, "rating": "⭐⭐⭐⭐", "action": "續推"},
+      {"stock_code": "2449", "stock_name": "京元電", "score": 73, "rating": "⭐⭐⭐", "action": "降級"}
+    ],
+    "removed_stocks": [
+      {"stock_code": "2610", "stock_name": "華航", "reason": "油價+5.79%利空+接近停損"}
+    ]
   }
 }

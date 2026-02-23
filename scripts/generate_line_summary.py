@@ -204,8 +204,17 @@ def _short_reason(reason, max_len=50):
     return reason
 
 
+def _get_after_summary(tracking):
+    """讀取盤後摘要，相容兩種 key 名稱"""
+    for key in ("after_market_summary", "after_market_analysis"):
+        val = tracking.get(key)
+        if isinstance(val, dict) and val:
+            return val
+    return {}
+
+
 def after_market_summary(date):
-    """盤後摘要：準確率 + 評分原因 + 失敗分析 + 明日重點"""
+    """盤後摘要：準確率 + 評分原因 + 失敗分析 + 遺漏機會 + 明日重點"""
     tracking = load_json(DATA_DIR / "tracking" / f"tracking_{date}.json")
     if not tracking:
         return f"[{date}] 盤後分析完成，但無法讀取追蹤資料"
@@ -213,6 +222,8 @@ def after_market_summary(date):
     recs = tracking.get("recommendations", [])
     if not recs:
         return f"[{date}] 盤後分析完成，無追蹤股票"
+
+    after_summary = _get_after_summary(tracking)
 
     # 計算準確率
     total = 0
@@ -277,9 +288,7 @@ def after_market_summary(date):
         lines.append("")
 
     # === 失敗原因深度分析 ===
-    after_summary = tracking.get("after_market_summary", {})
-    if not isinstance(after_summary, dict):
-        after_summary = {}
+    holdings_pressure = after_summary.get("holdings_pressure", {})
 
     if fail_list:
         lines.append("---")
@@ -291,19 +300,25 @@ def after_market_summary(date):
             # 從 tracking 找失敗資訊
             rec = next((r for r in recs if _get(r, "stock_code", "symbol") == code), {})
             fail_reason = rec.get("fail_reason", "") or rec.get("fail_analysis", "")
-            if fail_reason:
-                lines.append(f"  {name}({code}) {change}")
-                short_fail = _short_reason(fail_reason, 80)
-                lines.append(f"  → {short_fail}")
-            else:
-                # fallback: 從 after_market_summary.lessons 找相關教訓
+
+            # fallback: 從 lessons 找相關教訓
+            if not fail_reason:
                 lessons = after_summary.get("lessons", [])
                 related = [l for l in lessons if code in str(l) or name in str(l)]
                 if related:
-                    lines.append(f"  {name}({code}) {change}")
-                    lines.append(f"  → {_short_reason(related[0], 80)}")
-                else:
-                    lines.append(f"  {name}({code}) {change}（原因待分析）")
+                    fail_reason = related[0]
+
+            # 組合持股壓力資訊
+            pressure_info = ""
+            hp = holdings_pressure.get(code, {})
+            if hp:
+                pressure_info = f"（持股壓力：{hp.get('pressure', '?')}）"
+
+            if fail_reason:
+                lines.append(f"  {name}({code}) {change}")
+                lines.append(f"  → {_short_reason(fail_reason, 80)}{pressure_info}")
+            else:
+                lines.append(f"  {name}({code}) {change}{pressure_info}（原因待分析）")
             lines.append("")
 
     # === 教訓 ===
@@ -329,21 +344,55 @@ def after_market_summary(date):
                 code = k.replace("_buy", "")
                 lines.append(f"  🟢 {code} 買超 {v:+,}")
 
-    # === 明日重點 ===
-    tomorrow = after_summary.get("tomorrow_focus", "")
-    if not tomorrow:
-        tomorrow = after_summary.get("next_day_prediction", "")
-    if not tomorrow:
-        tomorrow = after_summary.get("next_trading_day_focus", "")
-    if not tomorrow:
-        tomorrow = after_summary.get("notes", after_summary.get("summary", ""))
-
-    if tomorrow:
+    # === 遺漏機會 ===
+    intraday_data = tracking.get("intraday_analysis", {})
+    missed = intraday_data.get("missed_opportunities", [])
+    if missed:
         lines.append("")
         lines.append("---")
-        lines.append("明日重點：")
-        short = str(tomorrow)[:200] + ("..." if len(str(tomorrow)) > 200 else "")
-        lines.append(short)
+        lines.append("遺漏機會：")
+        for m in missed[:5]:
+            stock = m.get("stock", "?")
+            chg = m.get("change", "?")
+            reason = m.get("excluded_reason", "")
+            reason_str = f"（{reason}）" if reason else ""
+            lines.append(f"  {stock} {chg}{reason_str}")
+
+    # === 明日推薦 ===
+    tomorrow_recs = after_summary.get("tomorrow_recommendations", [])
+    removed = after_summary.get("removed_stocks", [])
+    if tomorrow_recs:
+        lines.append("")
+        lines.append("---")
+        lines.append(f"明日重點（{len(tomorrow_recs)}檔）：")
+        for tr in tomorrow_recs:
+            name = tr.get("stock_name", tr.get("name", "?"))
+            code = tr.get("stock_code", tr.get("symbol", "?"))
+            score = tr.get("score", "?")
+            rating = tr.get("rating", "")
+            action = tr.get("action", "")
+            action_str = f"（{action}）" if action else ""
+            lines.append(f"  {rating} {name}({code}) {score}分{action_str}")
+        for rm in removed:
+            name = rm.get("stock_name", rm.get("name", "?"))
+            code = rm.get("stock_code", rm.get("symbol", "?"))
+            reason = rm.get("reason", "")
+            lines.append(f"  ❌ 移除：{name}({code}) {reason}")
+    else:
+        # fallback: 嘗試讀 tomorrow_focus 等文字欄位
+        tomorrow = after_summary.get("tomorrow_focus", "")
+        if not tomorrow:
+            tomorrow = after_summary.get("next_day_prediction", "")
+        if not tomorrow:
+            tomorrow = after_summary.get("next_trading_day_focus", "")
+        if not tomorrow:
+            tomorrow = after_summary.get("notes", after_summary.get("summary", ""))
+        if tomorrow:
+            lines.append("")
+            lines.append("---")
+            lines.append("明日重點：")
+            short = str(tomorrow)[:200] + ("..." if len(str(tomorrow)) > 200 else "")
+            lines.append(short)
 
     return "\n".join(lines)
 

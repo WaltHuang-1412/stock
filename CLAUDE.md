@@ -91,6 +91,28 @@ python3 scripts/fetch_us_asia_markets.py > data/$(date +%Y-%m-%d)/us_asia_market
 
 ---
 
+### 🟢 Step 1.2: 累積摘要檢查（自動判斷）🆕 v7.4
+
+**目的**：長假/週末後，彙整間隔期間美股龍頭股連續漲跌數據，避免只看最後一天而低估催化強度
+
+**執行命令**：
+```bash
+python3 scripts/holiday_cumulative_summary.py --date $(date +%Y-%m-%d)
+```
+
+**腳本自動判斷**：距上一交易日≤1天 → 不產生摘要，直接跳過（不影響正常交易日）
+
+**如果產生了 `cumulative_summary.json`**，後續步驟必須遵守：
+- 持續性等級「超強」的龍頭股 → Step 6 強制展開對應產業鏈到 depth 3
+- 持續性等級「強」的龍頭股 → Step 6 展開對應產業鏈到 depth 2
+- 持續性等級「超強」→ Step 7 反轉預警可降級（Level 3→Level 1，Level 4→Level 2）
+- 催化分數加成：超強+15分、強+10分（加在五維度「時事現況」維度）
+- 持續性利空等級「強利空」/「超強利空」→ 對應產業額外扣分 -10/-15
+
+**完成後**：更新 TodoWrite，標記 Step 1.2 為 `completed`
+
+---
+
 ### 🔴 Step 1.5: 美股龍頭預警（強制）🆕 v7.3
 
 **目的**：自動偵測美股龍頭股暴跌，直接排除受影響的台股產業（一票否決機制）
@@ -1023,6 +1045,16 @@ python3 scripts/chip_analysis.py 1301 1326 6505 4766 4712 --days 10
 1. **盤中分析報告**：`data/YYYY-MM-DD/intraday_analysis.md`
 2. **更新追蹤記錄**：`data/tracking/tracking_YYYY-MM-DD.json`（加入盤中價格）
 
+**Track B 資料格式要求**：tracking.json 的 `track_b_discoveries` 每檔必須包含 `price`（盤中現價）：
+```json
+{
+  "stock_code": "2801", "stock_name": "彰銀", "price": 27.55,
+  "intraday_change": "+3.86%", "volume_ratio": 3.4,
+  "chip_data": "7天連續買超+36K、外資+投信同步",
+  "action": "明日盤前重點評估"
+}
+```
+
 **驗證**：
 - ✅ 兩個檔案都必須存在
 - ✅ tracking.json 必須更新 `intraday_price` 欄位
@@ -1238,6 +1270,17 @@ python3 scripts/holdings_pressure_analysis.py [失敗股1] [失敗股2] ...
 1. **盤後分析報告**：`data/YYYY-MM-DD/after_market_analysis.md`
 2. **更新追蹤記錄**：`data/tracking/tracking_YYYY-MM-DD.json`（加入收盤價+結果）
 3. **更新預測記錄**：`data/predictions/predictions.json`
+
+**tracking.json LINE 推送欄位要求**：
+- 每個 `result: "fail"` 的推薦股，必須補上 `fail_reason` 欄位（字串，說明失敗原因）
+- `after_market_analysis` 物件內必須包含 `tomorrow_recommendations` 陣列：
+  ```json
+  [{"stock_code": "2801", "stock_name": "彰銀", "score": 86, "rating": "⭐⭐⭐⭐⭐", "action": "新增"}]
+  ```
+- `after_market_analysis` 物件內必須包含 `removed_stocks` 陣列：
+  ```json
+  [{"stock_code": "2610", "stock_name": "華航", "reason": "油價利空+接近停損"}]
+  ```
 
 **驗證**：
 - ✅ 三個檔案都必須存在/更新

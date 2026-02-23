@@ -584,6 +584,38 @@
           ]
         }
       }
+    },
+    "被動元件": {
+      "name": "被動元件/電子零組件",
+      "catalysts": ["被動元件", "MLCC", "電容", "電阻", "電感", "國巨", "村田"],
+      "tiers": {
+        "tier_0": {
+          "name": "被動元件龍頭",
+          "description": "MLCC/晶片電阻全球前三大",
+          "stocks": [
+            {"code": "2327", "name": "國巨", "category": "MLCC龍頭"},
+            {"code": "2492", "name": "華新科", "category": "晶片電阻"}
+          ]
+        },
+        "tier_1": {
+          "name": "被動元件製造",
+          "description": "電感、電阻、連接器端子",
+          "stocks": [
+            {"code": "2456", "name": "奇力新", "category": "電感"},
+            {"code": "1593", "name": "祺驊", "category": "電阻"},
+            {"code": "3003", "name": "健和興", "category": "連接器端子"}
+          ]
+        },
+        "tier_2": {
+          "name": "被動元件通路/材料",
+          "description": "通路商與上游材料",
+          "stocks": [
+            {"code": "3536", "name": "誠創", "category": "被動元件通路"},
+            {"code": "2478", "name": "大毅", "category": "電阻"},
+            {"code": "2375", "name": "智寶", "category": "鋁質電解電容"}
+          ]
+        }
+      }
     }
   }
 }
