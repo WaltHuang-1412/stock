@@ -92,10 +92,11 @@ Write-Output "" | Tee-Object -FilePath $LogFile -Append
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 if ($AllExist) {
     Write-Output "盤中分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-    # LINE 推送盤中追蹤摘要
-    $Summary = python "$ProjectDir\scripts\generate_line_summary.py" intraday $Date 2>&1
-    if ($Summary) {
-        python "$ProjectDir\scripts\notify_line.py" $Summary
+    # LINE 推送盤中追蹤摘要（存檔後用 --file 送，保留換行）
+    $SummaryFile = "$ProjectDir\automation\logs\${Date}_intraday_line.txt"
+    python "$ProjectDir\scripts\generate_line_summary.py" intraday $Date 2>&1 | Out-File -FilePath $SummaryFile -Encoding utf8
+    if ((Test-Path $SummaryFile) -and (Get-Item $SummaryFile).Length -gt 0) {
+        python "$ProjectDir\scripts\notify_line.py" --file $SummaryFile
     } else {
         python "$ProjectDir\scripts\notify_line.py" "盤中分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
     }

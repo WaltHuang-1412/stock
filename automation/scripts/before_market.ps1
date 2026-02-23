@@ -83,10 +83,11 @@ if ($IsHoliday) {
     Write-Output "" | Tee-Object -FilePath $LogFile -Append
     if ($AllExist) {
         Write-Output "假日快照完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-        # LINE 推送假日摘要
-        $Summary = python "$ProjectDir\scripts\generate_line_summary.py" holiday $Date 2>&1
-        if ($Summary) {
-            python "$ProjectDir\scripts\notify_line.py" $Summary
+        # LINE 推送假日摘要（存檔後用 --file 送，保留換行）
+        $SummaryFile = "$ProjectDir\automation\logs\${Date}_holiday_line.txt"
+        python "$ProjectDir\scripts\generate_line_summary.py" holiday $Date 2>&1 | Out-File -FilePath $SummaryFile -Encoding utf8
+        if ((Test-Path $SummaryFile) -and (Get-Item $SummaryFile).Length -gt 0) {
+            python "$ProjectDir\scripts\notify_line.py" --file $SummaryFile
         } else {
             python "$ProjectDir\scripts\notify_line.py" "假日美股快照完成 ($Date $HolidayName)"
         }
@@ -135,10 +136,11 @@ if ($IsHoliday) {
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
     if ($AllExist) {
         Write-Output "盤前分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-        # LINE 推送推薦摘要
-        $Summary = python "$ProjectDir\scripts\generate_line_summary.py" before_market $Date 2>&1
-        if ($Summary) {
-            python "$ProjectDir\scripts\notify_line.py" $Summary
+        # LINE 推送推薦摘要（存檔後用 --file 送，保留換行）
+        $SummaryFile = "$ProjectDir\automation\logs\${Date}_before_market_line.txt"
+        python "$ProjectDir\scripts\generate_line_summary.py" before_market $Date 2>&1 | Out-File -FilePath $SummaryFile -Encoding utf8
+        if ((Test-Path $SummaryFile) -and (Get-Item $SummaryFile).Length -gt 0) {
+            python "$ProjectDir\scripts\notify_line.py" --file $SummaryFile
         } else {
             python "$ProjectDir\scripts\notify_line.py" "盤前分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
         }

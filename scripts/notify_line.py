@@ -74,7 +74,7 @@ if __name__ == "__main__":
     if sys.argv[1] == "--file" and len(sys.argv) >= 3:
         filepath = sys.argv[2]
         if os.path.exists(filepath):
-            with open(filepath, "r", encoding="utf-8") as f:
+            with open(filepath, "r", encoding="utf-8-sig") as f:
                 content = f.read()
             send_message(content)
         else:

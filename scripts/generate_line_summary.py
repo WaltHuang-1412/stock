@@ -52,24 +52,38 @@ def before_market_summary(date):
         position = r.get("position", "?")
         industry = r.get("industry", "")
         rating = r.get("rating", "")
+        reason = r.get("reason", "")
+        risk = r.get("risk", "")
+
+        # 計算目標/停損漲跌%
+        target_pct = ""
+        stop_pct = ""
+        if isinstance(entry, (int, float)) and isinstance(target, (int, float)) and entry > 0:
+            target_pct = f"(+{(target - entry) / entry * 100:.1f}%)"
+        if isinstance(entry, (int, float)) and isinstance(stop, (int, float)) and entry > 0:
+            stop_pct = f"({(stop - entry) / entry * 100:.1f}%)"
 
         lines.append(f"{rating} {name}({code}) {score}分")
-        lines.append(f"  進場:{entry} 目標:{target} 停損:{stop}")
-        lines.append(f"  倉位:{position} 產業:{industry}")
+        lines.append(f"產業：{industry}｜倉位：{position}")
+        lines.append(f"進場：{entry} → 目標：{target}{target_pct}｜停損：{stop}{stop_pct}")
+        if reason:
+            lines.append(f"理由：{reason}")
+        if risk:
+            lines.append(f"⚠️ {risk}")
         lines.append("")
 
-    # 市場概況（簡要）
+    # 今日注意事項
     ctx = tracking.get("market_context", {})
     if ctx:
-        lines.append("---")
-        lines.append("市場概況：")
-        for key, val in ctx.items():
-            if isinstance(val, dict):
-                change = val.get("change_pct", val.get("change", ""))
-                if change:
-                    lines.append(f"  {key}: {change}")
-            elif isinstance(val, (int, float, str)):
-                lines.append(f"  {key}: {val}")
+        catalysts = ctx.get("key_catalysts", [])
+        negatives = ctx.get("negative_catalysts", [])
+        if catalysts or negatives:
+            lines.append("---")
+            lines.append("今日注意：")
+            for c in catalysts:
+                lines.append(f"  📈 {c}")
+            for n in negatives:
+                lines.append(f"  📉 {n}")
 
     return "\n".join(lines)
 
