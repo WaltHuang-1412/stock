@@ -19,9 +19,13 @@
     "level": "super_strong",
     "indicator": "費半 +3.29%",
     "rules": {
-      "industry_concentration_max": 0.70,
+      "industry_concentration_max": 0.7,
       "price_threshold_relaxed": true,
-      "affected_industries": ["記憶體", "封測", "面板"]
+      "affected_industries": [
+        "記憶體",
+        "封測",
+        "面板"
+      ]
     }
   },
   "recommendations": [
@@ -53,7 +57,11 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "記憶體"
-      }
+      },
+      "recommend_date": "2026-01-30",
+      "closing_price": 92.80000305175781,
+      "vs_recommend_pct": 0.87,
+      "result": "success"
     },
     {
       "stock_code": "3481",
@@ -82,7 +90,11 @@
       "industry": {
         "sector": "面板",
         "sub_type": "FOPLP載板"
-      }
+      },
+      "recommend_date": "2026-01-30",
+      "closing_price": 21.799999237060547,
+      "vs_recommend_pct": 3.81,
+      "result": "success"
     },
     {
       "stock_code": "8150",
@@ -110,7 +122,11 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "封測"
-      }
+      },
+      "recommend_date": "2026-01-30",
+      "closing_price": 60.20000076293945,
+      "vs_recommend_pct": -2.11,
+      "result": "fail"
     },
     {
       "stock_code": "2409",
@@ -138,7 +154,11 @@
       "industry": {
         "sector": "面板",
         "sub_type": "面板"
-      }
+      },
+      "recommend_date": "2026-01-30",
+      "closing_price": 13.75,
+      "vs_recommend_pct": -3.17,
+      "result": "fail"
     },
     {
       "stock_code": "2880",
@@ -166,7 +186,11 @@
       "industry": {
         "sector": "金融",
         "sub_type": "純銀行"
-      }
+      },
+      "recommend_date": "2026-01-30",
+      "closing_price": 33.099998474121094,
+      "vs_recommend_pct": -1.78,
+      "result": "fail"
     },
     {
       "stock_code": "1303",
@@ -197,21 +221,80 @@
       "industry": {
         "sector": "塑化",
         "sub_type": "綜合塑化"
-      }
+      },
+      "recommend_date": "2026-01-30",
+      "closing_price": 75.9000015258789,
+      "vs_recommend_pct": -1.43,
+      "result": "fail"
     }
   ],
   "avoided_stocks": [
-    {"stock_code": "2303", "stock_name": "聯電", "reason": "昨日法人-55K大賣", "five_day_change": 12.3},
-    {"stock_code": "2408", "stock_name": "南亞科", "reason": "10天法人對決（投信買+3.2K vs 外資賣-31K）", "five_day_change": 11.4},
-    {"stock_code": "2344", "stock_name": "華邦電", "reason": "10天法人對決（投信買+19K vs 外資賣-40K）", "five_day_change": 21.5},
-    {"stock_code": "1326", "stock_name": "台化", "reason": "5日+26%已大漲", "five_day_change": 26.0},
-    {"stock_code": "1301", "stock_name": "台塑", "reason": "5日+17.7%已大漲", "five_day_change": 17.7},
-    {"stock_code": "3711", "stock_name": "日月光", "reason": "法人對決（外資買+16K vs 投信賣-4.8K）", "five_day_change": 5.0},
-    {"stock_code": "3583", "stock_name": "辛耘", "reason": "10天累計賣超-966張（法人出貨）", "five_day_change": 0},
-    {"stock_code": "2330", "stock_name": "台積電", "reason": "Intel-10.42%拖累代工、昨日-0.82%驗證弱勢", "five_day_change": 1.8},
-    {"stock_code": "2327", "stock_name": "國巨", "reason": "昨日教訓：單日反轉不可信", "five_day_change": -3.5},
-    {"stock_code": "2610", "stock_name": "華航", "reason": "油價+8.21%利空航空", "five_day_change": -0.9},
-    {"stock_code": "3231", "stock_name": "緯創", "reason": "連10日賣-182K、強烈建議出場（持股）", "five_day_change": -0.7}
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "昨日法人-55K大賣",
+      "five_day_change": 12.3
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "reason": "10天法人對決（投信買+3.2K vs 外資賣-31K）",
+      "five_day_change": 11.4
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "10天法人對決（投信買+19K vs 外資賣-40K）",
+      "five_day_change": 21.5
+    },
+    {
+      "stock_code": "1326",
+      "stock_name": "台化",
+      "reason": "5日+26%已大漲",
+      "five_day_change": 26.0
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "reason": "5日+17.7%已大漲",
+      "five_day_change": 17.7
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光",
+      "reason": "法人對決（外資買+16K vs 投信賣-4.8K）",
+      "five_day_change": 5.0
+    },
+    {
+      "stock_code": "3583",
+      "stock_name": "辛耘",
+      "reason": "10天累計賣超-966張（法人出貨）",
+      "five_day_change": 0
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "reason": "Intel-10.42%拖累代工、昨日-0.82%驗證弱勢",
+      "five_day_change": 1.8
+    },
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨",
+      "reason": "昨日教訓：單日反轉不可信",
+      "five_day_change": -3.5
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "reason": "油價+8.21%利空航空",
+      "five_day_change": -0.9
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "reason": "連10日賣-182K、強烈建議出場（持股）",
+      "five_day_change": -0.7
+    }
   ],
   "entry_b_stocks": [
     {
@@ -278,15 +361,46 @@
     }
   },
   "industry_distribution": {
-    "面板": {"count": 2, "percentage": 0.33, "stocks": ["群創", "友達"]},
-    "記憶體": {"count": 1, "percentage": 0.17, "stocks": ["旺宏"]},
-    "封測": {"count": 1, "percentage": 0.17, "stocks": ["南茂"]},
-    "金融": {"count": 1, "percentage": 0.17, "stocks": ["華南金"]},
-    "塑化": {"count": 1, "percentage": 0.17, "stocks": ["南亞條件單"]}
+    "面板": {
+      "count": 2,
+      "percentage": 0.33,
+      "stocks": [
+        "群創",
+        "友達"
+      ]
+    },
+    "記憶體": {
+      "count": 1,
+      "percentage": 0.17,
+      "stocks": [
+        "旺宏"
+      ]
+    },
+    "封測": {
+      "count": 1,
+      "percentage": 0.17,
+      "stocks": [
+        "南茂"
+      ]
+    },
+    "金融": {
+      "count": 1,
+      "percentage": 0.17,
+      "stocks": [
+        "華南金"
+      ]
+    },
+    "塑化": {
+      "count": 1,
+      "percentage": 0.17,
+      "stocks": [
+        "南亞條件單"
+      ]
+    }
   },
   "yesterday_verification": {
     "date": "2026-01-29",
-    "accuracy": 0.40,
+    "accuracy": 0.4,
     "key_lessons": [
       "旺宏+9.90% ✅ v6.1超強催化規則有效",
       "華南金+0.75% ✅ 佈局股策略成功",
@@ -298,14 +412,44 @@
   "today_verification": {
     "date": "2026-01-30",
     "closing_prices": {
-      "2337": {"close": 92.80, "change_pct": 0.87, "vs_recommend": 0.87, "result": "success"},
-      "3481": {"close": 21.80, "change_pct": 3.81, "vs_recommend": 3.81, "result": "success"},
-      "8150": {"close": 60.20, "change_pct": -2.11, "vs_recommend": -2.11, "result": "fail"},
-      "2409": {"close": 13.75, "change_pct": -3.17, "vs_recommend": -3.17, "result": "fail"},
-      "2880": {"close": 33.10, "change_pct": -1.78, "vs_recommend": -1.78, "result": "fail"},
-      "1303": {"close": 75.90, "change_pct": -1.43, "vs_recommend": -1.43, "result": "not_triggered"}
+      "2337": {
+        "close": 92.8,
+        "change_pct": 0.87,
+        "vs_recommend": 0.87,
+        "result": "success"
+      },
+      "3481": {
+        "close": 21.8,
+        "change_pct": 3.81,
+        "vs_recommend": 3.81,
+        "result": "success"
+      },
+      "8150": {
+        "close": 60.2,
+        "change_pct": -2.11,
+        "vs_recommend": -2.11,
+        "result": "fail"
+      },
+      "2409": {
+        "close": 13.75,
+        "change_pct": -3.17,
+        "vs_recommend": -3.17,
+        "result": "fail"
+      },
+      "2880": {
+        "close": 33.1,
+        "change_pct": -1.78,
+        "vs_recommend": -1.78,
+        "result": "fail"
+      },
+      "1303": {
+        "close": 75.9,
+        "change_pct": -1.43,
+        "vs_recommend": -1.43,
+        "result": "not_triggered"
+      }
     },
-    "accuracy": 0.40,
+    "accuracy": 0.4,
     "success_count": 2,
     "fail_count": 3,
     "not_triggered_count": 1,
@@ -345,10 +489,10 @@
     "actual_recommendations": 6,
     "min_industries": 4,
     "actual_industries": 5,
-    "max_single_industry_ratio": 0.50,
+    "max_single_industry_ratio": 0.5,
     "actual_max_ratio": 0.33,
     "v6_1_super_catalyst": true,
-    "v6_1_max_ratio_relaxed": 0.70,
+    "v6_1_max_ratio_relaxed": 0.7,
     "catalyst_industry_ratio": 0.67,
     "price_verified": false,
     "chip_analysis_executed": true,
@@ -359,10 +503,26 @@
   "predictions_reference": {
     "checked": true,
     "lessons_applied": [
-      {"date": "01/29", "lesson": "v6.1超強催化規則有效", "applied_to": "今日費半+3.29%繼續套用v6.1，旺宏可小倉位推薦"},
-      {"date": "01/29", "lesson": "佈局股策略成功", "applied_to": "今日推薦華南金（佈局股）"},
-      {"date": "01/29", "lesson": "Intel拖累代工", "applied_to": "今日避開台積電、聯電"},
-      {"date": "01/29", "lesson": "塑化需量能確認", "applied_to": "南亞設為條件單（需量比>1.5x）"}
+      {
+        "date": "01/29",
+        "lesson": "v6.1超強催化規則有效",
+        "applied_to": "今日費半+3.29%繼續套用v6.1，旺宏可小倉位推薦"
+      },
+      {
+        "date": "01/29",
+        "lesson": "佈局股策略成功",
+        "applied_to": "今日推薦華南金（佈局股）"
+      },
+      {
+        "date": "01/29",
+        "lesson": "Intel拖累代工",
+        "applied_to": "今日避開台積電、聯電"
+      },
+      {
+        "date": "01/29",
+        "lesson": "塑化需量能確認",
+        "applied_to": "南亞設為條件單（需量比>1.5x）"
+      }
     ]
   }
 }

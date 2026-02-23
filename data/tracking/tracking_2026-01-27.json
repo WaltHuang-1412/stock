@@ -34,11 +34,14 @@
       "status": "success",
       "intraday_close": 75.1,
       "intraday_change_pct": 8.37,
-      "result": "✅ 成功（ADR催化有效）",
+      "result": "success",
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工"
-      }
+      },
+      "recommend_date": "2026-01-27",
+      "closing_price": 76.19999694824219,
+      "vs_recommend_pct": 8.86
     },
     {
       "stock_code": "1314",
@@ -61,12 +64,15 @@
       "status": "price_error",
       "intraday_close": 8.28,
       "intraday_change_pct": -0.96,
-      "result": "⚠️ 推薦價錯誤（推薦12.6、實際8.28）",
+      "result": "fail",
       "error_note": "盤前分析時未執行股價驗證，推薦價與實際差距-34%",
       "industry": {
         "sector": "塑化",
         "sub_type": "石化"
-      }
+      },
+      "recommend_date": "2026-01-27",
+      "closing_price": 8.260000228881836,
+      "vs_recommend_pct": -34.44
     },
     {
       "stock_code": "2610",
@@ -88,12 +94,15 @@
       "institutional_flow": 65000,
       "status": "success",
       "intraday_close": 22.95,
-      "intraday_change_pct": 2.00,
-      "result": "✅ 成功（航空族群穩健）",
+      "intraday_change_pct": 2.0,
+      "result": "fail",
       "industry": {
         "sector": "航運",
         "sub_type": "航空"
-      }
+      },
+      "recommend_date": "2026-01-27",
+      "closing_price": 22.899999618530273,
+      "vs_recommend_pct": -7.66
     },
     {
       "stock_code": "2884",
@@ -116,11 +125,14 @@
       "status": "success",
       "intraday_close": 33.7,
       "intraday_change_pct": 0.15,
-      "result": "✅ 成功（金融穩健佈局）",
+      "result": "success",
       "industry": {
         "sector": "金融",
         "sub_type": "綜合型"
-      }
+      },
+      "recommend_date": "2026-01-27",
+      "closing_price": 33.599998474121094,
+      "vs_recommend_pct": 15.07
     },
     {
       "stock_code": "2002",
@@ -143,12 +155,15 @@
       "status": "price_error",
       "intraday_close": 19.4,
       "intraday_change_pct": -1.27,
-      "result": "⚠️ 推薦價錯誤（推薦25.2、實際19.4）",
+      "result": "fail",
       "error_note": "盤前分析時未執行股價驗證，推薦價與實際差距-23%",
       "industry": {
         "sector": "鋼鐵",
         "sub_type": "鋼鐵"
-      }
+      },
+      "recommend_date": "2026-01-27",
+      "closing_price": 19.350000381469727,
+      "vs_recommend_pct": -23.21
     },
     {
       "stock_code": "2883",
@@ -171,11 +186,14 @@
       "status": "fail",
       "intraday_close": 18.25,
       "intraday_change_pct": -0.27,
-      "result": "❌ 失敗（動能減弱-32.6%）",
+      "result": "success",
       "industry": {
         "sector": "金融",
         "sub_type": "證券型"
-      }
+      },
+      "recommend_date": "2026-01-27",
+      "closing_price": 18.149999618530273,
+      "vs_recommend_pct": 16.35
     },
     {
       "stock_code": "1101",
@@ -198,12 +216,15 @@
       "status": "price_error",
       "intraday_close": 26.3,
       "intraday_change_pct": 0.19,
-      "result": "⚠️ 推薦價錯誤（推薦48.2、實際26.3）",
+      "result": "fail",
       "error_note": "盤前分析時未執行股價驗證，推薦價與實際差距-45%",
       "industry": {
         "sector": "水泥",
         "sub_type": "水泥"
-      }
+      },
+      "recommend_date": "2026-01-27",
+      "closing_price": 26.049999237060547,
+      "vs_recommend_pct": -45.95
     }
   ],
   "avoided_stocks": [
@@ -275,52 +296,106 @@
   "predictions_reference": {
     "checked": true,
     "lessons_applied": [
-      {"date": "01/26", "lesson": "ADR+20%訊號強烈有效", "applied_to": "聯電(+5分)"},
-      {"date": "01/26", "lesson": "塑化族群聯動性強", "applied_to": "中石化(+3分)"},
-      {"date": "01/26", "lesson": "遺漏記憶體族群", "applied_to": "需關注記憶體"},
-      {"date": "01/23", "lesson": "法人買超需催化劑", "applied_to": "五維度評分"},
-      {"date": "01/21", "lesson": "佈局股需雙重條件", "applied_to": "推薦均有驅動因素"}
+      {
+        "date": "01/26",
+        "lesson": "ADR+20%訊號強烈有效",
+        "applied_to": "聯電(+5分)"
+      },
+      {
+        "date": "01/26",
+        "lesson": "塑化族群聯動性強",
+        "applied_to": "中石化(+3分)"
+      },
+      {
+        "date": "01/26",
+        "lesson": "遺漏記憶體族群",
+        "applied_to": "需關注記憶體"
+      },
+      {
+        "date": "01/23",
+        "lesson": "法人買超需催化劑",
+        "applied_to": "五維度評分"
+      },
+      {
+        "date": "01/21",
+        "lesson": "佈局股需雙重條件",
+        "applied_to": "推薦均有驅動因素"
+      }
     ]
   },
   "historical_adjustments": {
-    "聯電(2303)": {"adjustment": "+5分", "reason": "ADR+21.83%完全符合01/26教訓"},
-    "中石化(1314)": {"adjustment": "+3分", "reason": "塑化族群聯動性教訓應用"},
-    "華航(2610)": {"adjustment": "0", "reason": "無特別歷史對應"},
-    "玉山金(2884)": {"adjustment": "0", "reason": "有年底作帳題材"},
-    "中鋼(2002)": {"adjustment": "0", "reason": "單日大買是新訊號"},
-    "凱基金(2883)": {"adjustment": "0", "reason": "當正常推薦處理"},
-    "台泥(1101)": {"adjustment": "0", "reason": "TOP30補充推薦"}
+    "聯電(2303)": {
+      "adjustment": "+5分",
+      "reason": "ADR+21.83%完全符合01/26教訓"
+    },
+    "中石化(1314)": {
+      "adjustment": "+3分",
+      "reason": "塑化族群聯動性教訓應用"
+    },
+    "華航(2610)": {
+      "adjustment": "0",
+      "reason": "無特別歷史對應"
+    },
+    "玉山金(2884)": {
+      "adjustment": "0",
+      "reason": "有年底作帳題材"
+    },
+    "中鋼(2002)": {
+      "adjustment": "0",
+      "reason": "單日大買是新訊號"
+    },
+    "凱基金(2883)": {
+      "adjustment": "0",
+      "reason": "當正常推薦處理"
+    },
+    "台泥(1101)": {
+      "adjustment": "0",
+      "reason": "TOP30補充推薦"
+    }
   },
   "industry_distribution": {
     "半導體": {
       "count": 1,
       "percentage": 0.143,
-      "stocks": ["聯電"]
+      "stocks": [
+        "聯電"
+      ]
     },
     "塑化": {
       "count": 1,
       "percentage": 0.143,
-      "stocks": ["中石化"]
+      "stocks": [
+        "中石化"
+      ]
     },
     "航運": {
       "count": 1,
       "percentage": 0.143,
-      "stocks": ["華航"]
+      "stocks": [
+        "華航"
+      ]
     },
     "金融": {
       "count": 2,
       "percentage": 0.286,
-      "stocks": ["玉山金", "凱基金"]
+      "stocks": [
+        "玉山金",
+        "凱基金"
+      ]
     },
     "鋼鐵": {
       "count": 1,
       "percentage": 0.143,
-      "stocks": ["中鋼"]
+      "stocks": [
+        "中鋼"
+      ]
     },
     "水泥": {
       "count": 1,
       "percentage": 0.143,
-      "stocks": ["台泥"]
+      "stocks": [
+        "台泥"
+      ]
     }
   },
   "yesterday_verification": {
@@ -350,7 +425,7 @@
       "fail": 1,
       "price_error": 3,
       "total_valid": 5,
-      "accuracy_rate": 0.80,
+      "accuracy_rate": 0.8,
       "note": "扣除3檔推薦價錯誤，有效準確率4/5=80%"
     },
     "key_lessons": [

@@ -54,12 +54,14 @@
       },
       "institutional_flow": 2404,
       "status": "completed",
-      "result": "failure",
+      "result": "success",
       "result_note": "盤中-3.36%回檔，收盤持平推薦價",
       "industry": {
         "sector": "AI伺服器",
         "sub_type": "AI伺服器組裝"
-      }
+      },
+      "closing_price": 273.5,
+      "recommend_date": "2026-02-02"
     },
     {
       "stock_code": "2883",
@@ -92,12 +94,14 @@
       },
       "institutional_flow": 10000,
       "status": "completed",
-      "result": "failure",
+      "result": "success",
       "result_note": "盤中-0.83%，收盤持平推薦價",
       "industry": {
         "sector": "金融",
         "sub_type": "證券"
-      }
+      },
+      "closing_price": 18.0,
+      "recommend_date": "2026-02-02"
     },
     {
       "stock_code": "2303",
@@ -123,13 +127,15 @@
       "reason": "費半+0.51%、5日-20.9%大跌法人逆勢買",
       "institutional_flow": 20000,
       "status": "completed",
-      "result": "failure",
+      "result": "fail",
       "result_note": "盤中大跌-11.84%，4步驗證：動能減弱-21.3%，正確判斷不加碼",
       "warning": "⚠️ 法人對決（投信-27K vs 外資+51K），小倉位",
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工"
-      }
+      },
+      "closing_price": 60.3,
+      "recommend_date": "2026-02-02"
     },
     {
       "stock_code": "2324",
@@ -160,7 +166,9 @@
       "industry": {
         "sector": "電子",
         "sub_type": "NB代工"
-      }
+      },
+      "closing_price": 32.35,
+      "recommend_date": "2026-02-02"
     },
     {
       "stock_code": "6282",
@@ -193,13 +201,15 @@
       },
       "institutional_flow": 4500,
       "status": "completed",
-      "result": "failure",
+      "result": "fail",
       "result_note": "盤中大跌-8.99%，4步驗證：10天累計-9K底子差，正確判斷不加碼",
       "warning": "⚠️ 法人對決（外資買+953 vs 投信賣-55），極小倉位",
       "industry": {
         "sector": "電子",
         "sub_type": "電源供應"
-      }
+      },
+      "closing_price": 48.6,
+      "recommend_date": "2026-02-02"
     }
   ],
   "avoided_stocks": [

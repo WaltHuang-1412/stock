@@ -32,9 +32,9 @@
       "recommend_date": "2026-02-10",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 284.00,
-      "target_price": 305.00,
-      "stop_loss": 270.00,
+      "recommend_price": 284.0,
+      "target_price": 305.0,
+      "stop_loss": 270.0,
       "position": "20%",
       "rating": "⭐⭐⭐⭐⭐",
       "score": 100,
@@ -54,7 +54,10 @@
         "sector": "半導體",
         "sub_type": "AI 伺服器"
       },
-      "dual_confirmed": true
+      "dual_confirmed": true,
+      "closing_price": 285.0,
+      "vs_recommend_pct": 0.35,
+      "result": "success"
     },
     {
       "stock_code": "3037",
@@ -62,9 +65,9 @@
       "recommend_date": "2026-02-10",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 347.50,
-      "target_price": 375.00,
-      "stop_loss": 330.00,
+      "recommend_price": 347.5,
+      "target_price": 375.0,
+      "stop_loss": 330.0,
       "position": "20%",
       "rating": "⭐⭐⭐⭐⭐",
       "score": 96,
@@ -85,7 +88,10 @@
         "sub_type": "AI 晶片載板"
       },
       "dual_confirmed": true,
-      "warning": "⚠️ 今日大跌 -9.74%，投信接手（外資賣 -39K、投信買 +15K）"
+      "warning": "⚠️ 今日大跌 -9.74%，投信接手（外資賣 -39K、投信買 +15K）",
+      "closing_price": 371.5,
+      "vs_recommend_pct": 6.91,
+      "result": "success"
     },
     {
       "stock_code": "2408",
@@ -93,9 +99,9 @@
       "recommend_date": "2026-02-10",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 274.50,
-      "target_price": 290.00,
-      "stop_loss": 260.00,
+      "recommend_price": 274.5,
+      "target_price": 290.0,
+      "stop_loss": 260.0,
       "position": "15%",
       "rating": "⭐⭐⭐⭐",
       "score": 85,
@@ -116,7 +122,10 @@
         "sub_type": "記憶體"
       },
       "dual_confirmed": true,
-      "warning": "⚠️ Micron -12.40% 記憶體壓力"
+      "warning": "⚠️ Micron -12.40% 記憶體壓力",
+      "closing_price": 271.0,
+      "vs_recommend_pct": -1.28,
+      "result": "fail"
     },
     {
       "stock_code": "2303",
@@ -124,9 +133,9 @@
       "recommend_date": "2026-02-10",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 62.40,
-      "target_price": 67.00,
-      "stop_loss": 59.00,
+      "recommend_price": 62.4,
+      "target_price": 67.0,
+      "stop_loss": 59.0,
       "position": "15%",
       "rating": "⭐⭐⭐⭐",
       "score": 80,
@@ -143,7 +152,10 @@
         "sector": "半導體",
         "sub_type": "晶圓代工"
       },
-      "dual_confirmed": false
+      "dual_confirmed": false,
+      "closing_price": 62.400001525878906,
+      "vs_recommend_pct": 0.0,
+      "result": "success"
     },
     {
       "stock_code": "2610",
@@ -151,9 +163,9 @@
       "recommend_date": "2026-02-10",
       "type": "stable",
       "phase": "satellite",
-      "recommend_price": 22.80,
-      "target_price": 24.50,
-      "stop_loss": 21.50,
+      "recommend_price": 22.8,
+      "target_price": 24.5,
+      "stop_loss": 21.5,
       "position": "10%",
       "rating": "⭐⭐⭐⭐",
       "score": 79,
@@ -172,7 +184,10 @@
         "sector": "航空",
         "sub_type": "客運"
       },
-      "dual_confirmed": true
+      "dual_confirmed": true,
+      "closing_price": 22.950000762939453,
+      "vs_recommend_pct": 0.66,
+      "result": "success"
     },
     {
       "stock_code": "2801",
@@ -181,8 +196,8 @@
       "type": "risky",
       "phase": "satellite",
       "recommend_price": 20.55,
-      "target_price": 22.00,
-      "stop_loss": 19.50,
+      "target_price": 22.0,
+      "stop_loss": 19.5,
       "position": "10%",
       "rating": "⭐⭐⭐",
       "score": 69,
@@ -201,7 +216,10 @@
         "sector": "金融",
         "sub_type": "銀行"
       },
-      "dual_confirmed": true
+      "dual_confirmed": true,
+      "closing_price": 20.649999618530273,
+      "vs_recommend_pct": 0.49,
+      "result": "success"
     }
   ],
   "avoided_stocks": [
@@ -383,8 +401,8 @@
       {
         "stock_code": "2382",
         "stock_name": "廣達",
-        "recommend_price": 284.00,
-        "intraday_price": 285.00,
+        "recommend_price": 284.0,
+        "intraday_price": 285.0,
         "change_pct": 0.35,
         "vs_recommend_pct": 0.35,
         "volume_ratio": 0.92,
@@ -394,8 +412,8 @@
       {
         "stock_code": "3037",
         "stock_name": "欣興",
-        "recommend_price": 347.50,
-        "intraday_price": 372.00,
+        "recommend_price": 347.5,
+        "intraday_price": 372.0,
         "change_pct": 7.05,
         "vs_recommend_pct": 7.05,
         "volume_ratio": 0.68,
@@ -405,19 +423,19 @@
       {
         "stock_code": "2408",
         "stock_name": "南亞科",
-        "recommend_price": 274.50,
-        "intraday_price": 271.50,
+        "recommend_price": 274.5,
+        "intraday_price": 271.5,
         "change_pct": -1.09,
         "vs_recommend_pct": -1.09,
-        "volume_ratio": 0.70,
+        "volume_ratio": 0.7,
         "intraday_strategy": "📍 續抱觀察（Micron壓力）",
         "priority": 3
       },
       {
         "stock_code": "2303",
         "stock_name": "聯電",
-        "recommend_price": 62.40,
-        "intraday_price": 62.30,
+        "recommend_price": 62.4,
+        "intraday_price": 62.3,
         "change_pct": -0.16,
         "vs_recommend_pct": -0.16,
         "volume_ratio": 0.52,
@@ -427,11 +445,11 @@
       {
         "stock_code": "2610",
         "stock_name": "華航",
-        "recommend_price": 22.80,
+        "recommend_price": 22.8,
         "intraday_price": 22.85,
         "change_pct": 0.22,
         "vs_recommend_pct": 0.22,
-        "volume_ratio": 0.80,
+        "volume_ratio": 0.8,
         "intraday_strategy": "✅ 續抱",
         "priority": 4
       },
@@ -439,7 +457,7 @@
         "stock_code": "2801",
         "stock_name": "彰銀",
         "recommend_price": 20.55,
-        "intraday_price": 20.70,
+        "intraday_price": 20.7,
         "change_pct": 0.73,
         "vs_recommend_pct": 0.73,
         "volume_ratio": 1.18,
@@ -468,24 +486,38 @@
       "strong_sectors": [
         {
           "sector": "封測產業",
-          "stocks": ["日月光(3711) +5.50%", "京元電(2449) +3.95%"],
+          "stocks": [
+            "日月光(3711) +5.50%",
+            "京元電(2449) +3.95%"
+          ],
           "assessment": "延續強勢，但漲幅已高，不追高"
         },
         {
           "sector": "PC/筆電產業",
-          "stocks": ["華碩(2357) +4.77%", "微星(2377) +3.16%", "宏碁(2353) +2.64%"],
+          "stocks": [
+            "華碩(2357) +4.77%",
+            "微星(2377) +3.16%",
+            "宏碁(2353) +2.64%"
+          ],
           "assessment": "產業復甦訊號，明日可關注"
         }
       ],
       "weak_sectors": [
         {
           "sector": "塑化產業",
-          "stocks": ["南亞(1303) -6.28%", "台化(1326) -6.05%", "台塑(1301) -2.89%"],
+          "stocks": [
+            "南亞(1303) -6.28%",
+            "台化(1326) -6.05%",
+            "台塑(1301) -2.89%"
+          ],
           "assessment": "油價利多結束，系統性回檔，短期避開"
         },
         {
           "sector": "記憶體產業",
-          "stocks": ["華邦電(2344) -3.26%", "南亞科(2408) -1.09%"],
+          "stocks": [
+            "華邦電(2344) -3.26%",
+            "南亞科(2408) -1.09%"
+          ],
           "assessment": "Micron -12.40% 壓力，觀察美股反應"
         }
       ],
@@ -504,8 +536,8 @@
       {
         "stock_code": "3037",
         "stock_name": "欣興",
-        "recommend_price": 347.50,
-        "close_price": 371.50,
+        "recommend_price": 347.5,
+        "close_price": 371.5,
         "change_pct": 6.91,
         "vs_recommend_pct": 6.91,
         "result": "success",
@@ -514,8 +546,8 @@
       {
         "stock_code": "2382",
         "stock_name": "廣達",
-        "recommend_price": 284.00,
-        "close_price": 285.00,
+        "recommend_price": 284.0,
+        "close_price": 285.0,
         "change_pct": 0.35,
         "vs_recommend_pct": 0.35,
         "result": "success",
@@ -524,7 +556,7 @@
       {
         "stock_code": "2610",
         "stock_name": "華航",
-        "recommend_price": 22.80,
+        "recommend_price": 22.8,
         "close_price": 22.95,
         "change_pct": 0.66,
         "vs_recommend_pct": 0.66,
@@ -544,10 +576,10 @@
       {
         "stock_code": "2303",
         "stock_name": "聯電",
-        "recommend_price": 62.40,
-        "close_price": 62.40,
-        "change_pct": 0.00,
-        "vs_recommend_pct": 0.00,
+        "recommend_price": 62.4,
+        "close_price": 62.4,
+        "change_pct": 0.0,
+        "vs_recommend_pct": 0.0,
         "result": "fail",
         "fail_reason": "平盤，無漲跌",
         "rating": "⭐⭐⭐⭐"
@@ -555,8 +587,8 @@
       {
         "stock_code": "2408",
         "stock_name": "南亞科",
-        "recommend_price": 274.50,
-        "close_price": 271.00,
+        "recommend_price": 274.5,
+        "close_price": 271.0,
         "change_pct": -1.28,
         "vs_recommend_pct": -1.28,
         "result": "fail",

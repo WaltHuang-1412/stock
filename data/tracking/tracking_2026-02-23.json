@@ -20,7 +20,11 @@
         "trust_net_7d": 1978,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "金融股配息題材+法人年後卡位"
+      "catalyst": "金融股配息題材+法人年後卡位",
+      "recommend_date": "2026-02-23",
+      "closing_price": 40.849998474121094,
+      "vs_recommend_pct": 2.0,
+      "result": "success"
     },
     {
       "stock_code": "2883",
@@ -40,7 +44,11 @@
         "trust_net_7d": 2373,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "外資連續7天爆買+192K、金融配息題材"
+      "catalyst": "外資連續7天爆買+192K、金融配息題材",
+      "recommend_date": "2026-02-23",
+      "closing_price": 20.450000762939453,
+      "vs_recommend_pct": 6.23,
+      "result": "success"
     },
     {
       "stock_code": "2382",
@@ -60,7 +68,11 @@
         "trust_net_7d": -3414,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "SMCI+6.54%、Dell+8.38%、CSP投資AI伺服器不減"
+      "catalyst": "SMCI+6.54%、Dell+8.38%、CSP投資AI伺服器不減",
+      "recommend_date": "2026-02-23",
+      "closing_price": 285.5,
+      "vs_recommend_pct": -0.17,
+      "result": "fail"
     },
     {
       "stock_code": "2317",
@@ -80,7 +92,11 @@
         "trust_net_7d": 997,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "AI伺服器龍頭、SMCI+6.54%、Dell+8.38%"
+      "catalyst": "AI伺服器龍頭、SMCI+6.54%、Dell+8.38%",
+      "recommend_date": "2026-02-23",
+      "closing_price": 228.5,
+      "vs_recommend_pct": 0.66,
+      "result": "success"
     },
     {
       "stock_code": "5880",
@@ -100,7 +116,11 @@
         "trust_net_7d": 2294,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "公股行庫穩定配息+法人卡位"
+      "catalyst": "公股行庫穩定配息+法人卡位",
+      "recommend_date": "2026-02-23",
+      "closing_price": 24.200000762939453,
+      "vs_recommend_pct": 1.26,
+      "result": "success"
     },
     {
       "stock_code": "6213",
@@ -120,7 +140,11 @@
         "trust_net_7d": 0,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "AMAT+14.31%、半導體設備暴漲、CCL為半導體關鍵材料"
+      "catalyst": "AMAT+14.31%、半導體設備暴漲、CCL為半導體關鍵材料",
+      "recommend_date": "2026-02-23",
+      "closing_price": 121.5,
+      "vs_recommend_pct": 0.41,
+      "result": "success"
     },
     {
       "stock_code": "2449",
@@ -141,7 +165,11 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "費半+2.17%、CoWoS封裝測試需求",
-      "risk_note": "已大漲11.8%，建議等回檔300-310再進"
+      "risk_note": "已大漲11.8%，建議等回檔300-310再進",
+      "recommend_date": "2026-02-23",
+      "closing_price": 322.5,
+      "vs_recommend_pct": 2.87,
+      "result": "success"
     },
     {
       "stock_code": "2610",
@@ -162,7 +190,11 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "外資連續7天買超+81K",
-      "risk_note": "油價+5.79%為航空利空，小倉位試探"
+      "risk_note": "油價+5.79%為航空利空，小倉位試探",
+      "recommend_date": "2026-02-23",
+      "closing_price": 22.0,
+      "vs_recommend_pct": -3.08,
+      "result": "fail"
     }
   ],
   "excluded_stocks": [
@@ -204,7 +236,12 @@
       {
         "us_stock": "AMD",
         "change_pct": -2.81,
-        "affected_tw_stocks": ["2454", "3661", "3443", "3707"],
+        "affected_tw_stocks": [
+          "2454",
+          "3661",
+          "3443",
+          "3707"
+        ],
         "score_adjustment": -5,
         "note": "不影響今日推薦名單"
       }

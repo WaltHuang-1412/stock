@@ -29,7 +29,10 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工",
-        "drivers": ["費半+2.51%", "外資連買14天"]
+        "drivers": [
+          "費半+2.51%",
+          "外資連買14天"
+        ]
       },
       "dual_track": {
         "news_track": 42,
@@ -41,7 +44,11 @@
         "status": "強力佈局"
       },
       "reason": "外資超強連買+費半強勢+還沒大漲",
-      "status": "pending"
+      "status": "pending",
+      "recommend_date": "2025-12-19",
+      "closing_price": 50.70000076293945,
+      "vs_recommend_pct": -2.5,
+      "result": "fail"
     },
     {
       "stock_code": "2330",
@@ -56,7 +63,10 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工龍頭",
-        "drivers": ["ADR+2.79%", "法人轉買"]
+        "drivers": [
+          "ADR+2.79%",
+          "法人轉買"
+        ]
       },
       "dual_track": {
         "news_track": 44,
@@ -65,7 +75,11 @@
       "reason": "ADR大漲+費半強勢+跌深反彈",
       "status": "pending",
       "user_holding": true,
-      "user_cost": 1458.5
+      "user_cost": 1458.5,
+      "recommend_date": "2025-12-19",
+      "closing_price": 1430.0,
+      "vs_recommend_pct": -0.69,
+      "result": "fail"
     },
     {
       "stock_code": "3037",
@@ -80,7 +94,10 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "載板/PCB",
-        "drivers": ["ABF載板需求", "AI伺服器"]
+        "drivers": [
+          "ABF載板需求",
+          "AI伺服器"
+        ]
       },
       "dual_track": {
         "news_track": 38,
@@ -93,7 +110,11 @@
         "status": "佈局中"
       },
       "reason": "法人悄悄吸貨+5日-6.5%還沒反映",
-      "status": "pending"
+      "status": "pending",
+      "recommend_date": "2025-12-19",
+      "closing_price": 215.0,
+      "vs_recommend_pct": 2.38,
+      "result": "success"
     },
     {
       "stock_code": "2337",
@@ -108,14 +129,21 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "記憶體",
-        "drivers": ["記憶體價格回穩", "法人同買"]
+        "drivers": [
+          "記憶體價格回穩",
+          "法人同買"
+        ]
       },
       "dual_track": {
         "news_track": 35,
         "institutional_track": 43
       },
       "reason": "投信+外資同買+記憶體復甦題材",
-      "status": "pending"
+      "status": "pending",
+      "recommend_date": "2025-12-19",
+      "closing_price": 37.150001525878906,
+      "vs_recommend_pct": -2.24,
+      "result": "fail"
     },
     {
       "stock_code": "2883",
@@ -130,13 +158,20 @@
       "industry": {
         "sector": "金融",
         "sub_type": "證券型",
-        "drivers": ["年底作帳", "投信續買"]
+        "drivers": [
+          "年底作帳",
+          "投信續買"
+        ]
       },
       "reason": "用戶持股+8.8%獲利中+法人續買",
       "status": "holding",
       "user_holding": true,
       "user_cost": 15.95,
-      "user_profit_pct": 8.8
+      "user_profit_pct": 8.8,
+      "recommend_date": "2025-12-19",
+      "closing_price": 17.549999237060547,
+      "vs_recommend_pct": 1.15,
+      "result": "success"
     }
   ],
   "avoid_stocks": [

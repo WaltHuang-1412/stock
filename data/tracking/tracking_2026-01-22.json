@@ -63,7 +63,8 @@
       "time_horizon": "1-3個月",
       "target_return": "+12%",
       "result": "success",
-      "status": "tracking"
+      "status": "tracking",
+      "recommend_date": "2026-01-22"
     },
     {
       "type": "stable",
@@ -98,7 +99,10 @@
       "time_horizon": "1-2個月",
       "target_return": "+8%",
       "result": "success",
-      "status": "tracking"
+      "status": "tracking",
+      "recommend_date": "2026-01-22",
+      "closing_price": 22.700000762939453,
+      "vs_recommend_pct": -11.84
     },
     {
       "type": "stable",
@@ -113,7 +117,7 @@
           "法人持續買超"
         ]
       },
-      "recommend_price": 26,
+      "recommend_price": 26.0,
       "actual_close": 33.25,
       "change_pct": -0.3,
       "target_price": 28,
@@ -132,8 +136,11 @@
       "reason": "連6日買超累計+17K，純銀行受惠利差",
       "time_horizon": "1-3個月",
       "target_return": "+8%",
-      "result": "partial",
-      "status": "tracking"
+      "result": "success",
+      "status": "tracking",
+      "recommend_date": "2026-01-22",
+      "closing_price": 33.25,
+      "vs_recommend_pct": 27.88
     },
     {
       "type": "stable",
@@ -147,7 +154,7 @@
           "外資+投信同步買"
         ]
       },
-      "recommend_price": 68,
+      "recommend_price": 68.0,
       "actual_close": 135.0,
       "change_pct": 0.37,
       "target_price": 75,
@@ -166,9 +173,12 @@
       "reason": "外資+投信同步買累計+9K，費半利多",
       "time_horizon": "1-2個月",
       "target_return": "+10%",
-      "result": "partial",
+      "result": "success",
       "notes": "法人01/22反轉賣超-1,568張，需觀察",
-      "status": "tracking"
+      "status": "tracking",
+      "recommend_date": "2026-01-22",
+      "closing_price": 135.0,
+      "vs_recommend_pct": 98.53
     },
     {
       "type": "explosive",
@@ -202,7 +212,10 @@
       "time_horizon": "1-2週",
       "target_return": "+8%",
       "result": "success",
-      "status": "tracking"
+      "status": "tracking",
+      "recommend_date": "2026-01-22",
+      "closing_price": 39.20000076293945,
+      "vs_recommend_pct": -7.76
     }
   ],
   "watch_stocks": [

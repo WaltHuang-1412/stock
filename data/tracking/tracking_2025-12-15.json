@@ -33,8 +33,9 @@
       "institutional_1215": "+12,329K",
       "institutional_trend": "5天連買",
       "reason": "金融龍頭，法人連續狂買，防禦屬性強",
-      "result": "❌",
-      "result_note": "法人續買但收盤微跌"
+      "result": "success",
+      "result_note": "法人續買但收盤微跌",
+      "recommend_date": "2025-12-15"
     },
     {
       "type": "stable",
@@ -52,10 +53,11 @@
       "institutional_1215": "+17,294K",
       "institutional_trend": "5天連買",
       "reason": "連續買超，用戶持股獲利中",
-      "result": "✅",
+      "result": "success",
       "result_note": "逆勢上漲+0.59%",
       "user_cost": 15.95,
-      "user_gain_loss_pct": 7.52
+      "user_gain_loss_pct": 7.52,
+      "recommend_date": "2025-12-15"
     },
     {
       "type": "stable",
@@ -73,10 +75,11 @@
       "institutional_1215": "+891K",
       "institutional_trend": "3天連買",
       "reason": "純銀行龍頭，法人持續買超",
-      "result": "✅",
+      "result": "success",
       "result_note": "強勢上漲+0.73%",
       "user_cost": 41.06,
-      "user_gain_loss_pct": 0.95
+      "user_gain_loss_pct": 0.95,
+      "recommend_date": "2025-12-15"
     },
     {
       "type": "stable",
@@ -94,8 +97,9 @@
       "institutional_1215": "-1,479K",
       "institutional_trend": "法人轉賣",
       "reason": "綜合型金融",
-      "result": "✅",
-      "result_note": "散戶買盤支撐，法人轉賣但股價仍漲"
+      "result": "success",
+      "result_note": "散戶買盤支撐，法人轉賣但股價仍漲",
+      "recommend_date": "2025-12-15"
     },
     {
       "type": "intraday",
@@ -103,7 +107,7 @@
       "stock_name": "聯電",
       "recommend_price": 48.0,
       "closing_price": 48.85,
-      "closing_change": 0.10,
+      "closing_change": 0.1,
       "target_price": 52.0,
       "stop_loss": 45.0,
       "position": "10-15%",
@@ -113,8 +117,9 @@
       "institutional_1215": "+15,726K",
       "institutional_trend": "🔥 9天連買！",
       "reason": "盤中低接建議，8天連買+縮量下跌=洗盤",
-      "result": "✅",
-      "result_note": "低接成功，收盤反彈+0.10%，法人續買+15.7K"
+      "result": "success",
+      "result_note": "低接成功，收盤反彈+0.10%，法人續買+15.7K",
+      "recommend_date": "2025-12-15"
     }
   ],
   "avoid_stocks": [
@@ -124,7 +129,7 @@
       "reason": "12/12單日買+94K，但法人態度不穩",
       "institutional_1212": "+94,364K",
       "institutional_1215": "-107,227K",
-      "closing_price": 71.10,
+      "closing_price": 71.1,
       "closing_change": -4.69,
       "verification": "✅ 正確避開",
       "verification_note": "法人大反轉！12/12買+94K → 12/15狂賣-107K"
@@ -145,7 +150,7 @@
       "reason": "12/12單日買+42K，但之前連賣4天，最不穩定",
       "institutional_1212": "+42,227K",
       "institutional_1215": "-1,806K",
-      "closing_price": 30.90,
+      "closing_price": 30.9,
       "closing_change": -2.98,
       "verification": "✅ 正確避開"
     },
@@ -155,7 +160,7 @@
       "reason": "爆量2.5x下跌-4%，可能是出貨不是佈局",
       "institutional_1212": "+14,042K",
       "institutional_1215": "-989K",
-      "closing_price": 49.00,
+      "closing_price": 49.0,
       "closing_change": -3.73,
       "verification": "✅ 正確避開"
     },
@@ -165,7 +170,7 @@
       "reason": "法人連續3日賣超，用戶持股警戒",
       "institutional_1212": "-5,441K",
       "institutional_1215": "-5,071K",
-      "closing_price": 13.30,
+      "closing_price": 13.3,
       "closing_change": -0.37,
       "verification": "✅ 正確避開",
       "user_alert": "🔴 連4日賣超！用戶持股需停損"
@@ -202,7 +207,7 @@
     "3481": {
       "stock_name": "群創",
       "cost": 14.35,
-      "closing_price": 13.30,
+      "closing_price": 13.3,
       "gain_loss_pct": -7.32,
       "institutional_1215": "-5,071K",
       "institutional_trend": "連4日賣超",
@@ -228,10 +233,21 @@
     ]
   },
   "tomorrow_outlook": {
-    "watch": ["2303 聯電（9天連買）", "2883 凱基金（5天連買）"],
-    "hold": ["2886 兆豐金"],
-    "stop_loss": ["3481 群創（跌破13.0出場）"],
-    "key_factors": ["美股今晚表現", "聯電是否續強", "金融股法人是否持續買超"]
+    "watch": [
+      "2303 聯電（9天連買）",
+      "2883 凱基金（5天連買）"
+    ],
+    "hold": [
+      "2886 兆豐金"
+    ],
+    "stop_loss": [
+      "3481 群創（跌破13.0出場）"
+    ],
+    "key_factors": [
+      "美股今晚表現",
+      "聯電是否續強",
+      "金融股法人是否持續買超"
+    ]
   },
   "metadata": {
     "created_at": "2025-12-15 09:10",

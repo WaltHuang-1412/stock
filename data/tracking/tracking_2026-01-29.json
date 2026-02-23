@@ -53,12 +53,13 @@
       "status": "verified",
       "closing_price": 1805.0,
       "closing_change": -0.82,
-      "result": "partial",
+      "result": "fail",
       "result_notes": "Intel-10.08%拖累晶圓代工",
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工"
-      }
+      },
+      "recommend_date": "2026-01-29"
     },
     {
       "stock_code": "1303",
@@ -85,12 +86,13 @@
       "status": "verified",
       "closing_price": 77.1,
       "closing_change": -4.22,
-      "result": "failed",
+      "result": "fail",
       "result_notes": "塑化利多但量縮不買單",
       "industry": {
         "sector": "塑化",
         "sub_type": "綜合塑化"
-      }
+      },
+      "recommend_date": "2026-01-29"
     },
     {
       "stock_code": "2880",
@@ -122,7 +124,8 @@
       "industry": {
         "sector": "金融",
         "sub_type": "純銀行"
-      }
+      },
+      "recommend_date": "2026-01-29"
     },
     {
       "stock_code": "2337",
@@ -156,7 +159,8 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "記憶體"
-      }
+      },
+      "recommend_date": "2026-01-29"
     },
     {
       "stock_code": "1301",
@@ -184,14 +188,15 @@
       "status": "not_triggered",
       "closing_price": 49.3,
       "closing_change": -3.9,
-      "result": "not_triggered",
+      "result": "fail",
       "result_notes": "量比0.49x未達1.5x觸發條件",
       "warning": "⚠️ 5日+17.7%已大漲，需觀察盤中量能",
       "v6_1_relaxed": true,
       "industry": {
         "sector": "塑化",
         "sub_type": "綜合塑化"
-      }
+      },
+      "recommend_date": "2026-01-29"
     },
     {
       "stock_code": "2330_add",
@@ -210,7 +215,8 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工"
-      }
+      },
+      "recommend_date": "2026-01-29"
     }
   ],
   "avoided_stocks": [

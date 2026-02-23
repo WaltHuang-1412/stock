@@ -12,7 +12,7 @@
       "tsm_adr_5d": "+7.22%"
     },
     "key_indicators": {
-      "vix": 14.00,
+      "vix": 14.0,
       "vix_change": "-0.57%",
       "vix_5d": "-20.54%"
     },
@@ -21,16 +21,66 @@
   "yesterday_verification": {
     "new_recommendation_hit_rate": "0/5 = 0%",
     "results": [
-      {"code": "2303", "name": "聯電", "recommend": 50.3, "close": 50.0, "change": "-1.77%", "result": "fail"},
-      {"code": "2344", "name": "華邦電", "recommend": 72.9, "close": 73.0, "change": "-0.14%", "result": "neutral"},
-      {"code": "3037", "name": "欣興", "recommend": 219, "close": 215.5, "change": "-2.27%", "result": "fail"},
-      {"code": "2337", "name": "旺宏", "recommend": 38.7, "close": 38.5, "change": "-1.16%", "result": "fail"},
-      {"code": "2454", "name": "聯發科", "recommend": 1395, "close": 1390, "change": "-0.71%", "result": "fail"}
+      {
+        "code": "2303",
+        "name": "聯電",
+        "recommend": 50.3,
+        "close": 50.0,
+        "change": "-1.77%",
+        "result": "fail"
+      },
+      {
+        "code": "2344",
+        "name": "華邦電",
+        "recommend": 72.9,
+        "close": 73.0,
+        "change": "-0.14%",
+        "result": "neutral"
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "recommend": 219,
+        "close": 215.5,
+        "change": "-2.27%",
+        "result": "fail"
+      },
+      {
+        "code": "2337",
+        "name": "旺宏",
+        "recommend": 38.7,
+        "close": 38.5,
+        "change": "-1.16%",
+        "result": "fail"
+      },
+      {
+        "code": "2454",
+        "name": "聯發科",
+        "recommend": 1395,
+        "close": 1390,
+        "change": "-0.71%",
+        "result": "fail"
+      }
     ],
     "avoid_verification": [
-      {"code": "6770", "name": "力積電", "close_change": "-3.58%", "result": "correct_avoid"},
-      {"code": "3231", "name": "緯創", "close_change": "-1.02%", "result": "correct_avoid"},
-      {"code": "3481", "name": "群創", "close_change": "+3.16%", "result": "wrong_avoid"}
+      {
+        "code": "6770",
+        "name": "力積電",
+        "close_change": "-3.58%",
+        "result": "correct_avoid"
+      },
+      {
+        "code": "3231",
+        "name": "緯創",
+        "close_change": "-1.02%",
+        "result": "correct_avoid"
+      },
+      {
+        "code": "3481",
+        "name": "群創",
+        "close_change": "+3.16%",
+        "result": "wrong_avoid"
+      }
     ],
     "lessons": [
       "新推薦命中率0%，費半利多但台股不跟",
@@ -39,11 +89,31 @@
     ]
   },
   "layout_stocks": [
-    {"code": "2454", "name": "聯發科", "five_day_change": "-2.46%"},
-    {"code": "8046", "name": "南電", "five_day_change": "-1.85%"},
-    {"code": "2887", "name": "台新金", "five_day_change": "-1.65%"},
-    {"code": "2344", "name": "華邦電", "five_day_change": "-1.22%"},
-    {"code": "2303", "name": "聯電", "five_day_change": "-0.79%"}
+    {
+      "code": "2454",
+      "name": "聯發科",
+      "five_day_change": "-2.46%"
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "five_day_change": "-1.85%"
+    },
+    {
+      "code": "2887",
+      "name": "台新金",
+      "five_day_change": "-1.65%"
+    },
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "five_day_change": "-1.22%"
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "five_day_change": "-0.79%"
+    }
   ],
   "recommendations": [
     {
@@ -59,12 +129,20 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "成熟製程",
-        "drivers": ["費半5日+7.31%", "法人連10日買+238K", "5日-0.79%佈局"]
+        "drivers": [
+          "費半5日+7.31%",
+          "法人連10日買+238K",
+          "5日-0.79%佈局"
+        ]
       },
       "reason": "法人狂買但股價沒漲=佈局中",
       "status": "pending",
       "five_day_change": "-0.79%",
-      "layout_signal": true
+      "layout_signal": true,
+      "recommend_date": "2025-12-24",
+      "closing_price": 49.650001525878906,
+      "vs_recommend_pct": -0.7,
+      "result": "fail"
     },
     {
       "stock_code": "2344",
@@ -79,12 +157,19 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "記憶體",
-        "drivers": ["記憶體超級循環", "5日-1.22%佈局"]
+        "drivers": [
+          "記憶體超級循環",
+          "5日-1.22%佈局"
+        ]
       },
       "reason": "記憶體題材+跌深佈局",
       "status": "pending",
       "five_day_change": "-1.22%",
-      "layout_signal": true
+      "layout_signal": true,
+      "recommend_date": "2025-12-24",
+      "closing_price": 76.9000015258789,
+      "vs_recommend_pct": 5.34,
+      "result": "success"
     },
     {
       "stock_code": "2454",
@@ -99,12 +184,20 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "IC設計",
-        "drivers": ["天璣9400", "費半利多", "5日-2.46%跌最深"]
+        "drivers": [
+          "天璣9400",
+          "費半利多",
+          "5日-2.46%跌最深"
+        ]
       },
       "reason": "IC設計龍頭+跌深反彈",
       "status": "pending",
       "five_day_change": "-2.46%",
-      "layout_signal": true
+      "layout_signal": true,
+      "recommend_date": "2025-12-24",
+      "closing_price": 1380.0,
+      "vs_recommend_pct": -0.72,
+      "result": "fail"
     },
     {
       "stock_code": "8046",
@@ -119,12 +212,19 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "載板/PCB",
-        "drivers": ["AI伺服器封裝", "5日-1.85%跌深"]
+        "drivers": [
+          "AI伺服器封裝",
+          "5日-1.85%跌深"
+        ]
       },
       "reason": "載板跌深佈局",
       "status": "pending",
       "five_day_change": "-1.85%",
-      "layout_signal": true
+      "layout_signal": true,
+      "recommend_date": "2025-12-24",
+      "closing_price": 239.0,
+      "vs_recommend_pct": 0.0,
+      "result": "success"
     }
   ],
   "watch_stocks": [
@@ -151,7 +251,7 @@
     {
       "code": "2637",
       "name": "慧洋",
-      "cost": 66.90,
+      "cost": 66.9,
       "current": 69.0,
       "profit_pct": 3.1,
       "action": "續抱"
@@ -180,8 +280,18 @@
     "check": "產業分散合格"
   },
   "sync_check": {
-    "before_market_recommendations": ["2303", "2344", "2454", "8046"],
-    "tracking_recommendations": ["2303", "2344", "2454", "8046"],
+    "before_market_recommendations": [
+      "2303",
+      "2344",
+      "2454",
+      "8046"
+    ],
+    "tracking_recommendations": [
+      "2303",
+      "2344",
+      "2454",
+      "8046"
+    ],
     "is_synced": true
   },
   "risk_notes": [
@@ -198,24 +308,94 @@
     "closing_verification": {
       "new_recommendation_hit_rate": "1/4 = 25%",
       "results": [
-        {"code": "2344", "name": "華邦電", "recommend": 73.0, "close": 76.90, "change": "+5.34%", "result": "success"},
-        {"code": "8046", "name": "南電", "recommend": 239, "close": 239.00, "change": "+0.00%", "result": "neutral"},
-        {"code": "2303", "name": "聯電", "recommend": 50.0, "close": 49.65, "change": "-0.70%", "result": "fail"},
-        {"code": "2454", "name": "聯發科", "recommend": 1390, "close": 1380.00, "change": "-0.72%", "result": "fail"}
+        {
+          "code": "2344",
+          "name": "華邦電",
+          "recommend": 73.0,
+          "close": 76.9,
+          "change": "+5.34%",
+          "result": "success"
+        },
+        {
+          "code": "8046",
+          "name": "南電",
+          "recommend": 239,
+          "close": 239.0,
+          "change": "+0.00%",
+          "result": "neutral"
+        },
+        {
+          "code": "2303",
+          "name": "聯電",
+          "recommend": 50.0,
+          "close": 49.65,
+          "change": "-0.70%",
+          "result": "fail"
+        },
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "recommend": 1390,
+          "close": 1380.0,
+          "change": "-0.72%",
+          "result": "fail"
+        }
       ]
     },
     "user_holdings_close": [
-      {"code": "2330", "name": "台積電", "cost": 1458.5, "close": 1495, "profit_pct": 2.50, "today_change": "+0.34%"},
-      {"code": "2637", "name": "慧洋", "cost": 66.90, "close": 68.0, "profit_pct": 1.64, "today_change": "+0.00%"},
-      {"code": "8046", "name": "南電", "cost": 239.5, "close": 239.0, "profit_pct": -0.21, "today_change": "+0.00%", "note": "今日買進"},
-      {"code": "3481", "name": "群創", "cost": 14.35, "close": 13.25, "profit_pct": -7.67, "today_change": "+1.53%", "note": "連3日反彈，虧損收窄"},
-      {"code": "2886", "name": "兆豐金", "cost": 41.06, "close": 40.70, "profit_pct": -0.88, "today_change": "-0.61%"}
+      {
+        "code": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "close": 1495,
+        "profit_pct": 2.5,
+        "today_change": "+0.34%"
+      },
+      {
+        "code": "2637",
+        "name": "慧洋",
+        "cost": 66.9,
+        "close": 68.0,
+        "profit_pct": 1.64,
+        "today_change": "+0.00%"
+      },
+      {
+        "code": "8046",
+        "name": "南電",
+        "cost": 239.5,
+        "close": 239.0,
+        "profit_pct": -0.21,
+        "today_change": "+0.00%",
+        "note": "今日買進"
+      },
+      {
+        "code": "3481",
+        "name": "群創",
+        "cost": 14.35,
+        "close": 13.25,
+        "profit_pct": -7.67,
+        "today_change": "+1.53%",
+        "note": "連3日反彈，虧損收窄"
+      },
+      {
+        "code": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "close": 40.7,
+        "profit_pct": -0.88,
+        "today_change": "-0.61%"
+      }
     ],
     "lessons": [
       "華邦電+5.34%大漲，記憶體最強，但盤中已建議不追高",
       "聯電-0.70%，佈局邏輯正確但短線弱勢",
       "群創連3日反彈，虧損從-11.8%收窄至-7.67%"
     ],
-    "tomorrow_focus": ["華邦電記憶體續強？", "聯電50元支撐", "南電載板走勢", "群創13.5元減碼點"]
+    "tomorrow_focus": [
+      "華邦電記憶體續強？",
+      "聯電50元支撐",
+      "南電載板走勢",
+      "群創13.5元減碼點"
+    ]
   }
 }

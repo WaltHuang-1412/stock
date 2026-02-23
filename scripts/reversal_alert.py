@@ -42,6 +42,14 @@ import sys
 import os
 from datetime import datetime, timedelta
 
+# 取得日均成交量（用於比例門檻）
+sys.path.insert(0, os.path.dirname(__file__))
+try:
+    from yahoo_finance_api import get_stock_info
+    HAS_YAHOO = True
+except ImportError:
+    HAS_YAHOO = False
+
 try:
     import yaml
     HAS_YAML = True
@@ -108,11 +116,17 @@ def calculate_momentum(data_list):
     recent_avg = sum(d['total'] for d in recent_5) / 5
     previous_avg = sum(d['total'] for d in previous_5) / 5
 
-    # 計算動能變化率
+    # 計算動能變化率（v3.0：截斷極端值 ±500%，與 chip_analysis.py 一致）
     if previous_avg != 0:
         momentum_change = ((recent_avg - previous_avg) / abs(previous_avg)) * 100
+        momentum_change = max(-500, min(500, momentum_change))
     else:
-        momentum_change = 0
+        if recent_avg > 1000:
+            momentum_change = 200
+        elif recent_avg < -1000:
+            momentum_change = -200
+        else:
+            momentum_change = 0
 
     return {
         'recent_avg': recent_avg,
@@ -153,7 +167,9 @@ def detect_reversal(stock_code, stock_name="", days=10):
         'alert_level': 'none',
         'alert_reason': '',
         'recommendation': '',
-        'warning_level': 0  # 🆕 0=安全, 1-4=四層預警
+        'warning_level': 0,  # 0=安全, 1-4=四層預警
+        'avg_daily_volume': 0,  # v3.0：日均量（張）
+        'sell_ratio': 0,  # v3.0：賣超佔日均量%
     }
 
     # 計算籌碼動能（需要10天數據）
@@ -172,13 +188,31 @@ def detect_reversal(stock_code, stock_name="", days=10):
     recent_2_total = sum(d['total'] for d in recent_2)
     cumulative_total = sum(d['total'] for d in data_list)
 
-    # 🆕 四層預警判斷邏輯
+    # 🆕 v3.0：取得日均成交量，用比例判斷門檻（大小型股公平）
+    avg_daily_volume = 0  # 日均量（張）
+    if HAS_YAHOO:
+        try:
+            info = get_stock_info(stock_code)
+            if info and info.get('volume'):
+                avg_daily_volume = info['volume'] // 1000  # 股→張
+        except Exception:
+            pass
+    if avg_daily_volume <= 0:
+        avg_daily_volume = 20000  # fallback: 2 萬張
+
+    # 賣超佔日均量比例
+    sell_ratio = abs(latest['total']) / avg_daily_volume * 100 if avg_daily_volume > 0 else 0
+    result['avg_daily_volume'] = avg_daily_volume
+    result['sell_ratio'] = sell_ratio
+
+    # 🆕 四層預警判斷邏輯（v3.0：比例 + 絕對值雙重條件）
 
     # Level 4: 🔴🔴 爆量賣超（最高危）
-    if latest['total'] < -20000:
+    # v3.0：賣超佔日均量 >5% 或 絕對值 >50K 張
+    if latest['total'] < 0 and (sell_ratio > 5 or abs(latest['total']) > 50000):
         result['alert_level'] = 'level4'
         result['warning_level'] = 4
-        result['alert_reason'] = f"🔴🔴 Level 4：爆量賣超！今日賣超{latest['total']:+,}張"
+        result['alert_reason'] = f"🔴🔴 Level 4：爆量賣超！今日賣超{latest['total']:+,}張（佔日均量{sell_ratio:.1f}%）"
         result['recommendation'] = '🔴🔴 極度危險！法人大舉出貨，建議立即出場'
         return result
 
@@ -191,8 +225,9 @@ def detect_reversal(stock_code, stock_name="", days=10):
         return result
 
     # Level 2: ⚠️⚠️ 單日反轉（警戒）
+    # v3.0：賣超佔日均量 >1.5% 或 絕對值 >20K 張
     if early_buy_days >= len(early_data) * 0.6 and early_total > 5000:
-        if latest['total'] < -5000:
+        if latest['total'] < 0 and (sell_ratio > 1.5 or abs(latest['total']) > 20000):
             result['alert_level'] = 'level2'
             result['warning_level'] = 2
             result['alert_reason'] = f"⚠️⚠️ Level 2：單日反轉！前期買超{early_total:+,}張，今日賣超{latest['total']:+,}張"

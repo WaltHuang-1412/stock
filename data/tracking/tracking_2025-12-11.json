@@ -30,7 +30,7 @@
       "reason": "連3日買超+17.9M，5日漲幅-1.4%，佈局中",
       "time_horizon": "1-2週",
       "status": "stop_loss",
-      "result": "failure",
+      "result": "fail",
       "industry": {
         "sector": "電子",
         "sub_type": "AI伺服器",
@@ -54,7 +54,8 @@
           },
           "notes": "🚨 觸發停損310.0元（-14.62%）"
         }
-      ]
+      ],
+      "closing_price": 323.0
     },
     {
       "type": "positioning",
@@ -76,7 +77,7 @@
       "reason": "連3日買超+85.2M，5日漲幅+1.5%，佈局中",
       "time_horizon": "1-2週",
       "status": "success",
-      "result": "failure",
+      "result": "fail",
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工",
@@ -100,7 +101,8 @@
           },
           "notes": "✅ 達目標價52.0元（+36.97%）"
         }
-      ]
+      ],
+      "closing_price": 49.35
     },
     {
       "type": "positioning",
@@ -122,7 +124,7 @@
       "reason": "連3日買超+66.6M，5日漲幅+0.8%，佈局中",
       "time_horizon": "1-2週",
       "status": "neutral",
-      "result": "failure",
+      "result": "fail",
       "industry": {
         "sector": "金融",
         "sub_type": "綜合型金控",
@@ -146,7 +148,8 @@
           },
           "notes": "⚠️ 7日追蹤完成、震盪（-0.87%）"
         }
-      ]
+      ],
+      "closing_price": 22.95
     },
     {
       "type": "positioning",
@@ -192,7 +195,8 @@
           },
           "notes": "⚠️ 7日追蹤完成、震盪（1.95%）"
         }
-      ]
+      ],
+      "closing_price": 92.4
     }
   ],
   "avoid_stocks": [

@@ -175,11 +175,19 @@ def analyze_chip_history(stock_code, n_days=10):
         recent_avg = sum(d['total'] for d in recent_5) / 5
         previous_avg = sum(d['total'] for d in previous_5) / 5
 
-        # 計算動能變化率
+        # 計算動能變化率（v3.1：截斷極端值 ±500%）
         if previous_avg != 0:
             momentum_change = ((recent_avg - previous_avg) / abs(previous_avg)) * 100
+            # 截斷極端值：分母接近零時會爆出 +41219% 等假象
+            momentum_change = max(-500, min(500, momentum_change))
         else:
-            momentum_change = 0
+            # 分母為零：用 recent_avg 方向判斷
+            if recent_avg > 1000:
+                momentum_change = 200   # 從零到大量買超
+            elif recent_avg < -1000:
+                momentum_change = -200  # 從零到大量賣超
+            else:
+                momentum_change = 0
 
         # 判斷動能等級
         # 🆕 2026-02-04 驗證結果：動能減弱 = 佈局完成 = 準備漲

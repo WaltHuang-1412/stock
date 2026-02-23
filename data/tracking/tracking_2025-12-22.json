@@ -21,25 +21,35 @@
       "rank": 1,
       "industry": "半導體",
       "catalyst": "費半+2.98%、輝達CPO、AI散熱需求",
-      "stocks": ["2330", "2303", "3037"]
+      "stocks": [
+        "2330",
+        "2303",
+        "3037"
+      ]
     },
     {
       "rank": 2,
       "industry": "記憶體",
       "catalyst": "美光財報利多、HBM供應吃緊",
-      "stocks": ["2337"]
+      "stocks": [
+        "2337"
+      ]
     },
     {
       "rank": 3,
       "industry": "散裝航運",
       "catalyst": "BDI 2557、烏俄停火題材、旺季",
-      "stocks": ["2637"]
+      "stocks": [
+        "2637"
+      ]
     },
     {
       "rank": 4,
       "industry": "AI伺服器",
       "catalyst": "GB200量產、北美訂單",
-      "stocks": ["3231"]
+      "stocks": [
+        "3231"
+      ]
     }
   ],
   "recommendations": [
@@ -56,12 +66,20 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工龍頭",
-        "drivers": ["費半+2.98%", "ADR+1.50%", "CPO核心"]
+        "drivers": [
+          "費半+2.98%",
+          "ADR+1.50%",
+          "CPO核心"
+        ]
       },
       "reason": "費半強勢+ADR上漲+AI算力核心",
       "status": "pending",
       "user_holding": true,
-      "user_cost": 1458.5
+      "user_cost": 1458.5,
+      "recommend_date": "2025-12-22",
+      "closing_price": 1465.0,
+      "vs_recommend_pct": 2.45,
+      "result": "success"
     },
     {
       "stock_code": "2303",
@@ -76,10 +94,17 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "成熟製程",
-        "drivers": ["費半+2.98%", "車用工控需求"]
+        "drivers": [
+          "費半+2.98%",
+          "車用工控需求"
+        ]
       },
       "reason": "費半利多+成熟製程龍頭+法人連買",
-      "status": "pending"
+      "status": "pending",
+      "recommend_date": "2025-12-22",
+      "closing_price": 50.900001525878906,
+      "vs_recommend_pct": 0.79,
+      "result": "success"
     },
     {
       "stock_code": "3037",
@@ -94,10 +119,18 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "載板/PCB",
-        "drivers": ["ABF載板", "AI伺服器封裝", "CoWoS"]
+        "drivers": [
+          "ABF載板",
+          "AI伺服器封裝",
+          "CoWoS"
+        ]
       },
       "reason": "ABF載板龍頭+GB200受惠+法人持續買",
-      "status": "pending"
+      "status": "pending",
+      "recommend_date": "2025-12-22",
+      "closing_price": 220.5,
+      "vs_recommend_pct": 2.56,
+      "result": "success"
     },
     {
       "stock_code": "2637",
@@ -112,12 +145,20 @@
       "industry": {
         "sector": "航運",
         "sub_type": "散裝航運",
-        "drivers": ["BDI指數", "烏俄停火題材", "旺季"]
+        "drivers": [
+          "BDI指數",
+          "烏俄停火題材",
+          "旺季"
+        ]
       },
       "reason": "散裝龍頭+BDI回升+旺季題材",
       "status": "pending",
       "user_holding": true,
-      "user_cost": 66.895
+      "user_cost": 66.895,
+      "recommend_date": "2025-12-22",
+      "closing_price": 68.69999694824219,
+      "vs_recommend_pct": 1.78,
+      "result": "success"
     },
     {
       "stock_code": "3231",
@@ -132,10 +173,17 @@
       "industry": {
         "sector": "電子",
         "sub_type": "AI伺服器",
-        "drivers": ["GB200量產", "北美訂單"]
+        "drivers": [
+          "GB200量產",
+          "北美訂單"
+        ]
       },
       "reason": "AI伺服器主力+GB200受惠",
-      "status": "pending"
+      "status": "pending",
+      "recommend_date": "2025-12-22",
+      "closing_price": 146.5,
+      "vs_recommend_pct": 1.74,
+      "result": "success"
     },
     {
       "stock_code": "2337",
@@ -150,11 +198,18 @@
       "industry": {
         "sector": "半導體",
         "sub_type": "記憶體",
-        "drivers": ["記憶體超級循環", "車用NOR"]
+        "drivers": [
+          "記憶體超級循環",
+          "車用NOR"
+        ]
       },
       "reason": "記憶體題材但12/19法人轉賣-23K",
       "status": "pending",
-      "risk_note": "法人大賣，短線有壓"
+      "risk_note": "法人大賣，短線有壓",
+      "recommend_date": "2025-12-22",
+      "closing_price": 38.95000076293945,
+      "vs_recommend_pct": 3.87,
+      "result": "success"
     }
   ],
   "avoid_stocks": [
@@ -197,8 +252,22 @@
     "check": "半導體50%符合上限，產業分散合格"
   },
   "sync_check": {
-    "before_market_recommendations": ["2330", "2303", "3037", "2637", "3231", "2337"],
-    "tracking_recommendations": ["2330", "2303", "3037", "2637", "3231", "2337"],
+    "before_market_recommendations": [
+      "2330",
+      "2303",
+      "3037",
+      "2637",
+      "3231",
+      "2337"
+    ],
+    "tracking_recommendations": [
+      "2330",
+      "2303",
+      "3037",
+      "2637",
+      "3231",
+      "2337"
+    ],
     "is_synced": true
   },
   "intraday_update": {
@@ -206,32 +275,127 @@
     "track_a": {
       "hit_rate": "5/6 = 83%",
       "results": [
-        {"code": "2337", "name": "旺宏", "change": "+4.85%", "result": "success"},
-        {"code": "3037", "name": "欣興", "change": "+2.33%", "result": "success"},
-        {"code": "2330", "name": "台積電", "change": "+2.10%", "result": "success"},
-        {"code": "3231", "name": "緯創", "change": "+1.74%", "result": "success"},
-        {"code": "2637", "name": "慧洋", "change": "+1.04%", "result": "success"},
-        {"code": "2303", "name": "聯電", "change": "+0.00%", "result": "fail"}
+        {
+          "code": "2337",
+          "name": "旺宏",
+          "change": "+4.85%",
+          "result": "success"
+        },
+        {
+          "code": "3037",
+          "name": "欣興",
+          "change": "+2.33%",
+          "result": "success"
+        },
+        {
+          "code": "2330",
+          "name": "台積電",
+          "change": "+2.10%",
+          "result": "success"
+        },
+        {
+          "code": "3231",
+          "name": "緯創",
+          "change": "+1.74%",
+          "result": "success"
+        },
+        {
+          "code": "2637",
+          "name": "慧洋",
+          "change": "+1.04%",
+          "result": "success"
+        },
+        {
+          "code": "2303",
+          "name": "聯電",
+          "change": "+0.00%",
+          "result": "fail"
+        }
       ]
     },
     "track_b": {
       "top10_hit_rate": "3/10 = 30%",
       "missed": [
-        {"code": "6770", "name": "力積電", "change": "+9.92%", "reason": "法人對決被排除"},
-        {"code": "6239", "name": "力成", "change": "+9.12%", "reason": "法人賣超被排除"},
-        {"code": "3189", "name": "景碩", "change": "+7.78%", "reason": "只推欣興沒推其他載板"},
-        {"code": "2324", "name": "仁寶", "change": "+3.87%", "reason": "沒列入代工"},
-        {"code": "2408", "name": "南亞科", "change": "+3.44%", "reason": "沒列入記憶體"},
-        {"code": "2344", "name": "華邦電", "change": "+3.09%", "reason": "法人狂賣被排除"},
-        {"code": "8046", "name": "南電", "change": "+2.30%", "reason": "沒列入載板"}
+        {
+          "code": "6770",
+          "name": "力積電",
+          "change": "+9.92%",
+          "reason": "法人對決被排除"
+        },
+        {
+          "code": "6239",
+          "name": "力成",
+          "change": "+9.12%",
+          "reason": "法人賣超被排除"
+        },
+        {
+          "code": "3189",
+          "name": "景碩",
+          "change": "+7.78%",
+          "reason": "只推欣興沒推其他載板"
+        },
+        {
+          "code": "2324",
+          "name": "仁寶",
+          "change": "+3.87%",
+          "reason": "沒列入代工"
+        },
+        {
+          "code": "2408",
+          "name": "南亞科",
+          "change": "+3.44%",
+          "reason": "沒列入記憶體"
+        },
+        {
+          "code": "2344",
+          "name": "華邦電",
+          "change": "+3.09%",
+          "reason": "法人狂賣被排除"
+        },
+        {
+          "code": "8046",
+          "name": "南電",
+          "change": "+2.30%",
+          "reason": "沒列入載板"
+        }
       ]
     },
     "user_holdings": [
-      {"code": "2330", "name": "台積電", "cost": 1458.5, "current": 1460, "profit_pct": 0.1},
-      {"code": "2883", "name": "凱基金", "cost": 15.95, "current": 17.75, "profit_pct": 11.3},
-      {"code": "2637", "name": "慧洋", "cost": 66.90, "current": 68.30, "profit_pct": 2.1},
-      {"code": "2886", "name": "兆豐金", "cost": 41.06, "current": 41.00, "profit_pct": -0.1},
-      {"code": "3481", "name": "群創", "cost": 14.35, "current": 12.60, "profit_pct": -12.2}
+      {
+        "code": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "current": 1460,
+        "profit_pct": 0.1
+      },
+      {
+        "code": "2883",
+        "name": "凱基金",
+        "cost": 15.95,
+        "current": 17.75,
+        "profit_pct": 11.3
+      },
+      {
+        "code": "2637",
+        "name": "慧洋",
+        "cost": 66.9,
+        "current": 68.3,
+        "profit_pct": 2.1
+      },
+      {
+        "code": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "current": 41.0,
+        "profit_pct": -0.1
+      },
+      {
+        "code": "3481",
+        "name": "群創",
+        "cost": 14.35,
+        "current": 12.6,
+        "profit_pct": -12.2
+      }
     ],
     "lessons": "費半+2.98%時應用全產業鏈模式，不被法人數據篩掉"
   },
@@ -241,35 +405,137 @@
       "track_a": {
         "hit_rate": "5/6 = 83%",
         "results": [
-          {"code": "2337", "name": "旺宏", "recommend": 37.5, "close": 38.95, "change": "+4.85%", "result": "success"},
-          {"code": "3037", "name": "欣興", "recommend": 215, "close": 220.50, "change": "+2.56%", "result": "success"},
-          {"code": "2330", "name": "台積電", "recommend": 1430, "close": 1465, "change": "+2.45%", "result": "success"},
-          {"code": "3231", "name": "緯創", "recommend": 144, "close": 146.50, "change": "+1.74%", "result": "success"},
-          {"code": "2637", "name": "慧洋", "recommend": 67.5, "close": 68.70, "change": "+1.63%", "result": "success"},
-          {"code": "2303", "name": "聯電", "recommend": 50.5, "close": 50.90, "change": "+0.39%", "result": "neutral"}
+          {
+            "code": "2337",
+            "name": "旺宏",
+            "recommend": 37.5,
+            "close": 38.95,
+            "change": "+4.85%",
+            "result": "success"
+          },
+          {
+            "code": "3037",
+            "name": "欣興",
+            "recommend": 215,
+            "close": 220.5,
+            "change": "+2.56%",
+            "result": "success"
+          },
+          {
+            "code": "2330",
+            "name": "台積電",
+            "recommend": 1430,
+            "close": 1465,
+            "change": "+2.45%",
+            "result": "success"
+          },
+          {
+            "code": "3231",
+            "name": "緯創",
+            "recommend": 144,
+            "close": 146.5,
+            "change": "+1.74%",
+            "result": "success"
+          },
+          {
+            "code": "2637",
+            "name": "慧洋",
+            "recommend": 67.5,
+            "close": 68.7,
+            "change": "+1.63%",
+            "result": "success"
+          },
+          {
+            "code": "2303",
+            "name": "聯電",
+            "recommend": 50.5,
+            "close": 50.9,
+            "change": "+0.39%",
+            "result": "neutral"
+          }
         ]
       },
       "track_b": {
         "top10_hit_rate": "3/10 = 30%",
         "missed_big_gainers": [
-          {"code": "6770", "name": "力積電", "close_change": "+9.92%"},
-          {"code": "6239", "name": "力成", "close_change": "+9.12%"},
-          {"code": "3189", "name": "景碩", "close_change": "+7.78%"}
+          {
+            "code": "6770",
+            "name": "力積電",
+            "close_change": "+9.92%"
+          },
+          {
+            "code": "6239",
+            "name": "力成",
+            "close_change": "+9.12%"
+          },
+          {
+            "code": "3189",
+            "name": "景碩",
+            "close_change": "+7.78%"
+          }
         ]
       }
     },
     "user_holdings_close": [
-      {"code": "2330", "name": "台積電", "cost": 1458.5, "close": 1465, "profit_pct": 0.4, "today_change": "+2.45%"},
-      {"code": "2637", "name": "慧洋", "cost": 66.90, "close": 68.70, "profit_pct": 2.7, "today_change": "+1.63%"},
-      {"code": "2886", "name": "兆豐金", "cost": 41.06, "close": 41.20, "profit_pct": 0.3, "today_change": "+1.48%"},
-      {"code": "3481", "name": "群創", "cost": 14.35, "close": 12.65, "profit_pct": -11.8, "today_change": "-0.39%", "action": "考慮停損"}
+      {
+        "code": "2330",
+        "name": "台積電",
+        "cost": 1458.5,
+        "close": 1465,
+        "profit_pct": 0.4,
+        "today_change": "+2.45%"
+      },
+      {
+        "code": "2637",
+        "name": "慧洋",
+        "cost": 66.9,
+        "close": 68.7,
+        "profit_pct": 2.7,
+        "today_change": "+1.63%"
+      },
+      {
+        "code": "2886",
+        "name": "兆豐金",
+        "cost": 41.06,
+        "close": 41.2,
+        "profit_pct": 0.3,
+        "today_change": "+1.48%"
+      },
+      {
+        "code": "3481",
+        "name": "群創",
+        "cost": 14.35,
+        "close": 12.65,
+        "profit_pct": -11.8,
+        "today_change": "-0.39%",
+        "action": "考慮停損"
+      }
     ],
     "sold_today": [
-      {"code": "2883", "name": "凱基金", "buy_price": 15.95, "sell_price": 17.80, "profit": 1850, "profit_pct": 11.6}
+      {
+        "code": "2883",
+        "name": "凱基金",
+        "buy_price": 15.95,
+        "sell_price": 17.8,
+        "profit": 1850,
+        "profit_pct": 11.6
+      }
     ],
     "tomorrow_watchlist": {
-      "institutional_buy": ["2312", "2371", "2330", "6282", "2881", "2880", "2618"],
-      "sector_focus": ["半導體", "載板PCB", "記憶體"],
+      "institutional_buy": [
+        "2312",
+        "2371",
+        "2330",
+        "6282",
+        "2881",
+        "2880",
+        "2618"
+      ],
+      "sector_focus": [
+        "半導體",
+        "載板PCB",
+        "記憶體"
+      ],
       "key_lesson": "費半≥+2%時使用全產業鏈模式，不被法人一票否決"
     }
   }
