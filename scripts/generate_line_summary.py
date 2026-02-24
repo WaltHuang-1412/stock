@@ -264,7 +264,7 @@ def after_market_summary(date):
         name = _get(r, "stock_name", "name")
         score = _get(r, "score")
         entry = _get(r, "recommend_price", "entry_price")
-        close = _get(r, "closing_price", "close_price")
+        close = _get(r, "actual_close", "closing_price", "close_price")
         change = _get(r, "vs_recommend_pct")
         reason = _get(r, "reason", default="")
         catalyst = _get(r, "catalyst", default="")
@@ -375,11 +375,14 @@ def after_market_summary(date):
         lines.append("---")
         lines.append("遺漏機會：")
         for m in missed[:5]:
-            stock = m.get("stock", "?")
-            chg = m.get("change", "?")
-            reason = m.get("excluded_reason", "")
-            reason_str = f"（{reason}）" if reason else ""
-            lines.append(f"  {stock} {chg}{reason_str}")
+            if isinstance(m, dict):
+                stock = m.get("stock", "?")
+                chg = m.get("change", "?")
+                reason = m.get("excluded_reason", "")
+                reason_str = f"（{reason}）" if reason else ""
+                lines.append(f"  {stock} {chg}{reason_str}")
+            else:
+                lines.append(f"  {m}")
 
     # === 明日推薦 ===
     tomorrow_recs = after_summary.get("tomorrow_recommendations", [])
