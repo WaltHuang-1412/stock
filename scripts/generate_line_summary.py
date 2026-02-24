@@ -107,6 +107,15 @@ def intraday_summary(date):
     if not recs:
         return f"[{date}] 盤中分析完成，無追蹤股票"
 
+    # 從 intraday_analysis.track_a 建立盤中數據索引（by stock_code）
+    intraday_data = tracking.get("intraday_analysis", {})
+    track_a_list = intraday_data.get("track_a", [])
+    track_a_map = {}
+    for ta in track_a_list:
+        ta_code = ta.get("stock_code", "")
+        if ta_code:
+            track_a_map[ta_code] = ta
+
     lines = [f"[{date}] 盤中分析完成", ""]
 
     for r in recs:
@@ -114,16 +123,30 @@ def intraday_summary(date):
         name = _get(r, "stock_name", "name")
         entry = _get(r, "recommend_price", "entry_price")
 
-        # 支援巢狀結構 intraday{} 和平層 intraday_price
-        intra = r.get("intraday", {})
-        if isinstance(intra, dict) and intra:
-            intraday = intra.get("price", "?")
-            change = intra.get("vs_recommend_pct", "?")
-            strategy = intra.get("intraday_strategy", "")
+        # 優先從 intraday_analysis.track_a 取盤中數據
+        ta = track_a_map.get(code, {})
+        if ta:
+            intraday = ta.get("intraday_price", "?")
+            change = ta.get("vs_recommend", ta.get("intraday_change", "?"))
+            strategy = ta.get("strategy", "")
         else:
-            intraday = r.get("intraday_price", "?")
-            change = r.get("intraday_vs_recommend_pct", r.get("intraday_change", "?"))
-            strategy = r.get("intraday_strategy", "")
+            # fallback: 從 recommendations 本身讀取
+            intra = r.get("intraday", {})
+            if isinstance(intra, dict) and intra:
+                intraday = intra.get("price", "?")
+                change = intra.get("vs_recommend_pct", "?")
+                strategy = intra.get("intraday_strategy", "")
+            else:
+                intraday = r.get("intraday_price", "?")
+                change = r.get("intraday_vs_recommend_pct", r.get("intraday_change", "?"))
+                strategy = r.get("intraday_strategy", "")
+
+        # 將字串百分比轉為數字（如 "+7.65%" → 7.65）
+        if isinstance(change, str) and change not in ("?", ""):
+            try:
+                change = float(change.replace("%", "").replace("+", ""))
+            except ValueError:
+                pass
 
         if isinstance(change, (int, float)):
             sign = "+" if change >= 0 else ""
