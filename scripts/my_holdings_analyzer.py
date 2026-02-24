@@ -5,14 +5,20 @@
 使用方式：python3 scripts/my_holdings_analyzer.py
 """
 
+import sys
+import io
+import os
+
+if sys.platform == "win32":
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
+
 import yfinance as yf
 import yaml
 import json
 import requests
 from datetime import datetime, timedelta
 import subprocess
-import os
-import sys
 
 class MyHoldingsAnalyzer:
     def __init__(self):
@@ -75,10 +81,13 @@ class MyHoldingsAnalyzer:
             stock_code = holding['symbol']
             try:
                 # 使用現有的 check_institutional.py 腳本
-                result = subprocess.run([
-                    'python3', 'scripts/check_institutional.py',
-                    stock_code, date_str
-                ], capture_output=True, text=True, cwd='.')
+                result = subprocess.run(
+                    [sys.executable, 'scripts/check_institutional.py',
+                     stock_code, date_str],
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd='.'
+                )
+                result.stdout = result.stdout.decode('utf-8', errors='replace')
+                result.stderr = result.stderr.decode('utf-8', errors='replace')
 
                 if result.returncode == 0:
                     # 解析輸出
