@@ -394,141 +394,6 @@
     ]
   },
   "created_at": "2026-02-10 08:30",
-  "intraday_update": {
-    "update_time": "2026-02-10 12:17",
-    "market_status": "盤中",
-    "tracking_results": [
-      {
-        "stock_code": "2382",
-        "stock_name": "廣達",
-        "recommend_price": 284.0,
-        "intraday_price": 285.0,
-        "change_pct": 0.35,
-        "vs_recommend_pct": 0.35,
-        "volume_ratio": 0.92,
-        "intraday_strategy": "✅ 續抱",
-        "priority": 4
-      },
-      {
-        "stock_code": "3037",
-        "stock_name": "欣興",
-        "recommend_price": 347.5,
-        "intraday_price": 372.0,
-        "change_pct": 7.05,
-        "vs_recommend_pct": 7.05,
-        "volume_ratio": 0.68,
-        "intraday_strategy": "📈 部分獲利（已達標）",
-        "priority": 5
-      },
-      {
-        "stock_code": "2408",
-        "stock_name": "南亞科",
-        "recommend_price": 274.5,
-        "intraday_price": 271.5,
-        "change_pct": -1.09,
-        "vs_recommend_pct": -1.09,
-        "volume_ratio": 0.7,
-        "intraday_strategy": "📍 續抱觀察（Micron壓力）",
-        "priority": 3
-      },
-      {
-        "stock_code": "2303",
-        "stock_name": "聯電",
-        "recommend_price": 62.4,
-        "intraday_price": 62.3,
-        "change_pct": -0.16,
-        "vs_recommend_pct": -0.16,
-        "volume_ratio": 0.52,
-        "intraday_strategy": "📍 續抱觀察",
-        "priority": 3
-      },
-      {
-        "stock_code": "2610",
-        "stock_name": "華航",
-        "recommend_price": 22.8,
-        "intraday_price": 22.85,
-        "change_pct": 0.22,
-        "vs_recommend_pct": 0.22,
-        "volume_ratio": 0.8,
-        "intraday_strategy": "✅ 續抱",
-        "priority": 4
-      },
-      {
-        "stock_code": "2801",
-        "stock_name": "彰銀",
-        "recommend_price": 20.55,
-        "intraday_price": 20.7,
-        "change_pct": 0.73,
-        "vs_recommend_pct": 0.73,
-        "volume_ratio": 1.18,
-        "intraday_strategy": "✅ 續抱",
-        "priority": 4
-      }
-    ],
-    "performance_summary": {
-      "total": 6,
-      "gainers": 4,
-      "losers": 2,
-      "success_rate": 0.667,
-      "average_change": 1.18,
-      "best_performer": {
-        "code": "3037",
-        "name": "欣興",
-        "change_pct": 7.05
-      },
-      "worst_performer": {
-        "code": "2408",
-        "name": "南亞科",
-        "change_pct": -1.09
-      }
-    },
-    "track_b_findings": {
-      "strong_sectors": [
-        {
-          "sector": "封測產業",
-          "stocks": [
-            "日月光(3711) +5.50%",
-            "京元電(2449) +3.95%"
-          ],
-          "assessment": "延續強勢，但漲幅已高，不追高"
-        },
-        {
-          "sector": "PC/筆電產業",
-          "stocks": [
-            "華碩(2357) +4.77%",
-            "微星(2377) +3.16%",
-            "宏碁(2353) +2.64%"
-          ],
-          "assessment": "產業復甦訊號，明日可關注"
-        }
-      ],
-      "weak_sectors": [
-        {
-          "sector": "塑化產業",
-          "stocks": [
-            "南亞(1303) -6.28%",
-            "台化(1326) -6.05%",
-            "台塑(1301) -2.89%"
-          ],
-          "assessment": "油價利多結束，系統性回檔，短期避開"
-        },
-        {
-          "sector": "記憶體產業",
-          "stocks": [
-            "華邦電(2344) -3.26%",
-            "南亞科(2408) -1.09%"
-          ],
-          "assessment": "Micron -12.40% 壓力，觀察美股反應"
-        }
-      ],
-      "tomorrow_focus": [
-        "封測產業：如回檔1-2%可關注",
-        "PC產業：觀察是否延續強勢",
-        "記憶體：觀察Micron反應",
-        "塑化：等待油價反彈訊號"
-      ]
-    }
-  },
   "after_market_update": {
     "update_time": "2026-02-10 14:30",
     "market_status": "收盤",
@@ -633,5 +498,140 @@
         "增加美股龍頭股預警機制（Micron >-5%）"
       ]
     }
+  },
+  "intraday_analysis": {
+    "update_time": "2026-02-10 12:17",
+    "market_status": "盤中",
+    "performance_summary": {
+      "total": 6,
+      "gainers": 4,
+      "losers": 2,
+      "success_rate": 0.667,
+      "average_change": 1.18,
+      "best_performer": {
+        "code": "3037",
+        "name": "欣興",
+        "change_pct": 7.05
+      },
+      "worst_performer": {
+        "code": "2408",
+        "name": "南亞科",
+        "change_pct": -1.09
+      }
+    },
+    "track_b_findings": {
+      "strong_sectors": [
+        {
+          "sector": "封測產業",
+          "stocks": [
+            "日月光(3711) +5.50%",
+            "京元電(2449) +3.95%"
+          ],
+          "assessment": "延續強勢，但漲幅已高，不追高"
+        },
+        {
+          "sector": "PC/筆電產業",
+          "stocks": [
+            "華碩(2357) +4.77%",
+            "微星(2377) +3.16%",
+            "宏碁(2353) +2.64%"
+          ],
+          "assessment": "產業復甦訊號，明日可關注"
+        }
+      ],
+      "weak_sectors": [
+        {
+          "sector": "塑化產業",
+          "stocks": [
+            "南亞(1303) -6.28%",
+            "台化(1326) -6.05%",
+            "台塑(1301) -2.89%"
+          ],
+          "assessment": "油價利多結束，系統性回檔，短期避開"
+        },
+        {
+          "sector": "記憶體產業",
+          "stocks": [
+            "華邦電(2344) -3.26%",
+            "南亞科(2408) -1.09%"
+          ],
+          "assessment": "Micron -12.40% 壓力，觀察美股反應"
+        }
+      ],
+      "tomorrow_focus": [
+        "封測產業：如回檔1-2%可關注",
+        "PC產業：觀察是否延續強勢",
+        "記憶體：觀察Micron反應",
+        "塑化：等待油價反彈訊號"
+      ]
+    },
+    "track_a": [
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "recommend_price": 284.0,
+        "intraday_price": 285.0,
+        "volume_ratio": 0.92,
+        "priority": 4,
+        "intraday_change": 0.35,
+        "vs_recommend": 0.35,
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "3037",
+        "stock_name": "欣興",
+        "recommend_price": 347.5,
+        "intraday_price": 372.0,
+        "volume_ratio": 0.68,
+        "priority": 5,
+        "intraday_change": 7.05,
+        "vs_recommend": 7.05,
+        "strategy": "📈 部分獲利（已達標）"
+      },
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "recommend_price": 274.5,
+        "intraday_price": 271.5,
+        "volume_ratio": 0.7,
+        "priority": 3,
+        "intraday_change": -1.09,
+        "vs_recommend": -1.09,
+        "strategy": "📍 續抱觀察（Micron壓力）"
+      },
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "recommend_price": 62.4,
+        "intraday_price": 62.3,
+        "volume_ratio": 0.52,
+        "priority": 3,
+        "intraday_change": -0.16,
+        "vs_recommend": -0.16,
+        "strategy": "📍 續抱觀察"
+      },
+      {
+        "stock_code": "2610",
+        "stock_name": "華航",
+        "recommend_price": 22.8,
+        "intraday_price": 22.85,
+        "volume_ratio": 0.8,
+        "priority": 4,
+        "intraday_change": 0.22,
+        "vs_recommend": 0.22,
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2801",
+        "stock_name": "彰銀",
+        "recommend_price": 20.55,
+        "intraday_price": 20.7,
+        "volume_ratio": 1.18,
+        "priority": 4,
+        "intraday_change": 0.73,
+        "vs_recommend": 0.73,
+        "strategy": "✅ 續抱"
+      }
+    ]
   }
 }

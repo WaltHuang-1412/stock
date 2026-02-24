@@ -1,6 +1,6 @@
 ﻿# 盤前分析自動化腳本
 # 排程時間：每日 08:30（週一到週五）
-# 假日模式：自動切換為美股快照
+# 市場狀態由 check_market_status.py 判斷：full / snapshot / skip
 
 $ErrorActionPreference = "Continue"
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
@@ -17,29 +17,12 @@ if (Test-Path "$ProjectDir\automation\PAUSED") {
     exit 0
 }
 
-# === 週末/假日檢查 ===
-$DayOfWeek = (Get-Date).DayOfWeek
-$IsWeekend = ($DayOfWeek -eq 'Saturday' -or $DayOfWeek -eq 'Sunday')
+# === 市場狀態判斷（台股+美股行事曆）===
+$MarketStatus = (python "$ProjectDir\scripts\check_market_status.py" --date $Date --mode before_market --verbose 2>&1 | Select-Object -Last 1).Trim()
 
-$HolidayFile = "$ProjectDir\automation\holidays.json"
-$IsHoliday = $false
-$HolidayName = ""
-if (Test-Path $HolidayFile) {
-    $Holidays = Get-Content $HolidayFile -Raw -Encoding UTF8 | ConvertFrom-Json
-    $Year = (Get-Date).Year.ToString()
-    if ($Holidays.holidays.PSObject.Properties.Name -contains $Year) {
-        $HolidayDates = $Holidays.holidays.$Year | ForEach-Object { $_.date }
-        if ($HolidayDates -contains $Date) {
-            $HolidayName = ($Holidays.holidays.$Year | Where-Object { $_.date -eq $Date }).name
-            $IsHoliday = $true
-        }
-    }
-}
-
-# 週末或假日都進入假日模式
-if ($IsWeekend) {
-    $IsHoliday = $true
-    if (-not $HolidayName) { $HolidayName = "週末" }
+if ($MarketStatus -eq "skip") {
+    Write-Output "[$(Get-Date -Format 'HH:mm:ss')] 台股休市且美股無新交易日，跳過"
+    exit 0
 }
 
 # === 準備目錄 ===
@@ -50,11 +33,11 @@ New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
 $env:CLAUDECODE = $null
 Set-Location $ProjectDir
 
-if ($IsHoliday) {
+if ($MarketStatus -eq "snapshot") {
     # ========== 假日輕量模式：只抓美股快照 ==========
     $StartTime = Get-Date
     Write-Output "========================================" | Tee-Object -FilePath $LogFile
-    Write-Output "假日美股快照 - $Date ($HolidayName)" | Tee-Object -FilePath $LogFile -Append
+    Write-Output "假日美股快照 - $Date" | Tee-Object -FilePath $LogFile -Append
     Write-Output "開始時間: $(Get-Date -Format 'HH:mm:ss')" | Tee-Object -FilePath $LogFile -Append
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 
@@ -89,7 +72,7 @@ if ($IsHoliday) {
         if ((Test-Path $SummaryFile) -and (Get-Item $SummaryFile).Length -gt 0) {
             python "$ProjectDir\scripts\notify_line.py" --file $SummaryFile
         } else {
-            python "$ProjectDir\scripts\notify_line.py" "假日美股快照完成 ($Date $HolidayName)"
+            python "$ProjectDir\scripts\notify_line.py" "假日美股快照完成 ($Date)"
         }
     } else {
         Write-Output "假日快照有缺漏！(耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
@@ -104,6 +87,12 @@ if ($IsHoliday) {
     Write-Output "盤前分析自動化 - $Date" | Tee-Object -FilePath $LogFile -Append
     Write-Output "開始時間: $(Get-Date -Format 'HH:mm:ss')" | Tee-Object -FilePath $LogFile -Append
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
+
+    # === 累積摘要檢查（交易日間隔 > 1 天時自動觸發）===
+    python "$ProjectDir\scripts\holiday_cumulative_summary.py" --date $Date 2>&1 | Tee-Object -FilePath $LogFile -Append
+    if (Test-Path "$ProjectDir\data\$Date\cumulative_summary.json") {
+        Write-Output "[OK] 累積摘要已產生" | Tee-Object -FilePath $LogFile -Append
+    }
 
     $Prompt = Get-Content "$ProjectDir\automation\prompts\before_market.md" -Raw -Encoding UTF8
     claude -p $Prompt --dangerously-skip-permissions 2>&1 | Tee-Object -FilePath $LogFile -Append

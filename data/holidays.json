@@ -1,6 +1,6 @@
 {
-  "description": "台股休市日行事曆（每年需更新）",
-  "last_updated": "2026-02-13",
+  "description": "台股/美股休市日行事曆（每年需更新）",
+  "last_updated": "2026-02-24",
   "holidays": {
     "2026": [
       {"date": "2026-01-01", "name": "元旦"},
@@ -22,5 +22,19 @@
       {"date": "2026-10-10", "name": "國慶日"}
     ]
   },
-  "notes": "資料來源：台灣證券交易所。每年12月公布次年行事曆後請更新此檔案。"
+  "us_holidays": {
+    "2026": [
+      {"date": "2026-01-01", "name": "New Year's Day"},
+      {"date": "2026-01-19", "name": "Martin Luther King Jr. Day"},
+      {"date": "2026-02-16", "name": "Presidents' Day"},
+      {"date": "2026-04-03", "name": "Good Friday"},
+      {"date": "2026-05-25", "name": "Memorial Day"},
+      {"date": "2026-06-19", "name": "Juneteenth"},
+      {"date": "2026-07-03", "name": "Independence Day (observed)"},
+      {"date": "2026-09-07", "name": "Labor Day"},
+      {"date": "2026-11-26", "name": "Thanksgiving Day"},
+      {"date": "2026-12-25", "name": "Christmas Day"}
+    ]
+  },
+  "notes": "台股來源：台灣證券交易所。美股來源：NYSE。每年12月公布次年行事曆後請更新此檔案。"
 }

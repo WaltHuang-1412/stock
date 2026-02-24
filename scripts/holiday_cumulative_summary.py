@@ -22,7 +22,7 @@ if sys.platform == "win32":
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
-HOLIDAYS_FILE = PROJECT_DIR / "automation" / "holidays.json"
+HOLIDAYS_FILE = PROJECT_DIR / "data" / "holidays.json"
 
 # 龍頭股→台股產業對應（與 us_leader_alert.py 一致）
 LEADER_TW_INDUSTRIES = {

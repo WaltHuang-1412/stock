@@ -44,6 +44,22 @@
 **目標**：預測今日有機會的股票，給出明確進場策略
 **時間**：約 60-90 分鐘
 
+### 🔴 前置判斷：市場狀態（強制最先執行）
+
+```bash
+python3 scripts/check_market_status.py --date $(date +%Y-%m-%d) --mode before_market --verbose
+```
+
+| 輸出 | 意義 | 動作 |
+|------|------|------|
+| `full` | 台股開市 | 繼續 Step 0-10 完整流程 |
+| `snapshot` | 台股休市，但美股有新交易日 | 改跑假日快照（`automation/prompts/holiday_snapshot.md`） |
+| `skip` | 台股+美股都沒新交易日 | 不需執行，結束 |
+
+盤中/盤後同理：`--mode intraday` / `--mode after_market`（只區分 `full` 或 `skip`）
+
+---
+
 ### 🔴 Step 0: 建立 TodoWrite（強制第一步）
 
 ```bash

@@ -17,26 +17,11 @@ if (Test-Path "$ProjectDir\automation\PAUSED") {
     exit 0
 }
 
-# === 週末檢查 ===
-$DayOfWeek = (Get-Date).DayOfWeek
-if ($DayOfWeek -eq 'Saturday' -or $DayOfWeek -eq 'Sunday') {
-    Write-Output "[$(Get-Date -Format 'HH:mm:ss')] 週末，跳過盤中分析"
+# === 市場狀態判斷（台股行事曆）===
+$MarketStatus = (python "$ProjectDir\scripts\check_market_status.py" --date $Date --mode intraday 2>&1 | Select-Object -Last 1).Trim()
+if ($MarketStatus -ne "full") {
+    Write-Output "[$(Get-Date -Format 'HH:mm:ss')] 台股休市，跳過盤中分析"
     exit 0
-}
-
-# === 台股假日檢查（假日不跑盤中） ===
-$HolidayFile = "$ProjectDir\automation\holidays.json"
-if (Test-Path $HolidayFile) {
-    $Holidays = Get-Content $HolidayFile -Raw -Encoding UTF8 | ConvertFrom-Json
-    $Year = (Get-Date).Year.ToString()
-    if ($Holidays.holidays.PSObject.Properties.Name -contains $Year) {
-        $HolidayDates = $Holidays.holidays.$Year | ForEach-Object { $_.date }
-        if ($HolidayDates -contains $Date) {
-            $HolidayName = ($Holidays.holidays.$Year | Where-Object { $_.date -eq $Date }).name
-            Write-Output "[$(Get-Date -Format 'HH:mm:ss')] 台股休市 ($HolidayName)，跳過盤中分析"
-            exit 0
-        }
-    }
 }
 
 # === 前置檢查：盤前分析是否完成 ===
