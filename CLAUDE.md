@@ -759,7 +759,7 @@ python3 scripts/reversal_alert.py [推薦股1] [推薦股2] ...
 1. **分析報告**：`data/YYYY-MM-DD/before_market_analysis.md`
 2. **追蹤記錄**：`data/tracking/tracking_YYYY-MM-DD.json`
 
-**tracking.json 格式**：
+**tracking.json 格式（嚴格遵守欄位名稱，禁止使用其他名稱）**：
 ```json
 {
   "date": "2026-02-02",
@@ -1043,21 +1043,57 @@ python3 scripts/chip_analysis.py 1301 1326 6505 4766 4712 --days 10
 **建立/更新以下檔案**：
 
 1. **盤中分析報告**：`data/YYYY-MM-DD/intraday_analysis.md`
-2. **更新追蹤記錄**：`data/tracking/tracking_YYYY-MM-DD.json`（加入盤中價格）
+2. **更新追蹤記錄**：`data/tracking/tracking_YYYY-MM-DD.json`（加入盤中數據）
 
-**Track B 資料格式要求**：tracking.json 的 `track_b_discoveries` 每檔必須包含 `price`（盤中現價）：
+**盤中更新 tracking.json 格式（嚴格遵守欄位名稱）**：
+
+在 tracking.json 新增 `intraday_analysis` 物件：
 ```json
 {
-  "stock_code": "2801", "stock_name": "彰銀", "price": 27.55,
-  "intraday_change": "+3.86%", "volume_ratio": 3.4,
-  "chip_data": "7天連續買超+36K、外資+投信同步",
-  "action": "明日盤前重點評估"
+  "intraday_analysis": {
+    "analysis_time": "12:30",
+    "market_status": "全面強勢反彈",
+    "track_a": [
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "intraday_price": 54.2,
+        "intraday_change": "+3.2%",
+        "vs_recommend": "+3.2%",
+        "volume_ratio": 1.8,
+        "exit_signal": "Safe",
+        "strategy": "✅ 續抱"
+      }
+    ],
+    "track_b_discoveries": [
+      {
+        "stock_code": "2801",
+        "stock_name": "彰銀",
+        "price": 27.55,
+        "intraday_change": "+3.86%",
+        "volume_ratio": 3.4,
+        "chip_data": "7天連續買超+36K、外資+投信同步",
+        "action": "明日盤前重點評估"
+      }
+    ],
+    "missed_opportunities": [
+      "欣興(3037)+28.35%",
+      "華通(2313)+29.28%"
+    ]
+  }
 }
 ```
 
+**⚠️ 欄位名稱規範（禁止使用其他名稱）**：
+- 盤中價格：`intraday_price`（不是 `current_price`、`mid_price`）
+- 漲跌幅：`intraday_change`（不是 `change`、`change_pct`）
+- vs 推薦價：`vs_recommend`（不是 `vs_recommend_pct`、`profit_pct`）
+- 操作策略：`strategy`（不是 `intraday_strategy`、`action`）
+- 遺漏機會：`missed_opportunities`（字串陣列，格式 `"股名(代號)+漲幅%"`）
+
 **驗證**：
 - ✅ 兩個檔案都必須存在
-- ✅ tracking.json 必須更新 `intraday_price` 欄位
+- ✅ tracking.json 必須包含 `intraday_analysis.track_a` 陣列
 - ❌ **如果檔案不存在 = 分析未完成**
 
 **完成後**：更新 TodoWrite，標記 Step 5 為 `completed`
@@ -1271,20 +1307,49 @@ python3 scripts/holdings_pressure_analysis.py [失敗股1] [失敗股2] ...
 2. **更新追蹤記錄**：`data/tracking/tracking_YYYY-MM-DD.json`（加入收盤價+結果）
 3. **更新預測記錄**：`data/predictions/predictions.json`
 
-**tracking.json LINE 推送欄位要求**：
-- 每個 `result: "fail"` 的推薦股，必須補上 `fail_reason` 欄位（字串，說明失敗原因）
-- `after_market_analysis` 物件內必須包含 `tomorrow_recommendations` 陣列：
-  ```json
-  [{"stock_code": "2801", "stock_name": "彰銀", "score": 86, "rating": "⭐⭐⭐⭐⭐", "action": "新增"}]
-  ```
-- `after_market_analysis` 物件內必須包含 `removed_stocks` 陣列：
-  ```json
-  [{"stock_code": "2610", "stock_name": "華航", "reason": "油價利空+接近停損"}]
-  ```
+**盤後更新 tracking.json 格式（嚴格遵守欄位名稱）**：
+
+在每個 `recommendations[]` 項目中新增：
+```json
+{
+  "stock_code": "2303",
+  "stock_name": "聯電",
+  "recommend_price": 52.5,
+  "actual_close": 54.8,
+  "vs_recommend_pct": 4.4,
+  "result": "success",
+  "fail_reason": ""
+}
+```
+
+在 tracking.json 新增 `after_market_analysis` 物件：
+```json
+{
+  "after_market_analysis": {
+    "analysis_time": "14:45",
+    "accuracy": 0.80,
+    "total_recommended": 7,
+    "success_count": 5,
+    "fail_count": 2,
+    "tomorrow_recommendations": [
+      {"stock_code": "2801", "stock_name": "彰銀", "score": 86, "rating": "⭐⭐⭐⭐⭐", "action": "新增"}
+    ],
+    "removed_stocks": [
+      {"stock_code": "2610", "stock_name": "華航", "reason": "油價利空+接近停損"}
+    ]
+  }
+}
+```
+
+**⚠️ 欄位名稱規範（禁止使用其他名稱）**：
+- 收盤價：`actual_close`（不是 `closing_price`、`close_price`、`close`）
+- vs 推薦價：`vs_recommend_pct`（數字，如 4.4，不是 `"+4.4%"` 字串）
+- 驗證結果：`result`（值為 `"success"` 或 `"fail"`）
+- 失敗原因：`fail_reason`（字串，成功時留空字串）
 
 **驗證**：
 - ✅ 三個檔案都必須存在/更新
-- ✅ tracking.json 必須包含收盤價和驗證結果
+- ✅ tracking.json 每檔推薦必須包含 `actual_close` 和 `result`
 - ❌ **如果檔案不存在 = 分析未完成**
 
 **完成後**：更新 TodoWrite，標記 Step 6 為 `completed`
