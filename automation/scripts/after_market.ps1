@@ -93,6 +93,8 @@ Write-Output "" | Tee-Object -FilePath $LogFile -Append
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 if ($AllExist) {
     Write-Output "盤後分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
+    # 正規化 tracking.json 欄位名稱（防止 LINE 摘要讀取失敗）
+    python "$ProjectDir\scripts\normalize_tracking_fields.py" $Date 2>&1 | Tee-Object -FilePath $LogFile -Append
     # LINE 推送準確率 + 結果摘要（存檔後用 --file 送，保留換行）
     $SummaryFile = "$ProjectDir\automation\logs\${Date}_after_market_line.txt"
     python "$ProjectDir\scripts\generate_line_summary.py" after_market $Date 2>&1 | Out-File -FilePath $SummaryFile -Encoding utf8
