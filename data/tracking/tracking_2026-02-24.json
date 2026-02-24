@@ -21,7 +21,12 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "金融配息旺季+法人7天連買+外資投信同步",
-      "recommend_date": "2026-02-24"
+      "recommend_date": "2026-02-24",
+      "actual_close": 40.8,
+      "daily_change_pct": 2.51,
+      "vs_recommend_pct": -0.49,
+      "result": "fail",
+      "fail_reason": "方向正確(+2.51%)但入場價偏高(-0.49%)，金融股不應預設跳空>2%"
     },
     {
       "stock_code": "4958",
@@ -41,7 +46,11 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "ASML+5.64%/AMAT+5.25%半導體設備暴漲+PCB需求",
-      "recommend_date": "2026-02-24"
+      "recommend_date": "2026-02-24",
+      "actual_close": 211.5,
+      "daily_change_pct": 16.21,
+      "vs_recommend_pct": 7.91,
+      "result": "success"
     },
     {
       "stock_code": "2892",
@@ -62,7 +71,11 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "金融配息+ESG(S&P Global永續年鑑9度入選)",
-      "recommend_date": "2026-02-24"
+      "recommend_date": "2026-02-24",
+      "actual_close": 30.0,
+      "daily_change_pct": 3.45,
+      "vs_recommend_pct": 0.0,
+      "result": "success"
     },
     {
       "stock_code": "5880",
@@ -83,7 +96,12 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "公股行庫穩定配息+外資投信同步買超",
-      "recommend_date": "2026-02-24"
+      "recommend_date": "2026-02-24",
+      "actual_close": 24.05,
+      "daily_change_pct": 1.26,
+      "vs_recommend_pct": -1.03,
+      "result": "fail",
+      "fail_reason": "方向正確(+1.26%)但入場價偏高(-1.03%)，金融股不應預設跳空>2%"
     },
     {
       "stock_code": "2317",
@@ -104,7 +122,11 @@
       },
       "catalyst": "NVIDIA+4.78%+Apple+4.07%雙重催化",
       "risk_note": "Tesla-4.22% Level1(-5分)、5日漲+6.0%偏高",
-      "recommend_date": "2026-02-24"
+      "recommend_date": "2026-02-24",
+      "actual_close": 232.0,
+      "daily_change_pct": 6.18,
+      "vs_recommend_pct": 1.53,
+      "result": "success"
     },
     {
       "stock_code": "2382",
@@ -124,7 +146,11 @@
       },
       "catalyst": "NVIDIA+4.78%、AI伺服器需求",
       "risk_note": "量能不足(0.85x)，觀察量能回升",
-      "recommend_date": "2026-02-24"
+      "recommend_date": "2026-02-24",
+      "actual_close": 284.0,
+      "daily_change_pct": 0.0,
+      "vs_recommend_pct": 0.18,
+      "result": "success"
     },
     {
       "stock_code": "6213",
@@ -144,14 +170,37 @@
       },
       "catalyst": "ASML+5.64%/AMAT+5.25%半導體設備暴漲+CCL需求",
       "risk_note": "不在法人TOP50，法人力道偏弱",
-      "recommend_date": "2026-02-24"
+      "recommend_date": "2026-02-24",
+      "actual_close": 133.5,
+      "daily_change_pct": 13.14,
+      "vs_recommend_pct": 9.88,
+      "result": "success"
     }
   ],
   "holdings_alert": {
-    "2886": {"status": "續抱", "pnl_pct": -0.26, "institutional": "+47K連7天買超"},
-    "2330": {"status": "考慮部分獲利了結", "pnl_pct": 4246.83, "institutional": "-14K賣超"},
-    "3481": {"status": "考慮部分獲利", "pnl_pct": 28.12, "institutional": "+125K買超"},
-    "3231": {"status": "建議停損出場", "pnl_pct": -16.84, "institutional": "-6,729賣超"}
+    "2886": {
+      "status": "續抱",
+      "pnl_pct": -0.63,
+      "institutional": "+47K連7天買超",
+      "pressure": "🟢 低壓"
+    },
+    "2330": {
+      "status": "考慮部分獲利",
+      "close": 1965.0,
+      "change_pct": 8.26
+    },
+    "3481": {
+      "status": "盡快減碼",
+      "pnl_pct": 36.35,
+      "institutional": "-33K大賣",
+      "pressure": "🔴🔴 高壓"
+    },
+    "3231": {
+      "status": "立即出場",
+      "pnl_pct": -15.88,
+      "institutional": "-62K狂賣",
+      "pressure": "🔴🔴🔴 極高壓"
+    }
   },
   "excluded_stocks": [
     {
@@ -186,7 +235,12 @@
       {
         "us_stock": "AMD",
         "change_pct": -5.17,
-        "affected_tw_stocks": ["2454", "3661", "3443", "3707"],
+        "affected_tw_stocks": [
+          "2454",
+          "3661",
+          "3443",
+          "3707"
+        ],
         "score_adjustment": -15
       }
     ],
@@ -194,7 +248,13 @@
       {
         "us_stock": "Tesla",
         "change_pct": -4.22,
-        "affected_tw_stocks": ["2317", "1513", "1519", "2308", "1504"],
+        "affected_tw_stocks": [
+          "2317",
+          "1513",
+          "1519",
+          "2308",
+          "1504"
+        ],
         "score_adjustment": -5
       }
     ]
@@ -389,13 +449,137 @@
     ],
     "exit_signals": {
       "forced_stop_loss": [],
-      "near_target": ["4958", "6213"],
-      "watch_list": ["2382"]
+      "near_target": [
+        "4958",
+        "6213"
+      ],
+      "watch_list": [
+        "2382"
+      ]
     },
     "reversal_alerts": "全部 Level 0 (Safe)",
     "missed_opportunities": [
-      "欣興(3037)+28.35%", "華通(2313)+29.28%", "景碩(3189)+25.88%",
-      "南電(8046)+20.77%", "日月光(3711)+15.60%"
+      "欣興(3037)+28.35%",
+      "華通(2313)+29.28%",
+      "景碩(3189)+25.88%",
+      "南電(8046)+20.77%",
+      "日月光(3711)+15.60%"
     ]
-  }
+  },
+  "after_market_analysis": {
+    "analysis_time": "14:45",
+    "accuracy": 0.714,
+    "total_recommended": 7,
+    "success_count": 5,
+    "fail_count": 2,
+    "direction_accuracy": 1.0,
+    "avg_return_pct": 2.57,
+    "best_performer": "聯茂(6213) +9.88%",
+    "worst_performer": "合庫金(5880) -1.03%",
+    "tomorrow_recommendations": [
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "score": 88,
+        "rating": "⭐⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "score": 82,
+        "rating": "⭐⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "score": 78,
+        "rating": "⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "score": 76,
+        "rating": "⭐⭐⭐⭐",
+        "action": "續推(上調停損220)"
+      },
+      {
+        "stock_code": "4938",
+        "stock_name": "和碩",
+        "score": 72,
+        "rating": "⭐⭐⭐⭐",
+        "action": "新增"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "score": 70,
+        "rating": "⭐⭐⭐",
+        "action": "觀察"
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "score": 68,
+        "rating": "⭐⭐⭐",
+        "action": "新增"
+      }
+    ],
+    "removed_stocks": [
+      {
+        "stock_code": "4958",
+        "stock_name": "臻鼎-KY",
+        "reason": "接近目標價215(收盤211.5)，建議分批獲利"
+      },
+      {
+        "stock_code": "6213",
+        "stock_name": "聯茂",
+        "reason": "接近目標價135(收盤133.5)，建議分批獲利"
+      }
+    ],
+    "lessons_learned": [
+      "金融股推薦價不應預設跳空>2%",
+      "半導體設備暴漲需同步展開PCB/載板/封測產業",
+      "強勢催化日5日漲幅排除門檻應提高到+15%"
+    ]
+  },
+  "excluded_stocks_review": [
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "actual_close": 21.3,
+      "change_pct": -6.58,
+      "exclusion_correct": true
+    },
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科",
+      "actual_close": 1825.0,
+      "change_pct": -0.27,
+      "exclusion_correct": true
+    },
+    {
+      "stock_code": "2449",
+      "stock_name": "京元電",
+      "actual_close": 326.0,
+      "change_pct": 11.84,
+      "exclusion_correct": false
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "actual_close": 20.85,
+      "change_pct": 10.61,
+      "exclusion_correct": false
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "actual_close": 21.9,
+      "change_pct": 6.57,
+      "exclusion_correct": false
+    }
+  ]
 }
