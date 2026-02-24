@@ -20,14 +20,14 @@
       "industry": "IC載板",
       "catalyst": "台積電ADR +7.79%、日月光ADR +15.99%、AI晶片需求",
       "intraday_price": 369.0,
-      "intraday_change_pct": 0.96,
       "intraday_vs_recommend_pct": -0.67,
       "intraday_vol_ratio": 0.49,
       "intraday_strategy": "續抱觀察（量縮整理中）",
-      "closing_price": 369.0,
       "day_change_pct": 0.96,
       "vs_recommend_pct": -0.67,
-      "result": "fail"
+      "result": "fail",
+      "actual_close": 369.0,
+      "intraday_change": 0.96
     },
     {
       "stock_code": "2367",
@@ -47,14 +47,14 @@
       "industry": "AI伺服器PCB",
       "catalyst": "Super Micro +12.34%、Dell +7.56%、AI伺服器需求",
       "intraday_price": 51.7,
-      "intraday_change_pct": -10.24,
       "intraday_vs_recommend_pct": 0.19,
       "intraday_vol_ratio": 0.33,
       "intraday_strategy": "觀察停損（47元），不加碼",
-      "closing_price": 52.5,
       "day_change_pct": -8.85,
       "vs_recommend_pct": 1.74,
-      "result": "success"
+      "result": "success",
+      "actual_close": 52.5,
+      "intraday_change": -10.24
     },
     {
       "stock_code": "2449",
@@ -74,14 +74,14 @@
       "industry": "封裝測試",
       "catalyst": "日月光ADR +15.99%、CoWoS封裝測試需求",
       "intraday_price": 317.0,
-      "intraday_change_pct": 13.01,
       "intraday_vs_recommend_pct": 4.97,
       "intraday_vol_ratio": 0.74,
       "intraday_strategy": "續抱，不加碼（已大漲接近目標）",
-      "closing_price": 313.5,
       "day_change_pct": 11.76,
       "vs_recommend_pct": 3.81,
-      "result": "success"
+      "result": "success",
+      "actual_close": 313.5,
+      "intraday_change": 13.01
     },
     {
       "stock_code": "2330",
@@ -102,14 +102,14 @@
       "catalyst": "台積電ADR +7.79%、AI晶片需求",
       "risk_note": "已漲 +5.32%，建議等回檔 1850-1870 再進",
       "intraday_price": 1925.0,
-      "intraday_change_pct": 9.07,
       "intraday_vs_recommend_pct": 2.39,
       "intraday_vol_ratio": 0.77,
       "intraday_strategy": "續抱（ADR完全兌現）",
-      "closing_price": 1915.0,
       "day_change_pct": 8.5,
       "vs_recommend_pct": 1.86,
-      "result": "success"
+      "result": "success",
+      "actual_close": 1915.0,
+      "intraday_change": 9.07
     },
     {
       "stock_code": "2313",
@@ -130,14 +130,14 @@
       "catalyst": "AI伺服器、半導體PCB需求",
       "risk_note": "動能 +86.4%（增強中），小倉位試探",
       "intraday_price": 186.5,
-      "intraday_change_pct": 5.97,
       "intraday_vs_recommend_pct": 1.91,
       "intraday_vol_ratio": 0.76,
       "intraday_strategy": "續抱",
-      "closing_price": 186.5,
       "day_change_pct": 5.97,
       "vs_recommend_pct": 1.91,
-      "result": "success"
+      "result": "success",
+      "actual_close": 186.5,
+      "intraday_change": 5.97
     },
     {
       "stock_code": "2454",
@@ -158,14 +158,14 @@
       "catalyst": "Marvell +8.56%、Broadcom +6.28%、網通晶片需求",
       "risk_note": "昨日法人小賣 -193（態度轉變），動能 +85.6%，小倉位",
       "intraday_price": 1855.0,
-      "intraday_change_pct": 4.8,
       "intraday_vs_recommend_pct": 0.54,
       "intraday_vol_ratio": 0.47,
       "intraday_strategy": "續抱（量縮上漲）",
-      "closing_price": 1855.0,
       "day_change_pct": 4.8,
       "vs_recommend_pct": 0.54,
-      "result": "success"
+      "result": "success",
+      "actual_close": 1855.0,
+      "intraday_change": 4.8
     }
   ],
   "intraday_summary": {
@@ -298,7 +298,7 @@
     "max_industry_pct": 0.5,
     "diversification_check": "PASS"
   },
-  "after_market_summary": {
+  "after_market_analysis": {
     "taiex_close": 22605.71,
     "taiex_change_pct": 5.67,
     "total_recommended": 6,

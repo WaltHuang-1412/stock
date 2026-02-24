@@ -22,7 +22,6 @@
       },
       "catalyst": "金融股配息題材+法人年後卡位",
       "recommend_date": "2026-02-23",
-      "closing_price": 40.95,
       "vs_recommend_pct": 2.25,
       "result": "success",
       "intraday": {
@@ -32,7 +31,8 @@
         "exit_signal": "safe",
         "intraday_strategy": "續抱",
         "institutional_today": "+10,949（外資+12,662、投信-298）"
-      }
+      },
+      "actual_close": 40.95
     },
     {
       "stock_code": "2883",
@@ -54,7 +54,6 @@
       },
       "catalyst": "外資連續7天爆買+192K、金融配息題材",
       "recommend_date": "2026-02-23",
-      "closing_price": 20.55,
       "vs_recommend_pct": 6.75,
       "result": "success",
       "intraday": {
@@ -64,7 +63,8 @@
         "exit_signal": "safe",
         "intraday_strategy": "部分獲利30-50%",
         "institutional_today": "+40,758（外資+43,057、投信+425）"
-      }
+      },
+      "actual_close": 20.55
     },
     {
       "stock_code": "2382",
@@ -86,7 +86,6 @@
       },
       "catalyst": "SMCI+6.54%、Dell+8.38%、CSP投資AI伺服器不減",
       "recommend_date": "2026-02-23",
-      "closing_price": 283.5,
       "vs_recommend_pct": -0.87,
       "result": "fail",
       "fail_reason": "AI伺服器催化（SMCI+6.54%/Dell+8.38%）效果不如預期，量比0.85x量能不足，資金優先流入金融/PCB",
@@ -97,7 +96,8 @@
         "exit_signal": "safe",
         "intraday_strategy": "續抱",
         "institutional_today": "+5,028（外資+5,350、投信+42）"
-      }
+      },
+      "actual_close": 283.5
     },
     {
       "stock_code": "2317",
@@ -119,7 +119,6 @@
       },
       "catalyst": "AI伺服器龍頭、SMCI+6.54%、Dell+8.38%",
       "recommend_date": "2026-02-23",
-      "closing_price": 228.5,
       "vs_recommend_pct": 0.66,
       "result": "success",
       "intraday": {
@@ -129,7 +128,8 @@
         "exit_signal": "safe",
         "intraday_strategy": "續抱",
         "institutional_today": "+33,444（外資+31,320、投信+1,784）"
-      }
+      },
+      "actual_close": 228.5
     },
     {
       "stock_code": "5880",
@@ -151,7 +151,6 @@
       },
       "catalyst": "公股行庫穩定配息+法人卡位",
       "recommend_date": "2026-02-23",
-      "closing_price": 24.25,
       "vs_recommend_pct": 1.46,
       "result": "success",
       "intraday": {
@@ -161,7 +160,8 @@
         "exit_signal": "safe",
         "intraday_strategy": "續抱",
         "institutional_today": "+10,500（外資+9,199、投信+561）"
-      }
+      },
+      "actual_close": 24.25
     },
     {
       "stock_code": "6213",
@@ -183,7 +183,6 @@
       },
       "catalyst": "AMAT+14.31%、半導體設備暴漲、CCL為半導體關鍵材料",
       "recommend_date": "2026-02-23",
-      "closing_price": 121.5,
       "vs_recommend_pct": 0.41,
       "result": "success",
       "intraday": {
@@ -193,7 +192,8 @@
         "exit_signal": "safe",
         "intraday_strategy": "續抱",
         "institutional_today": "+6,792（外資+6,724、投信+0）"
-      }
+      },
+      "actual_close": 121.5
     },
     {
       "stock_code": "2449",
@@ -216,7 +216,6 @@
       "catalyst": "費半+2.17%、CoWoS封裝測試需求",
       "risk_note": "已大漲11.8%，建議等回檔300-310再進",
       "recommend_date": "2026-02-23",
-      "closing_price": 316.5,
       "vs_recommend_pct": 0.96,
       "result": "success",
       "intraday": {
@@ -226,7 +225,8 @@
         "exit_signal": "caution_consecutive_up_5d",
         "intraday_strategy": "續抱但注意回調",
         "institutional_today": "+5,179（外資+4,808、投信+543）"
-      }
+      },
+      "actual_close": 316.5
     },
     {
       "stock_code": "2610",
@@ -249,7 +249,6 @@
       "catalyst": "外資連續7天買超+81K",
       "risk_note": "油價+5.79%為航空利空，小倉位試探",
       "recommend_date": "2026-02-23",
-      "closing_price": 21.95,
       "vs_recommend_pct": -3.3,
       "result": "fail",
       "fail_reason": "油價+5.79%為航空股直接利空（燃油成本上升），跌破MA5/MA10，即使法人7天連買+81K也無法對抗外部利空",
@@ -261,7 +260,8 @@
         "intraday_strategy": "觀望不加碼，嚴守停損21.0",
         "institutional_today": "+9,070（外資+8,993、投信-836）",
         "note": "三條件均未觸發強制停損（停損21.0未觸及/法人Level0Safe），但技術面跌破MA5/MA10"
-      }
+      },
+      "actual_close": 21.95
     }
   ],
   "excluded_stocks": [
@@ -391,26 +391,10 @@
       }
     ],
     "missed_opportunities": [
-      {
-        "stock": "景碩(3189)",
-        "change": "+9.98%",
-        "excluded_reason": "反轉警告"
-      },
-      {
-        "stock": "華邦電(2344)",
-        "change": "+9.95%",
-        "excluded_reason": "外資+投信同步賣超"
-      },
-      {
-        "stock": "欣興(3037)",
-        "change": "+9.89%",
-        "excluded_reason": "未在TOP50/時事展開"
-      },
-      {
-        "stock": "國巨(2327)",
-        "change": "+9.96%",
-        "excluded_reason": "未評估"
-      }
+      "?(?)+9.98%",
+      "?(?)+9.95%",
+      "?(?)+9.89%",
+      "?(?)+9.96%"
     ]
   },
   "industry_diversification": {
@@ -454,16 +438,62 @@
       }
     },
     "tomorrow_recommendations": [
-      {"stock_code": "2801", "stock_name": "彰銀", "score": 86, "rating": "⭐⭐⭐⭐⭐", "action": "新增"},
-      {"stock_code": "2886", "stock_name": "兆豐金", "score": 85, "rating": "⭐⭐⭐⭐⭐", "action": "續推"},
-      {"stock_code": "2317", "stock_name": "鴻海", "score": 82, "rating": "⭐⭐⭐⭐", "action": "續推"},
-      {"stock_code": "5880", "stock_name": "合庫金", "score": 80, "rating": "⭐⭐⭐⭐", "action": "續推"},
-      {"stock_code": "2382", "stock_name": "廣達", "score": 79, "rating": "⭐⭐⭐⭐", "action": "續推觀察"},
-      {"stock_code": "6213", "stock_name": "聯茂", "score": 78, "rating": "⭐⭐⭐⭐", "action": "續推"},
-      {"stock_code": "2449", "stock_name": "京元電", "score": 73, "rating": "⭐⭐⭐", "action": "降級"}
+      {
+        "stock_code": "2801",
+        "stock_name": "彰銀",
+        "score": 86,
+        "rating": "⭐⭐⭐⭐⭐",
+        "action": "新增"
+      },
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "score": 85,
+        "rating": "⭐⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "score": 82,
+        "rating": "⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "score": 80,
+        "rating": "⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "score": 79,
+        "rating": "⭐⭐⭐⭐",
+        "action": "續推觀察"
+      },
+      {
+        "stock_code": "6213",
+        "stock_name": "聯茂",
+        "score": 78,
+        "rating": "⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電",
+        "score": 73,
+        "rating": "⭐⭐⭐",
+        "action": "降級"
+      }
     ],
     "removed_stocks": [
-      {"stock_code": "2610", "stock_name": "華航", "reason": "油價+5.79%利空+接近停損"}
+      {
+        "stock_code": "2610",
+        "stock_name": "華航",
+        "reason": "油價+5.79%利空+接近停損"
+      }
     ]
   }
 }

@@ -14,7 +14,6 @@
       "stock_code": "3481",
       "stock_name": "群創",
       "recommend_price": 16.5,
-      "current_price": 16.35,
       "target_price": 18.0,
       "stop_loss": 15.5,
       "position": "15-20%",
@@ -39,15 +38,15 @@
         ]
       },
       "recommend_date": "2025-12-03",
-      "closing_price": 14.199999809265137,
       "vs_recommend_pct": -13.94,
-      "result": "fail"
+      "result": "fail",
+      "actual_close": 14.199999809265137,
+      "intraday_price": 16.35
     },
     {
       "stock_code": "2330",
       "stock_name": "台積電",
       "recommend_price": 1080,
-      "current_price": 1075,
       "target_price": 1120,
       "stop_loss": 1040,
       "position": "15-20%",
@@ -72,15 +71,15 @@
         ]
       },
       "recommend_date": "2025-12-03",
-      "closing_price": 1450.0,
       "vs_recommend_pct": 34.26,
-      "result": "success"
+      "result": "success",
+      "actual_close": 1450.0,
+      "intraday_price": 1075
     },
     {
       "stock_code": "1303",
       "stock_name": "南亞",
       "recommend_price": 54.0,
-      "current_price": 53.8,
       "target_price": 58.0,
       "stop_loss": 51.0,
       "position": "10-15%",
@@ -105,15 +104,15 @@
         ]
       },
       "recommend_date": "2025-12-03",
-      "closing_price": 67.69999694824219,
       "vs_recommend_pct": 25.37,
-      "result": "success"
+      "result": "success",
+      "actual_close": 67.69999694824219,
+      "intraday_price": 53.8
     },
     {
       "stock_code": "2382",
       "stock_name": "廣達",
       "recommend_price": 340,
-      "current_price": 338,
       "target_price": 360,
       "stop_loss": 325,
       "position": "10-15%",
@@ -138,15 +137,15 @@
         ]
       },
       "recommend_date": "2025-12-03",
-      "closing_price": 292.5,
       "vs_recommend_pct": -13.97,
-      "result": "fail"
+      "result": "fail",
+      "actual_close": 292.5,
+      "intraday_price": 338
     },
     {
       "stock_code": "2801",
       "stock_name": "彰銀",
       "recommend_price": 20.0,
-      "current_price": 19.95,
       "target_price": 21.5,
       "stop_loss": 19.0,
       "position": "10-15%",
@@ -171,9 +170,10 @@
         ]
       },
       "recommend_date": "2025-12-03",
-      "closing_price": 20.450000762939453,
       "vs_recommend_pct": 2.25,
-      "result": "success"
+      "result": "success",
+      "actual_close": 20.450000762939453,
+      "intraday_price": 19.95
     }
   ],
   "avoid_stocks": [

@@ -26,9 +26,19 @@
     "partial": 1,
     "fail": 2,
     "total": 7,
-    "success_stocks": ["2308", "3037", "2356", "2618"],
-    "partial_stocks": ["2887"],
-    "fail_stocks": ["2382", "2609"]
+    "success_stocks": [
+      "2308",
+      "3037",
+      "2356",
+      "2618"
+    ],
+    "partial_stocks": [
+      "2887"
+    ],
+    "fail_stocks": [
+      "2382",
+      "2609"
+    ]
   },
   "market_summary": {
     "philadelphia_semi": "+1.56%",
@@ -48,13 +58,13 @@
       "recommend_price": "開盤價附近",
       "prev_close": 1130.0,
       "actual_close": 1238.14,
-      "change_pct": 9.57,
       "institutional_flow": 2588,
       "result": "success",
       "stop_loss": "-5%",
       "target_price": "+8-10%",
       "position": "10-15%",
-      "reason": "AI電源供應龍頭、受惠AI伺服器需求"
+      "reason": "AI電源供應龍頭、受惠AI伺服器需求",
+      "vs_recommend_pct": 9.57
     },
     {
       "stock_code": "3037",
@@ -63,14 +73,14 @@
       "score": 82,
       "recommend_price": "開盤價附近",
       "prev_close": 308.0,
-      "actual_close": 401.20,
-      "change_pct": 30.26,
+      "actual_close": 401.2,
       "institutional_flow": 7689,
       "result": "success",
       "stop_loss": "-5%",
       "target_price": "+8-10%",
       "position": "10-15%",
-      "reason": "費半+1.56%、ABF載板龍頭受惠"
+      "reason": "費半+1.56%、ABF載板龍頭受惠",
+      "vs_recommend_pct": 30.26
     },
     {
       "stock_code": "2356",
@@ -80,13 +90,13 @@
       "recommend_price": "58-59",
       "prev_close": 44.8,
       "actual_close": 47.49,
-      "change_pct": 6.00,
       "institutional_flow": 2732,
       "result": "success",
       "stop_loss": 55.5,
       "target_price": 63,
       "position": "10-15%",
-      "reason": "外資連3日買、累計+13K、5日漲幅僅+1.5%"
+      "reason": "外資連3日買、累計+13K、5日漲幅僅+1.5%",
+      "vs_recommend_pct": 6.0
     },
     {
       "stock_code": "2887",
@@ -94,16 +104,16 @@
       "type": "stable",
       "score": 76,
       "recommend_price": "開盤價附近",
-      "prev_close": 22.90,
+      "prev_close": 22.9,
       "actual_close": 23.75,
-      "change_pct": 3.70,
       "institutional_flow": -20601,
       "result": "partial",
       "stop_loss": "-5%",
       "target_price": "+6-8%",
       "position": "10-15%",
       "reason": "美股跌、防禦性佳、法人大買超+54K",
-      "notes": "上漲但法人-20K大賣超，散戶追高"
+      "notes": "上漲但法人-20K大賣超，散戶追高",
+      "vs_recommend_pct": 3.7
     },
     {
       "stock_code": "2382",
@@ -113,13 +123,13 @@
       "recommend_price": "開盤價附近",
       "prev_close": 277.5,
       "actual_close": 275.0,
-      "change_pct": -0.90,
       "institutional_flow": -865,
       "result": "fail",
       "stop_loss": "-5%",
       "target_price": "+8%",
       "position": "5-10%",
-      "reason": "AI伺服器龍頭、輝達合作夥伴"
+      "reason": "AI伺服器龍頭、輝達合作夥伴",
+      "vs_recommend_pct": -0.9
     },
     {
       "stock_code": "2618",
@@ -129,13 +139,13 @@
       "recommend_price": "42.5-43",
       "prev_close": 38.2,
       "actual_close": 39.27,
-      "change_pct": 2.80,
       "institutional_flow": 12863,
       "result": "success",
       "stop_loss": 40.5,
       "target_price": 46,
       "position": "5-10%",
-      "reason": "外資+73K累計、春節航空旺季、但投信對決"
+      "reason": "外資+73K累計、春節航空旺季、但投信對決",
+      "vs_recommend_pct": 2.8
     },
     {
       "stock_code": "2609",
@@ -144,25 +154,49 @@
       "score": 70,
       "recommend_price": "84-85",
       "prev_close": 55.1,
-      "actual_close": 54.90,
-      "change_pct": -0.36,
+      "actual_close": 54.9,
       "institutional_flow": 3085,
       "result": "fail",
       "stop_loss": 80,
       "target_price": 92,
       "position": "5%",
-      "reason": "外資+21K累計、5日-0.5%法人買但股價跌"
+      "reason": "外資+21K累計、5日-0.5%法人買但股價跌",
+      "vs_recommend_pct": -0.36
     }
   ],
   "avoid_stocks": [
-    {"stock_code": "2303", "reason": "5日已+25.6%追高風險"},
-    {"stock_code": "2344", "reason": "昨日+13%今日可能回檔"},
-    {"stock_code": "3481", "reason": "法人-36K大賣"}
+    {
+      "stock_code": "2303",
+      "reason": "5日已+25.6%追高風險"
+    },
+    {
+      "stock_code": "2344",
+      "reason": "昨日+13%今日可能回檔"
+    },
+    {
+      "stock_code": "3481",
+      "reason": "法人-36K大賣"
+    }
   ],
   "holdings_alerts": [
-    {"stock_code": "3231", "alert": "critical", "action": "今日出場", "reason": "已破停損-12.66%，法人-32K"},
-    {"stock_code": "3481", "alert": "high", "action": "設停損25元", "reason": "法人-36K大賣"},
-    {"stock_code": "2886", "alert": "medium", "action": "觀察", "reason": "法人-12K，破39.95減碼"}
+    {
+      "stock_code": "3231",
+      "alert": "critical",
+      "action": "今日出場",
+      "reason": "已破停損-12.66%，法人-32K"
+    },
+    {
+      "stock_code": "3481",
+      "alert": "high",
+      "action": "設停損25元",
+      "reason": "法人-36K大賣"
+    },
+    {
+      "stock_code": "2886",
+      "alert": "medium",
+      "action": "觀察",
+      "reason": "法人-12K，破39.95減碼"
+    }
   ],
   "yesterday_verification": {
     "accuracy": "75%",
@@ -170,10 +204,26 @@
     "fail": 1,
     "total": 4,
     "results": [
-      {"stock_code": "2883", "result": "success", "change": "+3.43%"},
-      {"stock_code": "2882", "result": "success", "change": "+2.54%"},
-      {"stock_code": "2344", "result": "success", "change": "+13.23%"},
-      {"stock_code": "2002", "result": "fail", "change": "-1.29%"}
+      {
+        "stock_code": "2883",
+        "result": "success",
+        "change": "+3.43%"
+      },
+      {
+        "stock_code": "2882",
+        "result": "success",
+        "change": "+2.54%"
+      },
+      {
+        "stock_code": "2344",
+        "result": "success",
+        "change": "+13.23%"
+      },
+      {
+        "stock_code": "2002",
+        "result": "fail",
+        "change": "-1.29%"
+      }
     ]
   },
   "key_lessons": [

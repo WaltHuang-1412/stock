@@ -26,7 +26,6 @@
       "stock_name": "凱基金",
       "recommend_price": 17.4,
       "close_price": 17.35,
-      "change_pct": -0.29,
       "target_price": 18.5,
       "stop_loss": 16.5,
       "position": "續抱",
@@ -44,11 +43,12 @@
       "user_cost": 15.95,
       "user_gain_loss_pct": 8.8,
       "result": "fail",
-      "result_reason": "Fed觀望氛圍，外資轉賣但投信續買",
       "status": "holding",
       "rank": 1,
-      "closing_price": 17.35,
-      "recommend_date": "2025-12-18"
+      "recommend_date": "2025-12-18",
+      "actual_close": 17.35,
+      "vs_recommend_pct": -0.29,
+      "fail_reason": "Fed觀望氛圍，外資轉賣但投信續買"
     },
     {
       "type": "stable",
@@ -56,7 +56,6 @@
       "stock_name": "聯電",
       "recommend_price": 49.5,
       "close_price": 50.3,
-      "change_pct": -0.2,
       "target_price": 52.0,
       "stop_loss": 47.5,
       "position": "5-10%",
@@ -72,11 +71,12 @@
       },
       "reason": "外資連續13天買超，聯電ADR+1.39%逆勢上漲",
       "result": "success",
-      "result_reason": "外資續買+22K，抗跌",
       "status": "pending",
       "rank": 2,
-      "closing_price": 50.3,
-      "recommend_date": "2025-12-18"
+      "recommend_date": "2025-12-18",
+      "actual_close": 50.3,
+      "vs_recommend_pct": -0.2,
+      "fail_reason": "外資續買+22K，抗跌"
     },
     {
       "type": "stable",
@@ -84,7 +84,6 @@
       "stock_name": "彰銀",
       "recommend_price": 16.1,
       "close_price": 20.75,
-      "change_pct": 0.24,
       "target_price": 17.0,
       "stop_loss": 15.5,
       "position": "5-10%",
@@ -100,11 +99,12 @@
       },
       "reason": "法人買但還沒漲（5日-0.2%），最佳佈局時機",
       "result": "success",
-      "result_reason": "法人續買，小漲抗跌",
       "status": "pending",
       "rank": 3,
-      "closing_price": 20.75,
-      "recommend_date": "2025-12-18"
+      "recommend_date": "2025-12-18",
+      "actual_close": 20.75,
+      "vs_recommend_pct": 0.24,
+      "fail_reason": "法人續買，小漲抗跌"
     },
     {
       "type": "stable",
@@ -112,7 +112,6 @@
       "stock_name": "富邦金",
       "recommend_price": 91.5,
       "close_price": 96.8,
-      "change_pct": -0.51,
       "target_price": 95.0,
       "stop_loss": 89.0,
       "position": "5-10%",
@@ -128,11 +127,12 @@
       },
       "reason": "法人買但還沒漲（5日-0.1%），壽險龍頭",
       "result": "success",
-      "result_reason": "壽險股觀望，法人僅小買",
       "status": "pending",
       "rank": 4,
-      "closing_price": 96.8,
-      "recommend_date": "2025-12-18"
+      "recommend_date": "2025-12-18",
+      "actual_close": 96.8,
+      "vs_recommend_pct": -0.51,
+      "fail_reason": "壽險股觀望，法人僅小買"
     },
     {
       "type": "positioning",
@@ -140,7 +140,6 @@
       "stock_name": "慧洋-KY",
       "recommend_price": 67.0,
       "close_price": 67.2,
-      "change_pct": -1.61,
       "target_price": 72.0,
       "stop_loss": 64.0,
       "position": "5%",
@@ -156,11 +155,12 @@
       },
       "reason": "非金融佈局股：法人連3日買+5日漲幅-0.4%，散裝航運",
       "result": "success",
-      "result_reason": "法人反轉賣-688，航運弱勢",
       "status": "failed",
       "rank": 5,
-      "closing_price": 67.2,
-      "recommend_date": "2025-12-18"
+      "recommend_date": "2025-12-18",
+      "actual_close": 67.2,
+      "vs_recommend_pct": -1.61,
+      "fail_reason": "法人反轉賣-688，航運弱勢"
     },
     {
       "type": "positioning",
@@ -168,7 +168,6 @@
       "stock_name": "華東",
       "recommend_price": 27.0,
       "close_price": 51.6,
-      "change_pct": 0.58,
       "target_price": 30.0,
       "stop_loss": 25.5,
       "position": "觀望",
@@ -184,11 +183,12 @@
       },
       "reason": "非金融佈局股：法人連3日買+5日跌幅-5.7%",
       "result": "success",
-      "result_reason": "法人連4日買超，抗跌上漲",
       "status": "success",
       "rank": 6,
-      "closing_price": 51.6,
-      "recommend_date": "2025-12-18"
+      "recommend_date": "2025-12-18",
+      "actual_close": 51.6,
+      "vs_recommend_pct": 0.58,
+      "fail_reason": "法人連4日買超，抗跌上漲"
     }
   ],
   "avoid_stocks": [

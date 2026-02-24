@@ -22,7 +22,6 @@
       "stock_code": "2887",
       "stock_name": "台新金",
       "recommend_price": 19.35,
-      "closing_price": 19.35,
       "closing_change": -0.26,
       "target_price": 20.5,
       "stop_loss": 18.5,
@@ -34,15 +33,15 @@
       "institutional_trend": "5天連買",
       "reason": "金融龍頭，法人連續狂買，防禦屬性強",
       "result": "success",
-      "result_note": "法人續買但收盤微跌",
-      "recommend_date": "2025-12-15"
+      "recommend_date": "2025-12-15",
+      "actual_close": 19.35,
+      "fail_reason": "法人續買但收盤微跌"
     },
     {
       "type": "stable",
       "stock_code": "2883",
       "stock_name": "凱基金",
       "recommend_price": 17.05,
-      "closing_price": 17.15,
       "closing_change": 0.59,
       "target_price": 18.0,
       "stop_loss": 16.0,
@@ -54,17 +53,17 @@
       "institutional_trend": "5天連買",
       "reason": "連續買超，用戶持股獲利中",
       "result": "success",
-      "result_note": "逆勢上漲+0.59%",
       "user_cost": 15.95,
       "user_gain_loss_pct": 7.52,
-      "recommend_date": "2025-12-15"
+      "recommend_date": "2025-12-15",
+      "actual_close": 17.15,
+      "fail_reason": "逆勢上漲+0.59%"
     },
     {
       "type": "stable",
       "stock_code": "2886",
       "stock_name": "兆豐金",
       "recommend_price": 41.15,
-      "closing_price": 41.45,
       "closing_change": 0.73,
       "target_price": 43.0,
       "stop_loss": 40.0,
@@ -76,17 +75,17 @@
       "institutional_trend": "3天連買",
       "reason": "純銀行龍頭，法人持續買超",
       "result": "success",
-      "result_note": "強勢上漲+0.73%",
       "user_cost": 41.06,
       "user_gain_loss_pct": 0.95,
-      "recommend_date": "2025-12-15"
+      "recommend_date": "2025-12-15",
+      "actual_close": 41.45,
+      "fail_reason": "強勢上漲+0.73%"
     },
     {
       "type": "stable",
       "stock_code": "2891",
       "stock_name": "中信金",
       "recommend_price": 46.5,
-      "closing_price": 46.75,
       "closing_change": 0.54,
       "target_price": 48.0,
       "stop_loss": 44.0,
@@ -98,15 +97,15 @@
       "institutional_trend": "法人轉賣",
       "reason": "綜合型金融",
       "result": "success",
-      "result_note": "散戶買盤支撐，法人轉賣但股價仍漲",
-      "recommend_date": "2025-12-15"
+      "recommend_date": "2025-12-15",
+      "actual_close": 46.75,
+      "fail_reason": "散戶買盤支撐，法人轉賣但股價仍漲"
     },
     {
       "type": "intraday",
       "stock_code": "2303",
       "stock_name": "聯電",
       "recommend_price": 48.0,
-      "closing_price": 48.85,
       "closing_change": 0.1,
       "target_price": 52.0,
       "stop_loss": 45.0,
@@ -118,8 +117,9 @@
       "institutional_trend": "🔥 9天連買！",
       "reason": "盤中低接建議，8天連買+縮量下跌=洗盤",
       "result": "success",
-      "result_note": "低接成功，收盤反彈+0.10%，法人續買+15.7K",
-      "recommend_date": "2025-12-15"
+      "recommend_date": "2025-12-15",
+      "actual_close": 48.85,
+      "fail_reason": "低接成功，收盤反彈+0.10%，法人續買+15.7K"
     }
   ],
   "avoid_stocks": [

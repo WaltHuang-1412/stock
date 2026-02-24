@@ -18,7 +18,6 @@
       "recommend_price": 32.0,
       "buy_date": "2025-12-09",
       "recommend_date": "2025-12-09",
-      "current_price": null,
       "target_price": 34.0,
       "stop_loss": 30.5,
       "position": "15-20%",
@@ -76,9 +75,10 @@
           "notes": "⚠️ 法人買賣互抵 追蹤中 (1/7日)"
         }
       ],
-      "closing_price": 32.099998474121094,
       "vs_recommend_pct": 0.31,
-      "result": "success"
+      "result": "success",
+      "actual_close": 32.099998474121094,
+      "intraday_price": null
     },
     {
       "stock_code": "3711",
@@ -86,7 +86,6 @@
       "recommend_price": 167.0,
       "buy_date": "2025-12-09",
       "recommend_date": "2025-12-09",
-      "current_price": null,
       "target_price": 180.0,
       "stop_loss": 158.0,
       "position": "15-20%",
@@ -130,9 +129,10 @@
           "notes": "✅ 達目標價180.0元（+43.71%）"
         }
       ],
-      "closing_price": 240.0,
       "vs_recommend_pct": 43.71,
-      "result": "success"
+      "result": "success",
+      "actual_close": 240.0,
+      "intraday_price": null
     },
     {
       "stock_code": "2330",
@@ -140,7 +140,6 @@
       "recommend_price": 1090.0,
       "buy_date": "2025-12-09",
       "recommend_date": "2025-12-09",
-      "current_price": null,
       "target_price": 1150.0,
       "stop_loss": 1030.0,
       "position": "10-15%",
@@ -184,9 +183,10 @@
           "notes": "✅ 達目標價1150.0元（+35.78%）"
         }
       ],
-      "closing_price": 1480.0,
       "vs_recommend_pct": 35.78,
-      "result": "success"
+      "result": "success",
+      "actual_close": 1480.0,
+      "intraday_price": null
     },
     {
       "stock_code": "2337",
@@ -194,7 +194,6 @@
       "recommend_price": 42.5,
       "buy_date": "2025-12-09",
       "recommend_date": "2025-12-09",
-      "current_price": null,
       "target_price": 46.0,
       "stop_loss": 40.0,
       "position": "10-15%",
@@ -239,9 +238,10 @@
           "notes": "🚨 觸發停損40.0元（-8.82%）"
         }
       ],
-      "closing_price": 38.75,
       "vs_recommend_pct": -8.82,
-      "result": "fail"
+      "result": "fail",
+      "actual_close": 38.75,
+      "intraday_price": null
     },
     {
       "stock_code": "3037",
@@ -249,7 +249,6 @@
       "recommend_price": 217.0,
       "buy_date": "2025-12-09",
       "recommend_date": "2025-12-09",
-      "current_price": null,
       "target_price": 235.0,
       "stop_loss": 205.0,
       "position": "10-15%",
@@ -307,9 +306,10 @@
           "notes": "⚠️ 法人買賣互抵 追蹤中 (1/7日)"
         }
       ],
-      "closing_price": 226.0,
       "vs_recommend_pct": 4.15,
-      "result": "success"
+      "result": "success",
+      "actual_close": 226.0,
+      "intraday_price": null
     }
   ],
   "avoid_stocks": [

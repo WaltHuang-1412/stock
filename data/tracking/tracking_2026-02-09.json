@@ -32,14 +32,11 @@
       "recommend_date": "2026-02-09",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 264.00,
-      "intraday_price": 279.50,
-      "intraday_change_pct": 5.87,
-      "close_price": 274.50,
-      "close_change_pct": 3.98,
+      "recommend_price": 264.0,
+      "intraday_price": 279.5,
       "result": "success",
       "target_price": 285.12,
-      "stop_loss": 250.80,
+      "stop_loss": 250.8,
       "position": "20%",
       "rating": "⭐⭐⭐⭐⭐",
       "score": 89,
@@ -58,7 +55,10 @@
         "sub_type": "記憶體"
       },
       "dual_confirmed": true,
-      "intraday_strategy": "🔥 強勢續抱"
+      "intraday_strategy": "🔥 強勢續抱",
+      "actual_close": 274.5,
+      "vs_recommend_pct": 3.98,
+      "intraday_change": 5.87
     },
     {
       "stock_code": "2303",
@@ -66,11 +66,8 @@
       "recommend_date": "2026-02-09",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 61.90,
-      "intraday_price": 62.70,
-      "intraday_change_pct": 1.29,
-      "close_price": 62.40,
-      "close_change_pct": 0.81,
+      "recommend_price": 61.9,
+      "intraday_price": 62.7,
       "result": "success",
       "target_price": 66.23,
       "stop_loss": 58.81,
@@ -92,7 +89,10 @@
         "sub_type": "晶圓代工"
       },
       "dual_confirmed": true,
-      "intraday_strategy": "✅ 續抱/小加碼"
+      "intraday_strategy": "✅ 續抱/小加碼",
+      "actual_close": 62.4,
+      "vs_recommend_pct": 0.81,
+      "intraday_change": 1.29
     },
     {
       "stock_code": "2344",
@@ -100,11 +100,8 @@
       "recommend_date": "2026-02-09",
       "type": "stable",
       "phase": "core",
-      "recommend_price": 97.80,
-      "intraday_price": 107.50,
-      "intraday_change_pct": 9.92,
-      "close_price": 107.50,
-      "close_change_pct": 9.92,
+      "recommend_price": 97.8,
+      "intraday_price": 107.5,
       "result": "success",
       "target_price": 105.62,
       "stop_loss": 92.91,
@@ -127,7 +124,10 @@
       },
       "dual_confirmed": true,
       "intraday_strategy": "🔥 強勢續抱（考慮部分獲利）",
-      "performance": "🏆 今日最強"
+      "performance": "🏆 今日最強",
+      "actual_close": 107.5,
+      "vs_recommend_pct": 9.92,
+      "intraday_change": 9.92
     },
     {
       "stock_code": "3711",
@@ -135,11 +135,8 @@
       "recommend_date": "2026-02-09",
       "type": "risky",
       "phase": "core",
-      "recommend_price": 304.50,
-      "intraday_price": 328.50,
-      "intraday_change_pct": 7.88,
-      "close_price": 327.00,
-      "close_change_pct": 7.39,
+      "recommend_price": 304.5,
+      "intraday_price": 328.5,
       "result": "success",
       "target_price": 322.77,
       "stop_loss": 289.28,
@@ -162,7 +159,10 @@
       },
       "dual_confirmed": true,
       "warning": "⚠️ 5日漲幅 +7.0%，追高風險",
-      "intraday_strategy": "🔥 強勢續抱（考慮部分獲利）"
+      "intraday_strategy": "🔥 強勢續抱（考慮部分獲利）",
+      "actual_close": 327.0,
+      "vs_recommend_pct": 7.39,
+      "intraday_change": 7.88
     },
     {
       "stock_code": "2887",
@@ -172,9 +172,6 @@
       "phase": "satellite",
       "recommend_price": 23.35,
       "intraday_price": 23.75,
-      "intraday_change_pct": 1.71,
-      "close_price": 23.80,
-      "close_change_pct": 1.93,
       "result": "success",
       "target_price": 24.52,
       "stop_loss": 22.42,
@@ -197,7 +194,10 @@
       },
       "dual_confirmed": true,
       "warning": "⚠️ 金融股昨日失敗（凱基金 +31K 但未漲）",
-      "intraday_strategy": "✅ 續抱/小加碼"
+      "intraday_strategy": "✅ 續抱/小加碼",
+      "actual_close": 23.8,
+      "vs_recommend_pct": 1.93,
+      "intraday_change": 1.71
     }
   ],
   "avoided_stocks": [
@@ -247,7 +247,7 @@
   "industry_distribution": {
     "半導體": {
       "count": 4,
-      "percentage": 0.80,
+      "percentage": 0.8,
       "stocks": [
         "南亞科",
         "聯電",
@@ -257,7 +257,7 @@
     },
     "金融": {
       "count": 1,
-      "percentage": 0.20,
+      "percentage": 0.2,
       "stocks": [
         "台新金"
       ]
@@ -281,7 +281,7 @@
     "min_industries": 3,
     "actual_industries": 2,
     "max_single_industry_ratio": 0.5,
-    "actual_max_ratio": 0.80,
+    "actual_max_ratio": 0.8,
     "validation_status": "⚠️ 推薦數量5檔（盤中補做）、半導體集中80%（跟隨市場主流）"
   },
   "dual_track_system": {
@@ -318,7 +318,7 @@
     "accuracy": 1.0,
     "success_count": 5,
     "fail_count": 0,
-    "average_change_pct": 4.80,
+    "average_change_pct": 4.8,
     "best_performer": {
       "stock_code": "2344",
       "stock_name": "華邦電",

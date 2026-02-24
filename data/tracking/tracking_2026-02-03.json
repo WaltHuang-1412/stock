@@ -61,16 +61,16 @@
         "sub_type": "記憶體"
       },
       "intraday_price": 83.4,
-      "intraday_change_pct": -1.65,
       "intraday_volume_ratio": 1.02,
-      "intraday_action": "📍 小跌，正常波動",
       "intraday_priority": 3,
       "actual_close": 84.5,
       "actual_change_pct": -0.35,
       "result": "fail",
       "recommend_date": "2026-02-03",
       "closing_price": 84.5,
-      "vs_recommend_pct": -0.35
+      "vs_recommend_pct": -0.35,
+      "intraday_change": -1.65,
+      "intraday_strategy": "📍 小跌，正常波動"
     },
     {
       "stock_code": "2883",
@@ -110,16 +110,16 @@
         "sub_type": "證券"
       },
       "intraday_price": 18.25,
-      "intraday_change_pct": 1.39,
       "intraday_volume_ratio": 0.98,
-      "intraday_action": "✅ 上漲，續抱觀察",
       "intraday_priority": 4,
       "actual_close": 18.25,
       "actual_change_pct": 1.39,
       "result": "success",
       "recommend_date": "2026-02-03",
       "closing_price": 18.25,
-      "vs_recommend_pct": 1.39
+      "vs_recommend_pct": 1.39,
+      "intraday_change": 1.39,
+      "intraday_strategy": "✅ 上漲，續抱觀察"
     },
     {
       "stock_code": "8150",
@@ -158,9 +158,7 @@
         "sub_type": "封測"
       },
       "intraday_price": 55.9,
-      "intraday_change_pct": -3.45,
       "intraday_volume_ratio": 0.73,
-      "intraday_action": "✅ 回檔，可考慮加碼",
       "intraday_priority": 2,
       "intraday_4step_verification": {
         "verified": true,
@@ -192,7 +190,9 @@
       "result": "fail",
       "recommend_date": "2026-02-03",
       "closing_price": 56.29999923706055,
-      "vs_recommend_pct": -2.76
+      "vs_recommend_pct": -2.76,
+      "intraday_change": -3.45,
+      "intraday_strategy": "✅ 回檔，可考慮加碼"
     },
     {
       "stock_code": "2454",
@@ -232,16 +232,16 @@
         "sub_type": "IC設計"
       },
       "intraday_price": 1790.0,
-      "intraday_change_pct": 4.99,
       "intraday_volume_ratio": 0.86,
-      "intraday_action": "📈 大漲，可部分獲利",
       "intraday_priority": 5,
       "actual_close": 1795.0,
       "actual_change_pct": 5.28,
       "result": "success",
       "recommend_date": "2026-02-03",
       "closing_price": 1795.0,
-      "vs_recommend_pct": 5.28
+      "vs_recommend_pct": 5.28,
+      "intraday_change": 4.99,
+      "intraday_strategy": "📈 大漲，可部分獲利"
     },
     {
       "stock_code": "2382",
@@ -281,16 +281,16 @@
         "sub_type": "AI伺服器組裝"
       },
       "intraday_price": 275.0,
-      "intraday_change_pct": 0.73,
       "intraday_volume_ratio": 0.49,
-      "intraday_action": "✅ 上漲，續抱觀察",
       "intraday_priority": 4,
       "actual_close": 276.5,
       "actual_change_pct": 1.28,
       "result": "success",
       "recommend_date": "2026-02-03",
       "closing_price": 276.5,
-      "vs_recommend_pct": 1.28
+      "vs_recommend_pct": 1.28,
+      "intraday_change": 0.73,
+      "intraday_strategy": "✅ 上漲，續抱觀察"
     },
     {
       "stock_code": "2324",
@@ -330,16 +330,16 @@
         "sub_type": "NB代工"
       },
       "intraday_price": 32.2,
-      "intraday_change_pct": -0.31,
       "intraday_volume_ratio": 0.61,
-      "intraday_action": "📍 小跌，正常波動",
       "intraday_priority": 3,
       "actual_close": 32.0,
       "actual_change_pct": -0.93,
       "result": "fail",
       "recommend_date": "2026-02-03",
       "closing_price": 32.0,
-      "vs_recommend_pct": -0.93
+      "vs_recommend_pct": -0.93,
+      "intraday_change": -0.31,
+      "intraday_strategy": "📍 小跌，正常波動"
     }
   ],
   "avoided_stocks": [

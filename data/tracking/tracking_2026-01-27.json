@@ -32,16 +32,16 @@
       "reason": "ADR+21.83%超強催化劑、外資主導+86K",
       "institutional_flow": 86000,
       "status": "success",
-      "intraday_close": 75.1,
-      "intraday_change_pct": 8.37,
       "result": "success",
       "industry": {
         "sector": "半導體",
         "sub_type": "晶圓代工"
       },
       "recommend_date": "2026-01-27",
-      "closing_price": 76.19999694824219,
-      "vs_recommend_pct": 8.86
+      "vs_recommend_pct": 8.86,
+      "actual_close": 76.19999694824219,
+      "intraday_price": 75.1,
+      "intraday_change": 8.37
     },
     {
       "stock_code": "1314",
@@ -62,8 +62,6 @@
       "reason": "連3日買超，籌碼最佳",
       "institutional_flow": 14000,
       "status": "price_error",
-      "intraday_close": 8.28,
-      "intraday_change_pct": -0.96,
       "result": "fail",
       "error_note": "盤前分析時未執行股價驗證，推薦價與實際差距-34%",
       "industry": {
@@ -71,8 +69,10 @@
         "sub_type": "石化"
       },
       "recommend_date": "2026-01-27",
-      "closing_price": 8.260000228881836,
-      "vs_recommend_pct": -34.44
+      "vs_recommend_pct": -34.44,
+      "actual_close": 8.260000228881836,
+      "intraday_price": 8.28,
+      "intraday_change": -0.96
     },
     {
       "stock_code": "2610",
@@ -93,16 +93,16 @@
       "reason": "5日累計+65K，外資主導，4天買超",
       "institutional_flow": 65000,
       "status": "success",
-      "intraday_close": 22.95,
-      "intraday_change_pct": 2.0,
       "result": "fail",
       "industry": {
         "sector": "航運",
         "sub_type": "航空"
       },
       "recommend_date": "2026-01-27",
-      "closing_price": 22.899999618530273,
-      "vs_recommend_pct": -7.66
+      "vs_recommend_pct": -7.66,
+      "actual_close": 22.899999618530273,
+      "intraday_price": 22.95,
+      "intraday_change": 2.0
     },
     {
       "stock_code": "2884",
@@ -123,16 +123,16 @@
       "reason": "5日累計+22K，外資主導，4天買超",
       "institutional_flow": 22000,
       "status": "success",
-      "intraday_close": 33.7,
-      "intraday_change_pct": 0.15,
       "result": "success",
       "industry": {
         "sector": "金融",
         "sub_type": "綜合型"
       },
       "recommend_date": "2026-01-27",
-      "closing_price": 33.599998474121094,
-      "vs_recommend_pct": 15.07
+      "vs_recommend_pct": 15.07,
+      "actual_close": 33.599998474121094,
+      "intraday_price": 33.7,
+      "intraday_change": 0.15
     },
     {
       "stock_code": "2002",
@@ -153,8 +153,6 @@
       "reason": "單日+56K（買超第一名），外資主導",
       "institutional_flow": 56000,
       "status": "price_error",
-      "intraday_close": 19.4,
-      "intraday_change_pct": -1.27,
       "result": "fail",
       "error_note": "盤前分析時未執行股價驗證，推薦價與實際差距-23%",
       "industry": {
@@ -162,8 +160,10 @@
         "sub_type": "鋼鐵"
       },
       "recommend_date": "2026-01-27",
-      "closing_price": 19.350000381469727,
-      "vs_recommend_pct": -23.21
+      "vs_recommend_pct": -23.21,
+      "actual_close": 19.350000381469727,
+      "intraday_price": 19.4,
+      "intraday_change": -1.27
     },
     {
       "stock_code": "2883",
@@ -184,16 +184,16 @@
       "reason": "5日累計+58K，連2日買超",
       "institutional_flow": 58000,
       "status": "fail",
-      "intraday_close": 18.25,
-      "intraday_change_pct": -0.27,
       "result": "success",
       "industry": {
         "sector": "金融",
         "sub_type": "證券型"
       },
       "recommend_date": "2026-01-27",
-      "closing_price": 18.149999618530273,
-      "vs_recommend_pct": 16.35
+      "vs_recommend_pct": 16.35,
+      "actual_close": 18.149999618530273,
+      "intraday_price": 18.25,
+      "intraday_change": -0.27
     },
     {
       "stock_code": "1101",
@@ -214,8 +214,6 @@
       "reason": "法人+16K排名#7，5日+0.2%佈局極佳",
       "institutional_flow": 16000,
       "status": "price_error",
-      "intraday_close": 26.3,
-      "intraday_change_pct": 0.19,
       "result": "fail",
       "error_note": "盤前分析時未執行股價驗證，推薦價與實際差距-45%",
       "industry": {
@@ -223,8 +221,10 @@
         "sub_type": "水泥"
       },
       "recommend_date": "2026-01-27",
-      "closing_price": 26.049999237060547,
-      "vs_recommend_pct": -45.95
+      "vs_recommend_pct": -45.95,
+      "actual_close": 26.049999237060547,
+      "intraday_price": 26.3,
+      "intraday_change": 0.19
     }
   ],
   "avoided_stocks": [
@@ -418,7 +418,7 @@
     "validation_status": "✅ 通過驗證"
   },
   "created_at": "2026-01-27 08:15",
-  "after_market_summary": {
+  "after_market_analysis": {
     "update_time": "2026-01-27 15:54",
     "accuracy": {
       "success": 4,

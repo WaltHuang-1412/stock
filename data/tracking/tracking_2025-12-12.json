@@ -18,7 +18,6 @@
       "stock_name": "凱基金",
       "recommend_price": 17.0,
       "close_price": 17.05,
-      "change_pct": 0.29,
       "recommend_date": "2025-12-12",
       "target_price": 18.0,
       "stop_loss": 16.0,
@@ -30,7 +29,8 @@
       "status": "user_holding",
       "user_cost": 15.95,
       "user_gain_loss_pct": 6.9,
-      "closing_price": 17.05
+      "actual_close": 17.05,
+      "vs_recommend_pct": 0.29
     },
     {
       "type": "stable",
@@ -38,7 +38,6 @@
       "stock_name": "玉山金",
       "recommend_price": 32.8,
       "close_price": 32.8,
-      "change_pct": 0.0,
       "recommend_date": "2025-12-12",
       "target_price": 34.5,
       "stop_loss": 31.5,
@@ -48,7 +47,8 @@
       "institutional_today": "+17,582K",
       "result": "success",
       "status": "tracking",
-      "closing_price": 32.8
+      "actual_close": 32.8,
+      "vs_recommend_pct": 0.0
     },
     {
       "type": "stable",
@@ -56,7 +56,6 @@
       "stock_name": "台新金",
       "recommend_price": 19.4,
       "close_price": 19.4,
-      "change_pct": 0.0,
       "recommend_date": "2025-12-12",
       "target_price": 20.5,
       "stop_loss": 18.5,
@@ -66,7 +65,8 @@
       "institutional_today": "+50,024K",
       "result": "success",
       "status": "tracking",
-      "closing_price": 19.4
+      "actual_close": 19.4,
+      "vs_recommend_pct": 0.0
     },
     {
       "type": "stable",
@@ -74,7 +74,6 @@
       "stock_name": "合庫金",
       "recommend_price": 24.5,
       "close_price": 24.45,
-      "change_pct": -0.2,
       "recommend_date": "2025-12-12",
       "target_price": 25.5,
       "stop_loss": 23.5,
@@ -84,7 +83,8 @@
       "institutional_today": "+11,937K",
       "result": "fail",
       "status": "tracking",
-      "closing_price": 24.45
+      "actual_close": 24.45,
+      "vs_recommend_pct": -0.2
     }
   ],
   "avoid_stocks": [

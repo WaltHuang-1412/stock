@@ -54,7 +54,6 @@
         ]
       },
       "recommend_price": 33.8,
-      "current_price": 33.6,
       "target_price": 37.0,
       "stop_loss": 32.8,
       "position": "20%",
@@ -84,9 +83,10 @@
         }
       ],
       "recommend_date": "2025-12-01",
-      "closing_price": 34.0,
       "vs_recommend_pct": 0.59,
-      "result": "success"
+      "result": "success",
+      "actual_close": 34.0,
+      "intraday_price": 33.6
     },
     {
       "type": "historical_continuation",
@@ -109,7 +109,6 @@
         ]
       },
       "recommend_price": 41.8,
-      "current_price": 41.5,
       "target_price": 45.0,
       "stop_loss": 39.5,
       "position": "15%",
@@ -180,9 +179,10 @@
         }
       ],
       "recommend_date": "2025-12-01",
-      "closing_price": 41.900001525878906,
       "vs_recommend_pct": 0.24,
-      "result": "success"
+      "result": "success",
+      "actual_close": 41.900001525878906,
+      "intraday_price": 41.5
     },
     {
       "type": "historical_continuation",
@@ -205,7 +205,6 @@
         ]
       },
       "recommend_price": 147.0,
-      "current_price": 145.0,
       "target_price": 158.0,
       "stop_loss": 140.0,
       "position": "12%",
@@ -276,9 +275,10 @@
         }
       ],
       "recommend_date": "2025-12-01",
-      "closing_price": 149.5,
       "vs_recommend_pct": 1.7,
-      "result": "success"
+      "result": "success",
+      "actual_close": 149.5,
+      "intraday_price": 145.0
     },
     {
       "type": "observation",
@@ -300,7 +300,6 @@
         ]
       },
       "recommend_price": 34.0,
-      "current_price": 33.9,
       "target_price": 37.0,
       "stop_loss": 32.0,
       "position": "5-8%",
@@ -371,9 +370,10 @@
         }
       ],
       "recommend_date": "2025-12-01",
-      "closing_price": 33.849998474121094,
       "vs_recommend_pct": -0.44,
-      "result": "fail"
+      "result": "fail",
+      "actual_close": 33.849998474121094,
+      "intraday_price": 33.9
     }
   ],
   "watch_list": [
