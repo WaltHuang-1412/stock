@@ -5055,5 +5055,145 @@
       "廣達量能持續不足(量比0.62x)，應在第一天弱勢時就降級",
       "強勢催化日「5日漲幅」排除門檻應提高到+15%"
     ]
+  },
+  "2026-02-25": {
+    "date": "2026-02-25",
+    "predictions": [
+      {
+        "symbol": "2317",
+        "name": "鴻海",
+        "recommend_price": 232.0,
+        "actual_close": 246.5,
+        "change_pct": 6.25,
+        "result": "success",
+        "notes": "NVIDIA+4.26%+費半+2.41%強催化，法人+39K大買，連漲6天+6.25%表現最佳"
+      },
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "recommend_price": 20.7,
+        "actual_close": 21.25,
+        "change_pct": 2.66,
+        "result": "success",
+        "notes": "法人+25.7K續買，豐興廢鋼漲價催化，穩健上漲+2.66%"
+      },
+      {
+        "symbol": "2801",
+        "name": "彰銀",
+        "recommend_price": 21.9,
+        "actual_close": 21.65,
+        "change_pct": -1.14,
+        "result": "fail",
+        "notes": "7天連續買超+65K但今日微跌-1.14%，金融股整體偏弱，法人+8.8K續買籌碼健康"
+      },
+      {
+        "symbol": "2892",
+        "name": "第一金",
+        "recommend_price": 30.0,
+        "actual_close": 29.9,
+        "change_pct": -0.33,
+        "result": "fail",
+        "notes": "法人+7.5K續買但微跌-0.33%，金融股整體偏弱正常波動，籌碼仍健康"
+      },
+      {
+        "symbol": "4938",
+        "name": "和碩",
+        "recommend_price": 71.9,
+        "actual_close": 73.1,
+        "change_pct": 1.67,
+        "result": "success",
+        "notes": "NVIDIA催化+法人+3.5K續買，穩健上漲+1.67%"
+      },
+      {
+        "symbol": "2412",
+        "name": "中華電",
+        "recommend_price": 135.5,
+        "actual_close": 136.0,
+        "change_pct": 0.37,
+        "result": "success",
+        "notes": "防禦型配息股微漲+0.37%，法人+3.5K，走勢平穩"
+      },
+      {
+        "symbol": "2603",
+        "name": "長榮",
+        "recommend_price": 190.5,
+        "actual_close": 192.0,
+        "change_pct": 0.79,
+        "result": "success",
+        "notes": "法人佔成交過半，穩健上漲+0.79%"
+      }
+    ],
+    "accuracy": 0.714,
+    "total_recommended": 7,
+    "success_count": 5,
+    "fail_count": 2,
+    "market_context": {
+      "taiex_change": 2.05,
+      "note": "大盤+2.05%強勢日，AI伺服器+塑化雙主題領漲，記憶體逆勢下跌"
+    },
+    "missed_opportunities": [
+      {
+        "symbol": "1326",
+        "name": "台化",
+        "change_pct": 9.94,
+        "reason": "塑化全面大漲，盤前未識別塑化催化劑"
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "change_pct": 8.02,
+        "reason": "塑化全面大漲，未納入時事展開"
+      },
+      {
+        "symbol": "6505",
+        "name": "台塑化",
+        "change_pct": 6.49,
+        "reason": "塑化全面大漲，未納入時事展開"
+      },
+      {
+        "symbol": "6770",
+        "name": "力積電",
+        "change_pct": 3.37,
+        "reason": "法人02/24爆買+44.9K(rank5)但盤前未納入，明日重點評估"
+      }
+    ],
+    "excluded_stock_review": [
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "change_pct": 4.39,
+        "exclusion_correct": false,
+        "notes": "排除原因量縮，但今日大反彈+4.39%爆量2.52x"
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "change_pct": 1.88,
+        "exclusion_correct": false,
+        "notes": "排除後反彈+1.88%，法人+18K續買"
+      },
+      {
+        "symbol": "5880",
+        "name": "合庫金",
+        "change_pct": null,
+        "exclusion_correct": true,
+        "notes": "排除正確"
+      },
+      {
+        "symbol": "2353",
+        "name": "宏碁",
+        "change_pct": 1.11,
+        "exclusion_correct": true,
+        "notes": "排除正確，僅+1.11%"
+      }
+    ],
+    "lessons_learned": [
+      "塑化產業遺漏嚴重(台化+9.94%/台塑+8.02%)，需在原物料復甦時主動展開塑化產業鏈",
+      "金融股微跌(彰銀-1.14%/第一金-0.33%)屬正常波動，籌碼仍健康可續抱",
+      "鴻海連漲6天+6.25%表現突出但回調風險升高，明日需調低倉位",
+      "力積電法人爆買+44.9K但股價克制，符合佈局特徵，明日重點關注",
+      "廣達排除決策失誤(+4.39%)，量縮判斷過於保守，法人6天連買應給更多權重",
+      "華通昨日漲停今日-7.10%大跌，印證不追漲停板策略正確"
+    ]
   }
 }

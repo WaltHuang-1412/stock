@@ -48,7 +48,12 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "NVIDIA +4.26%+Apple +3.13%+費半 +2.41%+台積電ADR +5.92%",
-      "recommend_date": "2026-02-25"
+      "recommend_date": "2026-02-25",
+      "actual_close": 246.5,
+      "change_pct": 6.25,
+      "result": "success",
+      "close_price": 246.5,
+      "change_percent": 6.25
     },
     {
       "stock_code": "2002",
@@ -70,7 +75,12 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "豐興廢鋼漲價+200元+原物料復甦+5日僅+1.5%安全進場",
-      "recommend_date": "2026-02-25"
+      "recommend_date": "2026-02-25",
+      "actual_close": 21.25,
+      "change_pct": 2.66,
+      "result": "success",
+      "close_price": 21.25,
+      "change_percent": 2.66
     },
     {
       "stock_code": "2801",
@@ -92,7 +102,13 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "金融配息+金融整併概念+法人7天連續大買",
-      "recommend_date": "2026-02-25"
+      "recommend_date": "2026-02-25",
+      "actual_close": 21.65,
+      "change_pct": -1.14,
+      "result": "fail",
+      "fail_reason": "金融股整體偏弱，微跌-1.14%屬正常波動，法人+8.8K續買籌碼健康",
+      "close_price": 21.65,
+      "change_percent": -1.14
     },
     {
       "stock_code": "2892",
@@ -114,7 +130,13 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "公股金控穩定配息+外資投信同步買超",
-      "recommend_date": "2026-02-25"
+      "recommend_date": "2026-02-25",
+      "actual_close": 29.9,
+      "change_pct": -0.33,
+      "result": "fail",
+      "fail_reason": "金融股整體偏弱，微跌-0.33%幾乎持平，法人+7.5K續買籌碼健康",
+      "close_price": 29.9,
+      "change_percent": -0.33
     },
     {
       "stock_code": "4938",
@@ -137,7 +159,12 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "NVIDIA +4.26%+AI伺服器組裝+法人連續加碼",
-      "recommend_date": "2026-02-25"
+      "recommend_date": "2026-02-25",
+      "actual_close": 73.1,
+      "change_pct": 1.67,
+      "result": "success",
+      "close_price": 73.1,
+      "change_percent": 1.67
     },
     {
       "stock_code": "2412",
@@ -160,7 +187,12 @@
       },
       "catalyst": "防禦型配息+法人加碼+5G基建",
       "risk_note": "Broadcom -2.12% Level 1 (-5分)",
-      "recommend_date": "2026-02-25"
+      "recommend_date": "2026-02-25",
+      "actual_close": 136.0,
+      "change_pct": 0.37,
+      "result": "success",
+      "close_price": 136.0,
+      "change_percent": 0.37
     },
     {
       "stock_code": "2603",
@@ -180,7 +212,12 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "法人佔成交過半+油價微利多+航運復甦",
-      "recommend_date": "2026-02-25"
+      "recommend_date": "2026-02-25",
+      "actual_close": 192.0,
+      "change_pct": 0.79,
+      "result": "success",
+      "close_price": 192.0,
+      "change_percent": 0.79
     }
   ],
   "excluded_stocks": [
@@ -419,5 +456,194 @@
     ],
     "market_theme": "塑化產業全面大漲（+6~10%）、AI伺服器續強、記憶體逆勢大跌",
     "summary": "7檔推薦股全數安全，無觸發出場訊號。鴻海+4.31%領漲，法人+39K大買。塑化族群今日爆發但已大漲不追高。力積電法人爆買+44.9K但僅漲0.81%，明日重點關注。"
+  },
+  "after_market_analysis": {
+    "timestamp": "2026-02-25 14:35",
+    "taiex_close": 35413.07,
+    "taiex_change_pct": 2.05,
+    "accuracy": 0.714,
+    "total_recommended": 7,
+    "success_count": 5,
+    "fail_count": 2,
+    "tomorrow_recommendations": [
+      {
+        "stock_code": "2002",
+        "stock_name": "中鋼",
+        "score": 82,
+        "rating": "⭐⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "score": 80,
+        "rating": "⭐⭐⭐⭐",
+        "action": "續推（降級10%倉位）"
+      },
+      {
+        "stock_code": "2801",
+        "stock_name": "彰銀",
+        "score": 78,
+        "rating": "⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "score": 77,
+        "rating": "⭐⭐⭐⭐",
+        "action": "新增"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "score": 76,
+        "rating": "⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "4938",
+        "stock_name": "和碩",
+        "score": 76,
+        "rating": "⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "score": 75,
+        "rating": "⭐⭐⭐⭐",
+        "action": "續推"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "score": 73,
+        "rating": "⭐⭐⭐",
+        "action": "續推"
+      }
+    ],
+    "removed_stocks": [],
+    "watch_list": [
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "reason": "法人6天連買+25K，今日+4.39%反彈"
+      },
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "reason": "法人+18K續買，+1.88%反彈"
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "reason": "塑化大漲+8.02%，觀察第二波"
+      },
+      {
+        "stock_code": "1326",
+        "stock_name": "台化",
+        "reason": "塑化大漲+9.94%，觀察是否回調"
+      }
+    ],
+    "missed_opportunities": [
+      {
+        "stock_code": "1326",
+        "stock_name": "台化",
+        "change_pct": 9.94,
+        "reason": "塑化全面大漲，盤前未識別催化劑"
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "change_pct": 8.02,
+        "reason": "塑化未納入時事展開"
+      },
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "change_pct": 6.49,
+        "reason": "塑化未納入時事展開"
+      },
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "change_pct": 3.37,
+        "reason": "法人爆買+44.9K盤前未納入"
+      }
+    ],
+    "lessons": [
+      "塑化遺漏嚴重(台化+9.94%/台塑+8.02%)，鋼鐵催化時應同步展開塑化產業鏈",
+      "金融微跌(彰銀-1.14%/第一金-0.33%)屬正常波動，法人持續加碼",
+      "鴻海連漲6天+6.25%，明日需調低倉位+提高停損",
+      "力積電法人爆買+44.9K(rank5)但股價僅+3.37%，佈局特徵明顯",
+      "廣達排除失誤(+4.39%)，法人6天連買應給更多權重",
+      "華通昨日漲停今日-7.10%，不追漲停板策略正確"
+    ]
+  },
+  "yesterday_verification": {
+    "date": "2026-02-25",
+    "accuracy": 0.714,
+    "total": 7,
+    "success_count": 5,
+    "fail_count": 2,
+    "results": [
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "recommend_price": 232.0,
+        "close_price": 246.5,
+        "change_percent": 6.25,
+        "result": "success"
+      },
+      {
+        "stock_code": "2002",
+        "stock_name": "中鋼",
+        "recommend_price": 20.7,
+        "close_price": 21.25,
+        "change_percent": 2.66,
+        "result": "success"
+      },
+      {
+        "stock_code": "2801",
+        "stock_name": "彰銀",
+        "recommend_price": 21.9,
+        "close_price": 21.65,
+        "change_percent": -1.14,
+        "result": "fail"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 30.0,
+        "close_price": 29.9,
+        "change_percent": -0.33,
+        "result": "fail"
+      },
+      {
+        "stock_code": "4938",
+        "stock_name": "和碩",
+        "recommend_price": 71.9,
+        "close_price": 73.1,
+        "change_percent": 1.67,
+        "result": "success"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 135.5,
+        "close_price": 136.0,
+        "change_percent": 0.37,
+        "result": "success"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "recommend_price": 190.5,
+        "close_price": 192.0,
+        "change_percent": 0.79,
+        "result": "success"
+      }
+    ]
   }
 }
