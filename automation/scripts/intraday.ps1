@@ -77,11 +77,8 @@ Write-Output "" | Tee-Object -FilePath $LogFile -Append
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 if ($AllExist) {
     Write-Output "盤中分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-    # 正規化 tracking.json 欄位名稱（防止 LINE 摘要讀取失敗）
-    python "$ProjectDir\scripts\normalize_tracking_fields.py" $Date 2>&1 | Tee-Object -FilePath $LogFile -Append
-    # LINE 推送盤中追蹤摘要（存檔後用 --file 送，保留換行）
-    $SummaryFile = "$ProjectDir\automation\logs\${Date}_intraday_line.txt"
-    python "$ProjectDir\scripts\generate_line_summary.py" intraday $Date 2>&1 | Out-File -FilePath $SummaryFile -Encoding utf8
+    # LINE 推送（Claude 分析時已產出 LINE 摘要檔）
+    $SummaryFile = "$ProjectDir\data\$Date\intraday_line.txt"
     if ((Test-Path $SummaryFile) -and (Get-Item $SummaryFile).Length -gt 0) {
         python "$ProjectDir\scripts\notify_line.py" --file $SummaryFile
     } else {

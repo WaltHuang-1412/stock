@@ -31,9 +31,9 @@
 ### 📁 驗證機制
 
 每次分析完成後，必須存在以下文件：
-- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json`🆕 + `tw_market_news.json` + `tracking_YYYY-MM-DD.json`
-- 盤中：`data/YYYY-MM-DD/intraday_analysis.md` + 更新 `tracking_YYYY-MM-DD.json`
-- 盤後：`data/YYYY-MM-DD/after_market_analysis.md` + 更新 `tracking_YYYY-MM-DD.json` + 更新 `predictions.json`
+- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json` + `tw_market_news.json` + `tracking_YYYY-MM-DD.json` + `before_market_line.txt`
+- 盤中：`data/YYYY-MM-DD/intraday_analysis.md` + `intraday_line.txt` + 更新 `tracking_YYYY-MM-DD.json`
+- 盤後：`data/YYYY-MM-DD/after_market_analysis.md` + `after_market_line.txt` + 更新 `tracking_YYYY-MM-DD.json` + 更新 `predictions.json`
 
 **如果檔案不存在 = 步驟未執行 = 違規**
 
@@ -774,6 +774,7 @@ python3 scripts/reversal_alert.py [推薦股1] [推薦股2] ...
 
 1. **分析報告**：`data/YYYY-MM-DD/before_market_analysis.md`
 2. **追蹤記錄**：`data/tracking/tracking_YYYY-MM-DD.json`
+3. **LINE 摘要**：`data/YYYY-MM-DD/before_market_line.txt`
 
 **tracking.json 格式**：
 ```json
@@ -795,9 +796,15 @@ python3 scripts/reversal_alert.py [推薦股1] [推薦股2] ...
 }
 ```
 
+**LINE 摘要格式**（`before_market_line.txt`，5000字以內）：
+- 從 `before_market_analysis.md` 的「今日推薦」段落提取重點
+- 每檔包含：星等、名稱(代號)、分數、產業、倉位、進場/目標/停損、理由
+- 末尾附上今日注意事項（利多/利空催化劑）
+
 **驗證**：
-- ✅ 兩個檔案都必須存在
+- ✅ 三個檔案都必須存在
 - ✅ tracking.json 必須包含所有推薦股票
+- ✅ LINE 摘要必須 ≤5000 字元
 - ❌ **如果檔案不存在 = 分析未完成**
 
 **完成後**：更新 TodoWrite，標記 Step 10 為 `completed`
@@ -931,103 +938,59 @@ python3 scripts/reversal_alert.py [股票代號]
 
 ---
 
-### 🔴 Step 3: Track B 盤中產業展開（強制）
+### 🔴 Step 3: Track B 法人佈局方向分析（強制）
 
-**目的**：發現盤前遺漏的機會
+**目的**：識別法人佈局方向（產業），找出產業鏈中尚未反映的佈局機會
 
 **執行流程**：
 
-#### 3-1：觀察推薦股表現，判斷想關注的產業
+#### 3-1：識別法人佈局方向（2-4 個）
+
+觀察以下數據來源，歸納今日法人押注的產業方向：
+- Track A 領漲/領跌股的產業群聚
+- 盤前 market_context 催化劑（美股、油價、時事）
+- 盤中產業群漲/群跌現象
+- 法人 TOP50 買超集中的產業
+
+#### 3-2：每個方向展開產業鏈 + 籌碼分析
 ```bash
-# 觀察：南亞(1303) +6.44%（領漲）
-# 判斷：想查塑化產業的其他股票
+# 展開產業
+python3 scripts/expand_industry.py [產業] --depth 2
+
+# 籌碼分析（排除已推薦股）
+python3 scripts/chip_analysis.py [展開的股票] --days 10
 ```
 
-**觸發條件**：
-- 推薦股盤中漲幅 >3%
-- 或成交量比 >1.5x
-- **人工判斷**該產業是否有其他機會
+#### 3-3：建立方向分析（每個方向三層）
 
-#### 3-2：手動展開指定產業
-```bash
-# 方法 1：直接指定產業名稱
-python3 scripts/expand_industry.py 塑化 --depth 2
+每個法人佈局方向必須包含三層分析：
 
-# 方法 2：基於領漲股代號（自動識別產業）
-python3 scripts/expand_industry.py --stock 1303
-# 輸出：南亞(1303) → 塑化產業 → 展開 8檔
-```
+1. **時事（📰）** — 為什麼法人往這個方向移動（催化劑、新聞、國際連動）
+2. **籌碼（📊）** — 法人實際買了哪些股票、金額排名多少
+3. **產業鏈（🏭）** — 完整產業鏈展開，標示每檔的狀態：
+   - **已反映**：漲幅 >3%，已大漲
+   - **可觀察**：漲幅 0-3%，法人有買
+   - **尚未跟上**：漲幅 <1%，但同產業其他股已漲
 
-**範例（南亞領漲 +6.44%）**：
-```bash
-$ python3 scripts/expand_industry.py --stock 1303
-
-# 輸出：
-# 🔍 查詢股票產業...
-#   南亞(1303) → 塑化產業
-#
-# 📊 展開塑化產業（Tier 0-2）...
-#   Tier 0（核心）：1301 台塑、1303 南亞、1326 台化
-#   Tier 1（供應鏈）：6505 台塑化、1227 福聚、1310 台苯
-#   Tier 2（下游）：4766 南寶、4712 永記
-#
-#   總計：8 檔
-```
-
-#### 3-3：批次籌碼分析
-```bash
-# 對展開的股票執行籌碼分析（排除已推薦股）
-python3 scripts/chip_analysis.py 1301 1326 6505 4766 4712 --days 10
-```
-
-#### 3-4：篩選盤前遺漏機會
-**篩選條件**：
-1. ✅ 盤中表現：漲幅 0-3%（還沒大漲）
-2. ✅ 法人態度：近5天買超 >5K
-3. ✅ 動能篩選：-30% ~ +50%（佈局中/完成）
-4. ✅ 量能確認：量比 >1.2x
-
-**判斷標準**：
-| 條件 | 盤中策略 | 明日策略 |
-|------|---------|---------|
-| 全部符合 + 漲幅<2% | 📝 記錄觀察（可尾盤進場） | ✅ 明日推薦 |
-| 全部符合 + 漲幅2-3% | 📝 記錄觀察（不追高） | ✅ 明日推薦 |
-| 漲幅>3% | ❌ 已大漲，不追高 | ⚠️ 明日觀察 |
-| 法人賣超 | ❌ 避開 | ❌ 不推薦 |
-
-**範例（02/04 發現台化）**：
+**範例**：
 ```markdown
-## Track B 盤中發現
+## Track B 法人佈局方向
 
-**領漲股觀察**：
-- 南亞(1303) +6.44% → 想查塑化產業
+### ① 塑化
+📰 油價 WTI +3.2%、中國 PMI 回升、台塑法說正面展望
+📊 台塑+12.8K(rank16)、台化+7K(rank25)、南亞+5K
+🏭 產業鏈：
+  上游：台塑 ↑8%、台化 ↑10%（已反映）
+  中游：台塑化 ↑6.5%、台苯 +1.2%（可觀察）
+  下游：南寶 +0.5%、永記 +0.3%（尚未跟上）
+→ 上游已大漲，中下游尚未跟上，佈局方向：台苯、南寶
 
-**同產業掃描結果**：
-| 股票 | 盤中價 | 漲跌% | 法人5日 | 動能 | 評估 |
-|------|--------|-------|---------|------|------|
-| 台塑(1301) | 46.85 | +4.23% | -25K | -139% | ⚠️ 法人出貨 |
-| 台化(1326) | 40.55 | +2.92% | +16K | -57% | ✅ 記錄觀察 |
-| 台塑化(6505) | 49.80 | +2.15% | +8K | +104% | ❌ 動能爆發 |
-
-**結論**：
-- ✅ 台化(1326)：符合條件，明日盤前納入評估
-- ⚠️ 台塑：法人出貨風險高
-- ❌ 台塑化：動能>+100%，追高風險
+### ② 記憶體
+📰 力積電法人爆買+44.9K，半導體需求回升
+📊 力積電+44.9K(rank5)
+🏭 力積電 +0.81%（小漲+大量，佈局訊號明確）
+→ 佈局訊號：小漲+大量+法人爆買
 ```
-
----
-
-#### 3-5：全市場掃描（輔助，可選）
-
-**掃描範圍**（若時間允許）：
-1. 成交量 TOP20（量大的股票 = 資金關注）
-2. 量比 TOP20（今日量 vs 5日均量）
-3. 買賣方向判斷（外盤% vs 內盤%）
-
-**⚠️ 重要**：
-- Track B 發現的股票，僅記錄，不建議追高
-- **禁止手動列股票代號**（必須用 expand_industry.py）
-- 想查什麼產業就查什麼（完全靈活）
 
 **完成後**：更新 TodoWrite，標記 Step 3 為 `completed`
 
@@ -1037,17 +1000,28 @@ python3 scripts/chip_analysis.py 1301 1326 6505 4766 4712 --days 10
 
 **輸出格式**：
 ```markdown
-## Track A 操作建議
+## Track A 推薦股狀態
 
-| 股票 | 推薦價 | 盤中價 | 漲跌% | 尾盤策略 |
-|------|--------|--------|-------|----------|
-| 聯電 | 52.5 | 54.2 | +3.2% | ✅ 續抱 |
+| 股票 | 推薦價 | 盤中價 | 漲跌% | 策略 |
+|------|--------|--------|-------|------|
+| 鴻海 | 232 | 242 | +4.3% | 📈 可部分獲利 |
+| 中鋼 | 20.7 | 20.95 | +1.2% | ✅ 續抱 |
 
-## Track B 市場發現
+🛑 停損觸發：（無 / 列出觸發停損的股票詳情）
 
-| 股票 | 盤中價 | 漲跌% | 量比 | 備註 |
-|------|--------|-------|------|------|
-| 欣興 | 361.5 | +4.9% | 2.5x | 盤中發現，僅記錄 |
+## Track B 法人佈局方向
+
+### ① 塑化
+📰 ...
+📊 ...
+🏭 ...
+→ 結論
+
+### ② 記憶體
+📰 ...
+📊 ...
+🏭 ...
+→ 結論
 ```
 
 **完成後**：更新 TodoWrite，標記 Step 4 為 `completed`
@@ -1060,20 +1034,21 @@ python3 scripts/chip_analysis.py 1301 1326 6505 4766 4712 --days 10
 
 1. **盤中分析報告**：`data/YYYY-MM-DD/intraday_analysis.md`
 2. **更新追蹤記錄**：`data/tracking/tracking_YYYY-MM-DD.json`（加入盤中價格）
+3. **LINE 摘要**：`data/YYYY-MM-DD/intraday_line.txt`
 
-**Track B 資料格式要求**：tracking.json 的 `track_b_discoveries` 每檔必須包含 `price`（盤中現價）：
-```json
-{
-  "stock_code": "2801", "stock_name": "彰銀", "price": 27.55,
-  "intraday_change": "+3.86%", "volume_ratio": 3.4,
-  "chip_data": "7天連續買超+36K、外資+投信同步",
-  "action": "明日盤前重點評估"
-}
-```
+**tracking.json 盤中更新**：
+- `intraday_analysis.track_a[]`：每檔推薦股的盤中價格、漲跌%、策略
+- `intraday_analysis.track_b_directions[]`：法人佈局方向（sector、catalyst、institutional_summary、chain、conclusion）
+
+**LINE 摘要格式**（`intraday_line.txt`，5000字以內）：
+- 從 `intraday_analysis.md` 提取 Track A 狀態 + Track B 法人佈局方向
+- Track A：每檔推薦股的漲跌% + 策略（停損時詳細說明）
+- Track B：每個法人佈局方向的三層分析（時事→籌碼→產業鏈）
 
 **驗證**：
-- ✅ 兩個檔案都必須存在
-- ✅ tracking.json 必須更新 `intraday_price` 欄位
+- ✅ 三個檔案都必須存在
+- ✅ tracking.json 必須更新盤中價格
+- ✅ LINE 摘要必須 ≤5000 字元
 - ❌ **如果檔案不存在 = 分析未完成**
 
 **完成後**：更新 TodoWrite，標記 Step 5 為 `completed`
@@ -1286,21 +1261,24 @@ python3 scripts/holdings_pressure_analysis.py [失敗股1] [失敗股2] ...
 1. **盤後分析報告**：`data/YYYY-MM-DD/after_market_analysis.md`
 2. **更新追蹤記錄**：`data/tracking/tracking_YYYY-MM-DD.json`（加入收盤價+結果）
 3. **更新預測記錄**：`data/predictions/predictions.json`
+4. **LINE 摘要**：`data/YYYY-MM-DD/after_market_line.txt`
 
-**tracking.json LINE 推送欄位要求**：
-- 每個 `result: "fail"` 的推薦股，必須補上 `fail_reason` 欄位（字串，說明失敗原因）
-- `after_market_analysis` 物件內必須包含 `tomorrow_recommendations` 陣列：
-  ```json
-  [{"stock_code": "2801", "stock_name": "彰銀", "score": 86, "rating": "⭐⭐⭐⭐⭐", "action": "新增"}]
-  ```
-- `after_market_analysis` 物件內必須包含 `removed_stocks` 陣列：
-  ```json
-  [{"stock_code": "2610", "stock_name": "華航", "reason": "油價利空+接近停損"}]
-  ```
+**tracking.json 盤後更新**：
+- 每個推薦股加入 `actual_close`（收盤價）和 `result`（success/fail）
+- 每個 `result: "fail"` 的推薦股，必須補上 `fail_reason` 欄位
+- `after_market_analysis` 物件內必須包含 `tomorrow_recommendations` 和 `removed_stocks` 陣列
+
+**LINE 摘要格式**（`after_market_line.txt`，5000字以內）：
+- 從 `after_market_analysis.md` 提取重點
+- 準確率（X/Y = Z%）
+- 每檔結果（✅/❌ + 漲跌% + 簡要原因）
+- 失敗分析重點
+- 明日關注股票（新增/移除）
 
 **驗證**：
-- ✅ 三個檔案都必須存在/更新
+- ✅ 四個檔案都必須存在/更新
 - ✅ tracking.json 必須包含收盤價和驗證結果
+- ✅ LINE 摘要必須 ≤5000 字元
 - ❌ **如果檔案不存在 = 分析未完成**
 
 **完成後**：更新 TodoWrite，標記 Step 6 為 `completed`
