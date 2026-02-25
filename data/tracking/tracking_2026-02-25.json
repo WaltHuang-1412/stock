@@ -267,5 +267,152 @@
     "航運": 1,
     "max_industry_pct": 0.286,
     "diversification_check": "PASS"
+  },
+  "intraday_tracking": {
+    "timestamp": "2026-02-25 12:31",
+    "track_a": [
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "recommend_price": 232.0,
+        "intraday_price": 242.0,
+        "intraday_change": "+4.31%",
+        "volume_ratio": 1.84,
+        "exit_signal": "安全（⚠️連漲6天注意回調）",
+        "institutional_today": "+39,350",
+        "action": "📈 大漲，可部分獲利"
+      },
+      {
+        "stock_code": "2002",
+        "stock_name": "中鋼",
+        "recommend_price": 20.7,
+        "intraday_price": 20.95,
+        "intraday_change": "+1.21%",
+        "volume_ratio": 1.26,
+        "exit_signal": "安全",
+        "institutional_today": "+25,751",
+        "action": "✅ 續抱"
+      },
+      {
+        "stock_code": "4938",
+        "stock_name": "和碩",
+        "recommend_price": 71.9,
+        "intraday_price": 72.7,
+        "intraday_change": "+1.11%",
+        "volume_ratio": 0.98,
+        "exit_signal": "安全",
+        "institutional_today": "+3,459",
+        "action": "✅ 續抱"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "recommend_price": 190.5,
+        "intraday_price": 192.5,
+        "intraday_change": "+1.05%",
+        "volume_ratio": 0.92,
+        "exit_signal": "安全",
+        "action": "✅ 續抱"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 135.5,
+        "intraday_price": 135.0,
+        "intraday_change": "-0.37%",
+        "volume_ratio": 0.39,
+        "exit_signal": "安全",
+        "action": "✅ 續抱"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 30.0,
+        "intraday_price": 29.85,
+        "intraday_change": "-0.50%",
+        "volume_ratio": 0.51,
+        "exit_signal": "安全",
+        "institutional_today": "+7,489",
+        "action": "✅ 續抱"
+      },
+      {
+        "stock_code": "2801",
+        "stock_name": "彰銀",
+        "recommend_price": 21.9,
+        "intraday_price": 21.75,
+        "intraday_change": "-0.68%",
+        "volume_ratio": 0.39,
+        "exit_signal": "安全",
+        "institutional_today": "+8,836",
+        "action": "✅ 續抱"
+      }
+    ],
+    "track_b_discoveries": [
+      {
+        "stock_code": "1326",
+        "stock_name": "台化",
+        "price": 49.2,
+        "intraday_change": "+9.94%",
+        "volume_ratio": 1.64,
+        "chip_data": "法人02/24 +7.0K（金額rank25）",
+        "action": "❌ 幾乎漲停，不追高"
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "price": 52.5,
+        "intraday_change": "+8.02%",
+        "volume_ratio": 2.77,
+        "chip_data": "法人02/24 +12.8K（金額rank16）",
+        "action": "❌ 爆量大漲，不追高"
+      },
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "price": 55.8,
+        "intraday_change": "+6.49%",
+        "volume_ratio": 2.35,
+        "chip_data": "不在TOP50",
+        "action": "❌ 已大漲，不追高"
+      },
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "price": 74.3,
+        "intraday_change": "+0.81%",
+        "volume_ratio": 1.55,
+        "chip_data": "法人02/24 +44.9K（金額rank5）、小漲+大量+法人爆買",
+        "action": "明日盤前重點評估"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "price": 296.0,
+        "intraday_change": "+4.23%",
+        "volume_ratio": 2.52,
+        "chip_data": "盤前排除（量縮），今日大反彈爆量",
+        "action": "明日觀察是否延續"
+      },
+      {
+        "stock_code": "3231",
+        "stock_name": "緯創",
+        "price": 137.5,
+        "intraday_change": "+4.96%",
+        "volume_ratio": 2.39,
+        "chip_data": "已停損出場股，反彈中",
+        "action": "僅記錄觀察"
+      },
+      {
+        "stock_code": "1513",
+        "stock_name": "中興電",
+        "price": 170.5,
+        "intraday_change": "+1.49%",
+        "volume_ratio": 1.78,
+        "chip_data": "小漲+大量，疑似佈局",
+        "action": "記錄觀察"
+      }
+    ],
+    "market_theme": "塑化產業全面大漲（+6~10%）、AI伺服器續強、記憶體逆勢大跌",
+    "summary": "7檔推薦股全數安全，無觸發出場訊號。鴻海+4.31%領漲，法人+39K大買。塑化族群今日爆發但已大漲不追高。力積電法人爆買+44.9K但僅漲0.81%，明日重點關注。"
   }
 }
