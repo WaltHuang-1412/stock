@@ -18,8 +18,8 @@ Write-Output ""
 $Tasks = @(
     @{
         Name        = "Stock_BeforeMarket"
-        Description = "台股盤前分析 (08:30)"
-        Time        = "08:30"
+        Description = "台股盤前分析 (08:00)"
+        Time        = "08:00"
         Script      = "before_market.ps1"
     },
     @{

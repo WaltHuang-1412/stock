@@ -117,11 +117,15 @@ def normalize_tracking(date):
     #    Claude 寫入格式不固定，統一轉換為 intraday_analysis.track_a (list)
     intraday = data.get("intraday_analysis", {})
 
-    # 2a. intraday_update → intraday_analysis（key 名稱不同）
-    if not intraday and "intraday_update" in data:
-        intraday = data.pop("intraday_update")
-        data["intraday_analysis"] = intraday
-        total_changes += 1
+    # 2a. 各種 intraday key 名稱 → intraday_analysis（Claude 每次用不同名字）
+    if not intraday:
+        for alt_key in ("intraday_update", "intraday_tracking", "intraday_data",
+                        "intraday_result", "intraday_monitor", "intraday"):
+            if alt_key in data and isinstance(data[alt_key], dict):
+                intraday = data.pop(alt_key)
+                data["intraday_analysis"] = intraday
+                total_changes += 1
+                break
 
     # 2b. intraday_prices (dict by code) → track_a (list)
     #     例：{"2886": {"intraday_price": 40.8, "action": "續抱"}, ...}

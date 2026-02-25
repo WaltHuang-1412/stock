@@ -213,7 +213,12 @@
         "us_stock": "Broadcom",
         "change_pct": -2.12,
         "affected_industry": "網通",
-        "affected_tw_stocks": ["2345", "2412", "3042", "2449"],
+        "affected_tw_stocks": [
+          "2345",
+          "2412",
+          "3042",
+          "2449"
+        ],
         "score_adjustment": -5
       }
     ]
@@ -268,7 +273,7 @@
     "max_industry_pct": 0.286,
     "diversification_check": "PASS"
   },
-  "intraday_tracking": {
+  "intraday_analysis": {
     "timestamp": "2026-02-25 12:31",
     "track_a": [
       {
@@ -280,7 +285,7 @@
         "volume_ratio": 1.84,
         "exit_signal": "安全（⚠️連漲6天注意回調）",
         "institutional_today": "+39,350",
-        "action": "📈 大漲，可部分獲利"
+        "strategy": "📈 大漲，可部分獲利"
       },
       {
         "stock_code": "2002",
@@ -291,7 +296,7 @@
         "volume_ratio": 1.26,
         "exit_signal": "安全",
         "institutional_today": "+25,751",
-        "action": "✅ 續抱"
+        "strategy": "✅ 續抱"
       },
       {
         "stock_code": "4938",
@@ -302,7 +307,7 @@
         "volume_ratio": 0.98,
         "exit_signal": "安全",
         "institutional_today": "+3,459",
-        "action": "✅ 續抱"
+        "strategy": "✅ 續抱"
       },
       {
         "stock_code": "2603",
@@ -312,7 +317,7 @@
         "intraday_change": "+1.05%",
         "volume_ratio": 0.92,
         "exit_signal": "安全",
-        "action": "✅ 續抱"
+        "strategy": "✅ 續抱"
       },
       {
         "stock_code": "2412",
@@ -322,7 +327,7 @@
         "intraday_change": "-0.37%",
         "volume_ratio": 0.39,
         "exit_signal": "安全",
-        "action": "✅ 續抱"
+        "strategy": "✅ 續抱"
       },
       {
         "stock_code": "2892",
@@ -333,7 +338,7 @@
         "volume_ratio": 0.51,
         "exit_signal": "安全",
         "institutional_today": "+7,489",
-        "action": "✅ 續抱"
+        "strategy": "✅ 續抱"
       },
       {
         "stock_code": "2801",
@@ -344,7 +349,7 @@
         "volume_ratio": 0.39,
         "exit_signal": "安全",
         "institutional_today": "+8,836",
-        "action": "✅ 續抱"
+        "strategy": "✅ 續抱"
       }
     ],
     "track_b_discoveries": [
