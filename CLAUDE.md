@@ -446,86 +446,59 @@ python3 scripts/fetch_institutional_top50.py $(date -d yesterday +%Y%m%d)
 
 ---
 
-#### 🟢 軌道 B：時事驅動產業展開（催化劑維度）
+#### 🟢 軌道 B：時事驅動產業展開（催化劑維度）🆕 v7.5 動態模式
 
-##### B-1：查看數據，判斷想關注的產業
+##### B-1：查看數據，判斷產業方向
 ```bash
 # 查看 Step 1（國際市場數據）+ Step 2（台股時事）
 cat data/$(date +%Y-%m-%d)/us_asia_markets.json
 cat data/$(date +%Y-%m-%d)/tw_market_news.json
 ```
 
-**人工判斷**（根據數據決定想關注的產業）：
-- 費半 +2% → 想查「半導體」產業
-- 油價 -2.54% → 想查「塑化」和「航空」產業
-- 輝達 +5.87% → 想查「AI」產業
-- Micron +8% → 想查「記憶體」產業
+根據數據**動態判斷**今天有催化劑的產業方向（不限於固定清單）：
+- 費半 +2% → 半導體相關
+- 油價 -2.54% → 塑化、航空
+- 輝達 +5.87% → AI 伺服器、散熱、載板
+- 致茂 EPS 創高 → 測試設備（不在舊清單裡也要抓）
+- 稀土漲價 → 稀土概念股
 
-**可選產業清單**（20個）：
+**🔴 不限於固定 20 個產業**：任何從新聞/數據中識別到的產業方向都可以展開。
+
+##### B-2：動態展開產業相關股票（Claude 主導）
+
+**展開順序**（三層）：
+
+1. **法人 TOP50 篩選**：從 `institutional_top50.json` 中找出屬於該產業方向的股票
+2. **Claude 知識補充**：根據自身對台股的了解，補充相關但不在 TOP50 的股票
+3. **參考 JSON 補漏**：讀取 `data/industry_chains.json`，檢查有沒有遺漏的相關股票
+   ```bash
+   # 可選：用 expand_industry.py 輔助查漏（非強制）
+   python3 scripts/expand_industry.py [產業] --depth 2
+   ```
+
+**輸出**：將所有展開的股票寫入 `data/YYYY-MM-DD/industry_expanded_stocks.json`，格式：
+```json
+{
+  "date": "2026-02-26",
+  "method": "dynamic",
+  "industries_expanded": ["AI伺服器", "塑化", "測試設備"],
+  "stocks": [
+    {"code": "2382", "name": "廣達", "category": "AI伺服器", "tier": "tier_1", "source": "TOP50+催化劑"},
+    {"code": "2360", "name": "致茂", "category": "測試設備", "tier": "tier_0", "source": "新聞催化劑"}
+  ]
+}
 ```
-科技類：AI、半導體、記憶體、光通訊、網通設備、蘋果供應鏈、
-       電動車、面板顯示、衛星通訊、AR/VR
-傳統類：塑化、航空、鋼鐵原物料、營建水泥、生技醫療
-金融類：金融、電信、綠能儲能
-其他：遊戲電競
-```
 
-##### B-2：手動展開指定產業
-```bash
-# 展開單一產業
-python3 scripts/expand_industry.py 塑化 --depth 2
-
-# 展開多個產業
-python3 scripts/expand_industry.py 塑化 --depth 2
-python3 scripts/expand_industry.py 航空 --depth 1
-
-# 或用股票代號（自動識別產業）
-python3 scripts/expand_industry.py --stock 1303  # 南亞 → 塑化產業
-```
-
-**展開深度建議**：
-| 催化強度 | 建議深度 | 說明 |
-|---------|---------|------|
-| 強烈（>5%） | --depth 3 | Tier 0-3（完整產業鏈） |
-| 中等（2-5%） | --depth 2 | Tier 0-2（核心+供應鏈） |
-| 微弱（<2%） | --depth 1 | Tier 0-1（核心受惠） |
-
-**範例（塑化產業展開）**：
-```bash
-$ python3 scripts/expand_industry.py 塑化 --depth 2
-
-# 輸出：
-# 🔍 展開產業：塑化
-# 📊 展開深度：Tier 0-2
-#
-# Tier 0（核心）：
-#   1301 台塑
-#   1303 南亞
-#   1326 台化
-#
-# Tier 1（供應鏈）：
-#   6505 台塑化
-#   1227 福聚
-#   1310 台苯
-#
-# Tier 2（下游）：
-#   4766 南寶
-#   4712 永記
-#
-# 總計：8 檔
-# 💾 已保存：data/2026-02-04/industry_stock_codes.txt
-```
+**🔴 重要規則**：
+- 展開不限於 `industry_chains.json` 定義的產業，新聞中出現的新題材也要展開
+- 每個產業方向至少展開 3-5 檔相關股票
+- 展開後將股票代號寫入 `data/YYYY-MM-DD/industry_stock_codes.txt`（一行一個代號）
 
 ##### B-3：批次籌碼分析
 ```bash
 # 對展開的所有股票執行籌碼分析
 python3 scripts/chip_analysis.py $(cat data/$(date +%Y-%m-%d)/industry_stock_codes.txt | tr '\n' ' ') --days 10
 ```
-
-**優勢**：
-- ✅ 完全靈活（想查什麼產業就查什麼）
-- ✅ 涵蓋整個產業（不遺漏第5、第6檔）
-- ✅ 不依賴自動判斷邏輯（避免系統判斷錯誤）
 
 ---
 
@@ -534,38 +507,19 @@ python3 scripts/chip_analysis.py $(cat data/$(date +%Y-%m-%d)/industry_stock_cod
 ```bash
 # 執行合併腳本
 python3 scripts/merge_candidates.py $(date +%Y-%m-%d)
-
-# 輸出：
-# 🔄 候選股合併器 v3.1
-# ============================================================
-# 📥 載入數據...
-#   ✓ A組（法人 TOP50）：50 檔
-#   ✓ B組（時事驅動）：35 檔
-#
-# 🔄 合併候選股...
-#   合併前總數：85 檔
-#   去重後總數：62 檔
-#
-#   🔥 雙重確認（法人+時事）：6 檔  ← 優先推薦
-#   📊 僅法人 TOP50：44 檔
-#   🎯 僅時事驅動：12 檔
 ```
 
-**雙重確認範例**（02/04）：
-| 股票 | A組來源 | B組來源 | 優先級 |
-|------|---------|---------|--------|
-| 華航(2610) | ✅ 法人+30K | ✅ 油價-2.68%利多 | 🔥 Very High |
-| 長榮航(2618) | ✅ 法人+13K | ✅ 油價-2.68%利多 | 🔥 Very High |
+合併 A 組（法人 TOP50）+ B 組（動態展開），去重後產出 `merged_candidates.json`。
 
 ---
 
 ### 驗證
 
-- ✅ 必須生成 `industry_stock_codes.txt`
-- ✅ 股票清單必須涵蓋整個產業（不遺漏）
-- ❌ **禁止手動列股票代號**（會遺漏第5、第6檔）
-- ❌ **禁止使用系統自動判斷**（太死板，改用人工判斷）
-- ✅ **統一使用 expand_industry.py**（想查什麼就查什麼）
+- ✅ 必須生成 `industry_expanded_stocks.json` + `industry_stock_codes.txt`
+- ✅ 產業方向不限於固定清單（新聞出現的新題材也要展開）
+- ✅ 每個方向至少 3-5 檔股票
+- ✅ 可參考 `industry_chains.json` 補漏，但不強制依賴
+- ✅ 輸出格式必須與 `merge_candidates.py` 相容
 
 ---
 
