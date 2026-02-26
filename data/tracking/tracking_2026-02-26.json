@@ -1,0 +1,270 @@
+{
+  "date": "2026-02-26",
+  "analysis_version": "v7.3",
+  "holdings_alert": {
+    "2886": {
+      "status": "續抱觀察",
+      "price": 40.5,
+      "cost": 41.058,
+      "pnl_pct": -1.36,
+      "institutional": "法人+2.8K(rank47)、佔成交14.1%、5日+1.9%",
+      "note": "費半+3.08%利多，金融不是今日主題但法人續買"
+    },
+    "2330": {
+      "status": "續抱",
+      "price": 1965.0,
+      "cost": 43.71,
+      "pnl_pct": 4395.54,
+      "institutional": "台積電ADR+7.03%，今日預期大漲",
+      "note": "半導體超強催化，台積電ADR+7.03%"
+    },
+    "3481": {
+      "status": "獲利觀察",
+      "price": 24.6,
+      "cost": 18.2258,
+      "pnl_pct": 34.98,
+      "institutional": "法人+75K(張數rank1)、+19億(金額rank8)、佔成交7.2%、5日+16.6%",
+      "note": "鴻海處分群創4.34萬張消息，注意短線賣壓"
+    },
+    "3231": {
+      "status": "已停損出場",
+      "price": 138.0,
+      "cost": 155.721,
+      "pnl_pct": -11.38,
+      "institutional": "法人+10K(rank16)、+14億(金額rank13)、佔成交11.7%、5日+5.3%",
+      "note": "已停損出場，法人回買中但不建議重新進場"
+    }
+  },
+  "recommendations": [
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": "AI伺服器",
+      "recommend_price": 310.0,
+      "target_price": 340.0,
+      "stop_loss": 285.0,
+      "position": "15-20%",
+      "score": 91,
+      "rating": "⭐⭐⭐⭐⭐",
+      "reason": "連7天買超+48K、金額rank2(+66億)、佔成交46.0%、NVIDIA+4.03%+SMCI+13.09%超強催化",
+      "chip_data": {
+        "institutional_amount_rank": 2,
+        "buy_amount": "66億",
+        "buy_ratio": "46.0%",
+        "consecutive_buy_days": 7,
+        "net_buy_7d": 48000,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "NVIDIA+4.03%+SMCI+13.09%+費半+3.08%+台積電ADR+7.03%",
+      "recommend_date": "2026-02-26"
+    },
+    {
+      "stock_code": "2454",
+      "stock_name": "聯發科",
+      "industry": "半導體",
+      "recommend_price": 1935.0,
+      "target_price": 2100.0,
+      "stop_loss": 1800.0,
+      "position": "15-20%",
+      "score": 90,
+      "rating": "⭐⭐⭐⭐⭐",
+      "reason": "金額rank3(+53億)、佔成交36.1%、費半+3.08%+AMD+5.37%+台積電ADR+7.03%超強催化、5日+2.2%位置極安全",
+      "chip_data": {
+        "institutional_amount_rank": 3,
+        "buy_amount": "53億",
+        "buy_ratio": "36.1%",
+        "consecutive_buy_days": 2,
+        "net_buy_7d": 701,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "費半+3.08%+AMD+5.37%+台積電ADR+7.03%",
+      "recommend_date": "2026-02-26"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "industry": "AI伺服器",
+      "recommend_price": 254.0,
+      "target_price": 275.0,
+      "stop_loss": 240.0,
+      "position": "5-10%",
+      "score": 85,
+      "rating": "⭐⭐⭐⭐⭐",
+      "reason": "金額rank1(+184億)、佔成交46.0%、NVIDIA+Apple雙催化、連5天買超+108K、5日+12.8%已大漲降倉",
+      "chip_data": {
+        "institutional_amount_rank": 1,
+        "buy_amount": "184億",
+        "buy_ratio": "46.0%",
+        "consecutive_buy_days": 5,
+        "net_buy_5d": 108000,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "NVIDIA+4.03%+Apple+3.74%+費半+3.08%+台積電ADR+7.03%",
+      "risk_note": "5日+12.8%已大漲，設緊停損，不追高",
+      "recommend_date": "2026-02-26"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "industry": "鋼鐵",
+      "recommend_price": 21.5,
+      "target_price": 23.5,
+      "stop_loss": 20.0,
+      "position": "15%",
+      "score": 79,
+      "rating": "⭐⭐⭐⭐",
+      "reason": "昨日+72K法人爆買、佔成交71.9%極高、對等關稅失效+豐興廢鋼漲價+200利多",
+      "chip_data": {
+        "institutional_amount_rank": 10,
+        "buy_amount": "15億",
+        "buy_ratio": "71.9%",
+        "consecutive_buy_days": 1,
+        "net_buy_latest": 72262,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "對等關稅失效+豐興廢鋼漲價+200+原物料復甦",
+      "recommend_date": "2026-02-26"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "industry": "AI伺服器",
+      "recommend_price": 48.0,
+      "target_price": 53.0,
+      "stop_loss": 44.5,
+      "position": "10-15%",
+      "score": 78,
+      "rating": "⭐⭐⭐⭐",
+      "reason": "法人+10K(rank17)、佔成交32.5%、NVIDIA+4.03%+SMCI+13.09% AI催化",
+      "chip_data": {
+        "institutional_amount_rank": 17,
+        "buy_amount": "4.7億",
+        "buy_ratio": "32.5%",
+        "net_buy_latest": 10081,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "NVIDIA+4.03%+SMCI+13.09%+AI伺服器需求",
+      "recommend_date": "2026-02-26"
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "industry": "航運",
+      "recommend_price": 195.0,
+      "target_price": 215.0,
+      "stop_loss": 183.0,
+      "position": "10%",
+      "score": 74,
+      "rating": "⭐⭐⭐",
+      "reason": "金額rank11(+15億)、佔成交55.4%、連4天買超、外資+30K、油價-1.13%小利多",
+      "chip_data": {
+        "institutional_amount_rank": 11,
+        "buy_amount": "15億",
+        "buy_ratio": "55.4%",
+        "consecutive_buy_days": 4,
+        "foreign_net_7d": 30000,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "油價-1.13%小利多+法人佔成交過半+航運復甦",
+      "recommend_date": "2026-02-26"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "industry": "蘋果供應鏈",
+      "recommend_price": 75.0,
+      "target_price": 83.0,
+      "stop_loss": 70.0,
+      "position": "10%",
+      "score": 74,
+      "rating": "⭐⭐⭐",
+      "reason": "Apple+3.74%+NVIDIA+4.03%雙催化、法人+3.3K續買、佔成交28.0%",
+      "chip_data": {
+        "institutional_amount_rank": 41,
+        "buy_amount": "2.4億",
+        "buy_ratio": "28.0%",
+        "net_buy_latest": 3265,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "Apple+3.74%+NVIDIA+4.03%+蘋果供應鏈+AI伺服器",
+      "recommend_date": "2026-02-26"
+    }
+  ],
+  "excluded_stocks": [
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "reason": "反轉預警Level 2：前期買超+30.8K→今日-120反轉"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "reason": "金融催化不足，強勢日吸引力低"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "5日+20.4%已大漲，追高風險過高"
+    },
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電",
+      "reason": "強勢日防禦股催化偏弱"
+    }
+  ],
+  "us_leader_alerts": {
+    "level_3": [],
+    "level_2": [],
+    "level_1": []
+  },
+  "market_context": {
+    "us_market": {
+      "nasdaq": 1.75,
+      "sp500": 0.94,
+      "dow": -0.36,
+      "phlx_semiconductor": 3.08
+    },
+    "key_catalysts": [
+      "費半+3.08%（半導體超強催化）",
+      "台積電ADR+7.03%（台股半導體大利多）",
+      "NVIDIA+4.03%（AI伺服器強催化）",
+      "SMCI+13.09%（AI伺服器爆發）",
+      "AMD+5.37%（IC設計強催化）",
+      "AMAT+6.95%（半導體設備強催化）",
+      "Apple+3.74%（蘋概利多）",
+      "VIX-11.37%（恐慌大降）",
+      "國巨法說AI需求暢旺",
+      "台達電EPS 23.14元創高",
+      "對等關稅失效（鋼鋁利多）"
+    ],
+    "negative_catalysts": [
+      "道瓊-0.36%偏弱",
+      "台股開春3天噴漲近2000點（短線漲幅過大）",
+      "WTI油價-1.13%（塑化微利空）"
+    ]
+  },
+  "historical_validation": {
+    "previous_date": "2026-02-25",
+    "total_recommended": 7,
+    "success_count": 5,
+    "fail_count": 2,
+    "accuracy": 0.714,
+    "lessons": [
+      "金融微跌屬正常波動，法人持續加碼",
+      "塑化遺漏嚴重（台化+9.94%、台塑+8.02%）",
+      "力積電法人爆買+44.9K漏推（+3.37%）",
+      "廣達排除失誤（+4.39%），法人連買應給更多權重"
+    ]
+  },
+  "industry_diversification": {
+    "total_stocks": 7,
+    "industries": 5,
+    "AI伺服器": 3,
+    "半導體": 1,
+    "蘋果供應鏈": 1,
+    "鋼鐵": 1,
+    "航運": 1,
+    "max_industry_pct": 0.429,
+    "diversification_check": "PASS"
+  }
+}
