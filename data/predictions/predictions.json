@@ -5195,5 +5195,127 @@
       "廣達排除決策失誤(+4.39%)，量縮判斷過於保守，法人6天連買應給更多權重",
       "華通昨日漲停今日-7.10%大跌，印證不追漲停板策略正確"
     ]
+  },
+  "2026-02-26": {
+    "date": "2026-02-26",
+    "predictions": [
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "recommend_price": 310.0,
+        "actual_close": 291.5,
+        "change_pct": -5.97,
+        "result": "fail",
+        "notes": "推薦價310高於前收297.5(+4.2%)，3天大漲後開高走低，一線AI組裝→二線輪動"
+      },
+      {
+        "symbol": "2454",
+        "name": "聯發科",
+        "recommend_price": 1935.0,
+        "actual_close": 1945.0,
+        "change_pct": 0.52,
+        "result": "success",
+        "notes": "費半+3.08%+AMD+5.37%催化兌現，開1895低開高走收1945(+4.01%)，法人+2.8K續買"
+      },
+      {
+        "symbol": "2317",
+        "name": "鴻海",
+        "recommend_price": 254.0,
+        "actual_close": 243.0,
+        "change_pct": -4.33,
+        "result": "fail",
+        "notes": "盤前已標注5日+12.8%追高風險，盤中最低241.5距停損240僅1.5元"
+      },
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "recommend_price": 21.5,
+        "actual_close": 20.75,
+        "change_pct": -3.49,
+        "result": "fail",
+        "notes": "法人+72K爆買後隔日獲利回吐-2.35%，跌破MA5(20.81)"
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 48.0,
+        "actual_close": 46.25,
+        "change_pct": -3.65,
+        "result": "fail",
+        "notes": "推薦價48高於前收46.4(+3.4%)，量能不足(0.54x)平盤整理"
+      },
+      {
+        "symbol": "2603",
+        "name": "長榮",
+        "recommend_price": 195.0,
+        "actual_close": 197.0,
+        "change_pct": 1.03,
+        "result": "success",
+        "notes": "航運穩健上漲+2.60%，法人連4天買超延續，非科技股在AI輪動日反而穩定"
+      },
+      {
+        "symbol": "4938",
+        "name": "和碩",
+        "recommend_price": 75.0,
+        "actual_close": 73.5,
+        "change_pct": -2.0,
+        "result": "fail",
+        "notes": "推薦價75高於前收73.1(+2.6%)，蘋概催化弱於AI，法人rank41偏低"
+      }
+    ],
+    "accuracy": 0.286,
+    "total_recommended": 7,
+    "success_count": 2,
+    "fail_count": 5,
+    "market_context": {
+      "taiex_change": 0.0,
+      "note": "開高走低消化漲幅，開春4天+2000點後首日持平，AI一線→二線輪動"
+    },
+    "missed_opportunities": [
+      {
+        "symbol": "6230",
+        "name": "超眾",
+        "change_pct": 9.79,
+        "reason": "AI散熱爆發，未在法人TOP50未推薦"
+      },
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "change_pct": 8.94,
+        "reason": "法人+262K但5日+16.6%排除，持股但未推薦"
+      },
+      {
+        "symbol": "3443",
+        "name": "創意",
+        "change_pct": 7.57,
+        "reason": "IC設計輪動，未在法人TOP50"
+      },
+      {
+        "symbol": "3017",
+        "name": "奇鋐",
+        "change_pct": 5.37,
+        "reason": "AI散熱，未在法人TOP50"
+      },
+      {
+        "symbol": "3037",
+        "name": "欣興",
+        "change_pct": 5.02,
+        "reason": "AI載板二線輪動"
+      },
+      {
+        "symbol": "2883",
+        "name": "開發金",
+        "change_pct": 5.02,
+        "reason": "連7天法人+265K極強但未推薦"
+      }
+    ],
+    "framework": "v7.3",
+    "lessons_learned": [
+      "推薦價設太高(高於前收2-4%)是最大失敗因素，5檔失敗股全有此問題",
+      "連漲3天+2000點後獲利回吐壓力大，應降低倉位+設保守進場價",
+      "一線AI(廣達/鴻海)→二線AI(創意/奇鋐/超眾)輪動，應提前偵測",
+      "法人爆買≠隔日必漲(中鋼+72K/鴻海+74.6K法人爆買但股價仍跌)",
+      "Track B盤中辨識力佳(散熱/面板/金融三方向全部命中)"
+    ]
   }
 }
