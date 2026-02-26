@@ -266,5 +266,124 @@
     "航運": 1,
     "max_industry_pct": 0.429,
     "diversification_check": "PASS"
+  },
+  "intraday_analysis": {
+    "analysis_time": "12:38",
+    "market_summary": "開春三天噴漲近2000點後市場分化，二線AI散熱/IC設計領漲，一線AI組裝回檔，面板爆量",
+    "track_a": [
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "recommend_price": 310.0,
+        "intraday_price": 292.0,
+        "daily_change_pct": -1.85,
+        "volume_ratio": 0.68,
+        "institutional_today": 22137,
+        "exit_signal": "無",
+        "strategy": "續抱（法人+22K連7天買超）"
+      },
+      {
+        "stock_code": "2454",
+        "stock_name": "聯發科",
+        "recommend_price": 1935.0,
+        "intraday_price": 1965.0,
+        "daily_change_pct": 5.08,
+        "volume_ratio": 0.82,
+        "institutional_today": 2840,
+        "exit_signal": "無",
+        "strategy": "可部分獲利（今日+5.08%大漲）"
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "recommend_price": 254.0,
+        "intraday_price": 242.5,
+        "daily_change_pct": -1.62,
+        "volume_ratio": 0.84,
+        "institutional_today": 74627,
+        "exit_signal": "距停損240僅1%，密切觀察",
+        "strategy": "觀察（距停損僅1%，但法人爆買+74.6K）"
+      },
+      {
+        "stock_code": "2002",
+        "stock_name": "中鋼",
+        "recommend_price": 21.5,
+        "intraday_price": 20.7,
+        "daily_change_pct": -2.59,
+        "volume_ratio": 0.71,
+        "institutional_today": 72262,
+        "exit_signal": "跌破MA5(20.81)，但法人+72K續買",
+        "strategy": "觀察（跌破MA5，等收盤能否站回）"
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "recommend_price": 48.0,
+        "intraday_price": 46.35,
+        "daily_change_pct": -0.11,
+        "volume_ratio": 0.54,
+        "institutional_today": 10081,
+        "exit_signal": "無",
+        "strategy": "續抱（法人+10K續買）"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "recommend_price": 195.0,
+        "intraday_price": 196.0,
+        "daily_change_pct": 2.08,
+        "volume_ratio": 1.19,
+        "institutional_today": null,
+        "exit_signal": "無",
+        "strategy": "續抱（穩健上漲+量增）"
+      },
+      {
+        "stock_code": "4938",
+        "stock_name": "和碩",
+        "recommend_price": 75.0,
+        "intraday_price": 74.0,
+        "daily_change_pct": 1.23,
+        "volume_ratio": 1.24,
+        "institutional_today": null,
+        "exit_signal": "無",
+        "strategy": "續抱（Apple催化+量增）"
+      }
+    ],
+    "stop_loss_triggered": [],
+    "track_b_directions": [
+      {
+        "sector": "AI散熱/零組件（二線AI輪動）",
+        "catalyst": "費半+3.08%、NVIDIA+4.03%、SMCI+13.09%催化，資金從一線AI組裝輪動到二線散熱/IC設計",
+        "institutional_summary": "創意+6.60%(連2天買超)、奇鋐+5.67%(法人+1.4K)、超眾+9.79%(散熱爆發)、欣興+3.71%",
+        "chain": {
+          "已反映": ["聯發科+5.08%", "創意+6.60%", "超眾+9.79%", "奇鋐+5.67%"],
+          "可觀察": ["欣興+3.71%", "南電+1.81%", "京元電+1.56%"],
+          "尚未跟上": ["日月光±0%", "景碩-2.0%", "信邦-1.02%"]
+        },
+        "conclusion": "AI資金輪動到散熱/IC設計，封測/連接器尚未跟上"
+      },
+      {
+        "sector": "面板/顯示器（法人爆量佈局）",
+        "catalyst": "群創法人連3天爆買+262K、鴻海處分4.34萬張利空出盡、面板補庫存週期",
+        "institutional_summary": "群創+262K(張數rank1、金額rank8)、友達跟漲+3.42%、揚明光+5.24%",
+        "chain": {
+          "已反映": ["群創+9.35%(爆漲)"],
+          "可觀察": ["友達+3.42%", "揚明光+5.24%"],
+          "尚未跟上": ["聯詠+0.52%"]
+        },
+        "conclusion": "群創法人+262K爆量帶動面板族群，聯詠(驅動IC)尚未跟上"
+      },
+      {
+        "sector": "金融（法人持續佈局）",
+        "catalyst": "台股爆量成交→金控手續費收入增、VIX-11.37%恐慌降、金控股利政策公佈",
+        "institutional_summary": "開發金連7天買超+265K(外資+投信同步)、合庫金+50K(同步買)、國泰金/富邦金近2天轉賣",
+        "chain": {
+          "已反映": ["開發金+4.78%(連7天買超極強)"],
+          "可觀察": ["國泰金+2.99%", "台新金+2.21%", "華南金+1.75%"],
+          "尚未跟上": ["合庫金+0.21%(法人+50K但股價未動)"]
+        },
+        "conclusion": "開發金法人極強，合庫金法人+50K同步買但股價尚未跟上有補漲空間"
+      }
+    ]
   }
 }
