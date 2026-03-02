@@ -309,6 +309,105 @@
       "AI伺服器一線→二線輪動→今日關注非科技防禦類"
     ]
   },
+  "intraday_analysis": {
+    "timestamp": "2026-03-02 12:30",
+    "market_index": 35278,
+    "market_change_pct": -0.39,
+    "track_a": [
+      {
+        "stock_code": "2882",
+        "stock_name": "國泰金",
+        "recommend_price": 78.0,
+        "intraday_price": 77.9,
+        "vs_recommend_pct": -0.13,
+        "today_change_pct": -2.14,
+        "volume_ratio": 0.39,
+        "exit_signal": "無",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2884",
+        "stock_name": "玉山金",
+        "recommend_price": 34.5,
+        "intraday_price": 34.85,
+        "vs_recommend_pct": 1.01,
+        "today_change_pct": 0.0,
+        "volume_ratio": 0.39,
+        "exit_signal": "無",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2881",
+        "stock_name": "富邦金",
+        "recommend_price": 91.0,
+        "intraday_price": 93.3,
+        "vs_recommend_pct": 2.53,
+        "today_change_pct": -2.51,
+        "volume_ratio": 0.47,
+        "exit_signal": "無",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "recommend_price": 193.0,
+        "intraday_price": 206.5,
+        "vs_recommend_pct": 6.99,
+        "today_change_pct": 9.55,
+        "volume_ratio": 2.19,
+        "exit_signal": "無",
+        "strategy": "可部分獲利30-50%，上調停損至195"
+      },
+      {
+        "stock_code": "2609",
+        "stock_name": "陽明",
+        "recommend_price": 55.0,
+        "intraday_price": 59.4,
+        "vs_recommend_pct": 8.0,
+        "today_change_pct": 7.03,
+        "volume_ratio": 2.64,
+        "exit_signal": "無",
+        "strategy": "可部分獲利30-50%，上調停損至56"
+      },
+      {
+        "stock_code": "2208",
+        "stock_name": "台船",
+        "recommend_price": 24.5,
+        "intraday_price": 23.3,
+        "vs_recommend_pct": -4.9,
+        "today_change_pct": -2.71,
+        "volume_ratio": 0.91,
+        "exit_signal": "接近停損（23.3 vs 停損22.5），尾盤跌破23.0則明日停損",
+        "strategy": "觀察，接近停損"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "recommend_price": 26.5,
+        "intraday_price": 27.35,
+        "vs_recommend_pct": 3.21,
+        "today_change_pct": 3.01,
+        "volume_ratio": 0.49,
+        "exit_signal": "無",
+        "strategy": "續抱"
+      }
+    ],
+    "track_b_directions": [
+      {
+        "sector": "金融股法人密集佈局（防禦性尚未反映）",
+        "catalyst": "法人上週密集買超金融板塊（2/26單日6檔金融股進TOP30），3月法人盛會+GTC接力，金融股防禦屬性。今日大盤-0.39%壓抑股價。",
+        "institutional_summary": "中信金+13K(金額rank18)、永豐金+9K(rank28)、華南金+8K(rank31)、第一金+7K(rank34)，法人同步買但股價未動",
+        "chain": [
+          {"code": "2891", "name": "中信金", "price": 53.7, "change_pct": -0.37, "status": "尚未反映"},
+          {"code": "2890", "name": "永豐金", "price": 32.7, "change_pct": 0.31, "status": "尚未反映"},
+          {"code": "2880", "name": "華南金", "price": 36.65, "change_pct": -0.14, "status": "尚未反映"},
+          {"code": "2892", "name": "第一金", "price": 29.5, "change_pct": -1.34, "status": "尚未反映"}
+        ],
+        "conclusion": "金融板塊法人買盤密集但今日被大盤拖累，若明日大盤回穩有補漲空間"
+      }
+    ],
+    "stop_loss_triggered": []
+  },
   "industry_diversification": {
     "total_stocks": 7,
     "industries": 4,
