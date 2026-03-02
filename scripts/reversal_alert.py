@@ -225,24 +225,19 @@ def detect_reversal(stock_code, stock_name="", days=10):
         return result
 
     # Level 2: ⚠️⚠️ 單日反轉（警戒）
-    # v3.0：賣超佔日均量 >1.5% 或 絕對值 >20K 張
-    if early_buy_days >= len(early_data) * 0.6 and early_total > 5000:
+    # 條件：連買後反轉，且賣超佔日均量 >1.5% 或絕對值 >20K 張
+    if early_buy_days >= len(early_data) * 0.6 and early_total > 0:
         if latest['total'] < 0 and (sell_ratio > 1.5 or abs(latest['total']) > 20000):
             result['alert_level'] = 'level2'
             result['warning_level'] = 2
-            result['alert_reason'] = f"⚠️⚠️ Level 2：單日反轉！前期買超{early_total:+,}張，今日賣超{latest['total']:+,}張"
+            result['alert_reason'] = f"⚠️⚠️ Level 2：單日反轉！前期買超{early_total:+,}張，今日賣超{latest['total']:+,}張（佔日均量{sell_ratio:.1f}%）"
             result['recommendation'] = '⚠️⚠️ 法人翻臉！密切觀察明日，準備停損'
-            return result
-        elif latest['total'] < 0:
-            result['alert_level'] = 'level2_mild'
-            result['warning_level'] = 2
-            result['alert_reason'] = f"⚠️ Level 2：買轉賣！前期買超{early_total:+,}張，今日小賣{latest['total']:+,}張"
-            result['recommendation'] = '⚠️ 注意反轉風險！設好停損'
             return result
 
     # Level 1: ⚠️ 動能減弱（早期預警）
+    # 條件：買超減速 >30%（不限制絕對量，小型股同樣適用）
     if momentum and early_buy_days >= len(early_data) * 0.5:
-        if momentum['change_pct'] < -30 and momentum['previous_avg'] > 2000:
+        if momentum['change_pct'] < -30:
             result['alert_level'] = 'level1'
             result['warning_level'] = 1
             result['alert_reason'] = f"⚠️ Level 1：買超減速{momentum['change_pct']:.1f}%！前5日{momentum['previous_avg']:+,.0f}張/日 → 近5日{momentum['recent_avg']:+,.0f}張/日"
@@ -312,14 +307,13 @@ def main():
     print(f"\n掃描標的：{len(stocks)} 檔")
     print("-" * 60)
 
-    # 🆕 v2.0 四層預警分類
+    # 四層預警分類（對應 CLAUDE.md Level 1-4）
     alerts = {
-        'level4': [],       # 🔴🔴 爆量賣超
-        'level3': [],       # 🔴 連續賣超
-        'level2': [],       # ⚠️⚠️ 單日反轉
-        'level2_mild': [],  # ⚠️ 買轉賣（較輕微）
-        'level1': [],       # ⚠️ 動能減弱
-        'safe': []          # ✅ 籌碼健康
+        'level4': [],  # 🔴🔴 爆量賣超（>5% 日均量 或 >50K張）
+        'level3': [],  # 🔴 連續賣超（連續2日 + 累計轉負）
+        'level2': [],  # ⚠️⚠️ 單日反轉（連買後賣，>1.5% 或 >20K張）
+        'level1': [],  # ⚠️ 動能減弱（買超減速>30%）
+        'safe': []     # ✅ 籌碼健康
     }
 
     for stock in stocks:
@@ -355,10 +349,9 @@ def main():
             print(f"   • {a['stock_name']}({a['stock_code']}): {a['alert_reason']}")
             print(f"     → {a['recommendation']}")
 
-    level2_total = len(alerts['level2']) + len(alerts['level2_mild'])
-    if level2_total > 0:
-        print(f"\n⚠️⚠️ Level 2：單日反轉（{level2_total}檔）- 密切觀察：")
-        for a in alerts['level2'] + alerts['level2_mild']:
+    if alerts['level2']:
+        print(f"\n⚠️⚠️ Level 2：單日反轉（{len(alerts['level2'])}檔）- 密切觀察：")
+        for a in alerts['level2']:
             print(f"   • {a['stock_name']}({a['stock_code']}): {a['alert_reason']}")
             print(f"     → {a['recommendation']}")
 
@@ -374,16 +367,16 @@ def main():
             reason = a['alert_reason'].replace('✅ ', '')  # 移除emoji避免重複
             print(f"   • {a['stock_name']}({a['stock_code']}): {reason}")
 
-    total_alerts = len(alerts['level4']) + len(alerts['level3']) + len(alerts['level2']) + len(alerts['level2_mild']) + len(alerts['level1'])
+    total_alerts = len(alerts['level4']) + len(alerts['level3']) + len(alerts['level2']) + len(alerts['level1'])
     if total_alerts == 0:
         print("\n✅ 無反轉警示，籌碼狀況良好")
     else:
         print(f"\n⚠️ 共 {total_alerts} 檔有反轉風險，請注意！")
         print("\n💡 四層預警說明：")
         print("   Level 1 ⚠️：買超減速>30%（早期預警，考慮減碼）")
-        print("   Level 2 ⚠️⚠️：連買後突然賣（密切觀察，準備停損）")
-        print("   Level 3 🔴：連續2日賣超（確認反轉，建議出場）")
-        print("   Level 4 🔴🔴：爆量賣超>20K（極度危險，立即出場）")
+        print("   Level 2 ⚠️⚠️：連買後反轉，賣超>1.5%日均量或>20K張（準備停損）")
+        print("   Level 3 🔴：連續2日賣超+累計轉負（確認反轉，建議出場）")
+        print("   Level 4 🔴🔴：爆量賣超>5%日均量或>50K張（極度危險，立即出場）")
 
 if __name__ == '__main__':
     main()
