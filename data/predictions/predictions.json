@@ -5317,5 +5317,75 @@
       "法人爆買≠隔日必漲(中鋼+72K/鴻海+74.6K法人爆買但股價仍跌)",
       "Track B盤中辨識力佳(散熱/面板/金融三方向全部命中)"
     ]
+  },
+  "2026-03-02": {
+    "date": "2026-03-02",
+    "predictions": [
+      {
+        "symbol": "2882",
+        "name": "國泰金",
+        "recommend_price": 78.0,
+        "actual_close": 77.9,
+        "change_pct": -0.13,
+        "result": "fail",
+        "notes": "金融全面回檔（大盤-0.90%），僅微虧-0.13%幾乎平盤，前收79.70今日-2.26%"
+      },
+      {
+        "symbol": "2884",
+        "name": "玉山金",
+        "recommend_price": 34.5,
+        "actual_close": 34.9,
+        "change_pct": 1.16,
+        "result": "success",
+        "notes": "金融股中最抗跌，今日-0.57%但仍在推薦價上方，法人+21K佔成交22.1%支撐"
+      },
+      {
+        "symbol": "2881",
+        "name": "富邦金",
+        "recommend_price": 91.0,
+        "actual_close": 93.0,
+        "change_pct": 2.2,
+        "result": "success",
+        "notes": "金融龍頭今日-1.27%回檔，但推薦價設定低於前收(94.2)，仍有+2.20%正報酬"
+      },
+      {
+        "symbol": "2603",
+        "name": "長榮",
+        "recommend_price": 193.0,
+        "actual_close": 210.0,
+        "change_pct": 8.81,
+        "result": "success",
+        "notes": "中東衝突推升運價，今日+6.60%爆量大漲，法人連5天買超+佔成交37.2%"
+      },
+      {
+        "symbol": "2609",
+        "name": "陽明",
+        "recommend_price": 55.0,
+        "actual_close": 60.0,
+        "change_pct": 9.09,
+        "result": "success",
+        "notes": "中東衝突→運價暴漲，今日+4.53%，法人佔成交50.3%極高主導力強"
+      },
+      {
+        "symbol": "2208",
+        "name": "台船",
+        "recommend_price": 24.5,
+        "actual_close": 23.3,
+        "change_pct": -4.9,
+        "result": "fail",
+        "notes": "推薦價24.5>前收24.35，法人金額rank49最低，純題材驅動(美伊開戰→軍工)失敗，今日-4.31%"
+      },
+      {
+        "symbol": "2353",
+        "name": "宏碁",
+        "recommend_price": 26.5,
+        "actual_close": 27.1,
+        "change_pct": 2.26,
+        "result": "success",
+        "notes": "Dell+21.11%催化PC/伺服器，今日-1.09%小跌但仍在推薦價上方+2.26%"
+      }
+    ],
+    "accuracy": 0.714,
+    "notes": "5/7=71.4%。航運大成功（長榮+8.81%、陽明+9.09%），金融防禦策略推薦價設定合理。台船失敗：法人rank49最低+推薦價>前收+純題材驅動。教訓：rank>40純題材股不推薦。"
   }
 }

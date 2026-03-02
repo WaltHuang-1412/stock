@@ -8,7 +8,9 @@
       "cost": 41.058,
       "pnl_pct": -1.24,
       "institutional": "法人+2.8K(rank47)、佔成交14.1%、5日+1.9%",
-      "note": "金融偏空日防禦，法人續買中"
+      "note": "金融偏空日防禦，法人續買中",
+      "close_price": 40.2,
+      "today_change_pct": -1.83
     },
     "2330": {
       "status": "續抱",
@@ -16,7 +18,9 @@
       "cost": 43.71,
       "pnl_pct": 4464.17,
       "institutional": "台積電ADR+1.09%，今日預期隨大盤回檔",
-      "note": "法人2/26賣超-16K，但ADR+1.09%相對穩"
+      "note": "法人2/26賣超-16K，但ADR+1.09%相對穩",
+      "close_price": 1975.0,
+      "today_change_pct": 3.95
     },
     "3481": {
       "status": "獲利觀察",
@@ -24,7 +28,9 @@
       "cost": 18.2258,
       "pnl_pct": 47.04,
       "institutional": "法人2/26+126K(rank1)、5日+27.3%已大漲",
-      "note": "5日漲幅極大，美伊開戰日獲利回吐壓力大，建議部分獲利鎖定"
+      "note": "法人-33K高壓出場，已獲利56.7%建議部分鎖定利潤",
+      "close_price": 28.55,
+      "today_change_pct": 6.53
     }
   },
   "recommendations": [
@@ -48,7 +54,12 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "金融防禦+法人佈局+偏空日首選",
-      "recommend_date": "2026-03-02"
+      "recommend_date": "2026-03-02",
+      "today_change_pct": -2.26,
+      "result": "fail",
+      "fail_reason": "金融全面回檔（大盤-0.90%），僅微虧-0.13%幾乎平盤",
+      "close_price": 77.9,
+      "change_percent": -0.13
     },
     {
       "stock_code": "2884",
@@ -70,7 +81,11 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "金融防禦+法人佈局",
-      "recommend_date": "2026-03-02"
+      "recommend_date": "2026-03-02",
+      "today_change_pct": -0.57,
+      "result": "success",
+      "close_price": 34.9,
+      "change_percent": 1.16
     },
     {
       "stock_code": "2881",
@@ -92,7 +107,11 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "金融龍頭+5日-0.3%最安全+偏空日防禦",
-      "recommend_date": "2026-03-02"
+      "recommend_date": "2026-03-02",
+      "today_change_pct": -1.27,
+      "result": "success",
+      "close_price": 93.0,
+      "change_percent": 2.2
     },
     {
       "stock_code": "2603",
@@ -115,7 +134,11 @@
       },
       "catalyst": "中東衝突→運價溢價+法人連4天買超+佔成交37.2%",
       "risk_note": "油價+10.19%為成本利空",
-      "recommend_date": "2026-03-02"
+      "recommend_date": "2026-03-02",
+      "today_change_pct": 6.6,
+      "result": "success",
+      "close_price": 210.0,
+      "change_percent": 8.81
     },
     {
       "stock_code": "2609",
@@ -138,7 +161,11 @@
       },
       "catalyst": "中東衝突→運價+法人佔成交過半",
       "risk_note": "油價成本壓力+5日+8.7%偏高",
-      "recommend_date": "2026-03-02"
+      "recommend_date": "2026-03-02",
+      "today_change_pct": 4.53,
+      "result": "success",
+      "close_price": 60.0,
+      "change_percent": 9.09
     },
     {
       "stock_code": "2208",
@@ -161,7 +188,12 @@
       },
       "catalyst": "美伊開戰→軍工直接受惠+軍艦訂單",
       "risk_note": "純題材驅動，法人金額偏低",
-      "recommend_date": "2026-03-02"
+      "recommend_date": "2026-03-02",
+      "today_change_pct": -4.31,
+      "result": "fail",
+      "fail_reason": "法人金額rank49最低+推薦價>前收+純題材驅動（美伊開戰→軍工）失敗",
+      "close_price": 23.3,
+      "change_percent": -4.9
     },
     {
       "stock_code": "2353",
@@ -184,7 +216,11 @@
       },
       "catalyst": "Dell+21.11%→PC/伺服器受惠",
       "risk_note": "Dell催化不直接，NVIDIA利空可能波及",
-      "recommend_date": "2026-03-02"
+      "recommend_date": "2026-03-02",
+      "today_change_pct": -1.09,
+      "result": "success",
+      "close_price": 27.1,
+      "change_percent": 2.26
     }
   ],
   "excluded_stocks": [
@@ -251,7 +287,13 @@
         "us_stock": "NVIDIA",
         "change_pct": -6.65,
         "tw_industry": "AI伺服器",
-        "affected_stocks": ["2382", "3231", "2324", "2356", "6669"]
+        "affected_stocks": [
+          "2382",
+          "3231",
+          "2324",
+          "2356",
+          "6669"
+        ]
       }
     ],
     "level_1": [
@@ -398,10 +440,34 @@
         "catalyst": "法人上週密集買超金融板塊（2/26單日6檔金融股進TOP30），3月法人盛會+GTC接力，金融股防禦屬性。今日大盤-0.39%壓抑股價。",
         "institutional_summary": "中信金+13K(金額rank18)、永豐金+9K(rank28)、華南金+8K(rank31)、第一金+7K(rank34)，法人同步買但股價未動",
         "chain": [
-          {"code": "2891", "name": "中信金", "price": 53.7, "change_pct": -0.37, "status": "尚未反映"},
-          {"code": "2890", "name": "永豐金", "price": 32.7, "change_pct": 0.31, "status": "尚未反映"},
-          {"code": "2880", "name": "華南金", "price": 36.65, "change_pct": -0.14, "status": "尚未反映"},
-          {"code": "2892", "name": "第一金", "price": 29.5, "change_pct": -1.34, "status": "尚未反映"}
+          {
+            "code": "2891",
+            "name": "中信金",
+            "price": 53.7,
+            "change_pct": -0.37,
+            "status": "尚未反映"
+          },
+          {
+            "code": "2890",
+            "name": "永豐金",
+            "price": 32.7,
+            "change_pct": 0.31,
+            "status": "尚未反映"
+          },
+          {
+            "code": "2880",
+            "name": "華南金",
+            "price": 36.65,
+            "change_pct": -0.14,
+            "status": "尚未反映"
+          },
+          {
+            "code": "2892",
+            "name": "第一金",
+            "price": 29.5,
+            "change_pct": -1.34,
+            "status": "尚未反映"
+          }
         ],
         "conclusion": "金融板塊法人買盤密集但今日被大盤拖累，若明日大盤回穩有補漲空間"
       }
@@ -417,5 +483,131 @@
     "PC/伺服器": 1,
     "max_industry_pct": 0.429,
     "diversification_check": "PASS"
+  },
+  "after_market_analysis": {
+    "timestamp": "2026-03-02 14:30",
+    "market_close": 35095,
+    "market_change_pct": -0.9,
+    "accuracy": 0.714,
+    "success_count": 5,
+    "fail_count": 2,
+    "total": 7,
+    "success_patterns": [
+      "航運+中東衝突催化（長榮+8.81%、陽明+9.09%）",
+      "金融防禦推薦價≤前收（玉山金+1.16%、富邦金+2.20%）",
+      "Dell催化PC/伺服器（宏碁+2.26%）"
+    ],
+    "failure_patterns": [
+      "法人rank>40純題材驅動（台船-4.90%）",
+      "金融全面回檔系統性風險（國泰金-0.13%，幾乎平盤）"
+    ],
+    "tomorrow_recommendations": [
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "industry": "航運",
+        "score": 80,
+        "position": "15%"
+      },
+      {
+        "stock_code": "2884",
+        "stock_name": "玉山金",
+        "industry": "金融",
+        "score": 76,
+        "position": "10-15%"
+      },
+      {
+        "stock_code": "2609",
+        "stock_name": "陽明",
+        "industry": "航運",
+        "score": 73,
+        "position": "10%"
+      },
+      {
+        "stock_code": "2881",
+        "stock_name": "富邦金",
+        "industry": "金融",
+        "score": 71,
+        "position": "10%"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "industry": "PC/伺服器",
+        "score": 69,
+        "position": "10%"
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "industry": "金融",
+        "score": 67,
+        "position": "10%"
+      },
+      {
+        "stock_code": "2308",
+        "stock_name": "台達電",
+        "industry": "電子零件",
+        "score": 66,
+        "position": "10%"
+      }
+    ],
+    "removed_stocks": [
+      {
+        "stock_code": "2208",
+        "stock_name": "台船",
+        "reason": "-4.90%接近停損，法人rank49最低+純題材驅動失敗→停損出場"
+      }
+    ]
+  },
+  "yesterday_verification": {
+    "accuracy": 0.714,
+    "total": 7,
+    "success": 5,
+    "fail": 2,
+    "results": [
+      {
+        "stock_code": "2882",
+        "stock_name": "國泰金",
+        "result": "fail",
+        "change_percent": -0.13
+      },
+      {
+        "stock_code": "2884",
+        "stock_name": "玉山金",
+        "result": "success",
+        "change_percent": 1.16
+      },
+      {
+        "stock_code": "2881",
+        "stock_name": "富邦金",
+        "result": "success",
+        "change_percent": 2.2
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "result": "success",
+        "change_percent": 8.81
+      },
+      {
+        "stock_code": "2609",
+        "stock_name": "陽明",
+        "result": "success",
+        "change_percent": 9.09
+      },
+      {
+        "stock_code": "2208",
+        "stock_name": "台船",
+        "result": "fail",
+        "change_percent": -4.9
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "result": "success",
+        "change_percent": 2.26
+      }
+    ]
   }
 }
