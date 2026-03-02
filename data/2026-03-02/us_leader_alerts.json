@@ -1,0 +1,154 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Micron",
+      "change_pct": -3.69,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "DRAM",
+      "affected_stocks": {
+        "1303": "南亞",
+        "2344": "華邦電",
+        "2337": "旺宏",
+        "5347": "世界"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Micron 跌幅 -3.69%，DRAM產業受壓"
+    },
+    {
+      "us_stock": "NVIDIA",
+      "change_pct": -6.65,
+      "level": 2,
+      "level_name": "🟡 降級評分",
+      "tw_industry": "AI伺服器",
+      "affected_stocks": {
+        "2382": "廣達",
+        "3231": "緯創",
+        "2324": "仁寶",
+        "2356": "英業達",
+        "6669": "緯穎"
+      },
+      "action": "downgrade",
+      "score_adjustment": -15,
+      "reason": "NVIDIA 跌幅 -6.65%，AI伺服器產業受壓"
+    },
+    {
+      "us_stock": "Tesla",
+      "change_pct": -2.26,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "電動車",
+      "affected_stocks": {
+        "2317": "鴻海",
+        "1513": "中興電",
+        "1519": "華城",
+        "2308": "台達電",
+        "1504": "東元"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Tesla 跌幅 -2.26%，電動車產業受壓"
+    },
+    {
+      "us_stock": "Broadcom",
+      "change_pct": -3.94,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "網通",
+      "affected_stocks": {
+        "2345": "智邦",
+        "2412": "中華電",
+        "3042": "晶技",
+        "2449": "京元電子"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Broadcom 跌幅 -3.94%，網通產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-03-02",
+    "total_alerts": 4,
+    "level_3_count": 0,
+    "level_2_count": 1,
+    "level_1_count": 3,
+    "excluded_stocks": [],
+    "downgraded_stocks": {
+      "2382": {
+        "reason": "NVIDIA 跌幅 -6.65%",
+        "adjustment": -15
+      },
+      "3231": {
+        "reason": "NVIDIA 跌幅 -6.65%",
+        "adjustment": -15
+      },
+      "2324": {
+        "reason": "NVIDIA 跌幅 -6.65%",
+        "adjustment": -15
+      },
+      "2356": {
+        "reason": "NVIDIA 跌幅 -6.65%",
+        "adjustment": -15
+      },
+      "6669": {
+        "reason": "NVIDIA 跌幅 -6.65%",
+        "adjustment": -15
+      }
+    },
+    "warning_stocks": {
+      "1303": {
+        "reason": "Micron 跌幅 -3.69%",
+        "adjustment": -5
+      },
+      "2344": {
+        "reason": "Micron 跌幅 -3.69%",
+        "adjustment": -5
+      },
+      "2337": {
+        "reason": "Micron 跌幅 -3.69%",
+        "adjustment": -5
+      },
+      "5347": {
+        "reason": "Micron 跌幅 -3.69%",
+        "adjustment": -5
+      },
+      "2317": {
+        "reason": "Tesla 跌幅 -2.26%",
+        "adjustment": -5
+      },
+      "1513": {
+        "reason": "Tesla 跌幅 -2.26%",
+        "adjustment": -5
+      },
+      "1519": {
+        "reason": "Tesla 跌幅 -2.26%",
+        "adjustment": -5
+      },
+      "2308": {
+        "reason": "Tesla 跌幅 -2.26%",
+        "adjustment": -5
+      },
+      "1504": {
+        "reason": "Tesla 跌幅 -2.26%",
+        "adjustment": -5
+      },
+      "2345": {
+        "reason": "Broadcom 跌幅 -3.94%",
+        "adjustment": -5
+      },
+      "2412": {
+        "reason": "Broadcom 跌幅 -3.94%",
+        "adjustment": -5
+      },
+      "3042": {
+        "reason": "Broadcom 跌幅 -3.94%",
+        "adjustment": -5
+      },
+      "2449": {
+        "reason": "Broadcom 跌幅 -3.94%",
+        "adjustment": -5
+      }
+    }
+  }
+}
