@@ -38,6 +38,32 @@ def load_institutional_top50(date_str):
         return []
 
 
+def load_leader_alerts(date_str):
+    """
+    載入美股龍頭預警（us_leader_alerts.json）
+
+    回傳：
+      excluded_codes: set  — Level 3 直接排除的股票代號
+      downgraded_codes: dict — Level 2 降級評分 {code: {reason, adjustment}}
+      warning_codes: dict  — Level 1 提示注意 {code: {reason, adjustment}}
+    """
+    alerts_file = project_root / "data" / date_str / "us_leader_alerts.json"
+    try:
+        with open(alerts_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        summary = data.get('summary', {})
+        excluded  = set(summary.get('excluded_stocks', []))
+        downgraded = summary.get('downgraded_stocks', {})
+        warning    = summary.get('warning_stocks', {})
+        return excluded, downgraded, warning
+    except FileNotFoundError:
+        print(f"警告：找不到 {alerts_file}，跳過龍頭預警過濾", file=sys.stderr)
+        return set(), {}, {}
+    except Exception as e:
+        print(f"警告：讀取 us_leader_alerts.json 失敗: {e}", file=sys.stderr)
+        return set(), {}, {}
+
+
 def load_industry_expanded_stocks(date_str):
     """載入時事驅動產業展開的股票"""
     stocks_file = project_root / "data" / date_str / "industry_expanded_stocks.json"
@@ -48,6 +74,37 @@ def load_industry_expanded_stocks(date_str):
     except FileNotFoundError:
         print(f"警告：找不到 {stocks_file}，返回空數據", file=sys.stderr)
         return []
+
+
+def apply_leader_alerts(merged, excluded_codes, downgraded_codes, warning_codes):
+    """
+    對已合併的候選股套用龍頭預警：
+    - Level 3（excluded）：直接移除
+    - Level 2（downgraded）：標記 alert_level=2 + score_adjustment
+    - Level 1（warning）：標記 alert_level=1 + score_adjustment
+    """
+    result = []
+    removed = []
+
+    for stock in merged:
+        code = stock['code']
+
+        if code in excluded_codes:
+            removed.append(stock)
+            continue  # Level 3：直接排除
+
+        if code in downgraded_codes:
+            stock['alert_level'] = 2
+            stock['alert_info'] = downgraded_codes[code]
+        elif code in warning_codes:
+            stock['alert_level'] = 1
+            stock['alert_info'] = warning_codes[code]
+        else:
+            stock['alert_level'] = 0
+
+        result.append(stock)
+
+    return result, removed
 
 
 def merge_candidates(group_a, group_b):
@@ -126,21 +183,43 @@ def main():
     group_b = load_industry_expanded_stocks(date_str)
     print(f"  ✓ B組（時事驅動）：{len(group_b)} 檔")
 
+    # 載入龍頭預警
+    print("\n🚨 載入美股龍頭預警...")
+    excluded_codes, downgraded_codes, warning_codes = load_leader_alerts(date_str)
+    print(f"  Level 3 排除：{len(excluded_codes)} 檔")
+    print(f"  Level 2 降級：{len(downgraded_codes)} 檔")
+    print(f"  Level 1 提示：{len(warning_codes)} 檔")
+
     # 合併
     print("\n🔄 合併候選股...")
-    merged = merge_candidates(group_a, group_b)
+    merged_raw = merge_candidates(group_a, group_b)
+
+    # 套用龍頭預警（排除 Level 3）
+    merged, removed = apply_leader_alerts(merged_raw, excluded_codes, downgraded_codes, warning_codes)
+
+    if removed:
+        print(f"\n🚫 Level 3 龍頭預警排除 {len(removed)} 檔：")
+        for s in removed:
+            print(f"  ✗ {s['name']}({s['code']})")
 
     # 統計
     dual_confirmed = [s for s in merged if s.get('dual_confirmed')]
     only_institutional = [s for s in merged if s['sources'] == ['institutional_top50']]
     only_catalyst = [s for s in merged if s['sources'] == ['industry_catalyst']]
+    alert_l2 = [s for s in merged if s.get('alert_level') == 2]
+    alert_l1 = [s for s in merged if s.get('alert_level') == 1]
 
-    print(f"  合併前總數：{len(group_a) + len(group_b)} 檔")
-    print(f"  去重後總數：{len(merged)} 檔")
+    print(f"\n  合併前總數：{len(group_a) + len(group_b)} 檔")
+    print(f"  去重後總數：{len(merged_raw)} 檔")
+    print(f"  排除後總數：{len(merged)} 檔")
     print()
     print(f"  🔥 雙重確認（法人+時事）：{len(dual_confirmed)} 檔")
     print(f"  📊 僅法人 TOP50：{len(only_institutional)} 檔")
     print(f"  🎯 僅時事驅動：{len(only_catalyst)} 檔")
+    if alert_l2:
+        print(f"  ⚠️  Level 2 降級（-15分）：{len(alert_l2)} 檔")
+    if alert_l1:
+        print(f"  ℹ️  Level 1 提示（-5分）：{len(alert_l1)} 檔")
 
     # 輸出雙重確認股票
     if dual_confirmed:
@@ -158,8 +237,12 @@ def main():
             "total": len(merged),
             "dual_confirmed": len(dual_confirmed),
             "only_institutional": len(only_institutional),
-            "only_catalyst": len(only_catalyst)
+            "only_catalyst": len(only_catalyst),
+            "excluded_by_leader_alert": len(removed),
+            "alert_level_2": len(alert_l2),
+            "alert_level_1": len(alert_l1)
         },
+        "excluded_stocks": [s['code'] for s in removed],
         "dual_confirmed_stocks": [s['code'] for s in dual_confirmed],
         "all_candidates": merged
     }

@@ -4,8 +4,12 @@
     "total": 64,
     "dual_confirmed": 20,
     "only_institutional": 30,
-    "only_catalyst": 14
+    "only_catalyst": 14,
+    "excluded_by_leader_alert": 0,
+    "alert_level_2": 3,
+    "alert_level_1": 4
   },
+  "excluded_stocks": [],
   "dual_confirmed_stocks": [
     "2887",
     "2883",
@@ -41,7 +45,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2883",
@@ -55,7 +60,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2884",
@@ -69,7 +75,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2609",
@@ -83,7 +90,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "1326",
@@ -97,7 +105,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2891",
@@ -111,7 +120,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2882",
@@ -125,7 +135,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2324",
@@ -139,7 +150,12 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 2,
+      "alert_info": {
+        "reason": "NVIDIA 跌幅 -6.65%",
+        "adjustment": -15
+      }
     },
     {
       "code": "2890",
@@ -153,7 +169,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2603",
@@ -167,7 +184,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2605",
@@ -181,7 +199,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2880",
@@ -195,7 +214,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2892",
@@ -209,7 +229,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2353",
@@ -223,7 +244,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2606",
@@ -237,7 +259,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "2881",
@@ -251,7 +274,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "1314",
@@ -265,7 +289,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "5880",
@@ -279,7 +304,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "1513",
@@ -293,7 +319,12 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 1,
+      "alert_info": {
+        "reason": "Tesla 跌幅 -2.26%",
+        "adjustment": -5
+      }
     },
     {
       "code": "2208",
@@ -307,7 +338,8 @@
       ],
       "priority": "very_high",
       "dual_confirmed": true,
-      "catalyst_industries": []
+      "catalyst_industries": [],
+      "alert_level": 0
     },
     {
       "code": "3481",
@@ -318,7 +350,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "high"
+      "priority": "high",
+      "alert_level": 0
     },
     {
       "code": "2409",
@@ -329,7 +362,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "high"
+      "priority": "high",
+      "alert_level": 0
     },
     {
       "code": "2344",
@@ -340,7 +374,12 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "high"
+      "priority": "high",
+      "alert_level": 1,
+      "alert_info": {
+        "reason": "Micron 跌幅 -3.69%",
+        "adjustment": -5
+      }
     },
     {
       "code": "3576",
@@ -351,7 +390,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "high"
+      "priority": "high",
+      "alert_level": 0
     },
     {
       "code": "8150",
@@ -362,7 +402,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "high"
+      "priority": "high",
+      "alert_level": 0
     },
     {
       "code": "6443",
@@ -373,7 +414,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "high"
+      "priority": "high",
+      "alert_level": 0
     },
     {
       "code": "2834",
@@ -384,7 +426,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "high"
+      "priority": "high",
+      "alert_level": 0
     },
     {
       "code": "1717",
@@ -395,7 +438,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "high"
+      "priority": "high",
+      "alert_level": 0
     },
     {
       "code": "2515",
@@ -406,7 +450,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "high"
+      "priority": "high",
+      "alert_level": 0
     },
     {
       "code": "2406",
@@ -417,7 +462,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "high"
+      "priority": "high",
+      "alert_level": 0
     },
     {
       "code": "2867",
@@ -428,7 +474,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "high"
+      "priority": "high",
+      "alert_level": 0
     },
     {
       "code": "6116",
@@ -439,7 +486,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2845",
@@ -450,7 +498,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "3715",
@@ -461,7 +510,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "1605",
@@ -472,7 +522,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "9105",
@@ -483,7 +534,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "8039",
@@ -494,7 +546,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "1402",
@@ -505,7 +558,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "8110",
@@ -516,7 +570,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "3037",
@@ -527,7 +582,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2455",
@@ -538,7 +594,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2312",
@@ -549,7 +606,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "4977",
@@ -560,7 +618,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "8028",
@@ -571,7 +630,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2323",
@@ -582,7 +642,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2485",
@@ -593,7 +654,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2329",
@@ -604,7 +666,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2449",
@@ -615,7 +678,12 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 1,
+      "alert_info": {
+        "reason": "Broadcom 跌幅 -3.94%",
+        "adjustment": -5
+      }
     },
     {
       "code": "2897",
@@ -626,7 +694,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "6282",
@@ -637,7 +706,8 @@
       "sources": [
         "institutional_top50"
       ],
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2634",
@@ -649,7 +719,8 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2049",
@@ -661,7 +732,8 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2233",
@@ -673,7 +745,8 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "1301",
@@ -685,7 +758,8 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "1303",
@@ -697,7 +771,12 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 1,
+      "alert_info": {
+        "reason": "Micron 跌幅 -3.69%",
+        "adjustment": -5
+      }
     },
     {
       "code": "6505",
@@ -709,7 +788,8 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2615",
@@ -721,7 +801,8 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "3491",
@@ -733,7 +814,8 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "6285",
@@ -745,7 +827,8 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2313",
@@ -757,7 +840,8 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "3138",
@@ -769,7 +853,8 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "3047",
@@ -781,7 +866,8 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 0
     },
     {
       "code": "2382",
@@ -793,7 +879,12 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 2,
+      "alert_info": {
+        "reason": "NVIDIA 跌幅 -6.65%",
+        "adjustment": -15
+      }
     },
     {
       "code": "3231",
@@ -805,7 +896,12 @@
         "industry_catalyst"
       ],
       "dual_confirmed": false,
-      "priority": "medium"
+      "priority": "medium",
+      "alert_level": 2,
+      "alert_info": {
+        "reason": "NVIDIA 跌幅 -6.65%",
+        "adjustment": -15
+      }
     }
   ]
 }
