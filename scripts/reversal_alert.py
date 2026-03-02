@@ -50,6 +50,13 @@ try:
 except ImportError:
     HAS_YAHOO = False
 
+# 導入 TWSE 快取模組（避免重複 API 呼叫）
+try:
+    from twse_institutional_cache import get_institutional_data as cached_get_institutional
+    HAS_CACHE = True
+except ImportError:
+    HAS_CACHE = False
+
 try:
     import yaml
     HAS_YAML = True
@@ -57,7 +64,11 @@ except ImportError:
     HAS_YAML = False
 
 def get_institutional_data(stock_code, date_str):
-    """Get institutional trading data for a specific date"""
+    """Get institutional trading data for a specific date（優先使用快取）"""
+    if HAS_CACHE:
+        return cached_get_institutional(stock_code, date_str)
+
+    # fallback：直接呼叫 API
     import warnings
     warnings.filterwarnings('ignore')
 
@@ -75,7 +86,6 @@ def get_institutional_data(stock_code, date_str):
             return None
         for row in data['data']:
             if row[0].strip() == stock_code:
-                # 單位：股，需轉換為張
                 foreign = int(row[3].replace(',', '')) // 1000
                 trust = int(row[9].replace(',', '')) // 1000
                 total = int(row[17].replace(',', '')) // 1000

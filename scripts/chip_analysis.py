@@ -46,6 +46,13 @@ try:
 except ImportError:
     USE_CROSS_PLATFORM = False
 
+# 導入 TWSE 快取模組（避免重複 API 呼叫）
+try:
+    from twse_institutional_cache import get_institutional_data as cached_get_institutional
+    HAS_CACHE = True
+except ImportError:
+    HAS_CACHE = False
+
 def get_trading_days(n_days=10):
     """
     取得最近N個交易日的日期列表
@@ -69,7 +76,11 @@ def get_trading_days(n_days=10):
 
 
 def fetch_institutional_data(stock_code, date):
-    """查詢單日法人數據"""
+    """查詢單日法人數據（優先使用快取模組）"""
+    if HAS_CACHE:
+        return cached_get_institutional(stock_code, date)
+
+    # fallback：直接呼叫 API（快取模組不可用時）
     url = f'https://www.twse.com.tw/rwd/en/fund/T86?date={date}&selectType=ALL&response=json'
 
     headers = {
@@ -86,7 +97,6 @@ def fetch_institutional_data(stock_code, date):
 
         for row in data['data']:
             if row[0].strip() == stock_code:
-                # 單位：股，需轉換為張
                 foreign = int(row[3].replace(',', '')) // 1000
                 trust = int(row[9].replace(',', '')) // 1000
                 dealer = int(row[10].replace(',', '')) // 1000
@@ -126,8 +136,9 @@ def analyze_chip_history(stock_code, n_days=10):
         if data:
             history.append(data)
             stock_name = data['name']
-            # 避免請求太快被擋
-            time.sleep(0.3)
+            # 使用快取時不需要 sleep（不打 API）
+            if not HAS_CACHE:
+                time.sleep(0.3)
 
     if not history:
         print(f"❌ 查無 {stock_code} 的法人數據")
