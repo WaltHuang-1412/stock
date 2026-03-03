@@ -18,7 +18,7 @@ if (Test-Path "$ProjectDir\automation\PAUSED") {
 }
 
 # === 市場狀態判斷（台股行事曆）===
-$MarketStatus = (python "$ProjectDir\scripts\check_market_status.py" --date $Date --mode after_market 2>&1 | Select-Object -Last 1).Trim()
+$MarketStatus = (python "$ProjectDir\scripts\check_market_status.py" --date $Date --mode after_market 2>$null).Trim()
 if ($MarketStatus -ne "full") {
     Write-Output "[$(Get-Date -Format 'HH:mm:ss')] 台股休市，跳過盤後分析"
     exit 0

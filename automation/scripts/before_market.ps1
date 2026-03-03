@@ -18,7 +18,7 @@ if (Test-Path "$ProjectDir\automation\PAUSED") {
 }
 
 # === 市場狀態判斷（台股+美股行事曆）===
-$MarketStatus = (python "$ProjectDir\scripts\check_market_status.py" --date $Date --mode before_market --verbose 2>&1 | Select-Object -Last 1).Trim()
+$MarketStatus = (python "$ProjectDir\scripts\check_market_status.py" --date $Date --mode before_market 2>$null).Trim()
 
 if ($MarketStatus -eq "skip") {
     Write-Output "[$(Get-Date -Format 'HH:mm:ss')] 台股休市且美股無新交易日，跳過"

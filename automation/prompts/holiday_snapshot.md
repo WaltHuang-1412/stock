@@ -12,6 +12,14 @@
 4. 產出 LINE 摘要 data/YYYY-MM-DD/holiday_line.txt，內容與上述摘要相同，純文字格式
 5. 完成後 git add 相關檔案並 git commit，然後 git push
 
+市場智能資料（補充分析用）：
+執行步驟 1 前，先嘗試從 GitHub 抓取今日新聞資料：
+```bash
+gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/$(date +%Y-%m-%d)/raw_for_claude.md --jq '.content' | base64 -d > data/$(date +%Y-%m-%d)/market_intelligence.md
+```
+如果成功，在步驟 3 產出摘要時參考這份資料，讓假日快照更完整。
+如果失敗，跳過即可。
+
 注意事項：
 - 今天日期用系統日期
 - 不需要執行台股相關腳本（休市無數據）
