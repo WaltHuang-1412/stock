@@ -1,0 +1,267 @@
+{
+  "date": "2026-03-03",
+  "analysis_version": "v7.5",
+  "holdings_alert": {
+    "2886": {
+      "status": "續抱（今日推薦）",
+      "price": 40.2,
+      "cost": 41.058,
+      "pnl_pct": -2.09,
+      "institutional": "法人+5.8K(rank29)、佔成交27.8%、5日+0.4%",
+      "note": "今日推薦74分、金融防禦首選、5日最安全位置"
+    },
+    "2330": {
+      "status": "續抱",
+      "price": 1975.0,
+      "cost": 43.71,
+      "pnl_pct": 4417.84,
+      "institutional": "法人賣超-17K(3/2)、台積電ADR-0.25%",
+      "note": "零股持有，長期投資不影響"
+    },
+    "3481": {
+      "status": "獲利觀察",
+      "price": 28.55,
+      "cost": 18.2258,
+      "pnl_pct": 56.67,
+      "institutional": "法人+148K(rank1張數/rank2金額+42億)、5日+30.1%",
+      "note": "5日已大漲30.1%，法人仍在買但股價過高，建議部分鎖定獲利"
+    },
+    "3231": {
+      "status": "續抱（今日推薦）",
+      "price": 135.0,
+      "cost": 155.721,
+      "pnl_pct": -13.31,
+      "institutional": "法人+9.6K(rank15金額+13億)、佔成交31.8%、5日+2.7%",
+      "note": "今日推薦74分、Dell催化+法人主導強，仍低於成本但趨勢好轉中"
+    }
+  },
+  "institutional_top50_scanned": true,
+  "chip_analysis_done": true,
+  "recommendations": [
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "industry": "EMS/代工",
+      "recommend_price": 239.0,
+      "target_price": 255.0,
+      "stop_loss": 225.0,
+      "position": "15-20%",
+      "score": 83,
+      "rating": "⭐⭐⭐⭐",
+      "reason": "Dell+28.88%超強催化→PC/伺服器全面受惠、金額rank3(+35億)、佔成交20.2%、6天累計+156K外資+投信同步",
+      "chip_data": {
+        "institutional_amount_rank": 3,
+        "buy_amount": "35億",
+        "buy_ratio": "20.2%",
+        "consecutive_buy_days": 1,
+        "net_buy_latest": 14000,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "Dell+28.88%→PC/伺服器+法人6天累計+156K",
+      "recommend_date": "2026-03-03"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": "AI伺服器/PC",
+      "recommend_price": 301.0,
+      "target_price": 320.0,
+      "stop_loss": 280.0,
+      "position": "10-15%",
+      "score": 74,
+      "rating": "⭐⭐⭐",
+      "reason": "Dell催化+金額rank1(+85億)、佔成交63.9%法人主導力極強、外資+投信同步",
+      "chip_data": {
+        "institutional_amount_rank": 1,
+        "buy_amount": "85億",
+        "buy_ratio": "63.9%",
+        "consecutive_buy_days": 1,
+        "net_buy_latest": 28000,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "Dell+28.88%催化+金額rank1",
+      "risk_note": "NVIDIA -4.74% Level 1(-5分)、5日+5.2%偏高",
+      "recommend_date": "2026-03-03"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "industry": "半導體",
+      "recommend_price": 64.5,
+      "target_price": 69.0,
+      "stop_loss": 60.0,
+      "position": "10-15%",
+      "score": 74,
+      "rating": "⭐⭐⭐",
+      "reason": "Intel+4.29%催化成熟製程、金額rank18(+8.5億)、佔成交13.6%、5日僅+2.7%位置安全",
+      "chip_data": {
+        "institutional_amount_rank": 18,
+        "buy_amount": "8.5億",
+        "buy_ratio": "13.6%",
+        "consecutive_buy_days": 1,
+        "net_buy_latest": 13000,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "Intel+4.29%→成熟製程+法人佈局",
+      "recommend_date": "2026-03-03"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "industry": "AI伺服器",
+      "recommend_price": 135.0,
+      "target_price": 148.0,
+      "stop_loss": 126.0,
+      "position": "10-15%",
+      "score": 74,
+      "rating": "⭐⭐⭐",
+      "reason": "Dell催化+金額rank15(+13億)、佔成交31.8%法人主導力強、5日僅+2.7%位置安全",
+      "chip_data": {
+        "institutional_amount_rank": 15,
+        "buy_amount": "13億",
+        "buy_ratio": "31.8%",
+        "consecutive_buy_days": 1,
+        "net_buy_latest": 9633,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "Dell+28.88%催化+佔成交31.8%",
+      "risk_note": "NVIDIA -4.74% Level 1(-5分)",
+      "recommend_date": "2026-03-03"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "industry": "金融",
+      "recommend_price": 40.2,
+      "target_price": 43.0,
+      "stop_loss": 37.5,
+      "position": "10-15%",
+      "score": 74,
+      "rating": "⭐⭐⭐",
+      "reason": "官股金控龍頭+高殖利率防禦、金額rank29(+2.3億)、佔成交27.8%、5日僅+0.4%最安全",
+      "chip_data": {
+        "institutional_amount_rank": 29,
+        "buy_amount": "2.3億",
+        "buy_ratio": "27.8%",
+        "consecutive_buy_days": 1,
+        "net_buy_latest": 5757,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "金融防禦+3月法人盛會+5日+0.4%最安全",
+      "recommend_date": "2026-03-03"
+    },
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "industry": "面板",
+      "recommend_price": 16.9,
+      "target_price": 18.5,
+      "stop_loss": 15.5,
+      "position": "10-15%",
+      "score": 74,
+      "rating": "⭐⭐⭐",
+      "reason": "面板題材+法人連2天爆買(94K+72K)、金額rank10(+16億)、佔成交27.1%",
+      "chip_data": {
+        "institutional_amount_rank": 10,
+        "buy_amount": "16億",
+        "buy_ratio": "27.1%",
+        "consecutive_buy_days": 2,
+        "net_buy_latest": 94000,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "面板題材+法人爆買94K+外資+投信同步",
+      "risk_note": "5日+4.3%小漲、面板持續性需觀察",
+      "recommend_date": "2026-03-03"
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "industry": "記憶體",
+      "recommend_price": 285.0,
+      "target_price": 310.0,
+      "stop_loss": 268.0,
+      "position": "10%",
+      "score": 72,
+      "rating": "⭐⭐⭐",
+      "reason": "Intel催化+記憶體+金額rank13(+14億)、5日僅+2.5%安全、DRAM龍頭台廠",
+      "chip_data": {
+        "institutional_amount_rank": 13,
+        "buy_amount": "14億",
+        "buy_ratio": "9.2%",
+        "consecutive_buy_days": 1,
+        "net_buy_latest": 4805,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "Intel+4.29%→記憶體+DRAM龍頭",
+      "recommend_date": "2026-03-03"
+    }
+  ],
+  "excluded_stocks": [
+    {"stock_code": "3481", "stock_name": "群創", "reason": "5日+30.1%極度追高"},
+    {"stock_code": "2344", "stock_name": "華邦電", "reason": "5日+18.0%已大漲"},
+    {"stock_code": "2603", "stock_name": "長榮", "reason": "5日+12.9%追高（昨日已獲利）"},
+    {"stock_code": "2609", "stock_name": "陽明", "reason": "法人賣超-7K態度反轉+5日+12.6%"},
+    {"stock_code": "2881", "stock_name": "富邦金", "reason": "法人賣超-3.6K"},
+    {"stock_code": "2882", "stock_name": "國泰金", "reason": "法人賣超-3.9K"},
+    {"stock_code": "1802", "stock_name": "台玻", "reason": "5日+42.8%極度追高"},
+    {"stock_code": "2208", "stock_name": "台船", "reason": "昨日-4.90%停損出場"}
+  ],
+  "us_leader_alerts": {
+    "level_3": [],
+    "level_2": [],
+    "level_1": [
+      {"us_stock": "NVIDIA", "change_pct": -4.74, "tw_industry": "AI伺服器", "affected_stocks": ["2382", "3231", "2324", "2356", "6669"]},
+      {"us_stock": "Broadcom", "change_pct": -3.49, "tw_industry": "網通", "affected_stocks": ["2345", "2412", "3042", "2449"]}
+    ]
+  },
+  "market_context": {
+    "us_market": {
+      "nasdaq": 0.54,
+      "sp500": 0.64,
+      "dow": 0.21,
+      "phlx_semiconductor": -0.93
+    },
+    "key_catalysts": [
+      "Dell +28.88%（超強催化→PC/伺服器）",
+      "Intel +4.29%（成熟製程利多）",
+      "WTI油價 +8.22%（中東衝突持續）",
+      "SMCI +3.65%, Microsoft +3.66%（AI應用/雲端）",
+      "國巨漲價三次（被動元件）",
+      "仁寶資本支出倍增",
+      "矽光子族逆勢走揚",
+      "韓國KOSPI +6.81%（亞洲資金回流）"
+    ],
+    "negative_catalysts": [
+      "NVIDIA -4.74%（AI伺服器Level 1）",
+      "Broadcom -3.49%（網通Level 1）",
+      "費半 -0.93%",
+      "ASML -4.20%, Lam -4.65%（設備利空）",
+      "VIX +2.05%",
+      "TOP50多數股票5日已漲10-40%追高風險"
+    ]
+  },
+  "historical_validation": {
+    "previous_date": "2026-03-02",
+    "total_recommended": 7,
+    "success_count": 5,
+    "fail_count": 2,
+    "accuracy": 0.714,
+    "lessons": [
+      "航運+中東催化爆發（長榮+8.81%、陽明+9.09%）",
+      "金融防禦推薦價≤前收成功",
+      "純題材驅動法人rank太低失敗（台船-4.90%）"
+    ]
+  },
+  "industry_diversification": {
+    "total_stocks": 7,
+    "industries": 6,
+    "EMS/代工": 1,
+    "AI伺服器/PC": 2,
+    "半導體": 1,
+    "記憶體": 1,
+    "金融": 1,
+    "面板": 1,
+    "max_industry_pct": 0.286,
+    "diversification_check": "PASS"
+  }
+}
