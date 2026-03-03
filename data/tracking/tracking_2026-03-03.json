@@ -238,5 +238,123 @@
     "面板": 1,
     "max_industry_pct": 0.286,
     "diversification_check": "PASS"
+  },
+  "intraday_analysis": {
+    "timestamp": "2026-03-03 12:30",
+    "market_status": "普跌，記憶體/面板跌幅最重",
+    "track_a": [
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "recommend_price": 235.0,
+        "intraday_price": 230.5,
+        "daily_change_pct": -3.56,
+        "vs_recommend_pct": -1.91,
+        "volume_ratio": 0.6,
+        "institutional_latest": 14727,
+        "exit_signal": "none",
+        "strategy": "觀察"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "recommend_price": 299.0,
+        "intraday_price": 294.0,
+        "daily_change_pct": -2.33,
+        "vs_recommend_pct": -1.67,
+        "volume_ratio": 0.6,
+        "institutional_latest": 28091,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "recommend_price": 40.0,
+        "intraday_price": 40.2,
+        "daily_change_pct": 0.0,
+        "vs_recommend_pct": 0.5,
+        "volume_ratio": 0.5,
+        "institutional_latest": 5757,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "3231",
+        "stock_name": "緯創",
+        "recommend_price": 134.0,
+        "intraday_price": 132.0,
+        "daily_change_pct": -2.22,
+        "vs_recommend_pct": -1.49,
+        "volume_ratio": 0.6,
+        "institutional_latest": 9633,
+        "exit_signal": "none",
+        "strategy": "觀察"
+      },
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "recommend_price": 64.0,
+        "intraday_price": 62.4,
+        "daily_change_pct": -3.26,
+        "vs_recommend_pct": -2.5,
+        "volume_ratio": 0.5,
+        "institutional_latest": 13117,
+        "exit_signal": "none",
+        "strategy": "觀察"
+      },
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "recommend_price": 275.0,
+        "intraday_price": 256.5,
+        "daily_change_pct": -10.0,
+        "vs_recommend_pct": -6.73,
+        "volume_ratio": 1.2,
+        "institutional_latest": 4805,
+        "exit_signal": "stop_loss_triggered",
+        "exit_reasons": ["觸及停損價 256.5<258", "單日跌幅-10%超過-8%門檻"],
+        "strategy": "強制停損：明日開盤出場"
+      },
+      {
+        "stock_code": "2409",
+        "stock_name": "友達",
+        "recommend_price": 16.2,
+        "intraday_price": 15.6,
+        "daily_change_pct": -7.42,
+        "vs_recommend_pct": -3.7,
+        "volume_ratio": 0.7,
+        "institutional_latest": 94174,
+        "exit_signal": "warning",
+        "exit_reasons": ["距停損15.0僅0.6元", "跌破MA5和MA10"],
+        "strategy": "高度警戒，明日若跌破15.0強制停損"
+      }
+    ],
+    "track_b_directions": [
+      {
+        "sector": "金融防禦避風港",
+        "catalyst": "大盤普跌（南亞科-10%、聯電-3.3%），資金轉向高殖利率金融防禦股",
+        "institutional_summary": "兆豐金連6天+41K、第一金連6天+47K，累計+88K，外資投信同步",
+        "chain": "兆豐金(2886) 0%抗跌已驗證 → 第一金(2892) 連6天+47K但5日僅+0.5%完全未反映",
+        "highlight_stock": {"code": "2892", "name": "第一金", "price": 29.6, "reason": "連6天+47K，5日+0.5%，today持平"},
+        "conclusion": "第一金法人佈局密度高（連6天+47K）但股價完全未反映，大盤弱勢日防禦價值凸顯"
+      },
+      {
+        "sector": "電信防禦",
+        "catalyst": "5G持續建設+高殖利率4-5%+大盤恐慌時電信成避風港",
+        "institutional_summary": "中華電連6天+37K，佔成交56.9%法人絕對主導",
+        "chain": "中華電(2412) 連6天+37K、佔成交57%但5日僅+3.8% → 台灣大(3045) 法人+6.3K today平盤",
+        "highlight_stock": {"code": "2412", "name": "中華電", "price": 137.5, "reason": "連6天+37K，佔成交57%法人主導"},
+        "conclusion": "中華電法人佈局強度極高（佔成交57%幾乎壟斷買盤），但股價反映有限"
+      },
+      {
+        "sector": "傳產低基期",
+        "catalyst": "中國基建刺激+碳中和+WTI+8.18%推升原物料氛圍",
+        "institutional_summary": "台泥5/6天+29K（外資+27K），佔成交32.2%",
+        "chain": "台泥(1101) 5日+2.1%、today-1.5%反跌 → 外資持續買但股價不動",
+        "highlight_stock": {"code": "1101", "name": "台泥", "price": 25.95, "reason": "5/6天+29K，today反跌-1.5%未反映"},
+        "conclusion": "台泥外資連續買入+低基期，但今日反跌，法人佈局尚未反映在股價"
+      }
+    ]
   }
 }
