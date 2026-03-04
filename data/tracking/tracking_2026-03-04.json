@@ -1,0 +1,197 @@
+{
+  "date": "2026-03-04",
+  "analysis_version": "v7.5",
+  "recommendations": [
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電",
+      "industry": "電信",
+      "recommend_price": 135.0,
+      "target_price": 145.0,
+      "stop_loss": 128.0,
+      "position": "20%",
+      "score": 88,
+      "rating": "⭐⭐⭐⭐⭐",
+      "reason": "電信防禦龍頭+法人連7天+佔成交93.3%壟斷+今日僅-0.7%最抗跌+VIX恐慌日首選",
+      "chip_data": {
+        "institutional_amount_rank": 11,
+        "buy_ratio": "93.3%",
+        "consecutive_buy_days": 7,
+        "net_buy_latest": 6743,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "恐慌日電信防禦+5G+高殖利率"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "industry": "金融",
+      "recommend_price": 20.0,
+      "target_price": 22.0,
+      "stop_loss": 18.5,
+      "position": "15-20%",
+      "score": 88,
+      "rating": "⭐⭐⭐⭐⭐",
+      "reason": "累計+221K法人大舉佈局+佔成交63.9%+外資+投信同步+今日繼續買+6.5K(Safe)",
+      "chip_data": {
+        "institutional_amount_rank": 18,
+        "buy_ratio": "63.9%",
+        "consecutive_buy_days": 2,
+        "cumulative_buy": 221000,
+        "net_buy_latest": 6458,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "金融防禦+法人持續佈局"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "industry": "金融",
+      "recommend_price": 28.5,
+      "target_price": 31.0,
+      "stop_loss": 26.5,
+      "position": "15%",
+      "score": 85,
+      "rating": "⭐⭐⭐⭐⭐",
+      "reason": "連7天買超+47K+佔成交90.9%壟斷+外資+投信同步+5日-3.7%安全位置",
+      "chip_data": {
+        "institutional_amount_rank": 26,
+        "buy_ratio": "90.9%",
+        "consecutive_buy_days": 7,
+        "cumulative_buy": 47000,
+        "net_buy_latest": 9584,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "金融防禦+官股金控+高殖利率"
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "industry": "金融",
+      "recommend_price": 31.5,
+      "target_price": 34.0,
+      "stop_loss": 29.5,
+      "position": "10-15%",
+      "score": 80,
+      "rating": "⭐⭐⭐⭐",
+      "reason": "6/7天買超+47K+佔成交68.5%+外資+投信同步+5日-2.6%安全",
+      "chip_data": {
+        "institutional_amount_rank": 27,
+        "buy_ratio": "68.5%",
+        "consecutive_buy_days": 2,
+        "cumulative_buy": 47000,
+        "net_buy_latest": 7665,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "金融防禦+法人持續佈局"
+    },
+    {
+      "stock_code": "2637",
+      "stock_name": "慧洋-KY",
+      "industry": "航運",
+      "recommend_price": 71.0,
+      "target_price": 78.0,
+      "stop_loss": 66.0,
+      "position": "10%",
+      "score": 76,
+      "rating": "⭐⭐⭐⭐",
+      "reason": "散裝航運+戰爭溢價+7/8天買超+佔成交75.3%+5日-1.1%完全未反映",
+      "chip_data": {
+        "institutional_amount_rank": 30,
+        "buy_ratio": "75.3%",
+        "consecutive_buy_days": 2,
+        "cumulative_buy": 8600,
+        "net_buy_latest": 2660,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "美伊戰爭→油價+15.83%→散裝航運受惠+法人佈局"
+    },
+    {
+      "stock_code": "2606",
+      "stock_name": "裕民",
+      "industry": "航運",
+      "recommend_price": 65.0,
+      "target_price": 72.0,
+      "stop_loss": 60.0,
+      "position": "10%",
+      "score": 75,
+      "rating": "⭐⭐⭐⭐",
+      "reason": "散裝航運+戰爭推升運價+7/8天買超+佔成交71.4%+5日+2.2%安全+今日僅+1%尚未反映",
+      "chip_data": {
+        "institutional_amount_rank": 21,
+        "buy_ratio": "71.4%",
+        "consecutive_buy_days": 2,
+        "cumulative_buy": 14000,
+        "net_buy_latest": 5261,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "美伊戰爭→運價飆升+散裝航運補漲"
+    }
+  ],
+  "excluded_stocks": [
+    {"stock_code": "2454", "stock_name": "聯發科", "reason": "AMD Level3 -10.70% 直接排除"},
+    {"stock_code": "3661", "stock_name": "世芯-KY", "reason": "AMD Level3 直接排除"},
+    {"stock_code": "3443", "stock_name": "創意", "reason": "AMD Level3 直接排除"},
+    {"stock_code": "3707", "stock_name": "漢磊", "reason": "AMD Level3 直接排除"},
+    {"stock_code": "3045", "stock_name": "台灣大", "reason": "反轉Level4 爆量賣超-595張(佔14.9%)"},
+    {"stock_code": "1216", "stock_name": "統一", "reason": "反轉Level4 爆量賣超-337張(佔9.3%)"},
+    {"stock_code": "2382", "stock_name": "廣達", "reason": "NVIDIA Level2(-15分)+反轉Level2(-15分)=31分"},
+    {"stock_code": "2609", "stock_name": "陽明", "reason": "今日已+15.3%追高風險極大"},
+    {"stock_code": "2615", "stock_name": "萬海", "reason": "今日已+10.9%追高風險"},
+    {"stock_code": "2603", "stock_name": "長榮", "reason": "今日已+8.9%追高風險"}
+  ],
+  "us_leader_alerts": {
+    "level_3": [
+      {"us_stock": "AMD", "change_pct": -10.70, "tw_industry": "AI晶片/IC設計", "affected_stocks": ["2454", "3661", "3443", "3707"]}
+    ],
+    "level_2": [
+      {"us_stock": "Micron", "change_pct": -9.17, "tw_industry": "DRAM", "affected_stocks": ["1303", "2344", "2337", "5347"]},
+      {"us_stock": "NVIDIA", "change_pct": -6.64, "tw_industry": "AI伺服器", "affected_stocks": ["2382", "3231", "2324", "2356", "6669"]}
+    ],
+    "level_1": [
+      {"us_stock": "Apple", "change_pct": -3.08, "tw_industry": "蘋果供應鏈"},
+      {"us_stock": "Tesla", "change_pct": -4.14, "tw_industry": "電動車"},
+      {"us_stock": "Broadcom", "change_pct": -3.58, "tw_industry": "網通"}
+    ]
+  },
+  "market_context": {
+    "us_market": {"nasdaq": -1.52, "sp500": -1.07, "dow": -1.37, "phlx_semiconductor": -6.81},
+    "key_catalysts": [
+      "美伊戰爭升級→油價+15.83%→航運運價飆升",
+      "Dell+21.21%（AI伺服器但被恐慌抵消）",
+      "中鋼漲價無懸念",
+      "NAND漲價（集邦看漲）"
+    ],
+    "negative_catalysts": [
+      "費半-6.81%崩跌",
+      "AMD-10.70%→IC設計Level3排除",
+      "NVIDIA-6.64%→AI伺服器Level2",
+      "Micron-9.17%→DRAM Level2",
+      "VIX+31.46%恐慌爆表",
+      "台幣重貶1.4角",
+      "台股跌破33000(-1300點)"
+    ]
+  },
+  "historical_validation": {
+    "previous_date": "2026-03-03",
+    "total_recommended": 7,
+    "success_count": 1,
+    "fail_count": 6,
+    "accuracy": 0.143,
+    "lessons": [
+      "戰爭恐慌日科技股全面下殺，僅金融防禦成功",
+      "南亞科停損觸發：記憶體+手機利空+法人同步賣超",
+      "兆豐金是唯一成功推薦：防禦策略驗證有效",
+      "今日戰爭進一步升級，必須更極端防禦"
+    ]
+  },
+  "industry_diversification": {
+    "total_stocks": 6,
+    "industries": 3,
+    "金融": 3,
+    "航運": 2,
+    "電信": 1,
+    "max_industry_pct": 0.50,
+    "diversification_check": "PASS"
+  }
+}
