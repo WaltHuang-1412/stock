@@ -193,5 +193,94 @@
     "電信": 1,
     "max_industry_pct": 0.50,
     "diversification_check": "PASS"
+  },
+  "intraday_analysis": {
+    "timestamp": "2026-03-04 12:30",
+    "market_status": "台股跌逾1300點，跌破33000。亞洲全面崩跌。",
+    "track_a": [
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 135.0,
+        "intraday_price": 136.5,
+        "change_pct": 1.1,
+        "intraday_institutional": 916,
+        "exit_signal": "無",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "recommend_price": 20.0,
+        "intraday_price": 20.0,
+        "change_pct": 0.0,
+        "intraday_institutional": 6458,
+        "exit_signal": "無",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 28.5,
+        "intraday_price": 28.7,
+        "change_pct": 0.7,
+        "intraday_institutional": 58,
+        "exit_signal": "無",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "recommend_price": 31.5,
+        "intraday_price": 31.5,
+        "change_pct": 0.0,
+        "intraday_institutional": 379,
+        "exit_signal": "無",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2637",
+        "stock_name": "慧洋-KY",
+        "recommend_price": 71.0,
+        "intraday_price": 72.6,
+        "change_pct": 2.3,
+        "intraday_institutional": 292,
+        "exit_signal": "無",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2606",
+        "stock_name": "裕民",
+        "recommend_price": 65.0,
+        "intraday_price": 66.3,
+        "change_pct": 2.0,
+        "intraday_institutional": 311,
+        "exit_signal": "無",
+        "strategy": "續抱"
+      }
+    ],
+    "track_b_directions": [
+      {
+        "sector": "金融防禦深化",
+        "catalyst": "恐慌日金融成為法人避風港，Track A已配3檔金融，合庫金跌幅最小-1.88%尚未跟上",
+        "institutional_summary": "合庫金(5880)：3/3法人+4,369（外資+投信同步）、今日+363持續買、累計10天+30K。台新金今日-264轉賣（籌碼不穩）",
+        "chain": "已反映：凱基金0%、第一金+0.7%。尚未跟上：合庫金-1.88%",
+        "conclusion": "合庫金(5880)現價23.5，法人持續買+外資投信同步，跌幅最小有補漲空間。但金融倉位已偏高需注意集中風險"
+      },
+      {
+        "sector": "PCB/載板逆勢佈局",
+        "catalyst": "費半-6.81%崩跌但Dell+21.21%暗示AI伺服器需求不減。PCB為底層基建與晶片股邏輯不同",
+        "institutional_summary": "華通(2313)：3/3法人+13.3K(amount_rank3)、今日+2,017持續買。但10天累計-14K，近5天外資+投信同步賣超，僅最近3天轉買",
+        "chain": "已崩跌：景碩-12.6%、欣興-8.6%。逆勢抗跌：華通+1.67%",
+        "conclusion": "華通(2313)為PCB唯一逆勢股，但10天籌碼基礎不穩。Level1態度轉變，僅觀察不推薦"
+      },
+      {
+        "sector": "塑化/石化戰爭受惠",
+        "catalyst": "美伊戰爭→油價+15.83%→塑化原料漲價預期。貨櫃航運已大漲但石化股尚未反映",
+        "institutional_summary": "中石化(1314)：3/3法人+12.7K(buy_ratio 56.3%)、今日+2,112持續買、累計10天+45K。但近5天外資轉賣(-1.2K)",
+        "chain": "已崩跌：中鋼-9.41%、華新-10.39%。相對抗跌：中石化-2.28%",
+        "conclusion": "中石化(1314)現價8.13，法人累計+45K但近5天外資轉賣。油價利多尚未充分反映，觀察為主"
+      }
+    ]
   }
 }
