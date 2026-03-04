@@ -25,12 +25,19 @@ if ($MarketStatus -eq "skip") {
     exit 0
 }
 
+# === Auth 檢查：token 是否有效 ===
+$env:CLAUDECODE = $null
+$AuthCheck = claude auth status 2>&1 | Out-String
+if ($AuthCheck -notmatch '"loggedIn":\s*true') {
+    $msg = "排程失敗 ($Date 盤前): Claude auth token 過期，需重新登入 (claude login)"
+    Write-Output "[ERROR] $msg"
+    python "$ProjectDir\scripts\notify_line.py" $msg
+    exit 1
+}
+
 # === 準備目錄 ===
 New-Item -ItemType Directory -Force -Path "$ProjectDir\data\$Date" | Out-Null
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
-
-# === 清除 CLAUDECODE 環境變數，避免巢狀 session 檢查 ===
-$env:CLAUDECODE = $null
 Set-Location $ProjectDir
 
 if ($MarketStatus -eq "snapshot") {
@@ -42,7 +49,34 @@ if ($MarketStatus -eq "snapshot") {
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 
     $Prompt = Get-Content "$ProjectDir\automation\prompts\holiday_snapshot.md" -Raw -Encoding UTF8
-    claude -p $Prompt --dangerously-skip-permissions 2>&1 | Tee-Object -FilePath $LogFile -Append
+
+    $MaxRetries = 2
+    $RetryDelay = 120
+    $MainOutputFile = "$ProjectDir\data\$Date\us_asia_markets.json"
+
+    for ($attempt = 1; $attempt -le ($MaxRetries + 1); $attempt++) {
+        if ($attempt -gt 1) {
+            Write-Output "" | Tee-Object -FilePath $LogFile -Append
+            Write-Output "[RETRY] 第 $attempt 次嘗試（等待 ${RetryDelay} 秒後重跑）" | Tee-Object -FilePath $LogFile -Append
+            Start-Sleep -Seconds $RetryDelay
+            $env:CLAUDECODE = $null
+        }
+
+        Write-Output "[$(Get-Date -Format 'HH:mm:ss')] Claude 執行中（第 $attempt 次）..." | Tee-Object -FilePath $LogFile -Append
+        claude -p $Prompt --dangerously-skip-permissions 2>&1 | Tee-Object -FilePath $LogFile -Append
+
+        if (Test-Path $MainOutputFile) {
+            Write-Output "[$(Get-Date -Format 'HH:mm:ss')] 主要輸出檔已產生，成功" | Tee-Object -FilePath $LogFile -Append
+            break
+        } else {
+            Write-Output "[$(Get-Date -Format 'HH:mm:ss')] 主要輸出檔未產生" | Tee-Object -FilePath $LogFile -Append
+            if ($attempt -le $MaxRetries) {
+                Write-Output "[WARN] 將重試..." | Tee-Object -FilePath $LogFile -Append
+            } else {
+                Write-Output "[ERROR] 已達最大重試次數 ($MaxRetries)，放棄" | Tee-Object -FilePath $LogFile -Append
+            }
+        }
+    }
 
     # 驗證
     Write-Output "" | Tee-Object -FilePath $LogFile -Append
@@ -94,7 +128,34 @@ if ($MarketStatus -eq "snapshot") {
     }
 
     $Prompt = Get-Content "$ProjectDir\automation\prompts\before_market.md" -Raw -Encoding UTF8
-    claude -p $Prompt --dangerously-skip-permissions 2>&1 | Tee-Object -FilePath $LogFile -Append
+
+    $MaxRetries = 2
+    $RetryDelay = 120
+    $MainOutputFile = "$ProjectDir\data\$Date\before_market_analysis.md"
+
+    for ($attempt = 1; $attempt -le ($MaxRetries + 1); $attempt++) {
+        if ($attempt -gt 1) {
+            Write-Output "" | Tee-Object -FilePath $LogFile -Append
+            Write-Output "[RETRY] 第 $attempt 次嘗試（等待 ${RetryDelay} 秒後重跑）" | Tee-Object -FilePath $LogFile -Append
+            Start-Sleep -Seconds $RetryDelay
+            $env:CLAUDECODE = $null
+        }
+
+        Write-Output "[$(Get-Date -Format 'HH:mm:ss')] Claude 執行中（第 $attempt 次）..." | Tee-Object -FilePath $LogFile -Append
+        claude -p $Prompt --dangerously-skip-permissions 2>&1 | Tee-Object -FilePath $LogFile -Append
+
+        if (Test-Path $MainOutputFile) {
+            Write-Output "[$(Get-Date -Format 'HH:mm:ss')] 主要輸出檔已產生，成功" | Tee-Object -FilePath $LogFile -Append
+            break
+        } else {
+            Write-Output "[$(Get-Date -Format 'HH:mm:ss')] 主要輸出檔未產生" | Tee-Object -FilePath $LogFile -Append
+            if ($attempt -le $MaxRetries) {
+                Write-Output "[WARN] 將重試..." | Tee-Object -FilePath $LogFile -Append
+            } else {
+                Write-Output "[ERROR] 已達最大重試次數 ($MaxRetries)，放棄" | Tee-Object -FilePath $LogFile -Append
+            }
+        }
+    }
 
     # 驗證
     Write-Output "" | Tee-Object -FilePath $LogFile -Append

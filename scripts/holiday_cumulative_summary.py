@@ -194,7 +194,7 @@ def generate_cumulative_summary(target_date):
     gap_days = (target_dt - prev_dt).days
 
     if gap_days <= 1:
-        print(f"間隔僅 {gap_days} 天，不需要累積摘要", file=sys.stderr)
+        print(f"間隔僅 {gap_days} 天，不需要累積摘要")
         return None
 
     # 掃描間隔天數內所有快照
