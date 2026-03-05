@@ -21,7 +21,12 @@
         "net_buy_latest": 2578,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "電信防禦龍頭+5G+高殖利率+VIX恐慌避風港"
+      "catalyst": "電信防禦龍頭+5G+高殖利率+VIX恐慌避風港",
+      "actual_close": 137.0,
+      "change_pct": 1.48,
+      "result": "success",
+      "close_price": 137.0,
+      "change_percent": 1.48
     },
     {
       "stock_code": "2883",
@@ -42,7 +47,12 @@
         "net_buy_latest": 6458,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "金融防禦+法人巨量佈局+投信買超"
+      "catalyst": "金融防禦+法人巨量佈局+投信買超",
+      "actual_close": 20.3,
+      "change_pct": 4.1,
+      "result": "success",
+      "close_price": 20.3,
+      "change_percent": 4.1
     },
     {
       "stock_code": "2892",
@@ -63,7 +73,12 @@
         "net_buy_latest": 58,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "金融防禦+官股金控+法說利多+高殖利率"
+      "catalyst": "金融防禦+官股金控+法說利多+高殖利率",
+      "actual_close": 29.05,
+      "change_pct": 3.75,
+      "result": "success",
+      "close_price": 29.05,
+      "change_percent": 3.75
     },
     {
       "stock_code": "2637",
@@ -82,7 +97,12 @@
         "net_buy_latest": 292,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "美伊戰爭→運價飆升+散裝航運戰爭溢價"
+      "catalyst": "美伊戰爭→運價飆升+散裝航運戰爭溢價",
+      "actual_close": 71.7,
+      "change_pct": 0.99,
+      "result": "success",
+      "close_price": 71.7,
+      "change_percent": 0.99
     },
     {
       "stock_code": "2606",
@@ -101,7 +121,12 @@
         "net_buy_latest": 311,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "散裝航運+運價飆升+法人持續佈局"
+      "catalyst": "散裝航運+運價飆升+法人持續佈局",
+      "actual_close": 66.2,
+      "change_pct": 1.85,
+      "result": "success",
+      "close_price": 66.2,
+      "change_percent": 1.85
     },
     {
       "stock_code": "5880",
@@ -120,38 +145,122 @@
         "net_buy_latest": 363,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "金融防禦+官股金控+高殖利率"
+      "catalyst": "金融防禦+官股金控+高殖利率",
+      "actual_close": 23.4,
+      "change_pct": 1.74,
+      "result": "success",
+      "close_price": 23.4,
+      "change_percent": 1.74
     }
   ],
   "excluded_stocks": [
-    {"stock_code": "2408", "stock_name": "南亞科", "reason": "反轉Level3 連續賣超累計轉負"},
-    {"stock_code": "2303", "stock_name": "聯電", "reason": "反轉Level4 爆量賣超-8,985張(佔7.9%)"},
-    {"stock_code": "2337", "stock_name": "旺宏", "reason": "Micron Level2 -15分 + 10天累計-107K"},
-    {"stock_code": "2344", "stock_name": "華邦電", "reason": "Micron Level2 -15分 + 近5天反轉"},
-    {"stock_code": "1303", "stock_name": "南亞", "reason": "Micron Level2 -15分"},
-    {"stock_code": "3711", "stock_name": "日月光", "reason": "NVIDIA Level2 -15分 + ADR -11.99%"},
-    {"stock_code": "3481", "stock_name": "群創", "reason": "時事催化不足(55分)"},
-    {"stock_code": "2603", "stock_name": "長榮", "reason": "已大漲+10%"},
-    {"stock_code": "2880", "stock_name": "華南金", "reason": "反轉Level2 + 近5天外資賣超"}
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "reason": "反轉Level3 連續賣超累計轉負"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "反轉Level4 爆量賣超-8,985張(佔7.9%)"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "Micron Level2 -15分 + 10天累計-107K"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "Micron Level2 -15分 + 近5天反轉"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "reason": "Micron Level2 -15分"
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光",
+      "reason": "NVIDIA Level2 -15分 + ADR -11.99%"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "時事催化不足(55分)"
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "reason": "已大漲+10%"
+    },
+    {
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "reason": "反轉Level2 + 近5天外資賣超"
+    }
   ],
   "us_leader_alerts": {
     "level_3": [],
     "level_2": [
-      {"us_stock": "Micron", "change_pct": -6.58, "tw_industry": "DRAM", "affected_stocks": ["2408", "2337", "2344", "1303"]},
-      {"us_stock": "NVIDIA", "change_pct": -6.40, "tw_industry": "AI伺服器", "affected_stocks": ["2382", "3231", "2324", "2356", "6669"]},
-      {"us_stock": "Apple", "change_pct": -4.27, "tw_industry": "蘋果供應鏈", "affected_stocks": ["3008", "2474", "2317", "4938"]}
+      {
+        "us_stock": "Micron",
+        "change_pct": -6.58,
+        "tw_industry": "DRAM",
+        "affected_stocks": [
+          "2408",
+          "2337",
+          "2344",
+          "1303"
+        ]
+      },
+      {
+        "us_stock": "NVIDIA",
+        "change_pct": -6.4,
+        "tw_industry": "AI伺服器",
+        "affected_stocks": [
+          "2382",
+          "3231",
+          "2324",
+          "2356",
+          "6669"
+        ]
+      },
+      {
+        "us_stock": "Apple",
+        "change_pct": -4.27,
+        "tw_industry": "蘋果供應鏈",
+        "affected_stocks": [
+          "3008",
+          "2474",
+          "2317",
+          "4938"
+        ]
+      }
     ],
     "level_1": [
-      {"us_stock": "AMD", "change_pct": -4.17, "tw_industry": "AI晶片/IC設計"},
-      {"us_stock": "Tesla", "change_pct": -2.75, "tw_industry": "電動車"},
-      {"us_stock": "Broadcom", "change_pct": -4.45, "tw_industry": "網通"}
+      {
+        "us_stock": "AMD",
+        "change_pct": -4.17,
+        "tw_industry": "AI晶片/IC設計"
+      },
+      {
+        "us_stock": "Tesla",
+        "change_pct": -2.75,
+        "tw_industry": "電動車"
+      },
+      {
+        "us_stock": "Broadcom",
+        "change_pct": -4.45,
+        "tw_industry": "網通"
+      }
     ]
   },
   "market_context": {
     "us_market": {
       "nasdaq": -1.49,
-      "sp500": -1.10,
-      "dow": -1.50,
+      "sp500": -1.1,
+      "dow": -1.5,
       "phlx_semiconductor": -6.53
     },
     "key_catalysts": [
@@ -191,19 +300,82 @@
     "金融": 3,
     "航運": 2,
     "電信": 1,
-    "max_industry_pct": 0.50,
+    "max_industry_pct": 0.5,
     "diversification_check": "PASS"
   },
   "intraday_analysis": {
     "timestamp": "2026-03-05 12:31",
-    "taiex": {"price": 33501, "change_pct": 2.05},
+    "taiex": {
+      "price": 33501,
+      "change_pct": 2.05
+    },
     "track_a": [
-      {"stock_code": "2412", "stock_name": "中華電", "recommend_price": 135.0, "intraday_price": 135.0, "vs_recommend_pct": 0.0, "today_change_pct": -0.37, "vol_ratio": 0.27, "exit_signal": "none", "strategy": "續抱"},
-      {"stock_code": "2883", "stock_name": "凱基金", "recommend_price": 19.5, "intraday_price": 20.35, "vs_recommend_pct": 4.4, "today_change_pct": 2.26, "vol_ratio": 0.46, "exit_signal": "none", "strategy": "續抱"},
-      {"stock_code": "2892", "stock_name": "第一金", "recommend_price": 28.0, "intraday_price": 28.9, "vs_recommend_pct": 3.2, "today_change_pct": 1.05, "vol_ratio": 0.31, "exit_signal": "none", "strategy": "續抱"},
-      {"stock_code": "2637", "stock_name": "慧洋-KY", "recommend_price": 71.0, "intraday_price": 71.3, "vs_recommend_pct": 0.4, "today_change_pct": -0.56, "vol_ratio": 0.49, "exit_signal": "none", "strategy": "續抱"},
-      {"stock_code": "2606", "stock_name": "裕民", "recommend_price": 65.0, "intraday_price": 65.4, "vs_recommend_pct": 0.6, "today_change_pct": -0.91, "vol_ratio": 0.55, "exit_signal": "none", "strategy": "續抱"},
-      {"stock_code": "5880", "stock_name": "合庫金", "recommend_price": 23.0, "intraday_price": 23.45, "vs_recommend_pct": 2.0, "today_change_pct": 0.0, "vol_ratio": 0.43, "exit_signal": "none", "strategy": "續抱"}
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 135.0,
+        "intraday_price": 135.0,
+        "vs_recommend_pct": 0.0,
+        "today_change_pct": -0.37,
+        "vol_ratio": 0.27,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "recommend_price": 19.5,
+        "intraday_price": 20.35,
+        "vs_recommend_pct": 4.4,
+        "today_change_pct": 2.26,
+        "vol_ratio": 0.46,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 28.0,
+        "intraday_price": 28.9,
+        "vs_recommend_pct": 3.2,
+        "today_change_pct": 1.05,
+        "vol_ratio": 0.31,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2637",
+        "stock_name": "慧洋-KY",
+        "recommend_price": 71.0,
+        "intraday_price": 71.3,
+        "vs_recommend_pct": 0.4,
+        "today_change_pct": -0.56,
+        "vol_ratio": 0.49,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2606",
+        "stock_name": "裕民",
+        "recommend_price": 65.0,
+        "intraday_price": 65.4,
+        "vs_recommend_pct": 0.6,
+        "today_change_pct": -0.91,
+        "vol_ratio": 0.55,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "recommend_price": 23.0,
+        "intraday_price": 23.45,
+        "vs_recommend_pct": 2.0,
+        "today_change_pct": 0.0,
+        "vol_ratio": 0.43,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      }
     ],
     "track_a_summary": {
       "exit_signals_triggered": 0,
@@ -216,9 +388,18 @@
         "catalyst": "大盤反彈+2%，封測股已大漲(南茂+6.88%、京元電+4.86%)，但ABF載板/PCB龍頭反彈幅度落後",
         "institutional_summary": "南電(8046)法人+5.6億(佔成交43.5%)連3天買超；敬鵬(2355)法人7/8天買超累計+8.4K(外資主導)",
         "chain": {
-          "reflected": ["南茂(8150)+6.88%", "京元電(2449)+4.86%", "力成(6239)+2.07%"],
-          "not_yet_reflected": ["南電(8046) 455元(+1.11%)", "敬鵬(2355) 42元(+0.84%)"],
-          "excluded": ["臻鼎-KY(4958) 法人近5天淨賣-9.2K(出貨中)"]
+          "reflected": [
+            "南茂(8150)+6.88%",
+            "京元電(2449)+4.86%",
+            "力成(6239)+2.07%"
+          ],
+          "not_yet_reflected": [
+            "南電(8046) 455元(+1.11%)",
+            "敬鵬(2355) 42元(+0.84%)"
+          ],
+          "excluded": [
+            "臻鼎-KY(4958) 法人近5天淨賣-9.2K(出貨中)"
+          ]
         },
         "conclusion": "載板龍頭反彈落後封測5-7個百分點，法人佈局中但外資/投信對決，需觀察"
       },
@@ -227,12 +408,154 @@
         "catalyst": "VIX恐慌(+17.96%)環境下電信是避風港，中華電(推薦中)穩定，同業台灣大落後",
         "institutional_summary": "台灣大(3045)法人累計+14K、外資+20K(外資主導)，近5天買3賣2",
         "chain": {
-          "reflected": ["中華電(2412) 135元(-0.37%) 推薦中"],
-          "not_yet_reflected": ["台灣大(3045) 107元(-0.93%)"]
+          "reflected": [
+            "中華電(2412) 135元(-0.37%) 推薦中"
+          ],
+          "not_yet_reflected": [
+            "台灣大(3045) 107元(-0.93%)"
+          ]
         },
         "conclusion": "台灣大法人外資累計買超+20K但股價5日-1.4%未反映，防禦配置補充選項"
       }
     ],
     "track_b_context": "DRAM全面漲停(南亞科+9.81%、旺宏+9.69%、華邦電+7.69%)已完全反映，盤後需重新評估是否納入明日推薦"
+  },
+  "after_market_analysis": {
+    "timestamp": "2026-03-05 15:00",
+    "market_close": "加權指數 33,673（+2.57%，+844點）",
+    "accuracy": "6/6 = 100%",
+    "excess_return": "-1.77%（推薦股平均+0.80% vs 大盤+2.57%，防禦策略反彈日正常落後）",
+    "tomorrow_recommendations": [
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "score": 92,
+        "action": "續持",
+        "entry": 137.0,
+        "target": 145.0,
+        "stop_loss": 130.0,
+        "position": "20%"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "score": 82,
+        "action": "續持",
+        "entry": 20.3,
+        "target": 22.0,
+        "stop_loss": 18.5,
+        "position": "15-20%"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "score": 80,
+        "action": "續持",
+        "entry": 29.05,
+        "target": 31.0,
+        "stop_loss": 27.0,
+        "position": "15%"
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "score": 72,
+        "action": "續持",
+        "entry": 23.4,
+        "target": 25.5,
+        "stop_loss": 21.5,
+        "position": "10%"
+      },
+      {
+        "stock_code": "2637",
+        "stock_name": "慧洋-KY",
+        "score": 65,
+        "action": "續持",
+        "entry": 71.7,
+        "target": 78.0,
+        "stop_loss": 65.0,
+        "position": "10%"
+      },
+      {
+        "stock_code": "2606",
+        "stock_name": "裕民",
+        "score": 63,
+        "action": "續持",
+        "entry": 66.2,
+        "target": 72.0,
+        "stop_loss": 60.0,
+        "position": "10%"
+      }
+    ],
+    "removed_stocks": [],
+    "watch_list": [
+      {
+        "stock_code": "8046",
+        "stock_name": "南電",
+        "reason": "載板補漲方向，法人連3天買超+金額rank14，今日+2.44%"
+      },
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "reason": "電信防禦延伸，外資累計+20K但股價未反映"
+      }
+    ]
+  },
+  "yesterday_verification": {
+    "date": "2026-03-05",
+    "accuracy": 1.0,
+    "total": 6,
+    "success": 6,
+    "fail": 0,
+    "results": [
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 135.0,
+        "actual_close": 137.0,
+        "change_pct": 1.48,
+        "result": "success"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "recommend_price": 19.5,
+        "actual_close": 20.3,
+        "change_pct": 4.1,
+        "result": "success"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 28.0,
+        "actual_close": 29.05,
+        "change_pct": 3.75,
+        "result": "success"
+      },
+      {
+        "stock_code": "2637",
+        "stock_name": "慧洋-KY",
+        "recommend_price": 71.0,
+        "actual_close": 71.7,
+        "change_pct": 0.99,
+        "result": "success"
+      },
+      {
+        "stock_code": "2606",
+        "stock_name": "裕民",
+        "recommend_price": 65.0,
+        "actual_close": 66.2,
+        "change_pct": 1.85,
+        "result": "success"
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "recommend_price": 23.0,
+        "actual_close": 23.4,
+        "change_pct": 1.74,
+        "result": "success"
+      }
+    ]
   }
 }
