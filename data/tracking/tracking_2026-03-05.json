@@ -1,0 +1,197 @@
+{
+  "date": "2026-03-05",
+  "analysis_version": "v7.5",
+  "recommendations": [
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電",
+      "industry": "電信",
+      "recommend_price": 135.0,
+      "target_price": 145.0,
+      "stop_loss": 128.0,
+      "position": "20%",
+      "score": 91,
+      "rating": "⭐⭐⭐⭐⭐",
+      "reason": "連8天法人買超+42K、外資投信同步、佔成交10.8%、ADR僅-0.83%最抗跌、VIX恐慌日首選",
+      "chip_data": {
+        "institutional_amount_rank": 19,
+        "buy_ratio": "10.8%",
+        "consecutive_buy_days": 8,
+        "cumulative_buy": 42000,
+        "net_buy_latest": 2578,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "電信防禦龍頭+5G+高殖利率+VIX恐慌避風港"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "industry": "金融",
+      "recommend_price": 19.5,
+      "target_price": 22.0,
+      "stop_loss": 18.0,
+      "position": "15-20%",
+      "score": 78,
+      "rating": "⭐⭐⭐⭐",
+      "reason": "10天累計+228K巨量佈局、7/8天買超、外資投信同步、佔成交63.9%法人壟斷",
+      "chip_data": {
+        "institutional_amount_rank": 18,
+        "buy_ratio": "63.9%",
+        "consecutive_buy_days": 2,
+        "cumulative_buy": 228000,
+        "net_buy_latest": 6458,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "金融防禦+法人巨量佈局+投信買超"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "industry": "金融",
+      "recommend_price": 28.0,
+      "target_price": 31.0,
+      "stop_loss": 26.0,
+      "position": "15%",
+      "score": 76,
+      "rating": "⭐⭐⭐⭐",
+      "reason": "連8天法人買超+47K、外資投信同步、法說利多股利優去年、官股金控最穩",
+      "chip_data": {
+        "institutional_amount_rank": 26,
+        "buy_ratio": "90.9%",
+        "consecutive_buy_days": 8,
+        "cumulative_buy": 47000,
+        "net_buy_latest": 58,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "金融防禦+官股金控+法說利多+高殖利率"
+    },
+    {
+      "stock_code": "2637",
+      "stock_name": "慧洋-KY",
+      "industry": "航運",
+      "recommend_price": 71.0,
+      "target_price": 78.0,
+      "stop_loss": 65.0,
+      "position": "10%",
+      "score": 67,
+      "rating": "⭐⭐⭐",
+      "reason": "散裝航運+中東戰爭運價飆升+法人7/8天買超+累計+8.6K",
+      "chip_data": {
+        "consecutive_buy_days": 2,
+        "cumulative_buy": 8577,
+        "net_buy_latest": 292,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "美伊戰爭→運價飆升+散裝航運戰爭溢價"
+    },
+    {
+      "stock_code": "2606",
+      "stock_name": "裕民",
+      "industry": "航運",
+      "recommend_price": 65.0,
+      "target_price": 72.0,
+      "stop_loss": 60.0,
+      "position": "10%",
+      "score": 65,
+      "rating": "⭐⭐⭐",
+      "reason": "散裝航運+戰爭溢價+法人7/8天買超+累計+14K+近5天+11K",
+      "chip_data": {
+        "consecutive_buy_days": 2,
+        "cumulative_buy": 14000,
+        "net_buy_latest": 311,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "散裝航運+運價飆升+法人持續佈局"
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "recommend_price": 23.0,
+      "target_price": 25.5,
+      "stop_loss": 21.0,
+      "position": "10%",
+      "score": 65,
+      "rating": "⭐⭐⭐",
+      "reason": "官股金控+法人累計+30K+外資投信同步+防禦策略驗證+替換永豐金",
+      "chip_data": {
+        "consecutive_buy_days": 2,
+        "cumulative_buy": 30000,
+        "net_buy_latest": 363,
+        "reversal_alert": "Level 0 (Safe)"
+      },
+      "catalyst": "金融防禦+官股金控+高殖利率"
+    }
+  ],
+  "excluded_stocks": [
+    {"stock_code": "2408", "stock_name": "南亞科", "reason": "反轉Level3 連續賣超累計轉負"},
+    {"stock_code": "2303", "stock_name": "聯電", "reason": "反轉Level4 爆量賣超-8,985張(佔7.9%)"},
+    {"stock_code": "2337", "stock_name": "旺宏", "reason": "Micron Level2 -15分 + 10天累計-107K"},
+    {"stock_code": "2344", "stock_name": "華邦電", "reason": "Micron Level2 -15分 + 近5天反轉"},
+    {"stock_code": "1303", "stock_name": "南亞", "reason": "Micron Level2 -15分"},
+    {"stock_code": "3711", "stock_name": "日月光", "reason": "NVIDIA Level2 -15分 + ADR -11.99%"},
+    {"stock_code": "3481", "stock_name": "群創", "reason": "時事催化不足(55分)"},
+    {"stock_code": "2603", "stock_name": "長榮", "reason": "已大漲+10%"},
+    {"stock_code": "2880", "stock_name": "華南金", "reason": "反轉Level2 + 近5天外資賣超"}
+  ],
+  "us_leader_alerts": {
+    "level_3": [],
+    "level_2": [
+      {"us_stock": "Micron", "change_pct": -6.58, "tw_industry": "DRAM", "affected_stocks": ["2408", "2337", "2344", "1303"]},
+      {"us_stock": "NVIDIA", "change_pct": -6.40, "tw_industry": "AI伺服器", "affected_stocks": ["2382", "3231", "2324", "2356", "6669"]},
+      {"us_stock": "Apple", "change_pct": -4.27, "tw_industry": "蘋果供應鏈", "affected_stocks": ["3008", "2474", "2317", "4938"]}
+    ],
+    "level_1": [
+      {"us_stock": "AMD", "change_pct": -4.17, "tw_industry": "AI晶片/IC設計"},
+      {"us_stock": "Tesla", "change_pct": -2.75, "tw_industry": "電動車"},
+      {"us_stock": "Broadcom", "change_pct": -4.45, "tw_industry": "網通"}
+    ]
+  },
+  "market_context": {
+    "us_market": {
+      "nasdaq": -1.49,
+      "sp500": -1.10,
+      "dow": -1.50,
+      "phlx_semiconductor": -6.53
+    },
+    "key_catalysts": [
+      "DRAM Q2跳漲確認（南亞科總經理）",
+      "中鋼4月盤價連四月漲+800~1000元/噸",
+      "蘋果M5筆電+記憶體缺貨漲價",
+      "AMD訂單超預期CPU供應吃緊",
+      "伊朗釋談判訊號可能緩解戰爭",
+      "3天崩跌2586點搶反彈預期"
+    ],
+    "negative_catalysts": [
+      "費半-6.53%連二日暴跌",
+      "台積電ADR-7.81%",
+      "VIX+17.96%恐慌持續",
+      "油價+13.4%推升通膨",
+      "日經-7.82%、KOSPI-16.28%全球崩跌",
+      "外資連續大賣超"
+    ]
+  },
+  "historical_validation": {
+    "previous_date": "2026-03-04",
+    "total_recommended": 6,
+    "success_count": 4,
+    "fail_count": 2,
+    "accuracy": 0.667,
+    "excess_return": "+4.55%",
+    "lessons": [
+      "防禦策略在大跌日效果顯著（推薦股+0.35% vs 大盤-4.2%）",
+      "電信+金融+航運組合驗證成功",
+      "兩檔失敗為邊際虧損（凱基金-0.5%、永豐金-0.63%），實質已是成功",
+      "今日延續相同防禦策略"
+    ]
+  },
+  "industry_diversification": {
+    "total_stocks": 6,
+    "industries": 3,
+    "金融": 3,
+    "航運": 2,
+    "電信": 1,
+    "max_industry_pct": 0.50,
+    "diversification_check": "PASS"
+  }
+}
