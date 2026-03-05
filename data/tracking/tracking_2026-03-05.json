@@ -193,5 +193,46 @@
     "電信": 1,
     "max_industry_pct": 0.50,
     "diversification_check": "PASS"
+  },
+  "intraday_analysis": {
+    "timestamp": "2026-03-05 12:31",
+    "taiex": {"price": 33501, "change_pct": 2.05},
+    "track_a": [
+      {"stock_code": "2412", "stock_name": "中華電", "recommend_price": 135.0, "intraday_price": 135.0, "vs_recommend_pct": 0.0, "today_change_pct": -0.37, "vol_ratio": 0.27, "exit_signal": "none", "strategy": "續抱"},
+      {"stock_code": "2883", "stock_name": "凱基金", "recommend_price": 19.5, "intraday_price": 20.35, "vs_recommend_pct": 4.4, "today_change_pct": 2.26, "vol_ratio": 0.46, "exit_signal": "none", "strategy": "續抱"},
+      {"stock_code": "2892", "stock_name": "第一金", "recommend_price": 28.0, "intraday_price": 28.9, "vs_recommend_pct": 3.2, "today_change_pct": 1.05, "vol_ratio": 0.31, "exit_signal": "none", "strategy": "續抱"},
+      {"stock_code": "2637", "stock_name": "慧洋-KY", "recommend_price": 71.0, "intraday_price": 71.3, "vs_recommend_pct": 0.4, "today_change_pct": -0.56, "vol_ratio": 0.49, "exit_signal": "none", "strategy": "續抱"},
+      {"stock_code": "2606", "stock_name": "裕民", "recommend_price": 65.0, "intraday_price": 65.4, "vs_recommend_pct": 0.6, "today_change_pct": -0.91, "vol_ratio": 0.55, "exit_signal": "none", "strategy": "續抱"},
+      {"stock_code": "5880", "stock_name": "合庫金", "recommend_price": 23.0, "intraday_price": 23.45, "vs_recommend_pct": 2.0, "today_change_pct": 0.0, "vol_ratio": 0.43, "exit_signal": "none", "strategy": "續抱"}
+    ],
+    "track_a_summary": {
+      "exit_signals_triggered": 0,
+      "avg_vs_recommend_pct": 1.8,
+      "strategy": "全部續抱，無出場訊號"
+    },
+    "track_b_directions": [
+      {
+        "sector": "PCB/載板",
+        "catalyst": "大盤反彈+2%，封測股已大漲(南茂+6.88%、京元電+4.86%)，但ABF載板/PCB龍頭反彈幅度落後",
+        "institutional_summary": "南電(8046)法人+5.6億(佔成交43.5%)連3天買超；敬鵬(2355)法人7/8天買超累計+8.4K(外資主導)",
+        "chain": {
+          "reflected": ["南茂(8150)+6.88%", "京元電(2449)+4.86%", "力成(6239)+2.07%"],
+          "not_yet_reflected": ["南電(8046) 455元(+1.11%)", "敬鵬(2355) 42元(+0.84%)"],
+          "excluded": ["臻鼎-KY(4958) 法人近5天淨賣-9.2K(出貨中)"]
+        },
+        "conclusion": "載板龍頭反彈落後封測5-7個百分點，法人佈局中但外資/投信對決，需觀察"
+      },
+      {
+        "sector": "電信防禦延伸",
+        "catalyst": "VIX恐慌(+17.96%)環境下電信是避風港，中華電(推薦中)穩定，同業台灣大落後",
+        "institutional_summary": "台灣大(3045)法人累計+14K、外資+20K(外資主導)，近5天買3賣2",
+        "chain": {
+          "reflected": ["中華電(2412) 135元(-0.37%) 推薦中"],
+          "not_yet_reflected": ["台灣大(3045) 107元(-0.93%)"]
+        },
+        "conclusion": "台灣大法人外資累計買超+20K但股價5日-1.4%未反映，防禦配置補充選項"
+      }
+    ],
+    "track_b_context": "DRAM全面漲停(南亞科+9.81%、旺宏+9.69%、華邦電+7.69%)已完全反映，盤後需重新評估是否納入明日推薦"
   }
 }
