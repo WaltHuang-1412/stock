@@ -21,7 +21,10 @@
         "net_buy_latest": 4619,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "電信防禦龍頭+5G-Advanced+高殖利率+VIX恐慌避風港"
+      "catalyst": "電信防禦龍頭+5G-Advanced+高殖利率+VIX恐慌避風港",
+      "close_price": 136.5,
+      "change_percent": -0.36,
+      "result": "success"
     },
     {
       "stock_code": "3231",
@@ -42,7 +45,10 @@
         "net_buy_latest": 6274,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "Dell+20.64%→AI伺服器代工需求暴增+跌深佈局"
+      "catalyst": "Dell+20.64%→AI伺服器代工需求暴增+跌深佈局",
+      "close_price": 130.5,
+      "change_percent": 1.95,
+      "result": "success"
     },
     {
       "stock_code": "2303",
@@ -63,7 +69,10 @@
         "net_buy_latest": 14794,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "成熟製程8吋12吋漲價確認+法人最大量佈局"
+      "catalyst": "成熟製程8吋12吋漲價確認+法人最大量佈局",
+      "close_price": 62.0,
+      "change_percent": 0.00,
+      "result": "success"
     },
     {
       "stock_code": "2376",
@@ -84,7 +93,10 @@
         "net_buy_latest": 2550,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "Dell+20.64%→AI伺服器/顯卡+跌深+法人佈局"
+      "catalyst": "Dell+20.64%→AI伺服器/顯卡+跌深+法人佈局",
+      "close_price": 219.0,
+      "change_percent": 0.46,
+      "result": "success"
     },
     {
       "stock_code": "2634",
@@ -105,7 +117,10 @@
         "net_buy_latest": 3692,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "中東戰爭+國防預算增+目標價調升+F-16V升級"
+      "catalyst": "中東戰爭+國防預算增+目標價調升+F-16V升級",
+      "close_price": 54.9,
+      "change_percent": -0.18,
+      "result": "success"
     },
     {
       "stock_code": "2395",
@@ -126,7 +141,10 @@
         "net_buy_latest": 2328,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "邊緣AI+IoT+法人重倉佈局+雲端利多"
+      "catalyst": "邊緣AI+IoT+法人重倉佈局+雲端利多",
+      "close_price": 375.0,
+      "change_percent": 9.65,
+      "result": "success"
     },
     {
       "stock_code": "2606",
@@ -147,7 +165,11 @@
         "net_buy_latest": 797,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "美伊戰爭→油價暴漲+中東塞港+運能減10%+散裝航運戰爭溢價"
+      "catalyst": "美伊戰爭→油價暴漲+中東塞港+運能減10%+散裝航運戰爭溢價",
+      "close_price": 63.7,
+      "change_percent": -3.48,
+      "result": "fail",
+      "fail_reason": "amount_rank不在TOP50(=0)、buy_ratio僅6.9%，法人金額支撐不足，大盤-4.36%中跌幅-5.91%"
     },
     {
       "stock_code": "2892",
@@ -168,7 +190,10 @@
         "net_buy_latest": 2077,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "金融防禦+官股金控+高殖利率（替代合庫金/凱基金）"
+      "catalyst": "金融防禦+官股金控+高殖利率（替代合庫金/凱基金）",
+      "close_price": 29.4,
+      "change_percent": 1.38,
+      "result": "success"
     }
   ],
   "excluded_stocks": [
@@ -185,11 +210,11 @@
   "us_leader_alerts": {
     "level_3": [],
     "level_2": [
-      {"us_stock": "Apple", "change_pct": -4.64, "tw_industry": "蘋果供應鏈", "affected_stocks": ["3008", "2474", "2317", "4938", "3673", "2353", "6415"]}
+      {"us_stock": "Apple", "change_percent": -4.64, "tw_industry": "蘋果供應鏈", "affected_stocks": ["3008", "2474", "2317", "4938", "3673", "2353", "6415"]}
     ],
     "level_1": [
-      {"us_stock": "Micron", "change_pct": -4.45, "tw_industry": "DRAM"},
-      {"us_stock": "AMD", "change_pct": -2.08, "tw_industry": "AI晶片/IC設計"}
+      {"us_stock": "Micron", "change_percent": -4.45, "tw_industry": "DRAM"},
+      {"us_stock": "AMD", "change_percent": -2.08, "tw_industry": "AI晶片/IC設計"}
     ]
   },
   "market_context": {
@@ -249,14 +274,14 @@
     "exit_signals": "無強制停損觸發，8檔均在停損線以上",
     "reversal_alerts": "8檔全部 Level 0 (Safe)",
     "track_a": [
-      {"stock_code": "2412", "stock_name": "中華電", "intraday_price": 136.0, "change_pct": -1.45, "vs_recommend": -0.7, "volume_ratio": 0.20, "strategy": "續抱"},
-      {"stock_code": "3231", "stock_name": "緯創", "intraday_price": 129.5, "change_pct": -4.07, "vs_recommend": 1.2, "volume_ratio": 0.40, "strategy": "續抱觀察"},
-      {"stock_code": "2303", "stock_name": "聯電", "intraday_price": 61.9, "change_pct": -4.03, "vs_recommend": -0.2, "volume_ratio": 0.36, "strategy": "續抱觀察"},
-      {"stock_code": "2376", "stock_name": "技嘉", "intraday_price": 217.5, "change_pct": -8.03, "vs_recommend": -0.2, "volume_ratio": 0.64, "strategy": "觀察停損線"},
-      {"stock_code": "2634", "stock_name": "漢翔", "intraday_price": 54.8, "change_pct": 0.37, "vs_recommend": -0.4, "volume_ratio": 0.17, "strategy": "續抱"},
-      {"stock_code": "2395", "stock_name": "研華", "intraday_price": 375.5, "change_pct": 9.78, "vs_recommend": 9.8, "volume_ratio": 3.39, "strategy": "部分獲利"},
-      {"stock_code": "2606", "stock_name": "裕民", "intraday_price": 64.0, "change_pct": -5.47, "vs_recommend": -3.0, "volume_ratio": 0.39, "strategy": "觀察停損線"},
-      {"stock_code": "2892", "stock_name": "第一金", "intraday_price": 29.25, "change_pct": -1.18, "vs_recommend": 0.9, "volume_ratio": 0.47, "strategy": "續抱"}
+      {"stock_code": "2412", "stock_name": "中華電", "intraday_price": 136.0, "change_percent": -1.45, "vs_recommend": -0.7, "volume_ratio": 0.20, "strategy": "續抱"},
+      {"stock_code": "3231", "stock_name": "緯創", "intraday_price": 129.5, "change_percent": -4.07, "vs_recommend": 1.2, "volume_ratio": 0.40, "strategy": "續抱觀察"},
+      {"stock_code": "2303", "stock_name": "聯電", "intraday_price": 61.9, "change_percent": -4.03, "vs_recommend": -0.2, "volume_ratio": 0.36, "strategy": "續抱觀察"},
+      {"stock_code": "2376", "stock_name": "技嘉", "intraday_price": 217.5, "change_percent": -8.03, "vs_recommend": -0.2, "volume_ratio": 0.64, "strategy": "觀察停損線"},
+      {"stock_code": "2634", "stock_name": "漢翔", "intraday_price": 54.8, "change_percent": 0.37, "vs_recommend": -0.4, "volume_ratio": 0.17, "strategy": "續抱"},
+      {"stock_code": "2395", "stock_name": "研華", "intraday_price": 375.5, "change_percent": 9.78, "vs_recommend": 9.8, "volume_ratio": 3.39, "strategy": "部分獲利"},
+      {"stock_code": "2606", "stock_name": "裕民", "intraday_price": 64.0, "change_percent": -5.47, "vs_recommend": -3.0, "volume_ratio": 0.39, "strategy": "觀察停損線"},
+      {"stock_code": "2892", "stock_name": "第一金", "intraday_price": 29.25, "change_percent": -1.18, "vs_recommend": 0.9, "volume_ratio": 0.47, "strategy": "續抱"}
     ],
     "track_b_directions": [
       {
@@ -280,6 +305,55 @@
         "chain": "研華+9.78%(已反映) → 宇瞻+0.84%(工業記憶體尚未跟上) + 仁寶-1.27%(防禦低估值)",
         "conclusion": "仁寶(2324)現價31.0、宇瞻(8271)現價120.5，法人買但股價未反映"
       }
+    ]
+  },
+  "yesterday_verification": {
+    "date": "2026-03-06",
+    "accuracy": 0.875,
+    "total": 8,
+    "success": 7,
+    "fail": 1,
+    "avg_return": 1.18,
+    "market_return": -4.36,
+    "excess_return": 5.54,
+    "results": [
+      {"stock_code": "2412", "stock_name": "中華電", "recommend_price": 137.0, "close_price": 136.5, "change_percent": -0.36, "result": "success"},
+      {"stock_code": "3231", "stock_name": "緯創", "recommend_price": 128.0, "close_price": 130.5, "change_percent": 1.95, "result": "success"},
+      {"stock_code": "2303", "stock_name": "聯電", "recommend_price": 62.0, "close_price": 62.0, "change_percent": 0.00, "result": "success"},
+      {"stock_code": "2376", "stock_name": "技嘉", "recommend_price": 218.0, "close_price": 219.0, "change_percent": 0.46, "result": "success"},
+      {"stock_code": "2634", "stock_name": "漢翔", "recommend_price": 55.0, "close_price": 54.9, "change_percent": -0.18, "result": "success"},
+      {"stock_code": "2395", "stock_name": "研華", "recommend_price": 342.0, "close_price": 375.0, "change_percent": 9.65, "result": "success"},
+      {"stock_code": "2606", "stock_name": "裕民", "recommend_price": 66.0, "close_price": 63.7, "change_percent": -3.48, "result": "fail"},
+      {"stock_code": "2892", "stock_name": "第一金", "recommend_price": 29.0, "close_price": 29.4, "change_percent": 1.38, "result": "success"}
+    ]
+  },
+  "after_market_analysis": {
+    "market_close": "0050 收盤 76.85（-4.36%）",
+    "results": [
+      {"stock_code": "2412", "stock_name": "中華電", "close_price": 136.5, "change_percent": -0.36, "today_change_pct": -1.09, "result": "success"},
+      {"stock_code": "3231", "stock_name": "緯創", "close_price": 130.5, "change_percent": 1.95, "today_change_pct": -3.33, "result": "success"},
+      {"stock_code": "2303", "stock_name": "聯電", "close_price": 62.0, "change_percent": 0.00, "today_change_pct": -3.88, "result": "success"},
+      {"stock_code": "2376", "stock_name": "技嘉", "close_price": 219.0, "change_percent": 0.46, "today_change_pct": -7.40, "result": "success"},
+      {"stock_code": "2634", "stock_name": "漢翔", "close_price": 54.9, "change_percent": -0.18, "today_change_pct": 0.55, "result": "success"},
+      {"stock_code": "2395", "stock_name": "研華", "close_price": 375.0, "change_percent": 9.65, "today_change_pct": 11.44, "result": "success"},
+      {"stock_code": "2606", "stock_name": "裕民", "close_price": 63.7, "change_percent": -3.48, "today_change_pct": -5.91, "result": "fail", "fail_reason": "amount_rank不在TOP50(=0)、buy_ratio僅6.9%，法人支撐力不足，大盤-4.36%中跌幅-5.91%"},
+      {"stock_code": "2892", "stock_name": "第一金", "close_price": 29.4, "change_percent": 1.38, "today_change_pct": -0.68, "result": "success"}
+    ],
+    "accuracy": 0.875,
+    "avg_return": 1.18,
+    "market_return": -4.36,
+    "excess_return": 5.54,
+    "tomorrow_recommendations": [
+      {"stock_code": "2412", "stock_name": "中華電", "score": 90, "action": "續推"},
+      {"stock_code": "2892", "stock_name": "第一金", "score": 85, "action": "續推上調"},
+      {"stock_code": "2634", "stock_name": "漢翔", "score": 82, "action": "續推上調"},
+      {"stock_code": "3231", "stock_name": "緯創", "score": 80, "action": "續推"},
+      {"stock_code": "2303", "stock_name": "聯電", "score": 78, "action": "續推"},
+      {"stock_code": "2376", "stock_name": "技嘉", "score": 76, "action": "續推下調"},
+      {"stock_code": "2395", "stock_name": "研華", "score": 72, "action": "觀望（獲利了結壓力）"}
+    ],
+    "removed_stocks": [
+      {"stock_code": "2606", "stock_name": "裕民", "reason": "收盤63.7低於推薦價66.0(-3.48%)，amount_rank不在TOP50、buy_ratio僅6.9%防禦力不足"}
     ]
   }
 }

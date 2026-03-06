@@ -5579,5 +5579,84 @@
     ],
     "accuracy": 1.0,
     "notes": "防禦策略第三天驗證：6/6=100%（大盤+2.57%反彈日）。推薦股平均+0.80%，反彈日漲幅落後大盤屬正常。連續兩日10/12=83.3%。DRAM因Micron Level2排除但今日漲停+7~10%，屬規則正確執行但錯過機會。"
+  },
+  "2026-03-06": {
+    "date": "2026-03-06",
+    "predictions": [
+      {
+        "symbol": "2412",
+        "name": "中華電",
+        "recommend_price": 137.0,
+        "actual_close": 136.5,
+        "change_pct": -0.36,
+        "result": "success",
+        "notes": "防禦龍頭大盤-4.36%中僅跌-1.09%，超額報酬+3.27%"
+      },
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "recommend_price": 128.0,
+        "actual_close": 130.5,
+        "change_pct": 1.95,
+        "result": "success",
+        "notes": "Dell+20.64%催化有效，大盤暴跌中仍高於推薦價+1.95%"
+      },
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend_price": 62.0,
+        "actual_close": 62.0,
+        "change_pct": 0.00,
+        "result": "success",
+        "notes": "成熟製程漲價+法人張數rank1佈局，大盤-4.36%中持平推薦價"
+      },
+      {
+        "symbol": "2376",
+        "name": "技嘉",
+        "recommend_price": 218.0,
+        "actual_close": 219.0,
+        "change_pct": 0.46,
+        "result": "success",
+        "notes": "今日-7.40%大跌但收盤219仍高於推薦價218，Dell催化+法人buy_ratio36.1%"
+      },
+      {
+        "symbol": "2634",
+        "name": "漢翔",
+        "recommend_price": 55.0,
+        "actual_close": 54.9,
+        "change_pct": -0.18,
+        "result": "success",
+        "notes": "國防股逆勢+0.55%，大盤-4.36%中超額報酬+4.91%"
+      },
+      {
+        "symbol": "2395",
+        "name": "研華",
+        "recommend_price": 342.0,
+        "actual_close": 375.0,
+        "change_pct": 9.65,
+        "result": "success",
+        "notes": "Edge AI/IoT爆發+11.44%，法人金額rank6+buy_ratio35.5%，今日最大贏家"
+      },
+      {
+        "symbol": "2606",
+        "name": "裕民",
+        "recommend_price": 66.0,
+        "actual_close": 63.7,
+        "change_pct": -3.48,
+        "result": "fail",
+        "notes": "油價催化+11.86%但amount_rank=0、buy_ratio僅6.9%法人支撐不足，大盤-4.36%中跌-5.91%"
+      },
+      {
+        "symbol": "2892",
+        "name": "第一金",
+        "recommend_price": 29.0,
+        "actual_close": 29.4,
+        "change_pct": 1.38,
+        "result": "success",
+        "notes": "官股金控大盤-4.36%中僅-0.68%，超額報酬+3.68%，連9天法人+50K"
+      }
+    ],
+    "accuracy": 0.875,
+    "notes": "攻守兼備策略驗證：7/8=87.5%（大盤-4.36%暴跌日）。推薦股平均+1.18%，超額報酬+5.54%。防禦股（中華電/第一金/漢翔）全部成功，研華+9.65%爆發。裕民失敗因amount_rank=0法人支撐不足。三日累計19/20=95%。"
   }
 }
