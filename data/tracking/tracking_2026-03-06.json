@@ -242,5 +242,44 @@
     "金融": 1,
     "max_industry_pct": 0.25,
     "diversification_check": "PASS"
+  },
+  "intraday_analysis": {
+    "time": "12:30",
+    "market_status": "0050 -4.36%（大盤重挫）",
+    "exit_signals": "無強制停損觸發，8檔均在停損線以上",
+    "reversal_alerts": "8檔全部 Level 0 (Safe)",
+    "track_a": [
+      {"stock_code": "2412", "stock_name": "中華電", "intraday_price": 136.0, "change_pct": -1.45, "vs_recommend": -0.7, "volume_ratio": 0.20, "strategy": "續抱"},
+      {"stock_code": "3231", "stock_name": "緯創", "intraday_price": 129.5, "change_pct": -4.07, "vs_recommend": 1.2, "volume_ratio": 0.40, "strategy": "續抱觀察"},
+      {"stock_code": "2303", "stock_name": "聯電", "intraday_price": 61.9, "change_pct": -4.03, "vs_recommend": -0.2, "volume_ratio": 0.36, "strategy": "續抱觀察"},
+      {"stock_code": "2376", "stock_name": "技嘉", "intraday_price": 217.5, "change_pct": -8.03, "vs_recommend": -0.2, "volume_ratio": 0.64, "strategy": "觀察停損線"},
+      {"stock_code": "2634", "stock_name": "漢翔", "intraday_price": 54.8, "change_pct": 0.37, "vs_recommend": -0.4, "volume_ratio": 0.17, "strategy": "續抱"},
+      {"stock_code": "2395", "stock_name": "研華", "intraday_price": 375.5, "change_pct": 9.78, "vs_recommend": 9.8, "volume_ratio": 3.39, "strategy": "部分獲利"},
+      {"stock_code": "2606", "stock_name": "裕民", "intraday_price": 64.0, "change_pct": -5.47, "vs_recommend": -3.0, "volume_ratio": 0.39, "strategy": "觀察停損線"},
+      {"stock_code": "2892", "stock_name": "第一金", "intraday_price": 29.25, "change_pct": -1.18, "vs_recommend": 0.9, "volume_ratio": 0.47, "strategy": "續抱"}
+    ],
+    "track_b_directions": [
+      {
+        "sector": "半導體通路",
+        "catalyst": "Dell+20.64%帶動AI拉貨，文曄+14.32%、大聯大+6.21%已反映",
+        "institutional_summary": "聯強(2347) 法人+1.4K ratio35.3%、外資+投信同步買",
+        "chain": "文曄+14.32%(已反映) → 大聯大+6.21%(已反映) → 聯強-0.28%(尚未跟上)",
+        "conclusion": "聯強(2347) 現價70.1，法人佔成交35.3%但股價未動，有補漲空間"
+      },
+      {
+        "sector": "光電/車用LED",
+        "catalyst": "車用LED+Micro LED需求成長，法人主導防禦股",
+        "institutional_summary": "億光(2393) 法人+1.5K ratio52.4%（法人佔成交過半）",
+        "chain": "億光+1.37%(法人佔成交52.4%但漲幅不大)",
+        "conclusion": "億光(2393) 現價59.3，大盤-4.36%中逆勢上漲，法人完全主導價格"
+      },
+      {
+        "sector": "NB代工/ICT通路",
+        "catalyst": "VIX+27.48%恐慌→資金流向低本益比防禦股+研華+9.78%帶動邊緣AI",
+        "institutional_summary": "仁寶(2324) 法人+2.8K rank26、宇瞻(8271) 法人+1.5K ratio29.3%",
+        "chain": "研華+9.78%(已反映) → 宇瞻+0.84%(工業記憶體尚未跟上) + 仁寶-1.27%(防禦低估值)",
+        "conclusion": "仁寶(2324)現價31.0、宇瞻(8271)現價120.5，法人買但股價未反映"
+      }
+    ]
   }
 }
