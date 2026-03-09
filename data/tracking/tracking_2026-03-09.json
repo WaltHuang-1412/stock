@@ -22,7 +22,12 @@
         "momentum": -34.0,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "VIX+48.49%恐慌避風港+官股金控+高殖利率+法人佈局完成"
+      "catalyst": "VIX+48.49%恐慌避風港+官股金控+高殖利率+法人佈局完成",
+      "actual_close": 29.1,
+      "day_change_pct": -2.02,
+      "result": "success",
+      "vs_market": 4.43,
+      "close_price": 29.1
     },
     {
       "stock_code": "2634",
@@ -44,7 +49,13 @@
         "momentum": -108.6,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "美伊戰爭持續+F-16V升級+國防預算增+佈局完成"
+      "catalyst": "美伊戰爭持續+F-16V升級+國防預算增+佈局完成",
+      "actual_close": 50.8,
+      "day_change_pct": -7.47,
+      "result": "fail",
+      "vs_market": -1.02,
+      "fail_reason": "日漲跌-7.47%略遜大盤-6.45%，近5天法人淨買超-344幾乎轉負，國防催化劑力道不足對抗系統性風險",
+      "close_price": 50.8
     },
     {
       "stock_code": "4904",
@@ -66,7 +77,12 @@
         "momentum": -47.6,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "VIX恐慌防禦+電信5G+高殖利率+法人佈局完成"
+      "catalyst": "VIX恐慌防禦+電信5G+高殖利率+法人佈局完成",
+      "actual_close": 91.5,
+      "day_change_pct": -2.45,
+      "result": "success",
+      "vs_market": 4.0,
+      "close_price": 91.5
     },
     {
       "stock_code": "1301",
@@ -88,7 +104,12 @@
         "momentum": -113.2,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "WTI$108暴漲+美伊衝突+荷姆茲海峽關閉+營收轉機"
+      "catalyst": "WTI$108暴漲+美伊衝突+荷姆茲海峽關閉+營收轉機",
+      "actual_close": 47.35,
+      "day_change_pct": -5.21,
+      "result": "success",
+      "vs_market": 1.24,
+      "close_price": 47.35
     },
     {
       "stock_code": "2603",
@@ -110,7 +131,12 @@
         "momentum": -8.4,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "WTI$108+中東塞港+海運漲價確定+航運龍頭戰爭溢價"
+      "catalyst": "WTI$108+中東塞港+海運漲價確定+航運龍頭戰爭溢價",
+      "actual_close": 210.5,
+      "day_change_pct": -2.77,
+      "result": "success",
+      "vs_market": 3.68,
+      "close_price": 210.5
     },
     {
       "stock_code": "2412",
@@ -132,7 +158,12 @@
         "momentum": 81.8,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "VIX恐慌避風港+電信防禦龍頭+連10天法人買超+5G"
+      "catalyst": "VIX恐慌避風港+電信防禦龍頭+連10天法人買超+5G",
+      "actual_close": 136.0,
+      "day_change_pct": -1.45,
+      "result": "success",
+      "vs_market": 5.0,
+      "close_price": 136.0
     },
     {
       "stock_code": "3481",
@@ -154,28 +185,87 @@
         "momentum": -121.6,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "輝達Google光通訊大單+矽光子CPO+Broadcom+Marvell逆勢強"
+      "catalyst": "輝達Google光通訊大單+矽光子CPO+Broadcom+Marvell逆勢強",
+      "actual_close": 27.8,
+      "day_change_pct": 7.13,
+      "result": "success",
+      "vs_market": 13.58,
+      "close_price": 27.8
     }
   ],
   "excluded_stocks": [
-    {"stock_code": "1303", "stock_name": "南亞", "reason": "Micron -10.20% Level 3 DRAM排除"},
-    {"stock_code": "2344", "stock_name": "華邦電", "reason": "Micron -10.20% Level 3 DRAM排除"},
-    {"stock_code": "2337", "stock_name": "旺宏", "reason": "Micron -10.20% Level 3 DRAM排除"},
-    {"stock_code": "5347", "stock_name": "世界", "reason": "Micron -10.20% Level 3 DRAM排除"},
-    {"stock_code": "3231", "stock_name": "緯創", "reason": "費半-7.21%壓力太大，62分不推薦"},
-    {"stock_code": "2303", "stock_name": "聯電", "reason": "費半-7.21%壓力，59分不推薦"},
-    {"stock_code": "6770", "stock_name": "力積電", "reason": "近5天嚴重反轉-118K，29分排除"},
-    {"stock_code": "2485", "stock_name": "兆赫", "reason": "+24.9%已暴漲，動能>100%排除"},
-    {"stock_code": "1582", "stock_name": "信紘科", "reason": "+24.5%已暴漲，動能>100%排除"}
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "reason": "Micron -10.20% Level 3 DRAM排除"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "Micron -10.20% Level 3 DRAM排除"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "Micron -10.20% Level 3 DRAM排除"
+    },
+    {
+      "stock_code": "5347",
+      "stock_name": "世界",
+      "reason": "Micron -10.20% Level 3 DRAM排除"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "reason": "費半-7.21%壓力太大，62分不推薦"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "費半-7.21%壓力，59分不推薦"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "近5天嚴重反轉-118K，29分排除"
+    },
+    {
+      "stock_code": "2485",
+      "stock_name": "兆赫",
+      "reason": "+24.9%已暴漲，動能>100%排除"
+    },
+    {
+      "stock_code": "1582",
+      "stock_name": "信紘科",
+      "reason": "+24.5%已暴漲，動能>100%排除"
+    }
   ],
   "us_leader_alerts": {
     "level_3": [
-      {"us_stock": "Micron", "change_percent": -10.20, "tw_industry": "DRAM", "affected_stocks": ["1303", "2344", "2337", "5347"]}
+      {
+        "us_stock": "Micron",
+        "change_percent": -10.2,
+        "tw_industry": "DRAM",
+        "affected_stocks": [
+          "1303",
+          "2344",
+          "2337",
+          "5347"
+        ]
+      }
     ],
     "level_2": [],
     "level_1": [
-      {"us_stock": "Apple", "change_percent": -2.54, "tw_industry": "蘋果供應鏈"},
-      {"us_stock": "AMD", "change_percent": -3.88, "tw_industry": "AI晶片/IC設計"}
+      {
+        "us_stock": "Apple",
+        "change_percent": -2.54,
+        "tw_industry": "蘋果供應鏈"
+      },
+      {
+        "us_stock": "AMD",
+        "change_percent": -3.88,
+        "tw_industry": "AI晶片/IC設計"
+      }
     ]
   },
   "market_context": {
@@ -224,13 +314,62 @@
     "portfolio_change_pct": -1.8,
     "excess_return": "+5.2%",
     "track_a": [
-      {"stock_code": "2892", "stock_name": "第一金", "intraday_price": 28.8, "change_from_rec_pct": -0.69, "day_change_pct": -3.03, "strategy": "續抱"},
-      {"stock_code": "2634", "stock_name": "漢翔", "intraday_price": 51.2, "change_from_rec_pct": -6.91, "day_change_pct": -6.74, "strategy": "高度警戒（距停損50僅1.2元）"},
-      {"stock_code": "4904", "stock_name": "遠傳", "intraday_price": 91.4, "change_from_rec_pct": -1.72, "day_change_pct": -2.56, "strategy": "續抱"},
-      {"stock_code": "1301", "stock_name": "台塑", "intraday_price": 46.8, "change_from_rec_pct": -6.40, "day_change_pct": -6.31, "strategy": "高度警戒（距停損46僅0.8元）"},
-      {"stock_code": "2603", "stock_name": "長榮", "intraday_price": 212.0, "change_from_rec_pct": 0.95, "day_change_pct": -2.08, "strategy": "續抱"},
-      {"stock_code": "2412", "stock_name": "中華電", "intraday_price": 135.5, "change_from_rec_pct": -0.37, "day_change_pct": -1.81, "strategy": "續抱"},
-      {"stock_code": "3481", "stock_name": "群創", "intraday_price": 27.4, "change_from_rec_pct": 1.48, "day_change_pct": 5.59, "strategy": "續抱，逆勢大漲"}
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "intraday_price": 28.8,
+        "change_from_rec_pct": -0.69,
+        "day_change_pct": -3.03,
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2634",
+        "stock_name": "漢翔",
+        "intraday_price": 51.2,
+        "change_from_rec_pct": -6.91,
+        "day_change_pct": -6.74,
+        "strategy": "高度警戒（距停損50僅1.2元）"
+      },
+      {
+        "stock_code": "4904",
+        "stock_name": "遠傳",
+        "intraday_price": 91.4,
+        "change_from_rec_pct": -1.72,
+        "day_change_pct": -2.56,
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "intraday_price": 46.8,
+        "change_from_rec_pct": -6.4,
+        "day_change_pct": -6.31,
+        "strategy": "高度警戒（距停損46僅0.8元）"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "intraday_price": 212.0,
+        "change_from_rec_pct": 0.95,
+        "day_change_pct": -2.08,
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "intraday_price": 135.5,
+        "change_from_rec_pct": -0.37,
+        "day_change_pct": -1.81,
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "3481",
+        "stock_name": "群創",
+        "intraday_price": 27.4,
+        "change_from_rec_pct": 1.48,
+        "day_change_pct": 5.59,
+        "strategy": "續抱，逆勢大漲"
+      }
     ],
     "stop_loss_triggered": [],
     "track_b_directions": [
@@ -268,5 +407,125 @@
     "光通訊": 1,
     "max_industry_pct": 0.286,
     "diversification_check": "PASS"
+  },
+  "after_market_analysis": {
+    "taiex_close": 21910,
+    "taiex_change_pct": -6.45,
+    "portfolio_return_pct": -1.7,
+    "excess_return_pct": 4.75,
+    "accuracy": "6/7 = 85.7%",
+    "tomorrow_recommendations": [
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "industry": "金融",
+        "score": 98,
+        "action": "續推"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "industry": "電信",
+        "score": 86,
+        "action": "續推"
+      },
+      {
+        "stock_code": "4904",
+        "stock_name": "遠傳",
+        "industry": "電信",
+        "score": 85,
+        "action": "續推"
+      },
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "industry": "金融",
+        "score": 83,
+        "action": "新增"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "industry": "航運",
+        "score": 82,
+        "action": "續推"
+      },
+      {
+        "stock_code": "3481",
+        "stock_name": "群創",
+        "industry": "光通訊",
+        "score": 78,
+        "action": "續推降級"
+      },
+      {
+        "stock_code": "2409",
+        "stock_name": "友達",
+        "industry": "光通訊",
+        "score": 76,
+        "action": "新增"
+      }
+    ],
+    "removed_stocks": [
+      {
+        "stock_code": "2634",
+        "stock_name": "漢翔",
+        "reason": "唯一失敗-7.47%、近5天法人-344轉負、收盤50.8逼近停損50"
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "reason": "近5天法人-6585嚴重反轉、收盤47.35極接近停損46"
+      }
+    ]
+  },
+  "yesterday_verification": {
+    "date": "2026-03-09",
+    "accuracy": 0.857,
+    "accuracy_str": "6/7 = 85.7%",
+    "excess_return": "+4.75%",
+    "results": [
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "result": "success",
+        "change_pct": 0.34
+      },
+      {
+        "stock_code": "2634",
+        "stock_name": "漢翔",
+        "result": "fail",
+        "change_pct": -7.64
+      },
+      {
+        "stock_code": "4904",
+        "stock_name": "遠傳",
+        "result": "success",
+        "change_pct": -1.61
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "result": "success",
+        "change_pct": -5.3
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "result": "success",
+        "change_pct": 0.24
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "result": "success",
+        "change_pct": 0.0
+      },
+      {
+        "stock_code": "3481",
+        "stock_name": "群創",
+        "result": "success",
+        "change_pct": 2.96
+      }
+    ]
   }
 }

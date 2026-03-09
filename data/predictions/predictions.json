@@ -5606,7 +5606,7 @@
         "name": "聯電",
         "recommend_price": 62.0,
         "actual_close": 62.0,
-        "change_pct": 0.00,
+        "change_pct": 0.0,
         "result": "success",
         "notes": "成熟製程漲價+法人張數rank1佈局，大盤-4.36%中持平推薦價"
       },
@@ -5658,5 +5658,75 @@
     ],
     "accuracy": 0.875,
     "notes": "攻守兼備策略驗證：7/8=87.5%（大盤-4.36%暴跌日）。推薦股平均+1.18%，超額報酬+5.54%。防禦股（中華電/第一金/漢翔）全部成功，研華+9.65%爆發。裕民失敗因amount_rank=0法人支撐不足。三日累計19/20=95%。"
+  },
+  "2026-03-09": {
+    "date": "2026-03-09",
+    "predictions": [
+      {
+        "symbol": "2892",
+        "name": "第一金",
+        "recommend_price": 29.0,
+        "actual_close": 29.1,
+        "change_pct": 0.34,
+        "result": "success",
+        "notes": "連10天法人+59K佔成交33%，暴跌日僅-2.02%超額+4.43%"
+      },
+      {
+        "symbol": "2634",
+        "name": "漢翔",
+        "recommend_price": 55.0,
+        "actual_close": 50.8,
+        "change_pct": -7.64,
+        "result": "fail",
+        "notes": "近5天法人-344轉負，-7.47%略遜大盤-6.45%，國防催化劑不足對抗系統風險"
+      },
+      {
+        "symbol": "4904",
+        "name": "遠傳",
+        "recommend_price": 93.0,
+        "actual_close": 91.5,
+        "change_pct": -1.61,
+        "result": "success",
+        "notes": "佔成交61.5%法人主導，暴跌日-2.45%超額+4.00%"
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "recommend_price": 50.0,
+        "actual_close": 47.35,
+        "change_pct": -5.3,
+        "result": "success",
+        "notes": "油價$108受惠但近5天法人-6585反轉，-5.21%仍beat大盤+1.24%"
+      },
+      {
+        "symbol": "2603",
+        "name": "長榮",
+        "recommend_price": 210.0,
+        "actual_close": 210.5,
+        "change_pct": 0.24,
+        "result": "success",
+        "notes": "油價+中東塞港利多，-2.77%超額+3.68%"
+      },
+      {
+        "symbol": "2412",
+        "name": "中華電",
+        "recommend_price": 136.0,
+        "actual_close": 136.0,
+        "change_pct": 0.0,
+        "result": "success",
+        "notes": "連10天法人+51K防禦龍頭，-1.45%超額+5.00%"
+      },
+      {
+        "symbol": "3481",
+        "name": "群創",
+        "recommend_price": 27.0,
+        "actual_close": 27.8,
+        "change_pct": 2.96,
+        "result": "success",
+        "notes": "輝達Google光通訊大單CPO催化劑，+7.13%逆勢大漲超額+13.58%"
+      }
+    ],
+    "accuracy": 0.857,
+    "notes": "極度恐慌防禦模式：6/7=85.7%（大盤-6.45%超額+4.75%）。推薦組合-1.7%大幅跑贏。群創+7.13%逆勢大漲為組合最大貢獻。漢翔唯一失敗因近5天法人轉負。連續兩日13/15=86.7%超額+10.29%。"
   }
 }
