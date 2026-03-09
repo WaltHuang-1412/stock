@@ -1,0 +1,788 @@
+{
+  "date": "2026-03-09",
+  "summary": {
+    "total": 54,
+    "dual_confirmed": 27,
+    "only_institutional": 22,
+    "only_catalyst": 5,
+    "excluded_by_leader_alert": 1,
+    "alert_level_2": 0,
+    "alert_level_1": 2
+  },
+  "excluded_stocks": [
+    "2344"
+  ],
+  "dual_confirmed_stocks": [
+    "3481",
+    "2409",
+    "1314",
+    "2002",
+    "2883",
+    "6770",
+    "2892",
+    "2324",
+    "1101",
+    "2395",
+    "1402",
+    "3715",
+    "2303",
+    "2886",
+    "1301",
+    "3231",
+    "2412",
+    "2885",
+    "2353",
+    "4938",
+    "4904",
+    "2603",
+    "2368",
+    "2451",
+    "9904",
+    "2890",
+    "8271"
+  ],
+  "all_candidates": [
+    {
+      "code": "3481",
+      "name": "群創",
+      "rank": 1,
+      "institutional_total": 140548403,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2409",
+      "name": "友達",
+      "rank": 2,
+      "institutional_total": 39765234,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "1314",
+      "name": "中石化",
+      "rank": 3,
+      "institutional_total": 25892505,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2002",
+      "name": "中鋼",
+      "rank": 6,
+      "institutional_total": 13895870,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2883",
+      "name": "凱基金",
+      "rank": 7,
+      "institutional_total": 9925767,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "6770",
+      "name": "力積電",
+      "rank": 8,
+      "institutional_total": 9740800,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2892",
+      "name": "第一金",
+      "rank": 9,
+      "institutional_total": 9730851,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2324",
+      "name": "仁寶",
+      "rank": 11,
+      "institutional_total": 7288350,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "1101",
+      "name": "台泥",
+      "rank": 14,
+      "institutional_total": 5938403,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2395",
+      "name": "2395",
+      "rank": 17,
+      "institutional_total": 5425948,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "1402",
+      "name": "1402",
+      "rank": 18,
+      "institutional_total": 5389539,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "3715",
+      "name": "3715",
+      "rank": 20,
+      "institutional_total": 4918177,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "rank": 21,
+      "institutional_total": 4917849,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2886",
+      "name": "兆豐金",
+      "rank": 22,
+      "institutional_total": 4753687,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "1301",
+      "name": "台塑",
+      "rank": 23,
+      "institutional_total": 4730976,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "rank": 24,
+      "institutional_total": 4514680,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2412",
+      "name": "2412",
+      "rank": 25,
+      "institutional_total": 4028496,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2885",
+      "name": "元大金",
+      "rank": 31,
+      "institutional_total": 3098242,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2353",
+      "name": "宏碁",
+      "rank": 34,
+      "institutional_total": 2591507,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 1,
+      "alert_info": {
+        "reason": "Apple 跌幅 -2.54%",
+        "adjustment": -5
+      }
+    },
+    {
+      "code": "4938",
+      "name": "4938",
+      "rank": 35,
+      "institutional_total": 2501382,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 1,
+      "alert_info": {
+        "reason": "Apple 跌幅 -2.54%",
+        "adjustment": -5
+      }
+    },
+    {
+      "code": "4904",
+      "name": "4904",
+      "rank": 36,
+      "institutional_total": 2416253,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2603",
+      "name": "長榮",
+      "rank": 41,
+      "institutional_total": 2167604,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2368",
+      "name": "2368",
+      "rank": 42,
+      "institutional_total": 2082525,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2451",
+      "name": "2451",
+      "rank": 45,
+      "institutional_total": 1771788,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "9904",
+      "name": "寶成",
+      "rank": 48,
+      "institutional_total": 1556345,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "2890",
+      "name": "永豐金",
+      "rank": 49,
+      "institutional_total": 1520488,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "8271",
+      "name": "8271",
+      "rank": 50,
+      "institutional_total": 1514743,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50",
+        "industry_catalyst"
+      ],
+      "priority": "very_high",
+      "dual_confirmed": true,
+      "catalyst_industries": [],
+      "alert_level": 0
+    },
+    {
+      "code": "6505",
+      "name": "6505",
+      "rank": 4,
+      "institutional_total": 18922117,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high",
+      "alert_level": 0
+    },
+    {
+      "code": "2485",
+      "name": "兆赫",
+      "rank": 5,
+      "institutional_total": 16230142,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high",
+      "alert_level": 0
+    },
+    {
+      "code": "1312",
+      "name": "1312",
+      "rank": 10,
+      "institutional_total": 7299354,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high",
+      "alert_level": 0
+    },
+    {
+      "code": "2543",
+      "name": "2543",
+      "rank": 12,
+      "institutional_total": 6875293,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high",
+      "alert_level": 0
+    },
+    {
+      "code": "1718",
+      "name": "1718",
+      "rank": 13,
+      "institutional_total": 6239169,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high",
+      "alert_level": 0
+    },
+    {
+      "code": "6116",
+      "name": "6116",
+      "rank": 15,
+      "institutional_total": 5899925,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high",
+      "alert_level": 0
+    },
+    {
+      "code": "3049",
+      "name": "3049",
+      "rank": 16,
+      "institutional_total": 5779305,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high",
+      "alert_level": 0
+    },
+    {
+      "code": "1304",
+      "name": "1304",
+      "rank": 19,
+      "institutional_total": 5333603,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "high",
+      "alert_level": 0
+    },
+    {
+      "code": "2355",
+      "name": "2355",
+      "rank": 26,
+      "institutional_total": 3905057,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "1409",
+      "name": "1409",
+      "rank": 27,
+      "institutional_total": 3707057,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "3576",
+      "name": "3576",
+      "rank": 28,
+      "institutional_total": 3542114,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "4989",
+      "name": "4989",
+      "rank": 30,
+      "institutional_total": 3188898,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "1582",
+      "name": "1582",
+      "rank": 32,
+      "institutional_total": 3027404,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "2323",
+      "name": "中環",
+      "rank": 33,
+      "institutional_total": 2909265,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "1714",
+      "name": "1714",
+      "rank": 37,
+      "institutional_total": 2413000,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "3702",
+      "name": "3702",
+      "rank": 38,
+      "institutional_total": 2382614,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "2406",
+      "name": "2406",
+      "rank": 39,
+      "institutional_total": 2351334,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "1305",
+      "name": "1305",
+      "rank": 40,
+      "institutional_total": 2299394,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "8039",
+      "name": "台虹",
+      "rank": 43,
+      "institutional_total": 1858237,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "3645",
+      "name": "3645",
+      "rank": 44,
+      "institutional_total": 1816453,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "2332",
+      "name": "2332",
+      "rank": 46,
+      "institutional_total": 1742543,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "4919",
+      "name": "4919",
+      "rank": 47,
+      "institutional_total": 1618879,
+      "source": "institutional_top50",
+      "sources": [
+        "institutional_top50"
+      ],
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "2376",
+      "name": "技嘉",
+      "category": "AI伺服器",
+      "tier": "tier_1",
+      "source": "昨日續推",
+      "sources": [
+        "industry_catalyst"
+      ],
+      "dual_confirmed": false,
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "2634",
+      "name": "漢翔",
+      "category": "國防",
+      "tier": "tier_0",
+      "source": "昨日續推+美伊衝突持續",
+      "sources": [
+        "industry_catalyst"
+      ],
+      "dual_confirmed": false,
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "2606",
+      "name": "裕民",
+      "category": "航運",
+      "tier": "tier_2",
+      "source": "油價暴漲+散裝航運",
+      "sources": [
+        "industry_catalyst"
+      ],
+      "dual_confirmed": false,
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "3081",
+      "name": "聯亞",
+      "category": "光通訊/矽光子",
+      "tier": "tier_0",
+      "source": "新聞催化（AI光通訊+營收年增91%）",
+      "sources": [
+        "industry_catalyst"
+      ],
+      "dual_confirmed": false,
+      "priority": "medium",
+      "alert_level": 0
+    },
+    {
+      "code": "2393",
+      "name": "億光",
+      "category": "LED/車用",
+      "tier": "tier_2",
+      "source": "新聞催化（車用LED）",
+      "sources": [
+        "industry_catalyst"
+      ],
+      "dual_confirmed": false,
+      "priority": "medium",
+      "alert_level": 0
+    }
+  ]
+}
