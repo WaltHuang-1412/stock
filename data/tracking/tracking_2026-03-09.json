@@ -217,6 +217,46 @@
       "今日延續極度恐慌防禦策略，加入油價受惠攻擊方向"
     ]
   },
+  "intraday_analysis": {
+    "time": "12:30",
+    "taiex": 21909,
+    "taiex_change_pct": -7.03,
+    "portfolio_change_pct": -1.8,
+    "excess_return": "+5.2%",
+    "track_a": [
+      {"stock_code": "2892", "stock_name": "第一金", "intraday_price": 28.8, "change_from_rec_pct": -0.69, "day_change_pct": -3.03, "strategy": "續抱"},
+      {"stock_code": "2634", "stock_name": "漢翔", "intraday_price": 51.2, "change_from_rec_pct": -6.91, "day_change_pct": -6.74, "strategy": "高度警戒（距停損50僅1.2元）"},
+      {"stock_code": "4904", "stock_name": "遠傳", "intraday_price": 91.4, "change_from_rec_pct": -1.72, "day_change_pct": -2.56, "strategy": "續抱"},
+      {"stock_code": "1301", "stock_name": "台塑", "intraday_price": 46.8, "change_from_rec_pct": -6.40, "day_change_pct": -6.31, "strategy": "高度警戒（距停損46僅0.8元）"},
+      {"stock_code": "2603", "stock_name": "長榮", "intraday_price": 212.0, "change_from_rec_pct": 0.95, "day_change_pct": -2.08, "strategy": "續抱"},
+      {"stock_code": "2412", "stock_name": "中華電", "intraday_price": 135.5, "change_from_rec_pct": -0.37, "day_change_pct": -1.81, "strategy": "續抱"},
+      {"stock_code": "3481", "stock_name": "群創", "intraday_price": 27.4, "change_from_rec_pct": 1.48, "day_change_pct": 5.59, "strategy": "續抱，逆勢大漲"}
+    ],
+    "stop_loss_triggered": [],
+    "track_b_directions": [
+      {
+        "sector": "金融防禦擴散",
+        "catalyst": "VIX+48.49%恐慌→資金流入官股金控，第一金連10天法人買超驗證",
+        "institutional_summary": "兆豐金(2886) 10天累計+42K、近5天+17K、外資+投信同步買、佔成交25%、動能-28.6%佈局中",
+        "chain": "第一金(Track A, -3.03%跑贏) → 兆豐金(2886, -3.71%相對抗跌，尚未推薦)",
+        "conclusion": "兆豐金法人佈局與第一金同級但股價尚未反映"
+      },
+      {
+        "sector": "面板光通訊補漲",
+        "catalyst": "群創奪輝達+Google光通訊大單+Broadcom+3.41%+Marvell+9.65%網通逆勢",
+        "institutional_summary": "友達(2409) 法人+39K佔成交34%、10天累計+59K、動能-93.9%佈局完成、外資+投信同步買",
+        "chain": "群創(Track A, +5.59%已反映) → 友達(2409, -2.86%尚未跟上)",
+        "conclusion": "群創大漲帶動，友達同產業法人佈局完成但股價未反映"
+      },
+      {
+        "sector": "AI代工法人轉向（僅觀察）",
+        "catalyst": "費半-7.21%壓制AI股，但仁寶近3天法人態度轉向加速買超573→2838→7288",
+        "institutional_summary": "仁寶(2324) 近3天加速買超、佔成交30.4%、今日+0.49%暴跌日唯一微漲，但10天累計-48K整體仍偏空",
+        "chain": "緯創(-4.56%)、宏碁(-2.25%) → 仁寶(2324, +0.49%逆勢微漲)",
+        "conclusion": "法人態度剛轉向，10天累計仍為淨賣超，僅觀察不建議進場"
+      }
+    ]
+  },
   "industry_diversification": {
     "total_stocks": 7,
     "industries": 6,
