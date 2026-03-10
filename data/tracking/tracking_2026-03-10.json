@@ -277,5 +277,121 @@
     "面板/光通訊": 1,
     "max_industry_pct": 0.429,
     "diversification_check": "PASS"
+  },
+  "intraday_analysis": {
+    "timestamp": "2026-03-10 12:31",
+    "taiex": 32523,
+    "taiex_change_pct": 1.29,
+    "market_status": "極度恐慌Day3技術性反彈",
+    "track_a": [
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 136.0,
+        "intraday_price": 135.0,
+        "vs_recommend_pct": -0.74,
+        "today_change_pct": -0.37,
+        "volume_ratio": 0.49,
+        "exit_signal": "無",
+        "reversal_alert": "Level 0 (Safe)",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "recommend_price": 107.5,
+        "intraday_price": 107.5,
+        "vs_recommend_pct": 0.00,
+        "today_change_pct": -0.46,
+        "volume_ratio": 0.18,
+        "exit_signal": "無",
+        "reversal_alert": "Level 0 (Safe)",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 29.1,
+        "intraday_price": 28.80,
+        "vs_recommend_pct": -1.03,
+        "today_change_pct": 0.70,
+        "volume_ratio": 0.35,
+        "exit_signal": "無",
+        "reversal_alert": "Level 0 (Safe)",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "4904",
+        "stock_name": "遠傳",
+        "recommend_price": 91.5,
+        "intraday_price": 91.10,
+        "vs_recommend_pct": -0.44,
+        "today_change_pct": -1.19,
+        "volume_ratio": 0.44,
+        "exit_signal": "無",
+        "reversal_alert": "Level 0 (Safe)",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "recommend_price": 34.6,
+        "intraday_price": 34.25,
+        "vs_recommend_pct": -1.01,
+        "today_change_pct": -2.14,
+        "volume_ratio": 0.27,
+        "exit_signal": "無",
+        "reversal_alert": "Level 0 (Safe)",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "recommend_price": 31.25,
+        "intraday_price": 31.05,
+        "vs_recommend_pct": -0.64,
+        "today_change_pct": -0.80,
+        "volume_ratio": 0.44,
+        "exit_signal": "無",
+        "reversal_alert": "Level 0 (Safe)",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2409",
+        "stock_name": "友達",
+        "recommend_price": 15.6,
+        "intraday_price": 15.45,
+        "vs_recommend_pct": -0.96,
+        "today_change_pct": 3.34,
+        "volume_ratio": 1.04,
+        "exit_signal": "無",
+        "reversal_alert": "Level 0 (Safe)",
+        "strategy": "✅ 續抱"
+      }
+    ],
+    "exit_signals_triggered": [],
+    "track_b_directions": [
+      {
+        "sector": "金融防禦擴散",
+        "catalyst": "VIX 25.50恐慌持續Day3、防禦策略連續驗證成功、資金續流入金融防禦",
+        "institutional_summary": "開發金(2883) 10天累計+152K（外資+116K、投信+33K同步）、動能-67.6%佈局完成、Level 0 Safe",
+        "chain": {
+          "已反映": "第一金(2892)+0.70%、中信金(2891)+0.99%",
+          "尚未跟上": "開發金(2883) 0.00% — 法人10天+152K但股價完全不動"
+        },
+        "conclusion": "開發金法人重倉佈局未反映，參考進場19.8-20.0"
+      },
+      {
+        "sector": "科技反彈分化觀察",
+        "catalyst": "費半-4.02%後技術性反彈、Broadcom+8.45%網通催化",
+        "institutional_summary": "多數反彈股為昨日Level 4排除股（智邦/台達電/群創），法人昨天大賣今天反彈=短覆回補",
+        "chain": {
+          "已反映": "智邦+8.05%、群創+11.92%、台達電+2.39%、京元電+3.78%",
+          "尚未跟上": "觀察為主，不追高"
+        },
+        "conclusion": "科技反彈以短覆為主、VIX仍高檔，今日不追高，觀察明日法人動向"
+      }
+    ],
+    "summary": "防禦策略Day3持續有效。7檔推薦全部續抱、無出場訊號。大盤+1.29%反彈但以科技短覆為主，防禦股持平屬正常。Track B發現開發金(2883)法人10天+152K但0.00%未反映。"
   }
 }
