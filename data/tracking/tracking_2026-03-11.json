@@ -255,5 +255,134 @@
     "塑化/DRAM": 1,
     "max_industry_pct": 0.25,
     "diversification_check": "PASS"
+  },
+  "intraday_analysis": {
+    "timestamp": "2026-03-11 12:32",
+    "taiex": 21182,
+    "taiex_change": "+1.51%",
+    "exit_signals": "無",
+    "track_a": [
+      {
+        "stock_code": "3006",
+        "stock_name": "晶豪科",
+        "recommend_price": 145.0,
+        "intraday_price": 159.5,
+        "change_vs_recommend": "+10.00%",
+        "daily_change": "+7.77%",
+        "volume_ratio": 1.32,
+        "strategy": "📈 可部分獲利",
+        "exit_signal": "無",
+        "reversal_alert": "Level 0"
+      },
+      {
+        "stock_code": "2049",
+        "stock_name": "上銀",
+        "recommend_price": 232.0,
+        "intraday_price": 238.0,
+        "change_vs_recommend": "+2.59%",
+        "daily_change": "-0.63%",
+        "volume_ratio": 0.59,
+        "strategy": "✅ 續抱",
+        "exit_signal": "無",
+        "reversal_alert": "Level 0"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 135.0,
+        "intraday_price": 135.0,
+        "change_vs_recommend": "+0.00%",
+        "daily_change": "-1.46%",
+        "volume_ratio": 0.54,
+        "strategy": "✅ 續抱",
+        "exit_signal": "無",
+        "reversal_alert": "Level 0"
+      },
+      {
+        "stock_code": "8039",
+        "stock_name": "台虹",
+        "recommend_price": 106.0,
+        "intraday_price": 116.5,
+        "change_vs_recommend": "+9.91%",
+        "daily_change": "+16.62%",
+        "volume_ratio": 0.35,
+        "strategy": "📈 可部分獲利",
+        "exit_signal": "無",
+        "reversal_alert": "Level 0"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 29.0,
+        "intraday_price": 28.9,
+        "change_vs_recommend": "-0.34%",
+        "daily_change": "-0.34%",
+        "volume_ratio": 0.42,
+        "strategy": "✅ 續抱",
+        "exit_signal": "無",
+        "reversal_alert": "Level 0"
+      },
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "recommend_price": 77.7,
+        "intraday_price": 82.3,
+        "change_vs_recommend": "+5.92%",
+        "daily_change": "-0.12%",
+        "volume_ratio": 1.01,
+        "strategy": "✅ 續抱",
+        "exit_signal": "無",
+        "reversal_alert": "Level 0",
+        "risk_note": "近5天外資-36K需觀察"
+      },
+      {
+        "stock_code": "3715",
+        "stock_name": "定穎投控",
+        "recommend_price": 146.5,
+        "intraday_price": 154.0,
+        "change_vs_recommend": "+5.12%",
+        "daily_change": "+3.01%",
+        "volume_ratio": 0.62,
+        "strategy": "✅ 續抱",
+        "exit_signal": "無",
+        "reversal_alert": "Level 0"
+      },
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "recommend_price": 66.4,
+        "intraday_price": 66.9,
+        "change_vs_recommend": "+0.75%",
+        "daily_change": "+3.88%",
+        "volume_ratio": 0.80,
+        "strategy": "✅ 續抱",
+        "exit_signal": "無",
+        "reversal_alert": "Level 0",
+        "risk_note": "V形反轉中，近5天仍淨賣超-59K"
+      }
+    ],
+    "track_b_directions": [
+      {
+        "sector": "PCB產業鏈補漲",
+        "catalyst": "金像電EPS19.47創高超車健鼎，PCB全面利多",
+        "institutional_summary": "敬鵬(2355)法人+2,283張佔成交19.8%、10天7買3賣、近5天外資+投信同步買+3,454",
+        "chain": "已反映：台虹+9.91%、定穎+5.12%、金像電+26.7%",
+        "conclusion": "敬鵬(2355)現價42.9（+2.63%）5日僅+2.9%，有補漲空間"
+      },
+      {
+        "sector": "電信防禦佈局持續",
+        "catalyst": "VIX24.93高恐慌區，法人持續加碼防禦",
+        "institutional_summary": "遠傳(4904)連8天買超+10K、近5天+4,789（外資+6,622）、動能-21%佈局完成中",
+        "chain": "已反映：中華電+0%（Track A但平盤）",
+        "conclusion": "遠傳(4904)現價91.5（+0%），連8天法人買但股價完全沒動，最典型佈局機會"
+      },
+      {
+        "sector": "塑化催化（法人分歧大，僅觀察）",
+        "catalyst": "油價+5.74%+台塑化減產不可抗力通知",
+        "institutional_summary": "台化(1326)昨日+8,597但近5天累計-23K外資+投信同步賣超",
+        "chain": "已反映：南亞(Track A)+5.92%",
+        "conclusion": "台化法人分歧大，僅觀察不進場"
+      }
+    ]
   }
 }
