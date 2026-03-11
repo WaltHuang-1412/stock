@@ -22,7 +22,12 @@
         "momentum": -88.7,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "Micron+6.17%+三星18天罷工+DDR4華強北漲15%+NB漲價40%"
+      "catalyst": "Micron+6.17%+三星18天罷工+DDR4華強北漲15%+NB漲價40%",
+      "actual_close": 159.5,
+      "result": "success",
+      "change_pct": 10.0,
+      "close_price": 159.5,
+      "change_percent": 10.0
     },
     {
       "stock_code": "2049",
@@ -44,7 +49,12 @@
         "momentum": -80.5,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "聯發科Genio Pro AI機器人+輝達結盟Groq物理AI+近5天外資+投信同買"
+      "catalyst": "聯發科Genio Pro AI機器人+輝達結盟Groq物理AI+近5天外資+投信同買",
+      "actual_close": 238.0,
+      "result": "success",
+      "change_pct": 2.59,
+      "close_price": 238.0,
+      "change_percent": 2.59
     },
     {
       "stock_code": "2412",
@@ -66,7 +76,12 @@
         "momentum": -42.6,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "VIX24.93防禦龍頭+連10天法人買超+外資+投信同步"
+      "catalyst": "VIX24.93防禦龍頭+連10天法人買超+外資+投信同步",
+      "actual_close": 135.5,
+      "result": "success",
+      "change_pct": 0.37,
+      "close_price": 135.5,
+      "change_percent": 0.37
     },
     {
       "stock_code": "8039",
@@ -88,7 +103,12 @@
         "momentum": -96.5,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "金像電EPS創高PCB利多+累計+13K+近5天外資+投信同步買"
+      "catalyst": "金像電EPS創高PCB利多+累計+13K+近5天外資+投信同步買",
+      "actual_close": 116.5,
+      "result": "success",
+      "change_pct": 9.91,
+      "close_price": 116.5,
+      "change_percent": 9.91
     },
     {
       "stock_code": "2892",
@@ -110,7 +130,12 @@
         "momentum": -35.2,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "VIX防禦金控+累計+34K外資+投信同步買超+動能佈局完成"
+      "catalyst": "VIX防禦金控+累計+34K外資+投信同步買超+動能佈局完成",
+      "actual_close": 29.15,
+      "result": "success",
+      "change_pct": 0.52,
+      "close_price": 29.15,
+      "change_percent": 0.52
     },
     {
       "stock_code": "1303",
@@ -133,7 +158,12 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "油價+5.74%+台塑化減產+DDR4漲價",
-      "risk_note": "近5天外資-36K，宜小倉位"
+      "risk_note": "近5天外資-36K，宜小倉位",
+      "actual_close": 82.4,
+      "result": "success",
+      "change_pct": 6.05,
+      "close_price": 82.4,
+      "change_percent": 6.05
     },
     {
       "stock_code": "3715",
@@ -155,7 +185,12 @@
         "momentum": -121.2,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "金像電EPS創高PCB產業鏈利多+動能佈局完成"
+      "catalyst": "金像電EPS創高PCB產業鏈利多+動能佈局完成",
+      "actual_close": 152.0,
+      "result": "success",
+      "change_pct": 3.75,
+      "close_price": 152.0,
+      "change_percent": 3.75
     },
     {
       "stock_code": "6770",
@@ -179,28 +214,106 @@
       },
       "catalyst": "Topic Tracker累積超強催化：美光目標翻倍+三星罷工18天+DDR4漲15%+NAND缺口",
       "risk_note": "近5天仍淨賣超-59K（V形反轉中）",
-      "topic_tracker_upgrade": true
+      "topic_tracker_upgrade": true,
+      "actual_close": 66.3,
+      "result": "fail",
+      "change_pct": -0.15,
+      "fail_reason": "V形反轉中推薦價微偏高（66.4 vs 收盤66.3），邊界失敗-0.15%",
+      "close_price": 66.3,
+      "change_percent": -0.15
     }
   ],
   "excluded_stocks": [
-    {"stock_code": "8112", "stock_name": "至上", "reason": "已大漲+12.9%"},
-    {"stock_code": "2368", "stock_name": "金像電", "reason": "動能+215.9%>100%排除"},
-    {"stock_code": "2449", "stock_name": "京元電", "reason": "動能+296.5%>100%排除"},
-    {"stock_code": "6213", "stock_name": "聯茂", "reason": "動能+396.7%>100%排除"},
-    {"stock_code": "8271", "stock_name": "宇瞻", "reason": "已大漲+15.9%"},
-    {"stock_code": "3481", "stock_name": "群創", "reason": "已大漲+6.2%+鴻海出清持股"},
-    {"stock_code": "3036", "stock_name": "文曄", "reason": "已大漲+24.7%"},
-    {"stock_code": "2376", "stock_name": "技嘉", "reason": "動能+500%>100%排除"},
-    {"stock_code": "3645", "stock_name": "達邁", "reason": "已大漲+12.2%"},
-    {"stock_code": "2303", "stock_name": "聯電", "reason": "動能+182%>100%排除"},
-    {"stock_code": "5871", "stock_name": "中租-KY", "reason": "10天9天賣超累計-11K+動能+97.3%=32分"},
-    {"stock_code": "2408", "stock_name": "南亞科", "reason": "催化強但10天累計-16K法人對決+動能+93.4%=63分"},
-    {"stock_code": "2409", "stock_name": "友達", "reason": "昨被賣超-22K移除"},
-    {"stock_code": "2890", "stock_name": "永豐金", "reason": "昨被賣超-4K移除"},
-    {"stock_code": "2883", "stock_name": "開發金", "reason": "Level2反轉(-15分)=69分"},
-    {"stock_code": "2344", "stock_name": "華邦電", "reason": "累計-32K+Level4爆量賣超(Topic Tracker)"},
-    {"stock_code": "2345", "stock_name": "智邦", "reason": "動能+358.6%+Level4(Topic Tracker)"},
-    {"stock_code": "4904", "stock_name": "遠傳", "reason": "78分被力積電85分替換"}
+    {
+      "stock_code": "8112",
+      "stock_name": "至上",
+      "reason": "已大漲+12.9%"
+    },
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "reason": "動能+215.9%>100%排除"
+    },
+    {
+      "stock_code": "2449",
+      "stock_name": "京元電",
+      "reason": "動能+296.5%>100%排除"
+    },
+    {
+      "stock_code": "6213",
+      "stock_name": "聯茂",
+      "reason": "動能+396.7%>100%排除"
+    },
+    {
+      "stock_code": "8271",
+      "stock_name": "宇瞻",
+      "reason": "已大漲+15.9%"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "已大漲+6.2%+鴻海出清持股"
+    },
+    {
+      "stock_code": "3036",
+      "stock_name": "文曄",
+      "reason": "已大漲+24.7%"
+    },
+    {
+      "stock_code": "2376",
+      "stock_name": "技嘉",
+      "reason": "動能+500%>100%排除"
+    },
+    {
+      "stock_code": "3645",
+      "stock_name": "達邁",
+      "reason": "已大漲+12.2%"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "動能+182%>100%排除"
+    },
+    {
+      "stock_code": "5871",
+      "stock_name": "中租-KY",
+      "reason": "10天9天賣超累計-11K+動能+97.3%=32分"
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "reason": "催化強但10天累計-16K法人對決+動能+93.4%=63分"
+    },
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "reason": "昨被賣超-22K移除"
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "reason": "昨被賣超-4K移除"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "開發金",
+      "reason": "Level2反轉(-15分)=69分"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "累計-32K+Level4爆量賣超(Topic Tracker)"
+    },
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦",
+      "reason": "動能+358.6%+Level4(Topic Tracker)"
+    },
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "reason": "78分被力積電85分替換"
+    }
   ],
   "us_leader_alerts": {
     "level_3": [],
@@ -209,7 +322,7 @@
   },
   "market_context": {
     "us_market": {
-      "nasdaq": 0.80,
+      "nasdaq": 0.8,
       "sp500": -0.52,
       "dow": -1.64,
       "phlx_semiconductor": 1.29
@@ -354,7 +467,7 @@
         "intraday_price": 66.9,
         "change_vs_recommend": "+0.75%",
         "daily_change": "+3.88%",
-        "volume_ratio": 0.80,
+        "volume_ratio": 0.8,
         "strategy": "✅ 續抱",
         "exit_signal": "無",
         "reversal_alert": "Level 0",
@@ -382,6 +495,147 @@
         "institutional_summary": "台化(1326)昨日+8,597但近5天累計-23K外資+投信同步賣超",
         "chain": "已反映：南亞(Track A)+5.92%",
         "conclusion": "台化法人分歧大，僅觀察不進場"
+      }
+    ]
+  },
+  "after_market_analysis": {
+    "timestamp": "2026-03-11 14:35",
+    "taiex_close_change": "+1.31%",
+    "accuracy": 0.875,
+    "success_count": 7,
+    "fail_count": 1,
+    "portfolio_avg_return": 4.13,
+    "market_return": 1.31,
+    "excess_return": 2.82,
+    "tomorrow_recommendations": [
+      {
+        "stock_code": "2049",
+        "stock_name": "上銀",
+        "score": 92,
+        "position": "15-20%",
+        "action": "續抱"
+      },
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "score": 88,
+        "position": "15%",
+        "action": "續抱"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "score": 88,
+        "position": "15%",
+        "action": "續抱"
+      },
+      {
+        "stock_code": "3715",
+        "stock_name": "定穎投控",
+        "score": 85,
+        "position": "10-15%",
+        "action": "續抱"
+      },
+      {
+        "stock_code": "2367",
+        "stock_name": "燿華",
+        "score": 84,
+        "position": "10-15%",
+        "action": "新增"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "score": 83,
+        "position": "10%",
+        "action": "續抱"
+      },
+      {
+        "stock_code": "4904",
+        "stock_name": "遠傳",
+        "score": 82,
+        "position": "10%",
+        "action": "新增"
+      },
+      {
+        "stock_code": "3006",
+        "stock_name": "晶豪科",
+        "score": 80,
+        "position": "10%",
+        "action": "減碼"
+      }
+    ],
+    "removed_stocks": [
+      {
+        "stock_code": "8039",
+        "stock_name": "台虹",
+        "reason": "+9.91%超越目標118，獲利了結"
+      },
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "reason": "外資近5天-36K出貨風險"
+      }
+    ]
+  },
+  "yesterday_verification": {
+    "date": "2026-03-11",
+    "accuracy": 0.875,
+    "total": 8,
+    "success": 7,
+    "fail": 1,
+    "portfolio_avg_return": 4.13,
+    "market_return": 1.31,
+    "excess_return": 2.82,
+    "results": [
+      {
+        "stock_code": "3006",
+        "stock_name": "晶豪科",
+        "result": "success",
+        "change_pct": 10.0
+      },
+      {
+        "stock_code": "2049",
+        "stock_name": "上銀",
+        "result": "success",
+        "change_pct": 2.59
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "result": "success",
+        "change_pct": 0.37
+      },
+      {
+        "stock_code": "8039",
+        "stock_name": "台虹",
+        "result": "success",
+        "change_pct": 9.91
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "result": "success",
+        "change_pct": 0.52
+      },
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "result": "success",
+        "change_pct": 6.05
+      },
+      {
+        "stock_code": "3715",
+        "stock_name": "定穎投控",
+        "result": "success",
+        "change_pct": 3.75
+      },
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "result": "fail",
+        "change_pct": -0.15,
+        "fail_reason": "V形反轉中推薦價微偏高"
       }
     ]
   }
