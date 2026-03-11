@@ -158,26 +158,28 @@
       "catalyst": "金像電EPS創高PCB產業鏈利多+動能佈局完成"
     },
     {
-      "stock_code": "4904",
-      "stock_name": "遠傳",
-      "industry": "電信",
-      "recommend_price": 90.9,
-      "target_price": 98.0,
-      "stop_loss": 86.0,
-      "position": "10%",
-      "score": 78,
-      "rating": "⭐⭐⭐⭐",
-      "reason": "連8天法人買超+10K、佔成交21.7%法人主導、VIX防禦電信、動能-21.0%佈局完成中",
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "industry": "記憶體/DRAM",
+      "recommend_price": 66.4,
+      "target_price": 73.0,
+      "stop_loss": 59.0,
+      "position": "15%",
+      "score": 85,
+      "rating": "⭐⭐⭐⭐⭐",
+      "reason": "記憶體3週超強累積催化（美光目標$315→$650翻倍+三星罷工+DDR4漲15%+NAND缺口擴大）、連3天買超V形反轉、動能-178.4%佈局完成",
       "chip_data": {
-        "institutional_amount_rank": 30,
-        "buy_ratio": "21.7%",
-        "consecutive_buy_days": 8,
-        "cumulative_buy": 10854,
-        "net_buy_latest": 1041,
-        "momentum": -21.0,
+        "institutional_amount_rank": 20,
+        "buy_ratio": null,
+        "consecutive_buy_days": 3,
+        "cumulative_buy": 16000,
+        "net_buy_latest": 3474,
+        "momentum": -178.4,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "VIX防禦電信+連8天法人買超+佔成交21.7%法人主導"
+      "catalyst": "Topic Tracker累積超強催化：美光目標翻倍+三星罷工18天+DDR4漲15%+NAND缺口",
+      "risk_note": "近5天仍淨賣超-59K（V形反轉中）",
+      "topic_tracker_upgrade": true
     }
   ],
   "excluded_stocks": [
@@ -195,7 +197,10 @@
     {"stock_code": "2408", "stock_name": "南亞科", "reason": "催化強但10天累計-16K法人對決+動能+93.4%=63分"},
     {"stock_code": "2409", "stock_name": "友達", "reason": "昨被賣超-22K移除"},
     {"stock_code": "2890", "stock_name": "永豐金", "reason": "昨被賣超-4K移除"},
-    {"stock_code": "2883", "stock_name": "開發金", "reason": "Level2反轉(-15分)=69分"}
+    {"stock_code": "2883", "stock_name": "開發金", "reason": "Level2反轉(-15分)=69分"},
+    {"stock_code": "2344", "stock_name": "華邦電", "reason": "累計-32K+Level4爆量賣超(Topic Tracker)"},
+    {"stock_code": "2345", "stock_name": "智邦", "reason": "動能+358.6%+Level4(Topic Tracker)"},
+    {"stock_code": "4904", "stock_name": "遠傳", "reason": "78分被力積電85分替換"}
   ],
   "us_leader_alerts": {
     "level_3": [],
@@ -242,13 +247,12 @@
   "industry_diversification": {
     "total_stocks": 8,
     "industries": 6,
-    "記憶體IC": 1,
+    "記憶體": 2,
     "設備/機器人": 1,
-    "電信": 2,
-    "PCB材料": 1,
+    "電信": 1,
+    "PCB": 2,
     "金融": 1,
     "塑化/DRAM": 1,
-    "PCB": 1,
     "max_industry_pct": 0.25,
     "diversification_check": "PASS"
   }
