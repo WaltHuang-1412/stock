@@ -25,6 +25,11 @@ notes/
 |------|-------------|
 | [institutional-vs-retail-mindset](market-observations/institutional-vs-retail-mindset.md) | 法人 vs 散戶 思維分析 |
 
+### strategies/
+| File | Description |
+|------|-------------|
+| [ai-industry-deep-dive](strategies/ai-industry-deep-dive.md) | AI 產業鏈完整結構（六大層級 + 台股對應 + 投資框架） |
+
 ### case-studies/
 | File | Description |
 |------|-------------|
