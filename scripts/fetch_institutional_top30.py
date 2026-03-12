@@ -258,6 +258,12 @@ def fetch_institutional_top30(date=None):
         for i, s in enumerate(stocks_by_amount, 1):
             s['amount_rank'] = i
 
+        # 平均排名（張數排名 + 金額排名）/ 2
+        for s in stocks_buy:
+            vr = s.get('volume_rank', 50)
+            ar = s.get('amount_rank', 50)
+            s['avg_rank'] = (vr + ar) / 2
+
         return {
             'date': formatted_date,
             'buy_top30': stocks_buy,  # 保留key名稱向下相容
@@ -320,8 +326,8 @@ def print_buy_tier(stocks, start_rank, title, include_price=True):
     """輸出買超單一層級（v3.0 含金額排名）"""
     print(f'### {title}')
     print()
-    print('| 排名(張) | 排名(額) | 代號 | 名稱 | 三大法人 | 買超金額 | 佔成交% | 收盤價 | 5日漲幅 | 狀態 |')
-    print('|---------|---------|------|------|---------|---------|--------|-------|--------|------|')
+    print('| 排名(張) | 排名(額) | 平均排名 | 代號 | 名稱 | 三大法人 | 買超金額 | 佔成交% | 收盤價 | 5日漲幅 | 狀態 |')
+    print('|---------|---------|---------|------|------|---------|---------|--------|-------|--------|------|')
 
     for i, s in enumerate(stocks, start_rank):
         if include_price:
@@ -334,8 +340,10 @@ def print_buy_tier(stocks, start_rank, title, include_price=True):
 
         amt_rank = s.get('amount_rank', '--')
         amt_rank_str = f'{amt_rank}' if isinstance(amt_rank, int) else '--'
+        avg_rank = s.get('avg_rank')
+        avg_rank_str = f'{avg_rank:.1f}' if avg_rank is not None else '--'
 
-        print(f"| {i} | {amt_rank_str} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_amount(s.get('buy_amount'))} | {format_ratio(s.get('buy_ratio'))} | {format_price(s.get('close_price'))} | {pct_str} | {status} |")
+        print(f"| {i} | {amt_rank_str} | {avg_rank_str} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_amount(s.get('buy_amount'))} | {format_ratio(s.get('buy_ratio'))} | {format_price(s.get('close_price'))} | {pct_str} | {status} |")
 
     print()
 
@@ -385,17 +393,24 @@ def print_top30_report(result, include_price=True):
         key=lambda x: abs(x['buy_amount']) if x.get('buy_amount') else 0,
         reverse=True
     )
-    print('### 💰 金額排名 TOP20（法人真金白銀）')
+    print('### 💰 綜合排名 TOP20（平均排名 = 張數+金額均衡）')
     print()
-    print('| 排名(額) | 排名(張) | 代號 | 名稱 | 買超金額 | 佔成交% | 三大法人 | 收盤價 | 5日漲幅 | 狀態 |')
-    print('|---------|---------|------|------|---------|--------|---------|-------|--------|------|')
+    # 用平均排名排序
+    stocks_by_avg = sorted(
+        buy_top50,
+        key=lambda x: x.get('avg_rank', 99)
+    )
+    print('| 平均排名 | 排名(張) | 排名(額) | 代號 | 名稱 | 三大法人 | 買超金額 | 佔成交% | 收盤價 | 5日漲幅 | 狀態 |')
+    print('|---------|---------|---------|------|------|---------|---------|--------|-------|--------|------|')
 
-    for s in stocks_by_amount[:20]:
+    for s in stocks_by_avg[:20]:
         pct = s.get('5day_change')
         pct_str = f'{pct:+.1f}%' if pct is not None else '--'
         status = get_status(pct)
+        avg_rank = s.get('avg_rank')
+        avg_rank_str = f'{avg_rank:.1f}' if avg_rank is not None else '--'
 
-        print(f"| {s.get('amount_rank', '--')} | {s.get('volume_rank', '--')} | {s['code']} | {s['name']} | {format_amount(s.get('buy_amount'))} | {format_ratio(s.get('buy_ratio'))} | {format_value(s['total'])} | {format_price(s.get('close_price'))} | {pct_str} | {status} |")
+        print(f"| {avg_rank_str} | {s.get('volume_rank', '--')} | {s.get('amount_rank', '--')} | {s['code']} | {s['name']} | {format_value(s['total'])} | {format_amount(s.get('buy_amount'))} | {format_ratio(s.get('buy_ratio'))} | {format_price(s.get('close_price'))} | {pct_str} | {status} |")
 
     print()
     print('---')
