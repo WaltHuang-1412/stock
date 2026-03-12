@@ -2,6 +2,7 @@
   "date": "2026-03-12",
   "analysis_version": "v7.6",
   "topic_tracker_updated": true,
+  "topic_tracker_version": "2026-03-12",
   "recommendations": [
     {
       "stock_code": "2317",
@@ -11,9 +12,10 @@
       "target_price": 240.0,
       "stop_loss": 200.0,
       "position": "15-20%",
-      "score": 95,
+      "score": 97,
       "rating": "⭐⭐⭐⭐⭐",
-      "reason": "GTC3/16前+甲骨文AI基建暴增243%+和碩10倍成長+大摩升台積電+董事長兩位數成長、金額TOP3+45億佔157%、動能-6.6%佈局完成中",
+      "score_change": "+2(AI伺服器→超強)",
+      "reason": "GTC3/16前+甲骨文AI基建暴增243%+和碩10倍成長+大摩升台積電+亞馬遜發債>650億衝AI+千瓦功耗+瑞銀:GTC主變數、金額TOP3+45億佔157%、動能-6.6%佈局完成中",
       "chip_data": {
         "institutional_amount_rank": 3,
         "buy_ratio": "157.0%",
@@ -36,9 +38,10 @@
       "target_price": 230.0,
       "stop_loss": 190.0,
       "position": "15-20%",
-      "score": 93,
+      "score": 95,
       "rating": "⭐⭐⭐⭐⭐",
-      "reason": "中東衝突運費漲+15-20%(馬士基確認)+暫停中東收貨、金額TOP6+23億佔240%、累計+38K近5天同步買、動能-42.8%佈局完成",
+      "score_change": "+2(航運→超強)",
+      "reason": "中東衝突運費漲+15-20%(馬士基)+紅海2.0歐洲港口塞港+MSC喊漲+G7釋放4億桶油價仍不跌、金額TOP6+23億佔240%、累計+38K近5天同步買、動能-42.8%佈局完成",
       "chip_data": {
         "institutional_amount_rank": 6,
         "buy_ratio": "240.3%",
@@ -60,9 +63,10 @@
       "target_price": 315.0,
       "stop_loss": 265.0,
       "position": "15%",
-      "score": 91,
+      "score": 93,
       "rating": "⭐⭐⭐⭐⭐",
-      "reason": "GTC前+甲骨文AI基建+和碩10倍確認需求+凱基Vera Rubin、金額TOP8+18億佔164%、累計+24K、動能-111.9%佈局完成",
+      "score_change": "+2(AI伺服器→超強)",
+      "reason": "GTC前+甲骨文AI基建+和碩10倍+亞馬遜發債>650億衝AI+千瓦功耗+瑞銀:GTC主變數、金額TOP8+18億佔164%、累計+24K、動能-111.9%佈局完成",
       "chip_data": {
         "institutional_amount_rank": 8,
         "buy_ratio": "163.8%",
@@ -245,22 +249,26 @@
       "日月光178億擴建高雄+核能重啟主題(歐盟+南韓+台灣核三)"
     ],
     "negative_catalysts": [
-      "VIX24.23(+14.56%)恐慌指數大幅上升",
+      "VIX24.23→盤中升破30，恐慌指數持續上升",
       "道瓊-2.71%大跌+台積電ADR-0.81%偏弱",
-      "油價WTI$93.33通膨壓力+中東戰事持續(法巴:短期近$100)",
-      "G7/IEA擬釋放史上最大石油儲備(油價可能回落)",
+      "油價利空不跌(G7/IEA釋放4億桶史上最大但布蘭特仍漲5%)",
+      "川普啟動301調查含台灣(首批16國)中期出口風險",
+      "降息預期收縮:FedWatch僅剩9月一碼",
+      "私募信貸壓力(小摩下調估值+Cliffwater贖回>7%)",
+      "化肥一週急漲30%通膨擴散",
       "Omdia:2026年記憶體出貨量料大跌12%(中期利空)",
       "南亞處分南亞科3.1萬張(母公司內部人獲利了結)",
       "連續反彈後短線漲多回檔壓力"
     ]
   },
   "topic_tracker_catalyst_strength": {
-    "記憶體": {"level": "超強", "bonus": 15, "detail": "3週+三星罷工+DDR4漲+Micron目標翻倍，但Omdia-12%中期隱憂"},
-    "網通/CPO": {"level": "超強", "bonus": 15, "detail": "AVGO+7.57%+MRVL+15.82%+GTC3/16CPO"},
-    "AI伺服器": {"level": "強", "bonus": 10, "detail": "GTC前+甲骨文+和碩10x+大摩升台積電+凱基Vera Rubin"},
-    "航運": {"level": "強", "bonus": 10, "detail": "中東+馬士基運費漲15-20%+暫停收貨"},
-    "PCB/CCL": {"level": "強", "bonus": 10, "detail": "台光電EPS41.67+金像電EPS19.47雙催化(升級from中)"},
-    "OSAT封測": {"level": "中", "bonus": 5, "detail": "日月光178億擴建"},
+    "記憶體": {"level": "超強", "bonus": 15, "detail": "3週+三星罷工+DDR4漲+Micron目標翻倍+南亞科漲停+PC漲價潮啟動，但Omdia-12%中期隱憂"},
+    "網通/CPO": {"level": "超強", "bonus": 15, "detail": "AVGO+7.57%+MRVL+15.82%+GTC3/16CPO+聯電TFLN光子晶片量產"},
+    "AI伺服器": {"level": "超強", "bonus": 15, "detail": "GTC前+甲骨文+和碩10x+亞馬遜發債>650億衝AI+千瓦功耗+奇鋐/健策/嘉澤EPS全創高+瑞銀:GTC主變數(升級from強)", "upgraded": true},
+    "航運": {"level": "超強", "bonus": 15, "detail": "中東+馬士基運費漲15-20%+紅海2.0歐洲港口塞港+MSC喊漲附加費+G7釋放4億桶油價仍不跌(升級from強)", "upgraded": true},
+    "PCB/CCL": {"level": "強", "bonus": 10, "detail": "台光電EPS41.67+金像電EPS19.47+榮惠-KY EPS5.68"},
+    "散熱": {"level": "強", "bonus": 10, "detail": "奇鋐EPS49.17+水冷板產能擴4-5倍+健策EPS36.75(新增)", "new": true},
+    "OSAT封測": {"level": "中", "bonus": 5, "detail": "日月光178億擴建+AI千瓦功耗封測受惠"},
     "核能": {"level": "中", "bonus": 5, "detail": "歐盟+南韓+台灣核三重啟(觀察)"}
   },
   "v76_features": {
@@ -301,6 +309,43 @@
       "PCB催化升級：台光電EPS41.67+金像電EPS19.47雙催化→定穎/燿華+2分",
       "新增鴻海(AI伺服器龍頭)、長榮(航運佈局)、廣達(AI伺服器)",
       "移除晶豪科(已大漲)、力積電(分數不足+Omdia利空)、遠傳(Level4反轉)"
+    ]
+  },
+  "intraday_analysis": {
+    "timestamp": "2026-03-12 12:33",
+    "track_a": [
+      {"stock_code": "2367", "stock_name": "燿華", "recommend_price": 69.2, "intraday_price": 73.2, "change_pct": 5.78, "volume_ratio": 1.09, "institutional_today": 2597, "exit_signal": "Safe", "strategy": "📈 可部分獲利"},
+      {"stock_code": "2049", "stock_name": "上銀", "recommend_price": 238.0, "intraday_price": 243.5, "change_pct": 2.31, "volume_ratio": 0.85, "institutional_today": 909, "exit_signal": "Safe", "strategy": "✅ 續抱"},
+      {"stock_code": "2412", "stock_name": "中華電", "recommend_price": 135.5, "intraday_price": 136.0, "change_pct": 0.37, "volume_ratio": 0.37, "institutional_today": 2908, "exit_signal": "MA5/10跌破但法人續買", "strategy": "✅ 續抱"},
+      {"stock_code": "2603", "stock_name": "長榮", "recommend_price": 210.0, "intraday_price": 210.5, "change_pct": 0.24, "volume_ratio": 0.28, "institutional_today": 10883, "exit_signal": "Safe", "strategy": "✅ 續抱"},
+      {"stock_code": "3715", "stock_name": "定穎投控", "recommend_price": 152.0, "intraday_price": 151.5, "change_pct": -0.33, "volume_ratio": 0.57, "institutional_today": 3741, "exit_signal": "Safe", "strategy": "✅ 續抱"},
+      {"stock_code": "2382", "stock_name": "廣達", "recommend_price": 289.0, "intraday_price": 286.5, "change_pct": -0.87, "volume_ratio": 0.51, "institutional_today": 6428, "exit_signal": "MA10跌破但法人續買", "strategy": "✅ 續抱"},
+      {"stock_code": "2892", "stock_name": "第一金", "recommend_price": 29.15, "intraday_price": 28.7, "change_pct": -1.54, "volume_ratio": 0.48, "institutional_today": 5667, "exit_signal": "MA5/10跌破但法人續買", "strategy": "✅ 續抱"},
+      {"stock_code": "2317", "stock_name": "鴻海", "recommend_price": 219.0, "intraday_price": 213.5, "change_pct": -2.51, "volume_ratio": 0.51, "institutional_today": 20663, "exit_signal": "MA5/10跌破", "strategy": "⚠️ 觀察（法人+20K大買）"}
+    ],
+    "exit_signals_triggered": "無（8檔均未觸及停損價）",
+    "track_b_directions": [
+      {
+        "sector": "銅/電纜",
+        "catalyst": "AI千瓦功耗→銅需求大增+黃仁勳搶ABF+中東推升原物料",
+        "institutional_summary": "華新(1605)連10天法人買超+44K（外資+46K），佈局完成中(-18.3%)",
+        "chain": "華城(1519)已大漲，但華新(1605)今日-2.14%(5日-3.2%)嚴重落後法人力度",
+        "conclusion": "華新(1605) 現價32.05，法人10天不停買但股價完全不動，有補漲空間"
+      },
+      {
+        "sector": "AI伺服器代工",
+        "catalyst": "GTC3/16前+甲骨文AI基建243%+和碩10倍+AVGO/MRVL爆漲→CPO/伺服器",
+        "institutional_summary": "神達(3706) avg_rank10 buy_ratio125.6% +13K；緯創(3231) avg_rank10.5 buy_ratio74.1% +11.5K",
+        "chain": "鴻海-4.48%/廣達-0.87%回檔，神達+1.73%/緯創+1.15%法人同步佈局但漲幅<2%",
+        "conclusion": "神達/緯創法人力度不輸龍頭（avg_rank TOP11），GTC前有催化，尚未充分反映"
+      },
+      {
+        "sector": "半導體/光電共封裝",
+        "catalyst": "聯電TFLN光子晶片量產=CPO商業化里程碑+AVGO/MRVL爆漲帶動",
+        "institutional_summary": "聯電(2303) avg_rank9(TOP10)，近5天外資+投信同步買超+42K",
+        "chain": "光通訊/CPO題材已爆發，但聯電(TFLN量產方)今日-2.58%反跌",
+        "conclusion": "聯電近5天同步買+42K但股價反跌，落差明顯。惟動能+500%偏高有追高風險，觀察為主"
+      }
     ]
   },
   "industry_diversification": {
