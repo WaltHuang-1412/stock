@@ -1,6 +1,7 @@
 {
   "date": "2026-03-12",
   "analysis_version": "v7.6",
+  "topic_tracker_updated": true,
   "recommendations": [
     {
       "stock_code": "2317",
@@ -10,19 +11,21 @@
       "target_price": 240.0,
       "stop_loss": 200.0,
       "position": "15-20%",
-      "score": 94,
+      "score": 95,
       "rating": "⭐⭐⭐⭐⭐",
-      "reason": "GTC3/16前+甲骨文AI基建暴增243%+董事長兩位數成長、金額TOP3+45億佔38.6%、動能-6.6%佈局完成中",
+      "reason": "GTC3/16前+甲骨文AI基建暴增243%+和碩10倍成長+大摩升台積電+董事長兩位數成長、金額TOP3+45億佔157%、動能-6.6%佈局完成中",
       "chip_data": {
         "institutional_amount_rank": 3,
-        "buy_ratio": "38.6%",
+        "buy_ratio": "157.0%",
         "consecutive_buy_days": 1,
         "cumulative_buy": -57000,
         "net_buy_latest": 20000,
         "momentum": -6.6,
-        "reversal_alert": "Level 0 (Safe)"
+        "reversal_alert": "Level 0 (Safe)",
+        "recent_5day_net": -30000,
+        "recent_5day_foreign": -36000
       },
-      "catalyst": "GTC3/16前+甲骨文AI基建暴增243%+鴻海兩位數成長預告",
+      "catalyst": "GTC3/16前+甲骨文AI基建暴增243%+和碩伺服器10倍成長+大摩升台積電+凱基Vera Rubin",
       "risk_note": "近5天外資-36K但昨日+20K反轉買超"
     },
     {
@@ -35,17 +38,19 @@
       "position": "15-20%",
       "score": 93,
       "rating": "⭐⭐⭐⭐⭐",
-      "reason": "中東衝突運費漲+15-20%暫停中東收貨、金額TOP6+23億佔60.5%、累計+38K近5天同步買、動能-42.8%佈局完成",
+      "reason": "中東衝突運費漲+15-20%(馬士基確認)+暫停中東收貨、金額TOP6+23億佔240%、累計+38K近5天同步買、動能-42.8%佈局完成",
       "chip_data": {
         "institutional_amount_rank": 6,
-        "buy_ratio": "60.5%",
+        "buy_ratio": "240.3%",
         "consecutive_buy_days": 1,
         "cumulative_buy": 38000,
         "net_buy_latest": 10000,
         "momentum": -42.8,
-        "reversal_alert": "Level 0 (Safe)"
+        "reversal_alert": "Level 0 (Safe)",
+        "recent_5day_net": 13000,
+        "recent_5day_foreign": 12000
       },
-      "catalyst": "中東衝突+運費漲15-20%+暫停中東收貨+SCFI漲11.7%"
+      "catalyst": "中東衝突+馬士基運費漲15-20%+三大航商暫停中東收貨+SCFI漲11.7%"
     },
     {
       "stock_code": "2382",
@@ -55,20 +60,22 @@
       "target_price": 315.0,
       "stop_loss": 265.0,
       "position": "15%",
-      "score": 90,
+      "score": 91,
       "rating": "⭐⭐⭐⭐⭐",
-      "reason": "GTC前+甲骨文AI基建+黃仁勳五層蛋糕、金額TOP8+19億佔36.1%、累計+24K、動能-111.9%佈局完成",
+      "reason": "GTC前+甲骨文AI基建+和碩10倍確認需求+凱基Vera Rubin、金額TOP8+18億佔164%、累計+24K、動能-111.9%佈局完成",
       "chip_data": {
         "institutional_amount_rank": 8,
-        "buy_ratio": "36.1%",
+        "buy_ratio": "163.8%",
         "consecutive_buy_days": 1,
         "cumulative_buy": 24000,
         "net_buy_latest": 6428,
         "momentum": -111.9,
-        "reversal_alert": "Level 0 (Safe)"
+        "reversal_alert": "Level 0 (Safe)",
+        "recent_5day_net": -3292,
+        "recent_5day_foreign": -5408
       },
-      "catalyst": "GTC前+甲骨文AI基建暴增243%+黃仁勳五層蛋糕",
-      "risk_note": "近5天累計轉負-3.3K（反轉警告）"
+      "catalyst": "GTC前+甲骨文AI基建暴增243%+和碩10倍成長確認+凱基Vera Rubin選股",
+      "risk_note": "近5天累計轉負-3.3K但昨日+6.4K大幅反轉買超"
     },
     {
       "stock_code": "2049",
@@ -80,7 +87,7 @@
       "position": "15%",
       "score": 88,
       "rating": "⭐⭐⭐⭐⭐",
-      "reason": "聯發科Genio Pro AI機器人+輝達Groq、10天9買+13K連4天買、近5天同步買、動能-77%佈局完成",
+      "reason": "聯發科Genio Pro AI機器人+輝達Groq、10天9買+13K連4天買、近5天同步買+2.8K、動能-77%佈局完成",
       "chip_data": {
         "institutional_amount_rank": null,
         "buy_ratio": "26.1%",
@@ -88,7 +95,9 @@
         "cumulative_buy": 13000,
         "net_buy_latest": 909,
         "momentum": -77.0,
-        "reversal_alert": "Level 0 (Safe)"
+        "reversal_alert": "Level 0 (Safe)",
+        "recent_5day_net": 2570,
+        "recent_5day_foreign": 2829
       },
       "catalyst": "聯發科Genio Pro AI機器人+輝達結盟Groq物理AI"
     },
@@ -97,12 +106,12 @@
       "stock_name": "定穎投控",
       "industry": "PCB",
       "recommend_price": 152.0,
-      "target_price": 168.0,
+      "target_price": 170.0,
       "stop_loss": 137.0,
       "position": "10-15%",
-      "score": 86,
-      "rating": "⭐⭐⭐⭐⭐",
-      "reason": "金像電EPS創高PCB利多延續、10天8買+14K、動能-97.9%佈局完成",
+      "score": 88,
+      "rating": "⭐⭐⭐⭐",
+      "reason": "台光電EPS41.67創高+金像電EPS19.47=PCB/CCL雙催化升級、10天8買+14K、動能-97.9%佈局完成",
       "chip_data": {
         "institutional_amount_rank": 19,
         "buy_ratio": "19.4%",
@@ -110,21 +119,25 @@
         "cumulative_buy": 14000,
         "net_buy_latest": 3741,
         "momentum": -97.9,
-        "reversal_alert": "Level 0 (Safe)"
+        "reversal_alert": "Level 0 (Safe)",
+        "recent_5day_net": 311,
+        "recent_5day_foreign": 543
       },
-      "catalyst": "金像電EPS19.47創高PCB產業鏈利多延續"
+      "catalyst": "台光電EPS41.67創歷史新高+金像電EPS19.47=PCB/CCL雙催化升級(強)",
+      "topic_tracker_upgrade": true,
+      "score_change": "+2 (PCB催化中→強)"
     },
     {
       "stock_code": "2367",
       "stock_name": "燿華",
       "industry": "PCB",
       "recommend_price": 69.2,
-      "target_price": 76.0,
+      "target_price": 78.0,
       "stop_loss": 63.0,
       "position": "10-15%",
-      "score": 84,
+      "score": 86,
       "rating": "⭐⭐⭐⭐",
-      "reason": "PCB利多+佈局中-2.5%極佳位置、10天7買+14K、近5天外資+4.6K、動能-79.1%佈局完成",
+      "reason": "PCB雙催化(台光電+金像電)+佈局中-2.5%極佳位置、10天7買+14K、近5天外資+4.6K、動能-79.1%佈局完成",
       "chip_data": {
         "institutional_amount_rank": 34,
         "buy_ratio": "16.7%",
@@ -132,9 +145,13 @@
         "cumulative_buy": 14000,
         "net_buy_latest": 2597,
         "momentum": -79.1,
-        "reversal_alert": "Level 0 (Safe)"
+        "reversal_alert": "Level 0 (Safe)",
+        "recent_5day_net": 2559,
+        "recent_5day_foreign": 4647
       },
-      "catalyst": "PCB產業利多+佈局中5日-2.5%極佳位置"
+      "catalyst": "PCB雙催化(台光電EPS41.67+金像電EPS19.47)+佈局中5日-2.5%極佳位置",
+      "topic_tracker_upgrade": true,
+      "score_change": "+2 (PCB催化中→強)"
     },
     {
       "stock_code": "2412",
@@ -149,12 +166,14 @@
       "reason": "VIX24.23防禦龍頭、連10天法人買超+46K不間斷、近5天+19K、動能-30.8%佈局完成",
       "chip_data": {
         "institutional_amount_rank": 20,
-        "buy_ratio": "29.5%",
+        "buy_ratio": "146.4%",
         "consecutive_buy_days": 10,
         "cumulative_buy": 46000,
         "net_buy_latest": 2908,
         "momentum": -30.8,
-        "reversal_alert": "Level 0 (Safe)"
+        "reversal_alert": "Level 0 (Safe)",
+        "recent_5day_net": 19000,
+        "recent_5day_foreign": 19000
       },
       "catalyst": "VIX24.23防禦龍頭+連10天法人買超+46K"
     },
@@ -170,13 +189,15 @@
       "rating": "⭐⭐⭐",
       "reason": "VIX防禦金控、10天9買+38K、近5天外資+投信同步買+19K",
       "chip_data": {
-        "institutional_amount_rank": 35,
-        "buy_ratio": "36.9%",
+        "institutional_amount_rank": 37,
+        "buy_ratio": "113.9%",
         "consecutive_buy_days": 1,
         "cumulative_buy": 38000,
         "net_buy_latest": 5667,
         "momentum": 0.2,
-        "reversal_alert": "Level 0 (Safe)"
+        "reversal_alert": "Level 0 (Safe)",
+        "recent_5day_net": 19000,
+        "recent_5day_foreign": 17000
       },
       "catalyst": "VIX防禦金控+10天9買+38K+近5天同步買"
     }
@@ -190,12 +211,15 @@
     {"stock_code": "2376", "stock_name": "技嘉", "reason": "5日+8.4%已大漲"},
     {"stock_code": "3231", "stock_name": "緯創", "reason": "動能+342.8%>100%非超強催化不覆寫"},
     {"stock_code": "2356", "stock_name": "英業達", "reason": "動能+121.7%>100%非超強催化不覆寫"},
-    {"stock_code": "6770", "stock_name": "力積電", "reason": "覆寫通過但分數66分不足推薦門檻"},
+    {"stock_code": "6770", "stock_name": "力積電", "reason": "覆寫通過但分數68分<75分+Omdia記憶體出貨-12%中期利空"},
     {"stock_code": "2337", "stock_name": "旺宏", "reason": "近5天外資+投信同步賣超-45K"},
     {"stock_code": "2609", "stock_name": "陽明", "reason": "近5天外資+投信同步賣超-19K"},
-    {"stock_code": "4904", "stock_name": "遠傳", "reason": "Level4反轉預警(賣超佔日均量20.2%)"},
+    {"stock_code": "4904", "stock_name": "遠傳", "reason": "Level4反轉預警(賣超佔日均量157.6%)"},
+    {"stock_code": "2383", "stock_name": "台光電", "reason": "Level4反轉預警(賣超佔日均量17.2%)+近5天外資-2K"},
+    {"stock_code": "3711", "stock_name": "日月光", "reason": "Level4反轉預警(賣超佔日均量87.9%)+近5天外資-12K"},
     {"stock_code": "3006", "stock_name": "晶豪科", "reason": "昨+10%已大漲"},
     {"stock_code": "1303", "stock_name": "南亞", "reason": "法人賣超-18K出貨"},
+    {"stock_code": "2408", "stock_name": "南亞科", "reason": "法人賣超-16K+母公司南亞處分3.1萬張(內部人出貨)"},
     {"stock_code": "8039", "stock_name": "台虹", "reason": "昨+9.9%獲利了結"}
   ],
   "us_leader_alerts": {
@@ -211,18 +235,57 @@
       "phlx_semiconductor": 0.00
     },
     "key_catalysts": [
-      "Broadcom+7.57%+Marvell+15.82%=網通爆漲GTC前CPO題材",
-      "Micron+4.47%+Intel+5.27%=記憶體晶片續強(三星罷工+DDR4漲15%)",
+      "Broadcom+7.57%+Marvell+15.82%=網通/CPO爆漲GTC前題材",
+      "Micron+4.47%+Intel+5.27%=記憶體晶片續強(三星罷工18天+DDR4漲15%)",
       "甲骨文AI基建暴增243%+黃仁勳五層蛋糕+GTC3/16",
-      "中東衝突持續+運費漲15-20%+三大航商暫停中東收貨",
-      "外資終止連8賣轉買超371.8億+台股2天暴漲2000點反彈"
+      "和碩法說伺服器10倍成長+大摩升台積電目標價+凱基首選Vera Rubin",
+      "台光電EPS41.67創歷史新高+金像電EPS19.47=PCB/CCL雙催化",
+      "中東衝突持續+馬士基運費漲15-20%+三大航商暫停中東收貨",
+      "外資終止連8賣轉買超371.8億+台股2天暴漲2000點反彈",
+      "日月光178億擴建高雄+核能重啟主題(歐盟+南韓+台灣核三)"
     ],
     "negative_catalysts": [
       "VIX24.23(+14.56%)恐慌指數大幅上升",
-      "道瓊-2.71%大跌",
-      "台積電ADR-0.81%偏弱",
-      "油價WTI$93.33通膨壓力+中東戰事持續"
+      "道瓊-2.71%大跌+台積電ADR-0.81%偏弱",
+      "油價WTI$93.33通膨壓力+中東戰事持續(法巴:短期近$100)",
+      "G7/IEA擬釋放史上最大石油儲備(油價可能回落)",
+      "Omdia:2026年記憶體出貨量料大跌12%(中期利空)",
+      "南亞處分南亞科3.1萬張(母公司內部人獲利了結)",
+      "連續反彈後短線漲多回檔壓力"
     ]
+  },
+  "topic_tracker_catalyst_strength": {
+    "記憶體": {"level": "超強", "bonus": 15, "detail": "3週+三星罷工+DDR4漲+Micron目標翻倍，但Omdia-12%中期隱憂"},
+    "網通/CPO": {"level": "超強", "bonus": 15, "detail": "AVGO+7.57%+MRVL+15.82%+GTC3/16CPO"},
+    "AI伺服器": {"level": "強", "bonus": 10, "detail": "GTC前+甲骨文+和碩10x+大摩升台積電+凱基Vera Rubin"},
+    "航運": {"level": "強", "bonus": 10, "detail": "中東+馬士基運費漲15-20%+暫停收貨"},
+    "PCB/CCL": {"level": "強", "bonus": 10, "detail": "台光電EPS41.67+金像電EPS19.47雙催化(升級from中)"},
+    "OSAT封測": {"level": "中", "bonus": 5, "detail": "日月光178億擴建"},
+    "核能": {"level": "中", "bonus": 5, "detail": "歐盟+南韓+台灣核三重啟(觀察)"}
+  },
+  "v76_features": {
+    "super_catalyst_override": {
+      "tested": "力積電(6770)",
+      "momentum": 122.6,
+      "screening_passed": true,
+      "final_score": 68,
+      "threshold": 75,
+      "result": "覆寫通過但分數不足，不推薦",
+      "additional_risk": "Omdia記憶體出貨-12%中期利空"
+    },
+    "dynamic_defense": {
+      "vix": 24.23,
+      "catalyst_strength": "超強",
+      "target_defense": "15-25%",
+      "actual_defense": "25% (2/8)",
+      "status": "PASS"
+    },
+    "pcb_catalyst_upgrade": {
+      "from": "中(+5分)",
+      "to": "強(+10分)",
+      "reason": "台光電EPS41.67+金像電EPS19.47雙催化",
+      "affected_stocks": ["3715(定穎+2分→88)", "2367(燿華+2分→86)"]
+    }
   },
   "historical_validation": {
     "previous_date": "2026-03-11",
@@ -235,8 +298,9 @@
       "產業催化+法人佈局完成=大漲(晶豪科+10%、台虹+9.9%)",
       "力積電V形反轉中推薦偏高，邊界失敗-0.15%",
       "今日策略：科技75%+防禦25%(GTC前+AVGO/MRVL爆漲+記憶體延續)",
+      "PCB催化升級：台光電EPS41.67+金像電EPS19.47雙催化→定穎/燿華+2分",
       "新增鴻海(AI伺服器龍頭)、長榮(航運佈局)、廣達(AI伺服器)",
-      "移除晶豪科(已大漲)、力積電(昨日失敗)、遠傳(Level4反轉)"
+      "移除晶豪科(已大漲)、力積電(分數不足+Omdia利空)、遠傳(Level4反轉)"
     ]
   },
   "industry_diversification": {
