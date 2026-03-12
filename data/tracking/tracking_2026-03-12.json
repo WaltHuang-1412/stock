@@ -364,5 +364,45 @@
     "vix": 24.23,
     "catalyst_strength": "超強",
     "target_defense_range": "15-25%"
+  },
+  "after_market_analysis": {
+    "timestamp": "2026-03-12 14:45",
+    "taiex_close": 33581.86,
+    "taiex_change_pct": -0.05,
+    "results": [
+      {"stock_code": "2317", "stock_name": "鴻海", "recommend_price": 219.0, "actual_close": 214.5, "change_pct": -2.05, "result": "fail", "fail_reason": "10天累計-57K賣壓+道瓊-2.71%拖累，單日+20K反轉不足以覆蓋多日賣壓"},
+      {"stock_code": "2603", "stock_name": "長榮", "recommend_price": 210.0, "actual_close": 211.5, "change_pct": 0.71, "result": "success"},
+      {"stock_code": "2382", "stock_name": "廣達", "recommend_price": 289.0, "actual_close": 288.5, "change_pct": -0.17, "result": "fail", "fail_reason": "邊際失敗(-0.17%)，幾乎平盤，持股邏輯不變"},
+      {"stock_code": "2049", "stock_name": "上銀", "recommend_price": 238.0, "actual_close": 244.0, "change_pct": 2.52, "result": "success"},
+      {"stock_code": "3715", "stock_name": "定穎投控", "recommend_price": 152.0, "actual_close": 151.5, "change_pct": -0.33, "result": "fail", "fail_reason": "邊際失敗(-0.33%)，PCB催化延遲反映"},
+      {"stock_code": "2367", "stock_name": "燿華", "recommend_price": 69.2, "actual_close": 73.0, "change_pct": 5.49, "result": "success"},
+      {"stock_code": "2412", "stock_name": "中華電", "recommend_price": 135.5, "actual_close": 136.0, "change_pct": 0.37, "result": "success"},
+      {"stock_code": "2892", "stock_name": "第一金", "recommend_price": 29.15, "actual_close": 28.85, "change_pct": -1.03, "result": "fail", "fail_reason": "金融股整體偏弱，防禦效果不佳"}
+    ],
+    "accuracy": 0.50,
+    "portfolio_avg_return": 0.69,
+    "taiex_return": -0.05,
+    "excess_return": 0.74,
+    "lessons": [
+      "單日法人排名(amount_rank TOP3)不等於趨勢，鴻海10天-57K但得97分偏高",
+      "邊際失敗(廣達-0.17%、定穎-0.33%)不影響持股邏輯",
+      "PCB催化驗證：燿華+5.49%完全發酵",
+      "動能延續日特徵：大量已排除股續漲(至上+28.9%、台虹+24.3%等)，非規則缺陷",
+      "建議v7.8：當10天累計<-30K且近5天也為負時，法人基礎分上限15分"
+    ],
+    "tomorrow_recommendations": [
+      {"stock_code": "2603", "stock_name": "長榮", "industry": "航運", "position": "15-20%", "score": 95, "action": "續抱"},
+      {"stock_code": "2382", "stock_name": "廣達", "industry": "AI伺服器", "position": "15%", "score": 93, "action": "續抱"},
+      {"stock_code": "2367", "stock_name": "燿華", "industry": "PCB", "position": "15%", "score": 88, "action": "續抱"},
+      {"stock_code": "2049", "stock_name": "上銀", "industry": "設備/機器人", "position": "15%", "score": 88, "action": "續抱"},
+      {"stock_code": "3715", "stock_name": "定穎投控", "industry": "PCB", "position": "10-15%", "score": 88, "action": "續抱"},
+      {"stock_code": "1605", "stock_name": "華新", "industry": "銅/電纜", "position": "10-15%", "score": 85, "action": "新增"},
+      {"stock_code": "2412", "stock_name": "中華電", "industry": "電信", "position": "10%", "score": 84, "action": "續抱"},
+      {"stock_code": "3706", "stock_name": "神達", "industry": "AI伺服器", "position": "10%", "score": 80, "action": "新增"}
+    ],
+    "removed_stocks": [
+      {"stock_code": "2317", "stock_name": "鴻海", "reason": "10天累計-57K趨勢偏空，近5天外資-36K，今日-2.05%確認"},
+      {"stock_code": "2892", "stock_name": "第一金", "reason": "金融防禦效果不佳，今日-1.03%，改用華新替代"}
+    ]
   }
 }
