@@ -227,5 +227,27 @@
     "successes": "燿華+5.49%, 上銀+2.52%, 長榮+0.71%, 中華電+0.37%",
     "failures": "鴻海-2.05%, 第一金-1.03%, 定穎-0.33%, 廣達-0.17%",
     "lesson": "法人10天累計為負時不應高分推薦（鴻海-57K得97分偏高），華新法人賣超TOP23需移除"
+  },
+  "intraday_analysis": {
+    "timestamp": "2026-03-13 12:31",
+    "forced_stop_loss": "無",
+    "track_a": [
+      {"stock_code": "2609", "stock_name": "陽明", "recommend_price": 62.0, "intraday_price": 59.60, "today_change": -3.25, "vs_recommend": -3.87, "institutional": 9724, "strategy": "續抱觀察（法人仍大買+9.7K，停損57仍有距離）"},
+      {"stock_code": "2049", "stock_name": "上銀", "recommend_price": 244.0, "intraday_price": 238.00, "today_change": 8.18, "vs_recommend": -2.46, "institutional": 1560, "strategy": "續抱（趨勢向上+8.18%）"},
+      {"stock_code": "2412", "stock_name": "中華電", "recommend_price": 136.0, "intraday_price": 136.00, "today_change": 0.0, "vs_recommend": 0.0, "institutional": 4794, "strategy": "續抱（防禦穩定）"},
+      {"stock_code": "2603", "stock_name": "長榮", "recommend_price": 211.5, "intraday_price": 208.00, "today_change": -1.19, "vs_recommend": -1.65, "institutional": 2119, "strategy": "續抱留意（Level 2預警）"},
+      {"stock_code": "2345", "stock_name": "智邦", "recommend_price": 1505.0, "intraday_price": 1440.00, "today_change": 4.35, "vs_recommend": -4.32, "institutional": 70, "strategy": "續抱（GTC催化在即）"},
+      {"stock_code": "2356", "stock_name": "英業達", "recommend_price": 43.0, "intraday_price": 42.65, "today_change": 6.49, "vs_recommend": -0.81, "institutional": 1675, "strategy": "續抱（法人續買+6.49%）"},
+      {"stock_code": "2367", "stock_name": "燿華", "recommend_price": 73.0, "intraday_price": 73.20, "today_change": 17.87, "vs_recommend": 0.27, "institutional": 8922, "strategy": "可部分獲利1/3（+17.87%超強）"},
+      {"stock_code": "4904", "stock_name": "遠傳", "recommend_price": 92.0, "intraday_price": 91.50, "today_change": 0.0, "vs_recommend": -0.54, "institutional": 1626, "strategy": "續抱（防禦穩定）"}
+    ],
+    "track_b_recommendations": [],
+    "track_b_observations": [
+      {"stock_code": "2890", "stock_name": "永豐金", "score": 62, "reason": "唯一漲幅<3%的TOP50候選，但外資近5天-1K未通過篩選"},
+      {"stock_code": "2887", "stock_name": "台新金", "score": 55, "reason": "avg_rank18.5但今日+3.13%>3%且動能+177%爆發"},
+      {"stock_code": "2882", "stock_name": "國泰金", "score": 0, "reason": "Level 4反轉預警（法人爆量賣超佔日均量19.1%），直接排除"}
+    ],
+    "track_b_note": "今日無盤中新推薦。市場全面上漲，TOP50幾乎全部已反映>3%，金融股外資全面賣超不符合推薦條件。",
+    "market_observation": "科技/PCB/記憶體全面爆發（欣興+28.5%、宇瞻+42.2%、台虹+33.4%），金融外資持續出貨，航運催化在但走勢分歧"
   }
 }
