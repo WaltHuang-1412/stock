@@ -5948,82 +5948,20 @@
   },
   "2026-03-13": {
     "date": "2026-03-13",
+    "analysis_version": "v7.9",
     "predictions": [
-      {
-        "symbol": "2609",
-        "name": "陽明",
-        "recommend_price": 62.0,
-        "actual_close": 59.2,
-        "change_pct": -4.52,
-        "result": "fail",
-        "fail_reason": "大盤台積ADR-4.85%拖累+法人轉賣-532"
-      },
-      {
-        "symbol": "2049",
-        "name": "上銀",
-        "recommend_price": 244.0,
-        "actual_close": 238.5,
-        "change_pct": -2.25,
-        "result": "fail",
-        "fail_reason": "大盤系統性下跌+法人僅+100微買"
-      },
-      {
-        "symbol": "2412",
-        "name": "中華電",
-        "recommend_price": 136.0,
-        "actual_close": 136.0,
-        "change_pct": 0.0,
-        "result": "success"
-      },
-      {
-        "symbol": "2603",
-        "name": "長榮",
-        "recommend_price": 211.5,
-        "actual_close": 207.5,
-        "change_pct": -1.89,
-        "result": "fail",
-        "fail_reason": "法人-277轉賣Level 2+大盤壓力"
-      },
-      {
-        "symbol": "2345",
-        "name": "智邦",
-        "recommend_price": 1505.0,
-        "actual_close": 1420.0,
-        "change_pct": -5.65,
-        "result": "fail",
-        "fail_reason": "法人量小+外資近5天-411+高beta大盤拖累"
-      },
-      {
-        "symbol": "2356",
-        "name": "英業達",
-        "recommend_price": 43.0,
-        "actual_close": 42.65,
-        "change_pct": -0.81,
-        "result": "fail",
-        "fail_reason": "法人+11K爆買但大盤壓力(接近持平)"
-      },
-      {
-        "symbol": "2367",
-        "name": "燿華",
-        "recommend_price": 73.0,
-        "actual_close": 72.6,
-        "change_pct": -0.55,
-        "result": "fail",
-        "fail_reason": "投信+3830大買但大盤壓力(接近持平)"
-      },
-      {
-        "symbol": "4904",
-        "name": "遠傳",
-        "recommend_price": 92.0,
-        "actual_close": 91.8,
-        "change_pct": -0.22,
-        "result": "fail",
-        "fail_reason": "防禦穩定但微跌(接近持平)"
-      }
+      {"symbol": "2609", "name": "陽明", "recommend_price": 62.0, "target_price": 68.0, "stop_loss": 57.0, "day1_close": 59.2, "day1_change_pct": -4.52, "result": "holding", "holding_days": 1, "holding_status": "催化✅未變｜法人-532⚠️｜距停損3.7%"},
+      {"symbol": "2049", "name": "上銀", "recommend_price": 244.0, "target_price": 265.0, "stop_loss": 224.0, "day1_close": 238.5, "day1_change_pct": -2.25, "result": "holding", "holding_days": 1, "holding_status": "催化✅GTC在即｜法人+100續買"},
+      {"symbol": "2412", "name": "中華電", "recommend_price": 136.0, "target_price": 142.0, "stop_loss": 130.0, "day1_close": 136.0, "day1_change_pct": 0.0, "result": "holding", "holding_days": 1, "holding_status": "催化✅防禦｜法人+916連11天"},
+      {"symbol": "2603", "name": "長榮", "recommend_price": 211.5, "target_price": 230.0, "stop_loss": 194.0, "day1_close": 207.5, "day1_change_pct": -1.89, "result": "holding", "holding_days": 1, "holding_status": "催化✅航運｜法人-277 Level2⚠️"},
+      {"symbol": "2345", "name": "智邦", "recommend_price": 1505.0, "target_price": 1650.0, "stop_loss": 1380.0, "day1_close": 1420.0, "day1_change_pct": -5.65, "result": "holding", "holding_days": 1, "holding_status": "催化✅Marvell+GTC｜距停損2.8%⚠️"},
+      {"symbol": "2356", "name": "英業達", "recommend_price": 43.0, "target_price": 47.0, "stop_loss": 39.5, "day1_close": 42.65, "day1_change_pct": -0.81, "result": "holding", "holding_days": 1, "holding_status": "催化✅GTC｜法人+11K爆買🔥"},
+      {"symbol": "2367", "name": "燿華", "recommend_price": 73.0, "target_price": 80.0, "stop_loss": 67.0, "day1_close": 72.6, "day1_change_pct": -0.55, "result": "holding", "holding_days": 1, "holding_status": "催化✅PCB｜法人+2883續買"},
+      {"symbol": "4904", "name": "遠傳", "recommend_price": 92.0, "target_price": 97.0, "stop_loss": 88.0, "day1_close": 91.8, "day1_change_pct": -0.22, "result": "holding", "holding_days": 1, "holding_status": "催化✅防禦｜法人+647續買"}
     ],
-    "accuracy": 0.125,
-    "portfolio_avg_return": -2.0,
-    "excess_return": -1.46,
-    "notes": "台積ADR-4.85%導致大盤-0.54%，8檔全面回檔。防禦股(中華電0%+遠傳-0.22%)最抗跌。法人+11K的英業達僅-0.81%最接近持平。智邦外資近5天-411但仍推薦75分是流程缺陷。GTC3/16開幕前法人逆勢佈局英業達+上銀。"
+    "settled_count": 0,
+    "holding_count": 8,
+    "settled_accuracy": null,
+    "notes": "v7.9多日追蹤：第1天不結算，8檔全部持有中。催化劑全部未變，6檔法人續買，2檔小幅轉賣(非趨勢)。大盤受台積ADR-4.85%壓抑-0.54%屬系統性風險。防禦配置(中華電0%+遠傳-0.22%)有效。英業達法人+11K爆買為全場最強訊號。"
   }
 }

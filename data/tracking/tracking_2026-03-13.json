@@ -28,11 +28,10 @@
       "catalyst": "紅海2.0+伊朗荷姆茲海峽布雷+油價破$100+馬士基運費漲15-20%+MSC附加費4/1",
       "actual_close": 59.2,
       "change_pct": -4.52,
-      "result": "fail",
+      "result": "holding",
       "today_institutional": -532,
-      "fail_reason": "大盤台積ADR-4.85%拖累+法人轉賣-532",
-      "close_price": 59.2,
-      "change_percent": -4.52
+      "holding_status": "催化✅未變｜法人今日-532轉賣⚠️｜距目標+14.9%｜距停損-3.7%",
+      "holding_days": 1
     },
     {
       "stock_code": "2049",
@@ -58,11 +57,10 @@
       "catalyst": "GTC3/16前+輝達機器人生態系+聯發科Genio Pro AI機器人+Meta4代晶片",
       "actual_close": 238.5,
       "change_pct": -2.25,
-      "result": "fail",
+      "result": "holding",
       "today_institutional": 100,
-      "fail_reason": "大盤系統性下跌+法人僅+100微買",
-      "close_price": 238.5,
-      "change_percent": -2.25
+      "holding_status": "催化✅GTC3/16在即｜法人+100續買｜距目標+11.1%｜距停損-5.9%",
+      "holding_days": 1
     },
     {
       "stock_code": "2412",
@@ -88,10 +86,10 @@
       "catalyst": "VIX27.29防禦需求+外資連10天累積+49K+AI雲端營收成長",
       "actual_close": 136.0,
       "change_pct": 0.0,
-      "result": "success",
+      "result": "holding",
       "today_institutional": 916,
-      "close_price": 136.0,
-      "change_percent": 0.0
+      "holding_status": "催化✅防禦需求持續｜法人+916續買｜距目標+4.4%｜距停損-4.4%",
+      "holding_days": 1
     },
     {
       "stock_code": "2603",
@@ -118,11 +116,10 @@
       "risk_note": "Level 2反轉預警（三大法人-277但外資+641仍買），倉位下調",
       "actual_close": 207.5,
       "change_pct": -1.89,
-      "result": "fail",
+      "result": "holding",
       "today_institutional": -277,
-      "fail_reason": "法人-277轉賣(Level 2)+大盤壓力",
-      "close_price": 207.5,
-      "change_percent": -1.89
+      "holding_status": "催化✅航運超強｜法人-277 Level2⚠️｜距目標+10.8%｜距停損-6.5%",
+      "holding_days": 1
     },
     {
       "stock_code": "2345",
@@ -148,11 +145,10 @@
       "catalyst": "Marvell+15.84%超級催化+智邦EPS47.13翻倍成長+GTC3/16網通升級",
       "actual_close": 1420.0,
       "change_pct": -5.65,
-      "result": "fail",
+      "result": "holding",
       "today_institutional": 628,
-      "fail_reason": "法人昨日僅+70量小+外資近5天-411+高beta大盤拖累",
-      "close_price": 1420.0,
-      "change_percent": -5.65
+      "holding_status": "催化✅Marvell+GTC｜法人+628但量小⚠️｜距目標+16.2%｜距停損-2.8%⚠️",
+      "holding_days": 1
     },
     {
       "stock_code": "2356",
@@ -179,11 +175,10 @@
       "risk_note": "法人近5天加速買進中，動能偏高注意追高風險",
       "actual_close": 42.65,
       "change_pct": -0.81,
-      "result": "fail",
+      "result": "holding",
       "today_institutional": 11710,
-      "fail_reason": "法人+11K爆買但大盤壓力(-0.81%接近持平)",
-      "close_price": 42.65,
-      "change_percent": -0.81
+      "holding_status": "催化✅GTC直接受惠｜法人+11K爆買🔥｜距目標+10.2%｜距停損-7.4%",
+      "holding_days": 1
     },
     {
       "stock_code": "2367",
@@ -210,11 +205,10 @@
       "risk_note": "5日漲幅偏高（昨+5.49%），動能加速中注意追高",
       "actual_close": 72.6,
       "change_pct": -0.55,
-      "result": "fail",
+      "result": "holding",
       "today_institutional": 2883,
-      "fail_reason": "投信+3830大買但大盤壓力(-0.55%接近持平)",
-      "close_price": 72.6,
-      "change_percent": -0.55
+      "holding_status": "催化✅PCB持續｜法人+2883續買🔥｜距目標+10.2%｜距停損-7.7%",
+      "holding_days": 1
     },
     {
       "stock_code": "4904",
@@ -240,11 +234,10 @@
       "catalyst": "VIX27.29防禦需求+5G雲端成長+穩定配息",
       "actual_close": 91.8,
       "change_pct": -0.22,
-      "result": "fail",
+      "result": "holding",
       "today_institutional": 647,
-      "fail_reason": "防禦穩定但微跌-0.22%（接近持平）",
-      "close_price": 91.8,
-      "change_percent": -0.22
+      "holding_status": "催化✅防禦需求｜法人+647續買｜距目標+5.7%｜距停損-4.1%",
+      "holding_days": 1
     }
   ],
   "removed_from_yesterday": [
@@ -419,15 +412,23 @@
     "market_observation": "台積ADR-4.85%+VIX27.29壓低大盤，推薦股普遍回檔。陽明-4.52%/智邦-4.98%接近停損需關注。長榮Level 2預警。"
   },
   "after_market_analysis": {
-    "timestamp": "2026-03-13 14:45",
+    "timestamp": "2026-03-13 15:00",
+    "analysis_version": "v7.9",
     "taiex_close": 22400.32,
     "taiex_change_pct": -0.54,
-    "accuracy": "1/8 = 12.5%",
-    "portfolio_return": -2.0,
-    "excess_return": -1.46,
-    "main_failure_cause": "台積ADR-4.85%導致大盤系統性下跌，8/8全面回檔",
+    "settled_count": 0,
+    "holding_count": 8,
+    "settled_accuracy": "N/A（無已結算推薦）",
+    "day1_portfolio_return": -2.0,
+    "day1_excess_return": -1.46,
+    "note": "v7.9：推薦第1天不結算，8檔全部持有中。待觸及目標/停損或持有7天後結算",
     "key_observation": "法人方向>催化劑強度：英業達+11K只跌-0.81%，陽明-532跌-4.52%",
     "defense_performance": "中華電0%+遠傳-0.22%=防禦有效(vs進攻股-2.61%)",
+    "attention_stocks": [
+      {"stock_code": "2345", "stock_name": "智邦", "close": 1420, "stop_loss": 1380, "distance_pct": 2.9, "note": "距停損最近，3/16開盤觀察"},
+      {"stock_code": "2609", "stock_name": "陽明", "close": 59.2, "stop_loss": 57, "distance_pct": 3.7, "note": "法人轉賣-532，需觀察"},
+      {"stock_code": "2603", "stock_name": "長榮", "close": 207.5, "stop_loss": 194, "distance_pct": 6.5, "note": "Level 2預警，法人-277"}
+    ],
     "tomorrow_recommendations": [
       {
         "stock_code": "2049",
@@ -486,96 +487,22 @@
         "reason": "GTC可能救援but距停損2.9%"
       }
     ],
-    "removed_stocks": [],
-    "stop_loss_alerts": [
-      {
-        "stock_code": "2345",
-        "stock_name": "智邦",
-        "close": 1420,
-        "stop_loss": 1380,
-        "distance_pct": 2.9,
-        "action": "3/16開盤破1380立即停損"
-      },
-      {
-        "stock_code": "2609",
-        "stock_name": "陽明",
-        "close": 59.2,
-        "stop_loss": 56,
-        "distance_pct": 5.4,
-        "action": "停損加嚴至56(原57)"
-      }
-    ]
+    "removed_stocks": []
   },
   "yesterday_verification": {
-    "accuracy": "1/8 = 12.5%",
-    "portfolio_return": -2.0,
-    "taiex_return": -0.54,
-    "excess_return": -1.46,
+    "note": "v7.9：第1天不結算，全部為holding狀態",
+    "settled_count": 0,
+    "holding_count": 8,
+    "settled_accuracy": "N/A",
     "results": [
-      {
-        "stock_code": "2609",
-        "stock_name": "陽明",
-        "recommend_price": 62.0,
-        "close_price": 59.2,
-        "change_percent": -4.52,
-        "result": "fail"
-      },
-      {
-        "stock_code": "2049",
-        "stock_name": "上銀",
-        "recommend_price": 244.0,
-        "close_price": 238.5,
-        "change_percent": -2.25,
-        "result": "fail"
-      },
-      {
-        "stock_code": "2412",
-        "stock_name": "中華電",
-        "recommend_price": 136.0,
-        "close_price": 136.0,
-        "change_percent": 0.0,
-        "result": "success"
-      },
-      {
-        "stock_code": "2603",
-        "stock_name": "長榮",
-        "recommend_price": 211.5,
-        "close_price": 207.5,
-        "change_percent": -1.89,
-        "result": "fail"
-      },
-      {
-        "stock_code": "2345",
-        "stock_name": "智邦",
-        "recommend_price": 1505.0,
-        "close_price": 1420.0,
-        "change_percent": -5.65,
-        "result": "fail"
-      },
-      {
-        "stock_code": "2356",
-        "stock_name": "英業達",
-        "recommend_price": 43.0,
-        "close_price": 42.65,
-        "change_percent": -0.81,
-        "result": "fail"
-      },
-      {
-        "stock_code": "2367",
-        "stock_name": "燿華",
-        "recommend_price": 73.0,
-        "close_price": 72.6,
-        "change_percent": -0.55,
-        "result": "fail"
-      },
-      {
-        "stock_code": "4904",
-        "stock_name": "遠傳",
-        "recommend_price": 92.0,
-        "close_price": 91.8,
-        "change_percent": -0.22,
-        "result": "fail"
-      }
+      {"stock_code": "2609", "stock_name": "陽明", "recommend_price": 62.0, "close_price": 59.2, "change_percent": -4.52, "result": "holding", "holding_days": 1},
+      {"stock_code": "2049", "stock_name": "上銀", "recommend_price": 244.0, "close_price": 238.5, "change_percent": -2.25, "result": "holding", "holding_days": 1},
+      {"stock_code": "2412", "stock_name": "中華電", "recommend_price": 136.0, "close_price": 136.0, "change_percent": 0.0, "result": "holding", "holding_days": 1},
+      {"stock_code": "2603", "stock_name": "長榮", "recommend_price": 211.5, "close_price": 207.5, "change_percent": -1.89, "result": "holding", "holding_days": 1},
+      {"stock_code": "2345", "stock_name": "智邦", "recommend_price": 1505.0, "close_price": 1420.0, "change_percent": -5.65, "result": "holding", "holding_days": 1},
+      {"stock_code": "2356", "stock_name": "英業達", "recommend_price": 43.0, "close_price": 42.65, "change_percent": -0.81, "result": "holding", "holding_days": 1},
+      {"stock_code": "2367", "stock_name": "燿華", "recommend_price": 73.0, "close_price": 72.6, "change_percent": -0.55, "result": "holding", "holding_days": 1},
+      {"stock_code": "4904", "stock_name": "遠傳", "recommend_price": 92.0, "close_price": 91.8, "change_percent": -0.22, "result": "holding", "holding_days": 1}
     ]
   }
 }

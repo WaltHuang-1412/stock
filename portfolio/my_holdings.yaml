@@ -256,9 +256,18 @@ holdings:
     profit_loss: -1384       # 虧損 -1,384元
     notes: "已停損賣出"      # 備註
     
+  - symbol: "2609"           # 股票代號
+    name: "陽明"             # 公司名稱
+    buy_price: 59.334        # 買入價格
+    quantity: 2              # 持有張數 (2張=2000股)
+    buy_date: "2026-03-13"   # 買入日期
+    stop_loss: 57.0          # 停損價
+    target_price: 68.0       # 目標價
+    notes: "航運｜荷姆茲布雷+油價$100+SCFI漲11.7%｜盤前推薦93分"
+
   # 如有其他持股請繼續添加
   # - symbol: "股票代號"
-  #   name: "公司名稱"  
+  #   name: "公司名稱"
   #   buy_price: 買入價格
   #   quantity: 持有張數
   #   buy_date: "買入日期"
