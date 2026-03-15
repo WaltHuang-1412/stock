@@ -1,0 +1,94 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Apple",
+      "change_pct": -2.85,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "蘋果供應鏈",
+      "affected_stocks": {
+        "3008": "大立光",
+        "2474": "可成",
+        "2317": "鴻海",
+        "4938": "和碩",
+        "3673": "TPK-KY",
+        "2353": "宏碁",
+        "6415": "矽力-KY"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Apple 跌幅 -2.85%，蘋果供應鏈產業受壓"
+    },
+    {
+      "us_stock": "Broadcom",
+      "change_pct": -2.52,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "網通",
+      "affected_stocks": {
+        "2345": "智邦",
+        "2412": "中華電",
+        "3042": "晶技",
+        "2449": "京元電子"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Broadcom 跌幅 -2.52%，網通產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-03-15",
+    "total_alerts": 2,
+    "level_3_count": 0,
+    "level_2_count": 0,
+    "level_1_count": 2,
+    "excluded_stocks": [],
+    "downgraded_stocks": {},
+    "warning_stocks": {
+      "3008": {
+        "reason": "Apple 跌幅 -2.85%",
+        "adjustment": -5
+      },
+      "2474": {
+        "reason": "Apple 跌幅 -2.85%",
+        "adjustment": -5
+      },
+      "2317": {
+        "reason": "Apple 跌幅 -2.85%",
+        "adjustment": -5
+      },
+      "4938": {
+        "reason": "Apple 跌幅 -2.85%",
+        "adjustment": -5
+      },
+      "3673": {
+        "reason": "Apple 跌幅 -2.85%",
+        "adjustment": -5
+      },
+      "2353": {
+        "reason": "Apple 跌幅 -2.85%",
+        "adjustment": -5
+      },
+      "6415": {
+        "reason": "Apple 跌幅 -2.85%",
+        "adjustment": -5
+      },
+      "2345": {
+        "reason": "Broadcom 跌幅 -2.52%",
+        "adjustment": -5
+      },
+      "2412": {
+        "reason": "Broadcom 跌幅 -2.52%",
+        "adjustment": -5
+      },
+      "3042": {
+        "reason": "Broadcom 跌幅 -2.52%",
+        "adjustment": -5
+      },
+      "2449": {
+        "reason": "Broadcom 跌幅 -2.52%",
+        "adjustment": -5
+      }
+    }
+  }
+}
