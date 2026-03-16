@@ -167,7 +167,17 @@ def detect_reversal(stock_code, stock_name="", days=10):
             data_list.append(data)
 
     if len(data_list) < 3:
-        return None
+        return {
+            'stock_code': stock_code,
+            'stock_name': stock_name,
+            'data': data_list,
+            'alert_level': 'unknown',
+            'alert_reason': f'❓ 數據不足：僅取得{len(data_list)}天數據（需≥3天）',
+            'recommendation': '⚠️ 無法判斷籌碼狀態，請勿視為安全',
+            'warning_level': -1,
+            'avg_daily_volume': 0,
+            'sell_ratio': 0,
+        }
 
     # 分析反轉
     result = {
@@ -270,6 +280,25 @@ def detect_reversal(stock_code, stock_name="", days=10):
             result['alert_reason'] = f"✅ 法人買超中。今日{latest['total']:+,}張"
             result['recommendation'] = '✅ 籌碼健康，可續抱'
 
+        return result
+
+    # 🟢 Level 0：中性（今日小賣/小買，但累計仍正，沒有危險訊號）
+    if cumulative_total > 0:
+        result['alert_level'] = 'level0'
+        result['warning_level'] = 0
+        if latest['total'] >= 0:
+            result['alert_reason'] = f"🟢 Level 0（中性）：今日{latest['total']:+,}張（小量買超），累計{cumulative_total:+,}張"
+            result['recommendation'] = '🟢 無危險訊號，累計仍正，可觀察'
+        else:
+            result['alert_reason'] = f"🟢 Level 0（中性）：今日{latest['total']:+,}張（小量賣超），累計{cumulative_total:+,}張仍正"
+            result['recommendation'] = '🟢 小幅賣超但累計仍正，暫無反轉跡象'
+        return result
+
+    # ⚠️ 狀態不明：累計為負且不符合 Level 1-4
+    result['alert_level'] = 'unknown'
+    result['warning_level'] = -1
+    result['alert_reason'] = f"❓ 狀態不明：今日{latest['total']:+,}張，累計{cumulative_total:+,}張（負），未匹配任何預警等級"
+    result['recommendation'] = '⚠️ 累計為負但未觸發預警，需人工判斷'
     return result
 
 def load_holdings():
@@ -323,7 +352,9 @@ def main():
         'level3': [],  # 🔴 連續賣超（連續2日 + 累計轉負）
         'level2': [],  # ⚠️⚠️ 單日反轉（連買後賣，>1.5% 或 >20K張）
         'level1': [],  # ⚠️ 動能減弱（買超減速>30%）
-        'safe': []     # ✅ 籌碼健康
+        'safe': [],    # ✅ 籌碼健康
+        'level0': [],  # 🟢 中性（小賣/小買，累計正，無危險）
+        'unknown': []  # ❓ 狀態不明（數據不足或累計負但未觸發預警）
     }
 
     for stock in stocks:
@@ -335,12 +366,15 @@ def main():
 
         if result:
             level = result['alert_level']
-            if level != 'none':
+            if level in alerts:
                 alerts[level].append(result)
+            elif level == 'none':
+                # 不應該再出現 none，但保險起見歸入 unknown
+                alerts['unknown'].append(result)
 
-                # 輸出詳細資訊
-                print(f"   {result['alert_reason']}")
-                print(f"   → {result['recommendation']}")
+            # 輸出詳細資訊
+            print(f"   {result['alert_reason']}")
+            print(f"   → {result['recommendation']}")
 
     # 輸出總結
     print("\n" + "=" * 60)
@@ -377,9 +411,24 @@ def main():
             reason = a['alert_reason'].replace('✅ ', '')  # 移除emoji避免重複
             print(f"   • {a['stock_name']}({a['stock_code']}): {reason}")
 
+    if alerts['level0']:
+        print(f"\n🟢 中性（{len(alerts['level0'])}檔）：")
+        for a in alerts['level0']:
+            reason = a['alert_reason'].replace('🟢 ', '')
+            print(f"   • {a['stock_name']}({a['stock_code']}): {reason}")
+
+    if alerts['unknown']:
+        print(f"\n❓ 狀態不明（{len(alerts['unknown'])}檔）— 不可視為Safe：")
+        for a in alerts['unknown']:
+            print(f"   • {a['stock_name']}({a['stock_code']}): {a['alert_reason']}")
+            print(f"     → {a['recommendation']}")
+
     total_alerts = len(alerts['level4']) + len(alerts['level3']) + len(alerts['level2']) + len(alerts['level1'])
-    if total_alerts == 0:
+    total_unknown = len(alerts['unknown'])
+    if total_alerts == 0 and total_unknown == 0:
         print("\n✅ 無反轉警示，籌碼狀況良好")
+    elif total_alerts == 0 and total_unknown > 0:
+        print(f"\n⚠️ {total_unknown} 檔狀態不明，無法確認安全，需人工判斷")
     else:
         print(f"\n⚠️ 共 {total_alerts} 檔有反轉風險，請注意！")
         print("\n💡 四層預警說明：")
