@@ -177,6 +177,120 @@
       "holding_days": 2
     }
   ],
+  "intraday_analysis": {
+    "time": "2026-03-16 12:30",
+    "track_a": [
+      {
+        "stock_code": "1605",
+        "stock_name": "華新",
+        "recommend_price": 32.0,
+        "intraday_price": 32.80,
+        "daily_change_pct": 2.34,
+        "vs_recommend_pct": 2.50,
+        "volume_ratio": 0.59,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "3231",
+        "stock_name": "緯創",
+        "recommend_price": 134.0,
+        "intraday_price": 136.00,
+        "daily_change_pct": 1.49,
+        "vs_recommend_pct": 1.49,
+        "volume_ratio": 1.1,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 28.9,
+        "intraday_price": 28.95,
+        "daily_change_pct": 0.17,
+        "vs_recommend_pct": 0.17,
+        "volume_ratio": 0.55,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "recommend_price": 43.0,
+        "intraday_price": 43.10,
+        "daily_change_pct": 1.06,
+        "vs_recommend_pct": 0.23,
+        "volume_ratio": 0.37,
+        "exit_signal": "none",
+        "strategy": "續抱",
+        "note": "法人盤中轉賣-804，力道觀察"
+      },
+      {
+        "stock_code": "2049",
+        "stock_name": "上銀",
+        "recommend_price": 244.0,
+        "intraday_price": 234.50,
+        "daily_change_pct": -1.68,
+        "vs_recommend_pct": -3.89,
+        "volume_ratio": 0.39,
+        "exit_signal": "none",
+        "strategy": "觀察",
+        "note": "跌破MA5/MA10，距停損224尚4.7%"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 136.0,
+        "intraday_price": 136.50,
+        "daily_change_pct": 0.37,
+        "vs_recommend_pct": 0.37,
+        "volume_ratio": 0.51,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2367",
+        "stock_name": "燿華",
+        "recommend_price": 73.0,
+        "intraday_price": 74.30,
+        "daily_change_pct": 2.34,
+        "vs_recommend_pct": 1.78,
+        "volume_ratio": 0.61,
+        "exit_signal": "none",
+        "strategy": "續抱"
+      }
+    ],
+    "track_b_recommendations": [
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "score": 78,
+        "industry": "AI伺服器",
+        "entry_price": 237.0,
+        "target_price": 256.0,
+        "stop_loss": 225.0,
+        "position": "5-10%",
+        "reason": "GTC超強催化+avg_rank26+外資+投信同步買+buy_ratio24.5%+今日僅+1.7%",
+        "note": "動能+151.7%>100%超強催化覆寫(催化對齊✅+外資+5860✅+Level0✅)，倉位保守5-10%停損-5%"
+      }
+    ],
+    "track_b_observations": [
+      {
+        "stock_code": "8028",
+        "stock_name": "昇陽半",
+        "score": 73,
+        "reason": "avg_rank10但近5天法人反轉-854，催化不夠直接"
+      },
+      {
+        "stock_code": "3706",
+        "stock_name": "神達",
+        "score": 71,
+        "reason": "GTC受惠但動能覆寫後僅71分，未達75門檻"
+      }
+    ],
+    "forced_exit": [],
+    "summary": "7檔Track A全部續抱（無停損觸發），Track B新增1檔盤中推薦：技嘉(2376) 78分"
+  },
   "removed_from_yesterday": [
     {
       "stock_code": "2345",
