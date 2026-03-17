@@ -1,35 +1,33 @@
 {
   "date": "2026-03-17",
-  "analysis_version": "v7.9",
+  "analysis_version": "v7.9.2",
   "topic_tracker_updated": true,
   "topic_tracker_version": "2026-03-17",
+  "corrections": "3/4+3/13 cache修正，英業達移除(累計-22K)，聯電移除(外資5買5賣-12K)，第一金降級(不在TOP50)，超強催化覆寫不扣分",
   "recommendations": [
     {
-      "stock_code": "3231",
-      "stock_name": "緯創",
-      "industry": "AI伺服器",
-      "recommend_price": 135.0,
-      "target_price": 148.0,
-      "stop_loss": 124.0,
-      "position": "10-15%",
-      "score": 83,
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "industry": "航運",
+      "recommend_price": 218.5,
+      "target_price": 240.0,
+      "stop_loss": 207.0,
+      "position": "5-10%",
+      "score": 82,
       "rating": "⭐⭐⭐⭐",
-      "reason": "GTC Day2超強催化+黃仁勳1兆$+鴻海法說AI倍數成長，avg_rank5.0，近5天+23K外資+19K+投信同步，buy_ratio31.5%，Level0 Safe",
+      "reason": "SCFI周漲14.9%+升評目標280，avg_rank1.5(TOP1)，buy_ratio61%",
       "chip_data": {
-        "avg_rank": 5.0,
-        "consecutive_buy_days": 1,
-        "cumulative_buy": 25000,
-        "net_buy_latest": 13394,
-        "momentum": 500.0,
-        "reversal_alert": "Level 0 (Safe)",
-        "recent_5day_net": 23000,
-        "recent_5day_foreign": 19000,
-        "buy_days": 5,
-        "sell_days": 5
+        "avg_rank": 1.5,
+        "buy_days": 7,
+        "sell_days": 3,
+        "cumulative_total": 43000,
+        "cumulative_foreign": 38000,
+        "cumulative_trust": 4200,
+        "momentum": 203.5,
+        "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "GTC2026 Day2+黃仁勳1兆$AI商機+BlueField-4 STX+鴻海AI倍數成長+資本支出增30%",
-      "risk_note": "動能+500%超強催化覆寫（催化✅外資✅Level0✅），10天5買5賣注意分歧",
-      "holding_from": "2026-03-16"
+      "catalyst": "SCFI周漲14.9%+長榮升評買進目標280+紅海2.0",
+      "risk_note": "動能+203%，倉位5-10%"
     },
     {
       "stock_code": "1605",
@@ -38,74 +36,46 @@
       "recommend_price": 32.9,
       "target_price": 35.5,
       "stop_loss": 29.5,
-      "position": "10-15%",
-      "score": 79,
+      "position": "10%",
+      "score": 80,
       "rating": "⭐⭐⭐⭐",
-      "reason": "AI千瓦功耗+半導體設備續強+銅需求，avg_rank20.5，10天9買1賣+36K外資+36K，buy_ratio32.7%，動能-13.4%佈局完成中",
+      "reason": "8買2賣最穩籌碼，外資+30K，GTC電力+AMAT/LRCX漲",
       "chip_data": {
         "avg_rank": 20.5,
-        "consecutive_buy_days": 2,
-        "cumulative_buy": 36000,
-        "net_buy_latest": 8022,
-        "momentum": -13.4,
-        "reversal_alert": "Level 0 (Safe)",
-        "recent_5day_net": 16000,
-        "recent_5day_foreign": 15000,
-        "buy_days": 9,
-        "sell_days": 1
+        "buy_days": 8,
+        "sell_days": 2,
+        "cumulative_total": 26000,
+        "cumulative_foreign": 30000,
+        "cumulative_trust": -1900,
+        "momentum": 119.0,
+        "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "AI千瓦功耗+AMAT+2.14%/LRCX+3.91%半導體設備大漲+銅價受惠+GTC電力需求",
+      "catalyst": "AI千瓦功耗+AMAT+2.14%/LRCX+3.91%+銅需求+GTC電力",
       "holding_from": "2026-03-16"
     },
     {
-      "stock_code": "2303",
-      "stock_name": "聯電",
-      "industry": "半導體",
-      "recommend_price": 60.5,
-      "target_price": 66.0,
-      "stop_loss": 55.5,
-      "position": "15%",
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "industry": "AI伺服器",
+      "recommend_price": 135.0,
+      "target_price": 148.0,
+      "stop_loss": 124.0,
+      "position": "5%",
       "score": 78,
       "rating": "⭐⭐⭐⭐",
-      "reason": "半導體漲價潮（聯電4月漲價最高一成）+GTC帶動需求，avg_rank13，外資+投信同步買，動能+19.4%佈局中，5日+1.3%低位可進場",
+      "reason": "GTC超強催化，avg_rank5.0(TOP10)，buy_ratio31.5%",
       "chip_data": {
-        "avg_rank": 13.0,
-        "consecutive_buy_days": 1,
-        "cumulative_buy": 18000,
-        "net_buy_latest": 8061,
-        "momentum": 19.4,
-        "reversal_alert": "Level 0 (Safe)",
-        "recent_5day_net": 9811,
-        "recent_5day_foreign": 2057,
+        "avg_rank": 5.0,
         "buy_days": 6,
-        "sell_days": 4
+        "sell_days": 4,
+        "cumulative_total": 13000,
+        "cumulative_foreign": 4400,
+        "cumulative_trust": 482,
+        "momentum": 300.6,
+        "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "半導體漲價潮4月漲最高一成+GTC晶圓代工需求+台積電除息填息效應"
-    },
-    {
-      "stock_code": "2892",
-      "stock_name": "第一金",
-      "industry": "金融/防禦",
-      "recommend_price": 28.85,
-      "target_price": 31.0,
-      "stop_loss": 27.0,
-      "position": "10-15%",
-      "score": 78,
-      "rating": "⭐⭐⭐⭐",
-      "reason": "VIX23.51防禦需求+13金控淨值5.35兆創高+配息季+壽險買股848億，avg_rank18.5，10天8買2賣+25K動能-92.6%佈局完成",
-      "chip_data": {
-        "avg_rank": 18.5,
-        "consecutive_buy_days": 2,
-        "cumulative_buy": 25000,
-        "net_buy_latest": 298,
-        "momentum": -92.6,
-        "reversal_alert": "Level 0 (Safe)",
-        "recent_5day_net": 1728,
-        "recent_5day_foreign": 1974,
-        "buy_days": 8,
-        "sell_days": 2
-      },
-      "catalyst": "VIX23.51防禦+13金控淨值5.35兆創高+配息季+國家隊護盤800億",
+      "catalyst": "GTC Day2+黃仁勳1兆$+鴻海法說AI倍數成長",
+      "risk_note": "6買4賣+外資僅+4.4K偏低，3/4大賣-17K，5%倉位",
       "holding_from": "2026-03-16"
     },
     {
@@ -115,81 +85,53 @@
       "recommend_price": 236.5,
       "target_price": 256.0,
       "stop_loss": 225.0,
-      "position": "5-10%",
-      "score": 77,
+      "position": "5%",
+      "score": 78,
       "rating": "⭐⭐⭐⭐",
-      "reason": "GTC超強催化+GPU板卡+鴻海AI倍數+美撤AI出口管制，avg_rank35，10天8買2賣外資+投信同步，buy_ratio29.3%",
+      "reason": "GTC超強催化+鴻海法說，7買3賣外資+10K投信同步",
       "chip_data": {
         "avg_rank": 35.0,
-        "consecutive_buy_days": 2,
-        "cumulative_buy": 10000,
-        "net_buy_latest": 1503,
-        "momentum": 50.9,
-        "reversal_alert": "Level 0 (Safe)",
-        "recent_5day_net": 6362,
-        "recent_5day_foreign": 5772,
-        "buy_days": 8,
-        "sell_days": 2
+        "buy_days": 7,
+        "sell_days": 3,
+        "cumulative_total": 11000,
+        "cumulative_foreign": 10000,
+        "cumulative_trust": 207,
+        "momentum": 113.2,
+        "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "GTC2026超強催化+GPU板卡+鴻海法說AI倍數成長+美撤AI出口管制",
+      "catalyst": "GTC超強催化+GPU板卡+鴻海法說AI倍數成長",
       "holding_from": "2026-03-16"
-    },
-    {
-      "stock_code": "2603",
-      "stock_name": "長榮",
-      "industry": "航運",
-      "recommend_price": 218.5,
-      "target_price": 240.0,
-      "stop_loss": 207.0,
-      "position": "5-10%",
-      "score": 72,
-      "rating": "⭐⭐⭐",
-      "reason": "SCFI周漲14.9%+亞系外資升評買進目標280+紅海2.0，avg_rank1.5(TOP1!)，3/16爆買+25K外資+24K，buy_ratio61%",
-      "chip_data": {
-        "avg_rank": 1.5,
-        "consecutive_buy_days": 1,
-        "cumulative_buy": 43000,
-        "net_buy_latest": 25013,
-        "momentum": 425.1,
-        "reversal_alert": "Level 0 (Safe)",
-        "recent_5day_net": 36000,
-        "recent_5day_foreign": 38000,
-        "buy_days": 6,
-        "sell_days": 4
-      },
-      "catalyst": "SCFI周漲14.9%+長榮升評買進目標280+紅海2.0+荷莫茲封鎖+運價四大航線均漲逾一成",
-      "risk_note": "動能+425%超強催化覆寫，油價回落可能削弱航運催化，倉位保守5-10%停損-5%"
-    },
+    }
+  ],
+  "removed_stocks": [
     {
       "stock_code": "2356",
       "stock_name": "英業達",
-      "industry": "AI伺服器",
-      "recommend_price": 43.0,
-      "target_price": 47.0,
-      "stop_loss": 39.5,
-      "position": "10%",
-      "score": 65,
-      "rating": "⭐⭐⭐",
-      "reason": "GTC受惠+Meta4代AI晶片+連5天法人大買+24K外資+22K同步，動能+366%覆寫通過",
-      "chip_data": {
-        "avg_rank": 37.0,
-        "consecutive_buy_days": 5,
-        "cumulative_buy": 15000,
-        "net_buy_latest": 2896,
-        "momentum": 366.2,
-        "reversal_alert": "Level 0 (Safe)",
-        "recent_5day_net": 24000,
-        "recent_5day_foreign": 22000,
-        "buy_days": 7,
-        "sell_days": 3
-      },
-      "catalyst": "GTC2026受惠+Meta4代AI晶片+美撤AI出口管制",
-      "risk_note": "avg_rank偏低37，動能+366%高風險，超強催化覆寫通過但倉位保守10%",
-      "holding_from": "2026-03-13",
-      "holding_days": 3
+      "reason": "cache修正後：5買5賣 累計-22K 外資-21K，法人出貨中"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "reason": "外資5買5賣 累計-12K，賣量>買量，投信+33K撐場但外資在跑"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "reason": "不在3/16 TOP50（當日僅+298張），降為持有觀察"
     }
   ],
   "holding_tracking": [
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "recommend_price": 28.85,
+      "target_price": 31.0,
+      "stop_loss": 27.0,
+      "last_close": 28.85,
+      "holding_from": "2026-03-16",
+      "note": "不在3/16 TOP50，降為持有觀察",
+      "action": "持有觀察，不新推"
+    },
     {
       "stock_code": "2412",
       "stock_name": "中華電",
@@ -199,8 +141,8 @@
       "last_close": 136.5,
       "holding_from": "2026-03-13",
       "holding_days": 3,
-      "note": "Broadcom -6.02% Level 2 → -15分降至57分，不列今日推薦但持續holding追蹤",
-      "action": "觀察，若Broadcom繼續走弱考慮減碼"
+      "note": "不在TOP50但10買0賣+35K全場最強籌碼，Broadcom L2壓制",
+      "action": "持有觀察"
     },
     {
       "stock_code": "2367",
@@ -211,8 +153,8 @@
       "last_close": 74.0,
       "holding_from": "2026-03-13",
       "holding_days": 3,
-      "note": "5日漲幅+19.2%已大漲，動能+293.6%爆發，但籌碼健康（連5天買+18K）",
-      "action": "持有觀察，接近目標80可部分獲利"
+      "note": "5日+19.2%，連5天買+10K籌碼健康",
+      "action": "接近目標80可部分獲利"
     }
   ],
   "forced_exits": [
@@ -222,77 +164,8 @@
       "recommend_price": 244.0,
       "last_close": 233.0,
       "change_pct": -4.51,
-      "reason": "Level 4爆量賣超(-785佔日均量30.1%)，GTC Day1反應冷淡，今日開盤出場",
+      "reason": "Level 4爆量賣超，今日出場",
       "exit_date": "2026-03-17"
     }
-  ],
-  "removed_from_yesterday": [
-    {
-      "stock_code": "2412",
-      "stock_name": "中華電",
-      "reason": "Broadcom -6.02% Level 2 → 網通-15分，從推薦降為holding追蹤"
-    },
-    {
-      "stock_code": "2367",
-      "stock_name": "燿華",
-      "reason": "5日漲幅+19.2%已大漲，從推薦降為holding追蹤"
-    }
-  ],
-  "new_additions": [
-    {
-      "stock_code": "2303",
-      "stock_name": "聯電",
-      "reason": "半導體漲價潮+avg_rank13+外資投信同步+5日+1.3%低位可進場+動能+19.4%佈局中"
-    },
-    {
-      "stock_code": "2603",
-      "stock_name": "長榮",
-      "reason": "SCFI周漲14.9%+avg_rank1.5(TOP1)+3/16爆買+25K+升評目標280+航運超強催化覆寫"
-    }
-  ],
-  "intraday_analysis": {
-    "time": "12:32",
-    "exit_signals": {
-      "stop_loss_triggered": false,
-      "consecutive_drop_triggered": false,
-      "reversal_level34_triggered": false,
-      "forced_exit_count": 0,
-      "conclusion": "無強制停損"
-    },
-    "track_a": [
-      {"stock_code": "3231", "stock_name": "緯創", "intraday_price": 133.5, "vs_recommend_pct": -1.11, "today_change_pct": 0.38, "institutional_net": 13394, "reversal_level": "Level 0", "strategy": "續抱"},
-      {"stock_code": "1605", "stock_name": "華新", "intraday_price": 33.9, "vs_recommend_pct": 3.04, "today_change_pct": 1.35, "institutional_net": 8022, "reversal_level": "Level 0", "strategy": "續抱"},
-      {"stock_code": "2303", "stock_name": "聯電", "intraday_price": 60.3, "vs_recommend_pct": -0.33, "today_change_pct": -3.05, "institutional_net": 8061, "reversal_level": "Level 0", "strategy": "觀察（跌破MA5/MA10+投信反轉）"},
-      {"stock_code": "2892", "stock_name": "第一金", "intraday_price": 28.95, "vs_recommend_pct": 0.35, "today_change_pct": -0.69, "institutional_net": 298, "reversal_level": "Level 0", "strategy": "續抱"},
-      {"stock_code": "2376", "stock_name": "技嘉", "intraday_price": 247.5, "vs_recommend_pct": 4.65, "today_change_pct": 6.68, "institutional_net": 1503, "reversal_level": "Level 0", "strategy": "接近目標256，可部分獲利"},
-      {"stock_code": "2603", "stock_name": "長榮", "intraday_price": 216.0, "vs_recommend_pct": -1.14, "today_change_pct": 2.86, "institutional_net": 25013, "reversal_level": "Level 0", "strategy": "續抱"},
-      {"stock_code": "2356", "stock_name": "英業達", "intraday_price": 44.0, "vs_recommend_pct": 2.33, "today_change_pct": 2.33, "institutional_net": 2896, "reversal_level": "累計-5.9K", "strategy": "續抱"}
-    ],
-    "holding_update": [
-      {"stock_code": "2367", "stock_name": "燿華", "intraday_price": 76.3, "vs_recommend_pct": 4.52, "today_change_pct": 10.26, "note": "接近目標80，今日大漲+10.26%"},
-      {"stock_code": "2412", "stock_name": "中華電", "intraday_price": 136.0, "vs_recommend_pct": 0.0, "today_change_pct": 0.37, "note": "持平穩定"}
-    ],
-    "track_b_recommendations": [],
-    "track_b_observations": [
-      {"stock_code": "3706", "stock_name": "神達", "score": 67, "reason": "GTC超強催化覆寫通過但5日+7.2%追高-10分，未達75分門檻"},
-      {"stock_code": "4904", "stock_name": "遠傳", "score": 59, "reason": "10天8買2賣穩定佈局完成，avg_rank40偏低催化弱"}
-    ],
-    "track_b_note": "今日無盤中新推薦（最高分67分，未達75分門檻）"
-  },
-  "market_context": {
-    "us_market": "NASDAQ -1.42%、費半 -0.18%、VIX 23.51(-5.70%)",
-    "key_catalysts": "GTC Day2（黃仁勳1兆$AI商機）、Micron+13.48%（台灣第二基地）、鴻海法說AI倍數成長、台積電除息6元、SCFI周漲14.9%",
-    "tw_news": "台積電除息6元拚填息、石化斷料危機一天一價、超級央行周（Fed/日銀/央行3/19）、外資3月賣超近6000億",
-    "us_leader_alert": "Broadcom -6.02% Level 2(網通-15分)、Apple -2.72% Level 1(-5分)、AMD -3.01% Level 1(-5分)",
-    "defense_ratio": "14%（VIX20-30+超強催化→15-25%目標，第一金1檔防禦）",
-    "topic_tracker_strength": {
-      "AI伺服器": "超強（GTC Day2+黃仁勳1兆$+鴻海法說，3週+累積）",
-      "記憶體": "超強（Micron+13.48%+美光台灣第二基地）但台股多數已大漲15-30%",
-      "航運": "強（SCFI周漲14.9%+紅海2.0+長榮升評280）",
-      "石化": "強（斷料危機+油價94.62）但法人10天累計負",
-      "金融": "中（13金控淨值5.35兆創高+富邦金法說+配息季）",
-      "銅/電纜": "強（AI千瓦功耗+半導體設備大漲）",
-      "半導體": "中（聯電漲價潮+費半持平）"
-    }
-  }
+  ]
 }
