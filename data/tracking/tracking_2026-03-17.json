@@ -27,7 +27,12 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "SCFI周漲14.9%+長榮升評買進目標280+紅海2.0",
-      "risk_note": "動能+203%，倉位5-10%"
+      "risk_note": "動能+203%，倉位5-10%",
+      "actual_close": 218.0,
+      "close_price": 218.0,
+      "change_pct": -0.23,
+      "change_percent": -0.23,
+      "result": "holding"
     },
     {
       "stock_code": "1605",
@@ -51,7 +56,12 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "AI千瓦功耗+AMAT+2.14%/LRCX+3.91%+銅需求+GTC電力",
-      "holding_from": "2026-03-16"
+      "holding_from": "2026-03-16",
+      "actual_close": 33.8,
+      "close_price": 33.8,
+      "change_pct": 2.74,
+      "change_percent": 2.74,
+      "result": "holding"
     },
     {
       "stock_code": "3231",
@@ -76,7 +86,12 @@
       },
       "catalyst": "GTC Day2+黃仁勳1兆$+鴻海法說AI倍數成長",
       "risk_note": "6買4賣+外資僅+4.4K偏低，3/4大賣-17K，5%倉位",
-      "holding_from": "2026-03-16"
+      "holding_from": "2026-03-16",
+      "actual_close": 134.0,
+      "close_price": 134.0,
+      "change_pct": -0.74,
+      "change_percent": -0.74,
+      "result": "holding"
     },
     {
       "stock_code": "2376",
@@ -100,7 +115,12 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "GTC超強催化+GPU板卡+鴻海法說AI倍數成長",
-      "holding_from": "2026-03-16"
+      "holding_from": "2026-03-16",
+      "actual_close": 248.0,
+      "close_price": 248.0,
+      "change_pct": 4.86,
+      "change_percent": 4.86,
+      "result": "holding"
     }
   ],
   "removed_stocks": [
@@ -154,7 +174,10 @@
       "holding_from": "2026-03-13",
       "holding_days": 3,
       "note": "5日+19.2%，連5天買+10K籌碼健康",
-      "action": "接近目標80可部分獲利"
+      "action": "接近目標80可部分獲利",
+      "actual_close": 76.8,
+      "change_pct": 5.21,
+      "result": "holding"
     }
   ],
   "forced_exits": [
@@ -167,5 +190,70 @@
       "reason": "Level 4爆量賣超，今日出場",
       "exit_date": "2026-03-17"
     }
-  ]
+  ],
+  "yesterday_verification": {
+    "note": "v7.9多日追蹤：3/13推薦Day3結算3檔fail(Level4)，3檔holding，2檔removed。3/16推薦Day2上銀fail+英業達removed，6檔holding",
+    "settled_count": 4,
+    "holding_count": 9,
+    "removed_count": 3,
+    "accuracy": "0/4=0%(4檔Level4強制出場)",
+    "results": [
+      {"stock_code": "2609", "stock_name": "陽明", "recommend_price": 62.0, "close_price": 58.5, "change_percent": -5.65, "result": "fail", "holding_days": 3, "reason": "Level 4強制出場"},
+      {"stock_code": "2049", "stock_name": "上銀", "recommend_price": 244.0, "close_price": 235.5, "change_percent": -3.48, "result": "fail", "holding_days": 3, "reason": "Level 4強制出場"},
+      {"stock_code": "2345", "stock_name": "智邦", "recommend_price": 1505.0, "close_price": 1455.0, "change_percent": -3.32, "result": "fail", "holding_days": 3, "reason": "Level 4強制出場"},
+      {"stock_code": "2412", "stock_name": "中華電", "recommend_price": 136.0, "close_price": 137.0, "change_percent": 0.74, "result": "holding", "holding_days": 3},
+      {"stock_code": "2367", "stock_name": "燿華", "recommend_price": 73.0, "close_price": 76.8, "change_percent": 5.21, "result": "holding", "holding_days": 3},
+      {"stock_code": "2603", "stock_name": "長榮", "recommend_price": 211.5, "close_price": 218.0, "change_percent": 3.07, "result": "holding", "holding_days": 3},
+      {"stock_code": "2356", "stock_name": "英業達", "recommend_price": 43.0, "close_price": 44.0, "change_percent": 2.33, "result": "removed"},
+      {"stock_code": "4904", "stock_name": "遠傳", "recommend_price": 92.0, "close_price": 93.5, "change_percent": 1.63, "result": "removed"},
+      {"stock_code": "1605", "stock_name": "華新", "recommend_price": 32.0, "close_price": 33.8, "change_percent": 5.63, "result": "holding", "holding_days": 2},
+      {"stock_code": "3231", "stock_name": "緯創", "recommend_price": 134.0, "close_price": 134.0, "change_percent": 0.0, "result": "holding", "holding_days": 2},
+      {"stock_code": "2892", "stock_name": "第一金", "recommend_price": 28.9, "close_price": 29.1, "change_percent": 0.69, "result": "holding", "holding_days": 2},
+      {"stock_code": "2376", "stock_name": "技嘉", "recommend_price": 237.0, "close_price": 248.0, "change_percent": 4.64, "result": "holding", "holding_days": 2}
+    ]
+  },
+  "after_market_analysis": {
+    "timestamp": "2026-03-17 15:00",
+    "analysis_version": "v7.9.2",
+    "taiex_close": 33836.57,
+    "taiex_change_pct": 1.48,
+    "settled_count": 0,
+    "holding_count": 7,
+    "settled_accuracy": "N/A（今日無新結算）",
+    "portfolio_daily_return": 1.66,
+    "excess_return": 0.18,
+    "note": "7檔全部Level0持有，無停損觸發。技嘉+4.86%最佳。上銀強制出場確認(-3.48%)",
+    "from_0313_settlements": {
+      "settled": 3,
+      "holding": 3,
+      "removed": 2,
+      "settled_accuracy": 0.0,
+      "fails": ["陽明(Level4,-5.65%)", "上銀(Level4,-3.48%)", "智邦(Level4,-3.32%)"],
+      "holdings": ["中華電(+0.74%)", "燿華(+5.21%)", "長榮(+3.07%)"]
+    },
+    "recommendations_close": [
+      {"stock_code": "2603", "stock_name": "長榮", "actual_close": 218.0, "vs_recommend_pct": -0.23, "result": "holding"},
+      {"stock_code": "1605", "stock_name": "華新", "actual_close": 33.8, "vs_recommend_pct": 2.74, "result": "holding"},
+      {"stock_code": "3231", "stock_name": "緯創", "actual_close": 134.0, "vs_recommend_pct": -0.74, "result": "holding"},
+      {"stock_code": "2376", "stock_name": "技嘉", "actual_close": 248.0, "vs_recommend_pct": 4.86, "result": "holding"}
+    ],
+    "holding_close": [
+      {"stock_code": "2892", "stock_name": "第一金", "actual_close": 29.1, "vs_recommend_pct": 0.87, "result": "holding"},
+      {"stock_code": "2412", "stock_name": "中華電", "actual_close": 137.0, "vs_recommend_pct": 0.74, "result": "holding"},
+      {"stock_code": "2367", "stock_name": "燿華", "actual_close": 76.8, "vs_recommend_pct": 5.21, "result": "holding"}
+    ],
+    "forced_exit_settled": [
+      {"stock_code": "2049", "stock_name": "上銀", "exit_price": 235.5, "vs_recommend_pct": -3.48, "result": "fail"}
+    ],
+    "tomorrow_recommendations": [
+      {"stock_code": "2603", "stock_name": "長榮", "score": 82, "position": "5-10%", "reason": "SCFI+14.9%超強+avg_rank1.5 TOP1"},
+      {"stock_code": "1605", "stock_name": "華新", "score": 80, "position": "10%", "reason": "8買2賣最穩+銅需求+穩步上漲"},
+      {"stock_code": "2376", "stock_name": "技嘉", "score": 78, "position": "5%", "reason": "GTC催化+距目標256僅3.2%可部分獲利"},
+      {"stock_code": "2412", "stock_name": "中華電", "score": 78, "position": "10%", "reason": "10天0賣+35K+Fed周防禦需求"},
+      {"stock_code": "3231", "stock_name": "緯創", "score": 76, "position": "5%", "reason": "近5天+27K但GTC結束催化可能減弱"},
+      {"stock_code": "2367", "stock_name": "燿華", "score": 76, "position": "10%", "reason": "連5天買+17K+接近目標80部分獲利"},
+      {"stock_code": "2892", "stock_name": "第一金", "score": 72, "position": "5-10%", "reason": "防禦+佈局完成-10%+Fed周"}
+    ],
+    "removed_stocks": []
+  }
 }

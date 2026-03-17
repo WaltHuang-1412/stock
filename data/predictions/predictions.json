@@ -5958,12 +5958,17 @@
         "stop_loss": 57.0,
         "day1_close": 59.2,
         "day1_change_pct": -4.52,
-        "result": "holding",
-        "holding_days": 2,
+        "result": "fail",
+        "holding_days": 3,
         "holding_status": "法人Level4反轉(-1914)→強制出場pending",
         "day2_close": 59.3,
         "day2_change_pct": -4.35,
-        "forced_exit_pending": true
+        "forced_exit_pending": true,
+        "settled_date": "2026-03-17",
+        "settled_price": 58.5,
+        "settled_reason": "Level 4法人反轉強制出場",
+        "day3_close": 58.5,
+        "day3_change_pct": -5.65
       },
       {
         "symbol": "2049",
@@ -5973,12 +5978,17 @@
         "stop_loss": 224.0,
         "day1_close": 238.5,
         "day1_change_pct": -2.25,
-        "result": "holding",
-        "holding_days": 2,
+        "result": "fail",
+        "holding_days": 3,
         "holding_status": "法人Level4反轉(-785)→強制出場pending",
         "day2_close": 233.0,
         "day2_change_pct": -4.51,
-        "forced_exit_pending": true
+        "forced_exit_pending": true,
+        "settled_date": "2026-03-17",
+        "settled_price": 235.5,
+        "settled_reason": "Level 4爆量賣超強制出場",
+        "day3_close": 235.5,
+        "day3_change_pct": -3.48
       },
       {
         "symbol": "2412",
@@ -5989,10 +5999,12 @@
         "day1_close": 136.0,
         "day1_change_pct": 0.0,
         "result": "holding",
-        "holding_days": 2,
-        "holding_status": "催化✅防禦｜法人+1386連10天 Level1",
+        "holding_days": 3,
+        "holding_status": "催化✅防禦｜10天0賣+35K全場最強 Level0",
         "day2_close": 136.5,
-        "day2_change_pct": 0.37
+        "day2_change_pct": 0.37,
+        "day3_close": 137.0,
+        "day3_change_pct": 0.74
       },
       {
         "symbol": "2603",
@@ -6003,10 +6015,12 @@
         "day1_close": 207.5,
         "day1_change_pct": -1.89,
         "result": "holding",
-        "holding_days": 2,
-        "holding_status": "催化✅航運｜法人+25K爆買Healthy✅",
+        "holding_days": 3,
+        "holding_status": "催化✅航運SCFI+14.9%｜法人+25K爆買 Level0",
         "day2_close": 218.5,
-        "day2_change_pct": 3.31
+        "day2_change_pct": 3.31,
+        "day3_close": 218.0,
+        "day3_change_pct": 3.07
       },
       {
         "symbol": "2345",
@@ -6016,12 +6030,17 @@
         "stop_loss": 1380.0,
         "day1_close": 1420.0,
         "day1_change_pct": -5.65,
-        "result": "holding",
-        "holding_days": 2,
+        "result": "fail",
+        "holding_days": 3,
         "holding_status": "法人Level4+距停損0.7%→強制出場pending",
         "day2_close": 1390.0,
         "day2_change_pct": -7.64,
-        "forced_exit_pending": true
+        "forced_exit_pending": true,
+        "settled_date": "2026-03-17",
+        "settled_price": 1455.0,
+        "settled_reason": "Level 4+距停損極近強制出場",
+        "day3_close": 1455.0,
+        "day3_change_pct": -3.32
       },
       {
         "symbol": "2356",
@@ -6031,11 +6050,16 @@
         "stop_loss": 39.5,
         "day1_close": 42.65,
         "day1_change_pct": -0.81,
-        "result": "holding",
-        "holding_days": 2,
+        "result": "removed",
+        "holding_days": 3,
         "holding_status": "催化✅GTC｜法人+2896 Level0",
         "day2_close": 43.1,
-        "day2_change_pct": 0.23
+        "day2_change_pct": 0.23,
+        "settled_date": "2026-03-17",
+        "settled_price": 44.0,
+        "settled_reason": "cache修正後5買5賣累計-22K非績效移除",
+        "day3_close": 44.0,
+        "day3_change_pct": 2.33
       },
       {
         "symbol": "2367",
@@ -6046,10 +6070,12 @@
         "day1_close": 72.6,
         "day1_change_pct": -0.55,
         "result": "holding",
-        "holding_days": 2,
-        "holding_status": "催化✅PCB｜法人+1443 Level0",
+        "holding_days": 3,
+        "holding_status": "催化✅PCB｜連5天買+17K Level0｜接近目標80",
         "day2_close": 74.0,
-        "day2_change_pct": 1.37
+        "day2_change_pct": 1.37,
+        "day3_close": 76.8,
+        "day3_change_pct": 5.21
       },
       {
         "symbol": "4904",
@@ -6059,18 +6085,22 @@
         "stop_loss": 88.0,
         "day1_close": 91.8,
         "day1_change_pct": -0.22,
-        "result": "holding",
+        "result": "removed",
         "holding_days": 2,
         "holding_status": "催化✅防禦｜法人Level1減速",
         "day2_close": 93.5,
-        "day2_change_pct": 1.63
+        "day2_change_pct": 1.63,
+        "settled_date": "2026-03-16",
+        "settled_price": 93.5,
+        "settled_reason": "防禦比例控制非績效移除"
       }
     ],
-    "settled_count": 0,
-    "holding_count": 8,
-    "settled_accuracy": null,
-    "notes": "Day2：0檔結算，5檔正常持有，3檔(陽明/上銀/智邦)法人Level4→強制出場pending",
-    "forced_exit_count": 3
+    "settled_count": 3,
+    "holding_count": 3,
+    "settled_accuracy": 0.0,
+    "notes": "Day3：3檔強制出場(陽明/上銀/智邦均Level4)=0%結算準確率，3檔持有中(中華電/燿華/長榮表現良好)，2檔非績效移除",
+    "forced_exit_count": 3,
+    "removed_count": 2
   },
   "2026-03-16": {
     "date": "2026-03-16",
@@ -6085,8 +6115,10 @@
         "day1_close": 32.9,
         "day1_change_pct": 2.81,
         "result": "holding",
-        "holding_days": 1,
-        "holding_status": "催化✅銅需求｜法人+8022 Healthy"
+        "holding_days": 2,
+        "holding_status": "催化✅銅需求｜8買2賣+26K Level0｜穩步上漲",
+        "day2_close": 33.8,
+        "day2_change_pct": 5.63
       },
       {
         "symbol": "3231",
@@ -6097,8 +6129,10 @@
         "day1_close": 135.0,
         "day1_change_pct": 0.75,
         "result": "holding",
-        "holding_days": 1,
-        "holding_status": "催化✅GTC｜法人+13K爆買Healthy"
+        "holding_days": 2,
+        "holding_status": "催化✅GTC｜近5天+27K Level0",
+        "day2_close": 134.0,
+        "day2_change_pct": 0.0
       },
       {
         "symbol": "2892",
@@ -6109,8 +6143,10 @@
         "day1_close": 28.85,
         "day1_change_pct": -0.17,
         "result": "holding",
-        "holding_days": 1,
-        "holding_status": "催化✅防禦｜法人+298 Level1"
+        "holding_days": 2,
+        "holding_status": "防禦穩定｜7買3賣+16K Level0",
+        "day2_close": 29.1,
+        "day2_change_pct": 0.69
       },
       {
         "symbol": "2356",
@@ -6120,9 +6156,14 @@
         "stop_loss": 39.5,
         "day1_close": 43.1,
         "day1_change_pct": 0.23,
-        "result": "holding",
-        "holding_days": 1,
-        "holding_status": "催化✅GTC｜法人+2896 Level0"
+        "result": "removed",
+        "holding_days": 2,
+        "holding_status": "催化✅GTC｜法人+2896 Level0",
+        "settled_date": "2026-03-17",
+        "settled_price": 44.0,
+        "settled_reason": "cache修正後5買5賣累計-22K非績效移除",
+        "day2_close": 44.0,
+        "day2_change_pct": 2.33
       },
       {
         "symbol": "2049",
@@ -6132,10 +6173,15 @@
         "stop_loss": 224.0,
         "day1_close": 233.0,
         "day1_change_pct": -4.51,
-        "result": "holding",
-        "holding_days": 1,
+        "result": "fail",
+        "holding_days": 2,
         "forced_exit_pending": true,
-        "holding_status": "法人Level4→強制出場pending"
+        "holding_status": "法人Level4→強制出場pending",
+        "settled_date": "2026-03-17",
+        "settled_price": 235.5,
+        "settled_reason": "Level 4爆量賣超強制出場",
+        "day2_close": 235.5,
+        "day2_change_pct": -3.48
       },
       {
         "symbol": "2412",
@@ -6146,8 +6192,10 @@
         "day1_close": 136.5,
         "day1_change_pct": 0.37,
         "result": "holding",
-        "holding_days": 1,
-        "holding_status": "催化✅防禦｜法人+1386連10天 Level1"
+        "holding_days": 2,
+        "holding_status": "催化✅防禦｜10天0賣+35K Level0",
+        "day2_close": 137.0,
+        "day2_change_pct": 0.74
       },
       {
         "symbol": "2367",
@@ -6158,8 +6206,10 @@
         "day1_close": 74.0,
         "day1_change_pct": 1.37,
         "result": "holding",
-        "holding_days": 1,
-        "holding_status": "催化✅PCB｜法人+1443 Level0"
+        "holding_days": 2,
+        "holding_status": "催化✅PCB｜連5天買+17K Level0｜接近目標80",
+        "day2_close": 76.8,
+        "day2_change_pct": 5.21
       },
       {
         "symbol": "2376",
@@ -6170,14 +6220,119 @@
         "day1_close": 236.5,
         "day1_change_pct": -0.21,
         "result": "holding",
+        "holding_days": 2,
+        "holding_status": "催化✅GTC｜7買3賣+11K Level0｜接近目標256",
+        "day2_close": 248.0,
+        "day2_change_pct": 4.64
+      }
+    ],
+    "settled_count": 1,
+    "holding_count": 6,
+    "forced_exit_count": 1,
+    "settled_accuracy": 0.0,
+    "notes": "Day2：上銀Level4強制出場=fail，英業達cache修正移除，6檔正常持有(技嘉+4.86%最佳)",
+    "removed_count": 1
+  },
+  "2026-03-17": {
+    "date": "2026-03-17",
+    "analysis_version": "v7.9.2",
+    "predictions": [
+      {
+        "symbol": "2603",
+        "name": "長榮",
+        "recommend_price": 218.5,
+        "target_price": 240.0,
+        "stop_loss": 207.0,
+        "day1_close": 218.0,
+        "day1_change_pct": -0.23,
+        "result": "holding",
         "holding_days": 1,
-        "holding_status": "催化✅GTC｜法人+1503 Level0 盤中推薦"
+        "holding_status": "催化✅SCFI+14.9%｜avg_rank1.5 Level0"
+      },
+      {
+        "symbol": "1605",
+        "name": "華新",
+        "recommend_price": 32.9,
+        "target_price": 35.5,
+        "stop_loss": 29.5,
+        "day1_close": 33.8,
+        "day1_change_pct": 2.74,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "催化✅銅需求｜8買2賣+26K Level0"
+      },
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "recommend_price": 135.0,
+        "target_price": 148.0,
+        "stop_loss": 124.0,
+        "day1_close": 134.0,
+        "day1_change_pct": -0.74,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "催化✅GTC｜近5天+27K Level0"
+      },
+      {
+        "symbol": "2376",
+        "name": "技嘉",
+        "recommend_price": 236.5,
+        "target_price": 256.0,
+        "stop_loss": 225.0,
+        "day1_close": 248.0,
+        "day1_change_pct": 4.86,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "催化✅GTC｜7買3賣+11K Level0｜距目標3.2%"
+      }
+    ],
+    "holding_tracking": [
+      {
+        "symbol": "2892",
+        "name": "第一金",
+        "recommend_price": 28.85,
+        "close": 29.1,
+        "vs_recommend_pct": 0.87,
+        "holding_from": "2026-03-16",
+        "status": "持有觀察"
+      },
+      {
+        "symbol": "2412",
+        "name": "中華電",
+        "recommend_price": 136.0,
+        "close": 137.0,
+        "vs_recommend_pct": 0.74,
+        "holding_from": "2026-03-13",
+        "status": "持有觀察"
+      },
+      {
+        "symbol": "2367",
+        "name": "燿華",
+        "recommend_price": 73.0,
+        "close": 76.8,
+        "vs_recommend_pct": 5.21,
+        "holding_from": "2026-03-13",
+        "status": "接近目標80可部分獲利"
+      }
+    ],
+    "forced_exits_settled": [
+      {
+        "symbol": "2049",
+        "name": "上銀",
+        "recommend_price": 244.0,
+        "exit_price": 235.5,
+        "change_pct": -3.48,
+        "reason": "Level 4爆量賣超強制出場",
+        "from_date": "2026-03-13"
       }
     ],
     "settled_count": 0,
-    "holding_count": 8,
-    "forced_exit_count": 1,
+    "holding_count": 7,
     "settled_accuracy": null,
-    "notes": "Day1：TAIEX-0.17%，組合+0.72%(超額+0.89%)。GTC Day1催化AI股正面。上銀Level4→強制出場pending。7檔正常持有。"
+    "taiex_close": 33836.57,
+    "taiex_change_pct": 1.48,
+    "portfolio_daily_return": 1.66,
+    "excess_return": 0.18,
+    "notes": "Day1：TAIEX+1.48%，組合+1.66%(超額+0.18%)。7檔全部Level0持有。技嘉+4.86%最佳。上銀強制出場確認。"
   }
 }
