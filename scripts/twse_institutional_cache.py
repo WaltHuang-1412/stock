@@ -91,16 +91,19 @@ def fetch_all_institutional(date_str):
         except (ValueError, IndexError):
             continue
 
-    # 寫入磁碟快取（有資料才存，避免假日空檔佔位）
-    if result:
+    # 寫入磁碟快取（資料筆數足夠才存，避免不完整資料污染快取）
+    # 正常交易日約 13,000-17,000 檔，低於 10,000 視為不完整
+    if len(result) >= 10000:
+        # 資料完整，存磁碟快取 + 記憶體快取
         cache_file.parent.mkdir(parents=True, exist_ok=True)
         try:
             with open(cache_file, 'w', encoding='utf-8') as f:
                 json.dump(result, f, ensure_ascii=False)
         except IOError:
             pass
+        _memory_cache[date_str] = result
+    # 不完整的資料不存任何快取，下次查詢會重新打 API
 
-    _memory_cache[date_str] = result
     return result
 
 
