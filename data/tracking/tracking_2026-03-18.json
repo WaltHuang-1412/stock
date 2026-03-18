@@ -164,5 +164,105 @@
       "reason": "Level 4 爆量賣超佔日均量6.4%",
       "exit_date": "2026-03-18"
     }
-  ]
+  ],
+  "intraday_analysis": {
+    "time": "12:30",
+    "track_a": [
+      {
+        "stock_code": "2344",
+        "stock_name": "華邦電",
+        "recommend_price": 124.0,
+        "intraday_price": 126.0,
+        "change_pct": 1.6,
+        "volume_ratio": 1.1,
+        "institutional_today": 21696,
+        "reversal_alert": "Level 0 (Safe)",
+        "exit_signal": "無",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "1605",
+        "stock_name": "華新",
+        "recommend_price": 32.9,
+        "intraday_price": 34.0,
+        "change_pct": 3.3,
+        "volume_ratio": 0.8,
+        "institutional_today": 9709,
+        "reversal_alert": "Level 0 (Safe)",
+        "exit_signal": "無",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "recommend_price": 236.5,
+        "intraday_price": 249.5,
+        "change_pct": 5.5,
+        "volume_ratio": 0.8,
+        "institutional_today": 3262,
+        "reversal_alert": "Level 0 (Safe)",
+        "exit_signal": "無",
+        "strategy": "📈 接近目標256，可部分獲利30-50%"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 136.0,
+        "intraday_price": 137.0,
+        "change_pct": 0.7,
+        "volume_ratio": 0.7,
+        "institutional_today": 3167,
+        "reversal_alert": "Level 0 (Safe)",
+        "exit_signal": "無",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 28.85,
+        "intraday_price": 28.9,
+        "change_pct": 0.2,
+        "volume_ratio": 1.0,
+        "institutional_today": 997,
+        "reversal_alert": "Level 0",
+        "exit_signal": "⚠️ 跌破MA5/MA10",
+        "strategy": "⚠️ 觀察，未觸停損但短期疲弱"
+      },
+      {
+        "stock_code": "2367",
+        "stock_name": "燿華",
+        "recommend_price": 73.0,
+        "intraday_price": 76.5,
+        "change_pct": 4.8,
+        "volume_ratio": 1.1,
+        "institutional_today": -470,
+        "reversal_alert": "Level 2 (單日反轉)",
+        "exit_signal": "⚠️ 法人賣超-470",
+        "strategy": "⚠️ Level 2觀察，接近目標80可部分獲利"
+      }
+    ],
+    "track_b_recommendations": [
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "industry": "AI伺服器/ODM",
+        "score": 80,
+        "entry_price": 44.25,
+        "target_price": 48.0,
+        "stop_loss": 42.0,
+        "position": "5-10%",
+        "reason": "GTC概念+Dell+6.4%超強催化+avg_rank14+佔成交83.3%+近5天+21K+今日僅+0.1%未反映",
+        "catalyst_override": "Dell+6.4%>+5%超強催化覆寫，動能+225%>100%→小倉位5-10%停損-5%",
+        "accuracy_filter": "催化對齊✅+外資近5天+21K≥0✅+Level0✅"
+      }
+    ],
+    "track_b_observations": [
+      {
+        "stock_code": "6443",
+        "stock_name": "元晶",
+        "score": 53,
+        "reason": "avg_rank11+法人+12K但催化不對齊(太陽能非今日主題)+動能+500%無覆寫"
+      }
+    ]
+  }
 }
