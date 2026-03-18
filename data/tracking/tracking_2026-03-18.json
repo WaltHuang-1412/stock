@@ -172,8 +172,8 @@
         "stock_code": "2344",
         "stock_name": "華邦電",
         "recommend_price": 124.0,
-        "intraday_price": 126.0,
-        "change_pct": 1.6,
+        "intraday_price": 124.5,
+        "change_pct": -2.7,
         "volume_ratio": 1.1,
         "institutional_today": 21696,
         "reversal_alert": "Level 0 (Safe)",
@@ -196,8 +196,8 @@
         "stock_code": "2376",
         "stock_name": "技嘉",
         "recommend_price": 236.5,
-        "intraday_price": 249.5,
-        "change_pct": 5.5,
+        "intraday_price": 249.0,
+        "change_pct": 5.3,
         "volume_ratio": 0.8,
         "institutional_today": 3262,
         "reversal_alert": "Level 0 (Safe)",
@@ -220,8 +220,8 @@
         "stock_code": "2892",
         "stock_name": "第一金",
         "recommend_price": 28.85,
-        "intraday_price": 28.9,
-        "change_pct": 0.2,
+        "intraday_price": 28.85,
+        "change_pct": 0.0,
         "volume_ratio": 1.0,
         "institutional_today": 997,
         "reversal_alert": "Level 0",
@@ -232,8 +232,8 @@
         "stock_code": "2367",
         "stock_name": "燿華",
         "recommend_price": 73.0,
-        "intraday_price": 76.5,
-        "change_pct": 4.8,
+        "intraday_price": 76.0,
+        "change_pct": 4.1,
         "volume_ratio": 1.1,
         "institutional_today": -470,
         "reversal_alert": "Level 2 (單日反轉)",
@@ -241,21 +241,8 @@
         "strategy": "⚠️ Level 2觀察，接近目標80可部分獲利"
       }
     ],
-    "track_b_recommendations": [
-      {
-        "stock_code": "2356",
-        "stock_name": "英業達",
-        "industry": "AI伺服器/ODM",
-        "score": 80,
-        "entry_price": 44.25,
-        "target_price": 48.0,
-        "stop_loss": 42.0,
-        "position": "5-10%",
-        "reason": "GTC概念+Dell+6.4%超強催化+avg_rank14+佔成交83.3%+近5天+21K+今日僅+0.1%未反映",
-        "catalyst_override": "Dell+6.4%>+5%超強催化覆寫，動能+225%>100%→小倉位5-10%停損-5%",
-        "accuracy_filter": "催化對齊✅+外資近5天+21K≥0✅+Level0✅"
-      }
-    ],
+    "track_b_recommendations": [],
+    "track_b_note": "重跑修正：英業達原80分，buy_ratio實際45.4%(非83.3%)，6買4賣累計+4.3K偏低，實際約70-72分未達75分門檻，不推薦",
     "track_b_observations": [
       {
         "stock_code": "6443",
