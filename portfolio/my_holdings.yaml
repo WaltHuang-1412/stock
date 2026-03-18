@@ -259,11 +259,28 @@ holdings:
   - symbol: "2609"           # 股票代號
     name: "陽明"             # 公司名稱
     buy_price: 59.334        # 買入價格
-    quantity: 2              # 持有張數 (2張=2000股)
+    sell_price: 58.2         # 賣出價格
+    quantity: 0              # 已清倉
     buy_date: "2026-03-13"   # 買入日期
-    stop_loss: 57.0          # 停損價
-    target_price: 68.0       # 目標價
-    notes: "航運｜荷姆茲布雷+油價$100+SCFI漲11.7%｜盤前推薦93分"
+    sell_date: "2026-03-18"  # 賣出日期
+    profit_loss: -2268       # 虧損 -2,268元 ((58.2-59.334)*2000)
+    notes: "已停損賣出 -1.91% | 法人3買7賣Level4出貨+外資-7.7K+3/3爆買+48K隔天倒-34K | 2張"
+
+  - symbol: "1605"           # 股票代號
+    name: "華新"             # 公司名稱
+    buy_price: 32.546        # 買入價格
+    quantity: 2              # 持有張數 (2張=2000股)
+    buy_date: "2026-03-16"   # 買入日期
+    notes: ""
+
+  - symbol: "2344"           # 股票代號
+    name: "華邦電"           # 公司名稱
+    buy_price: 128.0         # 買入價格
+    quantity: 2              # 持有張數 (2張=2000股)
+    buy_date: "2026-03-18"   # 買入日期
+    stop_loss: 121.6         # 停損價（-5%）
+    target_price: 135.0      # 目標價
+    notes: "記憶體｜Micron+14.53%超強催化覆寫｜5%倉位停損-5%"
 
   # 如有其他持股請繼續添加
   # - symbol: "股票代號"
