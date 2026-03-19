@@ -6003,14 +6003,16 @@
         "day1_close": 136.0,
         "day1_change_pct": 0.0,
         "result": "holding",
-        "holding_days": 4,
+        "holding_days": 5,
         "holding_status": "Level0 10buy0sell +32K steady",
         "day2_close": 136.5,
         "day2_change_pct": 0.37,
         "day3_close": 137.0,
         "day3_change_pct": 0.74,
         "day4_close": 137.5,
-        "day4_change_pct": 1.1
+        "day4_change_pct": 1.1,
+        "day5_close": 135.5,
+        "day5_change_pct": -0.37
       },
       {
         "symbol": "2603",
@@ -6082,7 +6084,7 @@
         "stop_loss": 67.0,
         "day1_close": 72.6,
         "day1_change_pct": -0.55,
-        "result": "holding",
+        "result": "removed",
         "holding_days": 4,
         "holding_status": "PCB +19K but -470 today Level2 watch",
         "day2_close": 74.0,
@@ -6090,7 +6092,10 @@
         "day3_close": 76.8,
         "day3_change_pct": 5.21,
         "day4_close": 76.0,
-        "day4_change_pct": 4.11
+        "day4_change_pct": 4.11,
+        "settled_date": "2026-03-19",
+        "settled_price": 72.1,
+        "settled_reason": "Level 4 reversal -1725 (7.2% daily vol)"
       },
       {
         "symbol": "4904",
@@ -6111,11 +6116,11 @@
       }
     ],
     "settled_count": 0,
-    "holding_count": 2,
+    "holding_count": 1,
     "settled_accuracy": null,
     "notes": "Day4: 3 fail->removed (L4 exit, stops never hit). 2603 removed 3/18 L4. 2412+2367 holding.",
     "forced_exit_count": 3,
-    "removed_count": 6
+    "removed_count": 7
   },
   "2026-03-16": {
     "date": "2026-03-16",
@@ -6130,12 +6135,14 @@
         "day1_close": 32.9,
         "day1_change_pct": 2.81,
         "result": "holding",
-        "holding_days": 3,
+        "holding_days": 4,
         "holding_status": "8buy2sell +33K Level0 steady",
         "day2_close": 33.8,
         "day2_change_pct": 5.63,
         "day3_close": 33.9,
-        "day3_change_pct": 5.94
+        "day3_change_pct": 5.94,
+        "day4_close": 32.2,
+        "day4_change_pct": 0.63
       },
       {
         "symbol": "3231",
@@ -6164,13 +6171,18 @@
         "stop_loss": 27.0,
         "day1_close": 28.85,
         "day1_change_pct": -0.17,
-        "result": "holding",
+        "result": "removed",
         "holding_days": 3,
         "holding_status": "7buy3sell Level0 weak",
         "day2_close": 29.1,
         "day2_change_pct": 0.69,
         "day3_close": 28.95,
-        "day3_change_pct": 0.17
+        "day3_change_pct": 0.17,
+        "settled_date": "2026-03-19",
+        "settled_price": 28.6,
+        "settled_reason": "Level 4 reversal -3419 (12.2% daily vol)",
+        "day4_close": 28.6,
+        "day4_change_pct": -1.04
       },
       {
         "symbol": "2356",
@@ -6216,12 +6228,16 @@
         "day1_close": 136.5,
         "day1_change_pct": 0.37,
         "result": "holding",
-        "holding_days": 3,
+        "holding_days": 5,
         "holding_status": "10buy0sell +32K Level0",
         "day2_close": 137.0,
         "day2_change_pct": 0.74,
         "day3_close": 137.5,
-        "day3_change_pct": 1.1
+        "day3_change_pct": 1.1,
+        "day4_close": 137.5,
+        "day4_change_pct": 1.1,
+        "day5_close": 135.5,
+        "day5_change_pct": -0.37
       },
       {
         "symbol": "2367",
@@ -6231,13 +6247,18 @@
         "stop_loss": 67.0,
         "day1_close": 74.0,
         "day1_change_pct": 1.37,
-        "result": "holding",
+        "result": "removed",
         "holding_days": 3,
         "holding_status": "+19K Level2 watch",
         "day2_close": 76.8,
         "day2_change_pct": 5.21,
         "day3_close": 76.0,
-        "day3_change_pct": 4.11
+        "day3_change_pct": 4.11,
+        "settled_date": "2026-03-19",
+        "settled_price": 72.1,
+        "settled_reason": "Level 4 reversal -1725 (7.2% daily vol)",
+        "day4_close": 72.1,
+        "day4_change_pct": -1.23
       },
       {
         "symbol": "2376",
@@ -6248,20 +6269,22 @@
         "day1_close": 236.5,
         "day1_change_pct": -0.21,
         "result": "holding",
-        "holding_days": 3,
+        "holding_days": 4,
         "holding_status": "8buy2sell +16K Level0 near target 256",
         "day2_close": 248.0,
         "day2_change_pct": 4.64,
         "day3_close": 249.5,
-        "day3_change_pct": 5.27
+        "day3_change_pct": 5.27,
+        "day4_close": 247.5,
+        "day4_change_pct": 4.43
       }
     ],
     "settled_count": 0,
-    "holding_count": 5,
+    "holding_count": 3,
     "forced_exit_count": 1,
     "settled_accuracy": null,
     "notes": "Day3: 3231 L2 removed, 2049 fail->removed. 5 holding (2376 +5.27% best).",
-    "removed_count": 3
+    "removed_count": 5
   },
   "2026-03-17": {
     "date": "2026-03-17",
@@ -6293,10 +6316,12 @@
         "day1_close": 33.8,
         "day1_change_pct": 2.74,
         "result": "holding",
-        "holding_days": 2,
+        "holding_days": 3,
         "holding_status": "8buy2sell +33K Level0",
         "day2_close": 33.9,
-        "day2_change_pct": 3.04
+        "day2_change_pct": 3.04,
+        "day3_close": 32.2,
+        "day3_change_pct": -2.13
       },
       {
         "symbol": "3231",
@@ -6324,10 +6349,12 @@
         "day1_close": 248.0,
         "day1_change_pct": 4.86,
         "result": "holding",
-        "holding_days": 2,
+        "holding_days": 3,
         "holding_status": "GTC Day2 8buy2sell Level0 near target 256",
         "day2_close": 249.5,
-        "day2_change_pct": 5.5
+        "day2_change_pct": 5.5,
+        "day3_close": 247.5,
+        "day3_change_pct": 4.64
       }
     ],
     "holding_tracking": [
@@ -6393,8 +6420,10 @@
         "day1_close": 128.0,
         "day1_change_pct": 3.23,
         "result": "holding",
-        "holding_days": 1,
-        "holding_status": "Micron+14.53% avg_rank2.5 +18K Level0"
+        "holding_days": 2,
+        "holding_status": "Micron+14.53% avg_rank2.5 +18K Level0",
+        "day2_close": 122.0,
+        "day2_change_pct": -1.61
       },
       {
         "symbol": "1605",
@@ -6405,9 +6434,11 @@
         "day1_close": 33.9,
         "day1_change_pct": 3.04,
         "result": "holding",
-        "holding_days": 1,
+        "holding_days": 2,
         "holding_status": "8buy2sell +33K Level0",
-        "holding_from": "2026-03-16"
+        "holding_from": "2026-03-16",
+        "day2_close": 32.2,
+        "day2_change_pct": -2.13
       },
       {
         "symbol": "2376",
@@ -6418,9 +6449,11 @@
         "day1_close": 249.5,
         "day1_change_pct": 5.5,
         "result": "holding",
-        "holding_days": 1,
+        "holding_days": 2,
         "holding_status": "GTC Day2 8buy2sell Level0 near target 256",
-        "holding_from": "2026-03-16"
+        "holding_from": "2026-03-16",
+        "day2_close": 247.5,
+        "day2_change_pct": 4.64
       },
       {
         "symbol": "2412",
@@ -6431,9 +6464,11 @@
         "day1_close": 137.5,
         "day1_change_pct": 1.1,
         "result": "holding",
-        "holding_days": 1,
+        "holding_days": 2,
         "holding_status": "Fed defense 10buy0sell +32K Level0",
-        "holding_from": "2026-03-13"
+        "holding_from": "2026-03-13",
+        "day2_close": 135.5,
+        "day2_change_pct": -0.37
       },
       {
         "symbol": "2892",
@@ -6443,10 +6478,15 @@
         "stop_loss": 27.0,
         "day1_close": 28.95,
         "day1_change_pct": 0.35,
-        "result": "holding",
+        "result": "removed",
         "holding_days": 1,
         "holding_status": "7buy3sell Level0 weak",
-        "holding_from": "2026-03-16"
+        "holding_from": "2026-03-16",
+        "settled_date": "2026-03-19",
+        "settled_price": 28.6,
+        "settled_reason": "Level 4 reversal -3419 (12.2% daily vol)",
+        "day2_close": 28.6,
+        "day2_change_pct": -0.87
       },
       {
         "symbol": "2367",
@@ -6456,17 +6496,158 @@
         "stop_loss": 67.0,
         "day1_close": 76.0,
         "day1_change_pct": 4.11,
-        "result": "holding",
+        "result": "removed",
         "holding_days": 1,
         "holding_status": "+19K but -470 today Level2 watch",
+        "holding_from": "2026-03-13",
+        "settled_date": "2026-03-19",
+        "settled_price": 72.1,
+        "settled_reason": "Level 4 reversal -1725 (7.2% daily vol)",
+        "day2_close": 72.1,
+        "day2_change_pct": -5.13
+      }
+    ],
+    "settled_count": 0,
+    "holding_count": 4,
+    "removed_count": 2,
+    "settled_accuracy": null,
+    "avg_return_vs_recommend": 2.87,
+    "notes": "Day1: 6 holding (avg +2.87%). L4/L2 removals done in morning. 3/13 3xfail corrected to removed."
+  },
+  "2026-03-19": {
+    "date": "2026-03-19",
+    "analysis_version": "v7.9.2",
+    "predictions": [
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "recommend_price": 126.0,
+        "target_price": 135.0,
+        "stop_loss": 118.0,
+        "day1_close": 122.0,
+        "day1_change_pct": -3.17,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "Micron催化回檔 法人+14K Level0",
+        "holding_from": "2026-03-18"
+      },
+      {
+        "symbol": "2376",
+        "name": "技嘉",
+        "recommend_price": 247.0,
+        "target_price": 256.0,
+        "stop_loss": 225.0,
+        "day1_close": 247.5,
+        "day1_change_pct": 0.2,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "GTC催化 9buy1sell +17K Level0 near target 256",
+        "holding_from": "2026-03-16"
+      },
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "recommend_price": 290.0,
+        "target_price": 315.0,
+        "stop_loss": 278.0,
+        "day1_close": 286.5,
+        "day1_change_pct": -1.21,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "ASIC催化 法人+5.3K Level0"
+      },
+      {
+        "symbol": "1605",
+        "name": "華新",
+        "recommend_price": 34.0,
+        "target_price": 35.5,
+        "stop_loss": 29.5,
+        "day1_close": 32.2,
+        "day1_change_pct": -5.29,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "回檔深但法人+6.2K 9buy1sell Level0",
+        "holding_from": "2026-03-16"
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 44.0,
+        "target_price": 48.0,
+        "stop_loss": 42.0,
+        "day1_close": 43.45,
+        "day1_change_pct": -1.25,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "ASIC催化 法人+4.5K Level0"
+      },
+      {
+        "symbol": "2880",
+        "name": "華南金",
+        "recommend_price": 33.2,
+        "target_price": 35.5,
+        "stop_loss": 31.0,
+        "day1_close": 33.3,
+        "day1_change_pct": 0.3,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "防禦穩定 法人+3.2K Level0"
+      },
+      {
+        "symbol": "2449",
+        "name": "京元電",
+        "recommend_price": 319.0,
+        "target_price": 350.0,
+        "stop_loss": 305.0,
+        "day1_close": 316.0,
+        "day1_change_pct": -0.94,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "封測催化 法人+13.4K Level0"
+      },
+      {
+        "symbol": "2412",
+        "name": "中華電",
+        "recommend_price": 137.0,
+        "target_price": 142.0,
+        "stop_loss": 130.0,
+        "day1_close": 135.5,
+        "day1_change_pct": -1.09,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "防禦 10buy0sell +31K Level0 Day5",
+        "holding_from": "2026-03-13"
+      }
+    ],
+    "removed_today": [
+      {
+        "symbol": "2892",
+        "name": "第一金",
+        "recommend_price": 28.85,
+        "close": 28.6,
+        "change_pct": -0.87,
+        "reason": "Level 4 reversal -3419 (12.2% daily vol)",
+        "holding_from": "2026-03-16"
+      },
+      {
+        "symbol": "2367",
+        "name": "燿華",
+        "recommend_price": 73.0,
+        "close": 72.1,
+        "change_pct": -1.23,
+        "reason": "Level 4 reversal -1725 (7.2% daily vol)",
         "holding_from": "2026-03-13"
       }
     ],
     "settled_count": 0,
-    "holding_count": 6,
-    "removed_count": 0,
+    "holding_count": 8,
+    "removed_count": 2,
     "settled_accuracy": null,
-    "avg_return_vs_recommend": 2.87,
-    "notes": "Day1: 6 holding (avg +2.87%). L4/L2 removals done in morning. 3/13 3xfail corrected to removed."
+    "taiex_close": 33689.68,
+    "taiex_change_pct": -1.92,
+    "portfolio_avg_vs_recommend": -1.56,
+    "portfolio_daily_return": -2.33,
+    "excess_return": -0.41,
+    "notes": "Day1: 8 holding (avg -1.56% vs rec). TAIEX -1.92%. 2892/2367 Level4 removed. All 8 institutional buying Level0."
   }
 }
