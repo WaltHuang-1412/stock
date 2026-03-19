@@ -206,5 +206,126 @@
       "last_close": 76.0,
       "recommend_price": 73.0
     }
-  ]
+  ],
+  "intraday_analysis": {
+    "time": "12:35",
+    "market_condition": "全面回檔，美股科技走弱",
+    "exit_signals": {
+      "stop_loss_triggered": false,
+      "consecutive_decline_triggered": false,
+      "reversal_level34_triggered": false,
+      "forced_stop": "無"
+    },
+    "track_a": [
+      {
+        "stock_code": "2344",
+        "stock_name": "華邦電",
+        "recommend_price": 126.0,
+        "intraday_price": 124.5,
+        "vs_recommend": -1.19,
+        "today_change": -2.73,
+        "volume_ratio": 0.72,
+        "institutional_today": 14460,
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "recommend_price": 247.0,
+        "intraday_price": 247.0,
+        "vs_recommend": 0.00,
+        "today_change": -0.80,
+        "volume_ratio": 0.56,
+        "institutional_today": 1022,
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "recommend_price": 290.0,
+        "intraday_price": 286.5,
+        "vs_recommend": -1.21,
+        "today_change": -2.22,
+        "volume_ratio": 0.53,
+        "institutional_today": 5289,
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "1605",
+        "stock_name": "華新",
+        "recommend_price": 34.0,
+        "intraday_price": 32.2,
+        "vs_recommend": -5.29,
+        "today_change": -5.01,
+        "volume_ratio": 1.32,
+        "institutional_today": 6194,
+        "strategy": "密切觀察"
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "recommend_price": 44.0,
+        "intraday_price": 43.3,
+        "vs_recommend": -1.59,
+        "today_change": -2.37,
+        "volume_ratio": 0.55,
+        "institutional_today": 4489,
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "recommend_price": 33.2,
+        "intraday_price": 33.2,
+        "vs_recommend": 0.00,
+        "today_change": -0.60,
+        "volume_ratio": 0.57,
+        "institutional_today": 3222,
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電",
+        "recommend_price": 319.0,
+        "intraday_price": 320.0,
+        "vs_recommend": 0.31,
+        "today_change": -0.93,
+        "volume_ratio": 1.02,
+        "institutional_today": 13355,
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 137.0,
+        "intraday_price": 135.5,
+        "vs_recommend": -1.09,
+        "today_change": -1.45,
+        "volume_ratio": 0.82,
+        "institutional_today": 1860,
+        "strategy": "續抱"
+      }
+    ],
+    "track_b_recommendations": [],
+    "track_b_observations": [
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "score": 55,
+        "reason": "avg_rank 9但近5天外資-28K反轉，未達75分"
+      },
+      {
+        "stock_code": "2377",
+        "stock_name": "微星",
+        "score": 54,
+        "reason": "GTC催化但法人力道偏弱avg_rank24，未達75分"
+      },
+      {
+        "stock_code": "2882",
+        "stock_name": "國泰金",
+        "score": 50,
+        "reason": "外資10天-33K+動能追高+215.6%，未達75分"
+      }
+    ]
+  }
 }
