@@ -178,5 +178,107 @@
       "last_close": 43.45,
       "recommend_price": 44.0
     }
-  ]
+  ],
+  "intraday_analysis": {
+    "timestamp": "2026-03-20T12:31:00",
+    "track_a": [
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "recommend_price": 218.0,
+        "intraday_price": 212.5,
+        "change_pct": -2.5,
+        "today_institutional": 3302,
+        "reversal_level": "Level 0",
+        "strategy": "續抱",
+        "notes": "法人續買+3,302，連3天買超，Level 0加速買超"
+      },
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "recommend_price": 34.9,
+        "intraday_price": 34.3,
+        "change_pct": -1.7,
+        "today_institutional": 2378,
+        "reversal_level": "Level 1",
+        "strategy": "續抱",
+        "notes": "連9天買超，動能-34.1%佈局完成，Level 1僅減速"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 137.0,
+        "intraday_price": 135.0,
+        "change_pct": -1.5,
+        "today_institutional": 1860,
+        "reversal_level": "Level 1",
+        "strategy": "續抱至明日結算",
+        "notes": "連10天買超全場最強，Day7明日到期結算"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "recommend_price": 33.2,
+        "intraday_price": 33.3,
+        "change_pct": 0.3,
+        "today_institutional": 3222,
+        "reversal_level": "Level 0",
+        "strategy": "續抱",
+        "notes": "法人轉買+3,222，Level 0加速買超"
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "recommend_price": 247.0,
+        "intraday_price": 249.5,
+        "change_pct": 1.0,
+        "today_institutional": 1022,
+        "reversal_level": "Level 0",
+        "strategy": "續抱觀察",
+        "notes": "Level 0改善（昨日Level 2），Day5已持有續抱"
+      },
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電",
+        "recommend_price": 319.0,
+        "intraday_price": 301.0,
+        "change_pct": -5.6,
+        "today_institutional": 13355,
+        "reversal_level": "Level 0",
+        "strategy": "強制停損",
+        "notes": "盤中301<停損305，觸及停損價→明日開盤出場。法人今日爆買+13K但規則優先"
+      }
+    ],
+    "track_b_recommendations": [],
+    "track_b_observations": [
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "score": 71,
+        "industry": "PC/AI PC",
+        "reason": "今日+8.3K(TOP15)+7買3賣+動能-59.9%佈局完成+Module A L2，71分接近門檻但未達75分",
+        "today_change_pct": 2.9
+      },
+      {
+        "stock_code": "2347",
+        "stock_name": "聯強",
+        "score": null,
+        "industry": "通路",
+        "reason": "連5天買超+31K！Level 0！但動能+500%過高，催化對齊間接",
+        "today_change_pct": 0.5
+      }
+    ],
+    "stop_loss_triggered": [
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電",
+        "recommend_price": 319.0,
+        "intraday_price": 301.0,
+        "stop_loss": 305.0,
+        "trigger_reason": "盤中價301.0 < 停損價305.0",
+        "action": "明日開盤強制停損",
+        "note": "法人今日爆買+13,355（外資+9,880投信+2,844同步大買），但觸及停損無例外"
+      }
+    ]
+  }
 }
