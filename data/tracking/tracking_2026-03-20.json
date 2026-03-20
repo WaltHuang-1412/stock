@@ -25,7 +25,13 @@
         "reversal_alert": "Level 0 (Healthy)"
       },
       "catalyst": "中東戰事→SCFI+14.9%+荷姆茲海峽受限+運價上升",
-      "risk_note": "超強催化覆寫：動能+166.7%，倉位5-10%停損-5%；川普要求停火→降溫風險"
+      "risk_note": "超強催化覆寫：動能+166.7%，倉位5-10%停損-5%；川普要求停火→降溫風險",
+      "actual_close": 214.0,
+      "change_pct": -1.83,
+      "result": "holding",
+      "holding_status": "催化✅ 法人✅ Level0",
+      "close_price": 214.0,
+      "change_percent": -1.83
     },
     {
       "stock_code": "9933",
@@ -47,7 +53,13 @@
         "momentum": -14.2,
         "reversal_alert": "Level 0 (Healthy)"
       },
-      "catalyst": "美光資本支出增50億+AI資料中心建廠+半導體設備暴漲"
+      "catalyst": "美光資本支出增50億+AI資料中心建廠+半導體設備暴漲",
+      "actual_close": 34.25,
+      "change_pct": -1.86,
+      "result": "holding",
+      "holding_status": "催化✅ 連9天買超 佈局完成",
+      "close_price": 34.25,
+      "change_percent": -1.86
     },
     {
       "stock_code": "2412",
@@ -72,7 +84,13 @@
       "catalyst": "Fed按兵不動+VIX 24防禦+外資3月大逃殺避風港",
       "risk_note": "Broadcom L1 -5分（電信非網通影響有限）；明日Day7到期結算",
       "holding_from": "2026-03-13",
-      "holding_days": 6
+      "holding_days": 6,
+      "actual_close": 134.0,
+      "change_pct": -2.19,
+      "result": "holding",
+      "holding_status": "連10天買超 Day6→3/23到期結算",
+      "close_price": 134.0,
+      "change_percent": -2.19
     },
     {
       "stock_code": "2880",
@@ -96,7 +114,13 @@
       },
       "catalyst": "央行第二戶房貸鬆綁(3/20起)+合庫金獲利創高+股利利多",
       "holding_from": "2026-03-19",
-      "holding_days": 2
+      "holding_days": 2,
+      "actual_close": 33.55,
+      "change_pct": 1.05,
+      "result": "holding",
+      "holding_status": "央行鬆綁 法人轉買+3222 Level0",
+      "close_price": 33.55,
+      "change_percent": 1.05
     },
     {
       "stock_code": "2376",
@@ -121,7 +145,13 @@
       "catalyst": "GTC Vera Rubin+ASIC伺服器需求激增",
       "risk_note": "Level 2降級(-15分)：不建議新進場，已持有可續抱觀察；NVIDIA L1 -5分",
       "holding_from": "2026-03-16",
-      "holding_days": 5
+      "holding_days": 5,
+      "actual_close": 248.5,
+      "change_pct": 0.61,
+      "result": "holding",
+      "holding_status": "GTC催化 8buy2sell Level0 接近目標256(差3%)",
+      "close_price": 248.5,
+      "change_percent": 0.61
     },
     {
       "stock_code": "2449",
@@ -146,7 +176,13 @@
       "catalyst": "日月光加碼86.6億先進封裝+費半+2.88%+SEMI產值破兆",
       "risk_note": "v7.9.1: 4買6賣(6天賣超→-5分買賣分歧)+Broadcom L1 -5分；觀察為主",
       "holding_from": "2026-03-19",
-      "holding_days": 2
+      "holding_days": 2,
+      "actual_close": 308.0,
+      "change_pct": -3.45,
+      "result": "fail",
+      "fail_reason": "盤中觸及停損(低點301<停損305)，收盤回升308但停損已觸發無例外",
+      "close_price": 308.0,
+      "change_percent": -3.45
     }
   ],
   "removed_stocks": [
@@ -278,6 +314,195 @@
         "trigger_reason": "盤中價301.0 < 停損價305.0",
         "action": "明日開盤強制停損",
         "note": "法人今日爆買+13,355（外資+9,880投信+2,844同步大買），但觸及停損無例外"
+      }
+    ]
+  },
+  "yesterday_verification": {
+    "settled_count": 1,
+    "success": 0,
+    "fail": 1,
+    "holding": 5,
+    "removed": 4,
+    "accuracy": 0.0,
+    "settled_accuracy": 0.0,
+    "results": [
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "close_price": 214.0,
+        "change_percent": -1.83,
+        "result": "holding"
+      },
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "close_price": 34.25,
+        "change_percent": -1.86,
+        "result": "holding"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "close_price": 134.0,
+        "change_percent": -2.19,
+        "result": "holding"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "close_price": 33.55,
+        "change_percent": 1.05,
+        "result": "holding"
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "close_price": 248.5,
+        "change_percent": 0.61,
+        "result": "holding"
+      },
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電",
+        "close_price": 308.0,
+        "change_percent": -3.45,
+        "result": "fail",
+        "fail_reason": "盤中觸及停損(301<305)"
+      }
+    ],
+    "notes": "京元電盤中觸停損fail. 5檔持有中. 4檔Level4移除共規避-13.4%."
+  },
+  "after_market_analysis": {
+    "timestamp": "2026-03-20T14:35:00",
+    "closing_prices": {
+      "2603": 214.0,
+      "9933": 34.25,
+      "2412": 134.0,
+      "2880": 33.55,
+      "2376": 248.5,
+      "2449": 308.0
+    },
+    "results": [
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "actual_close": 214.0,
+        "change_from_recommend": -1.83,
+        "result": "holding",
+        "holding_status": "催化✅(中東+SCFI) 法人✅(連3日+35K) Level 0"
+      },
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "actual_close": 34.25,
+        "change_from_recommend": -1.86,
+        "result": "holding",
+        "holding_status": "催化✅(美光擴產) 法人✅(連9日+32K) Level 1減速"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "actual_close": 134.0,
+        "change_from_recommend": -2.19,
+        "result": "holding",
+        "holding_status": "催化✅(防禦避風港) 法人✅(連10日+25K) Level 1減速 Day6→3/23到期"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "actual_close": 33.55,
+        "change_from_recommend": 1.05,
+        "result": "holding",
+        "holding_status": "催化✅(央行鬆綁) 法人✅(轉買+3,222) Level 0"
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "actual_close": 248.5,
+        "change_from_recommend": 0.61,
+        "result": "holding",
+        "holding_status": "催化✅(GTC) 法人✅(8買2賣) Level 0 接近目標256(差3%)"
+      },
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電",
+        "actual_close": 308.0,
+        "change_from_recommend": -3.45,
+        "result": "fail",
+        "fail_reason": "盤中觸及停損(低點301<停損305)，收盤回升至308但停損已觸發無例外"
+      }
+    ],
+    "removed_stocks_today_close": [
+      {
+        "stock_code": "2344",
+        "stock_name": "華邦電",
+        "today_close": 110.0,
+        "removal_price": 122.0,
+        "avoided_loss": -9.84
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "today_close": 283.5,
+        "removal_price": 286.5,
+        "avoided_loss": -1.05
+      },
+      {
+        "stock_code": "1605",
+        "stock_name": "華新",
+        "today_close": 31.85,
+        "removal_price": 32.2,
+        "avoided_loss": -1.09
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "today_close": 42.8,
+        "removal_price": 43.45,
+        "avoided_loss": -1.5
+      }
+    ],
+    "settled_accuracy": 0.0,
+    "settled_count": 1,
+    "holding_count": 5,
+    "removed_count": 4,
+    "tomorrow_recommendations": [
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "action": "續推",
+        "score": 77
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "action": "續推",
+        "score": 78
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "action": "續推",
+        "score": 65
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "action": "續推",
+        "score": 63
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "action": "Day7到期結算",
+        "score": 66
+      }
+    ],
+    "removed_from_tomorrow": [
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電",
+        "action": "明日開盤停損出場"
       }
     ]
   }
