@@ -5,13 +5,14 @@
 **目的**：提供清晰、可執行的盤前/盤中/盤後分析流程
 
 **🆕 v7.9.3 更新重點**：
-1. ✅ **催化預埋掃描**：Step 5.5 升級為強制步驟，自動偵測法人多日佈局+股價未反映的預埋機會
+1. ✅ **催化預埋掃描（Module A）**：Step 5.5 升級為強制步驟，自動偵測法人多日佈局+股價未反映的預埋機會
    - `catalyst_preposition_scan.py` 回看7天法人TOP50，交叉比對籌碼動能
-   - L3（佈局完成）：連3+天買超+動能<-30%+漲幅<5% → 正常倉位15-20%
-   - L2（早期佈局）：連2+天買超+動能<+50%+漲幅<5% → 小倉位5-10%
-   - L1（態度轉變）：首次進TOP50+漲幅<3% → 僅觀察
-   - 動能>100% → 自動標記「追高風險」排除
-2. 背景：原 Step 5.5 為手動判斷，容易遺漏。催化爆發日（如 Micron+9.6%）法人已在出貨，需提前1-2天發現佈局機會
+   - L3（佈局完成）/ L2（早期佈局）/ L1（態度轉變）/ 追高排除
+2. ✅ **催化主題預警（Module B）**：Step 5.7 新增，搶在法人前面進場
+   - `catalyst_theme_detector.py` 追蹤美股龍頭多日趨勢→對應台股產業→找法人還沒買的股票
+   - 催化劑成熟度分級：🟢早期（最佳）→ 🟡中期 → 🔴成熟（追高風險）
+   - 排除超大型股（台積電等）+ 排除已大漲（5日>10%）
+3. 背景：原系統是「反應型」——催化爆發日法人已在出貨。Module A 跟在法人後面（安全），Module B 搶在法人前面（更早但風險更高）
 
 **🆕 v7.9 更新重點**：
 1. ✅ **推薦結算制度改革**：推薦不再當天判定成敗，改為**多日追蹤結算**
@@ -61,7 +62,7 @@
 ### 📁 驗證機制
 
 每次分析完成後，必須存在以下文件：
-- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json` + `tw_market_news.json` + `catalyst_preposition_scan.json` + `tracking_YYYY-MM-DD.json` + `before_market_line.txt`
+- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json` + `tw_market_news.json` + `catalyst_preposition_scan.json` + `catalyst_theme_signals.json` + `tracking_YYYY-MM-DD.json` + `before_market_line.txt`
 - 盤中：`data/YYYY-MM-DD/intraday_analysis.md` + `intraday_line.txt` + 更新 `tracking_YYYY-MM-DD.json`
 - 盤後：`data/YYYY-MM-DD/after_market_analysis.md` + `after_market_line.txt` + 更新 `tracking_YYYY-MM-DD.json` + 更新 `predictions.json`
 
@@ -105,7 +106,8 @@ python3 scripts/check_market_status.py --date $(date +%Y-%m-%d) --mode before_ma
   {"content": "Step 3: 即時股價查詢（推薦股票）", "status": "pending", "activeForm": "正在查詢即時股價"},
   {"content": "Step 4: 歷史驗證（昨日推薦表現）", "status": "pending", "activeForm": "正在執行歷史驗證"},
   {"content": "Step 5: 法人 TOP50 掃描", "status": "pending", "activeForm": "正在掃描法人 TOP50"},
-  {"content": "Step 5.5: 催化預埋掃描🆕", "status": "pending", "activeForm": "正在執行催化預埋掃描"},
+  {"content": "Step 5.5: 催化預埋掃描（Module A）🆕", "status": "pending", "activeForm": "正在執行催化預埋掃描"},
+  {"content": "Step 5.7: 催化主題預警（Module B）🆕", "status": "pending", "activeForm": "正在執行催化主題預警"},
   {"content": "Step 6: 時事展開（受惠產業代表股）", "status": "pending", "activeForm": "正在執行時事展開"},
   {"content": "Step 7: 五維度評分", "status": "pending", "activeForm": "正在執行五維度評分"},
   {"content": "Step 8: 籌碼深度分析", "status": "pending", "activeForm": "正在執行籌碼深度分析"},
@@ -471,6 +473,86 @@ python3 scripts/catalyst_preposition_scan.py --date $(date +%Y-%m-%d) --lookback
 | 華邦電 追高排除 | Level 4 排除 ✅ | 掃描正確排除追高 |
 
 **完成後**：更新 TodoWrite，標記 Step 5.5 為 `completed`
+
+---
+
+### 🔴 Step 5.7: 催化主題預警（Module B，強制）🆕 v7.9.3
+
+**目的**：搶在法人前面進場 — 追蹤美股龍頭趨勢，找出催化劑升溫但法人還沒買的台股
+
+**與 Step 5.5（Module A）的差異**：
+- Module A：法人已經在買，股價還沒動 → **跟在法人後面**（安全，確認訊號）
+- Module B：催化劑正在升溫，法人還沒買 → **搶在法人前面**（更早，風險更高）
+
+**執行命令**：
+```bash
+python3 scripts/catalyst_theme_detector.py --date $(date +%Y-%m-%d) --lookback 7
+```
+
+**驗證**：
+- ✅ 必須生成 `data/YYYY-MM-DD/catalyst_theme_signals.json`
+- ❌ **如果文件不存在 = 步驟未執行 = 禁止繼續**
+
+---
+
+**掃描邏輯**：
+
+1. 回看 7 天 `us_asia_markets.json`，追蹤每個美股龍頭的累計漲幅+連漲天數
+2. 對應到台股產業（Micron→記憶體、NVIDIA→AI伺服器 等）
+3. 找出對應產業中**不在法人 TOP50**（法人還沒買）+ **5日漲幅<10%**（台股還沒動）的股票
+4. 排除超大型股（台積電、鴻海等 — 不在TOP50不代表法人沒注意）
+5. 依催化強度+成熟度+法人狀態+台股漲幅 綜合評分
+
+---
+
+**催化劑成熟度分級**：
+
+| 成熟度 | 條件 | 評分影響 | 說明 |
+|--------|------|---------|------|
+| 🟢 **早期** | 連漲 1-2 天 | 滿分+20 | 催化剛開始，最佳進場時機 |
+| 🟡 **中期** | 連漲 3-4 天 | +12 | 催化確認中，還可以 |
+| 🔴 **成熟** | 連漲 5+ 天 | +3 | 催化已成熟，追高風險高 |
+
+**🔴 重要**：成熟度是 Module B 的核心判斷。連漲 7 天的 Micron（93分）找到的台股候選，不如連漲 1 天的 Applied Materials（90分）找到的候選有價值 — 後者才是真正的「提前進場」。
+
+---
+
+**後續步驟整合**：
+
+| 掃描結果 | Step 6（候選股） | Step 7（評分） |
+|---------|---------------|--------------|
+| 🟢早期 預先佈局 | ✅ 進入候選池 | 時事維度+5分+「📡 Module B 早期」標籤 |
+| 🟡中期 預先佈局 | ✅ 進入候選池 | 不額外加分，標註「📡 Module B 中期」 |
+| 🔴成熟 預先佈局 | ⚠️ 可進入但標註風險 | 不加分+標註「⚠️ 催化劑已成熟，追高風險」 |
+| 法人已進場 | → 交給 Module A 處理 | Module A 評分為主 |
+| 已大漲排除 | ❌ 不進入 | 不評分 |
+
+---
+
+**輸出格式**：
+```markdown
+## 催化主題預警（Module B）
+
+### 📈 美股龍頭趨勢
+| 龍頭 | 累計 | 連漲 | 訊號 | 成熟度 | 對應台股產業 |
+|------|------|------|------|--------|-----------|
+| Applied Materials | +25.0% | 1天 | 🔥強 | 🟢早期 | 半導體設備 |
+| Micron | +93.1% | 7天 | 🔥強 | 🔴成熟 | DRAM/記憶體 |
+
+### 🎯 預先佈局候選（法人尚未進場）
+- 🔥 日月光(3711) 90分 | 半導體設備 | 🟢早期
+  催化：AMAT 累計+25% 連漲1天 | 法人尚未進TOP50
+- 🔥 世界(5347) 73分 | 記憶體 | 🔴成熟
+  催化：Micron +93% 連漲7天 | ⚠️ 追高風險
+
+### 📊 法人已進場（交給 Module A）
+- 華邦電(2344)、旺宏(2337)、力積電(6770)
+
+### 📈 已大漲排除
+- 旺宏 +44%、欣興 +21%
+```
+
+**完成後**：更新 TodoWrite，標記 Step 5.7 為 `completed`
 
 ---
 
@@ -1606,6 +1688,34 @@ python3 scripts/catalyst_preposition_scan.py --threshold 3       # 漲幅門檻3
 - 「預埋掃描」
 - 「法人佈局機會」
 - 「哪些股票法人在買但還沒漲」
+
+---
+
+### 0.5 **catalyst_theme_detector.py** - 催化主題預警（Module B）🆕 v7.9.3
+
+**用途**：追蹤美股龍頭趨勢，找出催化劑升溫但法人還沒買的台股（搶在法人前面）
+
+**執行時機**：
+- 盤前 Step 5.7（強制）
+- 任何時候想掃描美股催化→台股機會
+
+**執行命令**：
+```bash
+python3 scripts/catalyst_theme_detector.py                     # 今天，回看7天
+python3 scripts/catalyst_theme_detector.py --date 2026-03-20   # 指定日期
+python3 scripts/catalyst_theme_detector.py --lookback 10       # 回看10天
+```
+
+**功能**：
+1. 追蹤美股龍頭（Micron/NVIDIA/Apple 等）多日累計漲幅+連漲天數
+2. 對應到台股產業（Micron→記憶體、NVIDIA→AI伺服器 等）
+3. 找出對應產業中法人還沒買的台股 → 預先佈局候選
+4. 催化劑成熟度分級：🟢早期（最佳）/ 🟡中期 / 🔴成熟（追高風險）
+
+**觸發關鍵詞**：
+- 「催化主題預警」
+- 「美股帶動哪些台股」
+- 「搶在法人前面」
 
 ---
 
