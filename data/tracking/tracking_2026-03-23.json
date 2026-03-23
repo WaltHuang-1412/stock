@@ -26,7 +26,11 @@
       },
       "catalyst": "美光資本支出增50億+AI資料中心建廠+半導體設備大漲",
       "holding_from": "2026-03-20",
-      "holding_days": 1
+      "holding_days": 2,
+      "actual_close": 34.65,
+      "change_pct": 1.17,
+      "result": "holding",
+      "holding_status": "催化OK 連10天買超+36K Level1減速 逆勢+2.21%"
     },
     {
       "stock_code": "3034",
@@ -48,7 +52,12 @@
         "momentum": -68.3,
         "reversal_alert": "Level 0 (Safe)"
       },
-      "catalyst": "AMD+4.11%+AI Agent驅動ASIC/SoC需求+費半+0.31%"
+      "catalyst": "AMD+4.11%+AI Agent驅動ASIC/SoC需求+費半+0.31%",
+      "actual_close": 372.0,
+      "change_pct": -3.38,
+      "result": "holding",
+      "holding_status": "AMD+4% Level0 大盤系統性影響",
+      "holding_days": 1
     },
     {
       "stock_code": "2353",
@@ -70,7 +79,12 @@
         "momentum": -59.9,
         "reversal_alert": "Safe (法人買超中)"
       },
-      "catalyst": "GTC AI PC展+台灣品牌大廠強攻+Module A L2預埋"
+      "catalyst": "GTC AI PC展+台灣品牌大廠強攻+Module A L2預埋",
+      "actual_close": 27.0,
+      "change_pct": -2.88,
+      "result": "holding",
+      "holding_status": "法人+8.3K逆勢大買 外資投信同步 催化OK",
+      "holding_days": 1
     },
     {
       "stock_code": "2006",
@@ -93,7 +107,12 @@
         "reversal_alert": "不明(累計微負)"
       },
       "catalyst": "中鋼4月盤價大漲千元(近3年最大)+鋼市回溫",
-      "risk_note": "5日-9.3%大跌中法人逆勢抄底，累計微負需觀察"
+      "risk_note": "5日-9.3%大跌中法人逆勢抄底，累計微負需觀察",
+      "actual_close": 71.2,
+      "change_pct": 0.99,
+      "result": "holding",
+      "holding_status": "法人+1.1K逆勢買 但累計-485微負需觀察",
+      "holding_days": 1
     },
     {
       "stock_code": "2603",
@@ -118,7 +137,11 @@
       "catalyst": "中東戰事+SCFI+14.9%+荷姆茲海峽受限",
       "risk_note": "超強催化覆寫：動能+500%已持有續推；川普考慮縮減戰爭→降溫風險",
       "holding_from": "2026-03-20",
-      "holding_days": 1
+      "holding_days": 1,
+      "actual_close": 204.0,
+      "change_pct": -6.42,
+      "result": "fail",
+      "fail_reason": "收盤204<停損207，盤中已觸停損204.5"
     },
     {
       "stock_code": "2880",
@@ -142,7 +165,11 @@
       },
       "catalyst": "VIX防禦+央行第二戶房貸鬆綁+金控獲利創高",
       "holding_from": "2026-03-19",
-      "holding_days": 2
+      "holding_days": 3,
+      "actual_close": 32.7,
+      "change_pct": -1.51,
+      "result": "holding",
+      "holding_status": "防禦穩定 法人加速+3.2K Level0"
     }
   ],
   "holding_tracking": [
@@ -156,7 +183,10 @@
       "holding_from": "2026-03-13",
       "holding_days": 7,
       "last_close": 134.0,
-      "status": "Day7到期結算：今日收盤>137→success，≤137→fail"
+      "status": "Day7到期結算：今日收盤>137→success，≤137→fail",
+      "actual_close": 134.0,
+      "result": "fail",
+      "fail_reason": "Day7到期結算，收盤134<=推薦137"
     },
     {
       "stock_code": "2376",
@@ -166,9 +196,12 @@
       "target_price": 256.0,
       "stop_loss": 225.0,
       "holding_from": "2026-03-16",
-      "holding_days": 5,
+      "holding_days": 6,
       "last_close": 248.5,
-      "status": "SMCI -33.24%衝擊，盤中231.5距停損225僅-2.8%"
+      "status": "SMCI -33.24%衝擊，盤中231.5距停損225僅-2.8%",
+      "actual_close": 232.5,
+      "result": "holding",
+      "holding_status": "SMCI-33%衝擊 距停損225有3.2% Level0+13K Day6→明日Day7到期"
     }
   ],
   "removed_stocks": [
@@ -181,11 +214,37 @@
     }
   ],
   "excluded_by_alerts": {
-    "smci_level3": ["2382", "3231", "6669", "2376"],
-    "tesla_level2": ["2317", "2308", "1513", "1519", "1504"],
-    "reversal_level4": ["2887", "2892", "8210", "2105"],
-    "reversal_level3": ["2002", "2883"],
-    "momentum_over_100": ["2618", "2027", "2882", "2308", "2615", "3661"]
+    "smci_level3": [
+      "2382",
+      "3231",
+      "6669",
+      "2376"
+    ],
+    "tesla_level2": [
+      "2317",
+      "2308",
+      "1513",
+      "1519",
+      "1504"
+    ],
+    "reversal_level4": [
+      "2887",
+      "2892",
+      "8210",
+      "2105"
+    ],
+    "reversal_level3": [
+      "2002",
+      "2883"
+    ],
+    "momentum_over_100": [
+      "2618",
+      "2027",
+      "2882",
+      "2308",
+      "2615",
+      "3661"
+    ]
   },
   "intraday_analysis": {
     "timestamp": "2026-03-23 12:31",
@@ -292,6 +351,138 @@
         "stock_name": "長榮",
         "trigger_condition": "條件1：盤中204.5 < 停損207",
         "action": "明日開盤強制出場"
+      }
+    ]
+  },
+  "after_market_analysis": {
+    "timestamp": "2026-03-23T14:35:00",
+    "closing_prices": {
+      "9933": 34.65,
+      "3034": 372.0,
+      "2353": 27.0,
+      "2006": 71.2,
+      "2603": 204.0,
+      "2880": 32.7,
+      "2412": 134.0,
+      "2376": 232.5
+    },
+    "results": [
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "actual_close": 34.65,
+        "change_from_recommend": 1.17,
+        "result": "holding",
+        "holding_status": "催化OK 連10天買超+36K Level1(減速) 逆勢+2.21%"
+      },
+      {
+        "stock_code": "3034",
+        "stock_name": "聯詠",
+        "actual_close": 372.0,
+        "change_from_recommend": -3.38,
+        "result": "holding",
+        "holding_status": "AMD+4%催化 8買2賣 Level0 大盤系統性影響"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "actual_close": 27.0,
+        "change_from_recommend": -2.88,
+        "result": "holding",
+        "holding_status": "法人逆勢大買+8.3K 外資投信同步 AI PC催化OK"
+      },
+      {
+        "stock_code": "2006",
+        "stock_name": "東和鋼鐵",
+        "actual_close": 71.2,
+        "change_from_recommend": 0.99,
+        "result": "holding",
+        "holding_status": "法人+1.1K逆勢買 累計-485微負 鋼價催化仍在"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "actual_close": 204.0,
+        "change_from_recommend": -6.42,
+        "result": "fail",
+        "fail_reason": "收盤204<停損207，盤中已觸停損。川普縮減戰爭+系統性下殺"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "actual_close": 32.7,
+        "change_from_recommend": -1.51,
+        "result": "holding",
+        "holding_status": "防禦穩定 法人加速+3.2K Level0 央行鬆綁催化"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "actual_close": 134.0,
+        "change_from_recommend": -2.19,
+        "result": "fail",
+        "fail_reason": "Day7到期結算，收盤134<=推薦137。連10天買超+20K但大盤系統性下殺"
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "actual_close": 232.5,
+        "change_from_recommend": -5.87,
+        "result": "holding",
+        "holding_status": "SMCI-33%衝擊 距停損225有3.2% Level0+13K Day6→明日Day7"
+      }
+    ],
+    "settled_accuracy": 0.0,
+    "settled_count": 2,
+    "holding_count": 6,
+    "tomorrow_recommendations": [
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "action": "續推",
+        "score": 87
+      },
+      {
+        "stock_code": "3034",
+        "stock_name": "聯詠",
+        "action": "續推",
+        "score": 78
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "action": "續推",
+        "score": 75
+      },
+      {
+        "stock_code": "2006",
+        "stock_name": "東和鋼鐵",
+        "action": "續推(觀察累計)",
+        "score": 73
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "action": "續推(防禦)",
+        "score": 65
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "action": "Day7到期結算",
+        "score": 0
+      }
+    ],
+    "removed_stocks": [
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "action": "觸停損出場(204<207)"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "action": "Day7到期fail(134<=137)"
       }
     ]
   }

@@ -6808,5 +6808,98 @@
     "removed_count": 4,
     "settled_accuracy": 0.0,
     "notes": "京元電盤中觸停損fail. 5檔持有中. 4檔L4移除共規避-13.4%. 中華電Day6, 3/23到期."
+  },
+  "2026-03-23": {
+    "date": "2026-03-23",
+    "predictions": [
+      {
+        "symbol": "9933",
+        "name": "中鼎",
+        "recommend_price": 34.25,
+        "target_price": 39.0,
+        "stop_loss": 32.0,
+        "result": "holding",
+        "latest_close": 34.65,
+        "holding_days": 2
+      },
+      {
+        "symbol": "3034",
+        "name": "聯詠",
+        "recommend_price": 385.0,
+        "target_price": 420.0,
+        "stop_loss": 355.0,
+        "result": "holding",
+        "latest_close": 372.0,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2353",
+        "name": "宏碁",
+        "recommend_price": 27.8,
+        "target_price": 30.5,
+        "stop_loss": 25.6,
+        "result": "holding",
+        "latest_close": 27.0,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2006",
+        "name": "東和鋼鐵",
+        "recommend_price": 70.5,
+        "target_price": 78.0,
+        "stop_loss": 65.0,
+        "result": "holding",
+        "latest_close": 71.2,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2603",
+        "name": "長榮",
+        "recommend_price": 218.0,
+        "target_price": 240.0,
+        "stop_loss": 207.0,
+        "result": "fail",
+        "settled_date": "2026-03-23",
+        "settled_price": 204.0,
+        "settled_reason": "收盤204<停損207，盤中已觸停損",
+        "holding_days": 2
+      },
+      {
+        "symbol": "2880",
+        "name": "華南金",
+        "recommend_price": 33.2,
+        "target_price": 35.5,
+        "stop_loss": 31.0,
+        "result": "holding",
+        "latest_close": 32.7,
+        "holding_days": 3
+      },
+      {
+        "symbol": "2412",
+        "name": "中華電",
+        "recommend_price": 137.0,
+        "target_price": 142.0,
+        "stop_loss": 130.0,
+        "result": "fail",
+        "settled_date": "2026-03-23",
+        "settled_price": 134.0,
+        "settled_reason": "Day7到期結算，收盤134≤推薦137",
+        "holding_days": 7
+      },
+      {
+        "symbol": "2376",
+        "name": "技嘉",
+        "recommend_price": 247.0,
+        "target_price": 256.0,
+        "stop_loss": 225.0,
+        "result": "holding",
+        "latest_close": 232.5,
+        "holding_days": 6
+      }
+    ],
+    "settled_accuracy": 0.0,
+    "settled_count": 2,
+    "holding_count": 6,
+    "notes": "系統性下殺日(NASDAQ-2%+SMCI-33%+台指期-822)。長榮觸停損、中華電Day7到期fail。6檔持有中。"
   }
 }
