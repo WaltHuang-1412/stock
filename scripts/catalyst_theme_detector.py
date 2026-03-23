@@ -322,12 +322,15 @@ def find_preposition_candidates(leader_trends, top50_codes, industry_chains, pri
                 if stock['code'] not in all_stocks:
                     all_stocks[stock['code']] = stock['name']
 
-        # 催化劑成熟度
+        # 催化劑成熟度（綜合連漲天數 + 累計漲幅）
+        # 修正：僅看 consecutive_up 會誤判。如 Micron 累計+45%但最後一天-0.76%
+        #        → consecutive_up=0 → 被標「早期」，實際應為「成熟」
         maturity = 'early'  # 預設：早期
-        if trend['consecutive_up'] >= 5:
-            maturity = 'mature'  # 成熟：連漲5天+，追高風險
-        elif trend['consecutive_up'] >= 3:
-            maturity = 'mid'  # 中期：確認中
+        cumulative_abs = abs(trend['cumulative'])
+        if trend['consecutive_up'] >= 5 or cumulative_abs >= 30:
+            maturity = 'mature'  # 成熟：連漲5天+ 或 累計>30%
+        elif trend['consecutive_up'] >= 3 or cumulative_abs >= 15:
+            maturity = 'mid'  # 中期：連漲3-4天 或 累計>15%
 
         for code, name in all_stocks.items():
             # 排除超大型股
@@ -439,17 +442,27 @@ def scan(target_date_str, lookback=7):
     leader_trends = analyze_leader_trends(dates, us_data_by_date)
 
     # ─── Step 3: 載入法人 TOP50（最新日期）+ 股價漲幅 ───
+    # 修正：不能直接用 us_asia_markets 的 dates，因為週末快照日沒有 institutional_top50.json
+    # 改為獨立掃描有 institutional_top50.json 的日期
     top50_codes = set()
     price_changes = {}  # code → latest 5day_change
-    for d in dates[:3]:  # 查看最近3天的TOP50
-        codes, changes = load_institutional_top50(d)
-        top50_codes |= codes
-        # 用最新日期的漲幅
-        for code, change in changes.items():
-            if code not in price_changes:
-                price_changes[code] = change
+    top50_dates_found = 0
+    scan_date = target_date
+    for _ in range(lookback * 3):  # 往回掃描，找到3天有TOP50的
+        if top50_dates_found >= 3:
+            break
+        d = scan_date.strftime('%Y-%m-%d')
+        top50_path = DATA_DIR / d / 'institutional_top50.json'
+        if top50_path.exists():
+            codes, changes = load_institutional_top50(d)
+            top50_codes |= codes
+            for code, change in changes.items():
+                if code not in price_changes:
+                    price_changes[code] = change
+            top50_dates_found += 1
+        scan_date -= timedelta(days=1)
 
-    print(f"   近3天法人TOP50：{len(top50_codes)} 檔股票")
+    print(f"   近{top50_dates_found}天法人TOP50：{len(top50_codes)} 檔股票")
 
     # ─── Step 4: 載入產業鏈 ───
     industry_chains = load_industry_chains()
