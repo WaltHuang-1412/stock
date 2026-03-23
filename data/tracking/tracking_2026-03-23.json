@@ -168,7 +168,7 @@
       "holding_from": "2026-03-16",
       "holding_days": 5,
       "last_close": 248.5,
-      "status": "SMCI -33.24% Level 3衝擊觀察，停損225尚遠"
+      "status": "SMCI -33.24%衝擊，盤中231.5距停損225僅-2.8%"
     }
   ],
   "removed_stocks": [
@@ -186,5 +186,113 @@
     "reversal_level4": ["2887", "2892", "8210", "2105"],
     "reversal_level3": ["2002", "2883"],
     "momentum_over_100": ["2618", "2027", "2882", "2308", "2615", "3661"]
+  },
+  "intraday_analysis": {
+    "timestamp": "2026-03-23 12:31",
+    "market_condition": "系統性下殺（台指期-822，NASDAQ-2%，SMCI-33%）",
+    "track_a": [
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "intraday_price": 34.6,
+        "intraday_change_pct": 2.06,
+        "vs_recommend_pct": 1.02,
+        "volume_ratio": 1.11,
+        "reversal_alert": "Level 1 (買超減速-51.7%)",
+        "exit_signal": "無",
+        "strategy": "續抱"
+      },
+      {
+        "stock_code": "3034",
+        "stock_name": "聯詠",
+        "intraday_price": 376.5,
+        "intraday_change_pct": -1.18,
+        "vs_recommend_pct": -2.21,
+        "volume_ratio": 0.5,
+        "reversal_alert": "Level 0",
+        "exit_signal": "跌破MA5/MA10",
+        "strategy": "回檔觀察，不加碼"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "intraday_price": 26.85,
+        "intraday_change_pct": -2.19,
+        "vs_recommend_pct": -3.42,
+        "volume_ratio": 0.38,
+        "reversal_alert": "Safe (法人+8,319)",
+        "exit_signal": "跌破MA5/MA10",
+        "strategy": "回檔但法人撐腰，觀察"
+      },
+      {
+        "stock_code": "2006",
+        "stock_name": "東和鋼鐵",
+        "intraday_price": 70.8,
+        "intraday_change_pct": -7.57,
+        "vs_recommend_pct": 0.43,
+        "volume_ratio": 0.63,
+        "reversal_alert": "不明(累計-485)",
+        "exit_signal": "跌破MA5/MA10",
+        "strategy": "法人+8,134逆勢買，續抱"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "intraday_price": 204.5,
+        "intraday_change_pct": -6.19,
+        "vs_recommend_pct": -6.19,
+        "volume_ratio": 0.89,
+        "reversal_alert": "Level 1 (買超減速-56.6%)",
+        "exit_signal": "🛑 觸及停損（204.5 < 207）",
+        "strategy": "🛑 強制停損：明日開盤出場"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "intraday_price": 32.95,
+        "intraday_change_pct": -1.35,
+        "vs_recommend_pct": -0.75,
+        "volume_ratio": 0.82,
+        "reversal_alert": "Safe (加速+3,222)",
+        "exit_signal": "無",
+        "strategy": "防禦續抱"
+      }
+    ],
+    "track_a_holdings": [
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "intraday_price": 133.5,
+        "vs_recommend_pct": -2.55,
+        "reversal_alert": "Level 0",
+        "status": "Day7到期，盤中133.5<137→如收盤維持→fail"
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "intraday_price": 231.5,
+        "vs_recommend_pct": -6.28,
+        "reversal_alert": "Level 0",
+        "status": "SMCI-33%衝擊，距停損225僅-2.8%，嚴密監控"
+      }
+    ],
+    "track_b_recommendations": [],
+    "track_b_observations": [
+      {
+        "stock_code": "4904",
+        "stock_name": "遠傳",
+        "score": 78,
+        "reason": "連6天買超+佔成交30.9%+Level 0，但動能+164.5%>100%排除",
+        "note": "明日盤前再評估"
+      }
+    ],
+    "stop_loss_triggered": [
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "trigger_condition": "條件1：盤中204.5 < 停損207",
+        "action": "明日開盤強制出場"
+      }
+    ]
   }
 }
