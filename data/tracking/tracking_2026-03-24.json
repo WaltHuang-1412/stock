@@ -213,5 +213,143 @@
     "l2_stocks": ["2481", "1605", "2890", "5871", "2412"],
     "l1_stocks": ["2356"]
   },
-  "module_b_result": "全部未通過篩選：DRAM受Micron-8.48%Level2衝擊；IC設計催化已成熟(AMD連漲5天)且不在TOP50"
+  "module_b_result": "全部未通過篩選：DRAM受Micron-8.48%Level2衝擊；IC設計催化已成熟(AMD連漲5天)且不在TOP50",
+  "intraday_analysis": {
+    "time": "12:31",
+    "exit_signals": {
+      "stop_loss_triggered": [],
+      "consecutive_drop_triggered": [],
+      "reversal_level34_triggered": [],
+      "summary": "無強制停損觸發"
+    },
+    "track_a": [
+      {
+        "stock_code": "3036",
+        "stock_name": "文曄",
+        "recommend_price": 241.0,
+        "intraday_price": 236.0,
+        "vs_recommend": "-2.07%",
+        "today_change": "-2.07%",
+        "institutional": "+1,554",
+        "reversal": "L1(減速-31.5%)",
+        "volume_ratio": 0.76,
+        "strategy": "觀察：法人仍買但跌破MA，未觸停損222"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "recommend_price": 35.0,
+        "intraday_price": 35.5,
+        "vs_recommend": "+1.43%",
+        "today_change": "+1.87%",
+        "institutional": "+24,965",
+        "reversal": "L0(Safe)",
+        "volume_ratio": 0.62,
+        "strategy": "續抱：油價催化+法人爆買"
+      },
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "recommend_price": 34.25,
+        "intraday_price": 36.5,
+        "vs_recommend": "+6.57%",
+        "today_change": "+5.34%",
+        "institutional": "+2,698",
+        "reversal": "L1(減速-41.8%)",
+        "volume_ratio": 2.1,
+        "strategy": "部分獲利：接近目標39.0，可獲利50%"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 134.0,
+        "intraday_price": 134.5,
+        "vs_recommend": "+0.37%",
+        "today_change": "+0.37%",
+        "institutional": "+3,913",
+        "reversal": "L1(減速-42.9%)",
+        "volume_ratio": 0.25,
+        "strategy": "續抱：防禦穩定"
+      },
+      {
+        "stock_code": "2006",
+        "stock_name": "東和鋼鐵",
+        "recommend_price": 70.5,
+        "intraday_price": 72.6,
+        "vs_recommend": "+2.98%",
+        "today_change": "+1.97%",
+        "institutional": "+4,764",
+        "reversal": "累計-343微負",
+        "volume_ratio": 0.47,
+        "strategy": "觀察：法人主導強(120.7%)但累計微負"
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "recommend_price": 42.0,
+        "intraday_price": 42.55,
+        "vs_recommend": "+1.31%",
+        "today_change": "+1.43%",
+        "institutional": "+4,489",
+        "reversal": "Safe",
+        "volume_ratio": 0.43,
+        "strategy": "續抱：法人續買+AI PC催化"
+      },
+      {
+        "stock_code": "3034",
+        "stock_name": "聯詠",
+        "recommend_price": 385.0,
+        "intraday_price": 373.0,
+        "vs_recommend": "-3.12%",
+        "today_change": "+0.27%",
+        "institutional": "-565",
+        "reversal": "L0(中性)",
+        "volume_ratio": 0.18,
+        "strategy": "觀察：法人小賣-565，留意後續"
+      }
+    ],
+    "holding_status": [
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "intraday_price": 33.15,
+        "vs_recommend": "-0.15%",
+        "today_change": "+1.38%",
+        "institutional": "+3,222加速",
+        "strategy": "續抱：法人加速買超"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "intraday_price": 27.2,
+        "vs_recommend": "-2.16%",
+        "today_change": "+0.74%",
+        "institutional": "+8,319續買",
+        "strategy": "觀察：法人續買但股價弱"
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "intraday_price": 237.0,
+        "vs_recommend": "-4.05%",
+        "today_change": "+1.94%",
+        "institutional": "+225微買",
+        "strategy": "Day7到期：237<247預計fail"
+      }
+    ],
+    "track_b_recommendations": [],
+    "track_b_observations": [
+      {
+        "stock_code": "3702",
+        "stock_name": "大聯大",
+        "reason": "avg_rank 2.0 TOP1+連9天買超+81K，但動能+207.6%排除。約71分，明日動能回落可再評估"
+      },
+      {
+        "stock_code": "2882",
+        "stock_name": "國泰金",
+        "reason": "avg_rank 14.0+近5天外投同步買+金融防禦，但動能+500%排除。約61分"
+      }
+    ],
+    "track_b_no_recommendation_reason": "所有候選股動能>+100%，無超強催化覆寫（AMD+3.1%不足>+5%門檻）"
+  }
 }
