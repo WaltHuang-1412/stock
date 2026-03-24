@@ -351,5 +351,166 @@
       }
     ],
     "track_b_no_recommendation_reason": "所有候選股動能>+100%，無超強催化覆寫（AMD+3.1%不足>+5%門檻）"
+  },
+  "after_market_analysis": {
+    "timestamp": "2026-03-24T14:33:00",
+    "closing_prices": {
+      "3036": 232.0,
+      "2618": 35.3,
+      "9933": 36.5,
+      "2412": 134.0,
+      "2006": 72.7,
+      "2356": 42.25,
+      "3034": 370.0,
+      "2880": 33.3,
+      "2353": 27.15,
+      "2376": 235.0
+    },
+    "results": [
+      {
+        "stock_code": "3036",
+        "stock_name": "文曄",
+        "actual_close": 232.0,
+        "change_from_recommend": -3.73,
+        "today_change": -3.73,
+        "result": "holding",
+        "holding_status": "SMCI壓制但法人10買0賣+13K未變 L1 距停損222有-4.15%"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "actual_close": 35.3,
+        "change_from_recommend": 0.86,
+        "today_change": 1.29,
+        "result": "holding",
+        "holding_status": "油價催化+法人8買2賣+33K連7天 L0 Safe"
+      },
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "actual_close": 36.5,
+        "change_from_recommend": 6.57,
+        "today_change": 5.34,
+        "result": "holding",
+        "holding_status": "爆量+5.34% 接近目標39.0 法人10買0賣+36K L1 部分獲利策略"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "actual_close": 134.0,
+        "change_from_recommend": 0.0,
+        "today_change": 0.0,
+        "result": "holding",
+        "holding_status": "防禦平穩 法人10買0賣+21K L1"
+      },
+      {
+        "stock_code": "2006",
+        "stock_name": "東和鋼鐵",
+        "actual_close": 72.7,
+        "change_from_recommend": 3.12,
+        "today_change": 2.11,
+        "result": "holding",
+        "holding_status": "鋼價催化+2.11% 但累計-343微負 動能+187% 觀察中"
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "actual_close": 42.25,
+        "change_from_recommend": 0.6,
+        "today_change": 0.72,
+        "result": "holding",
+        "holding_status": "法人+4,489 Safe 8買2賣+38K AMD催化持續"
+      },
+      {
+        "stock_code": "3034",
+        "stock_name": "聯詠",
+        "actual_close": 370.0,
+        "change_from_recommend": -3.9,
+        "today_change": -0.54,
+        "result": "holding",
+        "holding_status": "動能+145%偏高 距停損355僅-3.9% 法人+608小量 需密切監控"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "actual_close": 33.3,
+        "change_from_recommend": 0.3,
+        "today_change": 1.83,
+        "result": "holding",
+        "holding_status": "防禦+1.83% 法人加速+3,222 L0 Day4"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "actual_close": 27.15,
+        "change_from_recommend": -2.34,
+        "today_change": 0.56,
+        "result": "holding",
+        "holding_status": "法人+8,319 Safe 但股價弱-2.34% Day2"
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "actual_close": 235.0,
+        "change_from_recommend": -4.86,
+        "today_change": 1.08,
+        "result": "fail",
+        "fail_reason": "Day7到期結算，收盤235<推薦247。SMCI-32.27%崩跌衝擊"
+      }
+    ],
+    "settled_accuracy": 0.0,
+    "settled_count": 1,
+    "holding_count": 9,
+    "tomorrow_recommendations": [
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "action": "續推(部分獲利策略)",
+        "score": 88
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "action": "續推",
+        "score": 86
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "action": "續推",
+        "score": 78
+      },
+      {
+        "stock_code": "3036",
+        "stock_name": "文曄",
+        "action": "續推(觀察SMCI)",
+        "score": 78
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "action": "續推(防禦)",
+        "score": 76
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "action": "觀察續抱",
+        "score": 68
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "action": "續推(防禦Day5)",
+        "score": 68
+      }
+    ],
+    "removed_stocks": [
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "action": "Day7到期fail(235<247)"
+      }
+    ]
   }
 }
