@@ -37,18 +37,7 @@ python3 scripts/catalyst_preposition_scan.py --date $(date +%Y-%m-%d) --lookback
 ```bash
 python3 scripts/catalyst_theme_detector.py --date $(date +%Y-%m-%d) --lookback 7
 ```
-- 「法人已進場」的股票交給 Module A 處理
-- 「已大漲排除」的股票不進入候選池
-
-🔴 Module B 候選必須帶入評分流程（不能只寫進報告就結束）：
-1. 讀取 `catalyst_theme_signals.json` 的 `preposition_candidates`
-2. 對候選執行 `chip_analysis.py` + `reversal_alert.py`（與 Step 6 的 B-3 合併批次）
-3. 篩選通過的候選（Level 0-1 + 動能≤100% + 累計為正）帶入 Step 7 五維度評分
-4. Step 7 評分時標註成熟度標籤：
-   - 🟢早期（maturity=early）：時事維度+5分 +「📡 Module B 早期」標籤
-   - 🟡中期（maturity=mid）：不額外加分 +「📡 Module B 中期」標籤
-   - 🔴成熟（maturity=mature）：不加分 +「⚠️ 催化劑已成熟，追高風險」標籤
-5. 沒有候選通過篩選時，報告中註明「Module B 候選全部未通過篩選」+ 各檔排除原因
+Module B 候選的後續處理（chip_analysis、reversal_alert、評分、排除原因）全部按照 CLAUDE.md Step 6「Module B 催化主題預警處理」段落執行，不得跳過。
 
 自動化注意事項：
 1. 今天日期用系統日期

@@ -665,13 +665,23 @@ python3 scripts/chip_analysis.py $(cat data/$(date +%Y-%m-%d)/industry_stock_cod
 python3 scripts/merge_candidates.py $(date +%Y-%m-%d)
 ```
 
-合併 A 組（法人 TOP50）+ B 組（動態展開）+ **Step 5.5 預埋掃描結果**，去重後產出 `merged_candidates.json`。
+合併 A 組（法人 TOP50）+ B 組（動態展開）+ **Step 5.5 預埋掃描結果** + **Step 5.7 催化主題預警結果**，去重後產出 `merged_candidates.json`。
 
-**🆕 預埋掃描優先處理**：
+**🆕 Module A 預埋掃描優先處理**：
 - `catalyst_preposition_scan.json` 中 L3 股票 → 自動標記「🔥 預埋L3」，強制進入候選池
 - L2 股票 → 標記「🟢 預埋L2」，進入候選池
 - L1 股票 → 標記「🟡 預埋L1」，列入觀察
 - 追高排除的股票 → 不進入候選池（除非超強催化覆寫）
+
+**🆕 Module B 催化主題預警處理（v7.9.3）**：
+- 讀取 `catalyst_theme_signals.json` 的 `preposition_candidates`（最多取前 10 檔）
+- **候選股必須加入 `industry_stock_codes.txt`，與 B 組一起跑 chip_analysis + reversal_alert**
+- 跑完後依篩選條件（Level 0-1 + 動能≤100% + 累計為正）決定是否進入 Step 7 評分
+- 🟢早期（maturity=early）→ 進入候選池+時事維度+5分+「📡 Module B 早期」標籤
+- 🟡中期（maturity=mid）→ 進入候選池+「📡 Module B 中期」標籤
+- 🔴成熟（maturity=mature）→ 進入候選池+「⚠️ 催化劑已成熟，追高風險」標籤
+- 「法人已進場」和「已大漲排除」的股票不進入候選池
+- **🔴 禁止跳過**：不能只在報告寫「Module B 全部未通過」就結束，必須先跑 chip_analysis + reversal_alert 拿到數據，再逐檔列出排除原因
 
 ---
 
