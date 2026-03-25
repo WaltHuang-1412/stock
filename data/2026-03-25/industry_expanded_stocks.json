@@ -1,0 +1,31 @@
+{
+  "date": "2026-03-25",
+  "method": "dynamic",
+  "industries_expanded": ["半導體設備", "光通訊", "航空", "金融防禦", "鋼鐵", "石化", "AI PC", "半導體通路", "航運", "IC設計"],
+  "stocks": [
+    {"code": "3702", "name": "大聯大", "category": "半導體通路", "tier": "tier_1", "source": "TOP50+Module A"},
+    {"code": "2605", "name": "新興", "category": "航運", "tier": "tier_1", "source": "TOP50+Module A L3"},
+    {"code": "2618", "name": "長榮航", "category": "航空", "tier": "tier_1", "source": "TOP50+Module A L2+holding"},
+    {"code": "3036", "name": "文曄", "category": "半導體通路", "tier": "tier_1", "source": "TOP50+Module A L3+holding"},
+    {"code": "4938", "name": "和碩", "category": "代工", "tier": "tier_1", "source": "TOP50+Module A L3"},
+    {"code": "2356", "name": "英業達", "category": "AI PC", "tier": "tier_1", "source": "TOP50+Module A L2+holding"},
+    {"code": "9933", "name": "中鼎", "category": "工程", "tier": "tier_1", "source": "TOP50+Module A+holding"},
+    {"code": "2412", "name": "中華電", "category": "電信防禦", "tier": "tier_1", "source": "TOP50+holding"},
+    {"code": "2880", "name": "華南金", "category": "金融防禦", "tier": "tier_2", "source": "TOP50+holding"},
+    {"code": "2006", "name": "東和鋼鐵", "category": "鋼鐵", "tier": "tier_2", "source": "TOP50+holding"},
+    {"code": "1605", "name": "華新", "category": "電纜/鋼鐵", "tier": "tier_2", "source": "Module A L3"},
+    {"code": "2603", "name": "長榮", "category": "航運", "tier": "tier_2", "source": "Module A L3"},
+    {"code": "2347", "name": "聯強", "category": "通路", "tier": "tier_2", "source": "TOP50"},
+    {"code": "3034", "name": "聯詠", "category": "IC設計", "tier": "tier_2", "source": "holding"},
+    {"code": "2481", "name": "強茂", "category": "二極體", "tier": "tier_2", "source": "Module A L2"},
+    {"code": "3045", "name": "台灣大", "category": "電信", "tier": "tier_2", "source": "TOP50"}
+  ],
+  "excluded_by_level3": {
+    "micron": ["1303", "2337", "2344", "5347", "2408"],
+    "smci": ["2382", "3231", "6669", "2376"]
+  },
+  "excluded_by_reversal": {
+    "level4": ["2308", "2027", "2610", "6139", "3661", "3037", "2353"],
+    "level3": ["2887", "2105", "2002"]
+  }
+}
