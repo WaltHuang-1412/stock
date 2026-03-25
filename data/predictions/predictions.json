@@ -6621,9 +6621,9 @@
         "day1_close": 33.3,
         "day1_change_pct": 0.3,
         "result": "holding",
-        "holding_days": 2,
+        "holding_days": 5,
         "holding_status": "央行鬆綁 法人轉買+3222 Level0",
-        "latest_close": 33.55
+        "latest_close": 34.15
       },
       {
         "symbol": "2449",
@@ -6710,9 +6710,12 @@
         "stop_loss": 32.0,
         "day1_close": 34.25,
         "day1_change_pct": -1.86,
-        "result": "holding",
-        "holding_days": 1,
-        "holding_status": "美光擴產 連9天買超+32K 佈局完成"
+        "result": "success",
+        "holding_days": 4,
+        "holding_status": "美光擴產 連9天買超+32K 佈局完成",
+        "settled_date": "2026-03-25",
+        "settled_price": 39.4,
+        "settled_reason": "收盤39.4>=目標39.0"
       },
       {
         "symbol": "2412",
@@ -6803,11 +6806,11 @@
         "reason": "Level 4 -745(5.8%) 規避-1.5%"
       }
     ],
-    "settled_count": 1,
+    "settled_count": 2,
     "holding_count": 5,
     "removed_count": 4,
-    "settled_accuracy": 0.0,
-    "notes": "京元電盤中觸停損fail. 5檔持有中. 4檔L4移除共規避-13.4%. 中華電Day6, 3/23到期."
+    "settled_accuracy": 0.5,
+    "notes": "京元電盤中觸停損fail. 5檔持有中. 4檔L4移除共規避-13.4%. 中華電Day6, 3/23到期. 3/25: 中鼎觸及目標SUCCESS(+15.04%)."
   },
   "2026-03-23": {
     "date": "2026-03-23",
@@ -6818,9 +6821,12 @@
         "recommend_price": 34.25,
         "target_price": 39.0,
         "stop_loss": 32.0,
-        "result": "holding",
+        "result": "success",
         "latest_close": 34.65,
-        "holding_days": 2
+        "holding_days": 3,
+        "settled_date": "2026-03-25",
+        "settled_price": 39.4,
+        "settled_reason": "收盤39.4>=目標39.0"
       },
       {
         "symbol": "3034",
@@ -6829,8 +6835,8 @@
         "target_price": 420.0,
         "stop_loss": 355.0,
         "result": "holding",
-        "latest_close": 372.0,
-        "holding_days": 1
+        "latest_close": 377.5,
+        "holding_days": 3
       },
       {
         "symbol": "2353",
@@ -6838,9 +6844,12 @@
         "recommend_price": 27.8,
         "target_price": 30.5,
         "stop_loss": 25.6,
-        "result": "holding",
+        "result": "removed",
         "latest_close": 27.0,
-        "holding_days": 1
+        "holding_days": 3,
+        "settled_date": "2026-03-25",
+        "settled_price": 27.1,
+        "settled_reason": "Level 4 爆量賣超-2199張(21.1%日均量)"
       },
       {
         "symbol": "2006",
@@ -6849,8 +6858,8 @@
         "target_price": 78.0,
         "stop_loss": 65.0,
         "result": "holding",
-        "latest_close": 71.2,
-        "holding_days": 1
+        "latest_close": 72.3,
+        "holding_days": 3
       },
       {
         "symbol": "2603",
@@ -6871,8 +6880,8 @@
         "target_price": 35.5,
         "stop_loss": 31.0,
         "result": "holding",
-        "latest_close": 32.7,
-        "holding_days": 3
+        "latest_close": 34.15,
+        "holding_days": 5
       },
       {
         "symbol": "2412",
@@ -6897,10 +6906,10 @@
         "holding_days": 6
       }
     ],
-    "settled_accuracy": 0.0,
-    "settled_count": 2,
+    "settled_accuracy": 0.3333333333333333,
+    "settled_count": 3,
     "holding_count": 6,
-    "notes": "系統性下殺日(NASDAQ-2%+SMCI-33%+台指期-822)。長榮觸停損、中華電Day7到期fail。6檔持有中。"
+    "notes": "3/25更新: 中鼎SUCCESS. 宏碁L4移除. 長榮/中華電已fail."
   },
   "2026-03-24": {
     "date": "2026-03-24",
@@ -6912,8 +6921,8 @@
         "target_price": 265.0,
         "stop_loss": 222.0,
         "result": "holding",
-        "latest_close": 232.0,
-        "holding_days": 1
+        "latest_close": 237.5,
+        "holding_days": 2
       },
       {
         "symbol": "2618",
@@ -6922,8 +6931,8 @@
         "target_price": 38.5,
         "stop_loss": 33.3,
         "result": "holding",
-        "latest_close": 35.3,
-        "holding_days": 1
+        "latest_close": 35.65,
+        "holding_days": 2
       },
       {
         "symbol": "9933",
@@ -6931,9 +6940,12 @@
         "recommend_price": 34.25,
         "target_price": 39.0,
         "stop_loss": 32.0,
-        "result": "holding",
+        "result": "success",
         "latest_close": 36.5,
-        "holding_days": 3
+        "holding_days": 4,
+        "settled_date": "2026-03-25",
+        "settled_price": 39.4,
+        "settled_reason": "收盤39.4>=目標39.0"
       },
       {
         "symbol": "2412",
@@ -6942,8 +6954,8 @@
         "target_price": 142.0,
         "stop_loss": 128.0,
         "result": "holding",
-        "latest_close": 134.0,
-        "holding_days": 1
+        "latest_close": 135.0,
+        "holding_days": 2
       },
       {
         "symbol": "2006",
@@ -6952,8 +6964,8 @@
         "target_price": 78.0,
         "stop_loss": 65.0,
         "result": "holding",
-        "latest_close": 72.7,
-        "holding_days": 2
+        "latest_close": 72.3,
+        "holding_days": 3
       },
       {
         "symbol": "2356",
@@ -6962,8 +6974,8 @@
         "target_price": 46.5,
         "stop_loss": 39.0,
         "result": "holding",
-        "latest_close": 42.25,
-        "holding_days": 1
+        "latest_close": 42.9,
+        "holding_days": 2
       },
       {
         "symbol": "3034",
@@ -6972,8 +6984,8 @@
         "target_price": 420.0,
         "stop_loss": 355.0,
         "result": "holding",
-        "latest_close": 370.0,
-        "holding_days": 2
+        "latest_close": 377.5,
+        "holding_days": 3
       },
       {
         "symbol": "2880",
@@ -6982,8 +6994,8 @@
         "target_price": 35.5,
         "stop_loss": 31.0,
         "result": "holding",
-        "latest_close": 33.3,
-        "holding_days": 4
+        "latest_close": 34.15,
+        "holding_days": 5
       },
       {
         "symbol": "2353",
@@ -6991,9 +7003,12 @@
         "recommend_price": 27.8,
         "target_price": 30.5,
         "stop_loss": 25.6,
-        "result": "holding",
+        "result": "removed",
         "latest_close": 27.15,
-        "holding_days": 2
+        "holding_days": 2,
+        "settled_date": "2026-03-25",
+        "settled_price": 27.1,
+        "settled_reason": "Level 4 爆量賣超-2199張(21.1%日均量)"
       },
       {
         "symbol": "2376",
@@ -7008,9 +7023,154 @@
         "holding_days": 7
       }
     ],
-    "settled_accuracy": 0.0,
+    "settled_accuracy": 0.5,
+    "settled_count": 2,
+    "holding_count": 9,
+    "notes": "3/25更新: 中鼎SUCCESS. 宏碁L4移除. 技嘉已fail(Day7). 9檔更新收盤."
+  },
+  "2026-03-25": {
+    "date": "2026-03-25",
+    "analysis_version": "v7.9.3",
+    "predictions": [
+      {
+        "symbol": "9933",
+        "name": "中鼎",
+        "recommend_price": 34.25,
+        "target_price": 39.0,
+        "stop_loss": 32.0,
+        "result": "success",
+        "settled_date": "2026-03-25",
+        "settled_price": 39.4,
+        "settled_reason": "收盤39.4>=目標39.0（+15.04%）",
+        "holding_days": 4,
+        "holding_from": "2026-03-20"
+      },
+      {
+        "symbol": "2605",
+        "name": "新興",
+        "recommend_price": 41.7,
+        "target_price": 46.0,
+        "stop_loss": 38.5,
+        "result": "holding",
+        "latest_close": 42.35,
+        "holding_days": 1,
+        "holding_status": "外資+11815爆買 9買1賣 L1減速 動能-58.1%佈局完成"
+      },
+      {
+        "symbol": "3036",
+        "name": "文曄",
+        "recommend_price": 241.0,
+        "target_price": 265.0,
+        "stop_loss": 222.0,
+        "result": "holding",
+        "latest_close": 237.5,
+        "holding_days": 2,
+        "holding_from": "2026-03-24",
+        "holding_status": "10買0賣 累計+12K L1減速 SMCI-29%壓制"
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 42.0,
+        "target_price": 46.5,
+        "stop_loss": 39.0,
+        "result": "holding",
+        "latest_close": 42.9,
+        "holding_days": 2,
+        "holding_from": "2026-03-24",
+        "holding_status": "8買2賣 累計+32K L0 Safe +3599法人續買"
+      },
+      {
+        "symbol": "4938",
+        "name": "和碩",
+        "recommend_price": 76.4,
+        "target_price": 84.0,
+        "stop_loss": 70.0,
+        "result": "holding",
+        "latest_close": 77.4,
+        "holding_days": 1,
+        "holding_status": "10買0賣 累計+22K L1減速 動能-81.7%佈局完成"
+      },
+      {
+        "symbol": "2618",
+        "name": "長榮航",
+        "recommend_price": 35.0,
+        "target_price": 38.5,
+        "stop_loss": 33.3,
+        "result": "holding",
+        "latest_close": 35.65,
+        "holding_days": 2,
+        "holding_from": "2026-03-24",
+        "holding_status": "Safe加速 +10288法人 油價-7.67%利好"
+      },
+      {
+        "symbol": "2412",
+        "name": "中華電",
+        "recommend_price": 134.0,
+        "target_price": 142.0,
+        "stop_loss": 128.0,
+        "result": "holding",
+        "latest_close": 135.0,
+        "holding_days": 2,
+        "holding_from": "2026-03-24",
+        "holding_status": "10買0賣 累計+21K Safe VIX防禦"
+      },
+      {
+        "symbol": "3034",
+        "name": "聯詠",
+        "recommend_price": 385.0,
+        "target_price": 420.0,
+        "stop_loss": 355.0,
+        "result": "holding",
+        "latest_close": 377.5,
+        "holding_days": 3,
+        "holding_from": "2026-03-23",
+        "holding_status": "Safe加速+4781 動能+471.6%追高風險 虧-1.95%"
+      },
+      {
+        "symbol": "2880",
+        "name": "華南金",
+        "recommend_price": 33.2,
+        "target_price": 35.5,
+        "stop_loss": 31.0,
+        "result": "holding",
+        "latest_close": 34.15,
+        "holding_days": 5,
+        "holding_from": "2026-03-19",
+        "holding_status": "L0 Day5 累計+12K +2.86%正報酬 3/27到期"
+      },
+      {
+        "symbol": "2006",
+        "name": "東和鋼鐵",
+        "recommend_price": 70.5,
+        "target_price": 78.0,
+        "stop_loss": 65.0,
+        "result": "holding",
+        "latest_close": 72.3,
+        "holding_days": 3,
+        "holding_from": "2026-03-23",
+        "holding_status": "L0 累計+11微正 跌破MA5/MA10 法人+1258"
+      },
+      {
+        "symbol": "2353",
+        "name": "宏碁",
+        "recommend_price": 27.8,
+        "target_price": 30.5,
+        "stop_loss": 25.6,
+        "result": "removed",
+        "settled_date": "2026-03-25",
+        "settled_price": 27.1,
+        "settled_reason": "Level 4 爆量賣超-2199張(佔日均21.1%)",
+        "holding_days": 3,
+        "holding_from": "2026-03-23"
+      }
+    ],
     "settled_count": 1,
     "holding_count": 9,
-    "notes": "技嘉Day7到期fail(SMCI崩跌衝擊)。中鼎+5.34%表現亮眼。9檔持有中無觸停損。"
+    "removed_count": 1,
+    "settled_accuracy": 1.0,
+    "taiex_close": 33439.11,
+    "taiex_change_pct": -0.74,
+    "notes": "中鼎觸及目標SUCCESS(+15.04%,4天). 宏碁L4移除. 9檔持有中. 全球股災中台股-0.74%抗跌."
   }
 }
