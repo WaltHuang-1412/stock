@@ -564,6 +564,137 @@ def scan(target_date_str, lookback=7):
     print(f"📋 統計：預先佈局 {len(deduped_pre)} 檔 / 法人已進場 {len(deduped_in)} 檔 / 已大漲排除 {len(already_moved)} 檔")
     print("=" * 70)
 
+    # ─── Step 7: 自動對候選跑 chip_analysis + reversal_alert ───
+    # 排程 Claude 會跳過手動跑 chip 的步驟，所以在腳本內直接做
+    chip_results = {}
+    top_candidates = deduped_pre[:10]
+    if top_candidates:
+        codes_to_check = [c['code'] for c in top_candidates]
+        print()
+        print(f"🔬 自動對 {len(codes_to_check)} 檔候選執行 chip_analysis + reversal_alert")
+        print("-" * 60)
+
+        # 呼叫 chip_analysis.py（用 subprocess 避免 import 衝突）
+        import subprocess
+        try:
+            chip_cmd = [sys.executable, str(SCRIPT_DIR / 'chip_analysis.py')] + codes_to_check + ['--days', '10']
+            chip_proc = subprocess.run(chip_cmd, capture_output=True, text=True, timeout=120, encoding='utf-8', errors='replace')
+            chip_output = chip_proc.stdout
+
+            # 解析 chip_analysis 輸出：提取每檔的關鍵數據
+            current_code = None
+            for line in chip_output.split('\n'):
+                # 偵測股票代號開始
+                if '籌碼分析' in line and '(' in line:
+                    # 格式：📊 XXXXXX(CODE) 籌碼分析
+                    for code in codes_to_check:
+                        if f'({code})' in line:
+                            current_code = code
+                            chip_results[code] = {
+                                'cumulative_total': None, 'buy_days': None, 'sell_days': None,
+                                'momentum_pct': None, 'consecutive_buy': None,
+                                'cumulative_foreign': None, 'reversal_level': None,
+                                'exclusion_reason': None,
+                            }
+                            break
+                if current_code and current_code in chip_results:
+                    r = chip_results[current_code]
+                    if '累計淨買超（三大法人）' in line:
+                        try:
+                            val = line.split(':')[1].strip().replace(',', '').replace('+', '').replace('張', '').replace('K', '000').strip()
+                            r['cumulative_total'] = int(float(val))
+                        except: pass
+                    elif '累計淨買超（外資）' in line:
+                        try:
+                            val = line.split(':')[1].strip().replace(',', '').replace('+', '').replace('張', '').replace('K', '000').strip()
+                            r['cumulative_foreign'] = int(float(val))
+                        except: pass
+                    elif '買超天數' in line and '賣超天數' not in line:
+                        try:
+                            r['buy_days'] = int(line.split(':')[1].strip().split()[0])
+                        except: pass
+                    elif '賣超天數' in line:
+                        try:
+                            r['sell_days'] = int(line.split(':')[1].strip().split()[0])
+                        except: pass
+                    elif '真連續買超' in line:
+                        try:
+                            r['consecutive_buy'] = int(line.split(':')[1].strip().split()[0])
+                        except: pass
+                    elif '動能變化' in line:
+                        try:
+                            val = line.split(':')[1].strip().replace('%', '').replace('+', '')
+                            r['momentum_pct'] = float(val)
+                        except: pass
+        except Exception as e:
+            print(f"  ⚠️ chip_analysis 執行失敗: {e}")
+
+        # 呼叫 reversal_alert.py
+        try:
+            rev_cmd = [sys.executable, str(SCRIPT_DIR / 'reversal_alert.py')] + codes_to_check
+            rev_proc = subprocess.run(rev_cmd, capture_output=True, text=True, timeout=120, encoding='utf-8', errors='replace')
+            rev_output = rev_proc.stdout
+
+            # 解析 reversal_alert 輸出
+            current_code = None
+            for line in rev_output.split('\n'):
+                for code in codes_to_check:
+                    if f'({code})' in line and '分析' in line:
+                        current_code = code
+                        break
+                if current_code and current_code in chip_results:
+                    if 'Level 4' in line:
+                        chip_results[current_code]['reversal_level'] = 'Level 4'
+                    elif 'Level 3' in line:
+                        chip_results[current_code]['reversal_level'] = 'Level 3'
+                    elif 'Level 2' in line:
+                        chip_results[current_code]['reversal_level'] = 'Level 2'
+                    elif 'Level 1' in line:
+                        chip_results[current_code]['reversal_level'] = 'Level 1'
+                    elif 'Level 0' in line or '加速買超' in line or '籌碼超健康' in line or '籌碼健康' in line:
+                        chip_results[current_code]['reversal_level'] = 'Level 0'
+                    if '數據不足' in line:
+                        chip_results[current_code]['reversal_level'] = 'unknown'
+        except Exception as e:
+            print(f"  ⚠️ reversal_alert 執行失敗: {e}")
+
+        # 判定排除原因
+        for code, r in chip_results.items():
+            reasons = []
+            rev = r.get('reversal_level', 'unknown')
+            if rev in ('Level 3', 'Level 4'):
+                reasons.append(f"反轉{rev}排除")
+            mom = r.get('momentum_pct')
+            if mom is not None and abs(mom) > 100 and (r.get('cumulative_total') or 0) >= 0:
+                # 動能>100% 但要注意負累計的動能是假的
+                reasons.append(f"動能{mom:+.0f}%>100%排除")
+            cum = r.get('cumulative_total')
+            if cum is not None and cum < 0:
+                reasons.append(f"累計{cum:+,}為負")
+            if rev == 'unknown':
+                reasons.append("數據不足無法評分")
+            if not reasons:
+                reasons.append("通過基礎篩選")
+            r['exclusion_reason'] = '｜'.join(reasons)
+            r['passed'] = len(reasons) == 1 and reasons[0] == "通過基礎篩選"
+
+        # 輸出結果
+        print()
+        print("📋 Module B 候選逐檔篩選結果")
+        print("-" * 60)
+        for c in top_candidates:
+            code = c['code']
+            r = chip_results.get(code, {})
+            cum = r.get('cumulative_total', '?')
+            bd = r.get('buy_days', '?')
+            sd = r.get('sell_days', '?')
+            rev = r.get('reversal_level', '?')
+            mom = r.get('momentum_pct', '?')
+            reason = r.get('exclusion_reason', '未執行')
+            passed = '✅' if r.get('passed') else '❌'
+            mat_label = {'early': '🟢早期', 'mid': '🟡中期', 'mature': '🔴成熟'}.get(c.get('maturity', ''), '')
+            print(f"  {passed} {c['name']}({code}) | {mat_label} | 累計={cum} | {bd}買{sd}賣 | {rev} | 動能={mom} | {reason}")
+
     # ─── 儲存 JSON ───
     output_dir = DATA_DIR / target_date_str
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -587,6 +718,8 @@ def scan(target_date_str, lookback=7):
                 'tw_5d_change': c.get('tw_5d_change'),
                 'in_top50': c['in_top50'],
                 'score': c['score'],
+                # 自動附加 chip_analysis + reversal_alert 結果
+                'chip_data': chip_results.get(c['code'], {}),
             }
             for c in deduped_pre[:15]
         ],
