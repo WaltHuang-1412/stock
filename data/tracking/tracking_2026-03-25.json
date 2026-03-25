@@ -234,5 +234,148 @@
     "vix": 26.95,
     "defense_ratio": "14.3% (1/7檔, VIX 20-30+混合催化=15-25%範圍)",
     "key_themes": "半導體設備超強逆勢漲+Micron/SMCI崩跌分化+油價暴跌+中東談判+全球股災"
+  },
+  "intraday_analysis": {
+    "timestamp": "2026-03-25 12:30",
+    "track_a": [
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "recommend_price": 34.25,
+        "intraday_price": 39.10,
+        "change_pct": 14.16,
+        "institutional_today": 301,
+        "reversal_level": "Level 1",
+        "strategy": "🎯 觸及目標39.0→成功！建議分批獲利"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "recommend_price": 35.0,
+        "intraday_price": 35.60,
+        "change_pct": 1.71,
+        "institutional_today": 5895,
+        "reversal_level": "Safe",
+        "strategy": "✅ 續抱（法人加速買超+油價利多）"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 134.0,
+        "intraday_price": 135.00,
+        "change_pct": 0.75,
+        "institutional_today": 3427,
+        "reversal_level": "Safe",
+        "strategy": "✅ 續抱（10買0賣，防禦穩定）"
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "recommend_price": 42.0,
+        "intraday_price": 42.55,
+        "change_pct": 1.31,
+        "institutional_today": 1498,
+        "reversal_level": "Level 0",
+        "strategy": "✅ 續抱（法人L0 Safe續買）"
+      },
+      {
+        "stock_code": "4938",
+        "stock_name": "和碩",
+        "recommend_price": 76.4,
+        "intraday_price": 76.90,
+        "change_pct": 0.65,
+        "institutional_today": 2250,
+        "reversal_level": "Level 1",
+        "strategy": "✅ 續抱（10買0賣佈局完成）"
+      },
+      {
+        "stock_code": "2605",
+        "stock_name": "新興",
+        "recommend_price": 41.7,
+        "intraday_price": 41.75,
+        "change_pct": 0.12,
+        "institutional_today": 1372,
+        "reversal_level": "Level 1",
+        "strategy": "✅ 續抱（法人9買1賣續買）"
+      },
+      {
+        "stock_code": "3036",
+        "stock_name": "文曄",
+        "recommend_price": 241.0,
+        "intraday_price": 237.00,
+        "change_pct": -1.66,
+        "institutional_today": 99,
+        "reversal_level": "Level 1",
+        "strategy": "⚠️ 觀察（跌破MA5/MA10，SMCI壓制）"
+      }
+    ],
+    "holding_updates": [
+      {
+        "stock_code": "3034",
+        "stock_name": "聯詠",
+        "intraday_price": 375.50,
+        "vs_recommend_pct": -2.47,
+        "strategy": "⚠️ 觀察（動能+471.6%追高風險 vs 今日法人+4,781強買）"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "intraday_price": 34.05,
+        "vs_recommend_pct": 2.56,
+        "strategy": "✅ 持有（Day5，目前+2.6%正報酬）"
+      },
+      {
+        "stock_code": "2006",
+        "stock_name": "東和鋼鐵",
+        "intraday_price": 72.10,
+        "vs_recommend_pct": 2.27,
+        "strategy": "✅ 持有（today回檔但仍>推薦價，法人L0續買）"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "intraday_price": 27.15,
+        "vs_recommend_pct": -2.34,
+        "strategy": "🛑 強制停損：Level 4爆量賣超-2,199張(佔日均21.1%)，明日開盤出場"
+      }
+    ],
+    "exit_signals": [
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "signal": "Level 4 爆量賣超",
+        "detail": "賣超-2,199張佔日均量21.1%，外資10天累計-724轉負",
+        "action": "🛑 強制停損：明日開盤出場"
+      }
+    ],
+    "target_reached": [
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "recommend_price": 34.25,
+        "target_price": 39.0,
+        "intraday_price": 39.10,
+        "gain_pct": 14.16,
+        "holding_days": 4,
+        "action": "🎯 觸及目標！建議分批獲利50-100%"
+      }
+    ],
+    "track_b_recommendations": [],
+    "track_b_observations": [
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "score": 65,
+        "industry": "電信防禦",
+        "reason": "VIX防禦需求+連8天買超+累計+30K，動能+91.8%偏高未達75分"
+      },
+      {
+        "stock_code": "2347",
+        "stock_name": "聯強",
+        "score": 59,
+        "industry": "半導體通路",
+        "reason": "累計+48K+9買1賣，但今日外資-1,252轉賣+全球股災壓制"
+      }
+    ]
   }
 }
