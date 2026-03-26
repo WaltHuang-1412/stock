@@ -89,34 +89,32 @@ def validate_before_market(date_str):
         # Step 1: 歷史驗證（強制）
         has_verification = ('昨日推薦驗證' in md_content or
                            '準確率' in md_content or
-                           '推薦績效' in md_content)
+                           '推薦績效' in md_content or
+                           '歷史驗證' in md_content)
         if not has_verification:
-            errors.append(f"❌ 缺少 Step 1：歷史驗證（強制）")
-            errors.append(f"   必須驗證前一日推薦表現並計算準確率")
+            errors.append(f"❌ 缺少歷史驗證（強制）")
 
-        # Step 1.8: 持股法人追蹤（強制）
-        has_holdings_tracking = ('持股法人追蹤' in md_content or
-                                'holdings_alert' in str(tracking))
-        if not has_holdings_tracking:
-            errors.append(f"❌ 缺少 Step 1.8：持股法人追蹤（強制）")
-            errors.append(f"   必須追蹤用戶持股的法人變化")
+        # Module A: 催化預埋掃描（強制）
+        has_module_a = ('催化預埋掃描' in md_content or
+                       'Module A' in md_content or
+                       'L3 佈局完成' in md_content)
+        if not has_module_a:
+            errors.append(f"❌ 缺少 Module A 催化預埋掃描段落（強制）")
+            errors.append(f"   報告必須包含獨立的 Module A 段落，列出 L3/L2/L1/追高排除結果")
 
-        # Step 3.1: TOP50 全面掃描（強制）
-        has_top50 = ('## 📈 法人買超 TOP50' in md_content or
-                    '法人買超TOP50' in md_content or
-                    '📈 法人買超 TOP50' in md_content)
-        if not has_top50:
-            errors.append(f"❌ 缺少 Step 3.1：TOP50 全面掃描（強制）")
-            errors.append(f"   必須執行：python3 scripts/fetch_institutional_top50.py [日期]")
+        # Module B: 催化主題預警（強制）
+        has_module_b = ('催化主題預警' in md_content or
+                       'Module B' in md_content)
+        if not has_module_b:
+            errors.append(f"❌ 缺少 Module B 催化主題預警段落（強制）")
+            errors.append(f"   報告必須包含獨立的 Module B 段落，逐檔列出篩選結果")
 
-        # Step 4.3: 籌碼深度分析（強制）
+        # 籌碼深度分析（強制）
         has_chip_analysis = ('籌碼深度分析' in md_content or
-                            '近 10 日法人買賣超' in md_content or
-                            '【近10日法人' in md_content or
+                            '反轉預警' in md_content or
                             '近10日法人' in md_content)
         if not has_chip_analysis:
-            errors.append(f"❌ 缺少 Step 4.3：籌碼深度分析（強制）")
-            errors.append(f"   必須執行：python3 scripts/chip_analysis.py [股票代號] --days 10")
+            errors.append(f"❌ 缺少籌碼深度分析（強制）")
 
     return errors, warnings
 
