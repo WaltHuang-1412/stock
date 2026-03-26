@@ -26,7 +26,10 @@
       "catalyst": "AMD+10.43%超強催化+Intel/AMD漲價→通路提前備貨+Topic Tracker🔴超強",
       "intraday_price": 95.6,
       "intraday_change": "-0.42%",
-      "intraday_status": "✅ 續抱｜Safe+法人穩定"
+      "intraday_status": "✅ 續抱｜Safe+法人穩定",
+      "close_price": 95.1,
+      "change_percent": -0.94,
+      "result": "holding"
     },
     {
       "stock_code": "3036",
@@ -52,7 +55,11 @@
       "holding_days": 3,
       "intraday_price": 230.0,
       "intraday_change": "-3.16%",
-      "intraday_status": "✅ 續抱｜⚠️距停損222僅3.5%注意"
+      "intraday_status": "✅ 續抱｜⚠️距停損222僅3.5%注意",
+      "close_price": 227.0,
+      "change_percent": -4.42,
+      "result": "holding",
+      "holding_status": "⚠️距停損222僅2.2%"
     },
     {
       "stock_code": "2618",
@@ -78,7 +85,10 @@
       "holding_days": 3,
       "intraday_price": 35.5,
       "intraday_change": "-0.42%",
-      "intraday_status": "✅ 續抱｜L1預警但累計+40K仍強"
+      "intraday_status": "✅ 續抱｜L1預警但累計+40K仍強",
+      "close_price": 35.35,
+      "change_percent": -0.84,
+      "result": "holding"
     },
     {
       "stock_code": "2356",
@@ -104,7 +114,10 @@
       "holding_days": 3,
       "intraday_price": 43.25,
       "intraday_change": "+0.82%",
-      "intraday_status": "✅ 續抱｜Safe+催化持續"
+      "intraday_status": "✅ 續抱｜Safe+催化持續",
+      "close_price": 42.95,
+      "change_percent": 0.12,
+      "result": "holding"
     },
     {
       "stock_code": "8028",
@@ -128,7 +141,10 @@
       "catalyst": "AMAT+5.69%+LRCX+3.89%+KLAC+4.15%→半導體設備超強催化+弘塑目標3500",
       "intraday_price": 195.5,
       "intraday_change": "-2.25%",
-      "intraday_status": "✅ 續抱｜L0+設備催化持續"
+      "intraday_status": "✅ 續抱｜L0+設備催化持續",
+      "close_price": 196.0,
+      "change_percent": -2.0,
+      "result": "holding"
     },
     {
       "stock_code": "4958",
@@ -153,7 +169,10 @@
       "risk_note": "動能+432%超高，超強催化覆寫通過但倉位5-10%+停損-5%",
       "intraday_price": 220.0,
       "intraday_change": "+5.77%",
-      "intraday_status": "✅ 續抱🔥接近目標230（距4.5%）"
+      "intraday_status": "✅ 續抱🔥接近目標230（距4.5%）",
+      "close_price": 218.5,
+      "change_percent": 5.05,
+      "result": "holding"
     },
     {
       "stock_code": "2605",
@@ -179,7 +198,10 @@
       "holding_days": 2,
       "intraday_price": 43.05,
       "intraday_change": "+1.65%",
-      "intraday_status": "✅ 續抱｜L1預警但累計+47K強"
+      "intraday_status": "✅ 續抱｜L1預警但累計+47K強",
+      "close_price": 42.75,
+      "change_percent": 0.94,
+      "result": "holding"
     },
     {
       "stock_code": "2412",
@@ -205,7 +227,10 @@
       "holding_days": 4,
       "intraday_price": 135.0,
       "intraday_change": "0.00%",
-      "intraday_status": "✅ 續抱｜L0+防禦配置"
+      "intraday_status": "✅ 續抱｜L0+防禦配置",
+      "close_price": 134.5,
+      "change_percent": -0.37,
+      "result": "holding"
     }
   ],
   "holding_tracking": [
@@ -338,5 +363,96 @@
       "華南金(2880)Day7到期今日盤後結算",
       "文曄(3036)-3.16%距停損222僅3.5%注意"
     ]
+  },
+  "yesterday_verification": {
+    "accuracy": 0.286,
+    "settled_count": 7,
+    "success_count": 2,
+    "fail_count": 5,
+    "holding_count": 12,
+    "results": [
+      {"symbol": "2880", "name": "華南金", "result": "success", "change_pct": 1.36, "reason": "Day7到期 收盤33.65>推薦33.2"},
+      {"symbol": "2353", "name": "宏碁", "result": "fail", "change_pct": -1.62, "reason": "L4移除 今日出場27.35<推薦27.8"},
+      {"symbol": "3702", "name": "大聯大", "result": "holding", "change_pct": -0.94},
+      {"symbol": "3036", "name": "文曄", "result": "holding", "change_pct": -4.42},
+      {"symbol": "2618", "name": "長榮航", "result": "holding", "change_pct": -0.84},
+      {"symbol": "2356", "name": "英業達", "result": "holding", "change_pct": 0.12},
+      {"symbol": "8028", "name": "昇陽半導體", "result": "holding", "change_pct": -2.0},
+      {"symbol": "4958", "name": "臻鼎-KY", "result": "holding", "change_pct": 5.05},
+      {"symbol": "2605", "name": "新興", "result": "holding", "change_pct": 0.94},
+      {"symbol": "2412", "name": "中華電", "result": "holding", "change_pct": -0.37},
+      {"symbol": "4938", "name": "和碩", "result": "holding", "change_pct": 5.63},
+      {"symbol": "3034", "name": "聯詠", "result": "holding", "change_pct": 1.82},
+      {"symbol": "2006", "name": "東和鋼鐵", "result": "holding", "change_pct": 1.84},
+      {"symbol": "2347", "name": "聯強", "result": "holding", "change_pct": 0.37}
+    ],
+    "notes": "v7.9多日追蹤: 華南金Day7 SUCCESS(+1.36%). 宏碁L4出場FAIL(-1.62%). 12檔持有中. 累計2成功/5失敗=28.6%."
+  },
+  "after_market_analysis": {
+    "timestamp": "2026-03-26 14:30",
+    "taiex_close": 33337.62,
+    "taiex_change_pct": -0.61,
+    "settled_today": [
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "result": "success",
+        "recommend_price": 33.2,
+        "settled_price": 33.65,
+        "gain_pct": 1.36,
+        "holding_days": 7,
+        "reason": "Day7到期 收盤33.65>推薦33.2"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "result": "fail",
+        "recommend_price": 27.8,
+        "settled_price": 27.35,
+        "gain_pct": -1.62,
+        "holding_days": 4,
+        "reason": "昨日L4爆量賣超移除 今日出場27.35<推薦27.8"
+      }
+    ],
+    "recommendations_close": [
+      {"stock_code": "3702", "actual_close": 95.1, "change_pct": -0.94, "result": "holding"},
+      {"stock_code": "3036", "actual_close": 227.0, "change_pct": -4.42, "result": "holding", "holding_status": "⚠️距停損222僅2.2%"},
+      {"stock_code": "2618", "actual_close": 35.35, "change_pct": -0.84, "result": "holding"},
+      {"stock_code": "2356", "actual_close": 42.95, "change_pct": 0.12, "result": "holding"},
+      {"stock_code": "8028", "actual_close": 196.0, "change_pct": -2.0, "result": "holding"},
+      {"stock_code": "4958", "actual_close": 218.5, "change_pct": 5.05, "result": "holding", "holding_status": "接近目標230距5.3%"},
+      {"stock_code": "2605", "actual_close": 42.75, "change_pct": 0.94, "result": "holding"},
+      {"stock_code": "2412", "actual_close": 134.5, "change_pct": -0.37, "result": "holding"}
+    ],
+    "holdings_close": [
+      {"stock_code": "4938", "actual_close": 80.7, "change_pct": 5.63, "result": "holding", "holding_status": "接近目標84距4.1%"},
+      {"stock_code": "3034", "actual_close": 392.0, "change_pct": 1.82, "result": "holding", "holding_status": "Day6 明日Day7到期"},
+      {"stock_code": "2880", "actual_close": 33.65, "change_pct": 1.36, "result": "success", "holding_status": "Day7到期SUCCESS+1.36%"},
+      {"stock_code": "2006", "actual_close": 71.8, "change_pct": 1.84, "result": "holding", "holding_status": "Day6 明日Day7到期"}
+    ],
+    "track_b_close": [
+      {"stock_code": "2347", "actual_close": 81.1, "change_pct": 0.37, "result": "holding"}
+    ],
+    "tomorrow_recommendations": [
+      {"stock_code": "3702", "stock_name": "大聯大", "score": 85, "industry": "半導體通路", "position": "10-15%"},
+      {"stock_code": "4958", "stock_name": "臻鼎-KY", "score": 83, "industry": "ABF/PCB", "position": "5-10%"},
+      {"stock_code": "2347", "stock_name": "聯強", "score": 80, "industry": "IT通路", "position": "5-10%"},
+      {"stock_code": "4938", "stock_name": "和碩", "score": 80, "industry": "代工", "position": "10-15%"},
+      {"stock_code": "2356", "stock_name": "英業達", "score": 78, "industry": "AI PC", "position": "10-15%"},
+      {"stock_code": "2605", "stock_name": "新興", "score": 75, "industry": "航運", "position": "10-15%"},
+      {"stock_code": "2618", "stock_name": "長榮航", "score": 73, "industry": "航空", "position": "10-15%"}
+    ],
+    "removed_stocks": [
+      {"stock_code": "2880", "stock_name": "華南金", "reason": "Day7到期 SUCCESS +1.36% 已結算"}
+    ],
+    "holding_watch": [
+      {"stock_code": "3036", "stock_name": "文曄", "note": "距停損222僅2.2% 明日密切監控"},
+      {"stock_code": "8028", "stock_name": "昇陽半導體", "note": "L0+設備催化 但收-2%偏弱"},
+      {"stock_code": "2412", "stock_name": "中華電", "note": "L0+VIX防禦 催化不足"},
+      {"stock_code": "3034", "stock_name": "聯詠", "note": "Day7明日到期 目前+1.82%"},
+      {"stock_code": "2006", "stock_name": "東和鋼鐵", "note": "Day7明日到期 目前+1.84%"}
+    ],
+    "settled_accuracy_recent": 0.286,
+    "settled_detail": "近期7結算: 2成功(中鼎+15%/華南金+1.4%) / 5失敗(京元電/長榮/中華電/技嘉/宏碁) = 28.6%"
   }
 }

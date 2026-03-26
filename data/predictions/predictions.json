@@ -7157,11 +7157,11 @@
         "recommend_price": 27.8,
         "target_price": 30.5,
         "stop_loss": 25.6,
-        "result": "removed",
-        "settled_date": "2026-03-25",
-        "settled_price": 27.1,
-        "settled_reason": "Level 4 爆量賣超-2199張(佔日均21.1%)",
-        "holding_days": 3,
+        "result": "fail",
+        "settled_date": "2026-03-26",
+        "settled_price": 27.35,
+        "settled_reason": "Level 4 爆量賣超移除 3/26出場27.35<推薦27.8(-1.62%)",
+        "holding_days": 4,
         "holding_from": "2026-03-23"
       }
     ],
@@ -7171,6 +7171,172 @@
     "settled_accuracy": 1.0,
     "taiex_close": 33439.11,
     "taiex_change_pct": -0.74,
-    "notes": "中鼎觸及目標SUCCESS(+15.04%,4天). 宏碁L4移除. 9檔持有中. 全球股災中台股-0.74%抗跌."
+    "notes": "中鼎觸及目標SUCCESS(+15.04%,4天). 宏碁L4移除→3/26出場FAIL(-1.62%). 9檔持有中. 全球股災中台股-0.74%抗跌."
+  },
+  "2026-03-26": {
+    "date": "2026-03-26",
+    "analysis_version": "v7.9.3",
+    "predictions": [
+      {
+        "symbol": "2880",
+        "name": "華南金",
+        "recommend_price": 33.2,
+        "target_price": 35.5,
+        "stop_loss": 31.0,
+        "result": "success",
+        "settled_date": "2026-03-26",
+        "settled_price": 33.65,
+        "settled_reason": "Day7到期 收盤33.65>推薦33.2(+1.36%)",
+        "holding_days": 7,
+        "holding_from": "2026-03-19"
+      },
+      {
+        "symbol": "3702",
+        "name": "大聯大",
+        "recommend_price": 96.0,
+        "target_price": 105.0,
+        "stop_loss": 88.0,
+        "result": "holding",
+        "latest_close": 95.1,
+        "holding_days": 1,
+        "holding_status": "Safe+10買0賣+累計+94K AMD超強催化"
+      },
+      {
+        "symbol": "3036",
+        "name": "文曄",
+        "recommend_price": 237.5,
+        "target_price": 265.0,
+        "stop_loss": 222.0,
+        "result": "holding",
+        "latest_close": 227.0,
+        "holding_days": 3,
+        "holding_from": "2026-03-24",
+        "holding_status": "⚠️距停損222僅2.2% L0但-4.42%偏弱"
+      },
+      {
+        "symbol": "2618",
+        "name": "長榮航",
+        "recommend_price": 35.65,
+        "target_price": 38.5,
+        "stop_loss": 33.3,
+        "result": "holding",
+        "latest_close": 35.35,
+        "holding_days": 3,
+        "holding_from": "2026-03-24",
+        "holding_status": "L1減速 9買1賣 累計+40K 油價利多"
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 42.9,
+        "target_price": 46.5,
+        "stop_loss": 39.0,
+        "result": "holding",
+        "latest_close": 42.95,
+        "holding_days": 3,
+        "holding_from": "2026-03-24",
+        "holding_status": "Safe+AMD催化+累計+35K"
+      },
+      {
+        "symbol": "8028",
+        "name": "昇陽半導體",
+        "recommend_price": 200.0,
+        "target_price": 220.0,
+        "stop_loss": 184.0,
+        "result": "holding",
+        "latest_close": 196.0,
+        "holding_days": 1,
+        "holding_status": "L0+AMAT催化+累計+19K 收-2%偏弱"
+      },
+      {
+        "symbol": "4958",
+        "name": "臻鼎-KY",
+        "recommend_price": 208.0,
+        "target_price": 230.0,
+        "stop_loss": 197.0,
+        "result": "holding",
+        "latest_close": 218.5,
+        "holding_days": 1,
+        "holding_status": "Safe加速+接近目標230距5.3%"
+      },
+      {
+        "symbol": "2605",
+        "name": "新興",
+        "recommend_price": 42.35,
+        "target_price": 46.0,
+        "stop_loss": 38.5,
+        "result": "holding",
+        "latest_close": 42.75,
+        "holding_days": 2,
+        "holding_from": "2026-03-25",
+        "holding_status": "L1減速 累計+47K 油價利多"
+      },
+      {
+        "symbol": "2412",
+        "name": "中華電",
+        "recommend_price": 135.0,
+        "target_price": 142.0,
+        "stop_loss": 128.0,
+        "result": "holding",
+        "latest_close": 134.5,
+        "holding_days": 3,
+        "holding_from": "2026-03-24",
+        "holding_status": "L0+10買0賣+VIX防禦"
+      },
+      {
+        "symbol": "4938",
+        "name": "和碩",
+        "recommend_price": 76.4,
+        "target_price": 84.0,
+        "stop_loss": 70.0,
+        "result": "holding",
+        "latest_close": 80.7,
+        "holding_days": 2,
+        "holding_from": "2026-03-25",
+        "holding_status": "L1減速 接近目標84距4.1% 10買0賣"
+      },
+      {
+        "symbol": "3034",
+        "name": "聯詠",
+        "recommend_price": 385.0,
+        "target_price": 420.0,
+        "stop_loss": 355.0,
+        "result": "holding",
+        "latest_close": 392.0,
+        "holding_days": 6,
+        "holding_from": "2026-03-23",
+        "holding_status": "L0 Day6 AMD反彈+1.82% 明日Day7到期"
+      },
+      {
+        "symbol": "2006",
+        "name": "東和鋼鐵",
+        "recommend_price": 70.5,
+        "target_price": 78.0,
+        "stop_loss": 65.0,
+        "result": "holding",
+        "latest_close": 71.8,
+        "holding_days": 6,
+        "holding_from": "2026-03-23",
+        "holding_status": "L0 Day6 累計+658微正 明日Day7到期"
+      },
+      {
+        "symbol": "2347",
+        "name": "聯強",
+        "recommend_price": 80.8,
+        "target_price": 88.0,
+        "stop_loss": 77.0,
+        "result": "holding",
+        "latest_close": 81.1,
+        "holding_days": 1,
+        "holding_status": "Safe+AMD催化+累計+53K Day1"
+      }
+    ],
+    "settled_count": 1,
+    "holding_count": 12,
+    "removed_count": 0,
+    "settled_accuracy": 1.0,
+    "taiex_close": 33337.62,
+    "taiex_change_pct": -0.61,
+    "notes": "華南金Day7到期SUCCESS(+1.36%). 宏碁3/26出場FAIL(-1.62%更新至3/25). 12檔持有中(含盤中新推聯強). 文曄距停損2.2%警戒. 聯詠+東和鋼鐵明日Day7到期."
   }
 }
