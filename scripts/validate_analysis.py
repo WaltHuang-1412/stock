@@ -109,6 +109,82 @@ def validate_before_market(date_str):
             errors.append(f"❌ 缺少 Module B 催化主題預警段落（強制）")
             errors.append(f"   報告必須包含獨立的 Module B 段落，逐檔列出篩選結果")
 
+    # 2.5 檢查強催化產業的股票是否有被展開（topic_tracker 台股影響鏈 vs industry_stock_codes）
+    tracker_file = f"data/{date_str}/topic_tracker.md"
+    stock_codes_file = f"data/{date_str}/industry_stock_codes.txt"
+    if os.path.exists(tracker_file) and os.path.exists(stock_codes_file):
+        import re
+        with open(tracker_file, 'r', encoding='utf-8') as f:
+            tracker_lines = f.read().split('\n')
+        with open(stock_codes_file, 'r', encoding='utf-8') as f:
+            expanded_codes = set(f.read().strip().split('\n'))
+
+        # 不是產業方向的宏觀主題，跳過
+        skip_keywords = ['市場動態', '利率政策', '貿易政策', '關稅', '加密貨幣',
+                         '黃金', '資金外流', '就業市場', '財報重點', '金融與房市']
+
+        # 逐主題解析
+        i = 0
+        while i < len(tracker_lines):
+            line = tracker_lines[i]
+            if line.startswith('### '):
+                topic = line.replace('### ', '').strip()
+                topic_clean = re.sub(r'[（(].*?[）)]', '', topic).strip()
+
+                # 跳過宏觀主題
+                if any(kw in topic_clean for kw in skip_keywords):
+                    i += 1
+                    continue
+
+                # 找強度（只在本主題段落內搜尋，遇到下一個 ### 就停）
+                strength = None
+                direction_line = ''
+                impact_stocks = []
+                for j in range(i+1, min(i+10, len(tracker_lines))):
+                    if tracker_lines[j].startswith('### '):
+                        break  # 進入下一個主題，停止
+                    if '強度' in tracker_lines[j]:
+                        m = re.search(r'\*\*強度\*\*[：:]\s*(\S+)', tracker_lines[j])
+                        if m:
+                            strength = m.group(1)
+                            direction_line = tracker_lines[j]
+                    if '台股影響鏈' in tracker_lines[j]:
+                        codes = re.findall(r'\((\d{4})\)', tracker_lines[j])
+                        impact_stocks = codes
+
+                if strength in ('超強', '強') and impact_stocks:
+                    # 跳過急跌/崩跌方向（Level 3 排除的產業）
+                    if any(kw in direction_line for kw in ['急跌', '崩跌', '急速回調']):
+                        i += 1
+                        continue
+
+                    # 檢查影響鏈股票是否有任一被納入展開
+                    covered = [c for c in impact_stocks if c in expanded_codes]
+                    if not covered:
+                        missing_codes = ', '.join(impact_stocks[:5])
+                        errors.append(
+                            f"❌ Topic Tracker「{strength}」催化 [{topic_clean}] "
+                            f"影響鏈股票({missing_codes})均未在 Step 6 展開"
+                        )
+            i += 1
+
+    # 2.6 檢查 LINE 摘要也包含 Module A/B
+    line_file = f"data/{date_str}/before_market_line.txt"
+    if os.path.exists(line_file):
+        with open(line_file, 'r', encoding='utf-8') as f:
+            line_content = f.read()
+
+        has_line_module_a = ('Module A' in line_content or
+                           '催化預埋' in line_content or
+                           'L3' in line_content)
+        if not has_line_module_a:
+            errors.append(f"❌ LINE 摘要缺少 Module A（催化預埋掃描）")
+
+        has_line_module_b = ('Module B' in line_content or
+                           '催化主題' in line_content)
+        if not has_line_module_b:
+            errors.append(f"❌ LINE 摘要缺少 Module B（催化主題預警）")
+
         # 籌碼深度分析（強制）
         has_chip_analysis = ('籌碼深度分析' in md_content or
                             '反轉預警' in md_content or
