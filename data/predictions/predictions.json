@@ -7254,10 +7254,12 @@
         "recommend_price": 208.0,
         "target_price": 230.0,
         "stop_loss": 197.0,
-        "result": "holding",
+        "result": "success",
         "latest_close": 218.5,
-        "holding_days": 1,
-        "holding_status": "Safe加速+接近目標230距5.3%"
+        "holding_days": 2,
+        "holding_status": "Safe加速+接近目標230距5.3%",
+        "settled_date": "2026-03-27",
+        "settled_price": 230.0
       },
       {
         "symbol": "2605",
@@ -7301,11 +7303,13 @@
         "recommend_price": 385.0,
         "target_price": 420.0,
         "stop_loss": 355.0,
-        "result": "holding",
+        "result": "success",
         "latest_close": 392.0,
-        "holding_days": 6,
+        "holding_days": 7,
         "holding_from": "2026-03-23",
-        "holding_status": "L0 Day6 AMD反彈+1.82% 明日Day7到期"
+        "holding_status": "L0 Day6 AMD反彈+1.82% 明日Day7到期",
+        "settled_date": "2026-03-27",
+        "settled_price": 399.0
       },
       {
         "symbol": "2006",
@@ -7313,11 +7317,13 @@
         "recommend_price": 70.5,
         "target_price": 78.0,
         "stop_loss": 65.0,
-        "result": "holding",
+        "result": "fail",
         "latest_close": 71.8,
-        "holding_days": 6,
+        "holding_days": 7,
         "holding_from": "2026-03-23",
-        "holding_status": "L0 Day6 累計+658微正 明日Day7到期"
+        "holding_status": "L0 Day6 累計+658微正 明日Day7到期",
+        "settled_date": "2026-03-27",
+        "settled_price": 70.5
       },
       {
         "symbol": "2347",
@@ -7338,5 +7344,156 @@
     "taiex_close": 33337.62,
     "taiex_change_pct": -0.61,
     "notes": "華南金Day7到期SUCCESS(+1.36%). 宏碁3/26出場FAIL(-1.62%更新至3/25). 12檔持有中(含盤中新推聯強). 文曄距停損2.2%警戒. 聯詠+東和鋼鐵明日Day7到期."
-  }
+  },
+  "2026-03-27": {
+    "date": "2026-03-27",
+    "predictions": [
+      {
+        "symbol": "4958",
+        "name": "臻鼎-KY",
+        "recommend_price": 208.0,
+        "target_price": 230.0,
+        "stop_loss": 197.0,
+        "result": "success",
+        "settled_date": "2026-03-27",
+        "settled_price": 230.0,
+        "holding_days": 2
+      },
+      {
+        "symbol": "3034",
+        "name": "聯詠",
+        "recommend_price": 385.0,
+        "target_price": 420.0,
+        "stop_loss": 355.0,
+        "result": "success",
+        "settled_date": "2026-03-27",
+        "settled_price": 399.0,
+        "holding_days": 7
+      },
+      {
+        "symbol": "2006",
+        "name": "東和鋼鐵",
+        "recommend_price": 70.5,
+        "target_price": 78.0,
+        "stop_loss": 65.0,
+        "result": "fail",
+        "settled_date": "2026-03-27",
+        "settled_price": 70.5,
+        "holding_days": 7
+      },
+      {
+        "symbol": "1326",
+        "name": "台化",
+        "recommend_price": 45.1,
+        "target_price": 49.5,
+        "stop_loss": 42.8,
+        "result": "holding",
+        "holding_days": 1
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "recommend_price": 47.45,
+        "target_price": 52.0,
+        "stop_loss": 45.0,
+        "result": "holding",
+        "holding_days": 1
+      },
+      {
+        "symbol": "3715",
+        "name": "定穎",
+        "recommend_price": 185.0,
+        "target_price": 205.0,
+        "stop_loss": 176.0,
+        "result": "holding",
+        "holding_days": 1
+      },
+      {
+        "symbol": "4938",
+        "name": "和碩",
+        "recommend_price": 76.4,
+        "target_price": 84.0,
+        "stop_loss": 70.0,
+        "result": "holding",
+        "holding_days": 4
+      },
+      {
+        "symbol": "2605",
+        "name": "新興",
+        "recommend_price": 42.35,
+        "target_price": 46.0,
+        "stop_loss": 38.5,
+        "result": "holding",
+        "holding_days": 3
+      },
+      {
+        "symbol": "3702",
+        "name": "大聯大",
+        "recommend_price": 96.0,
+        "target_price": 105.0,
+        "stop_loss": 88.0,
+        "result": "holding",
+        "holding_days": 2
+      },
+      {
+        "symbol": "2618",
+        "name": "長榮航",
+        "recommend_price": 35.65,
+        "target_price": 38.5,
+        "stop_loss": 33.3,
+        "result": "holding",
+        "holding_days": 4
+      },
+      {
+        "symbol": "2347",
+        "name": "聯強",
+        "recommend_price": 80.8,
+        "target_price": 88.0,
+        "stop_loss": 77.0,
+        "result": "holding",
+        "holding_days": 2
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 42.9,
+        "target_price": 46.5,
+        "stop_loss": 39.0,
+        "result": "holding",
+        "holding_days": 4
+      },
+      {
+        "symbol": "3036",
+        "name": "文曄",
+        "recommend_price": 237.5,
+        "target_price": 265.0,
+        "stop_loss": 222.0,
+        "result": "holding",
+        "holding_days": 4
+      },
+      {
+        "symbol": "8028",
+        "name": "昇陽半導體",
+        "recommend_price": 200.0,
+        "target_price": 220.0,
+        "stop_loss": 184.0,
+        "result": "holding",
+        "holding_days": 2
+      },
+      {
+        "symbol": "2412",
+        "name": "中華電",
+        "recommend_price": 135.0,
+        "target_price": 142.0,
+        "stop_loss": 128.0,
+        "result": "holding",
+        "holding_days": 4
+      }
+    ]
+  },
+  "settled_accuracy": 68.6,
+  "settled_count": 156,
+  "holding_count": 54,
+  "total_success": 107,
+  "total_fail": 49
 }
