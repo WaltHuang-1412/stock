@@ -1,0 +1,36 @@
+{
+  "date": "2026-03-30",
+  "method": "dynamic",
+  "industries_expanded": ["石化/塑化", "航運", "IC設計漲價", "鋼鐵", "金融防禦", "電信防禦", "AI伺服器/半導體", "低軌衛星"],
+  "trigger_events": {
+    "石化/塑化": "油價+11%(WTI $102.55)+荷莫茲實質封閉+台化/台塑/台塑化不可抗力+苯乙烯缺貨",
+    "航運": "4月運價+10%+荷莫茲+曼德海峽雙咽喉+澳洲LNG受損",
+    "IC設計漲價": "矽創/奕力4/1起漲+六大廠最高20%+半導體通膨",
+    "鋼鐵": "鋼筋封盤每噸1.76-1.77萬+不銹鋼Q2旺+鎳缺口",
+    "金融防禦": "VIX 31+衰退概率48.6%需防禦配置",
+    "電信防禦": "VIX 31+高殖利率避風港"
+  },
+  "stocks": [
+    {"code": "6505", "name": "台塑化", "category": "石化/塑化", "tier": "tier_1", "source": "催化劑+TOP50外"},
+    {"code": "1304", "name": "台聚", "category": "石化/塑化", "tier": "tier_2", "source": "催化劑"},
+    {"code": "1308", "name": "亞聚", "category": "石化/塑化", "tier": "tier_2", "source": "催化劑"},
+    {"code": "2603", "name": "長榮", "category": "航運", "tier": "tier_1", "source": "催化劑"},
+    {"code": "2609", "name": "陽明", "category": "航運", "tier": "tier_1", "source": "催化劑"},
+    {"code": "2615", "name": "萬海", "category": "航運", "tier": "tier_1", "source": "催化劑"},
+    {"code": "8016", "name": "矽創", "category": "IC設計漲價", "tier": "tier_1", "source": "時事新催化"},
+    {"code": "3034", "name": "聯詠", "category": "IC設計漲價", "tier": "tier_1", "source": "TOP50+時事"},
+    {"code": "3545", "name": "敦泰", "category": "IC設計漲價", "tier": "tier_2", "source": "時事"},
+    {"code": "1605", "name": "華新", "category": "鋼鐵", "tier": "tier_1", "source": "時事+不銹鋼Q2旺"},
+    {"code": "2027", "name": "大成鋼", "category": "鋼鐵", "tier": "tier_1", "source": "Module A L2+時事"},
+    {"code": "2886", "name": "兆豐金", "category": "金融防禦", "tier": "tier_1", "source": "TOP50+防禦"},
+    {"code": "2884", "name": "玉山金", "category": "金融防禦", "tier": "tier_1", "source": "TOP50+防禦"},
+    {"code": "4904", "name": "遠傳", "category": "電信防禦", "tier": "tier_1", "source": "Module A L2+外資目標100元"},
+    {"code": "3189", "name": "景碩", "category": "IC設計/AI", "tier": "tier_2", "source": "Module B通過"},
+    {"code": "3533", "name": "嘉澤", "category": "AI伺服器/半導體", "tier": "tier_1", "source": "Topic Tracker超強+目標價3000元"},
+    {"code": "2330", "name": "台積電", "category": "AI伺服器/半導體", "tier": "tier_1", "source": "Topic Tracker超強+4/16法說"},
+    {"code": "2455", "name": "全新", "category": "低軌衛星", "tier": "tier_1", "source": "Topic Tracker超強+SpaceX砷化鎵+周漲17%"},
+    {"code": "2313", "name": "華通", "category": "低軌衛星", "tier": "tier_1", "source": "Topic Tracker超強+LEO目標200億+已大漲排除"},
+    {"code": "2419", "name": "仲琦", "category": "低軌衛星", "tier": "tier_2", "source": "Topic Tracker超強+訂單能見度"},
+    {"code": "6285", "name": "啟碁", "category": "低軌衛星", "tier": "tier_1", "source": "Topic Tracker超強+TOP50 avg3.0+訂單旺"}
+  ]
+}
