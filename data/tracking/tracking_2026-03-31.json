@@ -19,7 +19,11 @@
       "intraday_price": 34.05,
       "intraday_change": "-1.73%",
       "result": "holding",
-      "holding_status": "Day7(4/1)：-1.73%，法人today-438中斷10連買，距停損33.0僅3.2%，明日Day7結算"
+      "holding_status": "Day6收盤：33.95（-2.02%），法人10連買+49K L0，明日Day7結算（33.95<推薦34.65）",
+      "actual_close": 33.95,
+      "close_change": "-2.02%",
+      "close_price": 33.95,
+      "change_percent": -2.02
     },
     {
       "stock_code": "3045",
@@ -36,7 +40,11 @@
       "intraday_price": 109.0,
       "intraday_change": "0.0%",
       "result": "holding",
-      "holding_status": "Day2：0.0%，法人+3,940防禦穩定，VIX>30首選"
+      "holding_status": "Day2收盤：109.0（0.0%），法人10連買+41K L0，防禦首選",
+      "actual_close": 109.0,
+      "close_change": "+0.00%",
+      "close_price": 109.0,
+      "change_percent": 0.0
     },
     {
       "stock_code": "4904",
@@ -53,7 +61,11 @@
       "intraday_price": 92.0,
       "intraday_change": "+1.10%",
       "result": "holding",
-      "holding_status": "Day2：+1.10%浮盈，法人+1,012防禦穩定"
+      "holding_status": "Day2收盤：91.9（+0.99%），法人10連買+14K L0，防禦穩定",
+      "actual_close": 91.9,
+      "close_change": "+0.99%",
+      "close_price": 91.9,
+      "change_percent": 0.99
     },
     {
       "stock_code": "9933",
@@ -70,7 +82,11 @@
       "intraday_price": 35.25,
       "intraday_change": "-1.54%",
       "result": "holding",
-      "holding_status": "Day1：-1.54%，法人+1,059仍在買，距停損32.8有7.5%空間"
+      "holding_status": "Day1收盤：35.45（-0.98%），法人10連買+17K L0，石化EPC佈局完成",
+      "actual_close": 35.45,
+      "close_change": "-0.98%",
+      "close_price": 35.45,
+      "change_percent": -0.98
     },
     {
       "stock_code": "2880",
@@ -87,7 +103,11 @@
       "intraday_price": 33.35,
       "intraday_change": "-0.74%",
       "result": "holding",
-      "holding_status": "Day1：-0.74%，法人+3,461防禦穩定，距停損31.0有7.1%"
+      "holding_status": "Day1收盤：33.2（-1.19%），法人7連買+19K L0，金融防禦",
+      "actual_close": 33.2,
+      "close_change": "-1.19%",
+      "close_price": 33.2,
+      "change_percent": -1.19
     },
     {
       "stock_code": "4938",
@@ -104,7 +124,11 @@
       "intraday_price": 76.4,
       "intraday_change": "-2.80%",
       "result": "holding",
-      "holding_status": "Day6：-2.80%，法人today-1,223轉賣，距停損70有8.4%"
+      "holding_status": "Day5收盤：76.2（-3.05%），法人10連買+10K L0但今轉賣-1.2K，距停損8.1%",
+      "actual_close": 76.2,
+      "close_change": "-3.05%",
+      "close_price": 76.2,
+      "change_percent": -3.05
     },
     {
       "stock_code": "2027",
@@ -121,7 +145,11 @@
       "intraday_price": 36.7,
       "intraday_change": "-0.27%",
       "result": "holding",
-      "holding_status": "Day2：-0.27%，🔴法人intraday-33,268巨量反轉！reversal_alert(T86)仍L0，明日確認"
+      "holding_status": "Day2收盤：36.85（+0.14%），🔴法人intraday-33K巨量反轉，T86 L0待更新，明日確認",
+      "actual_close": 36.85,
+      "close_change": "+0.14%",
+      "close_price": 36.85,
+      "change_percent": 0.14
     }
   ],
   "holding_tracking": [
@@ -136,7 +164,9 @@
       "intraday_price": 222.5,
       "intraday_change": "-2.41%",
       "result": "holding",
-      "holding_status": "Day3：-2.41%，距停損217僅2.5%，法人-1,215，NVIDIA L2壓力"
+      "holding_status": "Day2收盤：222.5（-2.41%），距停損217僅2.54%，NVIDIA L2壓力",
+      "actual_close": 222.5,
+      "close_change": "-2.41%"
     },
     {
       "stock_code": "2356",
@@ -149,7 +179,9 @@
       "intraday_price": 40.15,
       "intraday_change": "-3.02%",
       "result": "holding",
-      "holding_status": "Day7(4/1)：-3.02%，🔴法人反轉-8,781+距停損2.9%+明日Day7結算"
+      "holding_status": "Day6收盤：40.05（-3.26%），法人intraday-8.8K反轉，明日Day7結算（40.05<推薦41.4）",
+      "actual_close": 40.05,
+      "close_change": "-3.26%"
     },
     {
       "stock_code": "3702",
@@ -162,10 +194,11 @@
       "intraday_price": 86.8,
       "intraday_change": "-3.98%",
       "result": "fail",
-      "fail_reason": "盤中86.8跌破停損88.0（Day4），費半-8.12%衝擊半導體通路",
+      "fail_reason": "盤中86.8觸停損88.0，收盤88.0=停損。費半-8.12%衝擊半導體通路",
       "settled_date": "2026-03-31",
-      "settled_price": 86.8,
-      "holding_days": 4
+      "settled_price": 88.0,
+      "holding_days": 4,
+      "actual_close": 88.0
     },
     {
       "stock_code": "2615",
@@ -178,7 +211,9 @@
       "intraday_price": 76.6,
       "intraday_change": "-2.05%",
       "result": "holding",
-      "holding_status": "Day2：-2.05%，法人+4,588逆勢買超，距停損69有9.9%"
+      "holding_status": "Day2收盤：77.1（-1.41%），法人7連買+7K L0，距停損11.7%",
+      "actual_close": 77.1,
+      "close_change": "-1.41%"
     },
     {
       "stock_code": "3715",
@@ -191,10 +226,11 @@
       "intraday_price": 173.0,
       "intraday_change": "-6.49%",
       "result": "fail",
-      "fail_reason": "盤中173.0跌破停損176.0（Day4），法人反轉-11,581+費半-8.12%衝擊PCB",
+      "fail_reason": "盤中173觸停損176，收盤175.0<停損176。法人反轉-11,581+費半-8.12%衝擊PCB",
       "settled_date": "2026-03-31",
-      "settled_price": 173.0,
-      "holding_days": 4
+      "settled_price": 175.0,
+      "holding_days": 4,
+      "actual_close": 175.0
     },
     {
       "stock_code": "2412",
@@ -207,7 +243,9 @@
       "intraday_price": 133.5,
       "intraday_change": "-1.11%",
       "result": "holding",
-      "holding_status": "Day7(4/1)：-1.11%，距停損128有4.1%，法人-1,271，明日Day7結算"
+      "holding_status": "Day6收盤：133.0（-1.48%），法人10連買+16K L0，明日Day7結算（133.0<推薦135.0）",
+      "actual_close": 133.0,
+      "close_change": "-1.48%"
     },
     {
       "stock_code": "3533",
@@ -220,7 +258,9 @@
       "intraday_price": 2015.0,
       "intraday_change": "-3.82%",
       "result": "holding",
-      "holding_status": "Day1：-3.82%重挫，距停損1930有4.4%，法人+168微買"
+      "holding_status": "Day1收盤：2050.0（-2.15%），法人9連買+5.4K L0，距停損6.2%",
+      "actual_close": 2050.0,
+      "close_change": "-2.15%"
     }
   ],
   "removed_stocks": [
@@ -234,6 +274,12 @@
       "stock_code": "3715",
       "stock_name": "定穎",
       "reason": "盤中觸停損176.0（173.0<176），強制出場",
+      "removed_date": "2026-03-31"
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "reason": "法人intraday-33K巨量反轉，明日T86更新後預計L3-4",
       "removed_date": "2026-03-31"
     }
   ],
@@ -256,86 +302,154 @@
     "cumulative_accuracy": "65.2%",
     "cumulative_success": 105,
     "cumulative_fail": 56,
-    "holding_count": 10,
-    "note": "盤中+2 FAIL（3702大聯大+3715定穎觸停損），105/161=65.2%"
+    "holding_count": 12,
+    "settled_today": 2,
+    "note": "盤後確認+2 FAIL（3702大聯大收88.0=停損、3715定穎收175<176），105/161=65.2%"
   },
   "tomorrow_recommendations": [
-    {
-      "stock_code": "2618",
-      "stock_name": "長榮航",
-      "industry": "航空",
-      "recommend_price": 34.5,
-      "target_price": 38.5,
-      "stop_loss": 33.0,
-      "position": "10-15%",
-      "score": 87,
-      "reason": "10連買+61K L0+油價$103利多航空"
-    },
     {
       "stock_code": "3045",
       "stock_name": "台灣大",
       "industry": "電信防禦",
-      "recommend_price": 108.5,
+      "recommend_price": 109.0,
       "target_price": 116.0,
       "stop_loss": 103.5,
       "position": "10-15%",
-      "score": 86,
-      "reason": "10連買+36K L0+VIX>30防禦首選"
+      "score": 87,
+      "reason": "10連買+41K L0 防禦首選 Day3"
     },
     {
       "stock_code": "4904",
       "stock_name": "遠傳",
       "industry": "電信防禦",
-      "recommend_price": 91.4,
+      "recommend_price": 91.9,
       "target_price": 102.0,
       "stop_loss": 86.0,
       "position": "10-15%",
       "score": 82,
-      "reason": "10連買+14K L0+外資目標100-115"
+      "reason": "10連買+14K L0 防禦穩定 Day3"
     },
     {
       "stock_code": "9933",
       "stock_name": "中鼎",
       "industry": "工程/石化EPC",
-      "recommend_price": 35.8,
+      "recommend_price": 35.45,
       "target_price": 40.5,
       "stop_loss": 32.8,
       "position": "10-15%",
       "score": 81,
-      "reason": "Module A L3+10連買0賣+石化EPC+核能工程+Level 0"
+      "reason": "Module A L3+10連買+17K L0 佈局完成"
     },
     {
       "stock_code": "2880",
       "stock_name": "華南金",
       "industry": "金融防禦",
-      "recommend_price": 33.6,
+      "recommend_price": 33.2,
       "target_price": 36.5,
       "stop_loss": 31.0,
       "position": "10-15%",
       "score": 79,
-      "reason": "Module A L2+avg_rank 19.5+7連買+VIX>30防禦"
+      "reason": "Module A L2+7連買+19K L0 金融防禦"
+    },
+    {
+      "stock_code": "2615",
+      "stock_name": "萬海",
+      "industry": "航運",
+      "recommend_price": 77.1,
+      "target_price": 82.0,
+      "stop_loss": 69.0,
+      "position": "5-10%",
+      "score": 73,
+      "reason": "7連買+7K L0 航運逆勢穩健"
     },
     {
       "stock_code": "4938",
       "stock_name": "和碩",
       "industry": "代工",
-      "recommend_price": 78.6,
+      "recommend_price": 76.2,
       "target_price": 84.0,
       "stop_loss": 70.0,
       "position": "5-10%",
-      "score": 76,
-      "reason": "10連買L0佈局完成+Day5穩健"
+      "score": 72,
+      "reason": "10連買 L0 但法人今轉賣 Day6"
     },
     {
-      "stock_code": "2027",
-      "stock_name": "大成鋼",
-      "industry": "鋼鐵",
-      "recommend_price": 37.9,
-      "target_price": 40.0,
-      "stop_loss": 33.5,
+      "stock_code": "3533",
+      "stock_name": "嘉澤",
+      "industry": "光通訊CPO",
+      "recommend_price": 2050.0,
+      "target_price": 2350.0,
+      "stop_loss": 1930.0,
       "position": "5-10%",
-      "score": 68,
-      "reason": "Module A L3+9買1賣+鋼筋漲1,300元"
+      "score": 70,
+      "reason": "9連買+5.4K L0 Day1觀察"
     }
-  ]
+  ],
+  "yesterday_verification": {
+    "accuracy": "65.2%",
+    "total_settled": 161,
+    "success": 105,
+    "fail": 56,
+    "holding": 12,
+    "results": [
+      {
+        "stock_code": "3702",
+        "stock_name": "大聯大",
+        "recommend_price": 90.4,
+        "close_price": 88.0,
+        "result": "fail",
+        "reason": "盤中86.8觸停損88.0（Day4），費半-8.12%衝擊半導體通路"
+      },
+      {
+        "stock_code": "3715",
+        "stock_name": "定穎",
+        "recommend_price": 185.0,
+        "close_price": 175.0,
+        "result": "fail",
+        "reason": "盤中173觸停損176（Day4），法人反轉-11,581+費半-8.12%衝擊PCB"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "result": "holding",
+        "reason": "Day6 33.95<推薦34.65，明日Day7結算"
+      },
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "result": "holding",
+        "reason": "Day2 109.0=推薦 防禦穩定"
+      },
+      {
+        "stock_code": "4904",
+        "stock_name": "遠傳",
+        "result": "holding",
+        "reason": "Day2 91.9>推薦91.0 浮盈+0.99%"
+      },
+      {
+        "stock_code": "9933",
+        "stock_name": "中鼎",
+        "result": "holding",
+        "reason": "Day1 35.45<推薦35.8 微跌-0.98%"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "result": "holding",
+        "reason": "Day1 33.2<推薦33.6 微跌-1.19%"
+      },
+      {
+        "stock_code": "4938",
+        "stock_name": "和碩",
+        "result": "holding",
+        "reason": "Day5 76.2<推薦78.6 -3.05% 法人今轉賣"
+      },
+      {
+        "stock_code": "2027",
+        "stock_name": "大成鋼",
+        "result": "holding",
+        "reason": "Day2 36.85>推薦36.8 法人intraday-33K反轉"
+      }
+    ]
+  }
 }
