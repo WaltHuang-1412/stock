@@ -24,10 +24,18 @@ if ($MarketStatus -ne "full") {
     exit 0
 }
 
-# === Auth 檢查：token 是否有效 ===
+# === Auth 檢查：token 是否有效（含 retry，避免開機初期網路未就緒）===
 $env:CLAUDECODE = $null
-$AuthCheck = claude auth status 2>&1 | Out-String
-if ($AuthCheck -notmatch '"loggedIn":\s*true') {
+$AuthOK = $false
+for ($i = 1; $i -le 3; $i++) {
+    $AuthCheck = claude auth status 2>&1 | Out-String
+    if ($AuthCheck -match '"loggedIn":\s*true') {
+        $AuthOK = $true
+        break
+    }
+    if ($i -lt 3) { Start-Sleep -Seconds 30 }
+}
+if (-not $AuthOK) {
     $msg = "排程失敗 ($Date 盤後): Claude auth token 過期，需重新登入 (claude login)"
     Write-Output "[ERROR] $msg"
     python "$ProjectDir\scripts\notify_line.py" $msg
