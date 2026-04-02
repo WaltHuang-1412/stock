@@ -7515,11 +7515,11 @@
       }
     ]
   },
-  "settled_accuracy": 64.8,
-  "settled_count": 165,
-  "holding_count": 10,
-  "total_success": 107,
-  "total_fail": 58,
+  "settled_accuracy": 63.9,
+  "settled_count": 169,
+  "holding_count": 8,
+  "total_success": 108,
+  "total_fail": 61,
   "2026-03-30": {
     "predictions": [
       {
@@ -7964,6 +7964,163 @@
         "actual_close": 79.8,
         "holding_from": "2026-03-30",
         "holding_status": "Day3：+2.05%，8買+5.2K L0，今+7%逆勢領漲"
+      }
+    ]
+  },
+  "2026-04-02": {
+    "date": "2026-04-02",
+    "predictions": [
+      {
+        "symbol": "2353",
+        "name": "宏碁",
+        "recommend_price": 27.25,
+        "target_price": 30.0,
+        "stop_loss": 25.0,
+        "result": "success",
+        "holding_days": 2,
+        "actual_close": 27.3,
+        "holding_from": "2026-04-01",
+        "settled_date": "2026-04-02",
+        "settled_price": 27.3,
+        "holding_status": "L4出場SUCCESS +0.18%（法人爆量賣超-3,342張）"
+      },
+      {
+        "symbol": "9933",
+        "name": "中鼎",
+        "recommend_price": 35.8,
+        "target_price": 40.5,
+        "stop_loss": 32.8,
+        "result": "fail",
+        "holding_days": 3,
+        "actual_close": 35.5,
+        "holding_from": "2026-03-31",
+        "settled_date": "2026-04-02",
+        "settled_price": 35.5,
+        "holding_status": "L4出場FAIL -0.84%（法人爆量賣超-576張）"
+      },
+      {
+        "symbol": "2605",
+        "name": "新興",
+        "recommend_price": 42.0,
+        "target_price": 46.0,
+        "stop_loss": 39.5,
+        "result": "fail",
+        "holding_days": 2,
+        "actual_close": 41.0,
+        "holding_from": "2026-04-01",
+        "settled_date": "2026-04-02",
+        "settled_price": 41.7,
+        "holding_status": "L4出場FAIL -0.71%（法人-658張佔日均7%，盤中強制出場）"
+      },
+      {
+        "symbol": "4938",
+        "name": "和碩",
+        "recommend_price": 78.6,
+        "target_price": 84.0,
+        "stop_loss": 70.0,
+        "result": "fail",
+        "holding_days": 7,
+        "actual_close": 78.0,
+        "holding_from": "2026-03-25",
+        "settled_date": "2026-04-02",
+        "settled_price": 78.0,
+        "holding_status": "Day7到期FAIL -0.76%（7天橫盤無方向）"
+      },
+      {
+        "symbol": "3045",
+        "name": "台灣大",
+        "recommend_price": 109.5,
+        "target_price": 116.0,
+        "stop_loss": 103.5,
+        "result": "holding",
+        "holding_days": 4,
+        "actual_close": 109.5,
+        "holding_from": "2026-03-30",
+        "holding_status": "Day4：0%，9B1S+cum32K+L0，今轉賣-595但累計穩定"
+      },
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "recommend_price": 290.5,
+        "target_price": 320.0,
+        "stop_loss": 267.0,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 284.5,
+        "holding_from": "2026-04-02",
+        "holding_status": "Day1：-2.07%，8B2S+cum26K+L0+營收+43.2%+回檔佈局"
+      },
+      {
+        "symbol": "3533",
+        "name": "嘉澤",
+        "recommend_price": 2125.0,
+        "target_price": 2350.0,
+        "stop_loss": 1930.0,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 2045.0,
+        "holding_from": "2026-03-31",
+        "holding_status": "Day3：-3.76%，10連買+L0+距停損5.6%，CPO催化"
+      },
+      {
+        "symbol": "2330",
+        "name": "台積電",
+        "recommend_price": 1855.0,
+        "target_price": 2000.0,
+        "stop_loss": 1710.0,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 1810.0,
+        "holding_from": "2026-04-02",
+        "holding_status": "Day1：-2.43%，今+9K大買但累計-50K，4/16法說催化"
+      },
+      {
+        "symbol": "2880",
+        "name": "華南金",
+        "recommend_price": 33.7,
+        "target_price": 36.5,
+        "stop_loss": 31.0,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 33.85,
+        "holding_from": "2026-03-31",
+        "holding_status": "Day3：+0.45%，唯一正報酬，9連買+21K+L0"
+      },
+      {
+        "symbol": "3042",
+        "name": "晶技",
+        "recommend_price": 93.9,
+        "target_price": 102.0,
+        "stop_loss": 87.5,
+        "result": "holding",
+        "holding_days": 2,
+        "actual_close": 91.8,
+        "holding_from": "2026-04-01",
+        "holding_status": "Day2：-2.24%，10連買+L0+漲價催化"
+      },
+      {
+        "symbol": "4904",
+        "name": "遠傳",
+        "recommend_price": 93.5,
+        "target_price": 102.0,
+        "stop_loss": 86.0,
+        "result": "holding",
+        "holding_days": 4,
+        "actual_close": 92.5,
+        "holding_from": "2026-03-30",
+        "holding_status": "Day4：-1.07%，10連買+L0+防禦穩定"
+      },
+      {
+        "symbol": "2615",
+        "name": "萬海",
+        "recommend_price": 78.2,
+        "target_price": 82.0,
+        "stop_loss": 69.0,
+        "result": "holding",
+        "holding_days": 4,
+        "actual_close": 78.0,
+        "holding_from": "2026-03-30",
+        "holding_status": "Day4：-0.26%，L0但動能+218.5%>100%+營收衰退-5分"
       }
     ]
   }

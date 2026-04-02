@@ -18,7 +18,14 @@
       "holding_from": "2026-03-30",
       "intraday_price": 109.0,
       "intraday_change": "-0.46%",
-      "intraday_strategy": "續抱"
+      "intraday_strategy": "續抱",
+      "actual_close": 109.5,
+      "close_change": "0.00%",
+      "result": "holding",
+      "holding_status": "Day5：收盤109.5=推薦109.5（0%），9B1S+cum32K+L0，今日轉賣-595但累計穩定",
+      "holding_days": 4,
+      "close_price": 109.5,
+      "change_percent": 0.0
     },
     {
       "stock_code": "2382",
@@ -34,7 +41,14 @@
       "holding_from": "2026-04-02",
       "intraday_price": 285.0,
       "intraday_change": "-1.89%",
-      "intraday_strategy": "續抱"
+      "intraday_strategy": "續抱",
+      "actual_close": 284.5,
+      "close_change": "-2.07%",
+      "result": "holding",
+      "holding_status": "Day1：收盤284.5<推薦290.5（-2.07%），法人+6,660+L0，營收+43.2%+回檔中",
+      "holding_days": 1,
+      "close_price": 284.5,
+      "change_percent": -2.07
     },
     {
       "stock_code": "3533",
@@ -50,7 +64,14 @@
       "holding_from": "2026-03-31",
       "intraday_price": 2045.0,
       "intraday_change": "-3.76%",
-      "intraday_strategy": "續抱（跌破MA但法人10連買+未觸停損1930）"
+      "intraday_strategy": "續抱（跌破MA但法人10連買+未觸停損1930）",
+      "actual_close": 2045.0,
+      "close_change": "-3.76%",
+      "result": "holding",
+      "holding_status": "Day3：收盤2045<推薦2125（-3.76%），10連買+L0+距停損1930仍5.6%空間",
+      "holding_days": 3,
+      "close_price": 2045.0,
+      "change_percent": -3.76
     },
     {
       "stock_code": "2330",
@@ -66,7 +87,14 @@
       "holding_from": "2026-04-02",
       "intraday_price": 1815.0,
       "intraday_change": "-2.16%",
-      "intraday_strategy": "續抱（今日法人+9,277大買）"
+      "intraday_strategy": "續抱（今日法人+9,277大買）",
+      "actual_close": 1810.0,
+      "close_change": "-2.43%",
+      "result": "holding",
+      "holding_status": "Day1：收盤1810<推薦1855（-2.43%），今日+9,277大買但累計-50K，4/16法說催化",
+      "holding_days": 1,
+      "close_price": 1810.0,
+      "change_percent": -2.43
     },
     {
       "stock_code": "2880",
@@ -82,7 +110,14 @@
       "holding_from": "2026-03-31",
       "intraday_price": 34.05,
       "intraday_change": "+1.04%",
-      "intraday_strategy": "續抱（唯一正報酬）"
+      "intraday_strategy": "續抱（唯一正報酬）",
+      "actual_close": 33.85,
+      "close_change": "+0.45%",
+      "result": "holding",
+      "holding_status": "Day3：收盤33.85>推薦33.7（+0.45%），唯一正報酬，9連買+21K+L0",
+      "holding_days": 3,
+      "close_price": 33.85,
+      "change_percent": 0.45
     },
     {
       "stock_code": "3042",
@@ -98,7 +133,14 @@
       "holding_from": "2026-04-01",
       "intraday_price": 91.4,
       "intraday_change": "-2.66%",
-      "intraday_strategy": "續抱+可小加碼（通過4項加碼驗證）"
+      "intraday_strategy": "續抱+可小加碼（通過4項加碼驗證）",
+      "actual_close": 91.8,
+      "close_change": "-2.24%",
+      "result": "holding",
+      "holding_status": "Day2：收盤91.8<推薦93.9（-2.24%），10連買+L0+尾盤微彈",
+      "holding_days": 2,
+      "close_price": 91.8,
+      "change_percent": -2.24
     },
     {
       "stock_code": "4904",
@@ -114,7 +156,14 @@
       "holding_from": "2026-03-30",
       "intraday_price": 92.5,
       "intraday_change": "-1.07%",
-      "intraday_strategy": "續抱"
+      "intraday_strategy": "續抱",
+      "actual_close": 92.5,
+      "close_change": "-1.07%",
+      "result": "holding",
+      "holding_status": "Day4：收盤92.5<推薦93.5（-1.07%），10連買+L0+防禦穩定",
+      "holding_days": 4,
+      "close_price": 92.5,
+      "change_percent": -1.07
     }
   ],
   "holding_tracking": [
@@ -127,24 +176,12 @@
       "stop_loss": 69.0,
       "holding_from": "2026-03-30",
       "result": "holding",
-      "holding_status": "Day4：盤中78.3>推薦78.2（+0.13%），今日反彈+4.26%，L0續追蹤",
-      "actual_close": 79.8,
-      "intraday_price": 78.3
-    },
-    {
-      "stock_code": "2605",
-      "stock_name": "新興",
-      "industry": "航運",
-      "recommend_price": 42.0,
-      "target_price": 46.0,
-      "stop_loss": 39.5,
-      "holding_from": "2026-04-01",
-      "result": "holding",
-      "holding_status": "Day2：盤中41.7<推薦42.0（-0.71%），L4法人反轉→盤中強制出場",
-      "actual_close": 41.0,
-      "intraday_price": 41.7,
-      "exit_signal": "L4法人爆量賣超-658張（佔日均量7.0%）→強制出場",
-      "exit_price": 41.7
+      "holding_status": "Day5：收盤78.0<推薦78.2（-0.26%），L0但動能+218.5%>100%+營收連續衰退-5分。4/7 Day7到期。",
+      "actual_close": 78.0,
+      "intraday_price": 78.3,
+      "holding_days": 4,
+      "day7_date": "2026-04-07",
+      "risk_note": "動能+218.5%>100%+營收連續衰退10個月，不續推"
     },
     {
       "stock_code": "4938",
@@ -154,11 +191,31 @@
       "target_price": 84.0,
       "stop_loss": 70.0,
       "holding_from": "2026-03-25",
-      "result": "holding",
-      "holding_status": "Day7結算中：盤中78.1<推薦78.6（-0.64%），待收盤確認",
-      "day7_status": "盤中78.1<推薦78.6，若收盤仍<78.6→FAIL",
-      "actual_close": 78.2,
-      "intraday_price": 78.1
+      "result": "fail",
+      "fail_reason": "Day7到期：收盤78.0 ≤ 推薦78.6（-0.76%），7天橫盤無方向",
+      "actual_close": 78.0,
+      "intraday_price": 78.1,
+      "settled_date": "2026-04-02",
+      "settled_price": 78.0,
+      "holding_days": 7
+    },
+    {
+      "stock_code": "2605",
+      "stock_name": "新興",
+      "industry": "航運",
+      "recommend_price": 42.0,
+      "target_price": 46.0,
+      "stop_loss": 39.5,
+      "holding_from": "2026-04-01",
+      "result": "fail",
+      "fail_reason": "L4法人反轉（-658張佔日均7.0%）→盤中強制出場41.7（-0.71%）",
+      "actual_close": 41.0,
+      "intraday_price": 41.7,
+      "exit_signal": "L4法人爆量賣超→強制出場",
+      "exit_price": 41.7,
+      "settled_date": "2026-04-02",
+      "settled_price": 41.7,
+      "holding_days": 2
     }
   ],
   "removed_stocks": [
@@ -169,7 +226,9 @@
       "removed_date": "2026-04-02",
       "exit_price": 27.3,
       "recommend_price": 27.25,
-      "pnl": "+0.18%"
+      "pnl": "+0.18%",
+      "result": "success",
+      "settled_date": "2026-04-02"
     },
     {
       "stock_code": "9933",
@@ -178,7 +237,9 @@
       "removed_date": "2026-04-02",
       "exit_price": 35.5,
       "recommend_price": 35.8,
-      "pnl": "-0.84%"
+      "pnl": "-0.84%",
+      "result": "fail",
+      "settled_date": "2026-04-02"
     },
     {
       "stock_code": "2605",
@@ -188,7 +249,9 @@
       "removed_phase": "intraday",
       "exit_price": 41.7,
       "recommend_price": 42.0,
-      "pnl": "-0.71%"
+      "pnl": "-0.71%",
+      "result": "fail",
+      "settled_date": "2026-04-02"
     }
   ],
   "track_b_recommendations": [],
@@ -221,20 +284,148 @@
       "intraday_change": "+2.26%"
     }
   ],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": "AI伺服器",
+      "score": 88,
+      "position": "10-15%",
+      "reason": "Day2+8B2S+L0+營收+43.2%回檔≥2%+5分+OpenAI催化"
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "industry": "電信防禦",
+      "score": 85,
+      "position": "10-15%",
+      "reason": "Day5+9B1S+cum32K+L0+防禦核心（今日轉賣需觀察）"
+    },
+    {
+      "stock_code": "3533",
+      "stock_name": "嘉澤",
+      "industry": "光通訊CPO",
+      "score": 82,
+      "position": "5-10%",
+      "reason": "Day4+10連買+L0+動能-38.2%佈局完成+CPO催化"
+    },
+    {
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "industry": "金融防禦",
+      "score": 82,
+      "position": "10-15%",
+      "reason": "Day4+9連買+L0+唯一正報酬+金融穩定"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "industry": "半導體",
+      "score": 80,
+      "position": "10-15%",
+      "reason": "Day2+今日+9K大買+4/16法說+AI催化（⚠️累計-50K）"
+    },
+    {
+      "stock_code": "3042",
+      "stock_name": "晶技",
+      "industry": "IC漲價",
+      "score": 78,
+      "position": "10-15%",
+      "reason": "Day3+10連買+L0+漲價落地催化"
+    },
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "industry": "電信防禦",
+      "score": 74,
+      "position": "5-10%",
+      "reason": "Day6+10連買+L0+防禦穩定（動能+52%偏高）"
+    }
+  ],
   "market_context": {
     "vix": 24.54,
     "vix_change": "-10.57%",
-    "defense_ratio": "35-40%（台灣大+華南金+遠傳，目標15-25%偏高但持有中表現正面）",
+    "defense_ratio": "40%（台灣大+華南金+遠傳，目標15-25%偏高但持有中正面）",
     "key_themes": "中東停戰曙光+OpenAI$1220億+SpaceX IPO+鎧俠停產2D NAND+台光電Q2漲價+啟碁LEO 800萬套+智邦800G+南韓半導體+150%",
     "catalyst_strength": "超強（AI伺服器5週+光通訊3.5週+衛星3.5週）",
-    "intraday_note": "4/1大漲後正常回檔，權值股普跌，量能萎縮。法人TOP50多為4/1單日追高買超。金融股動能200-500%全排除。"
+    "after_market_note": "4/1大漲後正常回檔日。3檔L4出場+1檔Day7到期。7檔推薦全L0續持。準確率63.9%。"
   },
   "accuracy": {
-    "cumulative_accuracy": "64.8%",
-    "cumulative_success": 107,
-    "cumulative_fail": 58,
-    "holding_count": 10,
-    "day7_pending": ["4938"],
-    "note": "和碩Day7盤中78.1<78.6待收盤確認，2605新興盤中L4出場"
+    "cumulative_accuracy": "63.9%",
+    "cumulative_success": 108,
+    "cumulative_fail": 61,
+    "holding_count": 8,
+    "today_settled": [
+      {
+        "stock": "2353 宏碁",
+        "result": "success",
+        "pnl": "+0.18%"
+      },
+      {
+        "stock": "9933 中鼎",
+        "result": "fail",
+        "pnl": "-0.84%"
+      },
+      {
+        "stock": "2605 新興",
+        "result": "fail",
+        "pnl": "-0.71%"
+      },
+      {
+        "stock": "4938 和碩",
+        "result": "fail",
+        "pnl": "-0.76%"
+      }
+    ],
+    "day7_upcoming": [
+      "3045(4/7)",
+      "4904(4/7)",
+      "2615(4/7)"
+    ],
+    "note": "今日結算4檔(1勝3敗)，準確率64.8%→63.9%"
+  },
+  "revenue_check": {
+    "date": "2026-02",
+    "adjustments": {
+      "2382": "+5分（營收+43.2%+5日回檔≥2%）",
+      "2615": "-5分（營收連續衰退10個月）"
+    }
+  },
+  "foreign_ratio_check": {
+    "date": "2026-03-31",
+    "adjustments": "全部不調整（無>0.5%週增或≥0.1%週減）"
+  },
+  "yesterday_verification": {
+    "accuracy": "63.9%",
+    "total_success": 108,
+    "total_fail": 61,
+    "total_settled": 169,
+    "holding_count": 8,
+    "results": [
+      {
+        "stock": "2353 宏碁",
+        "result": "success",
+        "pnl": "+0.18%",
+        "reason": "L4出場 exit 27.3 > rec 27.25"
+      },
+      {
+        "stock": "9933 中鼎",
+        "result": "fail",
+        "pnl": "-0.84%",
+        "reason": "L4出場 exit 35.5 < rec 35.8"
+      },
+      {
+        "stock": "2605 新興",
+        "result": "fail",
+        "pnl": "-0.71%",
+        "reason": "L4出場 exit 41.7 < rec 42.0"
+      },
+      {
+        "stock": "4938 和碩",
+        "result": "fail",
+        "pnl": "-0.76%",
+        "reason": "Day7到期 close 78.0 ≤ rec 78.6"
+      }
+    ]
   }
 }
