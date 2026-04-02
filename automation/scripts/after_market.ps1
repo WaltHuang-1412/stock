@@ -132,9 +132,12 @@ if ($AllExist) {
         python "$ProjectDir\scripts\notify_line.py" "盤後分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
     }
 
-    # === 週五：跑規則有效性驗證 + 準確率週報 ===
-    $DayOfWeek = (Get-Date).DayOfWeek
-    if ($DayOfWeek -eq "Friday") {
+    # === 本週最後交易日：跑規則有效性驗證 + 準確率週報 ===
+    # 檢查明天是否為交易日，不是的話代表本週結束（處理週五休市、連假前等情況）
+    $Tomorrow = (Get-Date).AddDays(1).ToString("yyyy-MM-dd")
+    $TomorrowStatus = (python "$ProjectDir\scripts\check_market_status.py" --date $Tomorrow --mode after_market 2>$null).Trim()
+    $IsLastTradingDay = ($TomorrowStatus -ne "full")
+    if ($IsLastTradingDay) {
         Write-Output "" | Tee-Object -FilePath $LogFile -Append
         Write-Output "[週報] 執行規則有效性驗證..." | Tee-Object -FilePath $LogFile -Append
         python "$ProjectDir\scripts\weekly_rule_check.py" 2>&1 | Tee-Object -FilePath $LogFile -Append
