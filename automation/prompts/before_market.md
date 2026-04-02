@@ -47,6 +47,17 @@ python3 scripts/catalyst_theme_detector.py --date $(date +%Y-%m-%d) --lookback 7
 ```
 Module B 候選的後續處理（chip_analysis、reversal_alert、評分、排除原因）全部按照 CLAUDE.md Step 6「Module B 催化主題預警處理」段落執行，不得跳過。
 
+營收與外資持股比檢查（Step 7 評分時強制執行）：
+Step 7 開始前，必須對全部候選股（Step 5 + Step 6 合併後）執行以下兩個腳本：
+```bash
+python3 scripts/check_revenue_yoy.py [全部候選股代碼...]
+python3 scripts/check_foreign_ratio.py [全部候選股代碼...]
+```
+讀取輸出的「評分建議」欄，逐檔套用加減分到 Step 7 評分中。
+每檔推薦的 reason 欄必須標註營收/持股比調整（如「營收+43%→+5」或「持股比週減→-3」）。
+LINE 摘要中每檔推薦也要帶入。
+禁止用 Claude 自身知識代替腳本輸出，必須以腳本 JSON 結果為準。
+
 自動化注意事項：
 1. 今天日期用系統日期
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py before_market $(date +%Y-%m-%d)`，通過才能 git commit + git push。驗證失敗必須修正報告後重跑

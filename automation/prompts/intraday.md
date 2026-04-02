@@ -11,6 +11,14 @@
    - 無符合條件時標註「今日無盤中新推薦」
 4. LINE 摘要必須包含 Track B 盤中新推薦的完整進場資訊（進場/目標/停損/倉位）
 
+營收與外資持股比檢查（Track B Step 3.5 評分時強制執行）：
+Track B 候選股評分前，必須執行：
+```bash
+python3 scripts/check_revenue_yoy.py [Track B 候選股代碼...]
+python3 scripts/check_foreign_ratio.py [Track B 候選股代碼...]
+```
+讀取輸出的「評分建議」欄，逐檔套用加減分。推薦 reason 和 LINE 摘要必須標註。
+
 自動化注意事項：
 1. 今天日期用系統日期
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py intraday $(date +%Y-%m-%d)`，通過才能 git commit + git push
