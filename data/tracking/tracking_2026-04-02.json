@@ -15,7 +15,10 @@
       "score": 87,
       "rating": "⭐⭐⭐⭐⭐",
       "reason": "Day5續推+10連買+38K L0+Module A L2+動能-29.6%佈局完成+防禦核心",
-      "holding_from": "2026-03-30"
+      "holding_from": "2026-03-30",
+      "intraday_price": 109.0,
+      "intraday_change": "-0.46%",
+      "intraday_strategy": "續抱"
     },
     {
       "stock_code": "2382",
@@ -28,7 +31,10 @@
       "score": 85,
       "rating": "⭐⭐⭐⭐⭐",
       "reason": "TOP50 avg#11+8B2S+cum+26K+L0+OpenAI$1220億受益+營收+43%+動能-10.3%佈局中",
-      "holding_from": "2026-04-02"
+      "holding_from": "2026-04-02",
+      "intraday_price": 285.0,
+      "intraday_change": "-1.89%",
+      "intraday_strategy": "續抱"
     },
     {
       "stock_code": "3533",
@@ -41,7 +47,10 @@
       "score": 83,
       "rating": "⭐⭐⭐⭐",
       "reason": "Day4續推+10連買+6.2K L0+輝達矽光子20億+5日-6.4%回檔中+CPO超強催化",
-      "holding_from": "2026-03-31"
+      "holding_from": "2026-03-31",
+      "intraday_price": 2045.0,
+      "intraday_change": "-3.76%",
+      "intraday_strategy": "續抱（跌破MA但法人10連買+未觸停損1930）"
     },
     {
       "stock_code": "2330",
@@ -54,7 +63,10 @@
       "score": 82,
       "rating": "⭐⭐⭐⭐",
       "reason": "TOP50 avg#6+172億+AI超強催化5週+4/16法說+南韓半導體+150%+動能-10.8%",
-      "holding_from": "2026-04-02"
+      "holding_from": "2026-04-02",
+      "intraday_price": 1815.0,
+      "intraday_change": "-2.16%",
+      "intraday_strategy": "續抱（今日法人+9,277大買）"
     },
     {
       "stock_code": "2880",
@@ -67,7 +79,10 @@
       "score": 81,
       "rating": "⭐⭐⭐⭐",
       "reason": "Day4續推+9連買+21K L0+聯貸+38%利多+金融防禦+動能+23%佈局中",
-      "holding_from": "2026-03-31"
+      "holding_from": "2026-03-31",
+      "intraday_price": 34.05,
+      "intraday_change": "+1.04%",
+      "intraday_strategy": "續抱（唯一正報酬）"
     },
     {
       "stock_code": "3042",
@@ -80,7 +95,10 @@
       "score": 78,
       "rating": "⭐⭐⭐⭐",
       "reason": "Day2續推+10連買+3.6K L0+4/1漲價落地+村田同步+動能-12.5%佈局中",
-      "holding_from": "2026-04-01"
+      "holding_from": "2026-04-01",
+      "intraday_price": 91.4,
+      "intraday_change": "-2.66%",
+      "intraday_strategy": "續抱+可小加碼（通過4項加碼驗證）"
     },
     {
       "stock_code": "4904",
@@ -93,7 +111,10 @@
       "score": 75,
       "rating": "⭐⭐⭐⭐",
       "reason": "Day5續推+10連買+14K L0+防禦穩定+倉位降至5-10%配合攻防比例",
-      "holding_from": "2026-03-30"
+      "holding_from": "2026-03-30",
+      "intraday_price": 92.5,
+      "intraday_change": "-1.07%",
+      "intraday_strategy": "續抱"
     }
   ],
   "holding_tracking": [
@@ -106,8 +127,9 @@
       "stop_loss": 69.0,
       "holding_from": "2026-03-30",
       "result": "holding",
-      "holding_status": "Day4：收盤79.8>推薦78.2（+2.05%），L0續追蹤",
-      "actual_close": 79.8
+      "holding_status": "Day4：盤中78.3>推薦78.2（+0.13%），今日反彈+4.26%，L0續追蹤",
+      "actual_close": 79.8,
+      "intraday_price": 78.3
     },
     {
       "stock_code": "2605",
@@ -118,8 +140,11 @@
       "stop_loss": 39.5,
       "holding_from": "2026-04-01",
       "result": "holding",
-      "holding_status": "Day2：收盤41.0<推薦42.0（-2.38%），L0小量賣超但累計+3.8K仍正，觀察中",
-      "actual_close": 41.0
+      "holding_status": "Day2：盤中41.7<推薦42.0（-0.71%），L4法人反轉→盤中強制出場",
+      "actual_close": 41.0,
+      "intraday_price": 41.7,
+      "exit_signal": "L4法人爆量賣超-658張（佔日均量7.0%）→強制出場",
+      "exit_price": 41.7
     },
     {
       "stock_code": "4938",
@@ -130,9 +155,10 @@
       "stop_loss": 70.0,
       "holding_from": "2026-03-25",
       "result": "holding",
-      "holding_status": "Day7今日結算：昨收78.2<推薦78.6（-0.51%），待今日收盤確認",
-      "day7_status": "昨收78.2<推薦78.6，若今日收盤仍<78.6→FAIL",
-      "actual_close": 78.2
+      "holding_status": "Day7結算中：盤中78.1<推薦78.6（-0.64%），待收盤確認",
+      "day7_status": "盤中78.1<推薦78.6，若收盤仍<78.6→FAIL",
+      "actual_close": 78.2,
+      "intraday_price": 78.1
     }
   ],
   "removed_stocks": [
@@ -153,6 +179,46 @@
       "exit_price": 35.5,
       "recommend_price": 35.8,
       "pnl": "-0.84%"
+    },
+    {
+      "stock_code": "2605",
+      "stock_name": "新興",
+      "reason": "L4法人爆量賣超-658張（佔日均量7.0%）→盤中強制出場",
+      "removed_date": "2026-04-02",
+      "removed_phase": "intraday",
+      "exit_price": 41.7,
+      "recommend_price": 42.0,
+      "pnl": "-0.71%"
+    }
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "industry": "航空",
+      "score": 63,
+      "reason": "avg#25+累計+42K+近5天外資投信同步+L0，但航空非超強催化+油價高基期，63<75不推薦",
+      "intraday_price": 34.95,
+      "intraday_change": "-1.41%"
+    },
+    {
+      "stock_code": "4958",
+      "stock_name": "臻鼎-KY",
+      "industry": "PCB",
+      "score": 48,
+      "reason": "累計+27K+PCB漲價題材，但外資持股比-0.45%+今日-6.09%大跌",
+      "intraday_price": 216.0,
+      "intraday_change": "-6.09%"
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光",
+      "industry": "半導體封測",
+      "score": null,
+      "reason": "avg#8.5+27億，但累計-23K+近5天-12K法人賣超，需多日連買確認轉向",
+      "intraday_price": 361.5,
+      "intraday_change": "+2.26%"
     }
   ],
   "market_context": {
@@ -161,9 +227,7 @@
     "defense_ratio": "35-40%（台灣大+華南金+遠傳，目標15-25%偏高但持有中表現正面）",
     "key_themes": "中東停戰曙光+OpenAI$1220億+SpaceX IPO+鎧俠停產2D NAND+台光電Q2漲價+啟碁LEO 800萬套+智邦800G+南韓半導體+150%",
     "catalyst_strength": "超強（AI伺服器5週+光通訊3.5週+衛星3.5週）",
-    "module_a_summary": "L3:大聯大(觀察) | L2:文曄/聯強/華南金/台灣大/國產",
-    "module_b_summary": "Apple+2.7%連漲→欣興L0通過+信邦L0通過 | 可成L4+奇鋐L4排除",
-    "note": "4/1大漲1451點導致大量法人單日爆買，多數TOP50股票動能>100%被排除（追高風險）。金融股集體動能200-500%全部排除。真正佈局型機會在AI伺服器（廣達8B2S）和持有中的防禦+漲價股。"
+    "intraday_note": "4/1大漲後正常回檔，權值股普跌，量能萎縮。法人TOP50多為4/1單日追高買超。金融股動能200-500%全排除。"
   },
   "accuracy": {
     "cumulative_accuracy": "64.8%",
@@ -171,6 +235,6 @@
     "cumulative_fail": 58,
     "holding_count": 10,
     "day7_pending": ["4938"],
-    "note": "今日無新結算，和碩Day7待今日收盤確認"
+    "note": "和碩Day7盤中78.1<78.6待收盤確認，2605新興盤中L4出場"
   }
 }
