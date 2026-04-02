@@ -131,6 +131,21 @@ if ($AllExist) {
     } else {
         python "$ProjectDir\scripts\notify_line.py" "盤後分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
     }
+
+    # === 週五：跑規則有效性驗證 + 準確率週報 ===
+    $DayOfWeek = (Get-Date).DayOfWeek
+    if ($DayOfWeek -eq "Friday") {
+        Write-Output "" | Tee-Object -FilePath $LogFile -Append
+        Write-Output "[週報] 執行規則有效性驗證..." | Tee-Object -FilePath $LogFile -Append
+        python "$ProjectDir\scripts\weekly_rule_check.py" 2>&1 | Tee-Object -FilePath $LogFile -Append
+        python "$ProjectDir\scripts\accuracy_report.py" 2>&1 | Tee-Object -FilePath $LogFile -Append
+
+        $WeeklyFile = "$ProjectDir\data\reports\weekly_rule_check_$Date.txt"
+        if ((Test-Path $WeeklyFile) -and (Get-Item $WeeklyFile).Length -gt 0) {
+            python "$ProjectDir\scripts\notify_line.py" --file $WeeklyFile
+            Write-Output "[週報] LINE 推送完成" | Tee-Object -FilePath $LogFile -Append
+        }
+    }
 } else {
     Write-Output "盤後分析有缺漏檔案！請檢查 log (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
     python "$ProjectDir\scripts\notify_line.py" "盤後分析失敗 ($Date) 有缺漏檔案，請檢查 log"
