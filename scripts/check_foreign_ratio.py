@@ -154,10 +154,10 @@ def main():
                 suggestion = "+5分（大增>0.5%）"
             elif change > 0:
                 suggestion = "不調整（小增）"
-            elif change < 0:
-                suggestion = "-3分（週減）"
+            elif change <= -0.1:
+                suggestion = "-3分（週減≥0.1%）"
             else:
-                suggestion = "不調整"
+                suggestion = "不調整（微減<0.1%）"
         else:
             suggestion = "無數據"
 

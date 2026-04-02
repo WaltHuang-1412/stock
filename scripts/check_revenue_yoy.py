@@ -200,9 +200,9 @@ def main():
         suggestion = ""
         if yoy is not None:
             if yoy >= 30:
-                suggestion = "+5分（年增≥30%）"
+                suggestion = "可+5分（需確認近5日回檔≥2%）"
             elif yoy >= 10:
-                suggestion = "可+5分（需回檔≥5%）"
+                suggestion = "可+5分（需確認近5日回檔≥5%）"
             elif decline_streak >= 3:
                 suggestion = "-5分（連續衰退）"
             else:
