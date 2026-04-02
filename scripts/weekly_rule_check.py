@@ -44,12 +44,18 @@ def load_settled():
             result = rec.get('result', '')
             if result not in ('success', 'fail'):
                 continue
+            industry = rec.get('industry', '')
+            if isinstance(industry, dict):
+                industry = industry.get('sector', '')
+            if not industry:
+                industry = '未分類'
             all_recs.append({
                 'date': date_str,
                 'code': rec.get('stock_code') or rec.get('symbol', ''),
                 'name': rec.get('stock_name') or rec.get('name', ''),
                 'score': rec.get('score', 0),
                 'result': result,
+                'industry': industry,
             })
     return all_recs
 
@@ -139,23 +145,57 @@ def main():
     success = sum(1 for r in recs if r['result'] == 'success')
     overall_acc = success / total * 100
 
-    # 分類
+    # 逐檔分類 + 記錄每條規則觸發
     up, down, neutral = [], [], []
+
+    # 各規則獨立統計
+    rule_stats = {
+        'rev_decline': {'success': 0, 'fail': 0, 'stocks': []},   # 營收連續衰退 -5
+        'ratio_up': {'success': 0, 'fail': 0, 'stocks': []},      # 持股比大增 +5
+        'ratio_down': {'success': 0, 'fail': 0, 'stocks': []},    # 持股比週減 -3
+    }
+
+    # 產業統計
+    industry_stats = defaultdict(lambda: {'success': 0, 'fail': 0})
 
     for rec in recs:
         code, date = rec['code'], rec['date']
         adj = 0
+        triggers = []
 
+        # 產業
+        industry = rec.get('industry', '未分類')
+        industry_stats[industry][rec['result']] += 1
+
+        # 營收
         yoy, decline = get_revenue_yoy(code, date, rev_cache)
+        rec['yoy'] = yoy
+        rec['decline_streak'] = decline
+
         if decline >= 3:
             adj -= 5
+            triggers.append(f"衰退{decline}月-5")
+            rule_stats['rev_decline'][rec['result']] += 1
+            rule_stats['rev_decline']['stocks'].append(rec)
 
+        # 持股比
         ratio_chg = get_ratio_change(code, date, ratio_cache)
+        rec['ratio_change'] = ratio_chg
+
         if ratio_chg is not None:
             if ratio_chg > 0.5:
                 adj += 5
+                triggers.append(f"持股+{ratio_chg:.1f}%+5")
+                rule_stats['ratio_up'][rec['result']] += 1
+                rule_stats['ratio_up']['stocks'].append(rec)
             elif ratio_chg <= -0.1:
                 adj -= 3
+                triggers.append(f"持股{ratio_chg:.1f}%-3")
+                rule_stats['ratio_down'][rec['result']] += 1
+                rule_stats['ratio_down']['stocks'].append(rec)
+
+        rec['adj'] = adj
+        rec['triggers'] = triggers
 
         if adj > 0:
             up.append(rec)
@@ -170,40 +210,136 @@ def main():
         s = sum(1 for r in lst if r['result'] == 'success')
         return s / len(lst) * 100, len(lst)
 
+    def rule_acc(stat):
+        t = stat['success'] + stat['fail']
+        if t == 0:
+            return 0, 0
+        return stat['success'] / t * 100, t
+
     up_acc, up_n = acc(up)
     down_acc, down_n = acc(down)
     neutral_acc, neutral_n = acc(neutral)
 
-    # 近2週 vs 全期比較
+    # 近2週 vs 全期
     two_weeks_ago = (datetime.now() - timedelta(days=14)).strftime("%Y-%m-%d")
     recent = [r for r in recs if r['date'] >= two_weeks_ago]
-    recent_acc = sum(1 for r in recent if r['result'] == 'success') / len(recent) * 100 if recent else 0
+    recent_s = sum(1 for r in recent if r['result'] == 'success')
+    recent_acc = recent_s / len(recent) * 100 if recent else 0
 
-    # 判斷規則是否有效
-    rule_ok = down_acc < neutral_acc - 3  # 扣分股準確率比無變化低至少3%才算有效
+    # 近4週
+    four_weeks_ago = (datetime.now() - timedelta(days=28)).strftime("%Y-%m-%d")
+    month = [r for r in recs if r['date'] >= four_weeks_ago]
+    month_s = sum(1 for r in month if r['result'] == 'success')
+    month_acc = month_s / len(month) * 100 if month else 0
 
-    # 產出
+    rule_ok = down_acc < neutral_acc - 3
+
+    # ===== 產出 =====
     lines = []
-    lines.append(f"[週報] 規則有效性驗證 {today}")
-    lines.append(f"")
-    lines.append(f"整體: {success}/{total} = {overall_acc:.1f}%")
-    if recent:
-        lines.append(f"近2週: {sum(1 for r in recent if r['result']=='success')}/{len(recent)} = {recent_acc:.1f}%")
-    lines.append(f"")
-    lines.append(f"=== 新規則區分力 ===")
-    lines.append(f"加分股: {up_acc:.1f}% ({up_n}檔)")
-    lines.append(f"扣分股: {down_acc:.1f}% ({down_n}檔)")
-    lines.append(f"無變化: {neutral_acc:.1f}% ({neutral_n}檔)")
-    lines.append(f"")
+    lines.append(f"[週報] 規則驗證 {today}")
+    lines.append("")
 
+    # 1. 整體趨勢
+    lines.append(f"== 準確率趨勢 ==")
+    lines.append(f"全期: {success}/{total} = {overall_acc:.1f}%")
+    if month:
+        lines.append(f"近4週: {month_s}/{len(month)} = {month_acc:.1f}%")
+    if recent:
+        lines.append(f"近2週: {recent_s}/{len(recent)} = {recent_acc:.1f}%")
+    # 趨勢判斷
+    if recent and month and len(recent) >= 3 and len(month) >= 10:
+        if recent_acc > month_acc + 5:
+            lines.append(f"趨勢: 上升中")
+        elif recent_acc < month_acc - 5:
+            lines.append(f"趨勢: 下降中!!")
+        else:
+            lines.append(f"趨勢: 持平")
+    lines.append("")
+
+    # 2. 新規則區分力
+    lines.append(f"== 新規則區分力 ==")
+    lines.append(f"加分股: {up_acc:.0f}% ({up_n}檔)")
+    lines.append(f"扣分股: {down_acc:.0f}% ({down_n}檔)")
+    lines.append(f"無變化: {neutral_acc:.0f}% ({neutral_n}檔)")
+    lines.append("")
+
+    # 3. 各規則拆解
+    lines.append(f"== 各規則準確率 ==")
+    for rule_name, display in [
+        ('rev_decline', '營收連續衰退≥3月(-5分)'),
+        ('ratio_up', '外資持股比大增>0.5%(+5分)'),
+        ('ratio_down', '外資持股比週減≥0.1%(-3分)'),
+    ]:
+        a, n = rule_acc(rule_stats[rule_name])
+        s = rule_stats[rule_name]['success']
+        f = rule_stats[rule_name]['fail']
+        if n > 0:
+            lines.append(f"{display}: {s}成/{f}敗 = {a:.0f}% ({n}檔)")
+        else:
+            lines.append(f"{display}: 尚無觸發")
+    lines.append("")
+
+    # 4. 加分股明細（最多5檔）
+    if up:
+        lines.append(f"== 加分股明細 ==")
+        for r in up[:5]:
+            triggers = "+".join(r['triggers'])
+            lines.append(f"{r['date'][-5:]} {r['code']}{r['name']} {r['result']} ({triggers})")
+        if len(up) > 5:
+            lines.append(f"...共{len(up)}檔")
+        lines.append("")
+
+    # 5. 扣分股 fail 明細（警示用，最多8檔）
+    down_fails = [r for r in down if r['result'] == 'fail']
+    down_success = [r for r in down if r['result'] == 'success']
+    if down_fails:
+        lines.append(f"== 扣分股(fail)前8檔 ==")
+        for r in down_fails[:8]:
+            triggers = "+".join(r['triggers'])
+            lines.append(f"{r['date'][-5:]} {r['code']}{r['name']} FAIL ({triggers})")
+        if len(down_fails) > 8:
+            lines.append(f"...共{len(down_fails)}檔fail")
+        lines.append("")
+
+    # 6. 扣分股中的 success（被誤殺的）
+    if down_success:
+        lines.append(f"== 扣分但成功(誤殺){len(down_success)}檔 ==")
+        for r in down_success[:5]:
+            triggers = "+".join(r['triggers'])
+            lines.append(f"{r['date'][-5:]} {r['code']}{r['name']} SUCCESS ({triggers})")
+        if len(down_success) > 5:
+            lines.append(f"...共{len(down_success)}檔")
+        lines.append("")
+
+    # 7. 產業準確率 TOP5/WORST5
+    ind_list = [(k, v['success'], v['fail']) for k, v in industry_stats.items()
+                if v['success'] + v['fail'] >= 3]
+    if ind_list:
+        ind_list.sort(key=lambda x: x[1]/(x[1]+x[2]), reverse=True)
+        lines.append(f"== 產業TOP5 ==")
+        for name, s, f in ind_list[:5]:
+            lines.append(f"{name}: {s}/{s+f}={s/(s+f)*100:.0f}%")
+        lines.append("")
+        lines.append(f"== 產業WORST5 ==")
+        for name, s, f in ind_list[-5:]:
+            lines.append(f"{name}: {s}/{s+f}={s/(s+f)*100:.0f}%")
+        lines.append("")
+
+    # 8. 結論
+    lines.append(f"== 結論 ==")
     if rule_ok:
-        lines.append(f"結論: 規則有效 (扣分股{down_acc:.0f}% < 無變化{neutral_acc:.0f}%)")
+        lines.append(f"規則有效 (扣分{down_acc:.0f}% < 無變化{neutral_acc:.0f}%)")
     else:
-        lines.append(f"!! 警告: 規則可能失效 !!")
-        lines.append(f"扣分股{down_acc:.0f}% vs 無變化{neutral_acc:.0f}%，差距不足")
-        lines.append(f"建議檢查是否需要調整或移除規則")
+        lines.append(f"!! 規則可能失效 !!")
+        lines.append(f"扣分{down_acc:.0f}% vs 無變化{neutral_acc:.0f}%")
+        lines.append(f"建議檢查是否調整或移除")
 
     output = "\n".join(lines)
+
+    # LINE 上限 5000 字元
+    if len(output) > 4900:
+        output = output[:4900] + "\n...(截斷)"
+
     print(output)
 
     # 存檔
