@@ -47,8 +47,12 @@ python3 scripts/catalyst_theme_detector.py --date $(date +%Y-%m-%d) --lookback 7
 ```
 Module B 候選的後續處理（chip_analysis、reversal_alert、評分、排除原因）全部按照 CLAUDE.md Step 6「Module B 催化主題預警處理」段落執行，不得跳過。
 
-法人模式追蹤（Step 7 評分前讀取）：
-Step 7 開始前，讀取 `data/strategy/pattern_today.json`：
+法人模式追蹤（Step 5 完成後、Step 7 之前執行）：
+先執行模式追蹤器更新：
+```bash
+python3 scripts/institutional_pattern_tracker.py
+```
+然後讀取 `data/strategy/pattern_today.json`：
 - **hot_patterns**: 最近勝率高的模式 → 符合的候選股可額外 +3~5 分
 - **cold_patterns**: 最近勝率低的模式 → 符合的候選股 -3~5 分
 - **best_combos / worst_combos**: 兩兩特徵組合的最強/最差 → 交叉比對候選股
