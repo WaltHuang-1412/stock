@@ -7515,11 +7515,11 @@
       }
     ]
   },
-  "settled_accuracy": 63.9,
-  "settled_count": 169,
+  "settled_accuracy": 63.4,
+  "settled_count": 175,
   "holding_count": 8,
-  "total_success": 108,
-  "total_fail": 61,
+  "total_success": 111,
+  "total_fail": 64,
   "2026-03-30": {
     "predictions": [
       {
@@ -7548,9 +7548,11 @@
         "recommend_price": 92.6,
         "target_price": 102.0,
         "stop_loss": 86.0,
-        "result": "holding",
-        "holding_days": 1,
-        "actual_close": 91.0
+        "result": "fail",
+        "holding_days": 7,
+        "actual_close": 91.0,
+        "settled_date": "2026-04-07",
+        "settled_price": 93.3
       },
       {
         "symbol": "2356",
@@ -7588,9 +7590,11 @@
         "recommend_price": 75.1,
         "target_price": 82.0,
         "stop_loss": 69.0,
-        "result": "holding",
-        "holding_days": 1,
-        "actual_close": 78.2
+        "result": "success",
+        "holding_days": 7,
+        "actual_close": 78.2,
+        "settled_date": "2026-04-07",
+        "settled_price": 79.4
       },
       {
         "symbol": "3045",
@@ -7598,11 +7602,13 @@
         "recommend_price": 109.0,
         "target_price": 116.0,
         "stop_loss": 103.5,
-        "result": "holding",
-        "holding_days": 1,
+        "result": "fail",
+        "holding_days": 7,
         "actual_close": 109.0,
         "holding_status": "Day1：盤中新推薦，收盤109.0=推薦價，法人+2,450 L0，10連買，動能-22.9%",
-        "track": "B"
+        "track": "B",
+        "settled_date": "2026-04-07",
+        "settled_price": 109.5
       }
     ],
     "date": "2026-03-30"
@@ -7851,11 +7857,13 @@
         "recommend_price": 109.0,
         "target_price": 116.0,
         "stop_loss": 103.5,
-        "result": "holding",
-        "holding_days": 3,
+        "result": "fail",
+        "holding_days": 7,
         "actual_close": 109.5,
         "holding_from": "2026-03-30",
-        "holding_status": "Day3：+0.46%，10連買+38K L0，防禦核心"
+        "holding_status": "Day3：+0.46%，10連買+38K L0，防禦核心",
+        "settled_date": "2026-04-07",
+        "settled_price": 109.5
       },
       {
         "symbol": "3533",
@@ -7899,11 +7907,13 @@
         "recommend_price": 91.9,
         "target_price": 102.0,
         "stop_loss": 86.0,
-        "result": "holding",
-        "holding_days": 3,
+        "result": "fail",
+        "holding_days": 7,
         "actual_close": 93.5,
         "holding_from": "2026-03-30",
-        "holding_status": "Day3：+1.74%，10連買+15K L0，防禦穩定"
+        "holding_status": "Day3：+1.74%，10連買+15K L0，防禦穩定",
+        "settled_date": "2026-04-07",
+        "settled_price": 93.3
       },
       {
         "symbol": "3042",
@@ -7911,11 +7921,13 @@
         "recommend_price": 92.7,
         "target_price": 102.0,
         "stop_loss": 87.5,
-        "result": "holding",
-        "holding_days": 1,
+        "result": "success",
+        "holding_days": 3,
         "actual_close": 93.9,
         "holding_from": "2026-04-01",
-        "holding_status": "Day1：+1.29%，10連買+3.9K L0，IC漲價爆量"
+        "holding_status": "Day1：+1.29%，10連買+3.9K L0，IC漲價爆量",
+        "settled_date": "2026-04-07",
+        "settled_price": 94.0
       },
       {
         "symbol": "2605",
@@ -7959,11 +7971,13 @@
         "recommend_price": 78.2,
         "target_price": 82.0,
         "stop_loss": 69.0,
-        "result": "holding",
-        "holding_days": 3,
+        "result": "success",
+        "holding_days": 7,
         "actual_close": 79.8,
         "holding_from": "2026-03-30",
-        "holding_status": "Day3：+2.05%，8買+5.2K L0，今+7%逆勢領漲"
+        "holding_status": "Day3：+2.05%，8買+5.2K L0，今+7%逆勢領漲",
+        "settled_date": "2026-04-07",
+        "settled_price": 79.4
       }
     ]
   },
@@ -8032,11 +8046,13 @@
         "recommend_price": 109.5,
         "target_price": 116.0,
         "stop_loss": 103.5,
-        "result": "holding",
-        "holding_days": 4,
+        "result": "fail",
+        "holding_days": 7,
         "actual_close": 109.5,
         "holding_from": "2026-03-30",
-        "holding_status": "Day4：0%，9B1S+cum32K+L0，今轉賣-595但累計穩定"
+        "holding_status": "Day4：0%，9B1S+cum32K+L0，今轉賣-595但累計穩定",
+        "settled_date": "2026-04-07",
+        "settled_price": 109.5
       },
       {
         "symbol": "2382",
@@ -8044,11 +8060,13 @@
         "recommend_price": 290.5,
         "target_price": 320.0,
         "stop_loss": 267.0,
-        "result": "holding",
-        "holding_days": 1,
+        "result": "fail",
+        "holding_days": 2,
         "actual_close": 284.5,
         "holding_from": "2026-04-02",
-        "holding_status": "Day1：-2.07%，8B2S+cum26K+L0+營收+43.2%+回檔佈局"
+        "holding_status": "Day1：-2.07%，8B2S+cum26K+L0+營收+43.2%+回檔佈局",
+        "settled_date": "2026-04-07",
+        "settled_price": 289.0
       },
       {
         "symbol": "3533",
@@ -8057,7 +8075,7 @@
         "target_price": 2350.0,
         "stop_loss": 1930.0,
         "result": "holding",
-        "holding_days": 3,
+        "holding_days": 5,
         "actual_close": 2045.0,
         "holding_from": "2026-03-31",
         "holding_status": "Day3：-3.76%，10連買+L0+距停損5.6%，CPO催化"
@@ -8068,11 +8086,13 @@
         "recommend_price": 1855.0,
         "target_price": 2000.0,
         "stop_loss": 1710.0,
-        "result": "holding",
-        "holding_days": 1,
+        "result": "success",
+        "holding_days": 2,
         "actual_close": 1810.0,
         "holding_from": "2026-04-02",
-        "holding_status": "Day1：-2.43%，今+9K大買但累計-50K，4/16法說催化"
+        "holding_status": "Day1：-2.43%，今+9K大買但累計-50K，4/16法說催化",
+        "settled_date": "2026-04-07",
+        "settled_price": 1860.0
       },
       {
         "symbol": "2880",
@@ -8081,7 +8101,7 @@
         "target_price": 36.5,
         "stop_loss": 31.0,
         "result": "holding",
-        "holding_days": 3,
+        "holding_days": 5,
         "actual_close": 33.85,
         "holding_from": "2026-03-31",
         "holding_status": "Day3：+0.45%，唯一正報酬，9連買+21K+L0"
@@ -8092,11 +8112,13 @@
         "recommend_price": 93.9,
         "target_price": 102.0,
         "stop_loss": 87.5,
-        "result": "holding",
-        "holding_days": 2,
+        "result": "success",
+        "holding_days": 3,
         "actual_close": 91.8,
         "holding_from": "2026-04-01",
-        "holding_status": "Day2：-2.24%，10連買+L0+漲價催化"
+        "holding_status": "Day2：-2.24%，10連買+L0+漲價催化",
+        "settled_date": "2026-04-07",
+        "settled_price": 94.0
       },
       {
         "symbol": "4904",
@@ -8104,11 +8126,13 @@
         "recommend_price": 93.5,
         "target_price": 102.0,
         "stop_loss": 86.0,
-        "result": "holding",
-        "holding_days": 4,
+        "result": "fail",
+        "holding_days": 7,
         "actual_close": 92.5,
         "holding_from": "2026-03-30",
-        "holding_status": "Day4：-1.07%，10連買+L0+防禦穩定"
+        "holding_status": "Day4：-1.07%，10連買+L0+防禦穩定",
+        "settled_date": "2026-04-07",
+        "settled_price": 93.3
       },
       {
         "symbol": "2615",
@@ -8116,11 +8140,89 @@
         "recommend_price": 78.2,
         "target_price": 82.0,
         "stop_loss": 69.0,
-        "result": "holding",
-        "holding_days": 4,
+        "result": "success",
+        "holding_days": 7,
         "actual_close": 78.0,
         "holding_from": "2026-03-30",
-        "holding_status": "Day4：-0.26%，L0但動能+218.5%>100%+營收衰退-5分"
+        "holding_status": "Day4：-0.26%，L0但動能+218.5%>100%+營收衰退-5分",
+        "settled_date": "2026-04-07",
+        "settled_price": 79.4
+      }
+    ]
+  },
+  "2026-04-07": {
+    "predictions": [
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "recommend_price": 91.8,
+        "target_price": 101.0,
+        "stop_loss": 84.5,
+        "result": "holding",
+        "holding_days": 1
+      },
+      {
+        "symbol": "3702",
+        "name": "大聯大",
+        "recommend_price": 88.0,
+        "target_price": 97.0,
+        "stop_loss": 81.0,
+        "result": "holding",
+        "holding_days": 1
+      },
+      {
+        "symbol": "2027",
+        "name": "大成鋼",
+        "recommend_price": 38.4,
+        "target_price": 42.5,
+        "stop_loss": 35.4,
+        "result": "holding",
+        "holding_days": 1
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "recommend_price": 129.0,
+        "target_price": 142.0,
+        "stop_loss": 119.0,
+        "result": "holding",
+        "holding_days": 1
+      },
+      {
+        "symbol": "3533",
+        "name": "嘉澤",
+        "recommend_price": 2125.0,
+        "target_price": 2350.0,
+        "stop_loss": 1930.0,
+        "result": "holding",
+        "holding_days": 5
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 40.85,
+        "target_price": 45.0,
+        "stop_loss": 37.6,
+        "result": "holding",
+        "holding_days": 1
+      },
+      {
+        "symbol": "2880",
+        "name": "華南金",
+        "recommend_price": 33.7,
+        "target_price": 36.5,
+        "stop_loss": 31.0,
+        "result": "holding",
+        "holding_days": 5
+      },
+      {
+        "symbol": "6505",
+        "name": "台塑化",
+        "recommend_price": 54.7,
+        "target_price": 60.0,
+        "stop_loss": 52.0,
+        "result": "holding",
+        "holding_days": 1
       }
     ]
   }
