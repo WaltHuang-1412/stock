@@ -52,7 +52,7 @@ def load_t86(date_str):
     if not fp.exists():
         return {}
     with open(fp, 'r', encoding='utf-8') as f:
-        return json.load(fp)
+        return json.load(f)
 
 
 def find_consecutive_buyers(t86_dates):
@@ -193,7 +193,7 @@ def fetch_realtime_batch(stock_codes):
 
 
 def fetch_avg_volume_batch(stock_codes):
-    """用 Yahoo Finance 取得 20 日均量"""
+    """用 Yahoo Finance 取得 20 日均量（回傳單位：張）"""
     avg_volumes = {}
     for code in stock_codes:
         try:
@@ -204,7 +204,9 @@ def fetch_avg_volume_batch(stock_codes):
             volumes = [v for v in data['chart']['result'][0]['indicators']['quote'][0]['volume'] if v]
             if len(volumes) >= 5:
                 # 排除今天（最後一天），取前 20 天均量
-                avg_volumes[code] = sum(volumes[:-1]) / len(volumes[:-1])
+                # Yahoo volume 單位是「股」，轉成「張」（/1000）
+                avg_vol_shares = sum(volumes[:-1]) / len(volumes[:-1])
+                avg_volumes[code] = avg_vol_shares / 1000  # 股→張
         except Exception:
             pass
         time.sleep(0.2)
@@ -274,6 +276,7 @@ def main():
         if not avg_vol or avg_vol == 0:
             continue
 
+        # TWSE 即時 volume 單位是「張」，avg_vol 也已轉為「張」
         volume_ratio = rt['volume'] / avg_vol
 
         # 篩選條件
@@ -287,8 +290,8 @@ def main():
         if volume_ratio < 1.2:
             continue
 
-        # 3. 今天漲幅 < 3%（還沒反映）
-        if rt['change_pct'] >= 3:
+        # 3. 今天漲幅 < 5%（放寬：大盤強勢日 3% 很常見）
+        if rt['change_pct'] >= 5:
             continue
 
         # 計算信號強度
