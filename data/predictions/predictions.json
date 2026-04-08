@@ -7515,9 +7515,9 @@
       }
     ]
   },
-  "settled_accuracy": 63.4,
-  "settled_count": 175,
-  "holding_count": 8,
+  "settled_accuracy": "61.90%",
+  "settled_count": 189,
+  "holding_count": 85,
   "total_success": 111,
   "total_fail": 64,
   "2026-03-30": {
@@ -8223,6 +8223,90 @@
         "stop_loss": 52.0,
         "result": "holding",
         "holding_days": 1
+      }
+    ]
+  },
+  "2026-04-08": {
+    "predictions": [
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "recommend_price": 91.8,
+        "target_price": 101.0,
+        "stop_loss": 84.5,
+        "result": "fail",
+        "settled_date": "2026-04-08",
+        "settled_price": 89.4,
+        "holding_days": 2
+      },
+      {
+        "symbol": "2027",
+        "name": "大成鋼",
+        "recommend_price": 38.4,
+        "target_price": 42.5,
+        "stop_loss": 35.4,
+        "result": "fail",
+        "settled_date": "2026-04-08",
+        "settled_price": 38.1,
+        "holding_days": 2
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 40.85,
+        "target_price": 45.0,
+        "stop_loss": 37.6,
+        "result": "fail",
+        "settled_date": "2026-04-08",
+        "settled_price": 40.85,
+        "holding_days": 2
+      },
+      {
+        "symbol": "6505",
+        "name": "台塑化",
+        "recommend_price": 54.7,
+        "target_price": 60.0,
+        "stop_loss": 52.0,
+        "result": "success",
+        "settled_date": "2026-04-08",
+        "settled_price": 56.8,
+        "holding_days": 2
+      },
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend_price": 58.3,
+        "target_price": 64.0,
+        "stop_loss": 54.0,
+        "result": "holding",
+        "holding_days": 0
+      },
+      {
+        "symbol": "3189",
+        "name": "景碩",
+        "recommend_price": 358.5,
+        "target_price": 395.0,
+        "stop_loss": 330.0,
+        "result": "holding",
+        "holding_days": 0
+      },
+      {
+        "symbol": "8021",
+        "name": "尚鼎",
+        "recommend_price": 266.5,
+        "target_price": 293.0,
+        "stop_loss": 245.0,
+        "result": "holding",
+        "holding_days": 0
+      },
+      {
+        "symbol": "3443",
+        "name": "創意",
+        "recommend_price": 2365,
+        "target_price": 2600,
+        "stop_loss": 2175,
+        "result": "holding",
+        "holding_days": 0
       }
     ]
   }
