@@ -4,12 +4,18 @@
 
 重點（v7.8）：
 1. Track A：追蹤盤前推薦股 + 出場訊號檢查（停損/連續重挫/法人反轉）
-2. Track B（Step 3）：從法人 TOP50 篩出「買了但沒漲 <3%」的候選股
-3. Track B（Step 3.5）🆕：對候選股跑完整五維度評分，產出最多 3 檔盤中新推薦
+2. Track B（Step 3 前）：先執行盤中法人續買偵測器
+   ```bash
+   python3 scripts/intraday_institutional_detector.py
+   ```
+   讀取 `data/YYYY-MM-DD/intraday_detector.json`，強訊號（≥60分）的股票**必須加入 Track B 候選池**
+3. Track B（Step 3）：從法人 TOP50 篩出「買了但沒漲 <3%」的候選股 + 偵測器強訊號
+4. Track B（Step 3.5）：對候選股跑完整五維度評分，產出最多 3 檔盤中新推薦
    - 必須執行 chip_analysis.py + reversal_alert.py
+   - 偵測器強訊號股票評分時額外 +5 分（即時量價確認法人續買）
    - 門檻 ≥75 分、倉位 5-10%、停損 -5%
    - 無符合條件時標註「今日無盤中新推薦」
-4. LINE 摘要必須包含 Track B 盤中新推薦的完整進場資訊（進場/目標/停損/倉位）
+5. LINE 摘要必須包含 Track B 盤中新推薦的完整進場資訊（進場/目標/停損/倉位）
 
 營收與外資持股比檢查（Track B Step 3.5 評分時強制執行）：
 Track B 候選股評分前，必須執行：
