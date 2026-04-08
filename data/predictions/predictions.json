@@ -7515,11 +7515,11 @@
       }
     ]
   },
-  "settled_accuracy": "61.90%",
-  "settled_count": 189,
-  "holding_count": 85,
-  "total_success": 111,
-  "total_fail": 64,
+  "settled_accuracy": "62.37%",
+  "settled_count": 186,
+  "holding_count": 5,
+  "total_success": 116,
+  "total_fail": 70,
   "2026-03-30": {
     "predictions": [
       {
@@ -7613,8 +7613,8 @@
     ],
     "date": "2026-03-30"
   },
-  "cumulative_success": 107,
-  "cumulative_fail": 58,
+  "cumulative_success": 116,
+  "cumulative_fail": 70,
   "2026-03-31": {
     "date": "2026-03-31",
     "predictions": [
@@ -8279,7 +8279,7 @@
         "target_price": 64.0,
         "stop_loss": 54.0,
         "result": "holding",
-        "holding_days": 0
+        "holding_days": 1
       },
       {
         "symbol": "3189",
@@ -8288,7 +8288,7 @@
         "target_price": 395.0,
         "stop_loss": 330.0,
         "result": "holding",
-        "holding_days": 0
+        "holding_days": 1
       },
       {
         "symbol": "8021",
@@ -8296,8 +8296,10 @@
         "recommend_price": 266.5,
         "target_price": 293.0,
         "stop_loss": 245.0,
-        "result": "holding",
-        "holding_days": 0
+        "result": "success",
+        "holding_days": 1,
+        "settled_date": "2026-04-08",
+        "settled_price": 293.0
       },
       {
         "symbol": "3443",
@@ -8305,8 +8307,48 @@
         "recommend_price": 2365,
         "target_price": 2600,
         "stop_loss": 2175,
+        "result": "success",
+        "holding_days": 1,
+        "settled_date": "2026-04-08",
+        "settled_price": 2510.0
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "recommend_price": 129.0,
+        "target_price": 142.0,
+        "stop_loss": 119.0,
+        "result": "success",
+        "settled_date": "2026-04-08",
+        "settled_price": 150.0,
+        "holding_days": 3
+      },
+      {
+        "symbol": "3702",
+        "name": "大聯大",
+        "recommend_price": 88.0,
+        "target_price": 97.0,
+        "stop_loss": 81.0,
         "result": "holding",
-        "holding_days": 0
+        "holding_days": 4
+      },
+      {
+        "symbol": "3533",
+        "name": "嘉澤",
+        "recommend_price": 2125,
+        "target_price": 2350,
+        "stop_loss": 1930,
+        "result": "holding",
+        "holding_days": 8
+      },
+      {
+        "symbol": "2880",
+        "name": "華南金",
+        "recommend_price": 33.7,
+        "target_price": 36.5,
+        "stop_loss": 31.0,
+        "result": "holding",
+        "holding_days": 8
       }
     ]
   }
