@@ -47,6 +47,13 @@ python3 scripts/catalyst_theme_detector.py --date $(date +%Y-%m-%d) --lookback 7
 ```
 Module B 候選的後續處理（chip_analysis、reversal_alert、評分、排除原因）全部按照 CLAUDE.md Step 6「Module B 催化主題預警處理」段落執行，不得跳過。
 
+美股財報日曆（Step 7 評分時使用）：
+讀取 `market_intelligence.md` 中的「美股財報日曆」區塊：
+- ⚡ 7天內有財報的美股 → 對應台股供應鏈候選股 **+5分**（法說催化提前卡位）
+- 🔜 30天內有財報的美股 → 對應台股候選股 **標註**（即將到來的催化）
+- 對應關係：TSM→台積電供應鏈 / NVDA→AI伺服器鏈 / MU→記憶體鏈 / AVGO→網通光通訊鏈 / INTC→封測鏈 / AAPL→蘋果鏈
+- reason 欄標註（如「TSM法說4/16→+5」）
+
 法人模式追蹤（Step 5 完成後、Step 7 之前執行）：
 先執行模式追蹤器更新：
 ```bash
