@@ -18,8 +18,8 @@
 ### 📁 驗證機制
 
 每次分析完成後，必須存在以下文件：
-- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json` + `tw_market_news.json` + `catalyst_preposition_scan.json` + `catalyst_theme_signals.json` + `tracking_YYYY-MM-DD.json` + `before_market_line.txt`
-- 盤中：`data/YYYY-MM-DD/intraday_analysis.md` + `intraday_line.txt` + 更新 `tracking_YYYY-MM-DD.json`
+- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json` + `tw_market_news.json` + `catalyst_preposition_scan.json` + `catalyst_theme_signals.json` + `revenue_check.json` + `foreign_ratio_check.json` + `tracking_YYYY-MM-DD.json` + `before_market_line.txt`
+- 盤中：`data/YYYY-MM-DD/intraday_analysis.md` + `intraday_detector.json` + `intraday_line.txt` + 更新 `tracking_YYYY-MM-DD.json`
 - 盤後：`data/YYYY-MM-DD/after_market_analysis.md` + `after_market_line.txt` + 更新 `tracking_YYYY-MM-DD.json` + 更新 `predictions.json`
 
 **如果檔案不存在 = 步驟未執行 = 違規**
@@ -48,7 +48,7 @@ python3 scripts/check_market_status.py --date $(date +%Y-%m-%d) --mode before_ma
 
 ### 🔴 Step 0: 建立 TodoWrite（強制第一步）
 
-步驟清單：Step 1（國際市場）→ 1.5（龍頭預警）→ 2（台股時事）→ 3（即時股價）→ 4（歷史驗證）→ 5（法人TOP50）→ 5.5（Module A 預埋掃描）→ 5.7（Module B 催化主題）→ 6（雙軌候選）→ 7（五維度評分）→ 8（籌碼分析）→ 9（產業分散）→ 10（建檔）
+步驟清單：Step 1（國際市場）→ 1.5（龍頭預警）→ 2（台股時事）→ 3（即時股價）→ 4（歷史驗證）→ 5（法人TOP50）→ 5.5（Module A 預埋掃描）→ 5.7（Module B 催化主題）→ 模式追蹤器 → 營收/持股比查詢 → 6（雙軌候選）→ 7（五維度評分+多因子加減分）→ 8（籌碼分析）→ 9（產業分散）→ 10（建檔）
 
 ---
 
@@ -133,7 +133,7 @@ for s in stocks:
 cat data/tracking/tracking_$(date -d yesterday +%Y-%m-%d).json
 ```
 
-**v7.9 多日追蹤結算制度**：
+**多日追蹤結算制度**：
 
 | 條件 | 判定 |
 |------|------|
@@ -549,7 +549,7 @@ python3 scripts/reversal_alert.py [推薦股...]
 
 ### 🔴 Step 0: TodoWrite
 
-步驟：Step 1（前置檢查）→ 2（Track A 追蹤+出場）→ 3（Track B 候選篩選）→ 3.5（Track B 評分+推薦）→ 4（整合輸出）→ 5（建檔）
+步驟：Step 1（前置檢查）→ 2（Track A 追蹤+出場）→ 2.5（盤中偵測器）→ 3（Track B 候選篩選）→ 3.5（Track B 評分+推薦）→ 4（整合輸出）→ 5（建檔）
 
 ---
 
