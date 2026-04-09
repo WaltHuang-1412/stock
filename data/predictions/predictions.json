@@ -7515,10 +7515,10 @@
       }
     ]
   },
-  "settled_accuracy": "62.37%",
-  "settled_count": 186,
-  "holding_count": 5,
-  "total_success": 116,
+  "settled_accuracy": "62.77%",
+  "settled_count": 188,
+  "holding_count": 7,
+  "total_success": 118,
   "total_fail": 70,
   "2026-03-30": {
     "predictions": [
@@ -7613,7 +7613,7 @@
     ],
     "date": "2026-03-30"
   },
-  "cumulative_success": 116,
+  "cumulative_success": 118,
   "cumulative_fail": 70,
   "2026-03-31": {
     "date": "2026-03-31",
@@ -8279,7 +8279,7 @@
         "target_price": 64.0,
         "stop_loss": 54.0,
         "result": "holding",
-        "holding_days": 1
+        "holding_days": 2
       },
       {
         "symbol": "3189",
@@ -8288,7 +8288,7 @@
         "target_price": 395.0,
         "stop_loss": 330.0,
         "result": "holding",
-        "holding_days": 1
+        "holding_days": 2
       },
       {
         "symbol": "8021",
@@ -8330,7 +8330,7 @@
         "target_price": 97.0,
         "stop_loss": 81.0,
         "result": "holding",
-        "holding_days": 4
+        "holding_days": 5
       },
       {
         "symbol": "3533",
@@ -8338,8 +8338,10 @@
         "recommend_price": 2125,
         "target_price": 2350,
         "stop_loss": 1930,
-        "result": "holding",
-        "holding_days": 8
+        "result": "success",
+        "holding_days": 8,
+        "settled_date": "2026-04-09",
+        "settled_price": 2310.0
       },
       {
         "symbol": "2880",
@@ -8347,8 +8349,131 @@
         "recommend_price": 33.7,
         "target_price": 36.5,
         "stop_loss": 31.0,
+        "result": "success",
+        "holding_days": 8,
+        "settled_date": "2026-04-09",
+        "settled_price": 34.6
+      }
+    ]
+  },
+  "2026-04-09": {
+    "predictions": [
+      {
+        "symbol": "3702",
+        "name": "大聯大",
+        "recommend_price": 88.0,
+        "target_price": 97.0,
+        "stop_loss": 81.0,
         "result": "holding",
-        "holding_days": 8
+        "holding_days": 5,
+        "settled_date": null,
+        "settled_price": null,
+        "actual_close": 91.3,
+        "change_pct": "+3.75%"
+      },
+      {
+        "symbol": "3189",
+        "name": "景碩",
+        "recommend_price": 358.5,
+        "target_price": 395.0,
+        "stop_loss": 330.0,
+        "result": "holding",
+        "holding_days": 2,
+        "settled_date": null,
+        "settled_price": null,
+        "actual_close": 387.0,
+        "change_pct": "+7.95%"
+      },
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend_price": 58.3,
+        "target_price": 64.0,
+        "stop_loss": 54.0,
+        "result": "holding",
+        "holding_days": 2,
+        "settled_date": null,
+        "settled_price": null,
+        "actual_close": 60.0,
+        "change_pct": "+2.92%"
+      },
+      {
+        "symbol": "3036",
+        "name": "文曄",
+        "recommend_price": 233.5,
+        "target_price": 257.0,
+        "stop_loss": 215.0,
+        "result": "holding",
+        "holding_days": 1,
+        "settled_date": null,
+        "settled_price": null,
+        "actual_close": 224.0,
+        "change_pct": "-4.07%"
+      },
+      {
+        "symbol": "3045",
+        "name": "台灣大",
+        "recommend_price": 109.5,
+        "target_price": 117.0,
+        "stop_loss": 101.0,
+        "result": "holding",
+        "holding_days": 0,
+        "settled_date": null,
+        "settled_price": null,
+        "actual_close": 110.0,
+        "change_pct": "+0.46%"
+      },
+      {
+        "symbol": "2618",
+        "name": "長榮航",
+        "recommend_price": 35.2,
+        "target_price": 38.0,
+        "stop_loss": 32.5,
+        "result": "holding",
+        "holding_days": 0,
+        "settled_date": null,
+        "settled_price": null,
+        "actual_close": 34.8,
+        "change_pct": "-1.14%"
+      },
+      {
+        "symbol": "4739",
+        "name": "康普",
+        "recommend_price": 79.2,
+        "target_price": 86.5,
+        "stop_loss": 73.0,
+        "result": "holding",
+        "holding_days": 0,
+        "settled_date": null,
+        "settled_price": null,
+        "actual_close": 82.7,
+        "change_pct": "+4.42%"
+      },
+      {
+        "symbol": "3533",
+        "name": "嘉澤",
+        "recommend_price": 2125,
+        "target_price": 2350,
+        "stop_loss": 1930,
+        "result": "success",
+        "holding_days": 8,
+        "settled_date": "2026-04-09",
+        "settled_price": 2310.0,
+        "actual_close": 2310.0,
+        "change_pct": "+8.71%"
+      },
+      {
+        "symbol": "2880",
+        "name": "華南金",
+        "recommend_price": 33.7,
+        "target_price": 36.5,
+        "stop_loss": 31.0,
+        "result": "success",
+        "holding_days": 8,
+        "settled_date": "2026-04-09",
+        "settled_price": 34.6,
+        "actual_close": 34.6,
+        "change_pct": "+2.67%"
       }
     ]
   }
