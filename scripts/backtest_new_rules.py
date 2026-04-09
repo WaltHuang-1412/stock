@@ -324,14 +324,17 @@ def main():
         # 營收檢查
         yoy, decline_streak = get_revenue_yoy(code, date, rev_cache)
 
-        if yoy is not None and yoy >= 30:
-            # 需要確認近5日回檔 ≥2%（簡化：因為抓股價太慢，直接+5看效果上限）
+        # 近5日回檔幅度
+        pullback = get_5d_change(code, date)
+
+        if yoy is not None and yoy >= 30 and pullback is not None and pullback <= -2:
             adj_score += 5
-            adj_reasons.append(f"營收+{yoy:.0f}%→+5")
+            adj_reasons.append(f"營收+{yoy:.0f}%+回檔{pullback:.1f}%→+5")
             adjustments_applied['revenue_plus'] += 1
-        elif yoy is not None and yoy >= 10:
-            # 需要回檔 ≥5%（同上簡化）
-            pass  # 保守起見不加，除非確認回檔
+        elif yoy is not None and yoy >= 10 and pullback is not None and pullback <= -5:
+            adj_score += 5
+            adj_reasons.append(f"營收+{yoy:.0f}%+回檔{pullback:.1f}%→+5")
+            adjustments_applied['revenue_plus'] += 1
         elif decline_streak >= 3:
             adj_score -= 5
             adj_reasons.append(f"連續衰退{decline_streak}月→-5")
@@ -345,7 +348,7 @@ def main():
                 adj_score += 5
                 adj_reasons.append(f"持股比+{ratio_change:.2f}%→+5")
                 adjustments_applied['ratio_plus'] += 1
-            elif ratio_change < 0:
+            elif ratio_change <= -0.1:
                 adj_score -= 3
                 adj_reasons.append(f"持股比{ratio_change:.2f}%→-3")
                 adjustments_applied['ratio_minus'] += 1

@@ -69,6 +69,19 @@ python3 scripts/institutional_pattern_tracker.py
 ```
 加減分規則見 CLAUDE.md「法人模式追蹤加減分」段落。
 
+大盤局勢（Step 7 和 Step 9 使用）：
+```bash
+gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/market_regime.json --jq '.content' | base64 -d > data/$(date +%Y-%m-%d)/market_regime.json
+```
+讀取 regime 欄位判斷大盤狀態，影響 Step 9 防禦比例。如果抓取失敗，跳過即可。
+
+價格位置判斷（Step 7 評分時強制執行）：
+Step 7 開始前，對全部候選股執行：
+```bash
+python3 scripts/check_price_position.py [全部候選股代碼...]
+```
+加減分規則見 CLAUDE.md「價格位置加減分」段落。reason 欄標註（如「52週位置94%極高→-5」）。
+
 營收與外資持股比檢查（Step 7 評分時強制執行）：
 Step 7 開始前，必須對全部候選股（Step 5 + Step 6 合併後）執行以下兩個腳本：
 ```bash
