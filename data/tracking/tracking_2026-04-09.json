@@ -187,6 +187,35 @@
       "4739": "不調整（+0.08%小增）"
     }
   },
+  "intraday_update": {
+    "update_time": "2026-04-09 12:40",
+    "track_a_status": {
+      "3702": {"intraday_price": 91.1, "change_pct": "+3.5%", "exit_signal": "無", "reversal": "L0", "strategy": "續抱", "institutional_today": "+5,480"},
+      "3189": {"intraday_price": 389.0, "change_pct": "+8.5%", "exit_signal": "無", "reversal": "L0", "strategy": "續抱觀察（接近目標395）", "institutional_today": "+2,284"},
+      "2303": {"intraday_price": 59.7, "change_pct": "+2.4%", "exit_signal": "無", "reversal": "L0", "strategy": "續抱", "institutional_today": "+20,346"},
+      "3036": {"intraday_price": 225.0, "change_pct": "-3.6%", "exit_signal": "跌破MA5+MA10（非強制出場）", "reversal": "L0", "strategy": "觀察（加碼不符條件：動能-51.8%>50%）", "institutional_today": "+397"},
+      "3045": {"intraday_price": 109.5, "change_pct": "0.0%", "exit_signal": "無", "reversal": "L0", "strategy": "續抱", "institutional_today": "-595"},
+      "2618": {"intraday_price": 34.6, "change_pct": "-1.7%", "exit_signal": "無", "reversal": "L0", "strategy": "續抱（法人+7,239仍買）", "institutional_today": "+7,239"},
+      "4739": {"intraday_price": 83.6, "change_pct": "+5.6%", "exit_signal": "無", "reversal": "L0", "strategy": "續抱", "institutional_today": "+322"}
+    },
+    "exit_signals_triggered": [],
+    "settling_today_note": "3533嘉澤+2880華南金Day8到期，盤後以收盤價結算",
+    "track_b_recommendations": [],
+    "track_b_note": "今日無盤中新推薦",
+    "track_b_reason": "偵測器強訊號(1802/8072)已漲>3%；TOP50候選多數動能>100%；唯一候選1605華新僅61分(<75門檻)+催化對齊不通過",
+    "track_b_observations": [
+      {"code": "1605", "name": "華新", "score": 61, "reason": "avg#19+動能+27.5%+L0，但催化不對齊（鋼鐵非主催化）+61分<75門檻"},
+      {"code": "1802", "name": "台玻", "reason": "偵測器強訊號75分但已漲+11.87%>3%+累計-54K"},
+      {"code": "8072", "name": "陞泰", "reason": "偵測器強訊號60分但已漲+7.71%>3%"},
+      {"code": "2882", "name": "國泰金", "reason": "動能+259.5%>100%+外資累計-19K"},
+      {"code": "6005", "name": "群益證", "reason": "動能+156.3%>100%"},
+      {"code": "8422", "name": "可寧衛", "reason": "動能+200.8%>100%+累計近乎0"}
+    ],
+    "detector_strong_signals": [
+      {"code": "1802", "name": "台玻", "strength": 75, "change_pct": "+3.9%→11.87%", "volume_ratio": 2.08, "streak": 6},
+      {"code": "8072", "name": "陞泰", "strength": 60, "change_pct": "+3.2%→7.71%", "volume_ratio": 4.87, "streak": 6}
+    ]
+  },
   "market_context": {
     "vix": 21.04,
     "vix_change": "-18.26%",
