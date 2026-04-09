@@ -47,6 +47,18 @@ python3 scripts/catalyst_theme_detector.py --date $(date +%Y-%m-%d) --lookback 7
 ```
 Module B 候選的後續處理（chip_analysis、reversal_alert、評分、排除原因）全部按照 CLAUDE.md Step 6「Module B 催化主題預警處理」段落執行，不得跳過。
 
+催化劑x營收交叉分析（Step 7 評分時使用）：
+讀取 `market_intelligence.md` 中的「催化劑 x 營收交叉分析」區塊：
+- ⚠️ 營收未跟上的產業 → 該產業候選股 **-3分**（題材炒作無基本面支撐）
+- 💪 強力支撐的產業 → 標註參考（不額外加分，營收加分已在 check_revenue_yoy.py 處理）
+- reason 欄標註（如「催化x營收⚠️未跟上→-3」）
+
+PTT 散戶輿情（Step 7 評分時參考）：
+讀取 `market_intelligence.md` 中的「PTT 股票板散戶輿情」區塊：
+- PTT 熱門討論的個股 → 標註「散戶關注」，不自動扣分但提高警覺
+- 如果候選股同時出現在 PTT 熱門 + 今日漲幅已 >3% → **-3分**（散戶追高風險）
+- reason 欄標註（如「PTT熱門+已漲→-3」）
+
 美股財報日曆（Step 7 評分時使用）：
 加減分規則見 CLAUDE.md「美股財報日曆加分」段落。reason 欄標註（如「TSM法說4/16→+5」）。
 

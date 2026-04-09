@@ -415,6 +415,29 @@ python3 scripts/reversal_alert.py [候選股...] > data/$(date +%Y-%m-%d)/revers
 
 ---
 
+**催化劑 x 營收交叉分析**（market-intelligence 產出）：
+
+讀取 `market_intelligence.md` 中的「催化劑 x 營收交叉分析」：
+
+| 支撐度 | 評分調整 | 說明 |
+|--------|---------|------|
+| ⚠️ 營收未跟上 | **-3分** | 催化劑熱但營收衰退，題材炒作風險 |
+| 💪 強力支撐 | 不加分（標註參考） | 營收加分已由 check_revenue_yoy.py 處理 |
+| ✅ 有支撐 / ➡️ 溫和 | 不調整 | |
+
+---
+
+**PTT 散戶輿情**（market-intelligence 產出）：
+
+讀取 `market_intelligence.md` 中的「PTT 股票板散戶輿情」：
+
+| 條件 | 評分調整 | 說明 |
+|------|---------|------|
+| PTT 熱門討論 + 今日漲幅 >3% | **-3分** | 散戶追高風險 |
+| PTT 熱門討論但漲幅 ≤3% | 標註「散戶關注」不扣分 | |
+
+---
+
 **美股財報日曆加分**：
 
 讀取 `market_intelligence.md` 中的「美股財報日曆」：
