@@ -71,6 +71,35 @@ def validate_before_market(date_str):
         if ratio > 0.5:
             errors.append(f"❌ 產業過度集中: {ind} 佔比{ratio*100:.0f}%（應≤50%）")
 
+    # 2.2b 檢查 v8.0 新增必要檔案
+    new_files = {
+        f"data/{date_str}/revenue_check.json": "營收查詢結果",
+        f"data/{date_str}/foreign_ratio_check.json": "外資持股比查詢結果",
+    }
+    for filepath, desc in new_files.items():
+        if os.path.exists(filepath):
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content = json.load(f)
+            if len(content) < 3:
+                warnings.append(f"⚠️  {desc}只查了{len(content)}檔（應查全部候選股）")
+        else:
+            warnings.append(f"⚠️  缺少{desc}: {filepath}")
+
+    # pattern_today.json 是選填（盤前才跑）
+    pattern_file = "data/strategy/pattern_today.json"
+    if os.path.exists(pattern_file):
+        with open(pattern_file, 'r', encoding='utf-8') as f:
+            pdata = json.load(f)
+        # 檢查是否過舊（超過3天）
+        from datetime import datetime, timedelta
+        try:
+            pdate = datetime.strptime(pdata.get('date', ''), '%Y-%m-%d')
+            today = datetime.strptime(date_str, '%Y-%m-%d')
+            if (today - pdate).days > 3:
+                warnings.append(f"⚠️  pattern_today.json 已過期（{pdata['date']}），應重新執行模式追蹤器")
+        except ValueError:
+            pass
+
     # 2.3 檢查每檔推薦股是否有必要欄位
     for rec in recs:
         stock_name = rec.get('stock_name', '未知')
@@ -214,6 +243,11 @@ def validate_intraday(date_str):
         errors.append(f"❌ 缺少 Track B 分析")
     if '尾盤策略' not in content and '尾盤' not in content:
         warnings.append(f"⚠️  缺少尾盤策略")
+
+    # 檢查盤中偵測器
+    detector_file = f"data/{date_str}/intraday_detector.json"
+    if not os.path.exists(detector_file):
+        warnings.append(f"⚠️  缺少盤中偵測器結果: {detector_file}")
 
     # 檢查tracking.json是否有更新盤中價格
     tracking_file = f"data/tracking/tracking_{date_str}.json"

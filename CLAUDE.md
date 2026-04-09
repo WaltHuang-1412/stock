@@ -1,7 +1,7 @@
-# 台股分析執行流程（v7.9 多日追蹤版）
+# 台股分析執行流程（v8.0 多因子版）
 
-**版本**：v7.9.3
-**更新日期**：2026-03-26
+**版本**：v8.0
+**更新日期**：2026-04-09
 **目的**：提供清晰、可執行的盤前/盤中/盤後分析流程
 
 ---
@@ -558,9 +558,26 @@ python3 scripts/exit_signal_checker.py [推薦股...] --cost [推薦價]
 
 ---
 
+### 🔴 Step 2.5: 盤中法人續買偵測（強制）
+
+```bash
+python3 scripts/intraday_institutional_detector.py
+```
+
+偵測邏輯：昨天法人連買 ≥2 天的股票，今天盤中量比 ≥1.2 + 漲幅 <5% → 法人可能正在續買
+
+**驗證**：✅ 必須生成 `intraday_detector.json` | ❌ 不存在 = 禁止繼續
+
+| 訊號強度 | 條件 | 動作 |
+|---------|------|------|
+| 強訊號 ≥60 分 | 連買多天+量比高+TOP30+未反映 | **必須加入 Track B 候選，評分+5** |
+| 中訊號 40-59 分 | 部分條件符合 | 觀察，不強制進入 |
+
+---
+
 ### 🔴 Step 3: Track B 候選股篩選（強制）
 
-**篩選**：法人買超>5K 或 avg_rank TOP30 + 今日漲幅<3% + 不在 Track A
+**篩選**：法人買超>5K 或 avg_rank TOP30 + 今日漲幅<3% + 不在 Track A + **偵測器強訊號**
 
 ```bash
 python3 scripts/chip_analysis.py [股票清單] --days 10
@@ -692,5 +709,5 @@ python3 scripts/holdings_pressure_analysis.py [停損股...]
 
 **文件導航**：`docs/README.md` | 歷史教訓：`docs/HISTORICAL_LESSONS.md` | 產業鏈：`data/industry_chains.json`
 
-**最後更新**：2026-03-26
-**版本**：v7.9.3
+**最後更新**：2026-04-09
+**版本**：v8.0
