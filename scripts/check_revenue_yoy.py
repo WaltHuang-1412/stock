@@ -126,6 +126,21 @@ def get_decline_streak(stock_id, cache):
     return streak
 
 
+def get_5d_pullback(stock_id):
+    """查詢近5日股價回檔幅度（%），負值=回檔"""
+    try:
+        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{stock_id}.TW"
+        r = requests.get(url, params={"interval": "1d", "range": "10d"},
+                        headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+        data = r.json()
+        closes = [c for c in data['chart']['result'][0]['indicators']['quote'][0]['close'] if c]
+        if len(closes) >= 6:
+            return (closes[-1] - closes[-6]) / closes[-6] * 100
+    except Exception:
+        pass
+    return None
+
+
 def update_cache(stock_codes=None):
     """更新快取"""
     cache = load_cache()
@@ -187,39 +202,59 @@ def main():
 
     # 輸出結果
     print()
-    print(f"{'股票':>6} | {'最新營收月':>10} | {'YoY%':>8} | {'連續成長':>8} | {'連續衰退':>8} | {'評分建議':>10}")
+    print(f"{'股票':>6} | {'最新營收月':>10} | {'YoY%':>8} | {'5日回檔':>8} | {'評分建議'}")
     print("-" * 70)
+
+    # 批次查回檔
+    print("查詢近5日回檔...", flush=True)
+    pullbacks = {}
+    for code in stock_codes:
+        pullbacks[code] = get_5d_pullback(code)
+        time.sleep(0.2)
 
     results = []
     for code in stock_codes:
         month, yoy = get_latest_yoy(code, cache)
         growth_streak = get_streak(code, cache)
         decline_streak = get_decline_streak(code, cache)
+        pullback = pullbacks.get(code)
 
-        # 評分建議
+        # 評分建議（腳本直接判定，不交給 Claude）
         suggestion = ""
+        adj = 0
         if yoy is not None:
-            if yoy >= 30:
-                suggestion = "可+5分（需確認近5日回檔≥2%）"
+            if yoy >= 30 and pullback is not None and pullback <= -2:
+                suggestion = f"+5分（年增{yoy:+.0f}%+回檔{pullback:.1f}%）"
+                adj = 5
+            elif yoy >= 10 and pullback is not None and pullback <= -5:
+                suggestion = f"+5分（年增{yoy:+.0f}%+回檔{pullback:.1f}%）"
+                adj = 5
+            elif yoy >= 30:
+                suggestion = f"不加分（年增{yoy:+.0f}%但回檔僅{pullback:.1f}%，未達-2%）" if pullback is not None else "不加分（無回檔數據）"
             elif yoy >= 10:
-                suggestion = "可+5分（需確認近5日回檔≥5%）"
+                suggestion = f"不加分（年增{yoy:+.0f}%但回檔僅{pullback:.1f}%，未達-5%）" if pullback is not None else "不加分（無回檔數據）"
             elif decline_streak >= 3:
-                suggestion = "-5分（連續衰退）"
+                suggestion = f"-5分（連續衰退{decline_streak}個月）"
+                adj = -5
             else:
                 suggestion = "不調整"
         else:
             suggestion = "無數據"
 
         yoy_str = f"{yoy:+.1f}%" if yoy is not None else "N/A"
+        pullback_str = f"{pullback:+.1f}%" if pullback is not None else "N/A"
         month_str = month if month else "N/A"
-        print(f"{code:>6} | {month_str:>10} | {yoy_str:>8} | {growth_streak:>6}個月 | {decline_streak:>6}個月 | {suggestion}")
+        print(f"{code:>6} | {month_str:>10} | {yoy_str:>8} | {pullback_str:>8} | {suggestion}")
 
         results.append({
             'code': code,
             'month': month,
             'yoy': yoy,
+            'pullback_5d': round(pullback, 2) if pullback is not None else None,
             'growth_streak': growth_streak,
             'decline_streak': decline_streak,
+            'adj': adj,
+            'suggestion': suggestion,
         })
 
     # 輸出 JSON 供其他腳本使用
