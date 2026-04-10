@@ -93,6 +93,49 @@ python3 scripts/check_foreign_ratio.py [全部候選股代碼...]
 LINE 摘要中每檔推薦也要帶入。
 禁止用 Claude 自身知識代替腳本輸出，必須以腳本 JSON 結果為準。
 
+LINE 摘要格式（before_market_line.txt，≤5000字元）：
+```
+📊 盤前分析 MM/DD（v8.0）
+
+🌐 大盤局勢：{regime}（score={score}）防禦{defense_ratio}
+VIX {vix} | 台股vs年線{vs_ma240}%
+
+🌐 國際市場
+[費半/NASDAQ/VIX/油價/關鍵個股漲跌]
+
+🚨 龍頭預警
+[L1/L2/L3 列表]
+
+📊 催化劑
+[超強/強/中度 主題列表]
+
+⚠️ 催化x營收警告（如有）
+[⚠️營收未跟上的產業]
+
+💬 PTT 散戶輿情（如有熱門個股）
+[熱門討論的股票]
+
+📈 結算 + 準確率
+
+🔍 Module A/B
+
+📋 推薦N檔
+每檔格式：
+  代碼名稱 分數⭐ 倉位
+  推{price} 目標{target} 停損{stop_loss}(-10%) Day{N}/10
+  [reason 含營收/持股比/月線/模式追蹤/財報日曆]
+
+⚠️ 風險提示
+產業分散
+```
+
+注意：
+- 大盤局勢放最前面（不是最後面）
+- 每檔停損後面標百分比（如「停損79.2(-10%)」）
+- 每檔標 Day{N}/10（如「Day6/10」讓使用者知道還剩幾天）
+- 催化x營收有⚠️的產業要獨立列出
+- PTT 有熱門個股才列，沒有就省略
+
 自動化注意事項：
 1. 今天日期用系統日期
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py before_market $(date +%Y-%m-%d)`，通過才能 git commit + git push。驗證失敗必須修正報告後重跑

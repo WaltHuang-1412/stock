@@ -546,6 +546,10 @@ python3 scripts/reversal_alert.py [推薦股...]
 ```json
 {
   "date": "2026-02-02",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
   "recommendations": [
     {
       "stock_code": "2303",
@@ -553,7 +557,9 @@ python3 scripts/reversal_alert.py [推薦股...]
       "industry": "半導體",
       "recommend_price": 52.5,
       "target_price": 58.0,
-      "stop_loss": 48.3,
+      "stop_loss_pct": -10,
+      "stop_loss": 47.25,
+      "settlement_days": 10,
       "position": "15-20%",
       "score": 88,
       "reason": "費半+2%、外資+43K、AI 需求"
@@ -561,6 +567,12 @@ python3 scripts/reversal_alert.py [推薦股...]
   ]
 }
 ```
+
+**🔴 停損計算規則**：
+- `stop_loss = recommend_price × (1 + stop_loss_pct / 100)`
+- `stop_loss_pct` 和 `settlement_days` 為必填欄位
+- 每天盤前讀取 tracking.json 時，必須用 `stop_loss_pct` 重算 `stop_loss`，不得沿用舊的絕對價格
+- 當前設定：盤前推薦 `stop_loss_pct = -10`、盤中推薦 `stop_loss_pct = -5`、`settlement_days = 10`
 
 **LINE 摘要**（≤5000字元）：推薦股完整資訊 + 今日注意事項
 
@@ -747,6 +759,8 @@ python3 scripts/holdings_pressure_analysis.py [停損股...]
 - fail 必須補 `fail_reason` | holding 必須補 `holding_status`
 - 必須含 `tomorrow_recommendations` + `removed_stocks` 陣列
 - **🔴 禁止當天就設 fail（除非真的觸停損）**
+- **🔴 每檔推薦必須含 `stop_loss_pct` 和 `settlement_days` 欄位**
+- **🔴 `stop_loss` 必須從 `stop_loss_pct` 計算，不得手動填寫或沿用舊值**
 
 ---
 

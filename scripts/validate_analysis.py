@@ -110,6 +110,22 @@ def validate_before_market(date_str):
         if 'recommend_price' not in rec:
             warnings.append(f"⚠️  {stock_name} 缺少推薦價格")
 
+        # v8.0: 檢查停損百分比和結算天數
+        if 'stop_loss_pct' not in rec:
+            errors.append(f"❌ {stock_name} 缺少 stop_loss_pct（應為 -10 或 -5）")
+        if 'settlement_days' not in rec:
+            errors.append(f"❌ {stock_name} 缺少 settlement_days（應為 10）")
+
+        # 檢查 stop_loss 是否正確計算
+        rec_price = rec.get('recommend_price', 0)
+        stop_loss = rec.get('stop_loss', 0)
+        stop_pct = rec.get('stop_loss_pct', -10)
+        if rec_price and stop_loss and stop_pct:
+            expected = round(rec_price * (1 + stop_pct / 100), 2)
+            # 允許 1% 誤差（四捨五入）
+            if abs(stop_loss - expected) / expected > 0.01:
+                errors.append(f"❌ {stock_name} stop_loss={stop_loss} 不符合 {stop_pct}%（應為 {expected}）")
+
     # 2.4 檢查強制步驟（讀取 MD 檔案內容檢查）
     if os.path.exists(md_file):
         with open(md_file, 'r', encoding='utf-8') as f:
