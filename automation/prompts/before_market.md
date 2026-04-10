@@ -93,13 +93,6 @@ python3 scripts/check_foreign_ratio.py [全部候選股代碼...]
 LINE 摘要中每檔推薦也要帶入。
 禁止用 Claude 自身知識代替腳本輸出，必須以腳本 JSON 結果為準。
 
-v8.0 關鍵數值（強制遵守，不得沿用舊版）：
-- 盤前推薦停損 = **-10%**（不是 -8%）。stop_loss = recommend_price × 0.90
-- 結算天數 = **10 個交易日**（不是 7 天）。Day10 到期結算
-- 盤中推薦停損 = **-5%**
-- 持有中的舊推薦，如果停損還是 -8%，必須更新為 -10% 重新計算
-- tracking.json 的 stop_loss 欄位必須反映 -10%
-
 自動化注意事項：
 1. 今天日期用系統日期
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py before_market $(date +%Y-%m-%d)`，通過才能 git commit + git push。驗證失敗必須修正報告後重跑
