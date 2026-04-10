@@ -18,7 +18,7 @@
 ### 📁 驗證機制
 
 每次分析完成後，必須存在以下文件：
-- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json` + `tw_market_news.json` + `catalyst_preposition_scan.json` + `catalyst_theme_signals.json` + `revenue_check.json` + `foreign_ratio_check.json` + `tracking_YYYY-MM-DD.json` + `before_market_line.txt`
+- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json` + `tw_market_news.json` + `catalyst_preposition_scan.json` + `catalyst_theme_signals.json` + `revenue_check.json` + `foreign_ratio_check.json` + `price_position_check.json` + `tracking_YYYY-MM-DD.json` + `before_market_line.txt`
 - 盤中：`data/YYYY-MM-DD/intraday_analysis.md` + `intraday_detector.json` + `intraday_line.txt` + 更新 `tracking_YYYY-MM-DD.json`
 - 盤後：`data/YYYY-MM-DD/after_market_analysis.md` + `after_market_line.txt` + 更新 `tracking_YYYY-MM-DD.json` + 更新 `predictions.json`
 
