@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-10",
+  "alerts": {
+    "recommended_stocks": {
+      "3702": {"level": 0, "status": "healthy", "detail": "法人買超+4,051張，累計+49K正"},
+      "2897": {"level": 0, "status": "healthy", "detail": "法人買超+1,198張，累計+15K正，8連買"},
+      "3189": {"level": 4, "status": "warning", "detail": "爆量賣超-2,810張(5.5%日均量)，但累計+6.8K仍正，近目標"},
+      "2303": {"level": 0, "status": "neutral", "detail": "小量賣超-238張，累計+51K仍正"},
+      "3036": {"level": 4, "status": "warning", "detail": "爆量賣超-290張(5.7%日均量)，累計+7.3K仍正"},
+      "3045": {"level": 0, "status": "healthy", "detail": "法人買超+5,304張，10連買，累計+27K正"},
+      "2618": {"level": 4, "status": "warning", "detail": "爆量賣超-5,961張(36.9%日均量)，累計+30K仍正"},
+      "4739": {"level": 0, "status": "neutral", "detail": "小量買超+105張，累計+1.6K正"}
+    },
+    "track_b_excluded": {
+      "2344": {"level": 4, "detail": "爆量賣超-24,549張(18.4%日均量)"},
+      "2337": {"level": 4, "detail": "爆量賣超-27,728張(16.5%日均量)"},
+      "2408": {"level": 4, "detail": "爆量賣超-35,006張(39.6%日均量)"},
+      "3706": {"level": 4, "detail": "爆量賣超-1,722張(25.4%日均量)"},
+      "1605": {"level": 4, "detail": "爆量賣超-2,305張(16.6%日均量)"},
+      "6505": {"level": 4, "detail": "爆量賣超-5,605張(32.4%日均量)"},
+      "3138": {"level": 4, "detail": "爆量賣超-424張(10.4%日均量)"}
+    },
+    "topic_tracker_expansion": {
+      "2382": {"level": 0, "status": "healthy", "detail": "法人買超+14,872張"},
+      "2360": {"level": 0, "status": "neutral", "detail": "小量買超+987張，累計+494正"},
+      "3587": {"level": "unknown", "status": "insufficient_data"},
+      "5434": {"level": 0, "status": "neutral", "detail": "小量買超+471張，累計+1,589正"},
+      "8112": {"level": "unknown", "status": "negative_cum", "detail": "累計-2,906負"},
+      "8299": {"level": "unknown", "status": "insufficient_data"},
+      "3653": {"level": "unknown", "status": "negative_cum", "detail": "累計-242負"},
+      "3491": {"level": "unknown", "status": "insufficient_data"},
+      "6285": {"level": "excluded", "detail": "5日+20.9%已大漲排除"},
+      "3105": {"level": "unknown", "status": "insufficient_data"},
+      "2208": {"level": "unknown", "status": "negative_cum", "detail": "累計-241負"}
+    }
+  },
+  "summary": {
+    "level_4_count": 10,
+    "level_0_healthy": 4,
+    "level_0_neutral": 3,
+    "insufficient_data": 4
+  }
+}
