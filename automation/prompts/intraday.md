@@ -25,6 +25,13 @@ python3 scripts/check_foreign_ratio.py [Track B 候選股代碼...]
 ```
 讀取輸出的「評分建議」欄，逐檔套用加減分。推薦 reason 和 LINE 摘要必須標註。
 
+v8.0 關鍵數值（強制遵守）：
+- 盤前推薦停損 = **-10%**（不是 -8%），盤中推薦停損 = **-5%**
+- 結算天數 = **10 個交易日**（不是 7 天）
+- tracking.json 每檔必須有 `stop_loss_pct` 和 `settlement_days` 欄位
+- `stop_loss` 必須從 `stop_loss_pct` 計算：`stop_loss = recommend_price × (1 + stop_loss_pct / 100)`
+- 如果 Track A 持有股的 stop_loss 是舊的 -8% 算的，必須用 -10% 重算
+
 自動化注意事項：
 1. 今天日期用系統日期
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py intraday $(date +%Y-%m-%d)`，通過才能 git commit + git push
