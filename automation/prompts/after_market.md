@@ -10,6 +10,11 @@ python3 scripts/check_foreign_ratio.py [明日候選股代碼...]
 ```
 讀取輸出的「評分建議」欄，逐檔套用加減分。推薦 reason 和 LINE 摘要必須標註。
 
+v8.0 關鍵數值（強制遵守）：
+- 盤前推薦停損 = **-10%**（不是 -8%）
+- 結算天數 = **10 個交易日**（不是 7 天）。Day10 到期結算
+- 明日推薦的停損也用 -10%。stop_loss = recommend_price × 0.90
+
 自動化注意事項：
 1. 今天日期用系統日期
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py after_market $(date +%Y-%m-%d)`，通過才能 git commit + git push
