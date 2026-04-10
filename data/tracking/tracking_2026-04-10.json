@@ -18,7 +18,13 @@
       "holding_from": "2026-04-07",
       "holding_days": 6,
       "stop_loss_pct": -10,
-      "settlement_days": 10
+      "settlement_days": 10,
+      "intraday_price": 91.5,
+      "intraday_change": "+0.33%",
+      "intraday_vs_recommend": "+3.98%",
+      "intraday_action": "✅ 續抱",
+      "reversal_level": "Safe",
+      "chip_status": "10連買+cum49K+法人+4,051"
     },
     {
       "stock_code": "2897",
@@ -34,23 +40,13 @@
       "holding_from": "2026-04-10",
       "holding_days": 0,
       "stop_loss_pct": -10,
-      "settlement_days": 10
-    },
-    {
-      "stock_code": "3189",
-      "stock_name": "景碩",
-      "industry": "IC載板",
-      "recommend_price": 358.5,
-      "target_price": 395.0,
-      "stop_loss": 322.65,
-      "position": "10-15%",
-      "score": 84,
-      "rating": "⭐⭐⭐⭐",
-      "reason": "續持Day3+IC載板CoWoS+動能-70.2%→+15+TSM法說+5+L4⚠️(cum仍正+近目標)",
-      "holding_from": "2026-04-08",
-      "holding_days": 3,
-      "stop_loss_pct": -10,
-      "settlement_days": 10
+      "settlement_days": 10,
+      "intraday_price": 10.1,
+      "intraday_change": "-0.49%",
+      "intraday_vs_recommend": "-0.49%",
+      "intraday_action": "✅ 續抱",
+      "reversal_level": "L0",
+      "chip_status": "8連買+cum15K+法人+1,198"
     },
     {
       "stock_code": "2303",
@@ -66,23 +62,13 @@
       "holding_from": "2026-04-08",
       "holding_days": 3,
       "stop_loss_pct": -10,
-      "settlement_days": 10
-    },
-    {
-      "stock_code": "3036",
-      "stock_name": "文曄",
-      "industry": "半導體通路",
-      "recommend_price": 233.5,
-      "target_price": 257.0,
-      "stop_loss": 210.15,
-      "position": "10-15%",
-      "score": 81,
-      "rating": "⭐⭐⭐⭐",
-      "reason": "續持Day2+動能-83.2%佈局完成→+15+月線下-3+TSM+5+L4⚠️(cum+7.3K正)",
-      "holding_from": "2026-04-08",
-      "holding_days": 2,
-      "stop_loss_pct": -10,
-      "settlement_days": 10
+      "settlement_days": 10,
+      "intraday_price": 62.5,
+      "intraday_change": "+4.17%",
+      "intraday_vs_recommend": "+7.20%",
+      "intraday_action": "✅ 續抱（法人小賣-238但累計+62K）",
+      "reversal_level": "L0",
+      "chip_status": "法人-238但累計+62K正"
     },
     {
       "stock_code": "3045",
@@ -98,7 +84,13 @@
       "holding_from": "2026-04-09",
       "holding_days": 1,
       "stop_loss_pct": -10,
-      "settlement_days": 10
+      "settlement_days": 10,
+      "intraday_price": 110.0,
+      "intraday_change": "+0.00%",
+      "intraday_vs_recommend": "+0.46%",
+      "intraday_action": "✅ 續抱",
+      "reversal_level": "Safe",
+      "chip_status": "10連買+cum27K+法人+5,304"
     },
     {
       "stock_code": "4739",
@@ -114,7 +106,63 @@
       "holding_from": "2026-04-09",
       "holding_days": 1,
       "stop_loss_pct": -10,
-      "settlement_days": 10
+      "settlement_days": 10,
+      "intraday_price": 83.9,
+      "intraday_change": "+1.33%",
+      "intraday_vs_recommend": "+5.93%",
+      "intraday_action": "✅ 續抱",
+      "reversal_level": "L0",
+      "chip_status": "2連買+cum1.6K+法人+105"
+    },
+    {
+      "stock_code": "3189",
+      "stock_name": "景碩",
+      "industry": "IC載板",
+      "recommend_price": 358.5,
+      "target_price": 395.0,
+      "stop_loss": 322.65,
+      "position": "10-15%",
+      "score": 84,
+      "rating": "⭐⭐⭐⭐",
+      "reason": "續持Day3+IC載板CoWoS+動能-70.2%→+15+TSM法說+5+L4⚠️(cum仍正+近目標)",
+      "holding_from": "2026-04-08",
+      "holding_days": 3,
+      "stop_loss_pct": -10,
+      "settlement_days": 10,
+      "intraday_price": 379.5,
+      "intraday_change": "-1.81%",
+      "intraday_vs_recommend": "+5.86%",
+      "intraday_action": "🛑 強制出場（L4法人反轉）",
+      "reversal_level": "L4",
+      "chip_status": "法人-2,810(外資-3,268)+5日高點回落-7%",
+      "exit_signal": "L4法人反轉+高點回落-7%",
+      "exit_price": 379.5,
+      "exit_pnl": "+5.86%"
+    },
+    {
+      "stock_code": "3036",
+      "stock_name": "文曄",
+      "industry": "半導體通路",
+      "recommend_price": 233.5,
+      "target_price": 257.0,
+      "stop_loss": 210.15,
+      "position": "10-15%",
+      "score": 81,
+      "rating": "⭐⭐⭐⭐",
+      "reason": "續持Day2+動能-83.2%佈局完成→+15+月線下-3+TSM+5+L4⚠️(cum+7.3K正)",
+      "holding_from": "2026-04-08",
+      "holding_days": 2,
+      "stop_loss_pct": -10,
+      "settlement_days": 10,
+      "intraday_price": 227.5,
+      "intraday_change": "+1.56%",
+      "intraday_vs_recommend": "-2.57%",
+      "intraday_action": "🛑 強制出場（L4法人反轉）",
+      "reversal_level": "L4",
+      "chip_status": "法人-290(投信-283)+近5天外資買投信賣",
+      "exit_signal": "L4法人反轉",
+      "exit_price": 227.5,
+      "exit_pnl": "-2.57%"
     },
     {
       "stock_code": "2618",
@@ -130,9 +178,73 @@
       "holding_from": "2026-04-09",
       "holding_days": 1,
       "stop_loss_pct": -10,
-      "settlement_days": 10
+      "settlement_days": 10,
+      "intraday_price": 34.8,
+      "intraday_change": "-0.43%",
+      "intraday_vs_recommend": "-1.14%",
+      "intraday_action": "🛑 強制出場（L4法人反轉）",
+      "reversal_level": "L4",
+      "chip_status": "法人-5,961(外資-5,241)+昨+7,239→今-5,961大反轉+跌破MA5/MA10",
+      "exit_signal": "L4法人大反轉+跌破MA5/MA10",
+      "exit_price": 34.8,
+      "exit_pnl": "-1.14%"
     }
   ],
+  "exit_signals": [
+    {
+      "stock_code": "3189",
+      "trigger": "L4法人反轉（今日-2,810張，佔日均量14.5%）",
+      "action": "強制出場",
+      "exit_price": 379.5,
+      "pnl": "+5.86%"
+    },
+    {
+      "stock_code": "3036",
+      "trigger": "L4法人反轉（今日-290張，佔日均量10.9%）",
+      "action": "強制出場",
+      "exit_price": 227.5,
+      "pnl": "-2.57%"
+    },
+    {
+      "stock_code": "2618",
+      "trigger": "L4法人反轉（今日-5,961張，佔日均量62.9%）+跌破MA5/MA10",
+      "action": "強制出場",
+      "exit_price": 34.8,
+      "pnl": "-1.14%"
+    }
+  ],
+  "track_b_recommendations": [],
+  "track_b_result": "今日無盤中新推薦（所有候選股未達75分門檻）",
+  "track_b_observations": [
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "score": 59,
+      "reason": "10連買+動能-26.3%佈局中，但缺催化+avg_rank 37.5偏後",
+      "monitor": true
+    },
+    {
+      "stock_code": "5388",
+      "stock_name": "中磊",
+      "score": 60,
+      "reason": "偵測器強80+外資持股比+1.64%大增，但5日+9.8%已大漲-10+動能>100%需覆寫",
+      "monitor": true
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "score": 48,
+      "reason": "法人最強avg_rank 10+10連買，但無催化+動能+93.2%→-10",
+      "monitor": true
+    }
+  ],
+  "detector_results": {
+    "strong_signals": [
+      {"code": "2489", "name": "瑞軒", "strength": 85, "change_pct": "+3.74%", "excluded": "已反映>3%"},
+      {"code": "5388", "name": "中磊", "strength": 80, "change_pct": "-2.78%", "included": true}
+    ],
+    "moderate_signals_count": 8
+  },
   "excluded_stocks": [
     {
       "stock_code": "2344",
@@ -172,7 +284,7 @@
     {
       "stock_code": "2886",
       "stock_name": "兆豐金",
-      "reason": "動能+93.2%→-10分→55分不達65門檻"
+      "reason": "動能+93.2%→-10分→48分不達75門檻"
     },
     {
       "stock_code": "2356",
@@ -239,6 +351,13 @@
       "3045": "不調整（營收-0.0%）",
       "4739": "不調整（營收+103.6%）",
       "2618": "不調整（營收+14%）"
+    },
+    "track_b_adjustments": {
+      "4904": "不調整（營收+5.1%）",
+      "2886": "不調整（營收-3.6%）",
+      "5388": "不加分（營收+86.5%但未達回檔條件）",
+      "2892": "不調整（營收-6.2%）",
+      "2002": "不調整（營收-12.9%）"
     }
   },
   "foreign_ratio_check": {
@@ -252,6 +371,13 @@
       "3045": "不調整（+0.01%小增）",
       "4739": "不調整（+0.08%小增）",
       "2618": "不調整（+0.07%小增）"
+    },
+    "track_b_adjustments": {
+      "4904": "不調整（-0.01%微減<0.1%）",
+      "2886": "不調整（+0.07%小增）",
+      "5388": "+5分（+1.64%大增>0.5%）",
+      "2892": "不調整（+0.02%小增）",
+      "2002": "不調整（+0.00%微減<0.1%）"
     }
   },
   "market_context": {
