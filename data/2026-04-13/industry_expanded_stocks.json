@@ -1,0 +1,43 @@
+{
+  "date": "2026-04-13",
+  "method": "dynamic",
+  "industries_expanded": ["記憶體/DRAM", "AI伺服器", "網通/光通訊", "低軌衛星", "儲能/重電", "鋼鐵", "金融", "蘋果鏈", "航運"],
+  "expansion_triggers": {
+    "記憶體/DRAM": "MU+14.84%/WDC+16.43%/NAND缺貨/SanDisk 4/20納入Nasdaq100",
+    "AI伺服器": "NVDA+6.34%/SMCI+8.79%/台積電SoIC 4萬片/法說4/16",
+    "網通/光通訊": "AVGO+18.12%/MRVL+19.96%/冠西電800G驗證/啟碁目標319",
+    "儲能/重電": "WTI+8.85%油價危機強化替代邏輯/大同追單",
+    "鋼鐵": "中鋼搶市火力全開/鋼價支撐",
+    "金融": "央行存單12年低/OIU爆發/中信金EPS新高",
+    "蘋果鏈": "MacBook Neo追單千萬台/鴻海廣達受益"
+  },
+  "stocks": [
+    {"code": "2408", "name": "南亞科", "category": "記憶體/DRAM", "tier": "tier_1", "source": "TOP50 avg3+催化劑"},
+    {"code": "2344", "name": "華邦電", "category": "記憶體/DRAM", "tier": "tier_1", "source": "TOP50 avg6+Module A L2"},
+    {"code": "6770", "name": "力積電", "category": "記憶體/DRAM", "tier": "tier_1", "source": "TOP50 avg8"},
+    {"code": "8299", "name": "群聯", "category": "記憶體/DRAM", "tier": "tier_2", "source": "NAND缺貨+催化劑"},
+    {"code": "2324", "name": "仁寶", "category": "AI伺服器", "tier": "tier_2", "source": "TOP50 avg30.5"},
+    {"code": "2371", "name": "大同", "category": "儲能/重電", "tier": "tier_2", "source": "TOP50 avg37+油價催化"},
+    {"code": "2002", "name": "中鋼", "category": "鋼鐵", "tier": "tier_2", "source": "TOP50 avg23+搶市新聞"},
+    {"code": "2027", "name": "大成鋼", "category": "鋼鐵", "tier": "tier_2", "source": "TOP50 avg24"},
+    {"code": "2886", "name": "兆豐金", "category": "金融", "tier": "tier_2", "source": "Module A L2+avg4"},
+    {"code": "5880", "name": "合庫金", "category": "金融", "tier": "tier_2", "source": "Module A L2+avg11.5"},
+    {"code": "2880", "name": "華南金", "category": "金融", "tier": "tier_2", "source": "Module A L2+avg19.5"},
+    {"code": "4904", "name": "遠傳", "category": "電信服務", "tier": "tier_2", "source": "盤後推薦+10連買"},
+    {"code": "2485", "name": "兆赫", "category": "網通", "tier": "tier_2", "source": "TOP50 avg22+-9.8%佈局中"},
+    {"code": "6505", "name": "台塑化", "category": "石化", "tier": "tier_3", "source": "Module A L2+油價催化"},
+    {"code": "6443", "name": "元晶", "category": "太陽能", "tier": "tier_3", "source": "TOP50 avg13.5+-13.7%佈局中"},
+    {"code": "2618", "name": "長榮航", "category": "航空", "tier": "tier_3", "source": "Module A L2+兩岸題材"},
+    {"code": "2603", "name": "長榮", "category": "航運", "tier": "tier_2", "source": "Topic Tracker超強-全球航運"},
+    {"code": "2615", "name": "萬海", "category": "航運", "tier": "tier_2", "source": "Topic Tracker超強-全球航運"},
+    {"code": "2404", "name": "漢唐", "category": "AI伺服器", "tier": "tier_2", "source": "Topic Tracker超強-台積電SoIC/AP9"},
+    {"code": "6290", "name": "良維", "category": "AI伺服器", "tier": "tier_2", "source": "Topic Tracker超強-Vera Rubin Q1新高"},
+    {"code": "2466", "name": "冠西電", "category": "網通/光通訊", "tier": "tier_2", "source": "Topic Tracker超強-800G驗證"},
+    {"code": "6285", "name": "啟碁", "category": "網通/光通訊", "tier": "tier_2", "source": "Topic Tracker超強-目標319"},
+    {"code": "3105", "name": "穩懋", "category": "低軌衛星", "tier": "tier_2", "source": "Topic Tracker超強-PA漲價>10%"},
+    {"code": "3491", "name": "昇達科", "category": "低軌衛星", "tier": "tier_2", "source": "Topic Tracker超強-YoY+57.1%"},
+    {"code": "2317", "name": "鴻海", "category": "蘋果鏈", "tier": "tier_1", "source": "Topic Tracker強-MacBook Neo追單千萬台"},
+    {"code": "3231", "name": "緯創", "category": "蘋果鏈/AI伺服器", "tier": "tier_2", "source": "Topic Tracker強+TOP50 avg9"},
+    {"code": "3008", "name": "大立光", "category": "蘋果鏈", "tier": "tier_2", "source": "Topic Tracker強-折疊機法說4/16"}
+  ]
+}
