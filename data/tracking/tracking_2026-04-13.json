@@ -24,7 +24,12 @@
       "holding_from": "2026-04-07",
       "holding_days": 7,
       "reversal_level": "Safe",
-      "chip_status": "10連買+cum33K"
+      "chip_status": "10連買+cum52K",
+      "intraday_price": 95.4,
+      "intraday_change_pct": 4.26,
+      "intraday_vs_recommend_pct": 8.41,
+      "intraday_volume_ratio": 1.26,
+      "intraday_strategy": "續抱，接近目標97.0（差1.68%）"
     },
     {
       "stock_code": "2344",
@@ -41,8 +46,13 @@
       "reason": "🆕Module A L2+avg6+7買3賣+cum52K+動能-88.8%佈局完成→+15+月線下-3+DRAM超強5W",
       "holding_from": "2026-04-13",
       "holding_days": 0,
-      "reversal_level": "L0",
-      "chip_status": "7買3賣+cum52K"
+      "reversal_level": "不明",
+      "chip_status": "7買3賣+cum52K+今日+18K",
+      "intraday_price": 93.4,
+      "intraday_change_pct": -0.11,
+      "intraday_vs_recommend_pct": -0.11,
+      "intraday_volume_ratio": 0.44,
+      "intraday_strategy": "續抱觀察，平盤正常波動"
     },
     {
       "stock_code": "2303",
@@ -60,7 +70,12 @@
       "holding_from": "2026-04-08",
       "holding_days": 4,
       "reversal_level": "L0",
-      "chip_status": "cum62K+28K"
+      "chip_status": "近5天+102K+外資+投信同步",
+      "intraday_price": 60.0,
+      "intraday_change_pct": -3.06,
+      "intraday_vs_recommend_pct": 2.92,
+      "intraday_volume_ratio": 0.62,
+      "intraday_strategy": "續抱，回檔-3%但法人+28K續買，超強催化仍有效"
     },
     {
       "stock_code": "2897",
@@ -78,7 +93,12 @@
       "holding_from": "2026-04-10",
       "holding_days": 2,
       "reversal_level": "L0",
-      "chip_status": "9連買+cum15K"
+      "chip_status": "9買1賣+cum19K+外資+19K",
+      "intraday_price": 10.3,
+      "intraday_change_pct": 1.48,
+      "intraday_vs_recommend_pct": 1.48,
+      "intraday_volume_ratio": 1.88,
+      "intraday_strategy": "續抱，上漲+1.48%放量"
     },
     {
       "stock_code": "3045",
@@ -95,8 +115,13 @@
       "reason": "續持Day2+Module A L2+10連買+cum14K+動能-3.9%→+10+防禦配置",
       "holding_from": "2026-04-09",
       "holding_days": 2,
-      "reversal_level": "Safe",
-      "chip_status": "10連買+cum14K"
+      "reversal_level": "L0",
+      "chip_status": "10連買+cum27K+外資+投信同步",
+      "intraday_price": 110.0,
+      "intraday_change_pct": 0.0,
+      "intraday_vs_recommend_pct": 0.46,
+      "intraday_volume_ratio": 0.40,
+      "intraday_strategy": "續抱，平盤穩定"
     },
     {
       "stock_code": "4739",
@@ -114,7 +139,12 @@
       "holding_from": "2026-04-09",
       "holding_days": 2,
       "reversal_level": "L0",
-      "chip_status": "近5天法人-42⚠️"
+      "chip_status": "近5天外資-58⚠️法人弱",
+      "intraday_price": 88.8,
+      "intraday_change_pct": 4.96,
+      "intraday_vs_recommend_pct": 12.12,
+      "intraday_volume_ratio": 2.06,
+      "intraday_strategy": "🎯 盤中已超過目標86.5（+12.12%），等收盤確認結算"
     },
     {
       "stock_code": "5880",
@@ -132,9 +162,41 @@
       "holding_from": "2026-04-13",
       "holding_days": 0,
       "reversal_level": "L0",
-      "chip_status": "9買1賣+cum37K"
+      "chip_status": "4連買+cum37K+外資+34K",
+      "intraday_price": 23.75,
+      "intraday_change_pct": -0.42,
+      "intraday_vs_recommend_pct": -0.42,
+      "intraday_volume_ratio": 0.36,
+      "intraday_strategy": "續抱觀察，小跌正常波動"
     }
   ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "6771",
+      "stock_name": "平和環保-創",
+      "score": 25,
+      "reason": "偵測器強訊號65+連買6天，但累計僅14張+環保非催化+營收衰退8月-5分→25分排除"
+    },
+    {
+      "stock_code": "2488",
+      "stock_name": "漢平",
+      "score": 37,
+      "reason": "偵測器強訊號65+連買9天+動能佈局，但不在TOP50+汽車零件非催化→37分排除"
+    },
+    {
+      "stock_code": "2704",
+      "stock_name": "國賓",
+      "score": 28,
+      "reason": "偵測器強訊號60+連買5天，但4買6賣-5分+不在TOP50+觀光非催化→28分排除"
+    }
+  ],
+  "intraday_detector": {
+    "strong_signals": 5,
+    "moderate_signals": 4,
+    "qualified_for_evaluation": ["6771", "2488", "2704"],
+    "excluded_over_3pct": ["1709", "3168"]
+  },
   "excluded_stocks": [
     {
       "stock_code": "2408",
@@ -170,171 +232,6 @@
       "stock_code": "3706",
       "stock_name": "神達",
       "reason": "avg10: 5日+8.6%已大漲"
-    },
-    {
-      "stock_code": "6443",
-      "stock_name": "元晶",
-      "reason": "avg13.5: 動能+179%>100%+營收-43%→-5"
-    },
-    {
-      "stock_code": "3037",
-      "stock_name": "欣興",
-      "reason": "avg14.5: 5日+30.6%已大漲"
-    },
-    {
-      "stock_code": "2402",
-      "stock_name": "毅嘉",
-      "reason": "avg15.5: 5日+18.8%已大漲"
-    },
-    {
-      "stock_code": "5243",
-      "stock_name": "",
-      "reason": "avg16.5: 5日+33.9%已大漲"
-    },
-    {
-      "stock_code": "3583",
-      "stock_name": "",
-      "reason": "avg17: 5日+44.7%已大漲"
-    },
-    {
-      "stock_code": "2356",
-      "stock_name": "英業達",
-      "reason": "avg19: 動能+63.9%→-10+持股比→-3 → 66分不推"
-    },
-    {
-      "stock_code": "3576",
-      "stock_name": "",
-      "reason": "avg22: 國發基金倒貨排除"
-    },
-    {
-      "stock_code": "2485",
-      "stock_name": "兆赫",
-      "reason": "avg22: cum-5.7K為負+3買7賣"
-    },
-    {
-      "stock_code": "4977",
-      "stock_name": "",
-      "reason": "avg22: 5日+11.2%已大漲"
-    },
-    {
-      "stock_code": "2486",
-      "stock_name": "",
-      "reason": "avg22.5: 5日+27.9%已大漲"
-    },
-    {
-      "stock_code": "2002",
-      "stock_name": "中鋼",
-      "reason": "avg23: 動能+412%>100%"
-    },
-    {
-      "stock_code": "2313",
-      "stock_name": "華通",
-      "reason": "avg23: 5日+7.5%→-10 → 邊緣不推"
-    },
-    {
-      "stock_code": "2027",
-      "stock_name": "大成鋼",
-      "reason": "avg24: 動能+500%>100%"
-    },
-    {
-      "stock_code": "1714",
-      "stock_name": "",
-      "reason": "avg24: 5日+5.2% → 56分不推"
-    },
-    {
-      "stock_code": "8299",
-      "stock_name": "群聯",
-      "reason": "Track B: 無法人數據"
-    },
-    {
-      "stock_code": "2324",
-      "stock_name": "仁寶",
-      "reason": "Track B: cum-39K+3買7賣"
-    },
-    {
-      "stock_code": "2371",
-      "stock_name": "大同",
-      "reason": "Track B: cum-6.5K+外資-9K"
-    },
-    {
-      "stock_code": "4904",
-      "stock_name": "遠傳",
-      "reason": "Track B: reversal L4爆量賣超"
-    },
-    {
-      "stock_code": "2886",
-      "stock_name": "兆豐金",
-      "reason": "Track B: reversal L2→-15分 → 53分排除"
-    },
-    {
-      "stock_code": "2880",
-      "stock_name": "華南金",
-      "reason": "Track B: 73分但防禦比例已足→觀察"
-    },
-    {
-      "stock_code": "6505",
-      "stock_name": "台塑化",
-      "reason": "Track B: 石化成本壓力+營收-17%→52分排除"
-    },
-    {
-      "stock_code": "2618",
-      "stock_name": "長榮航",
-      "reason": "Track B: COLD航空0%(5)→-5+oil↑→53分排除"
-    },
-    {
-      "stock_code": "2603",
-      "stock_name": "長榮",
-      "reason": "航運: 催化x營收⚠️營收未跟上(YoY-20.7%)+5日漲幅不明"
-    },
-    {
-      "stock_code": "2615",
-      "stock_name": "萬海",
-      "reason": "���運: 催化x營收⚠️營收未跟上(YoY-0.5%)+油價飆漲增加成本"
-    },
-    {
-      "stock_code": "2404",
-      "stock_name": "漢唐",
-      "reason": "AI伺服器: 不在TOP50+需確認法人態度"
-    },
-    {
-      "stock_code": "6290",
-      "stock_name": "良維",
-      "reason": "AI伺服器: 不在TOP50+Q1創新高但���幅需確認"
-    },
-    {
-      "stock_code": "2466",
-      "stock_name": "冠西電",
-      "reason": "光通訊: 不在TOP50+800G驗證剛公布需等法人進場"
-    },
-    {
-      "stock_code": "6285",
-      "stock_name": "啟碁",
-      "reason": "光通訊: 5日+20.9%已大漲排除"
-    },
-    {
-      "stock_code": "3105",
-      "stock_name": "穩懋",
-      "reason": "低軌衛星: 不在TOP50+PA漲價催化但需等法人確認"
-    },
-    {
-      "stock_code": "3491",
-      "stock_name": "昇達科",
-      "reason": "低軌衛星: 不在TOP50+YoY+57%但需確認法人態度"
-    },
-    {
-      "stock_code": "2317",
-      "stock_name": "鴻海",
-      "reason": "蘋果鏈: Tesla L1→-5分+法人賣超-4.3K→邊緣不推"
-    },
-    {
-      "stock_code": "3231",
-      "stock_name": "緯創",
-      "reason": "蘋果鏈/AI: 5日+6.3%→-10分+追高→70分邊緣不推"
-    },
-    {
-      "stock_code": "3008",
-      "stock_name": "大立光",
-      "reason": "蘋果鏈: 不在TOP50+法說4/16等確認後評估"
     }
   ],
   "module_b_result": "10檔候選全排除（L3/L4 reversal或累計為負）",
@@ -453,23 +350,9 @@
     "market_regime": "偏多(score=2)"
   },
   "pattern_tracker": {
-    "hot": [
-      "IC載板100%",
-      "半導體通路100%",
-      "ABF/PCB100%"
-    ],
-    "cold": [
-      "航空0%(5)",
-      "封測16.7%(6)",
-      "PC/消費電子16.7%(6)",
-      "銅/電纜33.3%(6)"
-    ],
-    "worst_combos": [
-      "偷偷買+航空0%(5)",
-      "外資主導+航空0%(5)",
-      "外資主導+封測0%(5)",
-      "3天+金融9.1%(11)→-5分"
-    ],
+    "hot": ["IC載板100%", "半導體通路100%", "ABF/PCB100%"],
+    "cold": ["航空0%(5)", "封測16.7%(6)", "PC/消費電子16.7%(6)", "銅/電纜33.3%(6)"],
+    "worst_combos": ["偷偷買+航空0%(5)", "外資主導+航空0%(5)", "外資主導+封測0%(5)", "3天+金融9.1%(11)→-5分"],
     "applied": {
       "2618": "已排除（COLD航空-5分）",
       "others": "HOT僅標註不加分"
