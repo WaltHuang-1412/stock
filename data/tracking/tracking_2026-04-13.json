@@ -29,7 +29,12 @@
       "intraday_change_pct": 4.26,
       "intraday_vs_recommend_pct": 8.41,
       "intraday_volume_ratio": 1.26,
-      "intraday_strategy": "續抱，接近目標97.0（差1.68%）"
+      "intraday_strategy": "續抱，接近目標97.0（差1.68%）",
+      "actual_close": 96.6,
+      "close_price": 96.6,
+      "change_percent": 9.77,
+      "result": "holding",
+      "holding_status": "Day7 +9.77% 距目標97.0僅差0.4元"
     },
     {
       "stock_code": "2344",
@@ -52,7 +57,12 @@
       "intraday_change_pct": -0.11,
       "intraday_vs_recommend_pct": -0.11,
       "intraday_volume_ratio": 0.44,
-      "intraday_strategy": "續抱觀察，平盤正常波動"
+      "intraday_strategy": "續抱觀察，平盤正常波動",
+      "actual_close": 94.4,
+      "close_price": 94.4,
+      "change_percent": 0.96,
+      "result": "holding",
+      "holding_status": "Day1 +0.96% DRAM超強催化，反轉不明需觀察"
     },
     {
       "stock_code": "2303",
@@ -69,13 +79,22 @@
       "reason": "續持Day4+🔥超強催化覆寫(費半+13.49%)+cum62K+28K+TSM法說+5",
       "holding_from": "2026-04-08",
       "holding_days": 4,
-      "reversal_level": "L0",
+      "reversal_level": "L4",
       "chip_status": "近5天+102K+外資+投信同步",
       "intraday_price": 60.0,
       "intraday_change_pct": -3.06,
       "intraday_vs_recommend_pct": 2.92,
       "intraday_volume_ratio": 0.62,
-      "intraday_strategy": "續抱，回檔-3%但法人+28K續買，超強催化仍有效"
+      "intraday_strategy": "續抱，回檔-3%但法人+28K續買，超強催化仍有效",
+      "actual_close": 60.1,
+      "close_price": 60.1,
+      "change_percent": 3.09,
+      "result": "success",
+      "settled_date": "2026-04-13",
+      "settled_price": 60.1,
+      "exit_signal": "L4��人反轉（今日-8,985張，佔日均量7.3%）",
+      "exit_price": 60.1,
+      "exit_pnl": "+3.09%"
     },
     {
       "stock_code": "2897",
@@ -98,7 +117,12 @@
       "intraday_change_pct": 1.48,
       "intraday_vs_recommend_pct": 1.48,
       "intraday_volume_ratio": 1.88,
-      "intraday_strategy": "續抱，上漲+1.48%放量"
+      "intraday_strategy": "續抱，上漲+1.48%放量",
+      "actual_close": 10.35,
+      "close_price": 10.35,
+      "change_percent": 1.97,
+      "result": "holding",
+      "holding_status": "Day2 +1.97% L0安全，Module A L3"
     },
     {
       "stock_code": "3045",
@@ -120,8 +144,13 @@
       "intraday_price": 110.0,
       "intraday_change_pct": 0.0,
       "intraday_vs_recommend_pct": 0.46,
-      "intraday_volume_ratio": 0.40,
-      "intraday_strategy": "續抱，平盤穩定"
+      "intraday_volume_ratio": 0.4,
+      "intraday_strategy": "續抱，平盤穩定",
+      "actual_close": 110.0,
+      "close_price": 110.0,
+      "change_percent": 0.46,
+      "result": "holding",
+      "holding_status": "Day2 +0.46% L0安全，防禦配置"
     },
     {
       "stock_code": "4739",
@@ -144,7 +173,13 @@
       "intraday_change_pct": 4.96,
       "intraday_vs_recommend_pct": 12.12,
       "intraday_volume_ratio": 2.06,
-      "intraday_strategy": "🎯 盤中已超過目標86.5（+12.12%），等收盤確認結算"
+      "intraday_strategy": "🎯 盤中已超過目標86.5（+12.12%），等收盤確認結算",
+      "actual_close": 88.5,
+      "close_price": 88.5,
+      "change_percent": 11.74,
+      "result": "success",
+      "settled_date": "2026-04-13",
+      "settled_price": 88.5
     },
     {
       "stock_code": "5880",
@@ -167,7 +202,12 @@
       "intraday_change_pct": -0.42,
       "intraday_vs_recommend_pct": -0.42,
       "intraday_volume_ratio": 0.36,
-      "intraday_strategy": "續抱觀察，小跌正常波動"
+      "intraday_strategy": "續抱觀察，小跌正常波動",
+      "actual_close": 23.9,
+      "close_price": 23.9,
+      "change_percent": 0.21,
+      "result": "holding",
+      "holding_status": "Day1 +0.21% L0安全，Module A L2"
     }
   ],
   "track_b_recommendations": [],
@@ -194,8 +234,15 @@
   "intraday_detector": {
     "strong_signals": 5,
     "moderate_signals": 4,
-    "qualified_for_evaluation": ["6771", "2488", "2704"],
-    "excluded_over_3pct": ["1709", "3168"]
+    "qualified_for_evaluation": [
+      "6771",
+      "2488",
+      "2704"
+    ],
+    "excluded_over_3pct": [
+      "1709",
+      "3168"
+    ]
   },
   "excluded_stocks": [
     {
@@ -236,10 +283,10 @@
   ],
   "module_b_result": "10檔候選全排除（L3/L4 reversal或累計為負）",
   "yesterday_verification": {
-    "accuracy": "62.30%",
-    "total_success": 119,
-    "total_fail": 72,
-    "settled_count": 191,
+    "accuracy": "62.81%",
+    "total_success": 125,
+    "total_fail": 74,
+    "settled_count": 199,
     "holding_count": 5,
     "settled_on_0410": [
       {
@@ -291,13 +338,52 @@
         "vs_recommend": "+6.82%"
       }
     ],
-    "summary": "4/10結算3檔(1s/2f=33.3%), 持有5檔, 累計119/191=62.30%"
+    "summary": "4/13結算2檔(2s/0f=100%)+3/27到期6檔(4s/2f=66.7%), 累計125/199=62.81%",
+    "results": [
+      {
+        "stock_code": "3189",
+        "stock_name": "景碩",
+        "result": "success",
+        "exit_price": 379.5,
+        "pnl": "+5.86%"
+      },
+      {
+        "stock_code": "3036",
+        "stock_name": "文曄",
+        "result": "fail",
+        "exit_price": 227.5,
+        "pnl": "-2.57%"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "result": "fail",
+        "exit_price": 34.8,
+        "pnl": "-1.14%"
+      },
+      {
+        "stock_code": "4739",
+        "stock_name": "康普",
+        "result": "success",
+        "exit_price": 88.5,
+        "pnl": "+11.74%",
+        "reason": "收盤88.5≥目標86.5"
+      },
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "result": "success",
+        "exit_price": 60.1,
+        "pnl": "+3.09%",
+        "reason": "L4法人反轉出場"
+      }
+    ]
   },
   "accuracy": {
-    "cumulative_accuracy": "62.30%",
-    "cumulative_success": 119,
-    "cumulative_fail": 72,
-    "settled_count": 191,
+    "cumulative_accuracy": "62.81%",
+    "cumulative_success": 125,
+    "cumulative_fail": 74,
+    "settled_count": 199,
     "holding_count": 5
   },
   "cumulative_summary": {
@@ -350,9 +436,23 @@
     "market_regime": "偏多(score=2)"
   },
   "pattern_tracker": {
-    "hot": ["IC載板100%", "半導體通路100%", "ABF/PCB100%"],
-    "cold": ["航空0%(5)", "封測16.7%(6)", "PC/消費電子16.7%(6)", "銅/電纜33.3%(6)"],
-    "worst_combos": ["偷偷買+航空0%(5)", "外資主導+航空0%(5)", "外資主導+封測0%(5)", "3天+金融9.1%(11)→-5分"],
+    "hot": [
+      "IC載板100%",
+      "半導體通路100%",
+      "ABF/PCB100%"
+    ],
+    "cold": [
+      "航空0%(5)",
+      "封測16.7%(6)",
+      "PC/消費電子16.7%(6)",
+      "銅/電纜33.3%(6)"
+    ],
+    "worst_combos": [
+      "偷偷買+航空0%(5)",
+      "外資主導+航空0%(5)",
+      "外資主導+封測0%(5)",
+      "3天+金融9.1%(11)→-5分"
+    ],
     "applied": {
       "2618": "已排除（COLD航空-5分）",
       "others": "HOT僅標註不加分"
@@ -364,7 +464,165 @@
       "change": "-3.23%",
       "level": 1,
       "impact": "電動車-5分",
-      "affected_stocks": ["2317", "1513", "1519", "2308", "1504"]
+      "affected_stocks": [
+        "2317",
+        "1513",
+        "1519",
+        "2308",
+        "1504"
+      ]
+    }
+  ],
+  "after_market_settlement": {
+    "settled_today": [
+      {
+        "stock_code": "4739",
+        "stock_name": "康普",
+        "result": "success",
+        "exit_price": 88.5,
+        "pnl_pct": 11.74,
+        "reason": "收盤88.5≥目標86.5"
+      },
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "result": "success",
+        "exit_price": 60.1,
+        "pnl_pct": 3.09,
+        "reason": "L4法人反轉強制出場，仍獲利"
+      }
+    ],
+    "settlement_summary": "今日結算2檔: 2 success + 0 fail = 100%"
+  },
+  "expired_settlements_0327": {
+    "description": "3/27推薦10天到期（第10交易日=4/13）",
+    "results": [
+      {
+        "stock_code": "3715",
+        "stock_name": "定穎",
+        "recommend_price": 185.0,
+        "close": 186.5,
+        "pnl_pct": 0.81,
+        "result": "success"
+      },
+      {
+        "stock_code": "4938",
+        "stock_name": "和碩",
+        "recommend_price": 76.4,
+        "close": 78.0,
+        "pnl_pct": 2.09,
+        "result": "success"
+      },
+      {
+        "stock_code": "3702",
+        "stock_name": "大聯大(3/27)",
+        "recommend_price": 96.0,
+        "close": 96.6,
+        "pnl_pct": 0.62,
+        "result": "success"
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "recommend_price": 42.9,
+        "close": 44.55,
+        "pnl_pct": 3.85,
+        "result": "success"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "recommend_price": 35.65,
+        "close": 35.1,
+        "pnl_pct": -1.54,
+        "result": "fail"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 135.0,
+        "close": 134.5,
+        "pnl_pct": -0.37,
+        "result": "fail"
+      }
+    ],
+    "summary": "4 success + 2 fail = 66.7%"
+  },
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "3702",
+      "stock_name": "大聯大",
+      "industry": "半導體通路",
+      "recommend_price": 88.0,
+      "target_price": 97.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 79.2,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 93,
+      "reason": "續持Day8+10連買+cum52K+持股比-0.28%→-3+TSM法說⚡+5"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "industry": "記憶體",
+      "recommend_price": 93.5,
+      "target_price": 103.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 84.15,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 85,
+      "reason": "續持Day2+DRAM超強5W+cum52K+動能-88.8%→+15+月線下-3"
+    },
+    {
+      "stock_code": "2897",
+      "stock_name": "王道銀行",
+      "industry": "金融",
+      "recommend_price": 10.15,
+      "target_price": 11.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 9.14,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 83,
+      "reason": "續持Day3+Module A L3+9連買+動能-57.1%→+15+L0"
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "industry": "電信服務",
+      "recommend_price": 109.5,
+      "target_price": 117.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 98.55,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 75,
+      "reason": "續持Day3+10連買+cum27K+防禦+電信HOT75%"
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "recommend_price": 23.85,
+      "target_price": 26.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 21.47,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "reason": "續持Day2+Module A L2+4連買+cum37K+L0"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "4739",
+      "reason": "✅ SUCCESS +11.74%（收盤≥目標86.5）"
+    },
+    {
+      "stock_code": "2303",
+      "reason": "✅ SUCCESS +3.09%（L4法人反轉強制出場）"
     }
   ]
 }
