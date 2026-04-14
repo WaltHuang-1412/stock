@@ -7529,9 +7529,9 @@
   },
   "settled_accuracy": "62.81%",
   "settled_count": 199,
-  "holding_count": 5,
-  "total_success": 119,
-  "total_fail": 72,
+  "holding_count": 8,
+  "total_success": 125,
+  "total_fail": 74,
   "2026-03-30": {
     "predictions": [
       {
@@ -8658,6 +8658,107 @@
         "settlement_days": 10,
         "result": "holding",
         "holding_days": 1
+      }
+    ]
+  },
+  "2026-04-14": {
+    "date": "2026-04-14",
+    "predictions": [
+      {
+        "symbol": "3702",
+        "name": "大聯大",
+        "recommend_price": 88.0,
+        "target_price": 97.0,
+        "stop_loss": 79.2,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "result": "holding",
+        "holding_days": 8,
+        "holding_status": "Day8 +9.66% 盤中觸97.3但收盤96.5未達目標"
+      },
+      {
+        "symbol": "2897",
+        "name": "王道銀行",
+        "recommend_price": 10.15,
+        "target_price": 11.0,
+        "stop_loss": 9.14,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "result": "holding",
+        "holding_days": 4,
+        "holding_status": "Day4 +1.97% 10連買Safe"
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "recommend_price": 93.5,
+        "target_price": 103.0,
+        "stop_loss": 84.15,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "result": "holding",
+        "holding_days": 2,
+        "holding_status": "Day2 0% 投信對決中反轉不明"
+      },
+      {
+        "symbol": "6505",
+        "name": "台塑化",
+        "recommend_price": 55.1,
+        "target_price": 61.0,
+        "stop_loss": 49.59,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "Day1 +2.0% 法人大買Safe"
+      },
+      {
+        "symbol": "2027",
+        "name": "大成鋼",
+        "recommend_price": 38.3,
+        "target_price": 42.0,
+        "stop_loss": 34.47,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "Day1 +0.39% 4連買L0"
+      },
+      {
+        "symbol": "3045",
+        "name": "台灣大",
+        "recommend_price": 109.5,
+        "target_price": 117.0,
+        "stop_loss": 98.55,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "result": "holding",
+        "holding_days": 5,
+        "holding_status": "Day5 +0.46% 10連買防禦"
+      },
+      {
+        "symbol": "5880",
+        "name": "合庫金",
+        "recommend_price": 23.85,
+        "target_price": 26.0,
+        "stop_loss": 21.47,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "result": "holding",
+        "holding_days": 2,
+        "holding_status": "Day2 +0.21% 6連買L0"
+      },
+      {
+        "symbol": "2105",
+        "name": "正新",
+        "recommend_price": 32.6,
+        "target_price": 36.0,
+        "stop_loss": 30.97,
+        "stop_loss_pct": -5,
+        "settlement_days": 10,
+        "result": "holding",
+        "holding_days": 1,
+        "holding_status": "Day1(盤中推薦) -0.31% 佈局完成L0"
       }
     ]
   }
