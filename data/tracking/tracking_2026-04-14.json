@@ -226,5 +226,151 @@
   "earnings_calendar": {
     "TSM_0416": "⚡2天→台積電供應鏈+5分",
     "applied": {"3702": "+5分（半導體通路屬台積電供應鏈）"}
+  },
+  "intraday": {
+    "analysis_time": "12:30",
+    "data_source": "Yahoo Finance + T86(20260413) + 盤中即時行情",
+    "track_a_status": [
+      {
+        "stock_code": "2897",
+        "stock_name": "王道銀行",
+        "recommend_price": 10.15,
+        "intraday_price": 10.35,
+        "today_change_pct": 0.0,
+        "unrealized_pnl_pct": 1.97,
+        "today_institutional": 5392,
+        "today_foreign": 5356,
+        "today_trust": 20,
+        "volume_ratio": 0.61,
+        "reversal_level": "Safe",
+        "exit_signal": "無",
+        "strategy": "續抱（10連買+法人大買）"
+      },
+      {
+        "stock_code": "2344",
+        "stock_name": "華邦電",
+        "recommend_price": 93.5,
+        "intraday_price": 95.4,
+        "today_change_pct": 1.06,
+        "unrealized_pnl_pct": 2.03,
+        "today_institutional": 391,
+        "today_foreign": 6074,
+        "today_trust": -6440,
+        "volume_ratio": 0.94,
+        "reversal_level": "不明",
+        "exit_signal": "無",
+        "strategy": "續抱（外資+6074 vs 投信-6440對決中）"
+      },
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "recommend_price": 55.1,
+        "intraday_price": 55.5,
+        "today_change_pct": 0.73,
+        "unrealized_pnl_pct": 0.73,
+        "today_institutional": 6503,
+        "today_foreign": 6852,
+        "today_trust": -552,
+        "volume_ratio": 1.05,
+        "reversal_level": "Safe",
+        "exit_signal": "無",
+        "strategy": "續抱（法人今日大買+6503）"
+      },
+      {
+        "stock_code": "3702",
+        "stock_name": "大聯大",
+        "recommend_price": 88.0,
+        "intraday_price": 97.3,
+        "today_change_pct": 0.62,
+        "unrealized_pnl_pct": 10.57,
+        "today_institutional": 432,
+        "today_foreign": 4426,
+        "today_trust": -3841,
+        "volume_ratio": 1.85,
+        "reversal_level": "L0",
+        "exit_signal": "無",
+        "strategy": "⭐ 觸及目標97.0！等收盤確認"
+      },
+      {
+        "stock_code": "2027",
+        "stock_name": "大成鋼",
+        "recommend_price": 38.3,
+        "intraday_price": 38.4,
+        "today_change_pct": 0.26,
+        "unrealized_pnl_pct": 0.26,
+        "today_institutional": 2681,
+        "today_foreign": 3301,
+        "today_trust": 44,
+        "volume_ratio": 0.73,
+        "reversal_level": "L0",
+        "exit_signal": "無",
+        "strategy": "續抱（4連買+外資+3301）"
+      },
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "recommend_price": 109.5,
+        "intraday_price": 110.0,
+        "today_change_pct": 0.46,
+        "unrealized_pnl_pct": 0.46,
+        "today_institutional": 3483,
+        "today_foreign": 4150,
+        "today_trust": -603,
+        "volume_ratio": 0.41,
+        "reversal_level": "Safe",
+        "exit_signal": "無",
+        "strategy": "續抱（10連買+防禦穩定）"
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "recommend_price": 23.85,
+        "intraday_price": 23.9,
+        "today_change_pct": 0.21,
+        "unrealized_pnl_pct": 0.21,
+        "today_institutional": 803,
+        "today_foreign": 2769,
+        "today_trust": -1736,
+        "volume_ratio": 0.76,
+        "reversal_level": "L0",
+        "exit_signal": "無",
+        "strategy": "續抱（5連買+外資+2769）"
+      }
+    ],
+    "track_b_recommendations": [
+      {
+        "stock_code": "2105",
+        "stock_name": "正新",
+        "industry": "汽車零件",
+        "recommend_price": 32.6,
+        "target_price": 36.0,
+        "stop_loss_pct": -5,
+        "stop_loss": 30.97,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 76,
+        "rating": "⭐⭐⭐⭐",
+        "reason": "Module A L2+avg27.5+cum19K+動能-92.5%佈局完成→+15+外資+15K+月線上+0.46%未反映",
+        "reversal_level": "L0",
+        "chip_status": "7買3賣+cum19K+外資+15K+動能-92.5%",
+        "revenue_yoy": "-17.0%（不調整）",
+        "foreign_ratio": "+0.08%（不調整）"
+      }
+    ],
+    "track_b_observations": [
+      {"stock_code": "1313", "stock_name": "聯成", "reason": "動能+128.6%>100%排除"},
+      {"stock_code": "1708", "stock_name": "東鹼", "reason": "動能+191.8%>100%排除"},
+      {"stock_code": "2748", "stock_name": "雲品", "reason": "偵測器強訊號75分但動能+343.9%>100%+今日-5.96%暴跌排除"},
+      {"stock_code": "3576", "stock_name": "3576", "reason": "動能+127.4%>100%+cum-30K+營收連續衰退10月排除"},
+      {"stock_code": "2484", "stock_name": "希華", "reason": "偵測器強訊號60分但今日+3.58%>3%已反映排除"},
+      {"stock_code": "6209", "stock_name": "今國光", "reason": "偵測器強訊號60分但今日+5.79%>3%已反映排除"},
+      {"stock_code": "1310", "stock_name": "1310", "reason": "今日+3.85%>3%已反映排除"},
+      {"stock_code": "1312", "stock_name": "1312", "reason": "今日+10.0%>3%已反映排除"},
+      {"stock_code": "5871", "stock_name": "中租-KY", "reason": "今日+3.18%>3%已反映排除"}
+    ],
+    "detector_signals": {
+      "strong": ["2748 雲品(75)", "2484 希華(60)", "6209 今國光(60)"],
+      "moderate": ["1568 倉佑(55)", "4720 德淵(50)", "3694 海華(50)", "2459 敦吉(45)"]
+    }
   }
 }
