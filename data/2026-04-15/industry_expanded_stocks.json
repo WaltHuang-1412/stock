@@ -1,0 +1,29 @@
+{
+  "date": "2026-04-15",
+  "method": "dynamic",
+  "industries_expanded": ["金融", "石化", "被動元件", "衛星", "鋼鐵", "核能/能源", "DRAM/記憶體", "光通訊/網通"],
+  "stocks": [
+    {"code": "2887", "name": "台新金", "category": "金融", "tier": "tier_1", "source": "TOP50+Module A L2"},
+    {"code": "2890", "name": "永豐金", "category": "金融", "tier": "tier_1", "source": "TOP50+Module A L2", "excluded": "動能+157.7%>100%"},
+    {"code": "2884", "name": "玉山金", "category": "金融", "tier": "tier_1", "source": "TOP50+Module A L2"},
+    {"code": "2880", "name": "華南金", "category": "金融", "tier": "tier_1", "source": "TOP50+Module A L2"},
+    {"code": "2867", "name": "三商壽", "category": "金融", "tier": "tier_2", "source": "TOP50+Module A L1"},
+    {"code": "2801", "name": "彰銀", "category": "金融", "tier": "tier_2", "source": "Module A L2"},
+    {"code": "2892", "name": "第一金", "category": "金融", "tier": "tier_2", "source": "Module A L2"},
+    {"code": "2845", "name": "遠東銀", "category": "金融", "tier": "tier_2", "source": "TOP50+Module A L2"},
+    {"code": "2812", "name": "台中銀", "category": "金融", "tier": "tier_2", "source": "Module A L2", "excluded": "L4反轉"},
+    {"code": "5871", "name": "中租-KY", "category": "金融", "tier": "tier_2", "source": "TOP50+Module A L2"},
+    {"code": "2618", "name": "長榮航", "category": "航空", "tier": "tier_2", "source": "Module A L2"},
+    {"code": "2353", "name": "宏碁", "category": "AI/蘋果", "tier": "tier_2", "source": "TOP50", "excluded": "cum負"},
+    {"code": "4938", "name": "和碩", "category": "AI/蘋果", "tier": "tier_2", "source": "TOP50", "excluded": "cum負"},
+    {"code": "6443", "name": "元晶", "category": "綠能", "tier": "tier_2", "source": "TOP50", "excluded": "動能+108%>100%"},
+    {"code": "1605", "name": "華新", "category": "鋼鐵", "tier": "tier_2", "source": "TOP50", "excluded": "動能+500%>100%"},
+    {"code": "6282", "name": "康舒", "category": "核能/能源", "tier": "tier_2", "source": "TOP50", "excluded": "動能+235%+已大漲"},
+    {"code": "8996", "name": "高力", "category": "核能/能源", "tier": "tier_3", "source": "催化劑展開", "excluded": "動能+103%>100%"},
+    {"code": "6163", "name": "蜜望實", "category": "被動元件", "tier": "tier_3", "source": "催化劑展開(太陽誘電代理)", "excluded": "無T86數據"},
+    {"code": "8299", "name": "群聯", "category": "DRAM/記憶體", "tier": "tier_1", "source": "催化劑展開(MU+23%)", "excluded": "cum-1730為負+Module B催化已成熟"},
+    {"code": "6442", "name": "光聖", "category": "光通訊/網通", "tier": "tier_1", "source": "催化劑展開(AVGO+14%)", "excluded": "5日-4.2%回檔但不在TOP50"},
+    {"code": "3441", "name": "聯亞", "category": "光通訊/網通", "tier": "tier_1", "source": "催化劑展開(光通訊股王)", "excluded": "違約交割6889萬→風險過高"},
+    {"code": "3234", "name": "光環", "category": "光通訊/網通", "tier": "tier_2", "source": "催化劑展開(AI光通訊)", "excluded": "3月虧損EPS-0.1元由盈轉虧"}
+  ]
+}
