@@ -27,7 +27,14 @@
       "chip_status": "3連買+cum24K+今日+6656續買+動能-84.1%佈局完成",
       "intraday_price": 54.5,
       "intraday_change": "-1.09%",
-      "intraday_strategy": "續抱（法人+6,656續買+Safe+回檔加碼4條件通過）"
+      "intraday_strategy": "續抱（法人+6,656續買+Safe+回檔加碼4條件通過）",
+      "actual_close": 54.4,
+      "actual_change_pct": -1.27,
+      "result": "holding",
+      "holding_status": "正常持有中",
+      "close_price": 54.4,
+      "current_price": 54.4,
+      "change_percent": -1.27
     },
     {
       "stock_code": "2897",
@@ -48,7 +55,14 @@
       "chip_status": "10連買+cum20K+今日+991續買+動能-23%",
       "intraday_price": 10.35,
       "intraday_change": "+1.97%",
-      "intraday_strategy": "續抱（10連買穩定）"
+      "intraday_strategy": "續抱（10連買穩定）",
+      "actual_close": 10.35,
+      "actual_change_pct": 1.97,
+      "result": "holding",
+      "holding_status": "正常持有中",
+      "close_price": 10.35,
+      "current_price": 10.35,
+      "change_percent": 1.97
     },
     {
       "stock_code": "5880",
@@ -69,7 +83,14 @@
       "chip_status": "6連買+cum37K+今日+197續買+動能-18.4%",
       "intraday_price": 23.85,
       "intraday_change": "0.00%",
-      "intraday_strategy": "續抱（6連買+L0穩定）"
+      "intraday_strategy": "續抱（6連買+L0穩定）",
+      "actual_close": 23.85,
+      "actual_change_pct": 0.0,
+      "result": "holding",
+      "holding_status": "正常持有中",
+      "close_price": 23.85,
+      "current_price": 23.85,
+      "change_percent": 0.0
     },
     {
       "stock_code": "2105",
@@ -90,7 +111,14 @@
       "chip_status": "今日-181微量賣超+cum13K仍正+動能-57.6%",
       "intraday_price": 31.9,
       "intraday_change": "-2.15%",
-      "intraday_strategy": "觀察（跌破MA5+距停損3.0%，法人微量賣超但L0未反轉）"
+      "intraday_strategy": "觀察（跌破MA5+距停損3.0%，法人微量賣超但L0未反轉）",
+      "actual_close": 31.95,
+      "actual_change_pct": -1.99,
+      "result": "holding",
+      "holding_status": "L0但微量賣超-181+距停損3.1%需觀察",
+      "close_price": 31.95,
+      "current_price": 31.95,
+      "change_percent": -1.99
     },
     {
       "stock_code": "3702",
@@ -113,7 +141,13 @@
       "intraday_change": "+10.91%",
       "intraday_strategy": "達標（盤中97.6≥目標97.0，Day9 success +10.91%）",
       "result": "success",
-      "settled_reason": "盤中觸及目標價97.0（實際97.6），推薦後第9天達標"
+      "settled_reason": "收盤97.5>=目標97.0，Day9達標+10.80%",
+      "actual_close": 97.5,
+      "actual_change_pct": 10.8,
+      "settled_date": "2026-04-15",
+      "close_price": 97.5,
+      "current_price": 97.5,
+      "change_percent": 10.8
     },
     {
       "stock_code": "3045",
@@ -130,11 +164,18 @@
       "reason": "續持Day6+Module A L1不加分+10連買+cum27K+動能+70%→正常+防禦配置+Safe",
       "holding_from": "2026-04-09",
       "holding_days": 6,
-      "reversal_level": "Safe",
+      "reversal_level": "L4",
       "chip_status": "10連買+cum27K+今日+4195續買+動能+70%",
       "intraday_price": 110.0,
       "intraday_change": "+0.46%",
-      "intraday_strategy": "續抱（10連買+防禦穩定）"
+      "intraday_strategy": "續抱（10連買+防禦穩定）",
+      "actual_close": 110.0,
+      "actual_change_pct": 0.46,
+      "result": "holding",
+      "holding_status": "L4反轉移除：-595張佔日均量8.1%。10連買中斷。收盤110.0未觸停損98.55",
+      "close_price": 110.0,
+      "current_price": 110.0,
+      "change_percent": 0.46
     },
     {
       "stock_code": "2344",
@@ -157,7 +198,12 @@
       "intraday_change": "-1.93%",
       "intraday_strategy": "🛑 強制移除（L4+法人反轉+MA雙破）",
       "result": "holding",
-      "holding_status": "L4反轉移除，盤後收盤結算"
+      "holding_status": "L4反轉移除：爆量賣超-6988張+MA雙破。收盤90.2未觸停損84.15",
+      "actual_close": 90.2,
+      "actual_change_pct": -3.53,
+      "close_price": 90.2,
+      "current_price": 90.2,
+      "change_percent": -3.53
     },
     {
       "stock_code": "2027",
@@ -174,11 +220,18 @@
       "reason": "續持Day2+歐盟鋼鐵關稅50%+5+外資持股比+0.75%→+5+鋼鐵HOT85.7%標註-⚠️L2反轉-15(今日-1020賣超)+L1不加分",
       "holding_from": "2026-04-14",
       "holding_days": 2,
-      "reversal_level": "L0",
+      "reversal_level": "L2",
       "chip_status": "今日-1020賣超但累計+41K仍正+反轉已降回L0+動能+98.3%",
       "intraday_price": 37.7,
       "intraday_change": "-1.57%",
-      "intraday_strategy": "觀察（跌破MA5/MA10+今日賣超，但累計仍正+L0暫持）"
+      "intraday_strategy": "觀察（跌破MA5/MA10+今日賣超，但累計仍正+L0暫持）",
+      "actual_close": 37.45,
+      "actual_change_pct": -2.22,
+      "result": "holding",
+      "holding_status": "L2反轉觀察：-1020賣超+跌破MA5/MA10。距停損8.7%",
+      "close_price": 37.45,
+      "current_price": 37.45,
+      "change_percent": -2.22
     }
   ],
   "track_b_recommendations": [
@@ -198,7 +251,11 @@
       "reversal_level": "L0",
       "chip_status": "8B2S+cum8K+外資+5566+動能-61.6%佈局完成",
       "revenue": "營收+17.4%不加分（回檔未達-5%）",
-      "foreign_ratio": "持股比+0.06%不調整"
+      "foreign_ratio": "持股比+0.06%不調整",
+      "actual_close": 159.0,
+      "actual_change_pct": 0.32,
+      "result": "holding",
+      "holding_status": "新建倉Day1"
     },
     {
       "stock_code": "2884",
@@ -207,7 +264,7 @@
       "recommend_price": 32.95,
       "target_price": 36.0,
       "stop_loss_pct": -5,
-      "stop_loss": 31.30,
+      "stop_loss": 31.3,
       "settlement_days": 10,
       "position": "5-10%",
       "score": 84,
@@ -216,7 +273,11 @@
       "reversal_level": "L0",
       "chip_status": "6B4S+cum17K+外資+11K+動能-66.6%佈局完成",
       "revenue": "營收+4%不調整",
-      "foreign_ratio": "持股比-0.09%不調整（微減<0.1%）"
+      "foreign_ratio": "持股比-0.09%不調整（微減<0.1%）",
+      "actual_close": 32.95,
+      "actual_change_pct": 0.0,
+      "result": "holding",
+      "holding_status": "新建倉Day1"
     },
     {
       "stock_code": "2887",
@@ -234,7 +295,11 @@
       "reversal_level": "L0",
       "chip_status": "7B3S+cum56K+外資+投信同步+動能-83.2%佈局完成",
       "revenue": "營收+90.9%不加分（回檔未達-2%）",
-      "foreign_ratio": "持股比-0.11%→-3分（週減≥0.1%）"
+      "foreign_ratio": "持股比-0.11%→-3分（週減≥0.1%）",
+      "actual_close": 24.6,
+      "actual_change_pct": -0.2,
+      "result": "holding",
+      "holding_status": "新建倉Day1"
     }
   ],
   "track_b_observations": [
@@ -258,37 +323,177 @@
     "exclusion_reasons": "6191: 5日+9.8%已大漲; 5288/6958/2908/1443: 法人量太小+動能>100%; 4576: 動能+500%>100%"
   },
   "excluded_stocks": [
-    {"stock_code": "2890", "stock_name": "永豐金", "reason": "Module A L2但動能+157.7%>100%排除"},
-    {"stock_code": "2834", "stock_name": "臺企銀", "reason": "cum=-8238為負排除"},
-    {"stock_code": "6443", "stock_name": "元晶", "reason": "動能+108.2%>100%排除"},
-    {"stock_code": "1605", "stock_name": "華新", "reason": "動能+500%>100%排除"},
-    {"stock_code": "6282", "stock_name": "康舒", "reason": "動能+235.3%>100%+5日+18%已大漲排除"},
-    {"stock_code": "2353", "stock_name": "宏碁", "reason": "cum=-1220為負排除"},
-    {"stock_code": "4977", "stock_name": "眾達-KY", "reason": "cum=-3580為負排除"},
-    {"stock_code": "8996", "stock_name": "高力", "reason": "動能+103.3%>100%排除"},
-    {"stock_code": "2812", "stock_name": "台中銀", "reason": "反轉L4(-7685賣超佔52.1%)排除"},
-    {"stock_code": "4938", "stock_name": "和碩", "reason": "cum=-249為負+反轉不明排除"},
-    {"stock_code": "2344", "stock_name": "華邦電", "reason": "盤中L4移除：爆量賣超-6988張+MA雙破+高點-6.2%"},
-    {"stock_code": "2337", "stock_name": "旺宏", "reason": "TrackB排除：cum=-4731為負+外資投信同步賣"},
-    {"stock_code": "2002", "stock_name": "中鋼", "reason": "TrackB排除：動能+188%追高+過量36K佔成交126%"},
-    {"stock_code": "8112", "stock_name": "至上", "reason": "TrackB排除：cum=-7026為負"}
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "reason": "Module A L2但動能+157.7%>100%排除"
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "reason": "cum=-8238為負排除"
+    },
+    {
+      "stock_code": "6443",
+      "stock_name": "元晶",
+      "reason": "動能+108.2%>100%排除"
+    },
+    {
+      "stock_code": "1605",
+      "stock_name": "華新",
+      "reason": "動能+500%>100%排除"
+    },
+    {
+      "stock_code": "6282",
+      "stock_name": "康舒",
+      "reason": "動能+235.3%>100%+5日+18%已大漲排除"
+    },
+    {
+      "stock_code": "2353",
+      "stock_name": "宏碁",
+      "reason": "cum=-1220為負排除"
+    },
+    {
+      "stock_code": "4977",
+      "stock_name": "眾達-KY",
+      "reason": "cum=-3580為負排除"
+    },
+    {
+      "stock_code": "8996",
+      "stock_name": "高力",
+      "reason": "動能+103.3%>100%排除"
+    },
+    {
+      "stock_code": "2812",
+      "stock_name": "台中銀",
+      "reason": "反轉L4(-7685賣超佔52.1%)排除"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "reason": "cum=-249為負+反轉不明排除"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "盤中L4移除：爆量賣超-6988張+MA雙破+高點-6.2%"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "TrackB排除：cum=-4731為負+外資投信同步賣"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "reason": "TrackB排除：動能+188%追高+過量36K佔成交126%"
+    },
+    {
+      "stock_code": "8112",
+      "stock_name": "至上",
+      "reason": "TrackB排除：cum=-7026為負"
+    }
   ],
   "module_a_result": "L3=1(6505續持)+L2=14(金融為主)+L1=3(3045/2027/2867)",
   "module_b_result": "全排除（催化劑已成熟7天連漲+法人累計負或L4反轉）",
   "yesterday_verification": {
-    "accuracy": "62.81%",
-    "total_success": 125,
+    "accuracy": "63.0%",
+    "total_success": 126,
     "total_fail": 74,
-    "settled_count": 199,
-    "holding_count": 8,
-    "settled_today": "3702大聯大 success（盤中觸及目標97.0）"
+    "settled_count": 200,
+    "holding_count": 10,
+    "results": [
+      {
+        "stock_code": "3702",
+        "stock_name": "大聯大",
+        "recommend_price": 88.0,
+        "close_price": 97.5,
+        "target_price": 97.0,
+        "stop_loss": 79.2,
+        "result": "success",
+        "change_percent": 10.8,
+        "holding_days": 9,
+        "reason": "收盤97.5>=目標97.0，Day9達標"
+      },
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "recommend_price": 55.1,
+        "close_price": 54.4,
+        "result": "holding",
+        "change_percent": -1.27,
+        "holding_days": 2,
+        "reason": "未觸目標/停損，Safe續持"
+      },
+      {
+        "stock_code": "2897",
+        "stock_name": "王道銀行",
+        "recommend_price": 10.15,
+        "close_price": 10.35,
+        "result": "holding",
+        "change_percent": 1.97,
+        "holding_days": 5,
+        "reason": "未觸目標/停損，L0續持"
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "recommend_price": 23.85,
+        "close_price": 23.85,
+        "result": "holding",
+        "change_percent": 0.0,
+        "holding_days": 3,
+        "reason": "未觸目標/停損，L0續持"
+      },
+      {
+        "stock_code": "2105",
+        "stock_name": "正新",
+        "recommend_price": 32.6,
+        "close_price": 31.95,
+        "result": "holding",
+        "change_percent": -1.99,
+        "holding_days": 2,
+        "reason": "距停損3.1%需觀察"
+      },
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "recommend_price": 109.5,
+        "close_price": 110.0,
+        "result": "holding",
+        "change_percent": 0.46,
+        "holding_days": 6,
+        "reason": "L4反轉移除，持續追蹤"
+      },
+      {
+        "stock_code": "2344",
+        "stock_name": "華邦電",
+        "recommend_price": 93.5,
+        "close_price": 90.2,
+        "result": "holding",
+        "change_percent": -3.53,
+        "holding_days": 3,
+        "reason": "L4反轉移除，持續追蹤"
+      },
+      {
+        "stock_code": "2027",
+        "stock_name": "大成鋼",
+        "recommend_price": 38.3,
+        "close_price": 37.45,
+        "result": "holding",
+        "change_percent": -2.22,
+        "holding_days": 2,
+        "reason": "L2反轉觀察"
+      }
+    ]
   },
   "accuracy": {
-    "cumulative_accuracy": "63.06%",
+    "cumulative_accuracy": "63.0%",
     "cumulative_success": 126,
     "cumulative_fail": 74,
     "settled_count": 200,
-    "holding_count": 10
+    "holding_count": 10,
+    "today_settled": "3702大聯大 success（收盤97.5>=目標97.0，+10.80%）"
   },
   "market_context": {
     "vix": 18.36,
@@ -299,7 +504,158 @@
     "market_regime": "多頭(score=4)+台股vs年線+33.4%"
   },
   "removed_stocks": [
-    {"stock_code": "2344", "stock_name": "華邦電", "reason": "盤中L4移除：法人爆量賣超-6988張+MA雙破"}
+    {
+      "stock_code": "3702",
+      "stock_name": "大聯大",
+      "reason": "達標success，收盤97.5>=目標97.0，+10.80%"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "L4爆量賣超-6988張+MA5/MA10雙破（盤中移除）"
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "reason": "L4收盤反轉-595張佔日均量8.1%（盤後新增移除）"
+    }
   ],
-  "tomorrow_recommendations": []
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2301",
+      "stock_name": "光寶科",
+      "industry": "科技/ODM",
+      "recommend_price": 158.5,
+      "target_price": 175.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 150.58,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 87,
+      "reason": "費半+15%超強+TSM法說+動能-62%佈局完成+8B2S+L0",
+      "reversal_level": "L0",
+      "revenue": "營收+17.4%不加分",
+      "foreign_ratio": "持股比+0.06%不調整",
+      "price_position": "月線上+2.7%不調整"
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "industry": "金融",
+      "recommend_price": 32.95,
+      "target_price": 36.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 31.3,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 84,
+      "reason": "金融4W超強+動能-67%佈局完成+avg21+L0",
+      "reversal_level": "L0",
+      "revenue": "營收+4.0%不調整",
+      "foreign_ratio": "持股比-0.09%不調整",
+      "price_position": "月線上+2.5%不調整"
+    },
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "industry": "石化",
+      "recommend_price": 55.1,
+      "target_price": 61.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 49.59,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 81,
+      "reason": "WTI-8%利好+Module A L3+動能-84%佈局完成+Safe-月線下-3",
+      "reversal_level": "Safe",
+      "revenue": "營收-17.3%不調整",
+      "foreign_ratio": "持股比+0.00%不調整",
+      "price_position": "月線下-1.7%扣-3分"
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新金",
+      "industry": "金融",
+      "recommend_price": 24.65,
+      "target_price": 27.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 23.42,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 79,
+      "reason": "金融4W超強+動能-83%佈局完成+外資投信同步+L0-持股比-3",
+      "reversal_level": "L0",
+      "revenue": "營收+90.9%不加分",
+      "foreign_ratio": "持股比-0.11%扣-3分",
+      "price_position": "月線上+1.2%不調整"
+    },
+    {
+      "stock_code": "2897",
+      "stock_name": "王道銀行",
+      "industry": "金融",
+      "recommend_price": 10.15,
+      "target_price": 11.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 9.14,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 77,
+      "reason": "金融超強+10連買+cum20K+動能-23%佈局中+L0",
+      "reversal_level": "L0",
+      "revenue": "營收+7.3%不調整",
+      "foreign_ratio": "持股比+0.04%不調整",
+      "price_position": "月線上+3.1%不調整"
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "recommend_price": 23.85,
+      "target_price": 26.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 21.47,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "reason": "金融超強+6連買+cum37K+動能-18%佈局中+L0",
+      "reversal_level": "L0",
+      "revenue": "營收-2.1%不調整",
+      "foreign_ratio": "持股比+0.04%不調整",
+      "price_position": "月線上+1.7%不調整"
+    },
+    {
+      "stock_code": "2105",
+      "stock_name": "正新",
+      "industry": "汽車零件",
+      "recommend_price": 32.6,
+      "target_price": 36.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 30.97,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 72,
+      "reason": "Module A L2+動能-58%佈局+cum13K正-微量賣超+距停損3.1%",
+      "reversal_level": "L0",
+      "revenue": "營收-17.0%不調整",
+      "foreign_ratio": "持股比+0.08%不調整",
+      "price_position": "月線上+3.2%不調整"
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "industry": "鋼鐵",
+      "recommend_price": 38.3,
+      "target_price": 42.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 34.47,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 52,
+      "reason": "L2反轉-15+動能+98%接近上限+持股比+0.75%加+5-月線下-3",
+      "reversal_level": "L2",
+      "revenue": "營收+13.6%不加分",
+      "foreign_ratio": "持股比+0.75%加+5分",
+      "price_position": "月線下-0.1%扣-3分"
+    }
+  ]
 }
