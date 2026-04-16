@@ -1,0 +1,35 @@
+{
+  "date": "2026-04-16",
+  "method": "dynamic",
+  "industries_expanded": ["AI伺服器", "半導體", "光通訊/網通/PCB", "金融", "石化", "鋼鐵/原物料", "衛星通訊", "核能/綠能", "記憶體", "被動元件", "IC載板"],
+  "catalyst_drivers": [
+    "費半+8.56%→半導體/AI伺服器",
+    "AVGO+13.14%/MRVL+17.61%→光通訊/網通",
+    "台積電法說今天→半導體全鏈",
+    "金融Q1+31%創高→金融股",
+    "WTI-5.91%→石化利好",
+    "Tesla+14.19%→電動車(Module B全排除)"
+  ],
+  "stocks": [
+    {"code": "2303", "name": "聯電", "category": "半導體", "tier": "tier_1", "source": "TOP50 avg6.5+Module A L1"},
+    {"code": "2313", "name": "華通", "category": "PCB/半導體設備", "tier": "tier_1", "source": "TOP50 avg18.5+Module B法人已進場"},
+    {"code": "3189", "name": "景碩", "category": "IC載板/AI伺服器", "tier": "tier_1", "source": "TOP50 avg23.0+Module B法人已進場"},
+    {"code": "3037", "name": "欣興", "category": "PCB/光通訊", "tier": "tier_1", "source": "Module B通過(🟢早期)+TOP50近期"},
+    {"code": "3231", "name": "緯創", "category": "AI伺服器", "tier": "tier_1", "source": "Module A L1+Module B法人已進場"},
+    {"code": "2356", "name": "英業達", "category": "AI伺服器", "tier": "tier_2", "source": "TOP50 avg30.0"},
+    {"code": "2801", "name": "彰銀", "category": "金融", "tier": "tier_1", "source": "TOP50 avg23.0+Module A L2"},
+    {"code": "2886", "name": "兆豐金", "category": "金融", "tier": "tier_1", "source": "Module A L2"},
+    {"code": "2890", "name": "永豐金", "category": "金融", "tier": "tier_1", "source": "Module A L2+10連買"},
+    {"code": "2615", "name": "萬海", "category": "航運", "tier": "tier_2", "source": "TOP50 avg27.0佈局中"},
+    {"code": "2312", "name": "金寶", "category": "衛星通訊", "tier": "tier_2", "source": "Module A L2+NVDA量子AI夥伴"},
+    {"code": "2002", "name": "中鋼", "category": "鋼鐵", "tier": "tier_2", "source": "Module A L2+6天TOP50"},
+    {"code": "8996", "name": "高力", "category": "核能/綠能", "tier": "tier_2", "source": "Topic Tracker核能🔴超強影響鏈"},
+    {"code": "6282", "name": "康舒", "category": "核能/綠能", "tier": "tier_2", "source": "Topic Tracker核能🔴超強影響鏈"},
+    {"code": "8299", "name": "群聯", "category": "記憶體", "tier": "tier_2", "source": "Topic Tracker DRAM🔴超強影響鏈"},
+    {"code": "2345", "name": "智邦", "category": "光通訊/網通", "tier": "tier_1", "source": "Topic Tracker光通訊🔴超強影響鏈"},
+    {"code": "2383", "name": "台光電", "category": "PCB", "tier": "tier_1", "source": "Topic Tracker光通訊+PCB🟢中度影響鏈"},
+    {"code": "6274", "name": "台燿", "category": "PCB", "tier": "tier_2", "source": "Topic Tracker PCB🟢中度影響鏈"},
+    {"code": "2327", "name": "國巨", "category": "被動元件", "tier": "tier_1", "source": "Topic Tracker被動元件🟡強影響鏈+TOP50 avg12"},
+    {"code": "2492", "name": "華新科", "category": "被動元件", "tier": "tier_2", "source": "Topic Tracker被動元件🟡強影響鏈"}
+  ]
+}

@@ -1,168 +1,168 @@
 {
-  "date": "2026-04-15",
-  "data_range": "20260211~20260414",
-  "total_cycles": 404,
-  "overall_success_rate": 56.7,
+  "date": "2026-04-16",
+  "data_range": "20260211~20260415",
+  "total_cycles": 422,
+  "overall_success_rate": 57.1,
   "dimension_stats": {
     "buy_days": {
       "2天": {
-        "accuracy": 51.2,
-        "avg_return": 1.29,
-        "sample": 172
+        "accuracy": 52.2,
+        "avg_return": 1.23,
+        "sample": 182
       },
       "3天": {
-        "accuracy": 51.1,
-        "avg_return": 1.66,
-        "sample": 94
+        "accuracy": 56.6,
+        "avg_return": 1.76,
+        "sample": 99
       },
       "4天": {
-        "accuracy": 67.4,
-        "avg_return": 5.32,
-        "sample": 46
-      },
-      "6天+": {
-        "accuracy": 63.3,
-        "avg_return": 3.01,
+        "accuracy": 59.2,
+        "avg_return": 5.21,
         "sample": 49
       },
+      "6天+": {
+        "accuracy": 62.0,
+        "avg_return": 3.47,
+        "sample": 50
+      },
       "5天": {
-        "accuracy": 72.1,
-        "avg_return": 5.75,
-        "sample": 43
+        "accuracy": 71.4,
+        "avg_return": 6.15,
+        "sample": 42
       }
     },
     "volume": {
       "30K+": {
-        "accuracy": 51.2,
-        "avg_return": 1.38,
-        "sample": 80
+        "accuracy": 48.8,
+        "avg_return": 1.29,
+        "sample": 82
       },
       "10K-30K": {
-        "accuracy": 55.6,
-        "avg_return": 1.14,
-        "sample": 153
+        "accuracy": 55.7,
+        "avg_return": 1.19,
+        "sample": 158
       },
       "5K-10K": {
-        "accuracy": 65.4,
-        "avg_return": 5.71,
-        "sample": 78
+        "accuracy": 63.7,
+        "avg_return": 5.53,
+        "sample": 80
       },
       "<5K": {
-        "accuracy": 55.9,
-        "avg_return": 3.09,
-        "sample": 93
+        "accuracy": 60.8,
+        "avg_return": 3.41,
+        "sample": 102
       }
     },
     "stealth": {
       "偷偷買": {
-        "accuracy": 47.8,
-        "avg_return": 0.89,
-        "sample": 113
+        "accuracy": 52.0,
+        "avg_return": 0.94,
+        "sample": 127
       },
       "邊買邊漲": {
-        "accuracy": 57.4,
-        "avg_return": 1.26,
-        "sample": 115
+        "accuracy": 57.1,
+        "avg_return": 1.36,
+        "sample": 119
       },
       "追漲": {
-        "accuracy": 65.6,
-        "avg_return": 5.46,
-        "sample": 122
+        "accuracy": 64.5,
+        "avg_return": 5.55,
+        "sample": 121
       },
       "越買越跌": {
-        "accuracy": 53.7,
-        "avg_return": 1.95,
-        "sample": 54
+        "accuracy": 52.7,
+        "avg_return": 2.39,
+        "sample": 55
       }
     },
     "leader": {
       "外資主導": {
-        "accuracy": 58.0,
-        "avg_return": 2.61,
-        "sample": 355
+        "accuracy": 58.2,
+        "avg_return": 2.62,
+        "sample": 373
       },
       "混合": {
-        "accuracy": 50.0,
-        "avg_return": 1.91,
+        "accuracy": 53.1,
+        "avg_return": 2.32,
         "sample": 32
       },
       "投信主導": {
         "accuracy": 41.2,
-        "avg_return": 1.68,
+        "avg_return": 1.96,
         "sample": 17
       }
     },
     "sell_speed": {
       "快速出貨": {
-        "accuracy": 47.3,
-        "avg_return": 2.14,
-        "sample": 279
+        "accuracy": 49.1,
+        "avg_return": 2.26,
+        "sample": 293
       },
       "緩慢出貨": {
-        "accuracy": 73.0,
-        "avg_return": 3.99,
-        "sample": 89
+        "accuracy": 71.4,
+        "avg_return": 3.9,
+        "sample": 91
       },
       "沒出貨": {
-        "accuracy": 88.9,
-        "avg_return": 1.85,
-        "sample": 36
+        "accuracy": 84.2,
+        "avg_return": 1.81,
+        "sample": 38
       }
     },
     "industry": {
       "面板/光通訊": {
-        "accuracy": 50.0,
-        "avg_return": 4.49,
-        "sample": 4
+        "accuracy": 60.0,
+        "avg_return": 4.31,
+        "sample": 5
       },
       "光通訊": {
         "accuracy": 66.7,
-        "avg_return": 5.57,
+        "avg_return": 5.65,
         "sample": 3
       },
       "記憶體": {
-        "accuracy": 30.0,
-        "avg_return": -7.1,
+        "accuracy": 10.0,
+        "avg_return": -8.59,
         "sample": 10
       },
       "塑化": {
         "accuracy": 50.0,
-        "avg_return": 2.02,
+        "avg_return": 1.64,
         "sample": 4
       },
       "AI伺服器": {
-        "accuracy": 57.9,
-        "avg_return": -0.05,
+        "accuracy": 52.6,
+        "avg_return": -0.81,
         "sample": 19
       },
       "半導體": {
-        "accuracy": 58.3,
-        "avg_return": 1.23,
-        "sample": 12
+        "accuracy": 61.5,
+        "avg_return": 2.52,
+        "sample": 13
       },
       "航空": {
-        "accuracy": 20.0,
-        "avg_return": -7.76,
+        "accuracy": 0.0,
+        "avg_return": -8.22,
         "sample": 5
       },
       "石化": {
-        "accuracy": 75.0,
-        "avg_return": 4.6,
+        "accuracy": 41.7,
+        "avg_return": 1.97,
         "sample": 12
       },
       "金融": {
-        "accuracy": 46.2,
-        "avg_return": -0.66,
-        "sample": 52
+        "accuracy": 47.3,
+        "avg_return": -0.46,
+        "sample": 55
       },
       "未知": {
-        "accuracy": 59.5,
-        "avg_return": 4.6,
-        "sample": 168
+        "accuracy": 61.2,
+        "avg_return": 4.89,
+        "sample": 170
       },
       "鋼鐵": {
-        "accuracy": 85.7,
-        "avg_return": 1.16,
+        "accuracy": 71.4,
+        "avg_return": 0.11,
         "sample": 7
       },
       "水泥": {
@@ -172,67 +172,67 @@
       },
       "記憶體/DRAM": {
         "accuracy": 33.3,
-        "avg_return": -2.08,
+        "avg_return": -2.93,
         "sample": 3
       },
       "PCB": {
-        "accuracy": 53.8,
-        "avg_return": 3.11,
+        "accuracy": 61.5,
+        "avg_return": 3.4,
         "sample": 13
       },
       "銅/電纜": {
-        "accuracy": 33.3,
-        "avg_return": -2.48,
-        "sample": 6
+        "accuracy": 42.9,
+        "avg_return": -1.99,
+        "sample": 7
       },
       "AI PC": {
         "accuracy": 75.0,
-        "avg_return": -0.77,
+        "avg_return": -0.81,
         "sample": 4
       },
       "塑化/DRAM": {
         "accuracy": 40.0,
-        "avg_return": -0.61,
+        "avg_return": -0.93,
         "sample": 5
       },
       "DRAM記憶體": {
         "accuracy": 80.0,
-        "avg_return": 8.29,
+        "avg_return": 4.13,
         "sample": 5
       },
       "PC/消費電子": {
         "accuracy": 28.6,
-        "avg_return": -0.48,
+        "avg_return": -0.35,
         "sample": 7
-      },
-      "航運": {
-        "accuracy": 38.5,
-        "avg_return": 0.92,
-        "sample": 13
       },
       "電子": {
         "accuracy": 57.1,
-        "avg_return": 0.62,
+        "avg_return": 1.02,
         "sample": 7
+      },
+      "航運": {
+        "accuracy": 50.0,
+        "avg_return": 0.76,
+        "sample": 14
       },
       "半導體通路": {
         "accuracy": 100.0,
-        "avg_return": 15.97,
+        "avg_return": 16.21,
         "sample": 3
+      },
+      "IC載板": {
+        "accuracy": 88.9,
+        "avg_return": 7.69,
+        "sample": 9
       },
       "ABF/PCB": {
         "accuracy": 100.0,
         "avg_return": 14.16,
         "sample": 3
       },
-      "IC載板": {
-        "accuracy": 88.9,
-        "avg_return": 6.3,
-        "sample": 9
-      },
       "電信服務": {
         "accuracy": 75.0,
-        "avg_return": 0.35,
+        "avg_return": 0.34,
         "sample": 4
       },
       "封測": {
@@ -241,18 +241,28 @@
         "sample": 6
       },
       "金融防禦": {
-        "accuracy": 60.0,
-        "avg_return": -1.92,
-        "sample": 5
+        "accuracy": 66.7,
+        "avg_return": -0.32,
+        "sample": 6
       },
       "CCL材料": {
         "accuracy": 100.0,
-        "avg_return": 19.95,
+        "avg_return": 20.91,
         "sample": 4
       },
+      "電信防禦": {
+        "accuracy": 66.7,
+        "avg_return": 0.23,
+        "sample": 3
+      },
       "代工": {
-        "accuracy": 75.0,
-        "avg_return": 3.13,
+        "accuracy": 80.0,
+        "avg_return": 2.69,
+        "sample": 5
+      },
+      "工程/石化EPC": {
+        "accuracy": 100.0,
+        "avg_return": 8.29,
         "sample": 4
       }
     }
@@ -262,7 +272,7 @@
       "dimension": "industry",
       "value": "半導體通路",
       "accuracy": 100.0,
-      "avg_return": 15.97,
+      "avg_return": 16.21,
       "sample": 3
     },
     {
@@ -276,80 +286,80 @@
       "dimension": "industry",
       "value": "CCL材料",
       "accuracy": 100.0,
-      "avg_return": 19.95,
+      "avg_return": 20.91,
       "sample": 4
     },
     {
-      "dimension": "sell_speed",
-      "value": "沒出貨",
-      "accuracy": 88.9,
-      "avg_return": 1.85,
-      "sample": 36
+      "dimension": "industry",
+      "value": "工程/石化EPC",
+      "accuracy": 100.0,
+      "avg_return": 8.29,
+      "sample": 4
     },
     {
       "dimension": "industry",
       "value": "IC載板",
       "accuracy": 88.9,
-      "avg_return": 6.3,
+      "avg_return": 7.69,
       "sample": 9
     },
     {
-      "dimension": "industry",
-      "value": "鋼鐵",
-      "accuracy": 85.7,
-      "avg_return": 1.16,
-      "sample": 7
+      "dimension": "sell_speed",
+      "value": "沒出貨",
+      "accuracy": 84.2,
+      "avg_return": 1.81,
+      "sample": 38
     },
     {
       "dimension": "industry",
       "value": "DRAM記憶體",
       "accuracy": 80.0,
-      "avg_return": 8.29,
+      "avg_return": 4.13,
       "sample": 5
     },
     {
       "dimension": "industry",
-      "value": "石化",
-      "accuracy": 75.0,
-      "avg_return": 4.6,
-      "sample": 12
+      "value": "代工",
+      "accuracy": 80.0,
+      "avg_return": 2.69,
+      "sample": 5
     },
     {
       "dimension": "industry",
       "value": "電信服務",
       "accuracy": 75.0,
-      "avg_return": 0.35,
+      "avg_return": 0.34,
       "sample": 4
     },
     {
-      "dimension": "industry",
-      "value": "代工",
-      "accuracy": 75.0,
-      "avg_return": 3.13,
-      "sample": 4
+      "dimension": "buy_days",
+      "value": "5天",
+      "accuracy": 71.4,
+      "avg_return": 6.15,
+      "sample": 42
     }
   ],
   "cold_patterns": [
     {
       "dimension": "industry",
       "value": "航空",
-      "accuracy": 20.0,
-      "avg_return": -7.76,
+      "accuracy": 0.0,
+      "avg_return": -8.22,
       "sample": 5
+    },
+    {
+      "dimension": "industry",
+      "value": "記憶體",
+      "accuracy": 10.0,
+      "avg_return": -8.59,
+      "sample": 10
     },
     {
       "dimension": "industry",
       "value": "PC/消費電子",
       "accuracy": 28.6,
-      "avg_return": -0.48,
+      "avg_return": -0.35,
       "sample": 7
-    },
-    {
-      "dimension": "industry",
-      "value": "記憶體",
-      "accuracy": 30.0,
-      "avg_return": -7.1,
-      "sample": 10
     },
     {
       "dimension": "industry",
@@ -362,15 +372,8 @@
       "dimension": "industry",
       "value": "記憶體/DRAM",
       "accuracy": 33.3,
-      "avg_return": -2.08,
+      "avg_return": -2.93,
       "sample": 3
-    },
-    {
-      "dimension": "industry",
-      "value": "銅/電纜",
-      "accuracy": 33.3,
-      "avg_return": -2.48,
-      "sample": 6
     },
     {
       "dimension": "industry",
@@ -382,67 +385,97 @@
   ],
   "best_combos": [
     {
-      "combo": "volume=30K+ + sell_speed=沒出貨",
+      "combo": "sell_speed=沒出貨 + industry=金融",
       "accuracy": 100.0,
-      "avg_return": 3.8,
-      "sample": 11
-    },
-    {
-      "combo": "volume=10K-30K + industry=石化",
-      "accuracy": 100.0,
-      "avg_return": 8.7,
-      "sample": 6
-    },
-    {
-      "combo": "stealth=追漲 + sell_speed=沒出貨",
-      "accuracy": 100.0,
-      "avg_return": 4.73,
-      "sample": 10
-    },
-    {
-      "combo": "stealth=偷偷買 + industry=鋼鐵",
-      "accuracy": 100.0,
-      "avg_return": 2.25,
-      "sample": 5
+      "avg_return": 1.43,
+      "sample": 7
     },
     {
       "combo": "buy_days=6天+ + sell_speed=沒出貨",
       "accuracy": 100.0,
-      "avg_return": 3.56,
-      "sample": 8
+      "avg_return": 4.01,
+      "sample": 7
     },
     {
-      "combo": "sell_speed=沒出貨 + industry=金融",
+      "combo": "stealth=追漲 + sell_speed=沒出貨",
       "accuracy": 100.0,
-      "avg_return": 1.65,
-      "sample": 5
-    },
-    {
-      "combo": "volume=5K-10K + sell_speed=緩慢出貨",
-      "accuracy": 100.0,
-      "avg_return": 7.8,
-      "sample": 11
-    },
-    {
-      "combo": "buy_days=4天 + volume=5K-10K",
-      "accuracy": 100.0,
-      "avg_return": 12.04,
-      "sample": 8
+      "avg_return": 7.49,
+      "sample": 6
     },
     {
       "combo": "leader=外資主導 + industry=IC載板",
       "accuracy": 100.0,
-      "avg_return": 8.33,
+      "avg_return": 9.62,
       "sample": 7
     },
     {
+      "combo": "buy_days=2天 + sell_speed=沒出貨",
+      "accuracy": 93.8,
+      "avg_return": 0.54,
+      "sample": 16
+    },
+    {
+      "combo": "volume=30K+ + sell_speed=沒出貨",
+      "accuracy": 90.0,
+      "avg_return": 3.07,
+      "sample": 10
+    },
+    {
       "combo": "stealth=邊買邊漲 + sell_speed=沒出貨",
-      "accuracy": 95.0,
-      "avg_return": 1.64,
-      "sample": 20
+      "accuracy": 88.9,
+      "avg_return": 1.29,
+      "sample": 18
+    },
+    {
+      "combo": "volume=5K-10K + sell_speed=緩慢出貨",
+      "accuracy": 88.9,
+      "avg_return": 7.22,
+      "sample": 9
+    },
+    {
+      "combo": "buy_days=4天 + volume=5K-10K",
+      "accuracy": 88.9,
+      "avg_return": 10.43,
+      "sample": 9
+    },
+    {
+      "combo": "volume=10K-30K + sell_speed=沒出貨",
+      "accuracy": 88.2,
+      "avg_return": 1.93,
+      "sample": 17
     }
   ],
   "worst_combos": [
+    {
+      "combo": "volume=30K+ + industry=記憶體",
+      "accuracy": 0.0,
+      "avg_return": -10.93,
+      "sample": 5
+    },
+    {
+      "combo": "stealth=偷偷買 + industry=航空",
+      "accuracy": 0.0,
+      "avg_return": -8.22,
+      "sample": 5
+    },
+    {
+      "combo": "leader=外資主導 + industry=航空",
+      "accuracy": 0.0,
+      "avg_return": -8.22,
+      "sample": 5
+    },
+    {
+      "combo": "leader=外資主導 + industry=記憶體",
+      "accuracy": 10.0,
+      "avg_return": -8.59,
+      "sample": 10
+    },
+    {
+      "combo": "sell_speed=快速出貨 + industry=記憶體",
+      "accuracy": 10.0,
+      "avg_return": -8.59,
+      "sample": 10
+    },
     {
       "combo": "sell_speed=快速出貨 + industry=PC/消費電子",
       "accuracy": 16.7,
@@ -450,39 +483,15 @@
       "sample": 6
     },
     {
-      "combo": "buy_days=2天 + industry=航運",
-      "accuracy": 16.7,
-      "avg_return": -2.85,
-      "sample": 6
-    },
-    {
-      "combo": "buy_days=3天 + industry=金融",
-      "accuracy": 18.2,
-      "avg_return": -1.88,
-      "sample": 11
-    },
-    {
-      "combo": "volume=30K+ + industry=記憶體",
+      "combo": "buy_days=2天 + industry=記憶體",
       "accuracy": 20.0,
-      "avg_return": -10.22,
+      "avg_return": -6.25,
       "sample": 5
     },
     {
-      "combo": "stealth=偷偷買 + industry=航空",
+      "combo": "volume=30K+ + industry=石化",
       "accuracy": 20.0,
-      "avg_return": -7.76,
-      "sample": 5
-    },
-    {
-      "combo": "leader=外資主導 + industry=航空",
-      "accuracy": 20.0,
-      "avg_return": -7.76,
-      "sample": 5
-    },
-    {
-      "combo": "buy_days=3天 + leader=投信主導",
-      "accuracy": 20.0,
-      "avg_return": -1.47,
+      "avg_return": -0.76,
       "sample": 5
     },
     {
@@ -495,12 +504,6 @@
       "combo": "buy_days=2天 + industry=封測",
       "accuracy": 20.0,
       "avg_return": -3.82,
-      "sample": 5
-    },
-    {
-      "combo": "leader=外資主導 + industry=封測",
-      "accuracy": 20.0,
-      "avg_return": -5.52,
       "sample": 5
     }
   ]
