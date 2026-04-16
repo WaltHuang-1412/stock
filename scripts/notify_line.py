@@ -29,9 +29,11 @@ if env_file.exists():
 # === 設定（從 .env 或環境變數讀取） ===
 CHANNEL_TOKEN = os.environ.get("LINE_CHANNEL_TOKEN", "")
 USER_ID = os.environ.get("LINE_USER_ID", "")
+GROUP_ID = os.environ.get("LINE_GROUP_ID", "")
+SEND_TO = GROUP_ID or USER_ID
 
-if not CHANNEL_TOKEN or not USER_ID:
-    print("錯誤：缺少 LINE_CHANNEL_TOKEN 或 LINE_USER_ID")
+if not CHANNEL_TOKEN or not SEND_TO:
+    print("錯誤：缺少 LINE_CHANNEL_TOKEN 或 LINE_USER_ID/LINE_GROUP_ID")
     print("請在 .env 檔案中設定，或設定環境變數")
     sys.exit(1)
 
@@ -51,7 +53,7 @@ def send_message(text):
             "Content-Type": "application/json"
         },
         json={
-            "to": USER_ID,
+            "to": SEND_TO,
             "messages": [{"type": "text", "text": text}]
         },
         timeout=10
