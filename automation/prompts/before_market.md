@@ -13,8 +13,13 @@ gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/$(date +%Y-%m-%
 gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/topic_tracker.md --jq '.content' | base64 -d > data/$(date +%Y-%m-%d)/topic_tracker.md
 ```
 
+同時抓取 industry_signals.json（結構化產業信號，動態補充 industry_chains.json）：
+```bash
+gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/industry_signals.json --jq '.content' | base64 -d > data/$(date +%Y-%m-%d)/industry_signals.json
+```
+
 如果指令失敗（檔案不存在或網路問題），跳過即可，不影響後續流程。
-讀取後在 Step 2 和 Step 6 參考這兩份資料，識別額外的產業催化劑和時事題材。
+讀取後在 Step 2 和 Step 6 參考這些資料，識別額外的產業催化劑和時事題材。
 
 topic_tracker.md 催化劑儀表板使用方式：
 
@@ -30,6 +35,23 @@ topic_tracker.md 催化劑儀表板使用方式：
 - **領頭指標**：用於 catalyst theme detector 的美股領頭羊驗證
 - **關鍵轉折點**：用於 Step 5.5 催化預埋掃描的事件判斷
 - **方向（↑→↓）**：判斷催化劑是加速還是減速，影響攻防比例
+
+結構化產業信號（Step 6 產業展開時使用）：
+讀取 `industry_signals.json`，這是 topic_tracker.md 的結構化版本，每個催化劑主題已拆解為可直接使用的欄位：
+
+Step 6 產業展開補強：
+- `industry_chain_key` 非 null → 直接對應 `industry_chains.json` 的產業 key，用 catalyst_level 決定展開深度：
+  - 🔴 超強 → depth 3（tier 0-3 全展開）
+  - 🟡 強 → depth 2（tier 0-2）
+  - 🟢 中度 → depth 1（tier 0-1）
+- `industry_chain_key` 為 null → 新產業（industry_chains.json 沒有），直接用 `stocks[]` 作為候選股
+- `stocks[]` 中出現但不在 industry_chains.json 的股票 → 新股票，納入候選池
+
+Step 7 方向與營收驗證加減分：
+- `direction.arrow` 為 ↑（加速）且候選股在該主題中 → **+3 分**（reason 標註「催化↑加速→+3」）
+- `direction.arrow` 為 ↓（減速）且候選股在該主題中 → **-3 分**（reason 標註「催化↓減速→-3」）
+- `revenue_support` 為 ⚠️ → 等同「催化x營收⚠️未跟上→-3」（與既有規則合併，不重複扣分）
+- 方向加減分和時事維度加分可疊加，但時事維度總計不超過 30 分上限
 
 催化預埋掃描（Step 5.5 Module A，v7.9.3 新增）：
 Step 5（法人TOP50）完成後，強制執行預埋掃描：
