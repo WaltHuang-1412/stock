@@ -131,5 +131,38 @@
       "industry": "石化",
       "reason": "油價WTI-8.98%/BZ+3.38%分歧+月線下-0.3%-3分+營收-17.3% | 石化催化減速 | 雖法人+4,841買超但續推理由減弱 Day4/10自行決定是否保留部位"
     }
-  ]
+  ],
+  "intraday_update": {
+    "time": "12:30",
+    "track_a_status": [
+      {"stock_code": "2301", "intraday_price": 162.50, "day_change_pct": 0.93, "vs_cost_pct": 2.52, "status": "hold", "note": "法人+4,858連買3天，MA5/MA10站穩"},
+      {"stock_code": "2382", "intraday_price": 323.00, "day_change_pct": 1.41, "vs_cost_pct": 1.41, "status": "hold", "note": "法人+7,049，AI超強續發"},
+      {"stock_code": "2887", "intraday_price": 24.30, "day_change_pct": -2.61, "vs_cost_pct": -1.42, "status": "watch", "note": "距停損23.42僅3.8%，但法人+13,992（外資+22K/投信-3.7K），接近停損警戒"},
+      {"stock_code": "2890", "intraday_price": 32.50, "day_change_pct": -2.40, "vs_cost_pct": -2.40, "status": "hold", "note": "法人+4,402連買5天，跌破MA5"},
+      {"stock_code": "2002", "intraday_price": 20.05, "day_change_pct": 0.50, "vs_cost_pct": 0.50, "status": "hold", "note": "法人+12,953當日大買"},
+      {"stock_code": "2801", "intraday_price": 21.40, "day_change_pct": 0.23, "vs_cost_pct": 0.00, "status": "watch", "note": "投信-3,263連續賣，需留意"},
+      {"stock_code": "2886", "intraday_price": 39.35, "day_change_pct": -1.50, "vs_cost_pct": -1.50, "status": "hold", "note": "法人+2,524"},
+      {"stock_code": "3037", "intraday_price": 641.00, "day_change_pct": -0.62, "vs_cost_pct": 3.72, "status": "hold", "note": "對成本+3.72%，距目標680尚6.1%"}
+    ],
+    "track_b_recommendations": [
+      {
+        "stock_code": "8046",
+        "stock_name": "南電",
+        "industry": "PCB/IC載板",
+        "recommend_price": 717.0,
+        "target_price": 752.0,
+        "stop_loss_pct": -5,
+        "stop_loss": 681.15,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 89,
+        "reason": "AI伺服器🔴超強+15 | 動能-87%佈局完成+15 | 法人avg#16 外資+投信同步買超+2 | AVGO+12.27%/NVDA+7.85%利多IC載板 | 5d+7.8%已大漲-10 | 外資持股比-0.40%-3 | 營收+12.8%"
+      }
+    ],
+    "track_b_observations": [
+      {"stock_code": "2356", "stock_name": "英業達", "score": 69, "reason": "偵測器強訊號但動能+95%邊緣(-10)+外資持股-0.14%(-3)，低於75分門檻"},
+      {"stock_code": "2845", "stock_name": "遠東銀", "score": 70, "reason": "連買10天+19K但法人分偏低(avg#32.5)+金融小股，低於75分門檻"},
+      {"stock_code": "2401", "stock_name": "凌陽", "score": null, "reason": "動能+375%爆發追高+今日+4.4%超過3%門檻，直接排除"}
+    ]
+  }
 }
