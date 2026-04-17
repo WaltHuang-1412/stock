@@ -1,7 +1,7 @@
 # 台股分析執行流程（v8.0 多因子版）
 
-**版本**：v8.0
-**更新日期**：2026-04-09
+**版本**：v8.0.1
+**更新日期**：2026-04-17
 **目的**：提供清晰、可執行的盤前/盤中/盤後分析流程
 
 ---
@@ -72,8 +72,8 @@ python3 scripts/holiday_cumulative_summary.py --date $(date +%Y-%m-%d)
 腳本自動判斷：距上一交易日≤1天 → 不產生摘要，直接跳過
 
 **如果產生了 `cumulative_summary.json`**：
-- 持續性「超強」→ Step 6 展開 depth 3 + Step 7 反轉降級（L3→L1, L4→L2）+ 時事+15分
-- 持續性「強」→ Step 6 展開 depth 2 + 時事+10分
+- 持續性「超強」→ Step 7 反轉降級（L3→L1, L4→L2）+ 時事+15分
+- 持續性「強」→ 時事+10分
 - 持續性「強利空」/「超強利空」→ 對應產業 -10/-15分
 
 ---
@@ -215,47 +215,31 @@ python3 scripts/catalyst_theme_detector.py --date $(date +%Y-%m-%d) --lookback 7
 **B-1**：查看 Step 1 + Step 2 數據，**動態判斷**產業方向（不限固定清單）：
 - 費半 +2% → 半導體 | 油價 -2.54% → 塑化、航空 | 輝達 +5.87% → AI 伺服器
 - 新聞出現的新題材也要展開
+- 每方向至少 3-5 檔候選
 
-**B-2**：動態展開（三層）：
+**B-2**：候選股來源：
 1. 法人 TOP50 中找該產業股票
 2. Claude 知識補充相關股票
-3. `data/industry_chains.json` 補漏（可用 `expand_industry.py` 輔助）
+3. 可參考 `data/industry_chains.json` 補漏（非強制）
 
-**輸出**：`industry_expanded_stocks.json` + `industry_stock_codes.txt`
-```json
-{
-  "date": "2026-02-26",
-  "method": "dynamic",
-  "industries_expanded": ["AI伺服器", "塑化"],
-  "stocks": [
-    {"code": "2382", "name": "廣達", "category": "AI伺服器", "tier": "tier_1", "source": "TOP50+催化劑"}
-  ]
-}
-```
-
-**🔴 規則**：不限 `industry_chains.json`、每方向至少 3-5 檔、代號寫入 `industry_stock_codes.txt`
-
-**B-3**：批次籌碼分析
+**B-3**：候選股跑 chip_analysis + reversal_alert 過濾
 ```bash
-python3 scripts/chip_analysis.py $(cat data/$(date +%Y-%m-%d)/industry_stock_codes.txt | tr '\n' ' ') --days 10
+python3 scripts/chip_analysis.py [候選股...] --days 10
+python3 scripts/reversal_alert.py [候選股...]
 ```
 
 #### 🔄 合併去重
 
-```bash
-python3 scripts/merge_candidates.py $(date +%Y-%m-%d)
-```
+軌道 A + 軌道 B 候選股合併去重，進入 Step 7 評分。
 
 **Module A 整合**：L3→🔥強制進入 | L2→🟢進入 | L1→🟡觀察 | 追高→❌排除
 
 **Module B 整合**：
 - 讀取 `catalyst_theme_signals.json` 的 `preposition_candidates`（前10檔）
-- **必須加入 `industry_stock_codes.txt`，與 B 組一起跑 chip_analysis + reversal_alert**
+- 候選股跑 chip_analysis + reversal_alert
 - 篩選條件：Level 0-1 + 動能≤100% + 累計為正
 - 🟢早期→+5分 | 🟡中期→標註 | 🔴成熟→標註追高風險
 - **🔴 禁止跳過**：必須逐檔列出排除原因
-
-**驗證**：✅ `industry_expanded_stocks.json` + `industry_stock_codes.txt` 必須存在
 
 **產業知識庫**（完整定義在 `data/industry_chains.json`）：
 科技（10）：AI、半導體、記憶體、光通訊、網通、蘋果鏈、電動車、面板、衛星、AR/VR ｜ 傳統（5）：塑化、航空、鋼鐵、營建、生技 ｜ 金融（3）：金融、電信、綠能 ｜ 其他（2）：遊戲電競
@@ -415,37 +399,24 @@ python3 scripts/reversal_alert.py [候選股...] > data/$(date +%Y-%m-%d)/revers
 
 ---
 
-**催化劑 x 營收交叉分析**（market-intelligence 產出）：
+**催化劑 x 營收交叉分析**（market-intelligence 產出，僅標註不加減分）：
 
 讀取 `market_intelligence.md` 中的「催化劑 x 營收交叉分析」：
-
-| 支撐度 | 評分調整 | 說明 |
-|--------|---------|------|
-| ⚠️ 營收未跟上 | **-3分** | 催化劑熱但營收衰退，題材炒作風險 |
-| 💪 強力支撐 | 不加分（標註參考） | 營收加分已由 check_revenue_yoy.py 處理 |
-| ✅ 有支撐 / ➡️ 溫和 | 不調整 | |
+- ⚠️ 營收未跟上 → **標註「⚠️營收未跟上」**（不扣分，營收加減分已由 check_revenue_yoy.py 處理）
 
 ---
 
-**PTT 散戶輿情**（market-intelligence 產出）：
+**PTT 散戶輿情**（market-intelligence 產出，僅標註不加減分）：
 
 讀取 `market_intelligence.md` 中的「PTT 股票板散戶輿情」：
-
-| 條件 | 評分調整 | 說明 |
-|------|---------|------|
-| PTT 熱門討論 + 今日漲幅 >3% | **-3分** | 散戶追高風險 |
-| PTT 熱門討論但漲幅 ≤3% | 標註「散戶關注」不扣分 | |
+- PTT 熱門討論 → **標註「散戶關注」**（不扣分）
 
 ---
 
-**美股財報日曆加分**：
+**美股財報日曆**（僅標註不加減分）：
 
 讀取 `market_intelligence.md` 中的「美股財報日曆」：
-
-| 條件 | 評分調整 |
-|------|---------|
-| 對應美股 ⚡7天內有財報 | **+5分**（法說催化提前卡位）|
-| 對應美股 🔜30天內有財報 | 標註，不加分 |
+- 對應美股 7天內有財報 → **標註「⚡財報催化」**（不加分）
 
 對應關係：TSM→台積電供應鏈 / NVDA→AI伺服器鏈 / MU→記憶體鏈 / AVGO→網通光通訊鏈 / INTC→封測鏈 / AAPL→蘋果鏈
 
@@ -602,8 +573,9 @@ ls data/tracking/tracking_$(date +%Y-%m-%d).json
 ### 🔴 Step 2: Track A 推薦股追蹤 + 出場訊號（強制）
 
 ```bash
-python3 scripts/intraday_dual_track.py
 python3 scripts/exit_signal_checker.py [推薦股...] --cost [推薦價]
+python3 scripts/chip_analysis.py [推薦股...] --days 10
+python3 scripts/reversal_alert.py [推薦股...]
 ```
 
 **出場訊號（任一觸發 → 🛑 強制停損，無例外）**：
@@ -614,9 +586,7 @@ python3 scripts/exit_signal_checker.py [推薦股...] --cost [推薦價]
 | 連續重挫 | 2天累計跌幅 > -10% |
 | 法人反轉 | Level 3-4 |
 
-**尾盤策略**：✅ 續抱 | ➕ 加碼（回檔+法人續買+無出場訊號）| 🛑 強制停損
-
-**回檔加碼驗證**（4項全通過才可）：法人力道未減>50% | 動能未減>30% | 反轉 Level 0 | 價格位階<80%
+**尾盤策略**：✅ 續抱 | 🛑 強制停損
 
 ---
 
@@ -773,5 +743,5 @@ python3 scripts/holdings_pressure_analysis.py [停損股...]
 
 **文件導航**：`docs/README.md` | 歷史教訓：`docs/HISTORICAL_LESSONS.md` | 產業鏈：`data/industry_chains.json`
 
-**最後更新**：2026-04-09
-**版本**：v8.0
+**最後更新**：2026-04-17
+**版本**：v8.0.1
