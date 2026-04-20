@@ -7527,10 +7527,10 @@
       }
     ]
   },
-  "settled_accuracy": "64.7%",
-  "settled_count": 221,
-  "holding_count": 16,
-  "total_success": 126,
+  "settled_accuracy": "63.2%",
+  "settled_count": 222,
+  "holding_count": 143,
+  "total_success": 127,
   "total_fail": 74,
   "2026-03-30": {
     "predictions": [
@@ -7625,7 +7625,7 @@
     ],
     "date": "2026-03-30"
   },
-  "cumulative_success": 127,
+  "cumulative_success": 128,
   "cumulative_fail": 74,
   "2026-03-31": {
     "date": "2026-03-31",
@@ -9200,6 +9200,149 @@
         "stop_loss": 34.47,
         "result": "holding",
         "holding_days": 4
+      }
+    ]
+  },
+  "2026-04-20": {
+    "predictions": [
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "recommend_price": 318.5,
+        "target_price": 350.0,
+        "stop_loss": 286.65,
+        "result": "holding",
+        "holding_days": 2,
+        "actual_close": 329.0
+      },
+      {
+        "symbol": "2301",
+        "name": "光寶科",
+        "recommend_price": 158.5,
+        "target_price": 175.0,
+        "stop_loss": 150.58,
+        "result": "holding",
+        "holding_days": 4,
+        "actual_close": 165.0
+      },
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "recommend_price": 136.5,
+        "target_price": 150.0,
+        "stop_loss": 122.85,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 140.5
+      },
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "recommend_price": 19.95,
+        "target_price": 21.95,
+        "stop_loss": 17.96,
+        "result": "holding",
+        "holding_days": 2,
+        "actual_close": 19.85
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 45.8,
+        "target_price": 51.0,
+        "stop_loss": 41.22,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 46.6
+      },
+      {
+        "symbol": "2801",
+        "name": "彰銀",
+        "recommend_price": 21.4,
+        "target_price": 23.5,
+        "stop_loss": 19.26,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 21.6
+      },
+      {
+        "symbol": "3037",
+        "name": "欣興",
+        "recommend_price": 618.0,
+        "target_price": 680.0,
+        "stop_loss": 556.2,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 678.0,
+        "notes": "盤中最高707達目標+4%，尾盤回落至678，差目標2元"
+      },
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend_price": 73.0,
+        "target_price": 80.0,
+        "stop_loss": 69.35,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 76.9,
+        "notes": "ADR+19.71%發酵，法人+101K爆量漲停"
+      },
+      {
+        "symbol": "3706",
+        "name": "神達",
+        "recommend_price": 83.8,
+        "target_price": 92.0,
+        "stop_loss": 79.61,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 84.1,
+        "notes": "Track B 盤中新增"
+      },
+      {
+        "symbol": "2887",
+        "name": "台新金",
+        "recommend_price": 24.65,
+        "target_price": 27.0,
+        "stop_loss": 23.42,
+        "result": "holding",
+        "holding_days": 4,
+        "actual_close": 24.25,
+        "notes": "盤前Level 4已移除，停損未觸"
+      },
+      {
+        "symbol": "2890",
+        "name": "永豐金",
+        "recommend_price": 33.3,
+        "target_price": 36.5,
+        "stop_loss": 29.97,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 32.2,
+        "notes": "盤前Level 4已移除，停損未觸"
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "recommend_price": 39.95,
+        "target_price": 44.0,
+        "stop_loss": 35.96,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 39.75,
+        "notes": "盤前已移除，停損未觸"
+      },
+      {
+        "symbol": "8046",
+        "name": "南電",
+        "recommend_price": 717.0,
+        "target_price": 752.0,
+        "stop_loss": 681.15,
+        "result": "success",
+        "holding_days": 2,
+        "actual_close": 796.0,
+        "settled_date": "2026-04-20",
+        "settled_price": 796.0,
+        "notes": "盤前反轉Level 4 誤判移除，但今日漲停+9.94%達目標752 → v8.1 檢討載板高價股 L4 門檻"
       }
     ]
   }
