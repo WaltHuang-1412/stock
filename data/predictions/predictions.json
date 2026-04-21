@@ -7527,9 +7527,9 @@
       }
     ]
   },
-  "settled_accuracy": "63.2%",
+  "settled_accuracy": "64.9%",
   "settled_count": 222,
-  "holding_count": 143,
+  "holding_count": 153,
   "total_success": 127,
   "total_fail": 74,
   "2026-03-30": {
@@ -9343,6 +9343,116 @@
         "settled_date": "2026-04-20",
         "settled_price": 796.0,
         "notes": "盤前反轉Level 4 誤判移除，但今日漲停+9.94%達目標752 → v8.1 檢討載板高價股 L4 門檻"
+      }
+    ]
+  },
+  "2026-04-21": {
+    "predictions": [
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "recommend_price": 329.0,
+        "target_price": 350.0,
+        "stop_loss": 296.1,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 340.0
+      },
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "recommend_price": 140.5,
+        "target_price": 155.0,
+        "stop_loss": 126.45,
+        "result": "holding",
+        "holding_days": 2,
+        "actual_close": 144.5
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "recommend_price": 85.7,
+        "target_price": 96.0,
+        "stop_loss": 77.13,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 91.1,
+        "notes": "🆕 新增推薦 DRAM 跌深反彈，盤中爆量+42K"
+      },
+      {
+        "symbol": "2301",
+        "name": "光寶科",
+        "recommend_price": 165.0,
+        "target_price": 175.0,
+        "stop_loss": 148.5,
+        "result": "holding",
+        "holding_days": 5,
+        "actual_close": 171.5,
+        "notes": "接近目標 -2.0%"
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 46.6,
+        "target_price": 51.0,
+        "stop_loss": 41.94,
+        "result": "holding",
+        "holding_days": 2,
+        "actual_close": 47.35
+      },
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "recommend_price": 19.85,
+        "target_price": 21.95,
+        "stop_loss": 17.87,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 19.75,
+        "notes": "AI 噴發資金排擠+跌破 MA5/10"
+      },
+      {
+        "symbol": "2801",
+        "name": "彰銀",
+        "recommend_price": 21.6,
+        "target_price": 23.5,
+        "stop_loss": 19.44,
+        "result": "holding",
+        "holding_days": 4,
+        "actual_close": 21.45
+      },
+      {
+        "symbol": "3037",
+        "name": "欣興",
+        "recommend_price": 678.0,
+        "target_price": 720.0,
+        "stop_loss": 610.2,
+        "result": "holding",
+        "holding_days": 4,
+        "actual_close": 710.0,
+        "notes": "盤中 707 差目標 13 元，未達標；目標調升 740"
+      },
+      {
+        "symbol": "3706",
+        "name": "神達",
+        "recommend_price": 84.1,
+        "target_price": 92.0,
+        "stop_loss": 79.89,
+        "result": "holding",
+        "holding_days": 2,
+        "actual_close": 85.0,
+        "notes": "Track B"
+      },
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend_price": 73.0,
+        "target_price": 80.0,
+        "stop_loss": 69.35,
+        "result": "holding",
+        "holding_days": 2,
+        "actual_close": 76.2,
+        "notes": "removed_stocks 續 holding 追蹤"
       }
     ]
   }
