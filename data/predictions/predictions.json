@@ -7527,9 +7527,9 @@
       }
     ]
   },
-  "settled_accuracy": "64.9%",
-  "settled_count": 222,
-  "holding_count": 153,
+  "settled_accuracy": "65.0%",
+  "settled_count": 223,
+  "holding_count": 164,
   "total_success": 127,
   "total_fail": 74,
   "2026-03-30": {
@@ -9453,6 +9453,141 @@
         "holding_days": 2,
         "actual_close": 76.2,
         "notes": "removed_stocks 續 holding 追蹤"
+      }
+    ]
+  },
+  "2026-04-22": {
+    "predictions": [
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "recommend_price": 340.0,
+        "target_price": 350.0,
+        "stop_loss": 306.0,
+        "result": "holding",
+        "holding_days": 4,
+        "actual_close": 335.0
+      },
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "recommend_price": 144.5,
+        "target_price": 155.0,
+        "stop_loss": 130.05,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 144.0
+      },
+      {
+        "symbol": "2317",
+        "name": "鴻海",
+        "recommend_price": 211.0,
+        "target_price": 230.0,
+        "stop_loss": 189.9,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 221.0,
+        "notes": "🆕 Day1 +6.76% 接近目標 -3.9%"
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "recommend_price": 91.1,
+        "target_price": 96.0,
+        "stop_loss": 82.0,
+        "result": "holding",
+        "holding_days": 2,
+        "actual_close": 90.6,
+        "notes": "❓狀態不明 累計-6.3K"
+      },
+      {
+        "symbol": "2327",
+        "name": "國巨",
+        "recommend_price": 323.0,
+        "target_price": 345.0,
+        "stop_loss": 290.7,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 315.5,
+        "notes": "🆕 Day1 -2.92% L1減速驗證"
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 47.35,
+        "target_price": 51.0,
+        "stop_loss": 42.62,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 47.75
+      },
+      {
+        "symbol": "2301",
+        "name": "光寶科",
+        "recommend_price": 171.5,
+        "target_price": 175.0,
+        "stop_loss": 154.35,
+        "result": "success",
+        "holding_days": 6,
+        "settled_date": "2026-04-22",
+        "settled_price": 176.0,
+        "actual_close": 176.0,
+        "notes": "✅ Day6 達成目標 175，+9.32% 單日爆噴鎖利"
+      },
+      {
+        "symbol": "2801",
+        "name": "彰銀",
+        "recommend_price": 21.45,
+        "target_price": 23.5,
+        "stop_loss": 19.31,
+        "result": "holding",
+        "holding_days": 5,
+        "actual_close": 21.35,
+        "notes": "🟠 L2反轉 盤中減碼30-50%"
+      },
+      {
+        "symbol": "3706",
+        "name": "神達",
+        "recommend_price": 85.0,
+        "target_price": 92.0,
+        "stop_loss": 80.75,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 85.3,
+        "notes": "Track B 外資持股比+0.51%大增"
+      },
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "recommend_price": 19.75,
+        "target_price": 21.95,
+        "stop_loss": 17.78,
+        "result": "holding",
+        "holding_days": 4,
+        "actual_close": 19.55,
+        "notes": "holding_watch"
+      },
+      {
+        "symbol": "3037",
+        "name": "欣興",
+        "recommend_price": 710.0,
+        "target_price": 740.0,
+        "stop_loss": 639.0,
+        "result": "holding",
+        "holding_days": 5,
+        "actual_close": 716.0,
+        "notes": "holding_watch 距目標-3.2%"
+      },
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend_price": 73.0,
+        "target_price": 80.0,
+        "stop_loss": 69.35,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 78.6,
+        "notes": "holding_watch 距目標-1.8% +15%爆噴"
       }
     ]
   }
