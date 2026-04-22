@@ -1,0 +1,47 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Micron",
+      "change_pct": -3.5,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "DRAM",
+      "affected_stocks": {
+        "1303": "南亞",
+        "2344": "華邦電",
+        "2337": "旺宏",
+        "5347": "世界"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Micron 跌幅 -3.50%，DRAM產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-04-22",
+    "total_alerts": 1,
+    "level_3_count": 0,
+    "level_2_count": 0,
+    "level_1_count": 1,
+    "excluded_stocks": [],
+    "downgraded_stocks": {},
+    "warning_stocks": {
+      "1303": {
+        "reason": "Micron 跌幅 -3.50%",
+        "adjustment": -5
+      },
+      "2344": {
+        "reason": "Micron 跌幅 -3.50%",
+        "adjustment": -5
+      },
+      "2337": {
+        "reason": "Micron 跌幅 -3.50%",
+        "adjustment": -5
+      },
+      "5347": {
+        "reason": "Micron 跌幅 -3.50%",
+        "adjustment": -5
+      }
+    }
+  }
+}
