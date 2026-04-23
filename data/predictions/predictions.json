@@ -7527,11 +7527,11 @@
       }
     ]
   },
-  "settled_accuracy": "65.0%",
-  "settled_count": 223,
-  "holding_count": 164,
-  "total_success": 127,
-  "total_fail": 74,
+  "settled_accuracy": "62.1%",
+  "settled_count": 206,
+  "holding_count": 10,
+  "total_success": 128,
+  "total_fail": 78,
   "2026-03-30": {
     "predictions": [
       {
@@ -7626,7 +7626,7 @@
     "date": "2026-03-30"
   },
   "cumulative_success": 128,
-  "cumulative_fail": 74,
+  "cumulative_fail": 78,
   "2026-03-31": {
     "date": "2026-03-31",
     "predictions": [
@@ -9588,6 +9588,176 @@
         "holding_days": 3,
         "actual_close": 78.6,
         "notes": "holding_watch 距目標-1.8% +15%爆噴"
+      }
+    ]
+  },
+  "2026-04-23": {
+    "predictions": [
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "recommend_price": 340.0,
+        "target_price": 350.0,
+        "stop_loss": 306.0,
+        "result": "fail",
+        "holding_days": 5,
+        "settled_date": "2026-04-23",
+        "settled_price": 322.0,
+        "fail_reason": "Level 4 爆量賣超 -2,125張 佔日均量11.9%，強制停損出場",
+        "actual_close": 322.0,
+        "notes": "Day5 L4強制出場，虧損-5.3%"
+      },
+      {
+        "symbol": "2327",
+        "name": "國巨",
+        "recommend_price": 323.0,
+        "target_price": 345.0,
+        "stop_loss": 290.7,
+        "result": "fail",
+        "holding_days": 2,
+        "settled_date": "2026-04-23",
+        "settled_price": 295.0,
+        "fail_reason": "Level 4 爆量賣超 -5,668張 佔日均量19.5%，Day1 L1→Day2 L4極速惡化",
+        "actual_close": 295.0,
+        "notes": "Day2 L4強制出場，虧損-8.7%"
+      },
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "recommend_price": 19.75,
+        "target_price": 21.95,
+        "stop_loss": 17.78,
+        "result": "fail",
+        "holding_days": 5,
+        "settled_date": "2026-04-23",
+        "settled_price": 19.15,
+        "fail_reason": "Level 4 爆量賣超 -9,222張 佔日均量29.5%，holding_watch直接L4",
+        "actual_close": 19.15,
+        "notes": "Day5 L4強制出場，虧損-3.0%"
+      },
+      {
+        "symbol": "2801",
+        "name": "彰銀",
+        "recommend_price": 21.45,
+        "target_price": 23.5,
+        "stop_loss": 19.31,
+        "result": "fail",
+        "holding_days": 6,
+        "settled_date": "2026-04-23",
+        "settled_price": 21.15,
+        "fail_reason": "Level 2 單日反轉+投信連5日賣，清倉結算",
+        "actual_close": 21.15,
+        "notes": "Day6 L2清倉，虧損-1.4%"
+      },
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "recommend_price": 144.0,
+        "target_price": 158.0,
+        "stop_loss": 129.6,
+        "result": "holding",
+        "holding_days": 5,
+        "actual_close": 139.5,
+        "holding_status": "Day5 法人連4買，距目標+13.3%，距停損-7.6%"
+      },
+      {
+        "symbol": "2317",
+        "name": "鴻海",
+        "recommend_price": 221.0,
+        "target_price": 235.0,
+        "stop_loss": 198.9,
+        "result": "holding",
+        "holding_days": 3,
+        "actual_close": 225.0,
+        "holding_status": "Day3 今日最強+48K，收225高於推薦+1.8%，距目標-4.3%"
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 47.75,
+        "target_price": 52.0,
+        "stop_loss": 43.0,
+        "result": "holding",
+        "holding_days": 5,
+        "actual_close": 46.3,
+        "holding_status": "Day5 連10買+14.6K，距目標+12.3%，距停損-6.5%"
+      },
+      {
+        "symbol": "2376",
+        "name": "技嘉",
+        "recommend_price": 285.0,
+        "target_price": 310.0,
+        "stop_loss": 256.5,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 275.0,
+        "holding_status": "Day1 連10買佈局完成(-49.8%動能)，市場拖累-3.5%，距停損-6.7%"
+      },
+      {
+        "symbol": "1303",
+        "name": "南亞",
+        "recommend_price": 89.4,
+        "target_price": 96.0,
+        "stop_loss": 80.5,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 85.2,
+        "holding_status": "Day1 法人+14.4K連2買，今-4.7%距推薦，距停損-5.8%"
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "recommend_price": 90.6,
+        "target_price": 96.0,
+        "stop_loss": 81.5,
+        "result": "holding",
+        "holding_days": 4,
+        "actual_close": 87.8,
+        "holding_status": "Day4 累計轉負(-11K)，10天賣6天，建議繼續減倉至3-5%"
+      },
+      {
+        "symbol": "3706",
+        "name": "神達",
+        "recommend_price": 85.3,
+        "target_price": 93.0,
+        "stop_loss": 76.8,
+        "result": "holding",
+        "holding_days": 5,
+        "actual_close": 82.5,
+        "holding_status": "Day5 L2反轉警告(-507張)，建議再減碼至10-15%"
+      },
+      {
+        "symbol": "3037",
+        "name": "欣興",
+        "recommend_price": 710.0,
+        "target_price": 740.0,
+        "stop_loss": 639.0,
+        "result": "holding",
+        "holding_days": 7,
+        "actual_close": 728.0,
+        "holding_status": "Day7 距目標1.6%（728/740），今收728大幅反彈，停損仍遠-12.2%"
+      },
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend_price": 73.0,
+        "target_price": 85.0,
+        "stop_loss": 65.7,
+        "result": "holding",
+        "holding_days": 5,
+        "actual_close": 73.6,
+        "holding_status": "Day5 外資+投信同步+52K，收73.6距目標15.5%"
+      },
+      {
+        "symbol": "6282",
+        "name": "康舒",
+        "recommend_price": 47.3,
+        "target_price": 52.0,
+        "stop_loss": 44.9,
+        "result": "holding",
+        "holding_days": 1,
+        "actual_close": 48.0,
+        "holding_status": "Track B Day1 收48.0高於進場+1.5%，停損44.9守住"
       }
     ]
   }
