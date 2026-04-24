@@ -64,19 +64,57 @@ def analyze_position(code):
     vs_ma60 = (current - ma60) / ma60 * 100 if ma60 else 0
     above_ma20 = current > ma20 if ma20 else None
 
-    # 判定：只看月線
+    # 判定：MA20 位置 → 基礎分（0-14）
+    above_ma60 = (current > ma60) if ma60 else None
+
     if above_ma20 is None:
         position = "無資料"
-        adj = 0
-        suggestion = "不調整（資料不足）"
-    elif not above_ma20:
-        position = "月線下"
-        adj = -3
-        suggestion = f"-3分（跌破月線，現價vs MA20 {vs_ma20:+.1f}%）"
-    else:
+        base_score = 10
+        ma60_mod = 0
+        suggestion = "10分（資料不足，給中性分）"
+    elif vs_ma20 > 15:
+        position = "月線上強勢"
+        base_score = 14
+    elif vs_ma20 > 5:
         position = "月線上"
-        adj = 0
-        suggestion = f"不調整（月線上 {vs_ma20:+.1f}%）"
+        base_score = 12
+    elif vs_ma20 > 0:
+        position = "月線上（貼近）"
+        base_score = 10
+    elif vs_ma20 > -5:
+        position = "月線下（剛跌破）"
+        base_score = 7
+    elif vs_ma20 > -10:
+        position = "月線下"
+        base_score = 4
+    else:
+        position = "月線下（深度）"
+        base_score = 2
+
+    # MA60 修正（-1 ~ +1）
+    if above_ma20 is not None:
+        if above_ma20 and above_ma60:
+            ma60_mod = 1   # 月線+季線雙確認
+        elif not above_ma20 and above_ma60:
+            ma60_mod = 1   # 月線下但季線仍支撐，短線回調非趨勢反轉
+        elif above_ma20 and not above_ma60:
+            ma60_mod = 0   # 月線上但季線壓頂，偏弱反彈
+        else:
+            ma60_mod = -1  # 月線+季線雙破，趨勢惡化
+
+        final_score = max(0, min(15, base_score + ma60_mod))
+        ma60_label = (
+            "+1（月季雙線上）" if (above_ma20 and above_ma60) else
+            "+1（月線下但季線撐）" if (not above_ma20 and above_ma60) else
+            "0（月線上但季線壓）" if (above_ma20 and not above_ma60) else
+            "-1（月季雙線下）"
+        )
+        suggestion = f"{final_score}分（MA20 {vs_ma20:+.1f}% 基礎{base_score} | MA60 {ma60_label}）"
+    else:
+        ma60_mod = 0
+        final_score = base_score
+
+    adj = final_score
 
     return {
         'code': code,
@@ -86,7 +124,10 @@ def analyze_position(code):
         'vs_ma20': round(vs_ma20, 2),
         'vs_ma60': round(vs_ma60, 2) if ma60 else None,
         'above_ma20': above_ma20,
+        'above_ma60': above_ma60,
         'position': position,
+        'base_score': base_score,
+        'ma60_mod': ma60_mod,
         'adj': adj,
         'suggestion': suggestion,
     }
@@ -102,15 +143,17 @@ def main():
     print()
 
     results = []
-    print(f"{'股票':>6} | {'現價':>8} | {'MA20':>8} | {'vs MA20':>8} | {'判斷':>6} | {'評分建議'}")
-    print("-" * 70)
+    print(f"{'股票':>6} | {'現價':>8} | {'MA20':>8} | {'vs MA20':>8} | {'MA60':>8} | {'vs MA60':>8} | {'得分':>4} | {'評分建議'}")
+    print("-" * 95)
 
     for code in stock_codes:
         result = analyze_position(code)
         if result:
             results.append(result)
             ma20_str = f"{result['ma20']:.1f}" if result['ma20'] else "N/A"
-            print(f"{code:>6} | {result['current']:>8.1f} | {ma20_str:>8} | {result['vs_ma20']:>+7.1f}% | {result['position']:>6} | {result['suggestion']}")
+            ma60_str = f"{result['ma60']:.1f}" if result['ma60'] else "N/A"
+            vs60_str = f"{result['vs_ma60']:+.1f}%" if result['vs_ma60'] is not None else "N/A"
+            print(f"{code:>6} | {result['current']:>8.1f} | {ma20_str:>8} | {result['vs_ma20']:>+7.1f}% | {ma60_str:>8} | {vs60_str:>8} | {result['adj']:>4} | {result['suggestion']}")
         else:
             print(f"{code:>6} | 無資料")
         time.sleep(0.3)

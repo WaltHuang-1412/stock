@@ -269,9 +269,12 @@ holdings:
   - symbol: "1605"           # 股票代號
     name: "華新"             # 公司名稱
     buy_price: 32.546        # 買入價格
-    quantity: 2              # 持有張數 (2張=2000股)
+    sell_price: 33.0         # 賣出價格
+    quantity: 0              # 已清倉
     buy_date: "2026-03-16"   # 買入日期
-    notes: ""
+    sell_date: "2026-04-20"  # 賣出日期
+    profit_loss: 908         # 獲利 +908元 ((33.0-32.546)*2000)
+    notes: "已獲利賣出 +1.39% | 2張全出"
 
   - symbol: "2344"           # 股票代號
     name: "華邦電"           # 公司名稱
