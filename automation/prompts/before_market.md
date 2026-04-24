@@ -162,4 +162,4 @@ VIX {vix} | 台股vs年線{vs_ma240}%
 1. 今天日期用系統日期
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py before_market $(date +%Y-%m-%d)`，通過才能 git commit + git push。驗證失敗必須修正報告後重跑
 3. 禁止修改 scripts/ 目錄下的任何 .py 檔案，只能執行不能改
-4. 禁止呼叫 notify_line.py（LINE 推送由排程腳本統一處理）
+4. git commit + git push 完成後，必須執行 `python3 scripts/notify_line.py --file data/$(date +%Y-%m-%d)/before_market_line.txt` 推送 LINE

@@ -124,13 +124,7 @@ Write-Output "" | Tee-Object -FilePath $LogFile -Append
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 if ($AllExist) {
     Write-Output "盤後分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-    # LINE 推送（Claude 分析時已產出 LINE 摘要檔）
-    $SummaryFile = "$ProjectDir\data\$Date\after_market_line.txt"
-    if ((Test-Path $SummaryFile) -and (Get-Item $SummaryFile).Length -gt 0) {
-        python "$ProjectDir\scripts\notify_line.py" --file $SummaryFile
-    } else {
-        python "$ProjectDir\scripts\notify_line.py" "盤後分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
-    }
+    # LINE 推送由 Claude 在分析結尾自行呼叫 notify_line.py，PS1 不重複推送
 
     # === 本週最後交易日：跑規則有效性驗證 + 準確率週報 ===
     # 檢查明天是否為交易日，不是的話代表本週結束（處理週五休市、連假前等情況）

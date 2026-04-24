@@ -123,13 +123,7 @@ Write-Output "" | Tee-Object -FilePath $LogFile -Append
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 if ($AllExist) {
     Write-Output "盤中分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-    # LINE 推送（Claude 分析時已產出 LINE 摘要檔）
-    $SummaryFile = "$ProjectDir\data\$Date\intraday_line.txt"
-    if ((Test-Path $SummaryFile) -and (Get-Item $SummaryFile).Length -gt 0) {
-        python "$ProjectDir\scripts\notify_line.py" --file $SummaryFile
-    } else {
-        python "$ProjectDir\scripts\notify_line.py" "盤中分析完成 ($Date) 耗時$($Duration.ToString('hh\:mm\:ss'))，詳見 GitHub"
-    }
+    # LINE 推送由 Claude 在分析結尾自行呼叫 notify_line.py，PS1 不重複推送
 } else {
     Write-Output "盤中分析有缺漏檔案！請檢查 log (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
     python "$ProjectDir\scripts\notify_line.py" "盤中分析失敗 ($Date) 有缺漏檔案，請檢查 log"
