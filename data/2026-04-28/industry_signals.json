@@ -1,34 +1,34 @@
 {
-  "date": "2026-04-17",
-  "updated_at": "2026-04-17 11:53",
+  "date": "2026-04-28",
+  "updated_at": "2026-04-28 10:16",
   "revenue_period": "2026-02",
-  "signal_count": 25,
+  "signal_count": 26,
   "signals": [
     {
       "theme": "AI 伺服器與半導體供應鏈",
       "catalyst_level": "🔴",
       "direction": {
-        "arrow": "→",
-        "detail": "持平（高預期壓頂）"
+        "arrow": "↑",
+        "detail": "加速"
       },
       "duration": {
-        "text": "6 週（03/03 起）",
-        "weeks": 6,
+        "text": "10 週（03/03 起）",
+        "weeks": 10,
         "since": "03/03"
       },
       "industry_chain_key": "AI",
       "stocks": [
         {
-          "code": "2330",
-          "name": "台積電",
-          "context": "台積電Q1 EPS 22.08元+毛利率66.2%完美但ADR跌逾3%（利多不漲）"
+          "code": "6669",
+          "name": "緯穎",
+          "context": "傳承接Oracle GB300 NVL72機櫃300-400個訂單"
         }
       ],
       "stock_count": 1,
-      "revenue_support": "✅",
-      "lead_indicators": "TSM ADR 363.35(-3.61%)；AMD 278.26(+7.73%)；INTC 68.50(+5.78%)；費半 9,329(+0.97%)；ASML -5%",
-      "turning_points": "TSLA 4/22；INTC 4/24；4/30 MSFT/META/GOOGL/AMZN；NVDA 5/21；台積電ADR能否回穩",
-      "summary": "台積電法說完美但ADR逆跌3.6%，「高預期壓頂」格局成形。AMD大漲7.73%、INTC +5.78%顯示資金輪動至相對低基期半導體。美刪減對中晶片設備法案仍限制ASML DUV，ASML跌5%反映中國業務衝擊。"
+      "revenue_support": "💪",
+      "lead_indicators": "NVDA 216.61(+4.08%)市值5.26兆美元歷史新高；MU 524.56(+6.11%)；TSM ADR 404.98(+0.39%)；費半10,408(-1.00%)中止18連漲",
+      "turning_points": "4/29⚡ FOMC；4/30⚡ MSFT/GOOGL/META/AMZN AI Capex（本季最大錨）；5/21 NVDA財報",
+      "summary": "NVDA+4%市值衝5.26兆美元歷史新高，美光/閃迪/希捷齊創歷史新高，分析師預測記憶體需求持續至2030年。ARM因OpenAI-微軟合作重大修訂跌8%，多雲格局成形，4/30四大科技Capex為本週最大定向時刻。"
     },
     {
       "theme": "DRAM 與記憶體產業",
@@ -38,273 +38,191 @@
         "detail": "加速"
       },
       "duration": {
-        "text": "5 週（03/10 起）",
-        "weeks": 5,
+        "text": "8 週（03/10 起）",
+        "weeks": 8,
         "since": "03/10"
       },
       "industry_chain_key": "記憶體",
       "stocks": [
         {
-          "code": "8271",
-          "name": "宇瞻",
-          "context": "Q1 EPS 14.54元創新高（一季盈餘超去年全年、季增347%、年增19倍）"
+          "code": "2337",
+          "name": "旺宏",
+          "context": "目標價調升至178元(+6.27%)"
         },
         {
-          "code": "8299",
-          "name": "群聯",
-          "context": "2月 YoY+169.4%"
+          "code": "2408",
+          "name": "南亞科",
+          "context": "Vera Rubin增資確認"
+        },
+        {
+          "code": "1303",
+          "name": "南亞",
+          "context": "南亞科(2408) Vera Rubin增資確認"
+        },
+        {
+          "code": "5007",
+          "name": "三星",
+          "context": "三星代工效率暴跌58%罷工風險升高（台廠搶單機會）"
         }
       ],
-      "stock_count": 2,
+      "stock_count": 4,
       "revenue_support": "💪",
-      "lead_indicators": "MU 457.23(+0.76%)；宇瞻Q1 EPS 14.54元（年增19倍）",
-      "turning_points": "SanDisk 4/20 Nasdaq 100 納入；MU 6/25財報；南亞科Q2合約均價",
-      "summary": "宇瞻Q1 EPS 14.54元創新高，單季盈餘超去年全年，年增幅近19倍，記憶體超級週期加速信號最強勁。台積電法說確認HBM/CoWoS持緊，等MU 6/25財報驗證下半年展望。"
+      "lead_indicators": "MU 524.56(+6.11%)歷史新高；美光/閃迪/希捷齊創新高；旺宏目標178元；三星罷工效率-58%",
+      "turning_points": "三星罷工窗口（最快5月）；NVDA 5/21財報；iPhone 18 9月量產",
+      "summary": "美光/閃迪/希捷齊創歷史新高，分析師預測記憶體需求至2030年，旺宏目標價調升6.27%確認機構看好。三星罷工效率暴跌58%持續為台廠搶單最強信號。"
     },
     {
       "theme": "光通訊與網通產業",
-      "catalyst_level": "🔴",
-      "direction": {
-        "arrow": "↑",
-        "detail": "加速"
-      },
-      "duration": {
-        "text": "5 週（03/10 起）",
-        "weeks": 5,
-        "since": "03/10"
-      },
-      "industry_chain_key": "光通訊",
-      "stocks": [
-        {
-          "code": "6213",
-          "name": "聯茂",
-          "context": "漲停252元歷史新高"
-        },
-        {
-          "code": "3189",
-          "name": "景碩",
-          "context": "強勢"
-        },
-        {
-          "code": "2383",
-          "name": "台光電",
-          "context": "目標3,200元"
-        },
-        {
-          "code": "6274",
-          "name": "台燿",
-          "context": "目標900元"
-        },
-        {
-          "code": "2345",
-          "name": "智邦",
-          "context": "市值1.1兆"
-        },
-        {
-          "code": "4956",
-          "name": "光鋐",
-          "context": "矽光子年增4.4倍"
-        }
-      ],
-      "stock_count": 6,
-      "revenue_support": "✅",
-      "lead_indicators": "AVGO 398.47(+0.70%)；智邦市值1.1兆；工業富聯CPO元年宣示",
-      "turning_points": "工業富聯CPO商業化進程；大立光FAU認證通過；博通訂單落地",
-      "summary": "工業富聯宣布2026年為CPO元年，為光通訊族群加入大客戶驗證催化。聯茂漲停創歷史新高，景碩強勢，方向由持平上調為↑加速。"
-    },
-    {
-      "theme": "低軌衛星產業",
-      "catalyst_level": "🔴",
-      "direction": {
-        "arrow": "↑",
-        "detail": "加速"
-      },
-      "duration": {
-        "text": "5 週（03/10 起）",
-        "weeks": 5,
-        "since": "03/10"
-      },
-      "industry_chain_key": "衛星通訊",
-      "stocks": [
-        {
-          "code": "6285",
-          "name": "啟碁",
-          "context": "啟碁衛星+網通持續"
-        },
-        {
-          "code": "3491",
-          "name": "昇達科",
-          "context": "昇達科（SpaceX訂單擴大）"
-        }
-      ],
-      "stock_count": 2,
-      "revenue_support": "✅",
-      "lead_indicators": "昇達科股價；Amazon Globalstar 115.7億美元",
-      "turning_points": "XChat算力需求實際規模；Globalstar併購完成；AST頻譜收購進展",
-      "summary": "XChat正式發布為算力+衛星雙題材共振，AST SpaceMobile評估收購頻譜資產對抗Amazon/Globalstar，衛星頻譜爭奪戰升溫。"
-    },
-    {
-      "theme": "台股市場動態",
-      "catalyst_level": "🔴",
-      "direction": {
-        "arrow": "↑",
-        "detail": "加速"
-      },
-      "duration": {
-        "text": "4 週（03/17 起）",
-        "weeks": 4,
-        "since": "03/17"
-      },
-      "industry_chain_key": null,
-      "stocks": [
-        {
-          "code": "2303",
-          "name": "聯電",
-          "context": "聯電ADR +6.73%顯示資金輪動深度"
-        }
-      ],
-      "stock_count": 1,
-      "revenue_support": "➡️",
-      "lead_indicators": "台股37,132；S&P 500 7,041（首站7,000）；VIX 17.94；NTD 31.556",
-      "turning_points": "挑戰38,000整數關；4/21 Fed主席聽證；外資買超延續性；美伊停火落地",
-      "summary": "S&P 500首度站上7,000點，台股同步創歷史新高，台積電法說護航。外資今日買超440億元（今年第7大），聯電ADR大漲6.73%顯示半導體資金輪動深度廣。"
-    },
-    {
-      "theme": "中東地緣政治風險",
-      "catalyst_level": "🔴",
-      "direction": {
-        "arrow": "→",
-        "detail": "持平（停火樂觀vs談判降級）"
-      },
-      "duration": {
-        "text": "4 週（03/17 起）",
-        "weeks": 4,
-        "since": "03/17"
-      },
-      "industry_chain_key": null,
-      "stocks": [],
-      "stock_count": 0,
-      "revenue_support": null,
-      "lead_indicators": "BZ=F 98.20(+3.38%)；WTI 89.79(-2.11%)；黃金 4,817(-0.64%)；VIX 17.94",
-      "turning_points": "美伊本週末談判結果；荷姆茲正式解封；4/29美戰爭授權截止；5/14-15 川習峰會",
-      "summary": "以黎停火帶來樂觀，但美伊談判已降級為「臨時協議」，核計畫分歧仍難化解。BZ強彈3.38%逼近100美元，顯示市場不信和談能解決荷姆茲供應中斷。美軍同步擴大封鎖範圍（新增鋼鐵/鋁），雙向拉扯格局持平。"
-    },
-    {
-      "theme": "全球航運",
-      "catalyst_level": "🔴",
-      "direction": {
-        "arrow": "↑",
-        "detail": "風險升溫"
-      },
-      "duration": {
-        "text": "4 週（03/17 起）",
-        "weeks": 4,
-        "since": "03/17"
-      },
-      "industry_chain_key": "航空",
-      "stocks": [
-        {
-          "code": "2603",
-          "name": "長榮",
-          "context": "長榮航積極強攻歐洲轉機市場（美伊戰爭促歐轉需求增加）"
-        },
-        {
-          "code": "2618",
-          "name": "長榮航",
-          "context": "長榮航積極強攻歐洲轉機市場（美伊戰爭促歐轉需求增加）"
-        }
-      ],
-      "stock_count": 2,
-      "revenue_support": "⚠️",
-      "lead_indicators": "BZ=F 98.20(+3.38%)；5月削班52.6班/週",
-      "turning_points": "美伊本週末談判；荷姆茲/紅海開放；6月歐洲燃油供給",
-      "summary": "BZ原油強彈近5%逼近100美元，美軍擴大封鎖品項，長榮航受益歐洲轉機需求增加積極擴點，航運風險持續升溫。"
-    },
-    {
-      "theme": "核能與能源安全",
-      "catalyst_level": "🔴",
-      "direction": {
-        "arrow": "↑",
-        "detail": "加速"
-      },
-      "duration": {
-        "text": "4 週（03/17 起）",
-        "weeks": 4,
-        "since": "03/17"
-      },
-      "industry_chain_key": "綠能",
-      "stocks": [
-        {
-          "code": "8996",
-          "name": "高力",
-          "context": "2月 YoY+205.7%"
-        },
-        {
-          "code": "1513",
-          "name": "中興電",
-          "context": "中興電迎大商機"
-        },
-        {
-          "code": "1519",
-          "name": "華城",
-          "context": "華城、中興電迎大商機"
-        },
-        {
-          "code": "2308",
-          "name": "台達電",
-          "context": "台達電4/30法說"
-        },
-        {
-          "code": "2371",
-          "name": "大同",
-          "context": "大同、華城、中興電迎大商機"
-        }
-      ],
-      "stock_count": 5,
-      "revenue_support": "✅",
-      "lead_indicators": "高力 2月 YoY+205.7%；台電資本支出3,330億元",
-      "turning_points": "天能綠電掛牌（5月中）；台達電4/30法說；黃仁勳論述帶動政策加速",
-      "summary": "黃仁勳明確點名能源是AI時代最大長期制約，大同/華城/中興電等重電族群迎大商機，市場敘事從「AI軟硬體」延伸至「AI基礎電力」。台電資本支出大增，天能綠電掛牌在即。"
-    },
-    {
-      "theme": "聯準會利率政策",
-      "catalyst_level": "🔴",
-      "direction": {
-        "arrow": "↓",
-        "detail": "降息預期降溫"
-      },
-      "duration": {
-        "text": "5 週（03/10 起）",
-        "weeks": 5,
-        "since": "03/10"
-      },
-      "industry_chain_key": null,
-      "stocks": [],
-      "stock_count": 0,
-      "revenue_support": null,
-      "lead_indicators": "美元98.18；NTD 31.556；Fed褐皮書（經濟惡化）",
-      "turning_points": "**今日 Waller演講結果**；**4/21 Fed主席聽證**；5/2 非農；5/7 FOMC",
-      "summary": "Fed褐皮書指出美國經濟活動惡化，能源價格上漲和戰爭不確定性使企業觀望。今日Waller演講和下週主席聽證為降息路徑關鍵觀察，市場預期5/7 FOMC按兵不動。"
-    },
-    {
-      "theme": "川普貿易政策與關稅",
       "catalyst_level": "🔴",
       "direction": {
         "arrow": "→",
         "detail": "持平"
       },
       "duration": {
-        "text": "5 週（03/10 起）",
-        "weeks": 5,
+        "text": "8 週（03/10 起）",
+        "weeks": 8,
+        "since": "03/10"
+      },
+      "industry_chain_key": "光通訊",
+      "stocks": [
+        {
+          "code": "2313",
+          "name": "華通",
+          "context": "收漲停235.5元"
+        },
+        {
+          "code": "4958",
+          "name": "臻鼎-KY",
+          "context": "3月EPS年增448%"
+        },
+        {
+          "code": "3044",
+          "name": "健鼎",
+          "context": "目標價調升至500元(+14.68%，新增驗證)"
+        },
+        {
+          "code": "3037",
+          "name": "欣興",
+          "context": "欣興/景碩/南電等六檔目標價上調>25%"
+        },
+        {
+          "code": "3189",
+          "name": "景碩",
+          "context": "景碩/南電等六檔目標價上調>25%"
+        },
+        {
+          "code": "3443",
+          "name": "創意",
+          "context": "創意/欣興/景碩/南電等六檔目標價上調>25%"
+        },
+        {
+          "code": "8046",
+          "name": "南電",
+          "context": "南電等六檔目標價上調>25%"
+        }
+      ],
+      "stock_count": 7,
+      "revenue_support": "➡️",
+      "lead_indicators": "臻鼎3月EPS年增448%；健鼎目標500元(+14.68%)；欣興/景碩目標價上調>25%",
+      "turning_points": "4/30⚡ AI Capex確認；Computex 6/2；AVGO 6/4法說",
+      "summary": "健鼎目標價大幅調升14.68%至500元，臻鼎EPS年增448%共同確認PCB/光通訊機構全面加持。POET遭Marvell取消全部訂單為板塊持續分化警訊，個股選股需謹慎。"
+    },
+    {
+      "theme": "低軌衛星產業",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "→",
+        "detail": "持平"
+      },
+      "duration": {
+        "text": "8 週（03/10 起）",
+        "weeks": 8,
+        "since": "03/10"
+      },
+      "industry_chain_key": "衛星通訊",
+      "stocks": [
+        {
+          "code": "7915",
+          "name": "廌家科技",
+          "context": "今日(4/28)登錄興櫃"
+        },
+        {
+          "code": "2313",
+          "name": "華通",
+          "context": "漲停（衛星+光模塊雙驅動）"
+        }
+      ],
+      "stock_count": 2,
+      "revenue_support": "➡️",
+      "lead_indicators": "廌家科技今日興櫃登錄；華通漲停235.5元",
+      "turning_points": "廌家科技首日表現；電信管理法修法進度",
+      "summary": "廌家科技今日掛牌興櫃，華通漲停反映衛星+光模塊雙重需求，低軌衛星題材進入落地驗證階段。"
+    },
+    {
+      "theme": "核能與能源安全",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "→",
+        "detail": "持平"
+      },
+      "duration": {
+        "text": "7 週（03/17 起）",
+        "weeks": 7,
+        "since": "03/17"
+      },
+      "industry_chain_key": "綠能",
+      "stocks": [
+        {
+          "code": "2308",
+          "name": "台達電",
+          "context": "兩子公司增資確認"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "✅",
+      "lead_indicators": "布蘭特102.10(+1.73%)；WTI 96.92；Solaris上修財測；台達電子公司持續增資",
+      "turning_points": "4/30⚡ 台達電法說；美伊談判走向；荷莫茲通航恢復",
+      "summary": "油價升至102美元，Solaris分散式電力需求上修財測強化AI電源需求。美國終止兩項離岸風電租約、轉投化石燃料為川普能源轉向重要信號，4/30台達電法說為儲能/AI電源下一個確認錨。"
+    },
+    {
+      "theme": "聯準會利率政策",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↓",
+        "detail": "複雜化"
+      },
+      "duration": {
+        "text": "8 週（03/10 起）",
+        "weeks": 8,
         "since": "03/10"
       },
       "industry_chain_key": null,
       "stocks": [],
       "stock_count": 0,
       "revenue_support": null,
-      "lead_indicators": "台商海外vs大陸比值86:1；川習峰會5/14-15",
-      "turning_points": "5/14-15 川習峰會；中國太陽能出口管制決定；301調查後續",
-      "summary": "川習會倒數一個月，美貿易代表釋出樂觀訊號。台商2025年海外投資1.2兆元（大陸86倍）顯示去中化已實質落地。美刪減晶片法案條款但仍限ASML，ASML跌5%。"
+      "lead_indicators": "美元98.53；4/29 FOMC明日為本週最大定向信號；BOJ今日維持不變",
+      "turning_points": "4/29⚡ FOMC決議（明日）；4/30⚡ PCE/GDP初值；5/2⚡ 非農；5/15 Warsh正式接任",
+      "summary": "BOJ今日維持利率不變，4/29 FOMC明日決議（預期維持3.75%）。超級央行周（BOJ+FOMC+BOE+ECB同週）集中所有主要央行立場，達里歐再度重申滯脹環境不宜降息，Warsh接任為長期鷹派信號。"
+    },
+    {
+      "theme": "川普貿易政策與關稅",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "升溫"
+      },
+      "duration": {
+        "text": "8 週（03/10 起）",
+        "weeks": 8,
+        "since": "03/10"
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "油價102.10；LNG船成功穿越（首艘）；美CBO 10年赤字+1.1兆",
+      "turning_points": "荷莫茲是否正式開放；美伊是否直接對話；4/30川普時間線",
+      "summary": "川普拒絕伊朗「先開荷莫茲再談核」提案，紐時爆白宮分歧，封鎖可能再延2個月。首艘LNG船穿越為半解鎖信號，但保險業已要求伊朗通行許可，戰爭險常態化定價進入長期框架。美CBO確認關稅10年增赤字1.1兆，財政壓力長線承壓。"
     },
     {
       "theme": "台灣金融與銀行業",
@@ -314,254 +232,417 @@
         "detail": "持平"
       },
       "duration": {
-        "text": "4 週（03/17 起）",
-        "weeks": 4,
+        "text": "7 週（03/17 起）",
+        "weeks": 7,
         "since": "03/17"
       },
       "industry_chain_key": "金融",
       "stocks": [
         {
-          "code": "2881",
-          "name": "富邦金",
-          "context": "富邦金EPS預估下修至8.35元"
-        }
-      ],
-      "stock_count": 1,
-      "revenue_support": "💪",
-      "lead_indicators": "壽險Q1新契約保費年增36%；13金控Q1合計年增20%",
-      "turning_points": "Q2壽險評價損失；台新證後續監管處分；VASP牌照核發進度",
-      "summary": "壽險Q1新契約保費大增36%，投資型商品熱銷顯示風險偏好回升。台灣VASP市場新業者多家遞件，金管會同步強化公司治理。金控Q1整體獲利穩健（年增20%）。"
-    },
-    {
-      "theme": "企業財報重點（Q1 財報季）",
-      "catalyst_level": "🟡",
-      "direction": {
-        "arrow": "↑",
-        "detail": "加速"
-      },
-      "duration": {
-        "text": "2 週（04/01 起）",
-        "weeks": 2,
-        "since": "04/01"
-      },
-      "industry_chain_key": null,
-      "stocks": [
-        {
-          "code": "2330",
-          "name": "台積電",
-          "context": "台積電Q1完美（EPS 22.08元、毛利率66.2%）但ADR跌3.6%（高預期）"
+          "code": "5880",
+          "name": "合庫金",
+          "context": "/凱基金(2883)/華南金(2880)今日宣布股利"
         },
         {
-          "code": "2360",
-          "name": "致茂",
-          "context": "致茂3月 EPS 3.39元(年增80.2%)"
+          "code": "2883",
+          "name": "凱基金",
+          "context": "/華南金(2880)今日宣布股利"
         },
         {
-          "code": "8271",
-          "name": "宇瞻",
-          "context": "宇瞻Q1 EPS 14.54元（一季超去年全年）"
+          "code": "2880",
+          "name": "華南金",
+          "context": "今日宣布股利"
         }
       ],
       "stock_count": 3,
-      "revenue_support": "💪",
-      "lead_indicators": "",
-      "turning_points": "TSLA 4/22；INTC 4/24（晶圓代工成效）；4/30四大科技",
-      "summary": "台積電完美但ADR逆跌，高預期已充分反映為警示。宇瞻Q1暴增確認記憶體超級週期。下週TSLA（4/22）、INTC（4/24）接力，4/30四大科技財報為本季最大驗證點。"
+      "revenue_support": "➡️",
+      "lead_indicators": "00403A募資831億；台灣富豪AUM 2.4兆(年增55%)；主動ETF今年跑贏大盤65%+",
+      "turning_points": "金管會7月鬆綁細則；投信改契約完成（1-3月）；新壽外匯準備金爭議後續",
+      "summary": "合庫金/凱基金/華南金今日宣布股利，金融股配息行情。游庭皓分析台積條款實際資金入場需1-3月流程，目前是散戶預期交易先行。台灣富豪人數暴增72%、AUM年增55%顯示內生資金動力仍強。"
     },
     {
-      "theme": "被動元件漲價",
-      "catalyst_level": "🟡",
+      "theme": "人形機器人",
+      "catalyst_level": "🔴",
       "direction": {
-        "arrow": "↑",
-        "detail": "加速"
+        "arrow": "→",
+        "detail": "持平"
       },
       "duration": {
-        "text": "1 週（04/15 起）",
-        "weeks": 1,
-        "since": "04/15"
-      },
-      "industry_chain_key": "被動元件",
-      "stocks": [
-        {
-          "code": "2327",
-          "name": "國巨",
-          "context": "目標價上修至380元（EPS預估16.34元，年增44.7%）"
-        },
-        {
-          "code": "2014",
-          "name": "中鴻",
-          "context": "中鴻5月內銷盤價上漲1,200-1,500元/噸"
-        }
-      ],
-      "stock_count": 2,
-      "revenue_support": "⚠️",
-      "lead_indicators": "國巨目標價380元；5/1漲價生效",
-      "turning_points": "5/1太陽誘電漲價生效；Q2均價確認",
-      "summary": "國巨目標價上修至380元，被動元件+鋼材同步漲價，淡季不淡格局確立。5/1為近期最大驗證節點。"
-    },
-    {
-      "theme": "蘋果硬體週期",
-      "catalyst_level": "🟡",
-      "direction": {
-        "arrow": "↓",
-        "detail": "減速"
-      },
-      "duration": {
-        "text": "2 週（03/28 起）",
-        "weeks": 2,
+        "text": "5 週（03/28 起）",
+        "weeks": 5,
         "since": "03/28"
       },
-      "industry_chain_key": "蘋果供應鏈",
+      "industry_chain_key": "AI",
       "stocks": [
         {
-          "code": "3008",
-          "name": "大立光",
-          "context": "大立光Q1 EPS 46.63元，4-5月動能逐月下滑"
+          "code": "2392",
+          "name": "上銀",
+          "context": "/盟立(2464)/宇隆(1725)/中鋼(2002)/富田等"
         },
         {
-          "code": "4716",
-          "name": "大立",
-          "context": "大立光Q1 EPS 46.63元，4-5月動能逐月下滑"
+          "code": "2464",
+          "name": "盟立",
+          "context": "/宇隆(1725)/中鋼(2002)/富田等"
+        },
+        {
+          "code": "1725",
+          "name": "宇隆",
+          "context": "/中鋼(2002)/富田等"
+        },
+        {
+          "code": "4938",
+          "name": "和碩",
+          "context": "積極拓展機器人"
+        },
+        {
+          "code": "2002",
+          "name": "中鋼",
+          "context": "中鋼(2002)/富田等"
+        },
+        {
+          "code": "2049",
+          "name": "上銀",
+          "context": "上銀(2392)/盟立(2464)/宇隆(1725)/中鋼(2002)/富田等"
+        },
+        {
+          "code": "2233",
+          "name": "宇隆",
+          "context": "宇隆(1725)/中鋼(2002)/富田等"
+        },
+        {
+          "code": "2317",
+          "name": "鴻海",
+          "context": "鴻海今日法說(4/28 15:00)機器人+AI規劃"
         }
       ],
-      "stock_count": 2,
+      "stock_count": 8,
       "revenue_support": "⚠️",
-      "lead_indicators": "",
-      "turning_points": "AAPL 5/1財報；WWDC 6/8-9；大立光FAU進度",
-      "summary": "大立光確認4-5月動能下滑，CPO量產拉長至1-2年，短線動能偏弱。等AAPL 5/1財報確認下半年需求展望。"
+      "lead_indicators": "國防部機器狗採購確認；鴻海今日15:00法說",
+      "turning_points": "鴻海4/28今日法說結果；Computex 6/2；宇隆財報驗證",
+      "summary": "國防部宣布規劃導入機器狗，具體點名上銀/盟立/宇隆等，新增國防採購催化劑。鴻海今日15:00法說為機器人+AI伺服器雙重驗證窗口，結果決定題材短期走向。"
     },
     {
-      "theme": "PCB / CCL 族群",
-      "catalyst_level": "🟢",
+      "theme": "IC 設計 / 功率半導體 / 量測",
+      "catalyst_level": "🔴",
       "direction": {
         "arrow": "↑",
         "detail": "加速"
       },
       "duration": {
-        "text": "2 週（03/30 起）",
-        "weeks": 2,
-        "since": "03/30"
-      },
-      "industry_chain_key": "PCB",
-      "stocks": [
-        {
-          "code": "6213",
-          "name": "聯茂",
-          "context": "、景碩(3189)強勢"
-        },
-        {
-          "code": "3189",
-          "name": "景碩",
-          "context": "強勢"
-        },
-        {
-          "code": "2383",
-          "name": "台光電",
-          "context": "目標3,200元"
-        },
-        {
-          "code": "6274",
-          "name": "台燿",
-          "context": "目標900元"
-        },
-        {
-          "code": "3037",
-          "name": "欣興",
-          "context": "587.5元"
-        },
-        {
-          "code": "8021",
-          "name": "尖點",
-          "context": "CB引進欣興/臻鼎/金像電策略投資人（供應鏈整合加速信號）"
-        },
-        {
-          "code": "2368",
-          "name": "金像電",
-          "context": "金像電策略投資人（供應鏈整合加速信號）"
-        }
-      ],
-      "stock_count": 7,
-      "revenue_support": "✅",
-      "lead_indicators": "",
-      "turning_points": "聯茂/景碩Q2出貨確認；CCL原料漲價延續性；台積電後段封裝擴充",
-      "summary": "PCB族群強勢不減，尖點CB引入欣興/臻鼎/金像電顯示供應鏈策略整合深化，AI數據中心需求持續驅動。"
-    },
-    {
-      "theme": "IC 設計/量測",
-      "catalyst_level": "🟢",
-      "direction": {
-        "arrow": "↑",
-        "detail": "加速"
-      },
-      "duration": {
-        "text": "2 週（03/30 起）",
-        "weeks": 2,
+        "text": "5 週（03/30 起）",
+        "weeks": 5,
         "since": "03/30"
       },
       "industry_chain_key": "IC設計",
       "stocks": [
         {
-          "code": "8271",
-          "name": "宇瞻",
-          "context": "Q1 EPS 14.54元創新高"
+          "code": "2454",
+          "name": "聯發科",
+          "context": "盤中觸2,575元新高"
         },
         {
-          "code": "2360",
-          "name": "致茂",
-          "context": "3月EPS 3.39元(年增80.2%)"
-        },
-        {
-          "code": "3030",
-          "name": "德律",
-          "context": "Q1累計年增25.8%"
-        },
-        {
-          "code": "6515",
-          "name": "穎崴",
-          "context": "3月EPS 8.01元"
+          "code": "1459",
+          "name": "聯發",
+          "context": "聯發科(2454)盤中觸2,575元新高"
         },
         {
           "code": "2303",
           "name": "聯電",
-          "context": "聯電ADR +6.73%"
+          "context": "聯電法說"
         }
       ],
-      "stock_count": 5,
-      "revenue_support": "💪",
-      "lead_indicators": "",
-      "turning_points": "穎崴後續月度EPS；聯電代工快閃記憶體落地；台積電N2需求確認",
-      "summary": "IC設計/量測超預期財報持續浮現，聯電ADR今日大漲6.73%顯示市場重新定價。致茂年增80.2%、宇瞻季增347%確認產業週期加速。"
+      "stock_count": 3,
+      "revenue_support": "⚠️",
+      "lead_indicators": "聯發科2,575元新高；EPS上修至63.23元；ARM跌8%（競爭格局信號）",
+      "turning_points": "4/29⚡ 聯電法說（漲價接受度）；4/30⚡ 聯發科法說；5/6 AMD財報",
+      "summary": "聯發科2,575元新高，OpenAI-微軟合作修訂使OpenAI可在微軟以外雲端部署，為AI需求去中心化正面信號，ARM跌8%為負面分化。4/29聯電法說確認成熟製程漲價、4/30聯發科法說決定IC設計本季走向。"
     },
     {
-      "theme": "台塑集團與石化產業",
-      "catalyst_level": "🟢",
+      "theme": "中東地緣政治風險",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "升溫"
+      },
+      "duration": {
+        "text": "7 週（03/17 起）",
+        "weeks": 7,
+        "since": "03/17"
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "布蘭特102.10；LNG船穿越（封鎖後首艘）；黃金4,703(-0.78%小幅回落)",
+      "turning_points": "荷莫茲正式開放時程；美伊是否直接對話；4/30川普時間線",
+      "summary": "川普拒絕伊朗提案，首艘LNG船穿越荷莫茲為部分解鎖信號，但保險業已將伊朗通行許可常態化，戰爭風險進入長期定價框架。封鎖是否正式解除為油價與航運的關鍵轉折。"
+    },
+    {
+      "theme": "台股市場動態",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "→",
+        "detail": "持平"
+      },
+      "duration": {
+        "text": "8 週（03/17 起）",
+        "weeks": 8,
+        "since": "03/17"
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "1459",
+          "name": "聯發",
+          "context": "聯發科+台達電帶動再戰4萬點"
+        },
+        {
+          "code": "2308",
+          "name": "台達電",
+          "context": "台達電帶動再戰4萬點"
+        },
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "context": "聯發科+台達電帶動再戰4萬點"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "⚠️",
+      "lead_indicators": "台股40,031；VIX 18.02(-3.58%)；美股標普/那指雙創新高；費半中止18連漲",
+      "turning_points": "台股挑戰4萬點收盤關；4/29⚡ FOMC；4/30⚡ AI Capex四大科技",
+      "summary": "台股40,031今日再戰4萬點，由聯發科+台達電接棒台積電。游庭皓分析外資賣超511億但投信買超百億，內資主導為今年台股主要動力，2020-2026年外資6年賣超但台股從8000翻至4萬。台積條款實際資金入場仍需1-3月，高位分化是核心風險。"
+    },
+    {
+      "theme": "企業財報重點（Q1 財報季）",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速"
+      },
+      "duration": {
+        "text": "4 週（04/01 起）",
+        "weeks": 4,
+        "since": "04/01"
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "1459",
+          "name": "聯發",
+          "context": "聯發科/台達電"
+        },
+        {
+          "code": "2303",
+          "name": "聯電",
+          "context": "聯電法說"
+        },
+        {
+          "code": "2308",
+          "name": "台達電",
+          "context": "台達電"
+        },
+        {
+          "code": "2317",
+          "name": "鴻海",
+          "context": "鴻海法說（今日15:00）"
+        },
+        {
+          "code": "2337",
+          "name": "旺宏",
+          "context": "旺宏Q1 EPS 0.9元/毛利率40.8%"
+        },
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "context": "聯發科/台達電"
+        },
+        {
+          "code": "4749",
+          "name": "新應材",
+          "context": "新應材3月EPS 1.54元(YoY+43.93%)優於預期"
+        }
+      ],
+      "stock_count": 7,
+      "revenue_support": "➡️",
+      "lead_indicators": "旺宏Q1毛利率40.8%；新應材3月EPS+43.93%；4/30四大科技AI Capex（本季最大定價錨）",
+      "turning_points": "4/28⚡ 鴻海法說（今日）；4/29⚡ 聯電；4/30⚡ 四大科技+聯發科+台達電",
+      "summary": "新應材3月EPS 1.54元優於預期，財報高峰週：今日鴻海（機器人+AI伺服器）→明日聯電（成熟製程漲價）→後天四大科技（AI Capex最大定向）三個台股關鍵定錨串聯，4/30為本季最關鍵單日。"
+    },
+    {
+      "theme": "電子零組件與 PCB / CCL 族群",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速"
+      },
+      "duration": {
+        "text": "5 週（03/30 起）",
+        "weeks": 5,
+        "since": "03/30"
+      },
+      "industry_chain_key": "PCB",
+      "stocks": [
+        {
+          "code": "4958",
+          "name": "臻鼎-KY",
+          "context": "3月EPS年增448%"
+        },
+        {
+          "code": "3044",
+          "name": "健鼎",
+          "context": "目標價調升至500元(+14.68%)"
+        },
+        {
+          "code": "3443",
+          "name": "創意",
+          "context": "/欣興(3037)/景碩(3189)/南電/奇鋐/貿聯六檔目標價上調>25%"
+        },
+        {
+          "code": "3037",
+          "name": "欣興",
+          "context": "/景碩(3189)/南電/奇鋐/貿聯六檔目標價上調>25%"
+        },
+        {
+          "code": "3189",
+          "name": "景碩",
+          "context": "/南電/奇鋐/貿聯六檔目標價上調>25%"
+        },
+        {
+          "code": "3017",
+          "name": "奇鋐",
+          "context": "奇鋐/貿聯六檔目標價上調>25%"
+        },
+        {
+          "code": "8046",
+          "name": "南電",
+          "context": "南電/奇鋐/貿聯六檔目標價上調>25%"
+        }
+      ],
+      "stock_count": 7,
+      "revenue_support": "✅",
+      "lead_indicators": "臻鼎3月EPS年增448%；健鼎目標500元(+14.68%)；六檔目標價同步上調>25%",
+      "turning_points": "4/30⚡ AI Capex確認；伊朗石化廠恢復時程；BASF漲價傳遞效應",
+      "summary": "健鼎目標價調升14.68%至500元，與臻鼎EPS年增448%共同確認PCB族群機構全面加持。六大核心個股目標價同步調升>25%，BASF漲25%+伊朗石化廠雙重成本壓力需追蹤毛利影響。"
+    },
+    {
+      "theme": "AI 算力多元化",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速"
+      },
+      "duration": {
+        "text": "2 週（04/14 起）",
+        "weeks": 2,
+        "since": "04/14"
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "2454",
+          "name": "局利多聯發科",
+          "context": "端側晶片"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "⚠️",
+      "lead_indicators": "OpenAI-微軟合作修訂；ARM跌8%；聯發科2,575元新高",
+      "turning_points": "4/30 META/AMZN Capex指引；OpenAI手機開發實質進展",
+      "summary": "OpenAI-微軟合作修訂為本週AI算力最大結構性信號，OpenAI不再獨家在微軟雲端，多雲格局有利聯發科端側晶片需求。ARM跌8%為負面分化，非所有AI相關均受益，需區分受益鏈。"
+    },
+    {
+      "theme": "全球航運",
+      "catalyst_level": "🟡",
       "direction": {
         "arrow": "↓",
         "detail": "減速"
       },
       "duration": {
-        "text": "5 週（03/10 起）",
-        "weeks": 5,
-        "since": "03/10"
+        "text": "7 週（03/17 起）",
+        "weeks": 7,
+        "since": "03/17"
       },
-      "industry_chain_key": "塑化",
+      "industry_chain_key": "航空",
       "stocks": [
         {
-          "code": "2014",
-          "name": "中鴻",
-          "context": "中鴻5月漲價1,200-1,500元/噸（原料成本仍強）"
+          "code": "2603",
+          "name": "長榮",
+          "context": "YoY-20.7%/陽明(2609) YoY-15.3%估值承壓"
         },
         {
-          "code": "6505",
-          "name": "台塑化",
-          "context": "台塑化成本壓力快速解除"
+          "code": "2609",
+          "name": "陽明",
+          "context": "YoY-15.3%估值承壓"
+        },
+        {
+          "code": "2637",
+          "name": "慧洋",
+          "context": "YoY+29.9%"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "⚠️",
+      "lead_indicators": "布蘭特102.10；長榮/陽明月營收持續年減20%+；首艘LNG船穿越",
+      "turning_points": "荷莫茲正式開放時程；5月實際貨量",
+      "summary": "首艘LNG船成功穿越荷莫茲為封鎖鬆動正面信號，若正式開放將對航運為利多。但長榮/陽明月營收仍年減20%以上持續壓制估值，整體強度持續下滑。"
+    },
+    {
+      "theme": "蘋果硬體週期",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "升溫"
+      },
+      "duration": {
+        "text": "5 週（03/28 起）",
+        "weeks": 5,
+        "since": "03/28"
+      },
+      "industry_chain_key": "蘋果供應鏈",
+      "stocks": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "context": "台積電利多）/全系列12GB記憶體（記憶體族群利多）/入門款凍漲"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "✅",
+      "lead_indicators": "iPhone 18規格確認（2nm+12GB）；5/1 AAPL財報（3天）",
+      "turning_points": "5/1⚡ AAPL財報；WWDC 6/8-9",
+      "summary": "iPhone 18確認2奈米+全系列12GB直接利多台積電與記憶體族群，5/1財報驗證當前iPhone 17週期能否撐盤，並為換機週期是否加速提供線索。"
+    },
+    {
+      "theme": "液冷散熱族群",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速"
+      },
+      "duration": {
+        "text": "3 週（04/14 起）",
+        "weeks": 3,
+        "since": "04/14"
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "6669",
+          "name": "緯穎",
+          "context": "傳承接Oracle GB300 NVL72機櫃300-400個訂單（散熱間接受益）"
+        },
+        {
+          "code": "3017",
+          "name": "奇鋐",
+          "context": "目標價美銀上調3,540元"
         }
       ],
       "stock_count": 2,
-      "revenue_support": "⚠️",
-      "lead_indicators": "",
-      "turning_points": "美伊停火正式確認；荷姆茲解封；石腦油供應恢復",
-      "summary": "WTI與BZ走勢分歧，市場對停火樂觀但同時懷疑供應恢復，石化景氣待明確方向。中鴻漲價顯示原料成本端仍強。"
+      "revenue_support": "💪",
+      "lead_indicators": "NVDA 216.61(+4.08%)；緯穎Oracle GB300訂單；奇鋐目標3,540元",
+      "turning_points": "台達電4/30法說；NVDA 5/21財報Vera Rubin散熱規格確認",
+      "summary": "NVDA+4%強化GB300量產預期，緯穎Oracle訂單確認液冷需求方向，等NVDA 5/21財報確認Vera Rubin散熱規格支撐下一波。"
     },
     {
       "theme": "儲能與綠電",
@@ -571,45 +652,123 @@
         "detail": "加速"
       },
       "duration": {
-        "text": "4 週（03/17 起）",
-        "weeks": 4,
+        "text": "7 週（03/17 起）",
+        "weeks": 7,
         "since": "03/17"
       },
       "industry_chain_key": "綠能",
       "stocks": [
         {
-          "code": "1513",
-          "name": "中興電",
-          "context": "中興電商機"
-        },
-        {
-          "code": "1519",
-          "name": "華城",
-          "context": "華城/中興電商機"
+          "code": "1101",
+          "name": "諒再增持台泥",
+          "context": "至6.42%（再砸21.52億）"
         },
         {
           "code": "2308",
           "name": "台達電",
-          "context": "台達電4/30法說"
-        },
-        {
-          "code": "2371",
-          "name": "大同",
-          "context": "大同/華城/中興電商機"
+          "context": "兩子公司增資"
         }
       ],
-      "stock_count": 4,
+      "stock_count": 2,
+      "revenue_support": "➡️",
+      "lead_indicators": "Solaris上修財測股價勁揚；台達電子公司增資；熙特爾YoY+515%",
+      "turning_points": "天能綠電掛牌（5月中）；台達電4/30法說；美國能源政策走向",
+      "summary": "Solaris分散式電力需求爆發上修財測，台達電兩子公司增資確認儲能持續擴張。美國終止兩項離岸風電租約換取化石燃料投資，為再生能源板塊政策逆風信號，需與AI電源需求分開評估。"
+    },
+    {
+      "theme": "台塑集團與石化產業",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↓",
+        "detail": "轉負"
+      },
+      "duration": {
+        "text": "8 週（03/10 起）",
+        "weeks": 8,
+        "since": "03/10"
+      },
+      "industry_chain_key": "塑化",
+      "stocks": [
+        {
+          "code": "1301",
+          "name": "台塑",
+          "context": "台塑化/台化成本承壓）"
+        },
+        {
+          "code": "1326",
+          "name": "台化",
+          "context": "台化成本承壓）"
+        },
+        {
+          "code": "6505",
+          "name": "台塑化",
+          "context": "台塑化/台化成本承壓）"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "⚠️",
+      "lead_indicators": "BASF漲25%；布蘭特102.10；伊朗鋼鐵禁令至5/30",
+      "turning_points": "荷莫茲正式開放；台塑集團Q1法說",
+      "summary": "BASF漲25%+油價持高+伊朗鋼鐵禁令三重壓力疊加，台塑/台化成本持續惡化。首艘LNG船穿越為荷莫茲開放的前兆信號，若正式開放為最大近期解套機會。"
+    },
+    {
+      "theme": "聯電成熟製程漲價",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "2 週（04/17 起）",
+        "weeks": 2,
+        "since": "04/17"
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "2303",
+          "name": "聯電",
+          "context": "聯電法說（明日關鍵驗證）"
+        }
+      ],
+      "stock_count": 1,
       "revenue_support": "➡️",
       "lead_indicators": "",
-      "turning_points": "天能綠電掛牌（5月中）；台達電4/30法說",
-      "summary": "黃仁勳能源論帶動重電/綠電概念聚焦，台電資本支出大增為長線基礎。天能綠電掛牌在即為短期催化。"
+      "turning_points": "4/29⚡ 聯電法說（確認漲價接受度→立即升🟡）",
+      "summary": "明日法說為關鍵視窗，確認漲價接受度即升🟡，否則持續觀察。"
+    },
+    {
+      "theme": "量子科技產業",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": "升溫"
+      },
+      "duration": {
+        "text": "2 週（04/20 起）",
+        "weeks": 2,
+        "since": "04/20"
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "2312",
+          "name": "金寶",
+          "context": "入股美國量子公司SEEQC展開量子晶片合作"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "⚠️",
+      "lead_indicators": "",
+      "turning_points": "金寶/SEEQC量子晶片進展；美量子SPAC上市效應",
+      "summary": "金寶入股SEEQC為台灣量子商機首個具體案例，美量子SPAC上市潮帶動資本關注，需追蹤實質進展。"
     },
     {
       "theme": "加密貨幣市場",
       "catalyst_level": "⚪",
       "direction": {
-        "arrow": "↑",
-        "detail": "升溫"
+        "arrow": "→",
+        "detail": "持平"
       },
       "duration": {
         "text": "持續"
@@ -619,15 +778,15 @@
       "stock_count": 0,
       "revenue_support": null,
       "lead_indicators": "",
-      "turning_points": "BTC能否持穩75,000；XRP ETF；VASP牌照核發",
-      "summary": "BTC突破並站穩75,000，加密市場升溫。台灣VASP市場競爭白熱化，Kraken重啟IPO計畫顯示加密生態系信心回升。"
+      "turning_points": "BTC突破80,000；4/30四大科技財報風險情緒；Gemini代理交易商業化進展",
+      "summary": "BTC 77,084止跌略回升，Gemini推出AI代理交易（AI自主監控市場、執行交易）為主流機構深度接合的新型態信號，Western Union Solana穩定幣5月上線持續，金管會開放ETF為台灣本土催化劑。"
     },
     {
       "theme": "台灣 ETF 與資金流向",
       "catalyst_level": "⚪",
       "direction": {
         "arrow": "↑",
-        "detail": "加速"
+        "detail": "複雜化"
       },
       "duration": {
         "text": "觀察"
@@ -637,15 +796,15 @@
       "stock_count": 0,
       "revenue_support": null,
       "lead_indicators": "",
-      "turning_points": "00662分割4/27；4/30美科技財報後ETF持倉調整；外資買超延續性",
-      "summary": "外資連續大量買超，NTD穩定，資金動能維持強勁。台股市值全球第七持續吸引被動資金關注。"
+      "turning_points": "00403A上市日；金管會7月鬆綁細則；投信改契約完成時程",
+      "summary": "游庭皓指出主動ETF今年大幅跑贏大盤（994漲65%），資金從高股息持續轉向主動型。台積條款實際資金入場需1-3月流程，目前是散戶預期交易，非機構真正進場。"
     },
     {
       "theme": "美國就業市場",
       "catalyst_level": "⚪",
       "direction": {
         "arrow": "↓",
-        "detail": "景氣降溫"
+        "detail": "惡化"
       },
       "duration": {
         "text": "觀察"
@@ -655,119 +814,28 @@
       "stock_count": 0,
       "revenue_support": null,
       "lead_indicators": "",
-      "turning_points": "今日Waller演講結果；4/21 Fed主席聽證；5/2 非農；5/7 FOMC",
-      "summary": "Fed褐皮書確認經濟活動惡化，能源價格上漲外溢至消費信心。今日Waller演講和下週主席聽證為近期關鍵觀察。"
+      "turning_points": "4/28今日Consumer Confidence結果；4/30 GDP初值；5/2⚡ 非農",
+      "summary": "數據密集驗證周：今日消費者信心(預89.0)→4/30 GDP/PCE→5/1 ISM PMI→5/2非農，連環走弱將強化降息預期；若走強則Warsh鷹派立場更強硬。"
     },
     {
-      "theme": "人形機器人",
+      "theme": "鋼鐵與工業金屬族群",
       "catalyst_level": "⚪",
       "direction": {
         "arrow": "↑",
-        "detail": "加速"
+        "detail": "升溫"
       },
       "duration": {
-        "text": "3 週",
-        "weeks": 3
-      },
-      "industry_chain_key": null,
-      "stocks": [
-        {
-          "code": "6215",
-          "name": "和椿",
-          "context": "攜普渡機器人發布3款AI機器人（清潔/安防/工業搬運）"
-        },
-        {
-          "code": "2049",
-          "name": "上銀",
-          "context": "上銀(2049)接單能見度3-4個月"
-        }
-      ],
-      "stock_count": 2,
-      "revenue_support": "✅",
-      "lead_indicators": "",
-      "turning_points": "TSLA 4/22財報（Optimus量產規模）；Terafab設備採購確認",
-      "summary": "和椿發布3款AI機器人，馬斯克Terafab從計畫進入詢價設備實質階段，中國人形機器人大會今日召開。TSLA 4/22財報為近期最大催化驗證點。"
-    },
-    {
-      "theme": "XChat / xAI 算力題材",
-      "catalyst_level": "⚪",
-      "direction": {
-        "arrow": "↑",
-        "detail": "待驗證"
-      },
-      "duration": {
-        "text": "4 天（04/14 起）",
-        "days": 4,
-        "since": "04/14"
-      },
-      "industry_chain_key": "AI",
-      "stocks": [
-        {
-          "code": "2312",
-          "name": "金寶",
-          "context": "金寶/仁寶第一梯隊夥伴（解碼速度+2.5倍）"
-        },
-        {
-          "code": "2324",
-          "name": "仁寶",
-          "context": "仁寶第一梯隊夥伴（解碼速度+2.5倍）"
-        },
-        {
-          "code": "2356",
-          "name": "英業達",
-          "context": "英業達算力需求持續"
-        },
-        {
-          "code": "3231",
-          "name": "緯創",
-          "context": "緯創/英業達算力需求持續"
-        }
-      ],
-      "stock_count": 4,
-      "revenue_support": "✅",
-      "lead_indicators": "",
-      "turning_points": "XChat算力需求實際規模；NVDA Ising商業化進程",
-      "summary": "NVDA Ising量子AI模型點燃量子概念股本週最高暴漲50%，XChat今日正式發布。實際算力規模為關鍵驗證，商業化仍早期。"
-    },
-    {
-      "theme": "稀土與戰略資源出口管制",
-      "catalyst_level": "⚪",
-      "direction": {
-        "arrow": "→",
-        "detail": "持平"
-      },
-      "duration": {
-        "text": "2 週（04/08 起）",
+        "text": "2 週（04/20 起）",
         "weeks": 2,
-        "since": "04/08"
+        "since": "04/20"
       },
-      "industry_chain_key": null,
+      "industry_chain_key": "鋼鐵",
       "stocks": [],
       "stock_count": 0,
       "revenue_support": null,
       "lead_indicators": "",
-      "turning_points": "中國太陽能出口管制決定；ASML DUV出口執行細則",
-      "summary": "美刪減法案條款但仍保留DUV管制，ASML跌5%反映中國業務現實衝擊，去中化邏輯持續強化。"
-    },
-    {
-      "theme": "中國對台 10 項措施",
-      "catalyst_level": "⚪",
-      "direction": {
-        "arrow": "→",
-        "detail": "待觀察"
-      },
-      "duration": {
-        "text": "5 天（04/12 起）",
-        "days": 5,
-        "since": "04/12"
-      },
-      "industry_chain_key": null,
-      "stocks": [],
-      "stock_count": 0,
-      "revenue_support": null,
-      "lead_indicators": "",
-      "turning_points": "台灣官方正式回應；航線落地日期",
-      "summary": "無新進展，台灣持續表態不附帶政治前提，短期落地機率低。若無新訊息將於下週移除。"
+      "turning_points": "伊朗鋼鐵禁令持續時間；荷莫茲恢復；銅需求回溫確認",
+      "summary": "伊朗鋼鐵禁令至5/30持續，全球銅冶煉閒置產能降至11.7%歷史低位確認下游消費回溫，鎳價升至近2年高，工業金屬多路徑升溫但短線催化劑仍待確認。"
     }
   ]
 }
