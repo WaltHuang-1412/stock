@@ -1,0 +1,52 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Tesla",
+      "change_pct": -3.52,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "電動車",
+      "affected_stocks": {
+        "2317": "鴻海",
+        "1513": "中興電",
+        "1519": "華城",
+        "2308": "台達電",
+        "1504": "東元"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Tesla 跌幅 -3.52%，電動車產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-04-28",
+    "total_alerts": 1,
+    "level_3_count": 0,
+    "level_2_count": 0,
+    "level_1_count": 1,
+    "excluded_stocks": [],
+    "downgraded_stocks": {},
+    "warning_stocks": {
+      "2317": {
+        "reason": "Tesla 跌幅 -3.52%",
+        "adjustment": -5
+      },
+      "1513": {
+        "reason": "Tesla 跌幅 -3.52%",
+        "adjustment": -5
+      },
+      "1519": {
+        "reason": "Tesla 跌幅 -3.52%",
+        "adjustment": -5
+      },
+      "2308": {
+        "reason": "Tesla 跌幅 -3.52%",
+        "adjustment": -5
+      },
+      "1504": {
+        "reason": "Tesla 跌幅 -3.52%",
+        "adjustment": -5
+      }
+    }
+  }
+}
