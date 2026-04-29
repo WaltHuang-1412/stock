@@ -7527,11 +7527,11 @@
       }
     ]
   },
-  "settled_accuracy": "59.6%",
-  "settled_count": 218,
-  "holding_count": 1,
-  "total_success": 130,
-  "total_fail": 88,
+  "settled_accuracy": "58.7%",
+  "settled_count": 223,
+  "holding_count": 175,
+  "total_success": 131,
+  "total_fail": 92,
   "2026-03-30": {
     "predictions": [
       {
@@ -9933,9 +9933,11 @@
         "recommend_price": 323.0,
         "target_price": 365.0,
         "stop_loss": 290.7,
-        "result": "holding",
+        "result": "fail",
         "holding_days": 3,
-        "actual_close": 321.0
+        "actual_close": 321.0,
+        "settled_date": "2026-04-29",
+        "settled_price": 322.0
       },
       {
         "symbol": "2485",
@@ -9956,9 +9958,11 @@
         "recommend_price": 53.1,
         "target_price": 61.0,
         "stop_loss": 47.8,
-        "result": "holding",
+        "result": "fail",
         "holding_days": 3,
-        "actual_close": 52.9
+        "actual_close": 52.9,
+        "settled_date": "2026-04-29",
+        "settled_price": 52.5
       },
       {
         "symbol": "2344",
@@ -9978,9 +9982,11 @@
         "recommend_price": 302.0,
         "target_price": 330.0,
         "stop_loss": 271.8,
-        "result": "holding",
-        "holding_days": 6,
-        "actual_close": 301.0
+        "result": "success",
+        "holding_days": 10,
+        "actual_close": 301.0,
+        "settled_date": "2026-04-29",
+        "settled_price": 308.5
       }
     ]
   },
@@ -10022,9 +10028,112 @@
         "recommend_price": 31.75,
         "target_price": 34.9,
         "stop_loss": 28.58,
-        "result": "holding",
+        "result": "fail",
         "holding_days": 2,
-        "actual_close": 31.9
+        "actual_close": 31.9,
+        "settled_date": "2026-04-29",
+        "settled_price": 32.15
+      }
+    ]
+  },
+  "2026-04-29": {
+    "predictions": [
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend_price": 75.1,
+        "target_price": 84.0,
+        "stop_loss": 67.6,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 100,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1,
+        "track": "A"
+      },
+      {
+        "symbol": "2327",
+        "name": "國巨",
+        "recommend_price": 326.5,
+        "target_price": 366.0,
+        "stop_loss": 293.9,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 89,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1,
+        "track": "A"
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 46.3,
+        "target_price": 52.0,
+        "stop_loss": 41.7,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 85,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1,
+        "track": "A"
+      },
+      {
+        "symbol": "3661",
+        "name": "世芯-KY",
+        "recommend_price": 4000.0,
+        "target_price": 4500.0,
+        "stop_loss": 3600.0,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 83,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1,
+        "track": "A"
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "recommend_price": 92.6,
+        "target_price": 100.0,
+        "stop_loss": 88.0,
+        "stop_loss_pct": -5,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 79,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1,
+        "track": "B"
+      },
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "recommend_price": 140.5,
+        "target_price": 155.0,
+        "stop_loss": 126.5,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 0,
+        "result": "fail",
+        "settled_date": "2026-04-29",
+        "settled_price": 139.0,
+        "holding_days": 0,
+        "track": "A",
+        "fail_reason": "Level 4 爆量賣超13.7%日均量，D0撤銷"
       }
     ]
   }
