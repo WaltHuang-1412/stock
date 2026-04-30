@@ -173,8 +173,8 @@
         "momentum_pct": -135.5,
         "consecutive_buy": 0,
         "cumulative_foreign": 16000,
-        "reversal_level": "Level 4",
-        "exclusion_reason": "反轉Level 4排除｜動能-136%>100%排除",
+        "reversal_level": "Level 0",
+        "exclusion_reason": "動能-136%>100%排除",
         "passed": false
       }
     },
@@ -245,8 +245,8 @@
         "momentum_pct": 101.2,
         "consecutive_buy": 0,
         "cumulative_foreign": -8867,
-        "reversal_level": "Level 4",
-        "exclusion_reason": "反轉Level 4排除｜累計-29,000為負",
+        "reversal_level": "Level 3",
+        "exclusion_reason": "反轉Level 3排除｜累計-29,000為負",
         "passed": false
       }
     },
@@ -401,14 +401,6 @@
       "tw_5d_change": -11.363636363636363
     },
     {
-      "code": "3042",
-      "name": "晶技",
-      "tw_industry": "網通",
-      "us_leader": "Broadcom",
-      "leader_cumulative": 17.36,
-      "tw_5d_change": -5.688622754491018
-    },
-    {
       "code": "3711",
       "name": "日月光",
       "tw_industry": "半導體設備/製造",
@@ -425,20 +417,12 @@
       "tw_5d_change": 4.82985905551779
     },
     {
-      "code": "3189",
-      "name": "景碩",
-      "tw_industry": "半導體設備/製造",
-      "us_leader": "Applied Materials",
-      "leader_cumulative": 13.64,
-      "tw_5d_change": 3.3570701932858595
-    },
-    {
       "code": "2408",
       "name": "南亞科",
       "tw_industry": "半導體設備/製造",
       "us_leader": "Applied Materials",
       "leader_cumulative": 13.64,
-      "tw_5d_change": 7.30593607305936
+      "tw_5d_change": 5.288461538461538
     },
     {
       "code": "2345",
@@ -447,6 +431,14 @@
       "us_leader": "Broadcom",
       "leader_cumulative": 17.36,
       "tw_5d_change": 4.794520547945205
+    },
+    {
+      "code": "3042",
+      "name": "晶技",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": 17.36,
+      "tw_5d_change": 3.594771241830065
     },
     {
       "code": "6770",
@@ -462,8 +454,16 @@
       "tw_industry": "DRAM/記憶體",
       "us_leader": "Micron",
       "leader_cumulative": 68.37,
-      "tw_5d_change": -0.37174721189591076
+      "tw_5d_change": 0.5964214711729622
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": 27.63,
+      "tw_5d_change": -2.329192546583851
     }
   ],
-  "already_moved_count": 8
+  "already_moved_count": 11
 }

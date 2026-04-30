@@ -7527,11 +7527,11 @@
       }
     ]
   },
-  "settled_accuracy": "58.7%",
-  "settled_count": 223,
+  "settled_accuracy": "58.4%",
+  "settled_count": 226,
   "holding_count": 175,
-  "total_success": 131,
-  "total_fail": 92,
+  "total_success": 132,
+  "total_fail": 94,
   "2026-03-30": {
     "predictions": [
       {
@@ -9998,9 +9998,13 @@
         "recommend_price": 7.85,
         "target_price": 8.7,
         "stop_loss": 7.07,
-        "result": "holding",
-        "holding_days": 2,
-        "actual_close": 7.84
+        "result": "fail",
+        "holding_days": 5,
+        "actual_close": 7.84,
+        "settled_date": "2026-04-30",
+        "settled_price": 7.71,
+        "return_pct": -1.8,
+        "fail_reason": "Level4爆量賣超-359張(16.2%)強制出場 | 出場7.71<推薦7.85(-1.8%) | 金融壽險承壓"
       },
       {
         "symbol": "2408",
@@ -10009,7 +10013,7 @@
         "target_price": 249.2,
         "stop_loss": 215.2,
         "result": "holding",
-        "holding_days": 2,
+        "holding_days": 6,
         "actual_close": 237.5
       },
       {
@@ -10019,7 +10023,7 @@
         "target_price": 193.0,
         "stop_loss": 154.8,
         "result": "holding",
-        "holding_days": 2,
+        "holding_days": 6,
         "actual_close": 172.5
       },
       {
@@ -10048,11 +10052,12 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 100,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1,
-        "track": "A"
+        "result": "success",
+        "settled_date": "2026-04-30",
+        "settled_price": 77.3,
+        "holding_days": 2,
+        "track": "A",
+        "return_pct": 2.9
       },
       {
         "symbol": "2327",
@@ -10067,7 +10072,7 @@
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
-        "holding_days": 1,
+        "holding_days": 2,
         "track": "A"
       },
       {
@@ -10083,7 +10088,7 @@
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
-        "holding_days": 1,
+        "holding_days": 2,
         "track": "A"
       },
       {
@@ -10099,7 +10104,7 @@
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
-        "holding_days": 1,
+        "holding_days": 2,
         "track": "A"
       },
       {
@@ -10112,11 +10117,13 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 79,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1,
-        "track": "B"
+        "result": "fail",
+        "settled_date": "2026-04-30",
+        "settled_price": 89.8,
+        "holding_days": 2,
+        "track": "B",
+        "return_pct": -3.0,
+        "fail_reason": "Level4爆量賣超強制出場 | 出場89.8<推薦92.6(-3.0%) | 法說後快速反轉"
       },
       {
         "symbol": "3231",
@@ -10134,6 +10141,61 @@
         "holding_days": 0,
         "track": "A",
         "fail_reason": "Level 4 爆量賣超13.7%日均量，D0撤銷"
+      }
+    ]
+  },
+  "2026-04-30": {
+    "predictions": [
+      {
+        "symbol": "2317",
+        "name": "鴻海",
+        "recommend_price": 225.0,
+        "target_price": 252.0,
+        "stop_loss": 202.5,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 84,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1,
+        "track": "A",
+        "actual_close": 219.5
+      },
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "recommend_price": 322.0,
+        "target_price": 361.0,
+        "stop_loss": 289.8,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 83,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1,
+        "track": "A",
+        "actual_close": 312.5
+      },
+      {
+        "symbol": "1303",
+        "name": "南亞",
+        "recommend_price": 91.6,
+        "target_price": 101.0,
+        "stop_loss": 82.4,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 80,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1,
+        "track": "A",
+        "actual_close": 89.6
       }
     ]
   }
