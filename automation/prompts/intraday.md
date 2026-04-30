@@ -1,5 +1,13 @@
 執行盤中分析。
 
+**🛫 分析前強制執行 Pre-flight 自我檢查（不得跳過）：**
+```bash
+python3 scripts/preflight_check.py --mode intraday --fix
+```
+- ✅ 全部通過 → 繼續
+- ⚠️ 警告 → 記錄後繼續，今日分析中必須處理警告項目
+- ❌ 錯誤 → 必須修復後才能繼續（腳本已嘗試自動修復，確認修復結果）
+
 完整按照 CLAUDE.md 盤中流程（Step 0 到 Step 5）執行，不得跳過任何步驟。
 
 重點（v7.8）：
