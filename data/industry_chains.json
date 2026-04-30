@@ -319,6 +319,11 @@
           "description": "上游材料與設備",
           "stocks": [
             {
+              "code": "6488",
+              "name": "環球晶",
+              "category": "矽晶圓（全球三大之一，12吋滿載）"
+            },
+            {
               "code": "2383",
               "name": "台光電",
               "category": "ABF載板材料"
@@ -1770,6 +1775,129 @@
               "code": "2454",
               "name": "聯發科",
               "category": "今日漲停2,675元創歷史天價"
+            }
+          ]
+        }
+      }
+    },
+    "IC設計": {
+      "name": "IC設計/ASIC設計服務",
+      "catalysts": [
+        "ASIC",
+        "IC設計",
+        "算力多元化",
+        "客製晶片",
+        "TPU",
+        "NPU",
+        "聯發科",
+        "Qualcomm"
+      ],
+      "tiers": {
+        "tier_0": {
+          "name": "ASIC設計服務",
+          "description": "幫大型AI公司客製AI加速器晶片，全球只有少數廠商具備台積電頂級製程能力",
+          "stocks": [
+            {
+              "code": "3443",
+              "name": "創意",
+              "category": "ASIC設計服務龍頭（Google/MS客戶）"
+            },
+            {
+              "code": "3661",
+              "name": "世芯-KY",
+              "category": "ASIC設計服務（Amazon/Meta客戶）"
+            }
+          ]
+        },
+        "tier_1": {
+          "name": "IC設計",
+          "description": "自有IC設計廠商，算力多元化受益",
+          "stocks": [
+            {
+              "code": "2454",
+              "name": "聯發科",
+              "category": "端側AI/ASIC/天璣"
+            },
+            {
+              "code": "3035",
+              "name": "智原",
+              "category": "ASIC設計服務"
+            },
+            {
+              "code": "2379",
+              "name": "瑞昱",
+              "category": "IC設計/網路晶片"
+            },
+            {
+              "code": "3041",
+              "name": "揚智",
+              "category": "IC設計"
+            }
+          ]
+        },
+        "tier_2": {
+          "name": "封裝測試/驗證",
+          "description": "ASIC/AI晶片測試與封裝",
+          "stocks": [
+            {
+              "code": "2449",
+              "name": "京元電",
+              "category": "AI/ASIC晶片測試"
+            },
+            {
+              "code": "6510",
+              "name": "精測",
+              "category": "IC測試"
+            },
+            {
+              "code": "3711",
+              "name": "日月光",
+              "category": "CoWoS先進封裝"
+            }
+          ]
+        }
+      }
+    },
+    "廠務工程": {
+      "name": "半導體廠務工程",
+      "catalysts": [
+        "台積電擴廠",
+        "晶圓廠",
+        "無塵室",
+        "CoWoS",
+        "先進封裝廠",
+        "晶圓廠建設"
+      ],
+      "tiers": {
+        "tier_0": {
+          "name": "半導體廠務工程商",
+          "description": "台積電/Samsung/Intel擴廠必需，無塵室/特殊氣體/超純水KnowHow不可或缺，隨台積電出海",
+          "stocks": [
+            {
+              "code": "6139",
+              "name": "亞翔",
+              "category": "半導體廠務工程（台積電主要供應商）"
+            },
+            {
+              "code": "2404",
+              "name": "漢唐",
+              "category": "半導體廠務工程（台積電/聯電供應商）"
+            }
+          ]
+        },
+        "tier_1": {
+          "name": "潔淨室/特殊氣體",
+          "description": "半導體製程特殊材料與環境",
+          "stocks": [
+            {
+              "code": "3131",
+              "name": "弘塑",
+              "category": "半導體清洗設備"
+            },
+            {
+              "code": "3583",
+              "name": "辛耘",
+              "category": "半導體製程設備"
             }
           ]
         }
