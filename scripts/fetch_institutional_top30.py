@@ -115,8 +115,8 @@ def fetch_institutional_top30(date=None):
 
     formatted_date = f'{date[:4]}/{date[4:6]}/{date[6:8]}'
 
-    # 查詢證交所 API
-    url = f'https://www.twse.com.tw/rwd/en/fund/T86?date={date}&selectType=ALL&response=json'
+    # 查詢證交所 API（中文版，含公司名稱）
+    url = f'https://www.twse.com.tw/rwd/zh/fund/T86?date={date}&selectType=ALL&response=json'
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
@@ -142,12 +142,11 @@ def fetch_institutional_top30(date=None):
                 if not code.isdigit() or len(code) != 4 or code.startswith('0'):
                     continue
 
-                foreign = int(row[3].replace(',', ''))   # 外資買賣超
-                trust = int(row[9].replace(',', ''))     # 投信買賣超
-                dealer = int(row[10].replace(',', ''))   # 自營商買賣超
-                total = int(row[17].replace(',', ''))    # 三大法人合計
-
                 name = row[1].strip() if len(row) > 1 else code
+                foreign = int(row[4].replace(',', ''))   # 外資買賣超
+                trust = int(row[10].replace(',', ''))    # 投信買賣超
+                dealer = int(row[11].replace(',', ''))   # 自營商買賣超
+                total = int(row[18].replace(',', ''))    # 三大法人合計
 
                 stocks.append({
                     'code': code,

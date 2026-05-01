@@ -4,9 +4,11 @@
 使用方式：python scripts/holdings_pressure_analysis.py
 """
 
+import sys
 import urllib.request
 import json
 import ssl
+from pathlib import Path
 from datetime import datetime
 
 def get_current_holdings():
