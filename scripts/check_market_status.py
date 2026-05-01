@@ -45,38 +45,87 @@ def _is_weekend(date_str):
     return dt.weekday() >= 5
 
 
-def is_tw_trading_day(date_str):
-    """查詢 TWSE T86 API 判斷台股是否為交易日（有資料=開市）"""
-    if _is_weekend(date_str):
-        return False
-
-    # 未來日期無法查 TWSE（還沒有資料），非週末就假設開市
-    dt = datetime.strptime(date_str, "%Y-%m-%d")
-    if dt.date() > datetime.now().date():
-        return True
-
-    # 查快取：如果本地已有當天 T86 資料，代表有開市
-    date_compact = date_str.replace("-", "")
-    cache_file = CACHE_DIR / f"twse_t86_{date_compact}.json"
-    if cache_file.exists():
-        return True
-
-    # 查 TWSE T86 API
+def _check_twse_t86(date_compact):
+    """來源 1：查 TWSE T86 法人資料（有資料=開市）"""
     url = f"https://www.twse.com.tw/rwd/en/fund/T86?date={date_compact}&selectType=ALL&response=json"
     try:
         resp = requests.get(url, headers=HEADERS, timeout=15, verify=False)
         if resp.status_code == 200:
             data = resp.json()
-            # 有 data 欄位且非空 = 有交易
             if data.get("data") and len(data["data"]) > 0:
-                return True
-            # TWSE 回傳但沒資料 = 休市
-            return False
+                return True   # 有資料 = 確定開市
+            return False      # API 正常回傳但沒資料 = 確定休市
     except Exception as e:
-        print(f"[WARN] TWSE API 查詢失敗: {e}", file=sys.stderr)
+        print(f"[WARN] T86 查詢失敗: {e}", file=sys.stderr)
+    return None  # API 失敗 = 不確定
 
-    # API 失敗時：非週末就假設開市（保守策略，避免漏跑）
-    print(f"[WARN] 無法確認台股 {date_str} 是否開市，預設為開市", file=sys.stderr)
+
+def _check_twse_mis(date_str):
+    """來源 2：查 TWSE MIS 即時行情（有報價=開市）"""
+    # 用台積電 2330 當探針
+    url = "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_2330.tw&json=1&delay=0"
+    try:
+        resp = requests.get(url, headers={
+            'User-Agent': 'Mozilla/5.0',
+            'Referer': 'https://mis.twse.com.tw/stock/index.jsp'
+        }, timeout=10)
+        if resp.status_code == 200:
+            data = resp.json()
+            msgs = data.get("msgArray", [])
+            if msgs:
+                # 檢查交易日期是否為目標日期
+                trade_date = msgs[0].get("d", "")  # 格式: 20260502
+                target_compact = date_str.replace("-", "")
+                if trade_date == target_compact:
+                    price = msgs[0].get("z", "-")
+                    if price != "-":
+                        return True   # 有當天報價 = 確定開市
+                # 交易日期不是今天 = 今天沒開市
+                return False
+    except Exception as e:
+        print(f"[WARN] MIS 查詢失敗: {e}", file=sys.stderr)
+    return None  # API 失敗 = 不確定
+
+
+def is_tw_trading_day(date_str):
+    """
+    多來源交叉驗證台股是否為交易日。
+
+    判斷優先順序：
+      1. 週末 → 直接休市
+      2. 未來日期 → 非週末假設開市（TWSE 還沒資料）
+      3. 本地 T86 快取 → 有快取 = 確定開市
+      4. TWSE T86 API → 有資料=開市，沒資料=休市
+      5. T86 失敗時，TWSE MIS 即時行情交叉驗證
+      6. 兩個都失敗 → 非週末假設開市（保守策略）
+    """
+    if _is_weekend(date_str):
+        return False
+
+    # 未來日期無法查 TWSE
+    dt = datetime.strptime(date_str, "%Y-%m-%d")
+    if dt.date() > datetime.now().date():
+        return True
+
+    # 本地快取
+    date_compact = date_str.replace("-", "")
+    cache_file = CACHE_DIR / f"twse_t86_{date_compact}.json"
+    if cache_file.exists():
+        return True
+
+    # 來源 1：T86
+    t86_result = _check_twse_t86(date_compact)
+    if t86_result is not None:
+        return t86_result
+
+    # 來源 2：MIS（T86 失敗時交叉驗證）
+    print(f"[INFO] T86 失敗，改查 MIS 即時行情", file=sys.stderr)
+    mis_result = _check_twse_mis(date_str)
+    if mis_result is not None:
+        return mis_result
+
+    # 兩個都失敗
+    print(f"[WARN] T86+MIS 都失敗，{date_str} 預設為開市", file=sys.stderr)
     return True
 
 

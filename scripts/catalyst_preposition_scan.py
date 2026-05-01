@@ -26,7 +26,7 @@ import sys
 import io
 import json
 import os
-import subprocess
+from contextlib import redirect_stdout
 from pathlib import Path
 from datetime import datetime, timedelta
 import argparse
@@ -43,7 +43,8 @@ SCRIPT_DIR = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
 DATA_DIR = PROJECT_DIR / 'data'
 
-# 不直接 import chip_analysis（會觸發 stdout 雙重包裝問題），改用 subprocess
+sys.path.insert(0, str(SCRIPT_DIR))
+from chip_analysis import analyze_chip_history
 
 # 股票產業對照（從 industry_chains.json 動態載入）
 def load_industry_map():
@@ -96,22 +97,35 @@ def load_institutional_data(date_str):
 
 
 def run_chip_analysis(stock_codes, days=10):
-    """呼叫 chip_analysis.py 取得動能數據"""
+    """直接呼叫 chip_analysis 模組取得動能數據（不再用 subprocess）"""
     if not stock_codes:
         return {}
 
-    chip_script = SCRIPT_DIR / 'chip_analysis.py'
-    cmd = [sys.executable, str(chip_script)] + list(stock_codes) + ['--days', str(days)]
-    try:
-        result = subprocess.run(
-            cmd, capture_output=True, text=True, timeout=120,
-            encoding='utf-8', errors='replace',
-            cwd=str(PROJECT_DIR)
-        )
-        return parse_chip_output(result.stdout)
-    except Exception as e:
-        print(f"  ⚠️ chip_analysis 執行失敗: {e}", file=sys.stderr)
-        return {}
+    results = {}
+    # 壓掉 chip_analysis 的 stdout print
+    devnull = io.StringIO()
+    for code in stock_codes:
+        try:
+            with redirect_stdout(devnull):
+                chip_result = analyze_chip_history(code, n_days=days)
+            if chip_result and chip_result.get('momentum'):
+                m = chip_result['momentum']
+                s = chip_result['summary']
+                results[code] = {
+                    'momentum_pct': m.get('change_pct'),
+                    'momentum_level': m.get('level'),
+                    'consecutive_buy': s.get('consecutive_buy', 0),
+                    'cumulative_total': s.get('total_net', 0),
+                    'cumulative_foreign': s.get('foreign_net', 0),
+                    'buy_days': s.get('buy_days', 0),
+                    'sell_days': s.get('sell_days', 0),
+                    'recent_5d_avg': m.get('recent_avg', 0),
+                    'prior_5d_avg': m.get('previous_avg', 0),
+                }
+        except Exception as e:
+            print(f"  ⚠️ chip_analysis({code}) 失敗: {e}", file=sys.stderr)
+
+    return results
 
 
 def parse_number(text):

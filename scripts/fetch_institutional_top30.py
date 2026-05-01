@@ -132,21 +132,45 @@ def fetch_institutional_top30(date=None):
             print('可能原因：非交易日或數據尚未公布')
             return None
 
+        # 動態欄位對應（不硬寫索引，用 fields 名稱查找）
+        fields = data.get('fields', [])
+        field_map = {}
+        for i, f in enumerate(fields):
+            if '證券代號' in f:
+                field_map['code'] = i
+            elif '證券名稱' in f:
+                field_map['name'] = i
+            elif '外陸資買賣超股數(不含外資自營商)' in f:
+                field_map['foreign'] = i
+            elif '投信買賣超股數' in f:
+                field_map['trust'] = i
+            elif f == '自營商買賣超股數':
+                field_map['dealer'] = i
+            elif '三大法人買賣超股數' in f:
+                field_map['total'] = i
+
+        idx_code = field_map.get('code', 0)
+        idx_name = field_map.get('name', 1)
+        idx_foreign = field_map.get('foreign', 4)
+        idx_trust = field_map.get('trust', 10)
+        idx_dealer = field_map.get('dealer', 11)
+        idx_total = field_map.get('total', 18)
+
         # 解析數據
         stocks = []
         for row in data['data']:
             try:
-                code = row[0].strip()
+                code = row[idx_code].strip()
 
                 # 只取一般股票（4碼數字，排除 ETF）
                 if not code.isdigit() or len(code) != 4 or code.startswith('0'):
                     continue
 
-                name = row[1].strip() if len(row) > 1 else code
-                foreign = int(row[4].replace(',', ''))   # 外資買賣超
-                trust = int(row[10].replace(',', ''))    # 投信買賣超
-                dealer = int(row[11].replace(',', ''))   # 自營商買賣超
-                total = int(row[18].replace(',', ''))    # 三大法人合計
+                name = row[idx_name].strip() if len(row) > idx_name else code
+                foreign = int(row[idx_foreign].replace(',', ''))
+                trust = int(row[idx_trust].replace(',', ''))
+                dealer = int(row[idx_dealer].replace(',', ''))
+                total = int(row[idx_total].replace(',', ''))
 
                 stocks.append({
                     'code': code,
@@ -156,7 +180,7 @@ def fetch_institutional_top30(date=None):
                     'dealer': dealer,
                     'total': total
                 })
-            except:
+            except Exception:
                 continue
 
         # 買超 TOP50（v2.0 擴大掃描）

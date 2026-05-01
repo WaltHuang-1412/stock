@@ -34,14 +34,15 @@ def get_current_holdings():
         elif 'buy_price:' in line and current_holding:
             try:
                 current_holding['cost'] = float(line.split(':')[1].strip().split('#')[0].strip())
-            except:
-                pass
+            except Exception as e:
+                print(f"[holdings_pressure] Failed to parse buy_price: {e}", file=sys.stderr)
 
         elif 'quantity:' in line and current_holding:
             try:
                 qty_str = line.split(':')[1].strip().split('#')[0].strip()
                 current_holding['quantity'] = int(qty_str) if qty_str else 0
-            except:
+            except Exception as e:
+                print(f"[holdings_pressure] Failed to parse quantity, defaulting to 0: {e}", file=sys.stderr)
                 current_holding['quantity'] = 0
 
     # 最後一筆

@@ -12,6 +12,7 @@
   4. 輸出推薦清單
 """
 
+import sys
 import requests
 import json
 from pathlib import Path
@@ -130,8 +131,8 @@ def get_stock_price(stock_code):
                         est_price = float(bid_prices[0])
                         change = (est_price - float(yesterday)) / float(yesterday) * 100
                         return est_price, change, name
-    except:
-        pass
+    except Exception as e:
+        print(f"[sector_scanner] Failed to get price for {stock_code}: {e}", file=sys.stderr)
     return None, None, None
 
 

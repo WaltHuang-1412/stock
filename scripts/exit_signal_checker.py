@@ -101,8 +101,8 @@ def get_institutional_data(stock_code, days=5):
                                 'trust': trust
                             })
                             break
-            except:
-                pass
+            except Exception as e:
+                print(f"[exit_signal_checker] Failed to fetch T86 data for {stock_code} on {date_str}: {e}", file=sys.stderr)
 
         current -= timedelta(days=1)
         attempts += 1

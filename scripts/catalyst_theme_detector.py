@@ -530,24 +530,29 @@ def scan(target_date_str, lookback=7):
                         try:
                             val = line.split(':')[1].strip().replace(',', '').replace('+', '').replace('張', '').replace('K', '000').strip()
                             r['cumulative_total'] = int(float(val))
-                        except: pass
+                        except Exception as e:
+                            print(f"[catalyst_theme] Failed to parse cumulative_total: {e}", file=sys.stderr)
                     elif '累計淨買超（外資）' in line:
                         try:
                             val = line.split(':')[1].strip().replace(',', '').replace('+', '').replace('張', '').replace('K', '000').strip()
                             r['cumulative_foreign'] = int(float(val))
-                        except: pass
+                        except Exception as e:
+                            print(f"[catalyst_theme] Failed to parse cumulative_foreign: {e}", file=sys.stderr)
                     elif '買超天數' in line and '賣超天數' not in line:
                         try:
                             r['buy_days'] = int(line.split(':')[1].strip().split()[0])
-                        except: pass
+                        except Exception as e:
+                            print(f"[catalyst_theme] Failed to parse buy_days: {e}", file=sys.stderr)
                     elif '賣超天數' in line:
                         try:
                             r['sell_days'] = int(line.split(':')[1].strip().split()[0])
-                        except: pass
+                        except Exception as e:
+                            print(f"[catalyst_theme] Failed to parse sell_days: {e}", file=sys.stderr)
                     elif '真連續買超' in line:
                         try:
                             r['consecutive_buy'] = int(line.split(':')[1].strip().split()[0])
-                        except: pass
+                        except Exception as e:
+                            print(f"[catalyst_theme] Failed to parse consecutive_buy: {e}", file=sys.stderr)
                     elif '動能變化' in line:
                         try:
                             val = line.split(':')[1].strip().replace('%', '').replace('+', '')
