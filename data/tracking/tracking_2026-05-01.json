@@ -17,6 +17,8 @@
       "position": "15-20%",
       "score": 92,
       "result": "holding",
+      "close_price": 347.5,
+      "change_percent": 9.97,
       "holding_status": "D1/10 | Level0 | 外資+3.55%週增激增 | Qualcomm+34%+Intel+41%直接受益",
       "reason": "Qualcomm+34%+Intel+41%化合物半導體直接受益 | 外資持股比週增+3.55%極大 | EPS+25% | avg_rank TOP10 | 光通訊超強↑加速 | Level0 佈局完成"
     },
@@ -32,6 +34,8 @@
       "position": "10-15%",
       "score": 89,
       "result": "holding",
+      "close_price": 69.8,
+      "change_percent": 4.18,
       "holding_status": "D1/10 | Level0 | EPS+122%大成長 | Intel+41%封測需求爆發",
       "reason": "Intel+41%封測需求爆發 | EPS+121.9%大成長 | avg_rank TOP10 | 5日-2.9%佈局中 | 矽品108億擴廠確認封測景氣 | Level0"
     },
@@ -47,6 +51,8 @@
       "position": "5-10%",
       "score": 78,
       "result": "holding",
+      "close_price": 77.3,
+      "change_percent": 3.76,
       "holding_status": "D1/10 | Level0 | 小倉位(5日+5%已漲催化例外) | Intel 12nm合作",
       "reason": "Intel+41%直接催化12nm合作 | IC設計超強↑加速 | TOP1買超35K | ADR+8.83% | 5日+5%小幅已漲(-10)但新催化劑例外"
     },
@@ -62,6 +68,8 @@
       "position": "5%",
       "score": 72,
       "result": "holding",
+      "close_price": 509.0,
+      "change_percent": -1.17,
       "holding_status": "D1/10 | Level0 | Module B早期 | AAPL今日財報⚡",
       "reason": "AAPL今日財報⚡ | Module B早期+5 | 蘋果Q2展望強勁 | 技術面佈局完成Level0 | EPS+37% | WWDC 6/9後續催化"
     }
@@ -82,7 +90,7 @@
       "position": "15-20%",
       "score": 97,
       "result": "holding",
-      "holding_status": "D7/10 | ⚠️Level2監控 | 光通訊超強↑加速正面 | 法人單日反轉-1040張需監控 | 累計+52K仍健康"
+      "holding_status": "D7/10 | ⚠️Level2 | 今收166.0(-3.49%) | 停損154.8距7% | D8若再賣超→考慮主動停損 | 光通訊超強正面"
     },
     {
       "stock_code": "2317",
@@ -99,7 +107,7 @@
       "position": "10-15%",
       "score": 84,
       "result": "holding",
-      "holding_status": "D3/10 | ✅Level0 | AI Capex 7250億 | 累計+131K超大量"
+      "holding_status": "D3/10 | ⚠️Level2 | 今收219.5(-2.44%) | 停損202.5距7.8% | 密切監控 | 明日確認T86"
     },
     {
       "stock_code": "3661",
@@ -116,7 +124,7 @@
       "position": "5-10%",
       "score": 76,
       "result": "holding",
-      "holding_status": "D4/10 | ✅Level0 | IC設計超強↑ | 連買10天 | 動能-63.5%佈局完成"
+      "holding_status": "D4/10 | ✅Level0 | 今收4135(+3.25%) | 連買10天 | IC設計超強↑ | 目標4500"
     },
     {
       "stock_code": "2327",
@@ -133,7 +141,7 @@
       "position": "5-10%",
       "score": 65,
       "result": "holding",
-      "holding_status": "D4/10 | ✅L0 | ⚠️動能+285%追高 | COLD被動元件-5 | 已持有不加碼"
+      "holding_status": "D4/10 | ✅L0 | 今收317(-1.55%) | COLD被動元件-5 | 不加碼 | 停損293.85"
     },
     {
       "stock_code": "2356",
@@ -150,7 +158,7 @@
       "position": "10-15%",
       "score": 73,
       "result": "holding",
-      "holding_status": "D4/10 | ✅Level0 | L3預埋佈局完成 | AI伺服器強 | 累計+55K"
+      "holding_status": "D4/10 | ✅Level0 | 今收45.9(-0.86%) | L3預埋 | 累計+46K | 停損41.67"
     }
   ],
   "track_b_recommendations": [],
@@ -198,6 +206,75 @@
       "🟡 2356 英業達 D4: 跌破MA5/MA10但Level0，法人+2,422，持抱觀察"
     ]
   },
+  "yesterday_verification": {
+    "accuracy": "57.6%",
+    "settled_count": 229,
+    "total_success": 132,
+    "total_fail": 97,
+    "results": [
+      {"symbol": "2382", "name": "廣達", "result": "fail", "reason": "Level4強制出場(-9875張，均量54.4%)"},
+      {"symbol": "2408", "name": "南亞科", "result": "fail", "reason": "Level4+極近停損(215.5 vs 215.2)"},
+      {"symbol": "1303", "name": "南亞", "result": "fail", "reason": "Level4強制出場(-19777張，均量19.6%)"},
+      {"symbol": "2455", "name": "全新", "result": "holding", "daily_change": "+9.97%"},
+      {"symbol": "8150", "name": "南茂", "result": "holding", "daily_change": "+4.18%"},
+      {"symbol": "2303", "name": "聯電", "result": "holding", "daily_change": "+3.76%"},
+      {"symbol": "3406", "name": "玉晶光", "result": "holding", "daily_change": "-1.17%"},
+      {"symbol": "2301", "name": "光寶科", "result": "holding", "daily_change": "-3.49%", "note": "Level2⚠️"},
+      {"symbol": "2317", "name": "鴻海", "result": "holding", "daily_change": "-2.44%", "note": "Level2⚠️"},
+      {"symbol": "3661", "name": "世芯-KY", "result": "holding", "daily_change": "+3.25%"},
+      {"symbol": "2327", "name": "國巨", "result": "holding", "daily_change": "-1.55%"},
+      {"symbol": "2356", "name": "英業達", "result": "holding", "daily_change": "-0.86%"}
+    ]
+  },
+  "after_market_update": {
+    "update_time": "2026-05-01 14:45",
+    "actual_closes": {
+      "2455": {"close": 347.5, "daily_change_pct": 9.97, "result": "holding", "holding_status": "D1/10 | Level0健康 | +9.97%超強 | 目標383"},
+      "8150": {"close": 69.8, "daily_change_pct": 4.18, "result": "holding", "holding_status": "D1/10 | Level0健康 | +4.18% | 目標76.8"},
+      "2303": {"close": 77.3, "daily_change_pct": 3.76, "result": "holding", "holding_status": "D1/10 | Level0健康 | +3.76% | 近5天籌碼分歧觀察"},
+      "3406": {"close": 509.0, "daily_change_pct": -1.17, "result": "holding", "holding_status": "D1/10 | Level0 | -1.17% | AAPL財報今晚公布"},
+      "2301": {"close": 166.0, "daily_change_pct": -3.49, "result": "holding", "holding_status": "D7/10 | ⚠️Level2 | -3.5% | 停損154.8距7% | D8密切監控"},
+      "2317": {"close": 219.5, "daily_change_pct": -2.44, "result": "holding", "holding_status": "D3/10 | ⚠️Level2 | -2.44% | 停損202.5距7.8% | 密切監控"},
+      "3661": {"close": 4135.0, "daily_change_pct": 3.25, "result": "holding", "holding_status": "D4/10 | Level0 | +3.25% | 連買10天"},
+      "2327": {"close": 317.0, "daily_change_pct": -1.55, "result": "holding", "holding_status": "D4/10 | Level0 | -1.55% | 被動元件COLD觀察"},
+      "2356": {"close": 45.9, "daily_change_pct": -0.86, "result": "holding", "holding_status": "D4/10 | Level0 | -0.86% | 累計+46K健康"}
+    },
+    "accuracy_update": {
+      "settled_accuracy": "57.6%",
+      "settled_count": 229,
+      "total_success": 132,
+      "total_fail": 97,
+      "new_settled_today": ["2382廣達-fail", "2408南亞科-fail", "1303南亞-fail"]
+    }
+  },
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "6415",
+      "stock_name": "矽力-KY",
+      "industry": "IC設計/PMIC",
+      "recommend_price": 427.0,
+      "target_price": 470.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 384.3,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 102,
+      "reason": "PMIC電源管理IC直接受益Intel+41%+Qualcomm+34% | IC設計超強↑加速 | Module A L2動能-54% | avg_rank 21.5 | 外資+投信同步+13K | Level0"
+    },
+    {
+      "stock_code": "2388",
+      "stock_name": "威盛電子",
+      "industry": "IC設計/嵌入式CPU",
+      "recommend_price": 79.0,
+      "target_price": 87.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 71.1,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 93,
+      "reason": "嵌入式IC設計受Intel+41%生態受益 | IC設計超強↑加速 | Module A L2動能-141.5%佈局完成 | 外資+投信同步+5K | Level0 | 毛利率QoQ+2.1pp"
+    }
+  ],
   "removed_stocks": [
     {
       "stock_code": "2382",
