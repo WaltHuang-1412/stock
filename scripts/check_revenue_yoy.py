@@ -127,17 +127,15 @@ def get_decline_streak(stock_id, cache):
 
 
 def get_5d_pullback(stock_id):
-    """查詢近5日股價回檔幅度（%），負值=回檔"""
-    try:
-        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{stock_id}.TW"
-        r = requests.get(url, params={"interval": "1d", "range": "10d"},
-                        headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
-        data = r.json()
-        closes = [c for c in data['chart']['result'][0]['indicators']['quote'][0]['close'] if c]
+    """查詢近5日股價回檔幅度（%），負值=回檔（自動支援上市/上櫃）"""
+    sys.path.insert(0, str(Path(__file__).parent))
+    from yahoo_finance_api import get_history
+
+    hist = get_history(stock_id, period='10d', interval='1d')
+    if hist:
+        closes = [c for c in hist.get('closes', []) if c]
         if len(closes) >= 6:
             return (closes[-1] - closes[-6]) / closes[-6] * 100
-    except Exception:
-        pass
     return None
 
 

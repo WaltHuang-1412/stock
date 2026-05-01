@@ -49,27 +49,13 @@ def get_current_holdings():
     return holdings
 
 def get_stock_price(stock_code):
-    """查詢即時股價"""
-    try:
-        ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
+    """查詢即時股價（自動支援上市/上櫃）"""
+    sys.path.insert(0, str(Path(__file__).parent))
+    from yahoo_finance_api import get_current_price, get_previous_close
 
-        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{stock_code}.TW?interval=1d&range=2d'
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-
-        with urllib.request.urlopen(req, timeout=10, context=ctx) as response:
-            data = json.loads(response.read())
-
-        result = data['chart']['result'][0]
-        meta = result['meta']
-
-        current = meta.get('regularMarketPrice', meta.get('chartPreviousClose'))
-        prev = meta.get('previousClose', meta.get('chartPreviousClose'))
-
-        return current, prev
-    except:
-        return None, None
+    current = get_current_price(stock_code)
+    prev = get_previous_close(stock_code)
+    return current, prev
 
 def get_institutional_data_from_analysis():
     """從今日盤前分析讀取法人數據"""

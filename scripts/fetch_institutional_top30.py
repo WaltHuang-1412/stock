@@ -74,7 +74,7 @@ STOCK_NAMES = {
 
 def get_stock_market_data(code):
     """
-    一次查詢取得股價、成交量、5日漲幅（Yahoo Finance range=6d）
+    一次查詢取得股價、成交量、5日漲幅（自動支援上市/上櫃）
 
     Returns:
         dict: {
@@ -84,43 +84,33 @@ def get_stock_market_data(code):
         }
         失敗返回 None
     """
-    try:
-        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW?interval=1d&range=6d'
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers, timeout=10)
-        data = response.json()
+    from yahoo_finance_api import _fetch_chart
 
-        if 'chart' not in data or 'result' not in data['chart'] or not data['chart']['result']:
-            return None
-
-        result = data['chart']['result'][0]
-        info = {}
-
-        # 收盤價
-        if 'meta' in result and 'regularMarketPrice' in result['meta']:
-            info['close_price'] = result['meta']['regularMarketPrice']
-
-        # 成交量 + 5日漲幅
-        if 'indicators' in result and 'quote' in result['indicators']:
-            quote = result['indicators']['quote'][0]
-
-            # 成交量（最後一天）
-            if 'volume' in quote:
-                volumes = [v for v in quote['volume'] if v is not None]
-                if volumes:
-                    info['daily_volume'] = volumes[-1]
-
-            # 5日漲幅
-            if 'close' in quote:
-                closes = [c for c in quote['close'] if c is not None]
-                if len(closes) >= 2:
-                    first = closes[0]
-                    last = closes[-1]
-                    info['5day_change'] = (last - first) / first * 100
-
-        return info if 'close_price' in info else None
-    except:
+    result = _fetch_chart(code, range_str='6d')
+    if not result:
         return None
+
+    info = {}
+
+    # 收盤價
+    info['close_price'] = result.get('meta', {}).get('regularMarketPrice')
+
+    try:
+        quote = result['indicators']['quote'][0]
+
+        # 成交量（最後一天）
+        volumes = [v for v in quote.get('volume', []) if v is not None]
+        if volumes:
+            info['daily_volume'] = volumes[-1]
+
+        # 5日漲幅
+        closes = [c for c in quote.get('close', []) if c is not None]
+        if len(closes) >= 2:
+            info['5day_change'] = (closes[-1] - closes[0]) / closes[0] * 100
+    except (KeyError, IndexError):
+        pass
+
+    return info if info.get('close_price') else None
 
 
 def get_5day_change(code):
