@@ -133,14 +133,12 @@ python3 scripts/fetch_tw_market_news.py > data/$(date +%Y-%m-%d)/tw_market_news.
 
 ```python
 python3 -c "
-import requests
+import sys; sys.path.insert(0, 'scripts')
+from yahoo_finance_api import get_current_price
 stocks = ['2303', '2330', '3037']  # 替換為實際推薦股票
 for s in stocks:
-    url = f'https://query1.finance.yahoo.com/v8/finance/chart/{s}.TW?interval=1d&range=5d'
-    r = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=10)
-    data = r.json()
-    close = data['chart']['result'][0]['meta']['regularMarketPrice']
-    print(f'{s}: 現價={close}')
+    price = get_current_price(s)
+    print(f'{s}: 現價={price}')
 "
 ```
 
