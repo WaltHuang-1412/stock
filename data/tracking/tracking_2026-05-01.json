@@ -153,6 +153,51 @@
       "holding_status": "D4/10 | ✅Level0 | L3預埋佈局完成 | AI伺服器強 | 累計+55K"
     }
   ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "industry": "金融",
+      "intraday_signal_strength": 80,
+      "exclusion_reason": "動能+435.2% > 100% 直接排除，台灣金融↑升溫非超強催化無覆寫條件"
+    },
+    {
+      "stock_code": "6165",
+      "stock_name": "浪凡",
+      "industry": "網路設備",
+      "intraday_signal_strength": 75,
+      "exclusion_reason": "動能+300.6% > 100% 直接排除"
+    },
+    {
+      "stock_code": "2464",
+      "stock_name": "盟立",
+      "industry": "工業自動化",
+      "intraday_signal_strength": 85,
+      "score": 61,
+      "exclusion_reason": "61分 < 75分門檻，EPS連續5季負成長-5分，工業自動化非今日核心催化鏈"
+    }
+  ],
+  "intraday_update": {
+    "update_time": "2026-05-01 12:44",
+    "market_context": "多頭VIX16.89 | Intel+41%/Qualcomm+34%/費半+4.22%超強",
+    "track_a_prices": {
+      "2455": {"intraday_price": 347.5, "daily_change_pct": 9.97, "reversal_level": 0, "law_person_today": 6807},
+      "8150": {"intraday_price": 69.8, "daily_change_pct": 4.18, "reversal_level": 0, "law_person_today": 8737},
+      "2303": {"intraday_price": 77.3, "daily_change_pct": 3.76, "reversal_level": 0, "law_person_today": 35167},
+      "3406": {"intraday_price": 509.0, "daily_change_pct": -1.17, "reversal_level": 0, "law_person_today": -699},
+      "2301": {"intraday_price": 166.0, "daily_change_pct": -3.49, "reversal_level": 2, "law_person_today": -1040},
+      "2317": {"intraday_price": 219.5, "daily_change_pct": -2.44, "reversal_level": 0, "law_person_today": 886},
+      "3661": {"intraday_price": 4135.0, "daily_change_pct": 3.25, "reversal_level": 0, "law_person_today": 721},
+      "2327": {"intraday_price": 317.0, "daily_change_pct": -1.55, "reversal_level": 0, "law_person_today": 1772},
+      "2356": {"intraday_price": 45.9, "daily_change_pct": -0.86, "reversal_level": 0, "law_person_today": 2422}
+    },
+    "alerts": [
+      "⚠️ 2301 光寶科 D7 Level2: 今日-1040賣超+跌破MA5/MA10，166.0 vs 停損154.8，需密切監控",
+      "🟡 2303 聯電 D1: 近5天籌碼分歧（外資買投信賣），今日+35K確認，觀察",
+      "🟡 2356 英業達 D4: 跌破MA5/MA10但Level0，法人+2,422，持抱觀察"
+    ]
+  },
   "removed_stocks": [
     {
       "stock_code": "2382",
