@@ -50,6 +50,11 @@ def is_tw_trading_day(date_str):
     if _is_weekend(date_str):
         return False
 
+    # 未來日期無法查 TWSE（還沒有資料），非週末就假設開市
+    dt = datetime.strptime(date_str, "%Y-%m-%d")
+    if dt.date() > datetime.now().date():
+        return True
+
     # 查快取：如果本地已有當天 T86 資料，代表有開市
     date_compact = date_str.replace("-", "")
     cache_file = CACHE_DIR / f"twse_t86_{date_compact}.json"
