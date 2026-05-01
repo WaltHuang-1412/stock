@@ -11,13 +11,16 @@ python3 intraday_scanner.py
 - 可在 13:00 前決定尾盤策略
 """
 
-import yfinance as yf
-import pandas as pd
+import sys
+from pathlib import Path
 from datetime import datetime, timedelta
 import requests
 import time
 import warnings
 warnings.filterwarnings('ignore')
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from yahoo_finance_api import get_history
 
 def get_institutional_data(date_str):
     """獲取指定日期的法人數據"""
@@ -57,7 +60,7 @@ def get_institutional_data(date_str):
 def get_stock_list():
     """獲取台股主要股票列表（上市公司）"""
     # 這裡列出台股主要標的（可擴充）
-    # 格式: 代號.TW
+    # 格式: 股票代號
     stocks = []
 
     # 權值股 + 熱門股
@@ -68,9 +71,7 @@ def get_stock_list():
         '6770', '6239', '3715', '8112', '3013', '2408', '2409', '5347', '6531', '3034'
     ]
 
-    stocks = [f"{code}.TW" for code in major_stocks]
-
-    return stocks
+    return major_stocks
 
 def analyze_intraday_volume():
     """盤中量能分析主程式"""
@@ -94,25 +95,27 @@ def analyze_intraday_volume():
 
     results = []
 
-    for i, symbol in enumerate(stock_list):
+    for i, code in enumerate(stock_list):
         try:
-            code = symbol.replace('.TW', '')
-            ticker = yf.Ticker(symbol)
+            history = get_history(code, period='10d', interval='1d')
 
-            # 獲取最近10天數據
-            hist = ticker.history(period='10d')
+            if not history or 'timestamps' not in history:
+                continue
 
-            if len(hist) < 6:
+            closes = [c for c in history['closes'] if c is not None]
+            volumes = [v for v in history['volumes'] if v is not None]
+
+            if len(closes) < 6 or len(volumes) < 6:
                 continue
 
             # 當日數據
-            current_price = hist['Close'].iloc[-1]
-            prev_close = hist['Close'].iloc[-2]
-            current_volume = hist['Volume'].iloc[-1]
+            current_price = closes[-1]
+            prev_close = closes[-2]
+            current_volume = volumes[-1]
 
             # 計算指標
             change_pct = ((current_price - prev_close) / prev_close) * 100
-            avg_volume_5d = hist['Volume'].iloc[-6:-1].mean()
+            avg_volume_5d = sum(volumes[-6:-1]) / len(volumes[-6:-1])
             volume_ratio = current_volume / avg_volume_5d if avg_volume_5d > 0 else 0
 
             # 獲取法人數據

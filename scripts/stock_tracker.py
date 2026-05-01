@@ -16,20 +16,14 @@ from datetime import datetime, timedelta
 from pathlib import Path
 import requests
 
-# yfinance 可選依賴（P0 修復：解決 Python 3.15 相容性問題）
-try:
-    import yfinance as yf
-    HAS_YFINANCE = True
-except ImportError:
-    HAS_YFINANCE = False
-    print("⚠️ 警告: yfinance 未安裝，部分功能可能受限")
-
 # 添加專案根目錄到路徑
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
 # 添加 scripts 目錄到路徑（P0 修復）
 sys.path.insert(0, str(Path(__file__).parent))
+
+from yahoo_finance_api import get_current_price
 
 # 導入跨平台工具（P0 修復）
 try:
@@ -94,21 +88,16 @@ class StockTracker:
     def get_stock_price(self, stock_code):
         """獲取股票今日收盤價"""
         try:
-            # 台股代碼需要加.TW
-            ticker = f"{stock_code}.TW"
-            stock = yf.Ticker(ticker)
-            hist = stock.history(period="1d")
+            from yahoo_finance_api import get_stock_info
+            info = get_stock_info(stock_code)
 
-            if hist.empty:
+            if not info or info.get('current_price') is None:
                 print(f"⚠️ {stock_code} 無法獲取股價數據")
                 return None
 
-            close_price = float(hist['Close'].iloc[-1])
-            volume = int(hist['Volume'].iloc[-1])
-
             return {
-                "close_price": round(close_price, 2),
-                "volume": volume
+                "close_price": round(info['current_price'], 2),
+                "volume": info.get('volume', 0)
             }
         except Exception as e:
             print(f"❌ {stock_code} 獲取股價失敗: {e}")

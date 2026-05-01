@@ -272,65 +272,8 @@ def get_realtime_data_api(stock_code):
 
 
 def get_realtime_data(stock_code):
-    """獲取即時股價數據（P0修復：支援無 yfinance 環境）"""
-    import warnings
-    import os
-
-    # 抑制所有警告
-    warnings.filterwarnings('ignore')
-
-    # 抑制 yfinance 的錯誤輸出（重定向 stderr）
-    original_stderr = sys.stderr
-    sys.stderr = open(os.devnull, 'w')
-
-    # 優先使用 yfinance（如果可用）
-    if HAS_YFINANCE:
-        try:
-            ticker = yf.Ticker(f"{stock_code}.TW")
-            hist = ticker.history(period='5d')
-
-            if hist.empty or len(hist) < 2:
-                return get_realtime_data_api(stock_code)  # 降級到 API
-
-            current_price = hist['Close'].iloc[-1]
-            prev_close = hist['Close'].iloc[-2]
-            current_volume = hist['Volume'].iloc[-1]
-
-            # 計算指標
-            change_pct = ((current_price - prev_close) / prev_close) * 100
-            avg_volume_5d = hist['Volume'].iloc[:-1].mean()
-            volume_ratio = current_volume / avg_volume_5d if avg_volume_5d > 0 else 0
-
-            # 獲取股票名稱
-            info = ticker.info
-            stock_name = info.get('longName', stock_code)
-            if not stock_name or stock_name == stock_code:
-                stock_name = info.get('shortName', stock_code)
-
-            result = {
-                'code': stock_code,
-                'name': stock_name,
-                'current_price': round(current_price, 2),
-                'prev_close': round(prev_close, 2),
-                'change_pct': round(change_pct, 2),
-                'volume': current_volume,
-                'volume_ratio': round(volume_ratio, 2)
-            }
-            # 恢復 stderr
-            sys.stderr.close()
-            sys.stderr = original_stderr
-            return result
-        except Exception:
-            # 恢復 stderr
-            sys.stderr.close()
-            sys.stderr = original_stderr
-            return get_realtime_data_api(stock_code)  # 降級到 API
-    else:
-        # 恢復 stderr
-        sys.stderr.close()
-        sys.stderr = original_stderr
-        # 無 yfinance，直接使用 API
-        return get_realtime_data_api(stock_code)
+    """獲取即時股價數據（使用 yahoo_finance_api 共用模組）"""
+    return get_realtime_data_api(stock_code)
 
 def parse_recommend_price(price_str):
     """解析推薦價格，支援範圍格式如 '18.0-18.3' 或單一數值"""

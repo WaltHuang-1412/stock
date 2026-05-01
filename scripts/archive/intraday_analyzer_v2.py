@@ -22,17 +22,9 @@ import time
 import warnings
 warnings.filterwarnings('ignore')
 
-# yfinance/pandas 可選依賴（P0 修復：解決 Python 3.15 相容性問題）
-try:
-    import yfinance as yf
-    import pandas as pd
-    HAS_YFINANCE = True
-except ImportError:
-    HAS_YFINANCE = False
-    print("⚠️ 警告: yfinance/pandas 未安裝，將使用 Yahoo Finance API 直接查詢")
-
 # 添加 scripts 目錄到路徑，以便導入 utils
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from yahoo_finance_api import get_stock_info, get_history
 
 # 導入跨平台工具（P0 修復）
 try:
@@ -123,39 +115,23 @@ def get_institutional_data(date_str):
     return {}
 
 def get_intraday_data_api(stock_code):
-    """使用 Yahoo Finance API 直接查詢（無需 yfinance 套件）"""
+    """使用 yahoo_finance_api 共用模組查詢"""
     try:
-        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{stock_code}.TW?interval=1d&range=10d"
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers, timeout=10)
-
-        if response.status_code != 200:
+        history = get_history(stock_code, period='10d', interval='1d')
+        if not history or 'timestamps' not in history:
             return None
 
-        data = response.json()
-        result = data.get('chart', {}).get('result', [])
+        closes = [c for c in history['closes'] if c is not None]
+        volumes = [v for v in history['volumes'] if v is not None]
+        highs = history['highs']
+        lows = history['lows']
 
-        if not result:
+        if len(closes) < 2:
             return None
 
-        quote = result[0]
-        indicators = quote.get('indicators', {}).get('quote', [{}])[0]
-
-        closes = indicators.get('close', [])
-        volumes = indicators.get('volume', [])
-        highs = indicators.get('high', [])
-        lows = indicators.get('low', [])
-
-        # 過濾掉 None 值
-        valid_closes = [c for c in closes if c is not None]
-        valid_volumes = [v for v in volumes if v is not None]
-
-        if len(valid_closes) < 2:
-            return None
-
-        current_price = valid_closes[-1]
-        prev_close = valid_closes[-2] if len(valid_closes) >= 2 else current_price
-        current_volume = valid_volumes[-1] if valid_volumes else 0
+        current_price = closes[-1]
+        prev_close = closes[-2]
+        current_volume = volumes[-1] if volumes else 0
         today_high = highs[-1] if highs and highs[-1] else current_price
         today_low = lows[-1] if lows and lows[-1] else current_price
 
@@ -163,7 +139,7 @@ def get_intraday_data_api(stock_code):
         change_pct = ((current_price - prev_close) / prev_close) * 100 if prev_close else 0
 
         # 計算 5 日平均量
-        recent_volumes = [v for v in valid_volumes[-6:-1] if v is not None]
+        recent_volumes = [v for v in volumes[-6:-1] if v is not None]
         avg_volume_5d = sum(recent_volumes) / len(recent_volumes) if recent_volumes else 0
         volume_ratio = current_volume / avg_volume_5d if avg_volume_5d > 0 else 0
 
@@ -182,43 +158,8 @@ def get_intraday_data_api(stock_code):
 
 
 def get_intraday_data(stock_code):
-    """獲取盤中股價量能數據（P0修復：支援無 yfinance 環境）"""
-    # 優先使用 yfinance（如果可用）
-    if HAS_YFINANCE:
-        try:
-            ticker = yf.Ticker(f"{stock_code}.TW")
-            hist = ticker.history(period='10d')
-
-            if len(hist) < 2:
-                return get_intraday_data_api(stock_code)  # 降級到 API
-
-            # 今日數據（最後一筆）
-            current_price = hist['Close'].iloc[-1]
-            prev_close = hist['Close'].iloc[-2]
-            current_volume = hist['Volume'].iloc[-1]
-            today_high = hist['High'].iloc[-1]
-            today_low = hist['Low'].iloc[-1]
-
-            # 計算指標
-            change_pct = ((current_price - prev_close) / prev_close) * 100
-            avg_volume_5d = hist['Volume'].iloc[-6:-1].mean()
-            volume_ratio = current_volume / avg_volume_5d if avg_volume_5d > 0 else 0
-
-            return {
-                'current_price': current_price,
-                'prev_close': prev_close,
-                'change_pct': change_pct,
-                'volume': current_volume,
-                'volume_ratio': volume_ratio,
-                'high': today_high,
-                'low': today_low
-            }
-        except Exception as e:
-            print(f"yfinance 查詢 {stock_code} 失敗: {e}，嘗試 API")
-            return get_intraday_data_api(stock_code)
-    else:
-        # 無 yfinance，直接使用 API
-        return get_intraday_data_api(stock_code)
+    """獲取盤中股價量能數據（使用 yahoo_finance_api 共用模組）"""
+    return get_intraday_data_api(stock_code)
 
 def calculate_five_dimensions_intraday(stock_data, inst_data, market_context):
     """
