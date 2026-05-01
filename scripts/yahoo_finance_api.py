@@ -19,7 +19,7 @@ from datetime import datetime, timedelta
 
 def get_current_price(code):
     """
-    獲取即時股價
+    獲取即時股價（自動嘗試上市 .TW 和上櫃 .TWO）
 
     Args:
         code: 股票代號（如 '2330'）
@@ -27,18 +27,19 @@ def get_current_price(code):
     Returns:
         float: 現價，失敗返回 None
     """
-    try:
-        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW?interval=1d&range=1d'
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers, timeout=10)
-        data = response.json()
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    for suffix in ['.TW', '.TWO']:
+        try:
+            url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}{suffix}?interval=1d&range=1d'
+            response = requests.get(url, headers=headers, timeout=10)
+            data = response.json()
 
-        if 'chart' in data and 'result' in data['chart'] and data['chart']['result']:
-            result = data['chart']['result'][0]
-            if 'meta' in result and 'regularMarketPrice' in result['meta']:
-                return result['meta']['regularMarketPrice']
-    except Exception as e:
-        print(f"❌ 查詢 {code} 現價失敗: {e}")
+            if 'chart' in data and 'result' in data['chart'] and data['chart']['result']:
+                result = data['chart']['result'][0]
+                if 'meta' in result and 'regularMarketPrice' in result['meta']:
+                    return result['meta']['regularMarketPrice']
+        except Exception:
+            pass
 
     return None
 
