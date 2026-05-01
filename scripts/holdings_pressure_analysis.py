@@ -58,30 +58,10 @@ def get_stock_price(stock_code):
     return current, prev
 
 def get_institutional_data_from_analysis():
-    """從今日盤前分析讀取法人數據"""
-    try:
-        with open('data/2026-01-20/before_market_analysis.md', 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # 簡單解析持股警示表格
-        institutional_map = {}
-
-        if '| 緯創(3231)' in content and '-62K' in content:
-            institutional_map['3231'] = -62
-        if '| 群創(3481)' in content and '-33K' in content:
-            institutional_map['3481'] = -33
-        if '| 南亞(1303)' in content and '-18K' in content:
-            institutional_map['1303'] = -18
-        if '| 台積電(2330)' in content and '-11K' in content:
-            institutional_map['2330'] = -11
-        if '| 兆豐金(2886)' in content and '-2.5K' in content:
-            institutional_map['2886'] = -2.5
-        if '| 台塑(1301)' in content and '+10K' in content:
-            institutional_map['1301'] = 10
-
-        return institutional_map
-    except:
-        return {}
+    """從最近的 chip_analysis 或 tracking 讀取法人數據"""
+    # 這個函數原本硬寫了特定日期和特定股票數據，已不可用
+    # 法人數據應在呼叫端透過 chip_analysis.py 取得，此處回傳空值
+    return {}
 
 def analyze_pressure(cost, current_price, institutional_flow, profit_pct):
     """分析出場壓力"""

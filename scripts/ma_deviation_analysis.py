@@ -17,7 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from yahoo_finance_api import get_history
 
-PREDICTIONS_PATH = "/Users/walter/Documents/GitHub/stock/data/predictions/predictions.json"
+PREDICTIONS_PATH = str(Path(__file__).parent.parent / "data" / "predictions" / "predictions.json")
 
 def load_settled_recommendations():
     """Load all settled (success/fail) recommendations with recommend_price."""
@@ -444,7 +444,7 @@ def main():
     print()
 
     # Save raw data for further analysis
-    output_path = "/Users/walter/Documents/GitHub/stock/data/ma_deviation_analysis.json"
+    output_path = str(Path(__file__).parent.parent / "data" / "ma_deviation_analysis.json")
     with open(output_path, 'w') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f"Raw data saved to: {output_path}")

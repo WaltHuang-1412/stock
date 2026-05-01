@@ -1,16 +1,19 @@
 {
-  "description": "美股龍頭 → 台股產業對應表（供 us_leader_alert.py 和 holiday_cumulative_summary.py 共用）",
-  "last_updated": "2026-05-01",
+  "description": "美股龍頭 → 台股產業對應表（供 us_leader_alert / holiday_cumulative_summary / catalyst_theme_detector 共用）",
+  "last_updated": "2026-05-02",
   "leaders": {
     "Micron": {
-      "tw_industry": "DRAM",
+      "tw_industry": "DRAM/記憶體",
       "tw_industries": ["記憶體"],
+      "industry_chain_key": "記憶體",
       "aliases": ["Micron", "MU"],
       "tw_stocks": {
+        "2408": "南亞科",
         "1303": "南亞",
         "2344": "華邦電",
         "2337": "旺宏",
-        "5347": "世界"
+        "5347": "世界",
+        "6770": "力積電"
       },
       "threshold_l3": -10,
       "threshold_l2": -5,
@@ -19,13 +22,15 @@
     "NVIDIA": {
       "tw_industry": "AI伺服器",
       "tw_industries": ["AI", "半導體"],
+      "industry_chain_key": "AI",
       "aliases": ["NVIDIA", "輝達"],
       "tw_stocks": {
         "2382": "廣達",
         "3231": "緯創",
         "2324": "仁寶",
         "2356": "英業達",
-        "6669": "緯穎"
+        "6669": "緯穎",
+        "2376": "技嘉"
       },
       "threshold_l3": -10,
       "threshold_l2": -5,
@@ -34,6 +39,7 @@
     "Apple": {
       "tw_industry": "蘋果供應鏈",
       "tw_industries": ["蘋果供應鏈"],
+      "industry_chain_key": "蘋果供應鏈",
       "aliases": ["Apple", "AAPL"],
       "tw_stocks": {
         "3008": "大立光",
@@ -51,12 +57,13 @@
     "AMD": {
       "tw_industry": "AI晶片/IC設計",
       "tw_industries": ["半導體"],
+      "industry_chain_key": "AI",
       "aliases": ["AMD"],
       "tw_stocks": {
-        "3707": "漢磊",
-        "3661": "世芯-KY",
         "2454": "聯發科",
-        "3443": "創意"
+        "3661": "世芯-KY",
+        "3443": "創意",
+        "3707": "漢磊"
       },
       "threshold_l3": -10,
       "threshold_l2": -5,
@@ -65,6 +72,7 @@
     "Tesla": {
       "tw_industry": "電動車",
       "tw_industries": ["電動車"],
+      "industry_chain_key": "電動車",
       "aliases": ["Tesla", "TSLA"],
       "tw_stocks": {
         "2317": "鴻海",
@@ -80,6 +88,7 @@
     "Super Micro": {
       "tw_industry": "AI伺服器",
       "tw_industries": ["AI"],
+      "industry_chain_key": "AI",
       "aliases": ["Super Micro", "SMCI"],
       "tw_stocks": {
         "2382": "廣達",
@@ -94,6 +103,7 @@
     "Broadcom": {
       "tw_industry": "網通",
       "tw_industries": ["網通設備"],
+      "industry_chain_key": "光通訊",
       "aliases": ["Broadcom", "AVGO"],
       "tw_stocks": {
         "2345": "智邦",
@@ -105,11 +115,46 @@
       "threshold_l2": -5,
       "threshold_l1": -2
     },
-    "AMAT": {
-      "tw_industry": "半導體設備",
+    "Lam Research": {
+      "tw_industry": "半導體設備/製造",
       "tw_industries": ["半導體"],
+      "industry_chain_key": "半導體",
+      "aliases": ["Lam Research", "Lam"],
+      "tw_stocks": {
+        "2330": "台積電",
+        "3711": "日月光",
+        "2303": "聯電",
+        "6488": "環球晶"
+      },
+      "threshold_l3": -10,
+      "threshold_l2": -5,
+      "threshold_l1": -2
+    },
+    "Applied Materials": {
+      "tw_industry": "半導體設備/製造",
+      "tw_industries": ["半導體"],
+      "industry_chain_key": "半導體",
       "aliases": ["AMAT", "Applied Materials"],
-      "tw_stocks": {},
+      "tw_stocks": {
+        "2330": "台積電",
+        "3711": "日月光",
+        "2303": "聯電"
+      },
+      "threshold_l3": -10,
+      "threshold_l2": -5,
+      "threshold_l1": -2
+    },
+    "Western Digital": {
+      "tw_industry": "NAND/儲存",
+      "tw_industries": ["記憶體"],
+      "industry_chain_key": "記憶體",
+      "aliases": ["Western Digital", "WDC"],
+      "tw_stocks": {
+        "2408": "南亞科",
+        "2344": "華邦電",
+        "2337": "旺宏",
+        "6770": "力積電"
+      },
       "threshold_l3": -10,
       "threshold_l2": -5,
       "threshold_l1": -2
@@ -117,6 +162,7 @@
     "Dell": {
       "tw_industry": "AI伺服器",
       "tw_industries": [],
+      "industry_chain_key": "AI",
       "aliases": ["Dell"],
       "tw_stocks": {},
       "threshold_l3": -10,
@@ -126,20 +172,21 @@
     "ASML": {
       "tw_industry": "半導體設備",
       "tw_industries": [],
+      "industry_chain_key": "半導體",
       "aliases": ["ASML"],
       "tw_stocks": {},
       "threshold_l3": -10,
       "threshold_l2": -5,
       "threshold_l1": -2
-    },
-    "Lam Research": {
-      "tw_industry": "半導體設備",
-      "tw_industries": [],
-      "aliases": ["Lam Research", "Lam"],
-      "tw_stocks": {},
-      "threshold_l3": -10,
-      "threshold_l2": -5,
-      "threshold_l1": -2
     }
+  },
+  "industry_groups": {
+    "DRAM/記憶體": ["Micron", "Western Digital"],
+    "AI伺服器": ["NVIDIA", "Super Micro"],
+    "半導體設備": ["Lam Research", "Applied Materials"],
+    "IC設計": ["AMD"],
+    "蘋果供應鏈": ["Apple"],
+    "電動車": ["Tesla"],
+    "網通": ["Broadcom"]
   }
 }

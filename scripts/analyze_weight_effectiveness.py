@@ -20,7 +20,7 @@ from collections import defaultdict
 from pathlib import Path
 from datetime import datetime
 
-BASE_DIR = Path("/Users/walter/Documents/GitHub/stock")
+BASE_DIR = Path(__file__).parent.parent
 TRACKING_DIR = BASE_DIR / "data" / "tracking"
 PREDICTIONS_FILE = BASE_DIR / "data" / "predictions" / "predictions.json"
 MA_DEVIATION_FILE = BASE_DIR / "data" / "ma_deviation_analysis.json"
