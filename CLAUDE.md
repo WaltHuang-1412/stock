@@ -149,8 +149,8 @@ for s in stocks:
 ### 🔴 Step 4: 歷史驗證 + 持有中追蹤（強制）
 
 ```bash
-# 讀取昨日 tracking + 近7天 tracking 中 result="holding" 的股票
-cat data/tracking/tracking_$(date -d yesterday +%Y-%m-%d).json
+# 自動掃描所有 holding 股票，查收盤價，機械判斷結算結果
+python3 scripts/settlement_checker.py --date $(date +%Y-%m-%d)
 ```
 
 **多日追蹤結算制度**：
@@ -612,6 +612,10 @@ python3 scripts/reversal_alert.py [推薦股...]
 
 ### 🔴 Step 9: 產業分散檢查 + 動態防禦比例（強制）
 
+```bash
+python3 scripts/check_industry_diversification.py --date $(date +%Y-%m-%d)
+```
+
 **基本規則**：推薦 6-8 檔 | 單一產業 ≤50% | ≥3 個產業
 
 **動態防禦比例**：
@@ -797,11 +801,11 @@ ls data/$(date +%Y-%m-%d)/intraday_analysis.md
 **🔴 不再當天判定成敗**。盤後只做：更新收盤價 + 結算已觸及目標/停損的
 
 ```bash
-cat data/tracking/tracking_$(date +%Y-%m-%d).json
+python3 scripts/settlement_checker.py --date $(date +%Y-%m-%d)
 python3 scripts/holdings_pressure_analysis.py [停損股...]
 ```
 
-**結算規則**：收盤≥目標→success | 收盤≤停損→fail | 都沒觸→holding | 滿10日→收盤 vs 推薦價
+**結算規則**（由 `settlement_checker.py` 機械判斷）：收盤≥目標→success | 收盤≤停損→fail | 都沒觸→holding | 滿10日→收盤 vs 推薦價
 
 **持股壓力等級**：
 
@@ -826,6 +830,12 @@ python3 scripts/holdings_pressure_analysis.py [停損股...]
 ---
 
 ### 🔴 Step 4: 更新 predictions.json（強制）
+
+```bash
+python3 scripts/update_predictions.py --date $(date +%Y-%m-%d)
+```
+
+腳本自動執行：從 tracking.json 讀取結算結果 → 更新 predictions.json 對應項目 → 新增今日推薦 → 重算頂層統計
 
 每日 key=日期，包含 `predictions[]`（symbol/name/recommend_price/target_price/stop_loss/result/settled_date/settled_price/holding_days）
 - result：`"success"` / `"fail"` / `"holding"`（holding 不計入準確率）
