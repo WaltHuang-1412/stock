@@ -43,6 +43,20 @@ SCRIPT_DIR = Path(__file__).parent
 PROJECT_DIR = SCRIPT_DIR.parent
 DATA_DIR = PROJECT_DIR / 'data'
 
+# 直接 import chip_analysis / reversal_alert（避免 subprocess 開銷 + 共享快取）
+sys.path.insert(0, str(SCRIPT_DIR))
+try:
+    from chip_analysis import analyze_chip_history as _analyze_chip_history
+    HAS_CHIP_ANALYSIS = True
+except ImportError:
+    HAS_CHIP_ANALYSIS = False
+
+try:
+    from reversal_alert import detect_reversal as _detect_reversal
+    HAS_REVERSAL_ALERT = True
+except ImportError:
+    HAS_REVERSAL_ALERT = False
+
 # 超大型股排除（市值太大，不在TOP50不代表沒人買，意義不同）
 MEGA_CAP_EXCLUDE = {
     '2330',  # 台積電
@@ -492,7 +506,7 @@ def scan(target_date_str, lookback=7):
     print("=" * 70)
 
     # ─── Step 7: 自動對候選跑 chip_analysis + reversal_alert ───
-    # 排程 Claude 會跳過手動跑 chip 的步驟，所以在腳本內直接做
+    # 使用直接 import（共享 twse_institutional_cache 記憶體快取，避免重複 API 呼叫）
     chip_results = {}
     top_candidates = deduped_pre[:10]
     if top_candidates:
@@ -501,94 +515,60 @@ def scan(target_date_str, lookback=7):
         print(f"🔬 自動對 {len(codes_to_check)} 檔候選執行 chip_analysis + reversal_alert")
         print("-" * 60)
 
-        # 呼叫 chip_analysis.py（用 subprocess 避免 import 衝突）
-        import subprocess
-        try:
-            chip_cmd = [sys.executable, str(SCRIPT_DIR / 'chip_analysis.py')] + codes_to_check + ['--days', '10']
-            chip_proc = subprocess.run(chip_cmd, capture_output=True, text=True, timeout=120, encoding='utf-8', errors='replace')
-            chip_output = chip_proc.stdout
+        import io
+        from contextlib import redirect_stdout, redirect_stderr
 
-            # 解析 chip_analysis 輸出：提取每檔的關鍵數據
-            current_code = None
-            for line in chip_output.split('\n'):
-                # 偵測股票代號開始
-                if '籌碼分析' in line and '(' in line:
-                    # 格式：📊 XXXXXX(CODE) 籌碼分析
-                    for code in codes_to_check:
-                        if f'({code})' in line:
-                            current_code = code
-                            chip_results[code] = {
-                                'cumulative_total': None, 'buy_days': None, 'sell_days': None,
-                                'momentum_pct': None, 'consecutive_buy': None,
-                                'cumulative_foreign': None, 'reversal_level': None,
-                                'exclusion_reason': None,
-                            }
-                            break
-                if current_code and current_code in chip_results:
-                    r = chip_results[current_code]
-                    if '累計淨買超（三大法人）' in line:
-                        try:
-                            val = line.split(':')[1].strip().replace(',', '').replace('+', '').replace('張', '').replace('K', '000').strip()
-                            r['cumulative_total'] = int(float(val))
-                        except Exception as e:
-                            print(f"[catalyst_theme] Failed to parse cumulative_total: {e}", file=sys.stderr)
-                    elif '累計淨買超（外資）' in line:
-                        try:
-                            val = line.split(':')[1].strip().replace(',', '').replace('+', '').replace('張', '').replace('K', '000').strip()
-                            r['cumulative_foreign'] = int(float(val))
-                        except Exception as e:
-                            print(f"[catalyst_theme] Failed to parse cumulative_foreign: {e}", file=sys.stderr)
-                    elif '買超天數' in line and '賣超天數' not in line:
-                        try:
-                            r['buy_days'] = int(line.split(':')[1].strip().split()[0])
-                        except Exception as e:
-                            print(f"[catalyst_theme] Failed to parse buy_days: {e}", file=sys.stderr)
-                    elif '賣超天數' in line:
-                        try:
-                            r['sell_days'] = int(line.split(':')[1].strip().split()[0])
-                        except Exception as e:
-                            print(f"[catalyst_theme] Failed to parse sell_days: {e}", file=sys.stderr)
-                    elif '真連續買超' in line:
-                        try:
-                            r['consecutive_buy'] = int(line.split(':')[1].strip().split()[0])
-                        except Exception as e:
-                            print(f"[catalyst_theme] Failed to parse consecutive_buy: {e}", file=sys.stderr)
-                    elif '動能變化' in line:
-                        try:
-                            val = line.split(':')[1].strip().replace('%', '').replace('+', '')
-                            r['momentum_pct'] = float(val)
-                        except: pass
-        except Exception as e:
-            print(f"  ⚠️ chip_analysis 執行失敗: {e}")
+        for code in codes_to_check:
+            chip_results[code] = {
+                'cumulative_total': None, 'buy_days': None, 'sell_days': None,
+                'momentum_pct': None, 'consecutive_buy': None,
+                'cumulative_foreign': None, 'reversal_level': None,
+                'exclusion_reason': None,
+            }
 
-        # 呼叫 reversal_alert.py
-        try:
-            rev_cmd = [sys.executable, str(SCRIPT_DIR / 'reversal_alert.py')] + codes_to_check
-            rev_proc = subprocess.run(rev_cmd, capture_output=True, text=True, timeout=120, encoding='utf-8', errors='replace')
-            rev_output = rev_proc.stdout
+        # chip_analysis：直接呼叫，suppress print 輸出
+        if HAS_CHIP_ANALYSIS:
+            for code in codes_to_check:
+                try:
+                    buf = io.StringIO()
+                    with redirect_stdout(buf), redirect_stderr(io.StringIO()):
+                        chip = _analyze_chip_history(code, 10)
+                    if chip:
+                        summary = chip.get('summary', {})
+                        momentum = chip.get('momentum') or {}
+                        chip_results[code].update({
+                            'cumulative_total': summary.get('total_net'),
+                            'cumulative_foreign': summary.get('foreign_net'),
+                            'buy_days': summary.get('buy_days'),
+                            'sell_days': summary.get('sell_days'),
+                            'consecutive_buy': summary.get('consecutive_buy'),
+                            'momentum_pct': momentum.get('change_pct'),
+                        })
+                except Exception as e:
+                    print(f"  ⚠️ chip_analysis 失敗 {code}: {e}", file=sys.stderr)
+        else:
+            print("  ⚠️ chip_analysis 模組不可用", file=sys.stderr)
 
-            # 解析 reversal_alert 輸出
-            current_code = None
-            for line in rev_output.split('\n'):
-                for code in codes_to_check:
-                    if f'({code})' in line and '分析' in line:
-                        current_code = code
-                        break
-                if current_code and current_code in chip_results:
-                    if 'Level 4' in line:
-                        chip_results[current_code]['reversal_level'] = 'Level 4'
-                    elif 'Level 3' in line:
-                        chip_results[current_code]['reversal_level'] = 'Level 3'
-                    elif 'Level 2' in line:
-                        chip_results[current_code]['reversal_level'] = 'Level 2'
-                    elif 'Level 1' in line:
-                        chip_results[current_code]['reversal_level'] = 'Level 1'
-                    elif 'Level 0' in line or '加速買超' in line or '籌碼超健康' in line or '籌碼健康' in line:
-                        chip_results[current_code]['reversal_level'] = 'Level 0'
-                    if '數據不足' in line:
-                        chip_results[current_code]['reversal_level'] = 'unknown'
-        except Exception as e:
-            print(f"  ⚠️ reversal_alert 執行失敗: {e}")
+        # reversal_alert：直接呼叫，suppress print 輸出
+        if HAS_REVERSAL_ALERT:
+            for code in codes_to_check:
+                try:
+                    buf = io.StringIO()
+                    with redirect_stdout(buf), redirect_stderr(io.StringIO()):
+                        rev = _detect_reversal(code, days=10)
+                    if rev:
+                        wl = rev.get('warning_level', -1)
+                        al = rev.get('alert_level', 'unknown')
+                        if al == 'unknown' or wl == -1:
+                            chip_results[code]['reversal_level'] = 'unknown'
+                        elif wl == 0:
+                            chip_results[code]['reversal_level'] = 'Level 0'
+                        else:
+                            chip_results[code]['reversal_level'] = f'Level {wl}'
+                except Exception as e:
+                    print(f"  ⚠️ reversal_alert 失敗 {code}: {e}", file=sys.stderr)
+        else:
+            print("  ⚠️ reversal_alert 模組不可用", file=sys.stderr)
 
         # 判定排除原因
         for code, r in chip_results.items():

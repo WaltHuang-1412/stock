@@ -80,40 +80,54 @@ def fetch_institutional_data(stock_code, date):
         return cached_get_institutional(stock_code, date)
 
     # fallback：直接呼叫 API（快取模組不可用時）
-    url = f'https://www.twse.com.tw/rwd/en/fund/T86?date={date}&selectType=ALL&response=json'
-
+    # 使用中文版 API + 動態欄位對應，與 twse_institutional_cache.py 一致
+    url = f'https://www.twse.com.tw/rwd/zh/fund/T86?date={date}&selectType=ALL&response=json'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
         'Accept': 'application/json',
     }
-
     try:
         response = requests.get(url, headers=headers, timeout=15, verify=False)
-        data = response.json()
-
-        if 'data' not in data or not data['data']:
+        raw = response.json()
+        if 'data' not in raw or not raw['data']:
             return None
 
-        for row in data['data']:
-            if row[0].strip() == stock_code:
-                foreign = int(row[3].replace(',', '')) // 1000
-                trust = int(row[9].replace(',', '')) // 1000
-                dealer = int(row[10].replace(',', '')) // 1000
-                total = int(row[17].replace(',', '')) // 1000
-                name = row[1].strip() if len(row) > 1 else stock_code
+        # 動態欄位對應（不硬寫索引）
+        fields = raw.get('fields', [])
+        field_map = {}
+        for i, f in enumerate(fields):
+            if '證券代號' in f:
+                field_map['code'] = i
+            elif '證券名稱' in f:
+                field_map['name'] = i
+            elif '外陸資買賣超股數(不含外資自營商)' in f:
+                field_map['foreign'] = i
+            elif '投信買賣超股數' in f:
+                field_map['trust'] = i
+            elif f == '自營商買賣超股數':
+                field_map['dealer'] = i
+            elif '三大法人買賣超股數' in f:
+                field_map['total'] = i
 
+        idx_code = field_map.get('code', 0)
+        idx_name = field_map.get('name', 1)
+        idx_foreign = field_map.get('foreign', 4)
+        idx_trust = field_map.get('trust', 10)
+        idx_dealer = field_map.get('dealer', 11)
+        idx_total = field_map.get('total', 18)
+
+        for row in raw['data']:
+            if row[idx_code].strip() == stock_code:
                 return {
                     'date': date,
-                    'name': name,
-                    'foreign': foreign,
-                    'trust': trust,
-                    'dealer': dealer,
-                    'total': total
+                    'name': row[idx_name].strip() if len(row) > idx_name else stock_code,
+                    'foreign': int(row[idx_foreign].replace(',', '')) // 1000,
+                    'trust': int(row[idx_trust].replace(',', '')) // 1000,
+                    'dealer': int(row[idx_dealer].replace(',', '')) // 1000,
+                    'total': int(row[idx_total].replace(',', '')) // 1000,
                 }
-
         return None
-
-    except Exception as e:
+    except Exception:
         return None
 
 

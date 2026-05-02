@@ -30,6 +30,11 @@ try:
 except ImportError:
     USE_CROSS_PLATFORM = False
 
+try:
+    from twse_institutional_cache import get_institutional_data as cached_get_institutional
+    HAS_CACHE = True
+except ImportError:
+    HAS_CACHE = False
 
 from yahoo_finance_api import get_history
 
@@ -63,7 +68,7 @@ def get_stock_data(stock_code, days=20):
 
 
 def get_institutional_data(stock_code, days=5):
-    """獲取近N天法人數據"""
+    """獲取近N天法人數據（優先使用 twse_institutional_cache）"""
     if USE_CROSS_PLATFORM:
         current = get_tw_now()
     else:
@@ -76,38 +81,66 @@ def get_institutional_data(stock_code, days=5):
     while len(history) < days and attempts < max_attempts:
         if current.weekday() < 5:  # 週一到週五
             date_str = current.strftime('%Y%m%d')
-            url = f'https://www.twse.com.tw/rwd/en/fund/T86?date={date_str}&selectType=ALL&response=json'
 
-            headers = {
-                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
-                'Accept': 'application/json',
-            }
+            if HAS_CACHE:
+                data = cached_get_institutional(stock_code, date_str)
+            else:
+                data = _fetch_t86_fallback(stock_code, date_str)
 
-            try:
-                response = requests.get(url, headers=headers, timeout=15, verify=False)
-                data = response.json()
-
-                if 'data' in data and data['data']:
-                    for row in data['data']:
-                        if row[0].strip() == stock_code:
-                            foreign = int(row[3].replace(',', '')) // 1000
-                            trust = int(row[9].replace(',', '')) // 1000
-                            total = int(row[17].replace(',', '')) // 1000
-
-                            history.append({
-                                'date': date_str,
-                                'total': total,
-                                'foreign': foreign,
-                                'trust': trust
-                            })
-                            break
-            except Exception as e:
-                print(f"[exit_signal_checker] Failed to fetch T86 data for {stock_code} on {date_str}: {e}", file=sys.stderr)
+            if data:
+                history.append({
+                    'date': date_str,
+                    'total': data['total'],
+                    'foreign': data['foreign'],
+                    'trust': data['trust'],
+                })
 
         current -= timedelta(days=1)
         attempts += 1
 
     return history
+
+
+def _fetch_t86_fallback(stock_code, date_str):
+    """T86 直接查詢（cache 不可用時的 fallback，使用中文版 + 動態欄位對應）"""
+    import requests as _req
+    import warnings as _w
+    _w.filterwarnings('ignore')
+
+    url = f'https://www.twse.com.tw/rwd/zh/fund/T86?date={date_str}&selectType=ALL&response=json'
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)', 'Accept': 'application/json'}
+    try:
+        raw = _req.get(url, headers=headers, timeout=15, verify=False).json()
+        if 'data' not in raw or not raw['data']:
+            return None
+
+        fields = raw.get('fields', [])
+        field_map = {}
+        for i, f in enumerate(fields):
+            if '證券代號' in f:
+                field_map['code'] = i
+            elif '外陸資買賣超股數(不含外資自營商)' in f:
+                field_map['foreign'] = i
+            elif '投信買賣超股數' in f:
+                field_map['trust'] = i
+            elif '三大法人買賣超股數' in f:
+                field_map['total'] = i
+
+        idx_code = field_map.get('code', 0)
+        idx_foreign = field_map.get('foreign', 4)
+        idx_trust = field_map.get('trust', 10)
+        idx_total = field_map.get('total', 18)
+
+        for row in raw['data']:
+            if row[idx_code].strip() == stock_code:
+                return {
+                    'foreign': int(row[idx_foreign].replace(',', '')) // 1000,
+                    'trust': int(row[idx_trust].replace(',', '')) // 1000,
+                    'total': int(row[idx_total].replace(',', '')) // 1000,
+                }
+    except Exception as e:
+        print(f"[exit_signal_checker] T86 fallback failed for {stock_code} {date_str}: {e}", file=sys.stderr)
+    return None
 
 
 def calculate_ma(prices, period):

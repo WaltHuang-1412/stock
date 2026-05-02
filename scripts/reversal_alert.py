@@ -68,34 +68,47 @@ def get_institutional_data(stock_code, date_str):
     if HAS_CACHE:
         return cached_get_institutional(stock_code, date_str)
 
-    # fallback：直接呼叫 API
+    # fallback：直接呼叫 API（使用中文版 + 動態欄位對應）
     import warnings
     warnings.filterwarnings('ignore')
 
-    url = f'https://www.twse.com.tw/rwd/en/fund/T86?date={date_str}&selectType=ALL&response=json'
-
+    url = f'https://www.twse.com.tw/rwd/zh/fund/T86?date={date_str}&selectType=ALL&response=json'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
         'Accept': 'application/json',
     }
-
     try:
         r = requests.get(url, headers=headers, timeout=15, verify=False)
-        data = r.json()
-        if 'data' not in data or not data['data']:
+        raw = r.json()
+        if 'data' not in raw or not raw['data']:
             return None
-        for row in data['data']:
-            if row[0].strip() == stock_code:
-                foreign = int(row[3].replace(',', '')) // 1000
-                trust = int(row[9].replace(',', '')) // 1000
-                total = int(row[17].replace(',', '')) // 1000
+
+        fields = raw.get('fields', [])
+        field_map = {}
+        for i, f in enumerate(fields):
+            if '證券代號' in f:
+                field_map['code'] = i
+            elif '外陸資買賣超股數(不含外資自營商)' in f:
+                field_map['foreign'] = i
+            elif '投信買賣超股數' in f:
+                field_map['trust'] = i
+            elif '三大法人買賣超股數' in f:
+                field_map['total'] = i
+
+        idx_code = field_map.get('code', 0)
+        idx_foreign = field_map.get('foreign', 4)
+        idx_trust = field_map.get('trust', 10)
+        idx_total = field_map.get('total', 18)
+
+        for row in raw['data']:
+            if row[idx_code].strip() == stock_code:
                 return {
                     'date': date_str,
-                    'foreign': foreign,
-                    'trust': trust,
-                    'total': total
+                    'foreign': int(row[idx_foreign].replace(',', '')) // 1000,
+                    'trust': int(row[idx_trust].replace(',', '')) // 1000,
+                    'total': int(row[idx_total].replace(',', '')) // 1000,
                 }
-    except Exception as e:
+    except Exception:
         pass
     return None
 
