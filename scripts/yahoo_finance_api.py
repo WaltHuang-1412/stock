@@ -6,7 +6,7 @@ Yahoo Finance API 替代方案（不依賴 yfinance）
 - 獲取即時股價
 - 獲取5日漲幅
 - 獲取歷史數據
-- 適用於 Python 3.15+
+- 自動支援上市 (.TW) 和上櫃 (.TWO)
 
 使用方式：
     from yahoo_finance_api import get_current_price, get_5day_change, get_history
@@ -15,6 +15,33 @@ Yahoo Finance API 替代方案（不依賴 yfinance）
 import requests
 import json
 from datetime import datetime, timedelta
+
+
+HEADERS = {'User-Agent': 'Mozilla/5.0'}
+
+
+def _fetch_chart(code, interval='1d', range_str='1d'):
+    """
+    底層查詢：自動嘗試 .TW（上市）和 .TWO（上櫃）
+
+    Returns:
+        dict: Yahoo Finance chart result，失敗返回 None
+    """
+    for suffix in ['.TW', '.TWO']:
+        try:
+            url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}{suffix}?interval={interval}&range={range_str}'
+            response = requests.get(url, headers=HEADERS, timeout=10)
+            data = response.json()
+
+            if 'chart' in data and 'result' in data['chart'] and data['chart']['result']:
+                result = data['chart']['result'][0]
+                # 確認有實際資料（不是空殼）
+                if 'meta' in result and result['meta'].get('regularMarketPrice') is not None:
+                    return result
+        except Exception:
+            pass
+
+    return None
 
 
 def get_current_price(code):
@@ -27,19 +54,9 @@ def get_current_price(code):
     Returns:
         float: 現價，失敗返回 None
     """
-    try:
-        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW?interval=1d&range=1d'
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers, timeout=10)
-        data = response.json()
-
-        if 'chart' in data and 'result' in data['chart'] and data['chart']['result']:
-            result = data['chart']['result'][0]
-            if 'meta' in result and 'regularMarketPrice' in result['meta']:
-                return result['meta']['regularMarketPrice']
-    except Exception as e:
-        print(f"❌ 查詢 {code} 現價失敗: {e}")
-
+    result = _fetch_chart(code, range_str='1d')
+    if result:
+        return result['meta'].get('regularMarketPrice')
     return None
 
 
@@ -53,30 +70,23 @@ def get_previous_close(code):
     Returns:
         float: 昨收價，失敗返回 None
     """
+    result = _fetch_chart(code, range_str='2d')
+    if not result:
+        return None
+
+    # 方法1: 從meta獲取
+    prev = result.get('meta', {}).get('previousClose')
+    if prev is not None:
+        return prev
+
+    # 方法2: 從歷史收盤價獲取
     try:
-        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW?interval=1d&range=2d'
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers, timeout=10)
-        data = response.json()
-
-        if 'chart' in data and 'result' in data['chart'] and data['chart']['result']:
-            result = data['chart']['result'][0]
-
-            # 方法1: 從meta獲取
-            if 'meta' in result and 'previousClose' in result['meta']:
-                prev = result['meta']['previousClose']
-                if prev is not None:
-                    return prev
-
-            # 方法2: 從歷史收盤價獲取
-            if 'indicators' in result and 'quote' in result['indicators']:
-                quote = result['indicators']['quote'][0]
-                if 'close' in quote:
-                    closes = [c for c in quote['close'] if c is not None]
-                    if len(closes) >= 2:
-                        return closes[-2]  # 倒數第二天的收盤價
-    except Exception as e:
-        print(f"❌ 查詢 {code} 昨收價失敗: {e}")
+        quote = result['indicators']['quote'][0]
+        closes = [c for c in quote['close'] if c is not None]
+        if len(closes) >= 2:
+            return closes[-2]
+    except (KeyError, IndexError):
+        pass
 
     return None
 
@@ -91,28 +101,19 @@ def get_5day_change(code):
     Returns:
         float: 5日漲幅百分比，失敗返回 None
     """
+    result = _fetch_chart(code, range_str='5d')
+    if not result:
+        return None
+
     try:
-        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW?interval=1d&range=5d'
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers, timeout=10)
-        data = response.json()
-
-        if 'chart' in data and 'result' in data['chart'] and data['chart']['result']:
-            result = data['chart']['result'][0]
-
-            # 獲取收盤價數據
-            if 'indicators' in result and 'quote' in result['indicators']:
-                quote = result['indicators']['quote'][0]
-                if 'close' in quote:
-                    closes = [c for c in quote['close'] if c is not None]
-
-                    if len(closes) >= 2:
-                        first = closes[0]
-                        last = closes[-1]
-                        pct = (last - first) / first * 100
-                        return pct
-    except Exception as e:
-        print(f"❌ 查詢 {code} 5日漲幅失敗: {e}")
+        quote = result['indicators']['quote'][0]
+        closes = [c for c in quote['close'] if c is not None]
+        if len(closes) >= 2:
+            first = closes[0]
+            last = closes[-1]
+            return (last - first) / first * 100
+    except (KeyError, IndexError):
+        pass
 
     return None
 
@@ -127,45 +128,28 @@ def get_history(code, period='5d', interval='1d'):
         interval: 時間間隔 ('1m', '2m', '5m', '15m', '30m', '60m', '90m', '1d', '5d', '1wk', '1mo', '3mo')
 
     Returns:
-        dict: {
-            'timestamps': [...],
-            'opens': [...],
-            'highs': [...],
-            'lows': [...],
-            'closes': [...],
-            'volumes': [...]
-        }
+        dict: {timestamps, opens, highs, lows, closes, volumes}
         失敗返回 None
     """
+    result = _fetch_chart(code, interval=interval, range_str=period)
+    if not result:
+        return None
+
+    history = {}
+    if 'timestamp' in result:
+        history['timestamps'] = result['timestamp']
+
     try:
-        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW?interval={interval}&range={period}'
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers, timeout=10)
-        data = response.json()
+        quote = result['indicators']['quote'][0]
+        history['opens'] = quote.get('open', [])
+        history['highs'] = quote.get('high', [])
+        history['lows'] = quote.get('low', [])
+        history['closes'] = quote.get('close', [])
+        history['volumes'] = quote.get('volume', [])
+    except (KeyError, IndexError):
+        pass
 
-        if 'chart' in data and 'result' in data['chart'] and data['chart']['result']:
-            result = data['chart']['result'][0]
-
-            history = {}
-
-            # 時間戳
-            if 'timestamp' in result:
-                history['timestamps'] = result['timestamp']
-
-            # OHLCV數據
-            if 'indicators' in result and 'quote' in result['indicators']:
-                quote = result['indicators']['quote'][0]
-                history['opens'] = quote.get('open', [])
-                history['highs'] = quote.get('high', [])
-                history['lows'] = quote.get('low', [])
-                history['closes'] = quote.get('close', [])
-                history['volumes'] = quote.get('volume', [])
-
-            return history
-    except Exception as e:
-        print(f"❌ 查詢 {code} 歷史數據失敗: {e}")
-
-    return None
+    return history
 
 
 def get_volume_ratio(code):
@@ -178,30 +162,20 @@ def get_volume_ratio(code):
     Returns:
         float: 量比，失敗返回 None
     """
+    result = _fetch_chart(code, range_str='6d')
+    if not result:
+        return None
+
     try:
-        # 獲取6日數據（今日+過去5日）
-        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW?interval=1d&range=6d'
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers, timeout=10)
-        data = response.json()
-
-        if 'chart' in data and 'result' in data['chart'] and data['chart']['result']:
-            result = data['chart']['result'][0]
-
-            if 'indicators' in result and 'quote' in result['indicators']:
-                quote = result['indicators']['quote'][0]
-                if 'volume' in quote:
-                    volumes = [v for v in quote['volume'] if v is not None]
-
-                    if len(volumes) >= 2:
-                        today_volume = volumes[-1]
-                        avg_5day_volume = sum(volumes[:-1]) / len(volumes[:-1])
-
-                        if avg_5day_volume > 0:
-                            ratio = today_volume / avg_5day_volume
-                            return ratio
-    except Exception as e:
-        print(f"❌ 查詢 {code} 量比失敗: {e}")
+        quote = result['indicators']['quote'][0]
+        volumes = [v for v in quote['volume'] if v is not None]
+        if len(volumes) >= 2:
+            today_volume = volumes[-1]
+            avg_5day_volume = sum(volumes[:-1]) / len(volumes[:-1])
+            if avg_5day_volume > 0:
+                return today_volume / avg_5day_volume
+    except (KeyError, IndexError):
+        pass
 
     return None
 
@@ -214,53 +188,36 @@ def get_stock_info(code):
         code: 股票代號（如 '2330'）
 
     Returns:
-        dict: {
-            'current_price': float,
-            'prev_close': float,
-            'change_pct': float,
-            'volume': int,
-            'avg_5day_volume': int,
-            'volume_ratio': float
-        }
+        dict: {current_price, prev_close, change_pct, volume, avg_5day_volume, volume_ratio}
         失敗返回 None
     """
+    result = _fetch_chart(code, range_str='6d')
+    if not result:
+        return None
+
+    info = {}
+
+    # 現價和昨收
+    meta = result.get('meta', {})
+    info['current_price'] = meta.get('regularMarketPrice')
+    info['prev_close'] = meta.get('previousClose')
+
+    if info['current_price'] and info['prev_close']:
+        info['change_pct'] = (info['current_price'] - info['prev_close']) / info['prev_close'] * 100
+
+    # 成交量數據
     try:
-        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW?interval=1d&range=6d'
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers, timeout=10)
-        data = response.json()
+        quote = result['indicators']['quote'][0]
+        volumes = [v for v in quote['volume'] if v is not None]
+        if len(volumes) >= 2:
+            info['volume'] = volumes[-1]
+            info['avg_5day_volume'] = int(sum(volumes[:-1]) / len(volumes[:-1]))
+            if info['avg_5day_volume'] > 0:
+                info['volume_ratio'] = volumes[-1] / info['avg_5day_volume']
+    except (KeyError, IndexError):
+        pass
 
-        if 'chart' in data and 'result' in data['chart'] and data['chart']['result']:
-            result = data['chart']['result'][0]
-
-            info = {}
-
-            # 現價和昨收
-            if 'meta' in result:
-                info['current_price'] = result['meta'].get('regularMarketPrice')
-                info['prev_close'] = result['meta'].get('previousClose')
-
-                if info['current_price'] and info['prev_close']:
-                    info['change_pct'] = (info['current_price'] - info['prev_close']) / info['prev_close'] * 100
-
-            # 成交量數據
-            if 'indicators' in result and 'quote' in result['indicators']:
-                quote = result['indicators']['quote'][0]
-                if 'volume' in quote:
-                    volumes = [v for v in quote['volume'] if v is not None]
-
-                    if len(volumes) >= 2:
-                        info['volume'] = volumes[-1]
-                        info['avg_5day_volume'] = int(sum(volumes[:-1]) / len(volumes[:-1]))
-
-                        if info['avg_5day_volume'] > 0:
-                            info['volume_ratio'] = volumes[-1] / info['avg_5day_volume']
-
-            return info
-    except Exception as e:
-        print(f"❌ 查詢 {code} 完整資訊失敗: {e}")
-
-    return None
+    return info
 
 
 # 測試函數
@@ -269,35 +226,24 @@ if __name__ == '__main__':
     print("Yahoo Finance API 測試")
     print("=" * 60)
 
-    test_code = '2330'  # 台積電
+    # 測試上市股
+    for test_code, label in [('2330', '台積電(上市)'), ('6488', '環球晶(上櫃)')]:
+        print(f"\n測試：{test_code} {label}")
+        print("-" * 60)
 
-    print(f"\n測試股票：{test_code}")
-    print("-" * 60)
+        price = get_current_price(test_code)
+        print(f"  現價：{price}")
 
-    # 測試現價
-    price = get_current_price(test_code)
-    print(f"現價：{price}")
+        prev = get_previous_close(test_code)
+        print(f"  昨收：{prev}")
 
-    # 測試昨收
-    prev = get_previous_close(test_code)
-    print(f"昨收：{prev}")
+        change = get_5day_change(test_code)
+        if change is not None:
+            print(f"  5日漲幅：{change:+.2f}%")
 
-    # 測試5日漲幅
-    change = get_5day_change(test_code)
-    if change is not None:
-        print(f"5日漲幅：{change:+.2f}%")
-
-    # 測試量比
-    ratio = get_volume_ratio(test_code)
-    if ratio is not None:
-        print(f"量比：{ratio:.2f}x")
-
-    # 測試完整資訊
-    print("\n完整資訊：")
-    info = get_stock_info(test_code)
-    if info:
-        for key, value in info.items():
-            print(f"  {key}: {value}")
+        ratio = get_volume_ratio(test_code)
+        if ratio is not None:
+            print(f"  量比：{ratio:.2f}x")
 
     print("\n" + "=" * 60)
     print("測試完成")

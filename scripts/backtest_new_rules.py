@@ -21,6 +21,9 @@ from datetime import datetime, timedelta
 from collections import defaultdict
 import requests
 
+sys.path.insert(0, str(Path(__file__).parent))
+from yahoo_finance_api import get_history
+
 os.environ['PYTHONUTF8'] = '1'
 
 if sys.platform == 'win32':
@@ -218,19 +221,16 @@ def get_5d_change(code, rec_date):
     """取得近 5 日漲跌幅"""
     if code not in _price_cache:
         try:
-            url = f"https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW"
-            params = {"interval": "1d", "range": "30d"}
-            r = requests.get(url, params=params, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
-            data = r.json()
-            result = data['chart']['result'][0]
-            timestamps = result['timestamp']
-            closes = result['indicators']['quote'][0]['close']
-            prices = {}
-            for ts, close in zip(timestamps, closes):
-                if close is not None:
-                    dt = datetime.fromtimestamp(ts)
-                    prices[dt.strftime("%Y-%m-%d")] = close
-            _price_cache[code] = prices
+            history = get_history(code, period='30d', interval='1d')
+            if not history or 'timestamps' not in history:
+                _price_cache[code] = {}
+            else:
+                prices = {}
+                for ts, close in zip(history['timestamps'], history['closes']):
+                    if close is not None:
+                        dt = datetime.fromtimestamp(ts)
+                        prices[dt.strftime("%Y-%m-%d")] = close
+                _price_cache[code] = prices
         except Exception:
             _price_cache[code] = {}
 

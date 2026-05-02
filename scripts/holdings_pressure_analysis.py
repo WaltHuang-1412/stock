@@ -4,9 +4,11 @@
 使用方式：python scripts/holdings_pressure_analysis.py
 """
 
+import sys
 import urllib.request
 import json
 import ssl
+from pathlib import Path
 from datetime import datetime
 
 def get_current_holdings():
@@ -32,14 +34,15 @@ def get_current_holdings():
         elif 'buy_price:' in line and current_holding:
             try:
                 current_holding['cost'] = float(line.split(':')[1].strip().split('#')[0].strip())
-            except:
-                pass
+            except Exception as e:
+                print(f"[holdings_pressure] Failed to parse buy_price: {e}", file=sys.stderr)
 
         elif 'quantity:' in line and current_holding:
             try:
                 qty_str = line.split(':')[1].strip().split('#')[0].strip()
                 current_holding['quantity'] = int(qty_str) if qty_str else 0
-            except:
+            except Exception as e:
+                print(f"[holdings_pressure] Failed to parse quantity, defaulting to 0: {e}", file=sys.stderr)
                 current_holding['quantity'] = 0
 
     # 最後一筆
@@ -49,53 +52,19 @@ def get_current_holdings():
     return holdings
 
 def get_stock_price(stock_code):
-    """查詢即時股價"""
-    try:
-        ctx = ssl.create_default_context()
-        ctx.check_hostname = False
-        ctx.verify_mode = ssl.CERT_NONE
+    """查詢即時股價（自動支援上市/上櫃）"""
+    sys.path.insert(0, str(Path(__file__).parent))
+    from yahoo_finance_api import get_current_price, get_previous_close
 
-        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{stock_code}.TW?interval=1d&range=2d'
-        req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-
-        with urllib.request.urlopen(req, timeout=10, context=ctx) as response:
-            data = json.loads(response.read())
-
-        result = data['chart']['result'][0]
-        meta = result['meta']
-
-        current = meta.get('regularMarketPrice', meta.get('chartPreviousClose'))
-        prev = meta.get('previousClose', meta.get('chartPreviousClose'))
-
-        return current, prev
-    except:
-        return None, None
+    current = get_current_price(stock_code)
+    prev = get_previous_close(stock_code)
+    return current, prev
 
 def get_institutional_data_from_analysis():
-    """從今日盤前分析讀取法人數據"""
-    try:
-        with open('data/2026-01-20/before_market_analysis.md', 'r', encoding='utf-8') as f:
-            content = f.read()
-
-        # 簡單解析持股警示表格
-        institutional_map = {}
-
-        if '| 緯創(3231)' in content and '-62K' in content:
-            institutional_map['3231'] = -62
-        if '| 群創(3481)' in content and '-33K' in content:
-            institutional_map['3481'] = -33
-        if '| 南亞(1303)' in content and '-18K' in content:
-            institutional_map['1303'] = -18
-        if '| 台積電(2330)' in content and '-11K' in content:
-            institutional_map['2330'] = -11
-        if '| 兆豐金(2886)' in content and '-2.5K' in content:
-            institutional_map['2886'] = -2.5
-        if '| 台塑(1301)' in content and '+10K' in content:
-            institutional_map['1301'] = 10
-
-        return institutional_map
-    except:
-        return {}
+    """從最近的 chip_analysis 或 tracking 讀取法人數據"""
+    # 這個函數原本硬寫了特定日期和特定股票數據，已不可用
+    # 法人數據應在呼叫端透過 chip_analysis.py 取得，此處回傳空值
+    return {}
 
 def analyze_pressure(cost, current_price, institutional_flow, profit_pct):
     """分析出場壓力"""

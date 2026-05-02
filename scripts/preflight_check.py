@@ -26,10 +26,12 @@ sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 REPO_ROOT = Path(__file__).parent.parent
 MARKET_INTEL_ROOT = REPO_ROOT.parent / 'market-intelligence'
-HOLIDAYS_FILE = REPO_ROOT / 'data' / 'holidays.json'
 
 MAX_SIGNAL_AGE_DAYS = 2
 MAX_TRACK_B_SKIP_DAYS = 3
+
+sys.path.insert(0, str(REPO_ROOT / 'scripts'))
+from check_market_status import is_tw_trading_day as _dynamic_is_tw_trading_day
 
 # ─────────────────────────────────────────────────────────────────
 # 工具函式
@@ -38,32 +40,14 @@ MAX_TRACK_B_SKIP_DAYS = 3
 def get_today():
     return datetime.today().strftime('%Y-%m-%d')
 
-def load_holidays():
-    tw_holidays = set()
-    if not HOLIDAYS_FILE.exists():
-        return tw_holidays
-    with open(HOLIDAYS_FILE, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-    for year_dates in data.get('holidays', {}).values():
-        for h in year_dates:
-            tw_holidays.add(h['date'])
-    return tw_holidays
-
 def is_trading_day(date_str, tw_holidays=None):
-    if tw_holidays is None:
-        tw_holidays = load_holidays()
-    d = datetime.strptime(date_str, '%Y-%m-%d')
-    if d.weekday() >= 5:
-        return False
-    return date_str not in tw_holidays
+    return _dynamic_is_tw_trading_day(date_str)
 
 def next_trading_day(date_str, tw_holidays=None):
-    if tw_holidays is None:
-        tw_holidays = load_holidays()
     d = datetime.strptime(date_str, '%Y-%m-%d') + timedelta(days=1)
     for _ in range(14):
         ds = d.strftime('%Y-%m-%d')
-        if is_trading_day(ds, tw_holidays):
+        if is_trading_day(ds):
             return ds
         d += timedelta(days=1)
     return None
@@ -375,8 +359,7 @@ def check_d10_settlement(today):
 
 def check_tomorrow_date(today):
     """明日推薦日期必須是下一個交易日"""
-    tw_holidays = load_holidays()
-    expected_next = next_trading_day(today, tw_holidays)
+    expected_next = next_trading_day(today)
     if not expected_next:
         return [issue('WARN', '無法計算下一個交易日，請手動確認明日推薦日期')]
 

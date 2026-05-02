@@ -42,25 +42,26 @@ import xml.etree.ElementTree as ET
 import warnings
 warnings.filterwarnings('ignore')
 
-# 重點股票名稱對照（用於標註）
-STOCK_NAMES = {
-    # 半導體
-    '2330': '台積電', '2303': '聯電', '2454': '聯發科', '3711': '日月光投控',
-    '2379': '瑞昱', '3034': '聯詠', '6770': '力積電', '2408': '南亞科',
-    '2344': '華邦電', '2337': '旺宏',
-    # 電子
-    '2317': '鴻海', '2382': '廣達', '3231': '緯創', '2357': '華碩',
-    '3037': '欣興', '3189': '景碩', '8046': '南電', '6239': '力成',
-    # 金融
-    '2881': '富邦金', '2882': '國泰金', '2883': '凱基金', '2884': '玉山金',
-    '2885': '元大金', '2886': '兆豐金', '2887': '台新金', '2891': '中信金',
-    '2890': '永豐金', '2892': '第一金',
-    # 傳產
-    '1301': '台塑', '1303': '南亞', '1326': '台化', '2002': '中鋼',
-    '2603': '長榮', '2609': '陽明', '2615': '萬海',
-    # 其他
-    '3481': '群創', '2409': '友達', '8150': '南茂'
-}
+# 重點股票名稱對照（從 industry_chains.json 動態載入）
+from pathlib import Path
+
+def _load_stock_names():
+    """從 industry_chains.json 建立 code→name 對照表"""
+    chains_file = Path(__file__).parent.parent / 'data' / 'industry_chains.json'
+    names = {}
+    try:
+        with open(chains_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        for ind in data.get('industries', {}).values():
+            for tier in ind.get('tiers', {}).values():
+                for s in tier.get('stocks', []):
+                    if s.get('code') and s.get('name'):
+                        names[s['code']] = s['name']
+    except Exception:
+        pass
+    return names
+
+STOCK_NAMES = _load_stock_names()
 
 
 def get_twse_news():

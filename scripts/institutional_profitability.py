@@ -21,7 +21,9 @@ import time
 from pathlib import Path
 from datetime import datetime, timedelta
 from collections import defaultdict
-import requests
+
+sys.path.insert(0, str(Path(__file__).parent))
+from yahoo_finance_api import get_history
 
 if sys.platform == 'win32':
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
@@ -71,19 +73,14 @@ def fetch_prices(stock_code, days=60):
     if stock_code in _price_cache:
         return _price_cache[stock_code]
 
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{stock_code}.TW"
-    params = {"interval": "1d", "range": f"{days}d"}
-    headers = {"User-Agent": "Mozilla/5.0"}
-
     try:
-        r = requests.get(url, params=params, headers=headers, timeout=15)
-        data = r.json()
-        result = data['chart']['result'][0]
-        timestamps = result['timestamp']
-        closes = result['indicators']['quote'][0]['close']
+        history = get_history(stock_code, period=f'{days}d', interval='1d')
+        if not history or 'timestamps' not in history:
+            _price_cache[stock_code] = {}
+            return {}
 
         prices = {}
-        for ts, close in zip(timestamps, closes):
+        for ts, close in zip(history['timestamps'], history['closes']):
             if close is not None:
                 dt = datetime.fromtimestamp(ts)
                 date_str = dt.strftime("%Y%m%d")

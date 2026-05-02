@@ -5,7 +5,6 @@
 執行方式：python3 scripts/validate_stock_codes.py
 """
 
-import yfinance as yf
 import sys
 from pathlib import Path
 
@@ -13,21 +12,22 @@ from pathlib import Path
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
+sys.path.insert(0, str(Path(__file__).parent))
+from yahoo_finance_api import get_stock_info
+
 def validate_stock_code(code):
     """驗證單一股票代碼是否有效"""
     try:
-        ticker = f"{code}.TW"
-        stock = yf.Ticker(ticker)
-        hist = stock.history(period="1d")
+        info = get_stock_info(code)
 
-        if hist.empty:
+        if not info or info.get('current_price') is None:
             return False, "無價格數據"
 
         # 檢查是否有成交量（避免假資料）
-        if hist['Volume'].iloc[-1] == 0:
+        if info.get('volume', 0) == 0:
             return False, "無成交量"
 
-        return True, f"有效（收盤價：{hist['Close'].iloc[-1]:.2f}）"
+        return True, f"有效（收盤價：{info['current_price']:.2f}）"
 
     except Exception as e:
         return False, f"錯誤：{str(e)[:30]}..."

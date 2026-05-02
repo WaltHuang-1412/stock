@@ -193,22 +193,17 @@ def fetch_realtime_batch(stock_codes):
 
 
 def fetch_avg_volume_batch(stock_codes):
-    """用 Yahoo Finance 取得 20 日均量（回傳單位：張）"""
+    """用 Yahoo Finance 取得 20 日均量（回傳單位：張，自動支援上市/上櫃）"""
+    from yahoo_finance_api import get_history
+
     avg_volumes = {}
     for code in stock_codes:
-        try:
-            url = f"https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW"
-            r = requests.get(url, params={"interval": "1d", "range": "30d"},
-                           headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
-            data = r.json()
-            volumes = [v for v in data['chart']['result'][0]['indicators']['quote'][0]['volume'] if v]
+        hist = get_history(code, period='30d', interval='1d')
+        if hist:
+            volumes = [v for v in hist.get('volumes', []) if v]
             if len(volumes) >= 5:
-                # 排除今天（最後一天），取前 20 天均量
-                # Yahoo volume 單位是「股」，轉成「張」（/1000）
                 avg_vol_shares = sum(volumes[:-1]) / len(volumes[:-1])
                 avg_volumes[code] = avg_vol_shares / 1000  # 股→張
-        except Exception:
-            pass
         time.sleep(0.2)
 
     return avg_volumes

@@ -32,49 +32,11 @@ import urllib3
 warnings.filterwarnings('ignore')
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-# 股票名稱對照表
-STOCK_NAMES = {
-    # 半導體
-    '2330': '台積電', '2303': '聯電', '2454': '聯發科', '3711': '日月光',
-    '2408': '南亞科', '6770': '力積電', '2344': '華邦電', '2337': '旺宏',
-    '3037': '欣興', '3189': '景碩', '8150': '南茂', '5469': '瀚宇博',
-
-    # 電子
-    '2317': '鴻海', '2382': '廣達', '3231': '緯創', '2324': '仁寶',
-    '2353': '宏碁', '2356': '英業達', '2377': '微星', '2409': '友達',
-    '3481': '群創', '2327': '國巨', '8039': '台虹', '6282': '康舒',
-    '2312': '金寶', '2313': '華通', '2323': '中環', '2349': '錸德',
-    '2402': '毅嘉', '2485': '兆赫',
-
-    # 金融
-    '2882': '國泰金', '2881': '富邦金', '2886': '兆豐金', '2891': '中信金',
-    '2883': '凱基金', '2884': '玉山金', '2880': '華南金', '2885': '元大金',
-    '2887': '台新金', '2890': '永豐金', '2892': '第一金', '2888': '新光金',
-    '2801': '彰銀', '5880': '合庫金', '2867': '三商壽', '5876': '上海商銀',
-
-    # 傳產
-    '1303': '南亞', '1301': '台塑', '1326': '台化', '1314': '中石化',
-    '1101': '台泥', '1102': '亞泥', '1216': '統一', '2105': '正新',
-    '1605': '華新', '1802': '台玻', '1504': '東元',
-    '2002': '中鋼', '2014': '中鴻', '2009': '第一銅', '2027': '大成鋼',
-
-    # 航運
-    '2618': '長榮航', '2610': '華航', '2615': '萬海', '2603': '長榮',
-    '2609': '陽明', '2605': '新興', '2606': '裕民',
-
-    # 其他
-    '8110': '華東', '8422': '可寧衛', '6443': '元晶', '2371': '大同',
-    '2515': '中工',
-    '5521': '工信', '5522': '遠雄', '5871': '中租-KY', '9105': '泰金寶',
-    '9904': '寶成', '4916': '事欣科', '4927': '泰鼎', '6191': '精成科',
-    '6257': '矽格', '2329': '華泰', '2449': '京元電', '2481': '強茂',
-    '2457': '飛宏', '2498': '宏達電',
-}
 
 
 def get_stock_market_data(code):
     """
-    一次查詢取得股價、成交量、5日漲幅（Yahoo Finance range=6d）
+    一次查詢取得股價、成交量、5日漲幅（自動支援上市/上櫃）
 
     Returns:
         dict: {
@@ -84,43 +46,33 @@ def get_stock_market_data(code):
         }
         失敗返回 None
     """
-    try:
-        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{code}.TW?interval=1d&range=6d'
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers, timeout=10)
-        data = response.json()
+    from yahoo_finance_api import _fetch_chart
 
-        if 'chart' not in data or 'result' not in data['chart'] or not data['chart']['result']:
-            return None
-
-        result = data['chart']['result'][0]
-        info = {}
-
-        # 收盤價
-        if 'meta' in result and 'regularMarketPrice' in result['meta']:
-            info['close_price'] = result['meta']['regularMarketPrice']
-
-        # 成交量 + 5日漲幅
-        if 'indicators' in result and 'quote' in result['indicators']:
-            quote = result['indicators']['quote'][0]
-
-            # 成交量（最後一天）
-            if 'volume' in quote:
-                volumes = [v for v in quote['volume'] if v is not None]
-                if volumes:
-                    info['daily_volume'] = volumes[-1]
-
-            # 5日漲幅
-            if 'close' in quote:
-                closes = [c for c in quote['close'] if c is not None]
-                if len(closes) >= 2:
-                    first = closes[0]
-                    last = closes[-1]
-                    info['5day_change'] = (last - first) / first * 100
-
-        return info if 'close_price' in info else None
-    except:
+    result = _fetch_chart(code, range_str='6d')
+    if not result:
         return None
+
+    info = {}
+
+    # 收盤價
+    info['close_price'] = result.get('meta', {}).get('regularMarketPrice')
+
+    try:
+        quote = result['indicators']['quote'][0]
+
+        # 成交量（最後一天）
+        volumes = [v for v in quote.get('volume', []) if v is not None]
+        if volumes:
+            info['daily_volume'] = volumes[-1]
+
+        # 5日漲幅
+        closes = [c for c in quote.get('close', []) if c is not None]
+        if len(closes) >= 2:
+            info['5day_change'] = (closes[-1] - closes[0]) / closes[0] * 100
+    except (KeyError, IndexError):
+        pass
+
+    return info if info.get('close_price') else None
 
 
 def get_5day_change(code):
@@ -163,8 +115,8 @@ def fetch_institutional_top30(date=None):
 
     formatted_date = f'{date[:4]}/{date[4:6]}/{date[6:8]}'
 
-    # 查詢證交所 API
-    url = f'https://www.twse.com.tw/rwd/en/fund/T86?date={date}&selectType=ALL&response=json'
+    # 查詢證交所 API（中文版，含公司名稱）
+    url = f'https://www.twse.com.tw/rwd/zh/fund/T86?date={date}&selectType=ALL&response=json'
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
@@ -180,22 +132,45 @@ def fetch_institutional_top30(date=None):
             print('可能原因：非交易日或數據尚未公布')
             return None
 
+        # 動態欄位對應（不硬寫索引，用 fields 名稱查找）
+        fields = data.get('fields', [])
+        field_map = {}
+        for i, f in enumerate(fields):
+            if '證券代號' in f:
+                field_map['code'] = i
+            elif '證券名稱' in f:
+                field_map['name'] = i
+            elif '外陸資買賣超股數(不含外資自營商)' in f:
+                field_map['foreign'] = i
+            elif '投信買賣超股數' in f:
+                field_map['trust'] = i
+            elif f == '自營商買賣超股數':
+                field_map['dealer'] = i
+            elif '三大法人買賣超股數' in f:
+                field_map['total'] = i
+
+        idx_code = field_map.get('code', 0)
+        idx_name = field_map.get('name', 1)
+        idx_foreign = field_map.get('foreign', 4)
+        idx_trust = field_map.get('trust', 10)
+        idx_dealer = field_map.get('dealer', 11)
+        idx_total = field_map.get('total', 18)
+
         # 解析數據
         stocks = []
         for row in data['data']:
             try:
-                code = row[0].strip()
+                code = row[idx_code].strip()
 
                 # 只取一般股票（4碼數字，排除 ETF）
                 if not code.isdigit() or len(code) != 4 or code.startswith('0'):
                     continue
 
-                foreign = int(row[3].replace(',', ''))   # 外資買賣超
-                trust = int(row[9].replace(',', ''))     # 投信買賣超
-                dealer = int(row[10].replace(',', ''))   # 自營商買賣超
-                total = int(row[17].replace(',', ''))    # 三大法人合計
-
-                name = STOCK_NAMES.get(code, code)
+                name = row[idx_name].strip() if len(row) > idx_name else code
+                foreign = int(row[idx_foreign].replace(',', ''))
+                trust = int(row[idx_trust].replace(',', ''))
+                dealer = int(row[idx_dealer].replace(',', ''))
+                total = int(row[idx_total].replace(',', ''))
 
                 stocks.append({
                     'code': code,
@@ -205,7 +180,7 @@ def fetch_institutional_top30(date=None):
                     'dealer': dealer,
                     'total': total
                 })
-            except:
+            except Exception:
                 continue
 
         # 買超 TOP50（v2.0 擴大掃描）

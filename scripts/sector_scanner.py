@@ -12,75 +12,80 @@
   4. 輸出推薦清單
 """
 
+import sys
 import requests
 import json
+from pathlib import Path
 from datetime import datetime
 import warnings
 warnings.filterwarnings('ignore')
 
-# 產業鏈定義
-SECTORS = {
-    '晶圓代工': {
-        'stocks': ['2330', '2303', '6770'],
-        'names': {'2330': '台積電', '2303': '聯電', '6770': '力積電'},
-        'priority': 1,
-    },
-    '封測': {
-        'stocks': ['3711', '6239', '2325'],
-        'names': {'3711': '日月光', '6239': '力成', '2325': '矽品'},
-        'priority': 1,
-    },
-    '記憶體': {
-        'stocks': ['2408', '2344', '2337'],
-        'names': {'2408': '南亞科', '2344': '華邦電', '2337': '旺宏'},
-        'priority': 1,
-    },
-    'IC設計': {
-        'stocks': ['2454', '3034', '2379', '3443', '5274', '3661'],
-        'names': {'2454': '聯發科', '3034': '聯詠', '2379': '瑞昱', '3443': '創意', '5274': '信驊', '3661': '世芯'},
-        'priority': 2,
-    },
-    '載板PCB': {
-        'stocks': ['3037', '3189', '8046'],
-        'names': {'3037': '欣興', '3189': '景碩', '8046': '南電'},
-        'priority': 2,
-    },
-    'AI伺服器': {
-        'stocks': ['2317', '2382', '3231', '2324', '6669'],
-        'names': {'2317': '鴻海', '2382': '廣達', '3231': '緯創', '2324': '仁寶', '6669': '緯穎'},
-        'priority': 2,
-    },
-    '散熱': {
-        'stocks': ['3324', '6230'],
-        'names': {'3324': '雙鴻', '6230': '超眾'},
-        'priority': 3,
-    },
-    '設備材料': {
-        'stocks': ['3105', '2049', '3533'],
-        'names': {'3105': '穩懋', '2049': '上銀', '3533': '嘉澤'},
-        'priority': 3,
-    },
-}
 
-# 非半導體產業
-OTHER_SECTORS = {
-    '金融': {
-        'stocks': ['2882', '2881', '2883', '2886', '2884', '2887', '2891', '2890', '2801', '5880'],
-        'names': {'2882': '國泰金', '2881': '富邦金', '2883': '凱基金', '2886': '兆豐金',
-                  '2884': '玉山金', '2887': '台新金', '2891': '中信金', '2890': '永豐金',
-                  '2801': '彰銀', '5880': '合庫金'},
-    },
-    '航運': {
-        'stocks': ['2603', '2609', '2615', '2618', '2637', '2606'],
-        'names': {'2603': '長榮', '2609': '陽明', '2615': '萬海', '2618': '長榮航',
-                  '2637': '慧洋', '2606': '裕民'},
-    },
-    '傳產': {
-        'stocks': ['1301', '1303', '1326', '2002', '1101', '1102'],
-        'names': {'1301': '台塑', '1303': '南亞', '1326': '台化', '2002': '中鋼',
-                  '1101': '台泥', '1102': '亞泥'},
-    },
-}
+# 從 industry_chains.json 動態載入產業定義
+def _load_sectors_from_chains():
+    """從 industry_chains.json 建立產業掃描清單"""
+    chains_file = Path(__file__).parent.parent / 'data' / 'industry_chains.json'
+    sectors = {}
+    other_sectors = {}
+
+    # 半導體相關產業 key → 掃描器產業名 + 優先級
+    TECH_MAPPING = {
+        '半導體': ('晶圓代工/封測', 1),
+        '記憶體': ('記憶體', 1),
+        'IC設計': ('IC設計', 2),
+        'AI': ('AI伺服器', 2),
+        '光通訊': ('光通訊/載板', 2),
+    }
+    # 非半導體產業
+    OTHER_MAPPING = {
+        '金融': '金融',
+        '塑化': '傳產',
+        '鋼鐵原物料': '傳產',
+        '營建水泥': '傳產',
+    }
+
+    try:
+        with open(chains_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+
+        for ind_key, ind in data.get('industries', {}).items():
+            stocks = []
+            names = {}
+            for tier in ind.get('tiers', {}).values():
+                for s in tier.get('stocks', []):
+                    code = s.get('code', '')
+                    name = s.get('name', '')
+                    if code and code not in names:
+                        stocks.append(code)
+                        names[code] = name
+
+            if not stocks:
+                continue
+
+            if ind_key in TECH_MAPPING:
+                display_name, priority = TECH_MAPPING[ind_key]
+                sectors[display_name] = {
+                    'stocks': stocks,
+                    'names': names,
+                    'priority': priority,
+                }
+            elif ind_key in OTHER_MAPPING:
+                display_name = OTHER_MAPPING[ind_key]
+                if display_name in other_sectors:
+                    other_sectors[display_name]['stocks'].extend(stocks)
+                    other_sectors[display_name]['names'].update(names)
+                else:
+                    other_sectors[display_name] = {
+                        'stocks': stocks,
+                        'names': names,
+                    }
+    except Exception as e:
+        print(f"⚠️ 無法載入 industry_chains.json: {e}")
+
+    return sectors, other_sectors
+
+
+SECTORS, OTHER_SECTORS = _load_sectors_from_chains()
 
 
 def get_sox_change():
@@ -126,8 +131,8 @@ def get_stock_price(stock_code):
                         est_price = float(bid_prices[0])
                         change = (est_price - float(yesterday)) / float(yesterday) * 100
                         return est_price, change, name
-    except:
-        pass
+    except Exception as e:
+        print(f"[sector_scanner] Failed to get price for {stock_code}: {e}", file=sys.stderr)
     return None, None, None
 
 

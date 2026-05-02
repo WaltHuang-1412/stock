@@ -31,44 +31,35 @@ except ImportError:
     USE_CROSS_PLATFORM = False
 
 
+from yahoo_finance_api import get_history
+
+
 def get_stock_data(stock_code, days=20):
-    """從 Yahoo Finance 獲取股價數據"""
-    url = f'https://query1.finance.yahoo.com/v8/finance/chart/{stock_code}.TW'
-    params = {
-        'interval': '1d',
-        'range': f'{days}d'
-    }
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)'
-    }
-
-    try:
-        response = requests.get(url, params=params, headers=headers, timeout=10)
-        data = response.json()
-
-        if 'chart' not in data or 'result' not in data['chart'] or not data['chart']['result']:
-            return None
-
-        result = data['chart']['result'][0]
-        timestamps = result.get('timestamp', [])
-        quote = result['indicators']['quote'][0]
-
-        prices = []
-        for i, ts in enumerate(timestamps):
-            if quote['close'][i] is not None:
-                prices.append({
-                    'date': datetime.fromtimestamp(ts).strftime('%Y-%m-%d'),
-                    'open': quote['open'][i],
-                    'high': quote['high'][i],
-                    'low': quote['low'][i],
-                    'close': quote['close'][i],
-                    'volume': quote['volume'][i]
-                })
-
-        return prices
-    except Exception as e:
-        print(f"❌ 獲取股價失敗: {e}")
+    """從 Yahoo Finance 獲取股價數據（自動支援上市/上櫃）"""
+    hist = get_history(stock_code, period=f'{days}d', interval='1d')
+    if not hist or not hist.get('timestamps'):
         return None
+
+    prices = []
+    timestamps = hist['timestamps']
+    closes = hist.get('closes', [])
+    opens = hist.get('opens', [])
+    highs = hist.get('highs', [])
+    lows = hist.get('lows', [])
+    volumes = hist.get('volumes', [])
+
+    for i, ts in enumerate(timestamps):
+        if i < len(closes) and closes[i] is not None:
+            prices.append({
+                'date': datetime.fromtimestamp(ts).strftime('%Y-%m-%d'),
+                'open': opens[i] if i < len(opens) else None,
+                'high': highs[i] if i < len(highs) else None,
+                'low': lows[i] if i < len(lows) else None,
+                'close': closes[i],
+                'volume': volumes[i] if i < len(volumes) else None,
+            })
+
+    return prices if prices else None
 
 
 def get_institutional_data(stock_code, days=5):
@@ -110,8 +101,8 @@ def get_institutional_data(stock_code, days=5):
                                 'trust': trust
                             })
                             break
-            except:
-                pass
+            except Exception as e:
+                print(f"[exit_signal_checker] Failed to fetch T86 data for {stock_code} on {date_str}: {e}", file=sys.stderr)
 
         current -= timedelta(days=1)
         attempts += 1

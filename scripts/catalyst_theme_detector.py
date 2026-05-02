@@ -56,99 +56,26 @@ MEGA_CAP_EXCLUDE = {
 # 美股龍頭 → 台股產業對照（從 us_leader_alert.py 同步）
 # ============================================================
 
-US_LEADER_TO_TW = {
-    'Micron': {
-        'tw_industry': 'DRAM/記憶體',
-        'tw_stocks': {
-            '2408': '南亞科', '2344': '華邦電', '2337': '旺宏',
-            '5347': '世界', '6770': '力積電',
-        },
-        'industry_chain_key': '記憶體',
-    },
-    'NVIDIA': {
-        'tw_industry': 'AI伺服器',
-        'tw_stocks': {
-            '2382': '廣達', '3231': '緯創', '2324': '仁寶',
-            '2356': '英業達', '6669': '緯穎', '2376': '技嘉',
-        },
-        'industry_chain_key': 'AI',
-    },
-    'AMD': {
-        'tw_industry': 'IC設計/AI晶片',
-        'tw_stocks': {
-            '2454': '聯發科', '3661': '世芯-KY', '3443': '創意',
-            '3707': '漢磊',
-        },
-        'industry_chain_key': 'AI',
-    },
-    'Apple': {
-        'tw_industry': '蘋果供應鏈',
-        'tw_stocks': {
-            '3008': '大立光', '2474': '可成', '2317': '鴻海',
-            '4938': '和碩', '2353': '宏碁',
-        },
-        'industry_chain_key': '蘋果供應鏈',
-    },
-    'Tesla': {
-        'tw_industry': '電動車',
-        'tw_stocks': {
-            '2317': '鴻海', '1513': '中興電', '1519': '華城',
-            '2308': '台達電', '1504': '東元',
-        },
-        'industry_chain_key': '電動車',
-    },
-    'Broadcom': {
-        'tw_industry': '網通',
-        'tw_stocks': {
-            '2345': '智邦', '2412': '中華電', '3042': '晶技',
-            '2449': '京元電',
-        },
-        'industry_chain_key': '光通訊',
-    },
-    'Super Micro': {
-        'tw_industry': 'AI伺服器',
-        'tw_stocks': {
-            '2382': '廣達', '3231': '緯創', '6669': '緯穎',
-            '2376': '技嘉',
-        },
-        'industry_chain_key': 'AI',
-    },
-    # 半導體設備（額外追蹤）
-    'Lam Research': {
-        'tw_industry': '半導體設備/製造',
-        'tw_stocks': {
-            '2330': '台積電', '3711': '日月光', '2303': '聯電',
-            '6488': '環球晶',
-        },
-        'industry_chain_key': '半導體',
-    },
-    'Applied Materials': {
-        'tw_industry': '半導體設備/製造',
-        'tw_stocks': {
-            '2330': '台積電', '3711': '日月光', '2303': '聯電',
-        },
-        'industry_chain_key': '半導體',
-    },
-    'Western Digital': {
-        'tw_industry': 'NAND/儲存',
-        'tw_stocks': {
-            '2408': '南亞科', '2344': '華邦電', '2337': '旺宏',
-            '6770': '力積電',
-        },
-        'industry_chain_key': '記憶體',
-    },
-}
+def _load_leader_mapping():
+    """從 data/us_leader_mapping.json 讀取龍頭對應表"""
+    mapping_file = Path(__file__).parent.parent / 'data' / 'us_leader_mapping.json'
+    try:
+        with open(mapping_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        result = {}
+        for name, info in data.get('leaders', {}).items():
+            result[name] = {
+                'tw_industry': info.get('tw_industry', ''),
+                'tw_stocks': info.get('tw_stocks', {}),
+                'industry_chain_key': info.get('industry_chain_key', ''),
+            }
+        groups = data.get('industry_groups', {})
+        return result, groups
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"[WARN] 無法讀取 {mapping_file}: {e}", file=sys.stderr)
+        return {}, {}
 
-# 同產業合併（多個美股龍頭指向同產業時合併計算）
-INDUSTRY_GROUPS = {
-    'DRAM/記憶體': ['Micron', 'Western Digital'],
-    'AI伺服器': ['NVIDIA', 'Super Micro'],
-    '半導體設備': ['Lam Research', 'Applied Materials'],
-    'IC設計': ['AMD'],
-    '蘋果供應鏈': ['Apple'],
-    '電動車': ['Tesla'],
-    '網通': ['Broadcom'],
-}
+US_LEADER_TO_TW, INDUSTRY_GROUPS = _load_leader_mapping()
 
 
 def get_available_dates(target_date, lookback=7):
@@ -603,24 +530,29 @@ def scan(target_date_str, lookback=7):
                         try:
                             val = line.split(':')[1].strip().replace(',', '').replace('+', '').replace('張', '').replace('K', '000').strip()
                             r['cumulative_total'] = int(float(val))
-                        except: pass
+                        except Exception as e:
+                            print(f"[catalyst_theme] Failed to parse cumulative_total: {e}", file=sys.stderr)
                     elif '累計淨買超（外資）' in line:
                         try:
                             val = line.split(':')[1].strip().replace(',', '').replace('+', '').replace('張', '').replace('K', '000').strip()
                             r['cumulative_foreign'] = int(float(val))
-                        except: pass
+                        except Exception as e:
+                            print(f"[catalyst_theme] Failed to parse cumulative_foreign: {e}", file=sys.stderr)
                     elif '買超天數' in line and '賣超天數' not in line:
                         try:
                             r['buy_days'] = int(line.split(':')[1].strip().split()[0])
-                        except: pass
+                        except Exception as e:
+                            print(f"[catalyst_theme] Failed to parse buy_days: {e}", file=sys.stderr)
                     elif '賣超天數' in line:
                         try:
                             r['sell_days'] = int(line.split(':')[1].strip().split()[0])
-                        except: pass
+                        except Exception as e:
+                            print(f"[catalyst_theme] Failed to parse sell_days: {e}", file=sys.stderr)
                     elif '真連續買超' in line:
                         try:
                             r['consecutive_buy'] = int(line.split(':')[1].strip().split()[0])
-                        except: pass
+                        except Exception as e:
+                            print(f"[catalyst_theme] Failed to parse consecutive_buy: {e}", file=sys.stderr)
                     elif '動能變化' in line:
                         try:
                             val = line.split(':')[1].strip().replace('%', '').replace('+', '')

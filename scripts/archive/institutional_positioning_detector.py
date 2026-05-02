@@ -11,13 +11,16 @@ Institutional Positioning Detector
 日期：2025-12-01
 """
 
-import yfinance as yf
-import pandas as pd
+import sys
 import numpy as np
 from concurrent.futures import ThreadPoolExecutor
 import time
+from pathlib import Path
 from datetime import datetime
 import requests
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from yahoo_finance_api import get_history
 
 # 重點掃描股票清單（市值前500大代表）
 SCAN_UNIVERSE = [
@@ -44,35 +47,36 @@ SCAN_UNIVERSE = [
 def get_stock_data_fast(symbol):
     """快速取得個股數據"""
     try:
-        ticker = yf.Ticker(f"{symbol}.TW")
-
-        # 取得近10日數據計算指標
-        hist = ticker.history(period='10d')
-        if len(hist) < 5:
+        history = get_history(symbol, period='10d', interval='1d')
+        if not history or 'timestamps' not in history:
             return None
 
-        # 今日數據
-        latest = hist.iloc[-1]
-        prev_close = hist.iloc[-2]['Close'] if len(hist) >= 2 else latest['Close']
+        closes = [c for c in history['closes'] if c is not None]
+        volumes = [v for v in history['volumes'] if v is not None]
+        highs = [h for h in history['highs'] if h is not None]
+        lows = [l for l in history['lows'] if l is not None]
 
-        # 計算基礎指標
-        current_price = latest['Close']
-        volume = latest['Volume']
-        high = latest['High']
-        low = latest['Low']
+        if len(closes) < 5:
+            return None
+
+        current_price = closes[-1]
+        prev_close = closes[-2] if len(closes) >= 2 else current_price
+        volume = volumes[-1] if volumes else 0
+        high = highs[-1] if highs else current_price
+        low = lows[-1] if lows else current_price
 
         # 計算量比
-        avg_volume_5d = hist['Volume'].iloc[-6:-1].mean()
+        avg_volume_5d = sum(volumes[-6:-1]) / len(volumes[-6:-1]) if len(volumes) >= 6 else (sum(volumes[:-1]) / len(volumes[:-1]) if len(volumes) > 1 else 0)
         volume_ratio = volume / avg_volume_5d if avg_volume_5d > 0 else 0
 
         # 計算漲跌幅
         change_pct = ((current_price - prev_close) / prev_close) * 100
 
         # 計算5日均線
-        ma5 = hist['Close'].iloc[-5:].mean()
+        ma5 = sum(closes[-5:]) / len(closes[-5:])
 
         # 計算近5日最高價
-        high_5d = hist['High'].iloc[-5:].max()
+        high_5d = max(highs[-5:]) if len(highs) >= 5 else max(highs)
 
         return {
             'symbol': symbol,

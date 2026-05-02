@@ -133,14 +133,12 @@ python3 scripts/fetch_tw_market_news.py > data/$(date +%Y-%m-%d)/tw_market_news.
 
 ```python
 python3 -c "
-import requests
+import sys; sys.path.insert(0, 'scripts')
+from yahoo_finance_api import get_current_price
 stocks = ['2303', '2330', '3037']  # 替換為實際推薦股票
 for s in stocks:
-    url = f'https://query1.finance.yahoo.com/v8/finance/chart/{s}.TW?interval=1d&range=5d'
-    r = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'}, timeout=10)
-    data = r.json()
-    close = data['chart']['result'][0]['meta']['regularMarketPrice']
-    print(f'{s}: 現價={close}')
+    price = get_current_price(s)
+    print(f'{s}: 現價={price}')
 "
 ```
 
@@ -149,8 +147,8 @@ for s in stocks:
 ### 🔴 Step 4: 歷史驗證 + 持有中追蹤（強制）
 
 ```bash
-# 讀取昨日 tracking + 近7天 tracking 中 result="holding" 的股票
-cat data/tracking/tracking_$(date -d yesterday +%Y-%m-%d).json
+# 自動掃描所有 holding 股票，查收盤價，機械判斷結算結果
+python3 scripts/settlement_checker.py --date $(date +%Y-%m-%d)
 ```
 
 **多日追蹤結算制度**：
@@ -612,6 +610,10 @@ python3 scripts/reversal_alert.py [推薦股...]
 
 ### 🔴 Step 9: 產業分散檢查 + 動態防禦比例（強制）
 
+```bash
+python3 scripts/check_industry_diversification.py --date $(date +%Y-%m-%d)
+```
+
 **基本規則**：推薦 6-8 檔 | 單一產業 ≤50% | ≥3 個產業
 
 **動態防禦比例**：
@@ -797,11 +799,11 @@ ls data/$(date +%Y-%m-%d)/intraday_analysis.md
 **🔴 不再當天判定成敗**。盤後只做：更新收盤價 + 結算已觸及目標/停損的
 
 ```bash
-cat data/tracking/tracking_$(date +%Y-%m-%d).json
+python3 scripts/settlement_checker.py --date $(date +%Y-%m-%d)
 python3 scripts/holdings_pressure_analysis.py [停損股...]
 ```
 
-**結算規則**：收盤≥目標→success | 收盤≤停損→fail | 都沒觸→holding | 滿10日→收盤 vs 推薦價
+**結算規則**（由 `settlement_checker.py` 機械判斷）：收盤≥目標→success | 收盤≤停損→fail | 都沒觸→holding | 滿10日→收盤 vs 推薦價
 
 **持股壓力等級**：
 
@@ -826,6 +828,12 @@ python3 scripts/holdings_pressure_analysis.py [停損股...]
 ---
 
 ### 🔴 Step 4: 更新 predictions.json（強制）
+
+```bash
+python3 scripts/update_predictions.py --date $(date +%Y-%m-%d)
+```
+
+腳本自動執行：從 tracking.json 讀取結算結果 → 更新 predictions.json 對應項目 → 新增今日推薦 → 重算頂層統計
 
 每日 key=日期，包含 `predictions[]`（symbol/name/recommend_price/target_price/stop_loss/result/settled_date/settled_price/holding_days）
 - result：`"success"` / `"fail"` / `"holding"`（holding 不計入準確率）
@@ -853,6 +861,29 @@ python3 scripts/holdings_pressure_analysis.py [停損股...]
 - **🔴 禁止當天就設 fail（除非真的觸停損）**
 - **🔴 每檔推薦必須含 `stop_loss_pct` 和 `settlement_days` 欄位**
 - **🔴 `stop_loss` 必須從 `stop_loss_pct` 計算，不得手動填寫或沿用舊值**
+
+---
+
+## 📊 四、每週產業鏈審核（每週一盤前額外執行）
+
+**目標**：維護 `industry_chains.json` 的正確性，避免靜態資料過期
+
+```bash
+python3 scripts/audit_industry_chains.py
+```
+
+**檢查項目**：
+
+| 項目 | 內容 | 自動修復 |
+|------|------|---------|
+| 下市/停牌 | 查 Yahoo Finance 確認股票是否還有報價 | `--fix` 自動移除 |
+| tier_from_tracker 待審 | 統計 `industry_chain_sync.py` 自動加入但未歸位的股票 | 需人工判斷歸入正確 tier |
+| 冷門產業 | 近 30 天未出現在推薦中的產業 | 審視是否該保留或合併 |
+| 跨產業重複 | 同一股票出現在多個產業 | 合理重複（如鴻海）不需處理 |
+
+**執行時機**：每週一盤前，在 Step 0 之前執行
+
+**驗證**：審核報告顯示無 🔴 項目即可繼續盤前流程
 
 ---
 

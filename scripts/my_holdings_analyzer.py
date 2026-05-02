@@ -13,12 +13,15 @@ if sys.platform == "win32":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
-import yfinance as yf
 import yaml
 import json
 import requests
+from pathlib import Path
 from datetime import datetime, timedelta
 import subprocess
+
+sys.path.insert(0, str(Path(__file__).parent))
+from yahoo_finance_api import get_current_price
 
 class MyHoldingsAnalyzer:
     def __init__(self):
@@ -50,14 +53,7 @@ class MyHoldingsAnalyzer:
         for holding in holdings:
             stock_code = holding['symbol']
             try:
-                ticker = yf.Ticker(f"{stock_code}.TW")
-                info = ticker.info
-                current_price = info.get('currentPrice') or info.get('regularMarketPrice')
-
-                if not current_price:
-                    hist = ticker.history(period='1d')
-                    if not hist.empty:
-                        current_price = hist['Close'].iloc[-1]
+                current_price = get_current_price(stock_code)
 
                 if current_price:
                     self.current_prices[stock_code] = current_price

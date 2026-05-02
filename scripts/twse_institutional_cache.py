@@ -59,8 +59,8 @@ def fetch_all_institutional(date_str):
         except (json.JSONDecodeError, IOError):
             pass  # 快取損壞，重新下載
 
-    # 3. 從 TWSE API 下載
-    url = f'https://www.twse.com.tw/rwd/en/fund/T86?date={date_str}&selectType=ALL&response=json'
+    # 3. 從 TWSE API 下載（中文版，含公司名稱）
+    url = f'https://www.twse.com.tw/rwd/zh/fund/T86?date={date_str}&selectType=ALL&response=json'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
         'Accept': 'application/json',
@@ -75,18 +75,42 @@ def fetch_all_institutional(date_str):
     if 'data' not in raw or not raw['data']:
         return {}  # 假日或尚未公布，不快取（下次會重試）
 
+    # 動態欄位對應（不硬寫索引，用 fields 名稱查找）
+    fields = raw.get('fields', [])
+    field_map = {}
+    for i, f in enumerate(fields):
+        if '證券代號' in f:
+            field_map['code'] = i
+        elif '證券名稱' in f:
+            field_map['name'] = i
+        elif '外陸資買賣超股數(不含外資自營商)' in f:
+            field_map['foreign'] = i
+        elif '投信買賣超股數' in f:
+            field_map['trust'] = i
+        elif f == '自營商買賣超股數':
+            field_map['dealer'] = i
+        elif '三大法人買賣超股數' in f:
+            field_map['total'] = i
+
+    idx_code = field_map.get('code', 0)
+    idx_name = field_map.get('name', 1)
+    idx_foreign = field_map.get('foreign', 4)
+    idx_trust = field_map.get('trust', 10)
+    idx_dealer = field_map.get('dealer', 11)
+    idx_total = field_map.get('total', 18)
+
     # 解析全市場資料
     result = {}
     for row in raw['data']:
-        code = row[0].strip()
+        code = row[idx_code].strip()
         try:
             result[code] = {
                 'date': date_str,
-                'name': row[1].strip() if len(row) > 1 else code,
-                'foreign': int(row[3].replace(',', '')) // 1000,
-                'trust': int(row[9].replace(',', '')) // 1000,
-                'dealer': int(row[10].replace(',', '')) // 1000,
-                'total': int(row[17].replace(',', '')) // 1000,
+                'name': row[idx_name].strip() if len(row) > idx_name else code,
+                'foreign': int(row[idx_foreign].replace(',', '')) // 1000,
+                'trust': int(row[idx_trust].replace(',', '')) // 1000,
+                'dealer': int(row[idx_dealer].replace(',', '')) // 1000,
+                'total': int(row[idx_total].replace(',', '')) // 1000,
             }
         except (ValueError, IndexError):
             continue

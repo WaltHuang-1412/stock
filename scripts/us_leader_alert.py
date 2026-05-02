@@ -28,100 +28,33 @@ if sys.platform == 'win32':
 
 
 # ============================================================
-# 龍頭股→台股產業對應表（核心知識庫）
+# 龍頭股→台股產業對應表（從外部 JSON 讀取）
 # ============================================================
 
-US_LEADER_MAPPING = {
-    'Micron': {
-        'tw_industry': 'DRAM',
-        'tw_stocks': {
-            '1303': '南亞',
-            '2344': '華邦電',
-            '2337': '旺宏',
-            '5347': '世界'
-        },
-        'threshold_l3': -10,  # 跌破 -10% → Level 3（直接排除）
-        'threshold_l2': -5,   # -5% ~ -10% → Level 2（降級評分）
-        'threshold_l1': -2    # -2% ~ -5% → Level 1（提示注意）
-    },
-    'NVIDIA': {
-        'tw_industry': 'AI伺服器',
-        'tw_stocks': {
-            '2382': '廣達',
-            '3231': '緯創',
-            '2324': '仁寶',
-            '2356': '英業達',
-            '6669': '緯穎'
-        },
-        'threshold_l3': -10,
-        'threshold_l2': -5,
-        'threshold_l1': -2
-    },
-    'Apple': {
-        'tw_industry': '蘋果供應鏈',
-        'tw_stocks': {
-            '3008': '大立光',
-            '2474': '可成',
-            '2317': '鴻海',
-            '4938': '和碩',
-            '3673': 'TPK-KY',
-            '2353': '宏碁',
-            '6415': '矽力-KY'
-        },
-        'threshold_l3': -8,   # Apple 門檻較低（-8%）
-        'threshold_l2': -4,
-        'threshold_l1': -2
-    },
-    'AMD': {
-        'tw_industry': 'AI晶片/IC設計',
-        'tw_stocks': {
-            '3707': '漢磊',
-            '3661': '世芯-KY',
-            '2454': '聯發科',
-            '3443': '創意'
-        },
-        'threshold_l3': -10,
-        'threshold_l2': -5,
-        'threshold_l1': -2
-    },
-    'Tesla': {
-        'tw_industry': '電動車',
-        'tw_stocks': {
-            '2317': '鴻海',
-            '1513': '中興電',
-            '1519': '華城',
-            '2308': '台達電',
-            '1504': '東元'
-        },
-        'threshold_l3': -10,
-        'threshold_l2': -5,
-        'threshold_l1': -2
-    },
-    'Super Micro': {
-        'tw_industry': 'AI伺服器',
-        'tw_stocks': {
-            '2382': '廣達',
-            '3231': '緯創',
-            '6669': '緯穎',
-            '2376': '技嘉'
-        },
-        'threshold_l3': -15,  # SMCI 波動大，門檻較高
-        'threshold_l2': -8,
-        'threshold_l1': -5
-    },
-    'Broadcom': {
-        'tw_industry': '網通',
-        'tw_stocks': {
-            '2345': '智邦',
-            '2412': '中華電',
-            '3042': '晶技',
-            '2449': '京元電子'
-        },
-        'threshold_l3': -10,
-        'threshold_l2': -5,
-        'threshold_l1': -2
-    }
-}
+def _load_leader_mapping():
+    """從 data/us_leader_mapping.json 讀取對應表"""
+    mapping_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'us_leader_mapping.json')
+    mapping_file = os.path.abspath(mapping_file)
+    try:
+        with open(mapping_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        # 轉換格式：只保留有 tw_stocks 的龍頭（預警需要台股對應）
+        result = {}
+        for name, info in data.get('leaders', {}).items():
+            if info.get('tw_stocks'):
+                result[name] = {
+                    'tw_industry': info['tw_industry'],
+                    'tw_stocks': info['tw_stocks'],
+                    'threshold_l3': info.get('threshold_l3', -10),
+                    'threshold_l2': info.get('threshold_l2', -5),
+                    'threshold_l1': info.get('threshold_l1', -2),
+                }
+        return result
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"[WARN] 無法讀取 {mapping_file}: {e}", file=sys.stderr)
+        return {}
+
+US_LEADER_MAPPING = _load_leader_mapping()
 
 
 # ============================================================

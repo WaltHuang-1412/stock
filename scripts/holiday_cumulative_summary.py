@@ -22,66 +22,37 @@ if sys.platform == "win32":
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
-HOLIDAYS_FILE = PROJECT_DIR / "data" / "holidays.json"
 
-# 龍頭股→台股產業對應（與 us_leader_alert.py 一致）
-LEADER_TW_INDUSTRIES = {
-    "Micron": ["記憶體"],
-    "NVIDIA": ["AI", "半導體"],
-    "Apple": ["蘋果供應鏈"],
-    "AMD": ["半導體"],
-    "Tesla": ["電動車"],
-    "Super Micro": ["AI"],
-    "Broadcom": ["網通設備"],
-    "AMAT": ["半導體"],
-}
+sys.path.insert(0, str(PROJECT_DIR / "scripts"))
+from check_market_status import is_tw_trading_day as _dynamic_is_tw_trading_day
 
-# 要追蹤的龍頭股名稱（在 us_asia_markets.json markdown 中的可能寫法）
-LEADER_ALIASES = {
-    "Micron": ["Micron", "MU"],
-    "NVIDIA": ["NVIDIA", "輝達"],
-    "Apple": ["Apple", "AAPL"],
-    "AMD": ["AMD"],
-    "Tesla": ["Tesla", "TSLA"],
-    "Super Micro": ["Super Micro", "SMCI"],
-    "Broadcom": ["Broadcom", "AVGO"],
-    "AMAT": ["AMAT", "Applied Materials"],
-    "Dell": ["Dell"],
-    "ASML": ["ASML"],
-    "Lam Research": ["Lam Research", "Lam"],
-}
+# 龍頭股對應表（從 data/us_leader_mapping.json 讀取，與 us_leader_alert.py 共用）
+MAPPING_FILE = PROJECT_DIR / "data" / "us_leader_mapping.json"
+
+def _load_leader_config():
+    """從外部 JSON 讀取龍頭股對應表"""
+    tw_industries = {}
+    aliases = {}
+    try:
+        with open(MAPPING_FILE, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        for name, info in data.get("leaders", {}).items():
+            tw_industries[name] = info.get("tw_industries", [])
+            aliases[name] = info.get("aliases", [name])
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"[WARN] 無法讀取 {MAPPING_FILE}: {e}", file=sys.stderr)
+    return tw_industries, aliases
+
+LEADER_TW_INDUSTRIES, LEADER_ALIASES = _load_leader_config()
 
 
-def load_holidays():
-    """讀取台股假日清單"""
-    if not HOLIDAYS_FILE.exists():
-        return set()
-    with open(HOLIDAYS_FILE, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    holidays = set()
-    for year_dates in data.get("holidays", {}).values():
-        for h in year_dates:
-            holidays.add(h["date"])
-    return holidays
-
-
-def is_tw_trading_day(date_str, holidays):
-    """判斷某日是否為台股交易日"""
-    dt = datetime.strptime(date_str, "%Y-%m-%d")
-    if dt.weekday() >= 5:  # 週六日
-        return False
-    if date_str in holidays:
-        return False
-    return True
-
-
-def find_previous_trading_day(date_str, holidays):
-    """往前找上一個台股交易日"""
+def find_previous_trading_day(date_str):
+    """往前找上一個台股交易日（動態查詢 TWSE）"""
     dt = datetime.strptime(date_str, "%Y-%m-%d")
     for i in range(1, 30):
         prev = dt - timedelta(days=i)
         prev_str = prev.strftime("%Y-%m-%d")
-        if is_tw_trading_day(prev_str, holidays):
+        if _dynamic_is_tw_trading_day(prev_str):
             return prev_str
     return None
 
@@ -180,10 +151,8 @@ def calculate_sustained_level(daily_changes):
 
 def generate_cumulative_summary(target_date):
     """產生累積摘要"""
-    holidays = load_holidays()
-
-    # 找上一個交易日
-    prev_trading_day = find_previous_trading_day(target_date, holidays)
+    # 找上一個交易日（動態查詢 TWSE）
+    prev_trading_day = find_previous_trading_day(target_date)
     if not prev_trading_day:
         print("找不到上一個交易日", file=sys.stderr)
         return None

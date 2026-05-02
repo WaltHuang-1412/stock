@@ -30,21 +30,19 @@ if sys.platform == 'win32':
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 
 
+sys.path.insert(0, str(PROJECT_DIR / "scripts"))
+from yahoo_finance_api import get_history
+
+
 def fetch_stock_data(code, days=300):
-    """取得股價歷史"""
-    suffix = ".TW"
-    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{code}{suffix}"
-    params = {"interval": "1d", "range": f"{days}d"}
-    try:
-        r = requests.get(url, params=params, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
-        data = r.json()
-        result = data['chart']['result'][0]
-        closes = [c for c in result['indicators']['quote'][0]['close'] if c is not None]
-        highs = [h for h in result['indicators']['quote'][0]['high'] if h is not None]
-        lows = [l for l in result['indicators']['quote'][0]['low'] if l is not None]
-        return closes, highs, lows
-    except Exception:
+    """取得股價歷史（自動支援上市/上櫃）"""
+    hist = get_history(code, period=f'{days}d', interval='1d')
+    if not hist:
         return [], [], []
+    closes = [c for c in hist.get('closes', []) if c is not None]
+    highs = [h for h in hist.get('highs', []) if h is not None]
+    lows = [l for l in hist.get('lows', []) if l is not None]
+    return closes, highs, lows
 
 
 def analyze_position(code):

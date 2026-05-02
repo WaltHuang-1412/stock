@@ -252,129 +252,28 @@ def read_tracking_file(date_str):
             return None
 
 def get_realtime_data_api(stock_code):
-    """使用 Yahoo Finance API 直接查詢（無需 yfinance 套件）"""
-    import requests
-    import warnings
+    """使用 Yahoo Finance API 查詢（自動支援上市/上櫃）"""
+    sys.path.insert(0, str(Path(__file__).parent))
+    from yahoo_finance_api import get_stock_info
 
-    # 抑制所有警告和錯誤輸出
-    warnings.filterwarnings('ignore')
-
-    try:
-        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{stock_code}.TW?interval=1d&range=5d"
-        headers = {'User-Agent': 'Mozilla/5.0'}
-        response = requests.get(url, headers=headers, timeout=10)
-
-        if response.status_code != 200:
-            return None
-
-        data = response.json()
-        result = data.get('chart', {}).get('result', [])
-
-        if not result:
-            return None
-
-        quote = result[0]
-        meta = quote.get('meta', {})
-        indicators = quote.get('indicators', {}).get('quote', [{}])[0]
-
-        closes = indicators.get('close', [])
-        volumes = indicators.get('volume', [])
-
-        # 過濾掉 None 值
-        valid_closes = [c for c in closes if c is not None]
-        valid_volumes = [v for v in volumes if v is not None]
-
-        if len(valid_closes) < 2:
-            return None
-
-        current_price = valid_closes[-1]
-        prev_close = valid_closes[-2] if len(valid_closes) >= 2 else current_price
-        current_volume = valid_volumes[-1] if valid_volumes else 0
-
-        # 計算指標
-        change_pct = ((current_price - prev_close) / prev_close) * 100 if prev_close else 0
-
-        # 計算 5 日平均量
-        recent_volumes = [v for v in valid_volumes[:-1] if v is not None]
-        avg_volume_5d = sum(recent_volumes) / len(recent_volumes) if recent_volumes else 0
-        volume_ratio = current_volume / avg_volume_5d if avg_volume_5d > 0 else 0
-
-        # 獲取股票名稱
-        stock_name = meta.get('longName', '') or meta.get('shortName', '') or stock_code
-
-        return {
-            'code': stock_code,
-            'name': stock_name,
-            'current_price': round(current_price, 2),
-            'prev_close': round(prev_close, 2),
-            'change_pct': round(change_pct, 2),
-            'volume': current_volume,
-            'volume_ratio': round(volume_ratio, 2)
-        }
-    except Exception:
+    info = get_stock_info(stock_code)
+    if not info or not info.get('current_price'):
         return None
+
+    return {
+        'code': stock_code,
+        'name': stock_code,
+        'current_price': round(info['current_price'], 2),
+        'prev_close': round(info.get('prev_close', info['current_price']), 2),
+        'change_pct': round(info.get('change_pct', 0), 2),
+        'volume': info.get('volume', 0),
+        'volume_ratio': round(info.get('volume_ratio', 0), 2),
+    }
 
 
 def get_realtime_data(stock_code):
-    """獲取即時股價數據（P0修復：支援無 yfinance 環境）"""
-    import warnings
-    import os
-
-    # 抑制所有警告
-    warnings.filterwarnings('ignore')
-
-    # 抑制 yfinance 的錯誤輸出（重定向 stderr）
-    original_stderr = sys.stderr
-    sys.stderr = open(os.devnull, 'w')
-
-    # 優先使用 yfinance（如果可用）
-    if HAS_YFINANCE:
-        try:
-            ticker = yf.Ticker(f"{stock_code}.TW")
-            hist = ticker.history(period='5d')
-
-            if hist.empty or len(hist) < 2:
-                return get_realtime_data_api(stock_code)  # 降級到 API
-
-            current_price = hist['Close'].iloc[-1]
-            prev_close = hist['Close'].iloc[-2]
-            current_volume = hist['Volume'].iloc[-1]
-
-            # 計算指標
-            change_pct = ((current_price - prev_close) / prev_close) * 100
-            avg_volume_5d = hist['Volume'].iloc[:-1].mean()
-            volume_ratio = current_volume / avg_volume_5d if avg_volume_5d > 0 else 0
-
-            # 獲取股票名稱
-            info = ticker.info
-            stock_name = info.get('longName', stock_code)
-            if not stock_name or stock_name == stock_code:
-                stock_name = info.get('shortName', stock_code)
-
-            result = {
-                'code': stock_code,
-                'name': stock_name,
-                'current_price': round(current_price, 2),
-                'prev_close': round(prev_close, 2),
-                'change_pct': round(change_pct, 2),
-                'volume': current_volume,
-                'volume_ratio': round(volume_ratio, 2)
-            }
-            # 恢復 stderr
-            sys.stderr.close()
-            sys.stderr = original_stderr
-            return result
-        except Exception:
-            # 恢復 stderr
-            sys.stderr.close()
-            sys.stderr = original_stderr
-            return get_realtime_data_api(stock_code)  # 降級到 API
-    else:
-        # 恢復 stderr
-        sys.stderr.close()
-        sys.stderr = original_stderr
-        # 無 yfinance，直接使用 API
-        return get_realtime_data_api(stock_code)
+    """獲取即時股價數據（使用 yahoo_finance_api 共用模組）"""
+    return get_realtime_data_api(stock_code)
 
 def parse_recommend_price(price_str):
     """解析推薦價格，支援範圍格式如 '18.0-18.3' 或單一數值"""
