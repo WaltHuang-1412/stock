@@ -1,0 +1,107 @@
+{
+  "date": "2026-05-04",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2455",
+      "stock_name": "全新",
+      "industry": "IC設計/功率半導體",
+      "recommend_price": 356.0,
+      "target_price": 400.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 320.4,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 91,
+      "reason": "功率半導體IC設計龍頭，外資本週大增+3.55%，EPS+25%，avg_rank TOP10，Level 0；AMD 5/6財報催化"
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "industry": "IC封測",
+      "recommend_price": 75.0,
+      "target_price": 84.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 67.5,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 89,
+      "reason": "IC封裝超強週期，EPS季報+122%，avg_rank TOP10，Level 0，無龍頭預警影響"
+    },
+    {
+      "stock_code": "2401",
+      "stock_name": "凌陽",
+      "industry": "IC設計",
+      "recommend_price": 25.0,
+      "target_price": 28.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 22.5,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 87,
+      "reason": "訊號A(預埋)L3，IC設計超強週期，法人7買3賣佈局，動能-112%蓄積能量；EPS連虧務必嚴守停損"
+    },
+    {
+      "stock_code": "2355",
+      "stock_name": "敬鵬",
+      "industry": "ABF基板/PCB",
+      "recommend_price": 51.7,
+      "target_price": 59.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 46.5,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 86,
+      "reason": "ABF/PCB超強週期，Intel+20.68%封裝合作利多直接受惠，EPS+23%毛利改善，外資持股比+2.55%，Level 0"
+    },
+    {
+      "stock_code": "3029",
+      "stock_name": "零壹",
+      "industry": "網通/資安",
+      "recommend_price": 102.5,
+      "target_price": 115.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 92.3,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 84,
+      "reason": "低軌衛星/網通題材受益，外資持股比+0.66%，EPS回升，avg_rank TOP25，Level 0"
+    },
+    {
+      "stock_code": "6165",
+      "stock_name": "浪凡",
+      "industry": "IC設計",
+      "recommend_price": 53.0,
+      "target_price": 61.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 47.7,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 81,
+      "reason": "IC設計超強週期，外資持股比大增+5.37%，avg_rank TOP31，Level 0，低軌衛星/5G題材"
+    }
+  ],
+  "settled_today": [
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "result": "success",
+      "settled_price": 905.0,
+      "target_price": 720.0,
+      "change_pct": 33.5,
+      "settled_date": "2026-05-04",
+      "holding_days": 10
+    }
+  ],
+  "holdings_status": [
+    {"stock_code": "2303", "stock_name": "聯電", "holding_day": 3, "current_price": 80.8, "pct_change_from_rec": 7.6, "status": "holding"},
+    {"stock_code": "2344", "stock_name": "華邦電", "holding_day": 5, "current_price": 92.8, "pct_change_from_rec": 2.4, "status": "holding"},
+    {"stock_code": "3231", "stock_name": "緯創", "holding_day": 6, "current_price": 139.5, "pct_change_from_rec": -3.1, "status": "holding", "note": "Level4警告，監控"},
+    {"stock_code": "2408", "stock_name": "南亞科", "holding_day": 2, "current_price": 219.0, "pct_change_from_rec": -3.3, "status": "holding", "note": "停損距離1.7%極近"},
+    {"stock_code": "2002", "stock_name": "中鋼", "holding_day": 9, "current_price": 18.75, "pct_change_from_rec": -5.5, "status": "holding", "note": "明日D10到期"},
+    {"stock_code": "2317", "stock_name": "鴻海", "holding_day": 2, "current_price": 226.0, "pct_change_from_rec": 0.4, "status": "holding", "note": "Level4警告，監控"}
+  ]
+}

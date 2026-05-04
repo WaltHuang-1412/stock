@@ -28,10 +28,6 @@ from urllib3.exceptions import InsecureRequestWarning
 
 warnings.filterwarnings("ignore", category=InsecureRequestWarning)
 
-if sys.platform == "win32":
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
-
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 CACHE_DIR = PROJECT_DIR / "data" / "cache"
 
@@ -61,7 +57,7 @@ def _check_twse_t86(date_compact):
 
 
 def _check_twse_mis(date_str):
-    """來源 2：查 TWSE MIS 即時行情（有報價=開市）"""
+    """來源 2：查 TWSE MIS 即時行情（日期吻合=開市）"""
     # 用台積電 2330 當探針
     url = "https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_2330.tw&json=1&delay=0"
     try:
@@ -73,15 +69,10 @@ def _check_twse_mis(date_str):
             data = resp.json()
             msgs = data.get("msgArray", [])
             if msgs:
-                # 檢查交易日期是否為目標日期
                 trade_date = msgs[0].get("d", "")  # 格式: 20260502
                 target_compact = date_str.replace("-", "")
-                if trade_date == target_compact:
-                    price = msgs[0].get("z", "-")
-                    if price != "-":
-                        return True   # 有當天報價 = 確定開市
-                # 交易日期不是今天 = 今天沒開市
-                return False
+                # 日期吻合就是交易日（盤前 z="-" 也算，只要日期對就確定開市）
+                return trade_date == target_compact
     except Exception as e:
         print(f"[WARN] MIS 查詢失敗: {e}", file=sys.stderr)
     return None  # API 失敗 = 不確定
@@ -95,9 +86,10 @@ def is_tw_trading_day(date_str):
       1. 週末 → 直接休市
       2. 未來日期 → 非週末假設開市（TWSE 還沒資料）
       3. 本地 T86 快取 → 有快取 = 確定開市
-      4. TWSE T86 API → 有資料=開市，沒資料=休市
-      5. T86 失敗時，TWSE MIS 即時行情交叉驗證
-      6. 兩個都失敗 → 非週末假設開市（保守策略）
+      4. TWSE T86 API 有資料 → 確定開市
+      5. T86 無資料（含盤前未更新）→ MIS 即時行情交叉確認
+      6. MIS 確認 → 採用 MIS 結果
+      7. 兩個都失敗 → 非週末假設開市（保守策略）
     """
     if _is_weekend(date_str):
         return False
@@ -113,18 +105,23 @@ def is_tw_trading_day(date_str):
     if cache_file.exists():
         return True
 
-    # 來源 1：T86
+    # 來源 1：T86（有資料=確定開市；無資料不代表休市，可能是盤前尚未更新）
     t86_result = _check_twse_t86(date_compact)
-    if t86_result is not None:
-        return t86_result
+    if t86_result is True:
+        return True
 
-    # 來源 2：MIS（T86 失敗時交叉驗證）
-    print(f"[INFO] T86 失敗，改查 MIS 即時行情", file=sys.stderr)
+    # T86 無資料（False）或例外（None）→ 一律交叉驗證 MIS
+    # 原因：T86 盤後才更新，盤前查今天永遠拿不到資料，不能單獨信任
+    print(f"[INFO] T86 無資料，查 MIS 即時行情交叉驗證", file=sys.stderr)
     mis_result = _check_twse_mis(date_str)
     if mis_result is not None:
         return mis_result
 
-    # 兩個都失敗
+    # MIS 也失敗，回退到 T86 結果（如果 T86 明確回傳 False 則休市，否則預設開市）
+    if t86_result is False:
+        print(f"[WARN] MIS 失敗，採用 T86 結果（休市）", file=sys.stderr)
+        return False
+
     print(f"[WARN] T86+MIS 都失敗，{date_str} 預設為開市", file=sys.stderr)
     return True
 
@@ -222,6 +219,9 @@ def check_market_status(date_str, mode="before_market"):
 
 
 def main():
+    if sys.platform == "win32":
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser(description="市場狀態判斷器（動態版）")
     parser.add_argument("--date", default=None, help="目標日期 (YYYY-MM-DD)，預設今天")
     parser.add_argument("--mode", default="before_market",

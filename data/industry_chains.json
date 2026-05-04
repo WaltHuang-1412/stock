@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-01",
+  "last_updated": "2026-05-04",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -222,6 +222,31 @@
               "code": "2327",
               "name": "國巨",
               "category": "電子零組件與 PCB / CCL 族群"
+            },
+            {
+              "code": "3653",
+              "name": "健策",
+              "category": "液冷散熱族群"
+            },
+            {
+              "code": "2233",
+              "name": "宇隆",
+              "category": "液冷散熱族群"
+            },
+            {
+              "code": "5274",
+              "name": "信驊",
+              "category": "AI 伺服器與半導體供應鏈"
+            },
+            {
+              "code": "2404",
+              "name": "漢唐",
+              "category": "AI 伺服器與半導體供應鏈"
+            },
+            {
+              "code": "6196",
+              "name": "帆宣",
+              "category": "AI 伺服器與半導體供應鏈"
             }
           ]
         }
@@ -403,6 +428,36 @@
               "code": "2360",
               "name": "致茂",
               "category": "IC 設計 / 封裝 / 量測"
+            },
+            {
+              "code": "3264",
+              "name": "欣銓",
+              "category": "IC 設計 / 封裝 / 量測"
+            },
+            {
+              "code": "5274",
+              "name": "信驊",
+              "category": "IC 設計 / 封裝 / 量測"
+            },
+            {
+              "code": "6683",
+              "name": "雍智",
+              "category": "IC 設計 / 封裝 / 量測"
+            },
+            {
+              "code": "7734",
+              "name": "印能",
+              "category": "IC 設計 / 封裝 / 量測"
+            },
+            {
+              "code": "2379",
+              "name": "瑞昱",
+              "category": "IC 設計 / 封裝 / 量測"
+            },
+            {
+              "code": "8027",
+              "name": "鈦昇",
+              "category": "IC 設計 / 封裝 / 量測"
             }
           ]
         }
@@ -536,6 +591,16 @@
               "code": "3045",
               "name": "台灣大",
               "category": "宣示2030年營收翻倍"
+            },
+            {
+              "code": "2308",
+              "name": "台達電",
+              "category": "低軌衛星產業"
+            },
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "低軌衛星產業"
             }
           ]
         }
@@ -985,6 +1050,16 @@
               "code": "2892",
               "name": "第一金",
               "category": "通過股利分派"
+            },
+            {
+              "code": "2885",
+              "name": "元大金",
+              "category": "台灣金融與銀行業"
+            },
+            {
+              "code": "2889",
+              "name": "國票金",
+              "category": "台灣金融與銀行業"
             }
           ]
         }
@@ -1278,6 +1353,21 @@
               "code": "8046",
               "name": "南電",
               "category": "光通訊與網通產業"
+            },
+            {
+              "code": "3714",
+              "name": "富采",
+              "category": "光通訊與網通產業"
+            },
+            {
+              "code": "3016",
+              "name": "嘉晶",
+              "category": "光通訊與網通產業"
+            },
+            {
+              "code": "2409",
+              "name": "友達",
+              "category": "光通訊與網通產業"
             }
           ]
         }
@@ -1466,6 +1556,17 @@
               "code": "9938",
               "name": "百和",
               "category": "鋼纜"
+            }
+          ]
+        },
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "5009",
+              "name": "榮剛",
+              "category": "鋼鐵與工業金屬"
             }
           ]
         }
@@ -1764,6 +1865,26 @@
               "code": "4915",
               "name": "致伸",
               "category": "人形機器人"
+            },
+            {
+              "code": "2233",
+              "name": "宇隆",
+              "category": "人形機器人"
+            },
+            {
+              "code": "1597",
+              "name": "直得",
+              "category": "人形機器人"
+            },
+            {
+              "code": "5269",
+              "name": "南亞科",
+              "category": "人形機器人"
+            },
+            {
+              "code": "2382",
+              "name": "廣達",
+              "category": "人形機器人"
             }
           ]
         }
@@ -1840,6 +1961,11 @@
               "code": "2454",
               "name": "聯發科",
               "category": "今日漲停2,675元創歷史天價"
+            },
+            {
+              "code": "3661",
+              "name": "世芯-KY",
+              "category": "台股市場動態"
             }
           ]
         }
@@ -1987,6 +2113,136 @@
               "code": "2609",
               "name": "陽明",
               "category": "中東地緣政治風險"
+            }
+          ]
+        }
+      }
+    },
+    "企業財報重點": {
+      "name": "企業財報重點",
+      "catalysts": [
+        "企業財報重點",
+        "財報季"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "企業財報重點（Q1 財報季）"
+            },
+            {
+              "code": "2379",
+              "name": "瑞昱",
+              "category": "企業財報重點（Q1 財報季）"
+            }
+          ]
+        }
+      }
+    },
+    "工具機": {
+      "name": "工具機",
+      "catalysts": [
+        "工具機",
+        "工具機族群"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "1597",
+              "name": "直得",
+              "category": "工具機族群"
+            },
+            {
+              "code": "5009",
+              "name": "榮剛",
+              "category": "工具機族群"
+            }
+          ]
+        }
+      }
+    },
+    "川普貿易政策": {
+      "name": "川普貿易政策",
+      "catalysts": [
+        "川普貿易政策",
+        "川普貿易政策與關稅"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "1303",
+              "name": "南亞",
+              "category": "川普貿易政策與關稅"
+            }
+          ]
+        }
+      }
+    },
+    "儲能、綠電": {
+      "name": "儲能、綠電",
+      "catalysts": [
+        "儲能、綠電",
+        "儲能",
+        "綠電與太陽能"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2308",
+              "name": "台達電",
+              "category": "儲能、綠電與太陽能"
+            },
+            {
+              "code": "3576",
+              "name": "聯合再生",
+              "category": "儲能、綠電與太陽能"
+            },
+            {
+              "code": "1101",
+              "name": "台泥",
+              "category": "儲能、綠電與太陽能"
+            }
+          ]
+        }
+      }
+    },
+    "台積電龍潭埃米廠": {
+      "name": "台積電龍潭埃米廠",
+      "catalysts": [
+        "台積電龍潭埃米廠"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "台積電龍潭埃米廠（新）"
+            },
+            {
+              "code": "2404",
+              "name": "漢唐",
+              "category": "台積電龍潭埃米廠（新）"
+            },
+            {
+              "code": "6196",
+              "name": "帆宣",
+              "category": "台積電龍潭埃米廠（新）"
             }
           ]
         }
