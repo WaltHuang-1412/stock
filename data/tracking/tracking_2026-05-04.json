@@ -71,12 +71,98 @@
     }
   ],
   "holdings_status": [
-    {"stock_code": "2303", "stock_name": "聯電", "holding_day": 3, "current_price": 80.8, "pct_change_from_rec": 7.6, "status": "holding"},
-    {"stock_code": "2344", "stock_name": "華邦電", "holding_day": 5, "current_price": 92.8, "pct_change_from_rec": 2.4, "status": "holding"},
-    {"stock_code": "3231", "stock_name": "緯創", "holding_day": 6, "current_price": 139.5, "pct_change_from_rec": -3.1, "status": "holding", "note": "Level4警告，監控"},
-    {"stock_code": "2408", "stock_name": "南亞科", "holding_day": 2, "current_price": 219.0, "pct_change_from_rec": -3.3, "status": "holding", "note": "停損距離1.7%極近"},
-    {"stock_code": "2002", "stock_name": "中鋼", "holding_day": 9, "current_price": 18.75, "pct_change_from_rec": -5.5, "status": "holding", "note": "明日D10到期"},
-    {"stock_code": "2317", "stock_name": "鴻海", "holding_day": 2, "current_price": 226.0, "pct_change_from_rec": 0.4, "status": "holding", "note": "Level4警告，監控"}
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "holding_day": 3,
+      "current_price": 81.3,
+      "pct_change_from_rec": 7.6,
+      "status": "holding",
+      "note": "強勢，法人今日+35,167，Level 0"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "holding_day": 5,
+      "current_price": 96.1,
+      "pct_change_from_rec": 6.1,
+      "status": "holding",
+      "note": "5/4恢復健康，今日+6,160，Level 0"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "holding_day": 6,
+      "current_price": 140.0,
+      "pct_change_from_rec": -2.8,
+      "status": "holding",
+      "note": "建議減碼至50%；近5天外資+投信同步賣超，今日L0但趨勢弱"
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "holding_day": 2,
+      "current_price": 237.0,
+      "pct_change_from_rec": 4.6,
+      "status": "holding",
+      "note": "連假補漲+9.98%，但4/30法人爆賣-44K，累計法人負，觀察尾盤量能"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "holding_day": 9,
+      "current_price": 18.65,
+      "pct_change_from_rec": -5.9,
+      "status": "exiting",
+      "note": "Level4強制出場：法人連8天賣超+今日-26,050，以~18.65出場"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "holding_day": 2,
+      "current_price": 227.0,
+      "pct_change_from_rec": 0.8,
+      "status": "exiting",
+      "note": "Level4強制出場：5/1爆量賣超-14,775（34.5%日均量），以~227出場"
+    }
+  ],
+  "track_b_recommendations": [
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "industry": "IC設計/NOR Flash記憶體",
+      "recommend_price": 157.0,
+      "target_price": 175.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 149.15,
+      "settlement_days": 10,
+      "position": "5%",
+      "score": 76,
+      "intraday_signal_strength": 65,
+      "reason": "偵測器強訊號65分+累計法人125K，NOR Flash記憶體超強週期，連假補漲例外（5日+18.9%，-10分小倉位），EPS YoY+82%，L0反轉"
+    }
+  ],
+  "track_b_observations": [
+    {
+      "stock_code": "6415",
+      "stock_name": "矽力*-KY",
+      "reason": "Level 2反轉預警(-15分)，扣分後<75門檻，不推薦"
+    },
+    {
+      "stock_code": "2481",
+      "stock_name": "強茂",
+      "reason": "Level 4爆量賣超，直接排除"
+    },
+    {
+      "stock_code": "6239",
+      "stock_name": "力成",
+      "reason": "累計法人-22,126（負），外資+投信近5天同步賣超，排除"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "reason": "Level 2反轉+外資持股比週減-3分，扣分後<75門檻，不推薦"
+    }
   ],
   "exclusion_notes": "今日連假後Level4大量出現（台積電ADR-1.19%、大立光、聯發科等），加上法人連假獲利了結，可達標的新候選稀缺。零壹3029（78分，分數計算有誤）與浪凡6165（77分，冷門模式誤扣）移除，今日僅4檔達標推薦。"
 }
