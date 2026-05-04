@@ -16,7 +16,11 @@
       "settlement_days": 10,
       "position": "15-20%",
       "score": 91,
-      "reason": "功率半導體IC設計龍頭，外資本週大增+3.55%，EPS+25%，avg_rank TOP10，Level 0；AMD 5/6財報催化"
+      "reason": "功率半導體IC設計龍頭，外資本週大增+3.55%，EPS+25%，avg_rank TOP10，Level 0；AMD 5/6財報催化",
+      "close_price": 355.0,
+      "change_percent": -0.3,
+      "result": "holding",
+      "holding_status": "D0，籌碼健康Level 0，AMD 5/6財報催化持續"
     },
     {
       "stock_code": "8150",
@@ -29,7 +33,11 @@
       "settlement_days": 10,
       "position": "15-20%",
       "score": 89,
-      "reason": "IC封裝超強週期，EPS季報+122%，avg_rank TOP10，Level 0，無龍頭預警影響"
+      "reason": "IC封裝超強週期，EPS季報+122%，avg_rank TOP10，Level 0，無龍頭預警影響",
+      "close_price": 76.5,
+      "change_percent": 2.0,
+      "result": "holding",
+      "holding_status": "D0，強勢+2%，Level 0"
     },
     {
       "stock_code": "2401",
@@ -42,7 +50,11 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 87,
-      "reason": "訊號A(預埋)L3，IC設計超強週期，法人7買3賣佈局，動能-112%蓄積能量；EPS連虧務必嚴守停損"
+      "reason": "訊號A(預埋)L3，IC設計超強週期，法人7買3賣佈局，動能-112%蓄積能量；EPS連虧務必嚴守停損",
+      "close_price": 25.3,
+      "change_percent": 1.2,
+      "result": "holding",
+      "holding_status": "D0，連買4天佈局中，Level 0"
     },
     {
       "stock_code": "2355",
@@ -55,7 +67,11 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 86,
-      "reason": "ABF/PCB超強週期，Intel+20.68%封裝合作利多直接受惠，EPS+23%毛利改善，外資持股比+2.55%，Level 0"
+      "reason": "ABF/PCB超強週期，Intel+20.68%封裝合作利多直接受惠，EPS+23%毛利改善，外資持股比+2.55%，Level 0",
+      "close_price": 51.4,
+      "change_percent": -0.6,
+      "result": "holding",
+      "holding_status": "D0，小幅回檔，法人今日仍+1,062，Level 0"
     }
   ],
   "settled_today": [
@@ -164,5 +180,117 @@
       "reason": "Level 2反轉+外資持股比週減-3分，扣分後<75門檻，不推薦"
     }
   ],
-  "exclusion_notes": "今日連假後Level4大量出現（台積電ADR-1.19%、大立光、聯發科等），加上法人連假獲利了結，可達標的新候選稀缺。零壹3029（78分，分數計算有誤）與浪凡6165（77分，冷門模式誤扣）移除，今日僅4檔達標推薦。"
+  "exclusion_notes": "今日連假後Level4大量出現（台積電ADR-1.19%、大立光、聯發科等），加上法人連假獲利了結，可達標的新候選稀缺。零壹3029（78分，分數計算有誤）與浪凡6165（77分，冷門模式誤扣）移除，今日僅4檔達標推薦。",
+  "yesterday_verification": {
+    "accuracy": 59.0,
+    "note": "含今日結算：151成功/105失敗/177持有中",
+    "results": [
+      {
+        "stock_code": "3037",
+        "stock_name": "欣興",
+        "result": "success",
+        "settled_price": 911.0,
+        "return_pct": 34.0,
+        "note": "D10到期，目標720達成"
+      },
+      {
+        "stock_code": "2002",
+        "stock_name": "中鋼",
+        "result": "fail",
+        "settled_price": 18.65,
+        "return_pct": -6.0,
+        "note": "Level4強制出場"
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "result": "fail",
+        "settled_price": 227.5,
+        "return_pct": 0.8,
+        "note": "Level4強制出場（已達小幅獲利但記為fail）"
+      },
+      {
+        "stock_code": "2867",
+        "stock_name": "三商壽",
+        "result": "fail",
+        "settled_price": 7.58,
+        "return_pct": -3.3,
+        "note": "Level4強制出場"
+      }
+    ]
+  },
+  "removed_stocks": [
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "result": "success",
+      "settled_price": 911.0,
+      "recommend_price": 680.0,
+      "return_pct": 34.0,
+      "settled_date": "2026-05-04",
+      "holding_days": 10,
+      "removal_reason": "D10到期結算，收盤911.0 ≥ 目標720.0"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "result": "fail",
+      "settled_price": 18.65,
+      "recommend_price": 19.84,
+      "return_pct": -6.0,
+      "settled_date": "2026-05-04",
+      "holding_days": 9,
+      "fail_reason": "Level 4 強制出場：法人連8天賣超，今日-2,617張（5.7%日均量）"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "result": "fail",
+      "settled_price": 227.5,
+      "recommend_price": 225.1,
+      "return_pct": 0.8,
+      "settled_date": "2026-05-04",
+      "holding_days": 2,
+      "fail_reason": "Level 4 強制出場：5/1爆量賣超-14,775張（34.5%日均量），強制出場未達目標"
+    },
+    {
+      "stock_code": "2867",
+      "stock_name": "三商壽",
+      "result": "fail",
+      "settled_price": 7.58,
+      "recommend_price": 7.84,
+      "return_pct": -3.3,
+      "settled_date": "2026-05-04",
+      "holding_days": 3,
+      "fail_reason": "Level 4 強制出場：今日賣超-7,089張（73.2%日均量）"
+    }
+  ],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "industry": "金融/銀行",
+      "recommend_price": 16.3,
+      "target_price": 18.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 14.67,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 88,
+      "reason": "金融業13週🔴持續，5/1 avg_rank TOP3，Module A L2佈局中，外資+投信同步+42K累計，5/8非農就業前催化，月季雙線上"
+    },
+    {
+      "stock_code": "3033",
+      "stock_name": "威健",
+      "industry": "IC元件通路",
+      "recommend_price": 37.8,
+      "target_price": 43.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 34.02,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 80,
+      "reason": "IC通路商受益超強週期，9買1賣佈局完成，Module A L2，EPS+39%，外資連5天佈局，月季雙線上"
+    }
+  ]
 }
