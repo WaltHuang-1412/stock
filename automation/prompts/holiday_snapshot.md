@@ -15,10 +15,17 @@
 市場智能資料（補充分析用）：
 執行步驟 1 前，先嘗試從 GitHub 抓取今日新聞資料：
 ```bash
-gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/$(date +%Y-%m-%d)/raw_for_claude.md --jq '.content' | base64 -d > data/$(date +%Y-%m-%d)/market_intelligence.md
+TODAY=$(date +%Y-%m-%d)
+_mi_content=$(gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/${TODAY}/raw_for_claude.md --jq '.content' 2>/dev/null)
+if echo "$_mi_content" | base64 -d > data/${TODAY}/market_intelligence.md 2>/dev/null && [ $(wc -c < data/${TODAY}/market_intelligence.md) -gt 500 ]; then
+  echo "[OK] market_intelligence.md 抓取成功，將納入快照分析"
+else
+  rm -f data/${TODAY}/market_intelligence.md
+  echo "[SKIP] market_intelligence.md 不存在或尚未更新，跳過"
+fi
 ```
-如果成功，在步驟 3 產出摘要時參考這份資料，讓假日快照更完整。
-如果失敗，跳過即可。
+抓取成功時，在步驟 3 產出摘要時參考這份資料，讓假日快照更完整。
+抓取失敗時自動跳過，不影響後續流程。
 
 注意事項：
 - 今天日期用系統日期

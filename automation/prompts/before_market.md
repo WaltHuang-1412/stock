@@ -13,20 +13,41 @@ python3 scripts/preflight_check.py --fix
 市場智能資料（Step 2 和 Step 6 時使用）：
 在執行 Step 2（台股時事）前，先從 GitHub 抓取 market-intelligence 的今日資料：
 ```bash
-gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/$(date +%Y-%m-%d)/raw_for_claude.md --jq '.content' | base64 -d > data/$(date +%Y-%m-%d)/market_intelligence.md
+TODAY=$(date +%Y-%m-%d)
+_mi_content=$(gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/${TODAY}/raw_for_claude.md --jq '.content' 2>/dev/null)
+if echo "$_mi_content" | base64 -d > data/${TODAY}/market_intelligence.md 2>/dev/null && [ $(wc -c < data/${TODAY}/market_intelligence.md) -gt 500 ]; then
+  echo "[OK] market_intelligence.md 抓取成功"
+else
+  rm -f data/${TODAY}/market_intelligence.md
+  echo "[SKIP] market_intelligence.md 不存在或尚未更新，跳過"
+fi
 ```
 
 同時抓取 topic_tracker.md（催化劑追蹤儀表板，直接提供強度評級）：
 ```bash
-gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/topic_tracker.md --jq '.content' | base64 -d > data/$(date +%Y-%m-%d)/topic_tracker.md
+TODAY=$(date +%Y-%m-%d)
+_tt_content=$(gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/topic_tracker.md --jq '.content' 2>/dev/null)
+if echo "$_tt_content" | base64 -d > data/${TODAY}/topic_tracker.md 2>/dev/null && [ $(wc -c < data/${TODAY}/topic_tracker.md) -gt 100 ]; then
+  echo "[OK] topic_tracker.md 抓取成功"
+else
+  rm -f data/${TODAY}/topic_tracker.md
+  echo "[SKIP] topic_tracker.md 跳過"
+fi
 ```
 
 同時抓取 industry_signals.json（結構化產業信號，動態補充 industry_chains.json）：
 ```bash
-gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/industry_signals.json --jq '.content' | base64 -d > data/$(date +%Y-%m-%d)/industry_signals.json
+TODAY=$(date +%Y-%m-%d)
+_is_content=$(gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/industry_signals.json --jq '.content' 2>/dev/null)
+if echo "$_is_content" | base64 -d > data/${TODAY}/industry_signals.json 2>/dev/null && [ $(wc -c < data/${TODAY}/industry_signals.json) -gt 100 ]; then
+  echo "[OK] industry_signals.json 抓取成功"
+else
+  rm -f data/${TODAY}/industry_signals.json
+  echo "[SKIP] industry_signals.json 跳過"
+fi
 ```
 
-如果指令失敗（檔案不存在或網路問題），跳過即可，不影響後續流程。
+抓取失敗時自動跳過，不影響後續流程。
 讀取後在 Step 2 和 Step 6 參考這些資料，識別額外的產業催化劑和時事題材。
 
 topic_tracker.md 催化劑儀表板使用方式：

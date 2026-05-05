@@ -21,9 +21,6 @@ import argparse
 from datetime import datetime, timedelta
 from pathlib import Path
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
-
 REPO_ROOT = Path(__file__).parent.parent
 MARKET_INTEL_ROOT = REPO_ROOT.parent / 'market-intelligence'
 
@@ -479,6 +476,9 @@ def run_checks(mode, fix):
 
 
 def main():
+    if sys.platform == "win32":
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+        sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
     parser = argparse.ArgumentParser(description='Pre-flight 自我檢查 v2.0')
     parser.add_argument('--mode', choices=['before_market', 'intraday', 'after_market'],
                         default='before_market', help='分析模式')
