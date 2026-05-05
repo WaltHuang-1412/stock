@@ -7527,9 +7527,9 @@
       }
     ]
   },
-  "settled_accuracy": "59.0%",
-  "settled_count": 256,
-  "holding_count": 184,
+  "settled_accuracy": 58.3,
+  "settled_count": 264,
+  "holding_count": 177,
   "total_success": 151,
   "total_fail": 105,
   "2026-03-30": {
@@ -9379,10 +9379,12 @@
         "recommend_price": 85.7,
         "target_price": 96.0,
         "stop_loss": 77.13,
-        "result": "holding",
+        "result": "success",
         "holding_days": 1,
         "actual_close": 91.1,
-        "notes": "🆕 新增推薦 DRAM 跌深反彈，盤中爆量+42K"
+        "notes": "🆕 新增推薦 DRAM 跌深反彈，盤中爆量+42K",
+        "settled_price": 98.8,
+        "settled_date": "2026-05-05"
       },
       {
         "symbol": "2301",
@@ -9411,10 +9413,13 @@
         "recommend_price": 19.85,
         "target_price": 21.95,
         "stop_loss": 17.87,
-        "result": "holding",
+        "result": "fail",
         "holding_days": 3,
         "actual_close": 19.75,
-        "notes": "AI 噴發資金排擠+跌破 MA5/10"
+        "notes": "AI 噴發資金排擠+跌破 MA5/10",
+        "settled_price": 18.6,
+        "settled_date": "2026-05-05",
+        "fail_reason": "D10到期收盤<推薦價"
       },
       {
         "symbol": "2801",
@@ -9432,10 +9437,12 @@
         "recommend_price": 678.0,
         "target_price": 720.0,
         "stop_loss": 610.2,
-        "result": "holding",
+        "result": "success",
         "holding_days": 4,
         "actual_close": 710.0,
-        "notes": "盤中 707 差目標 13 元，未達標；目標調升 740"
+        "notes": "盤中 707 差目標 13 元，未達標；目標調升 740",
+        "settled_price": 903.0,
+        "settled_date": "2026-05-05"
       },
       {
         "symbol": "3706",
@@ -9547,10 +9554,13 @@
         "recommend_price": 21.45,
         "target_price": 23.5,
         "stop_loss": 19.31,
-        "result": "holding",
+        "result": "fail",
         "holding_days": 5,
         "actual_close": 21.35,
-        "notes": "🟠 L2反轉 盤中減碼30-50%"
+        "notes": "🟠 L2反轉 盤中減碼30-50%",
+        "settled_price": 20.8,
+        "settled_date": "2026-05-05",
+        "fail_reason": "Level 4爆量賣超強制出場"
       },
       {
         "symbol": "3706",
@@ -10199,12 +10209,13 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 80,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "fail",
+        "settled_date": "2026-05-05",
+        "settled_price": 94.0,
         "holding_days": 1,
         "track": "A",
-        "actual_close": 89.6
+        "actual_close": 89.6,
+        "fail_reason": "Level 4爆量賣超強制出場"
       }
     ]
   },
@@ -10220,10 +10231,11 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 91,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-05-05",
+        "settled_price": 386.5,
+        "holding_days": 1,
+        "fail_reason": "Level 4爆量賣超強制出場"
       },
       {
         "symbol": "8150",
@@ -10235,9 +10247,9 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 89,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-05-05",
+        "settled_price": 84.1,
         "holding_days": 1
       },
       {
@@ -10250,10 +10262,11 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 87,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-05-05",
+        "settled_price": 25.15,
+        "holding_days": 1,
+        "fail_reason": "Level 4爆量賣超強制出場"
       },
       {
         "symbol": "2355",
@@ -10396,6 +10409,19 @@
         "settled_date": null,
         "settled_price": null,
         "holding_days": 1
+      },
+      {
+        "symbol": "2344",
+        "name": "華邦電",
+        "industry": "DRAM/記憶體",
+        "recommend_price": 98.7,
+        "target_price": 108.0,
+        "stop_loss": 93.77,
+        "stop_loss_pct": -5,
+        "settlement_days": 10,
+        "result": "holding",
+        "track": "B",
+        "recommend_date": "2026-05-05"
       }
     ],
     "settled_accuracy": null,
