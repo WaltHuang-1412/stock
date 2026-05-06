@@ -1,0 +1,65 @@
+{
+  "date": "2026-05-06",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "industry": "DRAM代工/記憶體",
+      "recommend_price": 55.4,
+      "target_price": 61.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 52.63,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 81,
+      "note": "超強催化覆寫：Micron+26.95%>10%，停損-5%，小倉位",
+      "reason": "DRAM代工tier_1+Micron+26.95%超強催化覆寫+法人avg_rank 7.5(TOP10)+近5天外資+19K回補+EPS YoY+60%",
+      "result": "holding"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "industry": "NOR Flash記憶體/半導體",
+      "recommend_price": 160.5,
+      "target_price": 177.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 144.45,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 74,
+      "note": "已大漲催化脈絡例外：5日+10.69%但Micron+26.95%為今日新催化，小倉位",
+      "reason": "NOR Flash記憶體龍頭+Micron+26.95%直接催化+法人累計+59K佈局完成+近5天外+投同步+23K+Level 0籌碼健康",
+      "result": "holding"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "2301",
+      "stock_name": "光寶科",
+      "reason": "5/5法人爆量賣超-1386張（佔日均量8.3%），Level 4反轉預警，盤中確認後強制停損"
+    }
+  ],
+  "observations": [
+    {
+      "stock_code": "2311",
+      "stock_name": "日月光",
+      "reason": "Intel+27.96%+ADR+11.17%封測龍頭強催化，但T86數據不足（0天），無法正式評分，等待數據恢復"
+    }
+  ],
+  "market_context": {
+    "date": "2026-05-06",
+    "regime": "多頭",
+    "key_catalysts": [
+      "Micron+26.95%→DRAM超強催化覆寫",
+      "Intel+27.96%→封測強催化",
+      "NVIDIA-7.82%→AI伺服器Level 2預警"
+    ],
+    "vix": 17.38,
+    "defense_ratio": "0-15%",
+    "notes": "今日新推薦僅2檔：受NVIDIA下跌-7.82%影響AI伺服器鏈，多數DRAM/封測股5日已漲10-25%，有效候選有限。現有19檔持有中，整體組合分散。"
+  }
+}

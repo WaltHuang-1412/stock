@@ -1,0 +1,56 @@
+{
+  "date": "2026-05-06",
+  "regime": "多頭",
+  "score": 5,
+  "details": [
+    "台股在年線上+47.0%",
+    "台股在季線上+18.1%",
+    "VIX 17.4（正常）",
+    "S&P500在季線上+6.1%",
+    "投信連買 10 日（內資信心）"
+  ],
+  "taiex": {
+    "current": 40705.140625,
+    "ma20": 37021.0,
+    "ma60": 34453.0,
+    "ma240": 27683.0,
+    "high_52w": 40705.140625,
+    "low_52w": 17391.759765625,
+    "vs_ma20": 9.95,
+    "vs_ma60": 18.15,
+    "vs_ma240": 47.04
+  },
+  "sp500": {
+    "current": 7259.22021484375,
+    "ma60": 6844.0,
+    "vs_ma60": 6.06
+  },
+  "vix": 17.3799991607666,
+  "institutional": {
+    "foreign": {
+      "today_net": 39.39,
+      "consecutive_days": 2,
+      "net_5d": -700.92,
+      "net_10d": -83.72
+    },
+    "trust": {
+      "today_net": 34.11,
+      "consecutive_days": 10,
+      "net_5d": 142.92,
+      "net_10d": 441.39
+    },
+    "dealer": {
+      "today_net": -100.87,
+      "consecutive_days": -1,
+      "net_5d": -31.82,
+      "net_10d": -240.12
+    },
+    "total": {
+      "today_net": -27.37,
+      "net_5d": -589.82,
+      "net_10d": 117.55
+    }
+  },
+  "etf_buy_multiplier": 1,
+  "stock_defense_ratio": "0-15%"
+}
