@@ -274,6 +274,21 @@ python3 scripts/reversal_alert.py [候選股...]
 - **Module A L3 股票必須評分**（與 TOP30 同等優先級）
 - 評分後依總分排名，選出最終推薦 6-8 檔
 
+**🔴 推薦排除規則（新推薦前必讀）**：
+```bash
+# 讀取實際持倉，quantity > 0 的股票才排除
+python3 -c "
+import yaml
+with open('portfolio/my_holdings.yaml', encoding='utf-8') as f:
+    d = yaml.safe_load(f)
+held = [h['symbol'] for h in d.get('holdings', []) if h.get('quantity', 0) > 0]
+print('實際持有排除：', held)
+"
+```
+- **排除對象**：`portfolio/my_holdings.yaml` 中 `quantity > 0` 的股票（使用者已持有）
+- **不排除**：只在 `tracking.json` 追蹤但未實際持有的股票 → 仍可重新評分並推薦
+- **禁止憑「已在tracking」理由排除候選股** — tracking 是記錄系統，不代表使用者有買
+
 **🔴 產業分類強制驗證（每檔評分前必做）**：
 ```python
 # 評分任何候選股前，必須先讀取 industry_chains.json 確認：

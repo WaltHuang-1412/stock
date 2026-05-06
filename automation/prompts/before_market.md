@@ -187,6 +187,20 @@ VIX {vix} | 台股vs年線{vs_ma240}%
 - 催化x營收有⚠️的產業要獨立列出
 - PTT 有熱門個股才列，沒有就省略
 
+推薦排除規則（Step 7 評分前必讀）：
+```bash
+python3 -c "
+import yaml
+with open('portfolio/my_holdings.yaml', encoding='utf-8') as f:
+    d = yaml.safe_load(f)
+held = [h['symbol'] for h in d.get('holdings', []) if h.get('quantity', 0) > 0]
+print('實際持有（排除）：', held)
+"
+```
+- 只有 `quantity > 0` 的股票才排除於新推薦
+- tracking.json 中的持有中股票**不排除**，仍可重新評分推薦
+- 禁止用「已在 tracking」作為排除理由
+
 自動化注意事項：
 1. 今天日期用系統日期
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py before_market $(date +%Y-%m-%d)`，通過才能 git commit。驗證失敗必須修正報告後重跑
