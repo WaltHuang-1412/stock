@@ -50,6 +50,38 @@
       "reason": "Intel+27.96%+ADR+11.17%封測龍頭強催化，但T86數據不足（0天），無法正式評分，等待數據恢復"
     }
   ],
+  "intraday_prices": {
+    "updated_at": "2026-05-06 12:30",
+    "6770": {"price": 57.2, "change_pct": 3.2},
+    "2337": {"price": 172.0, "change_pct": 7.2}
+  },
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "detector_score": 80,
+      "reason": "偵測器強訊號80分（連買7天+量比1.53x+TOP30），但已在tracking D9/10，明日到期，不重複推薦"
+    },
+    {
+      "stock_code": "2430",
+      "stock_name": "燦坤",
+      "detector_score": 65,
+      "reason": "偵測器65分（連買7天+量比1.89x），但累計法人買超僅17張（10天），買超金額近乎為零，不符合Track B入口條件"
+    },
+    {
+      "stock_code": "4526",
+      "stock_name": "東台",
+      "detector_score": 60,
+      "reason": "偵測器60分，但盤前已排除（5日+24.8%>20%一票否決），今日-7.7%大跌"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "detector_score": 0,
+      "reason": "TOP30 avg_rank 3.0，昨日+130K大量買超，但5日+12.1%>10%，無新催化劑覆寫條件，預設不評分"
+    }
+  ],
   "market_context": {
     "date": "2026-05-06",
     "regime": "多頭",
