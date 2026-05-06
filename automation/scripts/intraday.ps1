@@ -123,7 +123,19 @@ Write-Output "" | Tee-Object -FilePath $LogFile -Append
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 if ($AllExist) {
     Write-Output "盤中分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-    # LINE 推送由 Claude 在分析結尾自行呼叫 notify_line.py，PS1 不重複推送
+    # git push
+    Write-Output "" | Tee-Object -FilePath $LogFile -Append
+    Write-Output "[$(Get-Date -Format 'HH:mm:ss')] git push..." | Tee-Object -FilePath $LogFile -Append
+    git -C $ProjectDir push 2>&1 | Tee-Object -FilePath $LogFile -Append
+    # LINE 推送
+    $LineFile = "$ProjectDir\data\$Date\intraday_line.txt"
+    if ((Test-Path $LineFile) -and (Get-Item $LineFile).Length -gt 0) {
+        python "$ProjectDir\scripts\notify_line.py" --file $LineFile 2>&1 | Tee-Object -FilePath $LogFile -Append
+        Write-Output "[$(Get-Date -Format 'HH:mm:ss')] LINE 推送完成" | Tee-Object -FilePath $LogFile -Append
+    } else {
+        Write-Output "[WARN] intraday_line.txt 不存在或為空，跳過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
+        python "$ProjectDir\scripts\notify_line.py" "盤中分析完成 ($Date) 但摘要檔遺失，請確認"
+    }
 } else {
     Write-Output "盤中分析有缺漏檔案！請檢查 log (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
     python "$ProjectDir\scripts\notify_line.py" "盤中分析失敗 ($Date) 有缺漏檔案，請檢查 log"

@@ -42,6 +42,6 @@ v8.0 關鍵數值（強制遵守）：
 
 自動化注意事項：
 1. 今天日期用系統日期
-2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py intraday $(date +%Y-%m-%d)`，通過才能 git commit + git push
+2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py intraday $(date +%Y-%m-%d)`，通過才能 git commit
 3. 禁止修改 scripts/ 目錄下的任何 .py 檔案，只能執行不能改
-4. git commit + git push 完成後，必須執行 `python3 scripts/notify_line.py --file data/$(date +%Y-%m-%d)/intraday_line.txt` 推送 LINE
+4. git push 和 LINE 推送由自動化腳本（intraday.ps1）在 Claude 結束後負責執行，Claude 只需完成 git commit
