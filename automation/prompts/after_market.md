@@ -28,4 +28,4 @@ v8.0 關鍵數值（強制遵守）：
 1. 今天日期用系統日期
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py after_market $(date +%Y-%m-%d)`，通過才能 git commit
 3. 禁止修改 scripts/ 目錄下的任何 .py 檔案，只能執行不能改
-4. git push 和 LINE 推送由自動化腳本（after_market.ps1）在 Claude 結束後負責執行，Claude 只需完成 git commit
+4. **🔴 禁止呼叫 notify_line.py** — git push 和 LINE 推送完全由 after_market.ps1 在 Claude session 結束後執行，Claude 只負責 git commit，絕對不得自行推送 LINE
