@@ -1,0 +1,206 @@
+{
+  "date": "2026-05-07",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "industry": "鋼鐵",
+      "recommend_price": 38.45,
+      "target_price": 42.30,
+      "stop_loss_pct": -10,
+      "stop_loss": 34.61,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 87,
+      "reason": "鋼鐵Module A L2+外資持股比+0.75%（本日最強單因子）+EPS YoY+48%+avg_rank 20.5 TOP21+AI基礎設施需求",
+      "scoring_detail": {
+        "時事現況": 15,
+        "法人數據": 16,
+        "產業邏輯": 14,
+        "技術面": 12,
+        "價格位置": 12,
+        "小計": 69,
+        "EPS_adj": 3,
+        "外資持股比_adj": 5,
+        "ModuleA_adj": 10,
+        "合計": 87
+      },
+      "track": "A",
+      "module_a_level": "L2",
+      "momentum_pct": -10.2,
+      "consecutive_buy_days": 3
+    },
+    {
+      "stock_code": "1326",
+      "stock_name": "台化",
+      "industry": "石化塑膠",
+      "recommend_price": 51.00,
+      "target_price": 56.10,
+      "stop_loss_pct": -10,
+      "stop_loss": 45.90,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 86,
+      "reason": "石化Module A L2（動能-44.1%深度佈局完成）+EPS YoY+74%+WTI油價-5.85%降低原料成本+外資6天累計+59K",
+      "scoring_detail": {
+        "時事現況": 20,
+        "法人數據": 14,
+        "產業邏輯": 15,
+        "技術面": 13,
+        "價格位置": 12,
+        "小計": 74,
+        "EPS_adj": 5,
+        "外資持股比_adj": -3,
+        "ModuleA_adj": 10,
+        "合計": 86
+      },
+      "track": "A",
+      "module_a_level": "L2",
+      "momentum_pct": -44.1,
+      "consecutive_buy_days": 2
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎",
+      "industry": "AI伺服器客製化",
+      "recommend_price": 4970.00,
+      "target_price": 5467.00,
+      "stop_loss_pct": -10,
+      "stop_loss": 4473.00,
+      "settlement_days": 10,
+      "position": "5%",
+      "score": 75,
+      "reason": "AMD+25%超強催化+EPS YoY+94%+動能-33.5%佈局完成+Level 0+Track B AI伺服器客製化龍頭，法人持有尚未反映AMD財報",
+      "scoring_detail": {
+        "時事現況": 22,
+        "法人數據": 5,
+        "產業邏輯": 18,
+        "技術面": 13,
+        "價格位置": 12,
+        "小計": 70,
+        "EPS_adj": 5,
+        "外資持股比_adj": 0,
+        "ModuleB_adj": 0,
+        "合計": 75
+      },
+      "note": "Track B新推薦，嚴守停損-10%，AMD財報催化尚未全面反映",
+      "track": "B",
+      "module_a_level": null,
+      "momentum_pct": -33.5,
+      "consecutive_buy_days": 0
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "reason": "冷模式扣分：金融/保險產業勝率0%（樣本=6≥5）→ -5分 → 總分63分低於門檻70分",
+      "original_score": 68,
+      "final_score": 63,
+      "note": "5/8法說後可重新評估；若法說正面且冷模式通過則可考慮入場"
+    }
+  ],
+  "observations": [
+    {
+      "stock_code": "2615",
+      "stock_name": "萬海",
+      "reason": "Module A L2(動能+27.1% consec=3)，但航運冷模式20%（樣本=5），不符合推薦條件，觀察"
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "reason": "Module A L2(動能-86.8% consec=2)，金融冷模式0% → 排除"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "reason": "5/7電信三雄法說今日舉行，等待法說確認後明日評估是否正式推薦。衛星PCB龍頭avg_rank 6.5 TOP10"
+    }
+  ],
+  "market_context": {
+    "date": "2026-05-07",
+    "regime": "多頭",
+    "key_catalysts": [
+      "AMD Q1財報+25%超強催化（EPS $1.57 vs 預期$1.01）",
+      "費半指數+11.7%，近期最大單日漲幅",
+      "Micron+28.57%，DRAM超強催化持續",
+      "Intel+19.27%，封測鏈強催化",
+      "SMCI+31.69%，AI伺服器設備強催化",
+      "WTI油價-5.85%，石化原料成本降低",
+      "NVIDIA-0.68%，Level 0無影響",
+      "Apple+6.42%，蘋果鏈輕度催化"
+    ],
+    "vix": 17.39,
+    "vix_level": "<20",
+    "defense_ratio": "0-15%",
+    "us_leader_alerts": "全Level 0，無警報",
+    "cold_patterns": ["金融/保險(0%)", "航空/航運(20%)", "水泥(20%)", "電動車/電子車(20%)"],
+    "hot_patterns_reference": ["DRAM記憶體(100%)", "ABF/PCB(100%)", "IC設計(100%)", "封測(100%)"],
+    "notes": "AMD財報夜超強，費半+11.7%創近期單日最高。今日新推薦3檔：鋼鐵+石化+AI伺服器，避開金融冷模式。持有中16檔分散良好，2317鴻海距目標僅0.4%需注意，2376技嘉D9/10明日最後結算日。"
+  },
+  "settlements_today": {
+    "count": 5,
+    "all_success": true,
+    "details": [
+      {"code": "3661", "name": "世芯-KY", "result": "success", "pct": 14.1},
+      {"code": "2408", "name": "南亞科", "result": "success", "pct": 24.5},
+      {"code": "2344", "name": "華邦電", "result": "success", "pct": 19.8},
+      {"code": "1303", "name": "南亞", "result": "success", "pct": 4.9, "note": "D10到期"},
+      {"code": "3706", "name": "神達", "result": "success", "pct": 2.9, "note": "D10到期"}
+    ]
+  },
+  "holdings_status": [
+    {"code": "2317", "name": "鴻海", "day": "D2/10", "price": 252.0, "change_pct": 10.8, "to_target": 0.4, "status": "⚠️極近目標"},
+    {"code": "3033", "name": "威健", "day": "D2/10", "price": 42.4, "change_pct": 11.9, "to_target": 1.4, "status": "⚠️近目標"},
+    {"code": "2337", "name": "旺宏", "day": "D1/10", "price": 172.0, "change_pct": 7.2, "to_target": 2.9, "status": "⚠️接近目標"},
+    {"code": "2376", "name": "技嘉", "day": "D9/10", "price": 301.0, "change_pct": 5.6, "to_target": 3.0, "status": "⚠️D9最後結算日"},
+    {"code": "2382", "name": "廣達", "day": "D5/10", "price": 346.5, "change_pct": 7.6, "to_target": 4.2, "status": "持有中"},
+    {"code": "6770", "name": "力積電", "day": "D1/10", "price": 58.1, "change_pct": 4.9, "to_target": 5.0, "status": "持有中"},
+    {"code": "2356", "name": "英業達", "day": "D5/10", "price": 49.2, "change_pct": 6.3, "to_target": 5.7, "status": "持有中"},
+    {"code": "2049", "name": "上銀", "day": "D7/10", "price": 315.5, "change_pct": 4.5, "to_target": 4.6, "status": "持有中"},
+    {"code": "2327", "name": "國巨", "day": "D5/10", "price": 338.0, "change_pct": 3.5, "to_target": 8.3, "status": "持有中"},
+    {"code": "3231", "name": "緯創", "day": "D2/10", "price": 146.5, "change_pct": 4.3, "to_target": 7.2, "status": "持有中"},
+    {"code": "2441", "name": "超豐", "day": "D2/10", "price": 93.2, "change_pct": 0.9, "to_target": 9.4, "status": "持有中"},
+    {"code": "2485", "name": "兆赫", "day": "D8/10", "price": 66.7, "change_pct": 10.2, "to_target": 10.9, "status": "持有中"},
+    {"code": "2355", "name": "敬鵬", "day": "D3/10", "price": 51.8, "change_pct": 0.2, "to_target": 14.9, "status": "持有中"},
+    {"code": "3008", "name": "大立光", "day": "D2/10", "price": 2520.0, "change_pct": -2.1, "to_target": 13.1, "status": "觀察中"},
+    {"code": "2867", "name": "三商壽", "day": "D6/10", "price": 7.69, "change_pct": -2.0, "to_target": 13.1, "status": "觀察中"},
+    {"code": "2301", "name": "光寶科", "day": "D2/10", "price": 185.0, "change_pct": 7.9, "to_target": 2.7, "note": "已於5/6盤中強制停損（Level 4反轉）", "status": "已強制停損"}
+  ],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "industry": "低軌衛星/LEO PCB",
+      "recommend_price": 250.0,
+      "target_price": 278.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 225.0,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 79,
+      "reason": "衛星PCB龍頭(LEO>30%)+5/7電信三雄法說→明日確認催化+avg_rank 6.5 TOP10+近5天外+投同步",
+      "note": "衛星熱模式100%，等今日法說結果確認後明日評估，衛星PCB供給最稀缺",
+      "track": "A"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "industry": "金融",
+      "recommend_price": 22.2,
+      "target_price": 24.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 19.98,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score_base": 68,
+      "reason": "5/8法說會可催化+Module A L2連買8天+EPS YoY+150%+avg_rank 15.5",
+      "note": "金融冷模式0%目前→63分低於門檻；明日法說後若正面確認，可考慮覆寫",
+      "track": "A"
+    }
+  ]
+}
