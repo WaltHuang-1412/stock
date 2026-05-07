@@ -143,50 +143,78 @@
     "notes": "AMD財報夜超強，費半+11.7%創近期單日最高。今日新推薦3檔：鋼鐵+石化+AI伺服器，避開金融冷模式。持有中16檔分散良好，2317鴻海距目標僅0.4%需注意，2376技嘉D9/10明日最後結算日。"
   },
   "settlements_today": {
-    "count": 5,
+    "count": 9,
     "all_success": true,
     "details": [
-      {"code": "3661", "name": "世芯-KY", "result": "success", "pct": 14.1},
-      {"code": "2408", "name": "南亞科", "result": "success", "pct": 24.5},
-      {"code": "2344", "name": "華邦電", "result": "success", "pct": 19.8},
-      {"code": "1303", "name": "南亞", "result": "success", "pct": 4.9, "note": "D10到期"},
-      {"code": "3706", "name": "神達", "result": "success", "pct": 2.9, "note": "D10到期"}
+      {"code": "6770", "name": "力積電", "result": "success", "pct": 15.3},
+      {"code": "2301", "name": "光寶科", "result": "success", "pct": 18.7},
+      {"code": "3661", "name": "世芯-KY", "result": "success", "pct": 20.2},
+      {"code": "2408", "name": "南亞科", "result": "success", "pct": 24.9},
+      {"code": "2327", "name": "國巨", "result": "success", "pct": 13.8},
+      {"code": "2376", "name": "技嘉", "result": "success", "pct": 8.9},
+      {"code": "2344", "name": "華邦電", "result": "success", "pct": 23.6},
+      {"code": "1303", "name": "南亞", "result": "success", "pct": 2.1, "note": "D10到期"},
+      {"code": "3706", "name": "神達", "result": "success", "pct": 2.6, "note": "D10到期"}
     ]
   },
+  "intraday_forced_stops": [
+    {
+      "stock_code": "2441",
+      "stock_name": "超豐",
+      "reason": "法人反轉 Level 4：今日爆量賣超-1,800張（佔日均量45.0%）",
+      "intraday_price": 93.4,
+      "action": "強制停損"
+    },
+    {
+      "stock_code": "2355",
+      "stock_name": "敬鵬",
+      "reason": "法人反轉 Level 4：今日爆量賣超-1,943張（佔日均量12.6%）",
+      "intraday_price": 53.1,
+      "action": "強制停損"
+    },
+    {
+      "stock_code": "2485",
+      "stock_name": "兆赫",
+      "reason": "法人反轉 Level 3：近2日累計賣超-6,293張，累計由正轉負",
+      "intraday_price": 68.2,
+      "action": "強制停損"
+    }
+  ],
   "holdings_status": [
-    {"code": "2317", "name": "鴻海", "day": "D2/10", "price": 252.0, "change_pct": 10.8, "to_target": 0.4, "status": "⚠️極近目標"},
-    {"code": "3033", "name": "威健", "day": "D2/10", "price": 42.4, "change_pct": 11.9, "to_target": 1.4, "status": "⚠️近目標"},
-    {"code": "2337", "name": "旺宏", "day": "D1/10", "price": 172.0, "change_pct": 7.2, "to_target": 2.9, "status": "⚠️接近目標"},
-    {"code": "2376", "name": "技嘉", "day": "D9/10", "price": 301.0, "change_pct": 5.6, "to_target": 3.0, "status": "⚠️D9最後結算日"},
-    {"code": "2382", "name": "廣達", "day": "D5/10", "price": 346.5, "change_pct": 7.6, "to_target": 4.2, "status": "持有中"},
-    {"code": "6770", "name": "力積電", "day": "D1/10", "price": 58.1, "change_pct": 4.9, "to_target": 5.0, "status": "持有中"},
-    {"code": "2356", "name": "英業達", "day": "D5/10", "price": 49.2, "change_pct": 6.3, "to_target": 5.7, "status": "持有中"},
-    {"code": "2049", "name": "上銀", "day": "D7/10", "price": 315.5, "change_pct": 4.5, "to_target": 4.6, "status": "持有中"},
-    {"code": "2327", "name": "國巨", "day": "D5/10", "price": 338.0, "change_pct": 3.5, "to_target": 8.3, "status": "持有中"},
-    {"code": "3231", "name": "緯創", "day": "D2/10", "price": 146.5, "change_pct": 4.3, "to_target": 7.2, "status": "持有中"},
-    {"code": "2441", "name": "超豐", "day": "D2/10", "price": 93.2, "change_pct": 0.9, "to_target": 9.4, "status": "持有中"},
-    {"code": "2485", "name": "兆赫", "day": "D8/10", "price": 66.7, "change_pct": 10.2, "to_target": 10.9, "status": "持有中"},
-    {"code": "2355", "name": "敬鵬", "day": "D3/10", "price": 51.8, "change_pct": 0.2, "to_target": 14.9, "status": "持有中"},
-    {"code": "3008", "name": "大立光", "day": "D2/10", "price": 2520.0, "change_pct": -2.1, "to_target": 13.1, "status": "觀察中"},
-    {"code": "2867", "name": "三商壽", "day": "D6/10", "price": 7.69, "change_pct": -2.0, "to_target": 13.1, "status": "觀察中"},
-    {"code": "2301", "name": "光寶科", "day": "D2/10", "price": 185.0, "change_pct": 7.9, "to_target": 2.7, "note": "已於5/6盤中強制停損（Level 4反轉）", "status": "已強制停損"}
+    {"code": "2027", "name": "大成鋼", "day": "D0/10", "price": 39.0, "change_pct": 1.4, "to_target": 8.5, "reversal": "Level 0", "status": "持有中"},
+    {"code": "1326", "name": "台化", "day": "D0/10", "price": 49.75, "change_pct": -2.5, "to_target": 12.8, "reversal": "Level 0", "status": "⚠️跌破MA5，法人仍買+6,759，未觸停損"},
+    {"code": "6669", "name": "緯穎", "day": "D0/10", "price": 4990.0, "change_pct": 0.4, "to_target": 9.6, "reversal": "Level 0", "status": "持有中"},
+    {"code": "2337", "name": "旺宏", "day": "D1/10", "price": 161.5, "change_pct": -5.5, "to_target": 9.6, "reversal": "Level 0", "status": "⚠️今日大跌-5.5%但法人逆勢+22,318，停損154.8"},
+    {"code": "2317", "name": "鴻海", "day": "D2/10", "price": 253.0, "change_pct": 11.0, "to_target": 0.2, "reversal": "Level 0", "status": "🎯極近目標，可考慮分批獲利"},
+    {"code": "3033", "name": "威健", "day": "D2/10", "price": 42.85, "change_pct": 13.1, "to_target": 0.4, "reversal": "Level 0", "status": "🎯極近目標，可考慮分批獲利"},
+    {"code": "3231", "name": "緯創", "day": "D2/10", "price": 146.0, "change_pct": 3.9, "to_target": 7.5, "reversal": "Level 0", "status": "持有中"},
+    {"code": "3008", "name": "大立光", "day": "D2/10", "price": 2535.0, "change_pct": -1.6, "to_target": 12.4, "reversal": "Level 0", "status": "⚠️跌破MA5，Level 0，觀察"},
+    {"code": "2441", "name": "超豐", "day": "D2/10", "price": 93.4, "change_pct": 1.1, "reversal": "Level 4", "status": "🛑已強制停損（L4爆量賣超45%日均量）"},
+    {"code": "2382", "name": "廣達", "day": "D5/10", "price": 343.0, "change_pct": 6.5, "to_target": 5.2, "reversal": "Level 0", "status": "持有中"},
+    {"code": "2356", "name": "英業達", "day": "D5/10", "price": 50.1, "change_pct": 8.2, "to_target": 3.8, "reversal": "Level 0", "status": "持有中"},
+    {"code": "2867", "name": "三商壽", "day": "D6/10", "price": 7.82, "change_pct": 1.7, "to_target": 11.3, "reversal": "Level 0", "status": "持有中"},
+    {"code": "2049", "name": "上銀", "day": "D7/10", "price": 322.5, "change_pct": 6.8, "to_target": 2.3, "reversal": "Level 0", "status": "🎯近目標"},
+    {"code": "2485", "name": "兆赫", "day": "D8/10", "price": 68.2, "change_pct": 2.7, "reversal": "Level 3", "status": "🛑已強制停損（L3連續賣超累計轉負）"},
+    {"code": "2355", "name": "敬鵬", "day": "D3/10", "price": 53.1, "change_pct": 2.7, "reversal": "Level 4", "status": "🛑已強制停損（L4爆量賣超12.6%日均量）"}
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "3046",
+      "stock_name": "建碁",
+      "score": 60,
+      "reason": "盤中偵測強訊號75分（連買7天+量比3.0x），但法人買超量太少（累計僅162張），產業定位未分類，總分60分低於75分門檻",
+      "action": "觀察，等法人買超量增加後重新評估"
+    },
+    {
+      "stock_code": "3715",
+      "stock_name": "定穎投控",
+      "score": 62,
+      "reason": "avg_rank 9.5（TOP10），連買3天，但EPS連續6季負成長(-5)外資持股比週減(-3)，總分62分低於門檻",
+      "action": "觀察，電信法說後若買超加速可重新評估"
+    }
   ],
   "tomorrow_recommendations": [
-    {
-      "stock_code": "2313",
-      "stock_name": "華通",
-      "industry": "低軌衛星/LEO PCB",
-      "recommend_price": 250.0,
-      "target_price": 278.0,
-      "stop_loss_pct": -10,
-      "stop_loss": 225.0,
-      "settlement_days": 10,
-      "position": "5-10%",
-      "score": 79,
-      "reason": "衛星PCB龍頭(LEO>30%)+5/7電信三雄法說→明日確認催化+avg_rank 6.5 TOP10+近5天外+投同步",
-      "note": "衛星熱模式100%，等今日法說結果確認後明日評估，衛星PCB供給最稀缺",
-      "track": "A"
-    },
     {
       "stock_code": "2883",
       "stock_name": "凱基金",
@@ -201,6 +229,15 @@
       "reason": "5/8法說會可催化+Module A L2連買8天+EPS YoY+150%+avg_rank 15.5",
       "note": "金融冷模式0%目前→63分低於門檻；明日法說後若正面確認，可考慮覆寫",
       "track": "A"
+    }
+  ],
+  "tomorrow_removed": [
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "reason": "盤中 Level 4 爆量賣超（-27,590張，佔日均量53%），電信三雄法說後法人大量出貨，明日盤前需重新確認法人態度",
+      "was_score": 79,
+      "action": "暫時移除，明日盤前重新評估"
     }
   ]
 }
