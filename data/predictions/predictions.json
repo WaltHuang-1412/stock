@@ -7527,9 +7527,9 @@
       }
     ]
   },
-  "settled_accuracy": "58.8%",
-  "settled_count": 267,
-  "holding_count": 179,
+  "settled_accuracy": 60.0,
+  "settled_count": 275,
+  "holding_count": 171,
   "total_success": 157,
   "total_fail": 110,
   "2026-03-30": {
@@ -9509,10 +9509,12 @@
         "recommend_price": 91.1,
         "target_price": 96.0,
         "stop_loss": 82.0,
-        "result": "holding",
-        "holding_days": 2,
+        "result": "success",
+        "holding_days": 10,
         "actual_close": 90.6,
-        "notes": "❓狀態不明 累計-6.3K"
+        "notes": "D10到期+25.2%",
+        "settled_date": "2026-05-07",
+        "settled_price": 114.0
       },
       {
         "symbol": "2327",
@@ -9520,10 +9522,12 @@
         "recommend_price": 323.0,
         "target_price": 345.0,
         "stop_loss": 290.7,
-        "result": "holding",
-        "holding_days": 1,
+        "result": "success",
+        "holding_days": 10,
         "actual_close": 315.5,
-        "notes": "🆕 Day1 -2.92% L1減速驗證"
+        "notes": "D10到期+15.0%",
+        "settled_date": "2026-05-07",
+        "settled_price": 371.5
       },
       {
         "symbol": "2356",
@@ -9568,10 +9572,12 @@
         "recommend_price": 85.0,
         "target_price": 92.0,
         "stop_loss": 80.75,
-        "result": "holding",
-        "holding_days": 3,
+        "result": "success",
+        "holding_days": 10,
         "actual_close": 85.3,
-        "notes": "Track B 外資持股比+0.51%大增"
+        "notes": "D10到期+2.8%",
+        "settled_date": "2026-05-07",
+        "settled_price": 87.4
       },
       {
         "symbol": "2002",
@@ -10029,11 +10035,12 @@
         "recommend_price": 226.5,
         "target_price": 249.2,
         "stop_loss": 215.2,
-        "result": "holding",
-        "holding_days": 6,
+        "result": "success",
+        "holding_days": 7,
         "actual_close": 237.5,
-        "settled_date": null,
-        "settled_price": null
+        "settled_date": "2026-05-07",
+        "settled_price": 287.0,
+        "notes": "目標達成+26.7%"
       },
       {
         "symbol": "2301",
@@ -10088,11 +10095,12 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 89,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 2,
-        "track": "A"
+        "result": "success",
+        "settled_date": "2026-05-07",
+        "settled_price": 371.5,
+        "holding_days": 6,
+        "track": "A",
+        "notes": "目標達成+13.8%"
       },
       {
         "symbol": "2356",
@@ -10316,10 +10324,11 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 97,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-05-07",
+        "settled_price": 203.5,
+        "holding_days": 2,
+        "notes": "目標達成+18.7%"
       },
       {
         "symbol": "2317",
@@ -10331,10 +10340,11 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 95,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-05-07",
+        "settled_price": 253.5,
+        "holding_days": 2,
+        "notes": "目標達成+11.4%"
       },
       {
         "symbol": "3033",
@@ -10445,10 +10455,11 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 81,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-05-07",
+        "settled_price": 63.9,
+        "holding_days": 1,
+        "notes": "目標達成+15.3%"
       },
       {
         "symbol": "2337",
