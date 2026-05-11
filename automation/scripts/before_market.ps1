@@ -108,13 +108,7 @@ if ($MarketStatus -eq "snapshot") {
     Write-Output "" | Tee-Object -FilePath $LogFile -Append
     if ($AllExist) {
         Write-Output "假日快照完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-        # LINE 推送假日摘要（Claude 產出 holiday_line.txt）
-        $SummaryFile = "$ProjectDir\data\$Date\holiday_line.txt"
-        if ((Test-Path $SummaryFile) -and (Get-Item $SummaryFile).Length -gt 0) {
-            python "$ProjectDir\scripts\notify_line.py" --file $SummaryFile
-        } else {
-            python "$ProjectDir\scripts\notify_line.py" "假日美股快照完成 ($Date)"
-        }
+        Write-Output "[$(Get-Date -Format 'HH:mm:ss')] git push 和 LINE 推送由 Claude 在 session 內完成" | Tee-Object -FilePath $LogFile -Append
     } else {
         Write-Output "假日快照有缺漏！(耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
         python "$ProjectDir\scripts\notify_line.py" "假日美股快照失敗 ($Date) 請檢查 log"
@@ -193,19 +187,7 @@ if ($MarketStatus -eq "snapshot") {
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
     if ($AllExist) {
         Write-Output "盤前分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-        # git push
-        Write-Output "" | Tee-Object -FilePath $LogFile -Append
-        Write-Output "[$(Get-Date -Format 'HH:mm:ss')] git push..." | Tee-Object -FilePath $LogFile -Append
-        git -C $ProjectDir push 2>&1 | Tee-Object -FilePath $LogFile -Append
-        # LINE 推送
-        $LineFile = "$ProjectDir\data\$Date\before_market_line.txt"
-        if ((Test-Path $LineFile) -and (Get-Item $LineFile).Length -gt 0) {
-            python "$ProjectDir\scripts\notify_line.py" --file $LineFile 2>&1 | Tee-Object -FilePath $LogFile -Append
-            Write-Output "[$(Get-Date -Format 'HH:mm:ss')] LINE 推送完成" | Tee-Object -FilePath $LogFile -Append
-        } else {
-            Write-Output "[WARN] before_market_line.txt 不存在或為空，跳過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
-            python "$ProjectDir\scripts\notify_line.py" "盤前分析完成 ($Date) 但摘要檔遺失，請確認"
-        }
+        Write-Output "[$(Get-Date -Format 'HH:mm:ss')] git push 和 LINE 推送由 Claude 在 session 內完成" | Tee-Object -FilePath $LogFile -Append
     } else {
         Write-Output "盤前分析有缺漏檔案！請檢查 log (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
         python "$ProjectDir\scripts\notify_line.py" "盤前分析失敗 ($Date) 有缺漏檔案，請檢查 log"

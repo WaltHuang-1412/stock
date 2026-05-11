@@ -44,4 +44,6 @@ v8.0 關鍵數值（強制遵守）：
 1. 今天日期用系統日期
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py intraday $(date +%Y-%m-%d)`，通過才能 git commit
 3. 禁止修改 scripts/ 目錄下的任何 .py 檔案，只能執行不能改
-4. **🔴 禁止呼叫 notify_line.py** — git push 和 LINE 推送完全由 intraday.ps1 在 Claude session 結束後執行，Claude 只負責 git commit，絕對不得自行推送 LINE
+4. git commit 完成後，執行 `git push`，再呼叫以下指令推送 LINE：
+   `python3 scripts/notify_line.py --file data/YYYY-MM-DD/intraday_line.txt`
+   （YYYY-MM-DD 替換為今日日期）

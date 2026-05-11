@@ -124,19 +124,7 @@ Write-Output "" | Tee-Object -FilePath $LogFile -Append
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 if ($AllExist) {
     Write-Output "盤後分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-    # git push
-    Write-Output "" | Tee-Object -FilePath $LogFile -Append
-    Write-Output "[$(Get-Date -Format 'HH:mm:ss')] git push..." | Tee-Object -FilePath $LogFile -Append
-    git -C $ProjectDir push 2>&1 | Tee-Object -FilePath $LogFile -Append
-    # LINE 推送
-    $LineFile = "$ProjectDir\data\$Date\after_market_line.txt"
-    if ((Test-Path $LineFile) -and (Get-Item $LineFile).Length -gt 0) {
-        python "$ProjectDir\scripts\notify_line.py" --file $LineFile 2>&1 | Tee-Object -FilePath $LogFile -Append
-        Write-Output "[$(Get-Date -Format 'HH:mm:ss')] LINE 推送完成" | Tee-Object -FilePath $LogFile -Append
-    } else {
-        Write-Output "[WARN] after_market_line.txt 不存在或為空，跳過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
-        python "$ProjectDir\scripts\notify_line.py" "盤後分析完成 ($Date) 但摘要檔遺失，請確認"
-    }
+    Write-Output "[$(Get-Date -Format 'HH:mm:ss')] git push 和 LINE 推送由 Claude 在 session 內完成" | Tee-Object -FilePath $LogFile -Append
 
     # === 本週最後交易日：跑規則有效性驗證 + 準確率週報 ===
     # 檢查明天是否為交易日，不是的話代表本週結束（處理週五休市、連假前等情況）
