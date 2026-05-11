@@ -36,7 +36,11 @@
       "consecutive_buy_days": 5,
       "reversal_level": 0,
       "intraday_price": 245.5,
-      "intraday_change_pct": -3.16
+      "intraday_change_pct": -3.16,
+      "actual_close": 242.0,
+      "close_price": 242.0,
+      "close_change_pct": -4.5,
+      "change_percent": -4.5
     },
     {
       "stock_code": "2890",
@@ -70,7 +74,11 @@
       "reversal_level": 0,
       "warning": "月季雙線下，倉位控制5-10%",
       "intraday_price": 30.7,
-      "intraday_change_pct": -0.97
+      "intraday_change_pct": -0.97,
+      "actual_close": 30.6,
+      "close_price": 30.6,
+      "close_change_pct": -1.3,
+      "change_percent": -1.3
     },
     {
       "stock_code": "2881",
@@ -105,7 +113,11 @@
       "reversal_level": 0,
       "warning": "⚠️ 過量買超警告：單日≥30K但連買<7天，依回測5日勝率僅35.2%，建議5%小倉位",
       "intraday_price": 96.0,
-      "intraday_change_pct": -0.72
+      "intraday_change_pct": -0.72,
+      "actual_close": 95.5,
+      "close_price": 95.5,
+      "close_change_pct": -1.2,
+      "change_percent": -1.2
     },
     {
       "stock_code": "2542",
@@ -139,7 +151,11 @@
       "reversal_level": 0,
       "warning": "EPS連4季負成長，邊際推薦，嚴守停損36元",
       "intraday_price": 41.6,
-      "intraday_change_pct": 4.0
+      "intraday_change_pct": 4.0,
+      "actual_close": 41.65,
+      "close_price": 41.65,
+      "close_change_pct": 4.1,
+      "change_percent": 4.1
     }
   ],
   "track_b_recommendations": [],
@@ -267,52 +283,24 @@
     "market_regime": "多頭（台股連續大漲，金融+AI供應鏈受益）"
   },
   "settlement_today": {
-    "settled_count": 7,
-    "success_count": 7,
-    "fail_count": 0,
-    "settled": [
-      {
-        "code": "6770",
-        "name": "力積電",
-        "result": "success",
-        "change": "+10.8%"
-      },
-      {
-        "code": "2301",
-        "name": "光寶科",
-        "result": "success",
-        "change": "+18.9%"
-      },
-      {
-        "code": "3033",
-        "name": "威健",
-        "result": "success",
-        "change": "+15.7%"
-      },
-      {
-        "code": "3661",
-        "name": "世芯-KY",
-        "result": "success",
-        "change": "+22.2%"
-      },
-      {
-        "code": "2408",
-        "name": "南亞科",
-        "result": "success",
-        "change": "+21.0%"
-      },
-      {
-        "code": "2327",
-        "name": "國巨",
-        "result": "success",
-        "change": "+19.1%"
-      },
-      {
-        "code": "2485",
-        "name": "兆赫",
-        "result": "success",
-        "note": "D10強制結算 68.6>60.5（推薦價）"
-      }
+    "settled_count": 12,
+    "success_count": 9,
+    "fail_count": 3,
+    "settled_machine": [
+      {"code": "6770", "name": "力積電", "result": "success", "close": 62.5, "change": "+12.8%"},
+      {"code": "2301", "name": "光寶科", "result": "success", "close": 224.0, "change": "+30.6%"},
+      {"code": "3033", "name": "威健", "result": "success", "close": 44.0, "change": "+16.1%"},
+      {"code": "3661", "name": "世芯-KY", "result": "success", "close": 5375.0, "change": "+34.4%"},
+      {"code": "2408", "name": "南亞科", "result": "success", "close": 301.0, "change": "+32.9%"},
+      {"code": "2327", "name": "國巨", "result": "success", "close": 391.5, "change": "+19.9%"},
+      {"code": "2049", "name": "上銀", "result": "success", "close": 351.0, "change": "+16.2%", "note": "D10到期"},
+      {"code": "2485", "name": "兆赫", "result": "success", "close": 67.6, "change": "+11.7%", "note": "D10到期"}
+    ],
+    "level4_exits": [
+      {"code": "2441", "name": "超豐", "result": "fail", "close": 92.4, "recommend": 92.4, "change": "+0%", "reason": "Level 4 -2479張(42.5%日均量)"},
+      {"code": "2481", "name": "強茂", "result": "success", "close": 109.0, "recommend": 103.5, "change": "+5.3%", "reason": "Level 4保護性出場"},
+      {"code": "2355", "name": "敬鵬", "result": "fail", "close": 52.7, "recommend": 52.7, "change": "+0%", "reason": "Level 4 -2949張(16.3%日均量)"},
+      {"code": "3008", "name": "大立光", "result": "fail", "close": 2545.0, "recommend": 2575.0, "change": "-1.2%", "reason": "Level 4 -89張(10.3%日均量)"}
     ]
   },
   "holding_warnings": [
@@ -347,167 +335,39 @@
     }
   ],
   "tomorrow_recommendations": [
-    {
-      "stock_code": "2313",
-      "stock_name": "華通",
-      "day": "D1",
-      "strategy": "新推薦 15-20%，IC基板AI強催化",
-      "stop_loss": 228.15,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2890",
-      "stock_name": "永豐金",
-      "day": "D1",
-      "strategy": "新推薦 5-10%，金融資金輪動",
-      "stop_loss": 27.9,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2881",
-      "stock_name": "富邦金",
-      "day": "D1",
-      "strategy": "新推薦 5%小倉，⚠️過量買超警告",
-      "stop_loss": 87.03,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2542",
-      "stock_name": "興富發",
-      "day": "D1",
-      "strategy": "新推薦 5-10%，Module A L2，嚴守停損36",
-      "stop_loss": 36.0,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2883",
-      "stock_name": "凱基金",
-      "day": "D2",
-      "strategy": "續抱，Module A L2連買，距目標7.9%",
-      "stop_loss": 20.21,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2867",
-      "stock_name": "三商壽",
-      "day": "D2",
-      "strategy": "續抱，Module A L3佈局完成",
-      "stop_loss": 7.03,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2027",
-      "stock_name": "大成鋼",
-      "day": "D2",
-      "strategy": "續抱，AI鋼材需求+外資持股比+0.75%",
-      "stop_loss": 35.19,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2892",
-      "stock_name": "第一金",
-      "day": "D2",
-      "strategy": "續抱，外資連買，距目標8.7%",
-      "stop_loss": 26.24,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2355",
-      "stock_name": "敬鵬",
-      "day": "D2",
-      "strategy": "續抱，AI伺服器PCB，距停損8.4%注意",
-      "stop_loss": 47.43,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2481",
-      "stock_name": "強茂",
-      "day": "D2",
-      "strategy": "⚠️ 距停損6.4%，嚴格警戒93.15",
-      "stop_loss": 93.15,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2356",
-      "stock_name": "英業達",
-      "day": "D2",
-      "strategy": "續抱，AI伺服器AMD超強催化",
-      "stop_loss": 46.79,
-      "stop_loss_pct": -5
-    },
-    {
-      "stock_code": "2891",
-      "stock_name": "中信金",
-      "day": "D2",
-      "strategy": "續抱，金融大盤多頭受益",
-      "stop_loss": 53.68,
-      "stop_loss_pct": -5
-    },
-    {
-      "stock_code": "6669",
-      "stock_name": "緯穎",
-      "day": "D3",
-      "strategy": "續抱，+4.6%接近目標5.1%，可考慮分批",
-      "stop_loss": 4473.0,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2337",
-      "stock_name": "旺宏",
-      "day": "D3",
-      "strategy": "⚠️ 持有警示：外資近5天大賣-36K，停損144.45，距停損僅5.6%，隨時準備出場",
-      "stop_loss": 144.45,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2317",
-      "stock_name": "鴻海",
-      "day": "D5",
-      "strategy": "接近目標254.8，可分批獲利",
-      "stop_loss": 204.75,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2441",
-      "stock_name": "超豐",
-      "day": "D5",
-      "strategy": "⚠️ 距停損3%，嚴格警戒",
-      "stop_loss": 87.78,
-      "stop_loss_pct": -5
-    },
-    {
-      "stock_code": "3231",
-      "stock_name": "緯創",
-      "day": "D5",
-      "strategy": "續抱，+4.3%",
-      "stop_loss": 126.45,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "3008",
-      "stock_name": "大立光",
-      "day": "D5",
-      "strategy": "續抱，蘋果鏈穩健",
-      "stop_loss": 2317.5,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2382",
-      "stock_name": "廣達",
-      "day": "D8",
-      "strategy": "續抱，+5.8%，AI伺服器強，距目標6%",
-      "stop_loss": 288.0,
-      "stop_loss_pct": -10
-    },
-    {
-      "stock_code": "2049",
-      "stock_name": "上銀",
-      "day": "D10",
-      "strategy": "⚠️ 今日D10強制結算（盤後執行），319.5>302.0 預期success",
-      "stop_loss": 271.8,
-      "stop_loss_pct": -10
-    }
+    {"stock_code": "2313", "stock_name": "華通", "day": "D2", "strategy": "⚠️ 收盤242(-4.5%)，距停損5.7%，密切監控228.15", "stop_loss": 228.15, "stop_loss_pct": -10},
+    {"stock_code": "2890", "stock_name": "永豐金", "day": "D2", "strategy": "續抱，法人連買4天+12K，Level 0", "stop_loss": 27.9, "stop_loss_pct": -10},
+    {"stock_code": "2881", "stock_name": "富邦金", "day": "D2", "strategy": "續抱，小倉位5%，過量買超警告仍在", "stop_loss": 87.03, "stop_loss_pct": -10},
+    {"stock_code": "2542", "stock_name": "興富發", "day": "D2", "strategy": "✅ +4.1%表現最佳，可移停損至成本36", "stop_loss": 36.0, "stop_loss_pct": -10},
+    {"stock_code": "2883", "stock_name": "凱基金", "day": "D3", "strategy": "續抱，法人連買，距目標8.3%", "stop_loss": 20.21, "stop_loss_pct": -10},
+    {"stock_code": "2867", "stock_name": "三商壽", "day": "D3", "strategy": "續抱，Module A L3", "stop_loss": 7.03, "stop_loss_pct": -10},
+    {"stock_code": "2027", "stock_name": "大成鋼", "day": "D3", "strategy": "續抱，外資持股比+0.75%", "stop_loss": 35.19, "stop_loss_pct": -10},
+    {"stock_code": "2892", "stock_name": "第一金", "day": "D3", "strategy": "續抱，外資連買", "stop_loss": 26.24, "stop_loss_pct": -10},
+    {"stock_code": "6669", "stock_name": "緯穎", "day": "D4", "strategy": "🎯 距目標5467僅2.4%，可設限價單", "stop_loss": 4473.0, "stop_loss_pct": -10},
+    {"stock_code": "2337", "stock_name": "旺宏", "day": "D5", "strategy": "⚠️ 外資近5天-36K，停損144.45，距停損9.4%，隨時準備出場", "stop_loss": 144.45, "stop_loss_pct": -10},
+    {"stock_code": "2317", "stock_name": "鴻海", "day": "D6", "strategy": "🎯 距目標253.0僅0.4%（1元），達標即結算", "stop_loss": 204.75, "stop_loss_pct": -10},
+    {"stock_code": "3231", "stock_name": "緯創", "day": "D6", "strategy": "續抱，AI伺服器", "stop_loss": 126.45, "stop_loss_pct": -10},
+    {"stock_code": "2382", "stock_name": "廣達", "day": "D9", "strategy": "續抱，+6.7%，距目標5.1%", "stop_loss": 288.0, "stop_loss_pct": -10},
+    {"stock_code": "2356", "stock_name": "英業達", "day": "D9", "strategy": "續抱，+8.4%，距目標3.6%", "stop_loss": 46.79, "stop_loss_pct": -5}
   ],
+  "removed_stocks_after_market": [
+    {"code": "2441", "name": "超豐", "result": "fail", "reason": "Level 4 強制出場 2026-05-11：-2479張(42.5%)，close 92.4=recommend，無獲利"},
+    {"code": "2481", "name": "強茂", "result": "success", "reason": "Level 4 保護性出場 2026-05-11：-3671張(11.2%)，close 109.0>recommend 103.5，+5.3%"},
+    {"code": "2355", "name": "敬鵬", "result": "fail", "reason": "Level 4 強制出場 2026-05-11：-2949張(16.3%)，close 52.7=recommend，無獲利"},
+    {"code": "3008", "name": "大立光", "result": "fail", "reason": "Level 4 強制出場 2026-05-11：-89張(10.3%)，close 2545<recommend 2575，-1.2%"}
+  ],
+  "after_market_summary": {
+    "settled_machine_today": 8,
+    "level4_exits_today": 4,
+    "total_settled_today": 12,
+    "today_success": 9,
+    "today_fail": 3,
+    "today_win_rate": "75.0%",
+    "cumulative_accuracy": "59.2% (168s/116f/284t)",
+    "holdings_remaining": 14,
+    "new_recommendations": 0,
+    "key_alert": "2317鴻海距目標0.4%，2337旺宏外資警告停損144.45"
+  },
   "intraday_summary": {
     "scan_time": "2026-05-11 12:30",
     "track_a_status": "全部持有中，無觸停損",
@@ -515,5 +375,29 @@
     "track_b_candidates_evaluated": 10,
     "strong_signal_stocks": "9940,2645,4722,8033,1437,2379,3022,2939,6695,3592",
     "conclusion": "今日無盤中新推薦，市場大漲後候選股多為高位反映或EPS負成長，無符合75分門檻"
+  },
+  "yesterday_verification": {
+    "date": "2026-05-11",
+    "accuracy": 59.2,
+    "settled_count": 284,
+    "success_count": 168,
+    "fail_count": 116,
+    "holding_count": 174,
+    "today_success": 9,
+    "today_fail": 3,
+    "results": [
+      {"code": "6770", "name": "力積電", "result": "success", "close_price": 62.5, "change_percent": 12.8},
+      {"code": "2301", "name": "光寶科", "result": "success", "close_price": 224.0, "change_percent": 30.6},
+      {"code": "3033", "name": "威健", "result": "success", "close_price": 44.0, "change_percent": 16.1},
+      {"code": "3661", "name": "世芯-KY", "result": "success", "close_price": 5375.0, "change_percent": 34.4},
+      {"code": "2408", "name": "南亞科", "result": "success", "close_price": 301.0, "change_percent": 32.9},
+      {"code": "2327", "name": "國巨", "result": "success", "close_price": 391.5, "change_percent": 19.9},
+      {"code": "2049", "name": "上銀", "result": "success", "close_price": 351.0, "change_percent": 16.2, "reason": "D10到期"},
+      {"code": "2485", "name": "兆赫", "result": "success", "close_price": 67.6, "change_percent": 11.7, "reason": "D10到期"},
+      {"code": "2481", "name": "強茂", "result": "success", "close_price": 109.0, "change_percent": 5.3, "reason": "Level 4保護性出場"},
+      {"code": "2441", "name": "超豐", "result": "fail", "close_price": 92.4, "change_percent": 0.0, "reason": "Level 4強制出場，無獲利"},
+      {"code": "2355", "name": "敬鵬", "result": "fail", "close_price": 52.7, "change_percent": 0.0, "reason": "Level 4強制出場，無獲利"},
+      {"code": "3008", "name": "大立光", "result": "fail", "close_price": 2545.0, "change_percent": -1.2, "reason": "Level 4強制出場，-89張邊界案例"}
+    ]
   }
 }
