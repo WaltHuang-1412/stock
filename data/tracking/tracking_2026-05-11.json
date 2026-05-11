@@ -34,7 +34,9 @@
       "track": "A",
       "module_a_level": "L2",
       "consecutive_buy_days": 5,
-      "reversal_level": 0
+      "reversal_level": 0,
+      "intraday_price": 245.5,
+      "intraday_change_pct": -3.16
     },
     {
       "stock_code": "2890",
@@ -66,7 +68,9 @@
       "module_a_level": null,
       "consecutive_buy_days": 3,
       "reversal_level": 0,
-      "warning": "月季雙線下，倉位控制5-10%"
+      "warning": "月季雙線下，倉位控制5-10%",
+      "intraday_price": 30.7,
+      "intraday_change_pct": -0.97
     },
     {
       "stock_code": "2881",
@@ -99,7 +103,9 @@
       "module_a_level": null,
       "consecutive_buy_days": 2,
       "reversal_level": 0,
-      "warning": "⚠️ 過量買超警告：單日≥30K但連買<7天，依回測5日勝率僅35.2%，建議5%小倉位"
+      "warning": "⚠️ 過量買超警告：單日≥30K但連買<7天，依回測5日勝率僅35.2%，建議5%小倉位",
+      "intraday_price": 96.0,
+      "intraday_change_pct": -0.72
     },
     {
       "stock_code": "2542",
@@ -131,25 +137,68 @@
       "module_a_level": "L2",
       "consecutive_buy_days": 4,
       "reversal_level": 0,
-      "warning": "EPS連4季負成長，邊際推薦，嚴守停損36元"
+      "warning": "EPS連4季負成長，邊際推薦，嚴守停損36元",
+      "intraday_price": 41.6,
+      "intraday_change_pct": 4.0
     }
   ],
   "track_b_recommendations": [],
   "track_b_observations": [
     {
-      "code": "2377",
-      "name": "微星",
-      "score": 80,
-      "note": "80分→候選觀察謹慎：10天外資累計賣超-5741張（7/10賣超天數），法人分數上限15分觸發，近5天改善(+3697)但整體籌碼偏空，AMD+26.25%強催化但倉位5%小倉/停損-5%",
-      "recommend_price": 100.0,
-      "position": "5%（謹慎）",
-      "stop_loss_pct": -5,
-      "stop_loss": 95.0
+      "stock_code": "9940",
+      "stock_name": "信義",
+      "reason": "10天累計法人-109張（整體賣超），排除"
     },
     {
-      "code": "6165",
-      "name": "浪凡",
-      "note": "Module A L2+外資持股比+5.37%(+5)，但產業「未分類」無法確認催化對齊，準確率篩選失敗，降為觀察"
+      "stock_code": "6695",
+      "stock_name": "芯鼎",
+      "reason": "今日漲幅+3.2% > 3%門檻，排除"
+    },
+    {
+      "stock_code": "2939",
+      "stock_name": "永邑-KY",
+      "reason": "累計法人-7張（負）+ 反轉狀態不明，排除"
+    },
+    {
+      "stock_code": "1437",
+      "stock_name": "勤益控",
+      "reason": "10天累計法人-3張（接近零，無意義），排除"
+    },
+    {
+      "stock_code": "2379",
+      "stock_name": "瑞昱",
+      "estimated_score": 52,
+      "reason": "EPS連3季YoY負成長(-5分) + 真連買僅1天 + Arista-17.91%對網通壓力，評分52分 < 75門檻"
+    },
+    {
+      "stock_code": "3592",
+      "stock_name": "瑞鼎",
+      "estimated_score": 53,
+      "reason": "EPS連5季YoY負成長(-5分) + 外資/投信法人對決，評分53分 < 75門檻"
+    },
+    {
+      "stock_code": "2645",
+      "stock_name": "長榮航太",
+      "estimated_score": 40,
+      "reason": "今日-5.8%爆量大跌（技術面重傷）+ EPS毛利率-7.8pp扣分，評分40分 < 75門檻"
+    },
+    {
+      "stock_code": "8033",
+      "stock_name": "雷虎",
+      "estimated_score": 42,
+      "reason": "今日-9.4%極大跌幅（盤中停損-5%風險極高）+ EPS虧損-3分，評分42分 < 75門檻"
+    },
+    {
+      "stock_code": "4722",
+      "stock_name": "國精化",
+      "estimated_score": 35,
+      "reason": "EPS YoY-57%(-5分) + 法人累計量微小，評分35分 < 75門檻"
+    },
+    {
+      "stock_code": "3022",
+      "stock_name": "威強電",
+      "estimated_score": 39,
+      "reason": "今日-6.4%爆量大跌 + EPS YoY-28%(-3分)，評分39分 < 75門檻"
     }
   ],
   "removed_stocks": [
@@ -222,13 +271,48 @@
     "success_count": 7,
     "fail_count": 0,
     "settled": [
-      {"code": "6770", "name": "力積電", "result": "success", "change": "+10.8%"},
-      {"code": "2301", "name": "光寶科", "result": "success", "change": "+18.9%"},
-      {"code": "3033", "name": "威健", "result": "success", "change": "+15.7%"},
-      {"code": "3661", "name": "世芯-KY", "result": "success", "change": "+22.2%"},
-      {"code": "2408", "name": "南亞科", "result": "success", "change": "+21.0%"},
-      {"code": "2327", "name": "國巨", "result": "success", "change": "+19.1%"},
-      {"code": "2485", "name": "兆赫", "result": "success", "note": "D10強制結算 68.6>60.5（推薦價）"}
+      {
+        "code": "6770",
+        "name": "力積電",
+        "result": "success",
+        "change": "+10.8%"
+      },
+      {
+        "code": "2301",
+        "name": "光寶科",
+        "result": "success",
+        "change": "+18.9%"
+      },
+      {
+        "code": "3033",
+        "name": "威健",
+        "result": "success",
+        "change": "+15.7%"
+      },
+      {
+        "code": "3661",
+        "name": "世芯-KY",
+        "result": "success",
+        "change": "+22.2%"
+      },
+      {
+        "code": "2408",
+        "name": "南亞科",
+        "result": "success",
+        "change": "+21.0%"
+      },
+      {
+        "code": "2327",
+        "name": "國巨",
+        "result": "success",
+        "change": "+19.1%"
+      },
+      {
+        "code": "2485",
+        "name": "兆赫",
+        "result": "success",
+        "note": "D10強制結算 68.6>60.5（推薦價）"
+      }
     ]
   },
   "holding_warnings": [
@@ -423,5 +507,13 @@
       "stop_loss": 271.8,
       "stop_loss_pct": -10
     }
-  ]
+  ],
+  "intraday_summary": {
+    "scan_time": "2026-05-11 12:30",
+    "track_a_status": "全部持有中，無觸停損",
+    "track_b_new_recommendations": 0,
+    "track_b_candidates_evaluated": 10,
+    "strong_signal_stocks": "9940,2645,4722,8033,1437,2379,3022,2939,6695,3592",
+    "conclusion": "今日無盤中新推薦，市場大漲後候選股多為高位反映或EPS負成長，無符合75分門檻"
+  }
 }

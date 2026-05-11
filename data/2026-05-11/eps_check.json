@@ -1,101 +1,68 @@
 [
   {
-    "code": "28
-    股票 |        最新季 |     EPS |   EPS YoY |     毛利率 |    QoQ | 評分
---------------------------------------------------------------------------------
-  2892 | 2025-12-31 |    0.36 |     +9.1% |     N/A |    N/A | 不調整（EPS YoY+9% 不調整）
-  2890 | 2025-12-31 |    0.40 |    +33.3% |     N/A |    N/A | +3分（EPS YoY+33% +3）
-  2884 | 2025-12-31 |    0.50 |    +56.2% |     N/A |    N/A | +5分（EPS YoY+56% +5）
-  2542 | 2025-12-31 |    1.15 |    -28.6% |   33.4% | +6.2pp | -3分（EPS連續4季YoY負成長 -5 | 毛利率QoQ+6.2pp +2）
-  2867 | 2025-12-31 |    0.04 |   +140.0% |     N/A |    N/A | +5分（EPS YoY+140% +5）
-  2377 | 2025-12-31 |    1.93 |   +250.9% |   11.1% | -0.1pp | +5分（EPS YoY+251% +5 | 毛利率QoQ-0.1pp 不調整）
-  6165 | 2025-12-31 |    1.00 |   +127.3% |   30.8% | +1.2pp | +5分（EPS YoY+127% +5 | 毛利率QoQ+1.2pp 不調整）
-  2897 | 2025-12-31 |    0.08 |    -61.9% |     N/A |    N/A | -5分（EPS連續4季YoY負成長 -5）
-  2881 | 2025-12-31 |    2.14 |     -0.9% |     N/A |    N/A | 不調整（EPS YoY-1% 不調整）
-  2883 | 2025-12-31 |    0.65 |   +150.0% |     N/A |    N/A | +5分（EPS YoY+150% +5）
-  2313 | 2025-12-31 |    1.90 |    +36.7% |   18.7% | -1.2pp | +3分（EPS YoY+37% +3 | 毛利率QoQ-1.2pp 不調整）
-  2337 | 2025-12-31 |   -0.15 |    +81.9% |   24.2% | +10.6pp | +5分（EPS YoY+82% +5 | 毛利率QoQ+10.6pp +2）
-  2404 | 2025-12-31 |   14.01 |    +33.7% |   17.2% | -3.0pp | +3分（EPS YoY+34% +3 | 毛利率QoQ-3.0pp 不調整）
-  2027 | 2025-12-31 |    0.80 |    +48.1% |   25.6% | -0.8pp | +3分（EPS YoY+48% +3 | 毛利率QoQ-0.8pp 不調整）
-
-結果已存: C:\Users\walter.huang\Documents\github\stock\data\2026-05-11\eps_check.json
-  "suggestion": "+5分"
-  },
-  {
-    "code": "2897",
+    "code": "2379",
     "latest_quarter": "2025-12-31",
-    "eps": 0.08,
-    "eps_yoy_pct": -61.9,
-    "gross_margin_pct": null,
-    "gm_qoq_delta": null,
+    "eps": 5.18,
+    "eps_yoy_pct": -21.9,
+    "gross_margin_pct": 48.08,
+    "gm_qoq_delta": -1.6,
     "adj": -5,
-    "notes": "EPS連續4季YoY負成長 -5",
+    "notes": "EPS連續3季YoY負成長 -5 | 毛利率QoQ-1.6pp 不調整",
     "suggestion": "-5分"
   },
   {
-    "code": "2881",
-    "latest_quarter": "2025-12-31",
-    "eps": 2.14,
-    "eps_yoy_pct": -0.9,
-    "gross_margin_pct": null,
-    "gm_qoq_delta": null,
-    "adj": 0,
-    "notes": "EPS YoY-1% 不調整",
-    "suggestion": "不調整"
+    "code": "3592",
+    "latest_quarter": "2026-03-31",
+    "eps": 3.82,
+    "eps_yoy_pct": -36.9,
+    "gross_margin_pct": 28.58,
+    "gm_qoq_delta": -0.46,
+    "adj": -5,
+    "notes": "EPS連續5季YoY負成長 -5 | 毛利率QoQ-0.5pp 不調整",
+    "suggestion": "-5分"
   },
   {
-    "code": "2883",
+    "code": "2645",
     "latest_quarter": "2025-12-31",
-    "eps": 0.65,
-    "eps_yoy_pct": 150.0,
-    "gross_margin_pct": null,
-    "gm_qoq_delta": null,
-    "adj": 5,
-    "notes": "EPS YoY+150% +5",
-    "suggestion": "+5分"
+    "eps": 1.3,
+    "eps_yoy_pct": 16.1,
+    "gross_margin_pct": 14.11,
+    "gm_qoq_delta": -7.75,
+    "adj": -2,
+    "notes": "EPS YoY+16% 不調整 | 毛利率QoQ-7.8pp -2",
+    "suggestion": "-2分"
   },
   {
-    "code": "2313",
-    "latest_quarter": "2025-12-31",
-    "eps": 1.9,
-    "eps_yoy_pct": 36.7,
-    "gross_margin_pct": 18.7,
-    "gm_qoq_delta": -1.25,
-    "adj": 3,
-    "notes": "EPS YoY+37% +3 | 毛利率QoQ-1.2pp 不調整",
-    "suggestion": "+3分"
+    "code": "4722",
+    "latest_quarter": "2026-03-31",
+    "eps": 0.22,
+    "eps_yoy_pct": -56.9,
+    "gross_margin_pct": 14.15,
+    "gm_qoq_delta": -3.69,
+    "adj": -5,
+    "notes": "EPS YoY-57% -3 | 毛利率QoQ-3.7pp -2",
+    "suggestion": "-5分"
   },
   {
-    "code": "2337",
+    "code": "8033",
     "latest_quarter": "2025-12-31",
     "eps": -0.15,
-    "eps_yoy_pct": 81.9,
-    "gross_margin_pct": 24.17,
-    "gm_qoq_delta": 10.63,
-    "adj": 5,
-    "notes": "EPS YoY+82% +5 | 毛利率QoQ+10.6pp +2",
-    "suggestion": "+5分"
+    "eps_yoy_pct": -171.4,
+    "gross_margin_pct": 35.84,
+    "gm_qoq_delta": 1.09,
+    "adj": -3,
+    "notes": "EPS YoY-171% -3 | 毛利率QoQ+1.1pp 不調整",
+    "suggestion": "-3分"
   },
   {
-    "code": "2404",
+    "code": "3022",
     "latest_quarter": "2025-12-31",
-    "eps": 14.01,
-    "eps_yoy_pct": 33.7,
-    "gross_margin_pct": 17.19,
-    "gm_qoq_delta": -2.99,
-    "adj": 3,
-    "notes": "EPS YoY+34% +3 | 毛利率QoQ-3.0pp 不調整",
-    "suggestion": "+3分"
-  },
-  {
-    "code": "2027",
-    "latest_quarter": "2025-12-31",
-    "eps": 0.8,
-    "eps_yoy_pct": 48.1,
-    "gross_margin_pct": 25.55,
-    "gm_qoq_delta": -0.81,
-    "adj": 3,
-    "notes": "EPS YoY+48% +3 | 毛利率QoQ-0.8pp 不調整",
-    "suggestion": "+3分"
+    "eps": 2.12,
+    "eps_yoy_pct": -28.1,
+    "gross_margin_pct": 33.3,
+    "gm_qoq_delta": 0.32,
+    "adj": -3,
+    "notes": "EPS YoY-28% -3 | 毛利率QoQ+0.3pp 不調整",
+    "suggestion": "-3分"
   }
 ]
