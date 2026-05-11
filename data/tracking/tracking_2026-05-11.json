@@ -1,0 +1,427 @@
+{
+  "date": "2026-05-11",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "industry": "IC基板/PCB（AI伺服器供應鏈）",
+      "recommend_price": 253.5,
+      "target_price": 304.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 228.15,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 92,
+      "result": "holding",
+      "holding_status": "D1/10 持有中",
+      "reason": "Module A L2連買多天+AMD+26.25%費半+11.14%超強催化+IC基板AI伺服器供應鏈+EPS YoY+37%+Level 0，外資持股比略減(-3)但催化強烈覆蓋",
+      "scoring_detail": {
+        "時事現況": 22,
+        "法人數據": 18,
+        "產業邏輯": 18,
+        "技術面": 13,
+        "價格位置": 11,
+        "小計": 82,
+        "EPS_adj": 3,
+        "外資持股比_adj": -3,
+        "ModuleA_adj": 10,
+        "合計": 92
+      },
+      "track": "A",
+      "module_a_level": "L2",
+      "consecutive_buy_days": 5,
+      "reversal_level": 0
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "industry": "金融（銀行）",
+      "recommend_price": 31.0,
+      "target_price": 37.2,
+      "stop_loss_pct": -10,
+      "stop_loss": 27.9,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 77,
+      "result": "holding",
+      "holding_status": "D1/10 持有中",
+      "reason": "avg_rank 19.5 TOP11-20+金融股外資資金輪動+台股創高金融受益+EPS YoY+33%（+3）+Level 0",
+      "scoring_detail": {
+        "時事現況": 20,
+        "法人數據": 21,
+        "產業邏輯": 16,
+        "技術面": 11,
+        "價格位置": 6,
+        "小計": 74,
+        "EPS_adj": 3,
+        "外資持股比_adj": 0,
+        "ModuleA_adj": 0,
+        "合計": 77
+      },
+      "track": "A",
+      "module_a_level": null,
+      "consecutive_buy_days": 3,
+      "reversal_level": 0,
+      "warning": "月季雙線下，倉位控制5-10%"
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "industry": "金融（壽險）",
+      "recommend_price": 96.7,
+      "target_price": 116.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 87.03,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "result": "holding",
+      "holding_status": "D1/10 持有中",
+      "reason": "金融股外資資金輪動+EPS YoY≥50%（+5）+Level 0，⚠️過量買超警告(-5)：單日法人買超≥30K且連買<7天，小倉位5%",
+      "scoring_detail": {
+        "時事現況": 18,
+        "法人數據": 17,
+        "產業邏輯": 15,
+        "技術面": 10,
+        "價格位置": 13,
+        "小計": 73,
+        "EPS_adj": 5,
+        "外資持股比_adj": 0,
+        "ModuleA_adj": 0,
+        "過量買超_adj": -5,
+        "合計": 73
+      },
+      "track": "A",
+      "module_a_level": null,
+      "consecutive_buy_days": 2,
+      "reversal_level": 0,
+      "warning": "⚠️ 過量買超警告：單日≥30K但連買<7天，依回測5日勝率僅35.2%，建議5%小倉位"
+    },
+    {
+      "stock_code": "2542",
+      "stock_name": "興富發",
+      "industry": "營建",
+      "recommend_price": 40.0,
+      "target_price": 48.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 36.0,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 70,
+      "result": "holding",
+      "holding_status": "D1/10 持有中",
+      "reason": "Module A L2連買佈局+avg_rank 33 TOP21-35+Level 0，⚠️EPS連4季負成長(-3)，邊際推薦須嚴守停損",
+      "scoring_detail": {
+        "時事現況": 13,
+        "法人數據": 14,
+        "產業邏輯": 12,
+        "技術面": 11,
+        "價格位置": 13,
+        "小計": 63,
+        "EPS_adj": -3,
+        "外資持股比_adj": 0,
+        "ModuleA_adj": 10,
+        "合計": 70
+      },
+      "track": "A",
+      "module_a_level": "L2",
+      "consecutive_buy_days": 4,
+      "reversal_level": 0,
+      "warning": "EPS連4季負成長，邊際推薦，嚴守停損36元"
+    }
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "code": "2377",
+      "name": "微星",
+      "score": 80,
+      "note": "80分→候選觀察謹慎：10天外資累計賣超-5741張（7/10賣超天數），法人分數上限15分觸發，近5天改善(+3697)但整體籌碼偏空，AMD+26.25%強催化但倉位5%小倉/停損-5%",
+      "recommend_price": 100.0,
+      "position": "5%（謹慎）",
+      "stop_loss_pct": -5,
+      "stop_loss": 95.0
+    },
+    {
+      "code": "6165",
+      "name": "浪凡",
+      "note": "Module A L2+外資持股比+5.37%(+5)，但產業「未分類」無法確認催化對齊，準確率篩選失敗，降為觀察"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "code": "2897",
+      "name": "王道銀行",
+      "reason": "Module A L3但EPS連4季負成長(-5)，總分<70排除"
+    },
+    {
+      "code": "1326",
+      "name": "台化",
+      "reason": "反轉 Level 4 直接排除 + 5/8盤後Level 4強制出場result=fail"
+    },
+    {
+      "code": "1301",
+      "name": "台塑",
+      "reason": "反轉 Level 4 直接排除"
+    },
+    {
+      "code": "6505",
+      "name": "台塑化",
+      "reason": "反轉 Level 4（5/8已排除）"
+    },
+    {
+      "code": "2337",
+      "name": "旺宏（新推薦排除）",
+      "reason": "外資近5天-36K大賣，準確率篩選失敗（外資近5天未達≥0），D3/10持有警示中但不新增推薦"
+    },
+    {
+      "code": "6165",
+      "name": "浪凡",
+      "reason": "Module A L2，但產業未分類，準確率篩選第一項失敗（催化對齊無法確認）"
+    },
+    {
+      "code": "2884",
+      "name": "玉山金",
+      "reason": "cumulative買賣天數不明+連續賣超風險，排除"
+    }
+  ],
+  "module_a_summary": {
+    "L3": [
+      "2897王道銀行（已排除：EPS連4季負成長）"
+    ],
+    "L2": [
+      "2313華通✓（已推薦）",
+      "2337旺宏（已排除：準確率篩選失敗，持有警示中）",
+      "6505台塑化（已排除：Level 4）",
+      "1301台塑（已排除：Level 4）",
+      "1326台化（已排除：Level 4 + fail）",
+      "6165浪凡（已排除：產業未分類）",
+      "2542興富發✓（已推薦）"
+    ],
+    "L1": []
+  },
+  "market_context": {
+    "vix": 17.19,
+    "phi_semicon": 11.14,
+    "phi_semicon_change_pct": 11.14,
+    "nasdaq_change_pct": 4.51,
+    "amd_change_pct": 26.25,
+    "micron_change_pct": 37.73,
+    "cumulative_summary": "強（費半+11%、Micron+38%、AMD+26%、SuperMicro+61%、Dell+48%累計3天，時事+10分cap25）",
+    "us_leader_alert_level": 0,
+    "defense_ratio": "0-15%",
+    "attack_ratio": "85-100%",
+    "market_regime": "多頭（台股連續大漲，金融+AI供應鏈受益）"
+  },
+  "settlement_today": {
+    "settled_count": 7,
+    "success_count": 7,
+    "fail_count": 0,
+    "settled": [
+      {"code": "6770", "name": "力積電", "result": "success", "change": "+10.8%"},
+      {"code": "2301", "name": "光寶科", "result": "success", "change": "+18.9%"},
+      {"code": "3033", "name": "威健", "result": "success", "change": "+15.7%"},
+      {"code": "3661", "name": "世芯-KY", "result": "success", "change": "+22.2%"},
+      {"code": "2408", "name": "南亞科", "result": "success", "change": "+21.0%"},
+      {"code": "2327", "name": "國巨", "result": "success", "change": "+19.1%"},
+      {"code": "2485", "name": "兆赫", "result": "success", "note": "D10強制結算 68.6>60.5（推薦價）"}
+    ]
+  },
+  "holding_warnings": [
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "day": "D3/10",
+      "current_price": 153.0,
+      "recommend_price": 160.5,
+      "stop_loss": 144.45,
+      "distance_to_stop_pct": -5.6,
+      "warning": "近5天外資大賣-36K，距停損僅5.6%，準備停損144元出場"
+    },
+    {
+      "code": "2481",
+      "name": "強茂",
+      "day": "D2/10",
+      "current_price": 99.5,
+      "recommend_price": 103.5,
+      "stop_loss": 93.15,
+      "distance_to_stop_pct": -6.4,
+      "warning": "昨日-3.9%，距停損僅6.4%，注意"
+    },
+    {
+      "code": "2049",
+      "name": "上銀",
+      "day": "D10/10",
+      "current_price": 319.5,
+      "recommend_price": 302.0,
+      "stop_loss": 271.8,
+      "warning": "今日D10強制結算（盤後執行），319.5>302.0 預期success"
+    }
+  ],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "day": "D1",
+      "strategy": "新推薦 15-20%，IC基板AI強催化",
+      "stop_loss": 228.15,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "day": "D1",
+      "strategy": "新推薦 5-10%，金融資金輪動",
+      "stop_loss": 27.9,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "day": "D1",
+      "strategy": "新推薦 5%小倉，⚠️過量買超警告",
+      "stop_loss": 87.03,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2542",
+      "stock_name": "興富發",
+      "day": "D1",
+      "strategy": "新推薦 5-10%，Module A L2，嚴守停損36",
+      "stop_loss": 36.0,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "day": "D2",
+      "strategy": "續抱，Module A L2連買，距目標7.9%",
+      "stop_loss": 20.21,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2867",
+      "stock_name": "三商壽",
+      "day": "D2",
+      "strategy": "續抱，Module A L3佈局完成",
+      "stop_loss": 7.03,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "day": "D2",
+      "strategy": "續抱，AI鋼材需求+外資持股比+0.75%",
+      "stop_loss": 35.19,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "day": "D2",
+      "strategy": "續抱，外資連買，距目標8.7%",
+      "stop_loss": 26.24,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2355",
+      "stock_name": "敬鵬",
+      "day": "D2",
+      "strategy": "續抱，AI伺服器PCB，距停損8.4%注意",
+      "stop_loss": 47.43,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2481",
+      "stock_name": "強茂",
+      "day": "D2",
+      "strategy": "⚠️ 距停損6.4%，嚴格警戒93.15",
+      "stop_loss": 93.15,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "day": "D2",
+      "strategy": "續抱，AI伺服器AMD超強催化",
+      "stop_loss": 46.79,
+      "stop_loss_pct": -5
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "day": "D2",
+      "strategy": "續抱，金融大盤多頭受益",
+      "stop_loss": 53.68,
+      "stop_loss_pct": -5
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎",
+      "day": "D3",
+      "strategy": "續抱，+4.6%接近目標5.1%，可考慮分批",
+      "stop_loss": 4473.0,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "day": "D3",
+      "strategy": "⚠️ 持有警示：外資近5天大賣-36K，停損144.45，距停損僅5.6%，隨時準備出場",
+      "stop_loss": 144.45,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "day": "D5",
+      "strategy": "接近目標254.8，可分批獲利",
+      "stop_loss": 204.75,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2441",
+      "stock_name": "超豐",
+      "day": "D5",
+      "strategy": "⚠️ 距停損3%，嚴格警戒",
+      "stop_loss": 87.78,
+      "stop_loss_pct": -5
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "day": "D5",
+      "strategy": "續抱，+4.3%",
+      "stop_loss": 126.45,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "3008",
+      "stock_name": "大立光",
+      "day": "D5",
+      "strategy": "續抱，蘋果鏈穩健",
+      "stop_loss": 2317.5,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "day": "D8",
+      "strategy": "續抱，+5.8%，AI伺服器強，距目標6%",
+      "stop_loss": 288.0,
+      "stop_loss_pct": -10
+    },
+    {
+      "stock_code": "2049",
+      "stock_name": "上銀",
+      "day": "D10",
+      "strategy": "⚠️ 今日D10強制結算（盤後執行），319.5>302.0 預期success",
+      "stop_loss": 271.8,
+      "stop_loss_pct": -10
+    }
+  ]
+}
