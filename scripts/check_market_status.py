@@ -41,6 +41,33 @@ def _is_weekend(date_str):
     return dt.weekday() >= 5
 
 
+_holiday_cache = {}  # year -> set of holiday date strings
+
+
+def _check_twse_holiday_schedule(date_str):
+    """
+    查 TWSE 官方假日行事曆，確認是否為休市日。
+    回傳 True=假日（休市）、False=非假日（開市）、None=查詢失敗
+    """
+    year = date_str[:4]
+    if year not in _holiday_cache:
+        url = (f"https://www.twse.com.tw/rwd/zh/holidaySchedule/holidaySchedule"
+               f"?response=json&queryYear={year}")
+        try:
+            resp = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'},
+                                timeout=10, verify=False)
+            if resp.status_code == 200:
+                raw = resp.content.decode('big5', errors='replace')
+                data = json.loads(raw)
+                _holiday_cache[year] = {row[0] for row in data.get('data', [])}
+            else:
+                return None
+        except Exception as e:
+            print(f"[WARN] TWSE 假日 API 查詢失敗: {e}", file=sys.stderr)
+            return None
+    return date_str in _holiday_cache[year]
+
+
 def _check_twse_t86(date_compact):
     """來源 1：查 TWSE T86 法人資料（有資料=開市）"""
     url = f"https://www.twse.com.tw/rwd/en/fund/T86?date={date_compact}&selectType=ALL&response=json"
@@ -99,30 +126,37 @@ def is_tw_trading_day(date_str):
     if dt.date() > datetime.now().date():
         return True
 
-    # 本地快取
+    # 本地快取（需確認有實際資料，空檔案不算）
     date_compact = date_str.replace("-", "")
     cache_file = CACHE_DIR / f"twse_t86_{date_compact}.json"
     if cache_file.exists():
-        return True
+        try:
+            cached = json.loads(cache_file.read_text(encoding='utf-8'))
+            if cached.get('stocks') and len(cached['stocks']) > 0:
+                return True
+        except Exception:
+            pass
 
-    # 來源 1：T86（有資料=確定開市；無資料不代表休市，可能是盤前尚未更新）
+    # 來源 1：T86（有資料=確定開市；無資料不代表休市，盤前尚未更新）
     t86_result = _check_twse_t86(date_compact)
     if t86_result is True:
         return True
 
-    # T86 無資料（False）或例外（None）→ 一律交叉驗證 MIS
-    # 原因：T86 盤後才更新，盤前查今天永遠拿不到資料，不能單獨信任
-    print(f"[INFO] T86 無資料，查 MIS 即時行情交叉驗證", file=sys.stderr)
+    # T86 無資料 → 查 TWSE 官方假日行事曆（最可靠，不受盤前時間影響）
+    print(f"[INFO] T86 無資料，查 TWSE 假日行事曆", file=sys.stderr)
+    holiday_result = _check_twse_holiday_schedule(date_str)
+    if holiday_result is not None:
+        if holiday_result:
+            print(f"[INFO] {date_str} 在 TWSE 假日清單中，判定休市", file=sys.stderr)
+        return not holiday_result  # 假日=False（休市），非假日=True（開市）
+
+    # 假日 API 失敗 → fallback 到 MIS 即時行情
+    print(f"[WARN] 假日 API 失敗，改查 MIS 即時行情", file=sys.stderr)
     mis_result = _check_twse_mis(date_str)
     if mis_result is not None:
         return mis_result
 
-    # MIS 也失敗，回退到 T86 結果（如果 T86 明確回傳 False 則休市，否則預設開市）
-    if t86_result is False:
-        print(f"[WARN] MIS 失敗，採用 T86 結果（休市）", file=sys.stderr)
-        return False
-
-    print(f"[WARN] T86+MIS 都失敗，{date_str} 預設為開市", file=sys.stderr)
+    print(f"[WARN] 所有來源都失敗，{date_str} 預設為開市", file=sys.stderr)
     return True
 
 

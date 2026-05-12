@@ -1,0 +1,9 @@
+
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\validate_analysis.py", line 390, in <module>
+    success = print_validation_result(phase, date_str, errors, warnings)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\validate_analysis.py", line 336, in print_validation_result
+    print(f"\U0001f50d ���� {date_str} {phase} ���R�����")
+UnicodeEncodeError: 'cp950' codec can't encode character '\U0001f50d' in position 0: illegal multibyte sequence
