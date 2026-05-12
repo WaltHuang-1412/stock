@@ -124,7 +124,12 @@ Write-Output "" | Tee-Object -FilePath $LogFile -Append
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
 if ($AllExist) {
     Write-Output "盤後分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-    Write-Output "[$(Get-Date -Format 'HH:mm:ss')] git push 和 LINE 推送由 Claude 在 session 內完成" | Tee-Object -FilePath $LogFile -Append
+    $LineFile = "$ProjectDir\data\$Date\after_market_line.txt"
+    if (Test-Path $LineFile) {
+        python "$ProjectDir\scripts\notify_line.py" --file $LineFile 2>&1 | Tee-Object -FilePath $LogFile -Append
+    } else {
+        Write-Output "[WARN] after_market_line.txt 不存在，略過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
+    }
 
     # === 本週最後交易日：跑規則有效性驗證 + 準確率週報 ===
     # 檢查明天是否為交易日，不是的話代表本週結束（處理週五休市、連假前等情況）

@@ -108,7 +108,12 @@ if ($MarketStatus -eq "snapshot") {
     Write-Output "" | Tee-Object -FilePath $LogFile -Append
     if ($AllExist) {
         Write-Output "假日快照完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-        Write-Output "[$(Get-Date -Format 'HH:mm:ss')] git push 和 LINE 推送由 Claude 在 session 內完成" | Tee-Object -FilePath $LogFile -Append
+        $LineFile = "$ProjectDir\data\$Date\holiday_line.txt"
+        if (Test-Path $LineFile) {
+            python "$ProjectDir\scripts\notify_line.py" --file $LineFile 2>&1 | Tee-Object -FilePath $LogFile -Append
+        } else {
+            Write-Output "[WARN] holiday_line.txt 不存在，略過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
+        }
     } else {
         Write-Output "假日快照有缺漏！(耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
         python "$ProjectDir\scripts\notify_line.py" "假日美股快照失敗 ($Date) 請檢查 log"
@@ -187,7 +192,12 @@ if ($MarketStatus -eq "snapshot") {
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
     if ($AllExist) {
         Write-Output "盤前分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
-        Write-Output "[$(Get-Date -Format 'HH:mm:ss')] git push 和 LINE 推送由 Claude 在 session 內完成" | Tee-Object -FilePath $LogFile -Append
+        $LineFile = "$ProjectDir\data\$Date\before_market_line.txt"
+        if (Test-Path $LineFile) {
+            python "$ProjectDir\scripts\notify_line.py" --file $LineFile 2>&1 | Tee-Object -FilePath $LogFile -Append
+        } else {
+            Write-Output "[WARN] before_market_line.txt 不存在，略過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
+        }
     } else {
         Write-Output "盤前分析有缺漏檔案！請檢查 log (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
         python "$ProjectDir\scripts\notify_line.py" "盤前分析失敗 ($Date) 有缺漏檔案，請檢查 log"

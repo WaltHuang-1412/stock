@@ -10,9 +10,7 @@
    - 龍頭預警等級（如有 Level 2-3 要特別標註）
    - 一句話總結：對台股開盤日的潛在影響
 4. 產出 LINE 摘要 data/YYYY-MM-DD/holiday_line.txt，內容與上述摘要相同，純文字格式
-5. 完成後 git add 相關檔案並 git commit，然後 git push
-6. 推送 LINE 摘要：`python3 scripts/notify_line.py --file data/YYYY-MM-DD/holiday_line.txt`
-   （YYYY-MM-DD 替換為今日日期）
+5. 完成後 git add 相關檔案並 git commit，然後 git push（LINE 推送由排程腳本統一處理，Claude 不推送）
 
 市場智能資料（補充分析用）：
 執行步驟 1 前，先嘗試從 GitHub 抓取今日新聞資料：
