@@ -18,7 +18,13 @@
       "score": 86,
       "track": "A",
       "module": "A-L2",
-      "reason": "光通訊🔴超強催化、Module A L2佈局(10天6買/動能-108.9%)、台積電CPO論壇前夕(5/14)、avg_rank 3.5 TOP3、buy_ratio 36.5%、Level 0"
+      "reason": "光通訊🔴超強催化、Module A L2佈局(10天6買/動能-108.9%)、台積電CPO論壇前夕(5/14)、avg_rank 3.5 TOP3、buy_ratio 36.5%、Level 0",
+      "actual_close": 237.0,
+      "close_price": 237.0,
+      "change_pct": -8.85,
+      "change_percent": -8.85,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤237.0(-8.8%) | 距停損1.3% | 法人今日大買+33K | 明日CPO論壇觀察"
     },
     {
       "stock_code": "2455",
@@ -33,7 +39,13 @@
       "score": 82,
       "track": "A",
       "module": null,
-      "reason": "IC封測受益費半超強、外資持股比+5(週大增)、EPS+3穩健成長、近5天全買5/0、Level 0、動能-2.98%未反映"
+      "reason": "IC封測受益費半超強、外資持股比+5(週大增)、EPS+3穩健成長、近5天全買5/0、Level 0、動能-2.98%未反映",
+      "actual_close": 374.0,
+      "close_price": 374.0,
+      "change_pct": -0.27,
+      "change_percent": -0.27,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤374.0(-0.3%) | 距停損9.8% | 連買6天籌碼穩健 | 續抱"
     }
   ],
   "intraday_prices": {
@@ -79,5 +91,129 @@
     "cold_patterns": ["AI伺服器", "AR/VR", "航空"],
     "hot_patterns": ["CCL", "IC設計", "IC封測", "DRAM"],
     "note": "大漲後回調整理期，優質入場點稀少，2檔高確定性策略"
+  },
+  "removed_stocks": [
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎",
+      "result": "success",
+      "settled_price": 5580.0,
+      "return_pct": 12.27,
+      "removal_reason": "收盤5580 >= 目標5467，目標達成"
+    },
+    {
+      "stock_code": "2301",
+      "stock_name": "光寶科",
+      "result": "success",
+      "settled_price": 211.5,
+      "return_pct": 23.32,
+      "removal_reason": "收盤211.5 >= 目標190，目標達成"
+    },
+    {
+      "stock_code": "3661",
+      "stock_name": "世芯-KY",
+      "result": "success",
+      "settled_price": 4780.0,
+      "return_pct": 19.5,
+      "removal_reason": "收盤4780 >= 目標4500，目標達成"
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "result": "success",
+      "settled_price": 321.0,
+      "return_pct": 41.72,
+      "removal_reason": "收盤321 >= 目標249.2，目標達成"
+    },
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨",
+      "result": "success",
+      "settled_price": 420.0,
+      "return_pct": 28.64,
+      "removal_reason": "收盤420 >= 目標366，目標達成"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "result": "success",
+      "settled_price": 52.8,
+      "return_pct": 14.04,
+      "removal_reason": "收盤52.8 >= 目標52，目標達成"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "result": "fail",
+      "settled_price": 168.0,
+      "return_pct": 9.45,
+      "fail_reason": "法人反轉 Level 4 強制出場（今日賣超-20,581張，佔日均量8.6%）",
+      "removal_reason": "法人反轉 Level 4 強制出場"
+    },
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦",
+      "result": "fail",
+      "settled_price": 2435.0,
+      "return_pct": -4.7,
+      "fail_reason": "法人反轉 Level 4 強制出場（今日賣超-753張，佔日均量19.5%）",
+      "removal_reason": "法人反轉 Level 4 強制出場"
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "result": "fail",
+      "settled_price": 94.7,
+      "return_pct": -2.07,
+      "fail_reason": "法人反轉 Level 4 強制出場（今日賣超-8,263張，佔日均量44.9%）",
+      "removal_reason": "法人反轉 Level 4 強制出場"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "result": "fail",
+      "settled_price": 21.95,
+      "return_pct": -2.23,
+      "fail_reason": "法人反轉 Level 4 強制出場（今日賣超-31,033張，佔日均量74.9%）",
+      "removal_reason": "法人反轉 Level 4 強制出場"
+    },
+    {
+      "stock_code": "2355",
+      "stock_name": "敬鵬",
+      "result": "fail",
+      "settled_price": 51.3,
+      "return_pct": -0.77,
+      "fail_reason": "法人反轉 Level 4 強制出場（今日賣超-2,189張，佔日均量27.1%）",
+      "removal_reason": "法人反轉 Level 4 強制出場"
+    }
+  ],
+  "tomorrow_recommendations": [],
+  "level2_warnings": [
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "warning": "Level 2 單日反轉，今日賣超-598張，建議降低倉位關注，若持續 Level 2 或升級 Level 3-4 則強制出場"
+    }
+  ],
+  "yesterday_verification": {
+    "date": "2026-05-13",
+    "accuracy": 58.6,
+    "settled_count": 292,
+    "success_count": 171,
+    "fail_count": 121,
+    "holding_count": 174,
+    "results": [
+      {"code": "6669", "name": "緯穎", "result": "success", "return_pct": 12.27},
+      {"code": "2301", "name": "光寶科", "result": "success", "return_pct": 23.32},
+      {"code": "2356", "name": "英業達", "result": "success", "return_pct": 14.04},
+      {"code": "3661", "name": "世芯-KY", "result": "success", "return_pct": 19.5},
+      {"code": "2408", "name": "南亞科", "result": "success", "return_pct": 41.72},
+      {"code": "2327", "name": "國巨", "result": "success", "return_pct": 28.64},
+      {"code": "2337", "name": "旺宏", "result": "fail", "fail_reason": "Level 4 強制出場"},
+      {"code": "2345", "name": "智邦", "result": "fail", "fail_reason": "Level 4 強制出場"},
+      {"code": "2881", "name": "富邦金", "result": "fail", "fail_reason": "Level 4 強制出場"},
+      {"code": "2883", "name": "凱基金", "result": "fail", "fail_reason": "Level 4 強制出場"},
+      {"code": "2355", "name": "敬鵬", "result": "fail", "fail_reason": "Level 4 強制出場"}
+    ]
   }
 }

@@ -6973,9 +6973,12 @@
         "recommend_price": 42.0,
         "target_price": 46.5,
         "stop_loss": 39.0,
-        "result": "holding",
+        "result": "success",
         "latest_close": 42.9,
-        "holding_days": 2
+        "holding_days": 2,
+        "settled_date": "2026-05-13",
+        "settled_price": 52.8,
+        "fail_reason": "收盤52.8 >= 目標52，目標達成"
       },
       {
         "symbol": "3034",
@@ -7527,11 +7530,11 @@
       }
     ]
   },
-  "settled_accuracy": "59.2%",
-  "settled_count": 284,
-  "holding_count": 180,
-  "total_success": 168,
-  "total_fail": 116,
+  "settled_accuracy": "58.6%",
+  "settled_count": 292,
+  "holding_count": 174,
+  "total_success": 171,
+  "total_fail": 121,
   "2026-03-30": {
     "predictions": [
       {
@@ -8199,8 +8202,11 @@
         "recommend_price": 129.0,
         "target_price": 142.0,
         "stop_loss": 119.0,
-        "result": "holding",
-        "holding_days": 1
+        "result": "fail",
+        "holding_days": 1,
+        "settled_date": "2026-05-13",
+        "settled_price": 168.0,
+        "fail_reason": "法人反轉 Level 4 強制出場"
       },
       {
         "symbol": "3533",
@@ -8884,9 +8890,12 @@
         "stop_loss": 150.58,
         "stop_loss_pct": -5,
         "settlement_days": 10,
-        "result": "holding",
+        "result": "success",
         "holding_days": 1,
-        "current_price": 159.0
+        "current_price": 159.0,
+        "settled_date": "2026-05-13",
+        "settled_price": 211.5,
+        "fail_reason": "收盤211.5 >= 目標190，目標達成"
       },
       {
         "symbol": "2884",
@@ -10288,10 +10297,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 86,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-05-13",
+        "settled_price": 51.3,
+        "holding_days": 1,
+        "fail_reason": "法人反轉 Level 4 強制出場"
       },
       {
         "symbol": "2337",
@@ -10526,10 +10536,11 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 75,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-05-13",
+        "settled_price": 5580.0,
+        "holding_days": 1,
+        "fail_reason": "收盤5580 >= 目標5467，目標達成"
       }
     ],
     "settled_accuracy": null,
@@ -10547,10 +10558,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 89,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-05-13",
+        "settled_price": 21.95,
+        "holding_days": 1,
+        "fail_reason": "法人反轉 Level 4 強制出場"
       },
       {
         "symbol": "2867",
@@ -10705,10 +10717,11 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 73,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-05-13",
+        "settled_price": 94.7,
+        "holding_days": 1,
+        "fail_reason": "法人反轉 Level 4 強制出場"
       },
       {
         "symbol": "2542",
@@ -10756,10 +10769,11 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 92,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-05-13",
+        "settled_price": 2435.0,
+        "holding_days": 1,
+        "fail_reason": "法人反轉 Level 4 強制出場"
       },
       {
         "symbol": "6282",
@@ -10816,6 +10830,42 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 78,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-05-13": {
+    "predictions": [
+      {
+        "symbol": "2313",
+        "name": "華通",
+        "recommend_price": 260.0,
+        "target_price": 286.0,
+        "stop_loss": 234.0,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 86,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2455",
+        "name": "全新",
+        "recommend_price": 375.0,
+        "target_price": 412.0,
+        "stop_loss": 337.5,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 82,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
