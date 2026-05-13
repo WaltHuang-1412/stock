@@ -1,0 +1,453 @@
+{
+  "date": "2026-05-13",
+  "lookback_dates": [
+    "2026-05-13",
+    "2026-05-12",
+    "2026-05-11",
+    "2026-05-10",
+    "2026-05-09",
+    "2026-05-08",
+    "2026-05-07"
+  ],
+  "leader_trends": {
+    "Micron": {
+      "cumulative": 224.5,
+      "consecutive_up": 7,
+      "latest_change": 19.74,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "NVIDIA": {
+      "cumulative": 53.55,
+      "consecutive_up": 6,
+      "latest_change": 12.36,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Apple": {
+      "cumulative": 35.9,
+      "consecutive_up": 7,
+      "latest_change": 3.74,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "AMD": {
+      "cumulative": 179.49,
+      "consecutive_up": 7,
+      "latest_change": 26.19,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Tesla": {
+      "cumulative": 68.35,
+      "consecutive_up": 7,
+      "latest_change": 11.32,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Super Micro": {
+      "cumulative": 183.95,
+      "consecutive_up": 7,
+      "latest_change": 17.82,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Broadcom": {
+      "cumulative": 10.94,
+      "consecutive_up": 0,
+      "latest_change": -1.89,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Lam Research": {
+      "cumulative": 93.57,
+      "consecutive_up": 7,
+      "latest_change": 4.87,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Applied Materials": {
+      "cumulative": 70.16,
+      "consecutive_up": 7,
+      "latest_change": 4.96,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Western Digital": {
+      "cumulative": 79.17,
+      "consecutive_up": 7,
+      "latest_change": 5.05,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Dell": {
+      "cumulative": 125.29,
+      "consecutive_up": 7,
+      "latest_change": 10.46,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "ASML": {
+      "cumulative": 69.25,
+      "consecutive_up": 7,
+      "latest_change": 5.41,
+      "signal_level": "strong",
+      "days_tracked": 7
+    }
+  },
+  "preposition_candidates": [
+    {
+      "code": "2449",
+      "name": "京元電子",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -35000,
+        "buy_days": 3,
+        "sell_days": 7,
+        "momentum_pct": -306.0,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -20000,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-35,000為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3234",
+      "name": "光環",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "4977",
+      "name": "眾達-KY",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 107,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 204.1,
+        "consecutive_buy": 3,
+        "cumulative_foreign": -138,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "動能+204%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "4908",
+      "name": "前鼎",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "3406",
+      "name": "玉晶光",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -315,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": -351.4,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 257,
+        "reversal_level": null,
+        "exclusion_reason": "累計-315為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "4958",
+      "name": "臻鼎-KY",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -13000,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 120.5,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -19000,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-13,000為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3044",
+      "name": "健鼎",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 1246,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -114.8,
+        "consecutive_buy": 1,
+        "cumulative_foreign": 681,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "動能-115%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "6510",
+      "name": "精測",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "8431",
+      "name": "匯鑽科",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "2383",
+      "name": "台光電",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 2858,
+        "buy_days": 9,
+        "sell_days": 1,
+        "momentum_pct": -4.9,
+        "consecutive_buy": 2,
+        "cumulative_foreign": 1590,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3105",
+      "name": "穩懋",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "3016",
+      "name": "嘉晶",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "6526",
+      "name": "達發",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "4991",
+      "name": "環宇-KY",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "signal_level": "strong",
+      "leader_cumulative": 10.94,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    }
+  ],
+  "already_in_top50": [
+    {
+      "code": "2345",
+      "name": "智邦",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": 10.94,
+      "tw_5d_change": 1.2024048096192386
+    },
+    {
+      "code": "3042",
+      "name": "晶技",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": 10.94,
+      "tw_5d_change": -9.667673716012084
+    },
+    {
+      "code": "2455",
+      "name": "全新",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": 10.94,
+      "tw_5d_change": -2.975420439844761
+    },
+    {
+      "code": "2313",
+      "name": "華通",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": 10.94,
+      "tw_5d_change": -5.2823315118397085
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": 10.94,
+      "tw_5d_change": -3.10077519379845
+    },
+    {
+      "code": "3714",
+      "name": "富采",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": 10.94,
+      "tw_5d_change": -1.2064363864445906
+    },
+    {
+      "code": "2402",
+      "name": "毅嘉",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": 10.94,
+      "tw_5d_change": -2.47933258980013
+    },
+    {
+      "code": "1303",
+      "name": "南亞",
+      "tw_industry": "DRAM/記憶體",
+      "us_leader": "Micron",
+      "leader_cumulative": 224.5,
+      "tw_5d_change": -5.2127675807222404
+    },
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "tw_industry": "DRAM/記憶體",
+      "us_leader": "Micron",
+      "leader_cumulative": 224.5,
+      "tw_5d_change": -4.672897196261682
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": 53.55,
+      "tw_5d_change": -0.35211267605633806
+    }
+  ],
+  "already_moved_count": 64
+}

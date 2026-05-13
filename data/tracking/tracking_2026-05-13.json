@@ -1,0 +1,83 @@
+{
+  "date": "2026-05-13",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "industry": "光通訊",
+      "recommend_price": 260.0,
+      "target_price": 286.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 234.0,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 86,
+      "track": "A",
+      "module": "A-L2",
+      "reason": "光通訊🔴超強催化、Module A L2佈局(10天6買/動能-108.9%)、台積電CPO論壇前夕(5/14)、avg_rank 3.5 TOP3、buy_ratio 36.5%、Level 0"
+    },
+    {
+      "stock_code": "2455",
+      "stock_name": "全新",
+      "industry": "IC封測",
+      "recommend_price": 375.0,
+      "target_price": 412.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 337.5,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 82,
+      "track": "A",
+      "module": null,
+      "reason": "IC封測受益費半超強、外資持股比+5(週大增)、EPS+3穩健成長、近5天全買5/0、Level 0、動能-2.98%未反映"
+    }
+  ],
+  "intraday_prices": {
+    "2313": {"price": 238.0, "change_pct": -8.46, "time": "12:34"},
+    "2455": {"price": 368.0, "change_pct": -1.87, "time": "12:34"}
+  },
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "note": "軌道B時事展開：油價塑化(1326台化55分不推薦/1301台塑Level4)、HVDC(台達電Level4/華城法人極小)、CPO光通訊(景碩/台光電/聯茂均Level4)、記憶體(南亞科已大漲/華邦電用戶持有)、IC設計祥碩(準確率篩選FAIL)",
+      "reason": "市場大漲後多數股票動能過高，安全入場點稀少，今日無Track B新推薦（盤前）"
+    },
+    {
+      "note": "盤中偵測器強訊號：2241艾姆勒(75分/量比4.26x)→51分<75門檻；2420新巨(65分)→動能+500%一票否決；TOP30動能爆發排除：1717/2892/3033/2374/2382/5876均>100%動能；3037欣興外資近5天-5674準確率FAIL；1802台玻45分不達門檻",
+      "reason": "費半-3.01%補跌日，多數股票動能過高或籌碼弱，今日無盤中新推薦"
+    }
+  ],
+  "excluded_stocks": [
+    {"code": "2409", "name": "友達", "reason": "動能+247.4% 一票否決"},
+    {"code": "3481", "name": "群創", "reason": "動能+237.6% 一票否決"},
+    {"code": "2303", "name": "聯電", "reason": "動能+128.5% 一票否決"},
+    {"code": "2344", "name": "華邦電", "reason": "用戶實際持有"},
+    {"code": "3231", "name": "緯創", "reason": "用戶實際持有"},
+    {"code": "2408", "name": "南亞科", "reason": "5日+25% 已大漲"},
+    {"code": "2301", "name": "光寶科", "reason": "5日+37% 已大漲"},
+    {"code": "3714", "name": "富采", "reason": "動能+100.9% + cold pattern AR/VR"},
+    {"code": "2367", "name": "燿華", "reason": "動能+191.7% 一票否決"},
+    {"code": "1402", "name": "遠東新", "reason": "動能+205% 一票否決"},
+    {"code": "2481", "name": "強茂", "reason": "動能+325% 一票否決"},
+    {"code": "3711", "name": "日月光", "reason": "76分但準確率篩選FAIL(外資近5天-15K)"},
+    {"code": "5269", "name": "祥碩", "reason": "準確率篩選FAIL(IC設計非今日🔴超強産業鏈)，法人佈局極小"},
+    {"code": "2317", "name": "鴻海", "reason": "66分不足推薦門檻"},
+    {"code": "1326", "name": "台化", "reason": "55分，Module A L2但弱催化"},
+    {"code": "6213", "name": "聯茂", "reason": "reversal Level 4"},
+    {"code": "1301", "name": "台塑", "reason": "reversal Level 4"}
+  ],
+  "market_context": {
+    "vix": 18.38,
+    "market_regime": "多頭",
+    "defense_ratio": "0-15%",
+    "attack_ratio": "85-100%",
+    "top_catalyst": ["光通訊", "DRAM", "AI算力"],
+    "cold_patterns": ["AI伺服器", "AR/VR", "航空"],
+    "hot_patterns": ["CCL", "IC設計", "IC封測", "DRAM"],
+    "note": "大漲後回調整理期，優質入場點稀少，2檔高確定性策略"
+  }
+}

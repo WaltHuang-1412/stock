@@ -1,0 +1,55 @@
+============================================================
+🔔 法人反轉預警工具 v2.0（多層次預警）
+============================================================
+
+掃描標的：11 檔
+------------------------------------------------------------
+
+🔍 分析 (2313)...
+   ✅ 法人買超中。今日+33,551張
+   → ✅ 籌碼健康，可續抱
+
+🔍 分析 (3711)...
+   🟢 Level 0（中性）：今日+2,795張（小量買超），累計+6,082張
+   → 🟢 無危險訊號，累計仍正，可觀察
+
+🔍 分析 (2498)...
+   ❓ 狀態不明：今日+3,445張，累計-1,810張（負），未匹配任何預警等級
+   → ⚠️ 累計為負但未觸發預警，需人工判斷
+
+🔍 分析 (2455)...
+   🟢 Level 0（中性）：今日+1,779張（小量買超），累計+9,877張
+   → 🟢 無危險訊號，累計仍正，可觀察
+
+🔍 分析 (2615)...
+   🔴🔴 Level 4：爆量賣超！今日賣超-1,484張（佔日均量26.0%）
+   → 🔴🔴 極度危險！法人大舉出貨，建議立即出場
+
+🔍 分析 (2308)...
+   🔴🔴 Level 4：爆量賣超！今日賣超-4,295張（佔日均量36.0%）
+   → 🔴🔴 極度危險！法人大舉出貨，建議立即出場
+
+🔍 分析 (3189)...
+   🔴🔴 Level 4：爆量賣超！今日賣超-2,533張（佔日均量8.9%）
+   → 🔴🔴 極度危險！法人大舉出貨，建議立即出場
+
+🔍 分析 (2402)...
+Traceback (most recent call last):
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\reversal_alert.py", line 441, in <module>
+    main()
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\reversal_alert.py", line 365, in main
+    result = detect_reversal(symbol, name, days=10)  # 使用10天數據
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\reversal_alert.py", line 165, in detect_reversal
+    data = get_institutional_data(stock_code, date)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\reversal_alert.py", line 69, in get_institutional_data
+    return cached_get_institutional(stock_code, date_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\twse_institutional_cache.py", line 142, in get_institutional_data
+    all_data = fetch_all_institutional(date_str)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\twse_institutional_cache.py", line 111, in fetch_all_institutional
+    'trust': int(row[idx_trust].replace(',', '')) // 1000,
+                 ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'replace'
