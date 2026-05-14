@@ -231,8 +231,8 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 84,
-      "result": "holding",
-      "holding_status": "D1/10 持有中，收盤49.55（+0.6%），Level 0 籌碼健康",
+      "result": "success",
+      "holding_status": "收盤53.2≥目標或D10到期(收盤>推薦價)，達標+14.9%",
       "reason": "偵測器強度80+avg_rank 16 TOP11-20+AI伺服器AMD/SMCI/Dell超強催化+外資+37K近5天+外資持股比-3+反轉Level 0",
       "scoring_detail": {
         "時事現況": 23,
@@ -249,10 +249,11 @@
       "track": "B",
       "intraday_signal": true,
       "detector_score": 80,
-      "actual_close": 49.55,
+      "actual_close": 53.2,
       "close_price": 49.55,
       "change_pct": 0.61,
-      "change_percent": 0.61
+      "change_percent": 0.61,
+      "settled_date": "2026-05-14"
     },
     {
       "stock_code": "2891",
