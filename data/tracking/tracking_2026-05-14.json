@@ -1,0 +1,165 @@
+{
+  "date": "2026-05-14",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "industry": "AI伺服器",
+      "recommend_price": 251.0,
+      "target_price": 289.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 225.9,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 100,
+      "reason": "AI伺服器🔴超強+NVIDIA+8.66%+費半+4.75%→時事25封頂；Module A L3佈局完成(連買8天+動能-6%)→+15；TOP8法人+外投同步→法人22；鴻海法說日直接催化；Level0 Safe；外資週減-3；SMCI L1-5"
+    },
+    {
+      "stock_code": "2376",
+      "stock_name": "技嘉",
+      "industry": "AI PC/GPU",
+      "recommend_price": 313.5,
+      "target_price": 360.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 282.2,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 82,
+      "reason": "GPU/AI PC強催化+NVIDIA+8.66%龍頭>5%+2；Module A L2佈局(連買10天)→+10；Level0 Safe；SMCI L1-5（AI伺服器受壓）；外資持股週減-3；月季線上"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": "AI伺服器",
+      "recommend_price": 340.5,
+      "target_price": 391.6,
+      "stop_loss_pct": -10,
+      "stop_loss": 306.5,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 81,
+      "reason": "AI伺服器🔴超強+NVIDIA+8.66%；Module A L2佈局完成(連買4天+動能-48.3%)→+10；EPS+39.6%YoY→+3；D10今日成功結算後重新進場；SMCI L1-5；Level0 Safe；月季線上"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "industry": "DRAM記憶體",
+      "recommend_price": 122.0,
+      "target_price": 140.3,
+      "stop_loss_pct": -10,
+      "stop_loss": 109.8,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 81,
+      "reason": "⚠️催化脈絡例外：5日+12.4%已大漲-10，但Micron+20.56%財報大超預期=DRAM新催化B首次觸發+直接相關+超強，小倉位；DRAM🔴超強+MU財報+20.56%；EPS+607%YoY毛利-4.8pp→+3；Level0 Safe"
+    },
+    {
+      "stock_code": "4958",
+      "stock_name": "臻鼎-KY",
+      "industry": "PCB/HDI",
+      "recommend_price": 442.5,
+      "target_price": 486.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 398.3,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "reason": "PCB/HDI AI伺服器用量成長；5日+7.4%已大漲-10；TOP6法人+17350K；EPS+101.5%YoY→+5；外資持股週減-3；Level0 Safe；月季線上"
+    },
+    {
+      "stock_code": "2352",
+      "stock_name": "佳世達",
+      "industry": "衛星通訊/顯示",
+      "recommend_price": 26.25,
+      "target_price": 30.2,
+      "stop_loss_pct": -10,
+      "stop_loss": 23.6,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 74,
+      "reason": "Module A L2預埋佈局；衛星通訊+AI顯示題材；分散產業需求；Level0 Safe；法人持續買超；月線上"
+    }
+  ],
+  "track_b_recommendations": [
+    {
+      "stock_code": "2377",
+      "stock_name": "微星",
+      "industry": "AI PC/GPU",
+      "recommend_price": 118.0,
+      "target_price": 135.7,
+      "stop_loss_pct": -5,
+      "stop_loss": 112.1,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 82,
+      "source": "track_b_intraday",
+      "reason": "🔥NVIDIA財報催化劑例外：5日+15.5%已大漲但NVIDIA Q1財報(+8.66%,05/13US)=新催化B首次觸發；偵測器強訊號75分(量比5.28x)+5；EPS+250.9%→+5；連買10天Level0；月季雙線上15分；三項準確率全通過"
+    }
+  ],
+  "track_b_observations": [
+    {"stock_code": "8926", "stock_name": "台汽電", "reason": "排除：5日+21.4%已大漲>10%，無明確48小時新催化劑B"},
+    {"stock_code": "2393", "stock_name": "億光", "reason": "排除：EPS YoY-32.6%(-3)+營收連衰退(-5)+月季雙線下+今日-9.9%異常暴跌"},
+    {"stock_code": "2832", "stock_name": "台產", "reason": "排除：法人累計僅+268張過少，保險股無強催化對應"},
+    {"stock_code": "2891", "stock_name": "中信金", "reason": "排除：金融銀行COLD pattern -5分，三大合計才+1K，估分~59 < 75"},
+    {"stock_code": "3042", "stock_name": "晶技", "reason": "排除：EPS連續4季YoY負成長-5分，無強催化，估分~45 < 75"}
+  ],
+  "holdings_exit_signals": [
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "buy_price": 240.0,
+      "current_price": 246.5,
+      "stop_loss": 234.0,
+      "signal": "Level4_法人反轉",
+      "detail": "今日法人賣超-44,596張（佔日均量78.7%），近5天外資-20K。強制出場訊號。",
+      "action": "🛑 今日出場（小幅獲利+2.7%，避免法人反轉損失）"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "buy_price": 155.721,
+      "current_price": 139.0,
+      "stop_loss": 148.0,
+      "signal": "停損觸發+Level4",
+      "detail": "現價139 < 停損148（跌破停損-10.7%），今日Level4爆量賣超-2,274張(6.9%日均)，近5天-29K。",
+      "action": "🛑 立即出場（停損應早已觸發）"
+    }
+  ],
+  "removed_stocks": [
+    {"stock_code": "2337", "stock_name": "旺宏", "reason": "reversal_alert Level4排除（T86快取05/12資料滯後，顯示大賣超，依規則強制排除）；但D2/10持倉追蹤繼續（距目標2.4%）"},
+    {"stock_code": "3231", "stock_name": "緯創", "reason": "my_holdings.yaml quantity=1，實際持有排除"},
+    {"stock_code": "2313", "stock_name": "華通", "reason": "my_holdings.yaml quantity=1，實際持有排除；D1/10持倉距停損1.3%⚠️"},
+    {"stock_code": "1216", "stock_name": "統一", "reason": "5日+9.5%已大漲-10分後總分69分，低於70分門檻"},
+    {"stock_code": "2883", "stock_name": "凱基金", "reason": "Module A L2候選但金融(銀行)COLD pattern勝率15.4%→-5，EPS+5，score不足70"},
+    {"stock_code": "2891", "stock_name": "中信金", "reason": "Module A L2候選但金融(銀行)COLD勝率15.4%→-5，score不足70"},
+    {"stock_code": "2027", "stock_name": "大成鋼", "reason": "reversal_alert Level4排除"},
+    {"stock_code": "1904", "stock_name": "正隆", "reason": "reversal_alert Level3排除"},
+    {"stock_code": "1326", "stock_name": "台化", "reason": "reversal_alert Level1-15分，塑化COLD pattern，score不足70"}
+  ],
+  "tomorrow_recommendations": [],
+  "market_context": {
+    "vix": 17.87,
+    "nasdaq_pct": 2.18,
+    "sox_pct": 4.75,
+    "nvidia_pct": 8.66,
+    "micron_pct": 20.56,
+    "smci_pct": -7.67,
+    "attack_ratio": "85-100%（VIX<20）",
+    "key_events": ["鴻海法說會", "台積電CPO技術論壇", "川習會貿易協議", "MSCI季度調整"]
+  },
+  "intraday_update": {
+    "timestamp": "2026-05-14 12:30",
+    "track_a_prices": {
+      "2317": {"current_price": 248.0, "pct_change": -1.2, "status": "holding"},
+      "2376": {"current_price": 326.0, "pct_change": 4.0, "status": "holding"},
+      "2382": {"current_price": 335.5, "pct_change": -1.5, "status": "holding"},
+      "2344": {"current_price": 132.0, "pct_change": 8.2, "status": "holding"},
+      "4958": {"current_price": 444.0, "pct_change": 0.3, "status": "holding"},
+      "2352": {"current_price": 25.70, "pct_change": -2.1, "status": "holding"}
+    }
+  }
+}
