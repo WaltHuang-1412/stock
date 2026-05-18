@@ -1,0 +1,463 @@
+{
+  "date": "2026-05-18",
+  "lookback_dates": [
+    "2026-05-18",
+    "2026-05-17",
+    "2026-05-16",
+    "2026-05-15",
+    "2026-05-14",
+    "2026-05-13",
+    "2026-05-12"
+  ],
+  "leader_trends": {
+    "Micron": {
+      "cumulative": 89.37,
+      "consecutive_up": 0,
+      "latest_change": -2.97,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "NVIDIA": {
+      "cumulative": 52.44,
+      "consecutive_up": 6,
+      "latest_change": 4.7,
+      "signal_level": "strong",
+      "days_tracked": 6
+    },
+    "Apple": {
+      "cumulative": 24.25,
+      "consecutive_up": 7,
+      "latest_change": 2.36,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "AMD": {
+      "cumulative": 55.85,
+      "consecutive_up": 0,
+      "latest_change": -6.83,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Tesla": {
+      "cumulative": 39.72,
+      "consecutive_up": 0,
+      "latest_change": -1.43,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Super Micro": {
+      "cumulative": -8.26,
+      "consecutive_up": 0,
+      "latest_change": -12.24,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Broadcom": {
+      "cumulative": 2.18,
+      "consecutive_up": 0,
+      "latest_change": -1.12,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Lam Research": {
+      "cumulative": 13.69,
+      "consecutive_up": 0,
+      "latest_change": -3.17,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Applied Materials": {
+      "cumulative": 28.27,
+      "consecutive_up": 7,
+      "latest_change": 0.27,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Western Digital": {
+      "cumulative": 30.63,
+      "consecutive_up": 7,
+      "latest_change": 0.43,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Dell": {
+      "cumulative": 15.69,
+      "consecutive_up": 0,
+      "latest_change": -7.09,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "ASML": {
+      "cumulative": 8.22,
+      "consecutive_up": 0,
+      "latest_change": -5.67,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    }
+  },
+  "preposition_candidates": [
+    {
+      "code": "3711",
+      "name": "日月光",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 568,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 219.2,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -15000,
+        "reversal_level": null,
+        "exclusion_reason": "動能+219%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "6488",
+      "name": "環球晶",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "3661",
+      "name": "世芯-KY",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 1164,
+        "buy_days": 6,
+        "sell_days": 4,
+        "momentum_pct": -74.4,
+        "consecutive_buy": 2,
+        "cumulative_foreign": 1111,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
+      }
+    },
+    {
+      "code": "8150",
+      "name": "南茂",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -8964,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": -275.1,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -22000,
+        "reversal_level": "Level 3",
+        "exclusion_reason": "反轉Level 3排除｜累計-8,964為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -4842,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 55.6,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -757,
+        "reversal_level": "Level 3",
+        "exclusion_reason": "反轉Level 3排除｜累計-4,842為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "2383",
+      "name": "台光電",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 2287,
+        "buy_days": 8,
+        "sell_days": 2,
+        "momentum_pct": 41.8,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 1138,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "6213",
+      "name": "聯茂",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -8340,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": -500.0,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -7064,
+        "reversal_level": null,
+        "exclusion_reason": "累計-8,340為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3131",
+      "name": "弘塑",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "3583",
+      "name": "辛耘",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -60,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": -226.0,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -1927,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "累計-60為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3680",
+      "name": "家登",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "6510",
+      "name": "精測",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "3035",
+      "name": "智原",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "6515",
+      "name": "看旺穎崴",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "6223",
+      "name": "旺矽",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "7769",
+      "name": "鴻勁",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "signal_level": "strong",
+      "leader_cumulative": 13.69,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    }
+  ],
+  "already_in_top50": [
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "leader_cumulative": 13.69,
+      "tw_5d_change": -2.3255813953488373
+    },
+    {
+      "code": "2449",
+      "name": "京元電",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "leader_cumulative": 13.69,
+      "tw_5d_change": -3.697749196141479
+    },
+    {
+      "code": "2313",
+      "name": "華通",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "leader_cumulative": 13.69,
+      "tw_5d_change": -6.70611439842209
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "leader_cumulative": 13.69,
+      "tw_5d_change": 3.9627039627039626
+    },
+    {
+      "code": "2367",
+      "name": "燿華",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 15.69,
+      "tw_5d_change": 0.32415034111245106
+    },
+    {
+      "code": "2392",
+      "name": "正崴",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 15.69,
+      "tw_5d_change": -12.886598191538509
+    },
+    {
+      "code": "3189",
+      "name": "景碩",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "leader_cumulative": 13.69,
+      "tw_5d_change": 5.458515283842795
+    },
+    {
+      "code": "6770",
+      "name": "力積電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 15.69,
+      "tw_5d_change": 2.280126508777966
+    },
+    {
+      "code": "6257",
+      "name": "矽格",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 15.69,
+      "tw_5d_change": 2.843601895734597
+    },
+    {
+      "code": "2464",
+      "name": "盟立",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 15.69,
+      "tw_5d_change": 3.6885245901639343
+    }
+  ],
+  "already_moved_count": 38
+}

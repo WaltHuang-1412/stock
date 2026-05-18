@@ -1,0 +1,515 @@
+{
+  "date": "2026-05-18",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "vix": 18.43,
+    "nasdaq": -0.08,
+    "sox": -1.59,
+    "nvda": 4.70,
+    "cisco": 22.41,
+    "amd": -6.83,
+    "smci": -12.24,
+    "umc_adr": 11.54,
+    "us_leader_alerts": ["AMD Level2 -15 AI晶片", "SMCI Level2 -15 AI伺服器", "Micron Level1 -5 DRAM", "LamR Level1 -5 半導體設備"],
+    "cumulative_super_bearish": ["AMD", "ASML", "Dell", "SMCI"],
+    "cumulative_bearish": ["Broadcom", "LamR", "Micron", "Tesla"],
+    "cumulative_strong": ["Apple", "AMAT", "WDC"],
+    "key_catalyst": "Cisco+22.41% 光通訊/網通超強，聯電ADR+11.54%，NVDA財報05/21⚡"
+  },
+  "today_settlement": [
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "result": "fail",
+      "recommend_price": 340.5,
+      "actual_close": 306.0,
+      "loss_pct": -10.1,
+      "reason": "停損觸發（D10到期，收盤306.0≤停損306.45）",
+      "settlement_date": "2026-05-18"
+    },
+    {
+      "stock_code": "2355",
+      "stock_name": "敬鵬",
+      "result": "success",
+      "recommend_price": 51.7,
+      "actual_close": 52.5,
+      "gain_pct": 1.6,
+      "reason": "D10到期，收盤52.5>推薦價51.7",
+      "settlement_date": "2026-05-18"
+    }
+  ],
+  "level4_exit_alerts": [
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦",
+      "level": 4,
+      "sell_qty": -1518,
+      "sell_pct_avg": "22.5%",
+      "day": "D4/10",
+      "distance_to_stop": "8.2%",
+      "note": "🔴🔴 Level 4爆量賣超，建議開盤出場。持有中距停損8.2%，若開盤跳空下跌需嚴守2254.5停損"
+    },
+    {
+      "stock_code": "4958",
+      "stock_name": "臻鼎-KY",
+      "level": 4,
+      "sell_qty": -13595,
+      "sell_pct_avg": "27.3%",
+      "day": "D2/10",
+      "distance_to_stop": "0.7%",
+      "note": "🔴🔴 Level 4爆量賣超+距停損僅0.7%，極度危險！開盤立即確認價格，已觸停損須強制出場"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "level": 4,
+      "sell_qty": -15518,
+      "sell_pct_avg": "34.0%",
+      "day": "D3/10",
+      "distance_to_stop": "0.6%",
+      "note": "🔴🔴 Level 4爆量賣超+距停損0.6%（停損211.95），實際持有中！開盤嚴守停損，已觸即出"
+    },
+    {
+      "stock_code": "2376",
+      "stock_name": "技嘉",
+      "level": 4,
+      "sell_qty": -1257,
+      "sell_pct_avg": "6.3%",
+      "day": "D1/10",
+      "distance_to_stop": "9.9%",
+      "note": "🔴🔴 Level 4爆量賣超，AMD Level2利空壓AI伺服器，移除推薦建議觀察後決定是否出場"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "level": 4,
+      "sell_qty": -3249,
+      "sell_pct_avg": "5.9%",
+      "day": "D6/10",
+      "distance_to_stop": "7.6%",
+      "note": "🔴🔴 Level 4爆量賣超，金融冷模式，移除推薦"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "level": 4,
+      "sell_qty": -4498,
+      "sell_pct_avg": "6.8%",
+      "day": "D9/10",
+      "distance_to_stop": "6.7%",
+      "note": "🔴🔴 Level 4爆量賣超，D9收盤135.5實際持有，明日D10須以收盤價結算，AMD/SMCI利空壓AI伺服器"
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "level": 4,
+      "sell_qty": -354,
+      "sell_pct_avg": "15.5%",
+      "day": "D1/10",
+      "distance_to_stop": "4.1%",
+      "note": "🔴🔴 Level 4爆量賣超，但Cisco+22%為光通訊CCL核心正面催化。嚴守停損4428，今日若開盤跳漲>3%可觀察"
+    },
+    {
+      "stock_code": "2485",
+      "stock_name": "兆赫",
+      "level": 4,
+      "sell_qty": -8032,
+      "sell_pct_avg": "18.9%",
+      "day": "D1/10",
+      "distance_to_stop": "1.7%",
+      "note": "🔴🔴 Level 4爆量賣超+距停損僅1.7%（停損67.2），極度危險！Cisco雖正面，但賣超量過大，建議出場"
+    },
+    {
+      "stock_code": "2352",
+      "stock_name": "佳世達",
+      "level": 4,
+      "sell_qty": -457,
+      "sell_pct_avg": "8.7%",
+      "day": "D2/10",
+      "distance_to_stop": "6.3%",
+      "note": "🔴🔴 Level 4爆量賣超，移除推薦"
+    }
+  ],
+  "level3_alerts": [
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "level": 3,
+      "cumulative": -4809,
+      "day": "D4/10",
+      "distance_to_target": "5.8%",
+      "note": "🔴 Level 3連續賣超累計轉負，D4目前距目標5.8%，建議降低倉位或出場"
+    }
+  ],
+  "recommendations": [
+    {
+      "stock_code": "4906",
+      "stock_name": "正文",
+      "industry": "光通訊",
+      "recommend_price": 39.2,
+      "target_price": 43.1,
+      "stop_loss_pct": -10,
+      "stop_loss": 35.28,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 79,
+      "result": "holding",
+      "holding_status": "D1/10，Cisco+22.41%光通訊直接受益，Module A L2（連買5天+動能-114.2%佈局完成），外資持股比週增+0.76%，Level 0 Safe",
+      "reason": "光通訊🔴超強+Cisco+22.41%龍頭>+5%→時事22；不在TOP50但連買5天→法人11；Cisco網通光通訊核心供應商→產業15；Level0+動能-114%佈局完成→技術13；價格位置adj=13；Module A L2+10；外資持股比+0.76%→+5；營收連衰-5；EPS衰退-5"
+    }
+  ],
+  "active_holdings": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "industry": "半導體（成熟製程）",
+      "recommend_price": 110.0,
+      "target_price": 121.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 99.0,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 83,
+      "result": "holding",
+      "close_price": 110.0,
+      "day": "D4/10",
+      "distance_to_target": "2.7%",
+      "holding_status": "D4/10，距目標僅2.7%（121元），聯電ADR+11.54%強勁，Level 0 Safe +45K，接近目標準備出場策略",
+      "reversal_level": 0
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "industry": "AI伺服器",
+      "recommend_price": 248.5,
+      "target_price": 289.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 223.65,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 82,
+      "result": "holding",
+      "close_price": 248.5,
+      "day": "D2/10",
+      "distance_to_stop": "9.1%",
+      "holding_status": "D2/10，AMD/SMCI Level 2利空壓AI伺服器，但法人+59K Level 0 Safe，嚴守223.65停損",
+      "reversal_level": 0,
+      "alert": "AMD Level2 -15分利空"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "industry": "DRAM記憶體",
+      "recommend_price": 129.5,
+      "target_price": 140.9,
+      "stop_loss_pct": -10,
+      "stop_loss": 116.55,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 80,
+      "result": "holding",
+      "close_price": 129.5,
+      "day": "D2/10",
+      "distance_to_target": "8.8%",
+      "holding_status": "D2/10，Micron Level1但法人+42K Level 0 Safe，5日+21%已大漲，距目標8.8%",
+      "reversal_level": 0,
+      "alert": "5日+21%高漲幅，Micron Level1利空DRAM"
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "industry": "金融（壽險）",
+      "recommend_price": 96.1,
+      "target_price": 115.3,
+      "stop_loss_pct": -10,
+      "stop_loss": 86.49,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 85,
+      "result": "holding",
+      "close_price": 96.1,
+      "day": "D5/10",
+      "distance_to_target": "20.0%",
+      "holding_status": "D5/10，Module A L3佈局完成（連3天+動能-67.1%），法人+24K Level 0 Safe，金融冷模式但L3保護",
+      "reversal_level": 0
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "industry": "鋼鐵",
+      "recommend_price": 39.85,
+      "target_price": 43.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 35.865,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 76,
+      "result": "holding",
+      "close_price": 39.85,
+      "day": "D6/10",
+      "distance_to_target": "9.9%",
+      "holding_status": "D6/10，法人+22K Level 0 Safe，鋼鐵穩健",
+      "reversal_level": 0
+    },
+    {
+      "stock_code": "2867",
+      "stock_name": "三商壽",
+      "industry": "金融（壽險）",
+      "recommend_price": 7.72,
+      "target_price": 8.74,
+      "stop_loss_pct": -10,
+      "stop_loss": 6.948,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 74,
+      "result": "holding",
+      "close_price": 7.72,
+      "day": "D6/10",
+      "distance_to_target": "13.2%",
+      "holding_status": "D6/10，法人+4K Level 0 Safe",
+      "reversal_level": 0
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "industry": "金融（銀行）",
+      "recommend_price": 29.3,
+      "target_price": 32.1,
+      "stop_loss_pct": -10,
+      "stop_loss": 26.37,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 77,
+      "result": "holding",
+      "close_price": 29.3,
+      "day": "D6/10",
+      "distance_to_target": "9.6%",
+      "holding_status": "D6/10，Module A L2（連9天+動能-21%），法人+7K Level 0 Safe",
+      "reversal_level": 0
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "industry": "AI伺服器",
+      "recommend_price": 53.2,
+      "target_price": 58.5,
+      "stop_loss_pct": -5,
+      "stop_loss": 50.54,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 71,
+      "result": "holding",
+      "close_price": 52.2,
+      "day": "D1/10",
+      "distance_to_stop": "3.2%",
+      "holding_status": "D1/10，法人+13K Level 0 Safe，但AMD Level2 -15分壓AI伺服器，嚴守50.54停損",
+      "reversal_level": 0,
+      "alert": "AMD/SMCI Level2利空AI伺服器"
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "industry": "金融（銀行）",
+      "recommend_price": 30.2,
+      "target_price": 37.2,
+      "stop_loss_pct": -10,
+      "stop_loss": 27.18,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "result": "holding",
+      "close_price": 30.2,
+      "day": "D5/10",
+      "distance_to_target": "23.2%",
+      "holding_status": "D5/10，Level 0中性 +2947張",
+      "reversal_level": 0
+    },
+    {
+      "stock_code": "2542",
+      "stock_name": "興富發",
+      "industry": "營建",
+      "recommend_price": 43.75,
+      "target_price": 48.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 39.375,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 75,
+      "result": "holding",
+      "close_price": 43.75,
+      "day": "D5/10",
+      "distance_to_target": "9.7%",
+      "holding_status": "D5/10，Level 0中性 +2910張，營建穩健",
+      "reversal_level": 0
+    },
+    {
+      "stock_code": "2455",
+      "stock_name": "全新",
+      "industry": "半導體（化合物）",
+      "recommend_price": 358.5,
+      "target_price": 412.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 322.65,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 74,
+      "result": "holding",
+      "close_price": 358.5,
+      "day": "D3/10",
+      "distance_to_target": "14.9%",
+      "holding_status": "D3/10，Level 0中性 +753張",
+      "reversal_level": 0
+    },
+    {
+      "stock_code": "1605",
+      "stock_name": "華新",
+      "industry": "鋼鐵（銅電纜）",
+      "recommend_price": 34.9,
+      "target_price": 38.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 31.41,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 74,
+      "result": "holding",
+      "close_price": 34.9,
+      "day": "D4/10",
+      "distance_to_target": "10.3%",
+      "holding_status": "D4/10，Level 0中性 +2519張",
+      "reversal_level": 0
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎",
+      "industry": "AI伺服器",
+      "recommend_price": 5115.0,
+      "target_price": 5470.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 4603.5,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 78,
+      "result": "holding",
+      "close_price": 5115.0,
+      "day": "D7/10",
+      "distance_to_target": "6.9%",
+      "holding_status": "D7/10，Level 0中性 +401張，AMD Level2利空但法人小量買，嚴守停損",
+      "reversal_level": 0,
+      "alert": "AMD/SMCI Level2利空AI伺服器，D7需注意"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦",
+      "remove_reason": "Level 4爆量賣超（-1518張，佔日均量22.5%），移除推薦建議出場",
+      "remove_date": "2026-05-18"
+    },
+    {
+      "stock_code": "4958",
+      "stock_name": "臻鼎-KY",
+      "remove_reason": "Level 4爆量賣超（-13595張，27.3%）+距停損僅0.7%，移除推薦",
+      "remove_date": "2026-05-18"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "remove_reason": "Level 4爆量賣超（-15518張，34.0%）+距停損0.6%+實際持有，建議嚴守211.95停損",
+      "remove_date": "2026-05-18"
+    },
+    {
+      "stock_code": "2376",
+      "stock_name": "技嘉",
+      "remove_reason": "Level 4爆量賣超（-1257張，6.3%）+AMD Level2利空AI伺服器，移除推薦",
+      "remove_date": "2026-05-18"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "remove_reason": "Level 4爆量賣超（-3249張，5.9%）+金融冷模式，移除推薦",
+      "remove_date": "2026-05-18"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "remove_reason": "Level 4爆量賣超（-4498張，6.8%）+D9明日到期結算+AMD/SMCI壓AI伺服器，移除推薦；實際持有",
+      "remove_date": "2026-05-18"
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "remove_reason": "Level 4爆量賣超（-354張，15.5%）+距停損4.1%，但Cisco+22%可能支撐，移除推薦但嚴守4428停損觀察",
+      "remove_date": "2026-05-18"
+    },
+    {
+      "stock_code": "2485",
+      "stock_name": "兆赫",
+      "remove_reason": "Level 4爆量賣超（-8032張，18.9%）+距停損僅1.7%，移除推薦建議立即出場",
+      "remove_date": "2026-05-18"
+    },
+    {
+      "stock_code": "2352",
+      "stock_name": "佳世達",
+      "remove_reason": "Level 4爆量賣超（-457張，8.7%），移除推薦",
+      "remove_date": "2026-05-18"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "remove_reason": "Level 3連續賣超累計轉負（-4809張），移除推薦",
+      "remove_date": "2026-05-18"
+    }
+  ],
+  "cancelled_recommendations": [
+    {
+      "stock_code": "2492",
+      "stock_name": "華新科",
+      "cancel_reason": "原計劃週一新推薦（from 05-15 tomorrow_recommendations），但AMD Level2 -15分+AI伺服器冷模式(-5分)使MLCC/被動元件故事大幅弱化，取消",
+      "cancel_date": "2026-05-18"
+    }
+  ],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "4906",
+      "stock_name": "正文",
+      "industry": "光通訊",
+      "recommend_price": 39.2,
+      "target_price": 43.1,
+      "stop_loss_pct": -10,
+      "stop_loss": 35.28,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 79,
+      "result": "holding",
+      "note": "D1今日新推薦，Cisco+22%光通訊核心，Level 0 Safe +3580張，停損35.28嚴守"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "note": "D4繼續，距目標2.7%（121元），聯電ADR+11.54%強勁，準備出場策略"
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "note": "D5繼續，Module A L3佈局完成，法人持續買超，金融防禦股"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "note": "D6繼續，Module A L2連9天，法人+7K，金融防禦"
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "note": "D6繼續，法人+22K，鋼鐵穩健"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "note": "D1繼續，法人+13K但AMD Level2壓AI伺服器，嚴守50.54停損"
+    }
+  ]
+}
