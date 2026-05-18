@@ -471,6 +471,77 @@
       "cancel_date": "2026-05-18"
     }
   ],
+  "intraday_update": {
+    "time": "12:30",
+    "track_a_prices": {
+      "4906": {"price": 39.2, "chg_pct": 0.0, "day": "D1", "status": "holding"},
+      "2303": {"price": 112.5, "chg_pct": 2.3, "day": "D4", "status": "holding_near_target"},
+      "2317": {"price": 249.5, "chg_pct": 0.4, "day": "D2", "status": "holding"},
+      "2344": {"price": 125.5, "chg_pct": -3.1, "day": "D2", "status": "warning_ma5_break"},
+      "2881": {"price": 95.5, "chg_pct": -0.6, "day": "D5", "status": "holding"},
+      "2027": {"price": 39.65, "chg_pct": -0.5, "day": "D6", "status": "holding"},
+      "2867": {"price": 7.7, "chg_pct": -0.3, "day": "D6", "status": "holding"},
+      "2892": {"price": 28.9, "chg_pct": -1.4, "day": "D6", "status": "holding"},
+      "2356": {"price": 52.1, "chg_pct": -2.1, "day": "D1", "status": "danger_near_stop"},
+      "2890": {"price": 30.1, "chg_pct": -0.3, "day": "D5", "status": "holding"},
+      "2542": {"price": 44.3, "chg_pct": 1.3, "day": "D5", "status": "holding"},
+      "2455": {"price": 376.0, "chg_pct": 4.9, "day": "D3", "status": "profitable"},
+      "1605": {"price": 34.65, "chg_pct": -0.7, "day": "D4", "status": "holding"},
+      "6669": {"price": 5055.0, "chg_pct": -1.2, "day": "D7", "status": "watch_d7"}
+    }
+  },
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "score": 58,
+      "reason": "金融冷模式(-5)+無今日催化，低於75門檻",
+      "excluded": true
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "score": 61,
+      "reason": "金融冷模式(-5)+近5天法人-35K轉負警告，低於75門檻",
+      "excluded": true
+    },
+    {
+      "stock_code": "2312",
+      "stock_name": "金寶",
+      "score": 64,
+      "reason": "電子製造無今日催化，低於75門檻",
+      "excluded": true
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "score": 49,
+      "reason": "EPS連4季衰退-5+AMD利空半導體，低於75門檻",
+      "excluded": true
+    },
+    {
+      "stock_code": "8466",
+      "stock_name": "美吉吉-KY",
+      "detector_score": 75,
+      "reason": "累計法人買超負值(-42張)，不通過準確率篩選",
+      "excluded": true
+    },
+    {
+      "stock_code": "3305",
+      "stock_name": "昇貿",
+      "detector_score": 75,
+      "reason": "動能+204%>100%，追高排除",
+      "excluded": true
+    },
+    {
+      "stock_code": "3149",
+      "stock_name": "正達",
+      "detector_score": 60,
+      "reason": "累計法人買超負值(-1379張)，不通過準確率篩選",
+      "excluded": true
+    }
+  ],
   "tomorrow_recommendations": [
     {
       "stock_code": "4906",
