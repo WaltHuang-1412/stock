@@ -114,6 +114,14 @@ if ($MarketStatus -eq "snapshot") {
         } else {
             Write-Output "[WARN] holiday_line.txt 不存在，略過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
         }
+        Write-Output "" | Tee-Object -FilePath $LogFile -Append
+        Write-Output "[git] 推送至 remote..." | Tee-Object -FilePath $LogFile -Append
+        git -C $ProjectDir push 2>&1 | Tee-Object -FilePath $LogFile -Append
+        if ($LASTEXITCODE -eq 0) {
+            Write-Output "[git] push 成功" | Tee-Object -FilePath $LogFile -Append
+        } else {
+            Write-Output "[git] push 失敗（exit $LASTEXITCODE），請手動確認" | Tee-Object -FilePath $LogFile -Append
+        }
     } else {
         Write-Output "假日快照有缺漏！(耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
         python "$ProjectDir\scripts\notify_line.py" "假日美股快照失敗 ($Date) 請檢查 log"
@@ -197,6 +205,14 @@ if ($MarketStatus -eq "snapshot") {
             python "$ProjectDir\scripts\notify_line.py" --file $LineFile 2>&1 | Tee-Object -FilePath $LogFile -Append
         } else {
             Write-Output "[WARN] before_market_line.txt 不存在，略過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
+        }
+        Write-Output "" | Tee-Object -FilePath $LogFile -Append
+        Write-Output "[git] 推送至 remote..." | Tee-Object -FilePath $LogFile -Append
+        git -C $ProjectDir push 2>&1 | Tee-Object -FilePath $LogFile -Append
+        if ($LASTEXITCODE -eq 0) {
+            Write-Output "[git] push 成功" | Tee-Object -FilePath $LogFile -Append
+        } else {
+            Write-Output "[git] push 失敗（exit $LASTEXITCODE），請手動確認" | Tee-Object -FilePath $LogFile -Append
         }
     } else {
         Write-Output "盤前分析有缺漏檔案！請檢查 log (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
