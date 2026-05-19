@@ -1,0 +1,71 @@
+{
+  "date": "2026-05-19",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2355",
+      "stock_name": "敬鵬",
+      "industry": "PCB/光通訊網通供應鏈",
+      "recommend_price": 57.7,
+      "target_price": 63.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 51.93,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "reason": "Cisco+20%網通超強催化/PCB供應鏈/外資連買25K/EPS YoY+23%/Level 0",
+      "track": "A",
+      "module": "none",
+      "catalyst": "網通/光通訊超強催化(Cisco earnings)",
+      "accuracy_filter": {
+        "catalyst_aligned": true,
+        "foreign_5d_positive": true,
+        "reversal_level_0": true
+      }
+    }
+  ],
+  "tracking_confirmations": [
+    {
+      "stock_code": "2485",
+      "stock_name": "兆赫",
+      "note": "已追蹤 D2/10，確認繼續持有。84分，網通設備 Cisco超強催化",
+      "current_price": 73.0,
+      "distance_to_stop": "8.0%"
+    }
+  ],
+  "critical_alerts": [
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "holding_day": "D2/10",
+      "current_price": 4545.0,
+      "distance_to_stop_pct": 2.6,
+      "alert": "🔴 距停損僅2.6%，費半持續承壓，密切監控"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "holding_day": "D2/10",
+      "current_price": 51.9,
+      "distance_to_stop_pct": 2.6,
+      "alert": "🔴 距停損僅2.6%，AI伺服器ODM受SMCI拖累"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "holding_day": "D5/10",
+      "current_price": 111.0,
+      "distance_to_target_pct": 1.8,
+      "alert": "✅ 距目標僅1.8%，ADR前次+9.81%，今日可能觸及目標"
+    }
+  ],
+  "data_note": "⚠️ us_asia_markets.json (08:01) 顯示US May 16數據(Cisco+20%/Micron-14%)，台股昨日(May18)已消化此衝擊。今日(May19)實際參考為US May18數據：費半-2.47%/Micron-4.80%/AMD+0.19%（來源：market_intelligence.md）",
+  "market_context": {
+    "us_may16_reference": "Cisco+20.42% 網通超強 | Micron-14.31% 記憶體衝擊",
+    "us_may18_actual": "費半-2.47% | Micron-4.80% | AMD+0.19% | TSMC ADR-2.12%",
+    "tw_yesterday": "台股May18大跌1000點後收-280點，外資賣超452億，SpaceX IPO→華通+啓碁漲停"
+  }
+}
