@@ -62,6 +62,88 @@
       "alert": "✅ 距目標僅1.8%，ADR前次+9.81%，今日可能觸及目標"
     }
   ],
+  "intraday_update": {
+    "time": "12:30",
+    "track_a_prices": {
+      "4906": {"price": 38.15, "chg_pct": -2.7, "day": "D2", "status": "level4_remove"},
+      "2303": {"price": 113.0, "chg_pct": 2.7, "day": "D5", "status": "level4_warning_but_rising"},
+      "2317": {"price": 246.5, "chg_pct": -0.8, "day": "D3", "status": "level1_watch"},
+      "2344": {"price": 117.5, "chg_pct": -9.9, "day": "D3", "status": "CRITICAL_exit_stop_0.8pct"},
+      "2881": {"price": 97.5, "chg_pct": 1.4, "day": "D6", "status": "level4_remove"},
+      "2027": {"price": 40.0, "chg_pct": 0.3, "day": "D7", "status": "healthy"},
+      "2867": {"price": 7.76, "chg_pct": 0.6, "day": "D7", "status": "level1_watch"},
+      "2892": {"price": 29.2, "chg_pct": -0.3, "day": "D7", "status": "level4_remove_60pct"},
+      "2356": {"price": 52.0, "chg_pct": -2.3, "day": "D2", "status": "danger_stop_2.9pct"},
+      "2890": {"price": 30.1, "chg_pct": -0.3, "day": "D6", "status": "level4_remove"},
+      "2542": {"price": 43.7, "chg_pct": -0.1, "day": "D6", "status": "healthy"},
+      "2455": {"price": 374.5, "chg_pct": 4.5, "day": "D4", "status": "healthy_profitable"},
+      "1605": {"price": 33.6, "chg_pct": -3.9, "day": "D5", "status": "level4_remove"},
+      "6669": {"price": 4890.0, "chg_pct": -4.2, "day": "D8", "status": "level1_d8_watch"},
+      "2355": {"price": 63.4, "chg_pct": 9.9, "day": "D1", "status": "TARGET_0.2pct"},
+      "2485": {"price": 71.4, "chg_pct": -4.7, "day": "D2", "status": "buying_recovery_watch"},
+      "2383": {"price": 4575.0, "chg_pct": 0.2, "day": "D2", "status": "danger_stop_3.3pct"}
+    }
+  },
+  "track_b_recommendations": [
+    {
+      "stock_code": "6285",
+      "stock_name": "啟碁",
+      "industry": "網通設備/衛星通訊",
+      "recommend_price": 291.0,
+      "target_price": 319.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 276.5,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 95,
+      "reason": "SpaceX IPO+Cisco+22%網通超強/昨漲停今平/avg6.5 TOP7/外資38K累計/動能-63.7%佈局完成",
+      "track": "B",
+      "catalyst": "SpaceX/衛星/網通超強催化",
+      "accuracy_filter": {
+        "catalyst_aligned": true,
+        "foreign_5d_positive": true,
+        "reversal_level_0_1": true
+      }
+    }
+  ],
+  "track_b_observations": [
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "score": 76,
+      "reason": "EPS+81%+法人225K累計強力買入，但面板今日無明確催化劑+Level1，76分勉強通過但不確定性高",
+      "excluded": true
+    },
+    {
+      "stock_code": "2376",
+      "stock_name": "技嘉",
+      "score": 73,
+      "reason": "偵測器90分但費半Level1(-5)+外資持股比減少(-3)+今日-7.6%暴跌，73分<75門檻",
+      "excluded": true
+    },
+    {
+      "stock_code": "1439",
+      "stock_name": "雋揚",
+      "score": 0,
+      "reason": "T86法人買超僅+12張(幾乎為零)，偵測器量比6.84x係散戶行為，不通過法人買超篩選",
+      "excluded": true
+    },
+    {
+      "stock_code": "3042",
+      "stock_name": "晶技",
+      "score": 0,
+      "reason": "動能+500%追高排除（CLAUDE.md規則）",
+      "excluded": true
+    }
+  ],
+  "intraday_level4_exits": [
+    {"code": "2344", "name": "華邦電", "reason": "Level4(-12K 7.3%)+今日-9.9%+距停損0.8%，強制出場"},
+    {"code": "4906", "name": "正文", "reason": "Level4(-3,170張 32.3%)，移除推薦"},
+    {"code": "2881", "name": "富邦金", "reason": "Level4(-5,312張 23.1%)，移除推薦"},
+    {"code": "2892", "name": "第一金", "reason": "Level4(-11K 60.7%！)，移除推薦"},
+    {"code": "2890", "name": "永豐金", "reason": "Level4(-2,800張 7.1%)，移除推薦"},
+    {"code": "1605", "name": "華新", "reason": "Level4(-2,573張 13.2%)+跌破MA5，移除推薦"}
+  ],
   "data_note": "⚠️ us_asia_markets.json (08:01) 顯示US May 16數據(Cisco+20%/Micron-14%)，台股昨日(May18)已消化此衝擊。今日(May19)實際參考為US May18數據：費半-2.47%/Micron-4.80%/AMD+0.19%（來源：market_intelligence.md）",
   "market_context": {
     "us_may16_reference": "Cisco+20.42% 網通超強 | Micron-14.31% 記憶體衝擊",
