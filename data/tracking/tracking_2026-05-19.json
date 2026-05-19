@@ -24,9 +24,29 @@
         "catalyst_aligned": true,
         "foreign_5d_positive": true,
         "reversal_level_0": true
-      }
+      },
+      "close_price": 63.4,
+      "actual_close": 63.4,
+      "result": "holding",
+      "holding_status": "D1/10，收盤63.4距目標63.5僅0.2%，法人加速+10.4K，明日繼續追蹤",
+      "change_percent": 9.9,
+      "chg_pct": 9.9
     }
   ],
+  "yesterday_verification": {
+    "date": "2026-05-19",
+    "settled_count": 3,
+    "success_count": 1,
+    "fail_count": 2,
+    "holding_count": 23,
+    "accuracy": "33.3%（今日結算）/ 累積59.1%（176s/122f/298t）",
+    "cumulative_accuracy": "59.1%",
+    "results": [
+      {"code": "2303", "name": "聯電", "result": "success", "close_price": 113.0, "change_percent": 12.4},
+      {"code": "2382", "name": "廣達", "result": "fail", "close_price": 290.0, "change_percent": -19.6, "reason": "觸及停損"},
+      {"code": "3231", "name": "緯創", "result": "fail", "close_price": 132.5, "change_percent": -5.7, "reason": "D10到期"}
+    ]
+  },
   "tracking_confirmations": [
     {
       "stock_code": "2485",
@@ -143,6 +163,58 @@
     {"code": "2892", "name": "第一金", "reason": "Level4(-11K 60.7%！)，移除推薦"},
     {"code": "2890", "name": "永豐金", "reason": "Level4(-2,800張 7.1%)，移除推薦"},
     {"code": "1605", "name": "華新", "reason": "Level4(-2,573張 13.2%)+跌破MA5，移除推薦"}
+  ],
+  "after_market_level4_exits": [
+    {"code": "2337", "name": "旺宏", "reason": "Level4(-7,858張 5.5%日均量)，今日盤後確認強制出場，三星罷工效應縮小"},
+    {"code": "2345", "name": "智邦", "reason": "Level4(-265張 6.3%日均量)，今日盤後確認強制出場"},
+    {"code": "2352", "name": "佳世達", "reason": "Level4(-377張 8.5%日均量)，今日盤後確認強制出場"}
+  ],
+  "today_settlements": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "result": "success",
+      "actual_close": 113.0,
+      "settlement_day": 5,
+      "settled_date": "2026-05-19",
+      "holding_status": null,
+      "fail_reason": null
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "result": "fail",
+      "actual_close": 290.0,
+      "settlement_day": 10,
+      "settled_date": "2026-05-19",
+      "holding_status": null,
+      "fail_reason": "收盤290.0觸及停損（stop_loss=306.45），AI伺服器需求確認等待法說"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "result": "fail",
+      "actual_close": 132.5,
+      "settlement_day": 10,
+      "settled_date": "2026-05-19",
+      "holding_status": null,
+      "fail_reason": "D10到期，收盤132.5 < 推薦價140.5，AI伺服器競爭壓力"
+    }
+  ],
+  "tomorrow_recommendations": [],
+  "removed_stocks": [
+    {"code": "2344", "name": "華邦電", "reason": "Level4強制出場，三星罷工縮限，轉單效應落空"},
+    {"code": "4906", "name": "正文", "reason": "Level4強制出場"},
+    {"code": "2881", "name": "富邦金", "reason": "Level4強制出場"},
+    {"code": "2892", "name": "第一金", "reason": "Level4強制出場（60.7%外資大賣）"},
+    {"code": "2890", "name": "永豐金", "reason": "Level4強制出場"},
+    {"code": "1605", "name": "華新", "reason": "Level4強制出場+跌破MA5"},
+    {"code": "2337", "name": "旺宏", "reason": "Level4強制出場，記憶體轉單邏輯受損"},
+    {"code": "2345", "name": "智邦", "reason": "Level4強制出場"},
+    {"code": "2352", "name": "佳世達", "reason": "Level4強制出場"},
+    {"code": "2303", "name": "聯電", "reason": "成功結算，目標達成"},
+    {"code": "2382", "name": "廣達", "reason": "觸及停損出場"},
+    {"code": "3231", "name": "緯創", "reason": "D10到期結算失敗"}
   ],
   "data_note": "⚠️ us_asia_markets.json (08:01) 顯示US May 16數據(Cisco+20%/Micron-14%)，台股昨日(May18)已消化此衝擊。今日(May19)實際參考為US May18數據：費半-2.47%/Micron-4.80%/AMD+0.19%（來源：market_intelligence.md）",
   "market_context": {
