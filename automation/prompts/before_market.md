@@ -210,4 +210,5 @@ print('實際持有（排除）：', held)
 1. 今天日期用系統日期
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py before_market $(date +%Y-%m-%d)`，通過才能 git commit。驗證失敗必須修正報告後重跑
 3. 禁止修改 scripts/ 目錄下的任何 .py 檔案，只能執行不能改
-4. git commit 完成後，執行 `git push`（LINE 推送由排程腳本統一處理，Claude 不推送）
+4. git commit 完成後，執行 `git push`
+5. **🔴 禁止執行 `python3 scripts/notify_line.py`**，LINE 推送由排程腳本統一處理，Claude 執行會造成重複發送
