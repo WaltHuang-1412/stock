@@ -86,11 +86,48 @@
       "reason": "光通訊tier_1，Cisco+16%超強催化，Module A L3連買3天，EPS+25% YoY"
     }
   ],
-  "track_b_recommendations": [],
+  "track_b_recommendations": [
+    {
+      "stock_code": "6282",
+      "stock_name": "康舒",
+      "industry": "AI伺服器電源PSU",
+      "recommend_price": 51.3,
+      "target_price": 57.5,
+      "stop_loss_pct": -5,
+      "stop_loss": 48.7,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 78,
+      "reason": "AI伺服器電源tier_3，Module A L3佈局完成（動能-82%），EPS YoY+640%，NVDA財報明日催化，外資近5天+1,612",
+      "type": "intraday"
+    }
+  ],
   "track_b_observations": [
     "2303 聯電：Level 4排除（ADR+9.46%但本體昨日賣超-24,733張）",
-    "2379 瑞昱：70分，光通訊IC，通過準確率，但分數接近門檻，列觀察",
-    "2367 燿華：74分，AI/光通訊PCB，通過準確率，列觀察（燿華EPS持續負成長）"
+    "2379 瑞昱：66分（EPS連3季負成長-5），低於75門檻，不推薦",
+    "2367 燿華：63分（EPS連虧-5+外資持股-3+SMCI-5），低於75門檻，不推薦",
+    "2376 技嘉：78分，已在追蹤中，不新推薦；Level 0籌碼健康+3,527，續觀察",
+    "2891 中信金：偵測器強訊號65，但今日+4.33%>3%，排除",
+    "8466 美吉吉-KY：偵測器強訊號65，但累計買超僅210張(<5K)，排除"
+  ],
+  "intraday_prices": {
+    "scan_time": "12:40",
+    "6285": {"price": 280.5, "change_pct": -3.94},
+    "3034": {"price": 472.5, "change_pct": 1.39},
+    "3045": {"price": 116.0, "change_pct": -0.43},
+    "2363": {"price": 60.6, "change_pct": 0.17},
+    "2368": {"price": 1245.0, "change_pct": -3.11},
+    "2312": {"price": 28.45, "change_pct": 2.52},
+    "2313_holding": {"price": 255.5, "change_pct": 6.46},
+    "3231_holding": {"price": 133.5, "stop_loss_triggered": true}
+  },
+  "forced_exits_intraday": [
+    {"code": "3231", "name": "緯創", "reason": "現價133.5 < 停損148.0，觸停損-14.3%（my_holdings實際持倉）"},
+    {"code": "2345", "name": "智邦", "reason": "Level 4反轉，法人今日賣超-265張（佔日均9.5%）"},
+    {"code": "4906", "name": "正文", "reason": "Level 4反轉，外資大賣-3,170張（佔日均43%）"},
+    {"code": "2881", "name": "富邦金", "reason": "Level 4反轉，投信大賣-5,008張（佔日均29.4%）"},
+    {"code": "4958", "name": "臻鼎-KY", "reason": "Level 3反轉，連續賣超累計轉負"},
+    {"code": "2356", "name": "英業達", "reason": "Level 2，前買+105K今翻賣-930，法人態度反轉，準備明日停損"}
   ],
   "removed_stocks": [
     {"code": "2303", "name": "聯電", "reason": "Level 4反轉（本體賣超-24,733張）"},
