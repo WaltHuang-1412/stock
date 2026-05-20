@@ -35,13 +35,15 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 81,
-      "result": "holding",
+      "result": "fail",
       "close_price": 4615.0,
-      "actual_close": 4615.0,
+      "actual_close": 4395.0,
       "change_percent": -6.2,
       "intraday_price": 4680.0,
       "holding_status": "D1/10，收盤4615（-6.2%），距停損4.1%，距目標22.6%，法人Level 0，光通訊族群今日整體回調，停損4428嚴守，密切觀察",
-      "reason": "光通訊🔴超強+Cisco+25.36%龍頭>+5%→+2+方向↑加速→時事22；連買4天外投同步+1；EPS YoY+20~49%→+3；Module B通過→+5；月線下季線下→-1；Level0 Safe"
+      "reason": "光通訊🔴超強+Cisco+25.36%龍頭>+5%→+2+方向↑加速→時事22；連買4天外投同步+1；EPS YoY+20~49%→+3；Module B通過→+5；月線下季線下→-1；Level0 Safe",
+      "settled_date": "2026-05-20",
+      "fail_reason": "收盤4395 ≤ 停損4428（MU -8.85% Level 2，記憶體籌碼全面撤退）"
     },
     {
       "stock_code": "3189",
@@ -155,45 +157,205 @@
     "fail_count": 122,
     "holding_count": 185,
     "results": [
-      {"stock_code": "3189", "stock_name": "景碩", "result": "fail", "close_price": 486.0, "recommend_price": 522.0, "change_percent": -6.9, "reason": "停損觸發"},
-      {"stock_code": "2408", "stock_name": "南亞科", "result": "fail", "close_price": 311.5, "recommend_price": 341.0, "change_percent": -8.7, "reason": "停損觸發"},
-      {"stock_code": "2382", "stock_name": "廣達", "result": "fail", "close_price": 306.0, "recommend_price": 340.5, "change_percent": -10.1, "reason": "停損觸發（追蹤中持倉結算）"},
-      {"stock_code": "2376", "stock_name": "技嘉", "result": "holding", "close_price": 326.5, "recommend_price": 327.0, "change_percent": -0.15},
-      {"stock_code": "2383", "stock_name": "台光電", "result": "holding", "close_price": 4615.0, "recommend_price": 4920.0, "change_percent": -6.2},
-      {"stock_code": "2485", "stock_name": "兆赫", "result": "holding", "close_price": 68.3, "recommend_price": 70.7, "change_percent": -3.4},
-      {"stock_code": "2356", "stock_name": "英業達", "result": "holding", "close_price": 52.2, "recommend_price": 53.2, "change_percent": -1.9},
-      {"stock_code": "2355", "stock_name": "敬鵬", "result": "holding", "close_price": 52.5, "recommend_price": 52.2, "change_percent": 0.6}
+      {
+        "stock_code": "3189",
+        "stock_name": "景碩",
+        "result": "fail",
+        "close_price": 486.0,
+        "recommend_price": 522.0,
+        "change_percent": -6.9,
+        "reason": "停損觸發"
+      },
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "result": "fail",
+        "close_price": 311.5,
+        "recommend_price": 341.0,
+        "change_percent": -8.7,
+        "reason": "停損觸發"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "result": "fail",
+        "close_price": 306.0,
+        "recommend_price": 340.5,
+        "change_percent": -10.1,
+        "reason": "停損觸發（追蹤中持倉結算）"
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "result": "holding",
+        "close_price": 326.5,
+        "recommend_price": 327.0,
+        "change_percent": -0.15
+      },
+      {
+        "stock_code": "2383",
+        "stock_name": "台光電",
+        "result": "holding",
+        "close_price": 4615.0,
+        "recommend_price": 4920.0,
+        "change_percent": -6.2
+      },
+      {
+        "stock_code": "2485",
+        "stock_name": "兆赫",
+        "result": "holding",
+        "close_price": 68.3,
+        "recommend_price": 70.7,
+        "change_percent": -3.4
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "result": "holding",
+        "close_price": 52.2,
+        "recommend_price": 53.2,
+        "change_percent": -1.9
+      },
+      {
+        "stock_code": "2355",
+        "stock_name": "敬鵬",
+        "result": "holding",
+        "close_price": 52.5,
+        "recommend_price": 52.2,
+        "change_percent": 0.6
+      }
     ]
   },
   "tracking_alerts": {
     "level4_exit": [
-      {"stock_code": "2382", "stock_name": "廣達", "day": "D1", "reason": "爆量賣超-3,372張（佔日均量15.9%）"},
-      {"stock_code": "2317", "stock_name": "鴻海", "day": "D1", "reason": "爆量賣超-23,465張（佔日均量33.0%）"},
-      {"stock_code": "4958", "stock_name": "臻鼎-KY", "day": "D1", "reason": "爆量賣超-10,616張（佔日均量15.6%）"},
-      {"stock_code": "2352", "stock_name": "佳世達", "day": "D1", "reason": "爆量賣超-1,896張（佔日均量30.1%）"},
-      {"stock_code": "2890", "stock_name": "永豐金", "day": "D4", "reason": "爆量賣超-3,459張（佔日均量14.4%）"},
-      {"stock_code": "2883", "stock_name": "凱基金", "day": "D5", "reason": "爆量賣超-10,406張（佔日均量17.7%）"},
-      {"stock_code": "3231", "stock_name": "緯創", "day": "D8", "reason": "爆量賣超-14,459張（佔日均量34.6%）+持股停損觸發(現價138<停損148)"}
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "day": "D1",
+        "reason": "爆量賣超-3,372張（佔日均量15.9%）"
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "day": "D1",
+        "reason": "爆量賣超-23,465張（佔日均量33.0%）"
+      },
+      {
+        "stock_code": "4958",
+        "stock_name": "臻鼎-KY",
+        "day": "D1",
+        "reason": "爆量賣超-10,616張（佔日均量15.6%）"
+      },
+      {
+        "stock_code": "2352",
+        "stock_name": "佳世達",
+        "day": "D1",
+        "reason": "爆量賣超-1,896張（佔日均量30.1%）"
+      },
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "day": "D4",
+        "reason": "爆量賣超-3,459張（佔日均量14.4%）"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "day": "D5",
+        "reason": "爆量賣超-10,406張（佔日均量17.7%）"
+      },
+      {
+        "stock_code": "3231",
+        "stock_name": "緯創",
+        "day": "D8",
+        "reason": "爆量賣超-14,459張（佔日均量34.6%）+持股停損觸發(現價138<停損148)"
+      }
     ],
     "level3_reduce": [
-      {"stock_code": "2337", "stock_name": "旺宏", "day": "D3", "note": "連續賣超近2日-22,330張累計轉負，但現價169(+10.1%)距目標僅1.8%，密切關注"}
+      {
+        "stock_code": "2337",
+        "stock_name": "旺宏",
+        "day": "D3",
+        "note": "連續賣超近2日-22,330張累計轉負，但現價169(+10.1%)距目標僅1.8%，密切關注"
+      }
     ],
     "level2_watch": [
-      {"stock_code": "6669", "stock_name": "緯穎", "day": "D6", "note": "單日反轉賣超-39張，現價5435距目標0.6%，考慮獲利了結"}
+      {
+        "stock_code": "6669",
+        "stock_name": "緯穎",
+        "day": "D6",
+        "note": "單日反轉賣超-39張，現價5435距目標0.6%，考慮獲利了結"
+      }
     ]
   },
   "today_settlement_summary": {
     "fail": [
-      {"stock_code": "3189", "stock_name": "景碩", "actual_close": 486.0, "recommend_price": 522.0, "loss_pct": -6.9, "reason": "停損觸發"},
-      {"stock_code": "2408", "stock_name": "南亞科", "actual_close": 311.5, "recommend_price": 341.0, "loss_pct": -8.7, "reason": "停損觸發"},
-      {"stock_code": "2382", "stock_name": "廣達", "actual_close": 306.0, "recommend_price": 340.5, "loss_pct": -10.1, "reason": "停損觸發（已在14日盤中追蹤，今日結算）"}
+      {
+        "stock_code": "3189",
+        "stock_name": "景碩",
+        "actual_close": 486.0,
+        "recommend_price": 522.0,
+        "loss_pct": -6.9,
+        "reason": "停損觸發"
+      },
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "actual_close": 311.5,
+        "recommend_price": 341.0,
+        "loss_pct": -8.7,
+        "reason": "停損觸發"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "actual_close": 306.0,
+        "recommend_price": 340.5,
+        "loss_pct": -10.1,
+        "reason": "停損觸發（已在14日盤中追蹤，今日結算）"
+      }
     ],
     "holding": [
-      {"stock_code": "2376", "stock_name": "技嘉", "actual_close": 326.5, "recommend_price": 327.0, "pnl_pct": -0.15, "day": "D1"},
-      {"stock_code": "2383", "stock_name": "台光電", "actual_close": 4615.0, "recommend_price": 4920.0, "pnl_pct": -6.2, "day": "D1"},
-      {"stock_code": "2485", "stock_name": "兆赫", "actual_close": 68.3, "recommend_price": 70.7, "pnl_pct": -3.4, "day": "D1"},
-      {"stock_code": "2356", "stock_name": "英業達", "actual_close": 52.2, "recommend_price": 53.2, "pnl_pct": -1.9, "day": "D1"},
-      {"stock_code": "2355", "stock_name": "敬鵬", "actual_close": 52.5, "recommend_price": 52.2, "pnl_pct": 0.6, "day": "D1"}
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "actual_close": 326.5,
+        "recommend_price": 327.0,
+        "pnl_pct": -0.15,
+        "day": "D1"
+      },
+      {
+        "stock_code": "2383",
+        "stock_name": "台光電",
+        "actual_close": 4615.0,
+        "recommend_price": 4920.0,
+        "pnl_pct": -6.2,
+        "day": "D1"
+      },
+      {
+        "stock_code": "2485",
+        "stock_name": "兆赫",
+        "actual_close": 68.3,
+        "recommend_price": 70.7,
+        "pnl_pct": -3.4,
+        "day": "D1"
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "actual_close": 52.2,
+        "recommend_price": 53.2,
+        "pnl_pct": -1.9,
+        "day": "D1"
+      },
+      {
+        "stock_code": "2355",
+        "stock_name": "敬鵬",
+        "actual_close": 52.5,
+        "recommend_price": 52.2,
+        "pnl_pct": 0.6,
+        "day": "D1"
+      }
     ]
   },
   "tomorrow_recommendations": [

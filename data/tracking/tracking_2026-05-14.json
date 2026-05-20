@@ -50,11 +50,14 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 81,
-      "result": "holding",
+      "result": "fail",
       "holding_status": "D1/10，距目標17.1%，距停損8.4%，Level 0持有",
       "reason": "AI伺服器🔴超強+NVIDIA+8.66%；Module A L2佈局完成(連買4天+動能-48.3%)→+10；EPS+39.6%YoY→+3；D10今日成功結算後重新進場；SMCI L1-5；Level0 Safe；月季線上",
       "close_price": 334.5,
-      "change_percent": -1.8
+      "change_percent": -1.8,
+      "actual_close": 290.0,
+      "settled_date": "2026-05-20",
+      "fail_reason": "收盤290.0 ≤ 停損306.5（SMCI -6.8% Level 1，AI伺服器籌碼出貨）"
     },
     {
       "stock_code": "2344",

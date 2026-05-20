@@ -10928,10 +10928,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 81,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-05-20",
+        "settled_price": 290.0,
+        "holding_days": 5
       },
       {
         "symbol": "2344",
@@ -11025,10 +11025,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 81,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-05-20",
+        "settled_price": 4395.0,
+        "holding_days": 4
       },
       {
         "symbol": "3189",
@@ -11247,5 +11247,12 @@
     ],
     "settled_accuracy": null,
     "settled_count": 0
+  },
+  "_stats": {
+    "success_count": 176,
+    "fail_count": 124,
+    "holding_count": 191,
+    "settled_count": 300,
+    "settled_accuracy": 0.5867
   }
 }
