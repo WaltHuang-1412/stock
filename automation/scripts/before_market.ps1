@@ -116,8 +116,9 @@ if ($MarketStatus -eq "snapshot") {
         }
         Write-Output "" | Tee-Object -FilePath $LogFile -Append
         Write-Output "[git] 推送至 remote..." | Tee-Object -FilePath $LogFile -Append
-        git -C $ProjectDir push 2>&1 | Tee-Object -FilePath $LogFile -Append
-        if ($LASTEXITCODE -eq 0) {
+        $gitOutput = git -C $ProjectDir push 2>&1
+        $gitOutput | Tee-Object -FilePath $LogFile -Append
+        if ($LASTEXITCODE -eq 0 -or ($gitOutput -join " ") -match "up-to-date") {
             Write-Output "[git] push 成功" | Tee-Object -FilePath $LogFile -Append
         } else {
             Write-Output "[git] push 失敗（exit $LASTEXITCODE），請手動確認" | Tee-Object -FilePath $LogFile -Append
@@ -208,8 +209,9 @@ if ($MarketStatus -eq "snapshot") {
         }
         Write-Output "" | Tee-Object -FilePath $LogFile -Append
         Write-Output "[git] 推送至 remote..." | Tee-Object -FilePath $LogFile -Append
-        git -C $ProjectDir push 2>&1 | Tee-Object -FilePath $LogFile -Append
-        if ($LASTEXITCODE -eq 0) {
+        $gitOutput = git -C $ProjectDir push 2>&1
+        $gitOutput | Tee-Object -FilePath $LogFile -Append
+        if ($LASTEXITCODE -eq 0 -or ($gitOutput -join " ") -match "up-to-date") {
             Write-Output "[git] push 成功" | Tee-Object -FilePath $LogFile -Append
         } else {
             Write-Output "[git] push 失敗（exit $LASTEXITCODE），請手動確認" | Tee-Object -FilePath $LogFile -Append
