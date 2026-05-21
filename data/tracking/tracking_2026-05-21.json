@@ -16,7 +16,10 @@
       "settlement_days": 10,
       "position": "15%",
       "score": 94,
-      "reason": "Cisco+12.25%網通大爆發、Module A L3佈局完成(連4天-84.9%動能)、外資主導、EPS+3"
+      "reason": "Cisco+12.25%網通大爆發、Module A L3佈局完成(連4天-84.9%動能)、外資主導、EPS+3",
+      "actual_close": 30.1,
+      "result": "holding",
+      "holding_status": "D1/10，距目標8.0%"
     },
     {
       "stock_code": "6285",
@@ -29,7 +32,10 @@
       "settlement_days": 10,
       "position": "15%",
       "score": 91,
-      "reason": "Cisco+12.25%最直接受益、Module A L3(連4天-49.2%動能)、網通ODM龍頭、Level 0安全"
+      "reason": "Cisco+12.25%最直接受益、Module A L3(連4天-49.2%動能)、網通ODM龍頭、Level 0安全",
+      "actual_close": 280.5,
+      "result": "holding",
+      "holding_status": "D1/10，距目標17.3%"
     },
     {
       "stock_code": "2376",
@@ -42,7 +48,10 @@
       "settlement_days": 10,
       "position": "10%",
       "score": 85,
-      "reason": "NVDA Q1財報$816B超強、AI伺服器GPU母板核心、Module A L2、外資投信同步連買4天"
+      "reason": "NVDA Q1財報$816B超強、AI伺服器GPU母板核心、Module A L2、外資投信同步連買4天",
+      "actual_close": 316.5,
+      "result": "holding",
+      "holding_status": "D1/10，距目標12.5%"
     },
     {
       "stock_code": "6531",
@@ -55,7 +64,10 @@
       "settlement_days": 10,
       "position": "10%",
       "score": 81,
-      "reason": "營收YoY+92.9%+近5日回檔-6.4%黃金買點、外資持股比週增+0.72%、EPS強、AI連接器受益"
+      "reason": "營收YoY+92.9%+近5日回檔-6.4%黃金買點、外資持股比週增+0.72%、EPS強、AI連接器受益",
+      "actual_close": 876.0,
+      "result": "holding",
+      "holding_status": "D1/10，距目標27.7%"
     },
     {
       "stock_code": "2317",
@@ -68,7 +80,10 @@
       "settlement_days": 10,
       "position": "8%",
       "score": 72,
-      "reason": "Module A L3(連4天-60.7%動能)、CPO光通訊Q3量產確認、AI伺服器ODM；注意Tesla Level 2風險"
+      "reason": "Module A L3(連4天-60.7%動能)、CPO光通訊Q3量產確認、AI伺服器ODM；注意Tesla Level 2風險",
+      "actual_close": 247.5,
+      "result": "holding",
+      "holding_status": "D1/10，距目標8.3%"
     },
     {
       "stock_code": "3034",
@@ -81,16 +96,37 @@
       "settlement_days": 10,
       "position": "5%",
       "score": 76,
-      "reason": "Module A L2、法人連5天買超+avg_rank22、buy_ratio30%、注意EPS連4季負成長-5分壓制"
+      "reason": "Module A L2、法人連5天買超+avg_rank22、buy_ratio30%、注意EPS連4季負成長-5分壓制",
+      "actual_close": 484.5,
+      "result": "holding",
+      "holding_status": "D1/10，距目標9.2%"
     }
   ],
   "intraday_prices": {
-    "2312": {"price": 30.50, "change_pct": 7.77},
-    "6285": {"price": 276.50, "change_pct": -0.90},
-    "2376": {"price": 314.50, "change_pct": 4.14},
-    "6531": {"price": 918.00, "change_pct": -5.65},
-    "2317": {"price": 247.00, "change_pct": 2.92},
-    "3034": {"price": 480.50, "change_pct": 1.69}
+    "2312": {
+      "price": 30.5,
+      "change_pct": 7.77
+    },
+    "6285": {
+      "price": 276.5,
+      "change_pct": -0.9
+    },
+    "2376": {
+      "price": 314.5,
+      "change_pct": 4.14
+    },
+    "6531": {
+      "price": 918.0,
+      "change_pct": -5.65
+    },
+    "2317": {
+      "price": 247.0,
+      "change_pct": 2.92
+    },
+    "3034": {
+      "price": 480.5,
+      "change_pct": 1.69
+    }
   },
   "track_b_recommendations": [],
   "track_b_observations": [
@@ -102,23 +138,136 @@
     "Track B今日無盤中新推薦：所有候選股評分25-54分，未達75分門檻"
   ],
   "removed_stocks": [
-    {"stock_code": "2382", "stock_name": "廣達", "reason": "反轉Level4爆量賣超-24.4%"},
-    {"stock_code": "5388", "stock_name": "中磊", "reason": "反轉Level4爆量賣超-12.8%"},
-    {"stock_code": "3017", "stock_name": "奇鋐", "reason": "反轉Level4爆量賣超-17.5%"},
-    {"stock_code": "2344", "stock_name": "華邦電", "reason": "反轉Level4排除+MU-8.91% Level2"},
-    {"stock_code": "2337", "stock_name": "旺宏", "reason": "反轉Level4爆量賣超-7.1%"},
-    {"stock_code": "2603", "stock_name": "長榮", "reason": "反轉Level4爆量賣超-22.6%"},
-    {"stock_code": "2883", "stock_name": "凱基金", "reason": "反轉Level4爆量賣超-63.1%"},
-    {"stock_code": "4958", "stock_name": "臻鼎-KY", "reason": "反轉Level3連續賣超"},
-    {"stock_code": "1314", "stock_name": "中石化", "reason": "反轉Level3連續賣超"},
-    {"stock_code": "2344", "stock_name": "華邦電", "reason": "MU-8.91% DRAM鏈Level2+Level4排除"},
-    {"stock_code": "3481", "stock_name": "群創", "reason": "反轉Level2(-15分)降至47分"},
-    {"stock_code": "2891", "stock_name": "中信金", "reason": "累計賣超-19,796張(法人出貨)，不符準確率篩選"},
-    {"stock_code": "1711", "stock_name": "永光", "reason": "累計賣超-18,727張(法人出貨)，月線下-14.3%"},
-    {"stock_code": "2409", "stock_name": "友達", "reason": "面板無超強催化+Level1-5分，總分62分"},
-    {"stock_code": "3008", "stock_name": "大立光", "reason": "AI眼鏡中度催化+EPS-3，總分57分"},
-    {"stock_code": "2542", "stock_name": "興富發", "reason": "營建無催化+EPS-3，總分67分"},
-    {"stock_code": "5876", "stock_name": "上海商銀", "reason": "Level1減速-69.7%+金融無催化，總分54分"},
-    {"stock_code": "2852", "stock_name": "中再保", "reason": "保險無催化，總分56分"}
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "reason": "反轉Level4爆量賣超-24.4%"
+    },
+    {
+      "stock_code": "5388",
+      "stock_name": "中磊",
+      "reason": "反轉Level4爆量賣超-12.8%"
+    },
+    {
+      "stock_code": "3017",
+      "stock_name": "奇鋐",
+      "reason": "反轉Level4爆量賣超-17.5%"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "反轉Level4排除+MU-8.91% Level2"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "反轉Level4爆量賣超-7.1%"
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "reason": "反轉Level4爆量賣超-22.6%"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "reason": "反轉Level4爆量賣超-63.1%"
+    },
+    {
+      "stock_code": "4958",
+      "stock_name": "臻鼎-KY",
+      "reason": "反轉Level3連續賣超"
+    },
+    {
+      "stock_code": "1314",
+      "stock_name": "中石化",
+      "reason": "反轉Level3連續賣超"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "MU-8.91% DRAM鏈Level2+Level4排除"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "反轉Level2(-15分)降至47分"
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "reason": "累計賣超-19,796張(法人出貨)，不符準確率篩選"
+    },
+    {
+      "stock_code": "1711",
+      "stock_name": "永光",
+      "reason": "累計賣超-18,727張(法人出貨)，月線下-14.3%"
+    },
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "reason": "面板無超強催化+Level1-5分，總分62分"
+    },
+    {
+      "stock_code": "3008",
+      "stock_name": "大立光",
+      "reason": "AI眼鏡中度催化+EPS-3，總分57分"
+    },
+    {
+      "stock_code": "2542",
+      "stock_name": "興富發",
+      "reason": "營建無催化+EPS-3，總分67分"
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "reason": "Level1減速-69.7%+金融無催化，總分54分"
+    },
+    {
+      "stock_code": "2852",
+      "stock_name": "中再保",
+      "reason": "保險無催化，總分56分"
+    }
+  ],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2485",
+      "stock_name": "兆赫",
+      "industry": "網通設備",
+      "recommend_price": 70.0,
+      "target_price": 80.5,
+      "stop_loss_pct": -5,
+      "stop_loss": 66.5,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 94,
+      "reason": "Cisco+12.25%超強催化覆寫、外資持股比週增+1.17%+5分、EPS YoY+149.3%+5分、法人TOP50 avg_rank 7.5"
+    },
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "industry": "AI伺服器PCB",
+      "recommend_price": 1285.0,
+      "target_price": 1478.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 1220.75,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 81,
+      "reason": "AI伺服器超強催化覆寫+5日-10.1%黃金買點、EPS YoY+90.8%+5分、營收YoY+53.9%+5分"
+    },
+    {
+      "stock_code": "2363",
+      "stock_name": "矽統",
+      "industry": "IC設計/被動元件",
+      "recommend_price": 62.8,
+      "target_price": 72.2,
+      "stop_loss_pct": -10,
+      "stop_loss": 56.52,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 81,
+      "reason": "Module A L3佈局完成（連4天，動能-87.7%）、月季雙線上；注意Level 1買超減速"
+    }
   ]
 }

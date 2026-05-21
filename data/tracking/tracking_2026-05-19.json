@@ -26,11 +26,12 @@
         "reversal_level_0": true
       },
       "close_price": 63.4,
-      "actual_close": 63.4,
-      "result": "holding",
+      "actual_close": 65.0,
+      "result": "success",
       "holding_status": "D1/10，收盤63.4距目標63.5僅0.2%，法人加速+10.4K，明日繼續追蹤",
       "change_percent": 9.9,
-      "chg_pct": 9.9
+      "chg_pct": 9.9,
+      "settled_date": "2026-05-21"
     }
   ],
   "yesterday_verification": {
@@ -42,9 +43,29 @@
     "accuracy": "33.3%（今日結算）/ 累積59.1%（176s/122f/298t）",
     "cumulative_accuracy": "59.1%",
     "results": [
-      {"code": "2303", "name": "聯電", "result": "success", "close_price": 113.0, "change_percent": 12.4},
-      {"code": "2382", "name": "廣達", "result": "fail", "close_price": 290.0, "change_percent": -19.6, "reason": "觸及停損"},
-      {"code": "3231", "name": "緯創", "result": "fail", "close_price": 132.5, "change_percent": -5.7, "reason": "D10到期"}
+      {
+        "code": "2303",
+        "name": "聯電",
+        "result": "success",
+        "close_price": 113.0,
+        "change_percent": 12.4
+      },
+      {
+        "code": "2382",
+        "name": "廣達",
+        "result": "fail",
+        "close_price": 290.0,
+        "change_percent": -19.6,
+        "reason": "觸及停損"
+      },
+      {
+        "code": "3231",
+        "name": "緯創",
+        "result": "fail",
+        "close_price": 132.5,
+        "change_percent": -5.7,
+        "reason": "D10到期"
+      }
     ]
   },
   "tracking_confirmations": [
@@ -85,23 +106,108 @@
   "intraday_update": {
     "time": "12:30",
     "track_a_prices": {
-      "4906": {"price": 38.15, "chg_pct": -2.7, "day": "D2", "status": "level4_remove"},
-      "2303": {"price": 113.0, "chg_pct": 2.7, "day": "D5", "status": "level4_warning_but_rising"},
-      "2317": {"price": 246.5, "chg_pct": -0.8, "day": "D3", "status": "level1_watch"},
-      "2344": {"price": 117.5, "chg_pct": -9.9, "day": "D3", "status": "CRITICAL_exit_stop_0.8pct"},
-      "2881": {"price": 97.5, "chg_pct": 1.4, "day": "D6", "status": "level4_remove"},
-      "2027": {"price": 40.0, "chg_pct": 0.3, "day": "D7", "status": "healthy"},
-      "2867": {"price": 7.76, "chg_pct": 0.6, "day": "D7", "status": "level1_watch"},
-      "2892": {"price": 29.2, "chg_pct": -0.3, "day": "D7", "status": "level4_remove_60pct"},
-      "2356": {"price": 52.0, "chg_pct": -2.3, "day": "D2", "status": "danger_stop_2.9pct"},
-      "2890": {"price": 30.1, "chg_pct": -0.3, "day": "D6", "status": "level4_remove"},
-      "2542": {"price": 43.7, "chg_pct": -0.1, "day": "D6", "status": "healthy"},
-      "2455": {"price": 374.5, "chg_pct": 4.5, "day": "D4", "status": "healthy_profitable"},
-      "1605": {"price": 33.6, "chg_pct": -3.9, "day": "D5", "status": "level4_remove"},
-      "6669": {"price": 4890.0, "chg_pct": -4.2, "day": "D8", "status": "level1_d8_watch"},
-      "2355": {"price": 63.4, "chg_pct": 9.9, "day": "D1", "status": "TARGET_0.2pct"},
-      "2485": {"price": 71.4, "chg_pct": -4.7, "day": "D2", "status": "buying_recovery_watch"},
-      "2383": {"price": 4575.0, "chg_pct": 0.2, "day": "D2", "status": "danger_stop_3.3pct"}
+      "4906": {
+        "price": 38.15,
+        "chg_pct": -2.7,
+        "day": "D2",
+        "status": "level4_remove"
+      },
+      "2303": {
+        "price": 113.0,
+        "chg_pct": 2.7,
+        "day": "D5",
+        "status": "level4_warning_but_rising"
+      },
+      "2317": {
+        "price": 246.5,
+        "chg_pct": -0.8,
+        "day": "D3",
+        "status": "level1_watch"
+      },
+      "2344": {
+        "price": 117.5,
+        "chg_pct": -9.9,
+        "day": "D3",
+        "status": "CRITICAL_exit_stop_0.8pct"
+      },
+      "2881": {
+        "price": 97.5,
+        "chg_pct": 1.4,
+        "day": "D6",
+        "status": "level4_remove"
+      },
+      "2027": {
+        "price": 40.0,
+        "chg_pct": 0.3,
+        "day": "D7",
+        "status": "healthy"
+      },
+      "2867": {
+        "price": 7.76,
+        "chg_pct": 0.6,
+        "day": "D7",
+        "status": "level1_watch"
+      },
+      "2892": {
+        "price": 29.2,
+        "chg_pct": -0.3,
+        "day": "D7",
+        "status": "level4_remove_60pct"
+      },
+      "2356": {
+        "price": 52.0,
+        "chg_pct": -2.3,
+        "day": "D2",
+        "status": "danger_stop_2.9pct"
+      },
+      "2890": {
+        "price": 30.1,
+        "chg_pct": -0.3,
+        "day": "D6",
+        "status": "level4_remove"
+      },
+      "2542": {
+        "price": 43.7,
+        "chg_pct": -0.1,
+        "day": "D6",
+        "status": "healthy"
+      },
+      "2455": {
+        "price": 374.5,
+        "chg_pct": 4.5,
+        "day": "D4",
+        "status": "healthy_profitable"
+      },
+      "1605": {
+        "price": 33.6,
+        "chg_pct": -3.9,
+        "day": "D5",
+        "status": "level4_remove"
+      },
+      "6669": {
+        "price": 4890.0,
+        "chg_pct": -4.2,
+        "day": "D8",
+        "status": "level1_d8_watch"
+      },
+      "2355": {
+        "price": 63.4,
+        "chg_pct": 9.9,
+        "day": "D1",
+        "status": "TARGET_0.2pct"
+      },
+      "2485": {
+        "price": 71.4,
+        "chg_pct": -4.7,
+        "day": "D2",
+        "status": "buying_recovery_watch"
+      },
+      "2383": {
+        "price": 4575.0,
+        "chg_pct": 0.2,
+        "day": "D2",
+        "status": "danger_stop_3.3pct"
+      }
     }
   },
   "track_b_recommendations": [
@@ -157,17 +263,53 @@
     }
   ],
   "intraday_level4_exits": [
-    {"code": "2344", "name": "華邦電", "reason": "Level4(-12K 7.3%)+今日-9.9%+距停損0.8%，強制出場"},
-    {"code": "4906", "name": "正文", "reason": "Level4(-3,170張 32.3%)，移除推薦"},
-    {"code": "2881", "name": "富邦金", "reason": "Level4(-5,312張 23.1%)，移除推薦"},
-    {"code": "2892", "name": "第一金", "reason": "Level4(-11K 60.7%！)，移除推薦"},
-    {"code": "2890", "name": "永豐金", "reason": "Level4(-2,800張 7.1%)，移除推薦"},
-    {"code": "1605", "name": "華新", "reason": "Level4(-2,573張 13.2%)+跌破MA5，移除推薦"}
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "reason": "Level4(-12K 7.3%)+今日-9.9%+距停損0.8%，強制出場"
+    },
+    {
+      "code": "4906",
+      "name": "正文",
+      "reason": "Level4(-3,170張 32.3%)，移除推薦"
+    },
+    {
+      "code": "2881",
+      "name": "富邦金",
+      "reason": "Level4(-5,312張 23.1%)，移除推薦"
+    },
+    {
+      "code": "2892",
+      "name": "第一金",
+      "reason": "Level4(-11K 60.7%！)，移除推薦"
+    },
+    {
+      "code": "2890",
+      "name": "永豐金",
+      "reason": "Level4(-2,800張 7.1%)，移除推薦"
+    },
+    {
+      "code": "1605",
+      "name": "華新",
+      "reason": "Level4(-2,573張 13.2%)+跌破MA5，移除推薦"
+    }
   ],
   "after_market_level4_exits": [
-    {"code": "2337", "name": "旺宏", "reason": "Level4(-7,858張 5.5%日均量)，今日盤後確認強制出場，三星罷工效應縮小"},
-    {"code": "2345", "name": "智邦", "reason": "Level4(-265張 6.3%日均量)，今日盤後確認強制出場"},
-    {"code": "2352", "name": "佳世達", "reason": "Level4(-377張 8.5%日均量)，今日盤後確認強制出場"}
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "reason": "Level4(-7,858張 5.5%日均量)，今日盤後確認強制出場，三星罷工效應縮小"
+    },
+    {
+      "code": "2345",
+      "name": "智邦",
+      "reason": "Level4(-265張 6.3%日均量)，今日盤後確認強制出場"
+    },
+    {
+      "code": "2352",
+      "name": "佳世達",
+      "reason": "Level4(-377張 8.5%日均量)，今日盤後確認強制出場"
+    }
   ],
   "today_settlements": [
     {
@@ -203,18 +345,66 @@
   ],
   "tomorrow_recommendations": [],
   "removed_stocks": [
-    {"code": "2344", "name": "華邦電", "reason": "Level4強制出場，三星罷工縮限，轉單效應落空"},
-    {"code": "4906", "name": "正文", "reason": "Level4強制出場"},
-    {"code": "2881", "name": "富邦金", "reason": "Level4強制出場"},
-    {"code": "2892", "name": "第一金", "reason": "Level4強制出場（60.7%外資大賣）"},
-    {"code": "2890", "name": "永豐金", "reason": "Level4強制出場"},
-    {"code": "1605", "name": "華新", "reason": "Level4強制出場+跌破MA5"},
-    {"code": "2337", "name": "旺宏", "reason": "Level4強制出場，記憶體轉單邏輯受損"},
-    {"code": "2345", "name": "智邦", "reason": "Level4強制出場"},
-    {"code": "2352", "name": "佳世達", "reason": "Level4強制出場"},
-    {"code": "2303", "name": "聯電", "reason": "成功結算，目標達成"},
-    {"code": "2382", "name": "廣達", "reason": "觸及停損出場"},
-    {"code": "3231", "name": "緯創", "reason": "D10到期結算失敗"}
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "reason": "Level4強制出場，三星罷工縮限，轉單效應落空"
+    },
+    {
+      "code": "4906",
+      "name": "正文",
+      "reason": "Level4強制出場"
+    },
+    {
+      "code": "2881",
+      "name": "富邦金",
+      "reason": "Level4強制出場"
+    },
+    {
+      "code": "2892",
+      "name": "第一金",
+      "reason": "Level4強制出場（60.7%外資大賣）"
+    },
+    {
+      "code": "2890",
+      "name": "永豐金",
+      "reason": "Level4強制出場"
+    },
+    {
+      "code": "1605",
+      "name": "華新",
+      "reason": "Level4強制出場+跌破MA5"
+    },
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "reason": "Level4強制出場，記憶體轉單邏輯受損"
+    },
+    {
+      "code": "2345",
+      "name": "智邦",
+      "reason": "Level4強制出場"
+    },
+    {
+      "code": "2352",
+      "name": "佳世達",
+      "reason": "Level4強制出場"
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "reason": "成功結算，目標達成"
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "reason": "觸及停損出場"
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "reason": "D10到期結算失敗"
+    }
   ],
   "data_note": "⚠️ us_asia_markets.json (08:01) 顯示US May 16數據(Cisco+20%/Micron-14%)，台股昨日(May18)已消化此衝擊。今日(May19)實際參考為US May18數據：費半-2.47%/Micron-4.80%/AMD+0.19%（來源：market_intelligence.md）",
   "market_context": {
