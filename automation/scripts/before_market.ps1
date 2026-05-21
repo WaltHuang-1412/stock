@@ -115,6 +115,13 @@ if ($MarketStatus -eq "snapshot") {
             Write-Output "[WARN] holiday_line.txt 不存在，略過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
         }
         Write-Output "" | Tee-Object -FilePath $LogFile -Append
+        Write-Output "[git] 檢查未 commit 資料..." | Tee-Object -FilePath $LogFile -Append
+        git -C $ProjectDir add data/ 2>&1 | Out-Null
+        $GitStatus = git -C $ProjectDir status --porcelain 2>&1
+        if ($GitStatus) {
+            Write-Output "[git] 補 commit 未提交資料..." | Tee-Object -FilePath $LogFile -Append
+            git -C $ProjectDir commit -m "auto: 假日快照 $Date（排程補 commit）" 2>&1 | Tee-Object -FilePath $LogFile -Append
+        }
         Write-Output "[git] 推送至 remote..." | Tee-Object -FilePath $LogFile -Append
         git -C $ProjectDir push 2>&1 | Tee-Object -FilePath $LogFile -Append
         if ($LASTEXITCODE -eq 0) {
@@ -207,6 +214,13 @@ if ($MarketStatus -eq "snapshot") {
             Write-Output "[WARN] before_market_line.txt 不存在，略過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
         }
         Write-Output "" | Tee-Object -FilePath $LogFile -Append
+        Write-Output "[git] 檢查未 commit 資料..." | Tee-Object -FilePath $LogFile -Append
+        git -C $ProjectDir add data/ 2>&1 | Out-Null
+        $GitStatus = git -C $ProjectDir status --porcelain 2>&1
+        if ($GitStatus) {
+            Write-Output "[git] 補 commit 未提交資料..." | Tee-Object -FilePath $LogFile -Append
+            git -C $ProjectDir commit -m "auto: 盤前分析 $Date（排程補 commit）" 2>&1 | Tee-Object -FilePath $LogFile -Append
+        }
         Write-Output "[git] 推送至 remote..." | Tee-Object -FilePath $LogFile -Append
         git -C $ProjectDir push 2>&1 | Tee-Object -FilePath $LogFile -Append
         if ($LASTEXITCODE -eq 0) {
