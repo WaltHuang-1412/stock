@@ -1,0 +1,114 @@
+{
+  "date": "2026-05-21",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2312",
+      "stock_name": "金寶",
+      "industry": "光通訊與網通",
+      "recommend_price": 28.3,
+      "target_price": 32.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 25.47,
+      "settlement_days": 10,
+      "position": "15%",
+      "score": 94,
+      "reason": "Cisco+12.25%網通大爆發、Module A L3佈局完成(連4天-84.9%動能)、外資主導、EPS+3"
+    },
+    {
+      "stock_code": "6285",
+      "stock_name": "啓碁",
+      "industry": "光通訊與網通",
+      "recommend_price": 279.0,
+      "target_price": 329.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 251.1,
+      "settlement_days": 10,
+      "position": "15%",
+      "score": 91,
+      "reason": "Cisco+12.25%最直接受益、Module A L3(連4天-49.2%動能)、網通ODM龍頭、Level 0安全"
+    },
+    {
+      "stock_code": "2376",
+      "stock_name": "技嘉",
+      "industry": "AI伺服器",
+      "recommend_price": 302.0,
+      "target_price": 356.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 271.8,
+      "settlement_days": 10,
+      "position": "10%",
+      "score": 85,
+      "reason": "NVDA Q1財報$816B超強、AI伺服器GPU母板核心、Module A L2、外資投信同步連買4天"
+    },
+    {
+      "stock_code": "6531",
+      "stock_name": "愛普",
+      "industry": "AI伺服器",
+      "recommend_price": 973.0,
+      "target_price": 1119.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 875.7,
+      "settlement_days": 10,
+      "position": "10%",
+      "score": 81,
+      "reason": "營收YoY+92.9%+近5日回檔-6.4%黃金買點、外資持股比週增+0.72%、EPS強、AI連接器受益"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "industry": "AI伺服器",
+      "recommend_price": 240.0,
+      "target_price": 268.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 216.0,
+      "settlement_days": 10,
+      "position": "8%",
+      "score": 72,
+      "reason": "Module A L3(連4天-60.7%動能)、CPO光通訊Q3量產確認、AI伺服器ODM；注意Tesla Level 2風險"
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "industry": "半導體設計",
+      "recommend_price": 472.5,
+      "target_price": 529.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 425.25,
+      "settlement_days": 10,
+      "position": "5%",
+      "score": 76,
+      "reason": "Module A L2、法人連5天買超+avg_rank22、buy_ratio30%、注意EPS連4季負成長-5分壓制"
+    }
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    "光通訊網通方向：Cisco+12.25%今日最強催化，主要受益股多數Level4排除(5388中磊、2603長榮、2337旺宏等)",
+    "AI伺服器方向：NVDA Q1$816B超強，但廣達(2382)、奇鋐(3017)均Level4排除，技嘉(2376)為主推薦",
+    "DRAM記憶體方向：MU-8.91%+WDC-6.98% Level2降級，華邦電(2344)Level4排除，全面迴避",
+    "電動車方向：Tesla Level2警報，鴻海(2317)受壓但靠Module A L3保留小倉位"
+  ],
+  "removed_stocks": [
+    {"stock_code": "2382", "stock_name": "廣達", "reason": "反轉Level4爆量賣超-24.4%"},
+    {"stock_code": "5388", "stock_name": "中磊", "reason": "反轉Level4爆量賣超-12.8%"},
+    {"stock_code": "3017", "stock_name": "奇鋐", "reason": "反轉Level4爆量賣超-17.5%"},
+    {"stock_code": "2344", "stock_name": "華邦電", "reason": "反轉Level4排除+MU-8.91% Level2"},
+    {"stock_code": "2337", "stock_name": "旺宏", "reason": "反轉Level4爆量賣超-7.1%"},
+    {"stock_code": "2603", "stock_name": "長榮", "reason": "反轉Level4爆量賣超-22.6%"},
+    {"stock_code": "2883", "stock_name": "凱基金", "reason": "反轉Level4爆量賣超-63.1%"},
+    {"stock_code": "4958", "stock_name": "臻鼎-KY", "reason": "反轉Level3連續賣超"},
+    {"stock_code": "1314", "stock_name": "中石化", "reason": "反轉Level3連續賣超"},
+    {"stock_code": "2344", "stock_name": "華邦電", "reason": "MU-8.91% DRAM鏈Level2+Level4排除"},
+    {"stock_code": "3481", "stock_name": "群創", "reason": "反轉Level2(-15分)降至47分"},
+    {"stock_code": "2891", "stock_name": "中信金", "reason": "累計賣超-19,796張(法人出貨)，不符準確率篩選"},
+    {"stock_code": "1711", "stock_name": "永光", "reason": "累計賣超-18,727張(法人出貨)，月線下-14.3%"},
+    {"stock_code": "2409", "stock_name": "友達", "reason": "面板無超強催化+Level1-5分，總分62分"},
+    {"stock_code": "3008", "stock_name": "大立光", "reason": "AI眼鏡中度催化+EPS-3，總分57分"},
+    {"stock_code": "2542", "stock_name": "興富發", "reason": "營建無催化+EPS-3，總分67分"},
+    {"stock_code": "5876", "stock_name": "上海商銀", "reason": "Level1減速-69.7%+金融無催化，總分54分"},
+    {"stock_code": "2852", "stock_name": "中再保", "reason": "保險無催化，總分56分"}
+  ]
+}

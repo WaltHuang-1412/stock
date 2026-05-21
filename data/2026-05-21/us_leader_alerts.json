@@ -1,0 +1,138 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Micron",
+      "change_pct": -8.91,
+      "level": 2,
+      "level_name": "🟡 降級評分",
+      "tw_industry": "DRAM/記憶體",
+      "affected_stocks": {
+        "2408": "南亞科",
+        "1303": "南亞",
+        "2344": "華邦電",
+        "2337": "旺宏",
+        "5347": "世界",
+        "6770": "力積電"
+      },
+      "action": "downgrade",
+      "score_adjustment": -15,
+      "reason": "Micron 跌幅 -8.91%，DRAM/記憶體產業受壓"
+    },
+    {
+      "us_stock": "Tesla",
+      "change_pct": -6.29,
+      "level": 2,
+      "level_name": "🟡 降級評分",
+      "tw_industry": "電動車",
+      "affected_stocks": {
+        "2317": "鴻海",
+        "1513": "中興電",
+        "1519": "華城",
+        "2308": "台達電",
+        "1504": "東元"
+      },
+      "action": "downgrade",
+      "score_adjustment": -15,
+      "reason": "Tesla 跌幅 -6.29%，電動車產業受壓"
+    },
+    {
+      "us_stock": "Applied Materials",
+      "change_pct": -2.24,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "半導體設備/製造",
+      "affected_stocks": {
+        "2330": "台積電",
+        "3711": "日月光",
+        "2303": "聯電"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Applied Materials 跌幅 -2.24%，半導體設備/製造產業受壓"
+    },
+    {
+      "us_stock": "Western Digital",
+      "change_pct": -6.98,
+      "level": 2,
+      "level_name": "🟡 降級評分",
+      "tw_industry": "NAND/儲存",
+      "affected_stocks": {
+        "2408": "南亞科",
+        "2344": "華邦電",
+        "2337": "旺宏",
+        "6770": "力積電"
+      },
+      "action": "downgrade",
+      "score_adjustment": -15,
+      "reason": "Western Digital 跌幅 -6.98%，NAND/儲存產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-05-21",
+    "total_alerts": 4,
+    "level_3_count": 0,
+    "level_2_count": 3,
+    "level_1_count": 1,
+    "excluded_stocks": [],
+    "downgraded_stocks": {
+      "2408": {
+        "reason": "Western Digital 跌幅 -6.98%",
+        "adjustment": -15
+      },
+      "1303": {
+        "reason": "Micron 跌幅 -8.91%",
+        "adjustment": -15
+      },
+      "2344": {
+        "reason": "Western Digital 跌幅 -6.98%",
+        "adjustment": -15
+      },
+      "2337": {
+        "reason": "Western Digital 跌幅 -6.98%",
+        "adjustment": -15
+      },
+      "5347": {
+        "reason": "Micron 跌幅 -8.91%",
+        "adjustment": -15
+      },
+      "6770": {
+        "reason": "Western Digital 跌幅 -6.98%",
+        "adjustment": -15
+      },
+      "2317": {
+        "reason": "Tesla 跌幅 -6.29%",
+        "adjustment": -15
+      },
+      "1513": {
+        "reason": "Tesla 跌幅 -6.29%",
+        "adjustment": -15
+      },
+      "1519": {
+        "reason": "Tesla 跌幅 -6.29%",
+        "adjustment": -15
+      },
+      "2308": {
+        "reason": "Tesla 跌幅 -6.29%",
+        "adjustment": -15
+      },
+      "1504": {
+        "reason": "Tesla 跌幅 -6.29%",
+        "adjustment": -15
+      }
+    },
+    "warning_stocks": {
+      "2330": {
+        "reason": "Applied Materials 跌幅 -2.24%",
+        "adjustment": -5
+      },
+      "3711": {
+        "reason": "Applied Materials 跌幅 -2.24%",
+        "adjustment": -5
+      },
+      "2303": {
+        "reason": "Applied Materials 跌幅 -2.24%",
+        "adjustment": -5
+      }
+    }
+  }
+}

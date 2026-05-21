@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-20",
+  "last_updated": "2026-05-21",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -1663,6 +1663,11 @@
               "code": "6239",
               "name": "力成",
               "category": "光通訊與網通（含低軌衛星）"
+            },
+            {
+              "code": "3163",
+              "name": "波若威",
+              "category": "光通訊與網通（含低軌衛星）"
             }
           ]
         }
@@ -2186,6 +2191,11 @@
             {
               "code": "3090",
               "name": "日電貿",
+              "category": "被動元件族群"
+            },
+            {
+              "code": "6642",
+              "name": "富致",
               "category": "被動元件族群"
             }
           ]
@@ -2999,6 +3009,21 @@
               "code": "2201",
               "name": "裕隆",
               "category": "企業財報重點（本週）"
+            },
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "企業財報重點（本週）"
+            },
+            {
+              "code": "3533",
+              "name": "嘉澤",
+              "category": "企業財報重點（本週）"
+            },
+            {
+              "code": "7750",
+              "name": "新代",
+              "category": "企業財報重點（本週）"
             }
           ]
         }
@@ -3184,6 +3209,21 @@
             {
               "code": "6873",
               "name": "泓德能源",
+              "category": "儲能、綠電與電力基建"
+            },
+            {
+              "code": "6869",
+              "name": "雲豹能源",
+              "category": "儲能、綠電與電力基建"
+            },
+            {
+              "code": "7921",
+              "name": "普威能源",
+              "category": "儲能、綠電與電力基建"
+            },
+            {
+              "code": "7740",
+              "name": "熙特爾",
               "category": "儲能、綠電與電力基建"
             }
           ]
@@ -3605,6 +3645,11 @@
               "code": "6719",
               "name": "力智",
               "category": "電源管理IC漲價"
+            },
+            {
+              "code": "2481",
+              "name": "強茂",
+              "category": "電源管理IC漲價"
             }
           ]
         }
@@ -3660,6 +3705,27 @@
               "code": "2891",
               "name": "中信金",
               "category": "聯準會利率政策與通膨"
+            }
+          ]
+        }
+      }
+    },
+    "OpenAI": {
+      "name": "OpenAI",
+      "catalysts": [
+        "OpenAI",
+        "SpaceX",
+        "IPO"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2382",
+              "name": "廣達",
+              "category": "OpenAI / SpaceX IPO"
             }
           ]
         }

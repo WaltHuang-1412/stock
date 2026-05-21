@@ -1,0 +1,69 @@
+[
+  {
+    "code": "62
+    股票 |        最新季 |     EPS |   EPS YoY |     毛利率 |    QoQ | 評分
+--------------------------------------------------------------------------------
+  6285 | 2025-12-31 |    2.06 |     -3.7% |   14.1% | +2.0pp | 不調整（EPS YoY-4% 不調整 | 毛利率QoQ+2.0pp 不調整）
+  3008 | 2025-12-31 |   50.35 |    -22.6% |   48.0% | +0.7pp | -3分（EPS YoY-23% -3 | 毛利率QoQ+0.7pp 不調整）
+  2317 | 2025-12-31 |    3.23 |     -3.3% |    5.9% | -0.5pp | 不調整（EPS YoY-3% 不調整 | 毛利率QoQ-0.5pp 不調整）
+  3034 | 2026-03-31 |    6.19 |    -28.4% |   39.1% | +0.9pp | -5分（EPS連續4季YoY負成長 -5 | 毛利率QoQ+0.9pp 不調整）
+  3045 | 2026-03-31 |    1.37 |    +13.2% |   21.6% | +1.9pp | 不調整（EPS YoY+13% 不調整 | 毛利率QoQ+1.9pp 不調整）
+  2312 | 2025-12-31 |    0.20 |    +25.0% |    5.4% | -1.7pp | +3分（EPS YoY+25% +3 | 毛利率QoQ-1.7pp 不調整）
+  2542 | 2025-12-31 |    1.15 |    -28.6% |   33.4% | +6.2pp | -3分（EPS連續4季YoY負成長 -5 | 毛利率QoQ+6.2pp +2）
+  6531 | 2026-03-31 |    4.15 |   +103.4% |   46.2% | -3.7pp | +3分（EPS YoY+103% +5 | 毛利率QoQ-3.7pp -2）
+  2409 | 2025-12-31 |    0.38 |    +81.0% |   10.7% | +1.2pp | +5分（EPS YoY+81% +5 | 毛利率QoQ+1.2pp 不調整）
+  2852 | 2025-12-31 |    0.49 |    +16.7% |     N/A |    N/A | 不調整（EPS YoY+17% 不調整）
+
+結果已存: C:\Users\walter.huang\Documents\github\stock\data\2026-05-21\eps_check.json
+eps_yoy_pct": 25.0,
+    "gross_margin_pct": 5.36,
+    "gm_qoq_delta": -1.68,
+    "adj": 3,
+    "notes": "EPS YoY+25% +3 | 毛利率QoQ-1.7pp 不調整",
+    "suggestion": "+3分"
+  },
+  {
+    "code": "2542",
+    "latest_quarter": "2025-12-31",
+    "eps": 1.15,
+    "eps_yoy_pct": -28.6,
+    "gross_margin_pct": 33.4,
+    "gm_qoq_delta": 6.15,
+    "adj": -3,
+    "notes": "EPS連續4季YoY負成長 -5 | 毛利率QoQ+6.2pp +2",
+    "suggestion": "-3分"
+  },
+  {
+    "code": "6531",
+    "latest_quarter": "2026-03-31",
+    "eps": 4.15,
+    "eps_yoy_pct": 103.4,
+    "gross_margin_pct": 46.19,
+    "gm_qoq_delta": -3.67,
+    "adj": 3,
+    "notes": "EPS YoY+103% +5 | 毛利率QoQ-3.7pp -2",
+    "suggestion": "+3分"
+  },
+  {
+    "code": "2409",
+    "latest_quarter": "2025-12-31",
+    "eps": 0.38,
+    "eps_yoy_pct": 81.0,
+    "gross_margin_pct": 10.73,
+    "gm_qoq_delta": 1.16,
+    "adj": 5,
+    "notes": "EPS YoY+81% +5 | 毛利率QoQ+1.2pp 不調整",
+    "suggestion": "+5分"
+  },
+  {
+    "code": "2852",
+    "latest_quarter": "2025-12-31",
+    "eps": 0.49,
+    "eps_yoy_pct": 16.7,
+    "gross_margin_pct": null,
+    "gm_qoq_delta": null,
+    "adj": 0,
+    "notes": "EPS YoY+17% 不調整",
+    "suggestion": "不調整"
+  }
+]

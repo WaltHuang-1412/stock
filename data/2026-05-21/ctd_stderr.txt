@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\catalyst_theme_detector.py", line 671, in <module>
+    main()
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\catalyst_theme_detector.py", line 667, in main
+    scan(target, lookback=args.lookback)
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\catalyst_theme_detector.py", line 368, in scan
+    print(f"🔍 催化主題預警掃描（Module B）")
+ValueError: I/O operation on closed file.

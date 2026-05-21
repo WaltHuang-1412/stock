@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "<string>", line 27, in <module>
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\walter.huang\Documents\github\stock\scripts/catalyst_theme_detector.py", line 55, in <module>
+    from reversal_alert import detect_reversal as _detect_reversal
+  File "C:\Users\walter.huang\Documents\github\stock\scripts\reversal_alert.py", line 37, in <module>
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+I/O operation on closed file.
