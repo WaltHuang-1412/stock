@@ -131,6 +131,12 @@ gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/market_regime.j
 ```
 讀取 regime 欄位判斷大盤狀態，影響 Step 9 防禦比例。如果抓取失敗，跳過即可。
 
+同時讀取 settlement 欄位（台指期結算機制）：
+- `days_from_settlement < 0`（結算前 T-3 到 T-1）→ 標註「⚠️結算週前，法人大買超可能含結算操作成分，不追高」
+- `days_from_settlement = 0`（結算日）→ 標註「⚠️結算日，成交量異常不代表真實買賣意願，不開新倉」
+- `days_from_settlement` 1-3（結算後確認期）→ 標註「✅結算後確認期，法人籌碼數據更可信」
+- `is_settlement_week = false` 或欄位不存在 → 不標註，正常分析
+
 價格位置判斷（Step 7 評分時強制執行）：
 Step 7 開始前，對全部候選股執行：
 ```bash
