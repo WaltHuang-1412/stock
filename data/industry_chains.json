@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-21",
+  "last_updated": "2026-05-23",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -382,6 +382,11 @@
               "code": "2325",
               "name": "矽品",
               "category": "AI 算力多元化"
+            },
+            {
+              "code": "2303",
+              "name": "聯電",
+              "category": "AI 伺服器與半導體"
             }
           ]
         }
@@ -1428,6 +1433,16 @@
               "code": "2492",
               "name": "華新科",
               "category": "DRAM 與記憶體"
+            },
+            {
+              "code": "6531",
+              "name": "愛普",
+              "category": "DRAM 與記憶體"
+            },
+            {
+              "code": "8046",
+              "name": "南電",
+              "category": "DRAM 與記憶體"
             }
           ]
         }
@@ -1677,6 +1692,11 @@
             {
               "code": "4916",
               "name": "事欣科",
+              "category": "光通訊與網通（含低軌衛星）"
+            },
+            {
+              "code": "3481",
+              "name": "群創",
               "category": "光通訊與網通（含低軌衛星）"
             }
           ]
@@ -2487,6 +2507,16 @@
               "code": "5347",
               "name": "世界先進",
               "category": "台股市場動態與ETF資金流向"
+            },
+            {
+              "code": "00981A",
+              "name": "台股增長",
+              "category": "台股市場動態與ETF資金"
+            },
+            {
+              "code": "2892",
+              "name": "第一金",
+              "category": "台股市場動態與ETF資金"
             }
           ]
         }
@@ -3064,6 +3094,16 @@
               "code": "3443",
               "name": "創意",
               "category": "企業財報重點（本週）"
+            },
+            {
+              "code": "6491",
+              "name": "晶碩",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "8046",
+              "name": "南電",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -3153,6 +3193,11 @@
             {
               "code": "2303",
               "name": "聯電",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "6491",
+              "name": "晶碩",
               "category": "川普貿易政策與關稅"
             }
           ]
@@ -3536,6 +3581,16 @@
               "code": "8008",
               "name": "台達化",
               "category": "中東地緣政治"
+            },
+            {
+              "code": "1326",
+              "name": "台化",
+              "category": "中東地緣政治（美伊衝突＋航運紅海）"
+            },
+            {
+              "code": "2636",
+              "name": "台驊",
+              "category": "中東地緣政治（美伊衝突＋航運紅海）"
             }
           ]
         }
@@ -3786,6 +3841,51 @@
               "code": "2382",
               "name": "廣達",
               "category": "OpenAI / SpaceX IPO"
+            }
+          ]
+        }
+      }
+    },
+    "聯準會利率": {
+      "name": "聯準會利率",
+      "catalysts": [
+        "聯準會利率",
+        "聯準會利率政策"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "聯準會利率政策"
+            }
+          ]
+        }
+      }
+    },
+    "SpaceX": {
+      "name": "SpaceX",
+      "catalysts": [
+        "SpaceX",
+        "IPO"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "6285",
+              "name": "啟碁",
+              "category": "SpaceX IPO"
+            },
+            {
+              "code": "4904",
+              "name": "遠傳",
+              "category": "SpaceX IPO"
             }
           ]
         }
