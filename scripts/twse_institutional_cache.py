@@ -75,6 +75,13 @@ def fetch_all_institutional(date_str):
     if 'data' not in raw or not raw['data']:
         return {}  # 假日或尚未公布，不快取（下次會重試）
 
+    # 驗證 API 回傳日期與請求日期一致
+    # TWSE 在資料未公布時會靜默回傳前一交易日的舊資料，不報錯
+    # 若日期不符代表拿到的是舊資料，丟棄不快取，等下次正確資料公布後再抓
+    response_date = raw.get('date', '')
+    if response_date and response_date != date_str:
+        return {}
+
     # 動態欄位對應（不硬寫索引，用 fields 名稱查找）
     fields = raw.get('fields', [])
     field_map = {}
