@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-24",
+  "last_updated": "2026-05-25",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -401,6 +401,11 @@
             {
               "code": "5348",
               "name": "華通",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "2455",
+              "name": "全新",
               "category": "AI 伺服器與半導體"
             }
           ]
@@ -1727,6 +1732,11 @@
             {
               "code": "5348",
               "name": "華通",
+              "category": "光通訊與網通（含低軌衛星）"
+            },
+            {
+              "code": "3363",
+              "name": "上詮",
               "category": "光通訊與網通（含低軌衛星）"
             }
           ]
@@ -3159,6 +3169,21 @@
               "code": "6505",
               "name": "台塑化",
               "category": "企業財報重點"
+            },
+            {
+              "code": "3711",
+              "name": "日月光",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3529",
+              "name": "力旺",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2882",
+              "name": "國泰金",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -3956,6 +3981,79 @@
               "code": "5348",
               "name": "華通",
               "category": "SpaceX IPO"
+            }
+          ]
+        }
+      }
+    },
+    "量子計算": {
+      "name": "量子計算",
+      "catalysts": [
+        "量子計算"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2337",
+              "name": "旺宏",
+              "category": "量子計算"
+            },
+            {
+              "code": "2382",
+              "name": "廣達",
+              "category": "量子計算"
+            },
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "量子計算"
+            },
+            {
+              "code": "3231",
+              "name": "緯創",
+              "category": "量子計算"
+            },
+            {
+              "code": "2324",
+              "name": "仁寶",
+              "category": "量子計算"
+            }
+          ]
+        }
+      }
+    },
+    "貨櫃海運旺季提前": {
+      "name": "貨櫃海運旺季提前",
+      "catalysts": [
+        "貨櫃海運旺季提前"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2603",
+              "name": "長榮",
+              "category": "貨櫃海運旺季提前"
+            },
+            {
+              "code": "2609",
+              "name": "陽明",
+              "category": "貨櫃海運旺季提前"
+            },
+            {
+              "code": "2615",
+              "name": "萬海",
+              "category": "貨櫃海運旺季提前"
+            },
+            {
+              "code": "2636",
+              "name": "台驊",
+              "category": "貨櫃海運旺季提前"
             }
           ]
         }
