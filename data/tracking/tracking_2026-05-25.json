@@ -24,7 +24,11 @@
       "us_leader_alert": "NVIDIA Level1 -5分",
       "momentum_pct": -92.2,
       "consecutive_buy_days": 7,
-      "notes": "Level 1買超減速，注意後續動能觀察"
+      "notes": "Level 1買超減速，注意後續動能觀察",
+      "intraday_price": 259.0,
+      "intraday_change_pct": 3.6,
+      "intraday_status": "holding",
+      "intraday_note": "今日外資+21K續買，無出場訊號，續抱"
     },
     {
       "stock_code": "2404",
@@ -45,7 +49,11 @@
       "us_leader_alert": null,
       "momentum_pct": 313.1,
       "consecutive_buy_days": 6,
-      "notes": "🔥超強催化覆寫(ASML>+5%+台積電擴產🔴), 動能313%爆發, 停損-5%, 小倉位"
+      "notes": "🔥超強催化覆寫(ASML>+5%+台積電擴產🔴), 動能313%爆發, 停損-5%, 小倉位",
+      "intraday_price": 1265.0,
+      "intraday_change_pct": 9.52,
+      "intraday_status": "holding",
+      "intraday_note": "現價1265接近目標1271(差6元), 關注尾盤能否收盤達標"
     },
     {
       "stock_code": "2383",
@@ -66,7 +74,11 @@
       "us_leader_alert": null,
       "momentum_pct": 0,
       "consecutive_buy_days": 6,
-      "notes": "外資+投信同步買, 月季雙線上"
+      "notes": "外資+投信同步買, 月季雙線上",
+      "intraday_price": 5505.0,
+      "intraday_change_pct": 9.99,
+      "intraday_status": "holding",
+      "intraday_note": "現價5505極接近目標5506(差1元!), 收盤若≥5506將結算success"
     },
     {
       "stock_code": "3034",
@@ -87,17 +99,21 @@
       "us_leader_alert": null,
       "momentum_pct": 8.3,
       "consecutive_buy_days": 8,
-      "notes": "EPS連4季YoY負成長(-5分)已計入, 注意基本面回升確認"
+      "notes": "EPS連4季YoY負成長(-5分)已計入, 注意基本面回升確認",
+      "intraday_price": 492.0,
+      "intraday_change_pct": 1.44,
+      "intraday_status": "holding",
+      "intraday_note": "連7天真連買，外資+投信盤中同步，Qualcomm催化持續，續抱"
     }
   ],
   "track_b_recommendations": [],
   "track_b_observations": [
-    "2345 智邦: 外資近5天-3055張, 準確率篩選失敗 → 排除",
-    "2337 旺宏: 近5天0買/5賣, 法人全面出貨 → 排除",
-    "6770 力積電: 近5天外資大賣, 法人出貨 → 排除",
-    "2344 華邦電: Reversal Level 4爆量賣超 → 直接排除",
-    "1802 台玻: 近5天外資-47K, 9賣/1買 → 排除",
-    "6515 穎崴: 外資近5天-190張, 準確率篩選失敗 → 排除（營收+50.5%值得持續觀察）"
+    "2344 華邦電: 盤前Level 4排除維持有效；盤中確認近5天外資-36K → 排除",
+    "2382 廣達: 累計-35K賣超，今日盤中再賣-496張，反轉不明 → 排除",
+    "2337 旺宏: 盤前排除維持（近5天0買/5賣，法人全面出貨）→ 排除",
+    "3006 晶豪科: 近5天外資-5561張（4賣/1買），外資近5天<0，準確率篩選失敗 → 排除",
+    "2374 佳能: 五維度評分~61分(<75門檻)；產業未分類；基本面佳(EPS+143%/外資+1.75%)但催化對齊不明 → 排除",
+    "3704 合勤控: 偵測器中訊號55分，連買9天/近5天全買+9181張，但不在TOP30且日買超<5K → 觀察名單（盤後追蹤）"
   ],
   "removed_stocks": [],
   "market_context": {
@@ -113,5 +129,16 @@
     "vix": 17.44,
     "market_regime": "偏多",
     "market_note": "台股42268創新高, 多數法人買超股週後大幅出貨, 新鮮佈局機會集中在連續積累股"
+  },
+  "intraday_summary": {
+    "executed_at": "2026-05-25 12:30",
+    "track_a_status": "全部持有中，無出場訊號觸發",
+    "track_b_new_recommendations": 0,
+    "key_observations": [
+      "2383台光電現價5505 vs 目標5506(差1元)，收盤可能觸發success結算",
+      "2404漢唐現價1265 vs 目標1271(差6元)，尾盤觀察",
+      "偵測器無強訊號，今日無Track B新推薦",
+      "3704合勤控連買9天但不符Track B標準，列觀察名單"
+    ]
   }
 }
