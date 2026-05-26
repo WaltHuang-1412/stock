@@ -7543,11 +7543,11 @@
       }
     ]
   },
-  "settled_accuracy": "61.3%",
-  "settled_count": 331,
-  "holding_count": 177,
-  "total_success": 203,
-  "total_fail": 128,
+  "settled_accuracy": "61.7%",
+  "settled_count": 342,
+  "holding_count": 166,
+  "total_success": 211,
+  "total_fail": 131,
   "2026-03-30": {
     "predictions": [
       {
@@ -8190,8 +8190,10 @@
         "recommend_price": 91.8,
         "target_price": 101.0,
         "stop_loss": 84.5,
-        "result": "holding",
-        "holding_days": 1
+        "result": "success",
+        "holding_days": 1,
+        "settled_date": "2026-05-14",
+        "settled_price": 141.0
       },
       {
         "symbol": "3702",
@@ -8317,8 +8319,10 @@
         "recommend_price": 58.3,
         "target_price": 64.0,
         "stop_loss": 54.0,
-        "result": "holding",
-        "holding_days": 2
+        "result": "success",
+        "holding_days": 2,
+        "settled_date": "2026-05-12",
+        "settled_price": 116.0
       },
       {
         "symbol": "3189",
@@ -8961,8 +8965,11 @@
         "recommend_price": 158.5,
         "target_price": 175.0,
         "stop_loss": 150.58,
-        "result": "holding",
-        "holding_days": 2
+        "result": "success",
+        "holding_days": 2,
+        "settled_date": "2026-05-13",
+        "settled_price": 211.5,
+        "fail_reason": "收盤211.5 >= 目標190，目標達成"
       },
       {
         "symbol": "2890",
@@ -9107,8 +9114,11 @@
         "recommend_price": 318.5,
         "target_price": 350.0,
         "stop_loss": 286.65,
-        "result": "holding",
-        "holding_days": 1
+        "result": "fail",
+        "holding_days": 1,
+        "settled_date": "2026-05-14",
+        "settled_price": 290.0,
+        "fail_reason": "收盤290.0 ≤ 停損306.5（SMCI -6.8% Level 1，AI伺服器籌碼出貨）"
       },
       {
         "symbol": "2887",
@@ -9165,8 +9175,10 @@
         "recommend_price": 618.0,
         "target_price": 680.0,
         "stop_loss": 556.2,
-        "result": "holding",
-        "holding_days": 2
+        "result": "success",
+        "holding_days": 2,
+        "settled_date": "2026-05-22",
+        "settled_price": 1085.0
       },
       {
         "symbol": "8046",
@@ -10789,9 +10801,9 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 109,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-05-12",
+        "settled_price": 160.5,
         "holding_days": 1
       },
       {
@@ -10850,9 +10862,9 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 79,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-05-12",
+        "settled_price": 37.15,
         "holding_days": 1
       },
       {
@@ -11109,10 +11121,11 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 77,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-05-13",
+        "settled_price": 321.0,
+        "holding_days": 1,
+        "fail_reason": "收盤321 >= 目標249.2，目標達成"
       },
       {
         "symbol": "2355",
@@ -11124,11 +11137,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 83,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "fail",
+        "settled_date": "2026-05-13",
+        "settled_price": 51.3,
         "holding_days": 1,
-        "track": "B"
+        "track": "B",
+        "fail_reason": "法人反轉 Level 4 強制出場"
       }
     ],
     "settled_accuracy": null,
@@ -11453,10 +11467,11 @@
         "settlement_days": 10,
         "position": "10%",
         "score": 82,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-05-15",
+        "settled_price": 4395.0,
+        "holding_days": 1,
+        "fail_reason": "收盤4395 ≤ 停損4428（MU -8.85% Level 2，記憶體籌碼全面撤退）"
       },
       {
         "symbol": "2363",
@@ -11555,9 +11570,9 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 102,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-05-26",
+        "settled_price": 632.0,
         "holding_days": 1
       }
     ],

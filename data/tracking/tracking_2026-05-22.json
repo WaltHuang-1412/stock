@@ -24,11 +24,12 @@
       "leader_alert": 0,
       "momentum": "+0(補正：chip_analysis標籤誤判為L3，未在scan輸出中)",
       "reversal_level": "L0",
-      "result": "holding",
-      "actual_close": 609.0,
+      "result": "success",
+      "actual_close": 696.0,
       "close_price": 609.0,
       "change_percent": 9.93,
-      "holding_status": "D1/10，收盤609.0(+9.9%)，距目標0.1%，法人+1039張連買5天，L0，已設移動停損"
+      "holding_status": "D1/10，收盤609.0(+9.9%)，距目標0.1%，法人+1039張連買5天，L0，已設移動停損",
+      "change_pct": 25.63
     },
     {
       "stock_code": "6282",
@@ -49,11 +50,12 @@
       "leader_alert": 0,
       "momentum": "+0(補正：chip_analysis標籤誤判為L3，未在scan輸出中)",
       "reversal_level": "L0",
-      "result": "holding",
-      "actual_close": 57.4,
+      "result": "success",
+      "actual_close": 62.4,
       "close_price": 57.4,
       "change_percent": 7.09,
-      "holding_status": "D1/10，收盤57.4(+7.1%)，距目標2.7%，法人+2146張連買5天，L0，續抱"
+      "holding_status": "D1/10，收盤57.4(+7.1%)，距目標2.7%，法人+2146張連買5天，L0，續抱",
+      "change_pct": 16.42
     },
     {
       "stock_code": "3037",
@@ -75,11 +77,12 @@
       "momentum": "+15(佈局完成)",
       "reversal_level": "L0",
       "note": "外資10日累計-9K，為投信主導行情，倉位保守12%",
-      "result": "holding",
-      "actual_close": 970.0,
+      "result": "success",
+      "actual_close": 1085.0,
       "close_price": 970.0,
       "change_percent": 7.18,
-      "holding_status": "D1/10，收盤970.0(+7.2%)，距目標2.6%，投信主導+290張連買5天，L0，移動停損設950"
+      "holding_status": "D1/10，收盤970.0(+7.2%)，距目標2.6%，投信主導+290張連買5天，L0，移動停損設950",
+      "change_pct": 19.89
     },
     {
       "stock_code": "2409",
@@ -104,7 +107,7 @@
       "result": "holding",
       "actual_close": 22.2,
       "close_price": 22.2,
-      "change_percent": 9.90,
+      "change_percent": 9.9,
       "holding_status": "D1/10，收盤22.2(+9.9%)，距目標0.1%，Level1預警(買超減速-81.2%)，外資連買6天累計222K，明日觀察是否突破"
     },
     {
@@ -168,34 +171,133 @@
     "cumulative_accuracy": 0.589,
     "cumulative_settled": 302,
     "results": [
-      {"code": "2312", "name": "金寶", "result": "success", "change": "+17.0%"},
-      {"code": "2356", "name": "英業達", "result": "success", "change": "+11.8%"},
-      {"code": "4958", "name": "臻鼎-KY", "result": "success", "change": "+16.6%"},
-      {"code": "2455", "name": "全新", "result": "success", "change": "+13.3%"},
-      {"code": "2027", "name": "大成鋼", "result": "success", "change": "+7.3%"},
-      {"code": "2883", "name": "凱基金", "result": "fail", "change": "-3.3%", "reason": "D10到期金融股無催化"},
-      {"code": "2867", "name": "三商壽", "result": "fail", "change": "-2.3%", "reason": "D10到期金融股無催化"},
-      {"code": "2892", "name": "第一金", "result": "fail", "change": "-5.5%", "reason": "D10到期金融股無催化"}
+      {
+        "code": "2312",
+        "name": "金寶",
+        "result": "success",
+        "change": "+17.0%"
+      },
+      {
+        "code": "2356",
+        "name": "英業達",
+        "result": "success",
+        "change": "+11.8%"
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "result": "success",
+        "change": "+16.6%"
+      },
+      {
+        "code": "2455",
+        "name": "全新",
+        "result": "success",
+        "change": "+13.3%"
+      },
+      {
+        "code": "2027",
+        "name": "大成鋼",
+        "result": "success",
+        "change": "+7.3%"
+      },
+      {
+        "code": "2883",
+        "name": "凱基金",
+        "result": "fail",
+        "change": "-3.3%",
+        "reason": "D10到期金融股無催化"
+      },
+      {
+        "code": "2867",
+        "name": "三商壽",
+        "result": "fail",
+        "change": "-2.3%",
+        "reason": "D10到期金融股無催化"
+      },
+      {
+        "code": "2892",
+        "name": "第一金",
+        "result": "fail",
+        "change": "-5.5%",
+        "reason": "D10到期金融股無催化"
+      }
     ]
   },
   "track_b_recommendations": [],
   "track_b_observations": [
-    {"code": "4916", "name": "事欣科", "note": "偵測器強訊號(75分)，連買8天量比4.09x未反映，但光通訊/網通+Broadcom-5.73% Level2+動能+125.7%>100%，無超強催化覆寫，排除"},
-    {"code": "2618", "name": "長榮航", "note": "Reversal Level 4 爆量賣超，排除"},
-    {"code": "2610", "name": "華航", "note": "Reversal Level 4 爆量賣超，排除"},
-    {"code": "1402", "name": "遠東新", "note": "Reversal Level 4 爆量賣超，排除"}
+    {
+      "code": "4916",
+      "name": "事欣科",
+      "note": "偵測器強訊號(75分)，連買8天量比4.09x未反映，但光通訊/網通+Broadcom-5.73% Level2+動能+125.7%>100%，無超強催化覆寫，排除"
+    },
+    {
+      "code": "2618",
+      "name": "長榮航",
+      "note": "Reversal Level 4 爆量賣超，排除"
+    },
+    {
+      "code": "2610",
+      "name": "華航",
+      "note": "Reversal Level 4 爆量賣超，排除"
+    },
+    {
+      "code": "1402",
+      "name": "遠東新",
+      "note": "Reversal Level 4 爆量賣超，排除"
+    }
   ],
   "removed_stocks": [
-    {"code": "2382", "name": "廣達", "reason": "Reversal Level 4 爆量賣超"},
-    {"code": "2303", "name": "聯電", "reason": "Reversal Level 4 爆量賣超"},
-    {"code": "1303", "name": "南亞", "reason": "Reversal Level 4"},
-    {"code": "2324", "name": "仁寶", "reason": "Reversal Level 4 + Tesla Level 2"},
-    {"code": "2376", "name": "技嘉", "reason": "NVIDIA Level 2 -15分 → 總分61分(不足70)"},
-    {"code": "2317", "name": "鴻海", "reason": "Tesla Level 2 -15分 → 總分68分(不足70)"},
-    {"code": "2356", "name": "英業達", "reason": "NVIDIA Level 2 -15分 → 總分69分(不足70)"},
-    {"code": "3481", "name": "群創", "reason": "5日+14.7%已大漲，無新催化"},
-    {"code": "2367", "name": "燿華", "reason": "EPS連續3季負成長 -5分 + 不在TOP50 → 總分67分"},
-    {"code": "2027", "name": "大成鋼", "reason": "催化對齊失敗(鋼鐵不在今日主要催化產業鏈)"}
+    {
+      "code": "2382",
+      "name": "廣達",
+      "reason": "Reversal Level 4 爆量賣超"
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "reason": "Reversal Level 4 爆量賣超"
+    },
+    {
+      "code": "1303",
+      "name": "南亞",
+      "reason": "Reversal Level 4"
+    },
+    {
+      "code": "2324",
+      "name": "仁寶",
+      "reason": "Reversal Level 4 + Tesla Level 2"
+    },
+    {
+      "code": "2376",
+      "name": "技嘉",
+      "reason": "NVIDIA Level 2 -15分 → 總分61分(不足70)"
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "reason": "Tesla Level 2 -15分 → 總分68分(不足70)"
+    },
+    {
+      "code": "2356",
+      "name": "英業達",
+      "reason": "NVIDIA Level 2 -15分 → 總分69分(不足70)"
+    },
+    {
+      "code": "3481",
+      "name": "群創",
+      "reason": "5日+14.7%已大漲，無新催化"
+    },
+    {
+      "code": "2367",
+      "name": "燿華",
+      "reason": "EPS連續3季負成長 -5分 + 不在TOP50 → 總分67分"
+    },
+    {
+      "code": "2027",
+      "name": "大成鋼",
+      "reason": "催化對齊失敗(鋼鐵不在今日主要催化產業鏈)"
+    }
   ],
   "tomorrow_recommendations": [
     {
@@ -219,21 +321,73 @@
     }
   ],
   "removed_stocks_tomorrow": [
-    {"code": "6285", "name": "啟碁", "reason": "5日+13.8%>10% 已大漲，無新催化"},
-    {"code": "2352", "name": "佳世達", "reason": "5日+14.1%>10% 已大漲"},
-    {"code": "2542", "name": "興富發", "reason": "建設股無強催化，評分55分"},
-    {"code": "2368", "name": "金像電", "reason": "MA20-2.7%，評分54分"},
-    {"code": "2317", "name": "鴻海", "reason": "準確率篩選Level 1不通過，Tesla Level 2"},
-    {"code": "1717", "name": "長興", "reason": "Level 4 爆量賣超"},
-    {"code": "2382", "name": "廣達", "reason": "Level 4 爆量賣超"},
-    {"code": "6257", "name": "矽格", "reason": "Level 4 爆量賣超"},
-    {"code": "4906", "name": "正文", "reason": "Level 4 爆量賣超"}
+    {
+      "code": "6285",
+      "name": "啟碁",
+      "reason": "5日+13.8%>10% 已大漲，無新催化"
+    },
+    {
+      "code": "2352",
+      "name": "佳世達",
+      "reason": "5日+14.1%>10% 已大漲"
+    },
+    {
+      "code": "2542",
+      "name": "興富發",
+      "reason": "建設股無強催化，評分55分"
+    },
+    {
+      "code": "2368",
+      "name": "金像電",
+      "reason": "MA20-2.7%，評分54分"
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "reason": "準確率篩選Level 1不通過，Tesla Level 2"
+    },
+    {
+      "code": "1717",
+      "name": "長興",
+      "reason": "Level 4 爆量賣超"
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "reason": "Level 4 爆量賣超"
+    },
+    {
+      "code": "6257",
+      "name": "矽格",
+      "reason": "Level 4 爆量賣超"
+    },
+    {
+      "code": "4906",
+      "name": "正文",
+      "reason": "Level 4 爆量賣超"
+    }
   ],
   "tomorrow_observations": [
-    {"code": "2317", "name": "鴻海", "condition": "Level 1解除+APPLE>+3%"},
-    {"code": "6285", "name": "啟碁", "condition": "若回調至265以下+MARVELL持續"},
-    {"code": "2409", "name": "友達", "condition": "Level 1預警中，突破22.22確認後"},
-    {"code": "3189", "name": "景碩", "condition": "突破609.4後考慮部分鎖利"}
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "condition": "Level 1解除+APPLE>+3%"
+    },
+    {
+      "code": "6285",
+      "name": "啟碁",
+      "condition": "若回調至265以下+MARVELL持續"
+    },
+    {
+      "code": "2409",
+      "name": "友達",
+      "condition": "Level 1預警中，突破22.22確認後"
+    },
+    {
+      "code": "3189",
+      "name": "景碩",
+      "condition": "突破609.4後考慮部分鎖利"
+    }
   ],
   "flow_defects": [
     {
@@ -249,6 +403,11 @@
     "sox_change": -3.12,
     "market_regime": "偏多",
     "defense_ratio": "0-15%",
-    "key_events": ["景碩今日法說", "台積電法說5/26", "AVGO財報6/4", "COMPUTEX 6/2"]
+    "key_events": [
+      "景碩今日法說",
+      "台積電法說5/26",
+      "AVGO財報6/4",
+      "COMPUTEX 6/2"
+    ]
   }
 }

@@ -40,17 +40,25 @@
       "track": "A",
       "module": null,
       "reason": "IC封測受益費半超強、外資持股比+5(週大增)、EPS+3穩健成長、近5天全買5/0、Level 0、動能-2.98%未反映",
-      "actual_close": 374.0,
+      "actual_close": 423.5,
       "close_price": 374.0,
-      "change_pct": -0.27,
+      "change_pct": 12.93,
       "change_percent": -0.27,
-      "result": "holding",
+      "result": "success",
       "holding_status": "D0/10 | 收盤374.0(-0.3%) | 距停損9.8% | 連買6天籌碼穩健 | 續抱"
     }
   ],
   "intraday_prices": {
-    "2313": {"price": 238.0, "change_pct": -8.46, "time": "12:34"},
-    "2455": {"price": 368.0, "change_pct": -1.87, "time": "12:34"}
+    "2313": {
+      "price": 238.0,
+      "change_pct": -8.46,
+      "time": "12:34"
+    },
+    "2455": {
+      "price": 368.0,
+      "change_pct": -1.87,
+      "time": "12:34"
+    }
   },
   "track_b_recommendations": [],
   "track_b_observations": [
@@ -64,32 +72,113 @@
     }
   ],
   "excluded_stocks": [
-    {"code": "2409", "name": "友達", "reason": "動能+247.4% 一票否決"},
-    {"code": "3481", "name": "群創", "reason": "動能+237.6% 一票否決"},
-    {"code": "2303", "name": "聯電", "reason": "動能+128.5% 一票否決"},
-    {"code": "2344", "name": "華邦電", "reason": "用戶實際持有"},
-    {"code": "3231", "name": "緯創", "reason": "用戶實際持有"},
-    {"code": "2408", "name": "南亞科", "reason": "5日+25% 已大漲"},
-    {"code": "2301", "name": "光寶科", "reason": "5日+37% 已大漲"},
-    {"code": "3714", "name": "富采", "reason": "動能+100.9% + cold pattern AR/VR"},
-    {"code": "2367", "name": "燿華", "reason": "動能+191.7% 一票否決"},
-    {"code": "1402", "name": "遠東新", "reason": "動能+205% 一票否決"},
-    {"code": "2481", "name": "強茂", "reason": "動能+325% 一票否決"},
-    {"code": "3711", "name": "日月光", "reason": "76分但準確率篩選FAIL(外資近5天-15K)"},
-    {"code": "5269", "name": "祥碩", "reason": "準確率篩選FAIL(IC設計非今日🔴超強産業鏈)，法人佈局極小"},
-    {"code": "2317", "name": "鴻海", "reason": "66分不足推薦門檻"},
-    {"code": "1326", "name": "台化", "reason": "55分，Module A L2但弱催化"},
-    {"code": "6213", "name": "聯茂", "reason": "reversal Level 4"},
-    {"code": "1301", "name": "台塑", "reason": "reversal Level 4"}
+    {
+      "code": "2409",
+      "name": "友達",
+      "reason": "動能+247.4% 一票否決"
+    },
+    {
+      "code": "3481",
+      "name": "群創",
+      "reason": "動能+237.6% 一票否決"
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "reason": "動能+128.5% 一票否決"
+    },
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "reason": "用戶實際持有"
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "reason": "用戶實際持有"
+    },
+    {
+      "code": "2408",
+      "name": "南亞科",
+      "reason": "5日+25% 已大漲"
+    },
+    {
+      "code": "2301",
+      "name": "光寶科",
+      "reason": "5日+37% 已大漲"
+    },
+    {
+      "code": "3714",
+      "name": "富采",
+      "reason": "動能+100.9% + cold pattern AR/VR"
+    },
+    {
+      "code": "2367",
+      "name": "燿華",
+      "reason": "動能+191.7% 一票否決"
+    },
+    {
+      "code": "1402",
+      "name": "遠東新",
+      "reason": "動能+205% 一票否決"
+    },
+    {
+      "code": "2481",
+      "name": "強茂",
+      "reason": "動能+325% 一票否決"
+    },
+    {
+      "code": "3711",
+      "name": "日月光",
+      "reason": "76分但準確率篩選FAIL(外資近5天-15K)"
+    },
+    {
+      "code": "5269",
+      "name": "祥碩",
+      "reason": "準確率篩選FAIL(IC設計非今日🔴超強産業鏈)，法人佈局極小"
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "reason": "66分不足推薦門檻"
+    },
+    {
+      "code": "1326",
+      "name": "台化",
+      "reason": "55分，Module A L2但弱催化"
+    },
+    {
+      "code": "6213",
+      "name": "聯茂",
+      "reason": "reversal Level 4"
+    },
+    {
+      "code": "1301",
+      "name": "台塑",
+      "reason": "reversal Level 4"
+    }
   ],
   "market_context": {
     "vix": 18.38,
     "market_regime": "多頭",
     "defense_ratio": "0-15%",
     "attack_ratio": "85-100%",
-    "top_catalyst": ["光通訊", "DRAM", "AI算力"],
-    "cold_patterns": ["AI伺服器", "AR/VR", "航空"],
-    "hot_patterns": ["CCL", "IC設計", "IC封測", "DRAM"],
+    "top_catalyst": [
+      "光通訊",
+      "DRAM",
+      "AI算力"
+    ],
+    "cold_patterns": [
+      "AI伺服器",
+      "AR/VR",
+      "航空"
+    ],
+    "hot_patterns": [
+      "CCL",
+      "IC設計",
+      "IC封測",
+      "DRAM"
+    ],
     "note": "大漲後回調整理期，優質入場點稀少，2檔高確定性策略"
   },
   "removed_stocks": [
@@ -203,17 +292,72 @@
     "fail_count": 121,
     "holding_count": 174,
     "results": [
-      {"code": "6669", "name": "緯穎", "result": "success", "return_pct": 12.27},
-      {"code": "2301", "name": "光寶科", "result": "success", "return_pct": 23.32},
-      {"code": "2356", "name": "英業達", "result": "success", "return_pct": 14.04},
-      {"code": "3661", "name": "世芯-KY", "result": "success", "return_pct": 19.5},
-      {"code": "2408", "name": "南亞科", "result": "success", "return_pct": 41.72},
-      {"code": "2327", "name": "國巨", "result": "success", "return_pct": 28.64},
-      {"code": "2337", "name": "旺宏", "result": "fail", "fail_reason": "Level 4 強制出場"},
-      {"code": "2345", "name": "智邦", "result": "fail", "fail_reason": "Level 4 強制出場"},
-      {"code": "2881", "name": "富邦金", "result": "fail", "fail_reason": "Level 4 強制出場"},
-      {"code": "2883", "name": "凱基金", "result": "fail", "fail_reason": "Level 4 強制出場"},
-      {"code": "2355", "name": "敬鵬", "result": "fail", "fail_reason": "Level 4 強制出場"}
+      {
+        "code": "6669",
+        "name": "緯穎",
+        "result": "success",
+        "return_pct": 12.27
+      },
+      {
+        "code": "2301",
+        "name": "光寶科",
+        "result": "success",
+        "return_pct": 23.32
+      },
+      {
+        "code": "2356",
+        "name": "英業達",
+        "result": "success",
+        "return_pct": 14.04
+      },
+      {
+        "code": "3661",
+        "name": "世芯-KY",
+        "result": "success",
+        "return_pct": 19.5
+      },
+      {
+        "code": "2408",
+        "name": "南亞科",
+        "result": "success",
+        "return_pct": 41.72
+      },
+      {
+        "code": "2327",
+        "name": "國巨",
+        "result": "success",
+        "return_pct": 28.64
+      },
+      {
+        "code": "2337",
+        "name": "旺宏",
+        "result": "fail",
+        "fail_reason": "Level 4 強制出場"
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "result": "fail",
+        "fail_reason": "Level 4 強制出場"
+      },
+      {
+        "code": "2881",
+        "name": "富邦金",
+        "result": "fail",
+        "fail_reason": "Level 4 強制出場"
+      },
+      {
+        "code": "2883",
+        "name": "凱基金",
+        "result": "fail",
+        "fail_reason": "Level 4 強制出場"
+      },
+      {
+        "code": "2355",
+        "name": "敬鵬",
+        "result": "fail",
+        "fail_reason": "Level 4 強制出場"
+      }
     ]
   }
 }
