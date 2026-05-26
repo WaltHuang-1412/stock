@@ -370,6 +370,17 @@ def scan(target_date_str, lookback=7, price_threshold=5.0):
 
     # ─── Step 1: 彙總多日法人數據 ───
 
+    # 預載 T86 快取，用於交叉驗證 institutional_top50.json 的正確性
+    t86_cache = {}  # date_str → {code: total}
+    cache_dir = DATA_DIR / 'cache'
+    for date_str in trading_dates:
+        date_compact = date_str.replace('-', '')
+        t86_path = cache_dir / f'twse_t86_{date_compact}.json'
+        if t86_path.exists():
+            with open(t86_path, 'r', encoding='utf-8') as f:
+                day_data = json.load(f)
+            t86_cache[date_str] = {k: v.get('total', 0) for k, v in day_data.items() if isinstance(v, dict)}
+
     stock_aggregate = {}  # code → 彙總數據
 
     for i, date_str in enumerate(trading_dates):
@@ -378,6 +389,7 @@ def scan(target_date_str, lookback=7, price_threshold=5.0):
             continue
 
         is_latest = (i == 0)  # 最新一天
+        t86_day = t86_cache.get(date_str, {})
 
         for stock in data['stocks']:
             code = stock.get('code', '')
@@ -387,6 +399,20 @@ def scan(target_date_str, lookback=7, price_threshold=5.0):
             total = stock.get('total', 0)
             if total <= 0:
                 continue  # 只看買超的
+
+            # 交叉驗證：若 T86 快取顯示當天實為賣超，剔除此筆（institutional_top50 可能含舊快取污染）
+            if t86_day and code in t86_day and t86_day[code] <= 0:
+                continue
+
+            # 判斷此筆的價格欄位是否可信（institutional_top50 total 與 T86 差距過大 → 舊快取污染）
+            # institutional_top50.total 單位是股（shares），T86 快取單位是張（lots），1張≈1000股
+            price_data_trusted = True
+            if t86_day and code in t86_day and t86_day[code] > 0:
+                t86_lots = t86_day[code]
+                top50_lots_approx = total / 1000
+                if top50_lots_approx > 0 and abs(top50_lots_approx - t86_lots) / t86_lots > 0.5:
+                    # 差距超過 50%，視為污染資料，不採用其 close/5day_change
+                    price_data_trusted = False
 
             if code not in stock_aggregate:
                 stock_aggregate[code] = {
@@ -421,14 +447,15 @@ def scan(target_date_str, lookback=7, price_threshold=5.0):
             if rank < agg['avg_rank_best']:
                 agg['avg_rank_best'] = rank
 
-            # 用最近出現日的數據（不一定是 day 0）
+            # 用最近出現日的數據（不一定是 day 0），污染資料不更新 close/5day_change
             if agg['latest_close'] == 0 or is_latest:
-                close = stock.get('close_price') or 0
-                change = stock.get('5day_change') or 0
-                if close and close > 0:
-                    agg['latest_close'] = close
-                if change != 0 or agg['latest_5day_change'] == 0:
-                    agg['latest_5day_change'] = change
+                if price_data_trusted:
+                    close = stock.get('close_price') or 0
+                    change = stock.get('5day_change') or 0
+                    if close and close > 0:
+                        agg['latest_close'] = close
+                    if change != 0 or agg['latest_5day_change'] == 0:
+                        agg['latest_5day_change'] = change
                 agg['avg_rank_latest'] = rank
                 agg['latest_buy_ratio'] = stock.get('buy_ratio', 0)
                 agg['latest_foreign'] = stock.get('foreign', 0)

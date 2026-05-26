@@ -345,14 +345,23 @@ def main():
     print("🔔 法人反轉預警工具 v2.0（多層次預警）")
     print("=" * 60)
 
+    # 解析參數
+    args = sys.argv[1:]
+    output_dir = None
+    if '--output-dir' in args:
+        idx = args.index('--output-dir')
+        if idx + 1 < len(args):
+            output_dir = args[idx + 1]
+            args = args[:idx] + args[idx + 2:]
+
     # 決定掃描標的
-    if len(sys.argv) > 1:
-        if sys.argv[1] == '--watchlist':
+    if args:
+        if args[0] == '--watchlist':
             # TODO: 實作觀察清單
             stocks = []
         else:
             # 指定股票
-            stocks = [{'symbol': s, 'name': ''} for s in sys.argv[1:]]
+            stocks = [{'symbol': s, 'name': ''} for s in args]
     else:
         # 掃描持股
         stocks = load_holdings()
@@ -454,6 +463,29 @@ def main():
         print("   Level 2 ⚠️⚠️：連買後反轉，賣超>1.5%日均量或>20K張（準備停損）")
         print("   Level 3 🔴：連續2日賣超+累計轉負（確認反轉，建議出場）")
         print("   Level 4 🔴🔴：爆量賣超>5%日均量或>50K張（極度危險，立即出場）")
+
+    # 儲存 JSON（供其他腳本讀取，格式與 preflight_check.py 預期一致）
+    if output_dir:
+        import json as _json
+        from pathlib import Path as _Path
+        from datetime import datetime as _datetime
+        all_results = []
+        for level_key, level_num in [('level4', 4), ('level3', 3), ('level2', 2), ('level1', 1), ('level0', 0), ('safe', 0), ('unknown', -1)]:
+            for a in alerts[level_key]:
+                all_results.append({
+                    'stock_code': a.get('stock_code', ''),
+                    'stock_name': a.get('stock_name', ''),
+                    'level': level_num,
+                    'alert_level': a.get('alert_level', ''),
+                    'alert_reason': a.get('alert_reason', ''),
+                    'recommendation': a.get('recommendation', ''),
+                    'warning_level': a.get('warning_level', level_num),
+                })
+        out_path = _Path(output_dir) / 'reversal_alerts.json'
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(out_path, 'w', encoding='utf-8') as f:
+            _json.dump(all_results, f, ensure_ascii=False, indent=2)
+        print(f"\n💾 已儲存: {out_path}")
 
 if __name__ == '__main__':
     main()

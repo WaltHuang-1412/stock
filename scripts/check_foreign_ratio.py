@@ -97,7 +97,17 @@ def update_cache(stock_codes=None):
                 if code.isdigit() and len(code) == 4 and not code.startswith('00'):
                     if abs(data[code].get('total', 0)) > 500:
                         freq[code] += 1
-        targets = [c for c, f in freq.items() if f >= 5 and c not in cache]
+        from datetime import datetime, timedelta
+        cutoff = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
+        def needs_update(code):
+            if code not in cache:
+                return True
+            rows = cache[code]
+            if not rows:
+                return True
+            latest = max(r['date'] for r in rows if r.get('date'))
+            return latest < cutoff
+        targets = [c for c, f in freq.items() if f >= 5 and needs_update(c)]
 
     print(f"更新 {len(targets)} 檔持股數據...")
     for i, code in enumerate(targets):

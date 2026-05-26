@@ -65,6 +65,9 @@ def get_trading_days(n_days=10):
     else:
         current = datetime.now()
 
+    # 從昨天開始：今天市場尚未收盤，T86 資料不存在，從今天查會拿到舊資料
+    current -= timedelta(days=1)
+
     while len(dates) < n_days:
         # 跳過週末
         if current.weekday() < 5:  # 0-4 是週一到週五

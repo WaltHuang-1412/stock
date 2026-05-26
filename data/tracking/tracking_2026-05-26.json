@@ -14,56 +14,343 @@
       "stop_loss_pct": -10,
       "stop_loss": 510.3,
       "settlement_days": 10,
-      "position": "15-20%",
-      "score": 102,
+      "position": "5-10%",
+      "score": 97,
       "result": "holding",
-      "holding_status": "D1/10，Module A L3佈局完成，今日+1,309張，累計+3,348張，Level 0",
-      "reason": "Marvell+10.99%/Arista+8.49%龍頭共振，光通訊🔴超強，L3佈局完成動能-72.5%，費半+5.30%，COMPUTEX 6/2催化，月季雙線上"
+      "holding_status": "D0/10，Module A L2早期佈局（institutional_top50資料修正：05/19-20為舊快取污染，實為連2天），今日+1,309張，累計+3,348張，Level 0",
+      "reason": "Marvell+10.99%/Arista+8.49%龍頭共振，光通訊🔴超強，L2早期佈局動能-72.5%，費半+5.30%，COMPUTEX 6/2催化，月季雙線上"
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "industry": "面板顯示/IC設計",
+      "recommend_price": 489.0,
+      "target_price": 562.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 440.1,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 84,
+      "result": "holding",
+      "holding_status": "D0/10，Module A L3佈局完成（連8天，動能-46%），費半+5.3%超強環境，Level 0",
+      "reason": "Module A L3佈局完成（連8天，累計+13K，動能-46%），費半+5.3%超強，IC設計環境強，5日僅+4.9%尚未充分反映，月季雙線上"
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "industry": "鋼鐵",
+      "recommend_price": 43.8,
+      "target_price": 50.4,
+      "stop_loss_pct": -10,
+      "stop_loss": 39.42,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 75,
+      "result": "holding",
+      "holding_status": "D0/10，Module A L2早期佈局（連8天外資累計+108K張），5日僅+3.9%，Level 0",
+      "reason": "Module A L2（連8天外資累計+108K張），法人佈局力道異常強勁，5日僅+3.9%未充分反映，EPS YoY+48%基本面支撐"
+    },
+    {
+      "stock_code": "3576",
+      "stock_name": "聯合再生",
+      "industry": "綠能/儲能",
+      "recommend_price": 19.4,
+      "target_price": 22.3,
+      "stop_loss_pct": -10,
+      "stop_loss": 17.46,
+      "settlement_days": 10,
+      "position": "5%",
+      "score": 72,
+      "result": "holding",
+      "holding_status": "D0/10，Module A L2早期佈局（外資近2天買），儲能政策驅動，Level 0。⚠️高風險：營收連10月衰退，倉位嚴格控5%",
+      "reason": "Module A L2（外資近2天佈局），儲能政策驅動，EPS YoY+1073%（低基期），⚠️警語：營收連10月衰退，倉位僅5%"
     }
   ],
   "track_b_recommendations": [],
-  "track_b_observations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "3576",
+      "stock_name": "聯合再生",
+      "note": "偵測器強訊號80，avg_rank 30.5，5日-1.6%，但評分約43分（低於75門檻），且已為今日盤前推薦（D1）。Level 1買超減速，密切觀察。"
+    }
+  ],
+  "intraday_exit_signals": [
+    {"stock_code": "2363", "stock_name": "矽統", "level": 4, "reason": "爆量賣超-6,492張（日均32.6%）", "action": "強制出場"},
+    {"stock_code": "6285", "stock_name": "啓碁", "level": 4, "reason": "爆量賣超-5,938張（日均35.0%）", "action": "強制出場"},
+    {"stock_code": "3045", "stock_name": "台灣大", "level": 4, "reason": "爆量賣超-2,645張（日均17.2%），距停損5.8%危急", "action": "強制出場"},
+    {"stock_code": "2368", "stock_name": "金像電", "level": 4, "reason": "爆量賣超-472張（日均10.2%），近目標仍須遵守出場規則", "action": "強制出場"},
+    {"stock_code": "2352", "stock_name": "佳世達", "level": 4, "reason": "爆量賣超-1,269張（日均16.4%）", "action": "強制出場"}
+  ],
+  "intraday_alerts": [
+    {"stock_code": "2313", "stock_name": "華通", "alert": "D9明日到期，現284距目標286僅0.7%，今日法人+11,209張（動能+401%）"},
+    {"stock_code": "2344", "stock_name": "華邦電", "alert": "D10到期，目標140.3已觸及（現141.0），法人+77,651張，建議設保護停損"},
+    {"stock_code": "2409", "stock_name": "友達", "alert": "接近目標22.22（現22.0），距-1%，考慮尾盤獲利了結"},
+    {"stock_code": "2376", "stock_name": "技嘉", "alert": "累計法人-820張（負），reversal狀態不明，密切觀察"}
+  ],
   "settlement_summary": {
     "date": "2026-05-26",
     "settled_today": 12,
     "success_count": 12,
     "fail_count": 0,
     "settled_stocks": [
-      {"code": "2404", "name": "漢唐", "result": "success", "return_pct": 13.0},
-      {"code": "3189", "name": "景碩", "result": "success", "return_pct": 21.5},
-      {"code": "6282", "name": "康舒", "result": "success", "return_pct": 13.1},
-      {"code": "3037", "name": "欣興", "result": "success", "return_pct": 14.4},
-      {"code": "2312", "name": "金寶", "result": "success", "return_pct": 36.8},
-      {"code": "2356", "name": "英業達", "result": "success", "return_pct": 17.5},
-      {"code": "4958", "name": "臻鼎-KY", "result": "success", "return_pct": 19.3},
-      {"code": "2313", "name": "華通", "result": "success", "return_pct": 11.2},
-      {"code": "2455", "name": "全新", "result": "success", "return_pct": 11.7},
-      {"code": "2337", "name": "旺宏", "result": "success", "return_pct": 2.9},
-      {"code": "2345", "name": "智邦", "result": "success", "return_pct": 0.6},
-      {"code": "1605", "name": "華新", "result": "success", "return_pct": 7.8}
+      {
+        "code": "2404",
+        "name": "漢唐",
+        "result": "success",
+        "return_pct": 13.0
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "result": "success",
+        "return_pct": 21.5
+      },
+      {
+        "code": "6282",
+        "name": "康舒",
+        "result": "success",
+        "return_pct": 13.1
+      },
+      {
+        "code": "3037",
+        "name": "欣興",
+        "result": "success",
+        "return_pct": 14.4
+      },
+      {
+        "code": "2312",
+        "name": "金寶",
+        "result": "success",
+        "return_pct": 36.8
+      },
+      {
+        "code": "2356",
+        "name": "英業達",
+        "result": "success",
+        "return_pct": 17.5
+      },
+      {
+        "code": "2344",
+        "name": "華邦電",
+        "result": "success",
+        "return_pct": 15.6
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "result": "success",
+        "return_pct": 19.3
+      },
+      {
+        "code": "2455",
+        "name": "全新",
+        "result": "success",
+        "return_pct": 11.7
+      },
+      {
+        "code": "2337",
+        "name": "旺宏",
+        "result": "success",
+        "return_pct": 4.6
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "result": "success",
+        "return_pct": 1.8
+      },
+      {
+        "code": "1605",
+        "name": "華新",
+        "result": "success",
+        "return_pct": 7.1
+      }
     ]
   },
   "holdings_status": [
-    {"code": "2317", "name": "鴻海", "day": 1, "current": 258.5, "change_pct": 3.4, "distance_target_pct": 6.4, "distance_stop_pct": 13.0},
-    {"code": "2383", "name": "台光電", "day": 1, "current": 5285.0, "change_pct": 5.6, "distance_target_pct": 4.2, "distance_stop_pct": 14.8},
-    {"code": "3034", "name": "聯詠", "day": 1, "current": 492.0, "change_pct": 1.4, "distance_target_pct": 8.5, "distance_stop_pct": 11.3},
-    {"code": "2409", "name": "友達", "day": 2, "current": 22.05, "change_pct": 9.2, "distance_target_pct": 0.8, "distance_stop_pct": 17.6, "alert": "近目標0.8%"},
-    {"code": "2363", "name": "矽統", "day": 2, "current": 66.6, "change_pct": 6.0, "distance_target_pct": 3.7, "distance_stop_pct": 15.1},
-    {"code": "6285", "name": "啓碁", "day": 3, "current": 299.5, "change_pct": 7.3, "distance_target_pct": 9.8, "distance_stop_pct": 16.2},
-    {"code": "2376", "name": "技嘉", "day": 3, "current": 334.0, "change_pct": 10.6, "distance_target_pct": 6.6, "distance_stop_pct": 18.6},
-    {"code": "6531", "name": "愛普", "day": 3, "current": 1105.0, "change_pct": 13.6, "distance_target_pct": 1.3, "distance_stop_pct": 20.8, "alert": "近目標1.3%"},
-    {"code": "3045", "name": "台灣大", "day": 4, "current": 111.5, "change_pct": -4.3, "distance_target_pct": 17.0, "distance_stop_pct": 6.0, "alert": "⚠️距停損僅6%，Level 1"},
-    {"code": "2368", "name": "金像電", "day": 4, "current": 1445.0, "change_pct": 12.4, "distance_target_pct": 2.4, "distance_stop_pct": 20.0, "alert": "近目標2.4%"},
-    {"code": "4906", "name": "正文", "day": 6, "current": 42.45, "change_pct": 8.3, "distance_target_pct": 1.5, "distance_stop_pct": 16.9, "alert": "近目標1.5%"},
-    {"code": "2485", "name": "兆赫", "day": 7, "current": 74.5, "change_pct": 5.4, "distance_target_pct": 7.4, "distance_stop_pct": 9.8},
-    {"code": "2344", "name": "華邦電", "day": 8, "current": 139.0, "change_pct": 13.9, "distance_target_pct": 0.9, "distance_stop_pct": 21.0, "alert": "近目標0.9%"},
-    {"code": "2352", "name": "佳世達", "day": 8, "current": 28.25, "change_pct": 7.6, "distance_target_pct": 6.9, "distance_stop_pct": 16.4}
+    {
+      "code": "6451",
+      "name": "訊芯-KY",
+      "day": 0,
+      "current": 598.0,
+      "change_pct": 5.5,
+      "distance_target_pct": 4.5,
+      "distance_stop_pct": 14.7
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "day": 1,
+      "current": 260.0,
+      "change_pct": 4.0,
+      "distance_target_pct": 5.8,
+      "distance_stop_pct": 13.5
+    },
+    {
+      "code": "2383",
+      "name": "台光電",
+      "day": 1,
+      "current": 5310.0,
+      "change_pct": 6.1,
+      "distance_target_pct": 3.7,
+      "distance_stop_pct": 15.2
+    },
+    {
+      "code": "3034",
+      "name": "聯詠",
+      "day": 1,
+      "current": 489.5,
+      "change_pct": 0.9,
+      "distance_target_pct": 9.1,
+      "distance_stop_pct": 10.8
+    },
+    {
+      "code": "2409",
+      "name": "友達",
+      "day": 2,
+      "current": 22.05,
+      "change_pct": 9.2,
+      "distance_target_pct": 0.8,
+      "distance_stop_pct": 17.6,
+      "alert": "近目標0.8%"
+    },
+    {
+      "code": "2363",
+      "name": "矽統",
+      "day": 2,
+      "current": 67.8,
+      "change_pct": 8.0,
+      "distance_target_pct": 1.9,
+      "distance_stop_pct": 16.6,
+      "alert": "近目標1.9%"
+    },
+    {
+      "code": "6285",
+      "name": "啓碁",
+      "day": 3,
+      "current": 299.0,
+      "change_pct": 7.2,
+      "distance_target_pct": 10.0,
+      "distance_stop_pct": 16.0
+    },
+    {
+      "code": "2376",
+      "name": "技嘉",
+      "day": 3,
+      "current": 335.5,
+      "change_pct": 11.1,
+      "distance_target_pct": 6.1,
+      "distance_stop_pct": 19.0
+    },
+    {
+      "code": "6531",
+      "name": "愛普",
+      "day": 3,
+      "current": 1105.0,
+      "change_pct": 13.6,
+      "distance_target_pct": 1.3,
+      "distance_stop_pct": 20.8,
+      "alert": "近目標1.3%"
+    },
+    {
+      "code": "3045",
+      "name": "台灣大",
+      "day": 4,
+      "current": 111.5,
+      "change_pct": -4.3,
+      "distance_target_pct": 17.0,
+      "distance_stop_pct": 6.0,
+      "alert": "⚠️距停損僅6%，Level 1"
+    },
+    {
+      "code": "2368",
+      "name": "金像電",
+      "day": 4,
+      "current": 1450.0,
+      "change_pct": 12.8,
+      "distance_target_pct": 2.1,
+      "distance_stop_pct": 20.2,
+      "alert": "近目標2.1%"
+    },
+    {
+      "code": "4906",
+      "name": "正文",
+      "day": 6,
+      "current": 42.65,
+      "change_pct": 8.8,
+      "distance_target_pct": 1.1,
+      "distance_stop_pct": 17.3,
+      "alert": "近目標1.1%"
+    },
+    {
+      "code": "2485",
+      "name": "兆赫",
+      "day": 7,
+      "current": 74.3,
+      "change_pct": 5.1,
+      "distance_target_pct": 7.7,
+      "distance_stop_pct": 9.6
+    },
+    {
+      "code": "2352",
+      "name": "佳世達",
+      "day": 8,
+      "current": 28.3,
+      "change_pct": 7.8,
+      "distance_target_pct": 6.7,
+      "distance_stop_pct": 16.5
+    },
+    {
+      "code": "2313",
+      "name": "華通",
+      "day": 9,
+      "current": 283.5,
+      "change_pct": 9.0,
+      "distance_target_pct": 0.9,
+      "distance_stop_pct": 17.5,
+      "alert": "近目標0.9%，D9明日到期"
+    }
   ],
   "removed_stocks": [
-    {"code": "2344", "name": "華邦電", "reason": "Level 4反轉（今日爆量賣超-11,963張），雖仍在tracking中，今日不加新倉"},
-    {"code": "2610", "name": "華航", "reason": "Level 4反轉，排除"},
-    {"code": "2881", "name": "富邦金", "reason": "Level 4反轉，排除"},
-    {"code": "2330", "name": "台積電", "reason": "Level 4反轉 + 已在holdings持有，不重複推薦"},
-    {"code": "2485", "name": "兆赫", "reason": "動能>100%一票否決排除（新推薦），tracking中已有持倉繼續追蹤"}
+    {
+      "code": "2374",
+      "name": "佳能",
+      "reason": "Level 4反轉排除（Module A L2但反轉預警覆蓋）"
+    },
+    {
+      "code": "3712",
+      "name": "永崴投控",
+      "reason": "Level 4反轉排除（Module A L2但反轉預警覆蓋）"
+    },
+    {
+      "code": "2492",
+      "name": "華新科",
+      "reason": "5日漲幅+20.9%已大漲排除（>20%無催化例外保護）"
+    },
+    {
+      "code": "2610",
+      "name": "華航",
+      "reason": "法人6天賣超(-5分)，籌碼面弱，score 67未達門檻，降為盤中觀察"
+    },
+    {
+      "code": "2851",
+      "name": "中再保",
+      "reason": "score 65未達推薦門檻（70分）"
+    },
+    {
+      "code": "2881",
+      "name": "富邦金",
+      "reason": "Level 4反轉排除"
+    },
+    {
+      "code": "2330",
+      "name": "台積電",
+      "reason": "Level 4反轉 + 已在holdings持有"
+    },
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "reason": "D10到期結算（success，+15.6%）"
+    }
   ]
 }

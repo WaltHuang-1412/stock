@@ -78,9 +78,12 @@ def fetch_all_institutional(date_str):
     # 驗證 API 回傳日期與請求日期一致
     # TWSE 在資料未公布時會靜默回傳前一交易日的舊資料，不報錯
     # 若日期不符代表拿到的是舊資料，丟棄不快取，等下次正確資料公布後再抓
+    # 注意：API 回傳格式為 "YYYY/MM/DD"，date_str 格式為 "YYYYMMDD"，需統一後比較
     response_date = raw.get('date', '')
-    if response_date and response_date != date_str:
-        return {}
+    if response_date:
+        response_date_compact = response_date.replace('/', '')
+        if response_date_compact != date_str:
+            return {}
 
     # 動態欄位對應（不硬寫索引，用 fields 名稱查找）
     fields = raw.get('fields', [])
@@ -111,13 +114,18 @@ def fetch_all_institutional(date_str):
     for row in raw['data']:
         code = row[idx_code].strip()
         try:
+            def to_int(v):
+                if isinstance(v, int):
+                    return v
+                return int(str(v).replace(',', ''))
+
             result[code] = {
                 'date': date_str,
                 'name': row[idx_name].strip() if len(row) > idx_name else code,
-                'foreign': int(row[idx_foreign].replace(',', '')) // 1000,
-                'trust': int(row[idx_trust].replace(',', '')) // 1000,
-                'dealer': int(row[idx_dealer].replace(',', '')) // 1000,
-                'total': int(row[idx_total].replace(',', '')) // 1000,
+                'foreign': to_int(row[idx_foreign]) // 1000,
+                'trust': to_int(row[idx_trust]) // 1000,
+                'dealer': to_int(row[idx_dealer]) // 1000,
+                'total': to_int(row[idx_total]) // 1000,
             }
         except (ValueError, IndexError):
             continue

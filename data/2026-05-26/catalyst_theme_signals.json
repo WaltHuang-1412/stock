@@ -109,14 +109,14 @@
       "in_top50": false,
       "score": 82,
       "chip_data": {
-        "cumulative_total": -58361,
+        "cumulative_total": -49163,
         "buy_days": 3,
         "sell_days": 7,
-        "momentum_pct": 98.88421089107196,
+        "momentum_pct": -500,
         "consecutive_buy": 0,
-        "cumulative_foreign": -34406,
+        "cumulative_foreign": -25744,
         "reversal_level": "Level 4",
-        "exclusion_reason": "反轉Level 4排除｜累計-58,361為負",
+        "exclusion_reason": "反轉Level 4排除｜累計-49,163為負",
         "passed": false
       }
     },
@@ -157,14 +157,14 @@
       "in_top50": false,
       "score": 82,
       "chip_data": {
-        "cumulative_total": -6548,
+        "cumulative_total": -4475,
         "buy_days": 2,
         "sell_days": 8,
-        "momentum_pct": 19.664004406499593,
+        "momentum_pct": -67.16417910447761,
         "consecutive_buy": 1,
-        "cumulative_foreign": -6085,
+        "cumulative_foreign": -3947,
         "reversal_level": "unknown",
-        "exclusion_reason": "累計-6,548為負｜數據不足無法評分",
+        "exclusion_reason": "累計-4,475為負｜數據不足無法評分",
         "passed": false
       }
     },
@@ -181,14 +181,14 @@
       "in_top50": false,
       "score": 82,
       "chip_data": {
-        "cumulative_total": 268,
-        "buy_days": 3,
-        "sell_days": 7,
-        "momentum_pct": 219.44847605224962,
+        "cumulative_total": -3858,
+        "buy_days": 2,
+        "sell_days": 8,
+        "momentum_pct": -69.97900629811056,
         "consecutive_buy": 0,
-        "cumulative_foreign": 1285,
+        "cumulative_foreign": -3387,
         "reversal_level": "Level 4",
-        "exclusion_reason": "反轉Level 4排除｜動能+219%>100%排除",
+        "exclusion_reason": "反轉Level 4排除｜累計-3,858為負",
         "passed": false
       }
     },
@@ -277,14 +277,14 @@
       "in_top50": false,
       "score": 82,
       "chip_data": {
-        "cumulative_total": -36102,
+        "cumulative_total": -36419,
         "buy_days": 1,
         "sell_days": 9,
-        "momentum_pct": -89.65019255455712,
+        "momentum_pct": -65.34790528233152,
         "consecutive_buy": 0,
-        "cumulative_foreign": -34637,
-        "reversal_level": "Level 4",
-        "exclusion_reason": "反轉Level 4排除｜累計-36,102為負",
+        "cumulative_foreign": -36357,
+        "reversal_level": "Level 3",
+        "exclusion_reason": "反轉Level 3排除｜累計-36,419為負",
         "passed": false
       }
     },
@@ -325,15 +325,15 @@
       "in_top50": false,
       "score": 82,
       "chip_data": {
-        "cumulative_total": 24904,
-        "buy_days": 7,
-        "sell_days": 3,
-        "momentum_pct": -75.24296162709147,
-        "consecutive_buy": 0,
-        "cumulative_foreign": 22252,
-        "reversal_level": "Level 4",
-        "exclusion_reason": "反轉Level 4排除",
-        "passed": false
+        "cumulative_total": 29751,
+        "buy_days": 9,
+        "sell_days": 1,
+        "momentum_pct": -24.787985865724387,
+        "consecutive_buy": 5,
+        "cumulative_foreign": 22981,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
       }
     },
     {
@@ -433,20 +433,12 @@
       "tw_5d_change": 3.8904854306600734
     },
     {
-      "code": "2449",
-      "name": "京元電",
-      "tw_industry": "DRAM/記憶體",
-      "us_leader": "Micron",
-      "leader_cumulative": -5.03,
-      "tw_5d_change": 8.650519031141869
-    },
-    {
       "code": "3706",
       "name": "神達",
       "tw_industry": "電動車",
       "us_leader": "Tesla",
       "leader_cumulative": -15.24,
-      "tw_5d_change": 8.550188087744658
+      "tw_5d_change": 8.05452322900191
     },
     {
       "code": "6257",
@@ -462,7 +454,7 @@
       "tw_industry": "蘋果供應鏈",
       "us_leader": "Apple",
       "leader_cumulative": 16.25,
-      "tw_5d_change": 7.334963325183375
+      "tw_5d_change": 7.090464547677261
     },
     {
       "code": "2382",
@@ -486,8 +478,16 @@
       "tw_industry": "AI晶片/IC設計",
       "us_leader": "AMD",
       "leader_cumulative": 33.77,
-      "tw_5d_change": 9.345794392523365
+      "tw_5d_change": 8.722741433021806
+    },
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "tw_industry": "DRAM/記憶體",
+      "us_leader": "Micron",
+      "leader_cumulative": -5.03,
+      "tw_5d_change": 20.0
     }
   ],
-  "already_moved_count": 81
+  "already_moved_count": 88
 }

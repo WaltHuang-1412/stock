@@ -461,7 +461,7 @@ python3 scripts/check_foreign_ratio.py [候選股...]
 **反轉預警篩選**：
 
 ```bash
-python3 scripts/reversal_alert.py [候選股...] > data/$(date +%Y-%m-%d)/reversal_alerts.json
+python3 scripts/reversal_alert.py [候選股...] --output-dir data/$(date +%Y-%m-%d)
 ```
 
 | 預警等級 | 動作 | 評分調整 |
