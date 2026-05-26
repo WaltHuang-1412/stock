@@ -51,7 +51,7 @@ Set-Location $ProjectDir
 if ($MarketStatus -eq "snapshot") {
     # ========== 假日輕量模式：只抓美股快照 ==========
     $StartTime = Get-Date
-    Write-Output "========================================" | Tee-Object -FilePath $LogFile
+    Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
     Write-Output "假日美股快照 - $Date" | Tee-Object -FilePath $LogFile -Append
     Write-Output "開始時間: $(Get-Date -Format 'HH:mm:ss')" | Tee-Object -FilePath $LogFile -Append
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
@@ -138,7 +138,7 @@ if ($MarketStatus -eq "snapshot") {
 } else {
     # ========== 正常模式：完整盤前分析 ==========
     $StartTime = Get-Date
-    Write-Output "========================================" | Tee-Object -FilePath $LogFile
+    Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
     Write-Output "盤前分析自動化 - $Date" | Tee-Object -FilePath $LogFile -Append
     Write-Output "開始時間: $(Get-Date -Format 'HH:mm:ss')" | Tee-Object -FilePath $LogFile -Append
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
@@ -208,8 +208,13 @@ if ($MarketStatus -eq "snapshot") {
     if ($AllExist) {
         Write-Output "盤前分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
         $LineFile = "$ProjectDir\data\$Date\before_market_line.txt"
-        if (Test-Path $LineFile) {
+        $LineSentFlag = "$ProjectDir\data\$Date\before_market_line_sent.flag"
+        if (Test-Path $LineSentFlag) {
+            Write-Output "[SKIP] LINE 今日已推送過（flag 存在），略過重複推送" | Tee-Object -FilePath $LogFile -Append
+        } elseif (Test-Path $LineFile) {
             python "$ProjectDir\scripts\notify_line.py" --file $LineFile 2>&1 | Tee-Object -FilePath $LogFile -Append
+            New-Item -ItemType File -Path $LineSentFlag -Force | Out-Null
+            Write-Output "[OK] LINE 推送完成，建立 flag 防重複" | Tee-Object -FilePath $LogFile -Append
         } else {
             Write-Output "[WARN] before_market_line.txt 不存在，略過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
         }
