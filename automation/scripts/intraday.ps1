@@ -55,7 +55,7 @@ New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
 
 # === 記錄開始 ===
 $StartTime = Get-Date
-Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
+Write-Output "========================================" | Tee-Object -FilePath $LogFile
 Write-Output "盤中分析自動化 - $Date" | Tee-Object -FilePath $LogFile -Append
 Write-Output "開始時間: $(Get-Date -Format 'HH:mm:ss')" | Tee-Object -FilePath $LogFile -Append
 Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append
@@ -124,13 +124,8 @@ Write-Output "========================================" | Tee-Object -FilePath $
 if ($AllExist) {
     Write-Output "盤中分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
     $LineFile = "$ProjectDir\data\$Date\intraday_line.txt"
-    $LineSentFlag = "$ProjectDir\data\$Date\intraday_line_sent.flag"
-    if (Test-Path $LineSentFlag) {
-        Write-Output "[SKIP] LINE 今日已推送過（flag 存在），略過重複推送" | Tee-Object -FilePath $LogFile -Append
-    } elseif (Test-Path $LineFile) {
+    if (Test-Path $LineFile) {
         python "$ProjectDir\scripts\notify_line.py" --file $LineFile 2>&1 | Tee-Object -FilePath $LogFile -Append
-        New-Item -ItemType File -Path $LineSentFlag -Force | Out-Null
-        Write-Output "[OK] LINE 推送完成，建立 flag 防重複" | Tee-Object -FilePath $LogFile -Append
     } else {
         Write-Output "[WARN] intraday_line.txt 不存在，略過 LINE 推送" | Tee-Object -FilePath $LogFile -Append
     }
