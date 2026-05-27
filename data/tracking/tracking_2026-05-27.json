@@ -18,7 +18,9 @@
       "score": 87,
       "reason": "光通訊/網通超強催化+費半+13.93%+外資10天連買+6,931張+Module A L2預埋+5日+0.2%幾乎零漲幅=最佳佈局點",
       "result": "holding",
-      "holding_status": "盤中現價610(+3.4%)，法人Level 0，連漲6天留意回調，續抱"
+      "close_price": 605.0,
+      "change_percent": 2.5,
+      "holding_status": "收盤605(+2.5%)，法人Level 0，外資今日+1,596張，COMPUTEX D5催化持續，續抱"
     }
   ],
   "track_b_recommendations": [],
@@ -54,6 +56,15 @@
       "note": "Level 4爆量賣超-3,993張，直接排除"
     }
   ],
+  "yesterday_verification": {
+    "accuracy": "61.7% (211s/131f/342t)",
+    "today_settled": "3/3 = 100%",
+    "results": [
+      {"stock_code": "2312", "stock_name": "金寶", "result": "success", "gain_pct": 34.6, "settled_price": 37.35, "note": "D10到期"},
+      {"stock_code": "4906", "stock_name": "正文", "result": "success", "gain_pct": 14.2, "settled_price": 44.75, "note": "觸及目標"},
+      {"stock_code": "2313", "stock_name": "華通", "result": "success", "gain_pct": 8.5, "settled_price": 282.0, "note": "D10到期"}
+    ]
+  },
   "exit_signals": [
     {
       "stock_code": "4906",
@@ -118,5 +129,34 @@
       "alert": "距目標+3.1%（現價5340，目標5506），可設限掛"
     }
   ],
-  "removed_stocks": []
+  "removed_stocks": [],
+  "tomorrow_recommendations": [],
+  "tomorrow_watch": [
+    {
+      "stock_code": "2352",
+      "stock_name": "佳世達",
+      "note": "D10 到期，明日以收盤價結算，現價27.55>推薦26.25，預計 success"
+    },
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "note": "距目標+1.9%（21.8→22.22），明日極可能達標，設限掛"
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "note": "距停損僅4.7%（現110.0，停損104.85），高警戒，明日持續下跌準備停損"
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "note": "距停損7.1%（現42.45，停損38.25），Level 1，密切監控"
+    }
+  ],
+  "after_market_notes": {
+    "market_condition": "利多出盡（MU+31.45%消息後法人獲利了結）",
+    "new_recommendations_count": 0,
+    "reason_no_new_recs": "今日多數受益股法人大量出貨（Level3/4），金融股冷門模式15-17%準確率，T86當日資料未及時公布，無合格新進場機會",
+    "tomorrow_key_events": ["2352佳世達D10到期結算", "COMPUTEX 6/2倒數D5", "台灣大停損監控"]
+  }
 }
