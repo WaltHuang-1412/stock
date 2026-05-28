@@ -93,7 +93,12 @@ def get_previous_close(code):
 
 def get_5day_change(code):
     """
-    取得 5 日漲幅
+    取得 5 日漲幅（定義：T-1 收盤 vs T-6 收盤，共 5 個交易日間距）
+
+    T-1 = 前一交易日收盤（優先取 meta.previousClose，避免盤中即時價混入）
+    T-6 = 6 個交易日資料的第一筆收盤（range='6d'）
+
+    與 fetch_institutional_top30.py 的計算基礎一致。
 
     Args:
         code: 股票代號（如 '2330'）
@@ -101,17 +106,32 @@ def get_5day_change(code):
     Returns:
         float: 5日漲幅百分比，失敗返回 None
     """
-    result = _fetch_chart(code, range_str='5d')
+    result = _fetch_chart(code, range_str='6d')
     if not result:
         return None
 
     try:
         quote = result['indicators']['quote'][0]
         closes = [c for c in quote['close'] if c is not None]
-        if len(closes) >= 2:
-            first = closes[0]
-            last = closes[-1]
-            return (last - first) / first * 100
+        if len(closes) < 2:
+            return None
+
+        # T-6（最舊一筆，6d 範圍的起點）
+        first = closes[0]
+
+        # T-1 偵測邏輯：
+        #   盤前查詢（8AM）：Yahoo Finance 只回傳歷史收盤，len(closes) == 5
+        #                    closes[-1] = 昨收，直接使用
+        #   盤中查詢（9-14時）：Yahoo Finance 多加一筆即時價，len(closes) == 6
+        #                       closes[-1] = 即時價（非昨收），改用 closes[-2]
+        # 注意：不用 regularMarketPrice 比較，因為盤前 closes[-1] = mktPrice = 昨收，
+        #        會誤判成「盤中」。改用 len(closes) >= 6 更可靠。
+        if len(closes) >= 6:
+            last = closes[-2]   # 盤中：第6筆是即時價，取第5筆（昨收）
+        else:
+            last = closes[-1]   # 盤前/盤後：最後一筆即為昨收
+
+        return (last - first) / first * 100
     except (KeyError, IndexError):
         pass
 

@@ -24,6 +24,9 @@ warnings.filterwarnings('ignore')
 
 CACHE_DIR = Path(__file__).parent.parent / 'data' / 'cache'
 
+# 快取檔案內儲存實際 API 回傳日期的 key（用於讀取時驗證）
+METADATA_KEY = '__cache_date__'
+
 # 同一個 process 內的記憶體快取（避免同一天讀檔多次）
 _memory_cache = {}
 
@@ -48,14 +51,24 @@ def fetch_all_institutional(date_str):
     if date_str in _memory_cache:
         return _memory_cache[date_str]
 
-    # 2. 磁碟快取
+    # 2. 磁碟快取（含日期驗證）
     cache_file = _cache_path(date_str)
     if cache_file.exists():
         try:
             with open(cache_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            _memory_cache[date_str] = data
-            return data
+            # 驗證快取日期（新格式快取才有此欄位）
+            # 若日期不符代表此快取被 TWSE silent fallback 污染，刪除重抓
+            cached_date = data.get(METADATA_KEY)
+            if cached_date is not None and cached_date != date_str:
+                try:
+                    cache_file.unlink()
+                except OSError:
+                    pass
+                # 繼續走 API 流程
+            else:
+                _memory_cache[date_str] = data
+                return data
         except (json.JSONDecodeError, IOError):
             pass  # 快取損壞，重新下載
 
@@ -75,15 +88,16 @@ def fetch_all_institutional(date_str):
     if 'data' not in raw or not raw['data']:
         return {}  # 假日或尚未公布，不快取（下次會重試）
 
-    # 驗證 API 回傳日期與請求日期一致
+    # 驗證 API 回傳日期與請求日期一致（強制）
     # TWSE 在資料未公布時會靜默回傳前一交易日的舊資料，不報錯
-    # 若日期不符代表拿到的是舊資料，丟棄不快取，等下次正確資料公布後再抓
+    # 若無 date 欄位或日期不符，均視為不可信資料，丟棄不快取
     # 注意：API 回傳格式為 "YYYY/MM/DD"，date_str 格式為 "YYYYMMDD"，需統一後比較
     response_date = raw.get('date', '')
-    if response_date:
-        response_date_compact = response_date.replace('/', '')
-        if response_date_compact != date_str:
-            return {}
+    if not response_date:
+        return {}  # TWSE 未回傳日期欄位，無法驗證，拒絕
+    response_date_compact = response_date.replace('/', '')
+    if response_date_compact != date_str:
+        return {}
 
     # 動態欄位對應（不硬寫索引，用 fields 名稱查找）
     fields = raw.get('fields', [])
@@ -133,6 +147,8 @@ def fetch_all_institutional(date_str):
     # 寫入磁碟快取（資料筆數足夠才存，避免不完整資料污染快取）
     # 正常交易日約 13,000-17,000 檔，低於 10,000 視為不完整
     if len(result) >= 10000:
+        # 記錄 API 實際回傳日期，供下次讀取時驗證
+        result[METADATA_KEY] = response_date_compact
         # 資料完整，存磁碟快取 + 記憶體快取
         cache_file.parent.mkdir(parents=True, exist_ok=True)
         try:

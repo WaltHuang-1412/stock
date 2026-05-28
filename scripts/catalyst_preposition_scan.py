@@ -476,7 +476,37 @@ def scan(target_date_str, lookback=7, price_threshold=5.0):
     # 按 days_in_top50 + total_buying 排序
     candidates.sort(key=lambda x: (-x['days_in_top50'], -x['total_buying']))
 
-    print(f"   篩選結果：{len(stock_aggregate)} 檔出現在買超TOP50，{len(candidates)} 檔通過漲幅門檻")
+    print(f"   篩選結果：{len(stock_aggregate)} 檔出現在買超TOP50，{len(candidates)} 檔通過漲幅門檻（初步，基於 JSON 數據）")
+
+    # ─── Step 2.5: 刷新 5日漲幅（Yahoo Finance 即時數據）───
+    # institutional_top50.json 內的 5day_change 是「該股最後一次進 TOP50 當天」算的，
+    # 可能已過期數天（如瑞昱最後進 TOP50 是 5/20，但今天是 5/28，差了 8 天）。
+    # 必須從 Yahoo Finance 取得最新的 5日漲幅後，重新過濾一次。
+    import time as _time
+    from yahoo_finance_api import get_5day_change as _get_5day_change
+
+    print(f"🔄 從 Yahoo Finance 刷新 {min(len(candidates), 50)} 檔候選股的 5日漲幅...")
+    refreshed_candidates = []
+    for agg in candidates[:50]:
+        fresh = _get_5day_change(agg['code'])
+        if fresh is not None:
+            old_val = agg['latest_5day_change']
+            agg['latest_5day_change'] = round(fresh, 2)
+            if abs(fresh - old_val) >= 1.0:
+                print(f"   {agg['code']} {agg['name']}: {old_val:.1f}% → {fresh:.1f}%（已更新）")
+        # 重新套用漲幅門檻
+        if agg['latest_5day_change'] <= price_threshold:
+            refreshed_candidates.append(agg)
+        _time.sleep(0.15)
+
+    removed_count = len(candidates[:50]) - len(refreshed_candidates)
+    if removed_count > 0:
+        print(f"   刷新後移除 {removed_count} 檔（5日漲幅超過 {price_threshold}% 門檻）")
+
+    # 第 51 檔以後（lower-ranked）保留原始數據（不進 chip_analysis，影響不大）
+    candidates = refreshed_candidates + candidates[50:]
+    candidates.sort(key=lambda x: (-x['days_in_top50'], -x['total_buying']))
+    print(f"   刷新後最終候選：{len(candidates)} 檔")
     print()
 
     if not candidates:
