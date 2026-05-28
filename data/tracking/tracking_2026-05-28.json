@@ -35,7 +35,8 @@
       "score": 88,
       "result": "holding",
       "holding_status": "D0/10，今收478.5（-1.3%），距目標13.9%，距停損8.8%，Level 0，真連續10天",
-      "actual_close": 478.5,
+      "close_price": 478.5,
+      "change_percent": -1.34,
       "reason": "費半+12.35%廣泛半導體/真連續10天全買超/外資+投信同步/Module A L2/動能-41.6%佈局完成"
     },
     {
@@ -51,7 +52,8 @@
       "score": 84,
       "result": "holding",
       "holding_status": "D0/10，今收59.3（-1.0%），距目標11.3%，距停損9.1%，籌碼健康，外資今日+6,136但投信-3,562",
-      "actual_close": 59.3,
+      "close_price": 59.3,
+      "change_percent": -1.0,
       "reason": "外資累計買超175K/EPS YoY+47.8%/Module A L2/三大合計真連續1天（外資全10天正值，投信反向）/動能-82.2%佈局完成"
     }
   ],
@@ -138,7 +140,13 @@
     "版本說明": "本次分析依修正後規則：連買天數=真連續買超，非買超天數"
   },
   "yesterday_verification": {
-    "settled_today": "金寶(2312)+37.8% success / 正文(4906)+21.7% success / 佳世達(2352)+5.7% D10到期 success",
-    "holding": "16檔持有中（瑞昱D0/聯詠D0/中信金D0/大成鋼D2/聯合再生D2/鴻海D3/漢唐D3/台光電D3/友達D4/矽統D4/啟碁D5/技嘉D5/愛普D5/台灣大D6/金像電D6/兆赫D9）"
+    "accuracy": "61.8%（212成功/131失敗/343筆結算）",
+    "settled_today": "金寶(2312)+35.9% success / 正文(4906)+20.7% success / 佳世達(2352)+5.3% D10到期 success",
+    "holding": "15檔持有中（瑞昱D0/聯詠D0/中信金D0/大成鋼D2/聯合再生D2/鴻海D3/漢唐D3/台光電D3/友達D4/矽統D4/啟碁D5/技嘉D5/愛普D5/台灣大D6/金像電D6/兆赫D9）",
+    "results": [
+      {"symbol": "2312", "name": "金寶", "result": "success", "return_pct": 35.9, "note": "D10到期，收盤37.7≥目標31.1"},
+      {"symbol": "4906", "name": "正文", "result": "success", "return_pct": 20.7, "note": "D10到期，收盤47.3≥目標43.1"},
+      {"symbol": "2352", "name": "佳世達", "result": "success", "return_pct": 5.3, "note": "D10到期，收盤27.65>推薦26.25"}
+    ]
   }
 }
