@@ -7543,9 +7543,9 @@
       }
     ]
   },
-  "settled_accuracy": "61.8%",
-  "settled_count": 343,
-  "holding_count": 169,
+  "settled_accuracy": "62.2%",
+  "settled_count": 347,
+  "holding_count": 303,
   "total_success": 212,
   "total_fail": 131,
   "2026-03-30": {
@@ -11092,9 +11092,9 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 79,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-05-29",
+        "settled_price": 74.2,
         "holding_days": 1
       },
       {
@@ -11336,9 +11336,9 @@
         "settlement_days": 10,
         "position": "10%",
         "score": 85,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-05-29",
+        "settled_price": 370.0,
         "holding_days": 1
       },
       {
@@ -11351,9 +11351,9 @@
         "settlement_days": 10,
         "position": "10%",
         "score": 81,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-05-29",
+        "settled_price": 1190.0,
         "holding_days": 1
       },
       {
@@ -11505,9 +11505,9 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 91,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-05-29",
+        "settled_price": 289.0,
         "holding_days": 1
       },
       {
@@ -11643,6 +11643,102 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 84,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-05-29": {
+    "predictions": [
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "recommend_price": 160.0,
+        "target_price": 184.0,
+        "stop_loss": 152.0,
+        "stop_loss_pct": -5,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 85,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2408",
+        "name": "南亞科",
+        "recommend_price": 324.0,
+        "target_price": 372.0,
+        "stop_loss": 307.8,
+        "stop_loss_pct": -5,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 84,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "3035",
+        "name": "智原",
+        "recommend_price": 208.5,
+        "target_price": 240.0,
+        "stop_loss": 187.7,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 84,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2609",
+        "name": "陽明",
+        "recommend_price": 52.3,
+        "target_price": 58.5,
+        "stop_loss": 47.1,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 83,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 63.9,
+        "target_price": 72.0,
+        "stop_loss": 57.5,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 81,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "1582",
+        "name": "信錦",
+        "recommend_price": 113.5,
+        "target_price": 130.5,
+        "stop_loss": 102.2,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 76,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
