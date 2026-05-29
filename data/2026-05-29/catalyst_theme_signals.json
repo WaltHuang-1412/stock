@@ -163,8 +163,8 @@
         "momentum_pct": 36.349634193299956,
         "consecutive_buy": 0,
         "cumulative_foreign": -4154,
-        "reversal_level": "Level 3",
-        "exclusion_reason": "反轉Level 3排除｜累計-4,250為負",
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-4,250為負",
         "passed": false
       }
     },
@@ -211,7 +211,7 @@
         "momentum_pct": 259.5996061700033,
         "consecutive_buy": 2,
         "cumulative_foreign": -1511,
-        "reversal_level": "Level 0",
+        "reversal_level": "Level 1",
         "exclusion_reason": "動能+260%>100%排除",
         "passed": false
       }
@@ -235,9 +235,9 @@
         "momentum_pct": 52.000000000000014,
         "consecutive_buy": 1,
         "cumulative_foreign": 1028,
-        "reversal_level": "Level 0",
-        "exclusion_reason": "通過基礎篩選",
-        "passed": true
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除",
+        "passed": false
       }
     },
     {
@@ -259,8 +259,8 @@
         "momentum_pct": 500,
         "consecutive_buy": 0,
         "cumulative_foreign": 29441,
-        "reversal_level": "Level 4",
-        "exclusion_reason": "反轉Level 4排除｜動能+500%>100%排除",
+        "reversal_level": "Level 1",
+        "exclusion_reason": "動能+500%>100%排除",
         "passed": false
       }
     },
@@ -283,8 +283,8 @@
         "momentum_pct": -39.53201970443349,
         "consecutive_buy": 0,
         "cumulative_foreign": -1033,
-        "reversal_level": "Level 4",
-        "exclusion_reason": "反轉Level 4排除｜累計-1,945為負",
+        "reversal_level": "Level 1",
+        "exclusion_reason": "累計-1,945為負",
         "passed": false
       }
     },
@@ -409,28 +409,28 @@
   ],
   "already_in_top50": [
     {
-      "code": "3035",
-      "name": "智原",
-      "tw_industry": "半導體設備/製造",
-      "us_leader": "Applied Materials",
-      "leader_cumulative": 21.42,
-      "tw_5d_change": 0.2403846153846154
-    },
-    {
       "code": "5388",
       "name": "中磊",
       "tw_industry": "網通",
       "us_leader": "Broadcom",
       "leader_cumulative": -5.36,
-      "tw_5d_change": 2.0481890942676957
+      "tw_5d_change": 1.410111162342312
     },
     {
-      "code": "4967",
-      "name": "十銓",
-      "tw_industry": "DRAM/記憶體",
-      "us_leader": "Micron",
-      "leader_cumulative": 105.01,
-      "tw_5d_change": 1.5009380863039399
+      "code": "3035",
+      "name": "智原",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "leader_cumulative": 21.42,
+      "tw_5d_change": -1.1848341232227488
+    },
+    {
+      "code": "2449",
+      "name": "京元電子",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": -5.36,
+      "tw_5d_change": 9.797297297297296
     },
     {
       "code": "8046",
@@ -465,29 +465,29 @@
       "tw_5d_change": 3.665517567444981
     },
     {
+      "code": "4967",
+      "name": "十銓",
+      "tw_industry": "DRAM/記憶體",
+      "us_leader": "Micron",
+      "leader_cumulative": 105.01,
+      "tw_5d_change": 2.2181146025878005
+    },
+    {
+      "code": "6282",
+      "name": "康舒",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 96.08,
+      "tw_5d_change": 4.703827310918952
+    },
+    {
       "code": "2451",
       "name": "創見",
       "tw_industry": "DRAM/記憶體",
       "us_leader": "Micron",
       "leader_cumulative": 105.01,
-      "tw_5d_change": 2.711323763955343
-    },
-    {
-      "code": "3231",
-      "name": "緯創",
-      "tw_industry": "蘋果供應鏈",
-      "us_leader": "Apple",
-      "leader_cumulative": 22.32,
-      "tw_5d_change": 3.214285714285714
-    },
-    {
-      "code": "3006",
-      "name": "晶豪科",
-      "tw_industry": "DRAM/記憶體",
-      "us_leader": "Micron",
-      "leader_cumulative": 105.01,
-      "tw_5d_change": 9.234234234234235
+      "tw_5d_change": 6.003159557661927
     }
   ],
-  "already_moved_count": 103
+  "already_moved_count": 97
 }
