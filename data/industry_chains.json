@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-30",
+  "last_updated": "2026-05-31",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -456,6 +456,16 @@
             {
               "code": "3264",
               "name": "欣銓",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "3406",
+              "name": "玉晶光",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "4906",
+              "name": "正文",
               "category": "AI 伺服器與半導體"
             }
           ]
@@ -2381,6 +2391,11 @@
             {
               "code": "6213",
               "name": "聯茂",
+              "category": "被動元件族群"
+            },
+            {
+              "code": "3588",
+              "name": "禾伸堂",
               "category": "被動元件族群"
             }
           ]
@@ -4383,6 +4398,148 @@
               "code": "6869",
               "name": "雲豹能源",
               "category": "儲能與電力基建"
+            },
+            {
+              "code": "2308",
+              "name": "台達電",
+              "category": "儲能與電力基建"
+            },
+            {
+              "code": "1519",
+              "name": "華城",
+              "category": "儲能與電力基建"
+            }
+          ]
+        }
+      }
+    },
+    "矽晶圓復甦": {
+      "name": "矽晶圓復甦",
+      "catalysts": [
+        "矽晶圓復甦"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "6488",
+              "name": "環球晶",
+              "category": "矽晶圓復甦"
+            }
+          ]
+        }
+      }
+    },
+    "蘋果邊緣AI": {
+      "name": "蘋果邊緣AI",
+      "catalysts": [
+        "蘋果邊緣AI",
+        "蘋果邊緣",
+        "AI",
+        "WWDC"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "蘋果邊緣AI（WWDC 06/09）"
+            },
+            {
+              "code": "2454",
+              "name": "聯發科",
+              "category": "蘋果邊緣AI（WWDC 06/09）"
+            },
+            {
+              "code": "3008",
+              "name": "大立光",
+              "category": "蘋果邊緣AI（WWDC 06/09）"
+            }
+          ]
+        }
+      }
+    },
+    "機器人": {
+      "name": "機器人",
+      "catalysts": [
+        "機器人",
+        "機器人供應鏈"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "3520",
+              "name": "麗清",
+              "category": "機器人供應鏈"
+            },
+            {
+              "code": "8905",
+              "name": "全球傳動",
+              "category": "機器人供應鏈"
+            }
+          ]
+        }
+      }
+    },
+    "NVIDIA": {
+      "name": "NVIDIA",
+      "catalysts": [
+        "NVIDIA",
+        "ARM",
+        "PC",
+        "新架構"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "NVIDIA N1X/ARM PC新架構"
+            },
+            {
+              "code": "2454",
+              "name": "聯發科",
+              "category": "NVIDIA N1X/ARM PC新架構"
+            },
+            {
+              "code": "2356",
+              "name": "英業達",
+              "category": "NVIDIA N1X/ARM PC新架構"
+            }
+          ]
+        }
+      }
+    },
+    "鋼鐵族群漲價": {
+      "name": "鋼鐵族群漲價",
+      "catalysts": [
+        "鋼鐵族群漲價"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2002",
+              "name": "中鋼",
+              "category": "鋼鐵族群漲價"
+            },
+            {
+              "code": "2014",
+              "name": "中鴻",
+              "category": "鋼鐵族群漲價"
             }
           ]
         }
