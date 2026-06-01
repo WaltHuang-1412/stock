@@ -1,0 +1,112 @@
+{
+  "date": "2026-06-01",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "6282",
+      "stock_name": "康舒",
+      "industry": "AI電源供應器",
+      "recommend_price": 60.0,
+      "target_price": 69.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 54.0,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 110,
+      "reason": "Module A L3連7天買超+AI電源供應器超強催化+EPS+640%+外資週增+0.76%+動能-40.2%佈局完成+COMPUTEX AI行情"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "industry": "光通訊/網通PCB",
+      "recommend_price": 285.0,
+      "target_price": 322.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 256.5,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 97,
+      "reason": "光通訊網通TOP10法人avg_rank8.0+ANET+7.32%+AVGO佈局窗口概念+EPS+37%+外資週增+0.81%+buy_ratio34.7%"
+    },
+    {
+      "stock_code": "2485",
+      "stock_name": "兆赫",
+      "industry": "光通訊元件",
+      "recommend_price": 74.5,
+      "target_price": 84.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 70.8,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 85,
+      "reason": "🔥超強催化覆寫-光通訊🔴超強+ANET+7.32%>5%+EPS+149%+外資週增+0.55%+準確率三項全通過(停損-5%)"
+    },
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨",
+      "industry": "被動元件/MLCC",
+      "recommend_price": 740.0,
+      "target_price": 829.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 666.0,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 79,
+      "reason": "被動元件MLCC龍頭+高盛「下一個記憶體」報告+COMPUTEX AI伺服器MLCC需求爆發+投信大買"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "industry": "航空",
+      "recommend_price": 36.1,
+      "target_price": 39.7,
+      "stop_loss_pct": -10,
+      "stop_loss": 32.5,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 70,
+      "reason": "油價-4.79%航空成本大降+Module A動能-163.7%佈局完成+法人TOP15+貨運旺季加速"
+    }
+  ],
+  "holdings_addmore_evaluation": [
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "industry": "金融",
+      "current_price": 40.0,
+      "addmore_price": 41.0,
+      "target_price": 44.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 36.0,
+      "position": "5-10%",
+      "score": 83,
+      "recommendation": "可加碼",
+      "reason": "Module A L3連3天買超+台股創新高金融受惠+EPS+22%+已持有"
+    }
+  ],
+  "watch_list": [
+    {
+      "stock_code": "3008",
+      "stock_name": "大立光",
+      "reason": "COMPUTEX CPO首次參展,法人數據不足等確認"
+    },
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "reason": "Module A L3但基本面EPS/revenue持續衰退,低於推薦門檻67分"
+    }
+  ],
+  "excluded_stocks": [
+    {"code": "2382", "name": "廣達", "reason": "Level 4 爆量賣超"},
+    {"code": "2330", "name": "台積電", "reason": "Level 3 反轉（持股注意）"},
+    {"code": "2345", "name": "智邦", "reason": "Level 3 排除"},
+    {"code": "1101", "name": "台泥", "reason": "Level 4 排除"},
+    {"code": "6505", "name": "台塑化", "reason": "Level 4 排除+法人出貨"},
+    {"code": "2603", "name": "長榮", "reason": "Level 4 排除"},
+    {"code": "3706", "name": "神達", "reason": "Level 2 降級 -15分"},
+    {"code": "2303", "name": "聯電", "reason": "TOP賣超第1(-57K)+Level 4"}
+  ]
+}
