@@ -139,7 +139,7 @@ def analyze_chip_history(stock_code, n_days=10):
 
     print(f"\n🔍 查詢 {stock_code} 近 {n_days} 天法人數據...")
 
-    dates = get_trading_days(n_days + 5)  # 多取幾天避免假日
+    dates = get_trading_days(n_days + 8)  # 多取緩衝：假日 + TWSE歷史API重複日過濾
     history = []
     stock_name = stock_code
 
@@ -160,9 +160,34 @@ def analyze_chip_history(stock_code, n_days=10):
         print(f"❌ 查無 {stock_code} 的法人數據")
         return None
 
+    # 重複��料過濾：TWSE 歷史 API 有時對舊日期回傳最近交易日的數據
+    # history 已由新到舊排列，取 (foreign, trust, total) 為 fingerprint
+    # 若某日資料與更近日期完全相同（且非全零），���為 stale 跳過
+    seen_fp = {}
+    clean_history = []
+    skipped_dates = []
+    for entry in history:
+        fp = (entry['foreign'], entry['trust'], entry['total'])
+        is_all_zero = (entry['foreign'] == 0 and entry['trust'] == 0 and entry['total'] == 0)
+        if not is_all_zero and fp in seen_fp:
+            skipped_dates.append(entry['date'])
+        else:
+            if not is_all_zero:
+                seen_fp[fp] = entry['date']
+            clean_history.append(entry)
+
+    if skipped_dates:
+        fmt = [f"{d[:4]}/{d[4:6]}/{d[6:]}" for d in skipped_dates]
+        print(f"  ⚠️ 跳過 {len(skipped_dates)} 筆重複資料（{', '.join(fmt)}）"
+              f" — 與更近日期數值完全相同，TWSE 歷史 API 限制")
+
+    # 截斷至 n_days：緩衝多抓的資料在 dedup 後不應超過要求天數
+    history = clean_history[:n_days]
+
     # 數據完整性檢查
     if len(history) < n_days:
-        print(f"⚠️ 警告：要求{n_days}天，只取得{len(history)}天數據")
+        print(f"⚠️ 可用天數 {len(history)} 天（要求 {n_days} 天"
+              + (f"，其中 {len(skipped_dates)} 天為重複資料已排除" if skipped_dates else "") + "）")
 
     # 計算統計（全期間）
     total_net = sum(d['total'] for d in history)

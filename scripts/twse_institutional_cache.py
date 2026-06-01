@@ -36,6 +36,52 @@ def _cache_path(date_str):
     return CACHE_DIR / f'twse_t86_{date_str}.json'
 
 
+def _find_duplicate_cache(result, date_str):
+    """
+    檢查新抓的資料是否與近期某個更新日期的快取完全相同。
+
+    背景：TWSE T86 API 對較舊日期的查詢，有��會回傳最近交易日的資料，
+    但 response['date'] 仍 echo 請求的日期，導致日期驗證通過卻拿到錯誤資料。
+
+    做法：取前 30 檔股票的 total 值與近期有效快取比對，
+    若 25 檔以上完全吻合，視為重複資料（stale），拒絕儲存。
+
+    Returns: 重複的快取日期字串（如 '20260529'），或 None（資料正常）
+    """
+    sample = [
+        (k, v['total'])
+        for k, v in result.items()
+        if not k.startswith('_') and isinstance(v, dict) and 'total' in v
+    ][:30]
+
+    if len(sample) < 20:
+        return None  # 樣本不足，略過檢查
+
+    # 與比 date_str 更近的有效快取比對（stale 資料通常等於最新一筆）
+    checked = 0
+    for cache_file in sorted(CACHE_DIR.glob('twse_t86_*.json'), reverse=True):
+        cached_date = cache_file.stem.replace('twse_t86_', '')
+        if cached_date <= date_str:
+            break  # 檔案已降序排列，到達相同或更舊日期就停
+        try:
+            with open(cache_file, encoding='utf-8') as f:
+                cached = json.load(f)
+            if cached.get(METADATA_KEY) != cached_date:
+                continue  # 無效快取，跳過
+            matches = sum(
+                1 for code, total in sample
+                if cached.get(code, {}).get('total') == total
+            )
+            if matches >= 25:
+                return cached_date
+            checked += 1
+            if checked >= 5:
+                break
+        except Exception:
+            continue
+    return None
+
+
 def fetch_all_institutional(date_str):
     """
     取得某一天全市場法人買賣超數據（含快取）
@@ -60,7 +106,7 @@ def fetch_all_institutional(date_str):
             # 驗證快取日期（新格式快取才有此欄位）
             # 若日期不符代表此快取被 TWSE silent fallback 污染，刪除重抓
             cached_date = data.get(METADATA_KEY)
-            if cached_date is not None and cached_date != date_str:
+            if cached_date != date_str:  # None != date_str → 無 metadata 的舊壞檔也會被刪除重抓
                 try:
                     cache_file.unlink()
                 except OSError:
@@ -147,6 +193,13 @@ def fetch_all_institutional(date_str):
     # 寫入磁碟快取（資料筆數足夠才存，避免不完整資料污染快取）
     # 正常交易日約 13,000-17,000 檔，低於 10,000 視為不完整
     if len(result) >= 10000:
+        # 二次驗證：比對近期快取，偵測 TWSE echo-date 問題
+        # TWSE ��時對歷史查詢回傳最近資料但把 response['date'] 設成請求日期
+        dup_date = _find_duplicate_cache(result, date_str)
+        if dup_date:
+            # 資料是 stale 的，拒絕快取，下次查詢會重試
+            return {}
+
         # 記錄 API 實際回傳日期，供下次讀取時驗證
         result[METADATA_KEY] = response_date_compact
         # 資料完整，存磁碟快取 + 記憶體快取

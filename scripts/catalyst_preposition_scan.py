@@ -108,11 +108,11 @@ def run_chip_analysis(stock_codes, days=10):
         try:
             with redirect_stdout(devnull):
                 chip_result = analyze_chip_history(code, n_days=days)
-            if chip_result and chip_result.get('momentum'):
-                m = chip_result['momentum']
+            if chip_result:
+                m = chip_result.get('momentum') or {}
                 s = chip_result['summary']
                 results[code] = {
-                    'momentum_pct': m.get('change_pct'),
+                    'momentum_pct': m.get('change_pct'),       # None 表示資料不足無法計算
                     'momentum_level': m.get('level'),
                     'consecutive_buy': s.get('consecutive_buy', 0),
                     'cumulative_total': s.get('total_net', 0),
@@ -121,6 +121,7 @@ def run_chip_analysis(stock_codes, days=10):
                     'sell_days': s.get('sell_days', 0),
                     'recent_5d_avg': m.get('recent_avg', 0),
                     'prior_5d_avg': m.get('previous_avg', 0),
+                    'valid_days': chip_result.get('days', 0),   # 實際有效天數
                 }
         except Exception as e:
             print(f"  ⚠️ chip_analysis({code}) 失敗: {e}", file=sys.stderr)
@@ -288,7 +289,12 @@ def classify_positioning(stock_info, chip_data):
     if sell_days >= 7:
         return None  # 多數時間在賣（v7.9.1 規則）
 
+    # 動能格式化輔助（None = 資料不足無法計算）
+    def fmt_momentum(p):
+        return f'{p:+.1f}%' if p is not None else 'N/A(資料不足)'
+
     # L3: 佈局完成
+    # 動能必須明確 < -30% 才觸發，None 時不能確認 → 不升 L3
     if (days_in_top50 >= 3 and
         consecutive_buy >= 3 and
         momentum_pct is not None and momentum_pct < -30 and
@@ -299,13 +305,15 @@ def classify_positioning(stock_info, chip_data):
             'emoji': '🔥',
             'position': '15-20%',
             'confidence': '高',
-            'reason': f'連{consecutive_buy}天買超+動能{momentum_pct:+.1f}%佈局完成+漲幅僅{latest_change:+.1f}%'
+            'reason': f'連{consecutive_buy}天買超+動能{fmt_momentum(momentum_pct)}佈局完成+漲幅僅{latest_change:+.1f}%'
         }
 
     # L2: 早期佈局
+    # 動能 None（資料不足）時視為通過（< 50% 門檻無法確認但也無法否定）
+    momentum_ok_l2 = (momentum_pct is None) or (momentum_pct < 50)
     if (days_in_top50 >= 2 and
         (consecutive_buy >= 2 or buy_days >= 6) and
-        momentum_pct is not None and momentum_pct < 50 and
+        momentum_ok_l2 and
         latest_change < 5):
         return {
             'level': 'L2',
@@ -313,7 +321,7 @@ def classify_positioning(stock_info, chip_data):
             'emoji': '🟢',
             'position': '5-10%',
             'confidence': '中',
-            'reason': f'{days_in_top50}天在TOP50+動能{momentum_pct:+.1f}%+漲幅僅{latest_change:+.1f}%'
+            'reason': f'{days_in_top50}天在TOP50+動能{fmt_momentum(momentum_pct)}+漲幅僅{latest_change:+.1f}%'
         }
 
     # L1: 態度轉變（動能 > 100% 排除，那是追高不是預埋）
