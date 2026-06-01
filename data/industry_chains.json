@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-05-31",
+  "last_updated": "2026-06-01",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -2702,6 +2702,11 @@
               "code": "2308",
               "name": "台達電",
               "category": "台股市場動態與ETF資金"
+            },
+            {
+              "code": "5274",
+              "name": "信驊",
+              "category": "台股市場動態與ETF資金"
             }
           ]
         }
@@ -4265,6 +4270,11 @@
               "code": "7913",
               "name": "寶半導體",
               "category": "量子計算"
+            },
+            {
+              "code": "8383",
+              "name": "千附",
+              "category": "量子計算"
             }
           ]
         }
@@ -4408,6 +4418,11 @@
               "code": "1519",
               "name": "華城",
               "category": "儲能與電力基建"
+            },
+            {
+              "code": "7792",
+              "name": "安葆",
+              "category": "儲能與電力基建"
             }
           ]
         }
@@ -4484,6 +4499,16 @@
               "code": "8905",
               "name": "全球傳動",
               "category": "機器人供應鏈"
+            },
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "機器人供應鏈"
+            },
+            {
+              "code": "3162",
+              "name": "精確",
+              "category": "機器人供應鏈"
             }
           ]
         }
@@ -4516,6 +4541,11 @@
               "code": "2356",
               "name": "英業達",
               "category": "NVIDIA N1X/ARM PC新架構"
+            },
+            {
+              "code": "2382",
+              "name": "廣達",
+              "category": "NVIDIA N1X/ARM PC新架構"
             }
           ]
         }
@@ -4540,6 +4570,50 @@
               "code": "2014",
               "name": "中鴻",
               "category": "鋼鐵族群漲價"
+            }
+          ]
+        }
+      }
+    },
+    "無人機": {
+      "name": "無人機",
+      "catalysts": [
+        "無人機",
+        "無人機供應鏈"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "4916",
+              "name": "事欣科",
+              "category": "無人機供應鏈"
+            },
+            {
+              "code": "8033",
+              "name": "雷虎",
+              "category": "無人機供應鏈"
+            }
+          ]
+        }
+      }
+    },
+    "玻璃基板": {
+      "name": "玻璃基板",
+      "catalysts": [
+        "玻璃基板"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "1802",
+              "name": "台玻",
+              "category": "玻璃基板"
             }
           ]
         }
