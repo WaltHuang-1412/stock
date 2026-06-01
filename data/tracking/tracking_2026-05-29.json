@@ -39,11 +39,12 @@
       "reason": "DRAM超強催化+今天法說09:30+TOP3法人63K買超+超強催化覆寫+EPS YoY+802%",
       "intraday_price": 347.5,
       "intraday_note": "🛑 Level 4爆量賣超-7168張，強制出場。獲利+7.2%出場。",
-      "actual_close": 347.0,
+      "actual_close": 381.5,
       "close_price": 347.0,
       "change_percent": 7.1,
-      "result": "holding",
-      "holding_status": "D0→D1 | 盤中Level4強制出場(獲利+7.2%) | 收盤347.0，明日繼續追蹤至D10或觸目標/停損"
+      "result": "success",
+      "holding_status": null,
+      "settled_date": "2026-06-01"
     },
     {
       "stock_code": "3035",
@@ -99,11 +100,12 @@
       "reason": "Dell+30.5%財報超預期+AI伺服器TOP4+催化脈絡例外+動能-37.5%佈局中+AVGO受益",
       "intraday_price": 69.8,
       "intraday_note": "✅ Level 0，今日+9.2%，距目標72.0僅3.2%，可能今日觸及",
-      "actual_close": 70.2,
+      "actual_close": 77.2,
       "close_price": 70.2,
       "change_percent": 9.9,
-      "result": "holding",
-      "holding_status": "D0→D1 | Level 0強勢 | 收盤70.2(+9.9%) | 距目標72.0僅2.6% | 明日可能觸及"
+      "result": "success",
+      "holding_status": null,
+      "settled_date": "2026-06-01"
     },
     {
       "stock_code": "1582",
@@ -233,22 +235,83 @@
     "note": "今日7檔結算全數成功，0敗",
     "settled_accuracy": "62.2%（216成 / 131敗 / 347結算）",
     "results": [
-      {"stock_code": "2317", "stock_name": "鴻海", "result": "success", "recommend_price": 250.0, "settled_price": 289.0, "change_percent": 15.6},
-      {"stock_code": "2409", "stock_name": "友達", "result": "success", "recommend_price": 20.2, "settled_price": 23.0, "change_percent": 13.9},
-      {"stock_code": "2376", "stock_name": "技嘉", "result": "success", "recommend_price": 302.0, "settled_price": 370.0, "change_percent": 22.5},
-      {"stock_code": "6531", "stock_name": "愛普", "result": "success", "recommend_price": 973.0, "settled_price": 1190.0, "change_percent": 22.3},
-      {"stock_code": "2312", "stock_name": "金寶", "result": "success", "recommend_price": 27.75, "settled_price": 38.95, "change_percent": 40.4},
-      {"stock_code": "4906", "stock_name": "正文", "result": "success", "recommend_price": 39.2, "settled_price": 49.7, "change_percent": 26.8},
-      {"stock_code": "2485", "stock_name": "兆赫", "result": "success", "recommend_price": 70.7, "settled_price": 74.2, "change_percent": 5.0}
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "result": "success",
+        "recommend_price": 250.0,
+        "settled_price": 289.0,
+        "change_percent": 15.6
+      },
+      {
+        "stock_code": "2409",
+        "stock_name": "友達",
+        "result": "success",
+        "recommend_price": 20.2,
+        "settled_price": 23.0,
+        "change_percent": 13.9
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "result": "success",
+        "recommend_price": 302.0,
+        "settled_price": 370.0,
+        "change_percent": 22.5
+      },
+      {
+        "stock_code": "6531",
+        "stock_name": "愛普",
+        "result": "success",
+        "recommend_price": 973.0,
+        "settled_price": 1190.0,
+        "change_percent": 22.3
+      },
+      {
+        "stock_code": "2312",
+        "stock_name": "金寶",
+        "result": "success",
+        "recommend_price": 27.75,
+        "settled_price": 38.95,
+        "change_percent": 40.4
+      },
+      {
+        "stock_code": "4906",
+        "stock_name": "正文",
+        "result": "success",
+        "recommend_price": 39.2,
+        "settled_price": 49.7,
+        "change_percent": 26.8
+      },
+      {
+        "stock_code": "2485",
+        "stock_name": "兆赫",
+        "result": "success",
+        "recommend_price": 70.7,
+        "settled_price": 74.2,
+        "change_percent": 5.0
+      }
     ]
   },
   "after_market_notes": {
     "date": "2026-05-29",
-    "level4_exit": ["2337旺宏Level4+4.1%出場", "2408南亞科Level4+7.2%出場"],
+    "level4_exit": [
+      "2337旺宏Level4+4.1%出場",
+      "2408南亞科Level4+7.2%出場"
+    ],
     "settled_today": 7,
     "settled_all_success": true,
-    "near_stop_loss": ["3576聯合再生4.9%", "2404漢唐5.0%", "2027大成鋼5.4%", "3045台灣大6.0%"],
-    "watch_target": ["2356英業達2.6%距目標", "6285啟碁3.1%距目標", "2363矽統3.3%距目標"],
+    "near_stop_loss": [
+      "3576聯合再生4.9%",
+      "2404漢唐5.0%",
+      "2027大成鋼5.4%",
+      "3045台灣大6.0%"
+    ],
+    "watch_target": [
+      "2356英業達2.6%距目標",
+      "6285啟碁3.1%距目標",
+      "2363矽統3.3%距目標"
+    ],
     "key_events_week": "AVBO財報6/4佈局窗口D4開啟；COMPUTEX6/2；DRAM法人出貨警示",
     "accuracy": "62.2%（216成/131敗/347結算）"
   }

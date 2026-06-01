@@ -1,38 +1,29 @@
 [
   {
-    "stock_code": "6657",
+    "stock_code": "2408",
+    "stock_name": "",
+    "level": 4,
+    "alert_level": "level4",
+    "alert_reason": "🔴🔴 Level 4：爆量賣超！今日賣超-7,168張（佔日均量5.6%）",
+    "recommendation": "🔴🔴 極度危險！法人大舉出貨，建議立即出場",
+    "warning_level": 4
+  },
+  {
+    "stock_code": "3062",
     "stock_name": "",
     "level": 0,
     "alert_level": "level0",
-    "alert_reason": "🟢 Level 0（中性）：今日+59張（小量買超），累計+361張",
+    "alert_reason": "🟢 Level 0（中性）：今日+1,708張（小量買超），累計+14,726張",
     "recommendation": "🟢 無危險訊號，累計仍正，可觀察",
     "warning_level": 0
   },
   {
-    "stock_code": "6835",
+    "stock_code": "6515",
     "stock_name": "",
-    "level": 0,
-    "alert_level": "level0",
-    "alert_reason": "🟢 Level 0（中性）：今日+112張（小量買超），累計+73張",
-    "recommendation": "🟢 無危險訊號，累計仍正，可觀察",
-    "warning_level": 0
-  },
-  {
-    "stock_code": "8039",
-    "stock_name": "",
-    "level": 0,
-    "alert_level": "level0",
-    "alert_reason": "🟢 Level 0（中性）：今日-1,224張（小量賣超），累計+6,984張仍正",
-    "recommendation": "🟢 小幅賣超但累計仍正，暫無反轉跡象",
-    "warning_level": 0
-  },
-  {
-    "stock_code": "1609",
-    "stock_name": "",
-    "level": 0,
-    "alert_level": "level0",
-    "alert_reason": "🟢 Level 0（中性）：今日+183張（小量買超），累計+6,676張",
-    "recommendation": "🟢 無危險訊號，累計仍正，可觀察",
-    "warning_level": 0
+    "level": -1,
+    "alert_level": "unknown",
+    "alert_reason": "❓ 狀態不明：今日+31張，累計-321張（負），未匹配任何預警等級",
+    "recommendation": "⚠️ 累計為負但未觸發預警，需人工判斷",
+    "warning_level": -1
   }
 ]
