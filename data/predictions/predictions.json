@@ -7543,11 +7543,11 @@
       }
     ]
   },
-  "settled_accuracy": 62.9,
-  "settled_count": 353,
-  "holding_count": 167,
+  "settled_accuracy": 62.7,
+  "settled_count": 354,
+  "holding_count": 172,
   "total_success": 222,
-  "total_fail": 131,
+  "total_fail": 132,
   "2026-03-30": {
     "predictions": [
       {
@@ -11775,6 +11775,87 @@
         "settlement_days": 10,
         "position": "3-5%",
         "score": 82,
+        "result": "fail",
+        "settled_date": "2026-06-02",
+        "settled_price": 69.9,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-06-02": {
+    "predictions": [
+      {
+        "symbol": "6282",
+        "name": "康舒",
+        "recommend_price": 65.8,
+        "target_price": 74.0,
+        "stop_loss": 59.22,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "15%",
+        "score": 109,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2027",
+        "name": "大成鋼",
+        "recommend_price": 43.2,
+        "target_price": 47.5,
+        "stop_loss": 38.88,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10%",
+        "score": 78,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "recommend_price": 167.5,
+        "target_price": 184.0,
+        "stop_loss": 150.75,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 77,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "8046",
+        "name": "南電",
+        "recommend_price": 905.0,
+        "target_price": 995.0,
+        "stop_loss": 814.5,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 74,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2345",
+        "name": "智邦",
+        "recommend_price": 2510.0,
+        "target_price": 2760.0,
+        "stop_loss": 2259.0,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 73,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
