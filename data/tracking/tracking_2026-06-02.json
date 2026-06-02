@@ -117,22 +117,38 @@
     {"code": "2887", "name": "台新新光金", "reason": "單日98K過量買超（>30K），連買<7天"}
   ],
   "tracking_holdings": [
-    {"code": "6282", "name": "康舒", "status": "holding", "day": 1, "holding_status": "D1，AI電源L3，觀察"},
-    {"code": "2485", "name": "兆赫", "status": "holding", "day": 1, "holding_status": "D1，距停損3%，密切觀察"},
-    {"code": "2337", "name": "旺宏", "status": "holding", "day": 2, "holding_status": "D2，Micron超強催化"},
-    {"code": "3035", "name": "智原", "status": "holding", "day": 2, "holding_status": "D2，Module A L2"},
-    {"code": "2609", "name": "陽明", "status": "holding", "day": 2, "holding_status": "D2，Module A L2"},
-    {"code": "1582", "name": "信錦", "status": "holding", "day": 2, "holding_status": "D2，觀察"},
-    {"code": "2379", "name": "瑞昱", "status": "holding", "day": 3, "holding_status": "D3，IC設計"},
-    {"code": "3034", "name": "聯詠", "status": "holding", "day": 3, "holding_status": "D3，持倉，距目標9.8%"},
-    {"code": "2891", "name": "中信金", "status": "holding", "day": 3, "holding_status": "D3，金融"},
-    {"code": "2027", "name": "大成鋼", "status": "holding", "day": 5, "holding_status": "D5，L3再推薦"},
-    {"code": "3576", "name": "聯合再生", "status": "holding", "day": 5, "holding_status": "D5，距停損5.6%警示"},
-    {"code": "2404", "name": "漢唐", "status": "holding", "day": 6, "holding_status": "D6，6/11法說"},
-    {"code": "2383", "name": "台光電", "status": "holding", "day": 6, "holding_status": "D6，今日法說09:00"},
-    {"code": "2363", "name": "矽統", "status": "holding", "day": 7, "holding_status": "D7，距目標3%"},
-    {"code": "6285", "name": "啟碁", "status": "holding", "day": 8, "holding_status": "D8，距目標4.8%，今日+12.5%"},
-    {"code": "3045", "name": "台灣大", "status": "holding", "day": 9, "holding_status": "D9，明日到期，距目標14.5%"},
-    {"code": "2368", "name": "金像電", "status": "holding", "day": 9, "holding_status": "D9，明日到期，距目標11.7%"}
+    {"code": "6282", "name": "康舒", "status": "holding", "day": 1, "intraday_price": 62.8, "holding_status": "D1，AI電源L3，距停損6%，法人連買3天，觀察"},
+    {"code": "2485", "name": "兆赫", "status": "exit_signal", "day": 1, "intraday_price": 69.6, "holding_status": "D1，🛑法人Level4強制出場：昨+8K今-3.4K反轉，MA5跌破，回落-10.3%"},
+    {"code": "2337", "name": "旺宏", "status": "holding", "day": 2, "intraday_price": 171.0, "holding_status": "D2，Micron超強催化，+2.1%，連買1天"},
+    {"code": "3035", "name": "智原", "status": "holding", "day": 2, "intraday_price": 204.5, "holding_status": "D2，MA5跌破+高點-5.5%，建議評估出場"},
+    {"code": "2609", "name": "陽明", "status": "holding", "day": 2, "intraday_price": 53.5, "holding_status": "D2，外資+20K但投信-6K，法人對決"},
+    {"code": "1582", "name": "信錦", "status": "exit_signal", "day": 2, "intraday_price": 111.5, "holding_status": "D2，🛑法人Level4強制出場：-2,513張=日均70.7%，MA5跌破，回落-9.3%"},
+    {"code": "2379", "name": "瑞昱", "status": "holding", "day": 3, "intraday_price": 643.0, "holding_status": "D3，今日+5.75%，連買5天，IC設計強勢"},
+    {"code": "3034", "name": "聯詠", "status": "holding", "day": 3, "intraday_price": 499.5, "holding_status": "D3，持倉，法人連買3天，+0.4%"},
+    {"code": "2891", "name": "中信金", "status": "holding", "day": 3, "intraday_price": 63.5, "holding_status": "D3，連漲6天注意回調，法人仍+9K"},
+    {"code": "2027", "name": "大成鋼", "status": "holding", "day": 5, "intraday_price": 42.8, "holding_status": "D5，L3持續，連買4天，距停損10%"},
+    {"code": "3576", "name": "聯合再生", "status": "holding", "day": 5, "intraday_price": 17.7, "holding_status": "D5，MA5跌破+高點-9.9%，法人雖仍買+4.3K，密切注意"},
+    {"code": "2404", "name": "漢唐", "status": "exit_signal", "day": 6, "intraday_price": 1140.0, "holding_status": "D6，🛑法人Level4強制出場：-265張=日均10.7%，MA5跌破，高點-11.5%"},
+    {"code": "2383", "name": "台光電", "status": "holding", "day": 6, "intraday_price": 4880.0, "holding_status": "D6，今日法說後走弱，MA5跌破，高點-12.3%，評估出場"},
+    {"code": "2363", "name": "矽統", "status": "exit_signal", "day": 7, "intraday_price": 66.4, "holding_status": "D7，🛑法人Level4強制出場：-1,265張=日均8.7%，近5天1買4賣"},
+    {"code": "6285", "name": "啟碁", "status": "exit_signal", "day": 8, "intraday_price": 307.5, "holding_status": "D8，🛑法人Level4強制出場：昨+4.7K今-3.1K反轉，MA5跌破，高點-8.8%"},
+    {"code": "3045", "name": "台灣大", "status": "holding", "day": 9, "intraday_price": 115.5, "holding_status": "D9，明日到期，連買3天，+1.3%"},
+    {"code": "2368", "name": "金像電", "status": "holding", "day": 9, "intraday_price": 1260.0, "holding_status": "D9，明日到期，MA5跌破，高點-14.3%，技術面弱"}
+  ],
+  "intraday_new_recommendations": [],
+  "track_b_observations": [
+    {"code": "6456", "name": "GIS-KY", "score": 69, "reason": "偵測器強度90+L2佈局完成，但消費電子與今日AI主催化關聯弱，未達75分門檻"},
+    {"code": "1802", "name": "台玻", "score": 60, "reason": "TOP50 rank5.5但36K單日過量買超-5分，且台玻非今日AI/記憶體主題"},
+    {"code": "3715", "name": "定穎投控", "score": 53, "reason": "PCB二線受益，EPS連6季衰退-5分，外資持股比減-3分"},
+    {"code": "4526", "name": "東台", "score": 43, "reason": "工具機非今日催化主題，營收連衰6月-5分，EPS-1分"}
+  ],
+  "detector_strong_signals": [
+    {"code": "6456", "name": "GIS-KY", "strength": 90, "days": 6, "volume_ratio": 1.82},
+    {"code": "3346", "name": "麗清", "strength": 75, "days": 7, "volume_ratio": 15.48, "excluded": "動能+500%追高"},
+    {"code": "2887", "name": "台新新光金", "strength": 65, "days": 5, "volume_ratio": 1.31, "excluded": "昨日98K過量買超排除"},
+    {"code": "3447", "name": "展達", "strength": 60, "days": 7, "volume_ratio": 3.73},
+    {"code": "6689", "name": "伊雲谷", "strength": 60, "days": 7, "volume_ratio": 8.23},
+    {"code": "6269", "name": "台郡", "strength": 60, "days": 7, "volume_ratio": 7.74, "excluded": "今日+4.2%超過3%門檻"},
+    {"code": "6585", "name": "鼎基", "strength": 60, "days": 7, "volume_ratio": 2.66, "excluded": "今日+4.1%超過3%門檻"}
   ]
 }
