@@ -1,0 +1,96 @@
+{
+  "date": "2026-06-03",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "regime": "多頭",
+    "vix": 15.77,
+    "defense_ratio": "0-15%",
+    "key_events": "COMPUTEX 2026 Day2 黃仁勳效應持續, AVGO明日財報, 費半+6.60%, MU+18.78%, Dell+42.69%, Marvell+39.63%",
+    "note": "多數AI科技股已5日大漲20-40%，今日新推薦受限，盤前主要任務為警告持倉中出場風險"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "industry": "DRAM與記憶體",
+      "recommend_price": 175.5,
+      "target_price": 202.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 157.95,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 84,
+      "reason": "DRAM/記憶體超強催化5週↑加速；MU+18.78%、SK海力士缺到2030、群聯CEO確認明年記憶體供不應求；法人TOP6(avg_rank=5.5)+31K昨日買超、外資持股比+0.78%週增；EPS YoY+82%、毛利率QoQ+10.6pp；已大漲5-10%限縮倉位5-10%",
+      "catalysts": ["DRAM超強催化↑加速", "MU+18.78%", "SK海力士缺到2030", "COMPUTEX記憶體供需確認"],
+      "risks": ["5日+9.3%已有部分漲幅", "三大法人昨日31K過量買超(-5分)", "停損157.95元嚴格執行"],
+      "tags": ["已大漲5-10%", "連買2天", "EPS強勁"]
+    }
+  ],
+  "holdings_assessment": [
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "score": 53,
+      "assessment": "續抱觀察",
+      "reason": "金融股催化弱(聯準會升息壓力)，5日+5.8%小漲，法人5連買但投信主導外資賣出，評分53分不建議加碼"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "score": 73,
+      "assessment": "續抱觀察",
+      "reason": "AI龍頭產業邏輯強，EPS+5分，但法人近期持平買超量小，5日+4.8%，73分可續抱但不建議加碼"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "score": 0,
+      "assessment": "續抱，不建議加碼",
+      "reason": "5日+30.8%超過20%不評分，法人110K買超雖強勁，但30K+過量買超、高位追漲風險高，持倉續抱等待回檔"
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "score": 46,
+      "assessment": "留意減碼",
+      "reason": "EPS連續4季YoY負成長(-5分)，催化劑弱，46分低於70分門檻，D4持有中，建議留意減碼機會"
+    }
+  ],
+  "tracking_exit_warnings": [
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦",
+      "tracking_day": "D1",
+      "warning_level": "Level 4",
+      "action": "不建議今日進場，昨日法人賣超-315張(佔日均量8.8%)",
+      "note": "持有中D1，可能昨日推薦後買入，Level 4建議考慮出場或不進場"
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "tracking_day": "D7",
+      "warning_level": "Level 4",
+      "action": "⚠️ 考慮出場，昨日賣超-197張(佔日均量10.6%)",
+      "note": "D7 距目標13.3%但距停損7.3%，法人出現Level 4爆量賣超"
+    },
+    {
+      "stock_code": "2404",
+      "stock_name": "漢唐",
+      "tracking_day": "D7",
+      "warning_level": "Level 4",
+      "action": "⚠️ 考慮出場，昨日賣超-504張(佔日均量14.1%)",
+      "note": "D7 距目標10.5%但距停損4.6%，停損已近，Level 4需特別注意"
+    },
+    {
+      "stock_code": "2363",
+      "stock_name": "矽統",
+      "tracking_day": "D8",
+      "warning_level": "Level 3",
+      "action": "⚠️ 注意反轉訊號，連續2日賣超累計轉負",
+      "note": "D8 距目標3.4%，Level 3確認反轉，建議盤中密切觀察"
+    }
+  ]
+}
