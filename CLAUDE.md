@@ -303,6 +303,8 @@ print('實際持有（加碼評估）：', held)
 ```
 **禁止憑公司名稱、印象或推測填寫 industry 欄位。找不到就寫「未分類」，不得捏造。**
 
+**🔴 禁止寫入 `industry_chains.json` 的 `tier_from_tracker`**：該欄位已廢除。時事驅動發現的新股票只記錄在 `industry_signals.json`，不得修改 `industry_chains.json`。
+
 **評分維度**：時事現況 25% | 法人數據 25% | 產業邏輯 20% | 技術面 15% | 價格位置 15%
 
 ---
@@ -930,7 +932,6 @@ python3 scripts/audit_industry_chains.py
 | 項目 | 內容 | 自動修復 |
 |------|------|---------|
 | 下市/停牌 | 查 Yahoo Finance 確認股票是否還有報價 | `--fix` 自動移除 |
-| tier_from_tracker 待審 | 統計 `industry_chain_sync.py` 自動加入但未歸位的股票 | 需人工判斷歸入正確 tier |
 | 冷門產業 | 近 30 天未出現在推薦中的產業 | 審視是否該保留或合併 |
 | 跨產業重複 | 同一股票出現在多個產業 | 合理重複（如鴻海）不需處理 |
 

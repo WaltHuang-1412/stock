@@ -97,26 +97,7 @@ def check_delisted(stocks, batch_size=10):
     return results
 
 
-# ── 檢查 2: tier_from_tracker 待審 ──────────────────────────────────
-
-def check_tracker_tier(chains_data):
-    """統計 tier_from_tracker 中的待審股票"""
-    pending = []
-    for ind_key, ind in chains_data.get("industries", {}).items():
-        tier = ind.get("tiers", {}).get("tier_from_tracker")
-        if tier and tier.get("stocks"):
-            for s in tier["stocks"]:
-                pending.append({
-                    "code": s["code"],
-                    "name": s.get("name", ""),
-                    "category": s.get("category", ""),
-                    "industry": ind_key,
-                    "industry_name": ind.get("name", ind_key),
-                })
-    return pending
-
-
-# ── 檢查 3: 冷門產業 ──────────────────────────────────────────────
+# ── 檢查 2: 冷門產業 ──────────────────────────────────────────────
 
 def check_cold_industries(chains_data, days=30):
     """找出近 N 天沒出現在 tracking 推薦中的產業"""
@@ -243,16 +224,7 @@ def run_audit(checks=None, fix=False, output_json=False):
             report["checks"]["delisted"]["fixed"] = len(removed)
             print(f"  ✅ 已移除 {len(removed)} 檔下市股", file=sys.stderr)
 
-    # 2. tier_from_tracker 待審
-    if run_all or "tracker" in checks:
-        print("\n🔍 檢查 2: tier_from_tracker 待審股票", file=sys.stderr)
-        pending = check_tracker_tier(chains_data)
-        report["checks"]["tracker_pending"] = {
-            "count": len(pending),
-            "stocks": pending,
-        }
-
-    # 3. 冷門產業
+    # 2. 冷門產業
     if run_all or "cold" in checks:
         print("\n🔍 檢查 3: 冷門產業（近30天未推薦）", file=sys.stderr)
         cold = check_cold_industries(chains_data)
@@ -294,21 +266,6 @@ def print_report(report):
                 print(f"   ✅ 已自動移除 {delisted['fixed']} 檔")
         else:
             print(f"\n✅ 下市/停牌：無")
-
-    # 待審
-    pending = checks.get("tracker_pending", {})
-    if "count" in pending:
-        count = pending["count"]
-        if count > 0:
-            print(f"\n🟡 tier_from_tracker 待審：{count} 檔")
-            by_industry = defaultdict(list)
-            for s in pending["stocks"]:
-                by_industry[s["industry"]].append(s)
-            for ind, stocks in by_industry.items():
-                names = ", ".join(f"{s['name']}({s['code']})" for s in stocks)
-                print(f"   [{ind}] {names}")
-        else:
-            print(f"\n✅ tier_from_tracker：無待審")
 
     # 冷門
     cold = checks.get("cold_industries", {})
