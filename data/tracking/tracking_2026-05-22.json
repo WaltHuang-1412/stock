@@ -131,11 +131,13 @@
       "leader_alert": 0,
       "momentum": "+10(佈局完成中)",
       "reversal_level": "L0",
-      "result": "holding",
-      "actual_close": 5005.0,
+      "result": "success",
+      "actual_close": 5505.0,
+      "settled_date": "2026-05-25",
+      "settled_price": 5505.0,
       "close_price": 5005.0,
       "change_percent": 6.72,
-      "holding_status": "D1/10，收盤5005.0(+6.7%)，距目標3.1%，法人+358張連買5天，L0，台積電法說5/26前D3，續抱"
+      "holding_status": "✅ D1 成功結算 收盤5505.0 ≥ 目標5159.0 | 報酬+17.4%（2026-05-22推薦4690→2026-05-25收盤5505）"
     },
     {
       "stock_code": "2363",
@@ -157,11 +159,12 @@
       "momentum": "+15(Module A L3)",
       "reversal_level": "L0",
       "note": "已在追蹤系統D2/10，可加碼或保持，非持有排除",
-      "result": "holding",
+      "result": "fail",
+      "fail_reason": "2026-06-03 Level 3 連續賣超（近2日累計-1505張，累計轉負），強制出場，出場價66.2(+5.4% 未達目標69.08)",
       "actual_close": 66.7,
       "close_price": 66.7,
       "change_percent": 6.21,
-      "holding_status": "D1/10，收盤66.7(+6.2%)，距目標3.6%，外資+1087張連買5天，L0，續抱"
+      "holding_status": "❌ D8 Level3強制出場 出場價66.2 報酬+5.4%（未達目標69.08）"
     }
   ],
   "yesterday_verification": {

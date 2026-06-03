@@ -63,8 +63,9 @@
       "actual_close": 207.0,
       "close_price": 207.0,
       "change_percent": -0.7,
-      "result": "holding",
-      "holding_status": "D0→D1 | Level 1 | 收盤207.0(-0.7%) | 外資近5天-693張未通過準確率篩選 | 距停損9.3%"
+      "result": "fail",
+      "fail_reason": "2026-06-03 Level 4 爆量賣超（-352張佔日均量5.2%），強制停損，出場價204.5(-1.9%)",
+      "holding_status": "❌ D4 Level4強制停損 出場價204.5 報酬-1.9%"
     },
     {
       "stock_code": "2609",
@@ -83,8 +84,9 @@
       "actual_close": 52.7,
       "close_price": 52.7,
       "change_percent": 0.8,
-      "result": "holding",
-      "holding_status": "D0→D1 | Level 1 | 收盤52.7(+0.8%) | Revenue連衰10月EPS連虧 | 距停損10.7%"
+      "result": "fail",
+      "fail_reason": "2026-06-03 Level 4 爆量賣超（-11145張佔日均量25.5%），強制出場，出場價53.9(+3.1% 未達目標58.5)",
+      "holding_status": "❌ D4 Level4強制出場 出場價53.9 報酬+3.1%（未達目標）"
     },
     {
       "stock_code": "2356",

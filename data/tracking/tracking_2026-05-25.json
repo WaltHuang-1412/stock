@@ -60,8 +60,9 @@
       "intraday_status": "holding",
       "intraday_note": "現價1265接近目標1271(差6元), 關注尾盤能否收盤達標",
       "actual_close": 1245.0,
-      "result": "holding",
-      "holding_status": "D0/10 收盤1245 距目標2.1% 距停損11.9% 法人Level0 ASML+台積電廠務超強催化"
+      "result": "fail",
+      "fail_reason": "2026-06-03 Level 4 爆量賣超（賣超504張佔日均量18.0%），強制停損，出場價1150(-0.4%)",
+      "holding_status": "❌ D7 強制停損 Level4爆量賣超 出場價1150 報酬-0.4%"
     },
     {
       "stock_code": "2383",
@@ -88,8 +89,9 @@
       "intraday_status": "holding",
       "intraday_note": "現價5505極接近目標5506(差1元!), 收盤若≥5506將結算success",
       "actual_close": 5505.0,
-      "result": "holding",
-      "holding_status": "D0/10 收盤5505 差1元未達目標5506 距停損18.2% 法人外資+投信持續 明日仍有機會"
+      "result": "fail",
+      "fail_reason": "2026-06-03 Level 4 爆量賣超（賣超197張佔日均量13.1%），強制停損，出場價4890(-2.3%)",
+      "holding_status": "❌ D7 強制停損 Level4爆量賣超 出場價4890 報酬-2.3%"
     },
     {
       "stock_code": "3034",

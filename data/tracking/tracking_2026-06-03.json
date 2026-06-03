@@ -24,6 +24,10 @@
       "position": "5-10%",
       "score": 84,
       "reason": "DRAM/記憶體超強催化5週↑加速；MU+18.78%、SK海力士缺到2030、群聯CEO確認明年記憶體供不應求；法人TOP6(avg_rank=5.5)+31K昨日買超、外資持股比+0.78%週增；EPS YoY+82%、毛利率QoQ+10.6pp；已大漲5-10%限縮倉位5-10%",
+      "intraday_price": 164.0,
+      "intraday_change_pct": -6.5,
+      "intraday_status": "holding",
+      "intraday_note": "⚠️極度危險：D0即-6.5%，停損157.95，距停損僅3.7%。法人Level0但盤中大幅回落。尾盤若≤160考慮提前出場。",
       "catalysts": ["DRAM超強催化↑加速", "MU+18.78%", "SK海力士缺到2030", "COMPUTEX記憶體供需確認"],
       "risks": ["5日+9.3%已有部分漲幅", "三大法人昨日31K過量買超(-5分)", "停損157.95元嚴格執行"],
       "tags": ["已大漲5-10%", "連買2天", "EPS強勁"]
@@ -58,6 +62,31 @@
       "assessment": "留意減碼",
       "reason": "EPS連續4季YoY負成長(-5分)，催化劑弱，46分低於70分門檻，D4持有中，建議留意減碼機會"
     }
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {"code": "2867", "name": "三商壽", "note": "偵測器強85，但動能+496%>100%，金融保險無強催化，排除"},
+    {"code": "3515", "name": "華擎", "note": "偵測器強75，但動能+150%>100%，主機板非今日主催化，排除"},
+    {"code": "5484", "name": "慧友", "note": "偵測器強65，但動能+352%>100%，監控無強催化，排除"},
+    {"code": "2317", "name": "鴻海", "note": "偵測器強65，但5日+16.9%已大漲，COMPUTEX同一催化脈絡，排除"},
+    {"code": "4938", "name": "和碩", "note": "偵測器強60，5日+21.2%已大漲，排除"},
+    {"code": "6573", "name": "虹揚-KY", "note": "偵測器強60，今日+4.6%>3%門檻，排除"},
+    {"code": "2897", "name": "王道銀行", "note": "偵測器強60，累計淨買超-1464張（負），排除"},
+    {"code": "6214", "name": "精誠", "note": "偵測器強75，評分64分（IT服務法人量小，不在TOP50），未達75分門檻，排除"},
+    {"code": "2881", "name": "富邦金", "note": "TOP50 rank28，評分55分（金融無強催化，近5天法人對決），未達75分門檻，排除"},
+    {"code": "2392", "name": "正崴", "note": "Module B通過初篩但Level 2反轉（昨日賣超），排除"},
+    {"code": "3035", "name": "智原", "note": "Module B通過初篩但今日Level 4已強制出場，排除"}
+  ],
+  "intraday_level4_exits": [
+    {"code": "6282", "name": "康舒", "exit_price": 63.5, "pnl": -3.5, "reason": "Level4 -12568張(19.9%)"},
+    {"code": "8046", "name": "南電", "exit_price": 908.0, "pnl": 0.3, "reason": "Level4 -3485張(23.5%)"},
+    {"code": "2345", "name": "智邦", "exit_price": 2585.0, "pnl": 3.0, "reason": "Level4 -315張(9.2%)"},
+    {"code": "3035", "name": "智原", "exit_price": 204.5, "pnl": -1.9, "reason": "Level4 -352張(5.2%)"},
+    {"code": "2609", "name": "陽明", "exit_price": 53.9, "pnl": 3.1, "reason": "Level4 -11145張(25.5%)"},
+    {"code": "3576", "name": "聯合再生", "exit_price": 18.55, "pnl": -4.4, "reason": "Level4 -3677張(20%)"},
+    {"code": "2383", "name": "台光電", "exit_price": 4890.0, "pnl": -2.3, "reason": "Level4 -197張(13.1%)"},
+    {"code": "2404", "name": "漢唐", "exit_price": 1150.0, "pnl": -0.4, "reason": "Level4 -504張(18%)"},
+    {"code": "2363", "name": "矽統", "exit_price": 66.2, "pnl": 5.4, "reason": "Level3 連2日累計轉負"}
   ],
   "tracking_exit_warnings": [
     {
