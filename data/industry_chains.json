@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-01",
+  "last_updated": "2026-06-03",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -466,6 +466,11 @@
             {
               "code": "4906",
               "name": "正文",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "2352",
+              "name": "佳世達",
               "category": "AI 伺服器與半導體"
             }
           ]
@@ -4423,6 +4428,21 @@
               "code": "7792",
               "name": "安葆",
               "category": "儲能與電力基建"
+            },
+            {
+              "code": "6982",
+              "name": "大井泵浦",
+              "category": "儲能與電力基建"
+            },
+            {
+              "code": "3017",
+              "name": "奇鋐",
+              "category": "儲能與電力基建"
+            },
+            {
+              "code": "3324",
+              "name": "雙鴻",
+              "category": "儲能與電力基建"
             }
           ]
         }
@@ -4524,6 +4544,21 @@
               "code": "4562",
               "name": "穎漢",
               "category": "機器人供應鏈"
+            },
+            {
+              "code": "2049",
+              "name": "上銀",
+              "category": "機器人供應鏈"
+            },
+            {
+              "code": "4585",
+              "name": "達明",
+              "category": "機器人供應鏈"
+            },
+            {
+              "code": "2233",
+              "name": "宇隆",
+              "category": "機器人供應鏈"
             }
           ]
         }
@@ -4570,6 +4605,11 @@
             {
               "code": "2377",
               "name": "微星",
+              "category": "NVIDIA RTX Spark / ARM AI PC"
+            },
+            {
+              "code": "2498",
+              "name": "宏達電",
               "category": "NVIDIA RTX Spark / ARM AI PC"
             }
           ]
@@ -4639,6 +4679,76 @@
               "code": "1802",
               "name": "台玻",
               "category": "玻璃基板"
+            },
+            {
+              "code": "6770",
+              "name": "力積電",
+              "category": "玻璃基板"
+            },
+            {
+              "code": "6531",
+              "name": "愛普",
+              "category": "玻璃基板"
+            }
+          ]
+        }
+      }
+    },
+    "鋼鐵": {
+      "name": "鋼鐵",
+      "catalysts": [
+        "鋼鐵",
+        "鋼鐵族群"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2002",
+              "name": "中鋼",
+              "category": "鋼鐵族群"
+            },
+            {
+              "code": "2014",
+              "name": "中鴻",
+              "category": "鋼鐵族群"
+            }
+          ]
+        }
+      }
+    },
+    "世足賽": {
+      "name": "世足賽",
+      "catalysts": [
+        "世足賽",
+        "世足賽供應鏈"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "1476",
+              "name": "儒鴻",
+              "category": "世足賽供應鏈"
+            },
+            {
+              "code": "1477",
+              "name": "聚陽",
+              "category": "世足賽供應鏈"
+            },
+            {
+              "code": "1402",
+              "name": "遠東新",
+              "category": "世足賽供應鏈"
+            },
+            {
+              "code": "9904",
+              "name": "寶成",
+              "category": "世足賽供應鏈"
             }
           ]
         }
