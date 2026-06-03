@@ -7543,11 +7543,11 @@
       }
     ]
   },
-  "settled_accuracy": 62.7,
-  "settled_count": 354,
-  "holding_count": 172,
-  "total_success": 222,
-  "total_fail": 132,
+  "settled_accuracy": "62.7%",
+  "settled_count": 357,
+  "holding_count": 169,
+  "total_success": 224,
+  "total_fail": 133,
   "2026-03-30": {
     "predictions": [
       {
@@ -7643,8 +7643,8 @@
     ],
     "date": "2026-03-30"
   },
-  "cumulative_success": 130,
-  "cumulative_fail": 88,
+  "cumulative_success": 224,
+  "cumulative_fail": 133,
   "2026-03-31": {
     "date": "2026-03-31",
     "predictions": [
@@ -11233,9 +11233,9 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 81,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "fail",
+        "settled_date": "2026-06-03",
+        "settled_price": 116.0,
         "holding_days": 1
       },
       {
@@ -11263,9 +11263,9 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 78,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-06-03",
+        "settled_price": 1385.0,
         "holding_days": 1
       },
       {
@@ -11288,11 +11288,11 @@
     "settled_count": 0
   },
   "_stats": {
-    "success_count": 202,
-    "fail_count": 128,
+    "success_count": 224,
+    "fail_count": 133,
     "holding_count": 176,
-    "settled_count": 330,
-    "settled_accuracy": 0.6121
+    "settled_count": 357,
+    "settled_accuracy": "62.7%"
   },
   "2026-05-21": {
     "predictions": [
@@ -11643,9 +11643,9 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 84,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-06-03",
+        "settled_price": 70.5,
         "holding_days": 1
       }
     ],
@@ -11856,6 +11856,27 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 73,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-06-03": {
+    "predictions": [
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "recommend_price": 175.5,
+        "target_price": 202.0,
+        "stop_loss": 157.95,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 84,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,

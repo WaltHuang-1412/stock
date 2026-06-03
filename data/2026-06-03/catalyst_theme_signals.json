@@ -115,8 +115,8 @@
         "momentum_pct": 287.3720136518771,
         "consecutive_buy": 0,
         "cumulative_foreign": 282,
-        "reversal_level": "Level 4",
-        "exclusion_reason": "反轉Level 4排除｜動能+287%>100%排除",
+        "reversal_level": "Level 0",
+        "exclusion_reason": "動能+287%>100%排除",
         "passed": false
       }
     },
@@ -259,7 +259,7 @@
         "momentum_pct": -71.70849089034031,
         "consecutive_buy": 0,
         "cumulative_foreign": 3361,
-        "reversal_level": "Level 2",
+        "reversal_level": "Level 0",
         "exclusion_reason": "通過基礎篩選",
         "passed": true
       }
@@ -313,44 +313,6 @@
       }
     },
     {
-      "code": "3406",
-      "name": "玉晶光",
-      "tw_industry": "蘋果供應鏈",
-      "us_leader": "Apple",
-      "signal_level": "strong",
-      "leader_cumulative": 15.74,
-      "leader_consecutive_up": 1,
-      "maturity": "mid",
-      "tw_5d_change": null,
-      "in_top50": false,
-      "score": 82,
-      "chip_data": {
-        "cumulative_total": 676,
-        "buy_days": 6,
-        "sell_days": 4,
-        "momentum_pct": -137.75322283609577,
-        "consecutive_buy": 0,
-        "cumulative_foreign": 868,
-        "reversal_level": "Level 0",
-        "exclusion_reason": "動能-138%>100%排除",
-        "passed": false
-      }
-    },
-    {
-      "code": "3376",
-      "name": "新日興",
-      "tw_industry": "蘋果供應鏈",
-      "us_leader": "Apple",
-      "signal_level": "strong",
-      "leader_cumulative": 15.74,
-      "leader_consecutive_up": 1,
-      "maturity": "mid",
-      "tw_5d_change": null,
-      "in_top50": false,
-      "score": 82,
-      "chip_data": {}
-    },
-    {
       "code": "1513",
       "name": "中興電",
       "tw_industry": "電動車",
@@ -362,7 +324,17 @@
       "tw_5d_change": null,
       "in_top50": false,
       "score": 82,
-      "chip_data": {}
+      "chip_data": {
+        "cumulative_total": -3067,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -342.5848442584844,
+        "consecutive_buy": 2,
+        "cumulative_foreign": -6309,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-3,067為負｜數據不足無法評分",
+        "passed": false
+      }
     },
     {
       "code": "1519",
@@ -395,6 +367,34 @@
     {
       "code": "1503",
       "name": "士電",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "strong",
+      "leader_cumulative": 23.14,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "2049",
+      "name": "上銀",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "strong",
+      "leader_cumulative": 23.14,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "2231",
+      "name": "為升",
       "tw_industry": "電動車",
       "us_leader": "Tesla",
       "signal_level": "strong",
@@ -457,37 +457,37 @@
       "tw_5d_change": 0.9615359927070815
     },
     {
-      "code": "2354",
-      "name": "鴻準",
-      "tw_industry": "蘋果供應鏈",
-      "us_leader": "Apple",
-      "leader_cumulative": 15.74,
-      "tw_5d_change": 5.785123966942149
-    },
-    {
-      "code": "3706",
-      "name": "神達",
-      "tw_industry": "電動車",
-      "us_leader": "Tesla",
-      "leader_cumulative": 23.14,
-      "tw_5d_change": 8.924479732478865
-    },
-    {
       "code": "2337",
       "name": "旺宏",
       "tw_industry": "半導體設備",
       "us_leader": "ASML",
       "leader_cumulative": 21.2,
-      "tw_5d_change": 9.345794392523365
+      "tw_5d_change": 4.180064308681672
     },
     {
-      "code": "4904",
-      "name": "遠傳",
-      "tw_industry": "網通",
-      "us_leader": "Broadcom",
-      "leader_cumulative": 53.22,
-      "tw_5d_change": 5.851063829787234
+      "code": "2354",
+      "name": "鴻準",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "leader_cumulative": 15.74,
+      "tw_5d_change": 9.04522218119275
+    },
+    {
+      "code": "4938",
+      "name": "和碩",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "leader_cumulative": 15.74,
+      "tw_5d_change": 19.97564169388917
+    },
+    {
+      "code": "2353",
+      "name": "宏碁",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "leader_cumulative": 15.74,
+      "tw_5d_change": 38.21656704819512
     }
   ],
-  "already_moved_count": 68
+  "already_moved_count": 36
 }

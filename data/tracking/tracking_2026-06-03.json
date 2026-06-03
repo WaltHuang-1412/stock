@@ -28,6 +28,11 @@
       "intraday_change_pct": -6.5,
       "intraday_status": "holding",
       "intraday_note": "⚠️極度危險：D0即-6.5%，停損157.95，距停損僅3.7%。法人Level0但盤中大幅回落。尾盤若≤160考慮提前出場。",
+      "actual_close": 162.0,
+      "close_price": 162.0,
+      "change_percent": -7.7,
+      "result": "holding",
+      "holding_status": "D0/10，收盤162.0(-7.7%)，距停損157.95僅2.5%⚠️，明日需密切追蹤",
       "catalysts": ["DRAM超強催化↑加速", "MU+18.78%", "SK海力士缺到2030", "COMPUTEX記憶體供需確認"],
       "risks": ["5日+9.3%已有部分漲幅", "三大法人昨日31K過量買超(-5分)", "停損157.95元嚴格執行"],
       "tags": ["已大漲5-10%", "連買2天", "EPS強勁"]
@@ -121,5 +126,120 @@
       "action": "⚠️ 注意反轉訊號，連續2日賣超累計轉負",
       "note": "D8 距目標3.4%，Level 3確認反轉，建議盤中密切觀察"
     }
+  ],
+  "after_market_update": {
+    "time": "14:30",
+    "settled_today": [
+      {
+        "stock_code": "2485",
+        "stock_name": "兆赫",
+        "recommend_date": "2026-06-01",
+        "recommend_price": 74.1,
+        "actual_close": 69.2,
+        "result": "fail",
+        "return_pct": -6.6,
+        "settled_date": "2026-06-03",
+        "note": "收盤69.2 ≤ 停損70.39（-5%設定），超強催化覆寫但法人支撐不足"
+      },
+      {
+        "stock_code": "2891",
+        "stock_name": "中信金",
+        "recommend_date": "2026-05-28",
+        "recommend_price": 59.9,
+        "actual_close": 70.5,
+        "result": "success",
+        "return_pct": 17.7,
+        "settled_date": "2026-06-03",
+        "note": "D4 達目標！收盤70.5 ≥ 目標66.0，外資持續買超+EPS+47.8%驗證"
+      },
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "recommend_date": "2026-05-20",
+        "recommend_price": 116.5,
+        "actual_close": 116.0,
+        "result": "fail",
+        "return_pct": -0.4,
+        "settled_date": "2026-06-03",
+        "note": "D10 到期，收盤116.0 ≤ 推薦116.5，衛星催化遲未兌現"
+      },
+      {
+        "stock_code": "2363",
+        "stock_name": "矽統",
+        "recommend_date": "2026-05-20",
+        "recommend_price": 60.5,
+        "actual_close": 65.4,
+        "result": "success",
+        "return_pct": 8.1,
+        "settled_date": "2026-06-03",
+        "note": "D10 到期，收盤65.4 > 推薦60.5，被動元件受益費半強勢"
+      },
+      {
+        "stock_code": "2368",
+        "stock_name": "金像電",
+        "recommend_date": "2026-05-20",
+        "recommend_price": 1285.0,
+        "actual_close": 1385.0,
+        "result": "success",
+        "return_pct": 7.8,
+        "settled_date": "2026-06-03",
+        "note": "D10 到期，收盤1385.0 > 推薦1285.0，AI伺服器PCB基本面強勁"
+      }
+    ],
+    "holdings_update": [
+      {"code": "2337", "name": "旺宏", "close": 162.0, "change_pct": -7.7, "result": "holding", "holding_status": "D0/10，⚠️距停損2.5%，明日密切追蹤"},
+      {"code": "2027", "name": "大成鋼", "close": 43.85, "change_pct": 1.5, "result": "holding", "holding_status": "D1/10，正常持有"},
+      {"code": "1582", "name": "信錦", "close": 111.5, "change_pct": -1.8, "result": "holding", "holding_status": "D3/10，累計轉負⚠️，需觀察"},
+      {"code": "2379", "name": "瑞昱", "close": 646.0, "change_pct": 7.7, "result": "holding", "holding_status": "D4/10，接近目標670（距3.7%）"},
+      {"code": "3034", "name": "聯詠", "close": 503.0, "change_pct": 3.7, "result": "holding", "holding_status": "D4/10，正常持有"},
+      {"code": "6285", "name": "啓碁", "close": 306.0, "change_pct": 9.7, "result": "holding", "holding_status": "D9/10，明日D10結算，距目標7.5%"}
+    ],
+    "accuracy_update": "62.7% (224s/133f/357settled)",
+    "key_variable": "AVGO 財報今晚公布（美股），明早台股知道結果，為明日最大變數",
+    "flow_defect": "1. 市場整體大漲20-40%後，個股評分需加入行情成熟度折損因子；2. Level 4批量出場符合規則，流程合規"
+  },
+  "yesterday_verification": {
+    "date": "2026-06-03",
+    "accuracy": 62.7,
+    "settled_count": 357,
+    "success_count": 224,
+    "fail_count": 133,
+    "settled_today": [
+      {"symbol": "2891", "name": "中信金", "result": "success", "return_pct": 17.7, "note": "D4達目標70.5≥66.0"},
+      {"symbol": "2363", "name": "矽統", "result": "success", "return_pct": 8.1, "note": "D10到期，65.4>60.5"},
+      {"symbol": "2368", "name": "金像電", "result": "success", "return_pct": 7.8, "note": "D10到期，1385>1285"},
+      {"symbol": "2485", "name": "兆赫", "result": "fail", "return_pct": -6.6, "note": "停損觸發69.2≤70.39"},
+      {"symbol": "3045", "name": "台灣大", "result": "fail", "return_pct": -0.4, "note": "D10到期，116.0≤116.5"}
+    ],
+    "results": [
+      {"symbol": "2891", "name": "中信金", "recommend_price": 59.9, "close_price": 70.5, "result": "success", "change_pct": 17.7},
+      {"symbol": "2363", "name": "矽統", "recommend_price": 60.5, "close_price": 65.4, "result": "success", "change_pct": 8.1},
+      {"symbol": "2368", "name": "金像電", "recommend_price": 1285.0, "close_price": 1385.0, "result": "success", "change_pct": 7.8},
+      {"symbol": "2485", "name": "兆赫", "recommend_price": 74.1, "close_price": 69.2, "result": "fail", "change_pct": -6.6},
+      {"symbol": "3045", "name": "台灣大", "recommend_price": 116.5, "close_price": 116.0, "result": "fail", "change_pct": -0.4}
+    ]
+  },
+  "tomorrow_recommendations": [],
+  "tomorrow_watch_list": [
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "note": "法人avg_rank 22.5，今收113（5日+2.7%），Level 0，準確率篩選催化對齊待確認（取決於AVGO結果帶動金融預期）",
+      "condition": "AVGO強勁財報 → 金融可能受益外資資金持續流入"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "note": "若AVGO強勁帶動DRAM族群回升，旺宏可能在停損前回彈。否則停損157.95嚴格執行",
+      "condition": "AVGO大幅超預期（>+10%）才考慮"
+    }
+  ],
+  "removed_stocks": [
+    {"stock_code": "1802", "stock_name": "台玻", "reason": "Level 4 爆量賣超 -50K張(83.9%日均量)，直接排除"},
+    {"stock_code": "2615", "stock_name": "萬海", "reason": "Level 4 爆量賣超 -608張(5.3%日均量)，直接排除"},
+    {"stock_code": "2892", "stock_name": "第一金", "reason": "累計賣超 -356K張，法人10天9天賣超，結構惡化"},
+    {"stock_code": "5876", "stock_name": "上海商銀", "reason": "外資累計-30K，外資持續賣出，排除"},
+    {"stock_code": "3035", "stock_name": "智原", "reason": "評分65分<70門檻，EPS連4季衰退，不推薦"},
+    {"stock_code": "2392", "stock_name": "正崴", "reason": "催化對齊失敗（蘋果非今日最強催化），評分62分<70門檻"}
   ]
 }
