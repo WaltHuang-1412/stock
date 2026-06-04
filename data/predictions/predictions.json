@@ -7543,11 +7543,11 @@
       }
     ]
   },
-  "settled_accuracy": "62.7%",
-  "settled_count": 357,
-  "holding_count": 169,
-  "total_success": 224,
-  "total_fail": 133,
+  "settled_accuracy": "62.8%",
+  "settled_count": 360,
+  "holding_count": 304,
+  "total_success": 226,
+  "total_fail": 134,
   "2026-03-30": {
     "predictions": [
       {
@@ -7643,8 +7643,8 @@
     ],
     "date": "2026-03-30"
   },
-  "cumulative_success": 224,
-  "cumulative_fail": 133,
+  "cumulative_success": 226,
+  "cumulative_fail": 134,
   "2026-03-31": {
     "date": "2026-03-31",
     "predictions": [
@@ -11203,10 +11203,10 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 96,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-06-04",
+        "settled_price": 296.0,
+        "holding_days": 11
       },
       {
         "symbol": "3034",
@@ -11288,11 +11288,11 @@
     "settled_count": 0
   },
   "_stats": {
-    "success_count": 224,
-    "fail_count": 133,
-    "holding_count": 176,
-    "settled_count": 357,
-    "settled_accuracy": "62.7%"
+    "success_count": 226,
+    "fail_count": 134,
+    "holding_count": 304,
+    "settled_count": 360,
+    "settled_accuracy": "62.8%"
   },
   "2026-05-21": {
     "predictions": [
@@ -11321,10 +11321,10 @@
         "settlement_days": 10,
         "position": "15%",
         "score": 91,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-06-04",
+        "settled_price": 296.0,
+        "holding_days": 10
       },
       {
         "symbol": "2376",
@@ -11877,6 +11877,102 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 84,
+        "result": "fail",
+        "settled_date": "2026-06-04",
+        "settled_price": 156.5,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-06-04": {
+    "predictions": [
+      {
+        "symbol": "8046",
+        "name": "南電",
+        "recommend_price": 904.0,
+        "target_price": 990.0,
+        "stop_loss": 813.6,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 96,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2301",
+        "name": "光寶科",
+        "recommend_price": 250.0,
+        "target_price": 285.0,
+        "stop_loss": 225.0,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 93,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2027",
+        "name": "大成鋼",
+        "recommend_price": 43.85,
+        "target_price": 47.5,
+        "stop_loss": 39.465,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 81,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "3017",
+        "name": "奇鋐",
+        "recommend_price": 2855.0,
+        "target_price": 3140.0,
+        "stop_loss": 2569.5,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 78,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2449",
+        "name": "京元電子",
+        "recommend_price": 322.5,
+        "target_price": 355.0,
+        "stop_loss": 290.25,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 74,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2345",
+        "name": "智邦",
+        "recommend_price": 2585.0,
+        "target_price": 2850.0,
+        "stop_loss": 2326.5,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 73,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,

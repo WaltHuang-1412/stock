@@ -31,11 +31,27 @@
       "actual_close": 162.0,
       "close_price": 162.0,
       "change_percent": -7.7,
-      "result": "holding",
+      "result": "fail",
       "holding_status": "D0/10，收盤162.0(-7.7%)，距停損157.95僅2.5%⚠️，明日需密切追蹤",
-      "catalysts": ["DRAM超強催化↑加速", "MU+18.78%", "SK海力士缺到2030", "COMPUTEX記憶體供需確認"],
-      "risks": ["5日+9.3%已有部分漲幅", "三大法人昨日31K過量買超(-5分)", "停損157.95元嚴格執行"],
-      "tags": ["已大漲5-10%", "連買2天", "EPS強勁"]
+      "catalysts": [
+        "DRAM超強催化↑加速",
+        "MU+18.78%",
+        "SK海力士缺到2030",
+        "COMPUTEX記憶體供需確認"
+      ],
+      "risks": [
+        "5日+9.3%已有部分漲幅",
+        "三大法人昨日31K過量買超(-5分)",
+        "停損157.95元嚴格執行"
+      ],
+      "tags": [
+        "已大漲5-10%",
+        "連買2天",
+        "EPS強勁"
+      ],
+      "settled_price": 156.5,
+      "settled_date": "2026-06-04",
+      "fail_reason": "觸停損：收盤 156.5 ≤ 停損 157.95 (-10.8%)"
     }
   ],
   "holdings_assessment": [
@@ -70,28 +86,126 @@
   ],
   "track_b_recommendations": [],
   "track_b_observations": [
-    {"code": "2867", "name": "三商壽", "note": "偵測器強85，但動能+496%>100%，金融保險無強催化，排除"},
-    {"code": "3515", "name": "華擎", "note": "偵測器強75，但動能+150%>100%，主機板非今日主催化，排除"},
-    {"code": "5484", "name": "慧友", "note": "偵測器強65，但動能+352%>100%，監控無強催化，排除"},
-    {"code": "2317", "name": "鴻海", "note": "偵測器強65，但5日+16.9%已大漲，COMPUTEX同一催化脈絡，排除"},
-    {"code": "4938", "name": "和碩", "note": "偵測器強60，5日+21.2%已大漲，排除"},
-    {"code": "6573", "name": "虹揚-KY", "note": "偵測器強60，今日+4.6%>3%門檻，排除"},
-    {"code": "2897", "name": "王道銀行", "note": "偵測器強60，累計淨買超-1464張（負），排除"},
-    {"code": "6214", "name": "精誠", "note": "偵測器強75，評分64分（IT服務法人量小，不在TOP50），未達75分門檻，排除"},
-    {"code": "2881", "name": "富邦金", "note": "TOP50 rank28，評分55分（金融無強催化，近5天法人對決），未達75分門檻，排除"},
-    {"code": "2392", "name": "正崴", "note": "Module B通過初篩但Level 2反轉（昨日賣超），排除"},
-    {"code": "3035", "name": "智原", "note": "Module B通過初篩但今日Level 4已強制出場，排除"}
+    {
+      "code": "2867",
+      "name": "三商壽",
+      "note": "偵測器強85，但動能+496%>100%，金融保險無強催化，排除"
+    },
+    {
+      "code": "3515",
+      "name": "華擎",
+      "note": "偵測器強75，但動能+150%>100%，主機板非今日主催化，排除"
+    },
+    {
+      "code": "5484",
+      "name": "慧友",
+      "note": "偵測器強65，但動能+352%>100%，監控無強催化，排除"
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "note": "偵測器強65，但5日+16.9%已大漲，COMPUTEX同一催化脈絡，排除"
+    },
+    {
+      "code": "4938",
+      "name": "和碩",
+      "note": "偵測器強60，5日+21.2%已大漲，排除"
+    },
+    {
+      "code": "6573",
+      "name": "虹揚-KY",
+      "note": "偵測器強60，今日+4.6%>3%門檻，排除"
+    },
+    {
+      "code": "2897",
+      "name": "王道銀行",
+      "note": "偵測器強60，累計淨買超-1464張（負），排除"
+    },
+    {
+      "code": "6214",
+      "name": "精誠",
+      "note": "偵測器強75，評分64分（IT服務法人量小，不在TOP50），未達75分門檻，排除"
+    },
+    {
+      "code": "2881",
+      "name": "富邦金",
+      "note": "TOP50 rank28，評分55分（金融無強催化，近5天法人對決），未達75分門檻，排除"
+    },
+    {
+      "code": "2392",
+      "name": "正崴",
+      "note": "Module B通過初篩但Level 2反轉（昨日賣超），排除"
+    },
+    {
+      "code": "3035",
+      "name": "智原",
+      "note": "Module B通過初篩但今日Level 4已強制出場，排除"
+    }
   ],
   "intraday_level4_exits": [
-    {"code": "6282", "name": "康舒", "exit_price": 63.5, "pnl": -3.5, "reason": "Level4 -12568張(19.9%)"},
-    {"code": "8046", "name": "南電", "exit_price": 908.0, "pnl": 0.3, "reason": "Level4 -3485張(23.5%)"},
-    {"code": "2345", "name": "智邦", "exit_price": 2585.0, "pnl": 3.0, "reason": "Level4 -315張(9.2%)"},
-    {"code": "3035", "name": "智原", "exit_price": 204.5, "pnl": -1.9, "reason": "Level4 -352張(5.2%)"},
-    {"code": "2609", "name": "陽明", "exit_price": 53.9, "pnl": 3.1, "reason": "Level4 -11145張(25.5%)"},
-    {"code": "3576", "name": "聯合再生", "exit_price": 18.55, "pnl": -4.4, "reason": "Level4 -3677張(20%)"},
-    {"code": "2383", "name": "台光電", "exit_price": 4890.0, "pnl": -2.3, "reason": "Level4 -197張(13.1%)"},
-    {"code": "2404", "name": "漢唐", "exit_price": 1150.0, "pnl": -0.4, "reason": "Level4 -504張(18%)"},
-    {"code": "2363", "name": "矽統", "exit_price": 66.2, "pnl": 5.4, "reason": "Level3 連2日累計轉負"}
+    {
+      "code": "6282",
+      "name": "康舒",
+      "exit_price": 63.5,
+      "pnl": -3.5,
+      "reason": "Level4 -12568張(19.9%)"
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "exit_price": 908.0,
+      "pnl": 0.3,
+      "reason": "Level4 -3485張(23.5%)"
+    },
+    {
+      "code": "2345",
+      "name": "智邦",
+      "exit_price": 2585.0,
+      "pnl": 3.0,
+      "reason": "Level4 -315張(9.2%)"
+    },
+    {
+      "code": "3035",
+      "name": "智原",
+      "exit_price": 204.5,
+      "pnl": -1.9,
+      "reason": "Level4 -352張(5.2%)"
+    },
+    {
+      "code": "2609",
+      "name": "陽明",
+      "exit_price": 53.9,
+      "pnl": 3.1,
+      "reason": "Level4 -11145張(25.5%)"
+    },
+    {
+      "code": "3576",
+      "name": "聯合再生",
+      "exit_price": 18.55,
+      "pnl": -4.4,
+      "reason": "Level4 -3677張(20%)"
+    },
+    {
+      "code": "2383",
+      "name": "台光電",
+      "exit_price": 4890.0,
+      "pnl": -2.3,
+      "reason": "Level4 -197張(13.1%)"
+    },
+    {
+      "code": "2404",
+      "name": "漢唐",
+      "exit_price": 1150.0,
+      "pnl": -0.4,
+      "reason": "Level4 -504張(18%)"
+    },
+    {
+      "code": "2363",
+      "name": "矽統",
+      "exit_price": 66.2,
+      "pnl": 5.4,
+      "reason": "Level3 連2日累計轉負"
+    }
   ],
   "tracking_exit_warnings": [
     {
@@ -187,12 +301,54 @@
       }
     ],
     "holdings_update": [
-      {"code": "2337", "name": "旺宏", "close": 162.0, "change_pct": -7.7, "result": "holding", "holding_status": "D0/10，⚠️距停損2.5%，明日密切追蹤"},
-      {"code": "2027", "name": "大成鋼", "close": 43.85, "change_pct": 1.5, "result": "holding", "holding_status": "D1/10，正常持有"},
-      {"code": "1582", "name": "信錦", "close": 111.5, "change_pct": -1.8, "result": "holding", "holding_status": "D3/10，累計轉負⚠️，需觀察"},
-      {"code": "2379", "name": "瑞昱", "close": 646.0, "change_pct": 7.7, "result": "holding", "holding_status": "D4/10，接近目標670（距3.7%）"},
-      {"code": "3034", "name": "聯詠", "close": 503.0, "change_pct": 3.7, "result": "holding", "holding_status": "D4/10，正常持有"},
-      {"code": "6285", "name": "啓碁", "close": 306.0, "change_pct": 9.7, "result": "holding", "holding_status": "D9/10，明日D10結算，距目標7.5%"}
+      {
+        "code": "2337",
+        "name": "旺宏",
+        "close": 162.0,
+        "change_pct": -7.7,
+        "result": "holding",
+        "holding_status": "D0/10，⚠️距停損2.5%，明日密切追蹤"
+      },
+      {
+        "code": "2027",
+        "name": "大成鋼",
+        "close": 43.85,
+        "change_pct": 1.5,
+        "result": "holding",
+        "holding_status": "D1/10，正常持有"
+      },
+      {
+        "code": "1582",
+        "name": "信錦",
+        "close": 111.5,
+        "change_pct": -1.8,
+        "result": "holding",
+        "holding_status": "D3/10，累計轉負⚠️，需觀察"
+      },
+      {
+        "code": "2379",
+        "name": "瑞昱",
+        "close": 646.0,
+        "change_pct": 7.7,
+        "result": "holding",
+        "holding_status": "D4/10，接近目標670（距3.7%）"
+      },
+      {
+        "code": "3034",
+        "name": "聯詠",
+        "close": 503.0,
+        "change_pct": 3.7,
+        "result": "holding",
+        "holding_status": "D4/10，正常持有"
+      },
+      {
+        "code": "6285",
+        "name": "啓碁",
+        "close": 306.0,
+        "change_pct": 9.7,
+        "result": "holding",
+        "holding_status": "D9/10，明日D10結算，距目標7.5%"
+      }
     ],
     "accuracy_update": "62.7% (224s/133f/357settled)",
     "key_variable": "AVGO 財報今晚公布（美股），明早台股知道結果，為明日最大變數",
@@ -205,18 +361,83 @@
     "success_count": 224,
     "fail_count": 133,
     "settled_today": [
-      {"symbol": "2891", "name": "中信金", "result": "success", "return_pct": 17.7, "note": "D4達目標70.5≥66.0"},
-      {"symbol": "2363", "name": "矽統", "result": "success", "return_pct": 8.1, "note": "D10到期，65.4>60.5"},
-      {"symbol": "2368", "name": "金像電", "result": "success", "return_pct": 7.8, "note": "D10到期，1385>1285"},
-      {"symbol": "2485", "name": "兆赫", "result": "fail", "return_pct": -6.6, "note": "停損觸發69.2≤70.39"},
-      {"symbol": "3045", "name": "台灣大", "result": "fail", "return_pct": -0.4, "note": "D10到期，116.0≤116.5"}
+      {
+        "symbol": "2891",
+        "name": "中信金",
+        "result": "success",
+        "return_pct": 17.7,
+        "note": "D4達目標70.5≥66.0"
+      },
+      {
+        "symbol": "2363",
+        "name": "矽統",
+        "result": "success",
+        "return_pct": 8.1,
+        "note": "D10到期，65.4>60.5"
+      },
+      {
+        "symbol": "2368",
+        "name": "金像電",
+        "result": "success",
+        "return_pct": 7.8,
+        "note": "D10到期，1385>1285"
+      },
+      {
+        "symbol": "2485",
+        "name": "兆赫",
+        "result": "fail",
+        "return_pct": -6.6,
+        "note": "停損觸發69.2≤70.39"
+      },
+      {
+        "symbol": "3045",
+        "name": "台灣大",
+        "result": "fail",
+        "return_pct": -0.4,
+        "note": "D10到期，116.0≤116.5"
+      }
     ],
     "results": [
-      {"symbol": "2891", "name": "中信金", "recommend_price": 59.9, "close_price": 70.5, "result": "success", "change_pct": 17.7},
-      {"symbol": "2363", "name": "矽統", "recommend_price": 60.5, "close_price": 65.4, "result": "success", "change_pct": 8.1},
-      {"symbol": "2368", "name": "金像電", "recommend_price": 1285.0, "close_price": 1385.0, "result": "success", "change_pct": 7.8},
-      {"symbol": "2485", "name": "兆赫", "recommend_price": 74.1, "close_price": 69.2, "result": "fail", "change_pct": -6.6},
-      {"symbol": "3045", "name": "台灣大", "recommend_price": 116.5, "close_price": 116.0, "result": "fail", "change_pct": -0.4}
+      {
+        "symbol": "2891",
+        "name": "中信金",
+        "recommend_price": 59.9,
+        "close_price": 70.5,
+        "result": "success",
+        "change_pct": 17.7
+      },
+      {
+        "symbol": "2363",
+        "name": "矽統",
+        "recommend_price": 60.5,
+        "close_price": 65.4,
+        "result": "success",
+        "change_pct": 8.1
+      },
+      {
+        "symbol": "2368",
+        "name": "金像電",
+        "recommend_price": 1285.0,
+        "close_price": 1385.0,
+        "result": "success",
+        "change_pct": 7.8
+      },
+      {
+        "symbol": "2485",
+        "name": "兆赫",
+        "recommend_price": 74.1,
+        "close_price": 69.2,
+        "result": "fail",
+        "change_pct": -6.6
+      },
+      {
+        "symbol": "3045",
+        "name": "台灣大",
+        "recommend_price": 116.5,
+        "close_price": 116.0,
+        "result": "fail",
+        "change_pct": -0.4
+      }
     ]
   },
   "tomorrow_recommendations": [],
@@ -235,11 +456,35 @@
     }
   ],
   "removed_stocks": [
-    {"stock_code": "1802", "stock_name": "台玻", "reason": "Level 4 爆量賣超 -50K張(83.9%日均量)，直接排除"},
-    {"stock_code": "2615", "stock_name": "萬海", "reason": "Level 4 爆量賣超 -608張(5.3%日均量)，直接排除"},
-    {"stock_code": "2892", "stock_name": "第一金", "reason": "累計賣超 -356K張，法人10天9天賣超，結構惡化"},
-    {"stock_code": "5876", "stock_name": "上海商銀", "reason": "外資累計-30K，外資持續賣出，排除"},
-    {"stock_code": "3035", "stock_name": "智原", "reason": "評分65分<70門檻，EPS連4季衰退，不推薦"},
-    {"stock_code": "2392", "stock_name": "正崴", "reason": "催化對齊失敗（蘋果非今日最強催化），評分62分<70門檻"}
+    {
+      "stock_code": "1802",
+      "stock_name": "台玻",
+      "reason": "Level 4 爆量賣超 -50K張(83.9%日均量)，直接排除"
+    },
+    {
+      "stock_code": "2615",
+      "stock_name": "萬海",
+      "reason": "Level 4 爆量賣超 -608張(5.3%日均量)，直接排除"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "reason": "累計賣超 -356K張，法人10天9天賣超，結構惡化"
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "reason": "外資累計-30K，外資持續賣出，排除"
+    },
+    {
+      "stock_code": "3035",
+      "stock_name": "智原",
+      "reason": "評分65分<70門檻，EPS連4季衰退，不推薦"
+    },
+    {
+      "stock_code": "2392",
+      "stock_name": "正崴",
+      "reason": "催化對齊失敗（蘋果非今日最強催化），評分62分<70門檻"
+    }
   ]
 }
