@@ -138,8 +138,42 @@
       "risk_note": "AVGO財報盤後-13%，光通訊鏈短線受壓，今日開盤觀察"
     }
   ],
+  "intraday_update": {
+    "timestamp": "2026-06-04 12:30",
+    "track_a_prices": {
+      "8046": {"price": 876, "change_pct": -3.1, "note": "跌破MA5，法人仍買+7651，持有"},
+      "2301": {"price": 254.5, "change_pct": 1.8, "note": "獲利+1.8%，法人連買3天，續抱"},
+      "2027": {"price": 43.8, "change_pct": -0.1, "note": "持倉D3/10，法人連買6天，續抱"},
+      "3017": {"price": 2710, "change_pct": -5.1, "note": "距停損2569.5僅5.2%，密切留意"},
+      "2449": {"price": 327, "change_pct": 1.4, "note": "外資大買+20K但投信-966，觀察"},
+      "2345": {"price": 2510, "change_pct": -2.9, "note": "AVGO-13%壓力，近5天籌碼轉弱"}
+    },
+    "forced_exit": {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "Level 4爆量賣超-9164張（49.9%日均量），實際持股1張",
+      "action": "今日收盤前強制停損",
+      "intraday_price": 158.5
+    }
+  },
   "track_b_recommendations": [],
-  "track_b_observations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "3706",
+      "stock_name": "神達",
+      "detector_score": 90,
+      "score": 76,
+      "reason": "催化對齊未通過（industry_chains分類電動車/綠能，非今日AI催化鏈）；外資持股比大增+5；得分76但準確率篩選第1項失敗",
+      "note": "法人10天累計+50K，具AI伺服器業務潛力，待驗證重分類後可重新評分"
+    },
+    {
+      "stock_code": "6456",
+      "stock_name": "GIS-KY",
+      "detector_score": 85,
+      "score": 67,
+      "reason": "67分<75門檻；蘋果鏈今日無強力催化；真連續4天但累計規模有限"
+    }
+  ],
   "holdings_evaluation": [
     {
       "stock_code": "2027",
@@ -165,9 +199,9 @@
     {
       "stock_code": "2337",
       "stock_name": "旺宏",
-      "evaluation": "留意減碼",
+      "evaluation": "強制停損",
       "score": 0,
-      "note": "Level 4爆量賣超！D1/10，距停損2.5%，停損約158元，需密切監控"
+      "note": "Level 4爆量賣超-9164張(49.9%日均量)，實際持股1張，盤中現價158.5，今日收盤前強制出場"
     },
     {
       "stock_code": "6282",
