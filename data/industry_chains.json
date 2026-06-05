@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-04",
+  "last_updated": "2026-06-05",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -191,6 +191,16 @@
             {
               "code": "6196",
               "name": "帆宣",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "2324",
+              "name": "仁寶",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "2353",
+              "name": "宏碁",
               "category": "AI 伺服器與半導體"
             }
           ]
@@ -1118,6 +1128,16 @@
               "code": "6285",
               "name": "啟碁",
               "category": "光通訊與網通（含低軌衛星）"
+            },
+            {
+              "code": "5388",
+              "name": "中磊",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "6451",
+              "name": "訊芯-KY",
+              "category": "光通訊與網通"
             }
           ]
         }
@@ -1711,6 +1731,21 @@
               "code": "2303",
               "name": "聯電",
               "category": "台股市場動態與ETF資金"
+            },
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "台股市場動態（含 ETF 與資金流向）"
+            },
+            {
+              "code": "2324",
+              "name": "賣超仁寶",
+              "category": "台股市場動態（含 ETF 與資金流向）"
+            },
+            {
+              "code": "2353",
+              "name": "宏碁",
+              "category": "台股市場動態（含 ETF 與資金流向）"
             }
           ]
         }
@@ -1818,6 +1853,21 @@
             {
               "code": "3034",
               "name": "聯詠",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "8299",
+              "name": "群聯",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2357",
+              "name": "華碩",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2454",
+              "name": "聯發科",
               "category": "企業財報重點"
             }
           ]
@@ -2022,6 +2072,16 @@
               "code": "1319",
               "name": "東陽",
               "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "2353",
+              "name": "宏碁",
+              "category": "川普貿易政策與關稅"
             }
           ]
         }
@@ -2170,6 +2230,147 @@
               "code": "2014",
               "name": "中鴻",
               "category": "鋼鐵族群"
+            },
+            {
+              "code": "2017",
+              "name": "官田鋼",
+              "category": "鋼鐵族群"
+            }
+          ]
+        }
+      }
+    },
+    "台積電先進製程擴產": {
+      "name": "台積電先進製程擴產",
+      "catalysts": [
+        "台積電先進製程擴產"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "台積電先進製程擴產"
+            },
+            {
+              "code": "2383",
+              "name": "台光電",
+              "category": "台積電先進製程擴產"
+            },
+            {
+              "code": "3044",
+              "name": "健鼎",
+              "category": "台積電先進製程擴產"
+            },
+            {
+              "code": "4958",
+              "name": "臻鼎-KY",
+              "category": "台積電先進製程擴產"
+            },
+            {
+              "code": "3661",
+              "name": "世芯-KY",
+              "category": "台積電先進製程擴產"
+            },
+            {
+              "code": "2404",
+              "name": "漢唐",
+              "category": "台積電先進製程擴產"
+            }
+          ]
+        }
+      }
+    },
+    "綠能": {
+      "name": "綠能",
+      "catalysts": [
+        "綠能",
+        "綠能與電力基建"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "6282",
+              "name": "康舒",
+              "category": "綠能與電力基建"
+            },
+            {
+              "code": "2308",
+              "name": "台達電",
+              "category": "綠能與電力基建"
+            },
+            {
+              "code": "1519",
+              "name": "華城",
+              "category": "綠能與電力基建"
+            },
+            {
+              "code": "1503",
+              "name": "士電",
+              "category": "綠能與電力基建"
+            },
+            {
+              "code": "6869",
+              "name": "雲豹能源",
+              "category": "綠能與電力基建"
+            },
+            {
+              "code": "6770",
+              "name": "力積電",
+              "category": "綠能與電力基建"
+            }
+          ]
+        }
+      }
+    },
+    "蘋果概念股": {
+      "name": "蘋果概念股",
+      "catalysts": [
+        "蘋果概念股",
+        "蘋果概念股與",
+        "AIPC",
+        "換機潮"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "3008",
+              "name": "大立光",
+              "category": "蘋果概念股與 AIPC 換機潮"
+            },
+            {
+              "code": "4497",
+              "name": "玉金光",
+              "category": "蘋果概念股與 AIPC 換機潮"
+            },
+            {
+              "code": "3324",
+              "name": "雙鴻",
+              "category": "蘋果概念股與 AIPC 換機潮"
+            },
+            {
+              "code": "6669",
+              "name": "緯穎",
+              "category": "蘋果概念股與 AIPC 換機潮"
+            },
+            {
+              "code": "2357",
+              "name": "華碩",
+              "category": "蘋果概念股與 AIPC 換機潮"
+            },
+            {
+              "code": "2377",
+              "name": "微星",
+              "category": "蘋果概念股與 AIPC 換機潮"
             }
           ]
         }
