@@ -19,7 +19,12 @@
       "reason": "MU+7.85%記憶體旺季、Module A L3佈局完成(動能-135.8%連買3天)、EPS YoY+59.5%大幅改善、月季雙線上",
       "module_a_level": "L3",
       "reversal_level": "Level0",
-      "momentum_pct": -135.8
+      "momentum_pct": -135.8,
+      "close_price": 74.6,
+      "actual_close": 74.6,
+      "change_percent": -7.9,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤74.6(-7.9%) | 距停損2.3% | 法人Level0買超+10K | 個人持股停損已觸(成本87.7→停損78.93) | 明日繼續追蹤"
     },
     {
       "stock_code": "2449",
@@ -35,7 +40,12 @@
       "reason": "MRVL+54%帶動ASIC測試需求爆發、Module A L2(動能-85.2%連買2天)、外資持股週增+0.87%、月季雙線上",
       "module_a_level": "L2",
       "reversal_level": "Level0",
-      "momentum_pct": -85.2
+      "momentum_pct": -85.2,
+      "close_price": 309.5,
+      "actual_close": 309.5,
+      "change_percent": -3.9,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤309.5(-3.9%) | 距停損6.4% | 法人連買2天+8.4K | MRVL+54.48%ASIC催化 | 明日繼續追蹤"
     },
     {
       "stock_code": "2404",
@@ -51,7 +61,12 @@
       "reason": "TSM ADR+4.72%台積電廠務直接受益、外資持股週增+0.92%、EPS YoY+33.7%、月季雙線上",
       "module_a_level": "None",
       "reversal_level": "Level0",
-      "momentum_pct": -10.0
+      "momentum_pct": -10.0,
+      "close_price": 1205.0,
+      "actual_close": 1205.0,
+      "change_percent": -2.0,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤1205.0(-2.0%) | 距停損8.1% | 外資+2.1K/投信-1.1K | TSM廠務需求 | 明日繼續追蹤"
     },
     {
       "stock_code": "2383",
@@ -67,7 +82,12 @@
       "reason": "台積電鏈ABF載板、TSM ADR+4.72%、營收年增+45%+近5日回檔-4.5%黃金買點、EPS YoY+48.9%",
       "module_a_level": "None",
       "reversal_level": "Level0",
-      "momentum_pct": -61.2
+      "momentum_pct": -61.2,
+      "close_price": 4885.0,
+      "actual_close": 4885.0,
+      "change_percent": 1.1,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤4885.0(+1.1%) | 距停損11.0% | 法人+63 | ABF題材 | 明日繼續追蹤"
     }
   ],
   "holdings_evaluation": [
@@ -115,27 +135,108 @@
     }
   ],
   "excluded_stocks": [
-    {"code": "2345", "name": "智邦", "reason": "Level4排除"},
-    {"code": "5388", "name": "中磊", "reason": "Level4排除"},
-    {"code": "2609", "name": "陽明", "reason": "Level4排除"},
-    {"code": "2317", "name": "鴻海", "reason": "Level4排除"},
-    {"code": "2454", "name": "聯發科", "reason": "Level3排除"},
-    {"code": "2382", "name": "廣達", "reason": "動能+254%追高+5日漲幅>20%"},
-    {"code": "6451", "name": "訊芯-KY", "reason": "動能>100%追高+基本面差(EPS/營收/外資均扣分)，估分<60"}
+    {
+      "code": "2345",
+      "name": "智邦",
+      "reason": "Level4排除"
+    },
+    {
+      "code": "5388",
+      "name": "中磊",
+      "reason": "Level4排除"
+    },
+    {
+      "code": "2609",
+      "name": "陽明",
+      "reason": "Level4排除"
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "reason": "Level4排除"
+    },
+    {
+      "code": "2454",
+      "name": "聯發科",
+      "reason": "Level3排除"
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "reason": "動能+254%追高+5日漲幅>20%"
+    },
+    {
+      "code": "6451",
+      "name": "訊芯-KY",
+      "reason": "動能>100%追高+基本面差(EPS/營收/外資均扣分)，估分<60"
+    }
   ],
   "intraday_prices": {
-    "6770": {"price": 73.1, "change_pct": -9.75, "note": "個人停損78.93已觸發(買入87.7)，追蹤停損72.9未觸"},
-    "2449": {"price": 307.5, "change_pct": -4.5, "note": "安全，法人Level0，MRVL+54%催化"},
-    "2404": {"price": 1200.0, "change_pct": -2.4, "note": "安全，站MA5/10，TSM廠務"},
-    "2383": {"price": 4875.0, "change_pct": 0.9, "note": "安全，微漲，ABF續行"}
+    "6770": {
+      "price": 73.1,
+      "change_pct": -9.75,
+      "note": "個人停損78.93已觸發(買入87.7)，追蹤停損72.9未觸"
+    },
+    "2449": {
+      "price": 307.5,
+      "change_pct": -4.5,
+      "note": "安全，法人Level0，MRVL+54%催化"
+    },
+    "2404": {
+      "price": 1200.0,
+      "change_pct": -2.4,
+      "note": "安全，站MA5/10，TSM廠務"
+    },
+    "2383": {
+      "price": 4875.0,
+      "change_pct": 0.9,
+      "note": "安全，微漲，ABF續行"
+    }
   },
   "holdings_intraday": {
-    "6770": {"price": 73.1, "buy_price": 87.7, "personal_stop": 78.93, "pnl_pct": -16.6, "action": "🔴 個人停損已觸發 → 出場建議", "reversal": "Level0"},
-    "3037": {"price": 931.0, "buy_price": 1055, "personal_stop": 949.5, "pnl_pct": -11.8, "action": "🔴 個人停損已觸發 → 出場建議", "reversal": "Level0"},
-    "2337": {"price": 143.0, "buy_price": 164.0, "personal_stop": 147.6, "pnl_pct": -12.8, "action": "🔴 停損觸發+Level4 → 強制出場", "reversal": "Level4"},
-    "1303": {"price": 104.5, "buy_price": 113.6, "personal_stop": 102.24, "pnl_pct": -8.0, "action": "✅ 未觸停損，法人+3100，續抱", "reversal": "Level0"},
-    "2330": {"price": 2360.0, "buy_price": 2070, "pnl_pct": 14.0, "action": "🟡 C趨勢型，+14%獲利，觀察", "reversal": "Level4"},
-    "3231": {"price": null, "action": "✅ 今日已賣出 @169.248"}
+    "6770": {
+      "price": 73.1,
+      "buy_price": 87.7,
+      "personal_stop": 78.93,
+      "pnl_pct": -16.6,
+      "action": "🔴 個人停損已觸發 → 出場建議",
+      "reversal": "Level0"
+    },
+    "3037": {
+      "price": 931.0,
+      "buy_price": 1055,
+      "personal_stop": 949.5,
+      "pnl_pct": -11.8,
+      "action": "🔴 個人停損已觸發 → 出場建議",
+      "reversal": "Level0"
+    },
+    "2337": {
+      "price": 143.0,
+      "buy_price": 164.0,
+      "personal_stop": 147.6,
+      "pnl_pct": -12.8,
+      "action": "🔴 停損觸發+Level4 → 強制出場",
+      "reversal": "Level4"
+    },
+    "1303": {
+      "price": 104.5,
+      "buy_price": 113.6,
+      "personal_stop": 102.24,
+      "pnl_pct": -8.0,
+      "action": "✅ 未觸停損，法人+3100，續抱",
+      "reversal": "Level0"
+    },
+    "2330": {
+      "price": 2360.0,
+      "buy_price": 2070,
+      "pnl_pct": 14.0,
+      "action": "🟡 C趨勢型，+14%獲利，觀察",
+      "reversal": "Level4"
+    },
+    "3231": {
+      "price": null,
+      "action": "✅ 今日已賣出 @169.248"
+    }
   },
   "track_b_recommendations": [
     {
@@ -153,17 +254,51 @@
       "reversal_level": "Level0",
       "detector_strength": 90,
       "source": "偵測器強訊號+TOP30",
-      "three_checks": "催化對齊✅外資近5天+17K✅Level0✅"
+      "three_checks": "催化對齊✅外資近5天+17K✅Level0✅",
+      "close_price": 63.8,
+      "actual_close": 63.8,
+      "change_percent": 0.0,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤63.8(0.0%) | 停損60.6(-5%) | 法人+14.9K | DELL+33.12%AI電源 | 明日繼續追蹤"
     }
   ],
   "track_b_observations": [
-    {"code": "8150", "name": "南茂", "score": 72, "reason": "10天累計-15K淨賣超，賣超7天上限15分，未達75門檻"},
-    {"code": "4967", "name": "十銓", "reason": "籌碼動能+500%>100%，一票否決排除"},
-    {"code": "6257", "name": "矽格", "reason": "累計淨買超-1,021(負)，排除"},
-    {"code": "2834", "name": "臺企銀", "reason": "金融股，不符今日AI/記憶體主題"},
-    {"code": "2457", "name": "飛宏", "reason": "非TOP30，法人張數未確認"},
-    {"code": "1457", "name": "宜進", "reason": "紡織業，不符今日主題"},
-    {"code": "9105", "name": "泰金寶-DR", "reason": "5日漲幅+30.1%（已大漲），排除"}
+    {
+      "code": "8150",
+      "name": "南茂",
+      "score": 72,
+      "reason": "10天累計-15K淨賣超，賣超7天上限15分，未達75門檻"
+    },
+    {
+      "code": "4967",
+      "name": "十銓",
+      "reason": "籌碼動能+500%>100%，一票否決排除"
+    },
+    {
+      "code": "6257",
+      "name": "矽格",
+      "reason": "累計淨買超-1,021(負)，排除"
+    },
+    {
+      "code": "2834",
+      "name": "臺企銀",
+      "reason": "金融股，不符今日AI/記憶體主題"
+    },
+    {
+      "code": "2457",
+      "name": "飛宏",
+      "reason": "非TOP30，法人張數未確認"
+    },
+    {
+      "code": "1457",
+      "name": "宜進",
+      "reason": "紡織業，不符今日主題"
+    },
+    {
+      "code": "9105",
+      "name": "泰金寶-DR",
+      "reason": "5日漲幅+30.1%（已大漲），排除"
+    }
   ],
   "market_context": {
     "date": "2026-06-05",
@@ -177,5 +312,92 @@
     "vix": 15.4,
     "market_regime": "多頭",
     "defense_ratio": "0-15%"
-  }
+  },
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "industry": "DRAM代工/記憶體",
+      "recommend_price": 74.6,
+      "target_price": 93.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 67.1,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 100,
+      "reason": "MU+7.85%記憶體超強/Module A L3連買3天/EPS+59.5%毛利+12.9pp/今日-7.9%延遲反應"
+    },
+    {
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "industry": "IC封測/ASIC測試",
+      "recommend_price": 309.5,
+      "target_price": 362.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 278.6,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 89,
+      "reason": "MRVL+54.48%ASIC測試需求爆發/Module A L2/外資持股+0.87%/營收YoY+41%回檔-5.8%"
+    },
+    {
+      "stock_code": "6282",
+      "stock_name": "康舒",
+      "industry": "AI電源供應器",
+      "recommend_price": 63.8,
+      "target_price": 70.2,
+      "stop_loss_pct": -5,
+      "stop_loss": 60.6,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 101,
+      "reason": "DELL+33.12%AI伺服器爆發/Module A L2連買7天/外資持股+0.76%/EPS+640%"
+    },
+    {
+      "stock_code": "2404",
+      "stock_name": "漢唐",
+      "industry": "台積電廠務/設備安裝",
+      "recommend_price": 1205.0,
+      "target_price": 1400.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 1084.5,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 87,
+      "reason": "TSM ADR+4.72%廠務需求/外資持股+0.92%/EPS+33.7%"
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "industry": "ABF載板/PCB",
+      "recommend_price": 4885.0,
+      "target_price": 5500.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 4396.5,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 78,
+      "reason": "MRVL+54.48%ABF需求加速/IC載板HOT88.9%/營收YoY+45%回檔-4.6%"
+    },
+    {
+      "stock_code": "6139",
+      "stock_name": "亞翔",
+      "industry": "台積電廠務/潔淨室",
+      "recommend_price": 808.0,
+      "target_price": 900.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 727.2,
+      "settlement_days": 10,
+      "position": "5%",
+      "score": 72,
+      "reason": "TSM廠務核心/EPS YoY+148.7%/外資持股+0.71%大增/5日+5.2%(-10已計入)"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "觸停損fail(收盤150.0≤停損150.75)，近5日內第2次fail，暫停推薦"
+    }
+  ]
 }
