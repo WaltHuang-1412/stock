@@ -123,6 +123,48 @@
     {"code": "2382", "name": "廣達", "reason": "動能+254%追高+5日漲幅>20%"},
     {"code": "6451", "name": "訊芯-KY", "reason": "動能>100%追高+基本面差(EPS/營收/外資均扣分)，估分<60"}
   ],
+  "intraday_prices": {
+    "6770": {"price": 73.1, "change_pct": -9.75, "note": "個人停損78.93已觸發(買入87.7)，追蹤停損72.9未觸"},
+    "2449": {"price": 307.5, "change_pct": -4.5, "note": "安全，法人Level0，MRVL+54%催化"},
+    "2404": {"price": 1200.0, "change_pct": -2.4, "note": "安全，站MA5/10，TSM廠務"},
+    "2383": {"price": 4875.0, "change_pct": 0.9, "note": "安全，微漲，ABF續行"}
+  },
+  "holdings_intraday": {
+    "6770": {"price": 73.1, "buy_price": 87.7, "personal_stop": 78.93, "pnl_pct": -16.6, "action": "🔴 個人停損已觸發 → 出場建議", "reversal": "Level0"},
+    "3037": {"price": 931.0, "buy_price": 1055, "personal_stop": 949.5, "pnl_pct": -11.8, "action": "🔴 個人停損已觸發 → 出場建議", "reversal": "Level0"},
+    "2337": {"price": 143.0, "buy_price": 164.0, "personal_stop": 147.6, "pnl_pct": -12.8, "action": "🔴 停損觸發+Level4 → 強制出場", "reversal": "Level4"},
+    "1303": {"price": 104.5, "buy_price": 113.6, "personal_stop": 102.24, "pnl_pct": -8.0, "action": "✅ 未觸停損，法人+3100，續抱", "reversal": "Level0"},
+    "2330": {"price": 2360.0, "buy_price": 2070, "pnl_pct": 14.0, "action": "🟡 C趨勢型，+14%獲利，觀察", "reversal": "Level4"},
+    "3231": {"price": null, "action": "✅ 今日已賣出 @169.248"}
+  },
+  "track_b_recommendations": [
+    {
+      "stock_code": "6282",
+      "stock_name": "康舒",
+      "industry": "AI電源供應器",
+      "recommend_price": 63.8,
+      "target_price": 70.2,
+      "stop_loss_pct": -5,
+      "stop_loss": 60.61,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 101,
+      "reason": "DELL+33%AI伺服器、偵測器強度90TOP30連買7天、Module A L2、外資持股週增+0.76%",
+      "reversal_level": "Level0",
+      "detector_strength": 90,
+      "source": "偵測器強訊號+TOP30",
+      "three_checks": "催化對齊✅外資近5天+17K✅Level0✅"
+    }
+  ],
+  "track_b_observations": [
+    {"code": "8150", "name": "南茂", "score": 72, "reason": "10天累計-15K淨賣超，賣超7天上限15分，未達75門檻"},
+    {"code": "4967", "name": "十銓", "reason": "籌碼動能+500%>100%，一票否決排除"},
+    {"code": "6257", "name": "矽格", "reason": "累計淨買超-1,021(負)，排除"},
+    {"code": "2834", "name": "臺企銀", "reason": "金融股，不符今日AI/記憶體主題"},
+    {"code": "2457", "name": "飛宏", "reason": "非TOP30，法人張數未確認"},
+    {"code": "1457", "name": "宜進", "reason": "紡織業，不符今日主題"},
+    {"code": "9105", "name": "泰金寶-DR", "reason": "5日漲幅+30.1%（已大漲），排除"}
+  ],
   "market_context": {
     "date": "2026-06-05",
     "sox_change": "+6.15%",
