@@ -1,0 +1,493 @@
+{
+  "date": "2026-06-05",
+  "lookback_dates": [
+    "2026-06-05",
+    "2026-06-04",
+    "2026-06-03",
+    "2026-06-02",
+    "2026-06-01",
+    "2026-05-31",
+    "2026-05-30"
+  ],
+  "leader_trends": {
+    "Micron": {
+      "cumulative": 163.02,
+      "consecutive_up": 7,
+      "latest_change": 7.85,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "NVIDIA": {
+      "cumulative": -0.47,
+      "consecutive_up": 4,
+      "latest_change": 2.06,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Apple": {
+      "cumulative": 7.78,
+      "consecutive_up": 0,
+      "latest_change": -0.41,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    },
+    "AMD": {
+      "cumulative": 67.46,
+      "consecutive_up": 7,
+      "latest_change": 0.99,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Tesla": {
+      "cumulative": -0.91,
+      "consecutive_up": 0,
+      "latest_change": -5.35,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Super Micro": {
+      "cumulative": 217.97,
+      "consecutive_up": 7,
+      "latest_change": 13.56,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Broadcom": {
+      "cumulative": 60.29,
+      "consecutive_up": 0,
+      "latest_change": -1.8,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Lam Research": {
+      "cumulative": 36.86,
+      "consecutive_up": 7,
+      "latest_change": 5.79,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Applied Materials": {
+      "cumulative": 52.97,
+      "consecutive_up": 7,
+      "latest_change": 11.57,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Western Digital": {
+      "cumulative": 68.03,
+      "consecutive_up": 7,
+      "latest_change": 8.34,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Dell": {
+      "cumulative": 371.07,
+      "consecutive_up": 7,
+      "latest_change": 33.12,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "ASML": {
+      "cumulative": 25.61,
+      "consecutive_up": 3,
+      "latest_change": 9.45,
+      "signal_level": "strong",
+      "days_tracked": 7
+    }
+  },
+  "preposition_candidates": [
+    {
+      "code": "2324",
+      "name": "仁寶",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -141013,
+        "buy_days": 3,
+        "sell_days": 7,
+        "momentum_pct": -500,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 11822,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-141,013為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "6669",
+      "name": "緯穎",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -511,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 104.66417910447761,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 217,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-511為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "2376",
+      "name": "技嘉",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 10372,
+        "buy_days": 8,
+        "sell_days": 2,
+        "momentum_pct": -37.709278673134094,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -4085,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 13112,
+        "buy_days": 7,
+        "sell_days": 3,
+        "momentum_pct": -132.68302700482596,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 16908,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "動能-133%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3189",
+      "name": "景碩",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 7911,
+        "buy_days": 6,
+        "sell_days": 4,
+        "momentum_pct": -100.49056603773585,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 5747,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜動能-100%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3017",
+      "name": "奇鋐",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 1345,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -61.483007209062826,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 82,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3324",
+      "name": "雙鴻",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "6230",
+      "name": "超眾",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 16,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": 284.21052631578954,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 16,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜動能+284%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "2368",
+      "name": "金像電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 3643,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": 500,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 5805,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜動能+500%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "2367",
+      "name": "燿華",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -14525,
+        "buy_days": 2,
+        "sell_days": 8,
+        "momentum_pct": -94.50527169505271,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -14581,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-14,525為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3234",
+      "name": "光環",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "4977",
+      "name": "眾達-KY",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "2392",
+      "name": "正崴",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "3023",
+      "name": "信邦",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "6239",
+      "name": "力成",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": -0.47,
+      "leader_consecutive_up": 4,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    }
+  ],
+  "already_in_top50": [
+    {
+      "code": "3711",
+      "name": "日月光",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": -0.47,
+      "tw_5d_change": -3.7383177570093453
+    },
+    {
+      "code": "2449",
+      "name": "京元電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": -0.47,
+      "tw_5d_change": 0.625
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": -0.47,
+      "tw_5d_change": -0.11049723756906078
+    },
+    {
+      "code": "2301",
+      "name": "光寶科",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": -0.47,
+      "tw_5d_change": 1.6260162601626018
+    },
+    {
+      "code": "8150",
+      "name": "南茂",
+      "tw_industry": "半導體設備",
+      "us_leader": "ASML",
+      "leader_cumulative": 25.61,
+      "tw_5d_change": -3.7864092484261223
+    },
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "tw_industry": "半導體設備",
+      "us_leader": "ASML",
+      "leader_cumulative": 25.61,
+      "tw_5d_change": 4.180064308681672
+    },
+    {
+      "code": "6770",
+      "name": "力積電",
+      "tw_industry": "DRAM/記憶體",
+      "us_leader": "Micron",
+      "leader_cumulative": 163.02,
+      "tw_5d_change": 0.37175100756227125
+    },
+    {
+      "code": "2354",
+      "name": "鴻準",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": -0.47,
+      "tw_5d_change": 9.04522218119275
+    },
+    {
+      "code": "3006",
+      "name": "晶豪科",
+      "tw_industry": "DRAM/記憶體",
+      "us_leader": "Micron",
+      "leader_cumulative": 163.02,
+      "tw_5d_change": 7.676348547717843
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": -0.47,
+      "tw_5d_change": 33.65384615384615
+    }
+  ],
+  "already_moved_count": 41
+}
