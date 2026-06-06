@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-05",
+  "last_updated": "2026-06-06",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -1038,6 +1038,11 @@
               "code": "6770",
               "name": "力積電",
               "category": "DRAM 與記憶體"
+            },
+            {
+              "code": "5289",
+              "name": "宜鼎",
+              "category": "DRAM與記憶體"
             }
           ]
         }
@@ -1746,6 +1751,46 @@
               "code": "2353",
               "name": "宏碁",
               "category": "台股市場動態（含 ETF 與資金流向）"
+            },
+            {
+              "code": "8046",
+              "name": "南電",
+              "category": "台股市場動態（含 ETF 與資金流向）"
+            },
+            {
+              "code": "3665",
+              "name": "貿聯",
+              "category": "台股市場動態（含 ETF 與資金流向）"
+            },
+            {
+              "code": "3443",
+              "name": "創意",
+              "category": "台股市場動態（含 ETF 與資金流向）"
+            },
+            {
+              "code": "4958",
+              "name": "臻鼎-KY",
+              "category": "台股市場動態（含 ETF 與資金流向）"
+            },
+            {
+              "code": "2002",
+              "name": "中鋼",
+              "category": "台股市場動態（含 ETF 與資金流向）"
+            },
+            {
+              "code": "1301",
+              "name": "台塑",
+              "category": "台股市場動態（含 ETF 與資金流向）"
+            },
+            {
+              "code": "2408",
+              "name": "南亞科",
+              "category": "台股市場動態（含 ETF 與資金流向）"
+            },
+            {
+              "code": "2344",
+              "name": "華邦電",
+              "category": "台股市場動態（含 ETF 與資金流向）"
             }
           ]
         }
@@ -1869,6 +1914,51 @@
               "code": "2454",
               "name": "聯發科",
               "category": "企業財報重點"
+            },
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "6770",
+              "name": "力積電",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2303",
+              "name": "聯電",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "4958",
+              "name": "臻鼎-KY",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "6446",
+              "name": "藥華藥",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3008",
+              "name": "大立光",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2383",
+              "name": "台光電",
+              "category": "企業財報重點（5月營收）"
+            },
+            {
+              "code": "2059",
+              "name": "川湖",
+              "category": "企業財報重點（5月營收）"
+            },
+            {
+              "code": "2345",
+              "name": "智邦",
+              "category": "企業財報重點（5月營收）"
             }
           ]
         }
@@ -2082,6 +2172,11 @@
               "code": "2353",
               "name": "宏碁",
               "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "川普貿易政策與關稅"
             }
           ]
         }
@@ -2205,6 +2300,11 @@
               "code": "2454",
               "name": "聯發科",
               "category": "玻璃基板（英特爾EMIB-T）"
+            },
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "玻璃基板（英特爾 EMIB-T）"
             }
           ]
         }
@@ -2324,6 +2424,16 @@
               "code": "6770",
               "name": "力積電",
               "category": "綠能與電力基建"
+            },
+            {
+              "code": "6903",
+              "name": "巨漢",
+              "category": "綠能與電力基建"
+            },
+            {
+              "code": "1514",
+              "name": "亞力",
+              "category": "綠能與電力基建"
             }
           ]
         }
@@ -2371,6 +2481,112 @@
               "code": "2377",
               "name": "微星",
               "category": "蘋果概念股與 AIPC 換機潮"
+            }
+          ]
+        }
+      }
+    },
+    "聯準會利率政策": {
+      "name": "聯準會利率政策",
+      "catalysts": [
+        "聯準會利率政策",
+        "含台灣通膨"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2882",
+              "name": "國泰金",
+              "category": "聯準會利率政策（含台灣通膨）"
+            },
+            {
+              "code": "2881",
+              "name": "富邦金",
+              "category": "聯準會利率政策（含台灣通膨）"
+            },
+            {
+              "code": "2885",
+              "name": "元大金",
+              "category": "聯準會利率政策（含台灣通膨）"
+            },
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "聯準會利率政策（含美國就業市場）"
+            }
+          ]
+        }
+      }
+    },
+    "加密貨幣": {
+      "name": "加密貨幣",
+      "catalysts": [
+        "加密貨幣",
+        "加密貨幣市場"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "6285",
+              "name": "啟碁",
+              "category": "加密貨幣市場"
+            }
+          ]
+        }
+      }
+    },
+    "AI伺服器": {
+      "name": "AI伺服器",
+      "catalysts": [
+        "AI伺服器",
+        "AI",
+        "伺服器與半導體"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2382",
+              "name": "廣達",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "3017",
+              "name": "奇鋐",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "3324",
+              "name": "雙鴻",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "2454",
+              "name": "聯發科",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "3661",
+              "name": "世芯-KY",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "5274",
+              "name": "信驊",
+              "category": "AI伺服器與半導體"
             }
           ]
         }
