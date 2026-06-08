@@ -61,8 +61,10 @@
       "holding_type": "actual_holding",
       "quantity": 0.15,
       "reversal_level": 4,
-      "reversal_detail": "今日賣超-14,423張(44.0%日均量)",
-      "recommendation": "⚠️ 留意減碼 — Level4爆量賣超，今日Lam Research Level1-5，半導體產業強利空，建議密切監控停損"
+      "reversal_detail": "盤中連續賣超2天，今日-14,423張(44.0%日均量)",
+      "manual_exit_result": "不賣",
+      "manual_exit_reason": "C型趨勢持股，Level 4短線訊號不影響長線論點，停損1863未觸及",
+      "recommendation": "✅ 續抱 — 趨勢型，停損1863監控"
     },
     {
       "stock_code": "3037",
@@ -70,10 +72,46 @@
       "holding_type": "actual_holding",
       "quantity": 0.3,
       "reversal_level": 4,
-      "reversal_detail": "今日賣超-2,533張(10.5%日均量)",
-      "recommendation": "⚠️ 留意減碼 — Level4爆量賣超，半導體製造受壓，建議監控停損"
+      "reversal_detail": "盤中連續賣超2天，今日-2,533張(10.5%日均量)",
+      "manual_exit_result": "建議出場",
+      "manual_exit_reason": "A型催化劑持股，籌碼連續惡化2天，催化論點消失",
+      "recommendation": "⚠️ 建議出場 — 催化劑型，停損949.5"
     }
   ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "2637",
+      "stock_name": "慧洋-KY",
+      "score": 71,
+      "reason": "散裝航運，TOP13，EPS+767%，Level 0，但71分<75門檻，明日再評估"
+    },
+    {
+      "stock_code": "2731",
+      "stock_name": "雄獅",
+      "score": 49,
+      "reason": "偵測器強訊號，旅遊服務，不在TOP50，49分不通過"
+    },
+    {
+      "stock_code": "7827",
+      "stock_name": "漢康-KY創",
+      "score": 52,
+      "reason": "偵測器強訊號，產業未分類，52分不通過"
+    },
+    {
+      "stock_code": "2461",
+      "stock_name": "光群雷",
+      "score": null,
+      "reason": "5日+17.3%已大漲排除"
+    }
+  ],
+  "intraday_settlement_update": {
+    "failed_today": ["6770", "2449", "2404", "2301", "3017", "2337", "1582"],
+    "high_risk_holding": [
+      {"code": "8046", "name": "南電", "distance_to_stop": "2.4%"},
+      {"code": "2345", "name": "智邦", "distance_to_stop": "2.7%"}
+    ]
+  },
   "tracking_holdings_risk": [
     {
       "stock_code": "3017",
