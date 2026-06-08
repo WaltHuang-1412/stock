@@ -1,0 +1,128 @@
+{
+  "date": "2026-06-08",
+  "market_note": "⚠️ 黑色星期一 — 台股期貨 -3006點，NASDAQ -4.68%，SOX -10.26%。全面防禦模式，推薦檔數大幅縮減至2檔。",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "industry": "航運",
+      "recommend_price": 54.5,
+      "target_price": 62.7,
+      "stop_loss_pct": -10,
+      "stop_loss": 49.05,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 78,
+      "reason": "中東地緣↑加速+伊朗攻以→航運運費上漲+荷姆茲風險，Module A L2+10，外資近5天+128K，反轉Level0，航運不受今日半導體崩盤衝擊"
+    },
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "industry": "石化/油品",
+      "recommend_price": 55.3,
+      "target_price": 60.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 49.77,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 72,
+      "reason": "伊朗攻以→油價急漲+2.34%(WTI)，今日新催化劑覆寫5日+7.6%追高，真連5天外資買超，EPS YoY+286%，中東↑加速。已大漲例外，小倉位"
+    }
+  ],
+  "removed_stocks": [],
+  "observation_list": [
+    {
+      "stock_code": "4916",
+      "stock_name": "事欣科",
+      "score": 69,
+      "reason": "無人機↑加速(中東實戰升級)，EPS+648%，外資近5天+143，69分略低門檻，明日再評估"
+    },
+    {
+      "stock_code": "3491",
+      "stock_name": "昇達科",
+      "score": null,
+      "reason": "光通訊↑加速(黃仁勳+Scale out)，EPS+30%+Revenue+57%，但T86查無法人數據→無法確認反轉Level0→不得推薦，明日再確認"
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "score": 68,
+      "reason": "聯準會鷹派→利差擴大，Level0，累計+55K，但法人不在TOP50拖低分數，防禦性佳，觀察"
+    }
+  ],
+  "holdings_review": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "holding_type": "actual_holding",
+      "quantity": 0.15,
+      "reversal_level": 4,
+      "reversal_detail": "今日賣超-14,423張(44.0%日均量)",
+      "recommendation": "⚠️ 留意減碼 — Level4爆量賣超，今日Lam Research Level1-5，半導體產業強利空，建議密切監控停損"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣銓",
+      "holding_type": "actual_holding",
+      "quantity": 0.3,
+      "reversal_level": 4,
+      "reversal_detail": "今日賣超-2,533張(10.5%日均量)",
+      "recommendation": "⚠️ 留意減碼 — Level4爆量賣超，半導體製造受壓，建議監控停損"
+    }
+  ],
+  "tracking_holdings_risk": [
+    {
+      "stock_code": "3017",
+      "stock_name": "奇鋐",
+      "day": 2,
+      "distance_to_stop": "1.2%",
+      "risk": "🔴 極高 — 今日大跌極可能觸停損"
+    },
+    {
+      "stock_code": "1582",
+      "stock_name": "信錦",
+      "day": 6,
+      "distance_to_stop": "1.3%",
+      "risk": "🔴 極高 — 今日大跌極可能觸停損"
+    },
+    {
+      "stock_code": "2301",
+      "stock_name": "光寶科",
+      "day": 2,
+      "distance_to_stop": "2.2%",
+      "risk": "🔴 極高 — 今日大跌極可能觸停損"
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "day": 2,
+      "distance_to_stop": "3.7%",
+      "risk": "⚠️ 高 — 半導體封裝，今日SOX-10%衝擊"
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "day": 2,
+      "distance_to_stop": "9.9%",
+      "risk": "🟡 中 — 鋼鐵防禦性較強，距停損尚有空間"
+    },
+    {
+      "stock_code": "2404",
+      "stock_name": "漢唐",
+      "day": 1,
+      "distance_to_stop": "8.1%",
+      "risk": "🟡 中 — 今日法說(正面催化)，廠務工程受台積電縮手影響有限"
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "day": 1,
+      "distance_to_stop": "11.0%",
+      "risk": "🟡 中 — ABF載板，距停損較寬，WWDC輕度正面"
+    }
+  ]
+}
