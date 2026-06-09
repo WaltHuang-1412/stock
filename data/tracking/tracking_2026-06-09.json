@@ -165,6 +165,96 @@
       "reason": "settlement_checker 判定觸停損 -16.7%"
     }
   ],
+  "intraday_update": {
+    "time": "12:47",
+    "track_a_status": [
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "intraday_price": 353.0,
+        "day_change_pct": 2.3,
+        "vs_cost_pct": 2.3,
+        "status": "hold",
+        "note": "AI伺服器反彈，真連續2天，外+投同步，Level 0，距目標9.1%"
+      },
+      {
+        "stock_code": "2383",
+        "stock_name": "台光電",
+        "intraday_price": 5025.0,
+        "day_change_pct": 5.3,
+        "vs_cost_pct": 5.3,
+        "status": "hold",
+        "note": "光通訊超強催化持續，真連續4天，Level 0，距目標4.5%"
+      },
+      {
+        "stock_code": "2368",
+        "stock_name": "金像電",
+        "intraday_price": 1495.0,
+        "day_change_pct": 9.9,
+        "vs_cost_pct": 9.9,
+        "status": "watch",
+        "note": "距目標1510僅1.0%，真連續0天，若尾盤衝過目標可記錄結算"
+      },
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "intraday_price": 98.8,
+        "day_change_pct": 1.3,
+        "vs_cost_pct": 1.3,
+        "status": "hold",
+        "note": "全組最強，真連續6天，外+投同步，今日+5,014張，Level 0，距目標9.3%"
+      },
+      {
+        "stock_code": "2337",
+        "stock_name": "旺宏",
+        "intraday_price": 144.0,
+        "day_change_pct": 0.3,
+        "vs_cost_pct": 0.3,
+        "status": "watch",
+        "note": "真連續0天，動能-91%，近5天買1賣4，MU+10.74%催化強但法人態度轉弱"
+      }
+    ],
+    "track_b_recommendations": [],
+    "track_b_observations": [
+      {
+        "stock_code": "6901",
+        "stock_name": "鑽石投資",
+        "score": null,
+        "reason": "強訊號強度75，但動能+500% >+100%（前5日賣超→近5日買超急轉），投資公司無超強催化覆寫 → 直接排除"
+      },
+      {
+        "stock_code": "2547",
+        "stock_name": "日勝生",
+        "score": null,
+        "reason": "強訊號強度75，但今日漲幅+4.7% >3% → 直接排除"
+      },
+      {
+        "stock_code": "4137",
+        "stock_name": "麗豐-KY",
+        "score": null,
+        "reason": "強訊號強度65，動能+500% >+100%，生活消費公司無超強催化覆寫 → 直接排除"
+      },
+      {
+        "stock_code": "8341",
+        "stock_name": "日友",
+        "score": null,
+        "reason": "強訊號強度60，今日漲幅+3.9% >3% → 直接排除"
+      },
+      {
+        "stock_code": "6189",
+        "stock_name": "豐藝",
+        "score": null,
+        "reason": "強訊號強度60，今日漲幅+4.0% >3% → 直接排除"
+      },
+      {
+        "stock_code": "2897",
+        "stock_name": "王道銀行",
+        "score": null,
+        "reason": "強訊號強度60，動能+500% >+100%，銀行股無超強催化覆寫 → 直接排除"
+      }
+    ],
+    "intraday_summary": "今日無盤中新推薦。強訊號6檔全數排除：3檔漲幅>3%，3檔動能>+100%無催化覆寫。Track A全部Level 0無出場訊號。2368金像電距目標僅1%需盯盤。"
+  },
   "excluded_stocks": [
     {"code": "2330", "name": "台積電", "reason": "reversal Level 4"},
     {"code": "2303", "name": "聯電", "reason": "reversal Level 4"},
