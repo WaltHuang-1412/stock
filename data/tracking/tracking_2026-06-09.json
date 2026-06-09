@@ -7,7 +7,12 @@
   "market_context": {
     "vix": 18.92,
     "market_regime": "修正後反彈",
-    "key_catalysts": ["Marvell+31.64%", "Micron+10.74%", "費半+5.61%", "四大AI代工廠5月最旺"],
+    "key_catalysts": [
+      "Marvell+31.64%",
+      "Micron+10.74%",
+      "費半+5.61%",
+      "四大AI代工廠5月最旺"
+    ],
     "data_note": "us_leader_alerts 基於週五過時數據，NVIDIA/Micron Level 2 罰分不套用（週一已反彈）"
   },
   "recommendations": [
@@ -25,10 +30,19 @@
       "track": "A",
       "module": "A-L2",
       "reason": "AI伺服器強催化(四大代工廠5月最旺)+Module A L2佈局中+連買2天+動能-26.1%+營收+47%",
-      "catalysts": ["AI伺服器強催化", "四大代工廠5月最旺"],
-      "risks": ["NVIDIA仍在修正期，需確認週一+2.26%趨勢延續"],
+      "catalysts": [
+        "AI伺服器強催化",
+        "四大代工廠5月最旺"
+      ],
+      "risks": [
+        "NVIDIA仍在修正期，需確認週一+2.26%趨勢延續"
+      ],
       "result": "holding",
-      "holding_status": "新推薦"
+      "holding_status": "新推薦",
+      "actual_close": 359.0,
+      "day_change_pct": 4.1,
+      "close_price": 359.0,
+      "change_percent": 4.1
     },
     {
       "stock_code": "2383",
@@ -44,10 +58,20 @@
       "track": "B",
       "module": null,
       "reason": "光通訊超強催化(Marvell+31.64%/Amazon光纖)+Citi調升目標+連買4天+動能-79.2%+營收+45%+EPS+49%",
-      "catalysts": ["Marvell+31.64%", "Amazon大買光纖", "Citi調升目標"],
-      "risks": ["法人數據偏弱(不在TOP50)，依賴催化劑延續"],
+      "catalysts": [
+        "Marvell+31.64%",
+        "Amazon大買光纖",
+        "Citi調升目標"
+      ],
+      "risks": [
+        "法人數據偏弱(不在TOP50)，依賴催化劑延續"
+      ],
       "result": "holding",
-      "holding_status": "新推薦"
+      "holding_status": "新推薦",
+      "actual_close": 5065.0,
+      "day_change_pct": 6.2,
+      "close_price": 5065.0,
+      "change_percent": 6.2
     },
     {
       "stock_code": "2368",
@@ -63,10 +87,20 @@
       "track": "B",
       "module": null,
       "reason": "光通訊超強催化+Citi直接點名金像電調升目標+EPS+91%+動能-38.4%",
-      "catalysts": ["Marvell+31.64%", "Citi直接點名調升目標", "Amazon光纖採購潮"],
-      "risks": ["連買0天(最近一日賣超)，法人態度待確認"],
+      "catalysts": [
+        "Marvell+31.64%",
+        "Citi直接點名調升目標",
+        "Amazon光纖採購潮"
+      ],
+      "risks": [
+        "連買0天(最近一日賣超)，法人態度待確認"
+      ],
       "result": "holding",
-      "holding_status": "新推薦"
+      "holding_status": "新推薦",
+      "actual_close": 1495.0,
+      "day_change_pct": 9.9,
+      "close_price": 1495.0,
+      "change_percent": 9.9
     },
     {
       "stock_code": "1303",
@@ -84,7 +118,11 @@
       "holding_addon": true,
       "reason": "L3佈局完成+連買6天+外資+投信同步+EPS+1450%+動能-49.3%+石化Q2/Q3催化 ｜🔄 持倉加碼（用戶已持x1）",
       "result": "holding",
-      "holding_status": "持倉加碼"
+      "holding_status": "持倉加碼",
+      "actual_close": 99.2,
+      "day_change_pct": 1.7,
+      "close_price": 99.2,
+      "change_percent": 1.7
     },
     {
       "stock_code": "2337",
@@ -102,9 +140,79 @@
       "holding_addon": true,
       "reason": "Module B NAND早期+MU+10.74%+EPS+82%+外資持股比+0.78%+動能-91% ｜🔄 持倉加碼（謹慎）",
       "result": "holding",
-      "holding_status": "持倉加碼"
+      "holding_status": "持倉加碼",
+      "actual_close": 145.5,
+      "day_change_pct": 1.4,
+      "close_price": 145.5,
+      "change_percent": 1.4
     }
   ],
+  "yesterday_verification": {
+    "date": "2026-06-09",
+    "settled_today": [
+      {
+        "code": "3017",
+        "name": "奇鋐",
+        "result": "fail",
+        "settled_price": 2545.0,
+        "change_pct": -10.86
+      }
+    ],
+    "accuracy": {
+      "settled_accuracy_pct": 61.4,
+      "success_count": 226,
+      "fail_count": 142,
+      "total_settled": 368,
+      "holding_count": 177
+    },
+    "pattern_notes": [
+      "今日4檔fail（6770/2301/3017/1582）均為黑色星期一衝擊所致",
+      "今日新推薦5/5正報酬（平均+4.7%），光通訊+AI伺服器主題驗證成功",
+      "6檔Level 4預警（2609/6505/2449/2404/2027/2345），建議逐一manual_exit評估"
+    ],
+    "results": [
+      {
+        "code": "2376",
+        "name": "技嘉",
+        "close_price": 359.0,
+        "change_percent": 4.1,
+        "result": "holding",
+        "holding_status": "新推薦"
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "close_price": 5065.0,
+        "change_percent": 6.2,
+        "result": "holding",
+        "holding_status": "新推薦"
+      },
+      {
+        "code": "2368",
+        "name": "金像電",
+        "close_price": 1495.0,
+        "change_percent": 9.9,
+        "result": "holding",
+        "holding_status": "新推薦"
+      },
+      {
+        "code": "1303",
+        "name": "南亞",
+        "close_price": 99.2,
+        "change_percent": 1.7,
+        "result": "holding",
+        "holding_status": "持倉加碼"
+      },
+      {
+        "code": "2337",
+        "name": "旺宏",
+        "close_price": 145.5,
+        "change_percent": 1.4,
+        "result": "holding",
+        "holding_status": "持倉加碼"
+      }
+    ]
+  },
   "holdings_addon_evaluation": [
     {
       "stock_code": "1303",
@@ -256,23 +364,308 @@
     "intraday_summary": "今日無盤中新推薦。強訊號6檔全數排除：3檔漲幅>3%，3檔動能>+100%無催化覆寫。Track A全部Level 0無出場訊號。2368金像電距目標僅1%需盯盤。"
   },
   "excluded_stocks": [
-    {"code": "2330", "name": "台積電", "reason": "reversal Level 4"},
-    {"code": "2303", "name": "聯電", "reason": "reversal Level 4"},
-    {"code": "2886", "name": "兆豐金", "reason": "reversal Level 4"},
-    {"code": "2609", "name": "陽明", "reason": "reversal Level 4"},
-    {"code": "6505", "name": "台塑化", "reason": "reversal Level 4"},
-    {"code": "2603", "name": "長榮", "reason": "reversal Level 4"},
-    {"code": "3037", "name": "欣興", "reason": "reversal Level 3"},
-    {"code": "3231", "name": "緯創", "reason": "reversal Level 2 (-15分)"},
-    {"code": "2345", "name": "智邦", "reason": "Broadcom Level 3 排除"},
-    {"code": "2412", "name": "中華電", "reason": "Broadcom Level 3 排除"},
-    {"code": "2449", "name": "京元電子", "reason": "Broadcom Level 3 排除"},
-    {"code": "2382", "name": "廣達", "reason": "動能+254% 追高排除"},
-    {"code": "3702", "name": "大聯大", "reason": "動能+270.8% 追高排除"},
-    {"code": "2347", "name": "聯強", "reason": "動能+179.9% 追高 + 外資近5天-43K"},
-    {"code": "2408", "name": "南亞科", "reason": "準確率篩選失敗：外資近5天-18K"},
-    {"code": "2344", "name": "華邦電", "reason": "準確率篩選失敗：外資近5天-50K"},
-    {"code": "3533", "name": "嘉澤", "reason": "動能+169.7% 追高排除"},
-    {"code": "6274", "name": "台燿", "reason": "reversal 狀態不明"}
-  ]
+    {
+      "code": "2330",
+      "name": "台積電",
+      "reason": "reversal Level 4"
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "reason": "reversal Level 4"
+    },
+    {
+      "code": "2886",
+      "name": "兆豐金",
+      "reason": "reversal Level 4"
+    },
+    {
+      "code": "2609",
+      "name": "陽明",
+      "reason": "reversal Level 4"
+    },
+    {
+      "code": "6505",
+      "name": "台塑化",
+      "reason": "reversal Level 4"
+    },
+    {
+      "code": "2603",
+      "name": "長榮",
+      "reason": "reversal Level 4"
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "reason": "reversal Level 3"
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "reason": "reversal Level 2 (-15分)"
+    },
+    {
+      "code": "2345",
+      "name": "智邦",
+      "reason": "Broadcom Level 3 排除"
+    },
+    {
+      "code": "2412",
+      "name": "中華電",
+      "reason": "Broadcom Level 3 排除"
+    },
+    {
+      "code": "2449",
+      "name": "京元電子",
+      "reason": "Broadcom Level 3 排除"
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "reason": "動能+254% 追高排除"
+    },
+    {
+      "code": "3702",
+      "name": "大聯大",
+      "reason": "動能+270.8% 追高排除"
+    },
+    {
+      "code": "2347",
+      "name": "聯強",
+      "reason": "動能+179.9% 追高 + 外資近5天-43K"
+    },
+    {
+      "code": "2408",
+      "name": "南亞科",
+      "reason": "準確率篩選失敗：外資近5天-18K"
+    },
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "reason": "準確率篩選失敗：外資近5天-50K"
+    },
+    {
+      "code": "3533",
+      "name": "嘉澤",
+      "reason": "動能+169.7% 追高排除"
+    },
+    {
+      "code": "6274",
+      "name": "台燿",
+      "reason": "reversal 狀態不明"
+    }
+  ],
+  "after_market_update": {
+    "time": "2026-06-09 盤後",
+    "today_settled": [
+      {
+        "stock_code": "3017",
+        "stock_name": "奇鋐",
+        "result": "fail",
+        "close": 2545.0,
+        "fail_reason": "收盤2545 ≤ 停損2569.5，黑色星期一後續衝擊，D3/10結算"
+      }
+    ],
+    "today_closes": [
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "actual_close": 359.0,
+        "day_change_pct": 4.1
+      },
+      {
+        "stock_code": "2383",
+        "stock_name": "台光電",
+        "actual_close": 5065.0,
+        "day_change_pct": 6.2
+      },
+      {
+        "stock_code": "2368",
+        "stock_name": "金像電",
+        "actual_close": 1495.0,
+        "day_change_pct": 9.9
+      },
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "actual_close": 99.2,
+        "day_change_pct": 1.7
+      },
+      {
+        "stock_code": "2337",
+        "stock_name": "旺宏",
+        "actual_close": 145.5,
+        "day_change_pct": 1.4
+      }
+    ],
+    "level4_alerts": [
+      {
+        "stock_code": "2609",
+        "stock_name": "陽明",
+        "reversal": "Level 4",
+        "close": 51.6,
+        "vs_stop_loss": "4.9%",
+        "action": "強烈建議manual_exit_checker評估"
+      },
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "reversal": "Level 4",
+        "close": 52.4,
+        "vs_stop_loss": "5.0%",
+        "action": "強烈建議manual_exit_checker評估"
+      },
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電子",
+        "reversal": "Level 4",
+        "close": 291.0,
+        "vs_stop_loss": "0.4%",
+        "action": "⚠️緊急：距停損289.8僅0.4%"
+      },
+      {
+        "stock_code": "2404",
+        "stock_name": "漢唐",
+        "reversal": "Level 4",
+        "close": 1190.0,
+        "vs_stop_loss": "7.0%",
+        "action": "建議manual_exit_checker評估"
+      },
+      {
+        "stock_code": "2027",
+        "stock_name": "大成鋼",
+        "reversal": "Level 4",
+        "close": 42.9,
+        "vs_stop_loss": "8.0%",
+        "action": "建議manual_exit_checker評估"
+      },
+      {
+        "stock_code": "2345",
+        "stock_name": "智邦",
+        "reversal": "Level 4",
+        "close": 2475.0,
+        "vs_stop_loss": "6.0%",
+        "action": "建議manual_exit_checker評估"
+      }
+    ],
+    "tomorrow_recommendations": [
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "industry": "石化塑膠",
+        "recommend_price": 97.5,
+        "target_price": 108.0,
+        "stop_loss_pct": -10,
+        "stop_loss": 87.75,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 112,
+        "reason": "L3佈局完成+連買6天+外投同步+EPS+1450%+石化Q2/Q3催化"
+      },
+      {
+        "stock_code": "8046",
+        "stock_name": "南電",
+        "industry": "PCB/ABF基板",
+        "recommend_price": 904.0,
+        "target_price": 990.0,
+        "stop_loss_pct": -10,
+        "stop_loss": 813.6,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 93,
+        "reason": "EPS+564%+ABF基板AI需求持續+Level 0+外資持股比adj -3"
+      },
+      {
+        "stock_code": "2376",
+        "stock_name": "技嘉",
+        "industry": "AI伺服器",
+        "recommend_price": 345.0,
+        "target_price": 385.0,
+        "stop_loss_pct": -10,
+        "stop_loss": 310.5,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 92,
+        "reason": "AI伺服器反彈+Module A L2+連買2天+外資持股比adj -3"
+      },
+      {
+        "stock_code": "2383",
+        "stock_name": "台光電",
+        "industry": "光通訊CCL",
+        "recommend_price": 4770.0,
+        "target_price": 5250.0,
+        "stop_loss_pct": -10,
+        "stop_loss": 4293.0,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 92,
+        "reason": "Marvell+31.64%光通訊催化+連買4天+EPS+49%+Amazon光纖採購潮"
+      },
+      {
+        "stock_code": "2337",
+        "stock_name": "旺宏",
+        "industry": "NAND記憶體",
+        "recommend_price": 143.5,
+        "target_price": 158.0,
+        "stop_loss_pct": -10,
+        "stop_loss": 129.15,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 89,
+        "reason": "MU+10.74%+記憶體缺貨到2028+EPS+82%+外資持股比+0.78%（已含）"
+      },
+      {
+        "stock_code": "2368",
+        "stock_name": "金像電",
+        "industry": "光通訊CCL",
+        "recommend_price": 1360.0,
+        "target_price": 1510.0,
+        "stop_loss_pct": -10,
+        "stop_loss": 1224.0,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 85,
+        "reason": "Citi直接點名調升目標+EPS+91%+光通訊超強催化（⚠️距目標1%，明日注意結算）"
+      }
+    ],
+    "removed_stocks": [
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "reason": "已fail結算（D2觸停損 -11.7%）"
+      },
+      {
+        "stock_code": "2301",
+        "stock_name": "光寶科",
+        "reason": "已fail結算（D3觸停損 -10.4%）"
+      },
+      {
+        "stock_code": "3017",
+        "stock_name": "奇鋐",
+        "reason": "已fail結算（D3觸停損 -10.9%）"
+      },
+      {
+        "stock_code": "1582",
+        "stock_name": "信錦",
+        "reason": "已fail結算（D7觸停損 -17.3%）"
+      }
+    ],
+    "settlement_notes_approaching": [
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電子",
+        "note": "距停損0.4%，若明日觸289.8即自動fail"
+      },
+      {
+        "stock_code": "3034",
+        "stock_name": "聯詠",
+        "note": "D8→D9，明日D9/10，現價480.5 vs 推薦485（-0.9%）"
+      },
+      {
+        "stock_code": "2379",
+        "stock_name": "瑞昱",
+        "note": "D8→D9，Level 2預警，現價651 距目標670（2.9%）"
+      }
+    ]
+  }
 }
