@@ -1,0 +1,185 @@
+{
+  "date": "2026-06-10",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "vix": 19.87,
+    "nasdaq_pct": -5.22,
+    "soc_pct": -7.78,
+    "broadcom_pct": -18.57,
+    "level3_excluded_industries": ["DRAM記憶體", "AI伺服器", "網通CPO"],
+    "today_catalyst": "金融升息+CPI數據（金融板塊輪動）"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "industry": "金融",
+      "recommend_price": 43.55,
+      "target_price": 48.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 39.20,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 92,
+      "reason": "金融升息+CPI，Module A L2 投信連買，avg_rank TOP11，EPS+21.6%；⚠️外資近5天-452微幅未達準確率篩選",
+      "track": "A",
+      "module_a_level": "L2",
+      "reversal_level": 0,
+      "consecutive_buy_days": 1,
+      "foreign_5d": -452
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "recommend_price": 23.85,
+      "target_price": 26.2,
+      "stop_loss_pct": -10,
+      "stop_loss": 21.47,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 82,
+      "reason": "金融升息+CPI，外資+投信同步買超，avg_rank TOP13，EPS+50%（+5分），買進佈局型態",
+      "track": "A",
+      "module_a_level": null,
+      "reversal_level": 0,
+      "consecutive_buy_days": 1,
+      "foreign_5d": 47000
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "industry": "金融",
+      "recommend_price": 17.10,
+      "target_price": 18.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 15.39,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "reason": "金融升息+CPI，外資近5天+110K最強流入（TOP10），過量買超-5已扣，EPS持平，注意單日大量後短線壓力",
+      "track": "A",
+      "module_a_level": null,
+      "reversal_level": 0,
+      "consecutive_buy_days": 1,
+      "foreign_5d": 110000,
+      "warning": "過量買超(單日≥30K, 真連續<7天) -5分已計入評分"
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "industry": "金融",
+      "recommend_price": 42.65,
+      "target_price": 46.9,
+      "stop_loss_pct": -10,
+      "stop_loss": 38.39,
+      "settlement_days": 10,
+      "position": "5%",
+      "score": 70,
+      "reason": "金融升息+CPI，外資+投信同步買超，外資持股比+0.31%回升，EPS連2季負成長-5分已計入",
+      "track": "A",
+      "module_a_level": null,
+      "reversal_level": 0,
+      "consecutive_buy_days": 1,
+      "foreign_5d": 15000,
+      "warning": "EPS連2季負成長(-5分已計)"
+    }
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "note": "真連續9天/Level0/外資+投信同步，但動能76.6%(-10分)致總分63分不達推薦門檻；觀察明日動能修正後",
+      "score": 63
+    },
+    {
+      "stock_code": "6116",
+      "stock_name": "彩晶",
+      "note": "EPS+77%/外資近5天+6,209/Level0，但面板催化未入今日主題(準確率篩選催化對齊失敗)；觀察名單",
+      "score": 82
+    }
+  ],
+  "excluded_stocks": [
+    {"stock_code": "2330", "reason": "Level 1龍頭預警 (Lam Research)，不排除但-5分警示"},
+    {"stock_code": "2344", "reason": "Level 3排除 (Micron -12.05%)"},
+    {"stock_code": "3702", "reason": "Level 3排除 (Micron)"},
+    {"stock_code": "2408", "reason": "Level 3排除"},
+    {"stock_code": "6770", "reason": "Level 3排除 (Micron) + 已觸yaml停損(現價71.5<停損78.93)"},
+    {"stock_code": "2337", "reason": "Level 3排除 (Micron) + 已觸yaml停損(現價145.5<停損147.6)"},
+    {"stock_code": "1303", "reason": "Level 3排除 (SMCI/Broadcom) + 已觸yaml停損(現價99.2<停損102.24)"},
+    {"stock_code": "2303", "reason": "Level 3排除"},
+    {"stock_code": "3491", "reason": "Level 4反轉 (爆量賣超) - SpaceX IPO法人出清"},
+    {"stock_code": "6285", "reason": "Level 4反轉 (爆量賣超) - SpaceX IPO法人出清"},
+    {"stock_code": "2349", "reason": "Level 4反轉 (爆量賣超)"},
+    {"stock_code": "2886", "reason": "外資近5天-452微未達準確率篩選，但已納入推薦並標注"},
+    {"stock_code": "3715", "reason": "動能+126.5%>100%，動能一票否決"},
+    {"stock_code": "8112", "reason": "外資近5天-7,297，準確率篩選失敗"},
+    {"stock_code": "5880", "reason": "合庫金已納入推薦"},
+    {"stock_code": "5876", "reason": "上海商銀已納入推薦"},
+    {"stock_code": "2834", "reason": "臺企銀已納入推薦"},
+    {"stock_code": "1216", "reason": "外資近5天-793，準確率篩選失敗"},
+    {"stock_code": "2313", "reason": "外資近5天-16K，準確率篩選失敗，10天賣超8天"},
+    {"stock_code": "5880_dup", "reason": "重複"},
+    {"stock_code": "2886_dup", "reason": "重複"},
+    {"stock_code": "5880_fin", "reason": "重複"},
+    {"stock_code": "6116_cat", "reason": "催化對齊失敗(面板非今日主題)"},
+    {"stock_code": "5880_con", "reason": "合庫金+臺企銀+上海+兆豐金全為金融，產業集中；觀察"},
+    {"stock_code": "3045", "reason": "總分63分(<70)，動能-10分拖累；列觀察名單"}
+  ],
+  "portfolio_assessment": {
+    "holdings_evaluation": [
+      {
+        "stock_code": "2330",
+        "stock_name": "台積電",
+        "yaml_buy_price": 2070,
+        "current_price": 2305,
+        "yaml_stop_loss": 1863,
+        "status": "安全",
+        "score_estimate": 72,
+        "action": "🟡 續抱觀察（Lam Level1警示，持有不加碼）"
+      },
+      {
+        "stock_code": "3037",
+        "stock_name": "欣興",
+        "yaml_buy_price": 1055,
+        "current_price": 969,
+        "yaml_stop_loss": 949.5,
+        "status": "安全（距停損-2%）",
+        "action": "🟡 密切監控（Level3 Module B警示，距停損149.5元=剩4.5%緩衝）"
+      },
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "yaml_buy_price": 113.6,
+        "current_price": 99.2,
+        "yaml_stop_loss": 102.24,
+        "status": "⚠️ 已低於yaml停損",
+        "action": "⚠️ 留意減碼（Level3排除+已破停損，評分<50分）"
+      },
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "yaml_buy_price": 87.7,
+        "current_price": 71.5,
+        "yaml_stop_loss": 78.93,
+        "status": "⚠️ 已大幅低於yaml停損",
+        "action": "⚠️ 強烈留意減碼（Level3排除+已跌破停損9.4%，評分<40分）"
+      },
+      {
+        "stock_code": "2337",
+        "stock_name": "旺宏",
+        "yaml_buy_price": 164.0,
+        "current_price": 145.5,
+        "yaml_stop_loss": 147.6,
+        "status": "⚠️ 已低於yaml停損",
+        "action": "⚠️ 留意減碼（Level3排除+已破停損，評分<50分）"
+      }
+    ]
+  },
+  "diversification_warning": "⚠️ 今日4檔推薦全為金融產業，違反單一產業≤50%原則。因其他科技/成長類股受Level3排除，無法達成產業分散。建議總金融部位≤30%，各檔降至下限。",
+  "industry_warning": "Broadcom -18.57% → AI伺服器/CPO全排除。Micron -12.05% → DRAM/記憶體全排除。市場今日只有金融/電信/防禦性股票具備正向法人動能。"
+}
