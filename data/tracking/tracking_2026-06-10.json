@@ -29,7 +29,13 @@
       "module_a_level": "L2",
       "reversal_level": 0,
       "consecutive_buy_days": 1,
-      "foreign_5d": -452
+      "foreign_5d": -452,
+      "actual_close": 43.4,
+      "close_price": 43.4,
+      "change_pct": -0.3,
+      "change_percent": -0.3,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤43.4(-0.3%) | 距目標10.6% | 距停損9.7%"
     },
     {
       "stock_code": "5880",
@@ -47,7 +53,13 @@
       "module_a_level": null,
       "reversal_level": 0,
       "consecutive_buy_days": 1,
-      "foreign_5d": 47000
+      "foreign_5d": 47000,
+      "actual_close": 23.8,
+      "close_price": 23.8,
+      "change_pct": -0.2,
+      "change_percent": -0.2,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤23.8(-0.2%) | 距目標10.1% | 距停損9.8%"
     },
     {
       "stock_code": "2834",
@@ -66,7 +78,13 @@
       "reversal_level": 0,
       "consecutive_buy_days": 1,
       "foreign_5d": 110000,
-      "warning": "過量買超(單日≥30K, 真連續<7天) -5分已計入評分"
+      "warning": "過量買超(單日≥30K, 真連續<7天) -5分已計入評分",
+      "actual_close": 16.95,
+      "close_price": 16.95,
+      "change_pct": -0.9,
+      "change_percent": -0.9,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤16.95(-0.9%) | 距目標10.9% | 距停損9.2%"
     },
     {
       "stock_code": "5876",
@@ -85,9 +103,28 @@
       "reversal_level": 0,
       "consecutive_buy_days": 1,
       "foreign_5d": 15000,
-      "warning": "EPS連2季負成長(-5分已計)"
+      "warning": "EPS連2季負成長(-5分已計)",
+      "actual_close": 42.05,
+      "close_price": 42.05,
+      "change_pct": -1.4,
+      "change_percent": -1.4,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤42.05(-1.4%) | 距目標11.5% | 距停損8.7%"
     }
   ],
+  "yesterday_verification": {
+    "accuracy": 61.2,
+    "settled_count": 369,
+    "success": 226,
+    "fail": 143,
+    "holding": 307,
+    "today_settlements": 3,
+    "results": [
+      {"stock_code": "2449", "stock_name": "京元電子", "tracking_date": "2026-06-04", "result": "fail", "settled_price": 272.0, "stop_loss": 290.25, "note": "Broadcom -18.57%，收盤272≤停損290.25，D6觸停損"},
+      {"stock_code": "2449", "stock_name": "京元電子", "tracking_date": "2026-06-05", "result": "fail", "settled_price": 272.0, "stop_loss": 289.8, "note": "Broadcom -18.57%，收盤272≤停損289.8，D5觸停損"},
+      {"stock_code": "6282", "stock_name": "康舒", "tracking_date": "2026-06-05", "result": "fail", "settled_price": 58.5, "stop_loss": 60.61, "note": "Broadcom衝擊，收盤58.5≤停損60.61（-5%），track_b D3觸停損"}
+    ]
+  },
   "track_b_recommendations": [],
   "track_b_observations": [
     {
@@ -127,6 +164,12 @@
       "score": 82
     }
   ],
+  "actual_closes_2026_06_10": {
+    "2886": 43.4,
+    "5880": 23.8,
+    "2834": 16.95,
+    "5876": 42.05
+  },
   "intraday_summary": {
     "track_a_status": "全部4檔Level 0，法人今日持續買超，無出場訊號",
     "track_b_result": "今日無盤中新推薦（所有候選未達75分門檻）",
@@ -240,5 +283,91 @@
     ]
   },
   "diversification_warning": "⚠️ 今日4檔推薦全為金融產業，違反單一產業≤50%原則。因其他科技/成長類股受Level3排除，無法達成產業分散。建議總金融部位≤30%，各檔降至下限。",
-  "industry_warning": "Broadcom -18.57% → AI伺服器/CPO全排除。Micron -12.05% → DRAM/記憶體全排除。市場今日只有金融/電信/防禦性股票具備正向法人動能。"
+  "industry_warning": "Broadcom -18.57% → AI伺服器/CPO全排除。Micron -12.05% → DRAM/記憶體全排除。市場今日只有金融/電信/防禦性股票具備正向法人動能。",
+  "after_market_settlements": [
+    {
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "tracking_date": "2026-06-04",
+      "result": "fail",
+      "settled_price": 272.0,
+      "fail_reason": "Broadcom -18.57%衝擊，收盤272.0 ≤ 停損290.25，D6/10觸停損"
+    },
+    {
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "tracking_date": "2026-06-05",
+      "result": "fail",
+      "settled_price": 272.0,
+      "fail_reason": "Broadcom -18.57%衝擊，收盤272.0 ≤ 停損289.8，D5/10觸停損"
+    },
+    {
+      "stock_code": "6282",
+      "stock_name": "康舒",
+      "tracking_date": "2026-06-05",
+      "result": "fail",
+      "settled_price": 58.5,
+      "fail_reason": "Broadcom -18.57%衝擊，收盤58.5 ≤ 停損60.61（-5%），D3/10觸停損"
+    }
+  ],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "industry": "金融",
+      "recommend_price": 28.9,
+      "target_price": 32.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 26.01,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 92,
+      "reason": "金融升息CPI超強，avg_rank 4.5（全場TOP5），真連7天，EPS+177%，月季雙線上"
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "industry": "金融",
+      "recommend_price": 33.7,
+      "target_price": 37.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 30.33,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 91,
+      "reason": "金融升息CPI超強，avg_rank 6.5，外資主導+98K近5天，真連7天，EPS+56%"
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "industry": "金融",
+      "recommend_price": 33.0,
+      "target_price": 36.6,
+      "stop_loss_pct": -10,
+      "stop_loss": 29.70,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 90,
+      "reason": "金融升息CPI超強，avg_rank 7.5，外資+130K，5日+0%最乾淨佈局，EPS+33%"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "reason": "已觸停損FAIL (-15.5%)，Broadcom Level3衝擊，移除追蹤"
+    },
+    {
+      "stock_code": "6282",
+      "stock_name": "康舒",
+      "reason": "已觸停損FAIL (-8.3%)，Broadcom Level3衝擊，track_b移除"
+    }
+  ],
+  "critical_watch": [
+    {"stock_code": "2345", "note": "距停損2326.5僅1.6%，Broadcom Level3直接影響，明日優先監控"},
+    {"stock_code": "2609", "note": "距停損49.05僅3.1%，WTI持續走弱"},
+    {"stock_code": "6505", "note": "距停損49.77僅2.4%，WTI -4.2%直接衝擊"},
+    {"stock_code": "2379", "note": "D10到期，明日收盤結算（現價645 > 推薦600 = success）"},
+    {"stock_code": "3034", "note": "D10到期，明日收盤結算（現價478.5 > 推薦485 = 接近邊緣）"}
+  ]
 }

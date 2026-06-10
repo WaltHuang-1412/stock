@@ -43,10 +43,11 @@
       "reversal_level": "Level0",
       "momentum_pct": -85.2,
       "close_price": 309.5,
-      "actual_close": 309.5,
-      "change_percent": -3.9,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤309.5(-3.9%) | 距停損6.4% | 法人連買2天+8.4K | MRVL+54.48%ASIC催化 | 明日繼續追蹤"
+      "actual_close": 272.0,
+      "change_percent": -15.5,
+      "result": "fail",
+      "fail_reason": "Broadcom -18.57%衝擊，收盤272.0 ≤ 停損289.8 (-10%)，D5/10觸停損",
+      "settled_date": "2026-06-10"
     },
     {
       "stock_code": "2404",
@@ -63,11 +64,11 @@
       "module_a_level": "None",
       "reversal_level": "Level0",
       "momentum_pct": -10.0,
-      "close_price": 1205.0,
-      "actual_close": 1205.0,
-      "change_percent": -2.0,
+      "close_price": 1150.0,
+      "actual_close": 1150.0,
+      "change_percent": -6.5,
       "result": "holding",
-      "holding_status": "D0/10 | 收盤1205.0(-2.0%) | 距停損8.1% | 外資+2.1K/投信-1.1K | TSM廠務需求 | 明日繼續追蹤"
+      "holding_status": "D3/10 | 收盤1150.0(-6.5%) | 距目標21.7% | 距停損3.7%"
     },
     {
       "stock_code": "2383",
@@ -84,11 +85,11 @@
       "module_a_level": "None",
       "reversal_level": "Level0",
       "momentum_pct": -61.2,
-      "close_price": 4885.0,
-      "actual_close": 4885.0,
-      "change_percent": 1.1,
+      "close_price": 4940.0,
+      "actual_close": 4940.0,
+      "change_percent": 3.6,
       "result": "holding",
-      "holding_status": "D0/10 | 收盤4885.0(+1.1%) | 距停損11.0% | 法人+63 | ABF題材 | 明日繼續追蹤"
+      "holding_status": "D3/10 | 收盤4940.0(+3.6%) | 距目標11.3% | 距停損12.2%"
     }
   ],
   "holdings_evaluation": [
@@ -257,10 +258,11 @@
       "source": "偵測器強訊號+TOP30",
       "three_checks": "催化對齊✅外資近5天+17K✅Level0✅",
       "close_price": 63.8,
-      "actual_close": 63.8,
-      "change_percent": 0.0,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤63.8(0.0%) | 停損60.6(-5%) | 法人+14.9K | DELL+33.12%AI電源 | 明日繼續追蹤"
+      "actual_close": 58.5,
+      "change_percent": -8.3,
+      "result": "fail",
+      "fail_reason": "Broadcom -18.57%衝擊，收盤58.5 ≤ 停損60.61 (-5%)，D3/10觸停損",
+      "settled_date": "2026-06-10"
     }
   ],
   "track_b_observations": [
