@@ -30,7 +30,10 @@
       "reason": "Module A L3佈局完成，投信連買3天累計+234K，動能-63.9%，EPS+23.7%，升息利差受惠",
       "risk_note": "外資近5天-43K，準確率篩選外資條件未通過，縮倉5-10%",
       "result": "holding",
-      "holding_status": "D0/10 | 盤中35.85(+1.4%) | Level 0✅連買3天 | 距目標7.4% | 距停損11.1% | 策略:續抱"
+      "actual_close": 35.65,
+      "close_price": 35.65,
+      "change_percent": "+0.85%",
+      "holding_status": "D0/10 | 收盤35.65(+0.8%) | Level 0✅連買3天 | 距目標8.0% | 距停損10.7% | 策略:續抱"
     },
     {
       "stock_code": "2890",
@@ -47,7 +50,10 @@
       "module_a_level": "L2",
       "reason": "Module A L2，6天TOP50，EPS+33%，外資+投信同步（外資近5天+74K），動能-20.3%，升息受惠",
       "result": "holding",
-      "holding_status": "D0/10 | 盤中33.1(+0.3%) | ⚠️Level 2單日反轉(今日賣-435張) | 距停損10.3% | 策略:降倉觀察，明日確認"
+      "actual_close": 33.25,
+      "close_price": 33.25,
+      "change_percent": "+0.76%",
+      "holding_status": "D0/10 | 收盤33.25(+0.8%) | ⚠️Level 2確認中（明日若續賣→減半倉） | 距目標8.3% | 距停損10.7% | 策略:降倉觀察"
     },
     {
       "stock_code": "3045",
@@ -64,7 +70,10 @@
       "module_a_level": "L2",
       "reason": "Module A L2，連買10天，外資+投信同步，buy_ratio 51.3%，電信防禦，升息受惠",
       "result": "holding",
-      "holding_status": "D0/10 | 盤中119.0(+0.8%) | Level 0✅連買10天+6217張 | 距目標7.6% | 距停損10.8% | 策略:續抱"
+      "actual_close": 119.0,
+      "close_price": 119.0,
+      "change_percent": "+0.85%",
+      "holding_status": "D0/10 | 收盤119.0(+0.8%) | Level 0✅連買10天+6217張 | 距目標7.6% | 距停損10.8% | 策略:續抱"
     },
     {
       "stock_code": "2867",
@@ -81,7 +90,10 @@
       "module_a_level": "L2",
       "reason": "Module A L2，連買9天，EPS YoY +140%（+5分），外資近5天+44K，升息→壽險投資收益改善",
       "result": "holding",
-      "holding_status": "D0/10 | 盤中8.18(+0.2%) | Level 0✅連買9天+2283張 | 距目標8.8% | 距停損10.3% | 策略:續抱"
+      "actual_close": 8.19,
+      "close_price": 8.19,
+      "change_percent": "+0.37%",
+      "holding_status": "D0/10 | 收盤8.19(+0.4%) | Level 0✅連買9天+2283張 | 距目標8.7% | 距停損10.4% | 策略:續抱"
     },
     {
       "stock_code": "2027",
@@ -98,7 +110,10 @@
       "module_a_level": "L2",
       "reason": "Module A L2，動能-59.4%佈局完成+15分，外資近5天+55K，EPS+48.1%，中東油價+4.56%鋼鐵受益",
       "result": "holding",
-      "holding_status": "D0/10 | 盤中42.15(-0.7%) | Level 0✅今日+3283張(外資買/投信賣對決) | 距目標10.2% | 距停損9.4% | 策略:續抱"
+      "actual_close": 42.55,
+      "close_price": 42.55,
+      "change_percent": "+0.12%",
+      "holding_status": "D0/10 | 收盤42.55(+0.1%) | Level 0✅今日+3283張 | 距目標9.3% | 距停損10.1% | 策略:續抱"
     },
     {
       "stock_code": "3189",
@@ -116,7 +131,10 @@
       "reason": "Module B中期，PCB先進封裝，EPS+356%（+5分），營收+10%回檔（+5分），動能-26.9%+10分，外資近5天+6787",
       "risk_note": "投信近5天-3657（外資買投信賣），景碩高價股需嚴格控倉",
       "result": "holding",
-      "holding_status": "D0/10 | 盤中601(-9.1%) | 🔴距停損594僅1%！Level 0但籌碼不連續 | 策略:緊急關注，跌破594立即停損"
+      "actual_close": 619.0,
+      "close_price": 619.0,
+      "change_percent": "-6.21%",
+      "holding_status": "D0/10 | 收盤619(-6.2%) | 🔴距停損594僅4%！Level 0但投信持續賣 | 策略:緊急關注，跌破594立即停損"
     }
   ],
   "track_b_recommendations": [
@@ -134,7 +152,9 @@
       "track": "B",
       "reason": "盤中偵測器強訊號(強度80)，連買6天，外資累計+9456張，動能-107.3%佈局完成+15分，油價+4.56%綠能間接受益，毛利率QoQ+212pp+2分，外資持股比週增+1.16%+5分",
       "risk_note": "催化弱對齊（油價→太陽能間接），營收衰退10月-5分，EPS仍虧損，縮倉5%最小倉位",
-      "exit_signals": "停損37.1(-5%) | 反轉Level 2+以上 | 2日累計跌幅>-5%"
+      "exit_signals": "停損37.1(-5%) | 反轉Level 2+以上 | 2日累計跌幅>-5%",
+      "actual_close": 40.0,
+      "holding_status": "D0/10 | 收盤40.0(+2.3%) | Level 0✅外資近5天+9K | 距目標6.3% | 距停損7.3% | 策略:續抱"
     }
   ],
   "track_b_observations": [
@@ -224,6 +244,66 @@
       "stock_code": "2002",
       "stock_name": "中鋼",
       "reason": "籌碼累計-71K（法人大賣），近5天-35K，排除"
+    }
+  ],
+  "yesterday_verification": {
+    "accuracy": 50.0,
+    "settled_count": 4,
+    "success_count": 2,
+    "fail_count": 2,
+    "note": "今日結算4檔（2379瑞昱/3034聯詠成功，8046南電/2345智邦觸停損失敗）",
+    "results": [
+      {"symbol": "8046", "name": "南電", "result": "fail", "reason": "SOX崩跌PCB估值修正，觸停損-10.7%"},
+      {"symbol": "2345", "name": "智邦", "result": "fail", "reason": "NASDAQ-6.27%光通訊修正，觸停損-12.0%"},
+      {"symbol": "2379", "name": "瑞昱", "result": "success", "return": "+9.2%"},
+      {"symbol": "3034", "name": "聯詠", "result": "success", "return": "+0.6%"}
+    ]
+  },
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2637",
+      "stock_name": "慧洋-KY",
+      "industry": "航運",
+      "recommend_price": 78.5,
+      "target_price": 86.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 70.65,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 65,
+      "track": "A",
+      "reason": "中東地緣+荷姆茲封鎖風險，SCFI April+60%，外資近5天+15K，avg_rank TOP23，MA20+3.4%月季雙線上"
+    }
+  ],
+  "removed_stocks": [],
+  "today_settlements": [
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "result": "fail",
+      "settled_price": 807.0,
+      "fail_reason": "觸停損，收盤807≤停損813.6，SOX-12.29%科技崩跌殃及PCB"
+    },
+    {
+      "stock_code": "2345",
+      "stock_name": "智邦",
+      "result": "fail",
+      "settled_price": 2275.0,
+      "fail_reason": "觸停損，收盤2275≤停損2326.5，NASDAQ-6.27%光通訊估值修正"
+    },
+    {
+      "stock_code": "2379",
+      "stock_name": "瑞昱",
+      "result": "success",
+      "settled_price": 655.0,
+      "holding_days": 10
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "result": "success",
+      "settled_price": 488.0,
+      "holding_days": 10
     }
   ],
   "holdings_assessment": [
