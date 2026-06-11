@@ -30,7 +30,7 @@
       "reason": "Module A L3佈局完成，投信連買3天累計+234K，動能-63.9%，EPS+23.7%，升息利差受惠",
       "risk_note": "外資近5天-43K，準確率篩選外資條件未通過，縮倉5-10%",
       "result": "holding",
-      "holding_status": "盤前推薦，持有中"
+      "holding_status": "D0/10 | 盤中35.85(+1.4%) | Level 0✅連買3天 | 距目標7.4% | 距停損11.1% | 策略:續抱"
     },
     {
       "stock_code": "2890",
@@ -47,7 +47,7 @@
       "module_a_level": "L2",
       "reason": "Module A L2，6天TOP50，EPS+33%，外資+投信同步（外資近5天+74K），動能-20.3%，升息受惠",
       "result": "holding",
-      "holding_status": "盤前推薦，持有中"
+      "holding_status": "D0/10 | 盤中33.1(+0.3%) | ⚠️Level 2單日反轉(今日賣-435張) | 距停損10.3% | 策略:降倉觀察，明日確認"
     },
     {
       "stock_code": "3045",
@@ -64,7 +64,7 @@
       "module_a_level": "L2",
       "reason": "Module A L2，連買10天，外資+投信同步，buy_ratio 51.3%，電信防禦，升息受惠",
       "result": "holding",
-      "holding_status": "盤前推薦，持有中"
+      "holding_status": "D0/10 | 盤中119.0(+0.8%) | Level 0✅連買10天+6217張 | 距目標7.6% | 距停損10.8% | 策略:續抱"
     },
     {
       "stock_code": "2867",
@@ -81,7 +81,7 @@
       "module_a_level": "L2",
       "reason": "Module A L2，連買9天，EPS YoY +140%（+5分），外資近5天+44K，升息→壽險投資收益改善",
       "result": "holding",
-      "holding_status": "盤前推薦，持有中"
+      "holding_status": "D0/10 | 盤中8.18(+0.2%) | Level 0✅連買9天+2283張 | 距目標8.8% | 距停損10.3% | 策略:續抱"
     },
     {
       "stock_code": "2027",
@@ -98,7 +98,7 @@
       "module_a_level": "L2",
       "reason": "Module A L2，動能-59.4%佈局完成+15分，外資近5天+55K，EPS+48.1%，中東油價+4.56%鋼鐵受益",
       "result": "holding",
-      "holding_status": "盤前推薦，持有中"
+      "holding_status": "D0/10 | 盤中42.15(-0.7%) | Level 0✅今日+3283張(外資買/投信賣對決) | 距目標10.2% | 距停損9.4% | 策略:續抱"
     },
     {
       "stock_code": "3189",
@@ -116,10 +116,27 @@
       "reason": "Module B中期，PCB先進封裝，EPS+356%（+5分），營收+10%回檔（+5分），動能-26.9%+10分，外資近5天+6787",
       "risk_note": "投信近5天-3657（外資買投信賣），景碩高價股需嚴格控倉",
       "result": "holding",
-      "holding_status": "盤前推薦，持有中"
+      "holding_status": "D0/10 | 盤中601(-9.1%) | 🔴距停損594僅1%！Level 0但籌碼不連續 | 策略:緊急關注，跌破594立即停損"
     }
   ],
-  "track_b_recommendations": [],
+  "track_b_recommendations": [
+    {
+      "stock_code": "6443",
+      "stock_name": "元晶",
+      "industry": "太陽能",
+      "recommend_price": 39.1,
+      "target_price": 42.5,
+      "stop_loss_pct": -5,
+      "stop_loss": 37.1,
+      "settlement_days": 10,
+      "position": "5%",
+      "score": 79,
+      "track": "B",
+      "reason": "盤中偵測器強訊號(強度80)，連買6天，外資累計+9456張，動能-107.3%佈局完成+15分，油價+4.56%綠能間接受益，毛利率QoQ+212pp+2分，外資持股比週增+1.16%+5分",
+      "risk_note": "催化弱對齊（油價→太陽能間接），營收衰退10月-5分，EPS仍虧損，縮倉5%最小倉位",
+      "exit_signals": "停損37.1(-5%) | 反轉Level 2+以上 | 2日累計跌幅>-5%"
+    }
+  ],
   "track_b_observations": [
     {
       "stock_code": "5871",
@@ -132,6 +149,24 @@
       "stock_name": "至上",
       "score": 78,
       "reason": "未分類產業（不在industry_chains.json），外資持股比-3，準確率篩選不確定"
+    },
+    {
+      "stock_code": "6116",
+      "stock_name": "彩晶",
+      "score": 0,
+      "reason": "動能+125%一票否決排除，雖連買5天但法人買超速度爆發=追高風險"
+    },
+    {
+      "stock_code": "1402",
+      "stock_name": "遠東新",
+      "score": 0,
+      "reason": "動能+179.8%一票否決排除，前5天賣後近5天急買=法人態度未穩定"
+    },
+    {
+      "stock_code": "5521",
+      "stock_name": "工信",
+      "score": 0,
+      "reason": "偵測器強訊號但法人量太小(累計+2561張)，不在TOP50，排除"
     }
   ],
   "excluded_stocks": [
@@ -158,12 +193,12 @@
     {
       "stock_code": "2886",
       "stock_name": "兆豐金",
-      "reason": "Level 4 反轉預警排除"
+      "reason": "Level 4 反轉預警（爆量賣超-3863張，佔日均量24.7%）→ 強制出場"
     },
     {
       "stock_code": "6505",
       "stock_name": "台塑化",
-      "reason": "Level 4 反轉預警排除"
+      "reason": "Level 4 反轉預警（爆量賣超-1471張，佔日均量25%）→ 強制出場，且距停損僅3%"
     },
     {
       "stock_code": "2382",
@@ -178,7 +213,17 @@
     {
       "stock_code": "2542",
       "stock_name": "興富發",
-      "reason": "EPS連4季負成長-5分，外資近5天-40K準確率篩選失敗，總分69分"
+      "reason": "盤中Track B：偵測器85但5日+5.3%已大漲-10分，EPS連4季負成長-5分，評分44分不達75門檻"
+    },
+    {
+      "stock_code": "6282",
+      "stock_name": "康舒",
+      "reason": "籌碼累計-9353張（法人賣超），近5天-19K，排除"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "reason": "籌碼累計-71K（法人大賣），近5天-35K，排除"
     }
   ],
   "holdings_assessment": [
