@@ -1,0 +1,216 @@
+{
+  "date": "2026-06-11",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "nasdaq": -6.27,
+    "sox": -12.29,
+    "vix": 22.22,
+    "wti_oil": 4.56,
+    "us_leader_alert_max": "Level 3",
+    "defense_ratio": "40-50%",
+    "catalyst_strength": "弱（科技全線崩跌）"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "industry": "金融",
+      "recommend_price": 35.35,
+      "target_price": 38.50,
+      "stop_loss_pct": -10,
+      "stop_loss": 31.82,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 94,
+      "track": "A",
+      "module_a_level": "L3",
+      "reason": "Module A L3佈局完成，投信連買3天累計+234K，動能-63.9%，EPS+23.7%，升息利差受惠",
+      "risk_note": "外資近5天-43K，準確率篩選外資條件未通過，縮倉5-10%",
+      "result": "holding",
+      "holding_status": "盤前推薦，持有中"
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "industry": "金融",
+      "recommend_price": 33.00,
+      "target_price": 36.00,
+      "stop_loss_pct": -10,
+      "stop_loss": 29.70,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 89,
+      "track": "A",
+      "module_a_level": "L2",
+      "reason": "Module A L2，6天TOP50，EPS+33%，外資+投信同步（外資近5天+74K），動能-20.3%，升息受惠",
+      "result": "holding",
+      "holding_status": "盤前推薦，持有中"
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "industry": "電信",
+      "recommend_price": 118.00,
+      "target_price": 128.00,
+      "stop_loss_pct": -10,
+      "stop_loss": 106.20,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 87,
+      "track": "A",
+      "module_a_level": "L2",
+      "reason": "Module A L2，連買10天，外資+投信同步，buy_ratio 51.3%，電信防禦，升息受惠",
+      "result": "holding",
+      "holding_status": "盤前推薦，持有中"
+    },
+    {
+      "stock_code": "2867",
+      "stock_name": "三商壽",
+      "industry": "保險",
+      "recommend_price": 8.16,
+      "target_price": 8.90,
+      "stop_loss_pct": -10,
+      "stop_loss": 7.34,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 84,
+      "track": "A",
+      "module_a_level": "L2",
+      "reason": "Module A L2，連買9天，EPS YoY +140%（+5分），外資近5天+44K，升息→壽險投資收益改善",
+      "result": "holding",
+      "holding_status": "盤前推薦，持有中"
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "industry": "鋼鐵",
+      "recommend_price": 42.50,
+      "target_price": 46.50,
+      "stop_loss_pct": -10,
+      "stop_loss": 38.25,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 84,
+      "track": "A",
+      "module_a_level": "L2",
+      "reason": "Module A L2，動能-59.4%佈局完成+15分，外資近5天+55K，EPS+48.1%，中東油價+4.56%鋼鐵受益",
+      "result": "holding",
+      "holding_status": "盤前推薦，持有中"
+    },
+    {
+      "stock_code": "3189",
+      "stock_name": "景碩",
+      "industry": "PCB先進封裝",
+      "recommend_price": 660.00,
+      "target_price": 720.00,
+      "stop_loss_pct": -10,
+      "stop_loss": 594.00,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 74,
+      "track": "B",
+      "module_b_level": "中期",
+      "reason": "Module B中期，PCB先進封裝，EPS+356%（+5分），營收+10%回檔（+5分），動能-26.9%+10分，外資近5天+6787",
+      "risk_note": "投信近5天-3657（外資買投信賣），景碩高價股需嚴格控倉",
+      "result": "holding",
+      "holding_status": "盤前推薦，持有中"
+    }
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "5871",
+      "stock_name": "中租-KY",
+      "score": 75,
+      "reason": "外資近5天-27K，準確率篩選失敗，降為觀察"
+    },
+    {
+      "stock_code": "8112",
+      "stock_name": "至上",
+      "score": 78,
+      "reason": "未分類產業（不在industry_chains.json），外資持股比-3，準確率篩選不確定"
+    }
+  ],
+  "excluded_stocks": [
+    {
+      "stock_code": "2413",
+      "stock_name": "環科",
+      "reason": "動能+500%（一票否決），>+100%直接排除"
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "reason": "動能+500%（一票否決），>+100%直接排除"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "reason": "動能+500%（一票否決），>+100%直接排除；另過量買超30K+連買<7天-5分"
+    },
+    {
+      "stock_code": "2845",
+      "stock_name": "遠東銀",
+      "reason": "動能+500%（一票否決），>+100%直接排除"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "reason": "Level 4 反轉預警排除"
+    },
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "reason": "Level 4 反轉預警排除"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "reason": "Level 3 美股龍頭預警（SMCI-38.27%）排除"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "reason": "Level 3 美股龍頭預警（Micron-17.39%）排除"
+    },
+    {
+      "stock_code": "2542",
+      "stock_name": "興富發",
+      "reason": "EPS連4季負成長-5分，外資近5天-40K準確率篩選失敗，總分69分"
+    }
+  ],
+  "holdings_assessment": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "assessment": "續抱觀察",
+      "note": "Level 2 -15分（NVIDIA），今日除息6元，科技曝險高，不建議加碼"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "assessment": "留意減碼",
+      "note": "Level 3排除（記憶體鏈），美股記憶體全線崩跌"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "assessment": "留意減碼",
+      "note": "Level 3排除（記憶體），注意停損"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "assessment": "留意減碼",
+      "note": "累計賣超為負，不在今日TOP50"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "assessment": "留意減碼",
+      "note": "Level 3排除（記憶體），距停損4.3%，優先確認停損點"
+    }
+  ]
+}
