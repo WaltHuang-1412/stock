@@ -1,0 +1,161 @@
+{
+  "date": "2026-06-12",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": "AI伺服器",
+      "recommend_price": 370.0,
+      "target_price": 407.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 333.0,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 107,
+      "reason": "AMD+10.86%/NVDA+2.85%，Module A L2，法人avg_rank 10.5，廣達YoY+120.7%，SOX+7.91%；SMCI公司特定問題不影響訂單"
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "industry": "金融",
+      "recommend_price": 33.85,
+      "target_price": 38.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 30.47,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 96,
+      "reason": "Module A L3佈局完成，真連9天，累計+143K，外資+投信同步，EPS YoY+56.2%，降息預期"
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "industry": "金融",
+      "recommend_price": 28.75,
+      "target_price": 32.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 25.88,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 88,
+      "reason": "Module A L2，真連8天，累計+375K，EPS YoY+177.3%，降息+配息題材"
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "industry": "封測",
+      "recommend_price": 97.1,
+      "target_price": 107.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 87.39,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 87,
+      "reason": "SEMI Q1設備創高受益，真連6天，EPS YoY+121.9%，毛利率QoQ+2pp，佈局中動能"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "industry": "金融",
+      "recommend_price": 27.75,
+      "target_price": 31.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 24.98,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 83,
+      "reason": "Module A L3佈局完成，真連3天，累計+147K（投信主導），EPS YoY+150%，今日法說"
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "industry": "鋼鐵",
+      "recommend_price": 42.55,
+      "target_price": 47.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 38.30,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 83,
+      "reason": "Module A L3佈局完成，真連3天，累計+34K外資主導，EPS YoY+48.1%，油價-6%降成本"
+    }
+  ],
+  "removed_stocks": [
+    {"stock_code": "2303", "stock_name": "聯電", "reason": "reversal Level 3排除"},
+    {"stock_code": "2408", "stock_name": "南亞科", "reason": "reversal Level 3排除"},
+    {"stock_code": "2881", "stock_name": "富邦金", "reason": "5日+10.1%已大漲排除"},
+    {"stock_code": "3042", "stock_name": "晶技", "reason": "5日+13.0%已大漲排除"},
+    {"stock_code": "2344", "stock_name": "華邦電", "reason": "近5天外資+投信同步賣超，累計-82K"},
+    {"stock_code": "2618", "stock_name": "長榮航", "reason": "近5天籌碼賣超，不支持催化"},
+    {"stock_code": "6770", "stock_name": "力積電", "reason": "reversal Level 3排除（個人持倉另行評估）"}
+  ],
+  "holdings_evaluation": [
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "score": 85,
+      "personal_cost": 164.0,
+      "personal_stop_loss": 147.6,
+      "current_price": 140.0,
+      "status": "個人停損已觸發",
+      "recommendation": "⚠️ 減碼出場（停損已破）"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "score": null,
+      "personal_cost": 113.6,
+      "personal_stop_loss": 102.24,
+      "current_price": 96.9,
+      "status": "Level 2反轉+個人停損觸發",
+      "recommendation": "🔴 立即停損"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "score": null,
+      "personal_cost": 87.7,
+      "personal_stop_loss": 78.93,
+      "current_price": 64.4,
+      "status": "Level 3反轉+嚴重跌破停損-26.6%",
+      "recommendation": "🔴 立即停損"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "score": null,
+      "personal_cost": 1055.0,
+      "personal_stop_loss": 949.5,
+      "current_price": 854.0,
+      "status": "個人停損已觸發-19.1%",
+      "recommendation": "🔴 立即停損"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "score": null,
+      "personal_cost": 2070.0,
+      "personal_stop_loss": null,
+      "current_price": null,
+      "status": "零股長期持有",
+      "recommendation": "繼續持有"
+    }
+  ],
+  "market_context": {
+    "date": "2026-06-12",
+    "taiwan_index": 43149,
+    "vix": 19.44,
+    "sox_change": 7.91,
+    "nasdaq_change": 2.54,
+    "wti_change": -6.47,
+    "amd_change": 10.86,
+    "mu_change": 13.55,
+    "nvda_change": 2.85,
+    "key_catalyst": "SEMI Q1設備創歷史新高$365.5B，MU+13.55%，川普取消伊朗轟炸油價-6.47%",
+    "data_source_note": "us_asia_markets.json有計算方向BUG，以market_intelligence.md為準"
+  }
+}
