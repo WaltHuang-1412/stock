@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-12",
+  "last_updated": "2026-06-13",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -241,6 +241,36 @@
             {
               "code": "3443",
               "name": "創意",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "6139",
+              "name": "亞翔",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "1802",
+              "name": "台玻",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "4755",
+              "name": "三福化",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "3016",
+              "name": "嘉晶",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "3533",
+              "name": "嘉澤",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "1519",
+              "name": "華城",
               "category": "AI 伺服器與半導體"
             }
           ]
@@ -1238,6 +1268,11 @@
               "code": "4958",
               "name": "臻鼎-KY",
               "category": "光通訊與網通"
+            },
+            {
+              "code": "2316",
+              "name": "楠梓電",
+              "category": "光通訊與網通"
             }
           ]
         }
@@ -1645,6 +1680,11 @@
               "code": "3044",
               "name": "健鼎",
               "category": "被動元件族群"
+            },
+            {
+              "code": "6284",
+              "name": "佳邦",
+              "category": "被動元件族群"
             }
           ]
         }
@@ -1921,6 +1961,11 @@
               "code": "8299",
               "name": "群聯",
               "category": "台股市場動態（含ETF與資金流向）"
+            },
+            {
+              "code": "2881",
+              "name": "富邦金",
+              "category": "台股市場動態"
             }
           ]
         }
@@ -2264,6 +2309,41 @@
               "code": "6257",
               "name": "矽格",
               "category": "企業財報重點"
+            },
+            {
+              "code": "5880",
+              "name": "合庫金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2886",
+              "name": "兆豐金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2892",
+              "name": "第一金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2885",
+              "name": "元大金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3016",
+              "name": "嘉晶",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3533",
+              "name": "嘉澤",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3131",
+              "name": "弘塑",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -2486,6 +2566,11 @@
             {
               "code": "2330",
               "name": "台積電",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "2324",
+              "name": "賣超仁寶",
               "category": "川普貿易政策與關稅"
             }
           ]
@@ -3235,6 +3320,32 @@
               "code": "2330",
               "name": "台積電",
               "category": "台灣AI晶片出口管制"
+            }
+          ]
+        }
+      }
+    },
+    "Intel": {
+      "name": "Intel",
+      "catalysts": [
+        "Intel",
+        "CPU",
+        "崛起"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2303",
+              "name": "聯電",
+              "category": "Intel CPU崛起（新）"
+            },
+            {
+              "code": "2454",
+              "name": "聯發科",
+              "category": "Intel CPU崛起（新）"
             }
           ]
         }
