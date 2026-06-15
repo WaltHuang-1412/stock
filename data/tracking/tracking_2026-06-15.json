@@ -29,7 +29,13 @@
       "reason": "DRAM超強催化(MU+13.6%)，法人TOP6單日+27K轉折，EPS+802%，費半+9.42%共振",
       "module_a": "L1",
       "reversal_status": "狀態不明（今日+27K轉正）",
-      "risk": "狀態不明需人工確認，準確率篩選第3項邊緣"
+      "risk": "狀態不明需人工確認，準確率篩選第3項邊緣",
+      "result": "holding",
+      "actual_close": 395.5,
+      "close_price": 395.5,
+      "day_change_pct": 5.75,
+      "change_percent": 5.75,
+      "holding_status": "D0/10 | 收盤395.5(+5.75%) | 距目標3.9% | 距停損14.9%"
     },
     {
       "stock_code": "2880",
@@ -46,7 +52,13 @@
       "reason": "Module A L3佈局完成(連買5天/9買1賣)，FOMC 06/17前金融法人搶佈局，EPS+24%",
       "module_a": "L3",
       "reversal_status": "✅Safe",
-      "risk": "FOMC 06/17可能引發波動"
+      "risk": "FOMC 06/17可能引發波動",
+      "result": "holding",
+      "actual_close": 36.7,
+      "close_price": 36.7,
+      "day_change_pct": 1.94,
+      "change_percent": 1.94,
+      "holding_status": "D0/10 | 收盤36.7(+1.94%) | 距目標7.9% | 距停損11.7%"
     },
     {
       "stock_code": "2890",
@@ -63,7 +75,13 @@
       "reason": "Module A L2早期佈局，累計+227K強度罕見，買超9/10天，EPS+48%，FOMC前金融",
       "module_a": "L2",
       "reversal_status": "✅Safe",
-      "risk": "連買僅2天，需確認今日持續"
+      "risk": "連買僅2天，需確認今日持續",
+      "result": "holding",
+      "actual_close": 35.2,
+      "close_price": 35.2,
+      "day_change_pct": 3.07,
+      "change_percent": 3.07,
+      "holding_status": "D0/10 | 收盤35.2(+3.07%) | 距目標6.5% | 距停損12.7%"
     },
     {
       "stock_code": "6139",
@@ -80,7 +98,13 @@
       "reason": "台積電CoWoS/CoPoS廠務擴產直接受益，EPS+149%，半導體設備超強催化外溢，法人持續佈局",
       "module_a": "L1",
       "reversal_status": "✅Safe",
-      "risk": "法人rank較低(#28.5)，需觀察持續性"
+      "risk": "法人rank較低(#28.5)，需觀察持續性",
+      "result": "holding",
+      "actual_close": 885.0,
+      "close_price": 885.0,
+      "day_change_pct": 9.94,
+      "change_percent": 9.94,
+      "holding_status": "D0/10 | 收盤885.0(+9.94%) | 距目標0.1% | 接近目標"
     },
     {
       "stock_code": "2027",
@@ -97,7 +121,13 @@
       "reason": "Module A L3佈局完成(連買4天/9買1賣)，籌碼純淨，EPS+48%，美伊和平後供應鏈正常化",
       "module_a": "L3",
       "reversal_status": "✅Safe",
-      "risk": "無今日強催化劑，純籌碼推薦；若鋼鐵cold pattern確認→降至79分"
+      "risk": "無今日強催化劑，純籌碼推薦；若鋼鐵cold pattern確認→降至79分",
+      "result": "holding",
+      "actual_close": 43.65,
+      "close_price": 43.65,
+      "day_change_pct": 0.23,
+      "change_percent": 0.23,
+      "holding_status": "D0/10 | 收盤43.65(+0.23%) | 距目標9.7% | 距停損10.2%"
     },
     {
       "stock_code": "2610",
@@ -114,9 +144,54 @@
       "reason": "油價-8.29%（美伊和平），燃油成本大減，法人TOP10，EPS+23%",
       "module_a": "none",
       "reversal_status": "✅Safe",
-      "risk": "航空cold pattern歷史勝率25%(-5分已扣)，過量買超(-5分已扣)，盤中若無法人持續→考慮減倉"
+      "risk": "航空cold pattern歷史勝率25%(-5分已扣)，過量買超(-5分已扣)，盤中若無法人持續→考慮減倉",
+      "result": "holding",
+      "actual_close": 21.4,
+      "close_price": 21.4,
+      "day_change_pct": 4.9,
+      "change_percent": 4.9,
+      "holding_status": "D0/10 | 收盤21.4(+4.9%) | 距目標4.7% | 距停損14.2%"
     }
   ],
+  "yesterday_verification": {
+    "date": "2026-06-15",
+    "settled_today": [
+      {
+        "code": "1303",
+        "name": "南亞",
+        "result": "success",
+        "settled_price": 117.0,
+        "change_pct": 20.0
+      },
+      {
+        "code": "2337",
+        "name": "旺宏",
+        "result": "success",
+        "settled_price": 159.0,
+        "change_pct": 10.8
+      }
+    ],
+    "accuracy": {
+      "settled_accuracy_pct": 61.1,
+      "success_count": 228,
+      "fail_count": 145,
+      "total_settled": 373,
+      "holding_count": 195
+    },
+    "pattern_notes": [
+      "今日2檔結算全部success：南亞+20%/旺宏+10.8%，Module A L3 + Module B NAND早期催化均驗證",
+      "今日新推薦6/6正報酬（均值+4.3%），DRAM/設備超強催化+FOMC前金融格局驗證",
+      "3189景碩Level 4移出追蹤，2609陽明距停損4.2%需明日評估主動出場"
+    ],
+    "results": [
+      {"code": "2408", "name": "南亞科", "close_price": 395.5, "change_percent": 5.75, "result": "holding", "holding_status": "D0/10"},
+      {"code": "2880", "name": "華南金", "close_price": 36.7, "change_percent": 1.94, "result": "holding", "holding_status": "D0/10"},
+      {"code": "2890", "name": "永豐金", "close_price": 35.2, "change_percent": 3.07, "result": "holding", "holding_status": "D0/10"},
+      {"code": "6139", "name": "亞翔", "close_price": 885.0, "change_percent": 9.94, "result": "holding", "holding_status": "D0/10 距目標1元"},
+      {"code": "2027", "name": "大成鋼", "close_price": 43.65, "change_percent": 0.23, "result": "holding", "holding_status": "D0/10"},
+      {"code": "2610", "name": "華航", "close_price": 21.4, "change_percent": 4.9, "result": "holding", "holding_status": "D0/10"}
+    ]
+  },
   "holdings_assessment": [
     {
       "stock_code": "2330",
@@ -264,5 +339,168 @@
       "stock_name": "中石化",
       "reason": "Module A L3但油價-8.29%直接利空石化"
     }
-  ]
+  ],
+  "after_market_update": {
+    "time": "2026-06-15 盤後",
+    "today_settled": [
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "result": "success",
+        "settled_price": 117.0,
+        "holding_days": 4,
+        "change_pct": 20.0,
+        "note": "推薦97.5，收盤117 ≥ 目標108，Module A L3佈局完成驗證"
+      },
+      {
+        "stock_code": "2337",
+        "stock_name": "旺宏",
+        "result": "success",
+        "settled_price": 159.0,
+        "holding_days": 4,
+        "change_pct": 10.8,
+        "note": "推薦143.5，收盤159 ≥ 目標158，Module B NAND早期催化驗證"
+      }
+    ],
+    "today_closes": [
+      {"stock_code": "2408", "stock_name": "南亞科", "actual_close": 395.5, "day_change_pct": 5.75, "result": "holding", "holding_status": "D0/10 | 距目標3.9% | 距停損14.9%"},
+      {"stock_code": "2880", "stock_name": "華南金", "actual_close": 36.7, "day_change_pct": 1.94, "result": "holding", "holding_status": "D0/10 | 距目標7.9% | 距停損11.7%"},
+      {"stock_code": "2890", "stock_name": "永豐金", "actual_close": 35.2, "day_change_pct": 3.07, "result": "holding", "holding_status": "D0/10 | 距目標6.5% | 距停損12.7%"},
+      {"stock_code": "6139", "stock_name": "亞翔", "actual_close": 885.0, "day_change_pct": 9.94, "result": "holding", "holding_status": "D0/10 | 距目標0.1% | 接近目標"},
+      {"stock_code": "2027", "stock_name": "大成鋼", "actual_close": 43.65, "day_change_pct": 0.23, "result": "holding", "holding_status": "D0/10 | 距目標9.7% | 距停損10.2%"},
+      {"stock_code": "2610", "stock_name": "華航", "actual_close": 21.4, "day_change_pct": 4.9, "result": "holding", "holding_status": "D0/10 | 距目標4.7% | 距停損14.2%"}
+    ],
+    "level4_removals": [
+      {
+        "stock_code": "3189",
+        "stock_name": "景碩",
+        "reason": "Level 4 爆量賣超（今日-2,062張/佔日均量9.7%，盤中635最低），移出持倉追蹤，主動出場不記 fail"
+      }
+    ],
+    "high_risk_alerts": [
+      {
+        "stock_code": "2609",
+        "stock_name": "陽明",
+        "close": 51.2,
+        "day_change_pct": -6.1,
+        "day": "D5/10",
+        "distance_to_stop": "4.2%",
+        "action": "明日盤前執行 manual_exit_checker 評估主動出場"
+      },
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "close": 53.3,
+        "day_change_pct": -3.6,
+        "day": "D5/10",
+        "distance_to_stop": "6.6%",
+        "action": "油跌持續利空，密切監控"
+      }
+    ],
+    "near_target_stocks": [
+      {"stock_code": "6139", "stock_name": "亞翔", "close": 885.0, "target": 886.0, "distance_pct": 0.1},
+      {"stock_code": "2887", "stock_name": "台新新光金", "close": 31.6, "target": 32.0, "distance_pct": 1.3},
+      {"stock_code": "2404", "stock_name": "漢唐", "close": 1380.0, "target": 1400.0, "distance_pct": 1.4}
+    ],
+    "accuracy_update": {
+      "settled_accuracy_pct": 61.1,
+      "success_count": 228,
+      "fail_count": 145,
+      "total_settled": 373,
+      "holding_count": 195
+    },
+    "flow_defects": [
+      "景碩D2 Level 4：外資/投信對決(5買5賣)型態應額外扣分",
+      "陽明航運油跌邏輯：油跌原因需區分（需求萎縮vs供應增加），航運受益不確定",
+      "南亞科狀態不明倉位：超強催化覆寫時，reversal狀態不明倉位上限應為10%"
+    ],
+    "tomorrow_recommendations": [
+      {
+        "stock_code": "6139",
+        "stock_name": "亞翔",
+        "industry": "半導體廠務",
+        "recommend_price": 805.0,
+        "target_price": 886.0,
+        "stop_loss_pct": -10,
+        "stop_loss": 724.5,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 85,
+        "reason": "距目標886僅1元，台積電CoWoS廠務超強催化，明日極可能觸及目標結算",
+        "note": "注意：明日若開盤≥886可直接結算"
+      },
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "industry": "DRAM/記憶體",
+        "recommend_price": 374.0,
+        "target_price": 411.0,
+        "stop_loss_pct": -10,
+        "stop_loss": 336.6,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 98,
+        "reason": "DRAM超強催化持續(MU財報6/25佈局窗口)，今日+5.75%確認法人入場"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "industry": "金融",
+        "recommend_price": 36.0,
+        "target_price": 39.6,
+        "stop_loss_pct": -10,
+        "stop_loss": 32.4,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 94,
+        "reason": "FOMC 06/17 前最後布局日，Module A L3佈局完成，金融股最後機會"
+      },
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "industry": "金融",
+        "recommend_price": 34.15,
+        "target_price": 37.5,
+        "stop_loss_pct": -10,
+        "stop_loss": 30.7,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 86,
+        "reason": "外資今日+30K強勁，FOMC前最後機會，EPS+48%"
+      },
+      {
+        "stock_code": "2610",
+        "stock_name": "華航",
+        "industry": "航空",
+        "recommend_price": 20.4,
+        "target_price": 22.4,
+        "stop_loss_pct": -10,
+        "stop_loss": 18.36,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 71,
+        "reason": "油跌-8.29%持續，燃油成本降，今日+4.9%確認方向"
+      },
+      {
+        "stock_code": "2404",
+        "stock_name": "漢唐",
+        "industry": "半導體廠務",
+        "recommend_price": 1230.0,
+        "target_price": 1400.0,
+        "stop_loss_pct": -10,
+        "stop_loss": 1107.0,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": null,
+        "reason": "D6/10，收盤1380距目標1400僅1.4%，CoWoS廠務超強催化，明日可能觸及"
+      }
+    ],
+    "removed_from_tracking": [
+      {
+        "stock_code": "3189",
+        "stock_name": "景碩",
+        "reason": "Level 4 爆量賣超，盤中提示主動出場，不計入成敗統計"
+      }
+    ]
+  }
 }
