@@ -179,6 +179,55 @@
       "day": "D1/10"
     }
   ],
+  "intraday_update": {
+    "time": "12:30",
+    "track_a_prices": {
+      "2408": {"intraday_price": 395.0, "pct": "+5.61%", "status": "安全，DRAM確認漲"},
+      "2880": {"intraday_price": 36.8, "pct": "+2.22%", "status": "注意投信今日反轉-10K"},
+      "2890": {"intraday_price": 34.95, "pct": "+2.34%", "status": "安全，外資+30K"},
+      "6139": {"intraday_price": 885.0, "pct": "+9.94%", "status": "🟠接近目標886，考慮分批了結"},
+      "2027": {"intraday_price": 43.5, "pct": "-0.11%", "status": "盤整，法人連買4天"},
+      "2610": {"intraday_price": 21.35, "pct": "+4.66%", "status": "安全，油跌+法人+43K"}
+    },
+    "tracking_alerts_update": {
+      "3189": {"intraday_price": 635.0, "status": "Level 4 強制出場，法人-2K，高點回落-13.3%"},
+      "6505": {"intraday_price": 53.1, "status": "Level 0，今日法人轉正+2367，繼續觀察"},
+      "2382": {"intraday_price": 370.5, "status": "跌破MA5，投信買但外資賣，觀察"}
+    }
+  },
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "1342",
+      "stock_name": "八貫",
+      "score": 48,
+      "reason": "偵測器強訊號75分但紡織業無催化，法人量極小+284張，總分48 < 75門檻，不推薦"
+    },
+    {
+      "stock_code": "8488",
+      "stock_name": "吉源-KY",
+      "score": 45,
+      "reason": "偵測器強訊號60分但包裝業無催化，法人量僅+11張噪音級，總分45 < 75門檻，不推薦"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "score": null,
+      "reason": "今日+6.37%超過3%篩選門檻，排除Track B"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "score": null,
+      "reason": "今日+9.88%超過3%篩選門檻，排除Track B"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "score": null,
+      "reason": "今日+4.01%超過3%篩選門檻，排除Track B"
+    }
+  ],
   "observation_list": [
     {
       "stock_code": "2303",
