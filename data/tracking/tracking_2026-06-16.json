@@ -1,0 +1,155 @@
+{
+  "date": "2026-06-16",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "recommend_price": 24.15,
+      "target_price": 26.57,
+      "stop_loss_pct": -10,
+      "stop_loss": 21.74,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 82,
+      "result": "holding",
+      "holding_status": "新推薦，今日開盤進場",
+      "reason": "Module A L2佈局完成+外資連買5天(近5天5買0賣+外資+36K)+FOMC前金融防禦資金流入+EPS+50%YoY+合庫金法人持續建倉",
+      "track": "A"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "industry": "航空",
+      "recommend_price": 39.95,
+      "target_price": 43.95,
+      "stop_loss_pct": -5,
+      "stop_loss": 37.95,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 75,
+      "result": "holding",
+      "holding_status": "新推薦：超強催化覆寫，動能+435.5%但美伊和平超強催化符合覆寫條件",
+      "reason": "美伊和平→中東航線解禁+油價-9.49%燃油成本大降；外資近5天+81K大量買進；法人TOP10 avg_rank=10；超強催化覆寫(動能>100%)；停損-5%",
+      "track": "A",
+      "override": "超強催化覆寫_美伊和平"
+    }
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "reason": "台積電PLP強催化+EPS+564%，但評分67分未達70門檻，觀察明日法人動向"
+    },
+    {
+      "stock_code": "3702",
+      "stock_name": "大聯大",
+      "reason": "被動元件超強催化(大摩+小摩同步看多)+Module A L2+EPS+192%，但今日法人小量915張，評分68分"
+    }
+  ],
+  "holdings_evaluation": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "cost_price": 2070,
+      "current_price": 2375,
+      "pnl_pct": 14.7,
+      "score": 83,
+      "evaluation": "可加碼",
+      "evaluation_detail": "先進製程/CoWoS強催化+EPS+35%+今日+9,839K大量買入；10天累計-61K(狀態不明)，建議加碼5%以內保守操作"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "cost_price": 164.0,
+      "current_price": 159.0,
+      "pnl_pct": -3.0,
+      "score": 71,
+      "evaluation": "續抱觀察",
+      "evaluation_detail": "DRAM/NOR超強催化+EPS+239%；但10天7賣超(法人頻繁進出)+近5天外資買/投信賣對決，不建議加碼，續抱等待方向確認"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "cost_price": 113.6,
+      "current_price": 117.0,
+      "pnl_pct": 3.0,
+      "score": 0,
+      "evaluation": "不加碼",
+      "evaluation_detail": "5日+20%已大漲(>20%排除評分)，持續持有但不加碼"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "cost_price": 87.7,
+      "current_price": 73.3,
+      "pnl_pct": -16.4,
+      "stop_loss": 78.93,
+      "score": 0,
+      "evaluation": "觸停損",
+      "evaluation_detail": "現價73.3 < 停損78.93，已觸停損-16.4%，建議今日開盤立即出場"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "cost_price": 1055.0,
+      "current_price": 960.0,
+      "pnl_pct": -9.0,
+      "stop_loss": 949.5,
+      "score": 0,
+      "evaluation": "高度警戒",
+      "evaluation_detail": "現價960，距停損949.5僅+1.1%，高度警戒；台積電PLP仍是強催化但欣興今日走勢需密切監控"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "2382",
+      "reason": "Level 3龍頭預警排除：SMCI -29.87%，AI伺服器供應鏈一票否決"
+    },
+    {
+      "stock_code": "3231",
+      "reason": "Level 3龍頭預警排除：SMCI -29.87%"
+    },
+    {
+      "stock_code": "6669",
+      "reason": "Level 3龍頭預警排除：SMCI -29.87%"
+    },
+    {
+      "stock_code": "2376",
+      "reason": "Level 3龍頭預警排除：SMCI -29.87%"
+    },
+    {
+      "stock_code": "2481",
+      "reason": "Level 4反轉預警排除"
+    },
+    {
+      "stock_code": "2027",
+      "reason": "Level 4反轉預警排除：今日爆量賣超-722張"
+    },
+    {
+      "stock_code": "2344",
+      "reason": "5日+22.7%超過20%門檻，不受超強催化覆寫保護"
+    },
+    {
+      "stock_code": "2401",
+      "reason": "5日+24.6%超過20%門檻"
+    },
+    {
+      "stock_code": "2327",
+      "reason": "5日+25.2%超過20%門檻+累計-18K負"
+    },
+    {
+      "stock_code": "1301",
+      "reason": "準確率篩選FAIL：外資近5天-20K(近5天2買3賣外資持續賣出)"
+    },
+    {
+      "stock_code": "1326",
+      "reason": "準確率篩選FAIL：外資近5天-474+10天賣超6天-5分"
+    }
+  ]
+}
