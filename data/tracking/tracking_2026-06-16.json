@@ -17,7 +17,10 @@
       "position": "10-15%",
       "score": 82,
       "result": "holding",
-      "holding_status": "新推薦，今日開盤進場",
+      "actual_close": 24.6,
+      "close_price": 24.6,
+      "change_percent": 1.86,
+      "holding_status": "D0/10 | 收盤24.6(+1.86%) | 距目標8.0% | 距停損9.4%",
       "reason": "Module A L2佈局完成+外資連買5天(近5天5買0賣+外資+36K)+FOMC前金融防禦資金流入+EPS+50%YoY+合庫金法人持續建倉",
       "track": "A"
     },
@@ -33,7 +36,10 @@
       "position": "5-10%",
       "score": 75,
       "result": "holding",
-      "holding_status": "新推薦：超強催化覆寫，動能+435.5%但美伊和平超強催化符合覆寫條件",
+      "actual_close": 39.75,
+      "close_price": 39.75,
+      "change_percent": -0.5,
+      "holding_status": "D0/10 | 收盤39.75(-0.5%) | 距目標10.6% | 距停損4.5%",
       "reason": "美伊和平→中東航線解禁+油價-9.49%燃油成本大降；外資近5天+81K大量買進；法人TOP10 avg_rank=10；超強催化覆寫(動能>100%)；停損-5%",
       "track": "A",
       "override": "超強催化覆寫_美伊和平"
@@ -52,7 +58,10 @@
       "position": "5-10%",
       "score": 98,
       "result": "holding",
-      "holding_status": "盤中新推薦：法人TOP10+5天連買+動能佈局完成+EPS+150%",
+      "actual_close": 29.7,
+      "close_price": 29.7,
+      "change_percent": -0.34,
+      "holding_status": "D0/10 Track B | 收盤29.7(-0.34%) | 距目標9.4% | 距停損4.7%",
       "reason": "avg_rank 8.5(TOP10)+真連買5天+外資+投信同步(外資+36K)+動能佈局完成(-74.1%)+EPS YoY+150%+FOMC前金融防禦；停損-5%(盤中規則)",
       "track": "B",
       "intraday_signal": "偵測器強訊號必須納入→評分通過98分→盤中推薦"
@@ -132,6 +141,166 @@
       "score": 0,
       "evaluation": "高度警戒",
       "evaluation_detail": "盤中回升至980(+20元)，距停損949.5改善至+3.2%；台積電PLP催化支撐，尾盤繼續密切監控"
+    }
+  ],
+  "yesterday_verification": {
+    "date": "2026-06-16",
+    "settled_today": [
+      {
+        "code": "2408",
+        "name": "南亞科",
+        "result": "success",
+        "settled_price": 425.0,
+        "change_pct": 13.6
+      },
+      {
+        "code": "2887",
+        "name": "台新新光金",
+        "result": "success",
+        "settled_price": 32.3,
+        "change_pct": 12.3
+      }
+    ],
+    "accuracy": {
+      "settled_accuracy_pct": 61.3,
+      "success_count": 230,
+      "fail_count": 145,
+      "total_settled": 375,
+      "holding_count": 196
+    },
+    "results": [
+      {"code": "5880", "name": "合庫金", "close_price": 24.6, "change_percent": 1.86, "result": "holding", "holding_status": "D0/10"},
+      {"code": "2618", "name": "長榮航", "close_price": 39.75, "change_percent": -0.5, "result": "holding", "holding_status": "D0/10"},
+      {"code": "2883", "name": "凱基金", "close_price": 29.7, "change_percent": -0.34, "result": "holding", "holding_status": "D0/10 Track B"}
+    ]
+  },
+  "after_market_update": {
+    "time": "2026-06-16 14:30",
+    "today_settled": [
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "result": "success",
+        "settled_price": 425.0,
+        "settled_date": "2026-06-16",
+        "holding_days": 1,
+        "change_pct": 13.6,
+        "note": "推薦374，收盤425 ≥ 目標411，DRAM超強催化MU+14.61%驗證，D1快速達標"
+      },
+      {
+        "stock_code": "2887",
+        "stock_name": "台新新光金",
+        "result": "success",
+        "settled_price": 32.3,
+        "settled_date": "2026-06-16",
+        "holding_days": 3,
+        "change_pct": 12.3,
+        "note": "推薦28.75，收盤32.3 ≥ 目標32，Module A L2+降息配息題材，D3達標"
+      }
+    ],
+    "today_closes": [
+      {"stock_code": "5880", "stock_name": "合庫金", "actual_close": 24.6, "day_change_pct": 1.86, "result": "holding", "holding_status": "D0/10 | +1.86% | 距目標8%"},
+      {"stock_code": "2618", "stock_name": "長榮航", "actual_close": 39.75, "day_change_pct": -0.5, "result": "holding", "holding_status": "D0/10 | -0.5% | 距停損4.5%"},
+      {"stock_code": "2883", "stock_name": "凱基金", "actual_close": 29.7, "day_change_pct": -0.34, "result": "holding", "holding_status": "D0/10 Track B | -0.34% | 距停損4.7%"}
+    ],
+    "risk_alerts": [
+      {"stock_code": "2834", "note": "Level 4 爆量賣超今日(-3,589張/11.9%日均量)，明日需密切監控"},
+      {"stock_code": "2609", "note": "距停損3.8%，航運景氣不確定，明日評估主動出場"},
+      {"stock_code": "6139", "note": "疑似除息，從885→812(-8.2%)，停損724.5仍安全，需確認除息"},
+      {"stock_code": "2027", "note": "今日-4.2%，距停損6%，需關注"},
+      {"stock_code": "6505", "note": "距停損5.6%，油跌利空持續"}
+    ],
+    "flow_defects": [
+      "2883凱基金盤中真連買超5天→盤後確認1天：T86更新時間可能導致盤中數據不完整，需確認T86更新時間點",
+      "2834臺企銀Level 4：盤後才發現，應對所有holding股票每日執行reversal_alert掃描",
+      "6139亞翔除息未提前標記：盤前應查詢次日除息清單"
+    ],
+    "accuracy_update": {
+      "settled_accuracy_pct": 61.3,
+      "success_count": 230,
+      "fail_count": 145,
+      "total_settled": 375,
+      "holding_count": 196
+    }
+  },
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "industry": "光通訊",
+      "recommend_price": 5120.0,
+      "target_price": 5250.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 4608.0,
+      "settlement_days": 10,
+      "position": "維持",
+      "score": null,
+      "reason": "D5/10距目標僅2.5%，光通訊超強催化，明日可能觸及結算"
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "industry": "金融",
+      "recommend_price": 35.2,
+      "target_price": 38.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 31.68,
+      "settlement_days": 10,
+      "position": "維持",
+      "score": 84,
+      "reason": "10連買10天/10，FOMC前金融最強，EPS+56%，外資+投信同步+70K"
+    },
+    {
+      "stock_code": "2867",
+      "stock_name": "三商壽",
+      "industry": "金融",
+      "recommend_price": 8.53,
+      "target_price": 9.38,
+      "stop_loss_pct": -10,
+      "stop_loss": 7.68,
+      "settlement_days": 10,
+      "position": "維持",
+      "score": null,
+      "reason": "10連買10天，外資持續進場，壽險淨值創高，FOMC受益"
+    },
+    {
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "industry": "金融",
+      "recommend_price": 37.45,
+      "target_price": 39.6,
+      "stop_loss_pct": -10,
+      "stop_loss": 32.4,
+      "settlement_days": 10,
+      "position": "維持",
+      "score": 94,
+      "reason": "Module A L3佈局完成，FOMC前金融資金流入，今日+4%驗證"
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "industry": "金融",
+      "recommend_price": 35.3,
+      "target_price": 37.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 30.7,
+      "settlement_days": 10,
+      "position": "維持",
+      "score": 86,
+      "reason": "外資+投信同步230K累計，今日+3.4%，FOMC前金融"
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "recommend_price": 24.15,
+      "target_price": 26.57,
+      "stop_loss_pct": -10,
+      "stop_loss": 21.74,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 82,
+      "reason": "Module A L2，今日+1.86%驗證，真連5天，FOMC前金融防禦"
     }
   ],
   "removed_stocks": [
