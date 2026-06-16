@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-15",
+  "last_updated": "2026-06-16",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -296,6 +296,16 @@
             {
               "code": "4938",
               "name": "和碩",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "3661",
+              "name": "世芯-KY",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "2357",
+              "name": "華碩",
               "category": "AI 伺服器與半導體"
             }
           ]
@@ -1143,6 +1153,11 @@
               "code": "8150",
               "name": "南茂",
               "category": "DRAM 與記憶體"
+            },
+            {
+              "code": "8131",
+              "name": "福茂科",
+              "category": "DRAM 與記憶體"
             }
           ]
         }
@@ -1337,6 +1352,21 @@
             {
               "code": "2305",
               "name": "全友",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "4979",
+              "name": "華星光",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "8431",
+              "name": "匯鑽科",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "7769",
+              "name": "鴻勁",
               "category": "光通訊與網通"
             }
           ]
@@ -1755,6 +1785,16 @@
               "code": "8043",
               "name": "蜜望實",
               "category": "被動元件族群"
+            },
+            {
+              "code": "3042",
+              "name": "晶技",
+              "category": "被動元件族群"
+            },
+            {
+              "code": "5328",
+              "name": "華容",
+              "category": "被動元件族群"
             }
           ]
         }
@@ -2080,6 +2120,11 @@
             {
               "code": "2881",
               "name": "富邦金",
+              "category": "聯準會利率政策"
+            },
+            {
+              "code": "2882",
+              "name": "國泰金",
               "category": "聯準會利率政策"
             }
           ]
@@ -2444,6 +2489,36 @@
               "code": "6239",
               "name": "力成",
               "category": "企業財報重點"
+            },
+            {
+              "code": "3661",
+              "name": "世芯-KY",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3042",
+              "name": "晶技",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "1319",
+              "name": "東陽",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2408",
+              "name": "南亞科",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3017",
+              "name": "奇鋐",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "6830",
+              "name": "汎銓",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -2484,6 +2559,16 @@
               "code": "2881",
               "name": "富邦金",
               "category": "SpaceX/OpenAI IPO資金虹吸"
+            },
+            {
+              "code": "2382",
+              "name": "廣達",
+              "category": "SpaceX IPO 生態系"
+            },
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "SpaceX IPO 生態系"
             }
           ]
         }
@@ -2686,6 +2771,16 @@
             {
               "code": "2382",
               "name": "廣達",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "5227",
+              "name": "立凱-KY",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "6121",
+              "name": "新普",
               "category": "川普貿易政策與關稅"
             }
           ]
@@ -3543,6 +3638,46 @@
               "code": "2454",
               "name": "聯發科",
               "category": "Apple WWDC AI 生態系"
+            },
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "Apple WWDC AI 生態系"
+            }
+          ]
+        }
+      }
+    },
+    "矽晶圓": {
+      "name": "矽晶圓",
+      "catalysts": [
+        "矽晶圓",
+        "矽晶圓族群"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "6488",
+              "name": "環球晶",
+              "category": "矽晶圓族群"
+            },
+            {
+              "code": "3532",
+              "name": "台勝科",
+              "category": "矽晶圓族群"
+            },
+            {
+              "code": "6182",
+              "name": "合晶",
+              "category": "矽晶圓族群"
+            },
+            {
+              "code": "5483",
+              "name": "中美晶",
+              "category": "矽晶圓族群"
             }
           ]
         }
