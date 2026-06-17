@@ -9,10 +9,15 @@
     "sox_pct": 5.03,
     "vix": 16.41,
     "vix_pct": -26.15,
-    "key_alerts": ["SMCI -28.1% Level3排除AI伺服器", "AVGO -3.94% Level1網通-5分"],
+    "key_alerts": [
+      "SMCI -28.1% Level3排除AI伺服器",
+      "AVGO -3.94% Level1網通-5分"
+    ],
     "market_regime": "多頭",
     "dominant_theme": "金融（法人大量買超582億）",
-    "excluded_industries": ["AI伺服器（SMCI Level3）"]
+    "excluded_industries": [
+      "AI伺服器（SMCI Level3）"
+    ]
   },
   "recommendations": [
     {
@@ -30,7 +35,11 @@
       "track": "A",
       "module_a_level": "L3",
       "reason": "Module A L3佈局完成，avg_rank=8（TOP10），+33K連買10天，EPS YoY+56.2%，動能-35.5%",
-      "note": "已在tracking D3，今日加碼確認"
+      "note": "已在tracking D3，今日加碼確認",
+      "intraday_price": 35.5,
+      "intraday_change_pct": 0.85,
+      "reversal_level": "L4",
+      "exit_signal": "Level4 强制出場（今日法人爆量賣超，推薦出場）"
     },
     {
       "stock_code": "2867",
@@ -47,7 +56,10 @@
       "track": "A",
       "module_a_level": "L3",
       "reason": "Module A L3佈局完成，連買10天10買0賣，EPS YoY+140%，動能-56.2%",
-      "note": "已在tracking D4，今日加碼確認"
+      "note": "已在tracking D4，今日加碼確認",
+      "intraday_price": 8.65,
+      "intraday_change_pct": 1.41,
+      "reversal_level": "L1"
     },
     {
       "stock_code": "5880",
@@ -65,7 +77,10 @@
       "module_a_level": "L2",
       "reason": "公股銀行，+31K佔成交76.5%，外資+投信同步，EPS YoY+50%，動能-4.3%",
       "warning": "⚠️過量買超（+31K，連買<7天）建議倉位偏低端",
-      "note": "已在tracking D1，今日加碼確認"
+      "note": "已在tracking D1，今日加碼確認",
+      "intraday_price": 24.8,
+      "intraday_change_pct": 0.81,
+      "reversal_level": "L0"
     },
     {
       "stock_code": "2892",
@@ -81,7 +96,10 @@
       "stars": 4,
       "track": "A",
       "module_a_level": "L2",
-      "reason": "公股銀行，avg_rank=13（TOP11-20），+24K外資+投信同步，連買7天，動能-1.9%"
+      "reason": "公股銀行，avg_rank=13（TOP11-20），+24K外資+投信同步，連買7天，動能-1.9%",
+      "intraday_price": 32.35,
+      "intraday_change_pct": 1.73,
+      "reversal_level": "L0"
     },
     {
       "stock_code": "2886",
@@ -99,7 +117,10 @@
       "module_a_level": "L2",
       "reason": "公股匯銀，動能-99.5%深坑後回升，今日法人+5K，EPS YoY+21.6%",
       "warning": "10天中賣超6天，法人態度尚未穩定",
-      "note": "已在tracking D5，今日加碼確認"
+      "note": "已在tracking D5，今日加碼確認",
+      "intraday_price": 45.1,
+      "intraday_change_pct": 1.35,
+      "reversal_level": "L0"
     },
     {
       "stock_code": "2801",
@@ -115,7 +136,11 @@
       "stars": 3,
       "track": "A",
       "module_a_level": "L2",
-      "reason": "商業銀行，avg_rank=30，+8.2K外資+投信同步，連買6天，動能-7.2%"
+      "reason": "商業銀行，avg_rank=30，+8.2K外資+投信同步，連買6天，動能-7.2%",
+      "intraday_price": 22.85,
+      "intraday_change_pct": 0.22,
+      "reversal_level": "L2",
+      "intraday_warning": "Level2 單日反轉，密切觀察"
     },
     {
       "stock_code": "2845",
@@ -131,23 +156,74 @@
       "stars": 3,
       "track": "A",
       "module_a_level": "L2",
-      "reason": "小型商業銀行，+11K佔成交53.9%，外資+投信同步，EPS YoY+27.8%，動能-13.2%"
+      "reason": "小型商業銀行，+11K佔成交53.9%，外資+投信同步，EPS YoY+27.8%，動能-13.2%",
+      "intraday_price": 13.25,
+      "intraday_change_pct": 2.32,
+      "reversal_level": "L2",
+      "intraday_warning": "Level2 單日反轉，密切觀察"
     }
   ],
   "excluded_stocks": [
-    {"code": "2382", "name": "廣達", "reason": "SMCI Level3排除"},
-    {"code": "3231", "name": "緯創", "reason": "SMCI Level3排除"},
-    {"code": "6669", "name": "緯穎", "reason": "SMCI Level3排除"},
-    {"code": "2376", "name": "技嘉", "reason": "SMCI Level3排除"},
-    {"code": "2408", "name": "南亞科", "reason": "5日+27.6% 已大漲"},
-    {"code": "2344", "name": "華邦電", "reason": "5日+32.2% 已大漲"},
-    {"code": "2303", "name": "聯電", "reason": "5日+19.0% 已大漲"},
-    {"code": "2317", "name": "鴻海", "reason": "累計-55K 反轉狀態不明"},
-    {"code": "6770", "name": "力積電", "reason": "Level4反轉，法人-74K"}
+    {
+      "code": "2382",
+      "name": "廣達",
+      "reason": "SMCI Level3排除"
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "reason": "SMCI Level3排除"
+    },
+    {
+      "code": "6669",
+      "name": "緯穎",
+      "reason": "SMCI Level3排除"
+    },
+    {
+      "code": "2376",
+      "name": "技嘉",
+      "reason": "SMCI Level3排除"
+    },
+    {
+      "code": "2408",
+      "name": "南亞科",
+      "reason": "5日+27.6% 已大漲"
+    },
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "reason": "5日+32.2% 已大漲"
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "reason": "5日+19.0% 已大漲"
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "reason": "累計-55K 反轉狀態不明"
+    },
+    {
+      "code": "6770",
+      "name": "力積電",
+      "reason": "Level4反轉，法人-74K"
+    }
   ],
   "track_b_report": {
-    "directions_explored": ["半導體設備（AMAT/LRCX）", "記憶體配套", "電信", "公用事業"],
-    "candidates_checked": ["辛耘3583", "日月光3711", "台汽電8926", "台灣高鐵2633", "裕民2606"],
+    "directions_explored": [
+      "半導體設備（AMAT/LRCX）",
+      "記憶體配套",
+      "電信",
+      "公用事業"
+    ],
+    "candidates_checked": [
+      "辛耘3583",
+      "日月光3711",
+      "台汽電8926",
+      "台灣高鐵2633",
+      "裕民2606"
+    ],
     "result": "無合格候選：設備台廠籌碼不佳，記憶體已大漲，電信/公用分數不足"
   },
   "module_b_report": {
@@ -161,5 +237,77 @@
     "廣達(2382) SMCI受壓，tracking D3",
     "技嘉(2376) SMCI受壓，tracking D6",
     "力積電(6770) 實際持倉，法人大量賣超"
-  ]
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": {
+    "result": "今日無盤中新推薦",
+    "reason": "記憶體/半導體主力股(2408/2344/4958)5日漲幅>20%無催化例外保護；主要非金融股(2303/2317/2330)觸發Level4反轉；金融股加入會超產業50%上限；1402遠東新外資連賣7天法人分數上限15不足75",
+    "detector_signals": [
+      {
+        "code": "3532",
+        "name": "台勝科",
+        "strength": 70,
+        "note": "累計法人僅+106張，量過小不可靠"
+      },
+      {
+        "code": "1466",
+        "name": "聚隆",
+        "strength": 65,
+        "note": "累計法人僅+105張，量過小不可靠"
+      },
+      {
+        "code": "1413",
+        "name": "宏洲",
+        "strength": 65,
+        "note": "累計≈0張，無有效法人佈局"
+      }
+    ],
+    "excluded_candidates": [
+      {
+        "code": "2408",
+        "name": "南亞科",
+        "reason": "5日+27.6%>20%，已大漲排除"
+      },
+      {
+        "code": "2344",
+        "name": "華邦電",
+        "reason": "5日+32.2%>20%，已大漲排除"
+      },
+      {
+        "code": "4958",
+        "name": "臻鼎-KY",
+        "reason": "5日+24.3%>20%，已大漲排除"
+      },
+      {
+        "code": "2303",
+        "name": "聯電",
+        "reason": "Level4爆量賣超-8,985張"
+      },
+      {
+        "code": "2317",
+        "name": "鴻海",
+        "reason": "Level4爆量賣超-2,504張"
+      },
+      {
+        "code": "2330",
+        "name": "台積電",
+        "reason": "Level4爆量賣超-5,414張(35.4%日均量)"
+      },
+      {
+        "code": "6239",
+        "name": "力成",
+        "reason": "累計法人賣超-25,363張"
+      },
+      {
+        "code": "2337",
+        "name": "旺宏",
+        "reason": "累計法人賣超-8,421張"
+      },
+      {
+        "code": "1402",
+        "name": "遠東新",
+        "reason": "外資連賣7天，法人分數上限15分，預估總分<60"
+      }
+    ]
+  }
 }
