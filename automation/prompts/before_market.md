@@ -12,150 +12,38 @@ python3 scripts/preflight_check.py --fix
 
 完整按照 CLAUDE.md 盤前流程（Step 0 到 Step 10）執行，不得跳過任何步驟。
 
-市場智能資料（Step 2 和 Step 6 時使用）：
-在執行 Step 2（台股時事）前，先從 GitHub 抓取 market-intelligence 的今日資料：
+市場智能資料（Step 2 前抓取，失敗時跳過不影響後續）：
 ```bash
 TODAY=$(date +%Y-%m-%d)
-_mi_content=$(gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/${TODAY}/raw_for_claude.md --jq '.content' 2>/dev/null)
-if echo "$_mi_content" | base64 -d > data/${TODAY}/market_intelligence.md 2>/dev/null && [ $(wc -c < data/${TODAY}/market_intelligence.md) -gt 500 ]; then
-  echo "[OK] market_intelligence.md 抓取成功"
+
+_mi=$(gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/${TODAY}/raw_for_claude.md --jq '.content' 2>/dev/null)
+if echo "$_mi" | base64 -d > data/${TODAY}/market_intelligence.md 2>/dev/null && [ $(wc -c < data/${TODAY}/market_intelligence.md) -gt 500 ]; then
+  echo "[OK] market_intelligence.md"
 else
-  rm -f data/${TODAY}/market_intelligence.md
-  echo "[SKIP] market_intelligence.md 不存在或尚未更新，跳過"
+  rm -f data/${TODAY}/market_intelligence.md; echo "[SKIP] market_intelligence.md"
 fi
-```
 
-同時抓取 topic_tracker.md（催化劑追蹤儀表板，直接提供強度評級）：
-```bash
-TODAY=$(date +%Y-%m-%d)
-_tt_content=$(gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/topic_tracker.md --jq '.content' 2>/dev/null)
-if echo "$_tt_content" | base64 -d > data/${TODAY}/topic_tracker.md 2>/dev/null && [ $(wc -c < data/${TODAY}/topic_tracker.md) -gt 100 ]; then
-  echo "[OK] topic_tracker.md 抓取成功"
+_tt=$(gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/topic_tracker.md --jq '.content' 2>/dev/null)
+if echo "$_tt" | base64 -d > data/${TODAY}/topic_tracker.md 2>/dev/null && [ $(wc -c < data/${TODAY}/topic_tracker.md) -gt 100 ]; then
+  echo "[OK] topic_tracker.md"
 else
-  rm -f data/${TODAY}/topic_tracker.md
-  echo "[SKIP] topic_tracker.md 跳過"
+  rm -f data/${TODAY}/topic_tracker.md; echo "[SKIP] topic_tracker.md"
 fi
-```
 
-同時抓取 industry_signals.json（結構化產業信號，動態補充 industry_chains.json）：
-```bash
-TODAY=$(date +%Y-%m-%d)
-_is_content=$(gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/industry_signals.json --jq '.content' 2>/dev/null)
-if echo "$_is_content" | base64 -d > data/${TODAY}/industry_signals.json 2>/dev/null && [ $(wc -c < data/${TODAY}/industry_signals.json) -gt 100 ]; then
-  echo "[OK] industry_signals.json 抓取成功"
+_is=$(gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/industry_signals.json --jq '.content' 2>/dev/null)
+if echo "$_is" | base64 -d > data/${TODAY}/industry_signals.json 2>/dev/null && [ $(wc -c < data/${TODAY}/industry_signals.json) -gt 100 ]; then
+  echo "[OK] industry_signals.json"
 else
-  rm -f data/${TODAY}/industry_signals.json
-  echo "[SKIP] industry_signals.json 跳過"
+  rm -f data/${TODAY}/industry_signals.json; echo "[SKIP] industry_signals.json"
 fi
+
+gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/market_regime.json --jq '.content' | base64 -d > data/${TODAY}/market_regime.json 2>/dev/null || true
 ```
 
-抓取失敗時自動跳過，不影響後續流程。
-讀取後在 Step 2 和 Step 6 參考這些資料，識別額外的產業催化劑和時事題材。
-
-topic_tracker.md 催化劑儀表板使用方式：
-
-儀表板已按強度分為四區，可直接對應 Step 7 時事維度加分：
-- 🔴 超強催化劑（3週+）→ 時事維度 +15 分
-- 🟡 強催化劑（1-2週）→ 時事維度 +10 分
-- 🟢 中度催化劑 → 時事維度 +5 分
-- ⚪ 觀察中 → 不加分
-- 時事維度加分不超過 30 分上限
-
-每個主題已包含結構化欄位，可直接使用：
-- **台股影響鏈**：直接用於 Step 6 事件驅動選股的產業擴展
-- **領頭指標**：用於 catalyst theme detector 的美股領頭羊驗證
-- **關鍵轉折點**：用於 Step 5.5 催化預埋掃描的事件判斷
-- **方向（↑→↓）**：判斷催化劑是加速還是減速，影響攻防比例
-
-結構化產業信號（Step 6 產業展開時使用）：
-讀取 `industry_signals.json`，這是 topic_tracker.md 的結構化版本，每個催化劑主題已拆解為可直接使用的欄位：
-
-Step 6 產業展開補強：
-- `industry_chain_key` 非 null → 直接對應 `industry_chains.json` 的產業 key，用 catalyst_level 決定展開深度：
-  - 🔴 超強 → depth 3（tier 0-3 全展開）
-  - 🟡 強 → depth 2（tier 0-2）
-  - 🟢 中度 → depth 1（tier 0-1）
-- `industry_chain_key` 為 null → 新產業（industry_chains.json 沒有），直接用 `stocks[]` 作為候選股
-- `stocks[]` 中出現但不在 industry_chains.json 的股票 → 新股票，納入候選池
-
-Step 7 方向與營收驗證加減分：
-- `direction.arrow` 為 ↑（加速）且候選股在該主題中 → **+3 分**（reason 標註「催化↑加速→+3」）
-- `direction.arrow` 為 ↓（減速）且候選股在該主題中 → **-3 分**（reason 標註「催化↓減速→-3」）
-- `revenue_support` 為 ⚠️ → 等同「催化x營收⚠️未跟上→-3」（與既有規則合併，不重複扣分）
-- 方向加減分和時事維度加分可疊加，但時事維度總計不超過 30 分上限
-
-催化預埋掃描（Step 5.5 Module A，v7.9.3 新增）：
-Step 5（法人TOP50）完成後，強制執行預埋掃描：
-```bash
-python3 scripts/catalyst_preposition_scan.py --date $(date +%Y-%m-%d) --lookback 7 --threshold 5
-```
-- L3（佈局完成）股票必須進入 Step 7 評分，即使不在 TOP20
-- L2（早期佈局）股票進入候選池
-- 追高排除的股票不進入評分（除非超強催化覆寫）
-
-催化主題預警（Step 5.7 Module B，v7.9.3 新增）：
-接著執行催化主題預警：
-```bash
-python3 scripts/catalyst_theme_detector.py --date $(date +%Y-%m-%d) --lookback 7
-```
-Module B 候選的後續處理（chip_analysis、reversal_alert、評分、排除原因）全部按照 CLAUDE.md Step 6「Module B 催化主題預警處理」段落執行，不得跳過。
-
-催化劑x營收交叉分析（Step 7 評分時使用）：
-讀取 `market_intelligence.md` 中的「催化劑 x 營收交叉分析」區塊：
-- ⚠️ 營收未跟上的產業 → 該產業候選股 **-3分**（題材炒作無基本面支撐）
-- 💪 強力支撐的產業 → 標註參考（不額外加分，營收加分已在 check_revenue_yoy.py 處理）
-- reason 欄標註（如「催化x營收⚠️未跟上→-3」）
-
-PTT 散戶輿情（Step 7 評分時參考）：
-讀取 `market_intelligence.md` 中的「PTT 股票板散戶輿情」區塊：
-- PTT 熱門討論的個股 → 標註「散戶關注」，不自動扣分但提高警覺
-- 如果候選股同時出現在 PTT 熱門 + 今日漲幅已 >3% → **-3分**（散戶追高風險）
-- reason 欄標註（如「PTT熱門+已漲→-3」）
-
-美股財報日曆（Step 7 評分時使用）：
-讀取 `market_intelligence.md` 財報日曆，解析「類型」「台股受益鏈」「佈局窗口」三欄：
-- ⚡佈局窗口開啟（距今3-7天）+ A/B類 → 觸發財報前佈局規則（見 CLAUDE.md）
-- ⏰最後進場（1-2天）→ 不開新倉，已持有可續抱
-- 🔔今日財報 → 不進場，等結果
-
-加減分規則與倉位/停損調整見 CLAUDE.md「美股財報日曆」段落。reason 欄標註（如「⚡NVDA財報D5前佈局→A類+2」）。
-
-法人模式追蹤（Step 5 完成後、Step 7 之前執行）：
-先執行模式追蹤器更新：
-```bash
-python3 scripts/institutional_pattern_tracker.py
-```
-加減分規則見 CLAUDE.md「法人模式追蹤加減分」段落。
-
-大盤局勢（Step 7 和 Step 9 使用）：
-```bash
-gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/market_regime.json --jq '.content' | base64 -d > data/$(date +%Y-%m-%d)/market_regime.json
-```
-讀取 regime 欄位判斷大盤狀態，影響 Step 9 防禦比例。如果抓取失敗，跳過即可。
-
-同時讀取 settlement 欄位（台指期結算機制）：
-- `days_from_settlement < 0`（結算前 T-3 到 T-1）→ 標註「⚠️結算週前，法人大買超可能含結算操作成分，不追高」
-- `days_from_settlement = 0`（結算日）→ 標註「⚠️結算日，成交量異常不代表真實買賣意願，不開新倉」
-- `days_from_settlement` 1-3（結算後確認期）→ 標註「✅結算後確認期，法人籌碼數據更可信」
-- `is_settlement_week = false` 或欄位不存在 → 不標註，正常分析
-
-價格位置判斷（Step 7 評分時強制執行）：
-Step 7 開始前，對全部候選股執行：
-```bash
-python3 scripts/check_price_position.py [全部候選股代碼...]
-```
-加減分規則見 CLAUDE.md「價格位置加減分」段落。reason 欄標註（如「52週位置94%極高→-5」）。
-
-營收與外資持股比檢查（Step 7 評分時強制執行）：
-Step 7 開始前，必須對全部候選股（Step 5 + Step 6 合併後）執行以下兩個腳本：
-```bash
-python3 scripts/check_revenue_yoy.py [全部候選股代碼...]
-python3 scripts/check_foreign_ratio.py [全部候選股代碼...]
-```
-讀取輸出的「評分建議」欄，逐檔套用加減分到 Step 7 評分中。
-每檔推薦的 reason 欄必須標註營收/持股比調整（如「營收+43%→+5」或「持股比週減→-3」）。
-LINE 摘要中每檔推薦也要帶入。
-禁止用 Claude 自身知識代替腳本輸出，必須以腳本 JSON 結果為準。
+v8.0 關鍵數值（強制遵守）：
+- 盤前推薦停損 = **-10%**，結算天數 = **10 個交易日**
+- tracking.json 每檔必須有 `stop_loss_pct` 和 `settlement_days` 欄位
+- `stop_loss` 必須從 `stop_loss_pct` 計算：`stop_loss = recommend_price × 0.90`
 
 LINE 摘要格式（before_market_line.txt，≤5000字元）：
 ```
@@ -174,10 +62,8 @@ VIX {vix} | 台股vs年線{vs_ma240}%
 [超強/強/中度 主題列表]
 
 ⚠️ 催化x營收警告（如有）
-[⚠️營收未跟上的產業]
 
 💬 PTT 散戶輿情（如有熱門個股）
-[熱門討論的股票]
 
 📈 結算 + 準確率
 
@@ -189,30 +75,10 @@ VIX {vix} | 台股vs年線{vs_ma240}%
   推{price} 目標{target} 停損{stop_loss}(-10%) Day{N}/10
   [reason 含營收/持股比/月線/模式追蹤/財報日曆]
 
-⚠️ 風險提示
-產業分散
+⚠️ 風險提示 + 產業分散
 ```
 
-注意：
-- 大盤局勢放最前面（不是最後面）
-- 每檔停損後面標百分比（如「停損79.2(-10%)」）
-- 每檔標 Day{N}/10（如「Day6/10」讓使用者知道還剩幾天）
-- 催化x營收有⚠️的產業要獨立列出
-- PTT 有熱門個股才列，沒有就省略
-
-推薦排除規則（Step 7 評分前必讀）：
-```bash
-python3 -c "
-import yaml
-with open('portfolio/my_holdings.yaml', encoding='utf-8') as f:
-    d = yaml.safe_load(f)
-held = [h['symbol'] for h in d.get('holdings', []) if h.get('quantity', 0) > 0]
-print('實際持有（排除）：', held)
-"
-```
-- 只有 `quantity > 0` 的股票才排除於新推薦
-- tracking.json 中的持有中股票**不排除**，仍可重新評分推薦
-- 禁止用「已在 tracking」作為排除理由
+注意：大盤局勢放最前面 | 停損標百分比（如「停損79.2(-10%)」）| 每檔標 Day{N}/10
 
 自動化注意事項：
 1. 今天日期用系統日期
