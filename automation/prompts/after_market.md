@@ -1,5 +1,7 @@
 執行盤後分析。
 
+> 🚫 **LINE 推送禁止事項（最優先讀取）**：**絕對不得呼叫 `scripts/notify_line.py`**，任何時間點、任何情況皆不得執行此腳本。LINE 推送由排程腳本在 Claude 執行完成後統一處理。若 Claude 也推送，使用者將收到重複通知。報告結論中也不得出現「LINE 通知已發送」等字樣。
+
 **🛫 分析前強制執行 Pre-flight 自我檢查（不得跳過）：**
 ```bash
 python3 scripts/preflight_check.py --mode after_market --fix
@@ -29,4 +31,4 @@ v8.0 關鍵數值（強制遵守）：
 2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py after_market $(date +%Y-%m-%d)`，通過才能 git commit
 3. 禁止修改 scripts/ 目錄下的任何 .py 檔案，只能執行不能改
 4. git commit 完成後，執行 `git push`
-5. 🔴 **禁止執行 `scripts/notify_line.py`**，任何情況皆不得呼叫，LINE 推送由排程腳本統一處理
+5. 🚫 **絕對禁止執行 `scripts/notify_line.py`**（見文件最頂端說明）。違反此規則 = 使用者收到重複 LINE 通知
