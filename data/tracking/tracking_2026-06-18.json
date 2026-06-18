@@ -60,6 +60,61 @@
       "note": "Module A L3，L1反轉消除後重評"
     }
   ],
+  "track_b_recommendations": [
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "industry": "金融",
+      "recommend_price": 22.8,
+      "target_price": 25.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 21.66,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 94,
+      "reason": "盤前L2反轉→盤中Level0，外資+投信近5天+52K，Module A L3真連買7天，準確率篩選全通"
+    },
+    {
+      "stock_code": "2897",
+      "stock_name": "王道銀行",
+      "industry": "金融",
+      "recommend_price": 10.6,
+      "target_price": 11.66,
+      "stop_loss_pct": -5,
+      "stop_loss": 10.07,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 80,
+      "reason": "10天連買0天賣，盤前L1→盤中Level0，外資近5天+10K，Module A L3，準確率篩選全通"
+    }
+  ],
+  "track_b_observations": [
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "note": "96分但外資近5天-17K（盤中確認仍負），仍觀察。外資轉買即升格"
+    },
+    {
+      "stock_code": "2520",
+      "stock_name": "冠德",
+      "note": "偵測器強訊號75分但排除：建設業非催化，法人量小（727張），估算總分<75"
+    },
+    {
+      "stock_code": "3528",
+      "stock_name": "安馳",
+      "note": "偵測器強訊號75分但排除：今日-9.8%大跌，真連買僅1天，法人量微小（170張）"
+    },
+    {
+      "stock_code": "3530",
+      "stock_name": "晶相光",
+      "note": "偵測器強訊號60分但排除：chip_analysis動能爆發警告，累計量小（+175張）"
+    },
+    {
+      "stock_code": "2478",
+      "stock_name": "大毅",
+      "note": "偵測器強訊號60分但排除：chip_analysis動能爆發警告，現價+48.7% vs MA20追高風險"
+    }
+  ],
   "market_context": {
     "soxl_change": 10.41,
     "mu_change": 16.97,
