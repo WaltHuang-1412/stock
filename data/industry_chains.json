@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-17",
+  "last_updated": "2026-06-18",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -306,6 +306,41 @@
             {
               "code": "2357",
               "name": "華碩",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "2383",
+              "name": "台光電",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "3663",
+              "name": "鑫科",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "2397",
+              "name": "辛耘",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "6187",
+              "name": "萬潤",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "3131",
+              "name": "弘塑",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "6223",
+              "name": "旺矽",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "1303",
+              "name": "南亞",
               "category": "AI 伺服器與半導體"
             }
           ]
@@ -1158,6 +1193,16 @@
               "code": "8131",
               "name": "福茂科",
               "category": "DRAM 與記憶體"
+            },
+            {
+              "code": "6182",
+              "name": "合晶",
+              "category": "DRAM 與記憶體"
+            },
+            {
+              "code": "6488",
+              "name": "環球晶",
+              "category": "DRAM 與記憶體"
             }
           ]
         }
@@ -1372,6 +1417,11 @@
             {
               "code": "2402",
               "name": "毅嘉",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "2379",
+              "name": "瑞昱",
               "category": "光通訊與網通"
             }
           ]
@@ -1800,6 +1850,11 @@
               "code": "5328",
               "name": "華容",
               "category": "被動元件族群"
+            },
+            {
+              "code": "2441",
+              "name": "立隆電",
+              "category": "被動元件族群"
             }
           ]
         }
@@ -2101,6 +2156,11 @@
               "code": "2382",
               "name": "廣達",
               "category": "台股市場動態"
+            },
+            {
+              "code": "2618",
+              "name": "長榮航",
+              "category": "台股市場動態"
             }
           ]
         }
@@ -2135,6 +2195,11 @@
             {
               "code": "2882",
               "name": "國泰金",
+              "category": "聯準會利率政策"
+            },
+            {
+              "code": "2890",
+              "name": "永豐金",
               "category": "聯準會利率政策"
             }
           ]
@@ -2549,6 +2614,11 @@
               "code": "2106",
               "name": "建大",
               "category": "企業財報重點"
+            },
+            {
+              "code": "2890",
+              "name": "永豐金",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -2821,6 +2891,21 @@
             {
               "code": "6121",
               "name": "新普",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "6515",
+              "name": "穎崴",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "5483",
+              "name": "中美晶",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "6488",
+              "name": "環球晶",
               "category": "川普貿易政策與關稅"
             }
           ]
@@ -3631,6 +3716,11 @@
               "code": "6239",
               "name": "力成",
               "category": "Intel CPU崛起"
+            },
+            {
+              "code": "6515",
+              "name": "穎崴",
+              "category": "Intel CPU 崛起"
             }
           ]
         }
@@ -3753,6 +3843,41 @@
               "code": "8086",
               "name": "宏捷科",
               "category": "矽晶圓族群"
+            }
+          ]
+        }
+      }
+    },
+    "企業法說焦點": {
+      "name": "企業法說焦點",
+      "catalysts": [
+        "企業法說焦點",
+        "今日"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2890",
+              "name": "永豐金",
+              "category": "企業法說焦點（今日）"
+            },
+            {
+              "code": "2609",
+              "name": "陽明",
+              "category": "企業法說焦點（今日）"
+            },
+            {
+              "code": "2882",
+              "name": "國泰金",
+              "category": "企業法說焦點（今日）"
+            },
+            {
+              "code": "3062",
+              "name": "建漢",
+              "category": "企業法說焦點（今日）"
             }
           ]
         }
