@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-18",
+  "last_updated": "2026-06-19",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -341,6 +341,31 @@
             {
               "code": "1303",
               "name": "南亞",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "2059",
+              "name": "川湖",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "7822",
+              "name": "倍利科",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "3047",
+              "name": "富鼎",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "3707",
+              "name": "漢磊",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "6435",
+              "name": "大中",
               "category": "AI 伺服器與半導體"
             }
           ]
@@ -1422,6 +1447,21 @@
             {
               "code": "2379",
               "name": "瑞昱",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "7822",
+              "name": "倍利科",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "3587",
+              "name": "閎康",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "2388",
+              "name": "威盛",
               "category": "光通訊與網通"
             }
           ]
@@ -2619,6 +2659,16 @@
               "code": "2890",
               "name": "永豐金",
               "category": "企業財報重點"
+            },
+            {
+              "code": "6274",
+              "name": "台燿",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2884",
+              "name": "玉山金",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -2678,6 +2728,11 @@
             {
               "code": "8086",
               "name": "宏捷科",
+              "category": "SpaceX IPO 生態系"
+            },
+            {
+              "code": "4916",
+              "name": "四星科",
               "category": "SpaceX IPO 生態系"
             }
           ]
@@ -3721,6 +3776,11 @@
               "code": "6515",
               "name": "穎崴",
               "category": "Intel CPU 崛起"
+            },
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "Intel CPU 崛起"
             }
           ]
         }
@@ -3755,6 +3815,16 @@
             {
               "code": "2382",
               "name": "廣達",
+              "category": "台灣 ETF 與資金流向"
+            },
+            {
+              "code": "2408",
+              "name": "南亞科",
+              "category": "台灣 ETF 與資金流向"
+            },
+            {
+              "code": "2344",
+              "name": "華邦電",
               "category": "台灣 ETF 與資金流向"
             }
           ]
@@ -3878,6 +3948,41 @@
               "code": "3062",
               "name": "建漢",
               "category": "企業法說焦點（今日）"
+            }
+          ]
+        }
+      }
+    },
+    "MOSFET": {
+      "name": "MOSFET",
+      "catalysts": [
+        "MOSFET",
+        "功率半導體"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "3047",
+              "name": "富鼎",
+              "category": "MOSFET/功率半導體"
+            },
+            {
+              "code": "6435",
+              "name": "大中",
+              "category": "MOSFET/功率半導體"
+            },
+            {
+              "code": "2481",
+              "name": "強茂",
+              "category": "MOSFET/功率半導體"
+            },
+            {
+              "code": "5425",
+              "name": "台半",
+              "category": "MOSFET/功率半導體"
             }
           ]
         }
