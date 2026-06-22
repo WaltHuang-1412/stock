@@ -21,8 +21,10 @@
       "close_price": 50.6,
       "actual_close": 50.6,
       "change_percent": -7.2,
-      "result": "holding",
-      "holding_status": "D2/10 | 收盤50.6(-7.2%) | 距目標23.9% | 距停損3.1%"
+      "result": "fail",
+      "settled_price": 52.3,
+      "settled_date": "2026-06-22",
+      "fail_reason": "D10到期，收盤52.3≤推薦54.5，跌-4.0%"
     },
     {
       "stock_code": "6505",
@@ -39,8 +41,10 @@
       "close_price": 51.0,
       "actual_close": 51.0,
       "change_percent": -7.8,
-      "result": "holding",
-      "holding_status": "D2/10 | 收盤51.0(-7.8%) | 距目標19.2% | 距停損2.4%"
+      "result": "fail",
+      "settled_price": 54.0,
+      "settled_date": "2026-06-22",
+      "fail_reason": "D10到期，收盤54.0≤推薦55.3，跌-2.4%"
     }
   ],
   "removed_stocks": [],
@@ -52,13 +56,60 @@
     "holding": 178,
     "today_settlements": 5,
     "results": [
-      {"stock_code": "6770", "stock_name": "力積電", "result": "fail", "settled_price": 67.5, "stop_loss": 72.9, "note": "Micron Level 3，收盤67.5≤停損72.9"},
-      {"stock_code": "2449", "stock_name": "京元電子", "result": "fail", "settled_price": 288.5, "stop_loss": 289.8, "note": "Broadcom Level 3，收盤288.5≤停損289.8"},
-      {"stock_code": "2301", "stock_name": "光寶科", "result": "fail", "settled_price": 218.5, "stop_loss": 225.0, "note": "全面恐慌，收盤218.5≤停損225.0"},
-      {"stock_code": "2337", "stock_name": "旺宏", "result": "fail", "settled_price": 143.5, "stop_loss": 152.0, "note": "Micron Level 3，收盤143.5≤停損152.0"},
-      {"stock_code": "1582", "stock_name": "信錦", "result": "fail", "settled_price": 98.7, "stop_loss": 102.15, "note": "全面恐慌，收盤98.7≤停損102.15"},
-      {"stock_code": "2609", "stock_name": "陽明", "result": "holding", "close_price": 51.7, "note": "D0/10，距停損5.1%，外資+40K"},
-      {"stock_code": "6505", "stock_name": "台塑化", "result": "holding", "close_price": 52.6, "note": "D0/10，距停損5.4%，WTI今日-1.15%弱化催化"}
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "result": "fail",
+        "settled_price": 67.5,
+        "stop_loss": 72.9,
+        "note": "Micron Level 3，收盤67.5≤停損72.9"
+      },
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電子",
+        "result": "fail",
+        "settled_price": 288.5,
+        "stop_loss": 289.8,
+        "note": "Broadcom Level 3，收盤288.5≤停損289.8"
+      },
+      {
+        "stock_code": "2301",
+        "stock_name": "光寶科",
+        "result": "fail",
+        "settled_price": 218.5,
+        "stop_loss": 225.0,
+        "note": "全面恐慌，收盤218.5≤停損225.0"
+      },
+      {
+        "stock_code": "2337",
+        "stock_name": "旺宏",
+        "result": "fail",
+        "settled_price": 143.5,
+        "stop_loss": 152.0,
+        "note": "Micron Level 3，收盤143.5≤停損152.0"
+      },
+      {
+        "stock_code": "1582",
+        "stock_name": "信錦",
+        "result": "fail",
+        "settled_price": 98.7,
+        "stop_loss": 102.15,
+        "note": "全面恐慌，收盤98.7≤停損102.15"
+      },
+      {
+        "stock_code": "2609",
+        "stock_name": "陽明",
+        "result": "holding",
+        "close_price": 51.7,
+        "note": "D0/10，距停損5.1%，外資+40K"
+      },
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "result": "holding",
+        "close_price": 52.6,
+        "note": "D0/10，距停損5.4%，WTI今日-1.15%弱化催化"
+      }
     ]
   },
   "observation_list": [
@@ -134,23 +185,103 @@
   ],
   "after_market_settlement": {
     "settled_fails": [
-      {"stock_code": "6770", "stock_name": "力積電", "recommend_date": "2026-06-05", "close": 67.5, "stop_loss": 72.9, "result": "fail", "fail_reason": "Micron Level 3排除，收盤67.5≤停損72.9"},
-      {"stock_code": "2449", "stock_name": "京元電子", "recommend_date": "2026-06-05", "close": 288.5, "stop_loss": 289.8, "result": "fail", "fail_reason": "Broadcom Level 3排除，收盤288.5≤停損289.8"},
-      {"stock_code": "2301", "stock_name": "光寶科", "recommend_date": "2026-06-04", "close": 218.5, "stop_loss": 225.0, "result": "fail", "fail_reason": "全面恐慌，收盤218.5≤停損225.0"},
-      {"stock_code": "2337", "stock_name": "旺宏", "recommend_date": "2026-05-29", "close": 143.5, "stop_loss": 152.0, "result": "fail", "fail_reason": "Micron Level 3排除，收盤143.5≤停損152.0"},
-      {"stock_code": "1582", "stock_name": "信錦", "recommend_date": "2026-05-29", "close": 98.7, "stop_loss": 102.15, "result": "fail", "fail_reason": "全面恐慌，收盤98.7≤停損102.15"}
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "recommend_date": "2026-06-05",
+        "close": 67.5,
+        "stop_loss": 72.9,
+        "result": "fail",
+        "fail_reason": "Micron Level 3排除，收盤67.5≤停損72.9"
+      },
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電子",
+        "recommend_date": "2026-06-05",
+        "close": 288.5,
+        "stop_loss": 289.8,
+        "result": "fail",
+        "fail_reason": "Broadcom Level 3排除，收盤288.5≤停損289.8"
+      },
+      {
+        "stock_code": "2301",
+        "stock_name": "光寶科",
+        "recommend_date": "2026-06-04",
+        "close": 218.5,
+        "stop_loss": 225.0,
+        "result": "fail",
+        "fail_reason": "全面恐慌，收盤218.5≤停損225.0"
+      },
+      {
+        "stock_code": "2337",
+        "stock_name": "旺宏",
+        "recommend_date": "2026-05-29",
+        "close": 143.5,
+        "stop_loss": 152.0,
+        "result": "fail",
+        "fail_reason": "Micron Level 3排除，收盤143.5≤停損152.0"
+      },
+      {
+        "stock_code": "1582",
+        "stock_name": "信錦",
+        "recommend_date": "2026-05-29",
+        "close": 98.7,
+        "stop_loss": 102.15,
+        "result": "fail",
+        "fail_reason": "全面恐慌，收盤98.7≤停損102.15"
+      }
     ],
     "holdings_actual_close": [
-      {"stock_code": "2609", "actual_close": 51.7, "holding_status": "D0/10，外資+40K支撐，距停損5.1%，中東催化在"},
-      {"stock_code": "6505", "actual_close": 52.6, "holding_status": "D0/10，連5天法人買，距停損5.4%，但WTI今日-1.15%弱化催化"},
-      {"stock_code": "2404", "actual_close": 1110.0, "holding_status": "D1/10，距停損0.3%，極高危，明日幾乎確定觸停損"},
-      {"stock_code": "2383", "actual_close": 4770.0, "holding_status": "D1/10，距停損8.9%，ABF載板相對安全"},
-      {"stock_code": "8046", "actual_close": 831.0, "holding_status": "D2/10，距停損2.1%，Broadcom Level 3持續影響"},
-      {"stock_code": "2027", "actual_close": 41.8, "holding_status": "D2/10，距停損5.6%，中危"},
-      {"stock_code": "3017", "actual_close": 2570.0, "holding_status": "D2/10，距停損0.0%，極高危，明日幾乎確定觸停損"},
-      {"stock_code": "2345", "actual_close": 2420.0, "holding_status": "D2/10，距停損3.9%，高危，Broadcom Level 3"},
-      {"stock_code": "2379", "actual_close": 596.0, "holding_status": "D7/10，距停損9.4%，相對安全"},
-      {"stock_code": "3034", "actual_close": 473.0, "holding_status": "D7/10，距停損7.7%，中危"}
+      {
+        "stock_code": "2609",
+        "actual_close": 51.7,
+        "holding_status": "D0/10，外資+40K支撐，距停損5.1%，中東催化在"
+      },
+      {
+        "stock_code": "6505",
+        "actual_close": 52.6,
+        "holding_status": "D0/10，連5天法人買，距停損5.4%，但WTI今日-1.15%弱化催化"
+      },
+      {
+        "stock_code": "2404",
+        "actual_close": 1110.0,
+        "holding_status": "D1/10，距停損0.3%，極高危，明日幾乎確定觸停損"
+      },
+      {
+        "stock_code": "2383",
+        "actual_close": 4770.0,
+        "holding_status": "D1/10，距停損8.9%，ABF載板相對安全"
+      },
+      {
+        "stock_code": "8046",
+        "actual_close": 831.0,
+        "holding_status": "D2/10，距停損2.1%，Broadcom Level 3持續影響"
+      },
+      {
+        "stock_code": "2027",
+        "actual_close": 41.8,
+        "holding_status": "D2/10，距停損5.6%，中危"
+      },
+      {
+        "stock_code": "3017",
+        "actual_close": 2570.0,
+        "holding_status": "D2/10，距停損0.0%，極高危，明日幾乎確定觸停損"
+      },
+      {
+        "stock_code": "2345",
+        "actual_close": 2420.0,
+        "holding_status": "D2/10，距停損3.9%，高危，Broadcom Level 3"
+      },
+      {
+        "stock_code": "2379",
+        "actual_close": 596.0,
+        "holding_status": "D7/10，距停損9.4%，相對安全"
+      },
+      {
+        "stock_code": "3034",
+        "actual_close": 473.0,
+        "holding_status": "D7/10，距停損7.7%，中危"
+      }
     ]
   },
   "tomorrow_recommendations": [
@@ -168,12 +299,27 @@
       "reason": "中東封鎖散裝受益，TOP13外資主導，EPS YoY+767%，Level 0，月季雙線上，所有準確率篩選通過"
     }
   ],
-  "removed_stocks": [],
   "intraday_settlement_update": {
-    "failed_today": ["6770", "2449", "2404", "2301", "3017", "2337", "1582"],
+    "failed_today": [
+      "6770",
+      "2449",
+      "2404",
+      "2301",
+      "3017",
+      "2337",
+      "1582"
+    ],
     "high_risk_holding": [
-      {"code": "8046", "name": "南電", "distance_to_stop": "2.4%"},
-      {"code": "2345", "name": "智邦", "distance_to_stop": "2.7%"}
+      {
+        "code": "8046",
+        "name": "南電",
+        "distance_to_stop": "2.4%"
+      },
+      {
+        "code": "2345",
+        "name": "智邦",
+        "distance_to_stop": "2.7%"
+      }
     ]
   },
   "tracking_holdings_risk": [

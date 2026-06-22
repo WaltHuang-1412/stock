@@ -21,7 +21,10 @@
       "intraday_change_pct": -0.1,
       "reversal_level": "L0",
       "result": "holding",
-      "holding_status": "D1/10 | 盤中377.5(-0.1%) | 距目標9.9% | 距停損5.1% | Level 0"
+      "holding_status": "D1/10 | 距目標9.2% | 距停損5.5%",
+      "actual_close": 380.0,
+      "close_price": 380.0,
+      "change_percent": 0.5
     },
     {
       "stock_code": "2891",
@@ -39,7 +42,10 @@
       "intraday_change_pct": 0.9,
       "reversal_level": "L0",
       "result": "holding",
-      "holding_status": "D1/10 | 盤中70.9(+0.9%) | 距目標8.6% | 距停損10.1% | Level 0（籌碼健康）"
+      "holding_status": "D1/10 | 距目標9.2% | 距停損10.3%",
+      "actual_close": 70.5,
+      "close_price": 70.5,
+      "change_percent": 0.3
     },
     {
       "stock_code": "2801",
@@ -57,7 +63,10 @@
       "intraday_change_pct": 0.4,
       "reversal_level": "L0",
       "result": "holding",
-      "holding_status": "D1/10 | 盤中22.85(+0.4%) | 距目標9.4% | 距停損10.4% | Level 0（+1,490張）"
+      "holding_status": "D1/10 | 距目標9.4% | 距停損10.4%",
+      "actual_close": 22.85,
+      "close_price": 22.85,
+      "change_percent": 0.4
     },
     {
       "stock_code": "5880",
@@ -75,7 +84,10 @@
       "intraday_change_pct": 0.0,
       "reversal_level": "L0",
       "result": "holding",
-      "holding_status": "D1/10 | 盤中24.45(+0.0%) | 距目標10.4% | 距停損10.0% | Level 0（+8,826張）"
+      "holding_status": "D1/10 | 距目標10.4% | 距停損10.0%",
+      "actual_close": 24.45,
+      "close_price": 24.45,
+      "change_percent": 0.0
     },
     {
       "stock_code": "2610",
@@ -93,7 +105,10 @@
       "intraday_change_pct": -0.7,
       "reversal_level": "L0",
       "result": "holding",
-      "holding_status": "D1/10 | 盤中21.65(-0.7%) | 距目標10.8% | 距停損9.4% | Level 0（+19,425張）"
+      "holding_status": "D1/10 | 距目標10.1% | 距停損10.0%",
+      "actual_close": 21.8,
+      "close_price": 21.8,
+      "change_percent": 0.0
     },
     {
       "stock_code": "3048",
@@ -111,21 +126,84 @@
       "intraday_change_pct": -1.5,
       "reversal_level": "L0",
       "result": "holding",
-      "holding_status": "D1/10 | 盤中72.8(-1.5%) | 距目標11.3% | 距停損8.6% | Level 0（+2,478張）"
+      "holding_status": "D1/10 | 距目標11.9% | 距停損8.1%",
+      "actual_close": 72.4,
+      "close_price": 72.4,
+      "change_percent": -2.0
     }
   ],
+  "yesterday_verification": {
+    "date": "2026-06-22",
+    "accuracy": "61.0%",
+    "settled_count": 6,
+    "success_count": 4,
+    "fail_count": 2,
+    "results": [
+      {"code": "2890", "name": "永豐金", "result": "success", "pnl_pct": 16.5},
+      {"code": "8150", "name": "南茂", "result": "success", "pnl_pct": 17.4},
+      {"code": "3189", "name": "景碩", "result": "success", "pnl_pct": 20.6},
+      {"code": "2383", "name": "台光電", "result": "success", "pnl_pct": 22.1},
+      {"code": "2609", "name": "陽明", "result": "fail", "pnl_pct": -4.0, "reason": "D10到期收盤跌"},
+      {"code": "6505", "name": "台塑化", "result": "fail", "pnl_pct": -2.4, "reason": "D10到期，油價週跌-9%"}
+    ]
+  },
   "removed_stocks": [
-    {"stock_code": "2886", "reason": "【第二版修正移除】外資近5天=-45K（明顯為負），不符準確率篩選第2條，且無超強催化覆寫條件（金融催化非費半/NVDA類），降為觀察不推薦。原score=76，修正後72分。"},
-    {"stock_code": "2834", "stock_name": "臺企銀", "recommend_date": "2026-06-10", "recommend_price": 17.1, "exit_price": 17.5, "exit_pnl_pct": 2.3, "result": "fail", "reason": "Level4爆量賣超-10,432張（佔日均量24.7%），D8/10強制出場，以17.5獲利出場(+2.3%)"},
-    {"stock_code": "2845", "stock_name": "遠東銀", "recommend_date": "2026-06-17", "recommend_price": 12.95, "exit_price": 12.95, "exit_pnl_pct": 0.0, "result": "fail", "reason": "Level4爆量賣超-4,986張（佔日均量25.7%），D3/10強制出場，以12.95平手出場(+0.0%)"},
-    {"stock_code": "2618", "reason": "5日+7.4%已大漲-10 + 外資持股比週減-3 = 67分，低於70門檻"},
-    {"stock_code": "2002", "reason": "EPS連續6季負成長-5分，累計評分約58分；偵測器強訊號65但基本面拖累"},
-    {"stock_code": "2344", "reason": "反轉L2(-15分)，已大漲後評分偏低"},
-    {"stock_code": "8105", "reason": "reversal狀態不明（累計為負），無法評分"},
-    {"stock_code": "3550", "reason": "偵測器強訊號75，但5日漲幅+29.2%>10%，已大漲排除（IC通路）"},
-    {"stock_code": "1708", "reason": "東鹼今日漲幅+3.2%>3%，不符Track B篩選條件"},
-    {"stock_code": "2892", "reason": "第一金74分，接近75門檻但Level 1買超減速-43.9%-5分及外資持股比週減-3分導致未達標；列觀察"},
-    {"stock_code": "2606", "reason": "裕民66分，月線季線雙線下（位置分3分）拖累，不達75門檻；5日-9.5%佈局中型態，觀察"}
+    {
+      "stock_code": "2886",
+      "reason": "【第二版修正移除】外資近5天=-45K（明顯為負），不符準確率篩選第2條，且無超強催化覆寫條件（金融催化非費半/NVDA類），降為觀察不推薦。原score=76，修正後72分。"
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "recommend_date": "2026-06-10",
+      "recommend_price": 17.1,
+      "exit_price": 17.5,
+      "exit_pnl_pct": 2.3,
+      "result": "fail",
+      "reason": "Level4爆量賣超-10,432張（佔日均量24.7%），D8/10強制出場，以17.5獲利出場(+2.3%)"
+    },
+    {
+      "stock_code": "2845",
+      "stock_name": "遠東銀",
+      "recommend_date": "2026-06-17",
+      "recommend_price": 12.95,
+      "exit_price": 12.95,
+      "exit_pnl_pct": 0.0,
+      "result": "fail",
+      "reason": "Level4爆量賣超-4,986張（佔日均量25.7%），D3/10強制出場，以12.95平手出場(+0.0%)"
+    },
+    {
+      "stock_code": "2618",
+      "reason": "5日+7.4%已大漲-10 + 外資持股比週減-3 = 67分，低於70門檻"
+    },
+    {
+      "stock_code": "2002",
+      "reason": "EPS連續6季負成長-5分，累計評分約58分；偵測器強訊號65但基本面拖累"
+    },
+    {
+      "stock_code": "2344",
+      "reason": "反轉L2(-15分)，已大漲後評分偏低"
+    },
+    {
+      "stock_code": "8105",
+      "reason": "reversal狀態不明（累計為負），無法評分"
+    },
+    {
+      "stock_code": "3550",
+      "reason": "偵測器強訊號75，但5日漲幅+29.2%>10%，已大漲排除（IC通路）"
+    },
+    {
+      "stock_code": "1708",
+      "reason": "東鹼今日漲幅+3.2%>3%，不符Track B篩選條件"
+    },
+    {
+      "stock_code": "2892",
+      "reason": "第一金74分，接近75門檻但Level 1買超減速-43.9%-5分及外資持股比週減-3分導致未達標；列觀察"
+    },
+    {
+      "stock_code": "2606",
+      "reason": "裕民66分，月線季線雙線下（位置分3分）拖累，不達75門檻；5日-9.5%佈局中型態，觀察"
+    }
   ],
   "track_b_recommendations": [],
   "track_b_observations": [
@@ -156,14 +234,52 @@
   ],
   "intraday_detector": {
     "強訊號": [
-      {"code": "3550", "name": "聯穎", "strength": 75, "note": "5日+29.2%已大漲排除"},
-      {"code": "2002", "name": "中鋼", "strength": 65, "note": "EPS連虧，評分~60，不達門檻"}
+      {
+        "code": "3550",
+        "name": "聯穎",
+        "strength": 75,
+        "note": "5日+29.2%已大漲排除"
+      },
+      {
+        "code": "2002",
+        "name": "中鋼",
+        "strength": 65,
+        "note": "EPS連虧，評分~60，不達門檻"
+      }
     ],
-    "中訊號": ["1708東鹼(今日+3.2%超過3%排除)", "7736虎山(觀察)", "2712遠雄來(觀察)", "2546根基(觀察)"],
+    "中訊號": [
+      "1708東鹼(今日+3.2%超過3%排除)",
+      "7736虎山(觀察)",
+      "2712遠雄來(觀察)",
+      "2546根基(觀察)"
+    ],
     "強制出場": [
-      {"code": "2834", "name": "臺企銀", "action": "Level4爆量賣超-10,432張，D8/10強制出場@17.5(+2.3%)"},
-      {"code": "2845", "name": "遠東銀", "action": "Level4爆量賣超-4,986張，D3/10強制出場@12.95(+0.0%)"}
+      {
+        "code": "2834",
+        "name": "臺企銀",
+        "action": "Level4爆量賣超-10,432張，D8/10強制出場@17.5(+2.3%)"
+      },
+      {
+        "code": "2845",
+        "name": "遠東銀",
+        "action": "Level4爆量賣超-4,986張，D3/10強制出場@12.95(+0.0%)"
+      }
     ]
   },
-  "notes": "遲到分析（10:30台股開市中），推薦價格為當前市價。2801/2382已在 tracking 中（分別為D3/D6），本次為重新評分確認。台股盤中突破47,000歷史新高。【評分修正v2（11:30）：法人籌碼重新核實。】【評分修正v3（topic_tracker更新後）：台股市場動態→整理（金融三檔各時事-1~-2）；航運↓減速（2610華航時事18→16，總分73→71，維持推薦5%小倉）；AI伺服器↑加速不變（廣達96維持）。最終6檔推薦，4個產業，金融3/6=50%剛好達邊界通過。06/25 Core PCE⚡3天為最大風險事件。聯準會鷹派升溫標記：升息預期對金融利差利好但估值有壓，07/30 FOMC前需持續觀察。】【盤中12:30更新：Track A全數Level 0，無出場訊號。Level 4強制出場：2834臺企銀(+2.3%)/2845遠東銀(+0%)。Track B無新推薦（最高74分2892第一金，未達75門檻）。】"
+  "notes": "遲到分析（10:30台股開市中），推薦價格為當前市價。2801/2382已在 tracking 中（分別為D3/D6），本次為重新評分確認。台股盤中突破47,000歷史新高。【評分修正v2（11:30）：法人籌碼重新核實。】【評分修正v3（topic_tracker更新後）：台股市場動態→整理（金融三檔各時事-1~-2）；航運↓減速（2610華航時事18→16，總分73→71，維持推薦5%小倉）；AI伺服器↑加速不變（廣達96維持）。最終6檔推薦，4個產業，金融3/6=50%剛好達邊界通過。06/25 Core PCE⚡3天為最大風險事件。聯準會鷹派升溫標記：升息預期對金融利差利好但估值有壓，07/30 FOMC前需持續觀察。】【盤中12:30更新：Track A全數Level 0，無出場訊號。Level 4強制出場：2834臺企銀(+2.3%)/2845遠東銀(+0%)。Track B無新推薦（最高74分2892第一金，未達75門檻）。】【盤後14:30更新：4成功(永豐金/南茂/景碩/台光電)+2失敗(陽明/台塑化D10到期)。明日推薦1檔：2606裕民79分。流程缺陷：益登68分違規+油價觸發機制缺失。】",
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2606",
+      "stock_name": "裕民",
+      "industry": "散裝航運",
+      "recommend_price": 62.0,
+      "target_price": 68.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 55.8,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 79,
+      "reason": "散裝航運EPS YoY+333%(2026Q1)，SCFI 3,000+，外資連3天佈局+11K，5日深回調-9.2%為買點，動能+10分。注意：航運方向↓減速（美伊波折+油價週跌-9%），月季雙線下（位置僅3分），小倉位嚴守停損-10%。MU財報06/25⚡3天前航運受全球貿易預期支撐。"
+    }
+  ]
 }
