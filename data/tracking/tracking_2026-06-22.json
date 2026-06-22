@@ -6,32 +6,6 @@
   },
   "recommendations": [
     {
-      "stock_code": "2801",
-      "stock_name": "彰銀",
-      "industry": "金融",
-      "recommend_price": 22.75,
-      "target_price": 25.0,
-      "stop_loss_pct": -10,
-      "stop_loss": 20.475,
-      "settlement_days": 10,
-      "position": "10-15%",
-      "score": 96,
-      "reason": "Module A L3佈局完成（連8天真連續+動能-53.8%），台股市場動態🔴超強，外資+投信同步，13金控獲利最旺，金融多頭"
-    },
-    {
-      "stock_code": "2382",
-      "stock_name": "廣達",
-      "industry": "AI伺服器",
-      "recommend_price": 378.0,
-      "target_price": 415.0,
-      "stop_loss_pct": -10,
-      "stop_loss": 340.2,
-      "settlement_days": 10,
-      "position": "10-15%",
-      "score": 97,
-      "reason": "Module A L3（連3天+動能-43%），AI伺服器🔴超強催化，AVGO+6.69%/NVDA+2.84%，0050換血受益，EPS+40%"
-    },
-    {
       "stock_code": "2891",
       "stock_name": "中信金",
       "industry": "金融",
@@ -41,34 +15,34 @@
       "stop_loss": 63.27,
       "settlement_days": 10,
       "position": "10-15%",
-      "score": 85,
-      "reason": "金融金控🔴超強環境，連買6天，外資大買+93K累計，台股歷史新高受益，EPS YoY+48%"
+      "score": 89,
+      "reason": "金融金控超強環境，6/18 avg_rank=4.0（TOP10），連買6天，外資近5天+90K主導，台股歷史新高受益，EPS YoY+48%。外資/投信對決型，外資主導。【修正：原score=85，avg_rank修正為4.0，法人分升至25，總分升至89】"
     },
     {
-      "stock_code": "3048",
-      "stock_name": "益登",
-      "industry": "IC通路",
-      "recommend_price": 73.9,
-      "target_price": 81.0,
-      "stop_loss_pct": -10,
-      "stop_loss": 66.51,
-      "settlement_days": 10,
-      "position": "5-10%",
-      "score": 80,
-      "reason": "Module A L2（動能-105.9%），IC通路受益半導體景氣，EPS YoY+171%，外資持股比大增+0.84%，買超比62.7%"
-    },
-    {
-      "stock_code": "2886",
-      "stock_name": "兆豐金",
+      "stock_code": "2801",
+      "stock_name": "彰銀",
       "industry": "金融",
-      "recommend_price": 44.7,
-      "target_price": 49.0,
+      "recommend_price": 22.75,
+      "target_price": 25.0,
       "stop_loss_pct": -10,
-      "stop_loss": 40.23,
+      "stop_loss": 20.475,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 84,
+      "reason": "Module A L3佈局完成（連8天真連續+動能-53.8%），外資+投信同步，13金控獲利最旺，金融多頭。注意：6/18當天在賣超榜（-908張），歷史avg_rank_best=6.5（6/10），法人分以最近上榜天降級計算。【修正：原score=96，6/18賣超法人降級，總分降至84】"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": "AI伺服器",
+      "recommend_price": 378.0,
+      "target_price": 415.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 359.1,
       "settlement_days": 10,
       "position": "5-10%",
-      "score": 76,
-      "reason": "台股市場動態🔴超強，金融多頭環境，連買4天，EPS YoY+22%，投信主力買進"
+      "score": 96,
+      "reason": "Module A L3（連3天+動能-43%），AI伺服器超強催化，AVGO+6.69%/費半+8.89%，0050換血受益，EPS+40%。【重要】外資近5天=-4,448（負），不符準確率篩選第2條，觸發超強催化覆寫（費半>3%+AI超強）→ 倉位降至5-10%，停損改-5%。🔥超強催化覆寫標記。【修正：原stop_loss_pct=-10/position=10-15%，覆寫後改為-5%/5-10%】"
     },
     {
       "stock_code": "2610",
@@ -80,11 +54,38 @@
       "stop_loss": 19.62,
       "settlement_days": 10,
       "position": "5%",
-      "score": 75,
-      "reason": "航運族群🟡強催化，法人avg_rank=16大買，SCFI連8漲至3122，美伊談判取消新催化；5日+7.6%已大漲-10分計入，小倉位"
+      "score": 73,
+      "reason": "航運族群強催化，法人6/18 avg_rank=26.0，SCFI連8漲，近5天外資+100K+投信同步；5日+7.6%已大漲-10分計入；6/12單日+43K過量買超且真連續<7天扣-5分已計入。【修正：原score=75，過量買超-5修正，總分降至73】"
+    },
+    {
+      "stock_code": "3048",
+      "stock_name": "益登",
+      "industry": "IC通路",
+      "recommend_price": 73.9,
+      "target_price": 81.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 66.51,
+      "settlement_days": 10,
+      "position": "3-5%",
+      "score": 68,
+      "reason": "Module A L2（動能-105.9%），IC通路受益半導體景氣，EPS YoY+171%，外資持股比大增+0.84%。注意：6/18 avg_rank=43.5（較低），三大近5天=-128（負），籌碼偏弱。【修正：原score=80/position=5-10%，avg_rank降級+三大近5天為負，總分降至68，倉位縮至3-5%】"
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "recommend_price": 24.45,
+      "target_price": 27.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 22.005,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 78,
+      "reason": "金融超強環境，6/18 avg_rank=24.0，真連續買超8天，外資近5天+65K（主導），投信近5天-1,831（對決但外資絕對主導），buy_ratio=56%（>20%+2），EPS YoY+50%（+5），Level 0，月季雙線上。【修正新增：原報告排除，本次重新評分補入第6檔，總分=78分，通過準確率篩選（外資+65K/Level0/金融催化）】"
     }
   ],
   "removed_stocks": [
+    {"stock_code": "2886", "reason": "【修正移除】外資近5天=-45K（明顯為負），不符準確率篩選第2條，且無超強催化覆寫條件（金融催化非費半/NVDA類），降為觀察不推薦。原score=76，修正後72分。"},
     {"stock_code": "2834", "reason": "反轉 L4 爆量賣超（佔日均量39%），直接排除"},
     {"stock_code": "2845", "reason": "反轉 L4 爆量賣超（佔日均量49%），直接排除"},
     {"stock_code": "2618", "reason": "5日+7.4%已大漲-10 + 外資持股比週減-3 = 67分，低於70門檻"},
@@ -92,5 +93,5 @@
     {"stock_code": "2344", "reason": "反轉L2(-15分)，已大漲後評分偏低"},
     {"stock_code": "8105", "reason": "reversal狀態不明（累計為負），無法評分"}
   ],
-  "notes": "遲到分析（10:30台股開市中），推薦價格為當前市價。2801/2382已在 tracking 中（分別為D3/D6），本次為重新評分確認。台股盤中突破47,000歷史新高。"
+  "notes": "遲到分析（10:30台股開市中），推薦價格為當前市價。2801/2382已在 tracking 中（分別為D3/D6），本次為重新評分確認。台股盤中突破47,000歷史新高。【評分修正v2（11:30）：法人籌碼重新核實，2891上調89分/2801下調84分/2382維持96分但倉位降5-10%停損-5%/2886移除/2610調整73分/3048降至68分/3-5%倉位/5880補入第6檔78分】"
 }
