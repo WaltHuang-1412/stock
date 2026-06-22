@@ -83,8 +83,12 @@
       "close_price": 16.95,
       "change_pct": -0.9,
       "change_percent": -0.9,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤16.95(-0.9%) | 距目標10.9% | 距停損9.2%"
+      "result": "fail",
+      "holding_status": "D8/10 | Level4爆量賣超-10,432張(24.7%日均量)，2026-06-22強制出場",
+      "fail_reason": "Level4法人爆量賣超-10,432張（佔日均量24.7%），2026-06-22強制出場，出場價17.5(+2.3%)",
+      "exit_price": 17.5,
+      "exit_date": "2026-06-22",
+      "exit_pnl_pct": 2.3
     },
     {
       "stock_code": "5876",
