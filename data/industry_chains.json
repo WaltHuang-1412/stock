@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-19",
+  "last_updated": "2026-06-23",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -381,6 +381,11 @@
             {
               "code": "6693",
               "name": "廣閎科",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "2303",
+              "name": "聯電",
               "category": "AI 伺服器與半導體"
             }
           ]
@@ -1483,6 +1488,21 @@
               "code": "3481",
               "name": "群創",
               "category": "光通訊與網通"
+            },
+            {
+              "code": "4903",
+              "name": "聯光通",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "6442",
+              "name": "光聖",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "6213",
+              "name": "聯茂",
+              "category": "光通訊與網通"
             }
           ]
         }
@@ -2226,6 +2246,16 @@
               "code": "2885",
               "name": "元大金",
               "category": "台股市場動態"
+            },
+            {
+              "code": "5274",
+              "name": "信驊",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "2409",
+              "name": "友達",
+              "category": "台股市場動態"
             }
           ]
         }
@@ -2698,6 +2728,21 @@
             {
               "code": "1560",
               "name": "中砂",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "6213",
+              "name": "聯茂",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3481",
+              "name": "群創",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2002",
+              "name": "中鋼",
               "category": "企業財報重點"
             }
           ]
@@ -4023,6 +4068,117 @@
               "code": "7712",
               "name": "盛半導體",
               "category": "MOSFET/功率半導體"
+            },
+            {
+              "code": "2301",
+              "name": "光寶科",
+              "category": "MOSFET/功率半導體"
+            },
+            {
+              "code": "6282",
+              "name": "康舒",
+              "category": "MOSFET/功率半導體"
+            }
+          ]
+        }
+      }
+    },
+    "ASIC": {
+      "name": "ASIC",
+      "catalysts": [
+        "ASIC",
+        "vs",
+        "GPU",
+        "路線競爭"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2454",
+              "name": "聯發科",
+              "category": "ASIC vs GPU 路線競爭"
+            },
+            {
+              "code": "3661",
+              "name": "世芯-KY",
+              "category": "ASIC vs GPU 路線競爭"
+            },
+            {
+              "code": "6451",
+              "name": "訊芯-KY",
+              "category": "ASIC vs GPU 路線競爭"
+            }
+          ]
+        }
+      }
+    },
+    "被動元件族群": {
+      "name": "被動元件族群",
+      "catalysts": [
+        "被動元件族群",
+        "MCU",
+        "漲價潮"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2327",
+              "name": "國巨",
+              "category": "被動元件族群（含MCU漲價潮）"
+            },
+            {
+              "code": "2375",
+              "name": "智寶",
+              "category": "被動元件族群（含MCU漲價潮）"
+            },
+            {
+              "code": "2441",
+              "name": "立隆電",
+              "category": "被動元件族群（含MCU漲價潮）"
+            },
+            {
+              "code": "2492",
+              "name": "華新科",
+              "category": "被動元件族群（含MCU漲價潮）"
+            },
+            {
+              "code": "2436",
+              "name": "維權電",
+              "category": "被動元件族群（含MCU漲價潮）"
+            },
+            {
+              "code": "3033",
+              "name": "通路威建",
+              "category": "被動元件族群（含MCU漲價潮）"
+            }
+          ]
+        }
+      }
+    },
+    "Apple-Intel-UMC": {
+      "name": "Apple-Intel-UMC",
+      "catalysts": [
+        "Apple-Intel-UMC",
+        "Apple",
+        "Intel",
+        "UMC",
+        "半導體新鐵三角"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2303",
+              "name": "聯電",
+              "category": "Apple-Intel-UMC 半導體新鐵三角"
             }
           ]
         }
