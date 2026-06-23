@@ -187,9 +187,9 @@
         "momentum_pct": null,
         "consecutive_buy": 0,
         "cumulative_foreign": 1362,
-        "reversal_level": "Level 0",
-        "exclusion_reason": "通過基礎篩選",
-        "passed": true
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除",
+        "passed": false
       }
     },
     {
@@ -409,6 +409,14 @@
   ],
   "already_in_top50": [
     {
+      "code": "3037",
+      "name": "欣興",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 6.91,
+      "tw_5d_change": 1.4583333333333333
+    },
+    {
       "code": "2313",
       "name": "華通",
       "tw_industry": "AI伺服器",
@@ -433,6 +441,14 @@
       "tw_5d_change": 3.5168124903684728
     },
     {
+      "code": "1802",
+      "name": "台玻",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": 14.79,
+      "tw_5d_change": 3.709198729083263
+    },
+    {
       "code": "1513",
       "name": "中興電",
       "tw_industry": "電動車",
@@ -441,12 +457,28 @@
       "tw_5d_change": 8.383233532934131
     },
     {
+      "code": "2337",
+      "name": "旺宏",
+      "tw_industry": "DRAM/記憶體",
+      "us_leader": "Micron",
+      "leader_cumulative": 104.93,
+      "tw_5d_change": 8.176100628930817
+    },
+    {
+      "code": "6770",
+      "name": "力積電",
+      "tw_industry": "DRAM/記憶體",
+      "us_leader": "Micron",
+      "leader_cumulative": 104.93,
+      "tw_5d_change": 7.2305527990509155
+    },
+    {
       "code": "6282",
       "name": "康舒",
       "tw_industry": "AI伺服器",
       "us_leader": "NVIDIA",
       "leader_cumulative": 14.79,
-      "tw_5d_change": 9.982793810814385
+      "tw_5d_change": 5.488852152343176
     },
     {
       "code": "2301",
@@ -454,40 +486,8 @@
       "tw_industry": "AI伺服器",
       "us_leader": "NVIDIA",
       "leader_cumulative": 14.79,
-      "tw_5d_change": 6.682027649769585
-    },
-    {
-      "code": "3673",
-      "name": "TPK-KY",
-      "tw_industry": "蘋果供應鏈",
-      "us_leader": "Apple",
-      "leader_cumulative": 9.75,
-      "tw_5d_change": 9.529860598257008
-    },
-    {
-      "code": "3037",
-      "name": "欣興",
-      "tw_industry": "電動車",
-      "us_leader": "Tesla",
-      "leader_cumulative": 6.91,
-      "tw_5d_change": 11.419068736141908
-    },
-    {
-      "code": "2408",
-      "name": "南亞科",
-      "tw_industry": "DRAM/記憶體",
-      "us_leader": "Micron",
-      "leader_cumulative": 104.93,
-      "tw_5d_change": 35.02673796791444
-    },
-    {
-      "code": "1303",
-      "name": "南亞",
-      "tw_industry": "DRAM/記憶體",
-      "us_leader": "Micron",
-      "leader_cumulative": 104.93,
-      "tw_5d_change": 43.1924882629108
+      "tw_5d_change": 7.710843373493977
     }
   ],
-  "already_moved_count": 83
+  "already_moved_count": 58
 }

@@ -7543,9 +7543,9 @@
       }
     ]
   },
-  "settled_accuracy": "61.0%",
-  "settled_count": 377,
-  "holding_count": 210,
+  "settled_accuracy": "60.8%",
+  "settled_count": 380,
+  "holding_count": 341,
   "total_success": 230,
   "total_fail": 147,
   "2026-03-30": {
@@ -12115,9 +12115,9 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 95,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "fail",
+        "settled_date": "2026-06-23",
+        "settled_price": 330.5,
         "holding_days": 1
       },
       {
@@ -12145,9 +12145,9 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 85,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "fail",
+        "settled_date": "2026-06-23",
+        "settled_price": 1265.0,
         "holding_days": 1
       },
       {
@@ -12284,9 +12284,9 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 89,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-06-23",
+        "settled_price": 39.8,
         "holding_days": 1
       },
       {
@@ -12880,6 +12880,42 @@
         "settlement_days": 10,
         "position": "3-5%",
         "score": 68,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-06-23": {
+    "predictions": [
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "recommend_price": 380.0,
+        "target_price": 418.0,
+        "stop_loss": 342.0,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 80,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend_price": 160.0,
+        "target_price": 176.0,
+        "stop_loss": 144.0,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 73,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,

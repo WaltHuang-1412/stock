@@ -37,12 +37,16 @@
       "risks": [
         "NVIDIA仍在修正期，需確認週一+2.26%趨勢延續"
       ],
-      "result": "holding",
+      "result": "fail",
       "holding_status": "D1/10 | 收盤344.5(-0.1%) | 距目標11.8% | 距停損9.9%",
-      "actual_close": 344.5,
+      "actual_close": 330.5,
       "day_change_pct": -0.1,
       "close_price": 344.5,
-      "change_percent": -0.1
+      "change_percent": -0.1,
+      "settled_date": "2026-06-23",
+      "settled_price": 330.5,
+      "return_pct": -4.2,
+      "fail_reason": "D10到期，收盤330.5≤推薦345.0"
     },
     {
       "stock_code": "2383",
@@ -96,12 +100,16 @@
       "risks": [
         "連買0天(最近一日賣超)，法人態度待確認"
       ],
-      "result": "holding",
+      "result": "fail",
       "holding_status": "D1/10 | 收盤1420.0(+4.4%) | 距目標6.3% | 距停損13.8%",
-      "actual_close": 1420.0,
+      "actual_close": 1265.0,
       "day_change_pct": 4.4,
       "close_price": 1420.0,
-      "change_percent": 4.4
+      "change_percent": 4.4,
+      "settled_date": "2026-06-23",
+      "settled_price": 1265.0,
+      "return_pct": -7.0,
+      "fail_reason": "D10到期，收盤1265.0≤推薦1360.0"
     },
     {
       "stock_code": "1303",
