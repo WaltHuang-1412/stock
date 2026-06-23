@@ -50,7 +50,7 @@ from datetime import datetime, timedelta
 # 取得日均成交量（用於比例門檻）
 sys.path.insert(0, os.path.dirname(__file__))
 try:
-    from yahoo_finance_api import get_stock_info
+    from yahoo_finance_api import get_stock_info, get_history
     HAS_YAHOO = True
 except ImportError:
     HAS_YAHOO = False
@@ -67,6 +67,143 @@ try:
     HAS_YAML = True
 except ImportError:
     HAS_YAML = False
+
+# === 處置風險偵測 ===
+_TWSE_LIST_CACHE = {'disposed': set(), 'attention': set(), 'fetched_at': None}
+
+def fetch_twse_lists():
+    """從 TWSE 抓取最新處置/注意股清單（快取1小時）"""
+    import re as _re
+    from datetime import datetime as _dt
+    now = _dt.now()
+
+    if _TWSE_LIST_CACHE['fetched_at']:
+        if (now - _TWSE_LIST_CACHE['fetched_at']).total_seconds() < 3600:
+            return _TWSE_LIST_CACHE['disposed'], _TWSE_LIST_CACHE['attention']
+
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+    disposed_codes, attention_codes = set(), set()
+
+    for url, target in [
+        ('https://www.twse.com.tw/announcement/punish?response=html', 'disposed'),
+        ('https://www.twse.com.tw/announcement/notice?response=html',  'attention'),
+    ]:
+        try:
+            r = requests.get(url, headers=headers, timeout=10)
+            if r.status_code == 200:
+                # 從 <td> 欄位抓 4 位數字股票代碼
+                codes = set(_re.findall(r'<td>\s*(\d{4})\s*</td>', r.text))
+                if target == 'disposed':
+                    disposed_codes = codes
+                else:
+                    attention_codes = codes
+        except Exception:
+            pass
+
+    _TWSE_LIST_CACHE['disposed'] = disposed_codes
+    _TWSE_LIST_CACHE['attention'] = attention_codes
+    _TWSE_LIST_CACHE['fetched_at'] = now
+    return disposed_codes, attention_codes
+
+
+def check_disposition_risk(stock_code):
+    """
+    處置風險偵測（提前預警）
+
+    TWSE 觸發注意股標準（任一）：
+    - 近6日累積漲跌 > 25%
+    - 近30日漲幅 > 100%
+    - 近60日漲幅 > 130%
+    - 當日週轉率 ≥ 10%（需另外資料，暫不計）
+
+    Returns:
+        dict: risk_level / is_disposed / is_attention / 6d_pct / 30d_pct / 60d_pct / reasons / label
+    """
+    result = {
+        'risk_level': 'clear',
+        'is_disposed': False,
+        'is_attention': False,
+        '6d_pct': None,
+        '30d_pct': None,
+        '60d_pct': None,
+        'reasons': [],
+        'label': '',
+    }
+
+    # Step 1：查 TWSE 官方清單
+    try:
+        disposed_codes, attention_codes = fetch_twse_lists()
+        if stock_code in disposed_codes:
+            result['is_disposed'] = True
+            result['risk_level'] = 'disposed'
+            result['reasons'].append('已在 TWSE 處置股清單')
+        elif stock_code in attention_codes:
+            result['is_attention'] = True
+            result['risk_level'] = 'attention'
+            result['reasons'].append('已在 TWSE 注意股清單')
+    except Exception:
+        pass
+
+    # Step 2：用歷史收盤價計算累積漲跌幅
+    if HAS_YAHOO:
+        try:
+            hist = get_history(stock_code, period='3mo', interval='1d')
+            if hist and hist.get('closes'):
+                closes = [c for c in hist['closes'] if c is not None]
+
+                def _pct(old, new):
+                    return (new / old - 1) * 100 if old else None
+
+                # 近6日（需7個收盤價）
+                if len(closes) >= 7:
+                    p6 = _pct(closes[-7], closes[-1])
+                    result['6d_pct'] = p6
+                    if p6 is not None:
+                        if p6 > 25:
+                            result['reasons'].append(f'近6日漲幅 {p6:.1f}% > 25%（已達注意標準）')
+                            if result['risk_level'] == 'clear':
+                                result['risk_level'] = 'warning'
+                        elif p6 > 20:
+                            result['reasons'].append(f'近6日漲幅 {p6:.1f}%，接近25%門檻')
+                            if result['risk_level'] == 'clear':
+                                result['risk_level'] = 'watch'
+
+                # 近30日
+                if len(closes) >= 31:
+                    p30 = _pct(closes[-31], closes[-1])
+                    result['30d_pct'] = p30
+                    if p30 is not None:
+                        if p30 > 100:
+                            result['reasons'].append(f'近30日漲幅 {p30:.1f}% > 100%（已達注意標準）')
+                            if result['risk_level'] not in ('disposed', 'attention'):
+                                result['risk_level'] = 'warning'
+                        elif p30 > 85:
+                            result['reasons'].append(f'近30日漲幅 {p30:.1f}%，接近100%門檻')
+                            if result['risk_level'] == 'clear':
+                                result['risk_level'] = 'watch'
+
+                # 近60日
+                if len(closes) >= 61:
+                    p60 = _pct(closes[-61], closes[-1])
+                    result['60d_pct'] = p60
+                    if p60 is not None:
+                        if p60 > 130:
+                            result['reasons'].append(f'近60日漲幅 {p60:.1f}% > 130%（已達注意標準）')
+                            if result['risk_level'] not in ('disposed', 'attention'):
+                                result['risk_level'] = 'warning'
+        except Exception:
+            pass
+
+    level_labels = {
+        'disposed':  '🔴🔴 處置股（禁止進場）',
+        'attention': '🔴 注意股（極高風險）',
+        'warning':   '⚠️ 處置風險高（接近或已達觸發門檻）',
+        'watch':     '🟡 接近注意門檻（留意追蹤）',
+        'clear':     '',
+    }
+    result['label'] = level_labels.get(result['risk_level'], '')
+    return result
+
 
 def get_institutional_data(stock_code, date_str):
     """Get institutional trading data for a specific date（優先使用快取）"""
@@ -184,6 +321,9 @@ def detect_reversal(stock_code, stock_name="", days=10):
         if data:
             data_list.append(data)
 
+    # 處置風險偵測（不受籌碼數據限制，先跑）
+    disp_risk = check_disposition_risk(stock_code)
+
     if len(data_list) < 3:
         return {
             'stock_code': stock_code,
@@ -195,6 +335,7 @@ def detect_reversal(stock_code, stock_name="", days=10):
             'warning_level': -1,
             'avg_daily_volume': 0,
             'sell_ratio': 0,
+            'disposition_risk': disp_risk,
         }
 
     # 分析反轉
@@ -208,6 +349,7 @@ def detect_reversal(stock_code, stock_name="", days=10):
         'warning_level': 0,  # 0=安全, 1-4=四層預警
         'avg_daily_volume': 0,  # v3.0：日均量（張）
         'sell_ratio': 0,  # v3.0：賣超佔日均量%
+        'disposition_risk': disp_risk,
     }
 
     # 計算籌碼動能（需要10天數據）
@@ -402,6 +544,12 @@ def main():
             # 輸出詳細資訊
             print(f"   {result['alert_reason']}")
             print(f"   → {result['recommendation']}")
+            # 處置風險額外標注
+            dr = result.get('disposition_risk', {})
+            if dr.get('risk_level') in ('disposed', 'attention', 'warning', 'watch'):
+                print(f"   🚨 處置風險: {dr['label']}")
+                for reason in dr.get('reasons', []):
+                    print(f"      • {reason}")
 
     # 輸出總結
     print("\n" + "=" * 60)
@@ -449,6 +597,38 @@ def main():
         for a in alerts['unknown']:
             print(f"   • {a['stock_name']}({a['stock_code']}): {a['alert_reason']}")
             print(f"     → {a['recommendation']}")
+
+    # 處置風險彙整
+    all_results_flat = [a for level in alerts.values() for a in level]
+    disposed_list  = [a for a in all_results_flat if a.get('disposition_risk', {}).get('is_disposed')]
+    attention_list = [a for a in all_results_flat if a.get('disposition_risk', {}).get('is_attention')]
+    warning_list   = [a for a in all_results_flat
+                      if a.get('disposition_risk', {}).get('risk_level') in ('warning', 'watch')
+                      and not a.get('disposition_risk', {}).get('is_disposed')
+                      and not a.get('disposition_risk', {}).get('is_attention')]
+
+    if disposed_list or attention_list or warning_list:
+        print("\n" + "=" * 60)
+        print("🚨 處置風險偵測結果")
+        print("=" * 60)
+        if disposed_list:
+            print(f"\n🔴🔴 已處置（{len(disposed_list)}檔）— 禁止進場，流動性極低：")
+            for a in disposed_list:
+                dr = a['disposition_risk']
+                print(f"   • {a['stock_name']}({a['stock_code']}): {', '.join(dr['reasons'])}")
+        if attention_list:
+            print(f"\n🔴 注意股（{len(attention_list)}檔）— 極高風險，可能升級處置：")
+            for a in attention_list:
+                dr = a['disposition_risk']
+                print(f"   • {a['stock_name']}({a['stock_code']}): {', '.join(dr['reasons'])}")
+        if warning_list:
+            print(f"\n⚠️ 處置預警（{len(warning_list)}檔）— 接近或已達觸發門檻：")
+            for a in warning_list:
+                dr = a['disposition_risk']
+                p6  = f"6日{dr['6d_pct']:+.1f}%" if dr.get('6d_pct') is not None else ''
+                p30 = f"30日{dr['30d_pct']:+.1f}%" if dr.get('30d_pct') is not None else ''
+                pcts = ' / '.join(x for x in [p6, p30] if x)
+                print(f"   • {a['stock_name']}({a['stock_code']}): {pcts}  {dr['label']}")
 
     total_alerts = len(alerts['level4']) + len(alerts['level3']) + len(alerts['level2']) + len(alerts['level1'])
     total_unknown = len(alerts['unknown'])
