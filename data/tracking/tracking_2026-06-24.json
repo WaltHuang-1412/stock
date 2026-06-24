@@ -20,61 +20,137 @@
     {
       "stock_code": "2801",
       "stock_name": "彰銀",
-      "note": "Module A L2連買8天, 65分, 金融銀行冷門模式(pattern>3天跳過), 仍不足70分門檻, 繼續tracking D3"
+      "note": "Module A L2連買8天, 65分, 金融銀行冷門模式(pattern>3天跳過), 仍不足70分門檻, 繼續tracking D3 | 盤中評分：47分（冷模式-15, 外資主導+銀行worst combo-5），不推薦"
     },
     {
       "stock_code": "5880",
       "stock_name": "合庫金",
-      "note": "Module A L2連買8天, 67分, 最高分候選但仍低於70分門檻, 繼續tracking D3"
+      "note": "Module A L2連買8天, 67分, 最高分候選但仍低於70分門檻, 繼續tracking D3 | 盤中未重新評分（金融銀行冷模式確定排除）"
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "note": "盤中Track B候選: avg_rank 6.0, 5日+0.9%, Level 0。評分75分(基礎)+附加(-3+5=+2)=77分，但NVIDIA Level 2(-15分)→60分，不達盤中75分門檻"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "note": "盤中Track B候選: avg_rank 7.5, 5日+2.8%, Level 0。評分基礎80分+附加+8=88分，但MU Level 2(-15分)→73分，不達盤中75分門檻"
+    },
+    {
+      "stock_code": "6168",
+      "stock_name": "宏齊",
+      "note": "偵測器強訊號強度75, 今日+2.9%量比6.1x連買6天。但5日+24.3%>10%已大漲，無新催化劑B，按規則不評分"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "note": "偵測器強訊號強度65, 今日+2.6%量比1.4x連買6天。但5日+23.0%>10%已大漲，無新催化劑B，按規則不評分"
     }
   ],
-  "no_new_recommendation_reason": "費半史上第2大跌(-7.87%), NVIDIA/AMD/Tesla Level 2(-15分), MU財報明日高不確定性, 外資台指期空單76K歷史高, 所有候選股評分<70分(最高合庫金67分, 彰銀65分)",
+  "no_new_recommendation_reason": "費半史上第2大跌(-7.87%), NVIDIA/AMD/Tesla Level 2(-15分), MU財報06/25高不確定性, 外資台指期空單76K歷史高, 所有候選股評分<70分(最高合庫金67分, 彰銀65分)",
+  "intraday_no_recommendation_reason": "盤中同樣無推薦：Level 2龍頭預警(-15分)使AI/半導體類股(8046:60分, 2344:73分)低於75分門檻；金融股全命中Cold Pattern(-5至-15分)使銀行/保險類股(彰銀:47分, 台新新光金:60分)遠低於門檻；偵測器強訊號6168/2303均為5日+23-24%已大漲無新催化劑",
   "holdings_assessment": [
     {
       "stock_code": "2337",
       "stock_name": "旺宏",
       "source": "my_holdings.yaml",
       "cost_price": 164.0,
-      "current_price": 172.0,
+      "intraday_price": 168.5,
       "stop_loss_pct": -10,
       "stop_loss": 147.6,
+      "reversal_level": "Level 0",
+      "consecutive_buy": 2,
       "score": 70,
       "assessment": "🟡 續抱觀察",
-      "note": "量子運算IBM 20年合作受益+記憶體超強催化, 外資持股比週增+0.78%, EPS+82%, 5日+8.2%建議不加碼"
+      "note": "Level 0安全, 真連2天, 今日-2.0%, 高點回落-12.2%但法人仍買+2239張。停損遠(147.6), 持續觀察"
     },
     {
       "stock_code": "2610",
       "stock_name": "華航",
       "source": "tracking_D2",
-      "current_price": 22.3,
+      "intraday_price": 23.0,
       "recommend_price": 20.75,
       "stop_loss_pct": -10,
       "stop_loss": 18.68,
-      "score": 71,
-      "assessment": "🟡 續抱觀察",
-      "note": "真連3天, 過量買超警告(+37K但<30K...等等今日37,740>30K+真連3天<7天→-5分已扣), 71分, 不加碼"
+      "reversal_level": "Level 0",
+      "consecutive_buy": 3,
+      "assessment": "✅ 續抱",
+      "note": "Level 0, 真連3天, 今日+3.1%, 外資+投信近5天同步買超(外資+92K, 投信+2529), 累計+128K。籌碼極健康"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "source": "my_holdings.yaml",
+      "cost_price": 2070,
+      "intraday_price": 2405,
+      "stop_loss_pct": -10,
+      "stop_loss": 1863,
+      "reversal_level": "Level 2",
+      "assessment": "✅ 續抱（Level 2 警示）",
+      "note": "Level 2單日反轉, 今日-3.4%, 但停損遠(1863), 未觸發強制出場條件。觀察明日是否持續賣超"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "source": "my_holdings.yaml",
+      "cost_price": 113.6,
+      "intraday_price": 159.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 102.24,
+      "reversal_level": "Level 0",
+      "assessment": "🟡 續抱（處置股禁加碼）",
+      "note": "Level 0安全, 今日+2.9%, 投信大買+40K但外資-16K。已成處置股(6日+35.9%), 禁止加碼, 可考慮150-155設停利"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "source": "my_holdings.yaml",
+      "cost_price": 87.7,
+      "intraday_price": 83.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 78.93,
+      "reversal_level": "狀態不明(累計-229K)",
+      "assessment": "⚠️ 高風險，密切監控",
+      "note": "今日反彈+6.6%但累計外資賣超-237K，法人大量撤退。MU財報明日(06/25)高風險。停損78.9，如接近需立即出場"
     }
   ],
   "holdings_alerts": [
     {
       "stock_code": "2313",
       "stock_name": "華通",
-      "alert_level": "🔴🔴 極危險",
+      "alert_level": "🛑 強制停損",
       "cost_price": 283.403,
-      "current_price": 243.0,
+      "intraday_price": 240.5,
+      "stop_loss_pct": -10,
       "stop_loss": 255.1,
-      "status": "現價243.0已跌破停損255.1, 累計法人賣超-36K, 真連買超0天, 建議今日執行停損出場",
-      "action_required": true
+      "reversal_level": "Level 4",
+      "action_required": true,
+      "status": "現價240.5<停損255.1(-5.7%), Level 4爆量賣超(55%日均量-14456張), 外資+投信同步大賣。CLAUDE.md強制停損：任一觸發必出場"
     },
     {
-      "stock_code": "6770",
-      "stock_name": "力積電",
-      "alert_level": "🔴 已觸停損",
-      "cost_price": 87.7,
-      "current_price": 78.6,
-      "stop_loss": 78.93,
-      "status": "現價78.6≈停損78.93, 累計法人賣超-229K, 外資大量出逃, MU財報明日風險高, 建議今日評估停損",
-      "action_required": true
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "alert_level": "🛑 強制停損",
+      "cost_price": 48.55,
+      "intraday_price": 67.9,
+      "stop_loss_pct": -10,
+      "stop_loss": 43.695,
+      "reversal_level": "Level 3",
+      "action_required": true,
+      "status": "Level 3連續賣超(近2日累計-28199張, 累計轉負), 現價未觸停損但法人反轉強制出場。獲利+39.8%應保住"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "alert_level": "🛑 強制停損",
+      "cost_price": 1055,
+      "intraday_price": 922.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 949.5,
+      "reversal_level": "Level 3",
+      "action_required": true,
+      "status": "現價922<停損949.5(-2.9%), Level 3連續賣超(近2日累計-4616張, 累計轉負)。雙重觸發，立即出場"
     }
   ],
   "removed_stocks": [
@@ -97,6 +173,17 @@
       "settled_date": "2026-06-24"
     }
   ],
+  "intraday_summary": {
+    "date": "2026-06-24",
+    "time": "12:30",
+    "detector_strong_signals": ["6168(75分,+2.9%,量比6.1x)", "2303(65分,+2.6%,量比1.4x)"],
+    "detector_medium_signals": ["2482", "6715", "3016"],
+    "track_b_evaluated": 6,
+    "track_b_recommended": 0,
+    "forced_exits": ["2313-Level4+觸停損", "3037-Level3+觸停損", "3481-Level3法人反轉"],
+    "high_alert": ["6770-累計賣超-229K+MU財報明日"],
+    "market_note": "費半史上第2大跌(-7.87%), Level 2龍頭預警全面壓制AI/半導體股, 金融股Cold Pattern確認無效, 整體維持不推薦"
+  },
   "market_context": {
     "date": "2026-06-24",
     "regime": "多頭",
