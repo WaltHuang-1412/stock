@@ -119,38 +119,38 @@
     {
       "stock_code": "2313",
       "stock_name": "華通",
-      "alert_level": "🛑 強制停損",
-      "cost_price": 283.403,
-      "intraday_price": 240.5,
-      "stop_loss_pct": -10,
+      "alert_level": "🛑 強制停損（已執行）",
+      "cost_price": 283.4,
+      "close_price": 240.0,
       "stop_loss": 255.1,
       "reversal_level": "Level 4",
-      "action_required": true,
-      "status": "現價240.5<停損255.1(-5.7%), Level 4爆量賣超(55%日均量-14456張), 外資+投信同步大賣。CLAUDE.md強制停損：任一觸發必出場"
-    },
-    {
-      "stock_code": "3481",
-      "stock_name": "群創",
-      "alert_level": "🛑 強制停損",
-      "cost_price": 48.55,
-      "intraday_price": 67.9,
-      "stop_loss_pct": -10,
-      "stop_loss": 43.695,
-      "reversal_level": "Level 3",
-      "action_required": true,
-      "status": "Level 3連續賣超(近2日累計-28199張, 累計轉負), 現價未觸停損但法人反轉強制出場。獲利+39.8%應保住"
+      "result": "fail",
+      "fail_reason": "Level 4爆量賣超(-14,456張=41.9%日均量)+現價<停損(240<255.1)",
+      "return_pct": -15.3
     },
     {
       "stock_code": "3037",
       "stock_name": "欣興",
-      "alert_level": "🛑 強制停損",
-      "cost_price": 1055,
-      "intraday_price": 922.0,
-      "stop_loss_pct": -10,
+      "alert_level": "🛑 強制停損（已執行）",
+      "cost_price": 1055.0,
+      "close_price": 931.0,
       "stop_loss": 949.5,
       "reversal_level": "Level 3",
-      "action_required": true,
-      "status": "現價922<停損949.5(-2.9%), Level 3連續賣超(近2日累計-4616張, 累計轉負)。雙重觸發，立即出場"
+      "result": "fail",
+      "fail_reason": "Level 3連續賣超累計-4,616張+現價<停損(931<949.5)",
+      "return_pct": -11.7
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "alert_level": "🛑 強制停損（保住獲利）",
+      "cost_price": 48.55,
+      "close_price": 69.4,
+      "stop_loss": 43.7,
+      "reversal_level": "Level 3",
+      "result": "manual_exit",
+      "fail_reason": "Level 3連續賣超累計-28,199張，累計轉負。雖未觸停損但法人反轉強制出場，保住+39.8%獲利",
+      "return_pct": 42.9
     }
   ],
   "removed_stocks": [
@@ -164,24 +164,61 @@
   ],
   "settled_today": [
     {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "result": "success",
+      "reason": "D2 收盤178.0 ≥ 目標176.0 (+11.2%)",
+      "recommend_price": 160.0,
+      "settled_price": 178.0,
+      "settled_date": "2026-06-24",
+      "holding_days": 2,
+      "rec_date": "2026-06-23"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "result": "success",
+      "reason": "D8 收盤44.0 ≥ 目標43.95 (+10.1%)",
+      "recommend_price": 39.95,
+      "settled_price": 44.0,
+      "settled_date": "2026-06-24",
+      "holding_days": 8,
+      "rec_date": "2026-06-16"
+    },
+    {
       "stock_code": "5876",
       "stock_name": "上海商銀",
       "result": "fail",
-      "reason": "D10到期, 收盤41.8 ≤ 推薦42.65(-2.0%)",
+      "reason": "D10到期, 收盤41.55 ≤ 推薦42.65(-2.6%)",
       "recommend_price": 42.65,
-      "settled_price": 41.8,
-      "settled_date": "2026-06-24"
+      "settled_price": 41.55,
+      "settled_date": "2026-06-24",
+      "holding_days": 10,
+      "rec_date": "2026-06-10"
     }
   ],
   "intraday_summary": {
     "date": "2026-06-24",
     "time": "12:30",
-    "detector_strong_signals": ["6168(75分,+2.9%,量比6.1x)", "2303(65分,+2.6%,量比1.4x)"],
-    "detector_medium_signals": ["2482", "6715", "3016"],
+    "detector_strong_signals": [
+      "6168(75分,+2.9%,量比6.1x)",
+      "2303(65分,+2.6%,量比1.4x)"
+    ],
+    "detector_medium_signals": [
+      "2482",
+      "6715",
+      "3016"
+    ],
     "track_b_evaluated": 6,
     "track_b_recommended": 0,
-    "forced_exits": ["2313-Level4+觸停損", "3037-Level3+觸停損", "3481-Level3法人反轉"],
-    "high_alert": ["6770-累計賣超-229K+MU財報明日"],
+    "forced_exits": [
+      "2313-Level4+觸停損",
+      "3037-Level3+觸停損",
+      "3481-Level3法人反轉"
+    ],
+    "high_alert": [
+      "6770-累計賣超-229K+MU財報明日"
+    ],
     "market_note": "費半史上第2大跌(-7.87%), Level 2龍頭預警全面壓制AI/半導體股, 金融股Cold Pattern確認無效, 整體維持不推薦"
   },
   "market_context": {
@@ -194,5 +231,67 @@
     "mu_earnings_tomorrow": true,
     "foreign_futures_short_k": 76,
     "key_alert": "費半史上第2大跌, MU財報06/25, 外資期空76K歷史高"
+  },
+  "tomorrow_recommendations": [],
+  "tomorrow_no_recommendation_reason": "MU財報06/25高不確定性，費半-7.87%後Level 2龍頭預警持續，外資台指期空單76K歷史高；最高評分候選1402遠東新69分(未達70)，旺宏(2337)88分為持倉加碼評估而非新推薦",
+  "after_market_summary": {
+    "settled_count": 3,
+    "today_success": 2,
+    "today_fail": 1,
+    "today_success_stocks": [
+      "2303聯電+11.2%",
+      "2618長榮航+10.1%"
+    ],
+    "today_fail_stocks": [
+      "5876上海商銀-2.6%(D10到期)"
+    ],
+    "forced_exits": [
+      "2313華通(Level4,停損)",
+      "3037欣興(Level3,停損)",
+      "3481群創(Level3,保利)"
+    ],
+    "key_risk_tomorrow": "MU Micron財報(06/25 US盤後)，影響記憶體/DRAM/旺宏等持倉方向",
+    "holdings_watchlist": {
+      "3048益登": "距停損66.51僅3.7%，高度警戒",
+      "6770力積電": "MU財報前高危，停損78.93",
+      "3045台灣大": "D10明日到期(119.5>推薦118=預期成功)",
+      "2337旺宏": "88分可加碼，等MU財報確認"
+    },
+    "overall_accuracy": "60.8%(233/150/383)"
+  },
+  "yesterday_verification": {
+    "accuracy": "66.7% (2/3)",
+    "success_count": 2,
+    "fail_count": 1,
+    "holding_count": 14,
+    "results": [
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "result": "success",
+        "return_pct": 11.2,
+        "holding_days": 2,
+        "note": "D2目標達成，ADR+13.52%效應"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "result": "success",
+        "return_pct": 10.1,
+        "holding_days": 8,
+        "note": "D8目標達成"
+      },
+      {
+        "stock_code": "5876",
+        "stock_name": "上海商銀",
+        "result": "fail",
+        "return_pct": -2.6,
+        "holding_days": 10,
+        "note": "D10到期，收盤41.55<推薦42.65"
+      }
+    ],
+    "overall_accuracy": "60.8% (233/150/383)",
+    "pattern_success": "聯電ADR逆勢強，兌現快速；航空持續外資大買",
+    "pattern_fail": "上海商銀銀行類Cold Pattern驗證，金融類需謹慎"
   }
 }

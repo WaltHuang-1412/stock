@@ -7544,10 +7544,10 @@
     ]
   },
   "settled_accuracy": "60.8%",
-  "settled_count": 380,
-  "holding_count": 341,
-  "total_success": 230,
-  "total_fail": 147,
+  "settled_count": 383,
+  "holding_count": 206,
+  "total_success": 233,
+  "total_fail": 150,
   "2026-03-30": {
     "predictions": [
       {
@@ -12248,10 +12248,10 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 70,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-06-24",
+        "settled_price": 41.55,
+        "holding_days": 10
       }
     ],
     "settled_accuracy": null,
@@ -12604,10 +12604,10 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 75,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-06-24",
+        "settled_price": 44.0,
+        "holding_days": 8
       },
       {
         "symbol": "2883",
@@ -12916,13 +12916,17 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 73,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-06-24",
+        "settled_price": 178.0,
+        "holding_days": 2
       }
     ],
     "settled_accuracy": null,
     "settled_count": 0
+  },
+  "2026-06-24": {
+    "predictions": [],
+    "no_recommendation_reason": "費半-7.87%+Level 2龍頭預警+MU財報明日不確定性+外資期空76K歷史高，所有候選股<70分"
   }
 }
