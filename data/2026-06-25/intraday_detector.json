@@ -1,0 +1,63 @@
+{
+  "date": "2026-06-25",
+  "scan_time": "12:34:41",
+  "latest_t86": "20260624",
+  "scanned": 555,
+  "signals_count": 4,
+  "strong": [
+    {
+      "code": "5880",
+      "name": "合庫金",
+      "price": 25.05,
+      "change_pct": 2.66,
+      "volume_ratio": 1.38,
+      "streak": 10,
+      "cum_buy": 96225,
+      "in_top30": true,
+      "in_module_a": false,
+      "strength": 65,
+      "reasons": [
+        "連買10天",
+        "量比1.4x",
+        "昨日TOP30",
+        "累計96K"
+      ]
+    }
+  ],
+  "moderate": [
+    {
+      "code": "2727",
+      "name": "王品",
+      "price": 248.5,
+      "change_pct": 0.81,
+      "volume_ratio": 1.27,
+      "streak": 8,
+      "cum_buy": 1156,
+      "in_top30": false,
+      "in_module_a": false,
+      "strength": 50,
+      "reasons": [
+        "連買8天",
+        "量比1.3x",
+        "今日+0.8%(微漲)"
+      ]
+    },
+    {
+      "code": "6831",
+      "name": "邁科",
+      "price": 867.0,
+      "change_pct": 1.76,
+      "volume_ratio": 1.32,
+      "streak": 8,
+      "cum_buy": 2423,
+      "in_top30": false,
+      "in_module_a": false,
+      "strength": 40,
+      "reasons": [
+        "連買8天",
+        "量比1.3x"
+      ]
+    }
+  ],
+  "weak_count": 1
+}

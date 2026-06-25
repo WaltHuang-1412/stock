@@ -34,7 +34,10 @@
       "track": "A",
       "module_a": "L2",
       "consecutive_buy_days": 8,
-      "reason": "📶訊號A L2，連買8天真連續，外資+77K，EPS年增+50%，Fed利率觀望防禦性"
+      "intraday_price": 25.05,
+      "intraday_change_pct": 2.7,
+      "intraday_status": "续抱",
+      "reason": "訊號A L2，連買8天真連續，外資+77K，EPS年增+50%，Fed利率觀望防禦性"
     },
     {
       "stock_code": "2892",
@@ -50,7 +53,10 @@
       "track": "A",
       "module_a": "L2",
       "consecutive_buy_days": 8,
-      "reason": "📶訊號A L2，連買8天真連續，外資+53K+投信+91K雙向同步佈局，籌碼最健康"
+      "intraday_price": 33.05,
+      "intraday_change_pct": 3.1,
+      "intraday_status": "续抱",
+      "reason": "訊號A L2，連買8天真連續，外資+53K+投信+91K雙向同步佈局，籌碼最健康"
     },
     {
       "stock_code": "2834",
@@ -66,7 +72,10 @@
       "track": "A",
       "module_a": "L2",
       "consecutive_buy_days": 2,
-      "reason": "📶訊號A L2，外資主導累計+61K，buy_ratio 43.7%，銀行防禦性強"
+      "intraday_price": 18.05,
+      "intraday_change_pct": 1.4,
+      "intraday_status": "续抱",
+      "reason": "訊號A L2，外資主導累計+61K，buy_ratio 43.7%，銀行防禦性強"
     },
     {
       "stock_code": "3045",
@@ -82,17 +91,45 @@
       "track": "A",
       "module_a": "L2",
       "consecutive_buy_days": 3,
-      "reason": "📶訊號A L2，今日D10結算後重新推薦，外資+投信同步連買，電信防禦產業分散"
+      "intraday_price": 120.5,
+      "intraday_change_pct": 0.8,
+      "intraday_status": "续抱",
+      "reason": "訊號A L2，今日D10結算後重新推薦，外資+投信同步連買，電信防禦產業分散"
     }
   ],
   "track_b_recommendations": [],
-  "track_b_observations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "2542",
+      "stock_name": "興富發",
+      "industry": "營建",
+      "intraday_price": 43.4,
+      "score": 62,
+      "exclude_reason": "評分62分未達盤中門檻75分：產業無強催化(9分)，真連續2天，價格位置無資料"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "industry": "鋼鐵",
+      "intraday_price": 19.25,
+      "score": 57,
+      "exclude_reason": "評分57分未達門檻：真連續僅1天，外資/投信法人對決（可能含ETF再平衡），鋼鐵無強催化"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "industry": "蘋果鏈",
+      "intraday_price": 83.7,
+      "score": 51,
+      "exclude_reason": "評分51分未達門檻：Apple Level 1 -5分，營收連續衰退5個月 -5分，真連續1天"
+    }
+  ],
   "holdings_evaluation": [
     {
       "stock_code": "2330",
       "stock_name": "台積電",
       "holding_quantity": 0.15,
-      "evaluation": "Level 4反轉預警（昨-36,715張=66%日均量，史上最大賣超），不建議加碼",
+      "evaluation": "Level 4反轉預警（昨-36,715張=66%日均量，史上最大賣超），今日現價2400",
       "suggestion": "留意減碼"
     },
     {
@@ -107,15 +144,17 @@
       "stock_name": "力積電",
       "holding_quantity": 1,
       "score": 52,
-      "evaluation": "WDC Level 2 -15分，過量買超88,899張（真連續僅1天），10天累計外資-80K（實際在賣！），5日+20.7%",
+      "evaluation": "WDC Level 2 -15分，過量買超88,899張（真連續僅1天），10天累計外資-80K（實際在賣）",
       "suggestion": "留意減碼"
     },
     {
       "stock_code": "3037",
       "stock_name": "欣興",
       "holding_quantity": 0.3,
-      "evaluation": "10天累計-4,578（三大法人同賣），真連續0天，基本面強但籌碼轉弱",
-      "suggestion": "續抱觀察"
+      "intraday_price": 1020.0,
+      "reversal_level": 4,
+      "evaluation": "Level 4爆量賣超（今日-7,813張=27.4%日均量），連續賣超3天，真連續0天。Manual exit結論：賣。現價1020>停損949.5，未觸停損但籌碼持續惡化",
+      "suggestion": "建議出場（論點驅動，非停損觸發）"
     },
     {
       "stock_code": "2337",
@@ -136,8 +175,11 @@
       "stock_code": "2313",
       "stock_name": "華通",
       "holding_quantity": 1,
-      "evaluation": "Module A L1，外資持股比+0.29%週增，估分約70分邊際",
-      "suggestion": "續抱觀察"
+      "intraday_price": 234.0,
+      "reversal_level": 4,
+      "stop_loss_triggered": true,
+      "evaluation": "Level 4爆量賣超（今日-6,494張=31.6%日均量），連續賣超3天。現價234.0 <= 停損255.1，停損已觸發！",
+      "suggestion": "強制停損出場（停損已觸發）"
     },
     {
       "stock_code": "3090",
