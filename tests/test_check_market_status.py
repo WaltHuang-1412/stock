@@ -90,14 +90,14 @@ class TestCheckTwseMis:
             result = cms._check_twse_mis("2026-04-21")
         assert result is True
 
-    def test_matching_date_no_price_returns_false(self):
-        # z='-' 表示未成交
+    def test_matching_date_no_price_returns_true(self):
+        # z='-' 表示盤前未成交，但日期吻合仍視為開市
         with patch("check_market_status.requests.get") as mock_get:
             mock_get.return_value = self._mock_response({
                 "msgArray": [{"d": "20260421", "z": "-"}]
             })
             result = cms._check_twse_mis("2026-04-21")
-        assert result is False
+        assert result is True
 
     def test_date_mismatch_returns_false(self):
         # MIS 顯示的是上個交易日，今天是假日
