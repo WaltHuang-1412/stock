@@ -8,15 +8,44 @@
     "nasdaq_change_pct": -3.41,
     "vix": 18.63,
     "market_regime": "修正",
-    "key_events": ["外資史上最大賣超", "MU盤後+13%", "油價-8.64%", "NASDAQ-3.41%"],
+    "key_events": [
+      "外資史上最大賣超",
+      "MU盤後+13%",
+      "油價-8.64%",
+      "NASDAQ-3.41%"
+    ],
     "major_alerts": {
-      "wdc_level2": ["2337", "6770"],
-      "nvidia_level1": ["2356", "2382", "3231"],
-      "apple_level1": ["4938", "2353"],
-      "tesla_level2": ["2317", "1519", "2308"],
-      "reversal_level4": ["2408", "2344", "2330", "3711"],
-      "disposition_stocks": ["1303", "3090"],
-      "disposition_warning": ["3481"]
+      "wdc_level2": [
+        "2337",
+        "6770"
+      ],
+      "nvidia_level1": [
+        "2356",
+        "2382",
+        "3231"
+      ],
+      "apple_level1": [
+        "4938",
+        "2353"
+      ],
+      "tesla_level2": [
+        "2317",
+        "1519",
+        "2308"
+      ],
+      "reversal_level4": [
+        "2408",
+        "2344",
+        "2330",
+        "3711"
+      ],
+      "disposition_stocks": [
+        "1303",
+        "3090"
+      ],
+      "disposition_warning": [
+        "3481"
+      ]
     }
   },
   "recommendations": [
@@ -37,7 +66,11 @@
       "intraday_price": 25.05,
       "intraday_change_pct": 2.7,
       "intraday_status": "续抱",
-      "reason": "訊號A L2，連買8天真連續，外資+77K，EPS年增+50%，Fed利率觀望防禦性"
+      "reason": "訊號A L2，連買8天真連續，外資+77K，EPS年增+50%，Fed利率觀望防禦性",
+      "result": "holding",
+      "holding_status": "D0/10，今日+2.9%，正向表現",
+      "close_price": 25.1,
+      "change_percent": 2.9
     },
     {
       "stock_code": "2892",
@@ -56,7 +89,11 @@
       "intraday_price": 33.05,
       "intraday_change_pct": 3.1,
       "intraday_status": "续抱",
-      "reason": "訊號A L2，連買8天真連續，外資+53K+投信+91K雙向同步佈局，籌碼最健康"
+      "reason": "訊號A L2，連買8天真連續，外資+53K+投信+91K雙向同步佈局，籌碼最健康",
+      "result": "holding",
+      "holding_status": "D0/10，今日+2.5%，正向表現",
+      "close_price": 32.85,
+      "change_percent": 2.5
     },
     {
       "stock_code": "2834",
@@ -75,7 +112,11 @@
       "intraday_price": 18.05,
       "intraday_change_pct": 1.4,
       "intraday_status": "续抱",
-      "reason": "訊號A L2，外資主導累計+61K，buy_ratio 43.7%，銀行防禦性強"
+      "reason": "訊號A L2，外資主導累計+61K，buy_ratio 43.7%，銀行防禦性強",
+      "result": "holding",
+      "holding_status": "D0/10，今日+1.1%，正向表現",
+      "close_price": 18.0,
+      "change_percent": 1.1
     },
     {
       "stock_code": "3045",
@@ -94,7 +135,11 @@
       "intraday_price": 120.5,
       "intraday_change_pct": 0.8,
       "intraday_status": "续抱",
-      "reason": "訊號A L2，今日D10結算後重新推薦，外資+投信同步連買，電信防禦產業分散"
+      "reason": "訊號A L2，今日D10結算後重新推薦，外資+投信同步連買，電信防禦產業分散",
+      "result": "holding",
+      "holding_status": "D0/10，今日+0.4%，正向表現",
+      "close_price": 120.0,
+      "change_percent": 0.4
     }
   ],
   "track_b_recommendations": [],
@@ -190,15 +235,128 @@
     }
   ],
   "removed_stocks": [
-    {"stock_code": "2408", "reason": "Level 4 反轉預警"},
-    {"stock_code": "2344", "reason": "Level 4 反轉預警"},
-    {"stock_code": "2330", "reason": "Level 4 反轉預警（史上最大單日賣超-36,715張）"},
-    {"stock_code": "3711", "reason": "Level 4 反轉預警"},
-    {"stock_code": "6770", "reason": "WDC Level 2(-15分) + 過量買超 + 10天累計外資-80K"},
-    {"stock_code": "2337", "reason": "WDC Level 2(-15分) + 最近轉賣(真連續0天)"},
-    {"stock_code": "8046", "reason": "今日除息 + 5日+5.9%追高(-10分)，總分69不足70"},
-    {"stock_code": "6213", "reason": "5日+19.8%（已大漲，預設不評分）"},
-    {"stock_code": "2303", "reason": "今日D10到期結算成功，昨5日+11.2%動能已消化"}
+    {
+      "stock_code": "2408",
+      "reason": "Level 4 反轉預警"
+    },
+    {
+      "stock_code": "2344",
+      "reason": "Level 4 反轉預警"
+    },
+    {
+      "stock_code": "2330",
+      "reason": "Level 4 反轉預警（史上最大單日賣超-36,715張）"
+    },
+    {
+      "stock_code": "3711",
+      "reason": "Level 4 反轉預警"
+    },
+    {
+      "stock_code": "6770",
+      "reason": "WDC Level 2(-15分) + 過量買超 + 10天累計外資-80K"
+    },
+    {
+      "stock_code": "2337",
+      "reason": "WDC Level 2(-15分) + 最近轉賣(真連續0天)"
+    },
+    {
+      "stock_code": "8046",
+      "reason": "今日除息 + 5日+5.9%追高(-10分)，總分69不足70"
+    },
+    {
+      "stock_code": "6213",
+      "reason": "5日+19.8%（已大漲，預設不評分）"
+    },
+    {
+      "stock_code": "2303",
+      "reason": "今日D10到期結算成功，昨5日+11.2%動能已消化"
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "reason": "Level 4 爆量賣超（日均量33.4%），近5天三大法人-18K，盤後強制出場",
+      "exit_date": "2026-06-26",
+      "last_price": 40.2
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "reason": "Level 4 爆量賣超（日均量9.1%），論點驅動出場（D9法人已出貨）",
+      "exit_date": "2026-06-26",
+      "last_price": 30.5
+    }
   ],
-  "sector_warning": "今日推薦金融佔75%（超過50%上限），係市場特殊條件（外資史上最大賣超）導致，建議總倉位壓縮至30%以下"
+  "sector_warning": "今日推薦金融佔75%（超過50%上限），係市場特殊條件（外資史上最大賣超）導致，建議總倉位壓縮至30%以下",
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "reason": "今日D0+2.9%，L2連買8天，EPS+50%，金融防禦首選",
+      "priority": "高",
+      "action": "持倉"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "industry": "金融",
+      "reason": "今日D0+2.5%，L2連買8天，法人持續支持",
+      "priority": "高",
+      "action": "持倉"
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "industry": "金融",
+      "reason": "今日D0+1.1%，L2外資主導，防禦性",
+      "priority": "中",
+      "action": "持倉"
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "industry": "電信",
+      "reason": "今日D0+0.4%，L2，電信防禦",
+      "priority": "中",
+      "action": "持倉"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "industry": "記憶體",
+      "reason": "明日盤前重評：MU+13%盤後+今日機構+31K，WDC Level2是否適用NOR Flash需確認",
+      "priority": "待評估",
+      "action": "盤前重評"
+    }
+  ],
+  "yesterday_verification": {
+    "accuracy": 60.9,
+    "settled_count": 384,
+    "success_count": 234,
+    "fail_count": 150,
+    "holding_count": 209,
+    "results": [
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "result": "success",
+        "return_pct": 11.6,
+        "settled_date": "2026-06-25"
+      },
+      {
+        "stock_code": "2610",
+        "stock_name": "華航",
+        "result": "success",
+        "return_pct": 11.0,
+        "settled_date": "2026-06-25"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "result": "success",
+        "return_pct": 11.4,
+        "settled_date": "2026-06-25"
+      }
+    ]
+  }
 }

@@ -7543,9 +7543,9 @@
       }
     ]
   },
-  "settled_accuracy": "60.8%",
-  "settled_count": 383,
-  "holding_count": 210,
+  "settled_accuracy": 60.9,
+  "settled_count": 384,
+  "holding_count": 209,
   "total_success": 233,
   "total_fail": 150,
   "2026-03-30": {
@@ -8439,8 +8439,6 @@
         "stop_loss": 54.0,
         "result": "holding",
         "holding_days": 2,
-        "settled_date": null,
-        "settled_price": null,
         "actual_close": 60.0,
         "change_pct": "+2.92%"
       },
@@ -12569,8 +12567,6 @@
         "position": "5-10%",
         "score": 71,
         "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
         "holding_days": 1
       }
     ],
@@ -12865,10 +12861,11 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 71,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-06-25",
+        "settled_price": 24.2,
+        "holding_days": 1,
+        "actual_return_pct": 11.0
       },
       {
         "symbol": "3048",

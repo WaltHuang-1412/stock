@@ -35,14 +35,17 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 75,
-      "result": "holding",
+      "result": "success",
       "actual_close": 39.75,
       "close_price": 39.75,
       "change_percent": -0.5,
       "holding_status": "D0/10 | 收盤39.75(-0.5%) | 距目標10.6% | 距停損4.5%",
       "reason": "美伊和平→中東航線解禁+油價-9.49%燃油成本大降；外資近5天+81K大量買進；法人TOP10 avg_rank=10；超強催化覆寫(動能>100%)；停損-5%",
       "track": "A",
-      "override": "超強催化覆寫_美伊和平"
+      "override": "超強催化覆寫_美伊和平",
+      "settled_date": "2026-06-25",
+      "settled_price": 44.5,
+      "actual_return_pct": 11.4
     }
   ],
   "track_b_recommendations": [
@@ -169,9 +172,30 @@
       "holding_count": 196
     },
     "results": [
-      {"code": "5880", "name": "合庫金", "close_price": 24.6, "change_percent": 1.86, "result": "holding", "holding_status": "D0/10"},
-      {"code": "2618", "name": "長榮航", "close_price": 39.75, "change_percent": -0.5, "result": "holding", "holding_status": "D0/10"},
-      {"code": "2883", "name": "凱基金", "close_price": 29.7, "change_percent": -0.34, "result": "holding", "holding_status": "D0/10 Track B"}
+      {
+        "code": "5880",
+        "name": "合庫金",
+        "close_price": 24.6,
+        "change_percent": 1.86,
+        "result": "holding",
+        "holding_status": "D0/10"
+      },
+      {
+        "code": "2618",
+        "name": "長榮航",
+        "close_price": 39.75,
+        "change_percent": -0.5,
+        "result": "holding",
+        "holding_status": "D0/10"
+      },
+      {
+        "code": "2883",
+        "name": "凱基金",
+        "close_price": 29.7,
+        "change_percent": -0.34,
+        "result": "holding",
+        "holding_status": "D0/10 Track B"
+      }
     ]
   },
   "after_market_update": {
@@ -199,16 +223,52 @@
       }
     ],
     "today_closes": [
-      {"stock_code": "5880", "stock_name": "合庫金", "actual_close": 24.6, "day_change_pct": 1.86, "result": "holding", "holding_status": "D0/10 | +1.86% | 距目標8%"},
-      {"stock_code": "2618", "stock_name": "長榮航", "actual_close": 39.75, "day_change_pct": -0.5, "result": "holding", "holding_status": "D0/10 | -0.5% | 距停損4.5%"},
-      {"stock_code": "2883", "stock_name": "凱基金", "actual_close": 29.7, "day_change_pct": -0.34, "result": "holding", "holding_status": "D0/10 Track B | -0.34% | 距停損4.7%"}
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "actual_close": 24.6,
+        "day_change_pct": 1.86,
+        "result": "holding",
+        "holding_status": "D0/10 | +1.86% | 距目標8%"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "actual_close": 39.75,
+        "day_change_pct": -0.5,
+        "result": "holding",
+        "holding_status": "D0/10 | -0.5% | 距停損4.5%"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "actual_close": 29.7,
+        "day_change_pct": -0.34,
+        "result": "holding",
+        "holding_status": "D0/10 Track B | -0.34% | 距停損4.7%"
+      }
     ],
     "risk_alerts": [
-      {"stock_code": "2834", "note": "Level 4 爆量賣超今日(-3,589張/11.9%日均量)，明日需密切監控"},
-      {"stock_code": "2609", "note": "距停損3.8%，航運景氣不確定，明日評估主動出場"},
-      {"stock_code": "6139", "note": "疑似除息，從885→812(-8.2%)，停損724.5仍安全，需確認除息"},
-      {"stock_code": "2027", "note": "今日-4.2%，距停損6%，需關注"},
-      {"stock_code": "6505", "note": "距停損5.6%，油跌利空持續"}
+      {
+        "stock_code": "2834",
+        "note": "Level 4 爆量賣超今日(-3,589張/11.9%日均量)，明日需密切監控"
+      },
+      {
+        "stock_code": "2609",
+        "note": "距停損3.8%，航運景氣不確定，明日評估主動出場"
+      },
+      {
+        "stock_code": "6139",
+        "note": "疑似除息，從885→812(-8.2%)，停損724.5仍安全，需確認除息"
+      },
+      {
+        "stock_code": "2027",
+        "note": "今日-4.2%，距停損6%，需關注"
+      },
+      {
+        "stock_code": "6505",
+        "note": "距停損5.6%，油跌利空持續"
+      }
     ],
     "flow_defects": [
       "2883凱基金盤中真連買超5天→盤後確認1天：T86更新時間可能導致盤中數據不完整，需確認T86更新時間點",

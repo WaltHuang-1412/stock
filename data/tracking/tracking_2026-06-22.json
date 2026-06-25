@@ -104,11 +104,14 @@
       "intraday_price": 21.65,
       "intraday_change_pct": -0.7,
       "reversal_level": "L0",
-      "result": "holding",
+      "result": "success",
       "holding_status": "D1/10 | 距目標10.1% | 距停損10.0%",
       "actual_close": 21.8,
       "close_price": 21.8,
-      "change_percent": 0.0
+      "change_percent": 0.0,
+      "settled_date": "2026-06-25",
+      "settled_price": 24.2,
+      "actual_return_pct": 11.0
     },
     {
       "stock_code": "3048",
@@ -139,12 +142,44 @@
     "success_count": 4,
     "fail_count": 2,
     "results": [
-      {"code": "2890", "name": "永豐金", "result": "success", "pnl_pct": 16.5},
-      {"code": "8150", "name": "南茂", "result": "success", "pnl_pct": 17.4},
-      {"code": "3189", "name": "景碩", "result": "success", "pnl_pct": 20.6},
-      {"code": "2383", "name": "台光電", "result": "success", "pnl_pct": 22.1},
-      {"code": "2609", "name": "陽明", "result": "fail", "pnl_pct": -4.0, "reason": "D10到期收盤跌"},
-      {"code": "6505", "name": "台塑化", "result": "fail", "pnl_pct": -2.4, "reason": "D10到期，油價週跌-9%"}
+      {
+        "code": "2890",
+        "name": "永豐金",
+        "result": "success",
+        "pnl_pct": 16.5
+      },
+      {
+        "code": "8150",
+        "name": "南茂",
+        "result": "success",
+        "pnl_pct": 17.4
+      },
+      {
+        "code": "3189",
+        "name": "景碩",
+        "result": "success",
+        "pnl_pct": 20.6
+      },
+      {
+        "code": "2383",
+        "name": "台光電",
+        "result": "success",
+        "pnl_pct": 22.1
+      },
+      {
+        "code": "2609",
+        "name": "陽明",
+        "result": "fail",
+        "pnl_pct": -4.0,
+        "reason": "D10到期收盤跌"
+      },
+      {
+        "code": "6505",
+        "name": "台塑化",
+        "result": "fail",
+        "pnl_pct": -2.4,
+        "reason": "D10到期，油價週跌-9%"
+      }
     ]
   },
   "removed_stocks": [
