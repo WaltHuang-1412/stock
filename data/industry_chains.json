@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-24",
+  "last_updated": "2026-06-25",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -2754,6 +2754,21 @@
               "code": "2002",
               "name": "中鋼",
               "category": "企業財報重點"
+            },
+            {
+              "code": "2013",
+              "name": "中鋼構",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2072",
+              "name": "世紀風電",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "6223",
+              "name": "旺矽",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -3046,6 +3061,11 @@
             {
               "code": "6488",
               "name": "環球晶",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "2337",
+              "name": "旺宏",
               "category": "川普貿易政策與關稅"
             }
           ]
@@ -4088,6 +4108,11 @@
               "code": "6282",
               "name": "康舒",
               "category": "MOSFET/功率半導體"
+            },
+            {
+              "code": "5285",
+              "name": "界霖",
+              "category": "MOSFET/功率半導體"
             }
           ]
         }
@@ -4176,6 +4201,11 @@
               "code": "4919",
               "name": "新唐",
               "category": "被動元件族群（含MCU漲價潮）"
+            },
+            {
+              "code": "5285",
+              "name": "界霖",
+              "category": "被動元件族群（含MCU漲價潮）"
             }
           ]
         }
@@ -4243,6 +4273,27 @@
               "code": "2412",
               "name": "中華電",
               "category": "量子運算概念"
+            }
+          ]
+        }
+      }
+    },
+    "中國AI模型競爭": {
+      "name": "中國AI模型競爭",
+      "catalysts": [
+        "中國AI模型競爭",
+        "AI",
+        "模型競爭"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "中國AI模型競爭"
             }
           ]
         }

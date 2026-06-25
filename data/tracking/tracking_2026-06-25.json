@@ -1,0 +1,162 @@
+{
+  "date": "2026-06-25",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "nasdaq_change_pct": -3.41,
+    "vix": 18.63,
+    "market_regime": "修正",
+    "key_events": ["外資史上最大賣超", "MU盤後+13%", "油價-8.64%", "NASDAQ-3.41%"],
+    "major_alerts": {
+      "wdc_level2": ["2337", "6770"],
+      "nvidia_level1": ["2356", "2382", "3231"],
+      "apple_level1": ["4938", "2353"],
+      "tesla_level2": ["2317", "1519", "2308"],
+      "reversal_level4": ["2408", "2344", "2330", "3711"],
+      "disposition_stocks": ["1303", "3090"],
+      "disposition_warning": ["3481"]
+    }
+  },
+  "recommendations": [
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "recommend_price": 24.4,
+      "target_price": 26.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 21.96,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 76,
+      "track": "A",
+      "module_a": "L2",
+      "consecutive_buy_days": 8,
+      "reason": "📶訊號A L2，連買8天真連續，外資+77K，EPS年增+50%，Fed利率觀望防禦性"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "industry": "金融",
+      "recommend_price": 32.05,
+      "target_price": 35.3,
+      "stop_loss_pct": -10,
+      "stop_loss": 28.845,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 74,
+      "track": "A",
+      "module_a": "L2",
+      "consecutive_buy_days": 8,
+      "reason": "📶訊號A L2，連買8天真連續，外資+53K+投信+91K雙向同步佈局，籌碼最健康"
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "industry": "金融",
+      "recommend_price": 17.8,
+      "target_price": 19.6,
+      "stop_loss_pct": -10,
+      "stop_loss": 16.02,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 74,
+      "track": "A",
+      "module_a": "L2",
+      "consecutive_buy_days": 2,
+      "reason": "📶訊號A L2，外資主導累計+61K，buy_ratio 43.7%，銀行防禦性強"
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "industry": "電信",
+      "recommend_price": 119.5,
+      "target_price": 131.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 107.55,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "track": "A",
+      "module_a": "L2",
+      "consecutive_buy_days": 3,
+      "reason": "📶訊號A L2，今日D10結算後重新推薦，外資+投信同步連買，電信防禦產業分散"
+    }
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [],
+  "holdings_evaluation": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "holding_quantity": 0.15,
+      "evaluation": "Level 4反轉預警（昨-36,715張=66%日均量，史上最大賣超），不建議加碼",
+      "suggestion": "留意減碼"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "holding_quantity": 1,
+      "evaluation": "已處置股（近6日+33.3%>25%），禁止交易，流動性大幅降低",
+      "suggestion": "留意減碼（處置股）"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "holding_quantity": 1,
+      "score": 52,
+      "evaluation": "WDC Level 2 -15分，過量買超88,899張（真連續僅1天），10天累計外資-80K（實際在賣！），5日+20.7%",
+      "suggestion": "留意減碼"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "holding_quantity": 0.3,
+      "evaluation": "10天累計-4,578（三大法人同賣），真連續0天，基本面強但籌碼轉弱",
+      "suggestion": "續抱觀察"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "holding_quantity": 1,
+      "score": 47,
+      "evaluation": "WDC Level 2 -15分，最近1日轉賣超（真連續0天），NOR Flash非直接MU受益",
+      "suggestion": "留意減碼"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "holding_quantity": 2,
+      "evaluation": "處置預警（6日+35%，30日+95.5%），接近觸發門檻",
+      "suggestion": "不建議加碼"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "holding_quantity": 1,
+      "evaluation": "Module A L1，外資持股比+0.29%週增，估分約70分邊際",
+      "suggestion": "續抱觀察"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "holding_quantity": 1,
+      "evaluation": "已處置股（近30日+151.5%，近60日+227.6%），禁止交易，流動性大幅降低",
+      "suggestion": "留意減碼（處置股）"
+    }
+  ],
+  "removed_stocks": [
+    {"stock_code": "2408", "reason": "Level 4 反轉預警"},
+    {"stock_code": "2344", "reason": "Level 4 反轉預警"},
+    {"stock_code": "2330", "reason": "Level 4 反轉預警（史上最大單日賣超-36,715張）"},
+    {"stock_code": "3711", "reason": "Level 4 反轉預警"},
+    {"stock_code": "6770", "reason": "WDC Level 2(-15分) + 過量買超 + 10天累計外資-80K"},
+    {"stock_code": "2337", "reason": "WDC Level 2(-15分) + 最近轉賣(真連續0天)"},
+    {"stock_code": "8046", "reason": "今日除息 + 5日+5.9%追高(-10分)，總分69不足70"},
+    {"stock_code": "6213", "reason": "5日+19.8%（已大漲，預設不評分）"},
+    {"stock_code": "2303", "reason": "今日D10到期結算成功，昨5日+11.2%動能已消化"}
+  ],
+  "sector_warning": "今日推薦金融佔75%（超過50%上限），係市場特殊條件（外資史上最大賣超）導致，建議總倉位壓縮至30%以下"
+}
