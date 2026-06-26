@@ -37,7 +37,25 @@
       "risk_notes": "WD Level2降級-15（腳本判定），過量買超-5（真連續1天），建議控倉5%"
     }
   ],
-  "track_b_recommendations": [],
+  "track_b_recommendations": [
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "industry": "金融（銀行）",
+      "type": "盤中",
+      "recommend_price": 39.2,
+      "target_price": 43.1,
+      "stop_loss_pct": -5,
+      "stop_loss": 37.24,
+      "settlement_days": 10,
+      "position": "5%",
+      "score": 75,
+      "reversal_level": 0,
+      "detector_score": 60,
+      "reason": "法人真連續8天累計+160K，今日+45,822張放量，VIX<20金融板塊受惠，偵測器強訊號。EPS YoY+33%。模式追蹤器金融（銀行）cold pattern勝率7.7%+worst combo 0%×2，僅最小倉位5%試單，嚴守-5%停損",
+      "risk_notes": "⚠️ 高模式風險：金融（銀行）cold 7.7%樣本13，worst combo 0%×2（6天+/30K+），75分最低門檻，嚴守停損"
+    }
+  ],
   "track_b_observations": [
     {
       "stock_code": "1802",
@@ -86,6 +104,32 @@
       "reason": "外資三天合計賣4.7萬張，台幣貶值31.83。等待外資趨勢止穩"
     }
   ],
+  "intraday_price_update": {
+    "2337": 167.5,
+    "2382": 367.0,
+    "2890": 39.2,
+    "2886": 46.2,
+    "5880": 24.85,
+    "2892": 32.75,
+    "2027": 40.0,
+    "2880": 37.25,
+    "2891": 70.0,
+    "2801": 23.35,
+    "2884": 34.85,
+    "2867": 8.48,
+    "3045": 120.0
+  },
+  "intraday_settlement": {
+    "settled_today": [
+      {"stock_code": "6139", "stock_name": "亞翔", "result": "success", "gain_pct": 10.9, "close": 893.0},
+      {"stock_code": "3048", "stock_name": "益登", "result": "fail", "gain_pct": -12.4, "close": 64.7, "fail_reason": "停損觸發，收盤64.7 ≤ 停損66.51"}
+    ],
+    "level4_exits_tracking": [
+      {"stock_code": "2027", "stock_name": "大成鋼", "note": "Level4爆量賣超，D9/10，追蹤記錄待盤後結算"},
+      {"stock_code": "2884", "stock_name": "玉山金", "note": "Level4爆量賣超，D7/10，追蹤記錄出場訊號"},
+      {"stock_code": "2834", "stock_name": "臺企銀", "note": "Level4爆量賣超，D1/10，追蹤記錄出場訊號"}
+    ]
+  },
   "tracking_alerts": [
     {
       "stock_code": "3048",
