@@ -55,61 +55,55 @@ def load_tw_news(date_str):
 
 
 def identify_from_us_markets(markets_data, industry_chains):
-    """從美股數據識別熱點"""
-    hotspots = []
+    """從美股數據識別熱點（動態讀取 industry_chains.json 的 us_market_signals）"""
+    hotspots = {}  # industry_key -> best triggered signal
 
-    # 檢查輝達/AMD（AI產業）
-    nvidia_change = markets_data.get("NVIDIA", 0)
-    amd_change = markets_data.get("AMD", 0)
-    ai_change = max(nvidia_change, amd_change)
+    for industry_key, industry_info in industry_chains["industries"].items():
+        signals = industry_info.get("us_market_signals", [])
+        if not signals:
+            continue
 
-    if ai_change > 3:
-        hotspots.append({
-            "industry": "AI",
-            "catalyst": f"輝達{nvidia_change:+.2f}%" if nvidia_change > amd_change else f"AMD{amd_change:+.2f}%",
-            "strength": "strong" if ai_change > 5 else "medium",
-            "change": ai_change
-        })
+        best_change = 0
+        best_catalyst = ""
 
-    # 檢查費半（半導體產業）
-    sox_change = markets_data.get("費城半導體", 0)
-    if sox_change > 1:
-        hotspots.append({
-            "industry": "半導體",
-            "catalyst": f"費半{sox_change:+.2f}%",
-            "strength": "strong" if sox_change > 2 else "medium",
-            "change": sox_change
-        })
+        for sig in signals:
+            indicator = sig["indicator"]
+            threshold = sig["threshold"]
+            direction = sig["direction"]
+            strength_high = sig.get("strength_high", threshold * 2)
 
-    # 檢查油價（塑化/航空產業）
-    oil_change = markets_data.get("WTI原油", 0)
-    if abs(oil_change) > 2:
-        if oil_change > 0:
-            hotspots.append({
-                "industry": "塑化",
-                "catalyst": f"油價{oil_change:+.2f}%",
-                "strength": "strong" if oil_change > 5 else "medium",
-                "change": oil_change
-            })
-        else:
-            hotspots.append({
-                "industry": "航空",
-                "catalyst": f"油價{oil_change:+.2f}%（利多航空）",
-                "strength": "medium" if oil_change < -3 else "weak",
-                "change": abs(oil_change)
-            })
+            raw = markets_data.get(indicator, 0)
+            if raw is None:
+                continue
 
-    # 檢查Micron（記憶體產業）
-    micron_change = markets_data.get("Micron", 0)
-    if micron_change > 3:
-        hotspots.append({
-            "industry": "記憶體",
-            "catalyst": f"Micron{micron_change:+.2f}%",
-            "strength": "strong" if micron_change > 5 else "medium",
-            "change": micron_change
-        })
+            # 方向判斷：positive = 漲觸發，negative = 跌觸發
+            if direction == "positive":
+                triggered = raw >= threshold
+                effective = raw
+                label = f"{indicator}{raw:+.2f}%"
+            else:
+                triggered = raw <= -threshold
+                effective = abs(raw)
+                label = f"{indicator}{raw:+.2f}%（利多{industry_info['name']}）"
 
-    return hotspots
+            if not triggered:
+                continue
+
+            if effective > best_change:
+                best_change = effective
+                best_catalyst = label
+                best_strength_high = strength_high
+
+        if best_catalyst:
+            strength = "strong" if best_change >= best_strength_high else "medium"
+            hotspots[industry_key] = {
+                "industry": industry_key,
+                "catalyst": best_catalyst,
+                "strength": strength,
+                "change": best_change,
+            }
+
+    return list(hotspots.values())
 
 
 def identify_from_tw_news(news_data, industry_chains):

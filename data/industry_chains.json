@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-26",
+  "last_updated": "2026-06-25",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -172,235 +172,23 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2454",
-              "name": "聯發科",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "5274",
-              "name": "信驊",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "6196",
-              "name": "帆宣",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2324",
-              "name": "仁寶",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2353",
-              "name": "宏碁",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2376",
-              "name": "技嘉",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2404",
-              "name": "漢唐",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "3583",
-              "name": "辛耘",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "6953",
-              "name": "家碩",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2313",
-              "name": "華通",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "4958",
-              "name": "臻鼎-KY",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "3014",
-              "name": "聯陽",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "3443",
-              "name": "創意",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "6139",
-              "name": "亞翔",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "1802",
-              "name": "台玻",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "4755",
-              "name": "三福化",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "3016",
-              "name": "嘉晶",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "3533",
-              "name": "嘉澤",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "1519",
-              "name": "華城",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "6415",
-              "name": "矽力",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "3008",
-              "name": "大立光",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "7918",
-              "name": "創鉅",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2464",
-              "name": "盟立",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "4938",
-              "name": "和碩",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "3661",
-              "name": "世芯-KY",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2357",
-              "name": "華碩",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2383",
-              "name": "台光電",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "3663",
-              "name": "鑫科",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2397",
-              "name": "辛耘",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "6187",
-              "name": "萬潤",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "3131",
-              "name": "弘塑",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "6223",
-              "name": "旺矽",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "1303",
-              "name": "南亞",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2059",
-              "name": "川湖",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "7822",
-              "name": "倍利科",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "3047",
-              "name": "富鼎",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "3707",
-              "name": "漢磊",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "6435",
-              "name": "大中",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2481",
-              "name": "強茂",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "5425",
-              "name": "台半",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "6693",
-              "name": "廣閎科",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2303",
-              "name": "聯電",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "5347",
-              "name": "世界先進",
-              "category": "AI 伺服器與半導體"
-            },
-            {
-              "code": "2480",
-              "name": "敦陽科",
-              "category": "AI 伺服器與半導體"
-            }
-          ]
+          "stocks": []
         }
-      }
+      },
+      "us_market_signals": [
+        {
+          "indicator": "NVIDIA",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        },
+        {
+          "indicator": "AMD",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        }
+      ]
     },
     "半導體": {
       "name": "半導體產業",
@@ -535,7 +323,15 @@
             }
           ]
         }
-      }
+      },
+      "us_market_signals": [
+        {
+          "indicator": "費城半導體",
+          "threshold": 1,
+          "direction": "positive",
+          "strength_high": 2
+        }
+      ]
     },
     "衛星通訊": {
       "name": "衛星通訊",
@@ -749,7 +545,15 @@
             }
           ]
         }
-      }
+      },
+      "us_market_signals": [
+        {
+          "indicator": "Tesla",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        }
+      ]
     },
     "蘋果供應鏈": {
       "name": "蘋果供應鏈",
@@ -841,8 +645,19 @@
               "category": "機構件"
             }
           ]
+        },
+        "tier_from_tracker": {
+          "stocks": []
         }
-      }
+      },
+      "us_market_signals": [
+        {
+          "indicator": "Apple",
+          "threshold": 2,
+          "direction": "positive",
+          "strength_high": 4
+        }
+      ]
     },
     "塑化": {
       "name": "石化塑膠",
@@ -907,7 +722,15 @@
             }
           ]
         }
-      }
+      },
+      "us_market_signals": [
+        {
+          "indicator": "WTI原油",
+          "threshold": 2,
+          "direction": "positive",
+          "strength_high": 5
+        }
+      ]
     },
     "航空": {
       "name": "航空運輸",
@@ -948,7 +771,15 @@
             }
           ]
         }
-      }
+      },
+      "us_market_signals": [
+        {
+          "indicator": "WTI原油",
+          "threshold": 2,
+          "direction": "negative",
+          "strength_high": 3
+        }
+      ]
     },
     "金融": {
       "name": "金融產業",
@@ -1096,7 +927,21 @@
             }
           ]
         }
-      }
+      },
+      "us_market_signals": [
+        {
+          "indicator": "Arista",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        },
+        {
+          "indicator": "Cisco",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        }
+      ]
     },
     "面板顯示": {
       "name": "面板顯示",
@@ -1218,60 +1063,23 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "8299",
-              "name": "群聯",
-              "category": "DRAM 與記憶體"
-            },
-            {
-              "code": "3006",
-              "name": "晶豪科",
-              "category": "DRAM 與記憶體"
-            },
-            {
-              "code": "6770",
-              "name": "力積電",
-              "category": "DRAM 與記憶體"
-            },
-            {
-              "code": "5289",
-              "name": "宜鼎",
-              "category": "DRAM與記憶體"
-            },
-            {
-              "code": "8150",
-              "name": "南茂",
-              "category": "DRAM 與記憶體"
-            },
-            {
-              "code": "8131",
-              "name": "福茂科",
-              "category": "DRAM 與記憶體"
-            },
-            {
-              "code": "6182",
-              "name": "合晶",
-              "category": "DRAM 與記憶體"
-            },
-            {
-              "code": "6488",
-              "name": "環球晶",
-              "category": "DRAM 與記憶體"
-            },
-            {
-              "code": "3044",
-              "name": "健鼎",
-              "category": "DRAM 與記憶體"
-            },
-            {
-              "code": "6278",
-              "name": "台表科",
-              "category": "DRAM 與記憶體"
-            }
-          ]
+          "stocks": []
         }
-      }
+      },
+      "us_market_signals": [
+        {
+          "indicator": "Micron",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        },
+        {
+          "indicator": "Western Digital",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        }
+      ]
     },
     "光通訊": {
       "name": "光通訊",
@@ -1323,230 +1131,23 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "6515",
-              "name": "穎崴",
-              "category": "光通訊與網通（含低軌衛星）"
-            },
-            {
-              "code": "3008",
-              "name": "大立光",
-              "category": "光通訊與網通（含低軌衛星）"
-            },
-            {
-              "code": "2345",
-              "name": "智邦",
-              "category": "光通訊與網通（含低軌衛星）"
-            },
-            {
-              "code": "3491",
-              "name": "昇達科",
-              "category": "光通訊與網通（含低軌衛星）"
-            },
-            {
-              "code": "2383",
-              "name": "台光電",
-              "category": "光通訊與網通（含低軌衛星）"
-            },
-            {
-              "code": "2409",
-              "name": "友達",
-              "category": "光通訊與網通（含低軌衛星）"
-            },
-            {
-              "code": "6285",
-              "name": "啟碁",
-              "category": "光通訊與網通（含低軌衛星）"
-            },
-            {
-              "code": "5388",
-              "name": "中磊",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "6451",
-              "name": "訊芯-KY",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "2317",
-              "name": "鴻海",
-              "category": "光通訊與網通（含低軌衛星/ISL）"
-            },
-            {
-              "code": "3665",
-              "name": "貿聯",
-              "category": "光通訊與網通（含低軌衛星/ISL）"
-            },
-            {
-              "code": "3526",
-              "name": "聯寶",
-              "category": "光通訊與網通（含低軌衛星/ISL）"
-            },
-            {
-              "code": "3163",
-              "name": "波若威",
-              "category": "光通訊與網通（含低軌衛星/ISL）"
-            },
-            {
-              "code": "2458",
-              "name": "義隆",
-              "category": "光通訊與網通（含低軌衛星/ISL）"
-            },
-            {
-              "code": "3037",
-              "name": "欣興",
-              "category": "光通訊與網通（含低軌衛星/ISL）"
-            },
-            {
-              "code": "3363",
-              "name": "上詮",
-              "category": "光通訊與網通（含低軌衛星/CPO）"
-            },
-            {
-              "code": "4573",
-              "name": "高明鐵",
-              "category": "光通訊與網通（含低軌衛星/CPO）"
-            },
-            {
-              "code": "6830",
-              "name": "汎銓",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "4958",
-              "name": "臻鼎-KY",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "2316",
-              "name": "楠梓電",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "3105",
-              "name": "穩懋",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "2313",
-              "name": "華通",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "2367",
-              "name": "燿華",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "2355",
-              "name": "敬鵬",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "2368",
-              "name": "金像電",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "8046",
-              "name": "南電",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "2426",
-              "name": "鼎元",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "2305",
-              "name": "全友",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "4979",
-              "name": "華星光",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "8431",
-              "name": "匯鑽科",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "7769",
-              "name": "鴻勁",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "2402",
-              "name": "毅嘉",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "2379",
-              "name": "瑞昱",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "7822",
-              "name": "倍利科",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "3587",
-              "name": "閎康",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "2388",
-              "name": "威盛",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "3481",
-              "name": "群創",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "4903",
-              "name": "聯光通",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "6442",
-              "name": "光聖",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "6213",
-              "name": "聯茂",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "6426",
-              "name": "統新",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "6526",
-              "name": "達發",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "3044",
-              "name": "健鼎",
-              "category": "光通訊與網通"
-            },
-            {
-              "code": "6278",
-              "name": "台表科",
-              "category": "光通訊與網通"
-            }
-          ]
+          "stocks": []
         }
-      }
+      },
+      "us_market_signals": [
+        {
+          "indicator": "Arista",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        },
+        {
+          "indicator": "Cisco",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        }
+      ]
     },
     "綠能儲能": {
       "name": "綠能/儲能",
@@ -1594,6 +1195,9 @@
               "category": "儲能"
             }
           ]
+        },
+        "tier_from_tracker": {
+          "stocks": []
         }
       }
     },
@@ -1712,8 +1316,19 @@
               "category": "鋼纜"
             }
           ]
+        },
+        "tier_from_tracker": {
+          "stocks": []
         }
-      }
+      },
+      "us_market_signals": [
+        {
+          "indicator": "黃金",
+          "threshold": 2,
+          "direction": "positive",
+          "strength_high": 4
+        }
+      ]
     },
     "營建水泥": {
       "name": "營建/水泥",
@@ -1908,6 +1523,11 @@
               "code": "3003",
               "name": "健和興",
               "category": "連接器端子"
+            },
+            {
+              "code": "3588",
+              "name": "禾伸堂",
+              "category": "MLCC/電容"
             }
           ]
         },
@@ -1929,54 +1549,18 @@
               "code": "2375",
               "name": "智寶",
               "category": "鋁質電解電容"
+            },
+            {
+              "code": "3090",
+              "name": "日電貿",
+              "category": "被動元件通路"
             }
           ]
         },
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "3588",
-              "name": "禾伸堂",
-              "category": "被動元件族群"
-            },
-            {
-              "code": "3090",
-              "name": "日電貿",
-              "category": "被動元件族群"
-            },
-            {
-              "code": "3044",
-              "name": "健鼎",
-              "category": "被動元件族群"
-            },
-            {
-              "code": "6284",
-              "name": "佳邦",
-              "category": "被動元件族群"
-            },
-            {
-              "code": "8043",
-              "name": "蜜望實",
-              "category": "被動元件族群"
-            },
-            {
-              "code": "3042",
-              "name": "晶技",
-              "category": "被動元件族群"
-            },
-            {
-              "code": "5328",
-              "name": "華容",
-              "category": "被動元件族群"
-            },
-            {
-              "code": "2441",
-              "name": "立隆電",
-              "category": "被動元件族群"
-            }
-          ]
+          "stocks": []
         }
       }
     },
@@ -2056,7 +1640,33 @@
             }
           ]
         }
-      }
+      },
+      "us_market_signals": [
+        {
+          "indicator": "AMD",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        },
+        {
+          "indicator": "Qualcomm",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        },
+        {
+          "indicator": "Broadcom",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        },
+        {
+          "indicator": "Marvell",
+          "threshold": 3,
+          "direction": "positive",
+          "strength_high": 5
+        }
+      ]
     },
     "廠務工程": {
       "name": "半導體廠務工程",
@@ -2103,871 +1713,6 @@
         }
       }
     },
-    "中東地緣政治": {
-      "name": "中東地緣政治",
-      "catalysts": [
-        "中東地緣政治",
-        "美伊衝突",
-        "油價"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "6505",
-              "name": "台塑化",
-              "category": "中東地緣政治（美伊衝突＋油價）"
-            },
-            {
-              "code": "1326",
-              "name": "台化",
-              "category": "中東地緣政治（美伊衝突＋油價）"
-            },
-            {
-              "code": "2603",
-              "name": "長榮",
-              "category": "中東地緣政治（美伊衝突＋油價）"
-            },
-            {
-              "code": "2609",
-              "name": "陽明",
-              "category": "中東地緣政治（美伊衝突＋油價）"
-            },
-            {
-              "code": "2615",
-              "name": "萬海",
-              "category": "中東地緣政治（美伊衝突＋油價）"
-            },
-            {
-              "code": "2308",
-              "name": "台達電",
-              "category": "中東地緣政治"
-            },
-            {
-              "code": "1519",
-              "name": "華城",
-              "category": "中東地緣政治"
-            },
-            {
-              "code": "2610",
-              "name": "華航",
-              "category": "中東地緣政治"
-            },
-            {
-              "code": "2618",
-              "name": "長榮航",
-              "category": "中東地緣政治"
-            }
-          ]
-        }
-      }
-    },
-    "台股市場動態": {
-      "name": "台股市場動態",
-      "catalysts": [
-        "台股市場動態",
-        "台股市場動態與",
-        "ETF",
-        "資金"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2303",
-              "name": "聯電",
-              "category": "台股市場動態與ETF資金"
-            },
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "台股市場動態（含 ETF 與資金流向）"
-            },
-            {
-              "code": "2324",
-              "name": "賣超仁寶",
-              "category": "台股市場動態（含 ETF 與資金流向）"
-            },
-            {
-              "code": "2353",
-              "name": "宏碁",
-              "category": "台股市場動態（含 ETF 與資金流向）"
-            },
-            {
-              "code": "8046",
-              "name": "南電",
-              "category": "台股市場動態（含 ETF 與資金流向）"
-            },
-            {
-              "code": "3665",
-              "name": "貿聯",
-              "category": "台股市場動態（含 ETF 與資金流向）"
-            },
-            {
-              "code": "3443",
-              "name": "創意",
-              "category": "台股市場動態（含 ETF 與資金流向）"
-            },
-            {
-              "code": "4958",
-              "name": "臻鼎-KY",
-              "category": "台股市場動態（含 ETF 與資金流向）"
-            },
-            {
-              "code": "2002",
-              "name": "中鋼",
-              "category": "台股市場動態（含 ETF 與資金流向）"
-            },
-            {
-              "code": "1301",
-              "name": "台塑",
-              "category": "台股市場動態（含 ETF 與資金流向）"
-            },
-            {
-              "code": "2408",
-              "name": "南亞科",
-              "category": "台股市場動態（含 ETF 與資金流向）"
-            },
-            {
-              "code": "2344",
-              "name": "華邦電",
-              "category": "台股市場動態（含 ETF 與資金流向）"
-            },
-            {
-              "code": "2882",
-              "name": "國泰金",
-              "category": "台股市場動態（含ETF與資金流向）"
-            },
-            {
-              "code": "6197",
-              "name": "佳必琪",
-              "category": "台股市場動態（含ETF與資金流向）"
-            },
-            {
-              "code": "8299",
-              "name": "群聯",
-              "category": "台股市場動態（含ETF與資金流向）"
-            },
-            {
-              "code": "2881",
-              "name": "富邦金",
-              "category": "台股市場動態"
-            },
-            {
-              "code": "4904",
-              "name": "遠傳",
-              "category": "台股市場動態"
-            },
-            {
-              "code": "2404",
-              "name": "漢唐",
-              "category": "台股市場動態"
-            },
-            {
-              "code": "0063",
-              "name": "搶買正二",
-              "category": "成交量第四"
-            },
-            {
-              "code": "2382",
-              "name": "廣達",
-              "category": "台股市場動態"
-            },
-            {
-              "code": "2618",
-              "name": "長榮航",
-              "category": "台股市場動態"
-            },
-            {
-              "code": "2885",
-              "name": "元大金",
-              "category": "台股市場動態"
-            },
-            {
-              "code": "5274",
-              "name": "信驊",
-              "category": "台股市場動態"
-            },
-            {
-              "code": "2409",
-              "name": "友達",
-              "category": "台股市場動態"
-            }
-          ]
-        }
-      }
-    },
-    "聯準會利率": {
-      "name": "聯準會利率",
-      "catalysts": [
-        "聯準會利率",
-        "聯準會利率政策"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "聯準會利率政策"
-            },
-            {
-              "code": "2892",
-              "name": "第一金",
-              "category": "聯準會利率政策"
-            },
-            {
-              "code": "2881",
-              "name": "富邦金",
-              "category": "聯準會利率政策"
-            },
-            {
-              "code": "2882",
-              "name": "國泰金",
-              "category": "聯準會利率政策"
-            },
-            {
-              "code": "2890",
-              "name": "永豐金",
-              "category": "聯準會利率政策"
-            }
-          ]
-        }
-      }
-    },
-    "NVIDIA": {
-      "name": "NVIDIA",
-      "catalysts": [
-        "NVIDIA",
-        "RTX",
-        "Spark",
-        "ARM",
-        "AI",
-        "PC"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2454",
-              "name": "聯發科",
-              "category": "NVIDIA RTX Spark / ARM AI PC"
-            },
-            {
-              "code": "2382",
-              "name": "廣達",
-              "category": "NVIDIA RTX Spark / ARM AI PC"
-            },
-            {
-              "code": "2357",
-              "name": "華碩",
-              "category": "NVIDIA RTX Spark / ARM AI PC"
-            },
-            {
-              "code": "2356",
-              "name": "英業達",
-              "category": "NVIDIA RTX Spark / ARM AI PC"
-            },
-            {
-              "code": "2498",
-              "name": "宏達電",
-              "category": "NVIDIA RTX Spark / ARM AI PC"
-            },
-            {
-              "code": "2353",
-              "name": "宏碁",
-              "category": "NVIDIA RTX Spark / ARM AI PC"
-            }
-          ]
-        }
-      }
-    },
-    "企業財報重點": {
-      "name": "企業財報重點",
-      "catalysts": [
-        "企業財報重點"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "5274",
-              "name": "信驊",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "6415",
-              "name": "矽力",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "1504",
-              "name": "東元",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3034",
-              "name": "聯詠",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "8299",
-              "name": "群聯",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2357",
-              "name": "華碩",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2454",
-              "name": "聯發科",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2317",
-              "name": "鴻海",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "6770",
-              "name": "力積電",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2303",
-              "name": "聯電",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "4958",
-              "name": "臻鼎-KY",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "6446",
-              "name": "藥華藥",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3008",
-              "name": "大立光",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2383",
-              "name": "台光電",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2059",
-              "name": "川湖",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2345",
-              "name": "智邦",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2404",
-              "name": "漢唐",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2458",
-              "name": "義隆",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2432",
-              "name": "倚天酷碁",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2344",
-              "name": "華邦電",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "3037",
-              "name": "欣興",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2327",
-              "name": "國巨",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2347",
-              "name": "聯強",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2337",
-              "name": "旺宏",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "3260",
-              "name": "威剛",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2356",
-              "name": "英業達",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2382",
-              "name": "廣達",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "3231",
-              "name": "緯創",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "6768",
-              "name": "穎崴",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "3715",
-              "name": "定穎",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2293",
-              "name": "鈊象",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "3036",
-              "name": "文曄",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2353",
-              "name": "宏碁",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2324",
-              "name": "賣超仁寶",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "5903",
-              "name": "全家",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2301",
-              "name": "光寶科",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "2609",
-              "name": "陽明",
-              "category": "企業財報重點（5月營收）"
-            },
-            {
-              "code": "3711",
-              "name": "日月光",
-              "category": "企業財報重點（5月營收+法說）"
-            },
-            {
-              "code": "2308",
-              "name": "台達電",
-              "category": "企業財報重點（5月營收+法說）"
-            },
-            {
-              "code": "3044",
-              "name": "健鼎",
-              "category": "企業財報重點（5月營收+法說）"
-            },
-            {
-              "code": "2881",
-              "name": "富邦金",
-              "category": "企業財報重點（5月營收+法說）"
-            },
-            {
-              "code": "4938",
-              "name": "和碩",
-              "category": "企業財報重點（5月營收+法說）"
-            },
-            {
-              "code": "2882",
-              "name": "國泰金",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2891",
-              "name": "中信金",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2887",
-              "name": "台新金",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "5227",
-              "name": "立凱-KY",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2883",
-              "name": "凱基金",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2880",
-              "name": "華南金",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3443",
-              "name": "創意",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "8046",
-              "name": "南電",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "6257",
-              "name": "矽格",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "5880",
-              "name": "合庫金",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2886",
-              "name": "兆豐金",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2892",
-              "name": "第一金",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2885",
-              "name": "元大金",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3016",
-              "name": "嘉晶",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3533",
-              "name": "嘉澤",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3131",
-              "name": "弘塑",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "6239",
-              "name": "力成",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3661",
-              "name": "世芯-KY",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3042",
-              "name": "晶技",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "1319",
-              "name": "東陽",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2408",
-              "name": "南亞科",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3017",
-              "name": "奇鋐",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "6830",
-              "name": "汎銓",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3026",
-              "name": "禾伸堂",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "7734",
-              "name": "印能科技",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "7712",
-              "name": "盛半導體",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2106",
-              "name": "建大",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2890",
-              "name": "永豐金",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "6274",
-              "name": "台燿",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2884",
-              "name": "玉山金",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "1560",
-              "name": "中砂",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "6213",
-              "name": "聯茂",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3481",
-              "name": "群創",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2002",
-              "name": "中鋼",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2013",
-              "name": "中鋼構",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2072",
-              "name": "世紀風電",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "6223",
-              "name": "旺矽",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "3015",
-              "name": "全漢",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2014",
-              "name": "中鴻",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "1301",
-              "name": "台塑",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2367",
-              "name": "燿華",
-              "category": "企業財報重點"
-            },
-            {
-              "code": "2331",
-              "name": "精英",
-              "category": "企業財報重點"
-            }
-          ]
-        }
-      }
-    },
-    "SpaceX": {
-      "name": "SpaceX",
-      "catalysts": [
-        "SpaceX",
-        "IPO"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "3491",
-              "name": "昇達科",
-              "category": "SpaceX IPO"
-            },
-            {
-              "code": "3416",
-              "name": "融程電",
-              "category": "SpaceX IPO"
-            },
-            {
-              "code": "6285",
-              "name": "啟碁",
-              "category": "SpaceX IPO"
-            },
-            {
-              "code": "6190",
-              "name": "萬泰科",
-              "category": "SpaceX IPO"
-            },
-            {
-              "code": "2881",
-              "name": "富邦金",
-              "category": "SpaceX/OpenAI IPO資金虹吸"
-            },
-            {
-              "code": "2382",
-              "name": "廣達",
-              "category": "SpaceX IPO 生態系"
-            },
-            {
-              "code": "2317",
-              "name": "鴻海",
-              "category": "SpaceX IPO 生態系"
-            },
-            {
-              "code": "3481",
-              "name": "群創",
-              "category": "SpaceX IPO 生態系"
-            },
-            {
-              "code": "8086",
-              "name": "宏捷科",
-              "category": "SpaceX IPO 生態系"
-            },
-            {
-              "code": "4916",
-              "name": "四星科",
-              "category": "SpaceX IPO 生態系"
-            }
-          ]
-        }
-      }
-    },
-    "儲能": {
-      "name": "儲能",
-      "catalysts": [
-        "儲能",
-        "儲能與電力基建"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2308",
-              "name": "台達電",
-              "category": "儲能與電力基建"
-            },
-            {
-              "code": "3017",
-              "name": "奇鋐",
-              "category": "儲能與電力基建"
-            },
-            {
-              "code": "3324",
-              "name": "雙鴻",
-              "category": "儲能與電力基建"
-            },
-            {
-              "code": "1519",
-              "name": "華城",
-              "category": "儲能與電力基建"
-            },
-            {
-              "code": "6869",
-              "name": "雲豹能源",
-              "category": "儲能與電力基建"
-            }
-          ]
-        }
-      }
-    },
-    "貨櫃海運旺季": {
-      "name": "貨櫃海運旺季",
-      "catalysts": [
-        "貨櫃海運旺季"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2603",
-              "name": "長榮",
-              "category": "貨櫃海運旺季"
-            },
-            {
-              "code": "2609",
-              "name": "陽明",
-              "category": "貨櫃海運旺季"
-            },
-            {
-              "code": "2615",
-              "name": "萬海",
-              "category": "貨櫃海運旺季"
-            },
-            {
-              "code": "2618",
-              "name": "長榮航",
-              "category": "貨櫃海運旺季"
-            }
-          ]
-        }
-      }
-    },
     "量子計算": {
       "name": "量子計算",
       "catalysts": [
@@ -2977,18 +1722,7 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "8383",
-              "name": "千附",
-              "category": "量子計算"
-            },
-            {
-              "code": "2337",
-              "name": "旺宏",
-              "category": "量子計算"
-            }
-          ]
+          "stocks": []
         }
       }
     },
@@ -3002,173 +1736,7 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2049",
-              "name": "上銀",
-              "category": "機器人供應鏈"
-            },
-            {
-              "code": "4585",
-              "name": "達明",
-              "category": "機器人供應鏈"
-            },
-            {
-              "code": "2233",
-              "name": "宇隆",
-              "category": "機器人供應鏈"
-            },
-            {
-              "code": "2328",
-              "name": "廣宇",
-              "category": "機器人供應鏈"
-            },
-            {
-              "code": "4540",
-              "name": "全球傳動",
-              "category": "機器人供應鏈"
-            },
-            {
-              "code": "4562",
-              "name": "穎漢",
-              "category": "機器人供應鏈"
-            }
-          ]
-        }
-      }
-    },
-    "川普貿易政策": {
-      "name": "川普貿易政策",
-      "catalysts": [
-        "川普貿易政策",
-        "川普貿易政策與關稅"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "4551",
-              "name": "智伸科",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "1319",
-              "name": "東陽",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "2317",
-              "name": "鴻海",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "2353",
-              "name": "宏碁",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "2324",
-              "name": "賣超仁寶",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "3087",
-              "name": "智易",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "3380",
-              "name": "明泰",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "2382",
-              "name": "廣達",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "5227",
-              "name": "立凱-KY",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "6121",
-              "name": "新普",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "6515",
-              "name": "穎崴",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "5483",
-              "name": "中美晶",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "6488",
-              "name": "環球晶",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "2337",
-              "name": "旺宏",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "2303",
-              "name": "聯電",
-              "category": "川普貿易政策與關稅"
-            },
-            {
-              "code": "2408",
-              "name": "南亞科",
-              "category": "川普貿易政策與關稅"
-            }
-          ]
-        }
-      }
-    },
-    "世足賽": {
-      "name": "世足賽",
-      "catalysts": [
-        "世足賽",
-        "世足賽供應鏈"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "1476",
-              "name": "儒鴻",
-              "category": "世足賽供應鏈"
-            },
-            {
-              "code": "1477",
-              "name": "聚陽",
-              "category": "世足賽供應鏈"
-            },
-            {
-              "code": "1402",
-              "name": "遠東新",
-              "category": "世足賽供應鏈"
-            },
-            {
-              "code": "9904",
-              "name": "寶成",
-              "category": "世足賽供應鏈"
-            }
-          ]
+          "stocks": []
         }
       }
     },
@@ -3182,38 +1750,7 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "4916",
-              "name": "四星科",
-              "category": "無人機供應鏈"
-            },
-            {
-              "code": "8033",
-              "name": "雷虎",
-              "category": "無人機供應鏈"
-            },
-            {
-              "code": "8935",
-              "name": "邦泰",
-              "category": "無人機供應鏈"
-            },
-            {
-              "code": "2458",
-              "name": "義隆",
-              "category": "無人機供應鏈"
-            },
-            {
-              "code": "4536",
-              "name": "拓凱",
-              "category": "無人機供應鏈"
-            },
-            {
-              "code": "6223",
-              "name": "旺矽",
-              "category": "無人機供應鏈"
-            }
-          ]
+          "stocks": []
         }
       }
     },
@@ -3226,13 +1763,7 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "6488",
-              "name": "環球晶",
-              "category": "矽晶圓復甦"
-            }
-          ]
+          "stocks": []
         }
       }
     },
@@ -3245,339 +1776,7 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "1802",
-              "name": "台玻",
-              "category": "玻璃基板"
-            },
-            {
-              "code": "6770",
-              "name": "力積電",
-              "category": "玻璃基板"
-            },
-            {
-              "code": "6531",
-              "name": "愛普",
-              "category": "玻璃基板"
-            },
-            {
-              "code": "3533",
-              "name": "嘉澤",
-              "category": "玻璃基板（英特爾EMIB-T）"
-            },
-            {
-              "code": "2303",
-              "name": "聯電",
-              "category": "玻璃基板（英特爾EMIB-T）"
-            },
-            {
-              "code": "2454",
-              "name": "聯發科",
-              "category": "玻璃基板（英特爾EMIB-T）"
-            },
-            {
-              "code": "2317",
-              "name": "鴻海",
-              "category": "玻璃基板（英特爾 EMIB-T）"
-            }
-          ]
-        }
-      }
-    },
-    "鋼鐵": {
-      "name": "鋼鐵",
-      "catalysts": [
-        "鋼鐵",
-        "鋼鐵族群"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2002",
-              "name": "中鋼",
-              "category": "鋼鐵族群"
-            },
-            {
-              "code": "2014",
-              "name": "中鴻",
-              "category": "鋼鐵族群"
-            },
-            {
-              "code": "2017",
-              "name": "官田鋼",
-              "category": "鋼鐵族群"
-            }
-          ]
-        }
-      }
-    },
-    "台積電先進製程擴產": {
-      "name": "台積電先進製程擴產",
-      "catalysts": [
-        "台積電先進製程擴產"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "台積電先進製程擴產"
-            },
-            {
-              "code": "2383",
-              "name": "台光電",
-              "category": "台積電先進製程擴產"
-            },
-            {
-              "code": "3044",
-              "name": "健鼎",
-              "category": "台積電先進製程擴產"
-            },
-            {
-              "code": "4958",
-              "name": "臻鼎-KY",
-              "category": "台積電先進製程擴產"
-            },
-            {
-              "code": "3661",
-              "name": "世芯-KY",
-              "category": "台積電先進製程擴產"
-            },
-            {
-              "code": "2404",
-              "name": "漢唐",
-              "category": "台積電先進製程擴產"
-            }
-          ]
-        }
-      }
-    },
-    "綠能": {
-      "name": "綠能",
-      "catalysts": [
-        "綠能",
-        "綠能與電力基建"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "6282",
-              "name": "康舒",
-              "category": "綠能與電力基建"
-            },
-            {
-              "code": "2308",
-              "name": "台達電",
-              "category": "綠能與電力基建"
-            },
-            {
-              "code": "1519",
-              "name": "華城",
-              "category": "綠能與電力基建"
-            },
-            {
-              "code": "1503",
-              "name": "士電",
-              "category": "綠能與電力基建"
-            },
-            {
-              "code": "6869",
-              "name": "雲豹能源",
-              "category": "綠能與電力基建"
-            },
-            {
-              "code": "6770",
-              "name": "力積電",
-              "category": "綠能與電力基建"
-            },
-            {
-              "code": "6903",
-              "name": "巨漢",
-              "category": "綠能與電力基建"
-            },
-            {
-              "code": "1514",
-              "name": "亞力",
-              "category": "綠能與電力基建"
-            },
-            {
-              "code": "1513",
-              "name": "中興電",
-              "category": "綠能與電力基建"
-            },
-            {
-              "code": "2317",
-              "name": "鴻海",
-              "category": "綠能與電力基建"
-            },
-            {
-              "code": "5483",
-              "name": "中美晶",
-              "category": "綠能與電力基建（含太空AI太陽能）"
-            },
-            {
-              "code": "6443",
-              "name": "元晶",
-              "category": "綠能與電力基建（含太空AI太陽能）"
-            },
-            {
-              "code": "3576",
-              "name": "聯合再生",
-              "category": "綠能與電力基建（含太空AI太陽能）"
-            },
-            {
-              "code": "3491",
-              "name": "昇達科",
-              "category": "綠能與電力基建（含太空AI太陽能）"
-            },
-            {
-              "code": "7786",
-              "name": "東方風能",
-              "category": "綠能與電力基建（含太空AI太陽能）"
-            }
-          ]
-        }
-      }
-    },
-    "蘋果概念股": {
-      "name": "蘋果概念股",
-      "catalysts": [
-        "蘋果概念股",
-        "蘋果概念股與",
-        "AIPC",
-        "換機潮"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "3008",
-              "name": "大立光",
-              "category": "蘋果概念股與 AIPC 換機潮"
-            },
-            {
-              "code": "4497",
-              "name": "玉金光",
-              "category": "蘋果概念股與 AIPC 換機潮"
-            },
-            {
-              "code": "3324",
-              "name": "雙鴻",
-              "category": "蘋果概念股與 AIPC 換機潮"
-            },
-            {
-              "code": "6669",
-              "name": "緯穎",
-              "category": "蘋果概念股與 AIPC 換機潮"
-            },
-            {
-              "code": "2357",
-              "name": "華碩",
-              "category": "蘋果概念股與 AIPC 換機潮"
-            },
-            {
-              "code": "2377",
-              "name": "微星",
-              "category": "蘋果概念股與 AIPC 換機潮"
-            },
-            {
-              "code": "2409",
-              "name": "友達",
-              "category": "蘋果概念股與AIPC換機潮"
-            },
-            {
-              "code": "2353",
-              "name": "宏碁",
-              "category": "蘋果概念股與AIPC換機潮"
-            },
-            {
-              "code": "4958",
-              "name": "臻鼎-KY",
-              "category": "蘋果概念股與AIPC換機潮"
-            },
-            {
-              "code": "2317",
-              "name": "鴻海",
-              "category": "蘋果概念股與AIPC換機潮"
-            }
-          ]
-        }
-      }
-    },
-    "聯準會利率政策": {
-      "name": "聯準會利率政策",
-      "catalysts": [
-        "聯準會利率政策",
-        "含台灣通膨"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2882",
-              "name": "國泰金",
-              "category": "聯準會利率政策（含台灣通膨）"
-            },
-            {
-              "code": "2881",
-              "name": "富邦金",
-              "category": "聯準會利率政策（含台灣通膨）"
-            },
-            {
-              "code": "2885",
-              "name": "元大金",
-              "category": "聯準會利率政策（含台灣通膨）"
-            },
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "聯準會利率政策（含美國就業市場）"
-            },
-            {
-              "code": "2890",
-              "name": "永豐金",
-              "category": "聯準會利率政策（含美國就業市場）"
-            },
-            {
-              "code": "2884",
-              "name": "玉山金",
-              "category": "聯準會利率政策（含美國就業市場）"
-            }
-          ]
-        }
-      }
-    },
-    "加密貨幣": {
-      "name": "加密貨幣",
-      "catalysts": [
-        "加密貨幣",
-        "加密貨幣市場"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "6285",
-              "name": "啟碁",
-              "category": "加密貨幣市場"
-            }
-          ]
+          "stocks": []
         }
       }
     },
@@ -3592,138 +1791,7 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2382",
-              "name": "廣達",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "3017",
-              "name": "奇鋐",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "3324",
-              "name": "雙鴻",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "2454",
-              "name": "聯發科",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "3661",
-              "name": "世芯-KY",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "5274",
-              "name": "信驊",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "2317",
-              "name": "鴻海",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "6451",
-              "name": "訊芯-KY",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "2347",
-              "name": "聯強",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "3037",
-              "name": "欣興",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "2368",
-              "name": "金像電",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "2383",
-              "name": "台光電",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "6274",
-              "name": "台燿",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "3231",
-              "name": "緯創",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "2356",
-              "name": "英業達",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "2059",
-              "name": "川湖",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "8210",
-              "name": "勤誠",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "2376",
-              "name": "技嘉",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "2324",
-              "name": "賣超仁寶",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "7856",
-              "name": "漢測",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "4537",
-              "name": "旭東",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "2308",
-              "name": "台達電",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "3711",
-              "name": "日月光",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "6669",
-              "name": "緯穎",
-              "category": "AI伺服器與半導體"
-            },
-            {
-              "code": "3363",
-              "name": "上詮",
-              "category": "AI伺服器與半導體"
-            }
-          ]
+          "stocks": []
         }
       }
     },
@@ -3739,694 +1807,7 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2303",
-              "name": "聯電",
-              "category": "先進封裝族群（聯電/群創/立基電）"
-            },
-            {
-              "code": "3481",
-              "name": "群創",
-              "category": "先進封裝族群（聯電/群創/立基電）"
-            },
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "先進封裝族群（聯電/群創）"
-            },
-            {
-              "code": "3037",
-              "name": "欣興",
-              "category": "先進封裝族群（聯電/群創）"
-            },
-            {
-              "code": "3533",
-              "name": "嘉澤",
-              "category": "先進封裝族群（含玻璃基板）"
-            },
-            {
-              "code": "1802",
-              "name": "台玻",
-              "category": "先進封裝族群（含玻璃基板）"
-            },
-            {
-              "code": "3580",
-              "name": "友威科",
-              "category": "先進封裝族群（含玻璃基板）"
-            },
-            {
-              "code": "3044",
-              "name": "健鼎",
-              "category": "先進封裝族群（含ABF/CPO）"
-            },
-            {
-              "code": "4958",
-              "name": "臻鼎-KY",
-              "category": "先進封裝族群（含ABF/CPO）"
-            },
-            {
-              "code": "3363",
-              "name": "上詮",
-              "category": "先進封裝族群（含ABF/CPO）"
-            }
-          ]
-        }
-      }
-    },
-    "航運族群": {
-      "name": "航運族群",
-      "catalysts": [
-        "航運族群",
-        "新增獨立主題"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2603",
-              "name": "長榮",
-              "category": "航運族群（新增獨立主題）"
-            },
-            {
-              "code": "2615",
-              "name": "萬海",
-              "category": "航運族群（新增獨立主題）"
-            },
-            {
-              "code": "2637",
-              "name": "慧洋-KY",
-              "category": "航運族群（新增獨立主題）"
-            },
-            {
-              "code": "2609",
-              "name": "陽明",
-              "category": "航運族群（降格）"
-            },
-            {
-              "code": "2618",
-              "name": "長榮航",
-              "category": "航運族群（含中東地緣政治）"
-            },
-            {
-              "code": "2610",
-              "name": "華航",
-              "category": "航運族群（含中東地緣政治）"
-            },
-            {
-              "code": "2636",
-              "name": "台驊",
-              "category": "航運族群（含中東地緣政治）"
-            }
-          ]
-        }
-      }
-    },
-    "航運": {
-      "name": "航運",
-      "catalysts": [
-        "航運",
-        "航運族群"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2603",
-              "name": "長榮",
-              "category": "航運族群"
-            },
-            {
-              "code": "2615",
-              "name": "萬海",
-              "category": "航運族群"
-            },
-            {
-              "code": "2637",
-              "name": "慧洋-KY",
-              "category": "航運族群"
-            },
-            {
-              "code": "2609",
-              "name": "陽明",
-              "category": "航運族群"
-            },
-            {
-              "code": "2618",
-              "name": "長榮航",
-              "category": "航運族群"
-            },
-            {
-              "code": "2610",
-              "name": "華航",
-              "category": "航運族群"
-            },
-            {
-              "code": "2636",
-              "name": "台驊",
-              "category": "航運族群"
-            }
-          ]
-        }
-      }
-    },
-    "台灣AI晶片出口管制": {
-      "name": "台灣AI晶片出口管制",
-      "catalysts": [
-        "台灣AI晶片出口管制",
-        "AI",
-        "晶片出口管制"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "台灣AI晶片出口管制"
-            }
-          ]
-        }
-      }
-    },
-    "Intel": {
-      "name": "Intel",
-      "catalysts": [
-        "Intel",
-        "CPU",
-        "崛起"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2303",
-              "name": "聯電",
-              "category": "Intel CPU崛起（新）"
-            },
-            {
-              "code": "2454",
-              "name": "聯發科",
-              "category": "Intel CPU崛起（新）"
-            },
-            {
-              "code": "6239",
-              "name": "力成",
-              "category": "Intel CPU崛起"
-            },
-            {
-              "code": "6515",
-              "name": "穎崴",
-              "category": "Intel CPU 崛起"
-            },
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "Intel CPU 崛起"
-            }
-          ]
-        }
-      }
-    },
-    "ETF": {
-      "name": "ETF",
-      "catalysts": [
-        "ETF",
-        "與資金流向"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2303",
-              "name": "聯電",
-              "category": "台灣 ETF 與資金流向"
-            },
-            {
-              "code": "4958",
-              "name": "臻鼎-KY",
-              "category": "台灣 ETF 與資金流向"
-            },
-            {
-              "code": "8046",
-              "name": "南電",
-              "category": "台灣 ETF 與資金流向"
-            },
-            {
-              "code": "2382",
-              "name": "廣達",
-              "category": "台灣 ETF 與資金流向"
-            },
-            {
-              "code": "2408",
-              "name": "南亞科",
-              "category": "台灣 ETF 與資金流向"
-            },
-            {
-              "code": "2344",
-              "name": "華邦電",
-              "category": "台灣 ETF 與資金流向"
-            }
-          ]
-        }
-      }
-    },
-    "Apple": {
-      "name": "Apple",
-      "catalysts": [
-        "Apple",
-        "WWDC",
-        "AI",
-        "生態系"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "3008",
-              "name": "大立光",
-              "category": "Apple WWDC AI生態系"
-            },
-            {
-              "code": "3406",
-              "name": "玉晶光",
-              "category": "Apple WWDC AI生態系"
-            },
-            {
-              "code": "1730",
-              "name": "英濟",
-              "category": "Apple WWDC AI生態系"
-            },
-            {
-              "code": "3606",
-              "name": "揚明光",
-              "category": "Apple WWDC AI生態系"
-            },
-            {
-              "code": "2454",
-              "name": "聯發科",
-              "category": "Apple WWDC AI 生態系"
-            },
-            {
-              "code": "2317",
-              "name": "鴻海",
-              "category": "Apple WWDC AI 生態系"
-            }
-          ]
-        }
-      }
-    },
-    "矽晶圓": {
-      "name": "矽晶圓",
-      "catalysts": [
-        "矽晶圓",
-        "矽晶圓族群"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "6488",
-              "name": "環球晶",
-              "category": "矽晶圓族群"
-            },
-            {
-              "code": "3532",
-              "name": "台勝科",
-              "category": "矽晶圓族群"
-            },
-            {
-              "code": "6182",
-              "name": "合晶",
-              "category": "矽晶圓族群"
-            },
-            {
-              "code": "5483",
-              "name": "中美晶",
-              "category": "矽晶圓族群"
-            },
-            {
-              "code": "8086",
-              "name": "宏捷科",
-              "category": "矽晶圓族群"
-            }
-          ]
-        }
-      }
-    },
-    "企業法說焦點": {
-      "name": "企業法說焦點",
-      "catalysts": [
-        "企業法說焦點",
-        "今日"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2890",
-              "name": "永豐金",
-              "category": "企業法說焦點（今日）"
-            },
-            {
-              "code": "2609",
-              "name": "陽明",
-              "category": "企業法說焦點（今日）"
-            },
-            {
-              "code": "2882",
-              "name": "國泰金",
-              "category": "企業法說焦點（今日）"
-            },
-            {
-              "code": "3062",
-              "name": "建漢",
-              "category": "企業法說焦點（今日）"
-            }
-          ]
-        }
-      }
-    },
-    "MOSFET": {
-      "name": "MOSFET",
-      "catalysts": [
-        "MOSFET",
-        "功率半導體"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "3047",
-              "name": "富鼎",
-              "category": "MOSFET/功率半導體"
-            },
-            {
-              "code": "6435",
-              "name": "大中",
-              "category": "MOSFET/功率半導體"
-            },
-            {
-              "code": "2481",
-              "name": "強茂",
-              "category": "MOSFET/功率半導體"
-            },
-            {
-              "code": "5425",
-              "name": "台半",
-              "category": "MOSFET/功率半導體"
-            },
-            {
-              "code": "6693",
-              "name": "廣閎科",
-              "category": "MOSFET/功率半導體"
-            },
-            {
-              "code": "7712",
-              "name": "盛半導體",
-              "category": "MOSFET/功率半導體"
-            },
-            {
-              "code": "2301",
-              "name": "光寶科",
-              "category": "MOSFET/功率半導體"
-            },
-            {
-              "code": "6282",
-              "name": "康舒",
-              "category": "MOSFET/功率半導體"
-            },
-            {
-              "code": "5285",
-              "name": "界霖",
-              "category": "MOSFET/功率半導體"
-            },
-            {
-              "code": "3675",
-              "name": "德微",
-              "category": "MOSFET/功率半導體"
-            },
-            {
-              "code": "3707",
-              "name": "漢磊",
-              "category": "MOSFET/功率半導體"
-            },
-            {
-              "code": "6719",
-              "name": "力智",
-              "category": "MOSFET/功率半導體"
-            }
-          ]
-        }
-      }
-    },
-    "ASIC": {
-      "name": "ASIC",
-      "catalysts": [
-        "ASIC",
-        "vs",
-        "GPU",
-        "路線競爭"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2454",
-              "name": "聯發科",
-              "category": "ASIC vs GPU 路線競爭"
-            },
-            {
-              "code": "3661",
-              "name": "世芯-KY",
-              "category": "ASIC vs GPU 路線競爭"
-            },
-            {
-              "code": "6451",
-              "name": "訊芯-KY",
-              "category": "ASIC vs GPU 路線競爭"
-            }
-          ]
-        }
-      }
-    },
-    "被動元件族群": {
-      "name": "被動元件族群",
-      "catalysts": [
-        "被動元件族群",
-        "MCU",
-        "漲價潮"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2327",
-              "name": "國巨",
-              "category": "被動元件族群（含MCU漲價潮）"
-            },
-            {
-              "code": "2375",
-              "name": "智寶",
-              "category": "被動元件族群（含MCU漲價潮）"
-            },
-            {
-              "code": "2441",
-              "name": "立隆電",
-              "category": "被動元件族群（含MCU漲價潮）"
-            },
-            {
-              "code": "2492",
-              "name": "華新科",
-              "category": "被動元件族群（含MCU漲價潮）"
-            },
-            {
-              "code": "2436",
-              "name": "維權電",
-              "category": "被動元件族群（含MCU漲價潮）"
-            },
-            {
-              "code": "3033",
-              "name": "通路威建",
-              "category": "被動元件族群（含MCU漲價潮）"
-            },
-            {
-              "code": "6282",
-              "name": "康舒",
-              "category": "被動元件族群（含MCU漲價潮）"
-            },
-            {
-              "code": "4919",
-              "name": "新唐",
-              "category": "被動元件族群（含MCU漲價潮）"
-            },
-            {
-              "code": "5285",
-              "name": "界霖",
-              "category": "被動元件族群（含MCU漲價潮）"
-            },
-            {
-              "code": "3675",
-              "name": "德微",
-              "category": "被動元件族群（含功率半導體漲價潮）"
-            },
-            {
-              "code": "2481",
-              "name": "強茂",
-              "category": "被動元件族群（含功率半導體漲價潮）"
-            },
-            {
-              "code": "3707",
-              "name": "漢磊",
-              "category": "被動元件族群（含功率半導體漲價潮）"
-            },
-            {
-              "code": "6719",
-              "name": "力智",
-              "category": "被動元件族群（含功率半導體漲價潮）"
-            },
-            {
-              "code": "3016",
-              "name": "嘉晶",
-              "category": "被動元件族群（含功率半導體漲價潮）"
-            }
-          ]
-        }
-      }
-    },
-    "Apple-Intel-UMC": {
-      "name": "Apple-Intel-UMC",
-      "catalysts": [
-        "Apple-Intel-UMC",
-        "Apple",
-        "Intel",
-        "UMC",
-        "半導體新鐵三角"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2303",
-              "name": "聯電",
-              "category": "Apple-Intel-UMC 半導體新鐵三角"
-            },
-            {
-              "code": "5347",
-              "name": "世界先進",
-              "category": "Apple-Intel-UMC 半導體新鐵三角"
-            }
-          ]
-        }
-      }
-    },
-    "量子運算概念": {
-      "name": "量子運算概念",
-      "catalysts": [
-        "量子運算概念"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2337",
-              "name": "旺宏",
-              "category": "量子運算概念"
-            },
-            {
-              "code": "2317",
-              "name": "鴻海",
-              "category": "量子運算概念"
-            },
-            {
-              "code": "2382",
-              "name": "廣達",
-              "category": "量子運算概念"
-            },
-            {
-              "code": "2324",
-              "name": "賣超仁寶",
-              "category": "量子運算概念"
-            },
-            {
-              "code": "6285",
-              "name": "啟碁",
-              "category": "量子運算概念"
-            },
-            {
-              "code": "2412",
-              "name": "中華電",
-              "category": "量子運算概念"
-            }
-          ]
-        }
-      }
-    },
-    "中國AI模型競爭": {
-      "name": "中國AI模型競爭",
-      "catalysts": [
-        "中國AI模型競爭",
-        "AI",
-        "模型競爭"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2330",
-              "name": "台積電",
-              "category": "中國AI模型競爭"
-            }
-          ]
-        }
-      }
-    },
-    "中國房產": {
-      "name": "中國房產",
-      "catalysts": [
-        "中國房產",
-        "中國房產與經濟停滯",
-        "新增"
-      ],
-      "tiers": {
-        "tier_from_tracker": {
-          "name": "催化劑追蹤（自動同步）",
-          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": [
-            {
-              "code": "2409",
-              "name": "友達",
-              "category": "中國房產與經濟停滯（新增）"
-            }
-          ]
+          "stocks": []
         }
       }
     }
