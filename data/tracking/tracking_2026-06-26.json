@@ -1,0 +1,133 @@
+{
+  "date": "2026-06-26",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "vix": 18.89,
+    "nasdaq_change": -2.55,
+    "soc_change": 3.44,
+    "micron_change": 16.33,
+    "nvidia_change": -4.35,
+    "apple_change": -7.03,
+    "wd_change": -5.16,
+    "taiwan_usd": 31.83,
+    "catalyst_strength": "超強（Micron+16.33%，AMAT+12.66%）",
+    "leader_alerts": "Level2×3（Apple/Tesla/WD），Level1×2（NVIDIA/Broadcom）",
+    "regime": "大型科技分化，半導體設備/DRAM超強；蘋果鏈/電動車受壓",
+    "defense_ratio": "0-15%（VIX<20+超強催化）"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "industry": "記憶體-NOR Flash",
+      "type": "持倉加碼",
+      "recommend_price": 161.5,
+      "target_price": 178.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 145.4,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 77,
+      "module_a_level": "L2",
+      "reversal_level": 0,
+      "reason": "Micron+16.33%記憶體景氣超強，法人TOP3（avg_rank#3）大買31K，Module A L2佈局中，外資持股比+0.78%，EPS YoY+82%，月季雙線上。WD降級-15為保守應用（旺宏主力NOR Flash非WD業務）",
+      "risk_notes": "WD Level2降級-15（腳本判定），過量買超-5（真連續1天），建議控倉5%"
+    }
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "1802",
+      "stock_name": "台玻",
+      "score": 71,
+      "reversal_level": 1,
+      "reason": "AI伺服器PCB高頻板材，法人TOP6（buy_ratio 40.4%），EPS YoY+750%，但反轉Level 1（買超減速-63.1%），未通過準確率篩選。等Level 1→0轉換再考慮進場",
+      "observation_condition": "反轉Level 1→0，NVIDIA降級解除"
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "score": 54,
+      "reversal_level": 1,
+      "reason": "DRAM純業者，Micron超強催化直接受益，EPS YoY+802%，但WD降級-15+Level 1-5+5日已漲9.2%-10+買賣天數比-5，多重壓制。等買賣天數比改善再評",
+      "observation_condition": "WD降級解除或買賣天數比≤5天"
+    }
+  ],
+  "holdings_evaluation": [
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "score": 77,
+      "suggestion": "可加碼",
+      "position_suggestion": "5-10%"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "score": 48,
+      "suggestion": "留意減碼",
+      "reason": "外資三天砍8.7萬張，累計-64K賣超，WD降級-15，5日+18.5%已大漲"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "score": null,
+      "suggestion": "續抱觀察",
+      "reason": "5日+22.5%已大漲，不加碼。繼續持有觀察法人態度"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "score": null,
+      "suggestion": "續抱觀察",
+      "reason": "外資三天合計賣4.7萬張，台幣貶值31.83。等待外資趨勢止穩"
+    }
+  ],
+  "tracking_alerts": [
+    {
+      "stock_code": "3048",
+      "stock_name": "益登",
+      "alert": "距停損0.7%，極度危險",
+      "action": "盤中跌破停損價立即執行停損，不等收盤",
+      "holding_day": "D4"
+    },
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "alert": "D9最後一天，距停損2.5%",
+      "action": "今日收盤決定成敗，收盤>推薦價=成功",
+      "holding_day": "D9"
+    },
+    {
+      "stock_code": "6139",
+      "stock_name": "亞翔",
+      "alert": "D9距目標1.3%",
+      "action": "今日有機會達標結算",
+      "holding_day": "D9"
+    },
+    {
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "alert": "D9距目標4.2%",
+      "action": "今日結算日，觀察收盤",
+      "holding_day": "D9"
+    }
+  ],
+  "today_settled": [
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "result": "success",
+      "gain_pct": 18.6
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "result": "success",
+      "gain_pct": 9.9
+    }
+  ]
+}
