@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-25",
+  "last_updated": "2026-06-26",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -386,6 +386,16 @@
             {
               "code": "2303",
               "name": "聯電",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "5347",
+              "name": "世界先進",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "2480",
+              "name": "敦陽科",
               "category": "AI 伺服器與半導體"
             }
           ]
@@ -1248,6 +1258,16 @@
               "code": "6488",
               "name": "環球晶",
               "category": "DRAM 與記憶體"
+            },
+            {
+              "code": "3044",
+              "name": "健鼎",
+              "category": "DRAM 與記憶體"
+            },
+            {
+              "code": "6278",
+              "name": "台表科",
+              "category": "DRAM 與記憶體"
             }
           ]
         }
@@ -1512,6 +1532,16 @@
             {
               "code": "6526",
               "name": "達發",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "3044",
+              "name": "健鼎",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "6278",
+              "name": "台表科",
               "category": "光通訊與網通"
             }
           ]
@@ -2769,6 +2799,31 @@
               "code": "6223",
               "name": "旺矽",
               "category": "企業財報重點"
+            },
+            {
+              "code": "3015",
+              "name": "全漢",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2014",
+              "name": "中鴻",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "1301",
+              "name": "台塑",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2367",
+              "name": "燿華",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2331",
+              "name": "精英",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -3066,6 +3121,16 @@
             {
               "code": "2337",
               "name": "旺宏",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "2303",
+              "name": "聯電",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "2408",
+              "name": "南亞科",
               "category": "川普貿易政策與關稅"
             }
           ]
@@ -4113,6 +4178,21 @@
               "code": "5285",
               "name": "界霖",
               "category": "MOSFET/功率半導體"
+            },
+            {
+              "code": "3675",
+              "name": "德微",
+              "category": "MOSFET/功率半導體"
+            },
+            {
+              "code": "3707",
+              "name": "漢磊",
+              "category": "MOSFET/功率半導體"
+            },
+            {
+              "code": "6719",
+              "name": "力智",
+              "category": "MOSFET/功率半導體"
             }
           ]
         }
@@ -4206,6 +4286,31 @@
               "code": "5285",
               "name": "界霖",
               "category": "被動元件族群（含MCU漲價潮）"
+            },
+            {
+              "code": "3675",
+              "name": "德微",
+              "category": "被動元件族群（含功率半導體漲價潮）"
+            },
+            {
+              "code": "2481",
+              "name": "強茂",
+              "category": "被動元件族群（含功率半導體漲價潮）"
+            },
+            {
+              "code": "3707",
+              "name": "漢磊",
+              "category": "被動元件族群（含功率半導體漲價潮）"
+            },
+            {
+              "code": "6719",
+              "name": "力智",
+              "category": "被動元件族群（含功率半導體漲價潮）"
+            },
+            {
+              "code": "3016",
+              "name": "嘉晶",
+              "category": "被動元件族群（含功率半導體漲價潮）"
             }
           ]
         }
@@ -4228,6 +4333,11 @@
             {
               "code": "2303",
               "name": "聯電",
+              "category": "Apple-Intel-UMC 半導體新鐵三角"
+            },
+            {
+              "code": "5347",
+              "name": "世界先進",
               "category": "Apple-Intel-UMC 半導體新鐵三角"
             }
           ]
@@ -4294,6 +4404,27 @@
               "code": "2330",
               "name": "台積電",
               "category": "中國AI模型競爭"
+            }
+          ]
+        }
+      }
+    },
+    "中國房產": {
+      "name": "中國房產",
+      "catalysts": [
+        "中國房產",
+        "中國房產與經濟停滯",
+        "新增"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2409",
+              "name": "友達",
+              "category": "中國房產與經濟停滯（新增）"
             }
           ]
         }
