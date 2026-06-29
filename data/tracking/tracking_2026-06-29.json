@@ -1,0 +1,185 @@
+{
+  "date": "2026-06-29",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "industry": "金融",
+      "recommend_price": 39.1,
+      "target_price": 46.14,
+      "stop_loss_pct": -10,
+      "stop_loss": 35.19,
+      "settlement_days": 10,
+      "position": "15-20%",
+      "score": 96,
+      "reason": "聯準會升息超強+法人連買7天+外資投信同步+Module A L2+EPS YoY +33%"
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "industry": "金融",
+      "recommend_price": 23.4,
+      "target_price": 26.91,
+      "stop_loss_pct": -10,
+      "stop_loss": 21.06,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 85,
+      "reason": "聯準會升息超強+法人連買6天+Module A L2，外資持股比小減-3分"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "industry": "金融",
+      "recommend_price": 32.65,
+      "target_price": 37.55,
+      "stop_loss_pct": -10,
+      "stop_loss": 29.39,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 84,
+      "reason": "聯準會升息超強+法人連買6天+累計+96K+Module A L2，外資持股比-0.31%扣3分"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "industry": "航空",
+      "recommend_price": 43.8,
+      "target_price": 50.37,
+      "stop_loss_pct": -10,
+      "stop_loss": 39.42,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 83,
+      "reason": "美伊傳停火+油價-4.81%降低燃油成本+法人連買6天+Module A L2"
+    },
+    {
+      "stock_code": "2472",
+      "stock_name": "立隆電",
+      "industry": "被動元件",
+      "recommend_price": 376.0,
+      "target_price": 432.4,
+      "stop_loss_pct": -10,
+      "stop_loss": 338.4,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 79,
+      "reason": "AI功耗功率半導體漲價+外資持股比週增+1.78%（最強籌碼訊號）+5日回檔-6.5%"
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "industry": "CCL/ABF",
+      "recommend_price": 5255.0,
+      "target_price": 5885.6,
+      "stop_loss_pct": -10,
+      "stop_loss": 4729.5,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 77,
+      "reason": "光通訊/ABF超強↑加速+Module B早期+營收YoY+45%+近5日回檔-6.2%+EPS YoY+49%"
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "industry": "封測",
+      "recommend_price": 97.5,
+      "target_price": 109.2,
+      "stop_loss_pct": -10,
+      "stop_loss": 87.75,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 76,
+      "reason": "法人TOP4(avg_rank 4.0)+EPS YoY+122%+營收YoY+22%+5日回檔，法人態度偏弱須監控"
+    }
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "note": "Module B早期通過，但5日+12.7%已大漲(>10%)，不評分"
+    },
+    {
+      "stock_code": "3583",
+      "stock_name": "辛耘",
+      "note": "Module B早期通過，但不在TOP50，排名偏後，本日不推薦"
+    }
+  ],
+  "holdings_assessment": [
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "score": 89,
+      "status": "可謹慎加碼",
+      "note": "WDC Level 3排除（持股例外）+力積電法說DRAM催化+外資+0.78%+EPS+82%+營收+60%，不建議新增倉位僅評估現持倉"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "score": 0,
+      "status": "觸停損立即出場",
+      "note": "現價78.3 < 停損78.93，WDC Level 3，開盤立即出場"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "score": 0,
+      "status": "Level 4立即出場",
+      "note": "Level 4爆量賣超，強烈建議今日出場"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "score": 0,
+      "status": "觸停損+Level4立即出場",
+      "note": "現價222.5 < 停損255.1（-21.5%），Level 4爆量賣超，開盤立即出場"
+    },
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "score": 55,
+      "status": "建議出場",
+      "note": "Level 3連續賣超，雖未觸停損（成本48.55，現65），但法人持續出貨"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "score": 58,
+      "status": "留意減碼",
+      "note": "5日+6.5%無強催化，油價-5%不利石化"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "score": 65,
+      "status": "續抱觀察",
+      "note": "處置股至07/08，5分鐘撮合，無強催化，不建議加碼"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "score": -1,
+      "status": "長期零股不適用",
+      "note": "零股0.15張，長期持有不受系統評分"
+    }
+  ],
+  "tracking_alerts": [
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "holding_day": 4,
+      "note": "距停損僅5.5%（約341.9），NVIDIA Level 2 -15分，今日嚴密監控"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "holding_day": 8,
+      "note": "D8/10，距目標5.7%，Level 0，可能到期前達標"
+    }
+  ]
+}
