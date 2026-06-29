@@ -128,11 +128,14 @@
       "intraday_price": 72.8,
       "intraday_change_pct": -1.5,
       "reversal_level": "L0",
-      "result": "holding",
-      "holding_status": "D1/10 | 距目標11.9% | 距停損8.1%",
-      "actual_close": 72.4,
+      "result": "fail",
+      "holding_status": "D7/10 | 收盤61.6 ≤ 停損66.51 → ❌ fail -16.6%",
+      "actual_close": 61.6,
       "close_price": 72.4,
-      "change_percent": -2.0
+      "change_percent": -2.0,
+      "settled_price": 61.6,
+      "settled_date": "2026-06-29",
+      "fail_reason": "收盤61.6 ≤ 停損66.51，跌幅-16.6%"
     }
   ],
   "yesterday_verification": {

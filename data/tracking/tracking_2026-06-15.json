@@ -69,12 +69,14 @@
       "module_a": "L3",
       "reversal_status": "✅Safe",
       "risk": "FOMC 06/17可能引發波動",
-      "result": "holding",
-      "actual_close": 36.7,
+      "result": "success",
+      "actual_close": 37.3,
       "close_price": 36.7,
       "day_change_pct": 1.94,
       "change_percent": 1.94,
-      "holding_status": "D0/10 | 收盤36.7(+1.94%) | 距目標7.9% | 距停損11.7%"
+      "settled_price": 37.3,
+      "settled_date": "2026-06-29",
+      "holding_status": "D10/10 | 到期收盤37.3 > 推薦36.0 → ✅ success"
     },
     {
       "stock_code": "2890",
@@ -116,12 +118,14 @@
       "module_a": "L1",
       "reversal_status": "✅Safe",
       "risk": "法人rank較低(#28.5)，需觀察持續性",
-      "result": "holding",
-      "actual_close": 885.0,
+      "result": "success",
+      "actual_close": 955.0,
       "close_price": 885.0,
       "day_change_pct": 9.94,
       "change_percent": 9.94,
-      "holding_status": "D0/10 | 收盤885.0(+9.94%) | 距目標0.1% | 接近目標"
+      "settled_price": 955.0,
+      "settled_date": "2026-06-29",
+      "holding_status": "D10/10 | 收盤955.0 ≥ 目標886.0 → ✅ success +18.6%"
     },
     {
       "stock_code": "2027",
@@ -139,12 +143,15 @@
       "module_a": "L3",
       "reversal_status": "✅Safe",
       "risk": "無今日強催化劑，純籌碼推薦；若鋼鐵cold pattern確認→降至79分",
-      "result": "holding",
-      "actual_close": 40.2,
+      "result": "fail",
+      "actual_close": 40.4,
       "close_price": 43.65,
       "day_change_pct": 0.23,
       "change_percent": 0.23,
-      "holding_status": "Level 4 爆量賣超（盤後偵測），明日開盤論點驅動出場，出場後結算"
+      "settled_price": 40.4,
+      "settled_date": "2026-06-29",
+      "fail_reason": "D10到期，收盤40.4 ≤ 推薦43.55，-7.2%",
+      "holding_status": "D10/10 | 到期收盤40.4 ≤ 推薦43.55 → ❌ fail -7.2%"
     },
     {
       "stock_code": "2610",
@@ -162,12 +169,14 @@
       "module_a": "none",
       "reversal_status": "✅Safe",
       "risk": "航空cold pattern歷史勝率25%(-5分已扣)，過量買超(-5分已扣)，盤中若無法人持續→考慮減倉",
-      "result": "holding",
-      "actual_close": 21.4,
+      "result": "success",
+      "actual_close": 23.1,
       "close_price": 21.4,
       "day_change_pct": 4.9,
       "change_percent": 4.9,
-      "holding_status": "D0/10 | 收盤21.4(+4.9%) | 距目標4.7% | 距停損14.2%"
+      "settled_price": 23.1,
+      "settled_date": "2026-06-29",
+      "holding_status": "D10/10 | 收盤23.1 ≥ 目標22.4 → ✅ success +13.2%"
     }
   ],
   "yesterday_verification": {
