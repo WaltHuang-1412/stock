@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-29",
+  "last_updated": "2026-06-30",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -1238,6 +1238,11 @@
               "code": "3037",
               "name": "欣興",
               "category": "光通訊與網通"
+            },
+            {
+              "code": "4979",
+              "name": "華星光",
+              "category": "光通訊與網通"
             }
           ]
         }
@@ -1858,7 +1863,28 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": []
+          "stocks": [
+            {
+              "code": "8033",
+              "name": "雷虎",
+              "category": "無人機族群"
+            },
+            {
+              "code": "5371",
+              "name": "中光電",
+              "category": "無人機族群"
+            },
+            {
+              "code": "3227",
+              "name": "原項",
+              "category": "無人機族群"
+            },
+            {
+              "code": "2634",
+              "name": "漢翔",
+              "category": "無人機族群"
+            }
+          ]
         }
       }
     },
@@ -2108,6 +2134,16 @@
               "code": "3008",
               "name": "大立光",
               "category": "企業財報重點"
+            },
+            {
+              "code": "3661",
+              "name": "世芯-KY",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2354",
+              "name": "鴻準",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -2135,6 +2171,11 @@
             {
               "code": "5347",
               "name": "世界先進",
+              "category": "Apple-Intel-UMC 半導體新鐵三角"
+            },
+            {
+              "code": "3037",
+              "name": "欣興",
               "category": "Apple-Intel-UMC 半導體新鐵三角"
             }
           ]
@@ -2172,6 +2213,11 @@
             {
               "code": "8046",
               "name": "南電",
+              "category": "矽光子與CPO量產"
+            },
+            {
+              "code": "3481",
+              "name": "群創",
               "category": "矽光子與CPO量產"
             }
           ]
@@ -2351,6 +2397,65 @@
               "code": "2408",
               "name": "南亞科",
               "category": "南韓超級計畫與半導體競爭"
+            }
+          ]
+        }
+      }
+    },
+    "台股市場動態": {
+      "name": "台股市場動態",
+      "catalysts": [
+        "台股市場動態"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2409",
+              "name": "友達",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "3481",
+              "name": "群創",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "6116",
+              "name": "彩晶",
+              "category": "台股市場動態"
+            }
+          ]
+        }
+      }
+    },
+    "電子紙": {
+      "name": "電子紙",
+      "catalysts": [
+        "電子紙",
+        "電子紙族群"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "8069",
+              "name": "元太",
+              "category": "電子紙族群"
+            },
+            {
+              "code": "2409",
+              "name": "友達",
+              "category": "電子紙族群"
+            },
+            {
+              "code": "6116",
+              "name": "彩晶",
+              "category": "電子紙族群"
             }
           ]
         }
