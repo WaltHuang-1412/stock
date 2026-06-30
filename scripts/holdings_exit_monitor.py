@@ -254,11 +254,17 @@ def save_alert_log(log):
         json.dump(log, f, ensure_ascii=False, indent=2)
 
 
+STOP_COOLDOWN_HOURS = 2  # STOP 訊號至少間隔幾小時才再推
+
+
 def should_alert(log, code, level, today):
     key = f"{code}_{today}_{level}"
-    # STOP 級別每次都推；WARN/EXIT 每天只推一次
     if level == "STOP":
-        return True
+        if key not in log:
+            return True
+        last_time = log[key]
+        last_dt = datetime.strptime(f"{today} {last_time}", "%Y-%m-%d %H:%M")
+        return (datetime.now() - last_dt).total_seconds() >= STOP_COOLDOWN_HOURS * 3600
     return key not in log
 
 
