@@ -58,10 +58,38 @@ def load_holdings():
     return [h for h in d.get("holdings", []) if float(h.get("quantity", 0)) > 0]
 
 
-# ── 即時價格（TWSE） ──────────────────────────────────────
+# ── 市場偵測（上市 .TW / 上櫃 .TWO）────────────────────
+# 執行期間快取，避免同一股票重複偵測
+
+_market_cache = {}  # code -> "TW" or "TWO"
+
+def detect_market(code):
+    """回傳 'TW'（上市）或 'TWO'（上櫃），結果快取整個執行期。"""
+    if code in _market_cache:
+        return _market_cache[code]
+    url = (f"https://mis.twse.com.tw/stock/api/getStockInfo.jsp"
+           f"?ex_ch=tse_{code}.tw&json=1")
+    try:
+        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0",
+                                       "Referer": "https://mis.twse.com.tw/"},
+                         timeout=6)
+        items = r.json().get("msgArray", [])
+        if items and items[0].get("c") == code:
+            _market_cache[code] = "TW"
+            return "TW"
+    except Exception:
+        pass
+    _market_cache[code] = "TWO"
+    return "TWO"
+
+
+# ── 即時價格（上市 / 上櫃 自動判斷）─────────────────────
 
 def fetch_realtime(code):
-    url = f"https://mis.twse.com.tw/stock/api/getStockInfo.jsp?ex_ch=tse_{code}.tw&json=1"
+    market = detect_market(code)
+    exchange = "tse" if market == "TW" else "otc"
+    url = (f"https://mis.twse.com.tw/stock/api/getStockInfo.jsp"
+           f"?ex_ch={exchange}_{code}.tw&json=1")
     try:
         r = requests.get(url, headers={
             "User-Agent": "Mozilla/5.0",
@@ -96,12 +124,14 @@ def get_weekly_data(code):
     if code in _weekly_cache:
         return _weekly_cache[code]
 
+    start = (datetime.now() - timedelta(weeks=104)).strftime("%Y-%m-%d")
+    market = detect_market(code)
+    suffix = ".TW" if market == "TW" else ".TWO"
     try:
-        df = yf.download(f"{code}.TW", start="2024-01-01",
+        df = yf.download(f"{code}{suffix}", start=start,
                          interval="1wk", auto_adjust=True, progress=False)
         if isinstance(df.columns, pd.MultiIndex):
             df.columns = df.columns.droplevel(1)
-        # 過濾掉未收盤的未來週
         df = df[df["Close"].notna()]
         _weekly_cache[code] = df
         return df
@@ -142,7 +172,7 @@ def check_holding(h, is_friday):
     name = h["name"]
     buy_price = float(h["buy_price"])
     stop_loss = h.get("stop_loss")
-    if stop_loss:
+    if stop_loss is not None:
         stop_loss = float(stop_loss)
     else:
         stop_loss = buy_price * 0.90  # 無設定預設 -10%
@@ -179,8 +209,8 @@ def check_holding(h, is_friday):
             "msg": f"⚠️ 跌破前週低點 {prev_low:.2f}（現價 {price}，{ret:+.1f}%）"
         })
 
-    # 週五收盤確認
-    if is_friday:
+    # 週五收盤確認（只在收盤後才判斷，避免盤中未完成的週K誤觸）
+    if is_friday and datetime.now().strftime("%H:%M") >= MARKET_CLOSE:
         weekly_close = get_latest_weekly_close(weekly)
         if weekly_close:
             # Method C：週收盤 < 前週低點
@@ -204,10 +234,14 @@ def check_holding(h, is_friday):
 # ── 告警去重 ──────────────────────────────────────────────
 
 def load_alert_log():
-    if ALERT_LOG_FILE.exists():
-        with open(ALERT_LOG_FILE, encoding="utf-8") as f:
-            return json.load(f)
-    return {}
+    if not ALERT_LOG_FILE.exists():
+        return {}
+    with open(ALERT_LOG_FILE, encoding="utf-8") as f:
+        log = json.load(f)
+    # 清除 7 天前的舊紀錄（key 格式為 {code}_{YYYY-MM-DD}_{level}）
+    cutoff = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
+    return {k: v for k, v in log.items()
+            if len(k.split("_")) >= 3 and k.split("_")[1] >= cutoff}
 
 
 def save_alert_log(log):
