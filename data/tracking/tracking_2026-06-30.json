@@ -98,6 +98,50 @@
       "reason": "AI連接器題材，cum=761，觀察法人是否跟進"
     }
   ],
+  "intraday_update": {
+    "scan_time": "12:35",
+    "intraday_detector_signals": 0,
+    "track_b_new_recommendations": 0,
+    "track_b_intraday_candidates_screened": ["2892第一金(~70分,外資篩選不通過)", "1402遠東新(~63分,紡織無催化)", "2891中信金(~72分,金融非強催化鏈)", "2834臺企銀(Level4排除)"],
+    "critical_alerts": [
+      {
+        "stock_code": "2313",
+        "stock_name": "華通",
+        "alert_type": "STOP_LOSS_TRIGGERED",
+        "current_price": 232.0,
+        "stop_loss_price": 235.98,
+        "reversal_level": 4,
+        "action": "強制出場（停損已觸及）"
+      },
+      {
+        "stock_code": "3037",
+        "stock_name": "欣興",
+        "alert_type": "LEVEL4_DAY2",
+        "current_price": 1065.0,
+        "stop_loss_price": 949.5,
+        "reversal_level": 4,
+        "action": "連續第2天Level4，收盤確認後考慮減碼"
+      },
+      {
+        "stock_code": "2887",
+        "stock_name": "台新金",
+        "alert_type": "LEVEL4_D0",
+        "current_price": 33.45,
+        "stop_loss_price": 29.7,
+        "reversal_level": 4,
+        "action": "D0單日Level4，手動策略觀察1天，明日確認"
+      }
+    ],
+    "holdings_monitor": {
+      "2330": {"price": 2445.0, "status": "觀察（累計負但今日買超）"},
+      "1303": {"price": 166.5, "status": "安全（注意30日+97.7%接近處置）"},
+      "6770": {"price": 79.2, "status": "安全"},
+      "3037": {"price": 1065.0, "status": "Level4連2天，監控"},
+      "2337": {"price": 156.0, "status": "安全"},
+      "2313": {"price": 232.0, "status": "停損觸發，應出場"},
+      "3090": {"price": 327.0, "status": "處置風險高(30日+120.9%)"}
+    }
+  },
   "holding_evaluation": [
     {
       "stock_code": "2382",
