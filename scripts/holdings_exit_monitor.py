@@ -24,6 +24,10 @@ import subprocess
 from pathlib import Path
 from datetime import datetime, timedelta
 
+# Windows cp950 不支援 emoji，強制 utf-8 輸出
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 import yaml
 import yfinance as yf
 import pandas as pd
@@ -266,10 +270,10 @@ def mark_alerted(log, code, level, today):
 # ── LINE 推送 ─────────────────────────────────────────────
 
 def send_line(text):
-    token   = os.environ.get("LINE_CHANNEL_TOKEN", "")
+    # 出場警告用獨立的 alert token（新 bot），不與分析群組共用
+    token   = os.environ.get("LINE_ALERT_CHANNEL_TOKEN", "") or os.environ.get("LINE_CHANNEL_TOKEN", "")
     user_id = os.environ.get("LINE_USER_ID", "")
-    group_id= os.environ.get("LINE_GROUP_ID", "")
-    send_to = group_id or user_id
+    send_to = user_id
     if not token or not send_to:
         print("  LINE 未設定，跳過推送")
         return
