@@ -36,6 +36,28 @@ import requests
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 HOLDINGS_FILE = PROJECT_DIR / "portfolio" / "my_holdings.yaml"
 ALERT_LOG_FILE = PROJECT_DIR / "data" / "holdings_monitor_alert_log.json"
+LOCK_FILE = PROJECT_DIR / "data" / "holdings_monitor.lock"
+
+
+def acquire_lock():
+    """確保只有一個 instance 在執行，已有程序跑時直接退出。"""
+    if LOCK_FILE.exists():
+        try:
+            pid = int(LOCK_FILE.read_text().strip())
+            import psutil
+            if psutil.pid_exists(pid):
+                print(f"[lock] 已有程序在執行（PID {pid}），退出")
+                sys.exit(0)
+        except Exception:
+            pass
+    LOCK_FILE.write_text(str(os.getpid()))
+
+
+def release_lock():
+    try:
+        LOCK_FILE.unlink(missing_ok=True)
+    except Exception:
+        pass
 
 MARKET_OPEN  = "09:00"
 MARKET_CLOSE = "13:30"
@@ -373,7 +395,13 @@ def run_loop():
 
 
 if __name__ == "__main__":
-    if "--loop" in sys.argv:
-        run_loop()
-    else:
-        run_once()
+    if "--dry-run" not in sys.argv:
+        acquire_lock()
+    try:
+        if "--loop" in sys.argv:
+            run_loop()
+        else:
+            run_once()
+    finally:
+        if "--dry-run" not in sys.argv:
+            release_lock()
