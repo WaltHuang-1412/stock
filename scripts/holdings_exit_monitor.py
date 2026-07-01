@@ -416,18 +416,26 @@ def run_once():
         print(f"\n[買入掃描] {len(recs)} 檔推薦股...")
         buy_triggered = []
         for rec in recs:
-            result = check_buy_signal(rec)
-            if not result:
+            code = str(rec.get("stock_code") or rec.get("symbol", ""))
+            name = rec.get("stock_name") or rec.get("name", code)
+            recommend_price = rec.get("recommend_price")
+            price = fetch_realtime(code)
+            if price is None or not recommend_price:
+                print(f"  {code} {name}：無法取得價格")
                 continue
-            code, name = result["code"], result["name"]
-            alert_key = f"BUY_{code}_{today}_PRICE"
-            print(f"  {code} {name}：{result['msg']}")
-            if alert_key not in alert_log:
-                buy_triggered.append(f"{name}（{code}）\n{result['msg']}")
-                if not DRY_RUN:
-                    alert_log[alert_key] = now.strftime("%H:%M")
+            recommend_price = float(recommend_price)
+            diff_pct = (price - recommend_price) / recommend_price * 100
+            if price <= recommend_price:
+                alert_key = f"BUY_{code}_{today}_PRICE"
+                print(f"  {code} {name}：現價 {price}，推薦 {recommend_price}（{diff_pct:+.1f}%）→ 📉 可進場")
+                if alert_key not in alert_log:
+                    buy_triggered.append(f"{name}（{code}）\n📉 回到推薦價：現價 {price} ≤ 推薦 {recommend_price}（{diff_pct:+.1f}%）→ 可考慮進場")
+                    if not DRY_RUN:
+                        alert_log[alert_key] = now.strftime("%H:%M")
+                else:
+                    print(f"    （今日已通知過）")
             else:
-                print(f"    （今日已通知過）")
+                print(f"  {code} {name}：現價 {price}，推薦 {recommend_price}（{diff_pct:+.1f}%）— 未回檔")
             time.sleep(0.3)
 
         if buy_triggered:
