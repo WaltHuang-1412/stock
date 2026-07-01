@@ -7543,11 +7543,11 @@
       }
     ]
   },
-  "settled_accuracy": "60.5%",
-  "settled_count": 395,
-  "holding_count": 212,
-  "total_success": 239,
-  "total_fail": 156,
+  "settled_accuracy": "60.2%",
+  "settled_count": 400,
+  "holding_count": 215,
+  "total_success": 241,
+  "total_fail": 159,
   "2026-03-30": {
     "predictions": [
       {
@@ -8926,9 +8926,12 @@
         "stop_loss": 31.3,
         "stop_loss_pct": -5,
         "settlement_days": 10,
-        "result": "holding",
+        "result": "fail",
         "holding_days": 1,
-        "current_price": 32.95
+        "current_price": 32.95,
+        "settled_date": "2026-06-17",
+        "settled_price": 32.9,
+        "fail_reason": "D10到期：收盤32.9 ≤ 推薦35.2"
       },
       {
         "symbol": "2887",
@@ -9164,8 +9167,10 @@
         "recommend_price": 39.95,
         "target_price": 44.0,
         "stop_loss": 35.96,
-        "result": "holding",
-        "holding_days": 2
+        "result": "success",
+        "holding_days": 2,
+        "settled_date": "2026-06-17",
+        "settled_price": 46.15
       },
       {
         "symbol": "3037",
@@ -10619,10 +10624,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 88,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-06-17",
+        "settled_price": 8.25,
+        "holding_days": 1,
+        "fail_reason": "D10到期：收盤8.25 ≤ 推薦8.53"
       },
       {
         "symbol": "2027",
@@ -13012,10 +13018,11 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 77,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-06-26",
+        "settled_price": 143.5,
+        "holding_days": 1,
+        "fail_reason": "D3觸停損：收盤143.5 ≤ 停損145.35，反轉Level4爆量賣超-40,606張"
       },
       {
         "symbol": "2890",
@@ -13221,6 +13228,132 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 80,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-07-01": {
+    "predictions": [
+      {
+        "symbol": "8150",
+        "name": "南茂",
+        "recommend_price": 99.5,
+        "target_price": 111.5,
+        "stop_loss": 89.55,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 91,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2449",
+        "name": "京元電子",
+        "recommend_price": 337.5,
+        "target_price": 378.0,
+        "stop_loss": 303.75,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 91,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "3711",
+        "name": "日月光投控",
+        "recommend_price": 680.0,
+        "target_price": 762.0,
+        "stop_loss": 612.0,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 90,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2618",
+        "name": "長榮航",
+        "recommend_price": 44.9,
+        "target_price": 49.8,
+        "stop_loss": 40.41,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 85,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "1303",
+        "name": "南亞",
+        "recommend_price": 166.5,
+        "target_price": 183.0,
+        "stop_loss": 149.85,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 79,
+        "result": "success",
+        "settled_date": "2026-07-01",
+        "settled_price": 183.0,
+        "holding_days": 0
+      },
+      {
+        "symbol": "6285",
+        "name": "啟碁",
+        "recommend_price": 259.5,
+        "target_price": 285.5,
+        "stop_loss": 233.55,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 78,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "recommend_price": 54.5,
+        "target_price": 60.0,
+        "stop_loss": 49.05,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 72,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "4958",
+        "name": "臻鼎-KY",
+        "recommend_price": 630.0,
+        "target_price": 693.0,
+        "stop_loss": 567.0,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 70,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,

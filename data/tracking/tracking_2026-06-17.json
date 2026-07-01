@@ -51,8 +51,11 @@
       "change_percent": 0.85,
       "reversal_level": "L4",
       "exit_signal": "Level4 強制出場（盤中-2,401張），但T86 06/16 顯示+33K，矛盾待確認",
-      "result": "holding",
-      "holding_status": "⚠️ Level4盤中訊號存疑，待明日T86確認；若T86確認賣超則移出，若繼續買超則續持"
+      "result": "fail",
+      "actual_close": 32.9,
+      "gain_pct": -6.53,
+      "settled_date": "2026-07-01",
+      "fail_reason": "D10到期：收盤32.9 ≤ 推薦35.2"
     },
     {
       "stock_code": "2867",
@@ -74,8 +77,11 @@
       "close_price": 8.62,
       "change_percent": 1.05,
       "reversal_level": "L0",
-      "result": "holding",
-      "holding_status": "D1/10, 距目標8.8%，籌碼健康+5,575"
+      "result": "fail",
+      "actual_close": 8.25,
+      "gain_pct": -3.28,
+      "settled_date": "2026-07-01",
+      "fail_reason": "D10到期：收盤8.25 ≤ 推薦8.53"
     },
     {
       "stock_code": "5880",
@@ -142,8 +148,10 @@
       "close_price": 45.1,
       "change_percent": 1.35,
       "reversal_level": "L0",
-      "result": "holding",
-      "holding_status": "D1/10, 距目標8.2%，籌碼健康+5,045，⚠️10天賣超6天持續觀察"
+      "result": "success",
+      "actual_close": 46.15,
+      "gain_pct": 3.71,
+      "settled_date": "2026-07-01"
     },
     {
       "stock_code": "2801",
