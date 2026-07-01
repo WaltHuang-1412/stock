@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-06-30",
+  "last_updated": "2026-07-01",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -201,6 +201,11 @@
             {
               "code": "5347",
               "name": "世界先進",
+              "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "8150",
+              "name": "南茂",
               "category": "AI 伺服器與半導體"
             }
           ]
@@ -1243,6 +1248,21 @@
               "code": "4979",
               "name": "華星光",
               "category": "光通訊與網通"
+            },
+            {
+              "code": "3163",
+              "name": "波若威",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "6108",
+              "name": "競國",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "6285",
+              "name": "啟碁",
+              "category": "光通訊與網通"
             }
           ]
         }
@@ -1883,6 +1903,11 @@
               "code": "2634",
               "name": "漢翔",
               "category": "無人機族群"
+            },
+            {
+              "code": "2630",
+              "name": "亞航",
+              "category": "無人機族群"
             }
           ]
         }
@@ -2000,6 +2025,31 @@
               "code": "2406",
               "name": "國碩",
               "category": "被動元件族群（含功率半導體漲價潮）"
+            },
+            {
+              "code": "2375",
+              "name": "智寶",
+              "category": "被動元件族群（含成熟製程漲價潮）"
+            },
+            {
+              "code": "2478",
+              "name": "大毅",
+              "category": "被動元件族群（含成熟製程漲價潮）"
+            },
+            {
+              "code": "8043",
+              "name": "蜜望實",
+              "category": "被動元件族群（含成熟製程漲價潮）"
+            },
+            {
+              "code": "3026",
+              "name": "禾伸堂",
+              "category": "被動元件族群（含成熟製程漲價潮）"
+            },
+            {
+              "code": "2303",
+              "name": "聯電",
+              "category": "被動元件族群（含成熟製程漲價潮）"
             }
           ]
         }
@@ -2030,6 +2080,11 @@
               "code": "6505",
               "name": "台塑化",
               "category": "中東地緣政治（含航運）"
+            },
+            {
+              "code": "1301",
+              "name": "台塑",
+              "category": "中東地緣政治（含航運）"
             }
           ]
         }
@@ -2054,6 +2109,11 @@
             {
               "code": "2408",
               "name": "南亞科",
+              "category": "川普貿易政策與關稅"
+            },
+            {
+              "code": "2002",
+              "name": "中鋼",
               "category": "川普貿易政策與關稅"
             }
           ]
@@ -2144,6 +2204,21 @@
               "code": "2354",
               "name": "鴻準",
               "category": "企業財報重點"
+            },
+            {
+              "code": "2312",
+              "name": "金寶",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2059",
+              "name": "川湖",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "6940",
+              "name": "格斯科技",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -2219,6 +2294,11 @@
               "code": "3481",
               "name": "群創",
               "category": "矽光子與CPO量產"
+            },
+            {
+              "code": "3163",
+              "name": "波若威",
+              "category": "矽光子與CPO量產"
             }
           ]
         }
@@ -2244,6 +2324,16 @@
             {
               "code": "6285",
               "name": "啟碁",
+              "category": "SpaceX IPO 生態系"
+            },
+            {
+              "code": "3491",
+              "name": "昇達科",
+              "category": "SpaceX IPO 生態系"
+            },
+            {
+              "code": "6274",
+              "name": "台燿",
               "category": "SpaceX IPO 生態系"
             }
           ]
@@ -2456,6 +2546,71 @@
               "code": "6116",
               "name": "彩晶",
               "category": "電子紙族群"
+            }
+          ]
+        }
+      }
+    },
+    "聯準會利率": {
+      "name": "聯準會利率",
+      "catalysts": [
+        "聯準會利率",
+        "聯準會利率政策"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2884",
+              "name": "永豐金",
+              "category": "聯準會利率政策"
+            }
+          ]
+        }
+      }
+    },
+    "美國就業": {
+      "name": "美國就業",
+      "catalysts": [
+        "美國就業",
+        "美國就業市場"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2884",
+              "name": "永豐金",
+              "category": "美國就業市場"
+            }
+          ]
+        }
+      }
+    },
+    "加密貨幣": {
+      "name": "加密貨幣",
+      "catalysts": [
+        "加密貨幣",
+        "加密貨幣市場"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2891",
+              "name": "中信金",
+              "category": "加密貨幣市場"
+            },
+            {
+              "code": "2889",
+              "name": "國票金",
+              "category": "潛在受益"
             }
           ]
         }
