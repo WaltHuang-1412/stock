@@ -468,7 +468,7 @@ def run_once():
             elif result["signal"] == "BELOW_PREV_LOW":
                 print(f"  {code} {name}：{result['msg']}")
             else:  # BUY
-                alert_key = f"BUY_{code}_{today}_PRICE"
+                alert_key = f"{code}_{today}_BUY"
                 print(f"  {code} {name}：現價 {price}，推薦 {result['recommend_price']}（{diff_pct:+.1f}%）→ 📉 可進場")
                 if alert_key not in alert_log:
                     buy_triggered.append(f"{name}（{code}）\n{result['msg']}")
