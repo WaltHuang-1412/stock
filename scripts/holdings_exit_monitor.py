@@ -114,7 +114,18 @@ def detect_market(code):
 
 # ── 即時價格（上市 / 上櫃 自動判斷）─────────────────────
 
+_price_cache = {}  # code -> price（當日快取，避免重複呼叫 yfinance）
+
 def fetch_realtime(code):
+    """
+    優先取 TWSE 即時成交價（z）。
+    z='-'（盤後 / 未成交）時，改用 yfinance 取今日實際收盤，
+    避免誤用昨收（y）導致價格錯誤。
+    """
+    if code in _price_cache:
+        return _price_cache[code]
+
+    # 1. TWSE 即時 API — 盤中有 z 時最準
     market = detect_market(code)
     exchange = "tse" if market == "TW" else "otc"
     url = (f"https://mis.twse.com.tw/stock/api/getStockInfo.jsp"
@@ -126,15 +137,28 @@ def fetch_realtime(code):
         }, timeout=10)
         items = r.json().get("msgArray", [])
         if items:
-            item = items[0]
-            price_str = item.get("z", "")
+            price_str = items[0].get("z", "")
             if price_str and price_str != "-":
-                return float(price_str)
-            y = item.get("y", "")
-            if y:
-                return float(y)
+                price = float(price_str)
+                _price_cache[code] = price
+                return price
     except Exception:
         pass
+
+    # 2. z='-' 時 → yfinance 取今日（或最近一日）收盤
+    suffix = ".TW" if market == "TW" else ".TWO"
+    try:
+        df = yf.download(f"{code}{suffix}", period="2d", interval="1d",
+                         auto_adjust=False, progress=False)
+        if isinstance(df.columns, pd.MultiIndex):
+            df.columns = df.columns.droplevel(1)
+        if not df.empty:
+            price = round(float(df["Close"].iloc[-1]), 2)
+            _price_cache[code] = price
+            return price
+    except Exception:
+        pass
+
     return None
 
 
