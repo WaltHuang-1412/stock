@@ -121,7 +121,7 @@
       "stock_code": "2330",
       "stock_name": "台積電",
       "quantity": 0.15,
-      "current_price": 2410.0,
+      "current_price": 2490.0,
       "score_est": "65-70",
       "verdict": "續抱觀察",
       "reason": "基本面極強(EPS YoY+58%)+AI伺服器與半導體超強催化核心龍頭，但籌碼面出現轉弱訊號：反轉狀態unknown(近日累計轉負-37,528張)+今日法人轉賣-863張，籌碼判斷「法人出貨中」。持股極小(0.15張)，不建議加碼，密切觀察籌碼是否止穩"
@@ -130,46 +130,118 @@
       "stock_code": "1303",
       "stock_name": "南亞",
       "quantity": 1,
-      "current_price": 166.5,
+      "current_price": 183.0,
       "score_est": 79,
-      "verdict": "續抱觀察",
-      "reason": "同時是本次新推薦名單內的候選股，五維度評分79分，落在70-79可考慮區間，未達80分加碼門檻，建議續抱不加碼"
+      "verdict": "留意減碼",
+      "reason": "🔴盤中新增：今日確認已列入TWSE處置股（近30日漲幅+124.0%、近60日+137.4%，均超過注意標準），流動性風險極高。法人仍買超(真連續2天+7,841張)、五維度評分79分落在可考慮區間，但處置股狀態覆蓋原評分結論，建議減碼避開，不宜加碼或留戀漲勢"
     },
     {
       "stock_code": "6770",
       "stock_name": "力積電",
       "quantity": 2,
-      "current_price": 79.7,
+      "current_price": 74.6,
       "score_est": "N/A",
-      "verdict": "留意減碼",
-      "reason": "反轉預警觸發Level 4：今日爆量賣超-18,653張(佔日均量9.5%)，籌碼判斷「法人出貨中」。儘管EPS YoY+1392%基本面極強，但籌碼面出現法人大舉出貨訊號，屬CLAUDE.md強制降級/警示對象，建議留意減碼"
+      "verdict": "建議出場",
+      "reason": "反轉預警持續Level 4：今日再度爆量賣超-18,653張(佔日均量8.8%)，manual_exit_checker判定籌碼型論點「賣」（無對應美股利多/利空數據，但籌碼持續惡化）。現價74.6尚未跌破停損73.26(緩衝~1.8%)，但法人出貨明確，建議出場"
     },
     {
       "stock_code": "2337",
       "stock_name": "旺宏",
       "quantity": 1,
-      "current_price": 155.5,
+      "current_price": 145.0,
       "score_est": "N/A",
-      "verdict": "留意減碼",
-      "reason": "反轉預警觸發Level 4：今日爆量賣超-40,606張(佔日均量41.4%)，籌碼判斷「法人出貨中」，且今日美股Western Digital -4.78%對NAND/儲存記憶體產業已觸發Level 1警示(-5分)。雖EPS YoY+292%、營收+60%基本面優異，但籌碼面訊號嚴重，建議留意減碼"
+      "verdict": "強制停損",
+      "reason": "🛑現價145.0已跌破停損147.6，依「停損永遠優先」規則強制出場，覆蓋manual_exit_checker原「觀察1天」判斷（該判斷未及時反映盤中殺價）。反轉預警持續Level 4：今日爆量賣超-40,606張(佔日均量37.3%)"
     },
     {
       "stock_code": "2313",
       "stock_name": "華通",
       "quantity": 2,
-      "current_price": 232.5,
+      "current_price": 225.5,
       "score_est": "N/A",
-      "verdict": "留意減碼",
-      "reason": "反轉預警觸發Level 3：近2日累計賣超-8,349張，累計轉負，確認反轉。價格位置月線下(月季雙線下)基本面亦無明顯成長動能(營收YoY 0%)，建議留意減碼"
+      "verdict": "強制停損",
+      "reason": "🛑現價225.5已跌破停損235.98，強制出場。反轉預警升級為Level 4：連續賣超4天，今日再爆量賣超-1,079張(佔日均量6.3%)，manual_exit_checker判定「賣」"
     },
     {
       "stock_code": "3090",
       "stock_name": "日電貿",
       "quantity": 1,
-      "current_price": 322.5,
+      "current_price": 334.0,
       "score_est": 62,
       "verdict": "續抱觀察",
-      "reason": "反轉Level 0安全+真連續買超5天(觀測窗口內全買)+被動元件通路受惠國巨漲價潮，基本面/籌碼皆健康，但5日已上漲+6.6%觸及已大漲門檻扣10分，未達加碼標準，建議續抱觀察"
+      "reason": "反轉Level 0安全，法人今日仍小量買超+145張(累計+8,655張)。已知處置股(06/23~07/08，5分鐘撮合)，近30日漲幅+105.5%/60日+268.2%皆超注意標準，續抱觀察不加碼"
     }
-  ]
+  ],
+  "intraday_update": {
+    "scan_time": "12:35",
+    "taiex": "47006.6 (+1.91%)",
+    "intraday_detector_signals": 1,
+    "track_b_new_recommendations": 0,
+    "track_b_intraday_candidates_screened": [
+      "2409友達(面板龍頭,真連續2天,無面板催化排除)",
+      "1802台玻(未分類,真連續2天,無催化排除)",
+      "2890永豐金(金融,真連續6天最強,無金融催化排除)",
+      "2610華航(航空,真連續5天,同軌道A長榮航排除)",
+      "2377微星(未分類,5日+9.4%接近已大漲門檻排除)",
+      "2801彰銀(金融,真連續5天,無金融催化排除)",
+      "1314中石化(未分類,無催化排除)",
+      "2312金寶(衛星通訊,真連續僅3天規模偏小排除)",
+      "1615大山(偵測器強訊號60分,但真連續買超僅3天/累計僅+217張/不在TOP50,排除)"
+    ],
+    "critical_alerts": [
+      {
+        "stock_code": "2337",
+        "stock_name": "旺宏",
+        "alert_type": "STOP_LOSS_TRIGGERED",
+        "current_price": 145.0,
+        "stop_loss_price": 147.6,
+        "reversal_level": 4,
+        "action": "強制出場（停損已觸及，覆蓋manual_exit_checker「觀察1天」）"
+      },
+      {
+        "stock_code": "2313",
+        "stock_name": "華通",
+        "alert_type": "STOP_LOSS_TRIGGERED",
+        "current_price": 225.5,
+        "stop_loss_price": 235.98,
+        "reversal_level": 4,
+        "action": "強制出場（停損已觸及）"
+      },
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "alert_type": "LEVEL4_CHIP_DETERIORATION",
+        "current_price": 74.6,
+        "stop_loss_price": 73.26,
+        "reversal_level": 4,
+        "action": "未觸停損但manual_exit_checker判定「賣」，建議出場"
+      },
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "alert_type": "DISPOSITION_STOCK_CONFIRMED",
+        "current_price": 183.0,
+        "stop_loss_price": 149.85,
+        "reversal_level": 0,
+        "action": "今日新增列入處置股，建議減碼避開"
+      },
+      {
+        "stock_code": "4958",
+        "stock_name": "臻鼎-KY",
+        "alert_type": "DISPOSITION_RISK_HIGH",
+        "current_price": 613.0,
+        "stop_loss_price": 567.0,
+        "reversal_level": 0,
+        "action": "60日漲幅+187.6%已超130%注意標準，尚未正式列處置但風險極高，建議減碼30-50%"
+      }
+    ],
+    "holdings_monitor": {
+      "2330": {"price": 2490.0, "status": "觀察（累計負但未觸發預警，趨勢型持股不賣）"},
+      "1303": {"price": 183.0, "status": "🔴🔴已列處置股，建議減碼避開"},
+      "6770": {"price": 74.6, "status": "Level4籌碼惡化，manual_exit_checker判定賣"},
+      "2337": {"price": 145.0, "status": "已跌破停損，強制出場"},
+      "2313": {"price": 225.5, "status": "已跌破停損，強制出場"},
+      "3090": {"price": 334.0, "status": "已知處置股，Level0安全，續抱觀察"}
+    }
+  }
 }
