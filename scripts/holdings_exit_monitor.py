@@ -355,7 +355,7 @@ def load_recommendations():
 
 
 def check_buy_signal(rec):
-    """回到推薦價提醒：現價 ≤ 推薦價 → 可考慮進場"""
+    """回到推薦價提醒：現價 ≤ 推薦價 且 現價 > 前週低點 → 可考慮進場"""
     code = str(rec.get("stock_code") or rec.get("symbol", ""))
     name = rec.get("stock_name") or rec.get("name", code)
     recommend_price = rec.get("recommend_price")
@@ -367,12 +367,24 @@ def check_buy_signal(rec):
     if not price:
         return None
 
+    weekly = get_weekly_data(code)
+    prev_low = get_prev_week_low(weekly)
+
     if price <= recommend_price:
         diff_pct = (price - recommend_price) / recommend_price * 100
+        # 跌破前週低點 → 下跌趨勢，不建議買入
+        if prev_low and price < prev_low:
+            return {
+                "code": code, "name": name, "price": price,
+                "recommend_price": recommend_price,
+                "signal": "BELOW_PREV_LOW",
+                "msg": f"⛔ 回到推薦價但跌破前週低 {prev_low}：現價 {price}（{diff_pct:+.1f}%）→ 不建議進場"
+            }
         return {
             "code": code, "name": name, "price": price,
             "recommend_price": recommend_price,
-            "msg": f"📉 回到推薦價：現價 {price} ≤ 推薦 {recommend_price}（{diff_pct:+.1f}%）→ 可考慮進場"
+            "signal": "BUY",
+            "msg": f"📉 回到推薦價：現價 {price}（{diff_pct:+.1f}%），前週低 {prev_low} → 可考慮進場"
         }
     return None
 
@@ -442,24 +454,26 @@ def run_once():
         for rec in recs:
             code = str(rec.get("stock_code") or rec.get("symbol", ""))
             name = rec.get("stock_name") or rec.get("name", code)
-            recommend_price = rec.get("recommend_price")
+            rec_price = rec.get("recommend_price")
+            result = check_buy_signal(rec)
             price = fetch_realtime(code)
-            if price is None or not recommend_price:
+            if price is None or not rec_price:
                 print(f"  {code} {name}：無法取得價格")
                 continue
-            recommend_price = float(recommend_price)
-            diff_pct = (price - recommend_price) / recommend_price * 100
-            if price <= recommend_price:
+            diff_pct = (price - float(rec_price)) / float(rec_price) * 100
+            if result is None:
+                print(f"  {code} {name}：現價 {price}，推薦 {rec_price}（{diff_pct:+.1f}%）— 未回檔")
+            elif result["signal"] == "BELOW_PREV_LOW":
+                print(f"  {code} {name}：{result['msg']}")
+            else:
                 alert_key = f"BUY_{code}_{today}_PRICE"
-                print(f"  {code} {name}：現價 {price}，推薦 {recommend_price}（{diff_pct:+.1f}%）→ 📉 可進場")
+                print(f"  {code} {name}：現價 {price}，推薦 {rec_price}（{diff_pct:+.1f}%）→ 📉 可進場")
                 if alert_key not in alert_log:
-                    buy_triggered.append(f"{name}（{code}）\n📉 回到推薦價：現價 {price} ≤ 推薦 {recommend_price}（{diff_pct:+.1f}%）→ 可考慮進場")
+                    buy_triggered.append(f"{name}（{code}）\n{result['msg']}")
                     if not DRY_RUN:
                         alert_log[alert_key] = now.strftime("%H:%M")
                 else:
                     print(f"    （今日已通知過）")
-            else:
-                print(f"  {code} {name}：現價 {price}，推薦 {recommend_price}（{diff_pct:+.1f}%）— 未回檔")
             time.sleep(0.3)
 
         if buy_triggered:
