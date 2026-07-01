@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-持倉出場監控 — 盤中持續監控實際持股的出場訊號
+持倉出場監控 — 盤中持續監控實際持股的出場訊號 + 推薦股回檔買入提醒
 
 監控對象：portfolio/my_holdings.yaml 中 quantity > 0 的股票
 出場訊號：
@@ -9,6 +9,9 @@
   ⚠️  前週低點  ：現價跌破前週K棒低點（盤中預警）
   📅 週五確認  ：週K收盤 < 前週低點 → Method C 出場
   📅 週五確認  ：週K收盤 < 週線20MA → Method B 出場
+
+買入提醒：
+  📉 回到推薦價：今日推薦股現價 ≤ tracking.json 的 recommend_price → 可考慮進場
 
 用法：
     python scripts/holdings_exit_monitor.py           # 執行一次
@@ -169,10 +172,9 @@ def get_prev_week_low(weekly):
     """前一根完整週K的低點"""
     if weekly is None or len(weekly) < 2:
         return None
-    # 如果本週還在進行中，[-1] 是本週，[-2] 是前週
-    # 如果是週一開盤前，[-1] 就是上週
-    # 用 [-2] 確保拿到完整收盤的前週
     return float(weekly.iloc[-2]["Low"])
+
+
 
 
 def get_weekly_ma20(weekly):
@@ -309,6 +311,48 @@ def send_line(text):
         print(f"  LINE 推送失敗: {resp.status_code}")
 
 
+# ── 買入訊號：推薦股監控 ──────────────────────────────────
+
+def load_recommendations():
+    """讀取今日 tracking.json 的 holding 推薦股"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    f = PROJECT_DIR / "data" / "tracking" / f"tracking_{today}.json"
+    if not f.exists():
+        return []
+    try:
+        d = json.load(open(f, encoding="utf-8"))
+        recs = [r for r in d.get("recommendations", [])
+                if r.get("result", "holding") == "holding"]
+        recs += [r for r in d.get("track_b_recommendations", [])
+                 if r.get("result", "holding") == "holding"]
+        return recs
+    except Exception:
+        return []
+
+
+def check_buy_signal(rec):
+    """回到推薦價提醒：現價 ≤ 推薦價 → 可考慮進場"""
+    code = str(rec.get("stock_code") or rec.get("symbol", ""))
+    name = rec.get("stock_name") or rec.get("name", code)
+    recommend_price = rec.get("recommend_price")
+    if not recommend_price:
+        return None
+    recommend_price = float(recommend_price)
+
+    price = fetch_realtime(code)
+    if not price:
+        return None
+
+    if price <= recommend_price:
+        diff_pct = (price - recommend_price) / recommend_price * 100
+        return {
+            "code": code, "name": name, "price": price,
+            "recommend_price": recommend_price,
+            "msg": f"📉 回到推薦價：現價 {price} ≤ 推薦 {recommend_price}（{diff_pct:+.1f}%）→ 可考慮進場"
+        }
+    return None
+
+
 # ── 主要邏輯 ──────────────────────────────────────────────
 
 def is_market_hours():
@@ -365,6 +409,35 @@ def run_once():
     else:
         codes = [h["symbol"] for h in holdings]
         print(f"  {' '.join(codes)} — 無出場訊號")
+
+    # ── 買入訊號：推薦股回到推薦價 ─────────────────────
+    recs = load_recommendations()
+    if recs:
+        print(f"\n[買入掃描] {len(recs)} 檔推薦股...")
+        buy_triggered = []
+        for rec in recs:
+            result = check_buy_signal(rec)
+            if not result:
+                continue
+            code, name = result["code"], result["name"]
+            alert_key = f"BUY_{code}_{today}_PRICE"
+            print(f"  {code} {name}：{result['msg']}")
+            if alert_key not in alert_log:
+                buy_triggered.append(f"{name}（{code}）\n{result['msg']}")
+                if not DRY_RUN:
+                    alert_log[alert_key] = now.strftime("%H:%M")
+            else:
+                print(f"    （今日已通知過）")
+            time.sleep(0.3)
+
+        if buy_triggered:
+            msg = f"📉 回到推薦價 {now.strftime('%m/%d %H:%M')}\n\n" + "\n\n".join(buy_triggered)
+            print(f"\n{msg}")
+            if not DRY_RUN:
+                send_line(msg)
+                save_alert_log(alert_log)
+        else:
+            print("  — 無回檔訊號")
 
 
 def run_loop():
