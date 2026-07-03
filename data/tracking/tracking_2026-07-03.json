@@ -19,7 +19,13 @@
       "reason": "avg_rank2.5(TOP10最佳)+buy_ratio23.8%(+2)+真連續買超5天(+1)，外資5日淨買+199K；中東地緣政治🔴超強催化(塑化龍頭)；EPS YoY+5000%低基期(+5)；⚠️MA20+18.6%/MA60+20.6%價格位置偏高，留意追高風險",
       "intraday_price": 62.4,
       "intraday_change_pct": 4.52,
-      "intraday_note": "法人買超+26,647、真連續買超5天、站穩MA5/MA10，無出場訊號，續抱（同時為使用者今日新買進持股，成本60.085）"
+      "intraday_note": "法人買超+26,647、真連續買超5天、站穩MA5/MA10，無出場訊號，續抱（同時為使用者今日新買進持股，成本60.085）",
+      "actual_close": 62.1,
+      "day_change_pct": 4.02,
+      "result": "holding",
+      "holding_status": "D0/10 | +4.0% | 續抱，同時為使用者今日新買進持股",
+      "close_price": 62.1,
+      "change_percent": 4.02
     },
     {
       "stock_code": "1326",
@@ -35,7 +41,13 @@
       "reason": "avg_rank_best5.0(近7日)+真連續買超2天，外資5日淨買+21K；中東地緣政治🔴超強催化(台化轉型半導體材料)；EPS YoY+73.7%(+5)；5日回檔-5.4%尚未過熱，佈局中未追高",
       "intraday_price": 68.0,
       "intraday_change_pct": 9.85,
-      "intraday_note": "法人買超+3,903、真連續買超2天、站穩MA5/MA10，無出場訊號，續抱"
+      "intraday_note": "法人買超+3,903、真連續買超2天、站穩MA5/MA10，無出場訊號，續抱",
+      "actual_close": 68.0,
+      "day_change_pct": 9.85,
+      "result": "holding",
+      "holding_status": "D0/10 | +9.8% | 距目標僅0.1%，5日漲幅已接近過熱，續抱觀察",
+      "close_price": 68.0,
+      "change_percent": 9.85
     },
     {
       "stock_code": "2883",
@@ -51,20 +63,151 @@
       "reason": "avg_rank10(TOP10-20)+真連續買超3天，外資5日淨買+26K；聯準會利率政策🔴超強催化(降息預期利多金融股)；營收YoY+805.6%+近5日回檔-8.5%(+5，黃金買點)；EPS YoY+150%(+5)",
       "intraday_price": 28.2,
       "intraday_change_pct": 1.08,
-      "intraday_note": "exit_signal_checker建議減碼（跌破MA5/MA10、高點回落-8.4%），惟法人仍大買+12,764、真連續買超3天，未觸停損非強制出場，建議減碼30-50%控風險"
+      "intraday_note": "exit_signal_checker建議減碼（跌破MA5/MA10、高點回落-8.4%），惟法人仍大買+12,764、真連續買超3天，未觸停損非強制出場，建議減碼30-50%控風險",
+      "actual_close": 28.45,
+      "day_change_pct": 1.97,
+      "result": "holding",
+      "holding_status": "D0/10 | +2.0% | exit_signal_checker技術面轉弱（跌破MA5/MA10、高點回落-7.6%），未觸停損，建議減碼30-50%控風險",
+      "close_price": 28.45,
+      "change_percent": 1.97
     }
   ],
   "track_b_recommendations": [],
   "track_b_observations": [
-    {"stock_code": "1409", "stock_name": "新纖", "result": "excluded", "reason": "5日大漲+18.8%(>10%)預設不評分＋法人態度不明確(累計轉負-17K)＋營收連續衰退10個月"},
-    {"stock_code": "3605", "stock_name": "宏致", "result": "excluded", "reason": "偵測器強訊號(80分)，惟5日大漲+19.9%(>10%)預設不評分，EPS連續2季YoY負成長"},
-    {"stock_code": "4585", "stock_name": "達明", "result": "excluded", "reason": "偵測器強訊號，惟5日大漲+15.9%(>10%)預設不評分，EPS連續3季YoY負成長"},
-    {"stock_code": "1709", "stock_name": "和益", "result": "excluded", "reason": "偵測器強訊號，惟5日大漲+11.4%(>10%)預設不評分"},
-    {"stock_code": "2105", "stock_name": "正新", "result": "score_below_threshold", "estimated_score": 56, "reason": "avg_rank約7但今晨已標註追高風險，5日+10.0%已大漲修正抵銷法人優勢"},
-    {"stock_code": "6505", "stock_name": "台塑化", "result": "score_below_threshold", "estimated_score": "65-70", "reason": "偵測器強訊號，中東地緣政治超強催化+塑化龍頭產業邏輯強，但5日已大漲+9.9%修正-10分且真連續買超僅1天，估算未達75分門檻，列入觀察"},
-    {"stock_code": "7705", "stock_name": "三商餐飲", "result": "score_below_threshold", "estimated_score": 51, "reason": "偵測器強訊號，惟法人規模極小(累計51張)非TOP50規模，可信度低"},
-    {"stock_code": "1236", "stock_name": "宏亞", "result": "score_below_threshold", "estimated_score": 38, "reason": "偵測器強訊號，惟法人規模極小＋營收連續衰退3個月"},
-    {"stock_code": "1806", "stock_name": "冠軍", "result": "score_below_threshold", "estimated_score": 35, "reason": "偵測器強訊號，惟法人規模極小＋營收連續衰退4個月＋EPS連續3季負成長"},
-    {"stock_code": "4526", "stock_name": "東台", "result": "score_below_threshold", "estimated_score": 44, "reason": "法人規模偏小＋營收連續衰退6個月"}
-  ]
+    {
+      "stock_code": "1409",
+      "stock_name": "新纖",
+      "result": "excluded",
+      "reason": "5日大漲+18.8%(>10%)預設不評分＋法人態度不明確(累計轉負-17K)＋營收連續衰退10個月"
+    },
+    {
+      "stock_code": "3605",
+      "stock_name": "宏致",
+      "result": "excluded",
+      "reason": "偵測器強訊號(80分)，惟5日大漲+19.9%(>10%)預設不評分，EPS連續2季YoY負成長"
+    },
+    {
+      "stock_code": "4585",
+      "stock_name": "達明",
+      "result": "excluded",
+      "reason": "偵測器強訊號，惟5日大漲+15.9%(>10%)預設不評分，EPS連續3季YoY負成長"
+    },
+    {
+      "stock_code": "1709",
+      "stock_name": "和益",
+      "result": "excluded",
+      "reason": "偵測器強訊號，惟5日大漲+11.4%(>10%)預設不評分"
+    },
+    {
+      "stock_code": "2105",
+      "stock_name": "正新",
+      "result": "score_below_threshold",
+      "estimated_score": 56,
+      "reason": "avg_rank約7但今晨已標註追高風險，5日+10.0%已大漲修正抵銷法人優勢"
+    },
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "result": "score_below_threshold",
+      "estimated_score": "65-70",
+      "reason": "偵測器強訊號，中東地緣政治超強催化+塑化龍頭產業邏輯強，但5日已大漲+9.9%修正-10分且真連續買超僅1天，估算未達75分門檻，列入觀察"
+    },
+    {
+      "stock_code": "7705",
+      "stock_name": "三商餐飲",
+      "result": "score_below_threshold",
+      "estimated_score": 51,
+      "reason": "偵測器強訊號，惟法人規模極小(累計51張)非TOP50規模，可信度低"
+    },
+    {
+      "stock_code": "1236",
+      "stock_name": "宏亞",
+      "result": "score_below_threshold",
+      "estimated_score": 38,
+      "reason": "偵測器強訊號，惟法人規模極小＋營收連續衰退3個月"
+    },
+    {
+      "stock_code": "1806",
+      "stock_name": "冠軍",
+      "result": "score_below_threshold",
+      "estimated_score": 35,
+      "reason": "偵測器強訊號，惟法人規模極小＋營收連續衰退4個月＋EPS連續3季負成長"
+    },
+    {
+      "stock_code": "4526",
+      "stock_name": "東台",
+      "result": "score_below_threshold",
+      "estimated_score": 44,
+      "reason": "法人規模偏小＋營收連續衰退6個月"
+    }
+  ],
+  "tomorrow_recommendations": [],
+  "removed_stocks": [
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "reason": "反轉Level4爆量賣超-2,079張（佔日均量9.1%）"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "reason": "反轉Level4爆量賣超-10,462張（佔日均量40.8%）"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "reason": "反轉Level4爆量賣超-2,302張（佔日均量5.9%）"
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "reason": "估算60分左右，真連續買超僅1天+avg_rank偏低+外資持股比週減-0.22%(-3分)，未達70分門檻"
+    },
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "reason": "估算55分左右，真連續買超僅1天+外資投信對決（態度不明確），未達70分門檻"
+    },
+    {
+      "stock_code": "1717",
+      "stock_name": "長興",
+      "reason": "估算50分左右，真連續買超僅1天+外資持股比週減-0.32%(-3分)，未達70分門檻"
+    },
+    {
+      "stock_code": "8111",
+      "stock_name": "至上",
+      "reason": "法人數據不足0天，無法判斷，不評分"
+    }
+  ],
+  "yesterday_verification": {
+    "date": "2026-07-03",
+    "accuracy": "60.3%",
+    "total_success": 243,
+    "total_fail": 160,
+    "settled_count": 403,
+    "holding_count": 222,
+    "results": [
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "result": "holding",
+        "gain_pct": 4.02,
+        "note": "D0/10 | 收盤62.1(+4.0%) | 距目標5.7%／距停損13.5%，持有中（同時為使用者今日新買進持股）"
+      },
+      {
+        "stock_code": "1326",
+        "stock_name": "台化",
+        "result": "holding",
+        "gain_pct": 9.85,
+        "note": "D0/10 | 收盤68.0(+9.8%) | 距目標0.1%／距停損18.1%，持有中，5日漲幅接近過熱"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "result": "holding",
+        "gain_pct": 1.97,
+        "note": "D0/10 | 收盤28.45(+2.0%) | 距目標7.9%／距停損11.7%，exit_signal技術面轉弱建議減碼30-50%"
+      }
+    ]
+  }
 }
