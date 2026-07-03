@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-07-01",
+  "last_updated": "2026-07-03",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -1114,6 +1114,11 @@
               "code": "6770",
               "name": "力積電",
               "category": "DRAM 與記憶體"
+            },
+            {
+              "code": "3006",
+              "name": "晶豪科",
+              "category": "DRAM與記憶體"
             }
           ]
         }
@@ -1267,6 +1272,16 @@
             {
               "code": "8358",
               "name": "金居",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "3380",
+              "name": "明泰",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "3023",
+              "name": "信邦",
               "category": "光通訊與網通"
             }
           ]
@@ -1955,7 +1970,38 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": []
+          "stocks": [
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "2454",
+              "name": "聯發科",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "2382",
+              "name": "廣達",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "3661",
+              "name": "世芯-KY",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "2376",
+              "name": "技嘉",
+              "category": "AI伺服器與半導體"
+            }
+          ]
         }
       }
     },
@@ -2065,6 +2111,21 @@
               "code": "6515",
               "name": "穎崴",
               "category": "被動元件族群（含成熟製程漲價潮）"
+            },
+            {
+              "code": "8374",
+              "name": "羅昇",
+              "category": "被動元件族群（含成熟製程漲價潮）"
+            },
+            {
+              "code": "3042",
+              "name": "晶技",
+              "category": "被動元件族群（含成熟製程漲價潮）"
+            },
+            {
+              "code": "6191",
+              "name": "精成科",
+              "category": "被動元件族群（含成熟製程漲價潮）"
             }
           ]
         }
@@ -2099,6 +2160,16 @@
             {
               "code": "1301",
               "name": "台塑",
+              "category": "中東地緣政治（含航運）"
+            },
+            {
+              "code": "1314",
+              "name": "中石化",
+              "category": "中東地緣政治（含航運）"
+            },
+            {
+              "code": "1326",
+              "name": "台化",
               "category": "中東地緣政治（含航運）"
             }
           ]
@@ -2238,6 +2309,16 @@
             {
               "code": "8358",
               "name": "金居",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "8463",
+              "name": "潤泰材",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2301",
+              "name": "光寶科",
               "category": "企業財報重點"
             }
           ]
@@ -2416,6 +2497,11 @@
               "code": "2330",
               "name": "台積電",
               "category": "中國AI模型競爭"
+            },
+            {
+              "code": "3661",
+              "name": "世芯-KY",
+              "category": "中國AI模型競爭"
             }
           ]
         }
@@ -2556,6 +2642,11 @@
               "code": "1303",
               "name": "南亞",
               "category": "台股市場動態"
+            },
+            {
+              "code": "2344",
+              "name": "華邦電",
+              "category": "台股市場動態"
             }
           ]
         }
@@ -2678,6 +2769,34 @@
               "code": "2408",
               "name": "南亞科",
               "category": "南韓與日本超級AI計畫"
+            }
+          ]
+        }
+      }
+    },
+    "Apple-Intel-UMC半導體新鐵三角": {
+      "name": "Apple-Intel-UMC半導體新鐵三角",
+      "catalysts": [
+        "Apple-Intel-UMC半導體新鐵三角",
+        "Apple",
+        "Intel",
+        "UMC",
+        "半導體新鐵三角"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2303",
+              "name": "聯電",
+              "category": "Apple-Intel-UMC半導體新鐵三角"
+            },
+            {
+              "code": "3711",
+              "name": "日月光",
+              "category": "Apple-Intel-UMC半導體新鐵三角"
             }
           ]
         }
