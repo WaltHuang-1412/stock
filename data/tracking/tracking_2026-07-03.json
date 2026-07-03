@@ -16,7 +16,10 @@
       "settlement_days": 10,
       "position": "15-20%",
       "score": 92,
-      "reason": "avg_rank2.5(TOP10最佳)+buy_ratio23.8%(+2)+真連續買超5天(+1)，外資5日淨買+199K；中東地緣政治🔴超強催化(塑化龍頭)；EPS YoY+5000%低基期(+5)；⚠️MA20+18.6%/MA60+20.6%價格位置偏高，留意追高風險"
+      "reason": "avg_rank2.5(TOP10最佳)+buy_ratio23.8%(+2)+真連續買超5天(+1)，外資5日淨買+199K；中東地緣政治🔴超強催化(塑化龍頭)；EPS YoY+5000%低基期(+5)；⚠️MA20+18.6%/MA60+20.6%價格位置偏高，留意追高風險",
+      "intraday_price": 62.4,
+      "intraday_change_pct": 4.52,
+      "intraday_note": "法人買超+26,647、真連續買超5天、站穩MA5/MA10，無出場訊號，續抱（同時為使用者今日新買進持股，成本60.085）"
     },
     {
       "stock_code": "1326",
@@ -29,7 +32,10 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 82,
-      "reason": "avg_rank_best5.0(近7日)+真連續買超2天，外資5日淨買+21K；中東地緣政治🔴超強催化(台化轉型半導體材料)；EPS YoY+73.7%(+5)；5日回檔-5.4%尚未過熱，佈局中未追高"
+      "reason": "avg_rank_best5.0(近7日)+真連續買超2天，外資5日淨買+21K；中東地緣政治🔴超強催化(台化轉型半導體材料)；EPS YoY+73.7%(+5)；5日回檔-5.4%尚未過熱，佈局中未追高",
+      "intraday_price": 68.0,
+      "intraday_change_pct": 9.85,
+      "intraday_note": "法人買超+3,903、真連續買超2天、站穩MA5/MA10，無出場訊號，續抱"
     },
     {
       "stock_code": "2883",
@@ -42,7 +48,23 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 73,
-      "reason": "avg_rank10(TOP10-20)+真連續買超3天，外資5日淨買+26K；聯準會利率政策🔴超強催化(降息預期利多金融股)；營收YoY+805.6%+近5日回檔-8.5%(+5，黃金買點)；EPS YoY+150%(+5)"
+      "reason": "avg_rank10(TOP10-20)+真連續買超3天，外資5日淨買+26K；聯準會利率政策🔴超強催化(降息預期利多金融股)；營收YoY+805.6%+近5日回檔-8.5%(+5，黃金買點)；EPS YoY+150%(+5)",
+      "intraday_price": 28.2,
+      "intraday_change_pct": 1.08,
+      "intraday_note": "exit_signal_checker建議減碼（跌破MA5/MA10、高點回落-8.4%），惟法人仍大買+12,764、真連續買超3天，未觸停損非強制出場，建議減碼30-50%控風險"
     }
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {"stock_code": "1409", "stock_name": "新纖", "result": "excluded", "reason": "5日大漲+18.8%(>10%)預設不評分＋法人態度不明確(累計轉負-17K)＋營收連續衰退10個月"},
+    {"stock_code": "3605", "stock_name": "宏致", "result": "excluded", "reason": "偵測器強訊號(80分)，惟5日大漲+19.9%(>10%)預設不評分，EPS連續2季YoY負成長"},
+    {"stock_code": "4585", "stock_name": "達明", "result": "excluded", "reason": "偵測器強訊號，惟5日大漲+15.9%(>10%)預設不評分，EPS連續3季YoY負成長"},
+    {"stock_code": "1709", "stock_name": "和益", "result": "excluded", "reason": "偵測器強訊號，惟5日大漲+11.4%(>10%)預設不評分"},
+    {"stock_code": "2105", "stock_name": "正新", "result": "score_below_threshold", "estimated_score": 56, "reason": "avg_rank約7但今晨已標註追高風險，5日+10.0%已大漲修正抵銷法人優勢"},
+    {"stock_code": "6505", "stock_name": "台塑化", "result": "score_below_threshold", "estimated_score": "65-70", "reason": "偵測器強訊號，中東地緣政治超強催化+塑化龍頭產業邏輯強，但5日已大漲+9.9%修正-10分且真連續買超僅1天，估算未達75分門檻，列入觀察"},
+    {"stock_code": "7705", "stock_name": "三商餐飲", "result": "score_below_threshold", "estimated_score": 51, "reason": "偵測器強訊號，惟法人規模極小(累計51張)非TOP50規模，可信度低"},
+    {"stock_code": "1236", "stock_name": "宏亞", "result": "score_below_threshold", "estimated_score": 38, "reason": "偵測器強訊號，惟法人規模極小＋營收連續衰退3個月"},
+    {"stock_code": "1806", "stock_name": "冠軍", "result": "score_below_threshold", "estimated_score": 35, "reason": "偵測器強訊號，惟法人規模極小＋營收連續衰退4個月＋EPS連續3季負成長"},
+    {"stock_code": "4526", "stock_name": "東台", "result": "score_below_threshold", "estimated_score": 44, "reason": "法人規模偏小＋營收連續衰退6個月"}
   ]
 }
