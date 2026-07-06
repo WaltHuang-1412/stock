@@ -17,11 +17,14 @@
       "position": "15-20%",
       "score": 91,
       "reason": "Module A L2早期佈局(連4天在TOP50)+avg_rank=15+外資持股比+1.06%+EPS YoY+200%+營收+18%回檔-6.6%(黃金買點)+AI伺服器與半導體超強催化",
-      "close_price": 107.0,
-      "actual_close": 107.0,
-      "change_percent": 7.54,
-      "result": "holding",
-      "holding_status": "D0/10 +7.5%，AI伺服器與半導體超強催化，籌碼健康"
+      "close_price": 115.5,
+      "actual_close": 115.5,
+      "change_percent": 16.08,
+      "result": "success",
+      "holding_status": "D0/10 +7.5%，AI伺服器與半導體超強催化，籌碼健康",
+      "settled_price": 115.5,
+      "settled_date": "2026-07-06",
+      "settlement_note": "收盤 115.5 >= 目標 111.5"
     },
     {
       "stock_code": "2449",
@@ -154,9 +157,21 @@
   ],
   "track_b_recommendations": [],
   "track_b_observations": [
-    {"stock_code": "3017", "stock_name": "奇鋐", "reason": "Module B AMD早期佈局候選，通過基礎籌碼篩選，但不在TOP50且EPS數據不足，觀察不推薦"},
-    {"stock_code": "6230", "stock_name": "尼得科超眾", "reason": "Module B AMD早期佈局候選，通過基礎籌碼篩選，但EPS連續3季負成長-5分+價格月線下，排除"},
-    {"stock_code": "3023", "stock_name": "信邦", "reason": "Module B AMD早期佈局候選，通過基礎籌碼篩選，但EPS連續4季負成長-5分，排除"}
+    {
+      "stock_code": "3017",
+      "stock_name": "奇鋐",
+      "reason": "Module B AMD早期佈局候選，通過基礎籌碼篩選，但不在TOP50且EPS數據不足，觀察不推薦"
+    },
+    {
+      "stock_code": "6230",
+      "stock_name": "尼得科超眾",
+      "reason": "Module B AMD早期佈局候選，通過基礎籌碼篩選，但EPS連續3季負成長-5分+價格月線下，排除"
+    },
+    {
+      "stock_code": "3023",
+      "stock_name": "信邦",
+      "reason": "Module B AMD早期佈局候選，通過基礎籌碼篩選，但EPS連續4季負成長-5分，排除"
+    }
   ],
   "holdings_evaluation": [
     {
@@ -284,37 +299,143 @@
       }
     ],
     "holdings_monitor": {
-      "2330": {"price": 2490.0, "status": "觀察（累計負但未觸發預警，趨勢型持股不賣）"},
-      "1303": {"price": 183.0, "status": "🔴🔴已列處置股，建議減碼避開"},
-      "6770": {"price": 74.6, "status": "Level4籌碼惡化，manual_exit_checker判定賣"},
-      "2337": {"price": 145.0, "status": "已跌破停損，強制出場"},
-      "2313": {"price": 225.5, "status": "已跌破停損，強制出場"},
-      "3090": {"price": 334.0, "status": "已知處置股，Level0安全，續抱觀察"}
+      "2330": {
+        "price": 2490.0,
+        "status": "觀察（累計負但未觸發預警，趨勢型持股不賣）"
+      },
+      "1303": {
+        "price": 183.0,
+        "status": "🔴🔴已列處置股，建議減碼避開"
+      },
+      "6770": {
+        "price": 74.6,
+        "status": "Level4籌碼惡化，manual_exit_checker判定賣"
+      },
+      "2337": {
+        "price": 145.0,
+        "status": "已跌破停損，強制出場"
+      },
+      "2313": {
+        "price": 225.5,
+        "status": "已跌破停損，強制出場"
+      },
+      "3090": {
+        "price": 334.0,
+        "status": "已知處置股，Level0安全，續抱觀察"
+      }
     }
   },
   "removed_stocks": [
-    {"code": "2327", "name": "國巨", "reason": "被動元件族群🔴超強催化，但法人出貨中(5天累計-8,359/外資-17K)，不通過準確率篩選第2項"},
-    {"code": "2481", "name": "強茂", "reason": "已在TWSE處置股清單，禁止進場"},
-    {"code": "2455", "name": "全新", "reason": "已在TWSE處置股清單，禁止進場"},
-    {"code": "8046", "name": "南電", "reason": "Level0安全+外資買超，但近6日漲幅+29.3%已達處置注意門檻，風險過高排除"},
-    {"code": "2059", "name": "川湖", "reason": "反轉Level4爆量賣超(-60張/佔日均量10.8%)"},
-    {"code": "2603", "name": "長榮", "reason": "反轉狀態不明(10日累計-8,793)，不可視為安全"},
-    {"code": "3035", "name": "智原", "reason": "反轉Level4爆量賣超(-1,284張/佔日均量15.7%)"},
-    {"code": "2834", "name": "臺企銀", "reason": "反轉Level4爆量賣超(-12,511張/佔日均量41.6%)"},
-    {"code": "2356", "name": "英業達", "reason": "反轉狀態不明(10日累計-15,637)，不可視為安全"},
-    {"code": "2890", "name": "永豐金", "reason": "三大法人合計連買6天+93K，但外資近5天-29K轉賣，不通過準確率篩選第2項"},
-    {"code": "2801", "name": "彰銀", "reason": "三大法人合計連買5天+30K，但外資近5天-9,308轉賣，不通過準確率篩選第2項"},
-    {"code": "2880", "name": "華南金", "reason": "外資近5天-57K賣超"},
-    {"code": "1402", "name": "遠東新", "reason": "外資近5天-24K賣超"},
-    {"code": "3045", "name": "台灣大", "reason": "外資近5天-1,930賣超"},
-    {"code": "2609", "name": "陽明", "reason": "外資近5天-11張轉負"},
-    {"code": "2312", "name": "金寶", "reason": "營收連續5個月衰退YoY-8.1%(-5分)，基本面惡化，儘管籌碼買超健康"},
-    {"code": "2353", "name": "宏碁", "reason": "營收+36.5%/EPS+35.3%雙強，但非蘋果供應鏈成員，找不到明確對應催化鏈，不通過準確率篩選第1項，寧缺勿濫不強行歸類"},
-    {"code": "3714", "name": "富采", "reason": "外資買超+反轉Level0安全，但LED非CPO/光通訊核心供應鏈，催化對齊存疑"},
-    {"code": "2323", "name": "中環", "reason": "外資買超+反轉Level0安全，但太陽能光碟通路找不到明確對應催化鏈"},
-    {"code": "2317", "name": "鴻海", "reason": "外資近5天-78K重度賣超"},
-    {"code": "2382", "name": "廣達", "reason": "外資累計轉負(-3,258)，且已為既有Track A追蹤中D6/10 holding，不重複推薦"},
-    {"code": "2454", "name": "聯發科", "reason": "法人態度不明確(投信-6,035)，外資僅+150微幅不足採計"}
+    {
+      "code": "2327",
+      "name": "國巨",
+      "reason": "被動元件族群🔴超強催化，但法人出貨中(5天累計-8,359/外資-17K)，不通過準確率篩選第2項"
+    },
+    {
+      "code": "2481",
+      "name": "強茂",
+      "reason": "已在TWSE處置股清單，禁止進場"
+    },
+    {
+      "code": "2455",
+      "name": "全新",
+      "reason": "已在TWSE處置股清單，禁止進場"
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "reason": "Level0安全+外資買超，但近6日漲幅+29.3%已達處置注意門檻，風險過高排除"
+    },
+    {
+      "code": "2059",
+      "name": "川湖",
+      "reason": "反轉Level4爆量賣超(-60張/佔日均量10.8%)"
+    },
+    {
+      "code": "2603",
+      "name": "長榮",
+      "reason": "反轉狀態不明(10日累計-8,793)，不可視為安全"
+    },
+    {
+      "code": "3035",
+      "name": "智原",
+      "reason": "反轉Level4爆量賣超(-1,284張/佔日均量15.7%)"
+    },
+    {
+      "code": "2834",
+      "name": "臺企銀",
+      "reason": "反轉Level4爆量賣超(-12,511張/佔日均量41.6%)"
+    },
+    {
+      "code": "2356",
+      "name": "英業達",
+      "reason": "反轉狀態不明(10日累計-15,637)，不可視為安全"
+    },
+    {
+      "code": "2890",
+      "name": "永豐金",
+      "reason": "三大法人合計連買6天+93K，但外資近5天-29K轉賣，不通過準確率篩選第2項"
+    },
+    {
+      "code": "2801",
+      "name": "彰銀",
+      "reason": "三大法人合計連買5天+30K，但外資近5天-9,308轉賣，不通過準確率篩選第2項"
+    },
+    {
+      "code": "2880",
+      "name": "華南金",
+      "reason": "外資近5天-57K賣超"
+    },
+    {
+      "code": "1402",
+      "name": "遠東新",
+      "reason": "外資近5天-24K賣超"
+    },
+    {
+      "code": "3045",
+      "name": "台灣大",
+      "reason": "外資近5天-1,930賣超"
+    },
+    {
+      "code": "2609",
+      "name": "陽明",
+      "reason": "外資近5天-11張轉負"
+    },
+    {
+      "code": "2312",
+      "name": "金寶",
+      "reason": "營收連續5個月衰退YoY-8.1%(-5分)，基本面惡化，儘管籌碼買超健康"
+    },
+    {
+      "code": "2353",
+      "name": "宏碁",
+      "reason": "營收+36.5%/EPS+35.3%雙強，但非蘋果供應鏈成員，找不到明確對應催化鏈，不通過準確率篩選第1項，寧缺勿濫不強行歸類"
+    },
+    {
+      "code": "3714",
+      "name": "富采",
+      "reason": "外資買超+反轉Level0安全，但LED非CPO/光通訊核心供應鏈，催化對齊存疑"
+    },
+    {
+      "code": "2323",
+      "name": "中環",
+      "reason": "外資買超+反轉Level0安全，但太陽能光碟通路找不到明確對應催化鏈"
+    },
+    {
+      "code": "2317",
+      "name": "鴻海",
+      "reason": "外資近5天-78K重度賣超"
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "reason": "外資累計轉負(-3,258)，且已為既有Track A追蹤中D6/10 holding，不重複推薦"
+    },
+    {
+      "code": "2454",
+      "name": "聯發科",
+      "reason": "法人態度不明確(投信-6,035)，外資僅+150微幅不足採計"
+    }
   ],
   "yesterday_verification": {
     "date": "2026-07-01",
@@ -324,11 +445,41 @@
     "settled_count": 400,
     "holding_count": 215,
     "results": [
-      {"stock_code": "1303", "stock_name": "南亞", "result": "success", "gain_pct": 9.91, "note": "D0達標：處置股5分鐘撮合下單日觸及目標183.0"},
-      {"stock_code": "2886", "stock_name": "兆豐金", "result": "success", "gain_pct": 3.71, "note": "D10到期：收盤46.15>推薦44.5"},
-      {"stock_code": "2337", "stock_name": "旺宏", "result": "fail", "gain_pct": -11.15, "note": "D3觸停損：收盤143.5≤停損145.35"},
-      {"stock_code": "2884", "stock_name": "玉山金", "result": "fail", "gain_pct": -6.53, "note": "D10到期：收盤32.9≤推薦35.2"},
-      {"stock_code": "2867", "stock_name": "三商壽", "result": "fail", "gain_pct": -3.28, "note": "D10到期：收盤8.25≤推薦8.53"}
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "result": "success",
+        "gain_pct": 9.91,
+        "note": "D0達標：處置股5分鐘撮合下單日觸及目標183.0"
+      },
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "result": "success",
+        "gain_pct": 3.71,
+        "note": "D10到期：收盤46.15>推薦44.5"
+      },
+      {
+        "stock_code": "2337",
+        "stock_name": "旺宏",
+        "result": "fail",
+        "gain_pct": -11.15,
+        "note": "D3觸停損：收盤143.5≤停損145.35"
+      },
+      {
+        "stock_code": "2884",
+        "stock_name": "玉山金",
+        "result": "fail",
+        "gain_pct": -6.53,
+        "note": "D10到期：收盤32.9≤推薦35.2"
+      },
+      {
+        "stock_code": "2867",
+        "stock_name": "三商壽",
+        "result": "fail",
+        "gain_pct": -3.28,
+        "note": "D10到期：收盤8.25≤推薦8.53"
+      }
     ]
   },
   "tomorrow_recommendations": [
@@ -362,11 +513,51 @@
   "tomorrow_notes": "2026-07-01盤後→07-02盤前注意事項：(1)🔴🔴 2337旺宏、2313華通已跌破停損但my_holdings.yaml尚未更新為出場，提醒使用者確認是否已於盤中/盤後手動賣出，若尚未賣出應優先處理 (2)6770力積電Level4籌碼惡化未觸停損(緩衝~1.4%)，manual_exit_checker判定賣，建議出場 (3)1303南亞(實際持股)+4958臻鼎-KY處置/高風險，建議減碼 (4)本次明日候選篩選僅2檔通過三項準確率篩選(催化對齊+外資近5天≥0+反轉Level0)，遠低於平時6-8檔，因今日環境為法人普遍調節：外資連賣6日(近5日-3,676億)、多檔候選觸及TWSE處置門檻(1303/2481/2455)、多檔Level4爆量賣超(2059/2327/3035/2834)，如實反映非湊數 (5)07/01 Warsh演講(今晚)+07/02非農(預估110-114K)為短線波動關鍵 (6)台股Q2+14,402點創史上最大單季紀錄，多檔個股觸及注意/處置標準，須留意處置股流動性風險",
   "after_market_update": {
     "settlement_today": [
-      {"code": "1303", "name": "南亞", "result": "success", "recommend_price": 166.5, "settled_price": 183.0, "change_pct": 9.91, "holding_days": 0},
-      {"code": "2886", "name": "兆豐金", "result": "success", "recommend_price": 44.5, "settled_price": 46.15, "change_pct": 3.71, "holding_days": 10},
-      {"code": "2337", "name": "旺宏", "result": "fail", "recommend_price": 161.5, "settled_price": 143.5, "change_pct": -11.15, "holding_days": 3},
-      {"code": "2884", "name": "玉山金", "result": "fail", "recommend_price": 35.2, "settled_price": 32.9, "change_pct": -6.53, "holding_days": 10},
-      {"code": "2867", "name": "三商壽", "result": "fail", "recommend_price": 8.53, "settled_price": 8.25, "change_pct": -3.28, "holding_days": 10}
+      {
+        "code": "1303",
+        "name": "南亞",
+        "result": "success",
+        "recommend_price": 166.5,
+        "settled_price": 183.0,
+        "change_pct": 9.91,
+        "holding_days": 0
+      },
+      {
+        "code": "2886",
+        "name": "兆豐金",
+        "result": "success",
+        "recommend_price": 44.5,
+        "settled_price": 46.15,
+        "change_pct": 3.71,
+        "holding_days": 10
+      },
+      {
+        "code": "2337",
+        "name": "旺宏",
+        "result": "fail",
+        "recommend_price": 161.5,
+        "settled_price": 143.5,
+        "change_pct": -11.15,
+        "holding_days": 3
+      },
+      {
+        "code": "2884",
+        "name": "玉山金",
+        "result": "fail",
+        "recommend_price": 35.2,
+        "settled_price": 32.9,
+        "change_pct": -6.53,
+        "holding_days": 10
+      },
+      {
+        "code": "2867",
+        "name": "三商壽",
+        "result": "fail",
+        "recommend_price": 8.53,
+        "settled_price": 8.25,
+        "change_pct": -3.28,
+        "holding_days": 10
+      }
     ],
     "accuracy_update": {
       "settled_accuracy": "60.2%",
@@ -376,10 +567,26 @@
       "holding": 215
     },
     "holdings_action": [
-      {"code": "2337", "name": "旺宏", "action": "🛑強制停損（已跌破147.6，尚待使用者執行，my_holdings.yaml未更新）"},
-      {"code": "2313", "name": "華通", "action": "🛑強制停損（已跌破235.98，尚待使用者執行，my_holdings.yaml未更新）"},
-      {"code": "6770", "name": "力積電", "action": "建議出場（Level4籌碼惡化，未觸停損）"},
-      {"code": "1303", "name": "南亞(實際持股)", "action": "留意減碼（處置股，續抱但不加碼）"}
+      {
+        "code": "2337",
+        "name": "旺宏",
+        "action": "🛑強制停損（已跌破147.6，尚待使用者執行，my_holdings.yaml未更新）"
+      },
+      {
+        "code": "2313",
+        "name": "華通",
+        "action": "🛑強制停損（已跌破235.98，尚待使用者執行，my_holdings.yaml未更新）"
+      },
+      {
+        "code": "6770",
+        "name": "力積電",
+        "action": "建議出場（Level4籌碼惡化，未觸停損）"
+      },
+      {
+        "code": "1303",
+        "name": "南亞(實際持股)",
+        "action": "留意減碼（處置股，續抱但不加碼）"
+      }
     ]
   },
   "market_context": {
@@ -387,8 +594,19 @@
     "regime": "多頭",
     "defense_ratio": "0-15%",
     "attack_ratio": "85-100%",
-    "key_catalysts": ["AI伺服器與半導體超強(16週)", "DRAM記憶體超強(6週)", "光通訊與網通超強(7週)", "被動元件族群超強(4週,國巨今起最大範圍漲價)", "台股市場動態超強(5週,外資連賣6日/投信連買6日)"],
-    "risk_events": ["07/01 Warsh演講(今晚)", "07/01 ADP(預估118K)", "07/01 ISM製造業PMI(預估53.8)", "07/02 非農(預估110-114K)"],
+    "key_catalysts": [
+      "AI伺服器與半導體超強(16週)",
+      "DRAM記憶體超強(6週)",
+      "光通訊與網通超強(7週)",
+      "被動元件族群超強(4週,國巨今起最大範圍漲價)",
+      "台股市場動態超強(5週,外資連賣6日/投信連買6日)"
+    ],
+    "risk_events": [
+      "07/01 Warsh演講(今晚)",
+      "07/01 ADP(預估118K)",
+      "07/01 ISM製造業PMI(預估53.8)",
+      "07/02 非農(預估110-114K)"
+    ],
     "note": "台股Q2+14,402點、上半年+17,162點雙創史上最大紀錄，184檔個股上半年翻倍，多檔觸及TWSE注意/處置標準（1303/2481/2455今日確認），流動性與處置風險為當前主要留意事項"
   }
 }

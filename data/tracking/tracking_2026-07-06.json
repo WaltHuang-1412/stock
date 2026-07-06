@@ -17,9 +17,14 @@
       "position": "10-15%",
       "score": 86,
       "reason": "Apple單日+12.17%(連漲3天累計+8.4%)+2分、Module A L2(6天在TOP50,avg_rank11.5)+10、法人真連續買超6天+買超佔成交21%+2分、產業邏輯蘋果供應鏈tier_0核心組裝18分、反轉Level0；EPS YoY-64.2%-3分為主要扣分",
-      "intraday_price": 84.10,
-      "intraday_change_pct": 0.60,
-      "intraday_note": "🟢安全，法人買超+324、真連續買超6天、站穩MA5/MA10，無出場訊號，續抱（同時為使用者今日新買進實際持股，成本85.0）"
+      "intraday_price": 84.1,
+      "intraday_change_pct": 0.6,
+      "intraday_note": "🟢安全，法人買超+324、真連續買超6天、站穩MA5/MA10，無出場訊號，續抱（同時為使用者今日新買進實際持股，成本85.0）",
+      "actual_close": 84.5,
+      "close_price": 84.5,
+      "change_percent": 1.08,
+      "result": "holding",
+      "holding_status": "D0/10 | +1.08% | 未觸目標/停損，續抱"
     },
     {
       "stock_code": "2884",
@@ -35,7 +40,12 @@
       "reason": "market_intelligence.md催化劑x營收交叉分析確認「聯準會利率政策」🔴+「美國就業市場」🟢雙主題命中，營收YoY+24.8%有支撐（無⚠️營收未跟上）、EPS YoY+56.2%+5分、avg_rank14.5、真連續買超4天，為本次金融股中唯一有具名催化劑確認者",
       "intraday_price": 34.25,
       "intraday_change_pct": 1.63,
-      "intraday_note": "⚠️投信反轉（昨買+17,480→今日賣-3,322）、跌破MA10，惟法人今日仍大買+11,520、真連續買超4天，未觸停損非強制出場，續抱密切觀察"
+      "intraday_note": "⚠️投信反轉（昨買+17,480→今日賣-3,322）、跌破MA10，惟法人今日仍大買+11,520、真連續買超4天，未觸停損非強制出場，續抱密切觀察",
+      "actual_close": 34.45,
+      "close_price": 34.45,
+      "change_percent": 2.23,
+      "result": "holding",
+      "holding_status": "D0/10 | +2.23% | 未觸目標/停損，續抱"
     },
     {
       "stock_code": "2883",
@@ -51,25 +61,196 @@
       "reason": "法人avg_rank7.5(TOP10)+買超佔成交39.4%+2分、真連續買超4天且5日回檔-6.7%(佈局中)、營收YoY+805.6%+回檔-4.8%+5分(黃金買點)、EPS YoY+150%+5分",
       "intraday_price": 28.95,
       "intraday_change_pct": 1.76,
-      "intraday_note": "⚠️跌破MA10，惟法人今日仍大買+22,709、真連續買超4天，未觸停損非強制出場，續抱持續觀察"
+      "intraday_note": "⚠️跌破MA10，惟法人今日仍大買+22,709、真連續買超4天，未觸停損非強制出場，續抱持續觀察",
+      "actual_close": 29.0,
+      "close_price": 29.0,
+      "change_percent": 1.75,
+      "result": "holding",
+      "holding_status": "D0/10 | +1.75% | 未觸目標/停損，續抱"
     }
   ],
   "track_b_recommendations": [],
   "track_b_observations": [
-    {"stock_code": "1418", "stock_name": "東華", "result": "excluded", "reason": "偵測器強訊號(75分)，惟法人規模極小(累計僅+18張)+EPS連續7季YoY負成長(-5)，無`industry_chains.json`催化對齊，估算遠低於75分門檻"},
-    {"stock_code": "2239", "stock_name": "英利-KY", "result": "excluded", "reason": "反轉狀態不明（今日+3張，累計轉負-9張，未匹配任何預警等級），不可視為Safe，直接排除"},
-    {"stock_code": "3026", "stock_name": "禾伸堂", "result": "excluded", "reason": "處置風險偏高：近6日+35.8%/近30日+107.8%/近60日+439.5%皆已達注意標準，屬追高型態不受催化例外保護"},
-    {"stock_code": "2250", "stock_name": "IKKA-KY", "result": "excluded", "reason": "營收連續衰退4個月(-5)+EPS連續7季YoY負成長(-5)雙重轉弱，無催化對齊，估算遠低於75分門檻"},
-    {"stock_code": "6491", "stock_name": "晶碩", "result": "excluded", "reason": "五項數據最佳（外資持股比週增+2.06%+5分、外資+投信同步買超），惟不在`industry_chains.json`任何產業鏈中、無今日催化對齊，未通過準確率篩選三項之一，估算約50分，遠低於75分門檻，列入觀察"}
+    {
+      "stock_code": "1418",
+      "stock_name": "東華",
+      "result": "excluded",
+      "reason": "偵測器強訊號(75分)，惟法人規模極小(累計僅+18張)+EPS連續7季YoY負成長(-5)，無`industry_chains.json`催化對齊，估算遠低於75分門檻"
+    },
+    {
+      "stock_code": "2239",
+      "stock_name": "英利-KY",
+      "result": "excluded",
+      "reason": "反轉狀態不明（今日+3張，累計轉負-9張，未匹配任何預警等級），不可視為Safe，直接排除"
+    },
+    {
+      "stock_code": "3026",
+      "stock_name": "禾伸堂",
+      "result": "excluded",
+      "reason": "處置風險偏高：近6日+35.8%/近30日+107.8%/近60日+439.5%皆已達注意標準，屬追高型態不受催化例外保護"
+    },
+    {
+      "stock_code": "2250",
+      "stock_name": "IKKA-KY",
+      "result": "excluded",
+      "reason": "營收連續衰退4個月(-5)+EPS連續7季YoY負成長(-5)雙重轉弱，無催化對齊，估算遠低於75分門檻"
+    },
+    {
+      "stock_code": "6491",
+      "stock_name": "晶碩",
+      "result": "excluded",
+      "reason": "五項數據最佳（外資持股比週增+2.06%+5分、外資+投信同步買超），惟不在`industry_chains.json`任何產業鏈中、無今日催化對齊，未通過準確率篩選三項之一，估算約50分，遠低於75分門檻，列入觀察"
+    }
   ],
   "watchlist_near_miss": [
-    {"stock_code": "2890", "stock_name": "永豐金", "industry": "金融", "score": 77, "reason": "Module A L2+10、avg_rank10(TOP10)+買超佔成交30%，惟為避免金融業超過產業集中上限，未納入正式推薦"},
-    {"stock_code": "2892", "stock_name": "第一金", "industry": "金融", "score": 74, "reason": "Module A L2+10、avg_rank8(TOP10)+買超佔成交41.8%，惟為避免金融業超過產業集中上限，未納入正式推薦"},
-    {"stock_code": "2886", "stock_name": "兆豐金", "industry": "金融", "score": 74, "reason": "avg_rank14+真連續買超7天+買超佔成交21.4%，惟產業集中度限制未納入正式推薦"},
-    {"stock_code": "5880", "stock_name": "合庫金", "industry": "金融", "score": 70, "reason": "avg_rank11+EPS YoY+50%+5分，惟產業集中度限制未納入正式推薦，且僅真連續買超1天"},
-    {"stock_code": "2882", "stock_name": "國泰金", "industry": "金融", "score": 69, "reason": "EPS YoY+335%+revenue YoY+28.8%回檔-11.7%皆+5分，惟無market_intelligence具名催化劑確認、價格位置僅5分(MA20-9.9%)，未達70門檻"}
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "industry": "金融",
+      "score": 77,
+      "reason": "Module A L2+10、avg_rank10(TOP10)+買超佔成交30%，惟為避免金融業超過產業集中上限，未納入正式推薦"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "industry": "金融",
+      "score": 74,
+      "reason": "Module A L2+10、avg_rank8(TOP10)+買超佔成交41.8%，惟為避免金融業超過產業集中上限，未納入正式推薦"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "industry": "金融",
+      "score": 74,
+      "reason": "avg_rank14+真連續買超7天+買超佔成交21.4%，惟產業集中度限制未納入正式推薦"
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "score": 70,
+      "reason": "avg_rank11+EPS YoY+50%+5分，惟產業集中度限制未納入正式推薦，且僅真連續買超1天"
+    },
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "industry": "金融",
+      "score": 69,
+      "reason": "EPS YoY+335%+revenue YoY+28.8%回檔-11.7%皆+5分，惟無market_intelligence具名催化劑確認、價格位置僅5分(MA20-9.9%)，未達70門檻"
+    }
   ],
   "excluded_by_international_alert": [
-    {"stock_code": "2382", "stock_name": "廣達", "industry": "AI伺服器", "score": 68, "reason": "Super Micro單日-14.08%觸發Level2降級-15分，扣分後由83分降至68分，未達70門檻"}
-  ]
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": "AI伺服器",
+      "score": 68,
+      "reason": "Super Micro單日-14.08%觸發Level2降級-15分，扣分後由83分降至68分，未達70門檻"
+    }
+  ],
+  "removed_stocks": [],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "score": 81,
+      "reason": "EPS YoY+50%(+5)、avg_rank TOP11、近5天法人4買1賣+10K、真連續買超僅1天，價格位置11分(月季雙線上)",
+      "caveat": "真連續買超僅1天，非佈局型態，屬短線題材"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "industry": "金融",
+      "score": 81,
+      "reason": "金控tier_0龍頭、真連續買超7天(佈局中)、買超佔成交21.4%(+2)、EPS YoY+21.6%(+3)，惟外資持股比週減0.28%(-3)",
+      "caveat": null
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "industry": "金融",
+      "score": 78,
+      "reason": "avg_rank TOP10、buy_ratio~30%(+2)、EPS YoY+33%(+3)，惟06/29單日買超+45K且真連續買超僅1天觸發過量買超警告(-5)",
+      "caveat": "過量買超警告：單日45K但連續買超僅1天，消息面可能已公開，散戶追高風險"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "industry": "金融",
+      "score": 75,
+      "reason": "avg_rank TOP10、buy_ratio41.8%(+2)，惟外資持股比週減0.18%(-3)、EPS YoY+9%不調整",
+      "caveat": "分數居於門檻邊緣，且與上述3檔同屬金融業，Step9產業分散上限預計僅能保留2-3檔"
+    }
+  ],
+  "watchlist_pending_international_alert": [
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": "AI伺服器",
+      "score_estimate": 58,
+      "reason": "真連續買超6天+EPS YoY+40%基本面強，惟今日Super Micro單日-14.08%觸發Level2降級-15分，估算58分未達門檻。待明日盤前重新查詢美股龍頭預警，若降級解除可重新評分"
+    }
+  ],
+  "excluded_candidates": [
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "industry": "金融",
+      "score_estimate": 63,
+      "reason": "EPS YoY+335%+revenue YoY+29%回檔-8%基本面極強(+10)，惟法人態度不明確(7天3買4賣)+06/30單日買超+39K但真連續僅2天觸發過量買超警告(-5)+價格位置僅5分(MA20-9.8%)，估算63分未達70門檻"
+    },
+    {
+      "stock_code": "6491",
+      "stock_name": "晶碩",
+      "industry": "未分類",
+      "score_estimate": 51,
+      "reason": "外資持股比週增+2.06%(+5)+價格位置13分為五項最佳，惟不在industry_chains.json任何產業鏈中、無今日催化對齊，估算51分遠低於70門檻"
+    }
+  ],
+  "yesterday_verification": {
+    "date": "2026-07-06",
+    "accuracy": "61.0%",
+    "total_success": 250,
+    "total_fail": 160,
+    "settled_count": 410,
+    "holding_count": 218,
+    "results": [
+      {
+        "stock_code": "6257",
+        "stock_name": "矽格",
+        "result": "success",
+        "gain_pct": 11.4,
+        "note": "收盤273.0≥目標270.0"
+      },
+      {
+        "stock_code": "8150",
+        "stock_name": "南茂",
+        "result": "success",
+        "gain_pct": 16.1,
+        "note": "07/01推薦(99.5)，收盤115.5≥目標111.5"
+      },
+      {
+        "stock_code": "2891",
+        "stock_name": "中信金",
+        "result": "success",
+        "gain_pct": 1.6,
+        "note": "06/22推薦(70.3)，D10到期收盤71.4>推薦70.3"
+      },
+      {
+        "stock_code": "8150",
+        "stock_name": "南茂",
+        "result": "success",
+        "gain_pct": 18.5,
+        "note": "06/29推薦(97.5)重複記錄補結算，收盤115.5≥目標109.2"
+      },
+      {
+        "stock_code": "2891",
+        "stock_name": "中信金",
+        "result": "success",
+        "gain_pct": 26.4,
+        "note": "05/08推薦(56.5)孤立近2個月補結算，收盤71.4>推薦56.5"
+      }
+    ]
+  }
 }

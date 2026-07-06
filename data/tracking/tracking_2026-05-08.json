@@ -266,7 +266,7 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 77,
-      "result": "holding",
+      "result": "success",
       "holding_status": "D1/10 持有中，收盤56.4（-0.2%），Level 0 籌碼健康",
       "reason": "avg_rank 13.5 TOP11-20+外資近5天+96K（近期大幅加碼）+EPS YoY+48%(+3)+大盤創歷史新高金融受益+反轉Level 0",
       "scoring_detail": {
@@ -284,10 +284,13 @@
       "track": "B",
       "intraday_signal": false,
       "detector_score": null,
-      "actual_close": 56.4,
-      "close_price": 56.4,
+      "actual_close": 71.4,
+      "close_price": 71.4,
       "change_pct": -0.18,
-      "change_percent": -0.18
+      "change_percent": 26.37,
+      "settled_price": 71.4,
+      "settled_date": "2026-07-06",
+      "settlement_note": "收盤 71.4 >= 目標 62.15"
     }
   ],
   "track_b_observations": [
