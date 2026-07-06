@@ -16,7 +16,10 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 86,
-      "reason": "Apple單日+12.17%(連漲3天累計+8.4%)+2分、Module A L2(6天在TOP50,avg_rank11.5)+10、法人真連續買超6天+買超佔成交21%+2分、產業邏輯蘋果供應鏈tier_0核心組裝18分、反轉Level0；EPS YoY-64.2%-3分為主要扣分"
+      "reason": "Apple單日+12.17%(連漲3天累計+8.4%)+2分、Module A L2(6天在TOP50,avg_rank11.5)+10、法人真連續買超6天+買超佔成交21%+2分、產業邏輯蘋果供應鏈tier_0核心組裝18分、反轉Level0；EPS YoY-64.2%-3分為主要扣分",
+      "intraday_price": 84.10,
+      "intraday_change_pct": 0.60,
+      "intraday_note": "🟢安全，法人買超+324、真連續買超6天、站穩MA5/MA10，無出場訊號，續抱（同時為使用者今日新買進實際持股，成本85.0）"
     },
     {
       "stock_code": "2884",
@@ -29,7 +32,10 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 81,
-      "reason": "market_intelligence.md催化劑x營收交叉分析確認「聯準會利率政策」🔴+「美國就業市場」🟢雙主題命中，營收YoY+24.8%有支撐（無⚠️營收未跟上）、EPS YoY+56.2%+5分、avg_rank14.5、真連續買超4天，為本次金融股中唯一有具名催化劑確認者"
+      "reason": "market_intelligence.md催化劑x營收交叉分析確認「聯準會利率政策」🔴+「美國就業市場」🟢雙主題命中，營收YoY+24.8%有支撐（無⚠️營收未跟上）、EPS YoY+56.2%+5分、avg_rank14.5、真連續買超4天，為本次金融股中唯一有具名催化劑確認者",
+      "intraday_price": 34.25,
+      "intraday_change_pct": 1.63,
+      "intraday_note": "⚠️投信反轉（昨買+17,480→今日賣-3,322）、跌破MA10，惟法人今日仍大買+11,520、真連續買超4天，未觸停損非強制出場，續抱密切觀察"
     },
     {
       "stock_code": "2883",
@@ -42,10 +48,20 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 80,
-      "reason": "法人avg_rank7.5(TOP10)+買超佔成交39.4%+2分、真連續買超4天且5日回檔-6.7%(佈局中)、營收YoY+805.6%+回檔-4.8%+5分(黃金買點)、EPS YoY+150%+5分"
+      "reason": "法人avg_rank7.5(TOP10)+買超佔成交39.4%+2分、真連續買超4天且5日回檔-6.7%(佈局中)、營收YoY+805.6%+回檔-4.8%+5分(黃金買點)、EPS YoY+150%+5分",
+      "intraday_price": 28.95,
+      "intraday_change_pct": 1.76,
+      "intraday_note": "⚠️跌破MA10，惟法人今日仍大買+22,709、真連續買超4天，未觸停損非強制出場，續抱持續觀察"
     }
   ],
   "track_b_recommendations": [],
+  "track_b_observations": [
+    {"stock_code": "1418", "stock_name": "東華", "result": "excluded", "reason": "偵測器強訊號(75分)，惟法人規模極小(累計僅+18張)+EPS連續7季YoY負成長(-5)，無`industry_chains.json`催化對齊，估算遠低於75分門檻"},
+    {"stock_code": "2239", "stock_name": "英利-KY", "result": "excluded", "reason": "反轉狀態不明（今日+3張，累計轉負-9張，未匹配任何預警等級），不可視為Safe，直接排除"},
+    {"stock_code": "3026", "stock_name": "禾伸堂", "result": "excluded", "reason": "處置風險偏高：近6日+35.8%/近30日+107.8%/近60日+439.5%皆已達注意標準，屬追高型態不受催化例外保護"},
+    {"stock_code": "2250", "stock_name": "IKKA-KY", "result": "excluded", "reason": "營收連續衰退4個月(-5)+EPS連續7季YoY負成長(-5)雙重轉弱，無催化對齊，估算遠低於75分門檻"},
+    {"stock_code": "6491", "stock_name": "晶碩", "result": "excluded", "reason": "五項數據最佳（外資持股比週增+2.06%+5分、外資+投信同步買超），惟不在`industry_chains.json`任何產業鏈中、無今日催化對齊，未通過準確率篩選三項之一，估算約50分，遠低於75分門檻，列入觀察"}
+  ],
   "watchlist_near_miss": [
     {"stock_code": "2890", "stock_name": "永豐金", "industry": "金融", "score": 77, "reason": "Module A L2+10、avg_rank10(TOP10)+買超佔成交30%，惟為避免金融業超過產業集中上限，未納入正式推薦"},
     {"stock_code": "2892", "stock_name": "第一金", "industry": "金融", "score": 74, "reason": "Module A L2+10、avg_rank8(TOP10)+買超佔成交41.8%，惟為避免金融業超過產業集中上限，未納入正式推薦"},
