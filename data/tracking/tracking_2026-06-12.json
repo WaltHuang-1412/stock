@@ -17,12 +17,14 @@
       "position": "15-20%",
       "score": 107,
       "reason": "AMD+10.86%/NVDA+2.85%，Module A L2，法人avg_rank 10.5，廣達YoY+120.7%，SOX+7.91%；SMCI公司特定問題不影響訂單",
-      "actual_close": 372.0,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤=372.0 | 漲跌=0.5% | 距目標=9.4% | 距停損=11.7%",
+      "actual_close": 367.0,
+      "result": "fail",
       "close_price": 372.0,
       "current_price": 372.0,
-      "change_percent": 0.54
+      "change_percent": 0.54,
+      "settled_date": "2026-06-29",
+      "holding_days": 10,
+      "fail_reason": "D10到期，收盤367.0 ≤ 推薦370.0（-0.8%）。孤立重複記錄補結算：06-22/06-23重複推薦後，settlement_checker依代碼去重僅追蹤最新一筆，本筆未被每日掃描，2026-07-07盤後依D10規則以06-29收盤補結算"
     },
     {
       "stock_code": "2884",

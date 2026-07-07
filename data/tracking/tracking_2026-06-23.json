@@ -20,10 +20,12 @@
       "module_a": "L2",
       "reversal_level": 0,
       "consecutive_buy_days": 3,
-      "actual_close": 372.5,
+      "actual_close": 373.0,
       "day_change_pct": -2.0,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤372.5(-2.0%) | 距目標12.2% | 距停損8.2% | 外資近5天<0，觀察"
+      "result": "fail",
+      "settled_date": "2026-07-07",
+      "holding_days": 10,
+      "fail_reason": "D10到期，收盤373.0 ≤ 推薦380.0（-1.8%）。期間未觸目標418/停損342，AI伺服器盤整10日無明確方向"
     },
     {
       "stock_code": "2303",

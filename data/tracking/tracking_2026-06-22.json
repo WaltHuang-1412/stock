@@ -20,11 +20,13 @@
       "intraday_price": 377.5,
       "intraday_change_pct": -0.1,
       "reversal_level": "L0",
-      "result": "holding",
-      "holding_status": "D1/10 | 距目標9.2% | 距停損5.5%",
-      "actual_close": 380.0,
+      "result": "fail",
+      "actual_close": 378.0,
       "close_price": 380.0,
-      "change_percent": 0.5
+      "change_percent": 0.5,
+      "settled_date": "2026-07-06",
+      "holding_days": 10,
+      "fail_reason": "D10到期，收盤378.0 ≤ 推薦378.0（0.0%）。孤立重複記錄補結算：與06-23筆重複，2026-07-07盤後依D10規則以07-06收盤補結算。期間未觸目標415/停損359.1"
     },
     {
       "stock_code": "2891",
