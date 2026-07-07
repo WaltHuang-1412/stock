@@ -1,0 +1,71 @@
+{
+  "date": "2026-07-07",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "industry": "金融",
+      "recommend_price": 93.4,
+      "target_price": 100.9,
+      "stop_loss_pct": -10,
+      "stop_loss": 84.06,
+      "settlement_days": 10,
+      "position": "10%",
+      "score": 84,
+      "reason": "壽險龍頭 avg_rank8.0、近5日外資實買+132K張+投信真連續3天、營收YoY+29%/EPS YoY+335%、Module A L2預埋。除權息旺季+投信連買金融10日。⚠️風險：107→93連續跌13%(非除息)為落刀反轉底部型態，故倉位縮至10%、月線下(價格位置僅5分)"
+    },
+    {
+      "stock_code": "2301",
+      "stock_name": "光寶科",
+      "industry": "AI電源",
+      "recommend_price": 224.0,
+      "target_price": 242.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 201.6,
+      "settlement_days": 10,
+      "position": "8%",
+      "score": 75,
+      "reason": "AI伺服器電源供應器(AI tier_3)、真連續買超6天(候選中最佳持續佈局)+近5日外資+23K、營收YoY+30%、avg_rank17、反轉L0、Module A L2。⚠️已小漲5日+5.9%(-10分)故倉位8%"
+    },
+    {
+      "stock_code": "1216",
+      "stock_name": "統一",
+      "industry": "食品",
+      "recommend_price": 77.8,
+      "target_price": 84.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 70.02,
+      "settlement_days": 10,
+      "position": "6%",
+      "score": 65,
+      "reason": "食品內需龍頭、防禦避震部位、真連續買超4天+avg_rank13、EPS YoY+26%(+5分)、反轉L0。外資持股週減0.11%(-3分)。外資連賣3日震盪盤中提供防禦性"
+    }
+  ],
+  "observations": [
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "industry": "面板",
+      "note": "外資調節記憶體反手敲進面板雙虎約20萬張、avg_rank1.0，但屬單日爆量買超+123K張(真連續僅1天、10日累計+15K)非持續佈局，觸發過量買超-5分；TrendForce報7月電視面板首度跌價(需求青黃不接)基本面轉弱；30日+55%處置風險。列觀察，僅適合小倉位短多買黑賣紅，不列正式推薦"
+    },
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "industry": "面板",
+      "note": "追蹤中(D5)。同面板雙虎單日爆買+98K但10日累計淨賣-30K、近5外資-57K、EPS YoY-135%、面板跌價逆風。續抱觀察不加碼"
+    }
+  ],
+  "holdings_evaluation": [
+    {"stock_code": "6770", "stock_name": "力積電", "current_price": 72.6, "user_stop_loss": 73.26, "status": "留意減碼", "note": "已跌破自設停損73.26；Micron -13.03% Level3記憶體全產業一票否決、外資調節記憶體6萬張。論點驅動：記憶體逆風強，若無反轉訊號應執行停損"},
+    {"stock_code": "2337", "stock_name": "旺宏", "current_price": 144.5, "user_stop_loss": 147.6, "status": "留意減碼", "note": "已跌破自設停損147.6；Micron L3記憶體排除、5日-8.8%。同記憶體逆風，留意停損"},
+    {"stock_code": "2313", "stock_name": "華通", "current_price": 235.0, "user_stop_loss": 235.98, "status": "貼近停損", "note": "貼近自設停損235.98；PCB/半導體設備降級(AMAT-5.43/LRCX-7.62)、外資10日累計賣-34K。留意，跌破即減碼"},
+    {"stock_code": "4938", "stock_name": "和碩", "current_price": 84.5, "user_stop_loss": 76.5, "status": "可續抱/評估加碼", "note": "Apple +10.18%大漲(今日最強蘋果鏈利多)、Module A L2預埋、獲利部位。蘋果鏈受惠，續抱；若量價配合可小幅加碼"},
+    {"stock_code": "2330", "stock_name": "台積電", "current_price": 2460.0, "status": "核心續抱", "note": "半導體設備降級-15(AMAT/LRCX崩)但台積電ADR+4.5%、日月光ADR+7.73%背離。核心持有續抱，設備雜訊不影響長線"},
+    {"stock_code": "1301", "stock_name": "台塑", "current_price": 60.4, "status": "續抱", "note": "塑化，追蹤D2持有中，距停損11%。油價-1.04%中性，續抱"},
+    {"stock_code": "3090", "stock_name": "日電貿", "current_price": 340.0, "status": "續抱", "note": "被動元件通路(確認MLCC缺貨延至2027)、遠高於停損。被動元件族群有支撐，續抱"}
+  ]
+}
