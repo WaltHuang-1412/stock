@@ -1,0 +1,122 @@
+{
+  "date": "2026-07-08",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "2867",
+      "stock_name": "三商壽",
+      "industry": "壽險/金融",
+      "score_est": 62,
+      "note": "Module A L2（3天TOP50、avg_rank34.5、累計外資+41K、真連續買超4天）、reversal L0籌碼健康、EPS YoY+140%(低基期+5)、外資持股比-0.06%微減不調整、價格位置11(月季雙線上)。五維度估分≈62(時事13+產業10+技術10+法人13+價格11+EPS5-3已含)，未達70分門檻。營收YoY-30.2%(單月，未達連續3月衰退門檻不扣分)。金融/生醫股今日為大盤抗震部隊但個股本身催化不足，列觀察不推薦。"
+    },
+    {
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "industry": "金融",
+      "score_est": 56,
+      "note": "Module A L2、avg_rank42.5(TOP36-50)、真連續買超3天、reversal L0籌碼健康、EPS YoY+23.7%(+3)、外資持股比+0.02%不調整、價格位置11。估分≈56，法人排名偏後(TOP36-50)為主要扣分項，未達70。列觀察不推薦。"
+    },
+    {
+      "stock_code": "2812",
+      "stock_name": "台中銀",
+      "industry": "金融",
+      "score_est": 53,
+      "note": "Module A L2、avg_rank42.0(TOP36-50)、真連續買超4天、reversal L0籌碼健康、EPS YoY+14.3%不調整、外資持股比-0.04%不調整、價格位置11。估分≈53，無任何因子加分且法人排名偏後，未達70。列觀察不推薦。"
+    },
+    {
+      "stock_code": "2542",
+      "stock_name": "興富發",
+      "industry": "營建",
+      "score_est": 50,
+      "note": "Module A L2、avg_rank27.0、真連續買超4天、reversal L0中性、但EPS連續4季YoY負成長(-3分淨)、外資持股比-0.04%不調整、無明確今日催化對應(營建股)。估分≈50，基本面轉弱+無催化，未達70。列觀察不推薦。"
+    },
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "industry": "航運",
+      "note": "Module A L2候選，但今日reversal Level4爆量賣超-12,081張(佔日均量54.4%)，法人急殺出貨，直接排除不評分。"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": "AI伺服器",
+      "note": "Module A L2候選(AI伺服器)，但今日reversal Level4爆量賣超-2,466張(佔日均量16.1%)，且Super Micro Level1警示(-5分)，直接排除不評分。"
+    },
+    {
+      "stock_code": "3017",
+      "stock_name": "奇鋐",
+      "industry": "AI伺服器散熱",
+      "note": "Module B候選(AMD催化+法人已進場)，07/06數據Level0通過初篩，但今日盤中reversal Level4爆量賣超-532張(佔日均量13.4%)，重新查核後排除，不評分。"
+    },
+    {
+      "stock_code": "2845",
+      "stock_name": "遠東銀",
+      "industry": "金融",
+      "note": "Module A L2候選，但reversal_alert判定「狀態不明」(今日+1,379張，累計轉負-569張)，未達Level 0-1安全標準，不可視為Safe，保守不推薦。"
+    }
+  ],
+  "holdings_evaluation": [
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "current_price": 70.1,
+      "user_stop_loss": 73.26,
+      "status": "🛑強制停損出場",
+      "note": "已跌破自設停損73.26（現價70.1，跌幅-4.3%）。manual_exit_checker結論「賣」：反轉Level4、連續賣超5天、真連續買超0天。今日Micron/WDC Level3直接排除記憶體全產業一票否決。無論論點如何，停損已破一律出場，無例外。"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "current_price": 139.0,
+      "user_stop_loss": 147.6,
+      "status": "🛑強制停損出場",
+      "note": "已跌破自設停損147.6（現價139.0，跌幅-5.8%）。manual_exit_checker結論「賣」：法人連續賣超5天，佈局論點已消失。今日記憶體產業Level3排除。無論論點如何，停損已破一律出場，無例外。"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "current_price": 218.0,
+      "user_stop_loss": 235.98,
+      "status": "🛑強制停損出場",
+      "note": "已跌破自設停損235.98（現價218.0，跌幅-7.6%）。manual_exit_checker結論「觀察」（reversal Level0、真連續買超1天），但停損規則優先於論點判斷：現價<停損價一律強制出場，無例外。"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "current_price": 57.3,
+      "user_stop_loss": 54.08,
+      "status": "⚠️高度警戒未強制",
+      "note": "尚未跌破停損54.08（距停損約5.9%），但今日reversal Level4爆量賣超-5,190張，manual_exit_checker結論「賣」：催化劑論點（中東地緣政治塑化行情）已隨油價+5.5%不再獨佔優勢、籌碼持續惡化。未觸停損不強制出場，但建議使用者主動評估是否提前減碼。"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "current_price": 306.0,
+      "user_stop_loss": 256.5,
+      "status": "✅續抱＋處置到期提醒",
+      "note": "遠高於停損（+19.3%），reversal Level0中性、今日小買+335張、累計仍正。⚠️今日（07/08）為處置期最後一天（06/23~07/08五分鐘撮合），明日起恢復正常撮合，留意明日流動性與價格波動變化。"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "current_price": 82.3,
+      "user_stop_loss": 76.5,
+      "status": "✅可續抱/評估加碼",
+      "note": "法人真連續買超7天，籌碼健康。Apple ADR+10.26%大漲、Module A L2預埋（蘋果漲價主題）、EPS YoY未達異常。蘋果鏈受惠明確，可續抱，若量價配合可評估小幅加碼。"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "current_price": 2440.0,
+      "status": "✅核心續抱",
+      "note": "零股150股，均價2070，現價2440（+17.9%）。今日半導體設備產業被Level3排除（AMAT/LRCX/日月光/聯電/環球晶連動），但2330為長期核心零股部位、非本次新建倉，設備類美股雜訊不影響長期持有邏輯，續抱。"
+    }
+  ],
+  "removed_stocks": [],
+  "tomorrow_notes": "07/08盤前：TWSE T86法人數據延遲，07/07仍未公布（連續第2日延遲），改用本地cache 07/06資料重建TOP50，已於報告標註。美股費半-10.28%重挫(Micron/WDC/AMAT/LRCX/KLAC等全面重挫)，us_leader_alert觸發4檔Level3（DRAM/NAND、半導體設備/製造全產業直接排除2330/2303/3711/6488/2408/1303/2344/2337/5347/6770），為近期最大規模排除。台股同步重挫，台幣殺破32.1，加權指數失守46K（盤前新聞:「震盪1,535點」)。Module A/B候選除4檔金融/保險(2867/2880/2812)+1檔營建(2542)通過reversal初篩外，其餘(2609陽明/2382廣達/3017奇鋐)皆遭Level4爆量賣超排除；4檔存活候選五維度評分介於50-62分，均未達70分推薦門檻（主因法人排名偏後或缺乏強催化），今日無新推薦。持股警訊：6770/2337/2313三檔已跌破自設停損，須強制出場；1301 Level4爆量賣超但未破停損，建議評估減碼；3090今日為處置期最後一日，明日轉回正常撮合。追蹤中2303聯電（非持股，僅tracking）距停損僅1.9%+今日爆量賣超-19,810張+已列處置股，明日開盤高機率觸及停損152.1。"
+}
