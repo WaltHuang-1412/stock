@@ -136,10 +136,13 @@
       "intraday_change_pct": 0.8,
       "intraday_status": "续抱",
       "reason": "訊號A L2，今日D10結算後重新推薦，外資+投信同步連買，電信防禦產業分散",
-      "result": "holding",
-      "holding_status": "D0/10，今日+0.4%，正向表現",
-      "close_price": 120.0,
-      "change_percent": 0.4
+      "result": "fail",
+      "close_price": 113.0,
+      "change_percent": -5.44,
+      "fail_reason": "D9強制出場：反轉Level4爆量賣超-3,093張（佔日均量14.3%，T86 07/07），收盤113（-5.4%），明日D10到期原亦低於推薦價",
+      "settled_date": "2026-07-08",
+      "settled_price": 113.0,
+      "actual_close": 113.0
     }
   ],
   "track_b_recommendations": [],

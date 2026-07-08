@@ -20,12 +20,14 @@
       "intraday_price": 62.4,
       "intraday_change_pct": 4.52,
       "intraday_note": "法人買超+26,647、真連續買超5天、站穩MA5/MA10，無出場訊號，續抱（同時為使用者今日新買進持股，成本60.085）",
-      "actual_close": 62.1,
+      "actual_close": 58.0,
       "day_change_pct": 4.02,
-      "result": "holding",
-      "holding_status": "D0/10 | +4.0% | 續抱，同時為使用者今日新買進持股",
-      "close_price": 62.1,
-      "change_percent": 4.02
+      "result": "fail",
+      "close_price": 58.0,
+      "change_percent": -2.85,
+      "fail_reason": "D3強制出場：反轉Level4爆量賣超-5,662張（佔日均量12.7%，T86 07/07）+連續賣超3天+manual_exit_checker結論「賣」，收盤58（-2.8%）",
+      "settled_date": "2026-07-08",
+      "settled_price": 58.0
     },
     {
       "stock_code": "1326",
@@ -42,12 +44,14 @@
       "intraday_price": 68.0,
       "intraday_change_pct": 9.85,
       "intraday_note": "法人買超+3,903、真連續買超2天、站穩MA5/MA10，無出場訊號，續抱",
-      "actual_close": 68.0,
+      "actual_close": 64.7,
       "day_change_pct": 9.85,
-      "result": "holding",
-      "holding_status": "D0/10 | +9.8% | 距目標僅0.1%，5日漲幅已接近過熱，續抱觀察",
-      "close_price": 68.0,
-      "change_percent": 9.85
+      "result": "fail",
+      "close_price": 64.7,
+      "change_percent": 4.52,
+      "fail_reason": "D3強制出場：反轉Level4爆量賣超-7,134張（佔日均量9.6%，T86 07/07），出場價64.7（+4.5%）未達目標，依L4無例外規則出場",
+      "settled_date": "2026-07-08",
+      "settled_price": 64.7
     },
     {
       "stock_code": "2883",

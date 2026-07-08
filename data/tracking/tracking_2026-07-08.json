@@ -124,7 +124,9 @@
       "note": "已跌破自設停損73.26（現價70.1，跌幅-4.3%）。manual_exit_checker結論「賣」：反轉Level4、連續賣超5天、真連續買超0天。今日Micron/WDC Level3直接排除記憶體全產業一票否決。無論論點如何，停損已破一律出場，無例外。",
       "intraday_price": 70.0,
       "intraday_gain_pct": -14.0,
-      "intraday_action": "🛑強制停損執行中（已破停損73.26，Level3-4規則亦命中）"
+      "intraday_action": "🛑強制停損執行中（已破停損73.26，Level3-4規則亦命中）",
+      "after_market_close": 71.2,
+      "after_market_pnl_pct": -12.53
     },
     {
       "stock_code": "2337",
@@ -135,7 +137,9 @@
       "note": "已跌破自設停損147.6（現價139.0，跌幅-5.8%）。manual_exit_checker結論「賣」：法人連續賣超5天，佈局論點已消失。今日記憶體產業Level3排除。無論論點如何，停損已破一律出場，無例外。",
       "intraday_price": 136.5,
       "intraday_gain_pct": -16.8,
-      "intraday_action": "🛑強制停損執行中（已破停損147.6+反轉Level3再確認）"
+      "intraday_action": "🛑強制停損執行中（已破停損147.6+反轉Level3再確認）",
+      "after_market_close": 138.5,
+      "after_market_pnl_pct": -15.55
     },
     {
       "stock_code": "2313",
@@ -146,7 +150,9 @@
       "note": "已跌破自設停損235.98（現價218.0，跌幅-7.6%）。manual_exit_checker結論「觀察」（reversal Level0、真連續買超1天），但停損規則優先於論點判斷：現價<停損價一律強制出場，無例外。",
       "intraday_price": 219.0,
       "intraday_gain_pct": -16.5,
-      "intraday_action": "🛑強制停損執行中（已破停損235.98+反轉Level4再確認）"
+      "intraday_action": "🛑強制停損執行中（已破停損235.98+反轉Level4再確認）",
+      "after_market_close": 224.0,
+      "after_market_pnl_pct": -14.57
     },
     {
       "stock_code": "1301",
@@ -157,7 +163,9 @@
       "note": "尚未跌破停損54.08（距停損約5.9%），但今日reversal Level4爆量賣超-5,190張，manual_exit_checker結論「賣」：催化劑論點（中東地緣政治塑化行情）已隨油價+5.5%不再獨佔優勢、籌碼持續惡化。未觸停損不強制出場，但建議使用者主動評估是否提前減碼。",
       "intraday_price": 57.3,
       "intraday_gain_pct": -4.6,
-      "intraday_action": "🛑強制停損執行中（未破停損但法人反轉Level4，今日賣-5,662張佔日均量15.7%，CLAUDE.md無例外規則）"
+      "intraday_action": "🛑強制停損執行中（未破停損但法人反轉Level4，今日賣-5,662張佔日均量15.7%，CLAUDE.md無例外規則）",
+      "after_market_close": 58.0,
+      "after_market_pnl_pct": -3.47
     },
     {
       "stock_code": "3090",
@@ -168,7 +176,9 @@
       "note": "遠高於停損（+19.3%），reversal Level0中性、今日小買+335張、累計仍正。⚠️今日（07/08）為處置期最後一天（06/23~07/08五分鐘撮合），明日起恢復正常撮合，留意明日流動性與價格波動變化。",
       "intraday_price": 279.5,
       "intraday_gain_pct": -1.9,
-      "intraday_action": "🛑強制停損執行中（未破停損/反轉L0中性，但07/06收340→今279.5，2日累計跌幅-17.8%命中連續重挫規則；今日為處置期最後一天）"
+      "intraday_action": "🛑強制停損執行中（未破停損/反轉L0中性，但07/06收340→今279.5，2日累計跌幅-17.8%命中連續重挫規則；今日為處置期最後一天）",
+      "after_market_close": 303.5,
+      "after_market_pnl_pct": 6.49
     },
     {
       "stock_code": "4938",
@@ -179,7 +189,9 @@
       "note": "法人真連續買超7天，籌碼健康。Apple ADR+10.26%大漲、Module A L2預埋（蘋果漲價主題）、EPS YoY未達異常。蘋果鏈受惠明確，可續抱，若量價配合可評估小幅加碼。",
       "intraday_price": 83.1,
       "intraday_gain_pct": -2.2,
-      "intraday_action": "🟠減碼觀察（Level4單日、連續賣超僅1天、2日累計僅-1.7%，manual_exit_checker判定觀察1天，未達強制門檻）"
+      "intraday_action": "🟠減碼觀察（Level4單日、連續賣超僅1天、2日累計僅-1.7%，manual_exit_checker判定觀察1天，未達強制門檻）",
+      "after_market_close": 83.8,
+      "after_market_pnl_pct": -1.4
     },
     {
       "stock_code": "2330",
@@ -189,9 +201,151 @@
       "note": "零股150股，均價2070，現價2440（+17.9%）。今日半導體設備產業被Level3排除（AMAT/LRCX/日月光/聯電/環球晶連動），但2330為長期核心零股部位、非本次新建倉，設備類美股雜訊不影響長期持有邏輯，續抱。",
       "intraday_price": 2440.0,
       "intraday_gain_pct": 17.9,
-      "intraday_action": "✅核心續抱（可評估減碼1/3鎖利，非強制）"
+      "intraday_action": "✅核心續抱（可評估減碼1/3鎖利，非強制）",
+      "after_market_close": 2465.0,
+      "after_market_pnl_pct": 19.08
     }
   ],
   "removed_stocks": [],
-  "tomorrow_notes": "07/08盤前：TWSE T86法人數據延遲，07/07仍未公布（連續第2日延遲），改用本地cache 07/06資料重建TOP50，已於報告標註。美股費半-10.28%重挫(Micron/WDC/AMAT/LRCX/KLAC等全面重挫)，us_leader_alert觸發4檔Level3（DRAM/NAND、半導體設備/製造全產業直接排除2330/2303/3711/6488/2408/1303/2344/2337/5347/6770），為近期最大規模排除。台股同步重挫，台幣殺破32.1，加權指數失守46K（盤前新聞:「震盪1,535點」)。Module A/B候選除4檔金融/保險(2867/2880/2812)+1檔營建(2542)通過reversal初篩外，其餘(2609陽明/2382廣達/3017奇鋐)皆遭Level4爆量賣超排除；4檔存活候選五維度評分介於50-62分，均未達70分推薦門檻（主因法人排名偏後或缺乏強催化），今日無新推薦。持股警訊：6770/2337/2313三檔已跌破自設停損，須強制出場；1301 Level4爆量賣超但未破停損，建議評估減碼；3090今日為處置期最後一日，明日轉回正常撮合。追蹤中2303聯電（非持股，僅tracking）距停損僅1.9%+今日爆量賣超-19,810張+已列處置股，明日開盤高機率觸及停損152.1。 | 盤中07/08 12:30更新：實際持股6770/2337/2313/3090/1301五檔命中強制出場規則（停損破/連續重挫/法人反轉Level4），4938降級為減碼觀察（Level4單日未達強制門檻）；tracking追蹤中2449/2618已破停損、2303/6285反轉Level4未破停損但同樣強制出場，正式結算待盤後settlement_checker.py機械判定；軌道B候選9檔全數因已大漲modifier/反轉Level4急轉/今日重挫接刀風險排除，今日無盤中新推薦。"
+  "tomorrow_notes": "07/08盤前：TWSE T86法人數據延遲，07/07仍未公布（連續第2日延遲），改用本地cache 07/06資料重建TOP50，已於報告標註。美股費半-10.28%重挫(Micron/WDC/AMAT/LRCX/KLAC等全面重挫)，us_leader_alert觸發4檔Level3（DRAM/NAND、半導體設備/製造全產業直接排除2330/2303/3711/6488/2408/1303/2344/2337/5347/6770），為近期最大規模排除。台股同步重挫，台幣殺破32.1，加權指數失守46K（盤前新聞:「震盪1,535點」)。Module A/B候選除4檔金融/保險(2867/2880/2812)+1檔營建(2542)通過reversal初篩外，其餘(2609陽明/2382廣達/3017奇鋐)皆遭Level4爆量賣超排除；4檔存活候選五維度評分介於50-62分，均未達70分推薦門檻（主因法人排名偏後或缺乏強催化），今日無新推薦。持股警訊：6770/2337/2313三檔已跌破自設停損，須強制出場；1301 Level4爆量賣超但未破停損，建議評估減碼；3090今日為處置期最後一日，明日轉回正常撮合。追蹤中2303聯電（非持股，僅tracking）距停損僅1.9%+今日爆量賣超-19,810張+已列處置股，明日開盤高機率觸及停損152.1。 | 盤中07/08 12:30更新：實際持股6770/2337/2313/3090/1301五檔命中強制出場規則（停損破/連續重挫/法人反轉Level4），4938降級為減碼觀察（Level4單日未達強制門檻）；tracking追蹤中2449/2618已破停損、2303/6285反轉Level4未破停損但同樣強制出場，正式結算待盤後settlement_checker.py機械判定；軌道B候選9檔全數因已大漲modifier/反轉Level4急轉/今日重挫接刀風險排除，今日無盤中新推薦。 | 盤後07/08：今日結算13筆全fail（2618停損-11.25%、2449盤中破停損-9.48%、3711/-8.09%、2303/-3.55%、6285/-3.08%、2409/-3.43%、3045/-5.44%、2301 D1即L4出場-4.46%、1326 L4出場+4.52%、1301兩筆-2.85%/+6.42%、2618舊筆連續重挫-9.02%、2472連續重挫-6.65%），累計結算準確率59.6%→57.9%。追蹤中16檔（金融11+2882/1216/4938/2377/3706）籌碼全數健康或L0中性，多檔進收割區：2887距目標1.8%、2883距2.1%、2882距3.0%、2881距4.8%。明日無新推薦（候選2867/2880/2812五維度不足70且5日已漲3.5-8.2%、2618剛觸發連續重挫屬落刀+外資持股比-3）。實際持股：6770/2337/2313盤中已執行強制停損判定（收盤71.2/138.5/224.0），3090尾盤反轉收303.5(+6.49%)處置期滿明日恢復正常撮合，1301收58.0未破停損但L4維持出場判定，4938收83.8續觀察（明日法人再賣即出場），2330收2465核心續抱。07/08 T86盤後仍未公布，明日盤前必須以最新T86重掃16檔追蹤+全候選。",
+  "yesterday_verification": {
+    "note": "今日結算13筆（全數為出場硬規則觸發：停損1、盤中破停損1、反轉Level4爆量賣超9、連續重挫2），反轉數據=最新官方T86 2026-07-07。追蹤中16檔全數holding續抱",
+    "settled_today": 13,
+    "success": 0,
+    "fail": 13,
+    "accuracy": "0/13（今日結算全為強制出場fail；累計結算準確率57.9%，257s/187f/444t）",
+    "results": [
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "recommend_date": "2026-07-01",
+        "recommend_price": 44.9,
+        "settled_price": 39.85,
+        "return_pct": -11.25,
+        "result": "fail",
+        "trigger": "D5收盤39.85≤停損40.41（-10%停損）"
+      },
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電子",
+        "recommend_date": "2026-07-01",
+        "recommend_price": 337.5,
+        "settled_price": 305.5,
+        "return_pct": -9.48,
+        "result": "fail",
+        "trigger": "盤中303.5破停損303.75+反轉L4（-14,249張/54.0%日均量）"
+      },
+      {
+        "stock_code": "3711",
+        "stock_name": "日月光投控",
+        "recommend_date": "2026-07-01",
+        "recommend_price": 680.0,
+        "settled_price": 625.0,
+        "return_pct": -8.09,
+        "result": "fail",
+        "trigger": "反轉L4（-2,626張/9.9%日均量）"
+      },
+      {
+        "stock_code": "6285",
+        "stock_name": "啟碁",
+        "recommend_date": "2026-07-01",
+        "recommend_price": 259.5,
+        "settled_price": 251.5,
+        "return_pct": -3.08,
+        "result": "fail",
+        "trigger": "反轉L4（-1,200張/26.8%日均量）"
+      },
+      {
+        "stock_code": "2303",
+        "stock_name": "聯電",
+        "recommend_date": "2026-07-02",
+        "recommend_price": 169.0,
+        "settled_price": 163.0,
+        "return_pct": -3.55,
+        "result": "fail",
+        "trigger": "反轉L4（-19,810張/23.9%日均量）+處置股"
+      },
+      {
+        "stock_code": "2409",
+        "stock_name": "友達",
+        "recommend_date": "2026-06-30",
+        "recommend_price": 30.6,
+        "settled_price": 29.55,
+        "return_pct": -3.43,
+        "result": "fail",
+        "trigger": "反轉L4（-80,361張/30.5%日均量，全場最大量）"
+      },
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "recommend_date": "2026-06-25",
+        "recommend_price": 119.5,
+        "settled_price": 113.0,
+        "return_pct": -5.44,
+        "result": "fail",
+        "trigger": "反轉L4（-3,093張/14.3%日均量）"
+      },
+      {
+        "stock_code": "2301",
+        "stock_name": "光寶科",
+        "recommend_date": "2026-07-07",
+        "recommend_price": 224.0,
+        "settled_price": 214.0,
+        "return_pct": -4.46,
+        "result": "fail",
+        "trigger": "反轉L4（-3,408張/26.6%日均量），D1即出場"
+      },
+      {
+        "stock_code": "1326",
+        "stock_name": "台化",
+        "recommend_date": "2026-07-03",
+        "recommend_price": 61.9,
+        "settled_price": 64.7,
+        "return_pct": 4.52,
+        "result": "fail",
+        "trigger": "反轉L4（-7,134張/9.6%日均量），+4.5%出場未達目標"
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "recommend_date": "2026-07-03",
+        "recommend_price": 59.7,
+        "settled_price": 58.0,
+        "return_pct": -2.85,
+        "result": "fail",
+        "trigger": "反轉L4（-5,662張/12.7%日均量）+連賣3天"
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "recommend_date": "2026-07-01",
+        "recommend_price": 54.5,
+        "settled_price": 58.0,
+        "return_pct": 6.42,
+        "result": "fail",
+        "trigger": "反轉L4同上（重複追蹤記錄一併結算），+6.4%出場未達目標60"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航",
+        "recommend_date": "2026-06-29",
+        "recommend_price": 43.8,
+        "settled_price": 39.85,
+        "return_pct": -9.02,
+        "result": "fail",
+        "trigger": "連續重挫（07/06收44.9→07/08收39.85，2日-11.2%；重複追蹤記錄一併結算）"
+      },
+      {
+        "stock_code": "2472",
+        "stock_name": "立隆電",
+        "recommend_date": "2026-06-29",
+        "recommend_price": 376.0,
+        "settled_price": 351.0,
+        "return_pct": -6.65,
+        "result": "fail",
+        "trigger": "連續重挫（07/06收405→07/08收351，2日-13.3%；昨日已達-13.2%漏檢今日補執行）"
+      }
+    ]
+  },
+  "tomorrow_recommendations": []
 }

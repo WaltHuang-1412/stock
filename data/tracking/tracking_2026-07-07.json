@@ -42,12 +42,14 @@
       "intraday_price": 214.5,
       "intraday_change_pct": -4.24,
       "intraday_note": "盤中214.50(-4.24%，同日推薦即回落)。🔴exit_signal多訊號：跌破MA5(219.70)/MA10(216.50)、5日高點回落-8.1%、收黑K。但未觸停損201.6、reversal L0(法人+7,242買超中)、真連續買超5天，強制出場3條件皆未觸發→不強制停損，降級為⚠️高度警戒/減碼觀察，尾盤若持續破MA5或明日再破則減碼50%。",
-      "actual_close": 213.0,
-      "close_price": 213.0,
+      "actual_close": 214.0,
+      "close_price": 214.0,
       "close_change_pct": -4.91,
-      "change_percent": -4.91,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤213.0(-4.91%) | 距目標242約13.6% | 距停損201.6約5.4% | 同日推薦即重挫破MA5/MA10，高度警戒：明日再破則減碼50%，觸201.6無條件停損"
+      "change_percent": -4.46,
+      "result": "fail",
+      "fail_reason": "D1強制出場：反轉Level4爆量賣超-3,408張（佔日均量26.6%，T86 07/07），推薦次日即法人爆量出貨+連2日收黑破MA5，收盤214（-4.5%）",
+      "settled_date": "2026-07-08",
+      "settled_price": 214.0
     },
     {
       "stock_code": "1216",
