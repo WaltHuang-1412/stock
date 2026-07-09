@@ -7543,10 +7543,10 @@
       }
     ]
   },
-  "settled_accuracy": "57.9%",
-  "settled_count": 444,
-  "holding_count": 187,
-  "total_success": 257,
+  "settled_accuracy": "58.4%",
+  "settled_count": 449,
+  "holding_count": 184,
+  "total_success": 262,
   "total_fail": 187,
   "2026-03-30": {
     "predictions": [
@@ -12961,10 +12961,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 76,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-07-09",
+        "settled_price": 25.15,
+        "holding_days": 1,
+        "settle_note": "D10到期，收盤25.15 > 推薦24.4，+3.07%"
       },
       {
         "symbol": "2892",
@@ -12976,10 +12977,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 74,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-07-09",
+        "settled_price": 33.6,
+        "holding_days": 1,
+        "settle_note": "D10到期，收盤33.6 > 推薦32.05，+4.84%（重複條目遮蔽，盤後補結算）"
       },
       {
         "symbol": "2834",
@@ -13212,10 +13214,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 83,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-07-09",
+        "settled_price": 88.7,
+        "holding_days": 1,
+        "settle_note": "反轉L4強制出場鎖利+2.66%（T86 07/08爆量賣超-1,236張/8.8%日均量）"
       },
       {
         "symbol": "2408",
@@ -13243,10 +13246,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 80,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-07-09",
+        "settled_price": 36.85,
+        "holding_days": 1,
+        "settle_note": "D8收盤36.85 ≥ 目標36.5，+11.67%"
       }
     ],
     "settled_accuracy": null,
@@ -13611,10 +13615,11 @@
         "settlement_days": 10,
         "position": "10%",
         "score": 84,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-07-09",
+        "settled_price": 96.3,
+        "holding_days": 1,
+        "settle_note": "反轉L4強制出場鎖利+3.10%（T86 07/08爆量賣超-5,982張/36.5%日均量）"
       },
       {
         "symbol": "2301",
@@ -13642,6 +13647,42 @@
         "settlement_days": 10,
         "position": "6%",
         "score": 65,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-07-09": {
+    "predictions": [
+      {
+        "symbol": "5880",
+        "name": "合庫金",
+        "recommend_price": 25.1,
+        "target_price": 27.6,
+        "stop_loss": 22.59,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "15-20%",
+        "score": 93,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "6282",
+        "name": "康舒",
+        "recommend_price": 59.0,
+        "target_price": 64.9,
+        "stop_loss": 53.1,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 78,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,

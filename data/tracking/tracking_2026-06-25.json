@@ -67,10 +67,13 @@
       "intraday_change_pct": 2.7,
       "intraday_status": "续抱",
       "reason": "訊號A L2，連買8天真連續，外資+77K，EPS年增+50%，Fed利率觀望防禦性",
-      "result": "holding",
-      "holding_status": "D0/10，今日+2.9%，正向表現",
+      "result": "success",
+      "holding_status": "D10到期結算：收盤25.15 > 推薦24.4，+3.07% ✅（2026-07-09盤後結算）",
       "close_price": 25.1,
-      "change_percent": 2.9
+      "change_percent": 2.9,
+      "actual_close": 25.15,
+      "return_pct": 3.07,
+      "settled_date": "2026-07-09"
     },
     {
       "stock_code": "2892",
@@ -90,10 +93,13 @@
       "intraday_change_pct": 3.1,
       "intraday_status": "续抱",
       "reason": "訊號A L2，連買8天真連續，外資+53K+投信+91K雙向同步佈局，籌碼最健康",
-      "result": "holding",
-      "holding_status": "D0/10，今日+2.5%，正向表現",
+      "result": "success",
+      "holding_status": "D10到期結算：收盤33.6 > 推薦32.05，+4.84% ✅（重複條目遮蔽致漏結算，2026-07-09盤後補結算；06-29另有一筆32.65續追蹤中）",
       "close_price": 32.85,
-      "change_percent": 2.5
+      "change_percent": 2.5,
+      "actual_close": 33.6,
+      "return_pct": 4.84,
+      "settled_date": "2026-07-09"
     },
     {
       "stock_code": "2834",
@@ -113,10 +119,14 @@
       "intraday_change_pct": 1.4,
       "intraday_status": "续抱",
       "reason": "訊號A L2，外資主導累計+61K，buy_ratio 43.7%，銀行防禦性強",
-      "result": "holding",
-      "holding_status": "D0/10，今日+1.1%，正向表現",
+      "result": "fail",
+      "holding_status": "⚠️更正：本筆已於2026-06-26結算fail（predictions.json為準），tracking未回寫致07-09盤前誤重複結算為success，2026-07-09盤後更正對齊",
       "close_price": 18.0,
-      "change_percent": 1.1
+      "change_percent": 1.1,
+      "actual_close": 17.75,
+      "return_pct": -0.3,
+      "settled_date": "2026-06-26",
+      "fail_reason": "Level 4爆量賣超(-10,432張佔日均24.6%)強制停損，2026-06-26結算-0.3%"
     },
     {
       "stock_code": "3045",
