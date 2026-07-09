@@ -19,7 +19,10 @@
       "score": 93,
       "reason": "利率🔴超強催化+Module A L2(+10)+連買4天(外資投信同步,累計+38K/近5日+28K)+buy_ratio 54%+EPS YoY+50%(+5)+月季雙線上；昨D10結算success(+2.9%)後訊號未歇再進場",
       "result": "holding",
-      "holding_status": "D0 新推薦"
+      "holding_status": "D0 新推薦",
+      "intraday_price": 25.15,
+      "intraday_change_pct": 0.2,
+      "intraday_note": "12:35 盤中 +0.2%，T86 07/08 +13.8K 健康、無出場訊號，依盤前計畫建倉（金融總曝險≤45%控管）"
     },
     {
       "stock_code": "6282",
@@ -34,9 +37,61 @@
       "score": 78,
       "reason": "AI伺服器🔴超強催化(電源tier_3)+EPS YoY+640%(+5)+外資持股比週增+0.76%(+5)+反轉L0+5日-3.4%未反映；通過準確率三篩(催化對齊/外資5日+3.4K/L0)",
       "result": "holding",
-      "holding_status": "D0 新推薦"
+      "holding_status": "D0 新推薦",
+      "intraday_price": 58.5,
+      "intraday_change_pct": -0.85,
+      "intraday_note": "12:35 盤中 -0.85%，反轉安全但量價偏弱（真連續1天），維持盤前註記倉位下緣 5%"
     }
   ],
+  "intraday_update": {
+    "time": "2026-07-09 12:50",
+    "taiex": "45,762 (+0.06%)",
+    "force_exit_pending": [
+      {
+        "stock_code": "2882",
+        "stock_name": "國泰金",
+        "tracking_file": "tracking_2026-07-07.json",
+        "recommend_price": 93.4,
+        "intraday_price": 95.9,
+        "unrealized_pct": 2.7,
+        "trigger": "反轉 Level 4：T86 07/08 爆量賣超 -5,982張（36.5%日均量、外資-5,963），連買4天後單日反轉；已對官方快取雙重驗證",
+        "action": "尾盤前強制出場，盤後以收盤價結算"
+      },
+      {
+        "stock_code": "3706",
+        "stock_name": "神達",
+        "tracking_file": "tracking_2026-06-30.json",
+        "recommend_price": 86.4,
+        "intraday_price": 89.1,
+        "unrealized_pct": 3.1,
+        "trigger": "反轉 Level 4：T86 07/08 爆量賣超 -1,236張（8.8%日均量）、外資8日累計-28K、真連續買超0天",
+        "action": "尾盤前強制出場，盤後以收盤價結算"
+      }
+    ],
+    "target_watch": [
+      {
+        "stock_code": "2887",
+        "stock_name": "台新新光金",
+        "recommend_price": 33.0,
+        "target_price": 36.5,
+        "intraday_price": 36.9,
+        "note": "盤中已站上目標價，收盤≥36.50 即結算 success（T86 07/08 +15.9K 續買）"
+      }
+    ],
+    "track_a_holding": [
+      {"stock_code": "2890", "intraday_price": 41.15, "pnl_pct": 5.2, "today_pct": -1.79, "status": "續抱"},
+      {"stock_code": "2883", "intraday_price": 30.15, "pnl_pct": 5.8, "today_pct": -1.79, "status": "續抱（距目標約4%）"},
+      {"stock_code": "2377", "intraday_price": 144.5, "pnl_pct": 4.0, "today_pct": 2.11, "status": "續抱"},
+      {"stock_code": "2892", "intraday_price": 33.75, "pnl_pct": 3.4, "today_pct": -1.03, "status": "續抱"},
+      {"stock_code": "2801", "intraday_price": 24.15, "pnl_pct": 3.2, "today_pct": 1.05, "status": "續抱"},
+      {"stock_code": "2884", "intraday_price": 34.6, "pnl_pct": 2.7, "today_pct": -0.43, "status": "續抱"},
+      {"stock_code": "2881", "intraday_price": 124.5, "pnl_pct": 1.6, "today_pct": -1.19, "status": "續抱（跌破MA10警覺，非強制訊號）"},
+      {"stock_code": "2886", "intraday_price": 46.9, "pnl_pct": 1.6, "today_pct": 0.32, "status": "續抱（首輪掃描L2為API暫時異常，官方T86 07/08 +13,048買超，已重掃排除）"},
+      {"stock_code": "1216", "intraday_price": 78.9, "pnl_pct": 1.4, "today_pct": 0.13, "status": "續抱"},
+      {"stock_code": "4938", "intraday_price": 83.4, "pnl_pct": -0.2, "today_pct": -0.48, "status": "續抱觀察（跌破MA5減碼訊號，距停損尚10%）"}
+    ],
+    "exit_conditions_check": "觸停損 0 檔｜連續重挫 0 檔（今日最大跌幅 2882 -2.14%）｜反轉 L3-4：2882/3706 觸發強制出場"
+  },
   "watchlist": [
     {"stock_code": "2834", "stock_name": "臺企銀", "score": 75, "note": "分數達標，因新推薦產業分散上限(金融≤50%)裁減；連買5天/近5日+51K，明日若科技候選回穩可納入"},
     {"stock_code": "2880", "stock_name": "華南金", "score": 70, "note": "已大漲-10後貼推薦線+金融集中，觀察"},
@@ -46,5 +101,16 @@
     {"stock_code": "2618", "stock_name": "長榮航", "score": 64, "note": "avg_rank 3/外資單日+61.8K，但WTI+5.68%燃油利空催化不對齊+過量買超-5+投信-12K；連續第4日不推"}
   ],
   "track_b_recommendations": [],
-  "track_b_observations": []
+  "track_b_observations": [
+    {"stock_code": "3017", "stock_name": "奇鋐", "industry": "AI散熱", "score_est": 72, "today_pct": 0.86, "note": "盤中評分同盤前72（T86未更新、偵測器0訊號無加分）。營收+60.6%回檔-14.6%(+5)、外資持股比+0.50%不調整、反轉L0，但外資近5日-326未過準確率三篩。回正即候選"},
+    {"stock_code": "2353", "stock_name": "宏碁", "industry": "蘋果鏈/PC", "score_est": 71, "today_pct": 1.55, "note": "外資持股比+0.41%不調整、真連續買超2天、營收+36.5%但回檔僅+2.2%不加分；蘋果鏈🟡非今日最強催化，未過催化對齊"},
+    {"stock_code": "2880", "stock_name": "華南金", "industry": "金融", "score_est": 70, "today_pct": -1.26, "note": "營收+58.3%但回檔+7.1%不加分、已大漲-10；2882金融L4出場日，金融曝險不再加"},
+    {"stock_code": "2867", "stock_name": "三商壽", "industry": "壽險/金融", "score_est": 68, "today_pct": -0.34, "note": "營收-30.2%(單月不扣)、外資持股比-0.06%微減不調整、已大漲-10"},
+    {"stock_code": "3035", "stock_name": "智原", "industry": "IC設計服務", "score_est": 67, "today_pct": 1.16, "note": "營收連衰5月(-5)、外資持股比+3.02%(+5)、真連續買超僅2天"},
+    {"stock_code": "2618", "stock_name": "長榮航", "industry": "航空", "score_est": 64, "today_pct": -1.51, "note": "營收+22.1%回檔-10.5%(+5)、外資持股比-0.16%(-3)；WTI燃油利空催化不對齊+過量買超-5，連續第5日不推"},
+    {"stock_code": "2889", "stock_name": "國票金", "industry": "金融", "score_est": 56, "today_pct": 0.32, "note": "營收+16.4%回檔不足不加分、已大漲-10"},
+    {"stock_code": "2603", "stock_name": "長榮", "industry": "航運", "score_est": 54, "today_pct": -0.26, "note": "營收連衰10月(-5)、外資持股比-0.14%(-3)、真連續買超1天"},
+    {"stock_code": "2615", "stock_name": "萬海", "industry": "航運", "score_est": 43, "today_pct": 1.51, "note": "營收連衰10月(-5)、外資持股比-0.13%(-3)"}
+  ],
+  "intraday_no_new_recommendation": "今日無盤中新推薦：偵測器 0 強訊號；9 檔候選最高 72 分（3017），全數未達 75 門檻。3026(+5.98%)/3189(+6.62%) 已漲>3% 排除、2303/1718 處置股排除"
 }
