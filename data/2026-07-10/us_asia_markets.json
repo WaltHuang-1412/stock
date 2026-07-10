@@ -1,0 +1,237 @@
+{
+ "NASDAQ": 1.3,
+ "S&P 500": 0.81,
+ "道瓊": 0.27,
+ "費城半導體": 3.06,
+ "台積電ADR": -0.0,
+ "聯電ADR": 0.53,
+ "日月光ADR": 8.31,
+ "中華電ADR": -4.66,
+ "Micron": 4.52,
+ "Western Digital": 5.04,
+ "AMD": 5.66,
+ "Intel": 2.09,
+ "ASML": 2.01,
+ "Applied Materials": 3.18,
+ "Lam Research": 6.01,
+ "KLA": 3.77,
+ "Broadcom": 3.2,
+ "Marvell": 4.99,
+ "Cisco": 3.94,
+ "Arista": 2.01,
+ "Apple": 0.9,
+ "Qualcomm": 2.44,
+ "Super Micro": 0.25,
+ "Dell": 4.22,
+ "Amazon": 1.4,
+ "Microsoft": 0.27,
+ "Google": -0.84,
+ "Meta": 4.7,
+ "Tesla": 3.17,
+ "NVIDIA": -0.66,
+ "VIX": -6.27,
+ "WTI原油": -3.47,
+ "黃金": 1.18,
+ "日經225": -0.75,
+ "韓國KOSPI": -4.76,
+ "香港恆生": 2.27,
+ "上證指數": null,
+ "新加坡STI": 1.72,
+ "_meta": {
+  "fetched_at": "2026-07-10 08:05",
+  "note": "單日漲跌幅（2026-07-09 美股收盤 vs 2026-07-08 收盤）。原 fetch_us_asia_markets.py 輸出誤用舊基準（費半-2.95%/KLA-13.78%等為多日累計），已依 2026-07-09 檔案 _meta.levels 重算修正，並經 topic_tracker（費半+3.06%）交叉驗證。",
+  "levels": {
+   "NASDAQ": {
+    "close": 26206.89,
+    "prev_close": 25870.65,
+    "date": "2026-07-09"
+   },
+   "S&P 500": {
+    "close": 7543.64,
+    "prev_close": 7482.71,
+    "date": "2026-07-09"
+   },
+   "道瓊": {
+    "close": 52487.41,
+    "prev_close": 52348.39,
+    "date": "2026-07-09"
+   },
+   "費城半導體": {
+    "close": 12960.0,
+    "prev_close": 12574.97,
+    "date": "2026-07-09"
+   },
+   "台積電ADR": {
+    "close": 436.96,
+    "prev_close": 436.98,
+    "date": "2026-07-09"
+   },
+   "聯電ADR": {
+    "close": 24.86,
+    "prev_close": 24.73,
+    "date": "2026-07-09"
+   },
+   "日月光ADR": {
+    "close": 43.25,
+    "prev_close": 39.93,
+    "date": "2026-07-09"
+   },
+   "中華電ADR": {
+    "close": 41.51,
+    "prev_close": 43.54,
+    "date": "2026-07-09"
+   },
+   "Micron": {
+    "close": 991.64,
+    "prev_close": 948.8,
+    "date": "2026-07-09"
+   },
+   "Western Digital": {
+    "close": 578.05,
+    "prev_close": 550.3,
+    "date": "2026-07-09"
+   },
+   "AMD": {
+    "close": 546.72,
+    "prev_close": 517.41,
+    "date": "2026-07-09"
+   },
+   "Intel": {
+    "close": 112.54,
+    "prev_close": 110.24,
+    "date": "2026-07-09"
+   },
+   "ASML": {
+    "close": 1804.25,
+    "prev_close": 1768.65,
+    "date": "2026-07-09"
+   },
+   "Applied Materials": {
+    "close": 588.66,
+    "prev_close": 570.5,
+    "date": "2026-07-09"
+   },
+   "Lam Research": {
+    "close": 353.17,
+    "prev_close": 333.15,
+    "date": "2026-07-09"
+   },
+   "KLA": {
+    "close": 229.52,
+    "prev_close": 221.18,
+    "date": "2026-07-09"
+   },
+   "Broadcom": {
+    "close": 401.11,
+    "prev_close": 388.69,
+    "date": "2026-07-09"
+   },
+   "Marvell": {
+    "close": 243.27,
+    "prev_close": 231.71,
+    "date": "2026-07-09"
+   },
+   "Cisco": {
+    "close": 118.31,
+    "prev_close": 113.82,
+    "date": "2026-07-09"
+   },
+   "Arista": {
+    "close": 184.69,
+    "prev_close": 181.05,
+    "date": "2026-07-09"
+   },
+   "Apple": {
+    "close": 316.22,
+    "prev_close": 313.39,
+    "date": "2026-07-09"
+   },
+   "Qualcomm": {
+    "close": 191.11,
+    "prev_close": 186.56,
+    "date": "2026-07-09"
+   },
+   "Super Micro": {
+    "close": 28.24,
+    "prev_close": 28.17,
+    "date": "2026-07-09"
+   },
+   "Dell": {
+    "close": 450.22,
+    "prev_close": 431.97,
+    "date": "2026-07-09"
+   },
+   "Amazon": {
+    "close": 247.04,
+    "prev_close": 243.62,
+    "date": "2026-07-09"
+   },
+   "Microsoft": {
+    "close": 384.36,
+    "prev_close": 383.34,
+    "date": "2026-07-09"
+   },
+   "Google": {
+    "close": 358.89,
+    "prev_close": 361.92,
+    "date": "2026-07-09"
+   },
+   "Meta": {
+    "close": 631.48,
+    "prev_close": 603.12,
+    "date": "2026-07-09"
+   },
+   "Tesla": {
+    "close": 406.55,
+    "prev_close": 394.06,
+    "date": "2026-07-09"
+   },
+   "NVIDIA": {
+    "close": 202.78,
+    "prev_close": 204.12,
+    "date": "2026-07-09"
+   },
+   "VIX": {
+    "close": 15.84,
+    "prev_close": 16.9,
+    "date": "2026-07-09"
+   },
+   "WTI原油": {
+    "close": 71.86,
+    "prev_close": 74.44,
+    "date": "2026-07-09"
+   },
+   "黃金": {
+    "close": 4133.7,
+    "prev_close": 4085.6,
+    "date": "2026-07-09"
+   },
+   "日經225": {
+    "close": 67744,
+    "prev_close": 68256.96,
+    "date": "2026-07-09"
+   },
+   "韓國KOSPI": {
+    "close": 7292,
+    "prev_close": 7656.31,
+    "date": "2026-07-09"
+   },
+   "香港恆生": {
+    "close": 24030,
+    "prev_close": 23496.89,
+    "date": "2026-07-09"
+   },
+   "上證指數": {
+    "close": 4037,
+    "prev_close": NaN,
+    "date": "2026-07-09"
+   },
+   "新加坡STI": {
+    "close": 5434,
+    "prev_close": 5342.24,
+    "date": "2026-07-09"
+   }
+  },
+  "missing_prev_close": []
+ }
+}
