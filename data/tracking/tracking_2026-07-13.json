@@ -1,0 +1,186 @@
+{
+  "date": "2026-07-13",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "us_data_date": "2026-07-10",
+    "note": "美股07-09費半+3.06%與07-10(費半+0.06%、NVDA+4.03%、Meta+5.97%)兩交易日尚未被台股反映；台指期上週五夜盤+600點；WTI週末真漲+3.16%(美伊衝突)；07/14美CPI+Fed主席作證、07/15期貨結算、07/16台積電法說D-3",
+    "regime": "多頭(月線下-1.12%)",
+    "vix": 15.03,
+    "defense_ratio": "0-15%"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2353",
+      "stock_name": "宏碁",
+      "industry": "蘋果鏈/PC品牌",
+      "recommend_price": 32.5,
+      "target_price": 36.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 29.25,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 84,
+      "reason": "📶訊號A L2(+10)｜Q2營收創13年同期新高(企業財報🟡強)｜avg_rank13.5、外資近5日+48K、真連續3天｜EPS YoY+35%(+3)｜MA20 -3.7%低基期｜反轉L0"
+    },
+    {
+      "stock_code": "2441",
+      "stock_name": "超豐",
+      "industry": "未分類",
+      "recommend_price": 144.5,
+      "target_price": 160.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 130.05,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 77,
+      "reason": "封測滿載+漲價潮外溢(🔴被動元件/封測)｜7買2賣、外資近5日+4.5K｜EPS+5(YoY+35%+毛利+3.7pp)｜外資持股比週增+1.52%(+5)｜反轉L0｜註：industry_chains未收錄，產業=封測代工(未分類)"
+    },
+    {
+      "stock_code": "2324",
+      "stock_name": "仁寶",
+      "industry": "AI伺服器",
+      "recommend_price": 36.6,
+      "target_price": 40.3,
+      "stop_loss_pct": -10,
+      "stop_loss": 32.94,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 74,
+      "reason": "📶訊號A L2(+10)｜AI伺服器ODM(🔴超強)｜avg_rank13.5、外資近5日+42K｜EPS連3季負成長(-5)為主要減分｜MA20+1.1%未反映｜反轉L0"
+    },
+    {
+      "stock_code": "6285",
+      "stock_name": "啟碁",
+      "industry": "光通訊與網通",
+      "recommend_price": 260.5,
+      "target_price": 288.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 234.45,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "reason": "光通訊網通🔴+5G FWA新聞點名｜外資近5日+1.3K、外資持股比週增+0.53%(+5)｜EPS YoY+23%(+3)｜MA20+1.0%未反映｜反轉L0"
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "industry": "金融",
+      "recommend_price": 36.85,
+      "target_price": 40.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 33.17,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 71,
+      "reason": "avg_rank9.5、真連續5天、外資+投信同步(+92K/+50K)｜EPS YoY+177%(+5)｜5日+7.9%已大漲(-10)為主要減分｜反轉L0｜金融獲利動能(🔴利率)"
+    }
+  ],
+  "carryover_tracking": [
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "score": 81,
+      "note": "⏳沿用進行中追蹤(D1/10，07-09推薦)，維持原進場價25.1／停損22.59不變，不重複建倉"
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "industry": "金融",
+      "score": 76,
+      "note": "⏳沿用進行中追蹤(D4/10，07-06推薦)，維持原進場價／停損不變，不重複建倉"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "industry": "金融",
+      "score": 76,
+      "note": "⏳沿用進行中追蹤(D6/10，07-02推薦)，維持原進場價／停損不變，不重複建倉"
+    }
+  ],
+  "watchlist": [
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "score": 81,
+      "reason": "DRAM🔴超強+avg_rank2.5+投信同步，但反轉「狀態不明」(累計-19K)未過準確率篩選gate3；今日開盤若量價確認可盤中重評"
+    },
+    {
+      "stock_code": "2634",
+      "stock_name": "漢翔",
+      "score": 73,
+      "reason": "軍工題材+訊號A L2+外資持股比+2.01%，但無對應Topic Tracker催化主題(gate1催化對齊未過)"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "score": 70,
+      "reason": "訊號A L2+法人連買5天+112K，但WTI週末+3.16%為航空直接逆風(gate1未過)+單日31K過量買超(-5)"
+    },
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "score": 69,
+      "reason": "油價+3.16%受惠，但不在當日TOP50買超、法人維度僅6分，未達70"
+    },
+    {
+      "stock_code": "6488",
+      "stock_name": "環球晶",
+      "score": null,
+      "reason": "美光10年長約重大利多，但處置風險高(60日+161.6%)+反轉數據不足+⚠️營收未跟上+不在TOP50買超，禁止追高，今日開盤反應僅觀察"
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光投控",
+      "score": null,
+      "reason": "投信+4.3K金額排名4，但外資近5日-31K未過gate2"
+    },
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "score": 62,
+      "reason": "單日+203K為過量買超(真連續僅1天，-5)+投信賣超對決+EPS-135%，62分不推薦"
+    }
+  ],
+  "excluded": [
+    {
+      "stock_code": "1718",
+      "reason": "TWSE處置股(30日+121.9%)禁止進場"
+    },
+    {
+      "stock_code": "2344",
+      "reason": "反轉L4爆量賣超"
+    },
+    {
+      "stock_code": "6770",
+      "reason": "反轉L4法人出貨"
+    },
+    {
+      "stock_code": "1301",
+      "reason": "反轉L4爆量賣超"
+    },
+    {
+      "stock_code": "2345",
+      "reason": "反轉L3"
+    },
+    {
+      "stock_code": "8150",
+      "reason": "5日+11.4%已大漲不評分"
+    },
+    {
+      "stock_code": "3006",
+      "reason": "5日+12.1%已大漲不評分"
+    },
+    {
+      "stock_code": "2637",
+      "reason": "5日+11.7%已大漲不評分"
+    },
+    {
+      "stock_code": "4958",
+      "reason": "處置預警+累計賣超"
+    }
+  ]
+}
