@@ -2,17 +2,26 @@
 """
 結算判斷器
 
-掃描近期 tracking 中所有 holding 的股票，查詢收盤價，機械式判斷結算結果。
+掃描「所有」tracking 檔中 result='holding' 的推薦，用歷史日收盤從推薦日逐日重演，
+機械式判斷結算結果。
 
-結算規則：
+結算規則（逐交易日走訪，取最先觸發者）：
   1. 收盤價 ≥ 目標價 → success
-  2. 收盤價 ≤ 停損價 → fail
-  3. 持有天數 ≥ settlement_days → 收盤>推薦價=success，≤推薦價=fail
+  2. 收盤價 ≤ 停損價 → fail（停損價由 stop_loss_pct 重算）
+  3. 持有交易日數 ≥ settlement_days → 收盤>推薦價=success，≤推薦價=fail
   4. 以上皆無 → holding
+
+v2 修正（2026-07-13，殭屍 holding 清理後）：
+  - 掃描全部 tracking_*.json，不再只掃近 15 天（舊版漏掃 → 殭屍單成因）
+  - 同一股票不同日期的推薦各自獨立結算，以 (recommend_date, code, track) 去重，
+    不再被較新推薦遮蔽（修正「重複建檔遮蔽 D10」）
+  - 交易日數改用個股價格序列（成交量>0 的日 K）計算，颱風/臨時休市日不誤計
+    （Yahoo 會在休市日塞量=0 的假 K 棒，一律過濾）
+  - 目標/停損改用歷史收盤逐日判斷，補結算時能還原「當時就該結」的日期與價格
 
 用法：
   python scripts/settlement_checker.py                    # 掃描所有 holding
-  python scripts/settlement_checker.py --date 2026-05-02  # 指定日期
+  python scripts/settlement_checker.py --date 2026-05-02  # 指定結算日
   python scripts/settlement_checker.py --json              # JSON 輸出
 """
 
@@ -21,7 +30,7 @@ import io
 import json
 import argparse
 import glob
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 if sys.platform == "win32":
@@ -30,146 +39,164 @@ if sys.platform == "win32":
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 TRACKING_DIR = PROJECT_DIR / "data" / "tracking"
+TPE = timezone(timedelta(hours=8))
 
 sys.path.insert(0, str(PROJECT_DIR / "scripts"))
-from yahoo_finance_api import get_current_price
+from yahoo_finance_api import get_history
+
+_history_cache = {}
 
 
-def find_all_holdings(date_str):
-    """掃描近 15 天的 tracking，找出所有 result='holding' 的股票"""
-    holdings = {}  # key=stock_code, value=最早的推薦資訊
-    dt = datetime.strptime(date_str, "%Y-%m-%d")
+def get_close_series(code):
+    """個股日收盤序列 [(date_str, close), ...] 遞增排序。
 
-    for i in range(15):
-        d = dt - timedelta(days=i)
-        d_str = d.strftime("%Y-%m-%d")
-        tracking_file = TRACKING_DIR / f"tracking_{d_str}.json"
+    過濾成交量=0 的假 K 棒（颱風/休市日 Yahoo 沿用前收塞入），失敗返回 None。
+    """
+    if code in _history_cache:
+        return _history_cache[code]
 
-        if not tracking_file.exists():
+    h = get_history(code, period="1y", interval="1d")
+    series = None
+    if h and h.get("timestamps") and h.get("closes"):
+        vols = h.get("volumes") or [None] * len(h["timestamps"])
+        dedup = {}
+        for ts, c, v in zip(h["timestamps"], h["closes"], vols):
+            if c is None or not v:
+                continue
+            d = datetime.fromtimestamp(ts, tz=TPE).strftime("%Y-%m-%d")
+            dedup[d] = round(float(c), 2)
+        series = sorted(dedup.items()) or None
+
+    _history_cache[code] = series
+    return series
+
+
+def _entry_from_rec(rec, file_date, track):
+    """從 tracking 記錄建立待結算項目，recommend_price 相容舊格式 intraday_price"""
+    price = rec.get("recommend_price") or rec.get("intraday_price")
+    default_pct = -5 if track == "B" else -10
+    return {
+        "stock_code": rec.get("stock_code"),
+        "stock_name": rec.get("stock_name", ""),
+        "industry": rec.get("industry", ""),
+        "track": track,
+        "recommend_date": rec.get("recommend_date") or file_date,
+        "recommend_price": price,
+        "target_price": rec.get("target_price"),
+        "stop_loss": rec.get("stop_loss"),
+        "stop_loss_pct": rec.get("stop_loss_pct", default_pct),
+        "settlement_days": rec.get("settlement_days", 10),
+        "score": rec.get("score"),
+        "position": rec.get("position", ""),
+        "source_file": f"tracking_{file_date}.json",
+    }
+
+
+def find_all_holdings():
+    """掃描全部 tracking 檔，找出所有 result='holding' 的推薦。
+
+    以 (recommend_date, stock_code, track) 為身分去重 —— 同一筆推薦被後續檔案
+    carry over 時只取最早（原始）檔的版本；同一股票不同日期的推薦各自保留。
+    """
+    holdings = {}  # key=(recommend_date, code, track)
+
+    for path in sorted(glob.glob(str(TRACKING_DIR / "tracking_*.json"))):
+        file_date = Path(path).stem.replace("tracking_", "")
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except (json.JSONDecodeError, OSError):
+            print(f"⚠️ 無法讀取 {path}，跳過", file=sys.stderr)
             continue
 
-        with open(tracking_file, "r", encoding="utf-8") as f:
-            data = json.load(f)
+        for list_key, track in (("recommendations", "A"), ("track_b_recommendations", "B")):
+            for rec in data.get(list_key) or []:
+                if not isinstance(rec, dict):
+                    continue
+                if rec.get("result", "holding") != "holding":
+                    continue
+                entry = _entry_from_rec(rec, file_date, track)
+                key = (entry["recommend_date"], entry["stock_code"], track)
+                if key not in holdings:  # 檔案按日期排序，先見者即原始檔
+                    holdings[key] = entry
 
-        # 掃描 recommendations
-        for rec in data.get("recommendations", []):
-            code = rec.get("stock_code")
-            result = rec.get("result", "holding")
-
-            if result != "holding" or code in holdings:
+        # holdings 陣列（盤後 tracking 會把前幾天的放這裡）：無 track 資訊，
+        # 只在同 (recommend_date, code) 尚無任何軌的記錄時補入
+        for rec in data.get("holdings") or []:
+            if not isinstance(rec, dict):
                 continue
-
-            # 找推薦日期：如果有 recommend_date 就用，否則用 tracking 的 date
-            recommend_date = rec.get("recommend_date", d_str)
-
-            holdings[code] = {
-                "stock_code": code,
-                "stock_name": rec.get("stock_name", ""),
-                "industry": rec.get("industry", ""),
-                "recommend_date": recommend_date,
-                "recommend_price": rec.get("recommend_price"),
-                "target_price": rec.get("target_price"),
-                "stop_loss": rec.get("stop_loss"),
-                "stop_loss_pct": rec.get("stop_loss_pct", -10),
-                "settlement_days": rec.get("settlement_days", 10),
-                "score": rec.get("score"),
-                "position": rec.get("position", ""),
-            }
-
-        # 掃描 holdings（盤後 tracking 會把前幾天的放這裡）
-        for h in data.get("holdings", []):
-            code = h.get("stock_code")
-            result = h.get("result", "holding")
-
-            if result != "holding" or code in holdings:
+            if rec.get("result", "holding") != "holding":
                 continue
+            entry = _entry_from_rec(rec, file_date, "A")
+            rd, code = entry["recommend_date"], entry["stock_code"]
+            if any(k[0] == rd and k[1] == code for k in holdings):
+                continue
+            holdings[(rd, code, "A")] = entry
 
-            recommend_date = h.get("recommend_date", d_str)
-            holdings[code] = {
-                "stock_code": code,
-                "stock_name": h.get("stock_name", ""),
-                "industry": h.get("industry", ""),
-                "recommend_date": recommend_date,
-                "recommend_price": h.get("recommend_price"),
-                "target_price": h.get("target_price"),
-                "stop_loss": h.get("stop_loss"),
-                "stop_loss_pct": h.get("stop_loss_pct", -10),
-                "settlement_days": h.get("settlement_days", 10),
-                "score": h.get("score"),
-                "position": h.get("position", ""),
-            }
-
-    return holdings
+    return list(holdings.values())
 
 
-def count_trading_days(start_date, end_date):
-    """計算兩個日期之間的交易日數（簡易版：排除週末）"""
-    start = datetime.strptime(start_date, "%Y-%m-%d")
-    end = datetime.strptime(end_date, "%Y-%m-%d")
-    count = 0
-    dt = start + timedelta(days=1)
-    while dt <= end:
-        if dt.weekday() < 5:  # 排除週末
-            count += 1
-        dt += timedelta(days=1)
-    return count
-
-
-def check_settlement(holdings, date_str):
-    """對所有 holding 股票查詢收盤價並判斷結算"""
+def check_settlement(entries, date_str):
+    """逐筆用歷史收盤從推薦日重演結算"""
     results = []
 
-    for code, info in holdings.items():
-        close = get_current_price(code)
-        if close is None:
-            results.append({
-                **info,
-                "close": None,
-                "result": "error",
-                "reason": "無法取得收盤價",
-            })
-            continue
-
+    for info in entries:
+        code = info["stock_code"]
         recommend_price = info["recommend_price"]
         target_price = info["target_price"]
+
+        if not code or recommend_price in (None, 0):
+            results.append({**info, "close": None, "result": "error",
+                            "reason": "缺 recommend_price，無法結算"})
+            continue
+
+        series = get_close_series(code)
+        if not series:
+            results.append({**info, "close": None, "result": "error",
+                            "reason": "無法取得收盤價序列"})
+            continue
 
         # 用 stop_loss_pct 重算 stop_loss
         stop_loss_pct = info.get("stop_loss_pct", -10)
         stop_loss = round(recommend_price * (1 + stop_loss_pct / 100), 2)
-
         settlement_days = info.get("settlement_days", 10)
-        holding_days = count_trading_days(info["recommend_date"], date_str)
 
-        change_pct = round((close - recommend_price) / recommend_price * 100, 2)
+        # 推薦日之後、結算日（含）之前的交易日
+        days = [(d, c) for d, c in series if info["recommend_date"] < d <= date_str]
 
-        entry = {
-            **info,
-            "stop_loss": stop_loss,
-            "close": close,
-            "change_pct": change_pct,
-            "holding_days": holding_days,
-        }
+        entry = {**info, "stop_loss": stop_loss}
+        settled = False
+        for i, (d, close) in enumerate(days, 1):
+            if target_price and close >= target_price:
+                entry.update(result="success", settled_date=d, close=close, holding_days=i,
+                             reason=f"D{i} 收盤 {close} ≥ 目標 {target_price}")
+                settled = True
+                break
+            if close <= stop_loss:
+                entry.update(result="fail", settled_date=d, close=close, holding_days=i,
+                             reason=f"D{i} 收盤 {close} ≤ 停損 {stop_loss}")
+                settled = True
+                break
+            if i >= settlement_days:
+                if close > recommend_price:
+                    entry.update(result="success",
+                                 reason=f"D{i} 到期，收盤 {close} > 推薦 {recommend_price}")
+                else:
+                    entry.update(result="fail",
+                                 reason=f"D{i} 到期，收盤 {close} ≤ 推薦 {recommend_price}")
+                entry.update(settled_date=d, close=close, holding_days=i)
+                settled = True
+                break
 
-        # 結算判斷
-        if close >= target_price:
-            entry["result"] = "success"
-            entry["reason"] = f"收盤 {close} ≥ 目標 {target_price}"
-        elif close <= stop_loss:
-            entry["result"] = "fail"
-            entry["reason"] = f"收盤 {close} ≤ 停損 {stop_loss}"
-        elif holding_days >= settlement_days:
-            if close > recommend_price:
-                entry["result"] = "success"
-                entry["reason"] = f"D{holding_days} 到期，收盤 {close} > 推薦 {recommend_price}"
-            else:
-                entry["result"] = "fail"
-                entry["reason"] = f"D{holding_days} 到期，收盤 {close} ≤ 推薦 {recommend_price}"
-        else:
-            entry["result"] = "holding"
-            dist_target = round((target_price - close) / close * 100, 1)
+        if not settled:
+            close = days[-1][1] if days else series[-1][1]
+            holding_days = len(days)
+            dist_target = round((target_price - close) / close * 100, 1) if target_price else None
             dist_stop = round((close - stop_loss) / close * 100, 1)
-            entry["reason"] = f"D{holding_days}/{settlement_days} | 距目標 {dist_target}% | 距停損 {dist_stop}%"
+            entry.update(result="holding", close=close, holding_days=holding_days,
+                         reason=f"D{holding_days}/{settlement_days} | 距目標 {dist_target}% | 距停損 {dist_stop}%")
 
+        entry["change_pct"] = round((entry["close"] - recommend_price) / recommend_price * 100, 2)
         results.append(entry)
 
     return results
@@ -186,17 +213,15 @@ def main():
     print(f"📊 結算判斷 — {date_str}", file=sys.stderr)
     print("=" * 60, file=sys.stderr)
 
-    # 找出所有 holding
-    holdings = find_all_holdings(date_str)
+    holdings = find_all_holdings()
     if not holdings:
         print("沒有找到任何 holding 中的股票", file=sys.stderr)
         if args.json:
             print(json.dumps({"date": date_str, "results": []}, ensure_ascii=False, indent=2))
         return
 
-    print(f"找到 {len(holdings)} 檔 holding 中", file=sys.stderr)
+    print(f"找到 {len(holdings)} 筆 holding 中（含同股票不同日期推薦）", file=sys.stderr)
 
-    # 查詢收盤價 + 判斷結算
     results = check_settlement(holdings, date_str)
 
     if args.json:
@@ -212,26 +237,28 @@ def main():
         }
         print(json.dumps(output, ensure_ascii=False, indent=2))
     else:
-        # 表格輸出
         settled = [r for r in results if r["result"] in ("success", "fail")]
         holding = [r for r in results if r["result"] == "holding"]
         errors = [r for r in results if r["result"] == "error"]
 
         if settled:
-            print(f"\n🔔 今日結算 ({len(settled)} 檔):")
+            print(f"\n🔔 應結算 ({len(settled)} 筆):")
             for r in settled:
                 icon = "✅" if r["result"] == "success" else "❌"
-                print(f"  {icon} {r['stock_code']} {r['stock_name']} | {r['change_pct']:+.1f}% | {r['reason']}")
+                print(f"  {icon} {r['stock_code']} {r['stock_name']} [{r['track']}] "
+                      f"推薦日 {r['recommend_date']} | {r['change_pct']:+.1f}% | {r['reason']} "
+                      f"@{r['settled_date']} | 來源 {r['source_file']}")
 
         if holding:
-            print(f"\n📍 持有中 ({len(holding)} 檔):")
+            print(f"\n📍 持有中 ({len(holding)} 筆):")
             for r in holding:
-                print(f"  {r['stock_code']} {r['stock_name']} | 現價 {r['close']} ({r['change_pct']:+.1f}%) | {r['reason']}")
+                print(f"  {r['stock_code']} {r['stock_name']} [{r['track']}] "
+                      f"推薦日 {r['recommend_date']} | 現價 {r['close']} ({r['change_pct']:+.1f}%) | {r['reason']}")
 
         if errors:
-            print(f"\n⚠️ 查詢失敗 ({len(errors)} 檔):")
+            print(f"\n⚠️ 查詢失敗 ({len(errors)} 筆):")
             for r in errors:
-                print(f"  {r['stock_code']} {r['stock_name']} | {r['reason']}")
+                print(f"  {r['stock_code']} {r['stock_name']} 推薦日 {r['recommend_date']} | {r['reason']}")
 
 
 if __name__ == "__main__":
