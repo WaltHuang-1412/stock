@@ -28,7 +28,11 @@
       "intraday_price": 31.75,
       "intraday_change_pct": -2.31,
       "intraday_note": "12:44 盤中 跌破MA5/MA10、5日高點回落-5.9%，反轉L0未觸強制出場條件，續抱",
-      "holding_status": "D0/10 | 盤中31.75(-2.3%) | 距目標約13.4% | 距停損約8.5%"
+      "holding_status": "D0/10 收盤31.95(-1.7%) | 距目標36.0約12.7% | 距停損29.25約8.5% | 未觸出場條件續抱",
+      "actual_close": 31.95,
+      "close_change_vs_rec_pct": -1.69,
+      "close_price": 31.95,
+      "change_percent": -1.69
     },
     {
       "stock_code": "2441",
@@ -46,7 +50,11 @@
       "intraday_price": 135.5,
       "intraday_change_pct": -6.23,
       "intraday_note": "12:44 盤中 高風險續抱：距停損130.05僅4.0%，跌破即停損；跌破MA5/MA10、高點回落-10.9%",
-      "holding_status": "D0/10 | 盤中135.5(-6.2%) | 距目標約18.1% | 距停損約4.2%"
+      "holding_status": "D0/10 收盤137.5(-4.8%) | 距目標160約16.4% | 距停損130.05約5.4% | 尾盤未破停損續抱，明日開盤優先盯",
+      "actual_close": 137.5,
+      "close_change_vs_rec_pct": -4.84,
+      "close_price": 137.5,
+      "change_percent": -4.84
     },
     {
       "stock_code": "2324",
@@ -64,7 +72,11 @@
       "intraday_price": 36.25,
       "intraday_change_pct": -0.96,
       "intraday_note": "12:44 盤中 站穩MA5，5檔中最穩，續抱",
-      "holding_status": "D0/10 | 盤中36.25(-1.0%) | 距目標約11.2% | 距停損約10.0%"
+      "holding_status": "D0/10 收盤36.65(+0.1%) | 距目標40.3約10.0% | 距停損32.94約10.1% | 5檔中最穩",
+      "actual_close": 36.65,
+      "close_change_vs_rec_pct": 0.14,
+      "close_price": 36.65,
+      "change_percent": 0.14
     },
     {
       "stock_code": "6285",
@@ -82,7 +94,11 @@
       "intraday_price": 249.0,
       "intraday_change_pct": -4.41,
       "intraday_note": "12:44 盤中 續抱留意：距停損234.45約6.2%，跌破MA5/MA10、高點回落-9.9%",
-      "holding_status": "D0/10 | 盤中249.0(-4.4%) | 距目標約15.7% | 距停損約6.2%"
+      "holding_status": "D0/10 收盤259.0(-0.6%) | 距目標288約11.2% | 距停損234.45約9.5% | 尾盤收復部分跌幅續抱",
+      "actual_close": 259.0,
+      "close_change_vs_rec_pct": -0.58,
+      "close_price": 259.0,
+      "change_percent": -0.58
     },
     {
       "stock_code": "2887",
@@ -100,7 +116,11 @@
       "intraday_price": 35.95,
       "intraday_change_pct": -2.44,
       "intraday_note": "12:44 盤中 跌破MA5但投信+13.1K連買5天籌碼佳，續抱",
-      "holding_status": "D0/10 | 盤中35.95(-2.4%) | 距目標約12.7% | 距停損約8.4%"
+      "holding_status": "D0/10 收盤35.75(-3.0%) | 距目標40.5約13.3% | 距停損33.17約7.2% | 投信連買籌碼仍佳續抱",
+      "actual_close": 35.75,
+      "close_change_vs_rec_pct": -2.99,
+      "close_price": 35.75,
+      "change_percent": -2.99
     }
   ],
   "carryover_tracking": [
@@ -268,5 +288,91 @@
       }
     ],
     "prior_holdings_check": "07-02~07-09未結算holding全數未觸停損（2881+2.9%/2884+2.8%/2886+2.2%/2883+4.6%/2890+2.9%/2892+2.9%/2801+2.4%/2377+6.5%/1216+1.4%/5880+0.2%/4938-1.4%/6282-2.0%）"
+  },
+  "after_market_update": {
+    "time": "2026-07-13 14:40",
+    "taiex_close": "45,380.52 (+0.06%)",
+    "data_note": "T86 07-13 於 14:35 尚未公布，法人數據基準仍為 07-09；明日盤前必以 T86 07-13 全掃",
+    "settlement_today": [
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "source": "tracking_2026-06-26 track_b",
+        "result": "success",
+        "detail": "真D10到期（07-10颱風休市順延），收盤40.2 > 推薦39.2（+2.55%），未觸目標43.1/停損37.24"
+      }
+    ],
+    "settlement_deferred": [
+      {
+        "stock_codes": [
+          "2890",
+          "2801",
+          "2892"
+        ],
+        "source": "tracking_2026-06-29",
+        "detail": "settlement_checker因颱風日07-10誤計為D10，實為真D9；07-14才到期，今日不結算（現浮盈+2.8%/+1.9%/+3.1%）"
+      }
+    ],
+    "holdings_note": "6770力積電收69.0已低於一律出場價73.26，出場建議確認；1301台塑爆量大漲+9.85%（油價催化發酵），盤中賣出論點被行情反駁，明日以T86 07-13重跑manual_exit_checker再定",
+    "prior_holdings_no_stop": "14檔holding全數未觸停損（金融群+0.4%~+4.6%逆勢強，2441/-4.8%與2887/-3.0%最弱）"
+  },
+  "removed_stocks": [],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "industry": "DRAM",
+      "reason": "盤前81分最高候選：DRAM🔴超強+avg_rank2.5+投信同步；卡點=反轉狀態不明（累計-19K）未過gate3；今日-2.5%回檔中；營收+587%但回檔僅0.6%不加分、外資持股比不調整",
+      "priority": "高",
+      "action": "明日盤前以T86 07-13重評，法人回買+反轉L0-1即進候選"
+    },
+    {
+      "stock_code": "1536",
+      "stock_name": "和大",
+      "industry": "電動車減速齒輪",
+      "reason": "盤中70分：外資持股比週增+1.54%(+5)、偵測器75分；卡點=真連續僅1天+無催化對應；今日收56.1(+1.9%)",
+      "priority": "中",
+      "action": "T86 07-13若續買（真連續2天+）再評"
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "industry": "面板驅動IC",
+      "reason": "除息日觸跌停收467.5；營收5日回檔-13.1%但YoY僅+1.2%不加分；連買5天的法人今日是否護盤待T86確認，禁止在態度未明前接刀",
+      "priority": "中",
+      "action": "待T86 07-13確認法人態度"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "industry": "航空",
+      "reason": "連續第6日不推：營收+22%回檔-6.4%(+5)、外資持股比-0.16%(-3)；WTI+3.16%燃油利空催化不對齊+過量買超31K(-5)",
+      "priority": "低",
+      "action": "觀察落刀"
+    }
+  ],
+  "tomorrow_notes": [
+    "07-14為06-29批次2890/2801/2892真D10到期日，收盤後結算（現全數浮盈）",
+    "2441超豐距停損5.4%、2887台新新光金-3.0%開盤優先盯",
+    "6770確認出場；1301以新T86重評（+9.85%爆量反駁賣出論點）",
+    "上週重挫股（友達/英業達/普安/盛群/聯詠）今日T86法人動向決定明日是否有低接機會；PCB/ABF（台虹/臻鼎/南電）已大漲不追",
+    "07/14美CPI+鮑爾作證、07/15台指期結算、07/16台積電法說（進入佈局窗口尾段，波動加大）"
+  ],
+  "yesterday_verification": {
+    "note": "多日結算制：今日結算1筆（06-26的2890 D10到期success +2.55%）；06-29批次3筆真D9維持holding（settlement_checker颱風日誤計D10已攔截，07-14到期）；今日5檔D0與前期14筆holding全數未觸停損",
+    "accuracy": "累計 58.4%（263 success / 187 fail，450 筆結算，holding 188；holding 不計入分母）",
+    "results": [
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "source": "tracking_2026-06-26 track_b",
+        "recommend_price": 39.2,
+        "settled_price": 40.2,
+        "return_pct": 2.55,
+        "holding_days": 10,
+        "result": "success",
+        "detail": "真D10到期（07-10颱風休市順延至07-13），未觸目標43.1/停損37.24，收盤>推薦價判success"
+      }
+    ]
   }
 }

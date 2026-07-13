@@ -61,12 +61,15 @@
       "detector_score": 60,
       "reason": "法人真連續8天累計+160K，今日+45,822張放量，VIX<20金融板塊受惠，偵測器強訊號。EPS YoY+33%。模式追蹤器金融（銀行）cold pattern勝率7.7%+worst combo 0%×2，僅最小倉位5%試單，嚴守-5%停損",
       "risk_notes": "⚠️ 高模式風險：金融（銀行）cold 7.7%樣本13，worst combo 0%×2（6天+/30K+），75分最低門檻，嚴守停損",
-      "actual_close": 39.2,
-      "result": "holding",
+      "actual_close": 40.2,
+      "result": "success",
       "gain_pct": 0.0,
-      "holding_status": "D0/10，法人真連續8天，嚴守-5%停損",
+      "holding_status": "D10 到期結算：收盤 40.2 > 推薦 39.2（+2.55%），未觸目標 43.1/停損 37.24，依 D10 規則判 success（07-10 颱風休市順延至 07-13）",
       "close_price": 39.2,
-      "change_percent": 0.0
+      "change_percent": 0.0,
+      "settled_date": "2026-07-13",
+      "settled_price": 40.2,
+      "holding_days": 10
     }
   ],
   "track_b_observations": [
