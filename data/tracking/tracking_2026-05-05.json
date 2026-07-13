@@ -38,13 +38,16 @@
       "position": "15-20%",
       "score": 95,
       "reason": "低軌衛星超強12週+珍珠號成功+5/7電信三雄法說+Module A L2+法人累計+139K",
-      "actual_close": 239.5,
-      "holding_status": "D0/10 持有中",
-      "result": "holding",
+      "actual_close": 253.5,
+      "holding_status": "殭屍清理批次結算(2026-07-13)：D2 收盤 253.5 ≥ 目標 253.0",
+      "result": "success",
       "change_pct": 5.3,
       "close_price": 239.5,
       "current_price": 239.5,
-      "change_percent": 5.3
+      "change_percent": 5.3,
+      "settled_date": "2026-05-07",
+      "settled_price": 253.5,
+      "holding_days": 2
     },
     {
       "stock_code": "3033",
@@ -126,13 +129,16 @@
       "score": 85,
       "reason": "Module A L2(動能-98.9%,連買8/10天)+法人累計+53K+EPS YoY+41%",
       "note": "⚠️ NVIDIA Level 2預警(-15分)，AI伺服器受壓，注意停損",
-      "actual_close": 142.0,
-      "holding_status": "D0/10 持有中",
-      "result": "holding",
+      "actual_close": 132.5,
+      "result": "fail",
       "change_pct": 1.1,
       "close_price": 142.0,
       "current_price": 142.0,
-      "change_percent": 1.1
+      "change_percent": 1.1,
+      "settled_date": "2026-05-19",
+      "settled_price": 132.5,
+      "holding_days": 10,
+      "fail_reason": "殭屍清理批次結算(2026-07-13)：D10 到期：收盤 132.5 ≤ 推薦 140.5，未觸目標/停損"
     },
     {
       "stock_code": "3008",

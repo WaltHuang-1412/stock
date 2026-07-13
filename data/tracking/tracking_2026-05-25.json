@@ -117,26 +117,16 @@
       "intraday_change_pct": 1.44,
       "intraday_status": "holding",
       "intraday_note": "連7天真連買，外資+投信盤中同步，Qualcomm催化持續，續抱",
-      "actual_close": 489.0,
-      "result": "holding",
-      "holding_status": "D0/10 收盤489 距目標9.2% 距停損10.7% Module A L3 法人Level0 手機AI催化持續"
+      "actual_close": 473.0,
+      "result": "fail",
+      "settled_date": "2026-06-08",
+      "settled_price": 473.0,
+      "holding_days": 10,
+      "fail_reason": "殭屍清理批次結算(2026-07-13)：D10 到期：收盤 473.0 ≤ 推薦 485.0，未觸目標/停損"
     }
   ],
   "tomorrow_recommendations": [],
-  "removed_stocks": [
-    {
-      "stock_code": "3045",
-      "stock_name": "台灣大",
-      "reason": "reversal_level_4",
-      "detail": "今日爆量賣超-3868張(26.5%日均量)，Level 4 出場訊號觸發，建議明日評估停損"
-    },
-    {
-      "stock_code": "2345",
-      "stock_name": "智邦",
-      "reason": "reversal_level_4_d10_expire",
-      "detail": "Level 4爆量賣超+明日D10到期，預計fail，建議明日以收盤價結算"
-    }
-  ],
+  "removed_stocks": [],
   "track_b_recommendations": [],
   "track_b_observations": [
     "2344 華邦電: 盤前Level 4排除維持有效；盤中確認近5天外資-36K → 排除",
@@ -146,12 +136,11 @@
     "2374 佳能: 五維度評分~61分(<75門檻)；產業未分類；基本面佳(EPS+143%/外資+1.75%)但催化對齊不明 → 排除",
     "3704 合勤控: 偵測器中訊號55分，連買9天/近5天全買+9181張，但不在TOP30且日買超<5K → 觀察名單（盤後追蹤）"
   ],
-  "removed_stocks": [],
   "market_context": {
     "date": "2026-05-25",
     "us_market": "休市(Memorial Day 5/25)",
     "using_data_from": "2026-05-22(最近交易日)",
-    "sox_5d": 5.30,
+    "sox_5d": 5.3,
     "nvidia_signal": "Level 1 (-4.43%)",
     "qualcomm_5d": 18.0,
     "dell_5d": 21.98,

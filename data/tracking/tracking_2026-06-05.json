@@ -65,10 +65,13 @@
       "reversal_level": "Level0",
       "momentum_pct": -10.0,
       "close_price": 1150.0,
-      "actual_close": 1150.0,
+      "actual_close": 1280.0,
       "change_percent": -6.5,
-      "result": "holding",
-      "holding_status": "D3/10 | 收盤1150.0(-6.5%) | 距目標21.7% | 距停損3.7%"
+      "result": "success",
+      "holding_status": "殭屍清理批次結算(2026-07-13)：D10 到期：收盤 1280.0 > 推薦 1230.0，未觸目標/停損",
+      "settled_date": "2026-06-22",
+      "settled_price": 1280.0,
+      "holding_days": 10
     },
     {
       "stock_code": "2383",
@@ -86,10 +89,13 @@
       "reversal_level": "Level0",
       "momentum_pct": -61.2,
       "close_price": 4940.0,
-      "actual_close": 4940.0,
+      "actual_close": 5600.0,
       "change_percent": 3.6,
-      "result": "holding",
-      "holding_status": "D3/10 | 收盤4940.0(+3.6%) | 距目標11.3% | 距停損12.2%"
+      "result": "success",
+      "holding_status": "殭屍清理批次結算(2026-07-13)：D9 收盤 5600.0 ≥ 目標 5500.0",
+      "settled_date": "2026-06-18",
+      "settled_price": 5600.0,
+      "holding_days": 9
     }
   ],
   "holdings_evaluation": [

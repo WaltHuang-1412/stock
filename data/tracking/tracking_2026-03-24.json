@@ -23,7 +23,11 @@
         "momentum": -31.5,
         "reversal_alert": "Level 1 (減速-31.5%)"
       },
-      "catalyst": "AMD+3.1%+半導體設備超強漲+AI晶片需求+Topic強+10"
+      "catalyst": "AMD+3.1%+半導體設備超強漲+AI晶片需求+Topic強+10",
+      "result": "fail",
+      "settled_date": "2026-04-09",
+      "settled_price": 224.0,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "2618",
@@ -45,7 +49,11 @@
         "reversal_alert": "Level 0 (Safe)"
       },
       "catalyst": "油價暴跌-7.38%+川普暫停攻擊伊朗5天+航線恢復期待",
-      "risk_note": "超強催化覆寫：動能+368.7%，倉位限5-10%停損-5%；川普政策反覆風險"
+      "risk_note": "超強催化覆寫：動能+368.7%，倉位限5-10%停損-5%；川普政策反覆風險",
+      "result": "fail",
+      "settled_date": "2026-04-09",
+      "settled_price": 34.8,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "9933",
@@ -68,7 +76,11 @@
       },
       "catalyst": "半導體設備超強漲+AI資料中心建廠+美日5000億AI園區",
       "holding_from": "2026-03-20",
-      "holding_days": 3
+      "holding_days": 3,
+      "result": "success",
+      "settled_date": "2026-03-25",
+      "settled_price": 39.4,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "2412",
@@ -90,7 +102,11 @@
         "reversal_alert": "Level 1 (減速-42.9%)"
       },
       "catalyst": "VIX 26.15高恐慌+電信防禦+川普不確定性",
-      "risk_note": "昨Day7到期fail(134≤137)，今天以134重新進場"
+      "risk_note": "昨Day7到期fail(134≤137)，今天以134重新進場",
+      "result": "success",
+      "settled_date": "2026-04-09",
+      "settled_price": 135.0,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "2006",
@@ -114,7 +130,11 @@
       "catalyst": "中鋼4月盤價大漲千元(近3年最大)+豐興廢鋼鋼筋續漲",
       "holding_from": "2026-03-23",
       "holding_days": 2,
-      "risk_note": "累計-485微負需觀察，近5天+896正轉中"
+      "risk_note": "累計-485微負需觀察，近5天+896正轉中",
+      "result": "success",
+      "settled_date": "2026-04-09",
+      "settled_price": 71.7,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "2356",
@@ -135,7 +155,11 @@
         "momentum": -19.7,
         "reversal_alert": "Safe (法人買超中)"
       },
-      "catalyst": "AMD+3.1%+AI PC+蘋果全面AI+華碩Q2漲價30%推動提前拉貨"
+      "catalyst": "AMD+3.1%+AI PC+蘋果全面AI+華碩Q2漲價30%推動提前拉貨",
+      "result": "success",
+      "settled_date": "2026-05-13",
+      "settled_price": 52.8,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "3034",
@@ -158,7 +182,11 @@
       },
       "catalyst": "AMD+3.1%+IC設計龍頭+AI Agent驅動ASIC/SoC需求",
       "holding_from": "2026-03-23",
-      "holding_days": 2
+      "holding_days": 2,
+      "result": "success",
+      "settled_date": "2026-04-09",
+      "settled_price": 399.5,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     }
   ],
   "holding_tracking": [
@@ -200,18 +228,65 @@
     }
   ],
   "excluded_by_alerts": {
-    "smci_level3": ["2382", "3231", "6669", "2376"],
-    "micron_level2": ["1303", "2344", "2337", "5347"],
-    "nvidia_level1": ["2382", "3231", "2324", "2356", "6669"],
-    "tesla_level1": ["2317", "2308", "1513", "1519", "1504"],
-    "reversal_level4": ["6282"],
-    "reversal_level3": ["2891"],
-    "momentum_over_100": ["3045", "4958", "2882", "2347", "2324", "4904", "5871"]
+    "smci_level3": [
+      "2382",
+      "3231",
+      "6669",
+      "2376"
+    ],
+    "micron_level2": [
+      "1303",
+      "2344",
+      "2337",
+      "5347"
+    ],
+    "nvidia_level1": [
+      "2382",
+      "3231",
+      "2324",
+      "2356",
+      "6669"
+    ],
+    "tesla_level1": [
+      "2317",
+      "2308",
+      "1513",
+      "1519",
+      "1504"
+    ],
+    "reversal_level4": [
+      "6282"
+    ],
+    "reversal_level3": [
+      "2891"
+    ],
+    "momentum_over_100": [
+      "3045",
+      "4958",
+      "2882",
+      "2347",
+      "2324",
+      "4904",
+      "5871"
+    ]
   },
   "module_a_scan": {
-    "l3_stocks": ["9933", "4938", "3036", "2603"],
-    "l2_stocks": ["2481", "1605", "2890", "5871", "2412"],
-    "l1_stocks": ["2356"]
+    "l3_stocks": [
+      "9933",
+      "4938",
+      "3036",
+      "2603"
+    ],
+    "l2_stocks": [
+      "2481",
+      "1605",
+      "2890",
+      "5871",
+      "2412"
+    ],
+    "l1_stocks": [
+      "2356"
+    ]
   },
   "module_b_result": "全部未通過篩選：DRAM受Micron-8.48%Level2衝擊；IC設計催化已成熟(AMD連漲5天)且不在TOP50",
   "intraday_analysis": {

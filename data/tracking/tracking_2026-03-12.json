@@ -28,7 +28,11 @@
         "recent_5day_foreign": -36000
       },
       "catalyst": "GTC3/16前+甲骨文AI基建暴增243%+和碩伺服器10倍成長+大摩升台積電+凱基Vera Rubin",
-      "risk_note": "近5天外資-36K但昨日+20K反轉買超"
+      "risk_note": "近5天外資-36K但昨日+20K反轉買超",
+      "result": "fail",
+      "settled_date": null,
+      "settled_price": null,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "2603",
@@ -53,7 +57,11 @@
         "recent_5day_net": 13000,
         "recent_5day_foreign": 12000
       },
-      "catalyst": "中東衝突+馬士基運費漲15-20%+三大航商暫停中東收貨+SCFI漲11.7%"
+      "catalyst": "中東衝突+馬士基運費漲15-20%+三大航商暫停中東收貨+SCFI漲11.7%",
+      "result": "success",
+      "settled_date": null,
+      "settled_price": null,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "2382",
@@ -79,7 +87,11 @@
         "recent_5day_foreign": -5408
       },
       "catalyst": "GTC前+甲骨文AI基建暴增243%+和碩10倍成長確認+凱基Vera Rubin選股",
-      "risk_note": "近5天累計轉負-3.3K但昨日+6.4K大幅反轉買超"
+      "risk_note": "近5天累計轉負-3.3K但昨日+6.4K大幅反轉買超",
+      "result": "fail",
+      "settled_date": null,
+      "settled_price": null,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "2049",
@@ -103,7 +115,11 @@
         "recent_5day_net": 2570,
         "recent_5day_foreign": 2829
       },
-      "catalyst": "聯發科Genio Pro AI機器人+輝達結盟Groq物理AI"
+      "catalyst": "聯發科Genio Pro AI機器人+輝達結盟Groq物理AI",
+      "result": "success",
+      "settled_date": null,
+      "settled_price": null,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "3715",
@@ -129,7 +145,11 @@
       },
       "catalyst": "台光電EPS41.67創歷史新高+金像電EPS19.47=PCB/CCL雙催化升級(強)",
       "topic_tracker_upgrade": true,
-      "score_change": "+2 (PCB催化中→強)"
+      "score_change": "+2 (PCB催化中→強)",
+      "result": "fail",
+      "settled_date": null,
+      "settled_price": null,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "2367",
@@ -155,7 +175,11 @@
       },
       "catalyst": "PCB雙催化(台光電EPS41.67+金像電EPS19.47)+佈局中5日-2.5%極佳位置",
       "topic_tracker_upgrade": true,
-      "score_change": "+2 (PCB催化中→強)"
+      "score_change": "+2 (PCB催化中→強)",
+      "result": "success",
+      "settled_date": null,
+      "settled_price": null,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "2412",
@@ -179,7 +203,11 @@
         "recent_5day_net": 19000,
         "recent_5day_foreign": 19000
       },
-      "catalyst": "VIX24.23防禦龍頭+連10天法人買超+46K"
+      "catalyst": "VIX24.23防禦龍頭+連10天法人買超+46K",
+      "result": "success",
+      "settled_date": null,
+      "settled_price": null,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "2892",
@@ -203,28 +231,104 @@
         "recent_5day_net": 19000,
         "recent_5day_foreign": 17000
       },
-      "catalyst": "VIX防禦金控+10天9買+38K+近5天同步買"
+      "catalyst": "VIX防禦金控+10天9買+38K+近5天同步買",
+      "result": "fail",
+      "settled_date": null,
+      "settled_price": null,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     }
   ],
   "excluded_stocks": [
-    {"stock_code": "3481", "stock_name": "群創", "reason": "5日+22.4%已大漲"},
-    {"stock_code": "8112", "stock_name": "至上", "reason": "5日+31.8%已大漲"},
-    {"stock_code": "2368", "stock_name": "金像電", "reason": "5日+26.7%已大漲"},
-    {"stock_code": "2409", "stock_name": "友達", "reason": "5日+11.4%已大漲"},
-    {"stock_code": "6443", "stock_name": "元晶", "reason": "5日+14.9%已大漲"},
-    {"stock_code": "2376", "stock_name": "技嘉", "reason": "5日+8.4%已大漲"},
-    {"stock_code": "3231", "stock_name": "緯創", "reason": "動能+342.8%>100%非超強催化不覆寫"},
-    {"stock_code": "2356", "stock_name": "英業達", "reason": "動能+121.7%>100%非超強催化不覆寫"},
-    {"stock_code": "6770", "stock_name": "力積電", "reason": "覆寫通過但分數68分<75分+Omdia記憶體出貨-12%中期利空"},
-    {"stock_code": "2337", "stock_name": "旺宏", "reason": "近5天外資+投信同步賣超-45K"},
-    {"stock_code": "2609", "stock_name": "陽明", "reason": "近5天外資+投信同步賣超-19K"},
-    {"stock_code": "4904", "stock_name": "遠傳", "reason": "Level4反轉預警(賣超佔日均量157.6%)"},
-    {"stock_code": "2383", "stock_name": "台光電", "reason": "Level4反轉預警(賣超佔日均量17.2%)+近5天外資-2K"},
-    {"stock_code": "3711", "stock_name": "日月光", "reason": "Level4反轉預警(賣超佔日均量87.9%)+近5天外資-12K"},
-    {"stock_code": "3006", "stock_name": "晶豪科", "reason": "昨+10%已大漲"},
-    {"stock_code": "1303", "stock_name": "南亞", "reason": "法人賣超-18K出貨"},
-    {"stock_code": "2408", "stock_name": "南亞科", "reason": "法人賣超-16K+母公司南亞處分3.1萬張(內部人出貨)"},
-    {"stock_code": "8039", "stock_name": "台虹", "reason": "昨+9.9%獲利了結"}
+    {
+      "stock_code": "3481",
+      "stock_name": "群創",
+      "reason": "5日+22.4%已大漲"
+    },
+    {
+      "stock_code": "8112",
+      "stock_name": "至上",
+      "reason": "5日+31.8%已大漲"
+    },
+    {
+      "stock_code": "2368",
+      "stock_name": "金像電",
+      "reason": "5日+26.7%已大漲"
+    },
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "reason": "5日+11.4%已大漲"
+    },
+    {
+      "stock_code": "6443",
+      "stock_name": "元晶",
+      "reason": "5日+14.9%已大漲"
+    },
+    {
+      "stock_code": "2376",
+      "stock_name": "技嘉",
+      "reason": "5日+8.4%已大漲"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "reason": "動能+342.8%>100%非超強催化不覆寫"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "reason": "動能+121.7%>100%非超強催化不覆寫"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "reason": "覆寫通過但分數68分<75分+Omdia記憶體出貨-12%中期利空"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "reason": "近5天外資+投信同步賣超-45K"
+    },
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "reason": "近5天外資+投信同步賣超-19K"
+    },
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "reason": "Level4反轉預警(賣超佔日均量157.6%)"
+    },
+    {
+      "stock_code": "2383",
+      "stock_name": "台光電",
+      "reason": "Level4反轉預警(賣超佔日均量17.2%)+近5天外資-2K"
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光",
+      "reason": "Level4反轉預警(賣超佔日均量87.9%)+近5天外資-12K"
+    },
+    {
+      "stock_code": "3006",
+      "stock_name": "晶豪科",
+      "reason": "昨+10%已大漲"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "reason": "法人賣超-18K出貨"
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "reason": "法人賣超-16K+母公司南亞處分3.1萬張(內部人出貨)"
+    },
+    {
+      "stock_code": "8039",
+      "stock_name": "台虹",
+      "reason": "昨+9.9%獲利了結"
+    }
   ],
   "us_leader_alerts": {
     "level_3": [],
@@ -233,10 +337,10 @@
   },
   "market_context": {
     "us_market": {
-      "nasdaq": -0.40,
+      "nasdaq": -0.4,
       "sp500": -1.36,
       "dow": -2.71,
-      "phlx_semiconductor": 0.00
+      "phlx_semiconductor": 0.0
     },
     "key_catalysts": [
       "Broadcom+7.57%+Marvell+15.82%=網通/CPO爆漲GTC前題材",
@@ -262,14 +366,49 @@
     ]
   },
   "topic_tracker_catalyst_strength": {
-    "記憶體": {"level": "超強", "bonus": 15, "detail": "3週+三星罷工+DDR4漲+Micron目標翻倍+南亞科漲停+PC漲價潮啟動，但Omdia-12%中期隱憂"},
-    "網通/CPO": {"level": "超強", "bonus": 15, "detail": "AVGO+7.57%+MRVL+15.82%+GTC3/16CPO+聯電TFLN光子晶片量產"},
-    "AI伺服器": {"level": "超強", "bonus": 15, "detail": "GTC前+甲骨文+和碩10x+亞馬遜發債>650億衝AI+千瓦功耗+奇鋐/健策/嘉澤EPS全創高+瑞銀:GTC主變數(升級from強)", "upgraded": true},
-    "航運": {"level": "超強", "bonus": 15, "detail": "中東+馬士基運費漲15-20%+紅海2.0歐洲港口塞港+MSC喊漲附加費+G7釋放4億桶油價仍不跌(升級from強)", "upgraded": true},
-    "PCB/CCL": {"level": "強", "bonus": 10, "detail": "台光電EPS41.67+金像電EPS19.47+榮惠-KY EPS5.68"},
-    "散熱": {"level": "強", "bonus": 10, "detail": "奇鋐EPS49.17+水冷板產能擴4-5倍+健策EPS36.75(新增)", "new": true},
-    "OSAT封測": {"level": "中", "bonus": 5, "detail": "日月光178億擴建+AI千瓦功耗封測受惠"},
-    "核能": {"level": "中", "bonus": 5, "detail": "歐盟+南韓+台灣核三重啟(觀察)"}
+    "記憶體": {
+      "level": "超強",
+      "bonus": 15,
+      "detail": "3週+三星罷工+DDR4漲+Micron目標翻倍+南亞科漲停+PC漲價潮啟動，但Omdia-12%中期隱憂"
+    },
+    "網通/CPO": {
+      "level": "超強",
+      "bonus": 15,
+      "detail": "AVGO+7.57%+MRVL+15.82%+GTC3/16CPO+聯電TFLN光子晶片量產"
+    },
+    "AI伺服器": {
+      "level": "超強",
+      "bonus": 15,
+      "detail": "GTC前+甲骨文+和碩10x+亞馬遜發債>650億衝AI+千瓦功耗+奇鋐/健策/嘉澤EPS全創高+瑞銀:GTC主變數(升級from強)",
+      "upgraded": true
+    },
+    "航運": {
+      "level": "超強",
+      "bonus": 15,
+      "detail": "中東+馬士基運費漲15-20%+紅海2.0歐洲港口塞港+MSC喊漲附加費+G7釋放4億桶油價仍不跌(升級from強)",
+      "upgraded": true
+    },
+    "PCB/CCL": {
+      "level": "強",
+      "bonus": 10,
+      "detail": "台光電EPS41.67+金像電EPS19.47+榮惠-KY EPS5.68"
+    },
+    "散熱": {
+      "level": "強",
+      "bonus": 10,
+      "detail": "奇鋐EPS49.17+水冷板產能擴4-5倍+健策EPS36.75(新增)",
+      "new": true
+    },
+    "OSAT封測": {
+      "level": "中",
+      "bonus": 5,
+      "detail": "日月光178億擴建+AI千瓦功耗封測受惠"
+    },
+    "核能": {
+      "level": "中",
+      "bonus": 5,
+      "detail": "歐盟+南韓+台灣核三重啟(觀察)"
+    }
   },
   "v76_features": {
     "super_catalyst_override": {
@@ -292,7 +431,10 @@
       "from": "中(+5分)",
       "to": "強(+10分)",
       "reason": "台光電EPS41.67+金像電EPS19.47雙催化",
-      "affected_stocks": ["3715(定穎+2分→88)", "2367(燿華+2分→86)"]
+      "affected_stocks": [
+        "3715(定穎+2分→88)",
+        "2367(燿華+2分→86)"
+      ]
     }
   },
   "historical_validation": {
@@ -314,14 +456,94 @@
   "intraday_analysis": {
     "timestamp": "2026-03-12 12:33",
     "track_a": [
-      {"stock_code": "2367", "stock_name": "燿華", "recommend_price": 69.2, "intraday_price": 73.2, "change_pct": 5.78, "volume_ratio": 1.09, "institutional_today": 2597, "exit_signal": "Safe", "strategy": "📈 可部分獲利"},
-      {"stock_code": "2049", "stock_name": "上銀", "recommend_price": 238.0, "intraday_price": 243.5, "change_pct": 2.31, "volume_ratio": 0.85, "institutional_today": 909, "exit_signal": "Safe", "strategy": "✅ 續抱"},
-      {"stock_code": "2412", "stock_name": "中華電", "recommend_price": 135.5, "intraday_price": 136.0, "change_pct": 0.37, "volume_ratio": 0.37, "institutional_today": 2908, "exit_signal": "MA5/10跌破但法人續買", "strategy": "✅ 續抱"},
-      {"stock_code": "2603", "stock_name": "長榮", "recommend_price": 210.0, "intraday_price": 210.5, "change_pct": 0.24, "volume_ratio": 0.28, "institutional_today": 10883, "exit_signal": "Safe", "strategy": "✅ 續抱"},
-      {"stock_code": "3715", "stock_name": "定穎投控", "recommend_price": 152.0, "intraday_price": 151.5, "change_pct": -0.33, "volume_ratio": 0.57, "institutional_today": 3741, "exit_signal": "Safe", "strategy": "✅ 續抱"},
-      {"stock_code": "2382", "stock_name": "廣達", "recommend_price": 289.0, "intraday_price": 286.5, "change_pct": -0.87, "volume_ratio": 0.51, "institutional_today": 6428, "exit_signal": "MA10跌破但法人續買", "strategy": "✅ 續抱"},
-      {"stock_code": "2892", "stock_name": "第一金", "recommend_price": 29.15, "intraday_price": 28.7, "change_pct": -1.54, "volume_ratio": 0.48, "institutional_today": 5667, "exit_signal": "MA5/10跌破但法人續買", "strategy": "✅ 續抱"},
-      {"stock_code": "2317", "stock_name": "鴻海", "recommend_price": 219.0, "intraday_price": 213.5, "change_pct": -2.51, "volume_ratio": 0.51, "institutional_today": 20663, "exit_signal": "MA5/10跌破", "strategy": "⚠️ 觀察（法人+20K大買）"}
+      {
+        "stock_code": "2367",
+        "stock_name": "燿華",
+        "recommend_price": 69.2,
+        "intraday_price": 73.2,
+        "change_pct": 5.78,
+        "volume_ratio": 1.09,
+        "institutional_today": 2597,
+        "exit_signal": "Safe",
+        "strategy": "📈 可部分獲利"
+      },
+      {
+        "stock_code": "2049",
+        "stock_name": "上銀",
+        "recommend_price": 238.0,
+        "intraday_price": 243.5,
+        "change_pct": 2.31,
+        "volume_ratio": 0.85,
+        "institutional_today": 909,
+        "exit_signal": "Safe",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 135.5,
+        "intraday_price": 136.0,
+        "change_pct": 0.37,
+        "volume_ratio": 0.37,
+        "institutional_today": 2908,
+        "exit_signal": "MA5/10跌破但法人續買",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "recommend_price": 210.0,
+        "intraday_price": 210.5,
+        "change_pct": 0.24,
+        "volume_ratio": 0.28,
+        "institutional_today": 10883,
+        "exit_signal": "Safe",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "3715",
+        "stock_name": "定穎投控",
+        "recommend_price": 152.0,
+        "intraday_price": 151.5,
+        "change_pct": -0.33,
+        "volume_ratio": 0.57,
+        "institutional_today": 3741,
+        "exit_signal": "Safe",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "recommend_price": 289.0,
+        "intraday_price": 286.5,
+        "change_pct": -0.87,
+        "volume_ratio": 0.51,
+        "institutional_today": 6428,
+        "exit_signal": "MA10跌破但法人續買",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 29.15,
+        "intraday_price": 28.7,
+        "change_pct": -1.54,
+        "volume_ratio": 0.48,
+        "institutional_today": 5667,
+        "exit_signal": "MA5/10跌破但法人續買",
+        "strategy": "✅ 續抱"
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "recommend_price": 219.0,
+        "intraday_price": 213.5,
+        "change_pct": -2.51,
+        "volume_ratio": 0.51,
+        "institutional_today": 20663,
+        "exit_signal": "MA5/10跌破",
+        "strategy": "⚠️ 觀察（法人+20K大買）"
+      }
     ],
     "exit_signals_triggered": "無（8檔均未觸及停損價）",
     "track_b_directions": [
@@ -360,7 +582,10 @@
     "max_industry_pct": 0.25,
     "diversification_check": "PASS",
     "defense_ratio": 0.25,
-    "defense_stocks": ["2412", "2892"],
+    "defense_stocks": [
+      "2412",
+      "2892"
+    ],
     "vix": 24.23,
     "catalyst_strength": "超強",
     "target_defense_range": "15-25%"
@@ -370,16 +595,76 @@
     "taiex_close": 33581.86,
     "taiex_change_pct": -0.05,
     "results": [
-      {"stock_code": "2317", "stock_name": "鴻海", "recommend_price": 219.0, "actual_close": 214.5, "change_pct": -2.05, "result": "fail", "fail_reason": "10天累計-57K賣壓+道瓊-2.71%拖累，單日+20K反轉不足以覆蓋多日賣壓"},
-      {"stock_code": "2603", "stock_name": "長榮", "recommend_price": 210.0, "actual_close": 211.5, "change_pct": 0.71, "result": "success"},
-      {"stock_code": "2382", "stock_name": "廣達", "recommend_price": 289.0, "actual_close": 288.5, "change_pct": -0.17, "result": "fail", "fail_reason": "邊際失敗(-0.17%)，幾乎平盤，持股邏輯不變"},
-      {"stock_code": "2049", "stock_name": "上銀", "recommend_price": 238.0, "actual_close": 244.0, "change_pct": 2.52, "result": "success"},
-      {"stock_code": "3715", "stock_name": "定穎投控", "recommend_price": 152.0, "actual_close": 151.5, "change_pct": -0.33, "result": "fail", "fail_reason": "邊際失敗(-0.33%)，PCB催化延遲反映"},
-      {"stock_code": "2367", "stock_name": "燿華", "recommend_price": 69.2, "actual_close": 73.0, "change_pct": 5.49, "result": "success"},
-      {"stock_code": "2412", "stock_name": "中華電", "recommend_price": 135.5, "actual_close": 136.0, "change_pct": 0.37, "result": "success"},
-      {"stock_code": "2892", "stock_name": "第一金", "recommend_price": 29.15, "actual_close": 28.85, "change_pct": -1.03, "result": "fail", "fail_reason": "金融股整體偏弱，防禦效果不佳"}
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "recommend_price": 219.0,
+        "actual_close": 214.5,
+        "change_pct": -2.05,
+        "result": "fail",
+        "fail_reason": "10天累計-57K賣壓+道瓊-2.71%拖累，單日+20K反轉不足以覆蓋多日賣壓"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "recommend_price": 210.0,
+        "actual_close": 211.5,
+        "change_pct": 0.71,
+        "result": "success"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "recommend_price": 289.0,
+        "actual_close": 288.5,
+        "change_pct": -0.17,
+        "result": "fail",
+        "fail_reason": "邊際失敗(-0.17%)，幾乎平盤，持股邏輯不變"
+      },
+      {
+        "stock_code": "2049",
+        "stock_name": "上銀",
+        "recommend_price": 238.0,
+        "actual_close": 244.0,
+        "change_pct": 2.52,
+        "result": "success"
+      },
+      {
+        "stock_code": "3715",
+        "stock_name": "定穎投控",
+        "recommend_price": 152.0,
+        "actual_close": 151.5,
+        "change_pct": -0.33,
+        "result": "fail",
+        "fail_reason": "邊際失敗(-0.33%)，PCB催化延遲反映"
+      },
+      {
+        "stock_code": "2367",
+        "stock_name": "燿華",
+        "recommend_price": 69.2,
+        "actual_close": 73.0,
+        "change_pct": 5.49,
+        "result": "success"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 135.5,
+        "actual_close": 136.0,
+        "change_pct": 0.37,
+        "result": "success"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 29.15,
+        "actual_close": 28.85,
+        "change_pct": -1.03,
+        "result": "fail",
+        "fail_reason": "金融股整體偏弱，防禦效果不佳"
+      }
     ],
-    "accuracy": 0.50,
+    "accuracy": 0.5,
     "portfolio_avg_return": 0.69,
     "taiex_return": -0.05,
     "excess_return": 0.74,
@@ -391,18 +676,82 @@
       "建議v7.8：當10天累計<-30K且近5天也為負時，法人基礎分上限15分"
     ],
     "tomorrow_recommendations": [
-      {"stock_code": "2603", "stock_name": "長榮", "industry": "航運", "position": "15-20%", "score": 95, "action": "續抱"},
-      {"stock_code": "2382", "stock_name": "廣達", "industry": "AI伺服器", "position": "15%", "score": 93, "action": "續抱"},
-      {"stock_code": "2367", "stock_name": "燿華", "industry": "PCB", "position": "15%", "score": 88, "action": "續抱"},
-      {"stock_code": "2049", "stock_name": "上銀", "industry": "設備/機器人", "position": "15%", "score": 88, "action": "續抱"},
-      {"stock_code": "3715", "stock_name": "定穎投控", "industry": "PCB", "position": "10-15%", "score": 88, "action": "續抱"},
-      {"stock_code": "1605", "stock_name": "華新", "industry": "銅/電纜", "position": "10-15%", "score": 85, "action": "新增"},
-      {"stock_code": "2412", "stock_name": "中華電", "industry": "電信", "position": "10%", "score": 84, "action": "續抱"},
-      {"stock_code": "3706", "stock_name": "神達", "industry": "AI伺服器", "position": "10%", "score": 80, "action": "新增"}
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "industry": "航運",
+        "position": "15-20%",
+        "score": 95,
+        "action": "續抱"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "industry": "AI伺服器",
+        "position": "15%",
+        "score": 93,
+        "action": "續抱"
+      },
+      {
+        "stock_code": "2367",
+        "stock_name": "燿華",
+        "industry": "PCB",
+        "position": "15%",
+        "score": 88,
+        "action": "續抱"
+      },
+      {
+        "stock_code": "2049",
+        "stock_name": "上銀",
+        "industry": "設備/機器人",
+        "position": "15%",
+        "score": 88,
+        "action": "續抱"
+      },
+      {
+        "stock_code": "3715",
+        "stock_name": "定穎投控",
+        "industry": "PCB",
+        "position": "10-15%",
+        "score": 88,
+        "action": "續抱"
+      },
+      {
+        "stock_code": "1605",
+        "stock_name": "華新",
+        "industry": "銅/電纜",
+        "position": "10-15%",
+        "score": 85,
+        "action": "新增"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "industry": "電信",
+        "position": "10%",
+        "score": 84,
+        "action": "續抱"
+      },
+      {
+        "stock_code": "3706",
+        "stock_name": "神達",
+        "industry": "AI伺服器",
+        "position": "10%",
+        "score": 80,
+        "action": "新增"
+      }
     ],
     "removed_stocks": [
-      {"stock_code": "2317", "stock_name": "鴻海", "reason": "10天累計-57K趨勢偏空，近5天外資-36K，今日-2.05%確認"},
-      {"stock_code": "2892", "stock_name": "第一金", "reason": "金融防禦效果不佳，今日-1.03%，改用華新替代"}
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "reason": "10天累計-57K趨勢偏空，近5天外資-36K，今日-2.05%確認"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "reason": "金融防禦效果不佳，今日-1.03%，改用華新替代"
+      }
     ]
   }
 }

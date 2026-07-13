@@ -98,7 +98,11 @@
       "industry": {
         "sector": "電子",
         "sub_type": "被動元件",
-        "drivers": ["MLCC漲價週期", "庫存回補", "AI伺服器需求"]
+        "drivers": [
+          "MLCC漲價週期",
+          "庫存回補",
+          "AI伺服器需求"
+        ]
       },
       "recommend_price": "開盤價附近",
       "position": "15%",
@@ -107,7 +111,7 @@
       "time_horizon": "1-2週",
       "tracking_days": 7,
       "status": "success",
-      "actual_close": 278.50,
+      "actual_close": 278.5,
       "actual_change": 7.49,
       "verification": {
         "result": "success",
@@ -121,7 +125,9 @@
       "risks": [
         "需確認最新法人數據",
         "電子股波動較大"
-      ]
+      ],
+      "result": "legacy_unsettled",
+      "note": "legacy標記(2026-07-13)：預測系統上線前記錄或格式過舊（字串區間價格/持倉快照），無法機械結算，不計入統計"
     },
     {
       "stock_code": "2887",
@@ -139,7 +145,10 @@
       "industry": {
         "sector": "金融",
         "sub_type": "證券型",
-        "drivers": ["成交量放大", "ETF規模成長"]
+        "drivers": [
+          "成交量放大",
+          "ETF規模成長"
+        ]
       },
       "recommend_price": "開盤價附近",
       "position": "10%",
@@ -162,7 +171,9 @@
       "risks": [
         "金融股波動",
         "成交量不確定性"
-      ]
+      ],
+      "result": "legacy_unsettled",
+      "note": "legacy標記(2026-07-13)：預測系統上線前記錄或格式過舊（字串區間價格/持倉快照），無法機械結算，不計入統計"
     }
   ],
   "must_execute_actions": [
@@ -171,8 +182,8 @@
       "stock_code": "3231",
       "stock_name": "緯創",
       "cost_price": 155.72,
-      "current_price": 143.50,
-      "stop_loss_price": 148.00,
+      "current_price": 143.5,
+      "stop_loss_price": 148.0,
       "loss_per_share": -12.22,
       "loss_per_lot": -12220,
       "quantity": 1,
@@ -186,7 +197,7 @@
       "stock_name": "台塑",
       "cost_price": 40.757,
       "current_price": 39.55,
-      "stop_loss_price": 39.00,
+      "stop_loss_price": 39.0,
       "loss_per_share": -1.207,
       "loss_per_lot": -1207,
       "quantity": 1,
@@ -199,7 +210,7 @@
       "stock_code": "3481",
       "stock_name": "群創",
       "cost_price": 16.14,
-      "current_price": 22.70,
+      "current_price": 22.7,
       "unrealized_profit": 52480,
       "return_rate": 40.6,
       "quantity": 8,
@@ -219,14 +230,14 @@
       "quantity": 1,
       "status": "hold",
       "action": "續抱",
-      "stop_loss": 38.00,
+      "stop_loss": 38.0,
       "note": "官股金控穩健"
     },
     {
       "stock_code": "3481",
       "stock_name": "群創",
       "user_cost": 16.14,
-      "current_price": 22.70,
+      "current_price": 22.7,
       "quantity": 8,
       "unrealized_profit": 52480,
       "return_rate": 40.6,
@@ -234,14 +245,14 @@
       "action": "減碼50%（賣出4張）",
       "execution_price": "22.5-23元",
       "remaining_quantity": 4,
-      "target_price": 25.00,
+      "target_price": 25.0,
       "note": "鎖定利潤約26,000元"
     },
     {
       "stock_code": "3231",
       "stock_name": "緯創",
       "user_cost": 155.72,
-      "current_price": 143.50,
+      "current_price": 143.5,
       "quantity": 1,
       "unrealized_loss": -12220,
       "return_rate": -7.83,
@@ -254,14 +265,14 @@
       "stock_code": "8150",
       "stock_name": "南茂",
       "user_cost": 52.574,
-      "current_price": 53.70,
+      "current_price": 53.7,
       "quantity": 1,
       "unrealized_profit": 1126,
       "return_rate": 2.14,
       "status": "hold",
       "action": "續抱",
-      "target_price": 58.00,
-      "stop_loss": 48.00,
+      "target_price": 58.0,
+      "stop_loss": 48.0,
       "note": "封測邏輯強：日月光ADR +7.72%"
     },
     {
@@ -274,13 +285,13 @@
       "return_rate": -2.97,
       "status": "stop_loss",
       "action": "若跌破39元停損",
-      "stop_loss": 39.00,
+      "stop_loss": 39.0,
       "note": "法人反轉賣超-8.8K"
     },
     {
       "stock_code": "2330",
       "stock_name": "台積電",
-      "user_cost": 1458.50,
+      "user_cost": 1458.5,
       "quantity": 0.02,
       "status": "hold",
       "action": "零股續抱",
@@ -290,7 +301,7 @@
       "stock_code": "2637",
       "stock_name": "慧洋",
       "user_cost": 66.895,
-      "sell_price": 71.00,
+      "sell_price": 71.0,
       "sell_date": "2026-01-12",
       "profit": 4105,
       "profit_pct": 6.1,
@@ -303,12 +314,16 @@
     "電子（被動元件）": {
       "count": 1,
       "percentage": 50,
-      "stocks": ["國巨"]
+      "stocks": [
+        "國巨"
+      ]
     },
     "金融（證券）": {
       "count": 1,
       "percentage": 50,
-      "stocks": ["台新金"]
+      "stocks": [
+        "台新金"
+      ]
     }
   },
   "risk_warnings": [
@@ -323,8 +338,14 @@
     "data/tracking/tracking_2026-01-14.json"
   ],
   "sync_check": {
-    "before_market_recommendations": ["2327", "2887"],
-    "tracking_recommendations": ["2327", "2887"],
+    "before_market_recommendations": [
+      "2327",
+      "2887"
+    ],
+    "tracking_recommendations": [
+      "2327",
+      "2887"
+    ],
     "is_synced": true
   },
   "analysis_completed_at": "2026-01-14 08:45"

@@ -150,7 +150,9 @@
         "change_pct": 5.79,
         "result": "success",
         "timestamp": "2026-01-16 13:30"
-      }
+      },
+      "result": "legacy_unsettled",
+      "note": "legacy標記(2026-07-13)：預測系統上線前記錄或格式過舊（字串區間價格/持倉快照），無法機械結算，不計入統計"
     },
     {
       "stock_code": "2883",
@@ -211,7 +213,9 @@
         "change_pct": 0.57,
         "result": "neutral",
         "timestamp": "2026-01-16 13:30"
-      }
+      },
+      "result": "legacy_unsettled",
+      "note": "legacy標記(2026-07-13)：預測系統上線前記錄或格式過舊（字串區間價格/持倉快照），無法機械結算，不計入統計"
     },
     {
       "stock_code": "6770",
@@ -268,7 +272,11 @@
         "change_pct": 13.25,
         "result": "success",
         "timestamp": "2026-01-16 13:30"
-      }
+      },
+      "result": "success",
+      "settled_date": "2026-05-14",
+      "settled_price": 62.2,
+      "note": "legacy回填(2026-07-13)：result欄位缺漏，自predictions.json同步"
     },
     {
       "stock_code": "2890",
@@ -326,7 +334,9 @@
         "change_pct": 1.91,
         "result": "success",
         "timestamp": "2026-01-16 13:30"
-      }
+      },
+      "result": "legacy_unsettled",
+      "note": "legacy標記(2026-07-13)：預測系統上線前記錄或格式過舊（字串區間價格/持倉快照），無法機械結算，不計入統計"
     },
     {
       "stock_code": "1301",
@@ -389,7 +399,9 @@
         "change_pct": 3.61,
         "result": "success",
         "timestamp": "2026-01-16 13:30"
-      }
+      },
+      "result": "legacy_unsettled",
+      "note": "legacy標記(2026-07-13)：預測系統上線前記錄或格式過舊（字串區間價格/持倉快照），無法機械結算，不計入統計"
     }
   ],
   "avoid_stocks": [

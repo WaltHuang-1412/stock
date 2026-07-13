@@ -16,11 +16,15 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 82,
-      "result": "holding",
-      "holding_status": "D4/10，今收646.0（+7.7%），距目標3.7%，距停損16.4%，Level 0，真連續7天",
+      "result": "success",
+      "holding_status": "殭屍清理批次結算(2026-07-13)：D10 到期：收盤 655.0 > 推薦 600.0，未觸目標/停損",
       "close_price": 646.0,
       "change_percent": 7.67,
-      "reason": "DRAM超強催化Micron+32.87%/光通訊超強雙催化/真連續3天買超9/10天/Module A L2/動能-25%佈局中/5日+5.22%催化脈絡例外縮小倉位"
+      "reason": "DRAM超強催化Micron+32.87%/光通訊超強雙催化/真連續3天買超9/10天/Module A L2/動能-25%佈局中/5日+5.22%催化脈絡例外縮小倉位",
+      "settled_date": "2026-06-11",
+      "settled_price": 655.0,
+      "actual_close": 655.0,
+      "holding_days": 10
     },
     {
       "stock_code": "3034",
@@ -33,11 +37,15 @@
       "settlement_days": 10,
       "position": "15-20%",
       "score": 88,
-      "result": "holding",
-      "holding_status": "D4/10，今收503.0（+3.7%），距目標8.3%，距停損13.2%，Level 0，真連續4天",
+      "result": "success",
+      "holding_status": "殭屍清理批次結算(2026-07-13)：D10 到期：收盤 488.0 > 推薦 485.0，未觸目標/停損",
       "close_price": 503.0,
       "change_percent": 3.71,
-      "reason": "費半+12.35%廣泛半導體/真連續10天全買超/外資+投信同步/Module A L2/動能-41.6%佈局完成"
+      "reason": "費半+12.35%廣泛半導體/真連續10天全買超/外資+投信同步/Module A L2/動能-41.6%佈局完成",
+      "settled_date": "2026-06-11",
+      "settled_price": 488.0,
+      "actual_close": 488.0,
+      "holding_days": 10
     },
     {
       "stock_code": "2891",
@@ -146,9 +154,27 @@
     "settled_today": "金寶(2312)+35.9% success / 正文(4906)+20.7% success / 佳世達(2352)+5.3% D10到期 success",
     "holding": "15檔持有中（瑞昱D0/聯詠D0/中信金D0/大成鋼D2/聯合再生D2/鴻海D3/漢唐D3/台光電D3/友達D4/矽統D4/啟碁D5/技嘉D5/愛普D5/台灣大D6/金像電D6/兆赫D9）",
     "results": [
-      {"symbol": "2312", "name": "金寶", "result": "success", "return_pct": 35.9, "note": "D10到期，收盤37.7≥目標31.1"},
-      {"symbol": "4906", "name": "正文", "result": "success", "return_pct": 20.7, "note": "D10到期，收盤47.3≥目標43.1"},
-      {"symbol": "2352", "name": "佳世達", "result": "success", "return_pct": 5.3, "note": "D10到期，收盤27.65>推薦26.25"}
+      {
+        "symbol": "2312",
+        "name": "金寶",
+        "result": "success",
+        "return_pct": 35.9,
+        "note": "D10到期，收盤37.7≥目標31.1"
+      },
+      {
+        "symbol": "4906",
+        "name": "正文",
+        "result": "success",
+        "return_pct": 20.7,
+        "note": "D10到期，收盤47.3≥目標43.1"
+      },
+      {
+        "symbol": "2352",
+        "name": "佳世達",
+        "result": "success",
+        "return_pct": 5.3,
+        "note": "D10到期，收盤27.65>推薦26.25"
+      }
     ]
   }
 }

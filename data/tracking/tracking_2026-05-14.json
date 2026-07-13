@@ -16,11 +16,15 @@
       "settlement_days": 10,
       "position": "15-20%",
       "score": 100,
-      "result": "holding",
-      "holding_status": "D1/10，距目標18.2%，距停損8.4%，Level 0持有",
+      "result": "success",
+      "holding_status": "殭屍清理批次結算(2026-07-13)：D10 到期：收盤 263.0 > 推薦 251.0，未觸目標/停損",
       "reason": "AI伺服器🔴超強+NVIDIA+8.66%+費半+4.75%→時事25封頂；Module A L3佈局完成(連買8天+動能-6%)→+15；TOP8法人+外投同步→法人22；鴻海法說日直接催化；Level0 Safe；外資週減-3；SMCI L1-5",
       "close_price": 244.5,
-      "change_percent": -2.6
+      "change_percent": -2.6,
+      "settled_date": "2026-05-28",
+      "settled_price": 263.0,
+      "actual_close": 263.0,
+      "holding_days": 10
     },
     {
       "stock_code": "2376",
@@ -29,15 +33,19 @@
       "recommend_price": 313.5,
       "target_price": 360.5,
       "stop_loss_pct": -10,
-      "stop_loss": 282.2,
+      "stop_loss": 282.15,
       "settlement_days": 10,
       "position": "10-15%",
       "score": 82,
-      "result": "holding",
-      "holding_status": "D1/10，距目標10.2%，距停損13.7%，Level 0持有",
+      "result": "success",
+      "holding_status": "殭屍清理批次結算(2026-07-13)：D10 到期：收盤 337.5 > 推薦 313.5，未觸目標/停損",
       "reason": "GPU/AI PC強催化+NVIDIA+8.66%龍頭>5%+2；Module A L2佈局(連買10天)→+10；Level0 Safe；SMCI L1-5（AI伺服器受壓）；外資持股週減-3；月季線上",
       "close_price": 327.0,
-      "change_percent": 4.3
+      "change_percent": 4.3,
+      "settled_date": "2026-05-28",
+      "settled_price": 337.5,
+      "actual_close": 337.5,
+      "holding_days": 10
     },
     {
       "stock_code": "2382",
@@ -104,15 +112,19 @@
       "recommend_price": 26.25,
       "target_price": 30.2,
       "stop_loss_pct": -10,
-      "stop_loss": 23.6,
+      "stop_loss": 23.62,
       "settlement_days": 10,
       "position": "5-10%",
       "score": 74,
-      "result": "holding",
-      "holding_status": "D1/10，距目標18.0%，距停損7.7%，Level 0持有",
+      "result": "success",
+      "holding_status": "殭屍清理批次結算(2026-07-13)：D10 到期：收盤 27.65 > 推薦 26.25，未觸目標/停損",
       "reason": "Module A L2預埋佈局；衛星通訊+AI顯示題材；分散產業需求；Level0 Safe；法人持續買超；月線上",
       "close_price": 25.6,
-      "change_percent": -2.5
+      "change_percent": -2.5,
+      "settled_date": "2026-05-28",
+      "settled_price": 27.65,
+      "actual_close": 27.65,
+      "holding_days": 10
     }
   ],
   "track_b_recommendations": [
@@ -127,12 +139,16 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 82,
-      "result": "holding",
-      "holding_status": "D1/10 TrackB，距目標16.0%，距停損4.5%，Level 0持有",
+      "result": "fail",
       "source": "track_b_intraday",
       "reason": "🔥NVIDIA財報催化劑例外：5日+15.5%已大漲但NVIDIA Q1財報(+8.66%,05/13US)=新催化B首次觸發；偵測器強訊號75分(量比5.28x)+5；EPS+250.9%→+5；連買10天Level0；月季雙線上15分；三項準確率全通過",
       "close_price": 117.0,
-      "change_percent": -0.8
+      "change_percent": -0.8,
+      "settled_date": "2026-05-15",
+      "settled_price": 112.0,
+      "actual_close": 112.0,
+      "holding_days": 1,
+      "fail_reason": "殭屍清理批次結算(2026-07-13)：D1 收盤 112.0 ≤ 停損 112.1（-5%）"
     }
   ],
   "track_b_observations": [

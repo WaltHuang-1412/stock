@@ -38,12 +38,15 @@
       "position": "15-20%",
       "score": 96,
       "reason": "Module A L3佈局完成，真連9天，累計+143K，外資+投信同步，EPS YoY+56.2%，降息預期",
-      "actual_close": 34.35,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤=34.35 | 漲跌=1.5% | 距目標=10.6% | 距停損=12.7%",
+      "actual_close": 34.5,
+      "result": "success",
+      "holding_status": "殭屍清理批次結算(2026-07-13)：D10 到期：收盤 34.5 > 推薦 33.85，未觸目標/停損",
       "close_price": 34.35,
       "current_price": 34.35,
-      "change_percent": 1.48
+      "change_percent": 1.48,
+      "settled_date": "2026-06-29",
+      "settled_price": 34.5,
+      "holding_days": 10
     },
     {
       "stock_code": "2887",
@@ -98,12 +101,15 @@
       "position": "10-15%",
       "score": 83,
       "reason": "Module A L3佈局完成，真連3天，累計+147K（投信主導），EPS YoY+150%，今日法說",
-      "actual_close": 30.5,
-      "result": "holding",
-      "holding_status": "Level 4 爆量賣超（盤後偵測），明日開盤論點驅動出場，出場後結算",
+      "actual_close": 29.65,
+      "result": "success",
+      "holding_status": "殭屍清理批次結算(2026-07-13)：D10 到期：收盤 29.65 > 推薦 27.75，未觸目標/停損",
       "close_price": 27.45,
       "current_price": 27.45,
-      "change_percent": -1.08
+      "change_percent": -1.08,
+      "settled_date": "2026-06-29",
+      "settled_price": 29.65,
+      "holding_days": 10
     },
     {
       "stock_code": "2027",
@@ -117,12 +123,15 @@
       "position": "5-10%",
       "score": 83,
       "reason": "Module A L3佈局完成，真連3天，累計+34K外資主導，EPS YoY+48.1%，油價-6%降成本",
-      "actual_close": 43.55,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤=43.55 | 漲跌=2.4% | 距目標=7.9% | 距停損=13.7%",
+      "actual_close": 40.4,
+      "result": "fail",
       "close_price": 43.55,
       "current_price": 43.55,
-      "change_percent": 2.35
+      "change_percent": 2.35,
+      "settled_date": "2026-06-29",
+      "settled_price": 40.4,
+      "holding_days": 10,
+      "fail_reason": "殭屍清理批次結算(2026-07-13)：D10 到期：收盤 40.4 ≤ 推薦 42.55，未觸目標/停損"
     }
   ],
   "track_b_recommendations": [
@@ -139,12 +148,15 @@
       "score": 95,
       "reason": "AMD+10.86%/SOX+7.91%，法人avg_rank 2.0，5日-12.6%未跟漲，AI伺服器tier_1，近5天外資投信同步",
       "type": "intraday",
-      "actual_close": 67.0,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤=67.0 | 距目標=9.9% | 距停損=5.0%",
+      "actual_close": 63.3,
+      "result": "fail",
       "close_price": 67.0,
       "current_price": 67.0,
-      "change_percent": 0.0
+      "change_percent": 0.0,
+      "settled_date": "2026-06-26",
+      "settled_price": 63.3,
+      "holding_days": 9,
+      "fail_reason": "殭屍清理批次結算(2026-07-13)：D9 收盤 63.3 ≤ 停損 63.65（-5%）"
     }
   ],
   "track_b_observations": [
