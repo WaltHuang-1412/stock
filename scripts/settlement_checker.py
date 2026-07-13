@@ -136,18 +136,30 @@ def find_all_holdings():
     return list(holdings.values())
 
 
+def _num(v):
+    """轉數字；區間字串（'27.0-27.5'）或文字（'開盤價附近'）返回 None"""
+    if isinstance(v, (int, float)):
+        return float(v)
+    if isinstance(v, str):
+        try:
+            return float(v)
+        except ValueError:
+            return None
+    return None
+
+
 def check_settlement(entries, date_str):
     """逐筆用歷史收盤從推薦日重演結算"""
     results = []
 
     for info in entries:
         code = info["stock_code"]
-        recommend_price = info["recommend_price"]
-        target_price = info["target_price"]
+        recommend_price = _num(info["recommend_price"])
+        target_price = _num(info["target_price"])  # 非數字目標 → 只用停損/D10 規則
 
-        if not code or recommend_price in (None, 0):
+        if not code or not recommend_price:
             results.append({**info, "close": None, "result": "error",
-                            "reason": "缺 recommend_price，無法結算"})
+                            "reason": f"recommend_price 缺漏或非數字（{info['recommend_price']!r}），無法結算"})
             continue
 
         series = get_close_series(code)
@@ -156,10 +168,10 @@ def check_settlement(entries, date_str):
                             "reason": "無法取得收盤價序列"})
             continue
 
-        # 用 stop_loss_pct 重算 stop_loss
-        stop_loss_pct = info.get("stop_loss_pct", -10)
+        # 用 stop_loss_pct 重算 stop_loss（非數字時依軌道預設）
+        stop_loss_pct = _num(info.get("stop_loss_pct")) or (-5 if info.get("track") == "B" else -10)
         stop_loss = round(recommend_price * (1 + stop_loss_pct / 100), 2)
-        settlement_days = info.get("settlement_days", 10)
+        settlement_days = int(_num(info.get("settlement_days")) or 10)
 
         # 推薦日之後、結算日（含）之前的交易日
         days = [(d, c) for d, c in series if info["recommend_date"] < d <= date_str]
