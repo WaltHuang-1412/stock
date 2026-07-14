@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-07-12",
+  "last_updated": "2026-07-14",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -207,6 +207,11 @@
               "code": "8150",
               "name": "南茂",
               "category": "AI 伺服器與半導體"
+            },
+            {
+              "code": "5236",
+              "name": "凌陽創新",
+              "category": "AI PC換機潮與自研晶片布局"
             }
           ]
         }
@@ -755,6 +760,17 @@
               "code": "1313",
               "name": "聯成",
               "category": "化學材料"
+            }
+          ]
+        },
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "6505",
+              "name": "台塑化",
+              "category": "台塑集團H1獲利轉骨（含中東庫存效應）"
             }
           ]
         }
@@ -1327,6 +1343,11 @@
             {
               "code": "3596",
               "name": "智易",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "2313",
+              "name": "華通",
               "category": "光通訊與網通"
             }
           ]
@@ -1934,7 +1955,28 @@
         "tier_from_tracker": {
           "name": "催化劑追蹤（自動同步）",
           "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
-          "stocks": []
+          "stocks": [
+            {
+              "code": "5392",
+              "name": "能率創新",
+              "category": "機器人與物理AI"
+            },
+            {
+              "code": "2374",
+              "name": "佳能",
+              "category": "機器人與物理AI"
+            },
+            {
+              "code": "2049",
+              "name": "上銀",
+              "category": "機器人與物理AI"
+            },
+            {
+              "code": "2308",
+              "name": "台達電",
+              "category": "機器人與物理AI"
+            }
+          ]
         }
       }
     },
@@ -2155,6 +2197,11 @@
               "code": "2449",
               "name": "京元電",
               "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "3189",
+              "name": "景碩",
+              "category": "AI伺服器與半導體"
             }
           ]
         }
@@ -2366,6 +2413,16 @@
               "code": "2618",
               "name": "長榮航",
               "category": "中東地緣政治（含航運，戰事再升級）"
+            },
+            {
+              "code": "2634",
+              "name": "漢翔",
+              "category": "中東地緣政治（含航運）"
+            },
+            {
+              "code": "3208",
+              "name": "雷虎",
+              "category": "中東地緣政治（含航運）"
             }
           ]
         }
@@ -2635,6 +2692,36 @@
               "code": "4938",
               "name": "和碩",
               "category": "企業財報重點"
+            },
+            {
+              "code": "2885",
+              "name": "元大金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3045",
+              "name": "台灣大",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2912",
+              "name": "統一超",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2892",
+              "name": "第一金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "5871",
+              "name": "中租-KY",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2467",
+              "name": "志聖",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -2725,6 +2812,16 @@
               "code": "3596",
               "name": "智易",
               "category": "矽光子與CPO量產"
+            },
+            {
+              "code": "7930",
+              "name": "威世波",
+              "category": "矽光子與CPO量產"
+            },
+            {
+              "code": "2313",
+              "name": "華通",
+              "category": "矽光子與CPO量產"
             }
           ]
         }
@@ -2761,6 +2858,11 @@
               "code": "6274",
               "name": "台燿",
               "category": "SpaceX IPO 生態系"
+            },
+            {
+              "code": "4904",
+              "name": "遠傳",
+              "category": "SpaceX IPO生態系"
             }
           ]
         }
@@ -3052,6 +3154,31 @@
               "code": "2449",
               "name": "京元電",
               "category": "台股市場動態"
+            },
+            {
+              "code": "2618",
+              "name": "長榮航",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "4958",
+              "name": "臻鼎-KY",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "1301",
+              "name": "台塑",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "1326",
+              "name": "台化",
+              "category": "台股市場動態"
             }
           ]
         }
@@ -3178,6 +3305,16 @@
             {
               "code": "5289",
               "name": "宜鼎",
+              "category": "南韓與日本超級AI計畫（含SK海力士IPO）"
+            },
+            {
+              "code": "5351",
+              "name": "鈺創",
+              "category": "南韓與日本超級AI計畫（含SK海力士IPO）"
+            },
+            {
+              "code": "8299",
+              "name": "群聯",
               "category": "南韓與日本超級AI計畫（含SK海力士IPO）"
             }
           ]
@@ -3374,6 +3511,231 @@
               "code": "6505",
               "name": "台塑化",
               "category": "中東地緣政治延伸：油價與通膨連動"
+            }
+          ]
+        }
+      }
+    },
+    "軍工": {
+      "name": "軍工",
+      "catalysts": [
+        "軍工",
+        "軍工與無人機"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2634",
+              "name": "漢翔",
+              "category": "軍工與無人機"
+            },
+            {
+              "code": "3208",
+              "name": "雷虎",
+              "category": "軍工與無人機"
+            },
+            {
+              "code": "3706",
+              "name": "神達",
+              "category": "軍工與無人機"
+            }
+          ]
+        }
+      }
+    },
+    "航空暑假旺季": {
+      "name": "航空暑假旺季",
+      "catalysts": [
+        "航空暑假旺季",
+        "航空暑假旺季與",
+        "AI",
+        "貨運"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2618",
+              "name": "長榮航",
+              "category": "航空暑假旺季與AI貨運"
+            },
+            {
+              "code": "6757",
+              "name": "台灣虎航",
+              "category": "航空暑假旺季與AI貨運"
+            },
+            {
+              "code": "2610",
+              "name": "華航",
+              "category": "航空暑假旺季與AI貨運"
+            }
+          ]
+        }
+      }
+    },
+    "台股信用槓桿過熱": {
+      "name": "台股信用槓桿過熱",
+      "catalysts": [
+        "台股信用槓桿過熱",
+        "央行示警"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2885",
+              "name": "元大金",
+              "category": "台股信用槓桿過熱（央行示警）"
+            }
+          ]
+        }
+      }
+    },
+    "中聯油脂食安風暴": {
+      "name": "中聯油脂食安風暴",
+      "catalysts": [
+        "中聯油脂食安風暴"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "1246",
+              "name": "中聯油脂",
+              "category": "中聯油脂食安風暴"
+            },
+            {
+              "code": "2912",
+              "name": "統一超",
+              "category": "中聯油脂食安風暴"
+            },
+            {
+              "code": "1231",
+              "name": "聯華食",
+              "category": "中聯油脂食安風暴"
+            }
+          ]
+        }
+      }
+    },
+    "台股交易制度變革": {
+      "name": "台股交易制度變革",
+      "catalysts": [
+        "台股交易制度變革",
+        "千金股",
+        "元跳",
+        "零股",
+        "點開盤"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "3008",
+              "name": "大立光",
+              "category": "台股交易制度變革（千金股1元跳、零股9點開盤）"
+            },
+            {
+              "code": "3661",
+              "name": "世芯-KY",
+              "category": "台股交易制度變革（千金股1元跳、零股9點開盤）"
+            },
+            {
+              "code": "2885",
+              "name": "元大金",
+              "category": "台股交易制度變革（千金股1元跳、零股9點開盤）"
+            },
+            {
+              "code": "2855",
+              "name": "統一證",
+              "category": "台股交易制度變革（千金股1元跳、零股9點開盤）"
+            }
+          ]
+        }
+      }
+    },
+    "台灣穩定幣": {
+      "name": "台灣穩定幣",
+      "catalysts": [
+        "台灣穩定幣",
+        "台灣穩定幣與虛擬資產法制化"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2889",
+              "name": "國票金",
+              "category": "台灣穩定幣與虛擬資產法制化"
+            },
+            {
+              "code": "6214",
+              "name": "精誠",
+              "category": "台灣穩定幣與虛擬資產法制化"
+            }
+          ]
+        }
+      }
+    },
+    "台灣總經暢旺": {
+      "name": "台灣總經暢旺",
+      "catalysts": [
+        "台灣總經暢旺",
+        "台灣總經暢旺與對美出超",
+        "關稅談判籌碼風險"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2885",
+              "name": "元大金",
+              "category": "台灣總經暢旺與對美出超（關稅談判籌碼風險）"
+            }
+          ]
+        }
+      }
+    },
+    "巴威颱風衝擊": {
+      "name": "巴威颱風衝擊",
+      "catalysts": [
+        "巴威颱風衝擊",
+        "遞減型"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2103",
+              "name": "台橡",
+              "category": "巴威颱風衝擊（遞減型）"
+            },
+            {
+              "code": "2881",
+              "name": "富邦金",
+              "category": "巴威颱風衝擊（遞減型）"
+            },
+            {
+              "code": "2882",
+              "name": "國泰金",
+              "category": "巴威颱風衝擊（遞減型）"
             }
           ]
         }

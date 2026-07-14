@@ -1,392 +1,392 @@
 {
-  "date": "2026-06-30",
-  "settings": {
-    "stop_loss_pct": -10,
-    "settlement_days": 10
+ "date": "2026-06-30",
+ "settings": {
+  "stop_loss_pct": -10,
+  "settlement_days": 10
+ },
+ "recommendations": [
+  {
+   "stock_code": "2377",
+   "stock_name": "微星",
+   "industry": "AI電腦/主機板",
+   "recommend_price": 139.0,
+   "target_price": 157.0,
+   "stop_loss_pct": -10,
+   "stop_loss": 125.1,
+   "settlement_days": 10,
+   "position": "15-20%",
+   "score": 92,
+   "reason": "Module A L2連4天+EPS+251%+AI伺服器主機板超強+avg_rank=12.5",
+   "actual_close": 146.0,
+   "close_price": 146.0,
+   "change_percent": 5.0,
+   "result": "holding",
+   "holding_status": "真D9/10（颱風日07-10非交易日，settlement_checker於07-14誤報D10到期，實際07-15才到期，07-14盤前已攔截勿提前結算）| 07-13收盤149.5(+2.4%) | 距目標157約5.0% | 距停損125.1約16.3% | 真連買10天累計+40K續抱"
   },
-  "recommendations": [
-    {
-      "stock_code": "2377",
-      "stock_name": "微星",
-      "industry": "AI電腦/主機板",
-      "recommend_price": 139.0,
-      "target_price": 157.0,
-      "stop_loss_pct": -10,
-      "stop_loss": 125.1,
-      "settlement_days": 10,
-      "position": "15-20%",
-      "score": 92,
-      "reason": "Module A L2連4天+EPS+251%+AI伺服器主機板超強+avg_rank=12.5",
-      "actual_close": 146.0,
-      "close_price": 146.0,
-      "change_percent": 5.0,
-      "result": "holding",
-      "holding_status": "D7/10 | 收盤145.0(+2.11%) | 距目標157約8.3% | 距停損125.1約13.7% | 籌碼健康(+8.1K)續抱"
-    },
-    {
-      "stock_code": "2409",
-      "stock_name": "友達",
-      "industry": "面板/電子紙",
-      "recommend_price": 30.6,
-      "target_price": 34.0,
-      "stop_loss_pct": -10,
-      "stop_loss": 27.54,
-      "settlement_days": 10,
-      "position": "10-15%",
-      "score": 83,
-      "reason": "法人rank1大量買超+EPS+81%+電子紙AI題材+確認站穩後進場",
-      "actual_close": 29.55,
-      "close_price": 29.55,
-      "change_percent": -3.43,
-      "result": "fail",
-      "fail_reason": "D6強制出場：反轉Level4爆量賣超-80,361張（佔日均量30.5%，T86 07/07，全場最大量出貨），收盤29.55（-3.4%）",
-      "settled_date": "2026-07-08",
-      "settled_price": 29.55
-    },
-    {
-      "stock_code": "3706",
-      "stock_name": "神達",
-      "industry": "AI server/網通",
-      "recommend_price": 86.4,
-      "target_price": 97.0,
-      "stop_loss_pct": -10,
-      "stop_loss": 77.76,
-      "settlement_days": 10,
-      "position": "10-15%",
-      "score": 83,
-      "reason": "AI server網通+法人rank7+TSM ADR+5.5%+EPS+75%+佈局型",
-      "actual_close": 88.7,
-      "close_price": 87.3,
-      "change_percent": 1.0,
-      "result": "success",
-      "holding_status": "L4反轉強制出場：收盤88.7 > 推薦86.4，鎖利+2.66%（T86 07/08爆量賣超-1,236張8.8%日均量、外資8日-28K），D8結算 ✅",
-      "return_pct": 2.66,
-      "settled_date": "2026-07-09"
-    },
-    {
-      "stock_code": "2408",
-      "stock_name": "南亞科",
-      "industry": "DRAM記憶體",
-      "recommend_price": 453.0,
-      "target_price": 507.0,
-      "stop_loss_pct": -10,
-      "stop_loss": 407.7,
-      "settlement_days": 10,
-      "position": "5-10%",
-      "score": 83,
-      "reason": "DRAM超強+營收+587%+EPS+802%+5日-10.3%黃金買點",
-      "actual_close": 407.0,
-      "close_price": 407.0,
-      "change_percent": -10.15,
-      "result": "fail",
-      "fail_reason": "D2/10 收盤407.0 ≤ 停損407.7，觸及停損結算失敗（推薦後DRAM記憶體族群回檔，WDC-7.1%儲存降級拖累）",
-      "settled_price": 407.0,
-      "settled_date": "2026-07-02",
-      "holding_status": "D2/10 | -10.2% | 已觸停損結算失敗"
-    },
-    {
-      "stock_code": "2887",
-      "stock_name": "台新金",
-      "industry": "金融控股",
-      "recommend_price": 33.0,
-      "target_price": 36.5,
-      "stop_loss_pct": -10,
-      "stop_loss": 29.7,
-      "settlement_days": 10,
-      "position": "10-15%",
-      "score": 80,
-      "reason": "金融rank6.5+EPS+177%+台新新光合併題材+升息轉向受益",
-      "actual_close": 36.85,
-      "close_price": 33.25,
-      "change_percent": 0.8,
-      "result": "success",
-      "holding_status": "D8結算：收盤36.85 ≥ 目標36.5，+11.67% ✅ 結算成功",
-      "return_pct": 11.67,
-      "settled_date": "2026-07-09"
-    }
-  ],
-  "track_b_recommendations": [],
-  "track_b_observations": [
-    {
-      "stock_code": "6230",
-      "stock_name": "超眾",
-      "industry": "AI散熱",
-      "signal": "Module B 🟢早期 +5分",
-      "reason": "AI散熱管+Level 0，但累計法人買超太小(cum=28)，不進入推薦"
-    },
-    {
-      "stock_code": "2392",
-      "stock_name": "正崴",
-      "industry": "AI connectors",
-      "signal": "Module B 🟢早期",
-      "reason": "AI連接器題材，cum=761，觀察法人是否跟進"
-    }
-  ],
-  "intraday_update": {
-    "scan_time": "12:35",
-    "intraday_detector_signals": 0,
-    "track_b_new_recommendations": 0,
-    "track_b_intraday_candidates_screened": [
-      "2892第一金(~70分,外資篩選不通過)",
-      "1402遠東新(~63分,紡織無催化)",
-      "2891中信金(~72分,金融非強催化鏈)",
-      "2834臺企銀(Level4排除)"
-    ],
-    "critical_alerts": [
-      {
-        "stock_code": "2313",
-        "stock_name": "華通",
-        "alert_type": "STOP_LOSS_TRIGGERED",
-        "current_price": 232.0,
-        "stop_loss_price": 235.98,
-        "reversal_level": 4,
-        "action": "強制出場（停損已觸及）"
-      },
-      {
-        "stock_code": "3037",
-        "stock_name": "欣興",
-        "alert_type": "LEVEL4_DAY2",
-        "current_price": 1065.0,
-        "stop_loss_price": 949.5,
-        "reversal_level": 4,
-        "action": "連續第2天Level4，收盤確認後考慮減碼"
-      },
-      {
-        "stock_code": "2887",
-        "stock_name": "台新金",
-        "alert_type": "LEVEL4_D0",
-        "current_price": 33.45,
-        "stop_loss_price": 29.7,
-        "reversal_level": 4,
-        "action": "D0單日Level4，手動策略觀察1天，明日確認"
-      }
-    ],
-    "holdings_monitor": {
-      "2330": {
-        "price": 2445.0,
-        "status": "觀察（累計負但今日買超）"
-      },
-      "1303": {
-        "price": 166.5,
-        "status": "安全（注意30日+97.7%接近處置）"
-      },
-      "6770": {
-        "price": 79.2,
-        "status": "安全"
-      },
-      "3037": {
-        "price": 1065.0,
-        "status": "Level4連2天，監控"
-      },
-      "2337": {
-        "price": 156.0,
-        "status": "安全"
-      },
-      "2313": {
-        "price": 232.0,
-        "status": "停損觸發，應出場"
-      },
-      "3090": {
-        "price": 327.0,
-        "status": "處置風險高(30日+120.9%)"
-      }
-    }
+  {
+   "stock_code": "2409",
+   "stock_name": "友達",
+   "industry": "面板/電子紙",
+   "recommend_price": 30.6,
+   "target_price": 34.0,
+   "stop_loss_pct": -10,
+   "stop_loss": 27.54,
+   "settlement_days": 10,
+   "position": "10-15%",
+   "score": 83,
+   "reason": "法人rank1大量買超+EPS+81%+電子紙AI題材+確認站穩後進場",
+   "actual_close": 29.55,
+   "close_price": 29.55,
+   "change_percent": -3.43,
+   "result": "fail",
+   "fail_reason": "D6強制出場：反轉Level4爆量賣超-80,361張（佔日均量30.5%，T86 07/07，全場最大量出貨），收盤29.55（-3.4%）",
+   "settled_date": "2026-07-08",
+   "settled_price": 29.55
   },
-  "holding_evaluation": [
-    {
-      "stock_code": "2382",
-      "stock_name": "廣達",
-      "score": 99,
-      "recommendation": "🔄 強力可加碼",
-      "reason": "AI超強+Module A L2+營收+43.2%(回檔3.4%)→黃金加碼點",
-      "position_add": "5-10%",
-      "status": "D5/10 -3.4%"
-    },
-    {
-      "stock_code": "2890",
-      "stock_name": "永豐金",
-      "score": 89,
-      "recommendation": "🔄 可加碼",
-      "reason": "Module A L2連6天+EPS+33%+法人排行TOP10",
-      "position_add": "5-10%",
-      "status": "D1/10 +0.2%"
-    },
-    {
-      "stock_code": "5880",
-      "stock_name": "合庫金",
-      "score": 82,
-      "recommendation": "🔄 可加碼",
-      "reason": "Module A L2連5天+EPS+50%+法人支撐",
-      "position_add": "5%",
-      "status": "D3/10 +1.3%"
-    },
-    {
-      "stock_code": "8150",
-      "stock_name": "南茂",
-      "score": 65,
-      "recommendation": "⚠️ 留意減碼",
-      "reason": "昨-7.2%暴跌，距停損僅3.0%，今日密切監控",
-      "position_add": "0%",
-      "status": "D1/10 -7.2% ⚠️"
-    }
-  ],
-  "removed_stocks": [
-    {
-      "code": "3037",
-      "name": "欣興",
-      "reason": "Level 4爆量賣超（持有0.3股，今日注意停損）"
-    },
-    {
-      "code": "2356",
-      "name": "英業達",
-      "reason": "Level 4排除"
-    },
-    {
-      "code": "3189",
-      "name": "景碩",
-      "reason": "Level 4+處置預警"
-    },
-    {
-      "code": "2609",
-      "name": "陽明",
-      "reason": "Level 4排除"
-    },
-    {
-      "code": "6116",
-      "name": "彩晶",
-      "reason": "Level 4+處置預警"
-    },
-    {
-      "code": "3016",
-      "name": "嘉晶",
-      "reason": "avg_rank=4但累計賣超(-1,878)+60日+152.8%處置預警"
-    },
-    {
-      "code": "2327",
-      "name": "國巨",
-      "reason": "累計負(-433)+6季EPS衰退+30日+128%處置預警"
-    },
-    {
-      "code": "1402",
-      "name": "遠東新",
-      "reason": "外資5天-6,357賣超→不通過準確率篩選（紡織無催化）"
-    },
-    {
-      "code": "2880",
-      "name": "華南金",
-      "reason": "外資5天-48K賣超→不通過準確率篩選"
-    },
-    {
-      "code": "2002",
-      "name": "中鋼",
-      "reason": "鋼鐵未在最強催化鏈→不通過準確率篩選第1項"
-    }
-  ],
-  "yesterday_verification": {
-    "date": "2026-06-30",
-    "accuracy": "60.5%",
-    "total_success": 239,
-    "total_fail": 156,
-    "settled_count": 395,
-    "holding_count": 212,
-    "results": [
-      {
-        "stock_code": "2472",
-        "stock_name": "立隆電",
-        "result": "success",
-        "gain_pct": 20.6,
-        "note": "AI功率元件 D1達目標+20.6%"
-      },
-      {
-        "stock_code": "2377",
-        "stock_name": "微星",
-        "result": "holding",
-        "gain_pct": 5.0,
-        "note": "D0/10 AI主機板+5%"
-      },
-      {
-        "stock_code": "2409",
-        "stock_name": "友達",
-        "result": "holding",
-        "gain_pct": 6.9,
-        "note": "D0/10 面板rank1+6.9%"
-      },
-      {
-        "stock_code": "3706",
-        "stock_name": "神達",
-        "result": "holding",
-        "gain_pct": 1.0,
-        "note": "D0/10 外資賣超注意"
-      },
-      {
-        "stock_code": "2408",
-        "stock_name": "南亞科",
-        "result": "holding",
-        "gain_pct": -0.1,
-        "note": "D0/10 DRAM超強支撐"
-      },
-      {
-        "stock_code": "2887",
-        "stock_name": "台新金",
-        "result": "holding",
-        "gain_pct": 0.8,
-        "note": "D0/10 盤中L4→收盤L0"
-      }
-    ]
+  {
+   "stock_code": "3706",
+   "stock_name": "神達",
+   "industry": "AI server/網通",
+   "recommend_price": 86.4,
+   "target_price": 97.0,
+   "stop_loss_pct": -10,
+   "stop_loss": 77.76,
+   "settlement_days": 10,
+   "position": "10-15%",
+   "score": 83,
+   "reason": "AI server網通+法人rank7+TSM ADR+5.5%+EPS+75%+佈局型",
+   "actual_close": 88.7,
+   "close_price": 87.3,
+   "change_percent": 1.0,
+   "result": "success",
+   "holding_status": "L4反轉強制出場：收盤88.7 > 推薦86.4，鎖利+2.66%（T86 07/08爆量賣超-1,236張8.8%日均量、外資8日-28K），D8結算 ✅",
+   "return_pct": 2.66,
+   "settled_date": "2026-07-09"
   },
-  "tomorrow_recommendations": [],
-  "tomorrow_notes": "2026-07-01 明日注意事項：(1)2887台新金早盤確認籌碼，Level3-4→出場 (2)D10結算：2886兆豐金大概率SUCCESS，2884玉山金/2867三商壽需站回推薦價 (3)3037欣興減碼（Level4連2天） (4)07/02非農事件風險，留意短線波動 (5)無新增推薦",
-  "after_market_update": {
-    "settlement_today": [
-      {
-        "code": "2472",
-        "name": "立隆電",
-        "result": "success",
-        "recommend_price": 376.0,
-        "settled_price": 453.5,
-        "change_pct": 20.6,
-        "holding_days": 1
-      }
-    ],
-    "accuracy_update": {
-      "settled_accuracy": "60.5%",
-      "success": 239,
-      "fail": 156,
-      "total_settled": 395,
-      "holding": 212
-    },
-    "holdings_action": [
-      {
-        "code": "2313",
-        "name": "華通",
-        "action": "停損出場（盤中觸及停損235.98）"
-      },
-      {
-        "code": "3037",
-        "name": "欣興",
-        "action": "建議減碼（Level4連2天，論點矛盾）"
-      },
-      {
-        "code": "2887",
-        "name": "台新金",
-        "action": "收盤Level0，繼續觀察D1"
-      }
-    ]
+  {
+   "stock_code": "2408",
+   "stock_name": "南亞科",
+   "industry": "DRAM記憶體",
+   "recommend_price": 453.0,
+   "target_price": 507.0,
+   "stop_loss_pct": -10,
+   "stop_loss": 407.7,
+   "settlement_days": 10,
+   "position": "5-10%",
+   "score": 83,
+   "reason": "DRAM超強+營收+587%+EPS+802%+5日-10.3%黃金買點",
+   "actual_close": 407.0,
+   "close_price": 407.0,
+   "change_percent": -10.15,
+   "result": "fail",
+   "fail_reason": "D2/10 收盤407.0 ≤ 停損407.7，觸及停損結算失敗（推薦後DRAM記憶體族群回檔，WDC-7.1%儲存降級拖累）",
+   "settled_price": 407.0,
+   "settled_date": "2026-07-02",
+   "holding_status": "D2/10 | -10.2% | 已觸停損結算失敗"
   },
-  "market_context": {
-    "vix": 17.65,
-    "regime": "多頭",
-    "defense_ratio": "0-15%",
-    "attack_ratio": "85-100%",
-    "key_catalysts": [
-      "AI伺服器超強(15週)",
-      "DRAM記憶體超強(6週)",
-      "光通訊超強(7週)"
-    ],
-    "risk_events": [
-      "07/01 Warsh演講(今日!)",
-      "07/02 非農"
-    ],
-    "apple_warning": "Level 2 -5.14%→蘋果供應鏈-15分"
+  {
+   "stock_code": "2887",
+   "stock_name": "台新金",
+   "industry": "金融控股",
+   "recommend_price": 33.0,
+   "target_price": 36.5,
+   "stop_loss_pct": -10,
+   "stop_loss": 29.7,
+   "settlement_days": 10,
+   "position": "10-15%",
+   "score": 80,
+   "reason": "金融rank6.5+EPS+177%+台新新光合併題材+升息轉向受益",
+   "actual_close": 36.85,
+   "close_price": 33.25,
+   "change_percent": 0.8,
+   "result": "success",
+   "holding_status": "D8結算：收盤36.85 ≥ 目標36.5，+11.67% ✅ 結算成功",
+   "return_pct": 11.67,
+   "settled_date": "2026-07-09"
   }
+ ],
+ "track_b_recommendations": [],
+ "track_b_observations": [
+  {
+   "stock_code": "6230",
+   "stock_name": "超眾",
+   "industry": "AI散熱",
+   "signal": "Module B 🟢早期 +5分",
+   "reason": "AI散熱管+Level 0，但累計法人買超太小(cum=28)，不進入推薦"
+  },
+  {
+   "stock_code": "2392",
+   "stock_name": "正崴",
+   "industry": "AI connectors",
+   "signal": "Module B 🟢早期",
+   "reason": "AI連接器題材，cum=761，觀察法人是否跟進"
+  }
+ ],
+ "intraday_update": {
+  "scan_time": "12:35",
+  "intraday_detector_signals": 0,
+  "track_b_new_recommendations": 0,
+  "track_b_intraday_candidates_screened": [
+   "2892第一金(~70分,外資篩選不通過)",
+   "1402遠東新(~63分,紡織無催化)",
+   "2891中信金(~72分,金融非強催化鏈)",
+   "2834臺企銀(Level4排除)"
+  ],
+  "critical_alerts": [
+   {
+    "stock_code": "2313",
+    "stock_name": "華通",
+    "alert_type": "STOP_LOSS_TRIGGERED",
+    "current_price": 232.0,
+    "stop_loss_price": 235.98,
+    "reversal_level": 4,
+    "action": "強制出場（停損已觸及）"
+   },
+   {
+    "stock_code": "3037",
+    "stock_name": "欣興",
+    "alert_type": "LEVEL4_DAY2",
+    "current_price": 1065.0,
+    "stop_loss_price": 949.5,
+    "reversal_level": 4,
+    "action": "連續第2天Level4，收盤確認後考慮減碼"
+   },
+   {
+    "stock_code": "2887",
+    "stock_name": "台新金",
+    "alert_type": "LEVEL4_D0",
+    "current_price": 33.45,
+    "stop_loss_price": 29.7,
+    "reversal_level": 4,
+    "action": "D0單日Level4，手動策略觀察1天，明日確認"
+   }
+  ],
+  "holdings_monitor": {
+   "2330": {
+    "price": 2445.0,
+    "status": "觀察（累計負但今日買超）"
+   },
+   "1303": {
+    "price": 166.5,
+    "status": "安全（注意30日+97.7%接近處置）"
+   },
+   "6770": {
+    "price": 79.2,
+    "status": "安全"
+   },
+   "3037": {
+    "price": 1065.0,
+    "status": "Level4連2天，監控"
+   },
+   "2337": {
+    "price": 156.0,
+    "status": "安全"
+   },
+   "2313": {
+    "price": 232.0,
+    "status": "停損觸發，應出場"
+   },
+   "3090": {
+    "price": 327.0,
+    "status": "處置風險高(30日+120.9%)"
+   }
+  }
+ },
+ "holding_evaluation": [
+  {
+   "stock_code": "2382",
+   "stock_name": "廣達",
+   "score": 99,
+   "recommendation": "🔄 強力可加碼",
+   "reason": "AI超強+Module A L2+營收+43.2%(回檔3.4%)→黃金加碼點",
+   "position_add": "5-10%",
+   "status": "D5/10 -3.4%"
+  },
+  {
+   "stock_code": "2890",
+   "stock_name": "永豐金",
+   "score": 89,
+   "recommendation": "🔄 可加碼",
+   "reason": "Module A L2連6天+EPS+33%+法人排行TOP10",
+   "position_add": "5-10%",
+   "status": "D1/10 +0.2%"
+  },
+  {
+   "stock_code": "5880",
+   "stock_name": "合庫金",
+   "score": 82,
+   "recommendation": "🔄 可加碼",
+   "reason": "Module A L2連5天+EPS+50%+法人支撐",
+   "position_add": "5%",
+   "status": "D3/10 +1.3%"
+  },
+  {
+   "stock_code": "8150",
+   "stock_name": "南茂",
+   "score": 65,
+   "recommendation": "⚠️ 留意減碼",
+   "reason": "昨-7.2%暴跌，距停損僅3.0%，今日密切監控",
+   "position_add": "0%",
+   "status": "D1/10 -7.2% ⚠️"
+  }
+ ],
+ "removed_stocks": [
+  {
+   "code": "3037",
+   "name": "欣興",
+   "reason": "Level 4爆量賣超（持有0.3股，今日注意停損）"
+  },
+  {
+   "code": "2356",
+   "name": "英業達",
+   "reason": "Level 4排除"
+  },
+  {
+   "code": "3189",
+   "name": "景碩",
+   "reason": "Level 4+處置預警"
+  },
+  {
+   "code": "2609",
+   "name": "陽明",
+   "reason": "Level 4排除"
+  },
+  {
+   "code": "6116",
+   "name": "彩晶",
+   "reason": "Level 4+處置預警"
+  },
+  {
+   "code": "3016",
+   "name": "嘉晶",
+   "reason": "avg_rank=4但累計賣超(-1,878)+60日+152.8%處置預警"
+  },
+  {
+   "code": "2327",
+   "name": "國巨",
+   "reason": "累計負(-433)+6季EPS衰退+30日+128%處置預警"
+  },
+  {
+   "code": "1402",
+   "name": "遠東新",
+   "reason": "外資5天-6,357賣超→不通過準確率篩選（紡織無催化）"
+  },
+  {
+   "code": "2880",
+   "name": "華南金",
+   "reason": "外資5天-48K賣超→不通過準確率篩選"
+  },
+  {
+   "code": "2002",
+   "name": "中鋼",
+   "reason": "鋼鐵未在最強催化鏈→不通過準確率篩選第1項"
+  }
+ ],
+ "yesterday_verification": {
+  "date": "2026-06-30",
+  "accuracy": "60.5%",
+  "total_success": 239,
+  "total_fail": 156,
+  "settled_count": 395,
+  "holding_count": 212,
+  "results": [
+   {
+    "stock_code": "2472",
+    "stock_name": "立隆電",
+    "result": "success",
+    "gain_pct": 20.6,
+    "note": "AI功率元件 D1達目標+20.6%"
+   },
+   {
+    "stock_code": "2377",
+    "stock_name": "微星",
+    "result": "holding",
+    "gain_pct": 5.0,
+    "note": "D0/10 AI主機板+5%"
+   },
+   {
+    "stock_code": "2409",
+    "stock_name": "友達",
+    "result": "holding",
+    "gain_pct": 6.9,
+    "note": "D0/10 面板rank1+6.9%"
+   },
+   {
+    "stock_code": "3706",
+    "stock_name": "神達",
+    "result": "holding",
+    "gain_pct": 1.0,
+    "note": "D0/10 外資賣超注意"
+   },
+   {
+    "stock_code": "2408",
+    "stock_name": "南亞科",
+    "result": "holding",
+    "gain_pct": -0.1,
+    "note": "D0/10 DRAM超強支撐"
+   },
+   {
+    "stock_code": "2887",
+    "stock_name": "台新金",
+    "result": "holding",
+    "gain_pct": 0.8,
+    "note": "D0/10 盤中L4→收盤L0"
+   }
+  ]
+ },
+ "tomorrow_recommendations": [],
+ "tomorrow_notes": "2026-07-01 明日注意事項：(1)2887台新金早盤確認籌碼，Level3-4→出場 (2)D10結算：2886兆豐金大概率SUCCESS，2884玉山金/2867三商壽需站回推薦價 (3)3037欣興減碼（Level4連2天） (4)07/02非農事件風險，留意短線波動 (5)無新增推薦",
+ "after_market_update": {
+  "settlement_today": [
+   {
+    "code": "2472",
+    "name": "立隆電",
+    "result": "success",
+    "recommend_price": 376.0,
+    "settled_price": 453.5,
+    "change_pct": 20.6,
+    "holding_days": 1
+   }
+  ],
+  "accuracy_update": {
+   "settled_accuracy": "60.5%",
+   "success": 239,
+   "fail": 156,
+   "total_settled": 395,
+   "holding": 212
+  },
+  "holdings_action": [
+   {
+    "code": "2313",
+    "name": "華通",
+    "action": "停損出場（盤中觸及停損235.98）"
+   },
+   {
+    "code": "3037",
+    "name": "欣興",
+    "action": "建議減碼（Level4連2天，論點矛盾）"
+   },
+   {
+    "code": "2887",
+    "name": "台新金",
+    "action": "收盤Level0，繼續觀察D1"
+   }
+  ]
+ },
+ "market_context": {
+  "vix": 17.65,
+  "regime": "多頭",
+  "defense_ratio": "0-15%",
+  "attack_ratio": "85-100%",
+  "key_catalysts": [
+   "AI伺服器超強(15週)",
+   "DRAM記憶體超強(6週)",
+   "光通訊超強(7週)"
+  ],
+  "risk_events": [
+   "07/01 Warsh演講(今日!)",
+   "07/02 非農"
+  ],
+  "apple_warning": "Level 2 -5.14%→蘋果供應鏈-15分"
+ }
 }
