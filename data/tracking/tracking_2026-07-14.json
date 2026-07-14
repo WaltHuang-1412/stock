@@ -26,7 +26,12 @@
       "intraday_change_pct": -6.76,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "intraday_note": "D0 -6.76% 距停損199.8僅3.5%，未觸出場條件續抱但尾盤緊盯"
+      "intraday_note": "D0 -6.76% 距停損199.8僅3.5%，未觸出場條件續抱但尾盤緊盯",
+      "actual_close": 212.5,
+      "close_price": 212.5,
+      "change_percent": -4.28,
+      "result": "holding",
+      "holding_status": "D0/10 收盤212.5(-4.28%) | 距目標244約14.8% | 距停損199.8約6.0% | 尾盤自低點207收復，未觸出場條件續抱，明日開盤優先盯"
     },
     {
       "stock_code": "2882",
@@ -43,7 +48,12 @@
       "intraday_price": 95.0,
       "intraday_change_pct": -1.76,
       "intraday_reversal_level": 0,
-      "intraday_strategy": "續抱"
+      "intraday_strategy": "續抱",
+      "actual_close": 96.1,
+      "close_price": 96.1,
+      "change_percent": -0.62,
+      "result": "holding",
+      "holding_status": "D0/10 收盤96.1(-0.62%) | 距目標105約9.3% | 距停損87.03約9.4% | 金融群穩健續抱"
     },
     {
       "stock_code": "2634",
@@ -60,7 +70,12 @@
       "intraday_price": 65.1,
       "intraday_change_pct": 2.04,
       "intraday_reversal_level": 0,
-      "intraday_strategy": "續抱"
+      "intraday_strategy": "續抱",
+      "actual_close": 67.1,
+      "close_price": 67.1,
+      "change_percent": 5.17,
+      "result": "holding",
+      "holding_status": "D0/10 收盤67.1(+5.17%) | 距目標70約4.3% | 距停損57.42約14.4% | 地緣催化發酵今日最強，接近目標收割監控"
     },
     {
       "stock_code": "2382",
@@ -77,7 +92,12 @@
       "intraday_price": 370.5,
       "intraday_change_pct": -1.98,
       "intraday_reversal_level": 0,
-      "intraday_strategy": "續抱"
+      "intraday_strategy": "續抱",
+      "actual_close": 380.0,
+      "close_price": 380.0,
+      "change_percent": 0.53,
+      "result": "holding",
+      "holding_status": "D0/10 收盤380(+0.53%) | 距目標415約9.2% | 距停損340.2約10.5% | 費半隔夜-4.78%下逆勢翻紅續抱"
     },
     {
       "stock_code": "1303",
@@ -94,7 +114,12 @@
       "intraday_price": 196.5,
       "intraday_change_pct": -1.5,
       "intraday_reversal_level": 0,
-      "intraday_strategy": "續抱"
+      "intraday_strategy": "續抱",
+      "actual_close": 210.0,
+      "close_price": 210.0,
+      "change_percent": 5.26,
+      "result": "holding",
+      "holding_status": "D0/10 收盤210(+5.26%) | 距目標218約3.8% | 距停損179.55約14.5% | 油價催化午後發酵大漲，接近目標收割監控"
     },
     {
       "stock_code": "6505",
@@ -111,7 +136,12 @@
       "intraday_price": 65.8,
       "intraday_change_pct": 4.28,
       "intraday_reversal_level": 0,
-      "intraday_strategy": "續抱"
+      "intraday_strategy": "續抱",
+      "actual_close": 66.2,
+      "close_price": 66.2,
+      "change_percent": 4.91,
+      "result": "holding",
+      "holding_status": "D0/10 收盤66.2(+4.91%) | 距目標68約2.7% | 距停損59.95約9.4% | 油價最直接受惠，距目標僅2.7%明日觸68即結算success"
     },
     {
       "stock_code": "2606",
@@ -128,7 +158,12 @@
       "intraday_price": 62.4,
       "intraday_change_pct": -2.35,
       "intraday_reversal_level": 0,
-      "intraday_strategy": "續抱"
+      "intraday_strategy": "續抱",
+      "actual_close": 62.5,
+      "close_price": 62.5,
+      "change_percent": -2.19,
+      "result": "holding",
+      "holding_status": "D0/10 收盤62.5(-2.19%) | 距目標69.5約11.2% | 距停損57.51約8.0% | 運費受惠邏輯未變續抱"
     }
   ],
   "reused_tracking": [
@@ -415,5 +450,94 @@
       "note": "中訊號55分（連買6天，-1.6%未反映），明日盤前候選線索"
     }
   ],
-  "intraday_new_recommendations_note": "今日無盤中新推薦（評分最高54<75，連續第二日，寧缺勿濫）"
+  "intraday_new_recommendations_note": "今日無盤中新推薦（評分最高54<75，連續第二日，寧缺勿濫）",
+  "after_market_update": {
+    "time": "2026-07-14 14:40",
+    "market_note": "美伊衝突風險趨避日，0050收104.4（盤中低點-2.41%後尾盤跌幅收斂）；油價受惠股大漲（1303 +5.26%/2634 +5.17%/6505 +4.91%），今日7檔D0多數自盤中低點收復（2301 207→212.5、2382 370.5→380）",
+    "data_note": "T86 07-14 於 14:35 尚未公布，法人數據基準仍為 07-13；明日盤前必以 T86 07-14 全掃",
+    "settlement_today": [
+      {"stock_code": "2890", "stock_name": "永豐金", "source": "tracking_2026-06-29", "result": "success", "detail": "真D10到期人工結算，收盤39.65 > 推薦39.1（+1.41%）"},
+      {"stock_code": "2801", "stock_name": "彰銀", "source": "tracking_2026-06-29", "result": "success", "detail": "真D10到期人工結算，收盤23.6 > 推薦23.4（+0.85%），反轉L4同日到期一併了結"},
+      {"stock_code": "2892", "stock_name": "第一金", "source": "tracking_2026-06-29", "result": "success", "detail": "真D10到期人工結算，收盤33.55 > 推薦32.65（+2.76%）"},
+      {"stock_code": "2441", "stock_name": "超豐", "source": "tracking_2026-07-13", "result": "fail", "detail": "D1觸停損：收盤129.0 ≤ 130.05（-10.73%）+反轉L4"},
+      {"stock_code": "2353", "stock_name": "宏碁", "source": "tracking_2026-07-13", "result": "fail", "detail": "D1反轉L4強制出場，收盤30.75結算（-5.38%）"},
+      {"stock_code": "2324", "stock_name": "仁寶", "source": "tracking_2026-07-13", "result": "fail", "detail": "D1反轉L4強制出場，收盤35.55結算（-2.87%）"},
+      {"stock_code": "6285", "stock_name": "啟碁", "source": "tracking_2026-07-13", "result": "fail", "detail": "D1反轉L4強制出場，收盤247.5結算（-4.99%）"},
+      {"stock_code": "2887", "stock_name": "台新新光金", "source": "tracking_2026-07-13", "result": "fail", "detail": "D1反轉L4強制出場，收盤35.45結算（-3.80%）"},
+      {"stock_code": "6282", "stock_name": "康舒", "source": "tracking_2026-07-09", "result": "fail", "detail": "反轉L3+距停損0.6%強制出場，收盤54.8結算（-7.12%）"}
+    ],
+    "settlement_intercepted": [
+      {"stock_code": "2377", "stock_name": "微星", "source": "tracking_2026-06-30", "detail": "settlement_checker颱風日誤計報今日D10 success（收147.0 +5.8%），實為真D9；07-15才到期，今日不結算，明日以07-15收盤人工結算"}
+    ],
+    "after_market_todos_status": "✅ 06-29批次3筆已人工結算並回寫tracking+predictions｜✅ 2377已攔截未結算｜✅ 2441已依收盤129.0結算fail",
+    "holdings_note": "實際持倉收盤確認：6770收69.2/2337收139.5/2313收225.5/3090收232.5全數低於出場價，盤中出場決定維持（使用者執行）；1301收63.6（+5.85%浮盈）續抱、4938收82.1續抱；持股壓力分析：四檔出場股虧損-14%~-18.4%🔴高壓",
+    "prior_holdings_status": "未結算holding：2881 D8距目標5.6%/2886 D8距目標6.0%/2883 D6距目標6.3%/2884 D6距目標7.4%/4938 D6/1216 D5距目標7.0%/5880 D3/2377真D9（+5.8%明日到期），全數未觸停損，金融群持續逆勢強"
+  },
+  "removed_stocks": [],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "industry": "面板驅動IC",
+      "reason": "盤中偵測器中訊號55分（連買6天、今日-1.6%未反映）；營收YoY+1.2%不調整、外資持股比+0.07%不調整；除息後法人是否續買待T86 07-14確認",
+      "priority": "高",
+      "action": "明日盤前以T86 07-14重評，連買未斷+反轉L0即進候選"
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "industry": "DRAM",
+      "reason": "今日排除（不在07-13 TOP50買超+反轉L4爆量賣超）；營收YoY+587%但5日+11.2%上漲中不加分、外資持股比不調整；DRAM🔴催化仍在",
+      "priority": "中",
+      "action": "T86 07-14若法人回買+反轉降回L0-1再評，否則續排除"
+    },
+    {
+      "stock_code": "2357",
+      "stock_name": "華碩",
+      "industry": "AI/PC品牌",
+      "reason": "今日71分未達門檻（EPS-3+月線下）；營收YoY+45.7%但未回檔不加分、外資持股比+0.18%不調整",
+      "priority": "低",
+      "action": "AI🔴催化若延續且站回月線再評"
+    },
+    {
+      "stock_code": "8046",
+      "stock_name": "南電",
+      "industry": "ABF載板",
+      "reason": "今日72分觀察；外資持股比週減-0.40%（-3）+乖離+20%高位+不在TOP50，多重減分",
+      "priority": "低",
+      "action": "僅法人現身（進TOP50買超）才重評"
+    },
+    {
+      "stock_code": "1709",
+      "stock_name": "和益",
+      "industry": "未分類（化工）",
+      "reason": "盤中54分：EPS+5、毛利率+2.8pp，但5日+11.4%>10%已大漲不評分區+動能+500%",
+      "priority": "低",
+      "action": "回檔至5日漲幅<10%再評，禁止追高"
+    }
+  ],
+  "tomorrow_notes": [
+    "T86 07-14未公布（14:35），明日盤前必以T86 07-14全掃法人TOP50",
+    "🔴 2377微星真D10到期日=07-15，明日盤後以收盤人工結算（checker今日已誤報D10，明日勿信其D11/逾期輸出）",
+    "🔴 D計數颱風虛增仍在：跨07-10的holding（2881/2886 checker標D8實D7、2883/2884標D6實D5、1216標D5實D4、4938標D6實D5、5880標D3實D2），到期日均比checker晚一交易日，結算前逐筆人工覆核",
+    "收割監控：6505距目標2.7%、1303距3.8%、2634距4.3%、2881距5.6%，觸目標即結算success",
+    "風險監控：2301收212.5距停損6.0%（盤中曾-6.76%），明日開盤優先盯",
+    "07-15台指期結算日波動加大；今晚美CPI+鮑爾作證；07-16台積電法說（2382/2301等AI鏈事件風險）",
+    "07-13批次D1全滅教訓：連假/颱風致T86滯後≥2交易日時，盤前推薦承受法人已轉向盲區，見流程檢討"
+  ],
+  "yesterday_verification": {
+    "note": "多日結算制：今日結算9筆（06-29批次3筆真D10全success；07-13批次5檔D1全數L4/觸停損fail；07-09康舒6282 L3強制出場fail）；2377微星checker誤報D10已攔截（實D9，07-15到期）",
+    "accuracy": "累計 58.0%（266 success / 193 fail，459 筆結算；holding 不計入分母）",
+    "results": [
+      {"stock_code": "2890", "result": "success", "return_pct": 1.41, "holding_days": 10},
+      {"stock_code": "2801", "result": "success", "return_pct": 0.85, "holding_days": 10},
+      {"stock_code": "2892", "result": "success", "return_pct": 2.76, "holding_days": 10},
+      {"stock_code": "2441", "result": "fail", "return_pct": -10.73, "holding_days": 1},
+      {"stock_code": "2353", "result": "fail", "return_pct": -5.38, "holding_days": 1},
+      {"stock_code": "2324", "result": "fail", "return_pct": -2.87, "holding_days": 1},
+      {"stock_code": "6285", "result": "fail", "return_pct": -4.99, "holding_days": 1},
+      {"stock_code": "2887", "result": "fail", "return_pct": -3.8, "holding_days": 1},
+      {"stock_code": "6282", "result": "fail", "return_pct": -7.12, "holding_days": 2}
+    ]
+  }
 }

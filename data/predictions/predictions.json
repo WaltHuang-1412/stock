@@ -7543,11 +7543,11 @@
       }
     ]
   },
-  "settled_accuracy": "58.4%",
-  "settled_count": 450,
-  "holding_count": 188,
-  "total_success": 263,
-  "total_fail": 187,
+  "settled_accuracy": "58.0%",
+  "settled_count": 459,
+  "holding_count": 186,
+  "total_success": 266,
+  "total_fail": 193,
   "2026-03-30": {
     "predictions": [
       {
@@ -13069,10 +13069,11 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 96,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-07-14",
+        "settled_price": 39.65,
+        "holding_days": 10,
+        "note": "真D10到期（颱風日07-10順延），收盤39.65>推薦39.1（+1.41%）"
       },
       {
         "symbol": "2801",
@@ -13084,10 +13085,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 85,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-07-14",
+        "settled_price": 23.6,
+        "holding_days": 10,
+        "note": "真D10到期（颱風日07-10順延），收盤23.6>推薦23.4（+0.85%）；07-14反轉L4同日到期一併了結"
       },
       {
         "symbol": "2892",
@@ -13099,10 +13101,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 84,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-07-14",
+        "settled_price": 33.55,
+        "holding_days": 10,
+        "note": "真D10到期（颱風日07-10順延），收盤33.55>推薦32.65（+2.76%）"
       },
       {
         "symbol": "2618",
@@ -13683,10 +13686,11 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 78,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-07-14",
+        "settled_price": 54.8,
+        "holding_days": 2,
+        "fail_reason": "D3強制出場（真D2）：反轉Level 3近2日-7,608張累計轉負+距停損僅0.6%，收盤54.8結算-7.12%"
       }
     ],
     "settled_accuracy": null,
@@ -13704,10 +13708,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 84,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-07-14",
+        "settled_price": 30.75,
+        "holding_days": 1,
+        "fail_reason": "D1強制出場：反轉Level 4爆量賣超-10,721張（33.7%日均量），未觸停損以收盤30.75結算-5.38%"
       },
       {
         "symbol": "2441",
@@ -13719,10 +13724,11 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 77,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-07-14",
+        "settled_price": 129.0,
+        "holding_days": 1,
+        "fail_reason": "D1觸停損：收盤129.0≤停損130.05（-10.73%）+反轉Level 4爆量賣超-2,742張"
       },
       {
         "symbol": "2324",
@@ -13734,10 +13740,11 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 74,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-07-14",
+        "settled_price": 35.55,
+        "holding_days": 1,
+        "fail_reason": "D1強制出場：反轉Level 4爆量賣超-1,991張，未觸停損以收盤35.55結算-2.87%"
       },
       {
         "symbol": "6285",
@@ -13749,10 +13756,11 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 73,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-07-14",
+        "settled_price": 247.5,
+        "holding_days": 1,
+        "fail_reason": "D1強制出場：反轉Level 4爆量賣超-1,933張（24.7%日均量），未觸停損以收盤247.5結算-4.99%"
       },
       {
         "symbol": "2887",
@@ -13764,6 +13772,118 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 71,
+        "result": "fail",
+        "settled_date": "2026-07-14",
+        "settled_price": 35.45,
+        "holding_days": 1,
+        "fail_reason": "D1強制出場：反轉Level 4爆量賣超-9,430張，投信連買轉爆量倒貨，未觸停損以收盤35.45結算-3.80%"
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-07-14": {
+    "predictions": [
+      {
+        "symbol": "2301",
+        "name": "光寶科",
+        "recommend_price": 222.0,
+        "target_price": 244.0,
+        "stop_loss": 199.8,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 105,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2882",
+        "name": "國泰金",
+        "recommend_price": 96.7,
+        "target_price": 105.0,
+        "stop_loss": 87.03,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 98,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2634",
+        "name": "漢翔",
+        "recommend_price": 63.8,
+        "target_price": 70.0,
+        "stop_loss": 57.42,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 96,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2382",
+        "name": "廣達",
+        "recommend_price": 378.0,
+        "target_price": 415.0,
+        "stop_loss": 340.2,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 91,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "1303",
+        "name": "南亞",
+        "recommend_price": 199.5,
+        "target_price": 218.0,
+        "stop_loss": 179.55,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 88,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "6505",
+        "name": "台塑化",
+        "recommend_price": 63.1,
+        "target_price": 68.0,
+        "stop_loss": 59.95,
+        "stop_loss_pct": -5,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 85,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2606",
+        "name": "裕民",
+        "recommend_price": 63.9,
+        "target_price": 69.5,
+        "stop_loss": 57.51,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 84,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
