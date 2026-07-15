@@ -27,11 +27,14 @@
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
       "intraday_note": "D0 -6.76% 距停損199.8僅3.5%，未觸出場條件續抱但尾盤緊盯",
-      "actual_close": 212.5,
+      "actual_close": 216.0,
       "close_price": 212.5,
       "change_percent": -4.28,
-      "result": "holding",
-      "holding_status": "D0/10 收盤212.5(-4.28%) | 距目標244約14.8% | 距停損199.8約6.0% | 尾盤自低點207收復，未觸出場條件續抱，明日開盤優先盯"
+      "result": "fail",
+      "settled_date": "2026-07-15",
+      "settled_price": 217.0,
+      "holding_days": 1,
+      "fail_reason": "D1 L4出場鐵律：T86 07-14爆量賣超-6,163張（佔日均量62.2%），盤中217.0出場-2.25%，未觸停損199.8但法人反轉鐵律優先"
     },
     {
       "stock_code": "2882",
@@ -71,11 +74,14 @@
       "intraday_change_pct": 2.04,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "actual_close": 67.1,
+      "actual_close": 68.3,
       "close_price": 67.1,
       "change_percent": 5.17,
-      "result": "holding",
-      "holding_status": "D0/10 收盤67.1(+5.17%) | 距目標70約4.3% | 距停損57.42約14.4% | 地緣催化發酵今日最強，接近目標收割監控"
+      "result": "success",
+      "settled_date": "2026-07-15",
+      "settled_price": 66.9,
+      "holding_days": 1,
+      "holding_status": "D1 L4出場鐵律：T86 07-14爆量賣超-15,381張（佔日均量30.6%，漲停日倒貨），盤中66.9出場鎖利+4.86%（今日收盤68.3）"
     },
     {
       "stock_code": "2382",
@@ -93,11 +99,14 @@
       "intraday_change_pct": -1.98,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "actual_close": 380.0,
+      "actual_close": 381.0,
       "close_price": 380.0,
       "change_percent": 0.53,
-      "result": "holding",
-      "holding_status": "D0/10 收盤380(+0.53%) | 距目標415約9.2% | 距停損340.2約10.5% | 費半隔夜-4.78%下逆勢翻紅續抱"
+      "result": "success",
+      "settled_date": "2026-07-15",
+      "settled_price": 379.5,
+      "holding_days": 1,
+      "holding_status": "D1 L4出場鐵律：T86 07-14爆量賣超-1,942張（佔日均量15.5%），盤中379.5出場+0.40%"
     },
     {
       "stock_code": "1303",
@@ -115,11 +124,14 @@
       "intraday_change_pct": -1.5,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "actual_close": 210.0,
+      "actual_close": 227.5,
       "close_price": 210.0,
       "change_percent": 5.26,
-      "result": "holding",
-      "holding_status": "D0/10 收盤210(+5.26%) | 距目標218約3.8% | 距停損179.55約14.5% | 油價催化午後發酵大漲，接近目標收割監控"
+      "result": "success",
+      "settled_date": "2026-07-15",
+      "settled_price": 227.5,
+      "holding_days": 1,
+      "holding_status": "D1結算：收盤227.5 ≥ 目標218.0，+14.04% ✅ 塑化主升段，盤中破目標獲利了結（T86 07-14法人-5,294張，落袋優先）"
     },
     {
       "stock_code": "6505",
@@ -137,11 +149,14 @@
       "intraday_change_pct": 4.28,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "actual_close": 66.2,
+      "actual_close": 72.8,
       "close_price": 66.2,
       "change_percent": 4.91,
-      "result": "holding",
-      "holding_status": "D0/10 收盤66.2(+4.91%) | 距目標68約2.7% | 距停損59.95約9.4% | 油價最直接受惠，距目標僅2.7%明日觸68即結算success"
+      "result": "success",
+      "settled_date": "2026-07-15",
+      "settled_price": 72.8,
+      "holding_days": 1,
+      "holding_status": "D1結算：收盤72.8 ≥ 目標68.0，+15.37% ✅ 油價受惠塑化爆發，盤中+9.5%破目標"
     },
     {
       "stock_code": "2606",
@@ -159,11 +174,14 @@
       "intraday_change_pct": -2.35,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "actual_close": 62.5,
+      "actual_close": 64.2,
       "close_price": 62.5,
       "change_percent": -2.19,
-      "result": "holding",
-      "holding_status": "D0/10 收盤62.5(-2.19%) | 距目標69.5約11.2% | 距停損57.51約8.0% | 運費受惠邏輯未變續抱"
+      "result": "success",
+      "settled_date": "2026-07-15",
+      "settled_price": 64.0,
+      "holding_days": 1,
+      "holding_status": "D1 L4出場鐵律：T86 07-14爆量賣超-631張（佔日均量25.5%），盤中64.0出場+0.16%"
     }
   ],
   "reused_tracking": [
@@ -456,18 +474,77 @@
     "market_note": "美伊衝突風險趨避日，0050收104.4（盤中低點-2.41%後尾盤跌幅收斂）；油價受惠股大漲（1303 +5.26%/2634 +5.17%/6505 +4.91%），今日7檔D0多數自盤中低點收復（2301 207→212.5、2382 370.5→380）",
     "data_note": "T86 07-14 於 14:35 尚未公布，法人數據基準仍為 07-13；明日盤前必以 T86 07-14 全掃",
     "settlement_today": [
-      {"stock_code": "2890", "stock_name": "永豐金", "source": "tracking_2026-06-29", "result": "success", "detail": "真D10到期人工結算，收盤39.65 > 推薦39.1（+1.41%）"},
-      {"stock_code": "2801", "stock_name": "彰銀", "source": "tracking_2026-06-29", "result": "success", "detail": "真D10到期人工結算，收盤23.6 > 推薦23.4（+0.85%），反轉L4同日到期一併了結"},
-      {"stock_code": "2892", "stock_name": "第一金", "source": "tracking_2026-06-29", "result": "success", "detail": "真D10到期人工結算，收盤33.55 > 推薦32.65（+2.76%）"},
-      {"stock_code": "2441", "stock_name": "超豐", "source": "tracking_2026-07-13", "result": "fail", "detail": "D1觸停損：收盤129.0 ≤ 130.05（-10.73%）+反轉L4"},
-      {"stock_code": "2353", "stock_name": "宏碁", "source": "tracking_2026-07-13", "result": "fail", "detail": "D1反轉L4強制出場，收盤30.75結算（-5.38%）"},
-      {"stock_code": "2324", "stock_name": "仁寶", "source": "tracking_2026-07-13", "result": "fail", "detail": "D1反轉L4強制出場，收盤35.55結算（-2.87%）"},
-      {"stock_code": "6285", "stock_name": "啟碁", "source": "tracking_2026-07-13", "result": "fail", "detail": "D1反轉L4強制出場，收盤247.5結算（-4.99%）"},
-      {"stock_code": "2887", "stock_name": "台新新光金", "source": "tracking_2026-07-13", "result": "fail", "detail": "D1反轉L4強制出場，收盤35.45結算（-3.80%）"},
-      {"stock_code": "6282", "stock_name": "康舒", "source": "tracking_2026-07-09", "result": "fail", "detail": "反轉L3+距停損0.6%強制出場，收盤54.8結算（-7.12%）"}
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "source": "tracking_2026-06-29",
+        "result": "success",
+        "detail": "真D10到期人工結算，收盤39.65 > 推薦39.1（+1.41%）"
+      },
+      {
+        "stock_code": "2801",
+        "stock_name": "彰銀",
+        "source": "tracking_2026-06-29",
+        "result": "success",
+        "detail": "真D10到期人工結算，收盤23.6 > 推薦23.4（+0.85%），反轉L4同日到期一併了結"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "source": "tracking_2026-06-29",
+        "result": "success",
+        "detail": "真D10到期人工結算，收盤33.55 > 推薦32.65（+2.76%）"
+      },
+      {
+        "stock_code": "2441",
+        "stock_name": "超豐",
+        "source": "tracking_2026-07-13",
+        "result": "fail",
+        "detail": "D1觸停損：收盤129.0 ≤ 130.05（-10.73%）+反轉L4"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "source": "tracking_2026-07-13",
+        "result": "fail",
+        "detail": "D1反轉L4強制出場，收盤30.75結算（-5.38%）"
+      },
+      {
+        "stock_code": "2324",
+        "stock_name": "仁寶",
+        "source": "tracking_2026-07-13",
+        "result": "fail",
+        "detail": "D1反轉L4強制出場，收盤35.55結算（-2.87%）"
+      },
+      {
+        "stock_code": "6285",
+        "stock_name": "啟碁",
+        "source": "tracking_2026-07-13",
+        "result": "fail",
+        "detail": "D1反轉L4強制出場，收盤247.5結算（-4.99%）"
+      },
+      {
+        "stock_code": "2887",
+        "stock_name": "台新新光金",
+        "source": "tracking_2026-07-13",
+        "result": "fail",
+        "detail": "D1反轉L4強制出場，收盤35.45結算（-3.80%）"
+      },
+      {
+        "stock_code": "6282",
+        "stock_name": "康舒",
+        "source": "tracking_2026-07-09",
+        "result": "fail",
+        "detail": "反轉L3+距停損0.6%強制出場，收盤54.8結算（-7.12%）"
+      }
     ],
     "settlement_intercepted": [
-      {"stock_code": "2377", "stock_name": "微星", "source": "tracking_2026-06-30", "detail": "settlement_checker颱風日誤計報今日D10 success（收147.0 +5.8%），實為真D9；07-15才到期，今日不結算，明日以07-15收盤人工結算"}
+      {
+        "stock_code": "2377",
+        "stock_name": "微星",
+        "source": "tracking_2026-06-30",
+        "detail": "settlement_checker颱風日誤計報今日D10 success（收147.0 +5.8%），實為真D9；07-15才到期，今日不結算，明日以07-15收盤人工結算"
+      }
     ],
     "after_market_todos_status": "✅ 06-29批次3筆已人工結算並回寫tracking+predictions｜✅ 2377已攔截未結算｜✅ 2441已依收盤129.0結算fail",
     "holdings_note": "實際持倉收盤確認：6770收69.2/2337收139.5/2313收225.5/3090收232.5全數低於出場價，盤中出場決定維持（使用者執行）；1301收63.6（+5.85%浮盈）續抱、4938收82.1續抱；持股壓力分析：四檔出場股虧損-14%~-18.4%🔴高壓",
@@ -529,15 +606,60 @@
     "note": "多日結算制：今日結算9筆（06-29批次3筆真D10全success；07-13批次5檔D1全數L4/觸停損fail；07-09康舒6282 L3強制出場fail）；2377微星checker誤報D10已攔截（實D9，07-15到期）",
     "accuracy": "累計 58.0%（266 success / 193 fail，459 筆結算；holding 不計入分母）",
     "results": [
-      {"stock_code": "2890", "result": "success", "return_pct": 1.41, "holding_days": 10},
-      {"stock_code": "2801", "result": "success", "return_pct": 0.85, "holding_days": 10},
-      {"stock_code": "2892", "result": "success", "return_pct": 2.76, "holding_days": 10},
-      {"stock_code": "2441", "result": "fail", "return_pct": -10.73, "holding_days": 1},
-      {"stock_code": "2353", "result": "fail", "return_pct": -5.38, "holding_days": 1},
-      {"stock_code": "2324", "result": "fail", "return_pct": -2.87, "holding_days": 1},
-      {"stock_code": "6285", "result": "fail", "return_pct": -4.99, "holding_days": 1},
-      {"stock_code": "2887", "result": "fail", "return_pct": -3.8, "holding_days": 1},
-      {"stock_code": "6282", "result": "fail", "return_pct": -7.12, "holding_days": 2}
+      {
+        "stock_code": "2890",
+        "result": "success",
+        "return_pct": 1.41,
+        "holding_days": 10
+      },
+      {
+        "stock_code": "2801",
+        "result": "success",
+        "return_pct": 0.85,
+        "holding_days": 10
+      },
+      {
+        "stock_code": "2892",
+        "result": "success",
+        "return_pct": 2.76,
+        "holding_days": 10
+      },
+      {
+        "stock_code": "2441",
+        "result": "fail",
+        "return_pct": -10.73,
+        "holding_days": 1
+      },
+      {
+        "stock_code": "2353",
+        "result": "fail",
+        "return_pct": -5.38,
+        "holding_days": 1
+      },
+      {
+        "stock_code": "2324",
+        "result": "fail",
+        "return_pct": -2.87,
+        "holding_days": 1
+      },
+      {
+        "stock_code": "6285",
+        "result": "fail",
+        "return_pct": -4.99,
+        "holding_days": 1
+      },
+      {
+        "stock_code": "2887",
+        "result": "fail",
+        "return_pct": -3.8,
+        "holding_days": 1
+      },
+      {
+        "stock_code": "6282",
+        "result": "fail",
+        "return_pct": -7.12,
+        "holding_days": 2
+      }
     ]
   }
 }

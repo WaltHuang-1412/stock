@@ -7543,11 +7543,11 @@
       }
     ]
   },
-  "settled_accuracy": "58.0%",
-  "settled_count": 459,
-  "holding_count": 186,
-  "total_success": 266,
-  "total_fail": 193,
+  "settled_accuracy": "58.5%",
+  "settled_count": 467,
+  "holding_count": 181,
+  "total_success": 273,
+  "total_fail": 194,
   "2026-03-30": {
     "predictions": [
       {
@@ -13186,10 +13186,10 @@
         "settlement_days": 10,
         "position": "15-20%",
         "score": 92,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-07-15",
+        "settled_price": 145.5,
+        "holding_days": 10
       },
       {
         "symbol": "2409",
@@ -13650,10 +13650,10 @@
         "settlement_days": 10,
         "position": "6%",
         "score": 65,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-07-15",
+        "settled_price": 78.4,
+        "holding_days": 5
       }
     ],
     "settled_accuracy": null,
@@ -13794,9 +13794,9 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 105,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "fail",
+        "settled_date": "2026-07-15",
+        "settled_price": 217.0,
         "holding_days": 1
       },
       {
@@ -13824,9 +13824,9 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 96,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-07-15",
+        "settled_price": 66.9,
         "holding_days": 1
       },
       {
@@ -13839,9 +13839,9 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 91,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-07-15",
+        "settled_price": 379.5,
         "holding_days": 1
       },
       {
@@ -13854,9 +13854,9 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 88,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-07-15",
+        "settled_price": 227.5,
         "holding_days": 1
       },
       {
@@ -13869,9 +13869,9 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 85,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-07-15",
+        "settled_price": 72.8,
         "holding_days": 1
       },
       {
@@ -13884,6 +13884,57 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 84,
+        "result": "success",
+        "settled_date": "2026-07-15",
+        "settled_price": 64.0,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-07-15": {
+    "predictions": [
+      {
+        "symbol": "2887",
+        "name": "台新新光金",
+        "recommend_price": 35.45,
+        "target_price": 39.0,
+        "stop_loss": 31.91,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 94,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2105",
+        "name": "正新",
+        "recommend_price": 32.65,
+        "target_price": 35.9,
+        "stop_loss": 29.39,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 89,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2618",
+        "name": "長榮航",
+        "recommend_price": 40.8,
+        "target_price": 44.9,
+        "stop_loss": 36.72,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 83,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,

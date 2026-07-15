@@ -19,8 +19,11 @@
       "result": "holding",
       "intraday_price": 36.0,
       "intraday_change_pct": 1.55,
-      "holding_status": "盤中+1.55%，反轉L0無出場訊號，續抱",
-      "reason": "金控財報🟡強(EPS YoY+177%)+Module A L2(+10)+10日法人+129K(投信+78K/外資+41K)+avg_rank 12+月線上+5.26%季線上雙確認+EPS+5；反轉L0、動能+9.3%平穩、外資近5天≥0全過"
+      "holding_status": "D0/10 收盤36.15(+1.97%) | 距目標39.0約7.9% | 距停損31.91約11.7% | 投信主導買超，續抱",
+      "reason": "金控財報🟡強(EPS YoY+177%)+Module A L2(+10)+10日法人+129K(投信+78K/外資+41K)+avg_rank 12+月線上+5.26%季線上雙確認+EPS+5；反轉L0、動能+9.3%平穩、外資近5天≥0全過",
+      "close_price": 36.15,
+      "change_percent": 1.97,
+      "actual_close": 36.15
     },
     {
       "stock_code": "2105",
@@ -36,8 +39,11 @@
       "result": "holding",
       "intraday_price": 32.5,
       "intraday_change_pct": -0.46,
-      "holding_status": "盤中-0.46%，L3佈局股未發動（量比0.8x），反轉L0續抱",
-      "reason": "Module A L3佈局完成(+15)：真連買9天+動能-51.9%+5日僅+1.2%未反映；best avg_rank 7.0、10日+53K(外資+47K)、佔成交32.9%；EPS YoY+26.7%+毛利率+2pp(+5)；反轉L0；無產業催化為主要弱點(時事10分)"
+      "holding_status": "D0/10 收盤32.85(+0.61%) | 距目標35.9約9.3% | 距停損29.39約10.6% | L3佈局股未發動，量縮整理續抱",
+      "reason": "Module A L3佈局完成(+15)：真連買9天+動能-51.9%+5日僅+1.2%未反映；best avg_rank 7.0、10日+53K(外資+47K)、佔成交32.9%；EPS YoY+26.7%+毛利率+2pp(+5)；反轉L0；無產業催化為主要弱點(時事10分)",
+      "close_price": 32.85,
+      "change_percent": 0.61,
+      "actual_close": 32.85
     },
     {
       "stock_code": "2618",
@@ -53,8 +59,11 @@
       "result": "holding",
       "intraday_price": 42.15,
       "intraday_change_pct": 3.31,
-      "holding_status": "盤中+3.31%領漲，距目標44.9尚6.5%，反轉L0量比0.5x未爆量，續抱",
-      "reason": "航空旺季+AI貨運🟡強、6月營收234.7億創新高；T86買超冠軍+44K(佔成交54.5%、連2日外資買超冠軍)、真連買7天、10日+204K(外資+165K)；動能+500%>100%但單日爆買44K>30K例外且連買7天≥7不罰；EPS+5/FR-3；5日-3.8%月線下-3.86%未追高"
+      "holding_status": "D0/10 收盤42.15(+3.31%) | 距目標44.9約6.5% | 距停損36.72約12.9% | 今日D0最強，航空旺季催化發酵",
+      "reason": "航空旺季+AI貨運🟡強、6月營收234.7億創新高；T86買超冠軍+44K(佔成交54.5%、連2日外資買超冠軍)、真連買7天、10日+204K(外資+165K)；動能+500%>100%但單日爆買44K>30K例外且連買7天≥7不罰；EPS+5/FR-3；5日-3.8%月線下-3.86%未追高",
+      "close_price": 42.15,
+      "change_percent": 3.31,
+      "actual_close": 42.15
     }
   ],
   "track_b_recommendations": [],
@@ -79,16 +88,66 @@
     "new_recommendations": 0,
     "reason": "16檔Track B候選全數前置篩選排除（動能>100%或10日累計賣超），超強催化覆寫不成立（費半+2.54%<+3%），連三日寧缺勿濫",
     "exits_executed": [
-      {"stock_code": "2634", "batch": "2026-07-14", "exit_price": 66.9, "pnl_pct": 4.86, "reason": "L4爆量賣超-15,381張出場鐵律"},
-      {"stock_code": "2301", "batch": "2026-07-14", "exit_price": 217.0, "pnl_pct": -2.25, "reason": "L4爆量賣超-6,163張(佔62.2%)出場鐵律"},
-      {"stock_code": "2382", "batch": "2026-07-14", "exit_price": 379.5, "pnl_pct": 0.4, "reason": "L4爆量賣超-1,942張出場鐵律"},
-      {"stock_code": "2606", "batch": "2026-07-14", "exit_price": 64.0, "pnl_pct": 0.16, "reason": "L4爆量賣超-631張(佔25.5%)出場鐵律"},
-      {"stock_code": "1216", "batch": "2026-07-07", "exit_price": 78.4, "pnl_pct": 0.77, "reason": "L4爆量賣超-1,943張(佔12.3%)，盤前續抱表未攔截、盤中掃描補捉"},
-      {"stock_code": "2377", "batch": "2026-06-30", "exit_price": 145.5, "pnl_pct": 4.68, "reason": "L4爆量賣超-1,605張(佔24.2%)+真D10今日到期，盤後人工結算"}
+      {
+        "stock_code": "2634",
+        "batch": "2026-07-14",
+        "exit_price": 66.9,
+        "pnl_pct": 4.86,
+        "reason": "L4爆量賣超-15,381張出場鐵律"
+      },
+      {
+        "stock_code": "2301",
+        "batch": "2026-07-14",
+        "exit_price": 217.0,
+        "pnl_pct": -2.25,
+        "reason": "L4爆量賣超-6,163張(佔62.2%)出場鐵律"
+      },
+      {
+        "stock_code": "2382",
+        "batch": "2026-07-14",
+        "exit_price": 379.5,
+        "pnl_pct": 0.4,
+        "reason": "L4爆量賣超-1,942張出場鐵律"
+      },
+      {
+        "stock_code": "2606",
+        "batch": "2026-07-14",
+        "exit_price": 64.0,
+        "pnl_pct": 0.16,
+        "reason": "L4爆量賣超-631張(佔25.5%)出場鐵律"
+      },
+      {
+        "stock_code": "1216",
+        "batch": "2026-07-07",
+        "exit_price": 78.4,
+        "pnl_pct": 0.77,
+        "reason": "L4爆量賣超-1,943張(佔12.3%)，盤前續抱表未攔截、盤中掃描補捉"
+      },
+      {
+        "stock_code": "2377",
+        "batch": "2026-06-30",
+        "exit_price": 145.5,
+        "pnl_pct": 4.68,
+        "reason": "L4爆量賣超-1,605張(佔24.2%)+真D10今日到期，盤後人工結算"
+      }
     ],
     "targets_hit": [
-      {"stock_code": "6505", "batch": "2026-07-14", "intraday_price": 72.5, "target": 68.0, "pnl_pct": 14.9, "note": "盤中破目標，尾盤收盤≥68結算success"},
-      {"stock_code": "1303", "batch": "2026-07-14", "intraday_price": 225.5, "target": 218.0, "pnl_pct": 13.0, "note": "盤中破目標，T86法人-5,294張獲利了結優先"}
+      {
+        "stock_code": "6505",
+        "batch": "2026-07-14",
+        "intraday_price": 72.5,
+        "target": 68.0,
+        "pnl_pct": 14.9,
+        "note": "盤中破目標，尾盤收盤≥68結算success"
+      },
+      {
+        "stock_code": "1303",
+        "batch": "2026-07-14",
+        "intraday_price": 225.5,
+        "target": 218.0,
+        "pnl_pct": 13.0,
+        "note": "盤中破目標，T86法人-5,294張獲利了結優先"
+      }
     ]
   },
   "notes": {
@@ -97,5 +156,143 @@
     "holding_reuse": "2884玉山金84分/2886兆豐金82分/2882國泰金73分再入選高分候選，⏳沿用進行中追蹤(D7/D9/D1)不重複建倉",
     "exit_signals_today": "tracking holding 4檔觸法人反轉L4：2634漢翔(-15,381張)、2301光寶科(-6,163張)、2382廣達(-1,942張)、2606裕民(-631張佔22.5%日均量)，今日開盤執行出場鐵律；實際持倉2313/6770 L4、2337 L3維持昨日出場建議",
     "manual_settlement_pending": "2377微星06-30筆真D10今日到期，盤後人工結算(checker會誤報D11)"
-  }
+  },
+  "yesterday_verification": {
+    "note": "今日結算8筆（07-14批次6筆+07-07批次1216+06-30批次2377），7勝1敗",
+    "accuracy": "87.5%（今日結算7/8）；累計58.5%（273成功/194失敗/467筆，holding不計入）",
+    "results": [
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "batch": "2026-07-14",
+        "result": "success",
+        "settled_price": 72.8,
+        "pnl_pct": 15.37,
+        "note": "D1收盤72.8≥目標68.0，油價受惠塑化爆發"
+      },
+      {
+        "stock_code": "1303",
+        "stock_name": "南亞",
+        "batch": "2026-07-14",
+        "result": "success",
+        "settled_price": 227.5,
+        "pnl_pct": 14.04,
+        "note": "D1收盤227.5≥目標218.0，盤中破目標獲利了結"
+      },
+      {
+        "stock_code": "2634",
+        "stock_name": "漢翔",
+        "batch": "2026-07-14",
+        "result": "success",
+        "settled_price": 66.9,
+        "pnl_pct": 4.86,
+        "note": "D1 L4出場鐵律（-15,381張漲停日倒貨），盤中66.9鎖利"
+      },
+      {
+        "stock_code": "2377",
+        "stock_name": "微星",
+        "batch": "2026-06-30",
+        "result": "success",
+        "settled_price": 145.5,
+        "pnl_pct": 4.68,
+        "note": "真D10到期人工結算（checker誤報D11）+L4出場145.5，收盤148.5亦>推薦139"
+      },
+      {
+        "stock_code": "1216",
+        "stock_name": "統一",
+        "batch": "2026-07-07",
+        "result": "success",
+        "settled_price": 78.4,
+        "pnl_pct": 0.77,
+        "note": "真D5 L4出場（盤前未攔截、盤中補捉）"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "batch": "2026-07-14",
+        "result": "success",
+        "settled_price": 379.5,
+        "pnl_pct": 0.4,
+        "note": "D1 L4出場鐵律（-1,942張）"
+      },
+      {
+        "stock_code": "2606",
+        "stock_name": "裕民",
+        "batch": "2026-07-14",
+        "result": "success",
+        "settled_price": 64.0,
+        "pnl_pct": 0.16,
+        "note": "D1 L4出場鐵律（-631張佔25.5%）"
+      },
+      {
+        "stock_code": "2301",
+        "stock_name": "光寶科",
+        "batch": "2026-07-14",
+        "result": "fail",
+        "settled_price": 217.0,
+        "pnl_pct": -2.25,
+        "note": "D1 L4出場鐵律（-6,163張佔62.2%），未觸停損但鐵律優先"
+      }
+    ]
+  },
+  "tomorrow_recommendations": [],
+  "tomorrow_plan": {
+    "note": "T86 07-15今晚才公布，依「無新T86不給最終新推薦」原則，明日盤前以T86 07-15重評下列候選",
+    "candidates": [
+      {
+        "stock_code": "5388",
+        "stock_name": "中磊",
+        "note": "連買8天+FR週增+0.57%(+5分)+營收YoY+86.5%；今日+4.2%已反映，明日回檔<3%可重審"
+      },
+      {
+        "stock_code": "2812",
+        "stock_name": "台中銀",
+        "note": "Module A L3但法人現身門檻（不在當日TOP50×乖離+1.65%），明日查T86 07-15是否進TOP50解鎖"
+      },
+      {
+        "stock_code": "2867",
+        "stock_name": "三商壽",
+        "note": "10日+38K真連買8天，但動能+231%>100%一票否決維持，除非明日動能回落"
+      }
+    ],
+    "key_events": [
+      "2330台積電法說07-16：法說前外資-8,006張L4警示，半導體鏈波動風險",
+      "2881/2886：checker明日將誤報D10到期（跨颱風日07-10虛增），實際D9，真D10=07-17，明日禁止結算",
+      "2883凱基金距目標31.35僅4.0%，收割監控"
+    ]
+  },
+  "removed_stocks": [
+    {
+      "stock_code": "6505",
+      "reason": "D1達標結算success +15.37%"
+    },
+    {
+      "stock_code": "1303",
+      "reason": "D1達標結算success +14.04%"
+    },
+    {
+      "stock_code": "2634",
+      "reason": "L4出場鐵律結算success +4.86%"
+    },
+    {
+      "stock_code": "2301",
+      "reason": "L4出場鐵律結算fail -2.25%"
+    },
+    {
+      "stock_code": "2382",
+      "reason": "L4出場鐵律結算success +0.40%"
+    },
+    {
+      "stock_code": "2606",
+      "reason": "L4出場鐵律結算success +0.16%"
+    },
+    {
+      "stock_code": "1216",
+      "reason": "L4出場鐵律結算success +0.77%（真D5）"
+    },
+    {
+      "stock_code": "2377",
+      "reason": "真D10到期+L4出場結算success +4.68%"
+    }
+  ]
 }
