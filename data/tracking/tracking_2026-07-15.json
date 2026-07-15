@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-15",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "industry": "金融",
+      "recommend_price": 35.45,
+      "target_price": 39.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 31.91,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 94,
+      "result": "holding",
+      "reason": "金控財報🟡強(EPS YoY+177%)+Module A L2(+10)+10日法人+129K(投信+78K/外資+41K)+avg_rank 12+月線上+5.26%季線上雙確認+EPS+5；反轉L0、動能+9.3%平穩、外資近5天≥0全過"
+    },
+    {
+      "stock_code": "2105",
+      "stock_name": "正新",
+      "industry": "未分類(輪胎)",
+      "recommend_price": 32.65,
+      "target_price": 35.9,
+      "stop_loss_pct": -10,
+      "stop_loss": 29.39,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 89,
+      "result": "holding",
+      "reason": "Module A L3佈局完成(+15)：真連買9天+動能-51.9%+5日僅+1.2%未反映；best avg_rank 7.0、10日+53K(外資+47K)、佔成交32.9%；EPS YoY+26.7%+毛利率+2pp(+5)；反轉L0；無產業催化為主要弱點(時事10分)"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "industry": "航空",
+      "recommend_price": 40.8,
+      "target_price": 44.9,
+      "stop_loss_pct": -10,
+      "stop_loss": 36.72,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 83,
+      "result": "holding",
+      "reason": "航空旺季+AI貨運🟡強、6月營收234.7億創新高；T86買超冠軍+44K(佔成交54.5%、連2日外資買超冠軍)、真連買7天、10日+204K(外資+165K)；動能+500%>100%但單日爆買44K>30K例外且連買7天≥7不罰；EPS+5/FR-3；5日-3.8%月線下-3.86%未追高"
+    }
+  ],
+  "notes": {
+    "settlement_day_risk": "今日07/15台指期結算日(季線保衛戰)，外資連賣8日-2113億 vs 投信連買10日拉鋸，新倉建議分批進場",
+    "excluded_notables": "2891中信金(動能+500%單日25K<30K無例外排除)、3034聯詠(重評55分：價格位置1分+EPS-5)、2357華碩(重評54分：不在TOP50法人分僅7)、2408南亞科(5日+11.2%已大漲+10日-44K)、8046南電(反轉L4)、1709和益(5日+14.5%已大漲)、2812台中銀(Module A L3但法人現身門檻：不在當日TOP50×乖離+1.65%)、3481群創(10日累計-42K需人工判斷)、3706神達(反轉L3)、2610華航(反轉L4)、6669緯穎(法人現身門檻)",
+    "holding_reuse": "2884玉山金84分/2886兆豐金82分/2882國泰金73分再入選高分候選，⏳沿用進行中追蹤(D7/D9/D1)不重複建倉",
+    "exit_signals_today": "tracking holding 4檔觸法人反轉L4：2634漢翔(-15,381張)、2301光寶科(-6,163張)、2382廣達(-1,942張)、2606裕民(-631張佔22.5%日均量)，今日開盤執行出場鐵律；實際持倉2313/6770 L4、2337 L3維持昨日出場建議",
+    "manual_settlement_pending": "2377微星06-30筆真D10今日到期，盤後人工結算(checker會誤報D11)"
+  }
+}

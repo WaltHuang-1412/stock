@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-07-14",
+  "last_updated": "2026-07-15",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -1155,6 +1155,11 @@
               "code": "5351",
               "name": "鈺創",
               "category": "DRAM與記憶體"
+            },
+            {
+              "code": "8096",
+              "name": "擎亞",
+              "category": "DRAM與記憶體"
             }
           ]
         }
@@ -1348,6 +1353,26 @@
             {
               "code": "2313",
               "name": "華通",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "3491",
+              "name": "昇達科",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "5388",
+              "name": "中磊",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "2412",
+              "name": "中華電",
+              "category": "光通訊與網通"
+            },
+            {
+              "code": "4904",
+              "name": "遠傳",
               "category": "光通訊與網通"
             }
           ]
@@ -2202,6 +2227,21 @@
               "code": "3189",
               "name": "景碩",
               "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "2347",
+              "name": "聯強",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "8096",
+              "name": "擎亞",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "6278",
+              "name": "台表科",
+              "category": "AI伺服器與半導體"
             }
           ]
         }
@@ -2722,6 +2762,46 @@
               "code": "2467",
               "name": "志聖",
               "category": "企業財報重點"
+            },
+            {
+              "code": "2882",
+              "name": "國泰金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2891",
+              "name": "中信金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2886",
+              "name": "兆豐金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2880",
+              "name": "華南金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "5880",
+              "name": "合庫金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2883",
+              "name": "凱基金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2887",
+              "name": "台新金",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2881",
+              "name": "富邦金",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -2822,6 +2902,11 @@
               "code": "2313",
               "name": "華通",
               "category": "矽光子與CPO量產"
+            },
+            {
+              "code": "3491",
+              "name": "昇達科",
+              "category": "矽光子與CPO量產"
             }
           ]
         }
@@ -2862,6 +2947,11 @@
             {
               "code": "4904",
               "name": "遠傳",
+              "category": "SpaceX IPO生態系"
+            },
+            {
+              "code": "2412",
+              "name": "中華電",
               "category": "SpaceX IPO生態系"
             }
           ]
@@ -3179,6 +3269,21 @@
               "code": "1326",
               "name": "台化",
               "category": "台股市場動態"
+            },
+            {
+              "code": "6505",
+              "name": "台塑化",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "2382",
+              "name": "廣達",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "2347",
+              "name": "聯強",
+              "category": "台股市場動態"
             }
           ]
         }
@@ -3490,6 +3595,11 @@
               "code": "2330",
               "name": "台積電",
               "category": "新台幣匯率"
+            },
+            {
+              "code": "2890",
+              "name": "永豐金",
+              "category": "新台幣匯率"
             }
           ]
         }
@@ -3736,6 +3846,35 @@
               "code": "2882",
               "name": "國泰金",
               "category": "巴威颱風衝擊（遞減型）"
+            }
+          ]
+        }
+      }
+    },
+    "工具機景氣回溫": {
+      "name": "工具機景氣回溫",
+      "catalysts": [
+        "工具機景氣回溫"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2049",
+              "name": "上銀",
+              "category": "工具機景氣回溫"
+            },
+            {
+              "code": "1583",
+              "name": "程泰",
+              "category": "工具機景氣回溫"
+            },
+            {
+              "code": "4526",
+              "name": "東台",
+              "category": "工具機景氣回溫"
             }
           ]
         }
