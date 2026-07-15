@@ -17,6 +17,9 @@
       "position": "10-15%",
       "score": 94,
       "result": "holding",
+      "intraday_price": 36.0,
+      "intraday_change_pct": 1.55,
+      "holding_status": "盤中+1.55%，反轉L0無出場訊號，續抱",
       "reason": "金控財報🟡強(EPS YoY+177%)+Module A L2(+10)+10日法人+129K(投信+78K/外資+41K)+avg_rank 12+月線上+5.26%季線上雙確認+EPS+5；反轉L0、動能+9.3%平穩、外資近5天≥0全過"
     },
     {
@@ -31,6 +34,9 @@
       "position": "10-15%",
       "score": 89,
       "result": "holding",
+      "intraday_price": 32.5,
+      "intraday_change_pct": -0.46,
+      "holding_status": "盤中-0.46%，L3佈局股未發動（量比0.8x），反轉L0續抱",
       "reason": "Module A L3佈局完成(+15)：真連買9天+動能-51.9%+5日僅+1.2%未反映；best avg_rank 7.0、10日+53K(外資+47K)、佔成交32.9%；EPS YoY+26.7%+毛利率+2pp(+5)；反轉L0；無產業催化為主要弱點(時事10分)"
     },
     {
@@ -45,9 +51,46 @@
       "position": "10-15%",
       "score": 83,
       "result": "holding",
+      "intraday_price": 42.15,
+      "intraday_change_pct": 3.31,
+      "holding_status": "盤中+3.31%領漲，距目標44.9尚6.5%，反轉L0量比0.5x未爆量，續抱",
       "reason": "航空旺季+AI貨運🟡強、6月營收234.7億創新高；T86買超冠軍+44K(佔成交54.5%、連2日外資買超冠軍)、真連買7天、10日+204K(外資+165K)；動能+500%>100%但單日爆買44K>30K例外且連買7天≥7不罰；EPS+5/FR-3；5日-3.8%月線下-3.86%未追高"
     }
   ],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "5388",
+      "stock_name": "中磊",
+      "note": "偵測器強訊號60分(連買8天+量比2.85x)，但盤中+4.2%>3%門檻已反映，不推薦；回檔<3%可重審"
+    },
+    {
+      "stock_code": "6464",
+      "stock_name": "台數科",
+      "note": "偵測器強訊號60分(量比7.45x)，但T86 10日累計僅+93張無實質法人買超+動能+500%，排除"
+    },
+    {
+      "stock_code": "2867",
+      "stock_name": "三商壽",
+      "note": "10日+38K真連買8天最強籌碼，但動能+231%>100%一票否決（單日6.5K<30K無例外）"
+    }
+  ],
+  "intraday_summary": {
+    "new_recommendations": 0,
+    "reason": "16檔Track B候選全數前置篩選排除（動能>100%或10日累計賣超），超強催化覆寫不成立（費半+2.54%<+3%），連三日寧缺勿濫",
+    "exits_executed": [
+      {"stock_code": "2634", "batch": "2026-07-14", "exit_price": 66.9, "pnl_pct": 4.86, "reason": "L4爆量賣超-15,381張出場鐵律"},
+      {"stock_code": "2301", "batch": "2026-07-14", "exit_price": 217.0, "pnl_pct": -2.25, "reason": "L4爆量賣超-6,163張(佔62.2%)出場鐵律"},
+      {"stock_code": "2382", "batch": "2026-07-14", "exit_price": 379.5, "pnl_pct": 0.4, "reason": "L4爆量賣超-1,942張出場鐵律"},
+      {"stock_code": "2606", "batch": "2026-07-14", "exit_price": 64.0, "pnl_pct": 0.16, "reason": "L4爆量賣超-631張(佔25.5%)出場鐵律"},
+      {"stock_code": "1216", "batch": "2026-07-07", "exit_price": 78.4, "pnl_pct": 0.77, "reason": "L4爆量賣超-1,943張(佔12.3%)，盤前續抱表未攔截、盤中掃描補捉"},
+      {"stock_code": "2377", "batch": "2026-06-30", "exit_price": 145.5, "pnl_pct": 4.68, "reason": "L4爆量賣超-1,605張(佔24.2%)+真D10今日到期，盤後人工結算"}
+    ],
+    "targets_hit": [
+      {"stock_code": "6505", "batch": "2026-07-14", "intraday_price": 72.5, "target": 68.0, "pnl_pct": 14.9, "note": "盤中破目標，尾盤收盤≥68結算success"},
+      {"stock_code": "1303", "batch": "2026-07-14", "intraday_price": 225.5, "target": 218.0, "pnl_pct": 13.0, "note": "盤中破目標，T86法人-5,294張獲利了結優先"}
+    ]
+  },
   "notes": {
     "settlement_day_risk": "今日07/15台指期結算日(季線保衛戰)，外資連賣8日-2113億 vs 投信連買10日拉鋸，新倉建議分批進場",
     "excluded_notables": "2891中信金(動能+500%單日25K<30K無例外排除)、3034聯詠(重評55分：價格位置1分+EPS-5)、2357華碩(重評54分：不在TOP50法人分僅7)、2408南亞科(5日+11.2%已大漲+10日-44K)、8046南電(反轉L4)、1709和益(5日+14.5%已大漲)、2812台中銀(Module A L3但法人現身門檻：不在當日TOP50×乖離+1.65%)、3481群創(10日累計-42K需人工判斷)、3706神達(反轉L3)、2610華航(反轉L4)、6669緯穎(法人現身門檻)",
