@@ -1,0 +1,493 @@
+{
+  "date": "2026-07-16",
+  "lookback_dates": [
+    "2026-07-16",
+    "2026-07-15",
+    "2026-07-14",
+    "2026-07-13",
+    "2026-07-12",
+    "2026-07-11",
+    "2026-07-10"
+  ],
+  "leader_trends": {
+    "Micron": {
+      "cumulative": 971.58,
+      "consecutive_up": 0,
+      "latest_change": -8.02,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "NVIDIA": {
+      "cumulative": 220.04,
+      "consecutive_up": 2,
+      "latest_change": 0.33,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Apple": {
+      "cumulative": 319.56,
+      "consecutive_up": 3,
+      "latest_change": 4.01,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "AMD": {
+      "cumulative": 552.24,
+      "consecutive_up": 0,
+      "latest_change": -3.46,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Tesla": {
+      "cumulative": 396.63,
+      "consecutive_up": 0,
+      "latest_change": -0.43,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Super Micro": {
+      "cumulative": 23.6,
+      "consecutive_up": 0,
+      "latest_change": -2.75,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Broadcom": {
+      "cumulative": 388.82,
+      "consecutive_up": 2,
+      "latest_change": 1.33,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Lam Research": {
+      "cumulative": 340.8,
+      "consecutive_up": 0,
+      "latest_change": -3.08,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Applied Materials": {
+      "cumulative": 598.7,
+      "consecutive_up": 0,
+      "latest_change": -2.73,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Western Digital": {
+      "cumulative": 557.31,
+      "consecutive_up": 0,
+      "latest_change": -8.78,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Dell": {
+      "cumulative": 439.98,
+      "consecutive_up": 0,
+      "latest_change": -9.8,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "ASML": {
+      "cumulative": 1774.77,
+      "consecutive_up": 2,
+      "latest_change": 2.23,
+      "signal_level": "strong",
+      "days_tracked": 7
+    }
+  },
+  "preposition_candidates": [
+    {
+      "code": "6669",
+      "name": "緯穎",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 1141,
+        "buy_days": 7,
+        "sell_days": 3,
+        "momentum_pct": -79.768177028451,
+        "consecutive_buy": 3,
+        "cumulative_foreign": -1807,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
+      }
+    },
+    {
+      "code": "2376",
+      "name": "技嘉",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -1037,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 164.7758152173913,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -6924,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "累計-1,037為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -42902,
+        "buy_days": 2,
+        "sell_days": 8,
+        "momentum_pct": 63.82046724225495,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -50660,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-42,902為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "3189",
+      "name": "景碩",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -3623,
+        "buy_days": 7,
+        "sell_days": 3,
+        "momentum_pct": 149.70151325836457,
+        "consecutive_buy": 5,
+        "cumulative_foreign": -3992,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "累計-3,623為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -345,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": -267.5146771037182,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -13355,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-345為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "2356",
+      "name": "英業達",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -21945,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -500,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -62188,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-21,945為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "3017",
+      "name": "奇鋐",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 1662,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": -135.95375722543352,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 372,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜動能-136%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3324",
+      "name": "雙鴻",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "6230",
+      "name": "超眾",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 36,
+        "buy_days": 7,
+        "sell_days": 3,
+        "momentum_pct": -71.42857142857143,
+        "consecutive_buy": 1,
+        "cumulative_foreign": 38,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
+      }
+    },
+    {
+      "code": "2368",
+      "name": "金像電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 254,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 234.8901098901099,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 4673,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜動能+235%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3234",
+      "name": "光環",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "4977",
+      "name": "眾達-KY",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "2392",
+      "name": "正崴",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "3023",
+      "name": "信邦",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "6239",
+      "name": "力成",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "signal_level": "strong",
+      "leader_cumulative": 23.6,
+      "leader_consecutive_up": 0,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    }
+  ],
+  "already_in_top50": [
+    {
+      "code": "2382",
+      "name": "廣達",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "leader_cumulative": 23.6,
+      "tw_5d_change": 0.0
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "leader_cumulative": 23.6,
+      "tw_5d_change": -8.360128617363344
+    },
+    {
+      "code": "2449",
+      "name": "京元電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "leader_cumulative": 23.6,
+      "tw_5d_change": 0.4909983633387889
+    },
+    {
+      "code": "2367",
+      "name": "燿華",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "leader_cumulative": 23.6,
+      "tw_5d_change": -5.294119143018536
+    },
+    {
+      "code": "2301",
+      "name": "光寶科",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "leader_cumulative": 23.6,
+      "tw_5d_change": -0.8928571428571428
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Super Micro",
+      "leader_cumulative": 23.6,
+      "tw_5d_change": 1.8404907975460123
+    },
+    {
+      "code": "2324",
+      "name": "仁寶",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": 220.04,
+      "tw_5d_change": 1.830990213743398
+    },
+    {
+      "code": "2353",
+      "name": "宏碁",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "leader_cumulative": 319.56,
+      "tw_5d_change": -3.869969131657961
+    },
+    {
+      "code": "1504",
+      "name": "東元",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 396.63,
+      "tw_5d_change": 0.5830926162918273
+    },
+    {
+      "code": "2371",
+      "name": "大同",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 396.63,
+      "tw_5d_change": -0.17761718557052458
+    }
+  ],
+  "already_moved_count": 18
+}
