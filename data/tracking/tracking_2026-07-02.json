@@ -67,10 +67,10 @@
       "intraday_price": 119.0,
       "intraday_change_pct": -2.86,
       "result": "holding",
-      "actual_close": 119.5,
-      "close_price": 119.5,
-      "change_percent": -2.45,
-      "holding_status": "D5/10 | 收盤124.5(-1.19%) | 距目標132約6.0% | 距停損110.25約11.4% | 跌破MA10警覺（非強制訊號）續抱"
+      "actual_close": 125.0,
+      "close_price": 125.0,
+      "change_percent": -2.72,
+      "holding_status": "D9/10（真D9，checker誤報D10因07-10颱風虛增，禁止今日結算）| 收盤125.0(-2.72%) | 距目標132約5.6% | 距停損110.25約11.8% | 明日2026-07-17真D10到期結算，現高於推薦價+2.0%續抱"
     },
     {
       "stock_code": "2303",
@@ -129,11 +129,14 @@
       "reason": "avg_rank21+真連續買超5天（法人持續佈局中）+外資持股比週減-0.28%（-3分），無明確單一超強催化對應，屬台股資金回流受惠股",
       "intraday_price": 46.05,
       "intraday_change_pct": -0.22,
-      "result": "holding",
-      "actual_close": 46.0,
-      "close_price": 46.0,
-      "change_percent": -0.32,
-      "holding_status": "D5/10 | 收盤46.7(-0.21%) | 距目標49.8約6.6% | 距停損41.54約11.1% | 籌碼健康(+13.0K)續抱"
+      "result": "success",
+      "actual_close": 46.6,
+      "close_price": 46.6,
+      "change_percent": 1.3,
+      "settled_date": "2026-07-16",
+      "settled_price": 46.8,
+      "holding_days": 9,
+      "holding_status": "D9 L4出場鐵律：T86 07-15爆量賣超-2,120張（佔日均量8.1%），2026-07-16盤中12:30以46.80執行出場，較推薦價46.15獲利+1.41%（今日收盤46.6）。checker誤報D10（實D9，07-10颱風虛增）已攔截，以L4人工結算"
     },
     {
       "stock_code": "4938",
