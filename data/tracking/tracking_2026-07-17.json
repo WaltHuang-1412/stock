@@ -17,7 +17,9 @@
       "position": "10-15%",
       "score": 90,
       "result": "holding",
-      "reason": "利率政策🔴金融鏈｜avg_rank27+buy_ratio55%｜真連買10天+動能-21.7%佈局中｜EPS YoY+140%(+5)｜外資近5日+24K｜反轉L0｜5日僅+0.6%未反映"
+      "reason": "利率政策🔴金融鏈｜avg_rank27+buy_ratio55%｜真連買10天+動能-21.7%佈局中｜EPS YoY+140%(+5)｜外資近5日+24K｜反轉L0｜5日僅+0.6%未反映",
+      "intraday_price": 9.09,
+      "intraday_change_pct": 2.02
     },
     {
       "stock_code": "2812",
@@ -31,7 +33,9 @@
       "position": "10-15%",
       "score": 89,
       "result": "holding",
-      "reason": "利率政策🔴金融鏈｜avg_rank24.5+buy_ratio53%｜動能-70.3%佈局完成(+15)｜外資10日累計+40K｜反轉L0｜5日-1.7%未反映｜昨日觀察名單兌現"
+      "reason": "利率政策🔴金融鏈｜avg_rank24.5+buy_ratio53%｜動能-70.3%佈局完成(+15)｜外資10日累計+40K｜反轉L0｜5日-1.7%未反映｜昨日觀察名單兌現",
+      "intraday_price": 20.35,
+      "intraday_change_pct": 0.49
     },
     {
       "stock_code": "2880",
@@ -45,7 +49,9 @@
       "position": "10-15%",
       "score": 84,
       "result": "holding",
-      "reason": "利率政策🔴金融鏈｜avg_rank28.5｜真連買4天+外資投信同步買超｜動能-11.6%(+10)｜EPS YoY+24%(+3)｜反轉L0｜5日+1.4%未反映"
+      "reason": "利率政策🔴金融鏈｜avg_rank28.5｜真連買4天+外資投信同步買超｜動能-11.6%(+10)｜EPS YoY+24%(+3)｜反轉L0｜5日+1.4%未反映",
+      "intraday_price": 40.1,
+      "intraday_change_pct": 1.78
     }
   ],
   "exit_orders": [
@@ -150,6 +156,70 @@
     {
       "stock_code": "2317",
       "reason": "動能+127.7%>100%一票否決+三大累計-35K"
+    }
+  ],
+  "track_b_recommendations": [
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "industry": "金融",
+      "recommend_price": 47.45,
+      "target_price": 51.2,
+      "stop_loss_pct": -5,
+      "stop_loss": 45.08,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 86,
+      "result": "holding",
+      "source": "intraday",
+      "reason": "大盤-5.2%恐慌日金融防禦輪動逆勢+1.8%、07-16法人回頭+6.6K張(TOP50 rank21.5)、動能-45.8%佈局完成(+15)、近5日外資+8.7K投信+6.8K同步買超、EPS YoY+21.6%(+3)、外資持股比週減-0.28%(-3)、營收YoY+22.3%不加分；⚠️昨日07-16曾L4鐵律出場結算success 46.80，07-16 T86顯示法人單日回買、反轉L0健康，屬新循環進場"
+    }
+  ],
+  "track_b_observations": [
+    {
+      "stock_code": "1216",
+      "stock_name": "統一",
+      "reason": "偵測器唯一強訊號60分(連買9天量比1.4x)+動能-76.8%佈局完成+L0+EPS+5，但法人現身門檻硬封鎖（不在07-16 TOP50買超×乖離+3.6%，無例外）→觀察，若明日進TOP50買超即解鎖"
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "reason": "動能+500%>100%一票否決；另為06-10追蹤holding殭屍（已超出checker掃描窗，現+6.6%距目標46.9約3.2%，盤後帳務處理）"
+    },
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "reason": "動能+259%>100%一票否決"
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "reason": "外資近5日-30K準確率篩選fail（累計+22K vs 近5日-30K反轉警告）"
+    },
+    {
+      "stock_code": "1101",
+      "stock_name": "台泥",
+      "reason": "外資近5日-22K+累計-41K準確率篩選fail"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "reason": "動能+123%否決+累計-11K"
+    },
+    {
+      "stock_code": "9904",
+      "stock_name": "寶成",
+      "reason": "動能+184%否決+累計-1.7K"
+    },
+    {
+      "stock_code": "1402",
+      "stock_name": "遠東新",
+      "reason": "動能+500%否決"
+    },
+    {
+      "stock_code": "6770/8150/2449/8028",
+      "stock_name": "半導體崩跌組",
+      "reason": "今日-9.8~-10%崩跌+美股龍頭L2預警，催化不對齊（今日主軸金融防禦），禁止接刀"
     }
   ]
 }
