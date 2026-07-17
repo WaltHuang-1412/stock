@@ -19,7 +19,11 @@
       "result": "holding",
       "reason": "利率政策🔴金融鏈｜avg_rank27+buy_ratio55%｜真連買10天+動能-21.7%佈局中｜EPS YoY+140%(+5)｜外資近5日+24K｜反轉L0｜5日僅+0.6%未反映",
       "intraday_price": 9.09,
-      "intraday_change_pct": 2.02
+      "intraday_change_pct": 2.02,
+      "actual_close": 8.98,
+      "close_price": 8.98,
+      "change_percent": 0.79,
+      "holding_status": "D0/10 | 收盤8.98(+0.79%) | 大盤-6.47%恐慌日逆勢收紅，防禦邏輯當日兌現"
     },
     {
       "stock_code": "2812",
@@ -35,7 +39,11 @@
       "result": "holding",
       "reason": "利率政策🔴金融鏈｜avg_rank24.5+buy_ratio53%｜動能-70.3%佈局完成(+15)｜外資10日累計+40K｜反轉L0｜5日-1.7%未反映｜昨日觀察名單兌現",
       "intraday_price": 20.35,
-      "intraday_change_pct": 0.49
+      "intraday_change_pct": 0.49,
+      "actual_close": 20.55,
+      "close_price": 20.55,
+      "change_percent": 1.48,
+      "holding_status": "D0/10 | 收盤20.55(+1.48%) | 大盤-6.47%恐慌日逆勢收紅，防禦邏輯當日兌現"
     },
     {
       "stock_code": "2880",
@@ -51,7 +59,11 @@
       "result": "holding",
       "reason": "利率政策🔴金融鏈｜avg_rank28.5｜真連買4天+外資投信同步買超｜動能-11.6%(+10)｜EPS YoY+24%(+3)｜反轉L0｜5日+1.4%未反映",
       "intraday_price": 40.1,
-      "intraday_change_pct": 1.78
+      "intraday_change_pct": 1.78,
+      "actual_close": 40.15,
+      "close_price": 40.15,
+      "change_percent": 1.9,
+      "holding_status": "D0/10 | 收盤40.15(+1.9%) | 大盤-6.47%恐慌日逆勢收紅，防禦邏輯當日兌現"
     }
   ],
   "exit_orders": [
@@ -172,7 +184,11 @@
       "score": 86,
       "result": "holding",
       "source": "intraday",
-      "reason": "大盤-5.2%恐慌日金融防禦輪動逆勢+1.8%、07-16法人回頭+6.6K張(TOP50 rank21.5)、動能-45.8%佈局完成(+15)、近5日外資+8.7K投信+6.8K同步買超、EPS YoY+21.6%(+3)、外資持股比週減-0.28%(-3)、營收YoY+22.3%不加分；⚠️昨日07-16曾L4鐵律出場結算success 46.80，07-16 T86顯示法人單日回買、反轉L0健康，屬新循環進場"
+      "reason": "大盤-5.2%恐慌日金融防禦輪動逆勢+1.8%、07-16法人回頭+6.6K張(TOP50 rank21.5)、動能-45.8%佈局完成(+15)、近5日外資+8.7K投信+6.8K同步買超、EPS YoY+21.6%(+3)、外資持股比週減-0.28%(-3)、營收YoY+22.3%不加分；⚠️昨日07-16曾L4鐵律出場結算success 46.80，07-16 T86顯示法人單日回買、反轉L0健康，屬新循環進場",
+      "actual_close": 47.6,
+      "close_price": 47.6,
+      "change_percent": 2.15,
+      "holding_status": "D0/10 | 盤中12:30進場47.45，收盤47.60（+0.32% vs 進場）| ⚠️帳務警示：settlement_checker不掃track_b_recommendations，本檔須每日人工追蹤至結算"
     }
   ],
   "track_b_observations": [
@@ -221,5 +237,71 @@
       "stock_name": "半導體崩跌組",
       "reason": "今日-9.8~-10%崩跌+美股龍頭L2預警，催化不對齊（今日主軸金融防禦），禁止接刀"
     }
-  ]
+  ],
+  "tomorrow_recommendations": [],
+  "removed_stocks": [
+    {
+      "stock_code": "2881",
+      "reason": "L4+真D10出場鐵律結算success +1.63%（07-17開盤出場價124.5 vs 推薦122.5，殭屍窗人工結算完成）"
+    },
+    {
+      "stock_code": "2887",
+      "reason": "L4出場鐵律結算success +1.55%（07-17開盤出場價36.00 vs 推薦35.45，D2；出場後續跌收35.55鐵律救援）"
+    },
+    {
+      "stock_code": "5876",
+      "reason": "殭屍holding補結算fail -1.52%（06-10推薦42.65，真D10=06-25收42.00；來源tracking_2026-06-10.json已回寫）"
+    }
+  ],
+  "tomorrow_plan": {
+    "date": "2026-07-20",
+    "new_recommendations": "T86 07-17 於分析窗口尚未公布，依前例不以舊數據給最終新推薦，07-20盤前以 T86 07-17 重評",
+    "watchlist": [
+      "1216 統一：法人現身門檻解鎖檢查（T86 07-17 進TOP50買超即解鎖；偵測器強訊號60+動能-76.8%+L0，營收/持股比數據偏舊需盤前重驗）",
+      "2493 揚博：營收YoY+32.1%+回檔-22.8%（+5），偵測器中訊號55，需過全套門檻",
+      "6230 超眾：營收+21.9%回檔-8.9%（+5），EPS連3季負-5，需進TOP50",
+      "2353 宏碁：營收+36.5%回檔-8.9%（+5），動能+320%一票否決待降溫",
+      "2605 新興：持股比+1.55%（+5）但數據2026-03-31偏舊，動能+237%待降溫",
+      "8481/6183：偵測器中訊號觀察"
+    ],
+    "settlement_watch": [
+      "🔴 07-20 checker將對2883/2884/4938第四度D10誤報（真D9），禁止結算；真D10=07-21",
+      "5880 真D10=07-24",
+      "2886（track_b）checker不掃描，每日人工追蹤至結算",
+      "大盤-6.47%恐慌後首日：金融防禦組14檔全數無觸損但曝險集中，開盤先掃全體holding反轉訊號"
+    ]
+  },
+  "yesterday_verification": {
+    "note": "今日結算3筆：2881/2887 L4開盤出場（2勝）＋5876殭屍補結算（1敗，真D10=06-25機械判定）；大盤-6.47%恐慌日追蹤組14檔零觸損",
+    "accuracy": "67%（今日結算2/3）；累計58.7%（276成功/194失敗/470筆，holding不計入）",
+    "results": [
+      {
+        "stock_code": "2881",
+        "stock_name": "富邦金",
+        "batch": "2026-07-02",
+        "result": "success",
+        "settled_price": 124.5,
+        "pnl_pct": 1.63,
+        "note": "L4爆量賣超（-4,730張/日均量18%）+真D10到期，開盤124.5出場；殭屍窗（超出checker 15日窗）如期人工結算"
+      },
+      {
+        "stock_code": "2887",
+        "stock_name": "台新新光金",
+        "batch": "2026-07-15",
+        "result": "success",
+        "settled_price": 36.0,
+        "pnl_pct": 1.55,
+        "note": "L4爆量賣超（-5,121張/日均量7.8%），D2開盤36.00出場；出場後續跌收35.55，鐵律救援"
+      },
+      {
+        "stock_code": "5876",
+        "stock_name": "上海商銀",
+        "batch": "2026-06-10",
+        "result": "fail",
+        "settled_price": 42.0,
+        "pnl_pct": -1.52,
+        "note": "殭屍holding補結算：真D10=2026-06-25（端午06-19休市校正）收42.00 ≤ 推薦42.65；predictions舊列06-24@41.55一併校正"
+      }
+    ]
+  }
 }

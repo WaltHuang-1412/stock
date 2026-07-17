@@ -9,7 +9,11 @@
     "nasdaq_pct": -5.22,
     "soc_pct": -7.78,
     "broadcom_pct": -18.57,
-    "level3_excluded_industries": ["DRAM記憶體", "AI伺服器", "網通CPO"],
+    "level3_excluded_industries": [
+      "DRAM記憶體",
+      "AI伺服器",
+      "網通CPO"
+    ],
     "today_catalyst": "金融升息+CPI數據（金融板塊輪動）"
   },
   "recommendations": [
@@ -20,7 +24,7 @@
       "recommend_price": 43.55,
       "target_price": 48.0,
       "stop_loss_pct": -10,
-      "stop_loss": 39.20,
+      "stop_loss": 39.2,
       "settlement_days": 10,
       "position": "15-20%",
       "score": 92,
@@ -65,7 +69,7 @@
       "stock_code": "2834",
       "stock_name": "臺企銀",
       "industry": "金融",
-      "recommend_price": 17.10,
+      "recommend_price": 17.1,
       "target_price": 18.8,
       "stop_loss_pct": -10,
       "stop_loss": 15.39,
@@ -112,8 +116,11 @@
       "close_price": 42.05,
       "change_pct": -1.4,
       "change_percent": -1.4,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤42.05(-1.4%) | 距目標11.5% | 距停損8.7%"
+      "result": "fail",
+      "settled_date": "2026-06-25",
+      "settled_price": 42.0,
+      "holding_days": 10,
+      "fail_reason": "D10到期結算：真D10=2026-06-25（06-19端午休市校正）收盤42.00 ≤ 推薦價42.65（-1.52%），期間未觸目標46.9/停損38.39。殭屍holding於07-17盤後補結算（超出checker 15日窗+來源檔未回寫雙重遺漏；predictions舊列曾以虛增D計數結在06-24@41.55，本次一併校正為真D10）"
     }
   ],
   "yesterday_verification": {
@@ -124,9 +131,33 @@
     "holding": 307,
     "today_settlements": 3,
     "results": [
-      {"stock_code": "2449", "stock_name": "京元電子", "tracking_date": "2026-06-04", "result": "fail", "settled_price": 272.0, "stop_loss": 290.25, "note": "Broadcom -18.57%，收盤272≤停損290.25，D6觸停損"},
-      {"stock_code": "2449", "stock_name": "京元電子", "tracking_date": "2026-06-05", "result": "fail", "settled_price": 272.0, "stop_loss": 289.8, "note": "Broadcom -18.57%，收盤272≤停損289.8，D5觸停損"},
-      {"stock_code": "6282", "stock_name": "康舒", "tracking_date": "2026-06-05", "result": "fail", "settled_price": 58.5, "stop_loss": 60.61, "note": "Broadcom衝擊，收盤58.5≤停損60.61（-5%），track_b D3觸停損"}
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電子",
+        "tracking_date": "2026-06-04",
+        "result": "fail",
+        "settled_price": 272.0,
+        "stop_loss": 290.25,
+        "note": "Broadcom -18.57%，收盤272≤停損290.25，D6觸停損"
+      },
+      {
+        "stock_code": "2449",
+        "stock_name": "京元電子",
+        "tracking_date": "2026-06-05",
+        "result": "fail",
+        "settled_price": 272.0,
+        "stop_loss": 289.8,
+        "note": "Broadcom -18.57%，收盤272≤停損289.8，D5觸停損"
+      },
+      {
+        "stock_code": "6282",
+        "stock_name": "康舒",
+        "tracking_date": "2026-06-05",
+        "result": "fail",
+        "settled_price": 58.5,
+        "stop_loss": 60.61,
+        "note": "Broadcom衝擊，收盤58.5≤停損60.61（-5%），track_b D3觸停損"
+      }
     ]
   },
   "track_b_recommendations": [],
@@ -191,8 +222,8 @@
     ],
     "intraday_prices": {
       "2886": 43.45,
-      "5880": 23.80,
-      "2834": 17.00,
+      "5880": 23.8,
+      "2834": 17.0,
       "5876": 42.05,
       "2376": 348.0,
       "2383": 5010.0,
@@ -210,31 +241,106 @@
     }
   },
   "excluded_stocks": [
-    {"stock_code": "2330", "reason": "Level 1龍頭預警 (Lam Research)，不排除但-5分警示"},
-    {"stock_code": "2344", "reason": "Level 3排除 (Micron -12.05%)"},
-    {"stock_code": "3702", "reason": "Level 3排除 (Micron)"},
-    {"stock_code": "2408", "reason": "Level 3排除"},
-    {"stock_code": "6770", "reason": "Level 3排除 (Micron) + 已觸yaml停損(現價71.5<停損78.93)"},
-    {"stock_code": "2337", "reason": "Level 3排除 (Micron) + 已觸yaml停損(現價145.5<停損147.6)"},
-    {"stock_code": "1303", "reason": "Level 3排除 (SMCI/Broadcom) + 已觸yaml停損(現價99.2<停損102.24)"},
-    {"stock_code": "2303", "reason": "Level 3排除"},
-    {"stock_code": "3491", "reason": "Level 4反轉 (爆量賣超) - SpaceX IPO法人出清"},
-    {"stock_code": "6285", "reason": "Level 4反轉 (爆量賣超) - SpaceX IPO法人出清"},
-    {"stock_code": "2349", "reason": "Level 4反轉 (爆量賣超)"},
-    {"stock_code": "2886", "reason": "外資近5天-452微未達準確率篩選，但已納入推薦並標注"},
-    {"stock_code": "3715", "reason": "動能+126.5%>100%，動能一票否決"},
-    {"stock_code": "8112", "reason": "外資近5天-7,297，準確率篩選失敗"},
-    {"stock_code": "5880", "reason": "合庫金已納入推薦"},
-    {"stock_code": "5876", "reason": "上海商銀已納入推薦"},
-    {"stock_code": "2834", "reason": "臺企銀已納入推薦"},
-    {"stock_code": "1216", "reason": "外資近5天-793，準確率篩選失敗"},
-    {"stock_code": "2313", "reason": "外資近5天-16K，準確率篩選失敗，10天賣超8天"},
-    {"stock_code": "5880_dup", "reason": "重複"},
-    {"stock_code": "2886_dup", "reason": "重複"},
-    {"stock_code": "5880_fin", "reason": "重複"},
-    {"stock_code": "6116_cat", "reason": "催化對齊失敗(面板非今日主題)"},
-    {"stock_code": "5880_con", "reason": "合庫金+臺企銀+上海+兆豐金全為金融，產業集中；觀察"},
-    {"stock_code": "3045", "reason": "總分63分(<70)，動能-10分拖累；列觀察名單"}
+    {
+      "stock_code": "2330",
+      "reason": "Level 1龍頭預警 (Lam Research)，不排除但-5分警示"
+    },
+    {
+      "stock_code": "2344",
+      "reason": "Level 3排除 (Micron -12.05%)"
+    },
+    {
+      "stock_code": "3702",
+      "reason": "Level 3排除 (Micron)"
+    },
+    {
+      "stock_code": "2408",
+      "reason": "Level 3排除"
+    },
+    {
+      "stock_code": "6770",
+      "reason": "Level 3排除 (Micron) + 已觸yaml停損(現價71.5<停損78.93)"
+    },
+    {
+      "stock_code": "2337",
+      "reason": "Level 3排除 (Micron) + 已觸yaml停損(現價145.5<停損147.6)"
+    },
+    {
+      "stock_code": "1303",
+      "reason": "Level 3排除 (SMCI/Broadcom) + 已觸yaml停損(現價99.2<停損102.24)"
+    },
+    {
+      "stock_code": "2303",
+      "reason": "Level 3排除"
+    },
+    {
+      "stock_code": "3491",
+      "reason": "Level 4反轉 (爆量賣超) - SpaceX IPO法人出清"
+    },
+    {
+      "stock_code": "6285",
+      "reason": "Level 4反轉 (爆量賣超) - SpaceX IPO法人出清"
+    },
+    {
+      "stock_code": "2349",
+      "reason": "Level 4反轉 (爆量賣超)"
+    },
+    {
+      "stock_code": "2886",
+      "reason": "外資近5天-452微未達準確率篩選，但已納入推薦並標注"
+    },
+    {
+      "stock_code": "3715",
+      "reason": "動能+126.5%>100%，動能一票否決"
+    },
+    {
+      "stock_code": "8112",
+      "reason": "外資近5天-7,297，準確率篩選失敗"
+    },
+    {
+      "stock_code": "5880",
+      "reason": "合庫金已納入推薦"
+    },
+    {
+      "stock_code": "5876",
+      "reason": "上海商銀已納入推薦"
+    },
+    {
+      "stock_code": "2834",
+      "reason": "臺企銀已納入推薦"
+    },
+    {
+      "stock_code": "1216",
+      "reason": "外資近5天-793，準確率篩選失敗"
+    },
+    {
+      "stock_code": "2313",
+      "reason": "外資近5天-16K，準確率篩選失敗，10天賣超8天"
+    },
+    {
+      "stock_code": "5880_dup",
+      "reason": "重複"
+    },
+    {
+      "stock_code": "2886_dup",
+      "reason": "重複"
+    },
+    {
+      "stock_code": "5880_fin",
+      "reason": "重複"
+    },
+    {
+      "stock_code": "6116_cat",
+      "reason": "催化對齊失敗(面板非今日主題)"
+    },
+    {
+      "stock_code": "5880_con",
+      "reason": "合庫金+臺企銀+上海+兆豐金全為金融，產業集中；觀察"
+    },
+    {
+      "stock_code": "3045",
+      "reason": "總分63分(<70)，動能-10分拖累；列觀察名單"
+    }
   ],
   "portfolio_assessment": {
     "holdings_evaluation": [
@@ -348,7 +454,7 @@
       "recommend_price": 33.0,
       "target_price": 36.6,
       "stop_loss_pct": -10,
-      "stop_loss": 29.70,
+      "stop_loss": 29.7,
       "settlement_days": 10,
       "position": "5-10%",
       "score": 90,
@@ -368,10 +474,25 @@
     }
   ],
   "critical_watch": [
-    {"stock_code": "2345", "note": "距停損2326.5僅1.6%，Broadcom Level3直接影響，明日優先監控"},
-    {"stock_code": "2609", "note": "距停損49.05僅3.1%，WTI持續走弱"},
-    {"stock_code": "6505", "note": "距停損49.77僅2.4%，WTI -4.2%直接衝擊"},
-    {"stock_code": "2379", "note": "D10到期，明日收盤結算（現價645 > 推薦600 = success）"},
-    {"stock_code": "3034", "note": "D10到期，明日收盤結算（現價478.5 > 推薦485 = 接近邊緣）"}
+    {
+      "stock_code": "2345",
+      "note": "距停損2326.5僅1.6%，Broadcom Level3直接影響，明日優先監控"
+    },
+    {
+      "stock_code": "2609",
+      "note": "距停損49.05僅3.1%，WTI持續走弱"
+    },
+    {
+      "stock_code": "6505",
+      "note": "距停損49.77僅2.4%，WTI -4.2%直接衝擊"
+    },
+    {
+      "stock_code": "2379",
+      "note": "D10到期，明日收盤結算（現價645 > 推薦600 = success）"
+    },
+    {
+      "stock_code": "3034",
+      "note": "D10到期，明日收盤結算（現價478.5 > 推薦485 = 接近邊緣）"
+    }
   ]
 }

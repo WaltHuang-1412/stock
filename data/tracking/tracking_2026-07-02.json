@@ -66,11 +66,14 @@
       "note": "反轉狀態-1（近5個交易日累計淨買超轉負但今日回補），建議中性偏正看待，非過度樂觀",
       "intraday_price": 119.0,
       "intraday_change_pct": -2.86,
-      "result": "holding",
-      "actual_close": 125.0,
-      "close_price": 125.0,
-      "change_percent": -2.72,
-      "holding_status": "⚠️ 07-17出場指令：L4爆量賣超(-4,730張/18%日均量)+真D10到期，開盤出場，盤後以實際價結算回寫本檔（現125.0 vs 推薦122.5 = +2.04%預計success）｜殭屍警示：本檔已掉出checker15日窗，禁止遺忘"
+      "result": "success",
+      "actual_close": 124.5,
+      "close_price": 124.5,
+      "change_percent": -0.4,
+      "holding_status": "真D10 L4出場鐵律：T86 07-16爆量賣超-4,730張（佔日均量18%）+真D10到期（07-10颱風休市，checker虛增已人工校正），2026-07-17開盤以124.5執行出場，較推薦價122.5獲利+1.63%（出場後大盤-6.5%恐慌日，2881收124.5持平）。殭屍窗風險（本檔已出checker 15日窗）如期人工結算，無遺漏",
+      "settled_date": "2026-07-17",
+      "settled_price": 124.5,
+      "holding_days": 10
     },
     {
       "stock_code": "2303",
