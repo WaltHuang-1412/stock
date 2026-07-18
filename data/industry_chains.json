@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-07-16",
+  "last_updated": "2026-07-17",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -2862,6 +2862,16 @@
               "code": "2881",
               "name": "富邦金",
               "category": "企業財報重點"
+            },
+            {
+              "code": "1773",
+              "name": "勝一",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3675",
+              "name": "德微",
+              "category": "企業財報重點"
             }
           ]
         }
@@ -4018,6 +4028,48 @@
               "code": "2344",
               "name": "華邦電",
               "category": "中國長鑫存儲（CXMT）擴產IPO疑慮"
+            }
+          ]
+        }
+      }
+    },
+    "AI泡沫前兆檢查清單": {
+      "name": "AI泡沫前兆檢查清單",
+      "catalysts": [
+        "AI泡沫前兆檢查清單",
+        "AI",
+        "泡沫前兆檢查清單",
+        "系統性風險監控",
+        "每日必檢"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "AI泡沫前兆檢查清單（系統性風險監控）【每日必檢】"
+            }
+          ]
+        }
+      }
+    },
+    "國泰世華銀行人事異動": {
+      "name": "國泰世華銀行人事異動",
+      "catalysts": [
+        "國泰世華銀行人事異動"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2882",
+              "name": "國泰金",
+              "category": "國泰世華銀行人事異動"
             }
           ]
         }
