@@ -112,11 +112,15 @@
       "note": "反轉狀態-1，中性看待",
       "intraday_price": 33.45,
       "intraday_change_pct": 1.67,
-      "result": "holding",
+      "result": "success",
       "actual_close": 33.7,
       "close_price": 33.7,
       "change_percent": 2.43,
-      "holding_status": "D0/10 | 收盤33.7(+2.4%) | 距目標5.3%／距停損12.1%，持有中"
+      "holding_status": null,
+      "settled_date": "2026-07-17",
+      "settled_price": 35.1,
+      "holding_days": 10,
+      "success_note": "D10到期補結算（07-10颱風休市致真D10=07-17，checker 15日窗口漏掃，07-20盤前人工補記）收盤35.1 vs 推薦32.9"
     },
     {
       "stock_code": "2886",
@@ -156,11 +160,15 @@
       "note": "基本面偏弱，僅籌碼面支撐，倉位偏保守",
       "intraday_price": 82.9,
       "intraday_change_pct": 0.36,
-      "result": "holding",
+      "result": "fail",
       "actual_close": 83.2,
       "close_price": 83.2,
       "change_percent": 0.73,
-      "holding_status": "D0/10 | 收盤83.2(+0.7%) | 距目標7.0%／距停損10.6%，持有中"
+      "holding_status": null,
+      "settled_date": "2026-07-17",
+      "settled_price": 82.2,
+      "holding_days": 10,
+      "fail_reason": "D10到期補結算（07-10颱風休市致真D10=07-17，checker 15日窗口漏掃，07-20盤前人工補記）收盤82.2 vs 推薦82.6"
     }
   ],
   "holdings_evaluation": [
