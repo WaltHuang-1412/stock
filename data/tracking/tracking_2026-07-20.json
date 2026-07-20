@@ -4,7 +4,7 @@
     "stop_loss_pct": -10,
     "settlement_days": 10
   },
-  "notes": "沿用追蹤不重複建檔：2890(07-16 D2)/2883(07-06 D9)/2886(07-17盤中 D1)/2882(07-14 D4)/2884(07-06 D9)/2892(07-16 D2)/2105(07-15 D3)/5880(07-09 D6)。2883/2884/4938 真D10=07-21（07-10颱風休市，checker D10誤報已忽略）。07-02殭屍已補結算：2884成功+6.7%/4938失敗-0.5%（07-17收盤）。07-03的2883@27.9今日真D10，盤後以今日收盤結算。",
+  "notes": "沿用追蹤不重複建檔：2890(07-16 D2)/2883(07-06 D9)/2886(07-17盤中 D1)/2882(07-14 D4)/2884(07-06 D9)/2892(07-16 D2)/2105(07-15 D3)/5880(07-09 D6)。2883/2884/4938 真D10=07-21（07-10颱風休市，checker D10誤報已忽略）。07-02殭屍已補結算：2884成功+6.7%/4938失敗-0.5%（07-17收盤）。07-03的2883@27.9今日真D10，盤後以今日收盤結算。 ｜07-20盤後：07-03的2883@27.9真D10人工結算success +5.91%（收29.55）；07-06三檔今日D9禁結算已執行（checker第四度誤報如預期忽略）；今日5檔新推全數holding（2324 -4.44%最弱未觸損）。",
   "recommendations": [
     {
       "stock_code": "1216",
@@ -21,7 +21,11 @@
       "intraday_price": 80.2,
       "intraday_change_pct": 0.25,
       "result": "holding",
-      "holding_status": "盤中無出場訊號，續抱"
+      "holding_status": "D0/10 | +0.4% vs推薦 | 距目標7.1%/距停損10.3% | 防禦屬性如預期抗震",
+      "actual_close": 80.3,
+      "day_change_pct": 0.38,
+      "close_price": 80.3,
+      "change_percent": 0.38
     },
     {
       "stock_code": "2324",
@@ -38,7 +42,11 @@
       "intraday_price": 34.35,
       "intraday_change_pct": -4.58,
       "result": "holding",
-      "holding_status": "盤中無出場訊號，續抱"
+      "holding_status": "D0/10 | -4.4% vs推薦 | 距目標13.4%/距停損5.8% | 未觸停損續抱，AI伺服器族群回檔",
+      "actual_close": 34.4,
+      "day_change_pct": -4.44,
+      "close_price": 34.4,
+      "change_percent": -4.44
     },
     {
       "stock_code": "2332",
@@ -55,7 +63,11 @@
       "intraday_price": 20.45,
       "intraday_change_pct": -0.24,
       "result": "holding",
-      "holding_status": "盤中無出場訊號，續抱"
+      "holding_status": "D0/10 | +0.7% vs推薦 | 距目標7.0%/距停損5.7% | 逆勢收紅",
+      "actual_close": 20.65,
+      "day_change_pct": 0.73,
+      "close_price": 20.65,
+      "change_percent": 0.73
     },
     {
       "stock_code": "3189",
@@ -72,7 +84,11 @@
       "intraday_price": 703.0,
       "intraday_change_pct": 1.44,
       "result": "holding",
-      "holding_status": "盤中無出場訊號，續抱"
+      "holding_status": "D0/10 | -2.0% vs推薦 | 距目標11.9%/距停損8.1% | 未觸停損續抱",
+      "actual_close": 679.0,
+      "day_change_pct": -2.02,
+      "close_price": 679.0,
+      "change_percent": -2.02
     },
     {
       "stock_code": "2801",
@@ -89,7 +105,11 @@
       "intraday_price": 23.95,
       "intraday_change_pct": 0.21,
       "result": "holding",
-      "holding_status": "盤中無出場訊號，續抱"
+      "holding_status": "D0/10 | -0.2% vs推薦 | 距目標7.3%/距停損9.8% | 持平",
+      "actual_close": 23.85,
+      "day_change_pct": -0.21,
+      "close_price": 23.85,
+      "change_percent": -0.21
     }
   ],
   "track_b_recommendations": [],
@@ -130,5 +150,38 @@
       "reason": "偵測器強訊號60但動能+500%一票否決，無催化覆寫資格"
     }
   ],
-  "intraday_note": "12:30 大盤42,653.89(-0.04%)重挫後止穩。Track A 19筆全數無出場訊號續抱；2883@27.9今日真D10盤後結算；2883@28.5/2884/4938今日D9禁結算（真D10=07-21）。今日無盤中新推薦（外資連賣10日，Track B候選全卡準確率篩選）。持倉警示：6770/2313/1301 manual_exit_checker建議出場、2330續抱。"
+  "intraday_note": "12:30 大盤42,653.89(-0.04%)重挫後止穩。Track A 19筆全數無出場訊號續抱；2883@27.9今日真D10盤後結算；2883@28.5/2884/4938今日D9禁結算（真D10=07-21）。今日無盤中新推薦（外資連賣10日，Track B候選全卡準確率篩選）。持倉警示：6770/2313/1301 manual_exit_checker建議出場、2330續抱。",
+  "tomorrow_recommendations": [],
+  "removed_stocks": [
+    {
+      "stock_code": "2883",
+      "reason": "07-03推薦@27.9真D10=07-20人工結算success +5.91%（收盤29.55；checker 15日窗掃不到，人工結算並回寫tracking_2026-07-03.json）。注意：07-06推薦@28.5為另一筆，仍holding真D9，真D10=07-21"
+    }
+  ],
+  "tomorrow_plan": {
+    "date": "2026-07-21",
+    "key_events": [
+      "🔴 2883@28.5/2884/4938（07-06推薦）真D10=07-21，以收盤結算（今收：2883 +3.7%/2884 +6.4% 大概率success；4938 -4.3% 收盤≤83.6即fail）",
+      "T86 07-20 盤前重評觀察名單：2887台新新光金（85分卡外資5日-52K，轉正即最強候選）、2493揚博/6230超眾/2353宏碁/3163波若威（營收+5已預載）",
+      "2886兆豐金（07-17盤中track_b）checker掃不到，人工追蹤D2，今收48.2 +1.58%",
+      "07-17暴跌T+2交割日=07-21，觀察違約交割/融資斷頭賣壓",
+      "TSLA財報（美股盤後）",
+      "實際持倉：6770/2313/1301出場令續行（今日續殺-8.56%/-6.13%/-3.50%驗證出場方向），2313出場成交待使用者確認後更新my_holdings.yaml"
+    ]
+  },
+  "yesterday_verification": {
+    "note": "今日結算1筆：2883凱基金（07-03推薦@27.9）真D10=07-20人工結算success +5.91%（checker 15日窗外）；checker對2883@28.5/2884/4938第四度D10誤報（實D9）依預告忽略，真D10=07-21；恐慌次日追蹤組19檔零觸損",
+    "accuracy": "100%（今日結算1/1）；累計58.8%（278成功/195失敗/473筆，holding不計入）",
+    "results": [
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "batch": "2026-07-03",
+        "result": "success",
+        "settled_price": 29.55,
+        "pnl_pct": 5.91,
+        "note": "真D10=07-20（07-10颱風休市校正）收29.55 > 推薦27.9；超出checker 15日窗人工結算，tracking_2026-07-03.json與predictions.json雙回寫"
+      }
+    ]
+  }
 }
