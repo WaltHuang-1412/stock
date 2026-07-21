@@ -1,0 +1,163 @@
+{
+  "date": "2026-07-21",
+  "regime": "修正（台股續創本波回檔新低，投信連19買穩盤，VIX 18.65）",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "recommendations": [
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "industry": "航空",
+      "recommend_price": 41.2,
+      "target_price": 45.3,
+      "stop_loss_pct": -10,
+      "settlement_days": 10,
+      "position": "10%",
+      "score": 85,
+      "track": "A",
+      "module": "A-L3",
+      "reason": "外資累計+273K張、真連續10天、近5天+107K、動能-45%佈局完成、reversal Safe、暑假旺季；油價小漲為溫和逆風",
+      "stop_loss": 37.08
+    },
+    {
+      "stock_code": "6669",
+      "stock_name": "緯穎",
+      "industry": "AI伺服器",
+      "recommend_price": 4685.0,
+      "target_price": 5150.0,
+      "stop_loss_pct": -10,
+      "settlement_days": 10,
+      "position": "6%",
+      "score": 76,
+      "track": "B",
+      "module": "B-早期",
+      "reason": "訊號B🟢早期、AI伺服器核心ODM、EPS YoY+94%、營收+29.7%回檔-5.5%、動能+12%佈局中、Level 0、外資近5天+267",
+      "stop_loss": 4216.5
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "industry": "金融",
+      "recommend_price": 35.85,
+      "target_price": 38.7,
+      "stop_loss_pct": -10,
+      "settlement_days": 10,
+      "position": "8%",
+      "score": 75,
+      "track": "A",
+      "module": "A-L2",
+      "reason": "外資累計+165K張、真連續10天、單日≈30K爆買(真連續≥7不罰)、EPS YoY+56%、月季雙線上+3.5%、修正盤防禦錨",
+      "stop_loss": 32.27
+    }
+  ],
+  "holdings_addon_eval": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "rating": "🟡續抱觀察",
+      "note": "半導體🔴法說目標3250、EPS+58%，但外資今日淨賣、price-4.1%MA20"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "rating": "🟡續抱觀察",
+      "note": "塑化、+4.3%MA20雙線上、油價小漲原料成本；營收+0.7%持平"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "rating": "⚠️留意",
+      "note": "記憶體、營收+60%但-19.7%MA20深跌、記憶體族群外資出貨(華邦電累計-83K)"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "rating": "⚠️留意",
+      "note": "成熟製程、-15.2%MA20、營收+12%回檔-8.7%、逼近停損73.26"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "rating": "⚠️留意",
+      "note": "PCB、-12.5%MA20、營收持平、逼近停損235.98"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "rating": "⚠️留意減碼",
+      "note": "-37.6%MA20極深跌、趨勢最弱"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "rating": "⚠️留意",
+      "note": "推薦追蹤07-06@83.6今日D10收盤80.0結算fail(-4.31%)；持倉停損76.5、現80.0"
+    }
+  ],
+  "observations": [
+    {
+      "stock_code": "4958",
+      "stock_name": "臻鼎-KY",
+      "note": "avg_rank2.0、動能-160%佈局完成、EPS+101%，但近5天外資-15K未通過準確率篩選(法人近5天在賣)，列觀察"
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "note": "外資+79K真連續3，但動能+500%追高、單日18K<30K無爆買例外，動能一票否決排除"
+    },
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "note": "外資+64K真連續10，但乖離+26%、動能+181%追高排除"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "note": "記憶體🔴美光HBM催化，但累計-83K外資+投信同步出貨，排除"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "note": "AI伺服器🔴，但累計-7.5K、動能+104%追高、外資持股比-0.52%，反轉狀態不明，排除"
+    }
+  ],
+  "settled_today": [
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "rec_date": "2026-07-06",
+      "recommend_price": 33.7,
+      "settled_price": 35.85,
+      "result": "success",
+      "pct": 6.38,
+      "note": "D10收盤結算成功"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "rec_date": "2026-07-06",
+      "recommend_price": 28.5,
+      "settled_price": 29.55,
+      "result": "success",
+      "pct": 3.68,
+      "note": "D10收盤結算成功"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "rec_date": "2026-07-06",
+      "recommend_price": 83.6,
+      "settled_price": 80.0,
+      "result": "fail",
+      "pct": -4.31,
+      "note": "D10收盤≤推薦價結算失敗"
+    }
+  ],
+  "todo_next": [
+    "2886兆豐金@47.45每日人工追蹤(現48.2,動能-24.5%佈局中續抱)",
+    "2324仁寶查法人續買(D1,-4.4%)",
+    "5880合庫金真D10=07-24收盤結算"
+  ]
+}

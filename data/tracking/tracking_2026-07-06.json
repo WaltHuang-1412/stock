@@ -20,11 +20,11 @@
       "intraday_price": 84.1,
       "intraday_change_pct": 0.6,
       "intraday_note": "🟢安全，法人買超+324、真連續買超6天、站穩MA5/MA10，無出場訊號，續抱（同時為使用者今日新買進實際持股，成本85.0）",
-      "actual_close": 84.5,
+      "actual_close": 80.0,
       "close_price": 84.5,
       "change_percent": 1.08,
-      "result": "holding",
-      "holding_status": "D3/10 | 收盤82.7(-1.31%) | 距目標91.96約11.2% | 距停損75.24約9.0% | 跌破MA5減碼訊號（非強制）續抱觀察"
+      "result": "fail",
+      "fail_reason": "D10(07-20)收盤80.0≤推薦價83.6，機械結算失敗 (-4.31%)"
     },
     {
       "stock_code": "2884",
@@ -41,11 +41,11 @@
       "intraday_price": 34.25,
       "intraday_change_pct": 1.63,
       "intraday_note": "⚠️投信反轉（昨買+17,480→今日賣-3,322）、跌破MA10，惟法人今日仍大買+11,520、真連續買超4天，未觸停損非強制出場，續抱密切觀察",
-      "actual_close": 34.45,
+      "actual_close": 35.85,
       "close_price": 34.45,
       "change_percent": 2.23,
-      "result": "holding",
-      "holding_status": "D3/10 | 收盤34.75(0.00%) | 距目標37.07約6.7% | 距停損30.33約12.7% | 籌碼健康(+15.2K)續抱"
+      "result": "success",
+      "holding_status": "D10結算成功：收盤35.85>推薦價33.7 (+6.38%)"
     },
     {
       "stock_code": "2883",
@@ -62,11 +62,11 @@
       "intraday_price": 28.95,
       "intraday_change_pct": 1.76,
       "intraday_note": "⚠️跌破MA10，惟法人今日仍大買+22,709、真連續買超4天，未觸停損非強制出場，續抱持續觀察",
-      "actual_close": 29.0,
+      "actual_close": 29.55,
       "close_price": 29.0,
       "change_percent": 1.75,
-      "result": "holding",
-      "holding_status": "D3/10 | 收盤30.05(-2.12%) | 距目標31.35約4.3% | 距停損25.65約14.6% | 連買5天籌碼健康(+14.3K)續抱"
+      "result": "success",
+      "holding_status": "D10結算成功：收盤29.55>推薦價28.5 (+3.68%)"
     }
   ],
   "track_b_recommendations": [],
