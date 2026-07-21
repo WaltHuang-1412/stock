@@ -20,11 +20,15 @@
       "intraday_price": 84.1,
       "intraday_change_pct": 0.6,
       "intraday_note": "🟢安全，法人買超+324、真連續買超6天、站穩MA5/MA10，無出場訊號，續抱（同時為使用者今日新買進實際持股，成本85.0）",
-      "actual_close": 80.0,
+      "actual_close": 82.8,
       "close_price": 84.5,
       "change_percent": 1.08,
       "result": "fail",
-      "fail_reason": "D10(07-20)收盤80.0≤推薦價83.6，機械結算失敗 (-4.31%)"
+      "fail_reason": "D10(07-21真D10,07-10颱風校正)收盤82.8≤推薦價83.6，機械結算失敗 (-0.96%)",
+      "settled_price": 82.8,
+      "settled_date": "2026-07-21",
+      "holding_days": 10,
+      "holding_status": null
     },
     {
       "stock_code": "2884",
@@ -41,11 +45,15 @@
       "intraday_price": 34.25,
       "intraday_change_pct": 1.63,
       "intraday_note": "⚠️投信反轉（昨買+17,480→今日賣-3,322）、跌破MA10，惟法人今日仍大買+11,520、真連續買超4天，未觸停損非強制出場，續抱密切觀察",
-      "actual_close": 35.85,
+      "actual_close": 36.95,
       "close_price": 34.45,
       "change_percent": 2.23,
       "result": "success",
-      "holding_status": "D10結算成功：收盤35.85>推薦價33.7 (+6.38%)"
+      "holding_status": "D10(07-21真D10,07-10颱風校正)結算成功：收盤36.95>推薦價33.7 (+9.64%)",
+      "settled_price": 36.95,
+      "settled_date": "2026-07-21",
+      "holding_days": 10,
+      "fail_reason": null
     },
     {
       "stock_code": "2883",
@@ -62,11 +70,15 @@
       "intraday_price": 28.95,
       "intraday_change_pct": 1.76,
       "intraday_note": "⚠️跌破MA10，惟法人今日仍大買+22,709、真連續買超4天，未觸停損非強制出場，續抱持續觀察",
-      "actual_close": 29.55,
+      "actual_close": 29.7,
       "close_price": 29.0,
       "change_percent": 1.75,
       "result": "success",
-      "holding_status": "D10結算成功：收盤29.55>推薦價28.5 (+3.68%)"
+      "holding_status": "D10(07-21真D10,07-10颱風校正)結算成功：收盤29.7>推薦價28.5 (+4.21%)",
+      "settled_price": 29.7,
+      "settled_date": "2026-07-21",
+      "holding_days": 10,
+      "fail_reason": null
     }
   ],
   "track_b_recommendations": [],

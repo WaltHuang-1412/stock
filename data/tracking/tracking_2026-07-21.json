@@ -23,7 +23,13 @@
       "intraday_price": 42.45,
       "intraday_pnl_pct": 3.03,
       "intraday_status": "holding",
-      "intraday_note": "站穩MA5/MA10、外資今日+13K真連續10天、動能-45%佈局完成、reversal健康，續抱"
+      "intraday_note": "站穩MA5/MA10、外資今日+13K真連續10天、動能-45%佈局完成、reversal健康，續抱",
+      "actual_close": 42.3,
+      "close_price": 42.3,
+      "day_change_pct": 2.67,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤42.3 (+2.67% vs推薦41.2) | 續抱追蹤",
+      "change_percent": 2.67
     },
     {
       "stock_code": "6669",
@@ -42,7 +48,13 @@
       "intraday_price": 5030.0,
       "intraday_pnl_pct": 7.36,
       "intraday_status": "holding",
-      "intraday_note": "+7.36%逼近目標5150(距2.4%)、Level 0中性、量比0.8x偏低，續抱等目標，尾盤觸價可分批"
+      "intraday_note": "+7.36%逼近目標5150(距2.4%)、Level 0中性、量比0.8x偏低，續抱等目標，尾盤觸價可分批",
+      "actual_close": 5000.0,
+      "close_price": 5000.0,
+      "day_change_pct": 6.72,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤5000.0 (+6.72% vs推薦4685.0) | 續抱追蹤",
+      "change_percent": 6.72
     },
     {
       "stock_code": "2884",
@@ -61,7 +73,13 @@
       "intraday_price": 36.75,
       "intraday_pnl_pct": 2.51,
       "intraday_status": "holding",
-      "intraday_note": "外資今日再爆買+24K真連續10天、金融防禦錨、reversal健康，續抱"
+      "intraday_note": "外資今日再爆買+24K真連續10天、金融防禦錨、reversal健康，續抱",
+      "actual_close": 36.95,
+      "close_price": 36.95,
+      "day_change_pct": 3.07,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤36.95 (+3.07% vs推薦35.85) | 續抱追蹤",
+      "change_percent": 3.07
     }
   ],
   "track_b_recommendations": [],
@@ -190,5 +208,77 @@
     "2886兆豐金@47.45每日人工追蹤(現48.2,動能-24.5%佈局中續抱)",
     "2324仁寶查法人續買(D1,-4.4%)",
     "5880合庫金真D10=07-24收盤結算"
-  ]
+  ],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "industry": "航空",
+      "recommend_price": 21.5,
+      "target_price": 23.6,
+      "stop_loss_pct": -10,
+      "settlement_days": 10,
+      "stop_loss": 19.35,
+      "position": "5-8%",
+      "score": 72,
+      "track": "A",
+      "reason": "航空題材（呼應持倉2618長榮航續強+3%）、07-20法人TOP13買超+7,409張(投信+6,164)、外資近5天+46K強力買超、動能+31%佈局中、vs MA20 -2.8%接近月線、營收+27.7%。準確率篩選三項通過(催化對齊/外資近5天≥0/反轉健康)。Modifier：外資持股比週減-0.52%(-3)、投信累計-25K對決中。盤前重新完整評分定案。"
+    }
+  ],
+  "removed_stocks": [],
+  "tomorrow_watchlist": [
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "note": "AI伺服器龍頭、營收+43%回檔-14.7%黃金買點+5、07-20外資+投信雙買。但三大法人累計-7,492張未轉正(reversal狀態不明)、動能+104%爆發(近5日僅+63張/日屬低量噪音)、vs MA20 -11.1%深跌破月季雙線。等法人累計轉正再進，暫觀察。"
+    },
+    {
+      "stock_code": "2939",
+      "stock_name": "永邑-KY",
+      "note": "偵測器中訊號、連買8天今日-0.8%接近月線、營收+5.4%。但法人量能極小(今日+2張累計+8張)、KY低流動性，觀察是否轉強訊號。"
+    },
+    {
+      "stock_code": "2388",
+      "stock_name": "威盛",
+      "note": "連買4天量比1.51x，但營收連衰10月(-5)、體質偏弱，僅觀察不推薦。"
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "note": "07-06推薦進行中追蹤，真連買10天、近5天外資+33K、動能佈局中，07-24收盤真D10結算，依規則不重複建倉、持續人工追蹤。"
+    }
+  ],
+  "yesterday_verification": {
+    "accuracy": "58.9%",
+    "settled_count": 477,
+    "success": 281,
+    "fail": 196,
+    "holding": 186,
+    "results": [
+      {
+        "stock_code": "2332",
+        "stock_name": "友訊",
+        "result": "success",
+        "note": "D1觸目標，收盤22.3≥22.1，+8.78%（07-20盤中超強催化覆寫推薦）"
+      },
+      {
+        "stock_code": "2884",
+        "stock_name": "玉山金(07-06檔)",
+        "result": "success",
+        "note": "真D10=07-21收盤36.95>33.7，+9.64%（07-10颱風校正，盤前D9提前結算已校正）"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金(07-06檔)",
+        "result": "success",
+        "note": "真D10=07-21收盤29.70>28.5，+4.21%（同上校正）"
+      },
+      {
+        "stock_code": "4938",
+        "stock_name": "和碩(07-06檔)",
+        "result": "fail",
+        "note": "真D10=07-21收盤82.80≤83.6，-0.96%（同上校正）"
+      }
+    ]
+  }
 }
