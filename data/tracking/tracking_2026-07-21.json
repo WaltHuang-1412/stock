@@ -19,7 +19,11 @@
       "track": "A",
       "module": "A-L3",
       "reason": "外資累計+273K張、真連續10天、近5天+107K、動能-45%佈局完成、reversal Safe、暑假旺季；油價小漲為溫和逆風",
-      "stop_loss": 37.08
+      "stop_loss": 37.08,
+      "intraday_price": 42.45,
+      "intraday_pnl_pct": 3.03,
+      "intraday_status": "holding",
+      "intraday_note": "站穩MA5/MA10、外資今日+13K真連續10天、動能-45%佈局完成、reversal健康，續抱"
     },
     {
       "stock_code": "6669",
@@ -34,7 +38,11 @@
       "track": "B",
       "module": "B-早期",
       "reason": "訊號B🟢早期、AI伺服器核心ODM、EPS YoY+94%、營收+29.7%回檔-5.5%、動能+12%佈局中、Level 0、外資近5天+267",
-      "stop_loss": 4216.5
+      "stop_loss": 4216.5,
+      "intraday_price": 5030.0,
+      "intraday_pnl_pct": 7.36,
+      "intraday_status": "holding",
+      "intraday_note": "+7.36%逼近目標5150(距2.4%)、Level 0中性、量比0.8x偏低，續抱等目標，尾盤觸價可分批"
     },
     {
       "stock_code": "2884",
@@ -49,7 +57,30 @@
       "track": "A",
       "module": "A-L2",
       "reason": "外資累計+165K張、真連續10天、單日≈30K爆買(真連續≥7不罰)、EPS YoY+56%、月季雙線上+3.5%、修正盤防禦錨",
-      "stop_loss": 32.27
+      "stop_loss": 32.27,
+      "intraday_price": 36.75,
+      "intraday_pnl_pct": 2.51,
+      "intraday_status": "holding",
+      "intraday_note": "外資今日再爆買+24K真連續10天、金融防禦錨、reversal健康，續抱"
+    }
+  ],
+  "track_b_recommendations": [],
+  "track_b_note": "今日無盤中新推薦。偵測器唯一強訊號5525順天動能+500%追高+累計僅299張低量建設股(一票否決)；TOP50買超中今日<3%者1101/5871/2412動能>100%追高、2409近5天外資-59K準確率篩選不過；5880合庫金體質過關但為進行中追蹤(真D10=07-24)不重複建倉。依v8.2禁止湊數，修正盤寧缺勿濫。",
+  "track_b_observations": [
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "note": "真連買10天、近5天外資+33K、動能-17.6%佈局中、Level 0，07-24收盤真D10結算，進行中追蹤不重複建倉"
+    },
+    {
+      "stock_code": "2939",
+      "stock_name": "永邑-KY",
+      "note": "偵測器中訊號55、連買8天今日-2.1%未反映、量比1.57x，觀察是否轉強訊號"
+    },
+    {
+      "stock_code": "2388",
+      "stock_name": "威盛",
+      "note": "偵測器中訊號45、連買4天、量比1.51x，觀察"
     }
   ],
   "holdings_addon_eval": [
