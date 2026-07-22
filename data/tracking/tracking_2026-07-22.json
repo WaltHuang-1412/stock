@@ -1,0 +1,58 @@
+{
+  "date": "2026-07-22",
+  "settings": {
+    "stop_loss_pct": -5,
+    "settlement_days": 10,
+    "note": "本日 3 檔皆為『超強催化覆寫』小倉位（費半+5.21%、Micron+12%、多美股龍頭>+5%），倉位 5-10%、停損 -5%"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "industry": "AI伺服器",
+      "recommend_price": 246.0,
+      "target_price": 260.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 233.7,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 88,
+      "reason": "avg_rank1.5全市場最大買超+26,966張、外資近5天+32K、外資+投信同步、費半+5.21%AI伺服器超強催化覆寫、MA20+1.5%、EPS-3%持平。動能+353%追高由覆寫降級（催化對齊+外資近5天≥0+反轉L0全通過）"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "industry": "AI伺服器",
+      "recommend_price": 149.5,
+      "target_price": 160.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 142.0,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 80,
+      "reason": "德州D1新廠啟用今日頭條（黃仁勳到場、GB300運算基板）新催化、外資近5天+31K、累計外資+17K、EPS YoY+65%、MA20-1.0%。動能+213%由超強催化覆寫降級（三項篩選全通過）"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": "AI伺服器",
+      "recommend_price": 324.0,
+      "target_price": 350.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 307.8,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 74,
+      "reason": "AI伺服器龍頭（GB200 NVL主力）、5日-14.7%深跌抄底、外資近5天+13K回補、avg_rank13今日在TOP50買+7,732張、營收年增+43%+回檔+5分。10天賣超6天-5分、MA20-11.1%價格位置僅1分拖累。動能+243%由覆寫降級"
+    }
+  ],
+  "tomorrow_recommendations": [],
+  "removed_stocks": [],
+  "observations": [
+    {"stock_code": "3706", "stock_name": "神達", "score": 76, "reason": "AI伺服器、外資持股比+5、EPS+75%，但外資近5天僅+1,398偏弱、準確率篩選勉強通過，觀察續買力道"},
+    {"stock_code": "2356", "stock_name": "英業達", "score": null, "reason": "AI伺服器ODM二線、外資近5天+36K強回補但10天累計外資-3,000、反轉狀態不明（累計負未匹配等級），需人工確認法人是否真轉買"},
+    {"stock_code": "2603", "stock_name": "長榮", "score": null, "reason": "航運、真連續9天買+外資累計+44K籌碼最強，但動能+314%爆發且航運無超強催化覆寫→動能一票否決排除；營收連衰10月-5、EPS連3季負-5"},
+    {"stock_code": "2610", "stock_name": "華航", "score": null, "reason": "外資近5天+45K，但油價+3%燃油成本利空+動能+472%爆發無催化覆寫→排除"},
+    {"stock_code": "2634", "stock_name": "漢翔", "score": null, "reason": "MA20+21%已大漲追高、動能+263%無覆寫→排除"}
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-07-21",
+  "last_updated": "2026-07-22",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -2040,6 +2040,11 @@
               "code": "2308",
               "name": "台達電",
               "category": "機器人與物理AI"
+            },
+            {
+              "code": "3708",
+              "name": "上緯",
+              "category": "機器人與物理AI"
             }
           ]
         }
@@ -2357,6 +2362,11 @@
               "code": "6669",
               "name": "緯穎",
               "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "8210",
+              "name": "勤誠",
+              "category": "AI伺服器與半導體"
             }
           ]
         }
@@ -2577,6 +2587,11 @@
             {
               "code": "3208",
               "name": "雷虎",
+              "category": "中東地緣政治（含航運）"
+            },
+            {
+              "code": "2610",
+              "name": "華航",
               "category": "中東地緣政治（含航運）"
             }
           ]
@@ -2976,6 +2991,16 @@
             {
               "code": "4566",
               "name": "時碩工業",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "8210",
+              "name": "勤誠",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3665",
+              "name": "貿聯-KY",
               "category": "企業財報重點"
             }
           ]
@@ -3549,6 +3574,16 @@
               "code": "2357",
               "name": "華碩",
               "category": "台股市場動態"
+            },
+            {
+              "code": "2454",
+              "name": "聯發科",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "2885",
+              "name": "元大金",
+              "category": "台股市場動態"
             }
           ]
         }
@@ -3931,6 +3966,11 @@
               "code": "3706",
               "name": "神達",
               "category": "軍工與無人機"
+            },
+            {
+              "code": "3669",
+              "name": "圓展",
+              "category": "軍工與無人機"
             }
           ]
         }
@@ -3997,6 +4037,11 @@
             {
               "code": "6173",
               "name": "信昌電",
+              "category": "台股信用槓桿過熱（央行示警）"
+            },
+            {
+              "code": "2887",
+              "name": "台新金",
               "category": "台股信用槓桿過熱（央行示警）"
             }
           ]
@@ -4291,6 +4336,11 @@
               "code": "00919",
               "name": "精選高息",
               "category": "台灣ETF與資金流向"
+            },
+            {
+              "code": "3665",
+              "name": "貿聯-KY",
+              "category": "台灣ETF與資金流向"
             }
           ]
         }
@@ -4378,6 +4428,102 @@
               "code": "6173",
               "name": "信昌電",
               "category": "被動元件族群基本面分化"
+            }
+          ]
+        }
+      }
+    },
+    "台灣創新板": {
+      "name": "台灣創新板",
+      "catalysts": [
+        "台灣創新板",
+        "tib",
+        "鎖定",
+        "AI",
+        "基建七大產業掛牌"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "7763",
+              "name": "崇舜",
+              "category": "台灣創新板（tib-創）鎖定AI基建七大產業掛牌"
+            }
+          ]
+        }
+      }
+    },
+    "輝達收購暗光纖佈局AI自主網路": {
+      "name": "輝達收購暗光纖佈局AI自主網路",
+      "catalysts": [
+        "輝達收購暗光纖佈局AI自主網路",
+        "輝達收購暗光纖佈局",
+        "AI",
+        "自主網路"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2434",
+              "name": "光聖",
+              "category": "輝達收購暗光纖佈局AI自主網路"
+            },
+            {
+              "code": "4979",
+              "name": "華星光",
+              "category": "輝達收購暗光纖佈局AI自主網路"
+            }
+          ]
+        }
+      }
+    },
+    "七大銀行採用IRB內部評等法釋出資本空間": {
+      "name": "七大銀行採用IRB內部評等法釋出資本空間",
+      "catalysts": [
+        "七大銀行採用IRB內部評等法釋出資本空間",
+        "七大銀行採用",
+        "IRB",
+        "內部評等法釋出資本空間"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2882",
+              "name": "國泰金",
+              "category": "七大銀行採用IRB內部評等法釋出資本空間"
+            },
+            {
+              "code": "2881",
+              "name": "富邦金",
+              "category": "七大銀行採用IRB內部評等法釋出資本空間"
+            }
+          ]
+        }
+      }
+    },
+    "中美晶攜手聯合再生赴美設太陽能廠": {
+      "name": "中美晶攜手聯合再生赴美設太陽能廠",
+      "catalysts": [
+        "中美晶攜手聯合再生赴美設太陽能廠"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "5483",
+              "name": "中美晶",
+              "category": "中美晶攜手聯合再生赴美設太陽能廠"
             }
           ]
         }
