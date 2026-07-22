@@ -17,7 +17,10 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 88,
-      "reason": "avg_rank1.5全市場最大買超+26,966張、外資近5天+32K、外資+投信同步、費半+5.21%AI伺服器超強催化覆寫、MA20+1.5%、EPS-3%持平。動能+353%追高由覆寫降級（催化對齊+外資近5天≥0+反轉L0全通過）"
+      "reason": "avg_rank1.5全市場最大買超+26,966張、外資近5天+32K、外資+投信同步、費半+5.21%AI伺服器超強催化覆寫、MA20+1.5%、EPS-3%持平。動能+353%追高由覆寫降級（催化對齊+外資近5天≥0+反轉L0全通過）",
+      "intraday_price": 254.5,
+      "intraday_change_pct": 3.46,
+      "intraday_status": "續抱（法人+26,966連買2天、站穩MA5、無出場訊號）"
     },
     {
       "stock_code": "3231",
@@ -30,7 +33,10 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 80,
-      "reason": "德州D1新廠啟用今日頭條（黃仁勳到場、GB300運算基板）新催化、外資近5天+31K、累計外資+17K、EPS YoY+65%、MA20-1.0%。動能+213%由超強催化覆寫降級（三項篩選全通過）"
+      "reason": "德州D1新廠啟用今日頭條（黃仁勳到場、GB300運算基板）新催化、外資近5天+31K、累計外資+17K、EPS YoY+65%、MA20-1.0%。動能+213%由超強催化覆寫降級（三項篩選全通過）",
+      "intraday_price": 164.0,
+      "intraday_change_pct": 9.70,
+      "intraday_status": "續抱（盤中已觸目標160、法人+7,240、站穩MA5；盤後收>160即結算success）"
     },
     {
       "stock_code": "2382",
@@ -43,11 +49,20 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 74,
-      "reason": "AI伺服器龍頭（GB200 NVL主力）、5日-14.7%深跌抄底、外資近5天+13K回補、avg_rank13今日在TOP50買+7,732張、營收年增+43%+回檔+5分。10天賣超6天-5分、MA20-11.1%價格位置僅1分拖累。動能+243%由覆寫降級"
+      "reason": "AI伺服器龍頭（GB200 NVL主力）、5日-14.7%深跌抄底、外資近5天+13K回補、avg_rank13今日在TOP50買+7,732張、營收年增+43%+回檔+5分。10天賣超6天-5分、MA20-11.1%價格位置僅1分拖累。動能+243%由覆寫降級",
+      "intraday_price": 332.5,
+      "intraday_change_pct": 2.62,
+      "intraday_status": "續抱留意（法人+7,732連買3天、站穩MA5，但5日高點回落-7.9%跌破MA10；未觸停損307.8/反轉L0，三條強制停損皆未觸發）"
     }
   ],
   "tomorrow_recommendations": [],
   "removed_stocks": [],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {"stock_code": "2634", "stock_name": "漢翔", "detector_score": 100, "reason": "偵測器強訊號但動能一票否決：今日崩跌-9.8%、動能+263%、MA20+21%已大漲；準確率篩選催化對齊未過（航太非今日最強催化鏈）。營收+5/外資持股比+5加分不足以覆寫"},
+    {"stock_code": "1712", "stock_name": "興農", "detector_score": 75, "reason": "偵測器強訊號但動能+500%爆發追高、農化無超強催化覆寫→動能一票否決；營收YoY+4.1%不調整"},
+    {"stock_code": "1439", "stock_name": "雋揚", "detector_score": 60, "reason": "偵測器強訊號但動能+500%爆發追高、紡織無催化覆寫→動能一票否決；營收YoY-70%衰退"}
+  ],
   "observations": [
     {"stock_code": "3706", "stock_name": "神達", "score": 76, "reason": "AI伺服器、外資持股比+5、EPS+75%，但外資近5天僅+1,398偏弱、準確率篩選勉強通過，觀察續買力道"},
     {"stock_code": "2356", "stock_name": "英業達", "score": null, "reason": "AI伺服器ODM二線、外資近5天+36K強回補但10天累計外資-3,000、反轉狀態不明（累計負未匹配等級），需人工確認法人是否真轉買"},
