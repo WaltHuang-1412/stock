@@ -20,7 +20,12 @@
       "reason": "avg_rank1.5全市場最大買超+26,966張、外資近5天+32K、外資+投信同步、費半+5.21%AI伺服器超強催化覆寫、MA20+1.5%、EPS-3%持平。動能+353%追高由覆寫降級（催化對齊+外資近5天≥0+反轉L0全通過）",
       "intraday_price": 254.5,
       "intraday_change_pct": 3.46,
-      "intraday_status": "續抱（法人+26,966連買2天、站穩MA5、無出場訊號）"
+      "intraday_status": "續抱（法人+26,966連買2天、站穩MA5、無出場訊號）",
+      "actual_close": 251.5,
+      "result": "holding",
+      "holding_status": "D0/10 收盤251.5(+2.2%)。距目標260僅3.4%、距停損233.7有7.1%緩衝。全市場最大買超+26,966、外資近5天+32K、站穩MA5(242.3)、反轉L0。續抱",
+      "close_price": 251.5,
+      "change_percent": 2.2
     },
     {
       "stock_code": "3231",
@@ -35,8 +40,15 @@
       "score": 80,
       "reason": "德州D1新廠啟用今日頭條（黃仁勳到場、GB300運算基板）新催化、外資近5天+31K、累計外資+17K、EPS YoY+65%、MA20-1.0%。動能+213%由超強催化覆寫降級（三項篩選全通過）",
       "intraday_price": 164.0,
-      "intraday_change_pct": 9.70,
-      "intraday_status": "續抱（盤中已觸目標160、法人+7,240、站穩MA5；盤後收>160即結算success）"
+      "intraday_change_pct": 9.7,
+      "intraday_status": "續抱（盤中已觸目標160、法人+7,240、站穩MA5；盤後收>160即結算success）",
+      "actual_close": 164.0,
+      "result": "success",
+      "return_pct": 9.7,
+      "settled_date": "2026-07-22",
+      "settlement_note": "D0當天收盤164.0≥目標160.0→success（德州D1新廠GB300新催化+外資近5天+31K，同日達標）",
+      "close_price": 164.0,
+      "change_percent": 9.7
     },
     {
       "stock_code": "2382",
@@ -52,22 +64,130 @@
       "reason": "AI伺服器龍頭（GB200 NVL主力）、5日-14.7%深跌抄底、外資近5天+13K回補、avg_rank13今日在TOP50買+7,732張、營收年增+43%+回檔+5分。10天賣超6天-5分、MA20-11.1%價格位置僅1分拖累。動能+243%由覆寫降級",
       "intraday_price": 332.5,
       "intraday_change_pct": 2.62,
-      "intraday_status": "續抱留意（法人+7,732連買3天、站穩MA5，但5日高點回落-7.9%跌破MA10；未觸停損307.8/反轉L0，三條強制停損皆未觸發）"
+      "intraday_status": "續抱留意（法人+7,732連買3天、站穩MA5，但5日高點回落-7.9%跌破MA10；未觸停損307.8/反轉L0，三條強制停損皆未觸發）",
+      "actual_close": 329.0,
+      "result": "holding",
+      "holding_status": "D0/10 收盤329.0(+1.5%)。距目標350有6.4%、距停損307.8有6.4%緩衝。法人+7,732連買3天、外資近5天+13K回補、站穩MA5、反轉L0；MA20-11.1%價格位置偏低為主要弱點。續抱留意高檔回落",
+      "close_price": 329.0,
+      "change_percent": 1.5
     }
   ],
-  "tomorrow_recommendations": [],
-  "removed_stocks": [],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "3706",
+      "stock_name": "神達",
+      "industry": "AI伺服器",
+      "recommend_price": 91.2,
+      "target_price": 99.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 82.08,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 76,
+      "reason": "AI伺服器、外資持股比+0.51%(+5分)、EPS+75%、真連買2天(投信+9,292)。費半+5.21%超強催化覆寫；但動能+299.8%追高+外資近5天僅+1,398(弱)、外資累計-5,103，屬投信驅動。小倉位候選，須明日盤前確認外資轉買+反轉L0才進場，否則觀望",
+      "note": "⚠️前提：今日20260722 T86未公布、V轉改寫籌碼，明日盤前以新鮮數據完整重評；動能追高為主要風險"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "removal_reason": "記憶體題材(Micron+12%催化)+營收YoY+88.5%+外資持股比+1.57%，但反轉Level 4爆量賣超-9,778、外資近5天-25K出貨中→準確率篩選(反轉L0+外資≥0)未過，觀察不追高"
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "removal_reason": "DRAM+營收YoY+587%爆發，但反轉Level 3連續賣超、外資近5天-36K出貨中→準確率篩選未過，觀察不追"
+    },
+    {
+      "stock_code": "3260",
+      "stock_name": "威剛",
+      "removal_reason": "記憶體模組+營收YoY+212%，但reversal數據不足無法判定+動能+299.8%追高、外資累計-5,103→不視為安全，觀察"
+    }
+  ],
   "track_b_recommendations": [],
   "track_b_observations": [
-    {"stock_code": "2634", "stock_name": "漢翔", "detector_score": 100, "reason": "偵測器強訊號但動能一票否決：今日崩跌-9.8%、動能+263%、MA20+21%已大漲；準確率篩選催化對齊未過（航太非今日最強催化鏈）。營收+5/外資持股比+5加分不足以覆寫"},
-    {"stock_code": "1712", "stock_name": "興農", "detector_score": 75, "reason": "偵測器強訊號但動能+500%爆發追高、農化無超強催化覆寫→動能一票否決；營收YoY+4.1%不調整"},
-    {"stock_code": "1439", "stock_name": "雋揚", "detector_score": 60, "reason": "偵測器強訊號但動能+500%爆發追高、紡織無催化覆寫→動能一票否決；營收YoY-70%衰退"}
+    {
+      "stock_code": "2634",
+      "stock_name": "漢翔",
+      "detector_score": 100,
+      "reason": "偵測器強訊號但動能一票否決：今日崩跌-9.8%、動能+263%、MA20+21%已大漲；準確率篩選催化對齊未過（航太非今日最強催化鏈）。營收+5/外資持股比+5加分不足以覆寫"
+    },
+    {
+      "stock_code": "1712",
+      "stock_name": "興農",
+      "detector_score": 75,
+      "reason": "偵測器強訊號但動能+500%爆發追高、農化無超強催化覆寫→動能一票否決；營收YoY+4.1%不調整"
+    },
+    {
+      "stock_code": "1439",
+      "stock_name": "雋揚",
+      "detector_score": 60,
+      "reason": "偵測器強訊號但動能+500%爆發追高、紡織無催化覆寫→動能一票否決；營收YoY-70%衰退"
+    }
   ],
   "observations": [
-    {"stock_code": "3706", "stock_name": "神達", "score": 76, "reason": "AI伺服器、外資持股比+5、EPS+75%，但外資近5天僅+1,398偏弱、準確率篩選勉強通過，觀察續買力道"},
-    {"stock_code": "2356", "stock_name": "英業達", "score": null, "reason": "AI伺服器ODM二線、外資近5天+36K強回補但10天累計外資-3,000、反轉狀態不明（累計負未匹配等級），需人工確認法人是否真轉買"},
-    {"stock_code": "2603", "stock_name": "長榮", "score": null, "reason": "航運、真連續9天買+外資累計+44K籌碼最強，但動能+314%爆發且航運無超強催化覆寫→動能一票否決排除；營收連衰10月-5、EPS連3季負-5"},
-    {"stock_code": "2610", "stock_name": "華航", "score": null, "reason": "外資近5天+45K，但油價+3%燃油成本利空+動能+472%爆發無催化覆寫→排除"},
-    {"stock_code": "2634", "stock_name": "漢翔", "score": null, "reason": "MA20+21%已大漲追高、動能+263%無覆寫→排除"}
-  ]
+    {
+      "stock_code": "3706",
+      "stock_name": "神達",
+      "score": 76,
+      "reason": "AI伺服器、外資持股比+5、EPS+75%，但外資近5天僅+1,398偏弱、準確率篩選勉強通過，觀察續買力道"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "score": null,
+      "reason": "AI伺服器ODM二線、外資近5天+36K強回補但10天累計外資-3,000、反轉狀態不明（累計負未匹配等級），需人工確認法人是否真轉買"
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "score": null,
+      "reason": "航運、真連續9天買+外資累計+44K籌碼最強，但動能+314%爆發且航運無超強催化覆寫→動能一票否決排除；營收連衰10月-5、EPS連3季負-5"
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "score": null,
+      "reason": "外資近5天+45K，但油價+3%燃油成本利空+動能+472%爆發無催化覆寫→排除"
+    },
+    {
+      "stock_code": "2634",
+      "stock_name": "漢翔",
+      "score": null,
+      "reason": "MA20+21%已大漲追高、動能+263%無覆寫→排除"
+    }
+  ],
+  "yesterday_verification": {
+    "accuracy": "59.2%",
+    "settled_count": 480,
+    "success_count": 284,
+    "fail_count": 196,
+    "holding_count": 186,
+    "today_settled": 3,
+    "results": [
+      {
+        "stock_code": "3231",
+        "stock_name": "緯創",
+        "result": "success",
+        "return_pct": 9.7,
+        "note": "D0同日達標,收164≥目標160"
+      },
+      {
+        "stock_code": "6669",
+        "stock_name": "緯穎",
+        "result": "success",
+        "return_pct": 17.4,
+        "note": "D1收5500≥目標5150"
+      },
+      {
+        "stock_code": "3189",
+        "stock_name": "景碩",
+        "result": "success",
+        "return_pct": 14.9,
+        "note": "D2收796≥目標760"
+      }
+    ],
+    "note": "今日3檔全結算success，Track A零停損。準確率59.2%較昨58.9%提升"
+  }
 }
