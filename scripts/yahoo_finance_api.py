@@ -172,6 +172,66 @@ def get_history(code, period='5d', interval='1d'):
     return history
 
 
+_CRUMB_CACHE = {'session': None, 'crumb': None}
+_SHARES_CACHE = {}
+
+
+def _get_crumb_session():
+    """建立帶 crumb 的 Yahoo session（快取，避免每次握手）"""
+    if _CRUMB_CACHE['session'] is not None and _CRUMB_CACHE['crumb']:
+        return _CRUMB_CACHE['session'], _CRUMB_CACHE['crumb']
+    s = requests.Session()
+    s.headers.update(HEADERS)
+    try:
+        s.get('https://fc.yahoo.com', timeout=10)
+    except Exception:
+        pass
+    try:
+        crumb = s.get('https://query1.finance.yahoo.com/v1/test/getcrumb', timeout=10).text.strip()
+    except Exception:
+        crumb = ''
+    if crumb and '<' not in crumb:  # 排除 HTML 錯誤頁
+        _CRUMB_CACHE['session'] = s
+        _CRUMB_CACHE['crumb'] = crumb
+        return s, crumb
+    return None, None
+
+
+def get_shares_outstanding(code):
+    """
+    獲取流通在外股數（用於計算週轉率）
+
+    Yahoo quoteSummary 已改為 crumb 保護，需先握手取得 crumb。
+    自動嘗試 .TW（上市）和 .TWO（上櫃），結果快取於記憶體。
+
+    Args:
+        code: 股票代號（如 '3090'）
+
+    Returns:
+        int: 流通股數（股），失敗返回 None
+    """
+    if code in _SHARES_CACHE:
+        return _SHARES_CACHE[code]
+    s, crumb = _get_crumb_session()
+    if not s or not crumb:
+        return None
+    for suffix in ['.TW', '.TWO']:
+        try:
+            url = (f'https://query1.finance.yahoo.com/v10/finance/quoteSummary/'
+                   f'{code}{suffix}?modules=defaultKeyStatistics&crumb={crumb}')
+            d = s.get(url, timeout=10).json()
+            res = d.get('quoteSummary', {}).get('result')
+            if res:
+                so = res[0].get('defaultKeyStatistics', {}).get('sharesOutstanding', {})
+                raw = so.get('raw') if isinstance(so, dict) else None
+                if raw:
+                    _SHARES_CACHE[code] = int(raw)
+                    return int(raw)
+        except Exception:
+            pass
+    return None
+
+
 def get_volume_ratio(code):
     """
     計算量比（今日量 vs 5日均量）

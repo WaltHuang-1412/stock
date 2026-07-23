@@ -50,7 +50,7 @@ from datetime import datetime, timedelta
 # 取得日均成交量（用於比例門檻）
 sys.path.insert(0, os.path.dirname(__file__))
 try:
-    from yahoo_finance_api import get_stock_info, get_history
+    from yahoo_finance_api import get_stock_info, get_history, get_shares_outstanding
     HAS_YAHOO = True
 except ImportError:
     HAS_YAHOO = False
@@ -110,14 +110,29 @@ def check_disposition_risk(stock_code):
     """
     處置風險偵測（提前預警）
 
-    TWSE 觸發注意股標準（任一）：
-    - 近6日累積漲跌 > 25%
+    TWSE 注意股標準（本函式已實作的款次，符合任一即當日達標）：
+    - 近6日累積「漲跌」幅 > ±25%（漲、跌都算）
     - 近30日漲幅 > 100%
     - 近60日漲幅 > 130%
-    - 當日週轉率 ≥ 10%（需另外資料，暫不計）
+    - 近90日漲幅 > 160%
+    - 當日週轉率 ≥ 10%（成交股數 / 流通股數）
+    - 近6日累積週轉率 > 50%
+    - 【輔助啟發式】當日量 ≥ 近60日均量 × 5（爆量預警，非官方固定門檻）
+
+    尚未實作：本益比/淨值比綜合款、當沖比 60%（需另接資料源）。
+
+    處置升級路徑（連續達標天數）：
+    - 連續3個營業日達注意標準 → 處置
+    - 或 連續5日 / 最近10日內6日 / 最近30日內12日 → 處置
+    本函式計算「連續達標天數」與「還差幾天處置」倒數。
+
+    註：歷史每日週轉率以「當前流通股數」近似（流通股數變動極少）。
 
     Returns:
-        dict: risk_level / is_disposed / is_attention / 6d_pct / 30d_pct / 60d_pct / reasons / label
+        dict: risk_level / is_disposed / is_attention / 6d_pct / 30d_pct /
+              60d_pct / 90d_pct / turnover_today / turnover_6d /
+              attention_today / consecutive_attention / attention_in_10 /
+              attention_in_30 / days_to_disposition / reasons / label
     """
     result = {
         'risk_level': 'clear',
@@ -126,11 +141,19 @@ def check_disposition_risk(stock_code):
         '6d_pct': None,
         '30d_pct': None,
         '60d_pct': None,
+        '90d_pct': None,
+        'turnover_today': None,
+        'turnover_6d': None,
+        'attention_today': False,
+        'consecutive_attention': 0,
+        'attention_in_10': 0,
+        'attention_in_30': 0,
+        'days_to_disposition': None,
         'reasons': [],
         'label': '',
     }
 
-    # Step 1：查 TWSE 官方清單
+    # Step 1：查 TWSE 官方清單（最準，但只在被列後才知道）
     try:
         disposed_codes, attention_codes = fetch_twse_lists()
         if stock_code in disposed_codes:
@@ -144,52 +167,149 @@ def check_disposition_risk(stock_code):
     except Exception:
         pass
 
-    # Step 2：用歷史收盤價計算累積漲跌幅
+    # Step 2：自算注意股標準（不必等官網公告，提前預警）
     if HAS_YAHOO:
         try:
-            hist = get_history(stock_code, period='3mo', interval='1d')
+            # 需 90 日以上歷史，取 6mo（約 125 個交易日）
+            hist = get_history(stock_code, period='6mo', interval='1d')
             if hist and hist.get('closes'):
                 closes = [c for c in hist['closes'] if c is not None]
+                vols_raw = hist.get('volumes') or []
+                # volumes 與 closes 對齊：同步過濾 None（以 closes 為準長度）
+                volumes = [v if v is not None else 0 for v in vols_raw]
+                if len(volumes) < len(closes):
+                    volumes = volumes + [0] * (len(closes) - len(volumes))
+
+                shares = get_shares_outstanding(stock_code)
 
                 def _pct(old, new):
                     return (new / old - 1) * 100 if old else None
 
-                # 近6日（需7個收盤價）
+                def _turnover(i):
+                    """第 i 日週轉率(%)：成交股數 / 流通股數"""
+                    if not shares or i < 0 or i >= len(volumes):
+                        return None
+                    return volumes[i] / shares * 100
+
+                def _hit_attention(i):
+                    """第 i 日是否達注意標準（價格 + 當日週轉率款）"""
+                    if i < 0 or i >= len(closes):
+                        return False
+                    # 近6日 ±25%
+                    if i >= 6:
+                        p = _pct(closes[i - 6], closes[i])
+                        if p is not None and abs(p) > 25:
+                            return True
+                    # 近30/60/90日 漲幅
+                    for span, thr in ((30, 100), (60, 130), (90, 160)):
+                        if i >= span:
+                            p = _pct(closes[i - span], closes[i])
+                            if p is not None and p > thr:
+                                return True
+                    # 當日週轉率 ≥ 10%
+                    t = _turnover(i)
+                    if t is not None and t >= 10:
+                        return True
+                    return False
+
+                last = len(closes) - 1
+
+                # --- 當日各項數據（供報告顯示）---
                 if len(closes) >= 7:
                     p6 = _pct(closes[-7], closes[-1])
                     result['6d_pct'] = p6
                     if p6 is not None:
-                        if p6 > 25:
-                            result['reasons'].append(f'近6日漲幅 {p6:.1f}% > 25%（已達注意標準）')
-                            if result['risk_level'] == 'clear':
-                                result['risk_level'] = 'warning'
-                        elif p6 > 20:
-                            result['reasons'].append(f'近6日漲幅 {p6:.1f}%，接近25%門檻')
+                        if abs(p6) > 25:
+                            result['reasons'].append(f'近6日漲跌 {p6:+.1f}%（|幅| > 25%，已達注意標準）')
+                        elif abs(p6) > 20:
+                            result['reasons'].append(f'近6日漲跌 {p6:+.1f}%，接近 ±25% 門檻')
                             if result['risk_level'] == 'clear':
                                 result['risk_level'] = 'watch'
 
-                # 近30日
-                if len(closes) >= 31:
-                    p30 = _pct(closes[-31], closes[-1])
-                    result['30d_pct'] = p30
-                    if p30 is not None:
-                        if p30 > 100:
-                            result['reasons'].append(f'近30日漲幅 {p30:.1f}% > 100%（已達注意標準）')
-                            if result['risk_level'] not in ('disposed', 'attention'):
-                                result['risk_level'] = 'warning'
-                        elif p30 > 85:
-                            result['reasons'].append(f'近30日漲幅 {p30:.1f}%，接近100%門檻')
-                            if result['risk_level'] == 'clear':
-                                result['risk_level'] = 'watch'
+                for span, thr, near, key in (
+                    (30, 100, 85, '30d_pct'),
+                    (60, 130, 110, '60d_pct'),
+                    (90, 160, 140, '90d_pct'),
+                ):
+                    if len(closes) >= span + 1:
+                        p = _pct(closes[-(span + 1)], closes[-1])
+                        result[key] = p
+                        if p is not None:
+                            if p > thr:
+                                result['reasons'].append(f'近{span}日漲幅 {p:.1f}% > {thr}%（已達注意標準）')
+                            elif p > near:
+                                result['reasons'].append(f'近{span}日漲幅 {p:.1f}%，接近 {thr}% 門檻')
+                                if result['risk_level'] == 'clear':
+                                    result['risk_level'] = 'watch'
 
-                # 近60日
-                if len(closes) >= 61:
-                    p60 = _pct(closes[-61], closes[-1])
-                    result['60d_pct'] = p60
-                    if p60 is not None:
-                        if p60 > 130:
-                            result['reasons'].append(f'近60日漲幅 {p60:.1f}% > 130%（已達注意標準）')
-                            if result['risk_level'] not in ('disposed', 'attention'):
+                # 當日週轉率
+                t_today = _turnover(last)
+                result['turnover_today'] = t_today
+                if t_today is not None:
+                    if t_today >= 10:
+                        result['reasons'].append(f'當日週轉率 {t_today:.1f}% ≥ 10%（已達注意標準）')
+                    elif t_today >= 8:
+                        result['reasons'].append(f'當日週轉率 {t_today:.1f}%，接近 10% 門檻')
+                        if result['risk_level'] == 'clear':
+                            result['risk_level'] = 'watch'
+
+                # 近6日累積週轉率 > 50%
+                if shares and len(volumes) >= 6:
+                    t6 = sum(volumes[-6:]) / shares * 100
+                    result['turnover_6d'] = t6
+                    if t6 > 50:
+                        result['reasons'].append(f'近6日累積週轉率 {t6:.1f}% > 50%（已達注意標準）')
+                    elif t6 > 40:
+                        result['reasons'].append(f'近6日累積週轉率 {t6:.1f}%，接近 50% 門檻')
+                        if result['risk_level'] == 'clear':
+                            result['risk_level'] = 'watch'
+
+                # 【輔助啟發式】爆量：當日量 ≥ 近60日均量 × 5
+                if len(volumes) >= 61:
+                    avg60 = sum(volumes[-61:-1]) / 60
+                    if avg60 > 0 and volumes[-1] >= avg60 * 5:
+                        mult = volumes[-1] / avg60
+                        result['reasons'].append(f'爆量：當日量為近60日均量 {mult:.1f} 倍（輔助預警，非官方門檻）')
+                        if result['risk_level'] == 'clear':
+                            result['risk_level'] = 'watch'
+
+                # --- 連續達標天數 + 倒數計時 ---
+                result['attention_today'] = _hit_attention(last)
+
+                # 連續（從最新往回）
+                consec = 0
+                i = last
+                while i >= 0 and _hit_attention(i):
+                    consec += 1
+                    i -= 1
+                result['consecutive_attention'] = consec
+
+                # 最近10 / 30 日達標次數
+                result['attention_in_10'] = sum(
+                    1 for j in range(max(0, last - 9), last + 1) if _hit_attention(j))
+                result['attention_in_30'] = sum(
+                    1 for j in range(max(0, last - 29), last + 1) if _hit_attention(j))
+
+                # 若正在達標（或近期達標），計算「還差幾天處置」
+                routes = []
+                if consec >= 1:
+                    routes.append(3 - consec)   # 連續3日
+                    routes.append(5 - consec)   # 連續5日
+                if result['attention_in_10'] >= 1:
+                    routes.append(6 - result['attention_in_10'])   # 10日內6日
+                if result['attention_in_30'] >= 1:
+                    routes.append(12 - result['attention_in_30'])  # 30日內12日
+                routes = [r for r in routes if r is not None and r >= 0]
+                if routes:
+                    dtd = min(routes)
+                    result['days_to_disposition'] = dtd
+                    if result['attention_today'] and result['risk_level'] not in ('disposed', 'attention'):
+                        if dtd <= 1:
+                            result['reasons'].append(f'⏳ 連續達標 {consec} 天，最快明日可能被處置！')
+                            result['risk_level'] = 'warning'
+                        else:
+                            result['reasons'].append(f'⏳ 已達注意標準（連續{consec}天），若持續最快剩 {dtd} 個交易日處置')
+                            if result['risk_level'] == 'clear':
                                 result['risk_level'] = 'warning'
         except Exception:
             pass
@@ -197,7 +317,7 @@ def check_disposition_risk(stock_code):
     level_labels = {
         'disposed':  '🔴🔴 處置股（禁止進場）',
         'attention': '🔴 注意股（極高風險）',
-        'warning':   '⚠️ 處置風險高（接近或已達觸發門檻）',
+        'warning':   '⚠️ 處置風險高（已達或接近觸發門檻）',
         'watch':     '🟡 接近注意門檻（留意追蹤）',
         'clear':     '',
     }
@@ -627,8 +747,12 @@ def main():
                 dr = a['disposition_risk']
                 p6  = f"6日{dr['6d_pct']:+.1f}%" if dr.get('6d_pct') is not None else ''
                 p30 = f"30日{dr['30d_pct']:+.1f}%" if dr.get('30d_pct') is not None else ''
-                pcts = ' / '.join(x for x in [p6, p30] if x)
-                print(f"   • {a['stock_name']}({a['stock_code']}): {pcts}  {dr['label']}")
+                trn = f"週轉{dr['turnover_today']:.1f}%" if dr.get('turnover_today') is not None else ''
+                pcts = ' / '.join(x for x in [p6, p30, trn] if x)
+                cd = ''
+                if dr.get('attention_today') and dr.get('days_to_disposition') is not None:
+                    cd = f" ⏳連{dr['consecutive_attention']}天/最快剩{dr['days_to_disposition']}天處置"
+                print(f"   • {a['stock_name']}({a['stock_code']}): {pcts}  {dr['label']}{cd}")
 
     total_alerts = len(alerts['level4']) + len(alerts['level3']) + len(alerts['level2']) + len(alerts['level1'])
     total_unknown = len(alerts['unknown'])

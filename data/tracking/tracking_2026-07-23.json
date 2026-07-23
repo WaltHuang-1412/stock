@@ -58,6 +58,23 @@
     {"stock_code": "2313", "stock_name": "華通", "rating": "續抱觀察", "note": "PCB, 續抱"},
     {"stock_code": "3090", "stock_name": "日電貿", "rating": "續抱觀察", "note": "續抱"}
   ],
+  "intraday_update": {
+    "time": "2026-07-23 12:30",
+    "track_a_status": [
+      {"stock_code": "2377", "recommend_price": 155.0, "intraday_price": 149.0, "change_pct": -3.87, "stop_loss": 139.5, "reversal": "L0", "action": "續抱", "note": "法人+12,965連買3天,站穩MA5/MA10,高點回落-5.7%留意"},
+      {"stock_code": "2353", "recommend_price": 30.5, "intraday_price": 30.10, "change_pct": -1.31, "stop_loss": 27.45, "reversal": "L0", "action": "續抱", "note": "法人+4,510連買3天,站穩MA5,跌破MA10留意"},
+      {"stock_code": "2301", "recommend_price": 218.0, "intraday_price": 215.0, "change_pct": -1.38, "stop_loss": 196.2, "reversal": "L0", "action": "續抱", "note": "法人+7,093,站穩MA5,籌碼健康"},
+      {"stock_code": "2317", "recommend_price": 246.0, "intraday_price": 254.0, "change_pct": 3.25, "stop_loss": 233.7, "reversal": "L0", "action": "續抱", "note": "沿用追蹤D1,法人+18,162最大買超,距目標僅+2.4%"},
+      {"stock_code": "2618", "recommend_price": 41.2, "intraday_price": 40.7, "change_pct": -1.21, "stop_loss": 37.08, "reversal": "L0", "action": "續抱", "note": "沿用追蹤D2,ModuleA L3連買,法人+8,520健康"},
+      {"stock_code": "2382", "recommend_price": 324.0, "intraday_price": 331.5, "change_pct": 2.31, "stop_loss": 307.8, "reversal": "L4", "action": "出場訊號", "note": "沿用追蹤D1,法人反轉L4爆量賣超-2,375(佔日均量14.5%),依規則強制停損無例外,建議+2.3%小賺出場,近5天外資+15K為矛盾訊號"}
+    ],
+    "track_b_recommendations": [],
+    "track_b_observations": [
+      {"stock_code": "9103", "stock_name": "美德醫療-DR", "intraday_price": 5.7, "change_pct": 4.0, "detector_score": 60, "excluded_reason": "今日漲幅+4.0%>3%+近5日已漲+12.4%已大漲+醫療DR低價股無催化對齊(今日最強催化AI伺服器),反轉L0/外資持股比+0.47%正向但漲幅門檻硬性排除"},
+      {"stock_code": "3450", "stock_name": "聯鈞", "intraday_price": 472.0, "change_pct": 3.7, "detector_score": 50, "excluded_reason": "今日漲幅+3.7%>3%+處置風險高(週轉率10.5%連1天最快剩2交易日)+10日三大累計-835負(外資-1,428)+動能爆發+153%追高+反轉狀態不明"}
+    ],
+    "track_b_conclusion": "今日無盤中新推薦(偵測器2檔訊號皆因漲幅超標/處置風險/動能爆發排除,依v8.2禁止湊數)"
+  },
   "excluded_notables": [
     {"stock_code": "2603", "stock_name": "長榮", "reason": "評分68(<70), EPS -72.2%連3季負(-5)+營收連衰退10月, 航運基本面雙弱"},
     {"stock_code": "2615", "stock_name": "萬海", "reason": "評分56, 動能+63.1%(-10)+EPS/營收弱"},
