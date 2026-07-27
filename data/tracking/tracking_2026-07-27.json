@@ -92,5 +92,25 @@
     {"stock_code": "2603", "stock_name": "長榮", "reason": "真連買僅1天(不足)+EPS連3季負成長-5+毛利率-8.2pp，籌碼與基本面雙弱，不推薦"},
     {"stock_code": "2886", "stock_name": "兆豐金", "reason": "真連買僅1天+外資累計-12K(外資賣)+動能-92.8%，法人態度轉弱，不推薦"},
     {"stock_code": "2891", "stock_name": "中信金", "reason": "真連買僅1天+動能-74.0%+vs_ma20-5.1%(價格位置3分月季雙線下)，不推薦"}
-  ]
+  ],
+  "intraday": {
+    "analysis_time": "2026-07-27 12:30",
+    "track_a_intraday": [
+      {"stock_code": "3045", "intraday_price": 114.0, "change_pct": 0.44, "reversal": "L0", "action": "續抱"},
+      {"stock_code": "2883", "intraday_price": 30.75, "change_pct": 0.33, "reversal": "L0", "action": "續抱"},
+      {"stock_code": "2412", "intraday_price": 140.5, "change_pct": 1.08, "reversal": "L0", "action": "續抱"},
+      {"stock_code": "4904", "intraday_price": 107.0, "change_pct": 1.42, "reversal": "L0", "action": "續抱"},
+      {"stock_code": "2881", "intraday_price": 129.5, "change_pct": 1.57, "reversal": "L0", "action": "續抱"},
+      {"stock_code": "1402", "intraday_price": 27.7, "change_pct": 1.28, "reversal": "L0", "action": "續抱"}
+    ],
+    "track_a_exit_summary": "6檔全數續抱，無觸停損/連續重挫/法人反轉；risk-off日防禦股(電信/金融/紡織)逆勢收紅",
+    "track_b_recommendations": [],
+    "track_b_conclusion": "今日無盤中新建倉推薦。最強候選2884玉山金已在追蹤中(07-21進場@35.85/D4/10)依規則不重複建倉；偵測器強訊號6166凌華動能>+100%(90日+141.5%)+處置風險最快明日處置→一票否決排除；其餘法人強買標的今日多為falling knife(半導體/航運/塑化重挫)不宜新建倉",
+    "track_b_observations": [
+      {"stock_code": "2884", "stock_name": "玉山金", "note": "⏳已在追蹤中(07-21@35.85/目標38.7/停損32.27/D4/10)，今日五維再入選~86(真連買10天+外資投信同步+動能-22.4%+EPS+56%)，維持原進場/停損不重複建倉，現價36.35(+1.4%)續抱"},
+      {"stock_code": "3034", "stock_name": "聯詠", "note": "五維~78過門檻(真連買10天+動能-44.3%+近5天5買0賣)，但半導體/面板risk-off崩跌(費半-4.25%/友達-7.84%)+EPS連4季衰退-28.4%，環境逆風，觀察不建倉"},
+      {"stock_code": "2890", "stock_name": "永豐金", "note": "外資持股比週減-0.11%(-3)+真連買僅1天(投信買外資賣對決)+vs_ma20-0.3%，訊號較弱，觀察"},
+      {"stock_code": "6166", "stock_name": "凌華", "note": "偵測器強訊號75依規則納入評分→排除：90日+141.5%/6日+25.5%動能>100%追高+處置風險高最快明日處置，今日-9.9%為過熱回落非佈局"}
+    ]
+  }
 }
