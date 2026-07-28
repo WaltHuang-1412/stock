@@ -56,8 +56,12 @@
       "actual_close": 218.0,
       "close_price": 218.0,
       "change_percent": 0.0,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤218.0 (+0.0% vs推薦218.0) | 反轉L0 | 未觸停損續抱"
+      "result": "fail",
+      "holding_status": null,
+      "settled_date": "2026-07-28",
+      "settled_price": 196.5,
+      "pnl_pct": -9.86,
+      "fail_reason": "T86 07-27爆量賣超-2,273張(佔日均量16.6%)反轉Level 4，依盤中出場鐵律以196.5強制停損；今日再跌-7.3%跌破MA5/MA10、5日高點回落-14.2%，AI PC/電源族群補跌"
     }
   ],
   "reactivated_tracking": [

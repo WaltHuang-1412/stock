@@ -16,6 +16,9 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 85,
+      "intraday_price": 25.9,
+      "intraday_change_pct": -0.19,
+      "intraday_strategy": "✅ 續抱：反轉L0籌碼健康（T86 07-27 +17,788張），距停損9.8%無出場訊號",
       "reason": "訊號A L2(動能-25.6%+真連買3天+累計+67K)、avgR10.5 TOP11、佔成交77.2%法人主導、EPS YoY+50%(+5)、外資近5日+27K、FOMC🔴利率決議週金融防禦、月線上+季線上雙確認、反轉Level 0"
     },
     {
@@ -29,35 +32,95 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 76,
+      "intraday_price": 21.75,
+      "intraday_change_pct": 0.69,
+      "intraday_strategy": "✅ 續抱：反轉L0（T86 07-27 +1,817張），D0小漲+0.7%，油價利多發酵中",
       "reason": "美伊停火油價WTI大跌(今日新催化)+航空暑假旺季🟡、動能-73.4%佈局完成(+15)、營收YoY+41.5%、EPS+3毛利+2pp改善、外資近5日+2.4K≥0、反轉Level 0、月季雙線上；⚠️avgR46.5法人層級弱+真連買僅1天故降倉位"
     }
   ],
-  "track_b_recommendations": [],
-  "track_b_observations": [
+  "track_b_recommendations": [
     {
       "stock_code": "2834",
       "stock_name": "臺企銀",
-      "reason": "78分過門檻(訊號A L2動能-34.8%+avgR12.5+佔成交46%)，但新建倉產業≤50%硬規則下與合庫金同質官股金融擇強保留合庫金，列觀察；若盤中金融輪動延續可依盤中流程重評"
-    },
+      "industry": "金融",
+      "recommend_price": 18.05,
+      "target_price": 19.5,
+      "stop_loss_pct": -5,
+      "stop_loss": 17.15,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 78,
+      "recommend_time": "intraday",
+      "reason": "盤前78分過門檻（訊號A L2動能-34.8%+真連買2天+累計+25K+avgR12.5+佔成交46%、外資持股比-3已計、反轉L0），盤前因與合庫金同質產業集中控管暫列觀察；今日官股金融輪動確立（彰銀+3.4%/華南金+5.1%/第一金+5.6%/台中銀+2.2%）而臺企銀-0.8%落後未反映，且昨日T86 +21,283張為官股銀行買超最大，符合『買了還沒漲』盤中進場條件"
+    }
+  ],
+  "track_b_observations": [
     {
       "stock_code": "2882",
       "stock_name": "國泰金",
-      "reason": "今日D10結算success後再入選77分，惟動能+63.1%轉正(-10)+5日+4.8%接近已反映+金融新倉產業集中度控管，列觀察不重複進場"
+      "reason": "77分過門檻但今日即D10到期日、以今日收盤結算（盤中95.8<推薦96.7趨向fail），結算前仍屬holding不重複建倉；⚠️盤前報告誤用07-27收盤98.5提前判success，正確結算須待今日收盤，盤後必須修正"
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "reason": "訊號A L2+動能-43.4%+累計+52K+反轉L0，但avgR25較弱且EPS連2季YoY負成長(-5)，比照2834基準推算約72分未達盤中75門檻，列觀察"
+    },
+    {
+      "stock_code": "2009",
+      "stock_name": "第一銅",
+      "reason": "盤中偵測器唯一強訊號(60分,量比2.97x)，依規則納入評分後排除：真連續買超僅1天(偵測器連買5天係不同口徑)、10日累計僅+187張、動能+247.2%>100%一票否決，無超強催化覆寫條件"
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "reason": "已轉為盤中新推薦（見track_b_recommendations），官股金融輪動延續依盤前預留條件重評進場"
     },
     {
       "stock_code": "1101",
       "stock_name": "台泥",
-      "reason": "訊號A L2+動能-35.6%但EPS連4季YoY負成長(-5)且水泥無今日最強催化對應，準確率篩選催化對齊不通過，列觀察"
+      "reason": "沿用盤前排除：EPS連4季YoY負成長(-5)且水泥無今日最強催化對應，準確率篩選催化對齊不通過；今日+1.0%",
+      "carried_from": "before_market"
     },
     {
       "stock_code": "3491",
       "stock_name": "昇達科",
-      "reason": "CPO量產+Q2 EPS4.47年增330%+營收+5，但上櫃無T86法人數據無法驗證法人未出貨，外資持股比週減-0.38%，vs_ma20-8.2%雙線下，列觀察"
+      "reason": "沿用盤前排除：上櫃無T86法人數據無法驗證法人未出貨，外資持股比週減-0.38%，雙線下",
+      "carried_from": "before_market"
     },
     {
       "stock_code": "4979",
       "stock_name": "華星光",
-      "reason": "CPO量產題材(TrendForce報告點名)，但上櫃無T86法人數據、外資持股比週減-1.46%、5日+31.9%已大漲，列觀察"
+      "reason": "沿用盤前排除：上櫃無T86、外資持股比週減-1.46%、5日+31.9%已大漲",
+      "carried_from": "before_market"
+    }
+  ],
+  "intraday_exits": [
+    {
+      "stock_code": "2301",
+      "stock_name": "光寶科",
+      "from_tracking": "2026-07-23",
+      "recommend_price": 218.0,
+      "exit_price": 196.5,
+      "pnl_pct": -9.86,
+      "exit_reason": "反轉Level 4爆量賣超（T86 07-27 -2,273張佔日均量16.6%）強制停損鐵律；今日-7.3%跌破MA5/MA10、5日高點回落-14.2%，現價距-10%停損價196.2僅0.15%"
+    },
+    {
+      "stock_code": "2105",
+      "stock_name": "正新",
+      "from_tracking": "2026-07-15",
+      "recommend_price": 32.65,
+      "exit_price": 30.85,
+      "pnl_pct": -5.51,
+      "exit_reason": "反轉Level 4爆量賣超（T86 07-27 -1,086張佔日均量18.6%）強制停損鐵律；D9到期前一日、無催化無反彈動能"
+    },
+    {
+      "stock_code": "2324",
+      "stock_name": "仁寶",
+      "from_tracking": "2026-07-20",
+      "recommend_price": 36.0,
+      "exit_price": 35.05,
+      "pnl_pct": -2.64,
+      "exit_reason": "反轉Level 4爆量賣超（T86 07-27 -2,715張佔日均量7.9%）強制停損鐵律；今日-5.8%代工族群隨AI伺服器鏈回檔"
     }
   ]
 }
