@@ -20,8 +20,11 @@
       "actual_close": 152.0,
       "close_price": 152.0,
       "change_percent": -1.9,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤152.0 (-1.9% vs推薦155.0) | 反轉L0 | 未觸停損續抱"
+      "result": "fail",
+      "settled_date": "2026-07-28",
+      "settled_price": 139.0,
+      "holding_days": 3,
+      "fail_reason": "D3收盤139.0 ≤ 停損139.5（-10.3%）觸停損結算；07-27盤中曾距停損僅0.7%示警，07-28 AI伺服器鏈續回檔（廣達/鴻海/宏碁同步走弱）跌破停損。推薦時扣分項（營收月增-23.7%/外資持股比-0.33%）已預警動能疑慮"
     },
     {
       "stock_code": "2353",

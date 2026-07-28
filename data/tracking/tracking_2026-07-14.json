@@ -55,8 +55,11 @@
       "actual_close": 96.1,
       "close_price": 96.1,
       "change_percent": -0.62,
-      "result": "holding",
-      "holding_status": "D0/10 收盤96.1(-0.62%) | 距目標105約9.3% | 距停損87.03約9.4% | 金融群穩健續抱"
+      "result": "fail",
+      "settled_date": "2026-07-28",
+      "settled_price": 95.4,
+      "holding_days": 10,
+      "fail_reason": "D10到期（2026-07-28）收盤95.4 ≤ 推薦96.7，-1.3% fail；期間最高98.5未達目標105、最低未觸停損87.03，屬到期未漲結算。註：07-28盤前報告曾誤用D9(07-27)收盤98.5提前判success，盤後依正確口徑（到期日收盤）修正為fail，未寫入帳務前即攔截"
     },
     {
       "stock_code": "2634",

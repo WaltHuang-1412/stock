@@ -19,7 +19,12 @@
       "intraday_price": 25.9,
       "intraday_change_pct": -0.19,
       "intraday_strategy": "✅ 續抱：反轉L0籌碼健康（T86 07-27 +17,788張），距停損9.8%無出場訊號",
-      "reason": "訊號A L2(動能-25.6%+真連買3天+累計+67K)、avgR10.5 TOP11、佔成交77.2%法人主導、EPS YoY+50%(+5)、外資近5日+27K、FOMC🔴利率決議週金融防禦、月線上+季線上雙確認、反轉Level 0"
+      "reason": "訊號A L2(動能-25.6%+真連買3天+累計+67K)、avgR10.5 TOP11、佔成交77.2%法人主導、EPS YoY+50%(+5)、外資近5日+27K、FOMC🔴利率決議週金融防禦、月線上+季線上雙確認、反轉Level 0",
+      "actual_close": 25.95,
+      "close_price": 25.95,
+      "change_percent": 0.0,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤25.95(+0.0% vs推薦25.95) | 距目標7.9% | 距停損10.0% | 反轉L0續抱"
     },
     {
       "stock_code": "2646",
@@ -35,7 +40,12 @@
       "intraday_price": 21.75,
       "intraday_change_pct": 0.69,
       "intraday_strategy": "✅ 續抱：反轉L0（T86 07-27 +1,817張），D0小漲+0.7%，油價利多發酵中",
-      "reason": "美伊停火油價WTI大跌(今日新催化)+航空暑假旺季🟡、動能-73.4%佈局完成(+15)、營收YoY+41.5%、EPS+3毛利+2pp改善、外資近5日+2.4K≥0、反轉Level 0、月季雙線上；⚠️avgR46.5法人層級弱+真連買僅1天故降倉位"
+      "reason": "美伊停火油價WTI大跌(今日新催化)+航空暑假旺季🟡、動能-73.4%佈局完成(+15)、營收YoY+41.5%、EPS+3毛利+2pp改善、外資近5日+2.4K≥0、反轉Level 0、月季雙線上；⚠️avgR46.5法人層級弱+真連買僅1天故降倉位",
+      "actual_close": 21.8,
+      "close_price": 21.8,
+      "change_percent": 0.9,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤21.8(+0.9% vs推薦21.6) | 距目標7.8% | 距停損10.8% | 反轉L0續抱"
     }
   ],
   "track_b_recommendations": [
@@ -51,7 +61,12 @@
       "position": "5-10%",
       "score": 78,
       "recommend_time": "intraday",
-      "reason": "盤前78分過門檻（訊號A L2動能-34.8%+真連買2天+累計+25K+avgR12.5+佔成交46%、外資持股比-3已計、反轉L0），盤前因與合庫金同質產業集中控管暫列觀察；今日官股金融輪動確立（彰銀+3.4%/華南金+5.1%/第一金+5.6%/台中銀+2.2%）而臺企銀-0.8%落後未反映，且昨日T86 +21,283張為官股銀行買超最大，符合『買了還沒漲』盤中進場條件"
+      "reason": "盤前78分過門檻（訊號A L2動能-34.8%+真連買2天+累計+25K+avgR12.5+佔成交46%、外資持股比-3已計、反轉L0），盤前因與合庫金同質產業集中控管暫列觀察；今日官股金融輪動確立（彰銀+3.4%/華南金+5.1%/第一金+5.6%/台中銀+2.2%）而臺企銀-0.8%落後未反映，且昨日T86 +21,283張為官股銀行買超最大，符合『買了還沒漲』盤中進場條件",
+      "actual_close": 18.1,
+      "close_price": 18.1,
+      "change_percent": 0.3,
+      "result": "holding",
+      "holding_status": "D0/10 | 收盤18.1(+0.3% vs推薦18.05) | 距目標7.7% | 距停損5.2% | 反轉L0續抱"
     }
   ],
   "track_b_observations": [
@@ -122,5 +137,157 @@
       "pnl_pct": -2.64,
       "exit_reason": "反轉Level 4爆量賣超（T86 07-27 -2,715張佔日均量7.9%）強制停損鐵律；今日-5.8%代工族群隨AI伺服器鏈回檔"
     }
-  ]
+  ],
+  "yesterday_verification": {
+    "accuracy": 58.7,
+    "settled_total": 489,
+    "success": 287,
+    "fail": 202,
+    "holding": 190,
+    "note": "今日結算7筆：盤中L4鐵律出場3檔fail(2301光寶科-9.86%/2105正新-5.51%/2324仁寶-2.64%，出場價全數優於收盤+0.5%~+1.3%驗證鐵律有效)；2882國泰金D10到期收盤95.4≤96.7 fail -1.3%(修正盤前D9誤判)；2377微星D3收盤139.0≤停損139.5 fail -10.3%；另補結算06-10殭屍2筆success(2886兆豐金+7.1%/5880合庫金+5.2%，D10@06-25)。大盤重挫-4.65%日，金融/防禦持平抗跌、電子重挫，今日3檔新推薦(防禦+航空)全數持平以上。",
+    "results": [
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "result": "holding",
+        "recommend_price": 25.95,
+        "close_price": 25.95,
+        "change_percent": 0.0,
+        "note": "D0/10，反轉L0，大盤-4.65%日持平，續抱"
+      },
+      {
+        "stock_code": "2646",
+        "stock_name": "星宇航空",
+        "result": "holding",
+        "recommend_price": 21.6,
+        "close_price": 21.8,
+        "change_percent": 0.9,
+        "note": "D0/10，反轉L0，油價利多逆勢收紅，續抱"
+      },
+      {
+        "stock_code": "2834",
+        "stock_name": "臺企銀",
+        "result": "holding",
+        "recommend_price": 18.05,
+        "close_price": 18.1,
+        "change_percent": 0.3,
+        "note": "盤中新推薦D0/10，反轉L0，逆勢收紅，續抱"
+      },
+      {
+        "stock_code": "2882",
+        "stock_name": "國泰金",
+        "result": "fail",
+        "recommend_price": 96.7,
+        "close_price": 95.4,
+        "change_percent": -1.3,
+        "note": "07-14推薦D10到期，收盤95.4≤推薦96.7結算fail；修正盤前誤用D9收盤98.5之誤判"
+      },
+      {
+        "stock_code": "2377",
+        "stock_name": "微星",
+        "result": "fail",
+        "recommend_price": 155.0,
+        "close_price": 139.0,
+        "change_percent": -10.3,
+        "note": "07-23推薦D3收盤139.0≤停損139.5觸停損fail"
+      },
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "result": "success",
+        "recommend_price": 43.55,
+        "close_price": 46.65,
+        "change_percent": 7.1,
+        "note": "06-10推薦殭屍holding補結算，D10@06-25收盤46.65>43.55 success"
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金(06-10)",
+        "result": "success",
+        "recommend_price": 23.85,
+        "close_price": 25.1,
+        "change_percent": 5.2,
+        "note": "06-10推薦殭屍holding補結算，D10@06-25收盤25.1>23.85 success"
+      }
+    ]
+  },
+  "removed_stocks": [
+    {
+      "stock_code": "2377",
+      "stock_name": "微星",
+      "reason": "D3收盤139.0≤停損139.5(-10.3%)機械停損結算fail；07-27盤中已示警距停損0.7%"
+    },
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "reason": "D10到期收盤95.4≤推薦96.7(-1.3%)結算fail；明日起若T86續強可依正常流程重新評分"
+    },
+    {
+      "stock_code": "2009",
+      "stock_name": "第一銅",
+      "reason": "盤中偵測器強訊號依規則評分後排除：真連續買超僅1天、累計+187張極小量、動能+247%>100%一票否決"
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "reason": "約72分未達盤中75門檻：avgR25法人層級弱+EPS連2季YoY負成長(-5)，列明日觀察"
+    }
+  ],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "industry": "金融",
+      "recommend_price": 25.95,
+      "target_price": 28.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 23.355,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 85,
+      "action": "續抱D0→D1",
+      "reason": "訊號A L2+真連買3天+累計+67K+avgR10.5、FOMC利率決議週金融防禦、反轉L0；營收YoY+17.5%回檔僅1.0%(不加分)/外資持股比-0.02%(不調整)；維持原進場不重複建倉"
+    },
+    {
+      "stock_code": "2646",
+      "stock_name": "星宇航空",
+      "industry": "航空",
+      "recommend_price": 21.6,
+      "target_price": 23.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 19.44,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 76,
+      "action": "續抱D0→D1",
+      "reason": "油價WTI-8%美伊停火成本利多發酵、動能-73.4%佈局完成、反轉L0、大盤-4.65%日逆勢+0.9%；營收YoY+41.5%回檔-0.9%(不加分)/外資持股比+0.03%(不調整)；維持原進場不重複建倉"
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "industry": "金融",
+      "recommend_price": 18.05,
+      "target_price": 19.5,
+      "stop_loss_pct": -5,
+      "stop_loss": 17.15,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 78,
+      "action": "續抱D0→D1",
+      "reason": "官股金融輪動落後補漲邏輯、訊號A L2+累計+25K、反轉L0；營收YoY-4.6%(不調整)/外資持股比-0.14%(-3已計入78分)；盤中推薦停損-5%維持17.15不重複建倉"
+    }
+  ],
+  "tomorrow_observations": [
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "reason": "訊號A L2+動能-43.4%+累計+52K+反轉L0，但EPS連2季負成長(-5)+avgR25，約72分；明日若T86法人加碼升層級可重評"
+    },
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "reason": "今日D10結算fail後解除holding，77分曾過門檻；明日T86若續買可依正常流程重新評分（注意法人現身門檻：不在TOP50買超×乖離0~+5%則不推）"
+    }
+  ],
+  "tomorrow_note": "大盤單日-4.65%重挫收41,603，金融/電信/食品抗跌、電子重挫（鴻海-5.9%/微星-5.1%/宏碁-4.2%）。FOMC 7/29利率決議+MSFT/META 7/30+AAPL/AMZN 7/31財報週，觀望氣氛濃。明日重點：①鴻海/廣達距停損僅1.8%，電子續挫即機械停損不猶豫；②近目標監控第一金(2.0%)/華南金(2.8%)/三商壽(2.9%)/兆豐金track_b(3.5%)/彰銀(4.3%)；③重挫次日不搶反彈、不預先新建倉，待今晚美股+明晨T86 07-28確認官股金融是否續買再定；④v8.2禁止湊數。"
 }
