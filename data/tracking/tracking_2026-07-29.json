@@ -30,7 +30,11 @@
       "intraday_change_pct": -3.22,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "intraday_note": "D0 -3.22% 大盤-4.8%重挫日相對抗跌；T86 07-28法人+5,952買超、反轉L0；距停損67.14尚有7.0%"
+      "intraday_note": "D0 -3.22% 大盤-4.8%重挫日相對抗跌；T86 07-28法人+5,952買超、反轉L0；距停損67.14尚有7.0%",
+      "actual_close": 74.8,
+      "close_price": 74.8,
+      "change_percent": 0.27,
+      "holding_status": "D0/10 收盤74.8(+0.3%) | 距目標80.5約7.6% | 距停損67.14約10.2% | 重挫日守穩，尾盤翻紅"
     },
     {
       "stock_code": "5876",
@@ -50,7 +54,11 @@
       "intraday_change_pct": -0.23,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "intraday_note": "D0 -0.23% 極抗跌（大盤-4.8%）；T86 07-28法人+4,631買超、訊號A L3；距停損39.51尚有9.8%"
+      "intraday_note": "D0 -0.23% 極抗跌（大盤-4.8%）；T86 07-28法人+4,631買超、訊號A L3；距停損39.51尚有9.8%",
+      "actual_close": 44.35,
+      "close_price": 44.35,
+      "change_percent": 1.03,
+      "holding_status": "D0/10 收盤44.35(+1.0%) | 距目標47.4約6.9% | 距停損39.51約10.9% | 極抗跌，訊號A L3持續"
     },
     {
       "stock_code": "2603",
@@ -70,7 +78,11 @@
       "intraday_change_pct": -0.75,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "intraday_note": "D0 -0.75% 抗跌；T86 07-28法人+1,914小買、累計+33K、反轉L0；中東地緣催化持續；距停損180.0尚有9.3%"
+      "intraday_note": "D0 -0.75% 抗跌；T86 07-28法人+1,914小買、累計+33K、反轉L0；中東地緣催化持續；距停損180.0尚有9.3%",
+      "actual_close": 201.5,
+      "close_price": 201.5,
+      "change_percent": 0.75,
+      "holding_status": "D0/10 收盤201.5(+0.8%) | 距目標216.0約7.2% | 距停損180.0約10.7% | 中東地緣催化持續"
     }
   ],
   "observations": [
@@ -280,5 +292,219 @@
       "result": "fail",
       "reason": "L4鐵律D1出場（-7,018張佔14.5%）"
     }
-  ]
+  ],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "industry": "塑化",
+      "recommend_price": 74.6,
+      "target_price": 80.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 67.14,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 86,
+      "action": "續抱D0→D1",
+      "reason": "油價低檔+防禦塑化、訊號A L2、反轉L0+5,952買超；大盤-3.76%日逆勢+0.3%尾盤翻紅；營收YoY+2.1%(不調整)/外資持股比+0.02%(不調整)；維持原進場74.6不重複建倉"
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "industry": "金融",
+      "recommend_price": 43.9,
+      "target_price": 47.4,
+      "stop_loss_pct": -10,
+      "stop_loss": 39.51,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 79,
+      "action": "續抱D0→D1",
+      "reason": "訊號A L3佈局完成、反轉L0+4,631買超、兩日崩跌極抗跌(-0.2%/+1.0%)；金融系統性調節下唯一逆勢金融；維持原進場43.9不重複建倉；明日盤前v8.2.1全持倉掃描確認L4未現"
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "industry": "航運",
+      "recommend_price": 200.0,
+      "target_price": 216.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 180.0,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "action": "續抱D0→D1",
+      "reason": "中東地緣催化持續、反轉L0+1,914買超、重挫日逆勢+0.8%；維持原進場200.0不重複建倉"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航(07-15筆)",
+      "reason": "D10到期收盤41.45>推薦40.8(+1.59%)結算success；07-21另筆D6續抱中"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "reason": "D9 L4鐵律盤中34.35獲利出場(+3.78%)結算success"
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "reason": "D7 L4鐵律盤中24.10獲利出場(+0.84%)結算success"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "reason": "D5觸停損233.7+L4雙訊號，232.5出場(-5.49%)結算fail"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "reason": "D5觸停損307.8純機械停損，302.5出場(-6.64%)結算fail；法人仍買超屬假觸發風險，回測支持鐵律不修"
+    },
+    {
+      "stock_code": "2353",
+      "stock_name": "宏碁",
+      "reason": "D4 L4鐵律27.80出場(-8.85%)結算fail（未觸停損但鐵律優先）"
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "reason": "D2 L4鐵律121.0出場(-5.10%)結算fail；金融系統性調節"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "開發金",
+      "reason": "D2 L4鐵律28.55出場(-6.85%)結算fail；金融系統性調節"
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "reason": "D1 L4鐵律17.75出場(-1.66%)結算fail；盤中推薦當日法人反手出貨"
+    },
+    {
+      "stock_code": "1101",
+      "stock_name": "台泥",
+      "reason": "盤中最高分80仍敗於準確率篩選『催化對齊』；列明日觀察，需催化對齊+T86 07-29續現身"
+    }
+  ],
+  "yesterday_verification": {
+    "accuracy": 58.2,
+    "settled_total": 498,
+    "success": 290,
+    "fail": 208,
+    "holding": 184,
+    "note": "今日結算9筆(3s/6f)：2618長榮航07-15筆D10到期收盤41.45>40.8 success +1.59%；盤中L4鐵律/機械停損8筆=2892第一金+3.78%s/2801彰銀+0.84%s/2317鴻海-5.49%f(觸停損+L4)/2382廣達-6.64%f(純觸價)/2353宏碁-8.85%f/2881富邦金-5.10%f/2883開發金-6.85%f/2834臺企銀-1.66%f。尾盤反彈使8筆出場價全數劣於收盤1.1~3.0%(昨日相反)，鐵律價值在紀律非擇時不修規則。大盤-3.76%連2日重挫，今日D0三檔逆勢全紅。",
+    "results": [
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "result": "holding",
+        "recommend_price": 74.6,
+        "close_price": 74.8,
+        "change_percent": 0.3,
+        "note": "D0/10，反轉L0+5,952買超，大盤-3.76%日逆勢收紅，續抱"
+      },
+      {
+        "stock_code": "5876",
+        "stock_name": "上海商銀",
+        "result": "holding",
+        "recommend_price": 43.9,
+        "close_price": 44.35,
+        "change_percent": 1.0,
+        "note": "D0/10，訊號A L3，兩日崩跌極抗跌，續抱"
+      },
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "result": "holding",
+        "recommend_price": 200.0,
+        "close_price": 201.5,
+        "change_percent": 0.8,
+        "note": "D0/10，中東地緣催化持續，逆勢收紅，續抱"
+      },
+      {
+        "stock_code": "2618",
+        "stock_name": "長榮航(07-15筆)",
+        "result": "success",
+        "recommend_price": 40.8,
+        "close_price": 41.45,
+        "change_percent": 1.59,
+        "note": "D10到期收盤41.45>推薦40.8結算success；連兩日大盤重挫仍守正報酬"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "result": "success",
+        "recommend_price": 33.1,
+        "close_price": 34.8,
+        "change_percent": 3.78,
+        "note": "D9 L4鐵律盤中34.35獲利出場+3.78%（收盤34.8）"
+      },
+      {
+        "stock_code": "2801",
+        "stock_name": "彰銀",
+        "result": "success",
+        "recommend_price": 23.9,
+        "close_price": 24.45,
+        "change_percent": 0.84,
+        "note": "D7 L4鐵律盤中24.10獲利出場+0.84%（收盤24.45）"
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "result": "fail",
+        "recommend_price": 246.0,
+        "close_price": 237.0,
+        "change_percent": -5.49,
+        "note": "D5觸停損233.7+L4雙訊號232.5出場（收盤237.0）"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "result": "fail",
+        "recommend_price": 324.0,
+        "close_price": 309.5,
+        "change_percent": -6.64,
+        "note": "D5觸停損307.8純機械停損302.5出場（收盤309.5，假觸發風險回測支持不修）"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "result": "fail",
+        "recommend_price": 30.5,
+        "close_price": 28.65,
+        "change_percent": -8.85,
+        "note": "D4 L4鐵律27.80出場（未觸停損但鐵律優先）"
+      },
+      {
+        "stock_code": "2881",
+        "stock_name": "富邦金",
+        "result": "fail",
+        "recommend_price": 127.5,
+        "close_price": 123.0,
+        "change_percent": -5.1,
+        "note": "D2 L4鐵律121.0出場；金融系統性調節"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "開發金",
+        "result": "fail",
+        "recommend_price": 30.65,
+        "close_price": 29.15,
+        "change_percent": -6.85,
+        "note": "D2 L4鐵律28.55出場；金融系統性調節"
+      },
+      {
+        "stock_code": "2834",
+        "stock_name": "臺企銀",
+        "result": "fail",
+        "recommend_price": 18.05,
+        "close_price": 17.95,
+        "change_percent": -1.66,
+        "note": "D1 L4鐵律17.75出場；盤中推薦當日法人反手出貨"
+      }
+    ]
+  }
 }

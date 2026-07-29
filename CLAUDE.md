@@ -1,7 +1,7 @@
 # 台股分析執行流程（v8.0 多因子版）
 
-**版本**：v8.2.0
-**更新日期**：2026-07-16
+**版本**：v8.2.1
+**更新日期**：2026-07-29
 **目的**：提供清晰、可執行的盤前/盤中/盤後分析流程
 
 > **v8.2 變更**（依據 2026-07-09 回測 395 筆結算，詳見 `data/backtest/2026-07-09_score_regime/`）：
@@ -185,6 +185,16 @@ python3 scripts/settlement_checker.py --date $(date +%Y-%m-%d)
 1. 已結算：成功/失敗統計 + 特徵延續/避開
 2. 持有中：距目標/停損 + 法人態度 + 催化劑狀態 + 是否續推
 3. 到期：滿10交易日以收盤價結算
+
+**🔴 全持倉反轉掃描（v8.2.1 新增，強制）**：settlement_checker 跑完後，必須以「全部 holding 股票名單」執行 reversal_alert：
+
+```bash
+# holding 名單來自 settlement_checker 輸出，一檔不漏
+python3 scripts/reversal_alert.py [全部holding股票...] --output-dir data/$(date +%Y-%m-%d)
+```
+
+- **L4 者直接列入「開盤出場清單」**，開盤即執行出場，不得等到盤中 12:30 才檢查
+- 禁止只掃候選股+部分持倉。依據：2026-07-29 盤前僅掃部分持倉，5 檔 L4（2892/2801/2881/2883/2834）延遲至盤中才發現，其中 4 檔虧損因延遲擴大
 
 ---
 
@@ -987,5 +997,5 @@ python3 scripts/audit_industry_chains.py
 
 **文件導航**：`docs/README.md` | 歷史教訓：`docs/HISTORICAL_LESSONS.md` | 產業鏈：`data/industry_chains.json`
 
-**最後更新**：2026-07-16
-**版本**：v8.2.0
+**最後更新**：2026-07-29
+**版本**：v8.2.1（盤前 Step 4 新增全持倉反轉掃描：L4 開盤出場，禁止延遲至盤中）
