@@ -25,7 +25,12 @@
       "score": 86,
       "track": "A",
       "reason": "🛤️軌道A＋📶訊號A L2(動能-55.8%/真連買2)；中東超強催化(美軍攔截伊朗突襲、油價反彈約5%、OPEC+傳10月暫停增產)；avgR15.5、單日+5.9K、外資近5天+28K、buy_ratio 19.9%(+1)；EPS YoY+286%(+5)；月季雙線上(價格13)；5日-12.6%深跌+今日油價新催化=跌深反轉進場；Factset目標價上調至90元",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 72.2,
+      "intraday_change_pct": -3.22,
+      "intraday_reversal_level": 0,
+      "intraday_strategy": "續抱",
+      "intraday_note": "D0 -3.22% 大盤-4.8%重挫日相對抗跌；T86 07-28法人+5,952買超、反轉L0；距停損67.14尚有7.0%"
     },
     {
       "stock_code": "5876",
@@ -40,7 +45,12 @@
       "score": 79,
       "track": "A",
       "reason": "📶訊號A由L2升級L3(真連買3/動能-45.1%/累計外資+50K)；昨日盤後預留重評條件成立=T86 07-28法人現身(TOP50第22、+4.6K、外資+7.2K單日最大加碼日)；avgR24、外資近5天+20K、buy_ratio 27%(+2)；外資持股比週+0.31%；FOMC金融受惠(升息機率40%金融獲利動能)；月季雙線上；EPS連2季負(-5)已計",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 43.8,
+      "intraday_change_pct": -0.23,
+      "intraday_reversal_level": 0,
+      "intraday_strategy": "續抱",
+      "intraday_note": "D0 -0.23% 極抗跌（大盤-4.8%）；T86 07-28法人+4,631買超、訊號A L3；距停損39.51尚有9.8%"
     },
     {
       "stock_code": "2603",
@@ -55,7 +65,12 @@
       "score": 73,
       "track": "A",
       "reason": "📶訊號A L3(真連買3/動能-67.4%/累計+44K)；中東地緣超強催化(美軍攔截伊朗突襲、航運運價風險溢價)；avgR29.5、外資近5天+12K、buy_ratio 27.6%(+2)；反轉L0；風險已計價：營收連衰10月(-5)+EPS連3季負(-5)+外資持股比週減(-3)+投信近5天賣超對決→最低倉位帶5-10%",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 198.5,
+      "intraday_change_pct": -0.75,
+      "intraday_reversal_level": 0,
+      "intraday_strategy": "續抱",
+      "intraday_note": "D0 -0.75% 抗跌；T86 07-28法人+1,914小買、累計+33K、反轉L0；中東地緣催化持續；距停損180.0尚有9.3%"
     }
   ],
   "observations": [
@@ -86,11 +101,184 @@
   ],
   "intraday_watch": {
     "l4_exit_check": [
-      {"stock_code": "2317", "stock_name": "鴻海", "note": "反轉L4：T86 07-28賣超-17,039張(佔日均量33.4%)；距停損僅1.8%；今日盤中依L4鐵律強制出場檢查"},
-      {"stock_code": "2353", "stock_name": "宏碁", "note": "反轉L4：T86 07-28賣超-9,825張(佔日均量34.7%)；近5天三大-6,695張；今日盤中依L4鐵律強制出場檢查"}
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "note": "反轉L4：T86 07-28賣超-17,039張(佔日均量33.4%)；距停損僅1.8%；今日盤中依L4鐵律強制出場檢查"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "note": "反轉L4：T86 07-28賣超-9,825張(佔日均量34.7%)；近5天三大-6,695張；今日盤中依L4鐵律強制出場檢查"
+      }
     ],
     "stop_loss_watch": [
-      {"stock_code": "2382", "stock_name": "廣達", "note": "距停損1.8%，反轉L0續抱，觸價即機械停損"}
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "note": "距停損1.8%，反轉L0續抱，觸價即機械停損"
+      }
     ]
-  }
+  },
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "1101",
+      "stock_name": "台泥",
+      "score": 80,
+      "note": "偵測器強訊號80分(連買8天+量比1.21x+TOP30+今日-2.8%)+5分=80≥75，反轉L0、動能-30.2%、avgR10.5、近5天外資+33K；但準確率篩選「催化對齊」不通過（水泥不在今日最強催化鏈，與盤前同判）→不推薦"
+    },
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "score": 61,
+      "note": "中東航運催化對齊、反轉L0、動能-63.8%，但avgR32+真連買1+營收連衰10月(-5)+外資持股比週減(-3)+月季雙線下(價格6)→61<75"
+    },
+    {
+      "stock_code": "2615",
+      "stock_name": "萬海",
+      "score": 63,
+      "note": "催化對齊、動能-41.4%、近5天外資投信同步買，但avgR37.5+真連買1+營收連衰10月(-5)+外資持股比週減(-3)→63<75"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "score": 68,
+      "note": "AI伺服器催化+營收YoY+35%回檔-5.3%(+5)，但月線-8.0%季線下(價格3)+投信近5天-12K對決+真連買1→68<75"
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "score": 65,
+      "note": "avgR11但真連買1+近5天三大-563賣超+月線-6.3%雙線下(價格3)→65<75（與盤前同判）"
+    },
+    {
+      "stock_code": "3703",
+      "stock_name": "欣陸",
+      "score": 50,
+      "note": "偵測器強訊號65分+5、動能-77.6%連買3，但無催化對應+不在TOP50+月季雙線下→50<75"
+    },
+    {
+      "stock_code": "9940",
+      "stock_name": "信義",
+      "score": null,
+      "note": "法人現身門檻：不在當日TOP50買超名單×月線乖離+2.7%(0~+5%)→不推薦（偵測器70分不覆寫）"
+    },
+    {
+      "stock_code": "2849",
+      "stock_name": "安泰銀",
+      "score": null,
+      "note": "法人現身門檻：不在TOP50×乖離+2.2%→不推薦"
+    },
+    {
+      "stock_code": "5007",
+      "stock_name": "三星",
+      "score": null,
+      "note": "法人現身門檻：不在TOP50×乖離+1.1%→不推薦"
+    },
+    {
+      "stock_code": "2540",
+      "stock_name": "愛山林",
+      "score": null,
+      "note": "法人現身門檻：不在TOP50×乖離+4.6%；另營收連衰3月(-5)→不推薦"
+    },
+    {
+      "stock_code": "2538",
+      "stock_name": "基泰",
+      "score": null,
+      "note": "動能+500%爆發→追高排除"
+    },
+    {
+      "stock_code": "5608",
+      "stock_name": "四維航",
+      "score": null,
+      "note": "動能+100.1%>100%→一票否決（累計-1,121為負）"
+    },
+    {
+      "stock_code": "9933",
+      "stock_name": "中鼎",
+      "score": null,
+      "note": "今日-8.9% falling knife（連買10天但股價跳水）→排除"
+    },
+    {
+      "stock_code": "6657",
+      "stock_name": "華安",
+      "score": null,
+      "note": "今日-6.3%下殺中+累計僅+327張規模過小→排除"
+    }
+  ],
+  "intraday_l4_exits": [
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "tracking_date": "2026-07-22",
+      "exit_price": 232.5,
+      "return_pct": -5.49,
+      "result": "fail",
+      "reason": "觸停損233.7+L4雙訊號"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "tracking_date": "2026-07-22",
+      "exit_price": 302.5,
+      "return_pct": -6.64,
+      "result": "fail",
+      "reason": "觸停損307.8機械停損（反轉L0非法人出貨）"
+    },
+    {
+      "stock_code": "2353",
+      "stock_name": "宏碁",
+      "tracking_date": "2026-07-23",
+      "exit_price": 27.8,
+      "return_pct": -8.85,
+      "result": "fail",
+      "reason": "L4鐵律（T86 07-28 -9,825張佔日均量35.5%）"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "tracking_date": "2026-07-16",
+      "exit_price": 34.35,
+      "return_pct": 3.78,
+      "result": "success",
+      "reason": "L4鐵律獲利出場（-4,230張佔12.2%）"
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "tracking_date": "2026-07-20",
+      "exit_price": 24.1,
+      "return_pct": 0.84,
+      "result": "success",
+      "reason": "L4鐵律獲利出場（-2,524張佔8.8%）"
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "tracking_date": "2026-07-27",
+      "exit_price": 121.0,
+      "return_pct": -5.1,
+      "result": "fail",
+      "reason": "L4鐵律（-3,050張佔15.8%）"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "開發金",
+      "tracking_date": "2026-07-27",
+      "exit_price": 28.55,
+      "return_pct": -6.85,
+      "result": "fail",
+      "reason": "L4鐵律（-12,957張佔30.7%）"
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "tracking_date": "2026-07-28",
+      "exit_price": 17.75,
+      "return_pct": -1.66,
+      "result": "fail",
+      "reason": "L4鐵律D1出場（-7,018張佔14.5%）"
+    }
+  ]
 }

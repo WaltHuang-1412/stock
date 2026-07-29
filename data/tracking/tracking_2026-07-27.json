@@ -13,12 +13,60 @@
     "holding": 194,
     "note": "今日6檔盤前推薦皆D0(當日進場)，全數holding未結算；24檔追蹤中無新結算成敗。risk-off半導體重挫日6檔防禦股全數逆勢收紅，防禦策略驗證有效。",
     "results": [
-      {"stock_code": "3045", "stock_name": "台灣大", "result": "holding", "recommend_price": 113.5, "close_price": 113.5, "change_percent": 0.0, "note": "D0/10，反轉L0，續抱"},
-      {"stock_code": "2883", "stock_name": "開發金", "result": "holding", "recommend_price": 30.65, "close_price": 30.7, "change_percent": 0.2, "note": "D0/10，反轉L0，續抱"},
-      {"stock_code": "2412", "stock_name": "中華電", "result": "holding", "recommend_price": 139.0, "close_price": 140.5, "change_percent": 1.1, "note": "D0/10，反轉L0，續抱"},
-      {"stock_code": "4904", "stock_name": "遠傳", "result": "holding", "recommend_price": 105.5, "close_price": 107.5, "change_percent": 1.9, "note": "D0/10，反轉L0，續抱"},
-      {"stock_code": "2881", "stock_name": "富邦金", "result": "holding", "recommend_price": 127.5, "close_price": 130.0, "change_percent": 2.0, "note": "D0/10，反轉L0，續抱"},
-      {"stock_code": "1402", "stock_name": "遠東新", "result": "holding", "recommend_price": 27.35, "close_price": 27.45, "change_percent": 0.4, "note": "D0/10，反轉L0，續抱"}
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "result": "holding",
+        "recommend_price": 113.5,
+        "close_price": 113.5,
+        "change_percent": 0.0,
+        "note": "D0/10，反轉L0，續抱"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "開發金",
+        "result": "holding",
+        "recommend_price": 30.65,
+        "close_price": 30.7,
+        "change_percent": 0.2,
+        "note": "D0/10，反轉L0，續抱"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "result": "holding",
+        "recommend_price": 139.0,
+        "close_price": 140.5,
+        "change_percent": 1.1,
+        "note": "D0/10，反轉L0，續抱"
+      },
+      {
+        "stock_code": "4904",
+        "stock_name": "遠傳",
+        "result": "holding",
+        "recommend_price": 105.5,
+        "close_price": 107.5,
+        "change_percent": 1.9,
+        "note": "D0/10，反轉L0，續抱"
+      },
+      {
+        "stock_code": "2881",
+        "stock_name": "富邦金",
+        "result": "holding",
+        "recommend_price": 127.5,
+        "close_price": 130.0,
+        "change_percent": 2.0,
+        "note": "D0/10，反轉L0，續抱"
+      },
+      {
+        "stock_code": "1402",
+        "stock_name": "遠東新",
+        "result": "holding",
+        "recommend_price": 27.35,
+        "close_price": 27.45,
+        "change_percent": 0.4,
+        "note": "D0/10，反轉L0，續抱"
+      }
     ]
   },
   "recommendations": [
@@ -55,8 +103,14 @@
       "actual_close": 30.7,
       "close_price": 30.7,
       "change_percent": 0.2,
-      "result": "holding",
-      "holding_status": "D0/10，收盤30.7(+0.2%)，距目標+9.1%/距停損10.1%，反轉L0，續抱"
+      "result": "fail",
+      "intraday_price": 28.55,
+      "intraday_change_pct": -6.85,
+      "intraday_strategy": "強制出場",
+      "settled_date": "2026-07-29",
+      "settled_price": 28.55,
+      "holding_days": 2,
+      "fail_reason": "D2 L4出場鐵律：T86 07-28爆量賣超-12,957張（佔日均量30.7%），盤中28.55出場-6.85%（推薦價30.65）"
     },
     {
       "stock_code": "2412",
@@ -109,8 +163,14 @@
       "actual_close": 130.0,
       "close_price": 130.0,
       "change_percent": 2.0,
-      "result": "holding",
-      "holding_status": "D0/10，收盤130.0(+2.0%)，距目標+6.2%/距停損11.7%，反轉L0，金控龍頭領漲，續抱"
+      "result": "fail",
+      "intraday_price": 121.0,
+      "intraday_change_pct": -5.1,
+      "intraday_strategy": "強制出場",
+      "settled_date": "2026-07-29",
+      "settled_price": 121.0,
+      "holding_days": 2,
+      "fail_reason": "D2 L4出場鐵律：T86 07-28爆量賣超-3,050張（佔日均量15.8%），盤中121.0出場-5.10%（推薦價127.5）"
     },
     {
       "stock_code": "1402",
@@ -134,42 +194,196 @@
   "track_a_holdings_status": "settlement_checker 掃描 18 檔追蹤中(holding)，盤前全數未觸停損/目標，續抱追蹤；距目標近者：2317鴻海D3(3.0%)、2892第一金D7(3.5%)、2867三商壽D6(3.7%)、2880華南金D6(4.5%)、2324仁寶D5(4.8%)",
   "my_holdings_addon_eval": "實際持倉7檔(2330台積/6770力積/2337旺宏/2313華通/3090日電貿/1301台塑/4938和碩)皆極小額；今日risk-off半導體/記憶體承壓→6770力積電/2337旺宏留意(記憶體L2龍頭預警)、4938和碩蘋果鏈相對抗跌(蘋果+3.53%逆勢)、1301台塑油價跌成本利多但塑化需求疲弱，均維持觀察不加碼",
   "removed_stocks": [
-    {"stock_code": "2367", "stock_name": "燿華", "reason": "📶訊號B唯一通過基礎篩選(Level0/累計+9556/9買1賣)，但vs_ma20-15.5%深跌+AI硬板今日利空(費半-4.25%)，環境不對，列觀察不推薦"},
-    {"stock_code": "2603", "stock_name": "長榮", "reason": "真連買僅1天(不足)+EPS連3季負成長-5+毛利率-8.2pp，籌碼與基本面雙弱，不推薦"},
-    {"stock_code": "2886", "stock_name": "兆豐金", "reason": "真連買僅1天+外資累計-12K(外資賣)+動能-92.8%，法人態度轉弱，不推薦"},
-    {"stock_code": "2891", "stock_name": "中信金", "reason": "真連買僅1天+動能-74.0%+vs_ma20-5.1%(價格位置3分月季雙線下)，不推薦"}
+    {
+      "stock_code": "2367",
+      "stock_name": "燿華",
+      "reason": "📶訊號B唯一通過基礎篩選(Level0/累計+9556/9買1賣)，但vs_ma20-15.5%深跌+AI硬板今日利空(費半-4.25%)，環境不對，列觀察不推薦"
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "reason": "真連買僅1天(不足)+EPS連3季負成長-5+毛利率-8.2pp，籌碼與基本面雙弱，不推薦"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "reason": "真連買僅1天+外資累計-12K(外資賣)+動能-92.8%，法人態度轉弱，不推薦"
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "reason": "真連買僅1天+動能-74.0%+vs_ma20-5.1%(價格位置3分月季雙線下)，不推薦"
+    }
   ],
   "intraday": {
     "analysis_time": "2026-07-27 12:30",
     "track_a_intraday": [
-      {"stock_code": "3045", "intraday_price": 114.0, "change_pct": 0.44, "reversal": "L0", "action": "續抱"},
-      {"stock_code": "2883", "intraday_price": 30.75, "change_pct": 0.33, "reversal": "L0", "action": "續抱"},
-      {"stock_code": "2412", "intraday_price": 140.5, "change_pct": 1.08, "reversal": "L0", "action": "續抱"},
-      {"stock_code": "4904", "intraday_price": 107.0, "change_pct": 1.42, "reversal": "L0", "action": "續抱"},
-      {"stock_code": "2881", "intraday_price": 129.5, "change_pct": 1.57, "reversal": "L0", "action": "續抱"},
-      {"stock_code": "1402", "intraday_price": 27.7, "change_pct": 1.28, "reversal": "L0", "action": "續抱"}
+      {
+        "stock_code": "3045",
+        "intraday_price": 114.0,
+        "change_pct": 0.44,
+        "reversal": "L0",
+        "action": "續抱"
+      },
+      {
+        "stock_code": "2883",
+        "intraday_price": 30.75,
+        "change_pct": 0.33,
+        "reversal": "L0",
+        "action": "續抱"
+      },
+      {
+        "stock_code": "2412",
+        "intraday_price": 140.5,
+        "change_pct": 1.08,
+        "reversal": "L0",
+        "action": "續抱"
+      },
+      {
+        "stock_code": "4904",
+        "intraday_price": 107.0,
+        "change_pct": 1.42,
+        "reversal": "L0",
+        "action": "續抱"
+      },
+      {
+        "stock_code": "2881",
+        "intraday_price": 129.5,
+        "change_pct": 1.57,
+        "reversal": "L0",
+        "action": "續抱"
+      },
+      {
+        "stock_code": "1402",
+        "intraday_price": 27.7,
+        "change_pct": 1.28,
+        "reversal": "L0",
+        "action": "續抱"
+      }
     ],
     "track_a_exit_summary": "6檔全數續抱，無觸停損/連續重挫/法人反轉；risk-off日防禦股(電信/金融/紡織)逆勢收紅",
     "track_b_recommendations": [],
     "track_b_conclusion": "今日無盤中新建倉推薦。最強候選2884玉山金已在追蹤中(07-21進場@35.85/D4/10)依規則不重複建倉；偵測器強訊號6166凌華動能>+100%(90日+141.5%)+處置風險最快明日處置→一票否決排除；其餘法人強買標的今日多為falling knife(半導體/航運/塑化重挫)不宜新建倉",
     "track_b_observations": [
-      {"stock_code": "2884", "stock_name": "玉山金", "note": "⏳已在追蹤中(07-21@35.85/目標38.7/停損32.27/D4/10)，今日五維再入選~86(真連買10天+外資投信同步+動能-22.4%+EPS+56%)，維持原進場/停損不重複建倉，現價36.35(+1.4%)續抱"},
-      {"stock_code": "3034", "stock_name": "聯詠", "note": "五維~78過門檻(真連買10天+動能-44.3%+近5天5買0賣)，但半導體/面板risk-off崩跌(費半-4.25%/友達-7.84%)+EPS連4季衰退-28.4%，環境逆風，觀察不建倉"},
-      {"stock_code": "2890", "stock_name": "永豐金", "note": "外資持股比週減-0.11%(-3)+真連買僅1天(投信買外資賣對決)+vs_ma20-0.3%，訊號較弱，觀察"},
-      {"stock_code": "6166", "stock_name": "凌華", "note": "偵測器強訊號75依規則納入評分→排除：90日+141.5%/6日+25.5%動能>100%追高+處置風險高最快明日處置，今日-9.9%為過熱回落非佈局"}
+      {
+        "stock_code": "2884",
+        "stock_name": "玉山金",
+        "note": "⏳已在追蹤中(07-21@35.85/目標38.7/停損32.27/D4/10)，今日五維再入選~86(真連買10天+外資投信同步+動能-22.4%+EPS+56%)，維持原進場/停損不重複建倉，現價36.35(+1.4%)續抱"
+      },
+      {
+        "stock_code": "3034",
+        "stock_name": "聯詠",
+        "note": "五維~78過門檻(真連買10天+動能-44.3%+近5天5買0賣)，但半導體/面板risk-off崩跌(費半-4.25%/友達-7.84%)+EPS連4季衰退-28.4%，環境逆風，觀察不建倉"
+      },
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "note": "外資持股比週減-0.11%(-3)+真連買僅1天(投信買外資賣對決)+vs_ma20-0.3%，訊號較弱，觀察"
+      },
+      {
+        "stock_code": "6166",
+        "stock_name": "凌華",
+        "note": "偵測器強訊號75依規則納入評分→排除：90日+141.5%/6日+25.5%動能>100%追高+處置風險高最快明日處置，今日-9.9%為過熱回落非佈局"
+      }
     ]
   },
   "tomorrow_recommendations": [
-    {"stock_code": "3045", "stock_name": "台灣大", "industry": "電信", "recommend_price": 113.5, "target_price": 122.0, "stop_loss_pct": -10, "stop_loss": 102.15, "settlement_days": 10, "position": "10-15%", "score": 88, "action": "續抱D0→D1", "reason": "電信防禦龍頭risk-off避風港、L3佈局完成、反轉L0；營收YoY-0.0%(不調)/外資持股比+0.01%(不調)；維持原進場不重複建倉"},
-    {"stock_code": "2412", "stock_name": "中華電", "industry": "電信", "recommend_price": 139.0, "target_price": 148.0, "stop_loss_pct": -10, "stop_loss": 125.1, "settlement_days": 10, "position": "10-15%", "score": 85, "action": "續抱D0→D1", "reason": "最大電信核心、L2真連買7天、反轉L0；營收YoY+2.7%(不調)/外資持股比-0.11%(-3)；維持原進場不重複建倉"},
-    {"stock_code": "4904", "stock_name": "遠傳", "industry": "電信", "recommend_price": 105.5, "target_price": 114.0, "stop_loss_pct": -10, "stop_loss": 94.95, "settlement_days": 10, "position": "10-15%", "score": 84, "action": "續抱D0→D1", "reason": "電信+光通訊雙題材、L2動能佈局完成、反轉L0；營收YoY+5.1%(不調)/外資持股比-0.01%(不調)；維持原進場不重複建倉"},
-    {"stock_code": "2883", "stock_name": "開發金", "industry": "金融", "recommend_price": 30.65, "target_price": 33.5, "stop_loss_pct": -10, "stop_loss": 27.59, "settlement_days": 10, "position": "10-15%", "score": 86, "action": "續抱D0→D1", "reason": "EPS+150%/營收+806%、FOMC本週利率政策支撐、反轉L0；外資持股比+0.07%(不調)；維持原進場不重複建倉"},
-    {"stock_code": "2881", "stock_name": "富邦金", "industry": "金融", "recommend_price": 127.5, "target_price": 138.0, "stop_loss_pct": -10, "stop_loss": 114.75, "settlement_days": 10, "position": "8-12%", "score": 82, "action": "續抱D0→D1", "reason": "金控龍頭、FOMC本週利率政策強力支撐、反轉L0；外資持股比+0.12%小增(不調)；維持原進場不重複建倉"},
-    {"stock_code": "1402", "stock_name": "遠東新", "industry": "紡織", "recommend_price": 27.35, "target_price": 29.5, "stop_loss_pct": -10, "stop_loss": 24.62, "settlement_days": 10, "position": "5-8%", "score": 75, "action": "續抱觀察D0→D1", "reason": "傳產防禦分散、L3佈局完成、EPS+33%、反轉L0；⚠️營收連衰10月YoY-8.9%(-5)小倉；維持原進場不重複建倉"}
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "industry": "電信",
+      "recommend_price": 113.5,
+      "target_price": 122.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 102.15,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 88,
+      "action": "續抱D0→D1",
+      "reason": "電信防禦龍頭risk-off避風港、L3佈局完成、反轉L0；營收YoY-0.0%(不調)/外資持股比+0.01%(不調)；維持原進場不重複建倉"
+    },
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電",
+      "industry": "電信",
+      "recommend_price": 139.0,
+      "target_price": 148.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 125.1,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 85,
+      "action": "續抱D0→D1",
+      "reason": "最大電信核心、L2真連買7天、反轉L0；營收YoY+2.7%(不調)/外資持股比-0.11%(-3)；維持原進場不重複建倉"
+    },
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "industry": "電信",
+      "recommend_price": 105.5,
+      "target_price": 114.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 94.95,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 84,
+      "action": "續抱D0→D1",
+      "reason": "電信+光通訊雙題材、L2動能佈局完成、反轉L0；營收YoY+5.1%(不調)/外資持股比-0.01%(不調)；維持原進場不重複建倉"
+    },
+    {
+      "stock_code": "2883",
+      "stock_name": "開發金",
+      "industry": "金融",
+      "recommend_price": 30.65,
+      "target_price": 33.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 27.59,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 86,
+      "action": "續抱D0→D1",
+      "reason": "EPS+150%/營收+806%、FOMC本週利率政策支撐、反轉L0；外資持股比+0.07%(不調)；維持原進場不重複建倉"
+    },
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "industry": "金融",
+      "recommend_price": 127.5,
+      "target_price": 138.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 114.75,
+      "settlement_days": 10,
+      "position": "8-12%",
+      "score": 82,
+      "action": "續抱D0→D1",
+      "reason": "金控龍頭、FOMC本週利率政策強力支撐、反轉L0；外資持股比+0.12%小增(不調)；維持原進場不重複建倉"
+    },
+    {
+      "stock_code": "1402",
+      "stock_name": "遠東新",
+      "industry": "紡織",
+      "recommend_price": 27.35,
+      "target_price": 29.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 24.62,
+      "settlement_days": 10,
+      "position": "5-8%",
+      "score": 75,
+      "action": "續抱觀察D0→D1",
+      "reason": "傳產防禦分散、L3佈局完成、EPS+33%、反轉L0；⚠️營收連衰10月YoY-8.9%(-5)小倉；維持原進場不重複建倉"
+    }
   ],
   "tomorrow_observations": [
-    {"stock_code": "2884", "stock_name": "玉山金", "note": "五維最強~86(真連買10天+動能-22.4%+EPS+56%)，但已於07-21進場追蹤中(@35.85/D4)，依規則不重複建倉續抱"},
-    {"stock_code": "3034", "stock_name": "聯詠", "note": "五維~78過門檻但半導體/面板risk-off崩跌+EPS連4季衰退-28%，環境逆風待族群止穩再評估"}
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "note": "五維最強~86(真連買10天+動能-22.4%+EPS+56%)，但已於07-21進場追蹤中(@35.85/D4)，依規則不重複建倉續抱"
+    },
+    {
+      "stock_code": "3034",
+      "stock_name": "聯詠",
+      "note": "五維~78過門檻但半導體/面板risk-off崩跌+EPS連4季衰退-28%，環境逆風待族群止穩再評估"
+    }
   ],
   "tomorrow_note": "維持risk-off防禦posture。今日6檔防禦股全數逆勢收紅，明日續抱不動維持原進場/停損(D0→D1)。避開半導體/記憶體/面板falling knife不搶反彈。T86 07-27盤後未公布，明日盤前以最新法人數據重新掃描Track A/B；risk-off未緩解前不湊數新建倉(v8.2)。"
 }

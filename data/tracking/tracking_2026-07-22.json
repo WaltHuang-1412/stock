@@ -18,14 +18,18 @@
       "position": "5-10%",
       "score": 88,
       "reason": "avg_rank1.5全市場最大買超+26,966張、外資近5天+32K、外資+投信同步、費半+5.21%AI伺服器超強催化覆寫、MA20+1.5%、EPS-3%持平。動能+353%追高由覆寫降級（催化對齊+外資近5天≥0+反轉L0全通過）",
-      "intraday_price": 254.5,
-      "intraday_change_pct": 3.46,
+      "intraday_price": 232.5,
+      "intraday_change_pct": -5.49,
       "intraday_status": "續抱（法人+26,966連買2天、站穩MA5、無出場訊號）",
       "actual_close": 251.5,
-      "result": "holding",
-      "holding_status": "D0/10 收盤251.5(+2.2%)。距目標260僅3.4%、距停損233.7有7.1%緩衝。全市場最大買超+26,966、外資近5天+32K、站穩MA5(242.3)、反轉L0。續抱",
+      "result": "fail",
       "close_price": 251.5,
-      "change_percent": 2.2
+      "change_percent": 2.2,
+      "intraday_strategy": "強制出場",
+      "settled_date": "2026-07-29",
+      "settled_price": 232.5,
+      "holding_days": 5,
+      "fail_reason": "D5觸停損+L4雙訊號：盤中232.5<停損233.7（-5.49%），且T86 07-28爆量賣超-17,039張（佔日均量30.0%），機械停損出場"
     },
     {
       "stock_code": "3231",
@@ -62,14 +66,18 @@
       "position": "5-10%",
       "score": 74,
       "reason": "AI伺服器龍頭（GB200 NVL主力）、5日-14.7%深跌抄底、外資近5天+13K回補、avg_rank13今日在TOP50買+7,732張、營收年增+43%+回檔+5分。10天賣超6天-5分、MA20-11.1%價格位置僅1分拖累。動能+243%由覆寫降級",
-      "intraday_price": 332.5,
-      "intraday_change_pct": 2.62,
+      "intraday_price": 302.5,
+      "intraday_change_pct": -6.64,
       "intraday_status": "續抱留意（法人+7,732連買3天、站穩MA5，但5日高點回落-7.9%跌破MA10；未觸停損307.8/反轉L0，三條強制停損皆未觸發）",
       "actual_close": 329.0,
-      "result": "holding",
-      "holding_status": "D0/10 收盤329.0(+1.5%)。距目標350有6.4%、距停損307.8有6.4%緩衝。法人+7,732連買3天、外資近5天+13K回補、站穩MA5、反轉L0；MA20-11.1%價格位置偏低為主要弱點。續抱留意高檔回落",
+      "result": "fail",
       "close_price": 329.0,
-      "change_percent": 1.5
+      "change_percent": 1.5,
+      "intraday_strategy": "強制出場",
+      "settled_date": "2026-07-29",
+      "settled_price": 302.5,
+      "holding_days": 5,
+      "fail_reason": "D5觸停損：盤中302.5<停損307.8（-6.64%），大盤-4.8%重挫觸價機械停損（T86 07-28法人仍+4,252買超、反轉L0，非法人反轉出場）"
     }
   ],
   "tomorrow_recommendations": [

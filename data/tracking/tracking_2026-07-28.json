@@ -65,8 +65,14 @@
       "actual_close": 18.1,
       "close_price": 18.1,
       "change_percent": 0.3,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤18.1(+0.3% vs推薦18.05) | 距目標7.7% | 距停損5.2% | 反轉L0續抱"
+      "result": "fail",
+      "intraday_price": 17.75,
+      "intraday_change_pct": -1.66,
+      "intraday_strategy": "強制出場",
+      "settled_date": "2026-07-29",
+      "settled_price": 17.75,
+      "holding_days": 1,
+      "fail_reason": "D1 L4出場鐵律：T86 07-28爆量賣超-7,018張（佔日均量14.5%，盤中推薦當日法人即反手出貨），盤中17.75出場-1.66%（推薦價18.05）"
     }
   ],
   "track_b_observations": [

@@ -41,8 +41,14 @@
       "actual_close": 30.15,
       "close_price": 30.15,
       "change_percent": -1.1,
-      "result": "holding",
-      "holding_status": "D0/10 | 收盤30.15 (-1.1% vs推薦30.5) | 反轉L0 | 未觸停損續抱"
+      "result": "fail",
+      "intraday_price": 27.8,
+      "intraday_change_pct": -8.85,
+      "intraday_strategy": "強制出場",
+      "settled_date": "2026-07-29",
+      "settled_price": 27.8,
+      "holding_days": 4,
+      "fail_reason": "D4 L4出場鐵律：T86 07-28爆量賣超-9,825張（佔日均量35.5%），盤中27.80出場-8.85%，未觸停損27.45但法人反轉鐵律優先"
     },
     {
       "stock_code": "2301",
