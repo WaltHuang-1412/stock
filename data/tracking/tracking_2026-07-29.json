@@ -1,0 +1,96 @@
+{
+  "date": "2026-07-29",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "us_market": "NASDAQ -0.22% / S&P500 +0.21% / 道瓊 +1.03% / 費半 -4.49% / VIX 18.21",
+    "key_stocks": "NVDA +0.25% / AMD -8.15% / MU -8.85% / AMAT -7.82% / INTC -5.86% / AAPL +0.94%(市值5兆) / TSM ADR -1.70%",
+    "tw_context": "昨日大盤 -4.77% 收41,603 史上第三大跌點；融資減231億維持率163%；外資賣超875.6億；今晚FOMC(台灣時間07-30凌晨)升息機率~40%",
+    "regime": "偏多(score 2，注意 market_regime.json taiex快取價43,634與昨收41,603不符，防禦判斷從嚴)",
+    "leader_alerts": "Level 2 x2：Micron -8.85%→記憶體-15分；AMD -8.15%→IC設計-15分；無Level 3"
+  },
+  "recommendations": [
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "industry": "塑化",
+      "recommend_price": 74.6,
+      "target_price": 80.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 67.14,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 86,
+      "track": "A",
+      "reason": "🛤️軌道A＋📶訊號A L2(動能-55.8%/真連買2)；中東超強催化(美軍攔截伊朗突襲、油價反彈約5%、OPEC+傳10月暫停增產)；avgR15.5、單日+5.9K、外資近5天+28K、buy_ratio 19.9%(+1)；EPS YoY+286%(+5)；月季雙線上(價格13)；5日-12.6%深跌+今日油價新催化=跌深反轉進場；Factset目標價上調至90元",
+      "result": "holding"
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "industry": "金融",
+      "recommend_price": 43.9,
+      "target_price": 47.4,
+      "stop_loss_pct": -10,
+      "stop_loss": 39.51,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 79,
+      "track": "A",
+      "reason": "📶訊號A由L2升級L3(真連買3/動能-45.1%/累計外資+50K)；昨日盤後預留重評條件成立=T86 07-28法人現身(TOP50第22、+4.6K、外資+7.2K單日最大加碼日)；avgR24、外資近5天+20K、buy_ratio 27%(+2)；外資持股比週+0.31%；FOMC金融受惠(升息機率40%金融獲利動能)；月季雙線上；EPS連2季負(-5)已計",
+      "result": "holding"
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "industry": "航運",
+      "recommend_price": 200.0,
+      "target_price": 216.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 180.0,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "track": "A",
+      "reason": "📶訊號A L3(真連買3/動能-67.4%/累計+44K)；中東地緣超強催化(美軍攔截伊朗突襲、航運運價風險溢價)；avgR29.5、外資近5天+12K、buy_ratio 27.6%(+2)；反轉L0；風險已計價：營收連衰10月(-5)+EPS連3季負(-5)+外資持股比週減(-3)+投信近5天賣超對決→最低倉位帶5-10%",
+      "result": "holding"
+    }
+  ],
+  "observations": [
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "score": 62,
+      "note": "T86單日買超TOP1(+54.4K/外資+52.8K)但動能+64.1%(-10)+單日≥30K真連買僅3天過量買超(-5)+外資持股比週減-3；外資近5天+43K為正、反轉L0；動能降溫或連買延長後可重評"
+    },
+    {
+      "stock_code": "1101",
+      "stock_name": "台泥",
+      "score": 75,
+      "note": "訊號A L2+動能-30.2%+avgR10.5+近5天外資+33K，但EPS連4季YoY負(-5，毛利-4.2pp)且水泥不在今日最強催化鏈→準確率篩選『催化對齊』不通過(與昨日同判)"
+    },
+    {
+      "stock_code": "5871",
+      "stock_name": "中租-KY",
+      "score": 72,
+      "note": "訊號A L3但營收連衰10月(-5)+外資持股比週減(-3)；FOMC升息機率升溫對租賃資金成本屬利空，催化對齊不通過"
+    },
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "score": null,
+      "note": "反轉Level 4(07-28爆量賣超-5,856張佔日均量23.7%)→直接排除，不重評；昨日觀察名單關閉"
+    }
+  ],
+  "intraday_watch": {
+    "l4_exit_check": [
+      {"stock_code": "2317", "stock_name": "鴻海", "note": "反轉L4：T86 07-28賣超-17,039張(佔日均量33.4%)；距停損僅1.8%；今日盤中依L4鐵律強制出場檢查"},
+      {"stock_code": "2353", "stock_name": "宏碁", "note": "反轉L4：T86 07-28賣超-9,825張(佔日均量34.7%)；近5天三大-6,695張；今日盤中依L4鐵律強制出場檢查"}
+    ],
+    "stop_loss_watch": [
+      {"stock_code": "2382", "stock_name": "廣達", "note": "距停損1.8%，反轉L0續抱，觸價即機械停損"}
+    ]
+  }
+}

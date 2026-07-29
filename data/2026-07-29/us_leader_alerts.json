@@ -1,0 +1,89 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Micron",
+      "change_pct": -8.85,
+      "level": 2,
+      "level_name": "🟡 降級評分",
+      "tw_industry": "DRAM/記憶體",
+      "affected_stocks": {
+        "2408": "南亞科",
+        "1303": "南亞",
+        "2344": "華邦電",
+        "2337": "旺宏",
+        "5347": "世界",
+        "6770": "力積電"
+      },
+      "action": "downgrade",
+      "score_adjustment": -15,
+      "reason": "Micron 跌幅 -8.85%，DRAM/記憶體產業受壓"
+    },
+    {
+      "us_stock": "AMD",
+      "change_pct": -8.15,
+      "level": 2,
+      "level_name": "🟡 降級評分",
+      "tw_industry": "AI晶片/IC設計",
+      "affected_stocks": {
+        "2454": "聯發科",
+        "3661": "世芯-KY",
+        "3443": "創意",
+        "3707": "漢磊"
+      },
+      "action": "downgrade",
+      "score_adjustment": -15,
+      "reason": "AMD 跌幅 -8.15%，AI晶片/IC設計產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-07-29",
+    "total_alerts": 2,
+    "level_3_count": 0,
+    "level_2_count": 2,
+    "level_1_count": 0,
+    "excluded_stocks": [],
+    "downgraded_stocks": {
+      "2408": {
+        "reason": "Micron 跌幅 -8.85%",
+        "adjustment": -15
+      },
+      "1303": {
+        "reason": "Micron 跌幅 -8.85%",
+        "adjustment": -15
+      },
+      "2344": {
+        "reason": "Micron 跌幅 -8.85%",
+        "adjustment": -15
+      },
+      "2337": {
+        "reason": "Micron 跌幅 -8.85%",
+        "adjustment": -15
+      },
+      "5347": {
+        "reason": "Micron 跌幅 -8.85%",
+        "adjustment": -15
+      },
+      "6770": {
+        "reason": "Micron 跌幅 -8.85%",
+        "adjustment": -15
+      },
+      "2454": {
+        "reason": "AMD 跌幅 -8.15%",
+        "adjustment": -15
+      },
+      "3661": {
+        "reason": "AMD 跌幅 -8.15%",
+        "adjustment": -15
+      },
+      "3443": {
+        "reason": "AMD 跌幅 -8.15%",
+        "adjustment": -15
+      },
+      "3707": {
+        "reason": "AMD 跌幅 -8.15%",
+        "adjustment": -15
+      }
+    },
+    "warning_stocks": {}
+  }
+}

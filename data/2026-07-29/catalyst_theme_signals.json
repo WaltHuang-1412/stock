@@ -1,0 +1,477 @@
+{
+  "date": "2026-07-29",
+  "lookback_dates": [
+    "2026-07-29",
+    "2026-07-28",
+    "2026-07-27",
+    "2026-07-26",
+    "2026-07-24",
+    "2026-07-23",
+    "2026-07-22"
+  ],
+  "leader_trends": {
+    "Micron": {
+      "cumulative": -12.45,
+      "consecutive_up": 0,
+      "latest_change": -8.85,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "NVIDIA": {
+      "cumulative": -3.4,
+      "consecutive_up": 1,
+      "latest_change": 0.25,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Apple": {
+      "cumulative": 7.66,
+      "consecutive_up": 4,
+      "latest_change": 0.94,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "AMD": {
+      "cumulative": -12.9,
+      "consecutive_up": 0,
+      "latest_change": -8.15,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Tesla": {
+      "cumulative": -19.25,
+      "consecutive_up": 0,
+      "latest_change": -0.58,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Super Micro": {
+      "cumulative": 20.92,
+      "consecutive_up": 0,
+      "latest_change": -0.96,
+      "signal_level": "strong",
+      "days_tracked": 6
+    },
+    "Broadcom": {
+      "cumulative": -0.7,
+      "consecutive_up": 1,
+      "latest_change": 0.34,
+      "signal_level": "none",
+      "days_tracked": 6
+    },
+    "Lam Research": {
+      "cumulative": -9.3,
+      "consecutive_up": 0,
+      "latest_change": -4.46,
+      "signal_level": "none",
+      "days_tracked": 6
+    },
+    "Applied Materials": {
+      "cumulative": -5.94,
+      "consecutive_up": 0,
+      "latest_change": -3.61,
+      "signal_level": "none",
+      "days_tracked": 6
+    },
+    "Western Digital": {
+      "cumulative": -3.7,
+      "consecutive_up": 0,
+      "latest_change": -4.21,
+      "signal_level": "none",
+      "days_tracked": 6
+    },
+    "Dell": {
+      "cumulative": 11.33,
+      "consecutive_up": 0,
+      "latest_change": -2.42,
+      "signal_level": "strong",
+      "days_tracked": 6
+    },
+    "ASML": {
+      "cumulative": -7.23,
+      "consecutive_up": 0,
+      "latest_change": -5.8,
+      "signal_level": "none",
+      "days_tracked": 6
+    }
+  },
+  "preposition_candidates": [
+    {
+      "code": "3711",
+      "name": "日月光",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -9597,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": 37.47671464860288,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -18603,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-9,597為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "2449",
+      "name": "京元電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -35477,
+        "buy_days": 3,
+        "sell_days": 7,
+        "momentum_pct": 14.207907829274676,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -37693,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-35,477為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -6354,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 80.22620169651273,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -14995,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-6,354為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3189",
+      "name": "景碩",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -3111,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -500,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -2780,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-3,111為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "3017",
+      "name": "奇鋐",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -20,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 198.1818181818182,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -2771,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "累計-20為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3324",
+      "name": "雙鴻",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "6230",
+      "name": "超眾",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -16,
+        "buy_days": 4,
+        "sell_days": 5,
+        "momentum_pct": -266.6666666666667,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -11,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-16為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "2368",
+      "name": "金像電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -1273,
+        "buy_days": 6,
+        "sell_days": 4,
+        "momentum_pct": -500,
+        "consecutive_buy": 3,
+        "cumulative_foreign": 7643,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-1,273為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "2367",
+      "name": "燿華",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 5890,
+        "buy_days": 9,
+        "sell_days": 1,
+        "momentum_pct": -9.199870424360213,
+        "consecutive_buy": 8,
+        "cumulative_foreign": 4769,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
+      }
+    },
+    {
+      "code": "3234",
+      "name": "光環",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "4977",
+      "name": "眾達-KY",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "2392",
+      "name": "正崴",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "3023",
+      "name": "信邦",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "2408",
+      "name": "南亞科",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "6239",
+      "name": "力成",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "strong",
+      "leader_cumulative": 11.33,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    }
+  ],
+  "already_in_top50": [
+    {
+      "code": "8046",
+      "name": "南電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 11.33,
+      "tw_5d_change": -17.983193277310924
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 11.33,
+      "tw_5d_change": -3.2407407407407405
+    },
+    {
+      "code": "2356",
+      "name": "英業達",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 11.33,
+      "tw_5d_change": -2.1630603495278344
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 11.33,
+      "tw_5d_change": -3.076923076923077
+    },
+    {
+      "code": "8150",
+      "name": "南茂",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 11.33,
+      "tw_5d_change": -12.718445120505917
+    },
+    {
+      "code": "2353",
+      "name": "宏碁",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "leader_cumulative": 7.66,
+      "tw_5d_change": 2.905984210152911
+    },
+    {
+      "code": "4938",
+      "name": "和碩",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "leader_cumulative": 7.66,
+      "tw_5d_change": 9.250001907348633
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 11.33,
+      "tw_5d_change": 13.712374581939798
+    }
+  ],
+  "already_moved_count": 3
+}
