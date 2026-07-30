@@ -1,0 +1,78 @@
+{
+  "date": "2026-07-30",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": "FOMC鷹派(3票升息異議)道瓊-2.19%費半-5.33%；美伊戰火油價+6.6%；VIX 20.66；台股連兩日-8.2%後承壓開盤；投信+90.9億唯一買方",
+  "recommendations": [
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "industry": "金融",
+      "recommend_price": 29.15,
+      "target_price": 32.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 26.24,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 102,
+      "reason": "🔴利率政策催化+營收+806%/EPS+150%+ModA L2+動能-57%佈局+投信+5.4K接手；⚠️昨日L4出場後籌碼翻正再進場，高波動",
+      "result": "holding"
+    },
+    {
+      "stock_code": "2836",
+      "stock_name": "高雄銀",
+      "industry": "金融",
+      "recommend_price": 11.95,
+      "target_price": 12.9,
+      "stop_loss_pct": -10,
+      "stop_loss": 10.76,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 82,
+      "reason": "銀行利差催化+高雄財管專區AUM翻倍新聞+營收+15%回檔-6.2%(+5)+EPS+36%(+3)+動能-72%(+15)；⚠️處置預警🟡+流動性低倉位取下緣",
+      "result": "holding"
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "industry": "航空",
+      "recommend_price": 21.7,
+      "target_price": 23.4,
+      "stop_loss_pct": -5,
+      "stop_loss": 20.62,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 79,
+      "reason": "🔥超強催化覆寫(🔴中東地緣主題受益名單+動能+166%不排除)+外資5日+59K+EPS+23%毛利+2.5pp+營收+27.7%有支撐；停損-5%",
+      "result": "holding"
+    },
+    {
+      "stock_code": "2615",
+      "stock_name": "萬海",
+      "industry": "航運",
+      "recommend_price": 85.0,
+      "target_price": 91.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 76.5,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 77,
+      "reason": "🔴中東航運運價題材+ModA L2(+10)+動能-37%佈局(+10)+外資5日+14K+buy_ratio30%；⚠️營收未跟上已扣(-5/-5/-3)",
+      "result": "holding"
+    }
+  ],
+  "observations": [
+    {"stock_code": "2027", "stock_name": "大成鋼", "score": 93, "note": "催化對齊未過(鋼鋁無今日主題)；投信+6.25K動能-75%佈局極強，觀察首位"},
+    {"stock_code": "5871", "stock_name": "中租-KY", "score": 86, "note": "ModA L3但鷹派利率=租賃資金成本上升，催化方向為負"},
+    {"stock_code": "1102", "stock_name": "亞泥", "score": 77, "note": "水泥無催化主題；連買9天動能-59%"},
+    {"stock_code": "2609", "stock_name": "陽明", "score": 70, "note": "三重門檻全過但同題材已推萬海，EPS連4季負+營收-15%，寧缺勿濫"},
+    {"stock_code": "2002", "stock_name": "中鋼", "score": 69, "note": "真連續買超10天罕見但<70+無催化"},
+    {"stock_code": "1101", "stock_name": "台泥", "score": null, "note": "法人現身門檻連2日未過(不在TOP50買超×乖離+3.2%)"}
+  ],
+  "exit_alerts": [
+    {"stock_code": "2812", "stock_name": "台中銀", "from_tracking": "2026-07-17", "action": "開盤出場", "reason": "L4爆量賣超-3,859張(日均量11.0%)，v8.2.1鐵律禁延遲"},
+    {"stock_code": "6505", "stock_name": "台塑化", "from_tracking": "2026-07-29", "action": "警戒", "reason": "L2單日反轉(前期+43,347張後翻賣-860張)，準備停損67.15"}
+  ]
+}
