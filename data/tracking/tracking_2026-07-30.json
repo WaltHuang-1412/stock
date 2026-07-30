@@ -21,7 +21,11 @@
       "result": "holding",
       "intraday_price": 28.8,
       "intraday_change_pct": -1.2,
-      "intraday_note": "D0 距停損26.24約8.9%，T86今日+4,996張L0續抱"
+      "intraday_note": "D0 距停損26.24約8.9%，T86今日+4,996張L0續抱",
+      "actual_close": 28.95,
+      "close_price": 28.95,
+      "change_percent": -0.69,
+      "holding_status": "D0/10 收盤28.95（今日-0.69%，較推薦-0.69%） | 距目標32.0約10.5% | 距停損26.24約9.4%"
     },
     {
       "stock_code": "2836",
@@ -38,7 +42,11 @@
       "result": "holding",
       "intraday_price": 12.25,
       "intraday_change_pct": 2.51,
-      "intraday_note": "D0 四檔新推中最強，距目標12.90約5.3%，L0續抱"
+      "intraday_note": "D0 四檔新推中最強，距目標12.90約5.3%，L0續抱",
+      "actual_close": 12.15,
+      "close_price": 12.15,
+      "change_percent": 1.67,
+      "holding_status": "D0/10 收盤12.15（今日+1.67%，較推薦+1.67%） | 距目標12.9約6.2% | 距停損10.76約11.4%"
     },
     {
       "stock_code": "2610",
@@ -55,7 +63,11 @@
       "result": "holding",
       "intraday_price": 21.45,
       "intraday_change_pct": -1.15,
-      "intraday_note": "D0 距停損20.62約3.9%（-5%較緊），T86今日+13,936張L0續抱"
+      "intraday_note": "D0 距停損20.62約3.9%（-5%較緊），T86今日+13,936張L0續抱",
+      "actual_close": 21.7,
+      "close_price": 21.7,
+      "change_percent": 0.0,
+      "holding_status": "D0/10 收盤21.7（今日+0.00%，較推薦+0.00%） | 距目標23.4約7.8% | 距停損20.62約5.0%"
     },
     {
       "stock_code": "2615",
@@ -72,38 +84,154 @@
       "result": "holding",
       "intraday_price": 84.5,
       "intraday_change_pct": -0.59,
-      "intraday_note": "D0 距停損76.5約9.5%，L0續抱"
+      "intraday_note": "D0 距停損76.5約9.5%，L0續抱",
+      "actual_close": 84.4,
+      "close_price": 84.4,
+      "change_percent": -0.71,
+      "holding_status": "D0/10 收盤84.4（今日-0.71%，較推薦-0.71%） | 距目標91.8約8.8% | 距停損76.5約9.4%"
     }
   ],
   "observations": [
-    {"stock_code": "2027", "stock_name": "大成鋼", "score": 93, "note": "催化對齊未過(鋼鋁無今日主題)；投信+6.25K動能-75%佈局極強，觀察首位"},
-    {"stock_code": "5871", "stock_name": "中租-KY", "score": 86, "note": "ModA L3但鷹派利率=租賃資金成本上升，催化方向為負"},
-    {"stock_code": "1102", "stock_name": "亞泥", "score": 77, "note": "水泥無催化主題；連買9天動能-59%"},
-    {"stock_code": "2609", "stock_name": "陽明", "score": 70, "note": "三重門檻全過但同題材已推萬海，EPS連4季負+營收-15%，寧缺勿濫"},
-    {"stock_code": "2002", "stock_name": "中鋼", "score": 69, "note": "真連續買超10天罕見但<70+無催化"},
-    {"stock_code": "1101", "stock_name": "台泥", "score": null, "note": "法人現身門檻連2日未過(不在TOP50買超×乖離+3.2%)"}
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "score": 93,
+      "note": "催化對齊未過(鋼鋁無今日主題)；投信+6.25K動能-75%佈局極強，觀察首位"
+    },
+    {
+      "stock_code": "5871",
+      "stock_name": "中租-KY",
+      "score": 86,
+      "note": "ModA L3但鷹派利率=租賃資金成本上升，催化方向為負"
+    },
+    {
+      "stock_code": "1102",
+      "stock_name": "亞泥",
+      "score": 77,
+      "note": "水泥無催化主題；連買9天動能-59%"
+    },
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "score": 70,
+      "note": "三重門檻全過但同題材已推萬海，EPS連4季負+營收-15%，寧缺勿濫"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "score": 69,
+      "note": "真連續買超10天罕見但<70+無催化"
+    },
+    {
+      "stock_code": "1101",
+      "stock_name": "台泥",
+      "score": null,
+      "note": "法人現身門檻連2日未過(不在TOP50買超×乖離+3.2%)"
+    }
   ],
   "exit_alerts": [
-    {"stock_code": "2812", "stock_name": "台中銀", "from_tracking": "2026-07-17", "action": "已出場", "reason": "L4爆量賣超-3,859張(日均量11.0%)，v8.2.1鐵律開盤價20.50出場，結算success +1.23%(D9)，已回寫tracking_2026-07-17.json；predictions盤後手寫入帳"},
-    {"stock_code": "6505", "stock_name": "台塑化", "from_tracking": "2026-07-29", "action": "警戒續抱", "reason": "L2單日反轉(前期+43,347張後翻賣-860張)；盤中72.6(-2.68%)未觸停損67.14，續警戒"}
+    {
+      "stock_code": "2812",
+      "stock_name": "台中銀",
+      "from_tracking": "2026-07-17",
+      "action": "已出場",
+      "reason": "L4爆量賣超-3,859張(日均量11.0%)，v8.2.1鐵律開盤價20.50出場，結算success +1.23%(D9)，已回寫tracking_2026-07-17.json；predictions盤後手寫入帳"
+    },
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "from_tracking": "2026-07-29",
+      "action": "警戒續抱",
+      "reason": "L2單日反轉(前期+43,347張後翻賣-860張)；盤中72.6(-2.68%)未觸停損67.14，續警戒"
+    }
   ],
   "track_b_recommendations": [],
   "track_b_note": "今日無盤中新推薦：TOP50買超×今日<3%×非TrackA共18檔+偵測器強訊號3檔逐檔篩選，存活8檔全數未過門檻（催化對齊/≥75分/反轉L0），寧缺勿濫",
   "track_b_observations": [
-    {"stock_code": "2027", "stock_name": "大成鋼", "score": 93, "note": "盤中+1.27%，機械分最高但鋼鋁無今日催化主題（催化對齊連2日未過）；動能-75%+外資近5日+8.3K+L0佈局訊號極強，催化出現即首選"},
-    {"stock_code": "5871", "stock_name": "中租-KY", "score": 86, "note": "盤中-2.22%；ModA L3但鷹派利率=租賃資金成本上升催化方向為負+營收連10月衰退(-5)+外資持股比週減(-3)"},
-    {"stock_code": "2609", "stock_name": "陽明", "score": 70, "note": "盤中+0.0%；催化對齊過但70<75盤中門檻+營收連10月衰退(-5)+持股比週減(-3)，同題材已持萬海"},
-    {"stock_code": "2002", "stock_name": "中鋼", "score": 69, "note": "真連續買超10天+外資近5日+107K罕見，但69<75+無催化主題"},
-    {"stock_code": "2356", "stock_name": "英業達", "score": null, "note": "營收+35%回檔-8.6%(+5)但AI鏈今日負催化(SMCI -9.67%/Dell -5.73% L2)催化對齊fail+盤中-4.48%下跌中"},
-    {"stock_code": "2324", "stock_name": "仁寶", "score": null, "note": "AI鏈負催化催化對齊fail+盤中-3.30%"},
-    {"stock_code": "3231", "stock_name": "緯創", "score": null, "note": "營收+39%回檔-7.5%(+5)但AI鏈負催化fail+盤中-5.31%+持股比週減(-3)"},
-    {"stock_code": "4976", "stock_name": "佳凌", "score": null, "note": "偵測器強訊號75但今日-9.95%崩跌非未反映+處置風險🟡(週轉率14.4%)+T86累計僅+19張數據不足"},
-    {"stock_code": "6226", "stock_name": "光鼎", "score": null, "note": "偵測器強訊號75但反轉狀態不明（累計-4,030負）+今日-9.98%崩跌，禁止接刀"},
-    {"stock_code": "9904", "stock_name": "寶成", "score": null, "note": "反轉狀態不明（累計-4,667負）非L0"},
-    {"stock_code": "2540", "stock_name": "愛山林", "score": null, "note": "偵測器強訊號60但動能+165%>100%+營收連3月衰退-49%（盤前既有排除）+今日+2.94%貼近3%上緣"},
-    {"stock_code": "2303", "stock_name": "聯電", "score": null, "note": "今日+9.76%≥3%排除；盤前動能+133%追高排除確認正確，未反映窗口已過"},
-    {"stock_code": "1303", "stock_name": "南亞", "score": null, "note": "今日+4.59%≥3%排除"},
-    {"stock_code": "5880", "stock_name": "合庫金", "score": null, "note": "偵測器強訊號75（連買9天+量比2.4x）但為Track A holding（07-28筆，盤中+3.28%），不重複建倉"}
+    {
+      "stock_code": "2027",
+      "stock_name": "大成鋼",
+      "score": 93,
+      "note": "盤中+1.27%，機械分最高但鋼鋁無今日催化主題（催化對齊連2日未過）；動能-75%+外資近5日+8.3K+L0佈局訊號極強，催化出現即首選"
+    },
+    {
+      "stock_code": "5871",
+      "stock_name": "中租-KY",
+      "score": 86,
+      "note": "盤中-2.22%；ModA L3但鷹派利率=租賃資金成本上升催化方向為負+營收連10月衰退(-5)+外資持股比週減(-3)"
+    },
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "score": 70,
+      "note": "盤中+0.0%；催化對齊過但70<75盤中門檻+營收連10月衰退(-5)+持股比週減(-3)，同題材已持萬海"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "score": 69,
+      "note": "真連續買超10天+外資近5日+107K罕見，但69<75+無催化主題"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "score": null,
+      "note": "營收+35%回檔-8.6%(+5)但AI鏈今日負催化(SMCI -9.67%/Dell -5.73% L2)催化對齊fail+盤中-4.48%下跌中"
+    },
+    {
+      "stock_code": "2324",
+      "stock_name": "仁寶",
+      "score": null,
+      "note": "AI鏈負催化催化對齊fail+盤中-3.30%"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "score": null,
+      "note": "營收+39%回檔-7.5%(+5)但AI鏈負催化fail+盤中-5.31%+持股比週減(-3)"
+    },
+    {
+      "stock_code": "4976",
+      "stock_name": "佳凌",
+      "score": null,
+      "note": "偵測器強訊號75但今日-9.95%崩跌非未反映+處置風險🟡(週轉率14.4%)+T86累計僅+19張數據不足"
+    },
+    {
+      "stock_code": "6226",
+      "stock_name": "光鼎",
+      "score": null,
+      "note": "偵測器強訊號75但反轉狀態不明（累計-4,030負）+今日-9.98%崩跌，禁止接刀"
+    },
+    {
+      "stock_code": "9904",
+      "stock_name": "寶成",
+      "score": null,
+      "note": "反轉狀態不明（累計-4,667負）非L0"
+    },
+    {
+      "stock_code": "2540",
+      "stock_name": "愛山林",
+      "score": null,
+      "note": "偵測器強訊號60但動能+165%>100%+營收連3月衰退-49%（盤前既有排除）+今日+2.94%貼近3%上緣"
+    },
+    {
+      "stock_code": "2303",
+      "stock_name": "聯電",
+      "score": null,
+      "note": "今日+9.76%≥3%排除；盤前動能+133%追高排除確認正確，未反映窗口已過"
+    },
+    {
+      "stock_code": "1303",
+      "stock_name": "南亞",
+      "score": null,
+      "note": "今日+4.59%≥3%排除"
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "score": null,
+      "note": "偵測器強訊號75（連買9天+量比2.4x）但為Track A holding（07-28筆，盤中+3.28%），不重複建倉"
+    }
   ],
   "intraday_summary": {
     "time": "12:30",
@@ -111,5 +239,192 @@
     "track_a": "22檔：2812開盤出場success +1.23%；2867/2880/2886三檔盤中已觸目標價，收盤≥目標即結算，盤後處理；6505 L2警戒未觸停損；其餘續抱，無停損/連續重挫/L3-4新訊號",
     "detector": "強訊號4檔（5880持有中/6226/4976崩跌排除/2540既有排除），中訊號5檔",
     "new_recommendations": 0
+  },
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "industry": "金融",
+      "recommend_price": 29.15,
+      "target_price": 32.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 26.24,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 102,
+      "action": "續抱D0→D1",
+      "reason": "利率政策催化+營收+806%；今日D0收28.95(-0.69%)；營收YoY+806%(+5)/EPS+33%(+3)既有評分；維持原進場29.15不重複建倉"
+    },
+    {
+      "stock_code": "2836",
+      "stock_name": "高雄銀",
+      "industry": "金融",
+      "recommend_price": 11.95,
+      "target_price": 12.9,
+      "stop_loss_pct": -10,
+      "stop_loss": 10.76,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 82,
+      "action": "續抱D0→D1",
+      "reason": "利差+財管催化；今日D0四檔最強+1.67%；維持原進場11.95不重複建倉"
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "industry": "航空",
+      "recommend_price": 21.7,
+      "target_price": 23.4,
+      "stop_loss_pct": -5,
+      "stop_loss": 20.62,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 79,
+      "action": "續抱D0→D1",
+      "reason": "超強催化覆寫(中東地緣+油價)停損-5%較緊(距5.0%)；今日D0平盤21.70；維持原進場21.7不重複建倉"
+    },
+    {
+      "stock_code": "2615",
+      "stock_name": "萬海",
+      "industry": "航運",
+      "recommend_price": 85.0,
+      "target_price": 91.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 76.5,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 77,
+      "action": "續抱D0→D1",
+      "reason": "中東航運運價催化；今日D0收84.4(-0.71%)；維持原進場85.0不重複建倉"
+    }
+  ],
+  "tomorrow_note": "明日無新推薦：T86 07-30未公布+今晚MSFT/META財報+美GDP/Core PCE+明日盤中BOJ決策(台北時間約11:30)，事件密集不新建倉；續抱17筆holding。觀察名單交接：2027大成鋼(機械分93連2日催化對齊未過，鋼鋁題材現身即進)/2002中鋼(69分，真連買10天+外資近5日+107K罕見)/2609陽明(70分，營收連10月衰退-5+持股比週減-3)。明日D10到期：2867三商壽(現+7.52%距目標0.4%，等收盤結算)。最接近停損：1216統一4.8%/2610華航5.0%(停損-5%)/6505台塑化6.2%(L2警戒)",
+  "removed_stocks": [
+    {
+      "stock_code": "2812",
+      "stock_name": "台中銀(07-17筆)",
+      "reason": "D9 L4鐵律開盤20.50出場結算success(+1.23%)；v8.2.1全持倉掃描首日即攔截，未延遲至盤中"
+    },
+    {
+      "stock_code": "2880",
+      "stock_name": "華南金(07-17筆)",
+      "reason": "D9收盤42.65≥目標42.55結算success(+8.25%)"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金(07-17 track_b筆)",
+      "reason": "D9收盤51.50≥目標51.20結算success(+8.54%)，人工配對入帳"
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金(07-16筆)",
+      "reason": "D10到期收盤38.85≤推薦39.95結算fail(-2.75%)；未觸停損，大盤連兩日-8.2%拖累"
+    },
+    {
+      "stock_code": "2845",
+      "stock_name": "遠東銀(07-16筆)",
+      "reason": "D10到期收盤13.45=推薦13.45結算fail(+0.0%)；平盤未突破依規則判fail"
+    }
+  ],
+  "after_market_summary": "大盤收39,933.30(-0.26%)，盤中40,218(+0.45%)尾盤翻黑再破四萬。今日結算5筆=3success(2812+1.23%/2880+8.25%/2886+8.54%)+2fail(2890-2.75%/2845+0.0%)，累計503結算58.3%(293s/210f)。持有中17筆。出場訊號零觸發：停損0/2日重挫0/L3-4為0",
+  "yesterday_verification": {
+    "accuracy": 58.3,
+    "settled_total": 503,
+    "success": 293,
+    "fail": 210,
+    "holding": 183,
+    "note": "今日結算5筆(3s/2f)：2812台中銀D9 L4鐵律開盤20.50出場+1.23%s(v8.2.1全持倉掃描首日攔截零延遲)；2880華南金D9收42.65≥目標42.55 +8.25%s；2886兆豐金(track_b)D9收51.50≥目標51.20 +8.54%s；2890永豐金D10到期收38.85≤推薦39.95 -2.75%f；2845遠東銀D10到期平盤13.45 +0.0%f。2867三商壽盤中高9.70觸目標9.62收盤9.58未達續holding明日D10。07-17金融批(回檔後進場)3筆全勝vs07-16批(高點前進場)2筆全敗，支持回檔後進場評分邏輯。跨日結算5筆全手寫雙確認入帳。",
+    "results": [
+      {
+        "stock_code": "2812",
+        "stock_name": "台中銀(07-17筆)",
+        "result": "success",
+        "recommend_price": 20.25,
+        "close_price": 20.5,
+        "change_percent": 1.23,
+        "note": "D9 L4鐵律開盤20.50出場結算success"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金(07-17筆)",
+        "result": "success",
+        "recommend_price": 39.4,
+        "close_price": 42.65,
+        "change_percent": 8.25,
+        "note": "D9收盤≥目標42.55結算success"
+      },
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金(07-17 track_b筆)",
+        "result": "success",
+        "recommend_price": 47.45,
+        "close_price": 51.5,
+        "change_percent": 8.54,
+        "note": "D9收盤≥目標51.20結算success，人工配對入帳"
+      },
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金(07-16筆)",
+        "result": "fail",
+        "recommend_price": 39.95,
+        "close_price": 38.85,
+        "change_percent": -2.75,
+        "note": "D10到期收盤≤推薦價結算fail，未觸停損"
+      },
+      {
+        "stock_code": "2845",
+        "stock_name": "遠東銀(07-16筆)",
+        "result": "fail",
+        "recommend_price": 13.45,
+        "close_price": 13.45,
+        "change_percent": 0.0,
+        "note": "D10到期平盤=推薦價結算fail"
+      },
+      {
+        "stock_code": "2867",
+        "stock_name": "三商壽(07-17筆)",
+        "result": "holding",
+        "recommend_price": 8.91,
+        "close_price": 9.58,
+        "change_percent": 7.52,
+        "note": "盤中高9.70觸目標9.62收盤未達，明日D10到期等收盤結算"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "result": "holding",
+        "recommend_price": 29.15,
+        "close_price": 28.95,
+        "change_percent": -0.69,
+        "note": "D0/10，利率政策催化102分，續抱"
+      },
+      {
+        "stock_code": "2836",
+        "stock_name": "高雄銀",
+        "result": "holding",
+        "recommend_price": 11.95,
+        "close_price": 12.15,
+        "change_percent": 1.67,
+        "note": "D0/10，今日D0四檔最強，續抱"
+      },
+      {
+        "stock_code": "2610",
+        "stock_name": "華航",
+        "result": "holding",
+        "recommend_price": 21.7,
+        "close_price": 21.7,
+        "change_percent": 0.0,
+        "note": "D0/10，超強催化覆寫停損-5%距5.0%，續抱"
+      },
+      {
+        "stock_code": "2615",
+        "stock_name": "萬海",
+        "result": "holding",
+        "recommend_price": 85.0,
+        "close_price": 84.4,
+        "change_percent": -0.71,
+        "note": "D0/10，中東航運催化，續抱"
+      }
+    ]
   }
 }

@@ -19,11 +19,15 @@
       "reason": "📶訊號A L3佈局完成(+15)+動能-49.9%(+15)｜金控H1財報🟡強↑加速（13金控大賺4408億創同期新高）｜avg_rank23.5、buy_ratio28.6%、真連買3天、外資近5日+19.5K｜營收YoY+82.7%+回檔-4.7%(+5)｜EPS YoY+33%(+3)｜外資持股比週減-0.11%(-3)｜MA20+0.2%月季雙線上｜反轉L0",
       "intraday_price": 40.05,
       "intraday_change_pct": 0.25,
-      "result": "holding",
-      "actual_close": 38.6,
-      "close_price": 38.6,
-      "change_percent": -3.38,
-      "holding_status": "D8/10 收盤38.6(-3.4%) | 距目標42.9約11.1% | 距停損35.96約6.8% | 明日最接近停損者之一，觸價即機械停損"
+      "result": "fail",
+      "actual_close": 38.85,
+      "close_price": 38.85,
+      "change_percent": -2.75,
+      "holding_status": "D10 到期結算：收盤 38.85 ≤ 推薦價 39.95（-2.75%），未觸目標亦未觸停損，依 D10 規則判 fail",
+      "settled_date": "2026-07-30",
+      "settled_price": 38.85,
+      "holding_days": 10,
+      "fail_reason": "D10 到期，收盤 38.85 < 推薦價 39.95（-2.75%）。連兩日大盤重挫 -8.2% 拖累金融股，未及反彈"
     },
     {
       "stock_code": "2892",
@@ -63,11 +67,15 @@
       "reason": "📶訊號A L2早期佈局(+10)｜銀行財報🟡強｜avg_rank33.5、buy_ratio52.5%、真連買4天、外資累計+25K｜動能+3.5%正常帶｜EPS YoY+28%(+3)｜MA20+2.4%月季雙線上｜反轉L0",
       "intraday_price": 13.5,
       "intraday_change_pct": 0.37,
-      "result": "holding",
-      "actual_close": 13.3,
-      "close_price": 13.3,
-      "change_percent": -1.12,
-      "holding_status": "D9/10 收盤13.3(-1.1%) | 距目標14.4約8.3% | 距停損12.11約8.9% | 明日D10到期，等收盤結算"
+      "result": "fail",
+      "actual_close": 13.45,
+      "close_price": 13.45,
+      "change_percent": 0.0,
+      "holding_status": "D10 到期結算：收盤 13.45 = 推薦價 13.45（+0.0%），未大於推薦價，依 D10 規則判 fail",
+      "settled_date": "2026-07-30",
+      "settled_price": 13.45,
+      "holding_days": 10,
+      "fail_reason": "D10 到期，收盤 13.45 = 推薦價 13.45（+0.0%），持平未突破。大盤重挫週抗跌但無漲幅"
     }
   ],
   "track_b_recommendations": [],
