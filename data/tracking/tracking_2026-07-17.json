@@ -23,7 +23,7 @@
       "actual_close": 9.37,
       "close_price": 9.37,
       "change_percent": 5.16,
-      "holding_status": "D8/10 收盤9.37(+5.2%) | 距目標9.62約2.7% | 距停損8.02約14.4% | 逆勢上漲，留意觸目標"
+      "holding_status": "D9/10 盤中9.62=目標9.62、盤中高點9.67已觸目標 | 收盤≥9.62即success，盤後結算（D10結算等收盤鐵律） | 距停損8.02約16.6%"
     },
     {
       "stock_code": "2812",
@@ -36,14 +36,18 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 89,
-      "result": "holding",
+      "result": "success",
       "reason": "利率政策🔴金融鏈｜avg_rank24.5+buy_ratio53%｜動能-70.3%佈局完成(+15)｜外資10日累計+40K｜反轉L0｜5日-1.7%未反映｜昨日觀察名單兌現",
-      "intraday_price": 20.35,
-      "intraday_change_pct": 0.49,
+      "intraday_price": 20.65,
+      "intraday_change_pct": 1.98,
       "actual_close": 20.65,
       "close_price": 20.65,
       "change_percent": 1.98,
-      "holding_status": "D8/10 收盤20.65(+2.0%) | 距目標21.85約5.8% | 距停損18.23約11.7%"
+      "settled_date": "2026-07-30",
+      "settled_price": 20.5,
+      "pnl_pct": 1.23,
+      "holding_days": 9,
+      "exit_reason": "L4爆量賣超鐵律（07-29 T86賣超-3,859張/日均量11%），v8.2.1盤前全持倉掃描列開盤出場清單，07-30開盤價20.50出場（+1.23%獲利出場，D9）；predictions.json盤後手寫配對入帳（跨日結算update_predictions不會抓）"
     },
     {
       "stock_code": "2880",
@@ -63,7 +67,7 @@
       "actual_close": 41.8,
       "close_price": 41.8,
       "change_percent": 6.09,
-      "holding_status": "D8/10 收盤41.8(+6.1%) | 距目標42.55約1.8% | 距停損35.46約15.2% | 最接近目標，留意觸價結算"
+      "holding_status": "D9/10 盤中42.4(+7.6%)、盤中高點42.6已觸目標42.55 | 收盤≥42.55即success，盤後結算 | 距停損35.46約16.4%"
     }
   ],
   "exit_orders": [
@@ -188,7 +192,7 @@
       "actual_close": 49.9,
       "close_price": 49.9,
       "change_percent": 5.16,
-      "holding_status": "D8/10 收盤49.9(+5.2%) | 距目標51.2約2.6% | 距停損45.08約9.7% | 接近目標"
+      "holding_status": "D9/10 盤中51.4(+8.3%)、盤中高點51.6已觸目標51.2 | 收盤≥51.2即success，盤後結算 | track_b筆checker不掃，人工追蹤"
     }
   ],
   "track_b_observations": [
