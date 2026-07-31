@@ -7543,11 +7543,11 @@
       }
     ]
   },
-  "settled_accuracy": 58.3,
-  "settled_count": 503,
-  "holding_count": 183,
-  "total_success": 293,
-  "total_fail": 210,
+  "settled_accuracy": "58.2%",
+  "settled_count": 505,
+  "holding_count": 186,
+  "total_success": 294,
+  "total_fail": 211,
   "2026-03-30": {
     "predictions": [
       {
@@ -14009,10 +14009,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 90,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-07-31",
+        "settled_price": 9.9,
+        "holding_days": 10
       },
       {
         "symbol": "2812",
@@ -14486,10 +14486,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 86,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-07-31",
+        "settled_price": 74.1,
+        "holding_days": 2
       },
       {
         "symbol": "5876",
@@ -14586,6 +14586,88 @@
         "settled_date": null,
         "settled_price": null,
         "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-07-31": {
+    "predictions": [
+      {
+        "symbol": "2891",
+        "name": "中信金",
+        "recommend_price": 63.1,
+        "target_price": 68.0,
+        "stop_loss": 56.79,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 91,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2887",
+        "name": "台新新光金",
+        "recommend_price": 33.15,
+        "target_price": 35.8,
+        "stop_loss": 29.84,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 83,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "recommend_price": 18.95,
+        "target_price": 20.5,
+        "stop_loss": 17.05,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 74,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "1102",
+        "name": "亞泥",
+        "recommend_price": 33.2,
+        "target_price": 35.8,
+        "stop_loss": 29.88,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 71,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "recommend_price": 52.9,
+        "target_price": 56.6,
+        "stop_loss": 50.26,
+        "stop_loss_pct": -5,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 75,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1,
+        "track": "B"
       }
     ],
     "settled_accuracy": null,

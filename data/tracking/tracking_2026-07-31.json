@@ -30,7 +30,11 @@
       "intraday_change_pct": 2.06,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "intraday_note": "D0 +2.06%（較推薦價）；反轉L0、T86 07-30 +5,805張；距目標68.0約5.6%、距停損56.79約13.4%"
+      "intraday_note": "D0 +2.06%（較推薦價）；反轉L0、T86 07-30 +5,805張；距目標68.0約5.6%、距停損56.79約13.4%",
+      "actual_close": 64.9,
+      "change_percent": 2.85,
+      "holding_status": "D0 收盤 64.9（+2.85%）｜距目標68.0約4.8%｜距停損12.5%｜大漲日強勢股，續抱",
+      "close_price": 64.9
     },
     {
       "stock_code": "2887",
@@ -49,7 +53,11 @@
       "intraday_change_pct": 6.94,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "intraday_note": "D0 +6.94% 今日推薦最強；反轉L0、T86 07-30 +12,225張；距目標35.8僅1.0%，若收盤≥35.8今日即結算success"
+      "intraday_note": "D0 +6.94% 今日推薦最強；反轉L0、T86 07-30 +12,225張；距目標35.8僅1.0%，若收盤≥35.8今日即結算success",
+      "actual_close": 35.95,
+      "change_percent": 8.45,
+      "holding_status": "D0 收盤 35.95（+8.45%）已越目標 35.8，但依 settlement_checker 機械規則（recommend_date < d）D0 當日不結算，下一交易日收盤 ≥ 35.8 即結算 success",
+      "close_price": 35.95
     },
     {
       "stock_code": "2002",
@@ -68,7 +76,11 @@
       "intraday_change_pct": 0.26,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "intraday_note": "D0 +0.26%；反轉L0、T86 07-30 +14,144張；距目標20.5約7.9%、距停損17.05約11.4%"
+      "intraday_note": "D0 +0.26%；反轉L0、T86 07-30 +14,144張；距目標20.5約7.9%、距停損17.05約11.4%",
+      "actual_close": 18.95,
+      "change_percent": 0.0,
+      "holding_status": "D0 收盤 18.95（0.0%）平推薦價｜距目標8.2%｜距停損10.0%",
+      "close_price": 18.95
     },
     {
       "stock_code": "1102",
@@ -87,21 +99,75 @@
       "intraday_change_pct": -1.2,
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
-      "intraday_note": "D0 -1.20% 今日推薦唯一收黑；反轉L0、T86 07-30 +4,881張；距停損29.88約9.8%，無出場訊號"
+      "intraday_note": "D0 -1.20% 今日推薦唯一收黑；反轉L0、T86 07-30 +4,881張；距停損29.88約9.8%，無出場訊號",
+      "actual_close": 33.0,
+      "change_percent": -0.6,
+      "holding_status": "D0 收盤 33.0（-0.60%）大漲日收黑唯一一檔｜距目標8.5%｜距停損9.5%｜無出場訊號續抱",
+      "close_price": 33.0
     }
   ],
   "observations": [
-    {"stock_code": "2882", "stock_name": "國泰金", "score": 90, "reason": "分數達標但外資近5日-7,200未過『法人沒出貨』三重門檻，剔除；EPS+335%+ModA L2，待外資回補"},
-    {"stock_code": "3231", "stock_name": "緯創", "score": null, "reason": "ModA L3+真連續9天+累計+187K+營收+39%回檔-7.8%，但觸法人現身門檻（不在07-30 TOP50買超×乖離+2.9%=37%爛區，無例外）→觀察"},
-    {"stock_code": "2344", "stock_name": "華邦電", "score": null, "reason": "Micron+18.4%催化+昨外資單日+36K+營收+88.5%，但外資近5日-5,313未過法人沒出貨門檻；記憶體現貨反轉首日不追"},
-    {"stock_code": "3583", "stock_name": "辛耘", "score": 60, "reason": "設備鏈催化對齊(AMAT+15%/LRCX+18%)+外資5日+752，但動能+336.7%需覆寫+價格位置僅1分，總分<70"},
-    {"stock_code": "6196", "stock_name": "帆宣", "score": 63, "reason": "廠務催化對齊+外資投信同步買，動能+500%需覆寫+價格位置1分，總分<70"},
-    {"stock_code": "1519", "stock_name": "華城", "score": 49, "reason": "離岸風電739.5億催化+動能-48.4%，但EPS連3季負-5+不在TOP50，總分<70"},
-    {"stock_code": "2887_note", "stock_name": "(金融擴充說明)", "score": null, "reason": "2834臺企銀74/2885元大金74/2892第一金73/2845遠東銀73達70+，因單一產業≤50%限制未納入，列觀察"},
-    {"stock_code": "5871", "stock_name": "中租-KY", "score": null, "reason": "ModA L2但央行放鷹=資金成本上升，催化方向為負，未過催化對齊門檻（連3日）"}
+    {
+      "stock_code": "2882",
+      "stock_name": "國泰金",
+      "score": 90,
+      "reason": "分數達標但外資近5日-7,200未過『法人沒出貨』三重門檻，剔除；EPS+335%+ModA L2，待外資回補"
+    },
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "score": null,
+      "reason": "ModA L3+真連續9天+累計+187K+營收+39%回檔-7.8%，但觸法人現身門檻（不在07-30 TOP50買超×乖離+2.9%=37%爛區，無例外）→觀察"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "score": null,
+      "reason": "Micron+18.4%催化+昨外資單日+36K+營收+88.5%，但外資近5日-5,313未過法人沒出貨門檻；記憶體現貨反轉首日不追"
+    },
+    {
+      "stock_code": "3583",
+      "stock_name": "辛耘",
+      "score": 60,
+      "reason": "設備鏈催化對齊(AMAT+15%/LRCX+18%)+外資5日+752，但動能+336.7%需覆寫+價格位置僅1分，總分<70"
+    },
+    {
+      "stock_code": "6196",
+      "stock_name": "帆宣",
+      "score": 63,
+      "reason": "廠務催化對齊+外資投信同步買，動能+500%需覆寫+價格位置1分，總分<70"
+    },
+    {
+      "stock_code": "1519",
+      "stock_name": "華城",
+      "score": 49,
+      "reason": "離岸風電739.5億催化+動能-48.4%，但EPS連3季負-5+不在TOP50，總分<70"
+    },
+    {
+      "stock_code": "2887_note",
+      "stock_name": "(金融擴充說明)",
+      "score": null,
+      "reason": "2834臺企銀74/2885元大金74/2892第一金73/2845遠東銀73達70+，因單一產業≤50%限制未納入，列觀察"
+    },
+    {
+      "stock_code": "5871",
+      "stock_name": "中租-KY",
+      "score": null,
+      "reason": "ModA L2但央行放鷹=資金成本上升，催化方向為負，未過催化對齊門檻（連3日）"
+    }
   ],
   "exit_alerts": [
-    {"stock_code": "6505", "stock_name": "台塑化", "level": 4, "action": "🔴 L4鐵律開盤出場", "reason": "爆量賣超-4,781張（佔日均量12.3%），昨L2今升L4；07-29推薦價74.6，昨收71.6", "executed": true, "exit_price": 74.1, "return_pct": -0.67, "note": "07-31開盤74.1出場（D2，fail -0.67%），已回寫tracking_2026-07-29；盤中續跌至71.1，鐵律避免擴損-4.7%；predictions待盤後手寫入帳"}
+    {
+      "stock_code": "6505",
+      "stock_name": "台塑化",
+      "level": 4,
+      "action": "🔴 L4鐵律開盤出場",
+      "reason": "爆量賣超-4,781張（佔日均量12.3%），昨L2今升L4；07-29推薦價74.6，昨收71.6",
+      "executed": true,
+      "exit_price": 74.1,
+      "return_pct": -0.67,
+      "note": "07-31開盤74.1出場（D2，fail -0.67%），已回寫tracking_2026-07-29；盤中續跌至71.1，鐵律避免擴損-4.7%；predictions待盤後手寫入帳"
+    }
   ],
   "holding_evaluation_note": "持倉加碼評估：2884玉山金88可加碼(距目標2.7%追價空間有限)、5880合庫金87可加碼(單日+44K≥30K過量警告-5已計)；2883凱基金90/2886等沿用進行中追蹤不重複建倉；1216統一續抱觀察(距停損4.8%全持倉最近)；2610華航續抱(距停損5.0%)；其餘holding續抱",
   "track_b_recommendations": [
@@ -121,18 +187,118 @@
       "result": "holding",
       "intraday_price": 52.9,
       "intraday_change_pct": 2.72,
-      "intraday_note": "盤中新推薦（07-17舊追蹤已於07-30觸目標結算success +8.54%，本筆為全新追蹤，無重複記錄）"
+      "intraday_note": "盤中新推薦（07-17舊追蹤已於07-30觸目標結算success +8.54%，本筆為全新追蹤，無重複記錄）",
+      "actual_close": 53.1,
+      "change_percent": 0.38,
+      "holding_status": "D0 收盤 53.1（+0.38%）｜距目標56.6約6.6%｜距停損5.4%（-5%停損）",
+      "close_price": 53.1
     }
   ],
   "track_b_observations": [
-    {"stock_code": "2812", "stock_name": "台中銀", "score": 69, "reason": "累計+64K+外資5日+31.5K全池最強，但avg_rank 31(法人16)+昨日L4爆量賣出場翌日型態偏弱(技術9)，總分<75；昨鐵律出場+1.23%後今日平盤"},
-    {"stock_code": "2892", "stock_name": "第一金", "score": 62, "reason": "avg_rank 10+buy_ratio 30%法人強(23)，但動能+55.1%(-10)+已大漲5日+6.4%(-10)+持股比-3=扣分觸上限-20"},
-    {"stock_code": "2609", "stock_name": "陽明", "score": 50, "reason": "營收連10月衰退(-5)+EPS連4季負(-5)+持股比-3+價格位置6(月季雙線下)，基本面惡化"},
-    {"stock_code": "9945", "stock_name": "潤泰新", "score": null, "reason": "真連續10天+動能+47%籌碼佳，但營建無🔴催化對齊，未過三重門檻→觀察"},
-    {"stock_code": "2834", "stock_name": "臺企銀", "score": null, "reason": "昨+27.6K買超第4名但動能+283.6%>100%排除（不適用覆寫濫用）"},
-    {"stock_code": "2801", "stock_name": "彰銀", "score": null, "reason": "外資近5日-2,317未過『法人沒出貨』門檻"},
-    {"stock_code": "2511", "stock_name": "太子", "score": null, "reason": "盤中偵測器唯一強訊號(60分,連買8天+量比4.6x)，但今日+4.62%≥3%且動能+500%>100%雙重排除"},
-    {"stock_code": "2845_group", "stock_name": "(動能>100%批次排除)", "score": null, "reason": "2845遠東銀+500%/9904寶成+274.5%(且累計轉負狀態不明)/2633台灣高鐵+500%/2889國票金+500%"},
-    {"stock_code": "2344_group", "stock_name": "(今日≥3%已反映排除)", "score": null, "reason": "2344華邦電+9.7%/2882國泰金+5.6%/2890永豐金+4.3%/2881富邦金+4.4%/2885元大金+7.8%/4919新唐+9.4%/1802台玻+6.7%等，違反『只找還沒漲的』"}
-  ]
+    {
+      "stock_code": "2812",
+      "stock_name": "台中銀",
+      "score": 69,
+      "reason": "累計+64K+外資5日+31.5K全池最強，但avg_rank 31(法人16)+昨日L4爆量賣出場翌日型態偏弱(技術9)，總分<75；昨鐵律出場+1.23%後今日平盤"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "score": 62,
+      "reason": "avg_rank 10+buy_ratio 30%法人強(23)，但動能+55.1%(-10)+已大漲5日+6.4%(-10)+持股比-3=扣分觸上限-20"
+    },
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "score": 50,
+      "reason": "營收連10月衰退(-5)+EPS連4季負(-5)+持股比-3+價格位置6(月季雙線下)，基本面惡化"
+    },
+    {
+      "stock_code": "9945",
+      "stock_name": "潤泰新",
+      "score": null,
+      "reason": "真連續10天+動能+47%籌碼佳，但營建無🔴催化對齊，未過三重門檻→觀察"
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "score": null,
+      "reason": "昨+27.6K買超第4名但動能+283.6%>100%排除（不適用覆寫濫用）"
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "score": null,
+      "reason": "外資近5日-2,317未過『法人沒出貨』門檻"
+    },
+    {
+      "stock_code": "2511",
+      "stock_name": "太子",
+      "score": null,
+      "reason": "盤中偵測器唯一強訊號(60分,連買8天+量比4.6x)，但今日+4.62%≥3%且動能+500%>100%雙重排除"
+    },
+    {
+      "stock_code": "2845_group",
+      "stock_name": "(動能>100%批次排除)",
+      "score": null,
+      "reason": "2845遠東銀+500%/9904寶成+274.5%(且累計轉負狀態不明)/2633台灣高鐵+500%/2889國票金+500%"
+    },
+    {
+      "stock_code": "2344_group",
+      "stock_name": "(今日≥3%已反映排除)",
+      "score": null,
+      "reason": "2344華邦電+9.7%/2882國泰金+5.6%/2890永豐金+4.3%/2881富邦金+4.4%/2885元大金+7.8%/4919新唐+9.4%/1802台玻+6.7%等，違反『只找還沒漲的』"
+    }
+  ],
+  "after_market": {
+    "market_close": 43119.75,
+    "market_change_pct": 7.98,
+    "settlements_today": [
+      {
+        "stock_code": "2867",
+        "stock_name": "三商壽",
+        "source": "tracking_2026-07-17",
+        "result": "success",
+        "settled_price": 9.9,
+        "change_pct": 11.11,
+        "holding_days": 10,
+        "note": "D10到期收盤9.90≥目標9.62"
+      },
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "source": "tracking_2026-07-29",
+        "result": "fail",
+        "settled_price": 74.1,
+        "change_pct": -0.67,
+        "holding_days": 2,
+        "note": "L4鐵律開盤出場，predictions盤後手寫入帳"
+      }
+    ],
+    "note": "2887收盤35.95已越目標35.8，依checker機械規則D0當日不結算，D1(08-03)收盤≥35.8即結算success"
+  },
+  "tomorrow_recommendations": [],
+  "tomorrow_note": "明日(08-03)無新推薦：T86 07-31未公布+大盤單日+7.98%追高風險+持倉20筆已滿。候選4檔逐檔排除：2027法人現身門檻+催化未對齊/3017法人現身門檻+外資5日負/9945催化未對齊/2812分數69<70且L4出場後型態未修復",
+  "removed_stocks": [],
+  "yesterday_verification": {
+    "accuracy": "58.2% (294s/211f/505 settled)",
+    "settled_today": 2,
+    "results": [
+      {
+        "stock_code": "2867",
+        "stock_name": "三商壽",
+        "result": "success",
+        "change_pct": 11.11,
+        "note": "D10到期 8.91→9.90 越目標9.62（07-17推薦，跨日手寫入帳）"
+      },
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "result": "fail",
+        "change_pct": -0.67,
+        "note": "L4鐵律開盤74.1出場 D2（07-29推薦，跨日手寫入帳）"
+      }
+    ],
+    "note": "今日推薦5筆全數D0 holding不判定；出場訊號零觸發"
+  }
 }
