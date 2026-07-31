@@ -1,0 +1,85 @@
+{
+  "date": "2026-07-31",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "us_market": "費半+8.19%（MSFT財報+15.51%引爆）、Micron+18.36%、AMAT+14.97%、LRCX+17.98%、NASDAQ+2.78%、道瓊+1.19%、S&P500+1.66%",
+    "adr": "台積電ADR+7.64%、聯電ADR+10.70%、日月光ADR+11.73%",
+    "vix": 17.09,
+    "vix_note": "VIX -17.3% 回落至20以下，防禦比例 0-15%",
+    "tw_news": "台指期夜盤大漲逾1400點；央行理監事會紀錄兩位理事放鷹（升息風向）；離岸風電投審會核准739.5億；南亞科昨跌停爆4,768萬違約交割；處置股新增蔚華科/台勝科/大量/力山/中探針",
+    "data_note": "us_asia_markets.json 由 yfinance 兩日收盤重算覆寫（原腳本前收基準bug誤報費半-8.43%實+8.19%）；今日 MI 未提供，催化主題沿用 07-30 MI 🔴區；日經/KOSPI yfinance僅到07-29"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "industry": "金融",
+      "recommend_price": 63.1,
+      "target_price": 68.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 56.79,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 91,
+      "reason": "🔴利率政策催化(央行放鷹)+ModA L3佈局完成(動能-37.3%+真連續3天+累計+66K)+EPS YoY+47.8%+avg_rank 20；外資5日+684過三重門檻"
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "industry": "金融",
+      "recommend_price": 33.15,
+      "target_price": 35.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 29.84,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 83,
+      "reason": "🔴利率政策催化+營收YoY+117.9%回檔-3.9%(+5)+EPS+177.3%(+5)+avg_rank 15+佔成交20.4%；外資5日+1,719、反轉L0"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "industry": "鋼鐵",
+      "recommend_price": 18.95,
+      "target_price": 20.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 17.05,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 74,
+      "reason": "ModA L3佈局完成(真連續10天+累計+196K+動能-31.9%)+由虧轉盈題材；EPS連6季負成長-5為主要減分，5日-0.8%未反映"
+    },
+    {
+      "stock_code": "1102",
+      "stock_name": "亞泥",
+      "industry": "水泥",
+      "recommend_price": 33.2,
+      "target_price": 35.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 29.88,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 71,
+      "reason": "ModA L3佈局完成(真連續10天+累計+31K+動能-48.1%)+EPS+36.6%(+3)；外資持股比週減-0.51%(-3)、乖離-2.8%低位"
+    }
+  ],
+  "observations": [
+    {"stock_code": "2882", "stock_name": "國泰金", "score": 90, "reason": "分數達標但外資近5日-7,200未過『法人沒出貨』三重門檻，剔除；EPS+335%+ModA L2，待外資回補"},
+    {"stock_code": "3231", "stock_name": "緯創", "score": null, "reason": "ModA L3+真連續9天+累計+187K+營收+39%回檔-7.8%，但觸法人現身門檻（不在07-30 TOP50買超×乖離+2.9%=37%爛區，無例外）→觀察"},
+    {"stock_code": "2344", "stock_name": "華邦電", "score": null, "reason": "Micron+18.4%催化+昨外資單日+36K+營收+88.5%，但外資近5日-5,313未過法人沒出貨門檻；記憶體現貨反轉首日不追"},
+    {"stock_code": "3583", "stock_name": "辛耘", "score": 60, "reason": "設備鏈催化對齊(AMAT+15%/LRCX+18%)+外資5日+752，但動能+336.7%需覆寫+價格位置僅1分，總分<70"},
+    {"stock_code": "6196", "stock_name": "帆宣", "score": 63, "reason": "廠務催化對齊+外資投信同步買，動能+500%需覆寫+價格位置1分，總分<70"},
+    {"stock_code": "1519", "stock_name": "華城", "score": 49, "reason": "離岸風電739.5億催化+動能-48.4%，但EPS連3季負-5+不在TOP50，總分<70"},
+    {"stock_code": "2887_note", "stock_name": "(金融擴充說明)", "score": null, "reason": "2834臺企銀74/2885元大金74/2892第一金73/2845遠東銀73達70+，因單一產業≤50%限制未納入，列觀察"},
+    {"stock_code": "5871", "stock_name": "中租-KY", "score": null, "reason": "ModA L2但央行放鷹=資金成本上升，催化方向為負，未過催化對齊門檻（連3日）"}
+  ],
+  "exit_alerts": [
+    {"stock_code": "6505", "stock_name": "台塑化", "level": 4, "action": "🔴 L4鐵律開盤出場", "reason": "爆量賣超-4,781張（佔日均量12.3%），昨L2今升L4；07-29推薦價74.6，昨收71.6"}
+  ],
+  "holding_evaluation_note": "持倉加碼評估：2884玉山金88可加碼(距目標2.7%追價空間有限)、5880合庫金87可加碼(單日+44K≥30K過量警告-5已計)；2883凱基金90/2886等沿用進行中追蹤不重複建倉；1216統一續抱觀察(距停損4.8%全持倉最近)；2610華航續抱(距停損5.0%)；其餘holding續抱",
+  "track_b_recommendations": [],
+  "track_b_observations": []
+}
