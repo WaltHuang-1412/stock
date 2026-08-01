@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-07-30",
+  "last_updated": "2026-08-01",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -1484,6 +1484,11 @@
               "code": "7751",
               "name": "竑騰",
               "category": "光通訊與網通（含CPO/矽光子量產）"
+            },
+            {
+              "code": "2301",
+              "name": "光寶科",
+              "category": "光通訊與網通（含CPO/矽光子量產）"
             }
           ]
         }
@@ -2487,6 +2492,16 @@
               "code": "7751",
               "name": "竑騰",
               "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "2301",
+              "name": "光寶科",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "5388",
+              "name": "中磊",
+              "category": "AI伺服器與半導體"
             }
           ]
         }
@@ -3216,6 +3231,26 @@
             {
               "code": "2409",
               "name": "友達",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2395",
+              "name": "研華",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3443",
+              "name": "創意",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2345",
+              "name": "智邦",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "2303",
+              "name": "聯電",
               "category": "企業財報重點"
             }
           ]
@@ -4191,6 +4226,11 @@
               "code": "2356",
               "name": "英業達",
               "category": "ASIC自研晶片與去輝達化"
+            },
+            {
+              "code": "2454",
+              "name": "聯發科",
+              "category": "ASIC自研晶片與去輝達化"
             }
           ]
         }
@@ -4383,6 +4423,16 @@
               "code": "2408",
               "name": "南亞科",
               "category": "台股信用槓桿過熱（央行示警）"
+            },
+            {
+              "code": "3081",
+              "name": "聯亞",
+              "category": "台股信用槓桿過熱（央行示警，降溫觀察）"
+            },
+            {
+              "code": "4979",
+              "name": "華星光",
+              "category": "台股信用槓桿過熱（央行示警，降溫觀察）"
             }
           ]
         }
@@ -4730,6 +4780,21 @@
             {
               "code": "2337",
               "name": "旺宏",
+              "category": "AI泡沫前兆檢查清單（系統性風險監控）【每日必檢】"
+            },
+            {
+              "code": "2301",
+              "name": "光寶科",
+              "category": "AI泡沫前兆檢查清單（系統性風險監控）【每日必檢】"
+            },
+            {
+              "code": "2316",
+              "name": "南電",
+              "category": "AI泡沫前兆檢查清單（系統性風險監控）【每日必檢】"
+            },
+            {
+              "code": "3167",
+              "name": "大量",
               "category": "AI泡沫前兆檢查清單（系統性風險監控）【每日必檢】"
             }
           ]
@@ -5136,6 +5201,11 @@
               "code": "4958",
               "name": "臻鼎-KY",
               "category": "ABF載板/PCB基板缺口擴大帶動漲價"
+            },
+            {
+              "code": "3081",
+              "name": "聯亞",
+              "category": "ABF載板/PCB基板缺口擴大帶動漲價（台積電-景碩EMIB合作添變數）"
             }
           ]
         }
@@ -5229,6 +5299,11 @@
             {
               "code": "2382",
               "name": "廣達",
+              "category": "AI基建融資熱潮（Meta-Anthropic算力租賃、OpenAI鉅額支出、輝達循環融資疑慮）"
+            },
+            {
+              "code": "3231",
+              "name": "緯創",
               "category": "AI基建融資熱潮（Meta-Anthropic算力租賃、OpenAI鉅額支出、輝達循環融資疑慮）"
             }
           ]
@@ -5367,6 +5442,193 @@
               "code": "6202",
               "name": "盛群",
               "category": "MCU/晶片族群輪番漲價（盛群領軍）"
+            }
+          ]
+        }
+      }
+    },
+    "被動元件族群報復性反彈": {
+      "name": "被動元件族群報復性反彈",
+      "catalysts": [
+        "被動元件族群報復性反彈",
+        "籌碼修正告一段落"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "3167",
+              "name": "大量",
+              "category": "被動元件族群報復性反彈（籌碼修正告一段落）"
+            },
+            {
+              "code": "3624",
+              "name": "光頡",
+              "category": "被動元件族群報復性反彈（籌碼修正告一段落）"
+            }
+          ]
+        }
+      }
+    },
+    "鋼鐵市場需求疲弱": {
+      "name": "鋼鐵市場需求疲弱",
+      "catalysts": [
+        "鋼鐵市場需求疲弱",
+        "築底格局生變"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2023",
+              "name": "燁輝",
+              "category": "鋼鐵市場需求疲弱（築底格局生變）"
+            },
+            {
+              "code": "2002",
+              "name": "中鋼",
+              "category": "鋼鐵市場需求疲弱（築底格局生變）"
+            }
+          ]
+        }
+      }
+    },
+    "力積電創辦人黃崇仁辭世": {
+      "name": "力積電創辦人黃崇仁辭世",
+      "catalysts": [
+        "力積電創辦人黃崇仁辭世",
+        "經營權交接觀察"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "6770",
+              "name": "力積電",
+              "category": "力積電創辦人黃崇仁辭世（經營權交接觀察）"
+            }
+          ]
+        }
+      }
+    },
+    "弘塑攜手德國Singulus深化面板級封裝合作": {
+      "name": "弘塑攜手德國Singulus深化面板級封裝合作",
+      "catalysts": [
+        "弘塑攜手德國Singulus深化面板級封裝合作",
+        "弘塑攜手德國",
+        "Singulus",
+        "深化面板級封裝合作",
+        "經營層異動觀察"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "3131",
+              "name": "弘塑",
+              "category": "弘塑攜手德國Singulus深化面板級封裝合作（經營層異動觀察）"
+            }
+          ]
+        }
+      }
+    },
+    "樺漢完成公開收購Kontron": {
+      "name": "樺漢完成公開收購Kontron",
+      "catalysts": [
+        "樺漢完成公開收購Kontron",
+        "樺漢完成公開收購",
+        "Kontron",
+        "AG",
+        "營運轉機延續"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "6414",
+              "name": "樺漢",
+              "category": "樺漢完成公開收購Kontron AG案（營運轉機延續）"
+            }
+          ]
+        }
+      }
+    },
+    "美股七雄AI資本支出分化": {
+      "name": "美股七雄AI資本支出分化",
+      "catalysts": [
+        "美股七雄AI資本支出分化",
+        "美股七雄",
+        "AI",
+        "資本支出分化",
+        "Mag",
+        "ROI"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2382",
+              "name": "廣達",
+              "category": "美股七雄AI資本支出分化（Mag7 ROI差異化）"
+            },
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "美股七雄AI資本支出分化（Mag7 ROI差異化）"
+            },
+            {
+              "code": "3231",
+              "name": "緯創",
+              "category": "美股七雄AI資本支出分化（Mag7 ROI差異化）"
+            },
+            {
+              "code": "3711",
+              "name": "日月光",
+              "category": "美股七雄AI資本支出分化（Mag7 ROI差異化）"
+            }
+          ]
+        }
+      }
+    },
+    "SCFI貨櫃運價止跌反彈": {
+      "name": "SCFI貨櫃運價止跌反彈",
+      "catalysts": [
+        "SCFI貨櫃運價止跌反彈",
+        "SCFI",
+        "貨櫃運價止跌反彈",
+        "旺季需求支撐"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2603",
+              "name": "長榮",
+              "category": "SCFI貨櫃運價止跌反彈（旺季需求支撐）"
+            },
+            {
+              "code": "2609",
+              "name": "陽明",
+              "category": "SCFI貨櫃運價止跌反彈（旺季需求支撐）"
+            },
+            {
+              "code": "2615",
+              "name": "萬海",
+              "category": "SCFI貨櫃運價止跌反彈（旺季需求支撐）"
             }
           ]
         }
