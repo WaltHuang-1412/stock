@@ -40,7 +40,7 @@
 
 每次分析完成後，必須存在以下文件：
 - 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json` + `tw_market_news.json` + `catalyst_preposition_scan.json` + `catalyst_theme_signals.json` + `revenue_check.json` + `eps_check.json` + `foreign_ratio_check.json` + `price_position_check.json` + `stock_dossier.json` + `tracking_YYYY-MM-DD.json` + `before_market_line.txt`
-- 盤中：`data/YYYY-MM-DD/intraday_analysis.md` + `intraday_detector.json` + `intraday_line.txt` + 更新 `tracking_YYYY-MM-DD.json`
+- 盤中：`data/YYYY-MM-DD/intraday_analysis.md` + `intraday_detector.json` + `intraday_line.txt` + 更新 `tracking_YYYY-MM-DD.json`（有盤中新推薦時另需 `stock_dossier_intraday.json`）
 - 盤後：`data/YYYY-MM-DD/after_market_analysis.md` + `after_market_line.txt` + 更新 `tracking_YYYY-MM-DD.json` + 更新 `predictions.json`
 
 **如果檔案不存在 = 步驟未執行 = 違規**
@@ -813,7 +813,7 @@ python3 scripts/stock_dossier.py [名單...] --date $(date +%Y-%m-%d)
 
 ### 🔴 Step 0: TodoWrite
 
-步驟：Step 1（前置檢查）→ 2（Track A 追蹤+出場）→ 2.5（盤中偵測器）→ 3（Track B 候選篩選）→ 3.5（Track B 評分+推薦）→ 4（整合輸出）→ 5（建檔）
+步驟：Step 1（前置檢查）→ 2（Track A 追蹤+出場）→ 2.5（盤中偵測器）→ 3（Track B 候選篩選）→ 3.5（Track B 評分+推薦+逐檔卷宗）→ 4（整合輸出）→ 5（建檔）
 
 ---
 
@@ -890,6 +890,17 @@ python3 scripts/reversal_alert.py [股票清單]
 | 停損 | -5% | -10% |
 
 無符合條件時標註「今日無盤中新推薦」
+
+**🔴 逐檔資訊卷宗（v8.3，有盤中新推薦時強制）**：
+
+```bash
+# 名單 = 全部盤中新推薦（track_b_recommendations），一檔不漏
+python3 scripts/stock_dossier.py [盤中新推薦...] --date $(date +%Y-%m-%d) --suffix intraday
+```
+
+- 處理規則同盤前 Step 9.5 強制規則表（法說會/除權息/重大訊息標註、矛盾必回應、來源缺口必揭露）
+- **法說會當天（含今日盤後場次）→ 不開新倉**：盤中推薦持有期跨越事件日的風險更高
+- 驗證：✅ 有盤中新推薦時必須生成 `stock_dossier_intraday.json`，不存在 = 禁止建檔；無新推薦時免跑
 
 ---
 

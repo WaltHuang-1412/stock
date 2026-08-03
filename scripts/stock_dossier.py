@@ -352,6 +352,8 @@ def main():
     parser.add_argument('--date', default=datetime.date.today().isoformat())
     parser.add_argument('--days', type=int, default=5, help='事件窗口天數（預設5）')
     parser.add_argument('--output-dir', default=None)
+    parser.add_argument('--suffix', default='',
+                        help='輸出檔名後綴，如 intraday → stock_dossier_intraday.json（避免覆蓋盤前卷宗）')
     args = parser.parse_args()
 
     ref_date = datetime.date.fromisoformat(args.date)
@@ -360,7 +362,8 @@ def main():
     result = build_dossier(args.codes, ref_date, args.days, date_dir)
 
     os.makedirs(date_dir, exist_ok=True)
-    out_path = os.path.join(date_dir, 'stock_dossier.json')
+    fname = f'stock_dossier_{args.suffix}.json' if args.suffix else 'stock_dossier.json'
+    out_path = os.path.join(date_dir, fname)
     with open(out_path, 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 
