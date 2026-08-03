@@ -34,6 +34,38 @@ HEADERS = {
 }
 
 
+def _prev_trading_close(result: Dict[str, Any], meta: Dict[str, Any]):
+    """從日 K 收盤序列取「前一交易日」收盤價。
+
+    Yahoo chart API 的 chartPreviousClose 是圖表區間起點的前收——range=5d 時
+    等於 5 個交易日前的收盤，拿來當基準會把單日漲跌算成 5 日累計漲幅
+    （2026-07-09 起盤前費半/MSFT 等連續誤報的根因）。
+    正確基準：最後一根 K 棒若屬於當前交易時段（日期 >= regularMarketTime 的
+    日期，如盤中即時棒或今日剛收盤的棒），前收取倒數第二根；否則取最後一根。
+    無法判斷時回傳 None，由呼叫端 fallback。
+    """
+    try:
+        timestamps = result.get('timestamp') or []
+        closes = result['indicators']['quote'][0].get('close') or []
+        market_time = meta.get('regularMarketTime')
+        if market_time is None:
+            return None
+        offset = meta.get('gmtoffset', 0)
+        valid = [(t, c) for t, c in zip(timestamps, closes) if c is not None]
+        if len(valid) < 2:
+            return None
+
+        def to_local_date(ts):
+            return datetime.datetime.fromtimestamp(
+                ts + offset, tz=datetime.timezone.utc).date()
+
+        if to_local_date(valid[-1][0]) >= to_local_date(market_time):
+            return valid[-2][1]
+        return valid[-1][1]
+    except Exception:
+        return None
+
+
 def fetch_yahoo_quote(symbol: str) -> Dict[str, Any]:
     """從 Yahoo Finance API 獲取報價"""
     try:
@@ -45,7 +77,9 @@ def fetch_yahoo_quote(symbol: str) -> Dict[str, Any]:
         meta = result['meta']
 
         current_price = meta.get('regularMarketPrice', 0)
-        prev_close = meta.get('chartPreviousClose', meta.get('previousClose', current_price))
+        prev_close = _prev_trading_close(result, meta)
+        if not prev_close:
+            prev_close = meta.get('chartPreviousClose', meta.get('previousClose', current_price))
 
         if prev_close and prev_close > 0:
             change = current_price - prev_close
