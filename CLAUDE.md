@@ -1,7 +1,7 @@
 # 台股分析執行流程（v8.0 多因子版）
 
-**版本**：v8.2.1
-**更新日期**：2026-07-29
+**版本**：v8.3.0
+**更新日期**：2026-08-03
 **目的**：提供清晰、可執行的盤前/盤中/盤後分析流程
 
 > **v8.2 變更**（依據 2026-07-09 回測 395 筆結算，詳見 `data/backtest/2026-07-09_score_regime/`）：
@@ -11,6 +11,8 @@
 > 同回測**否決**擁擠度懲罰與外資賣壓煞車（高乖離+法人前排命中率 81-88%，為最強訊號；外資賣壓無法區分低接/出貨），禁止再提。
 >
 > **2026-07-16 重驗**（553 筆含殭屍清理批次，詳見 `data/backtest/2026-07-16_v82_reval/`）：三條規則全部成立 — 法人現身門檻命中區 34%（109 筆）、高乖離+法人前排 80%（55 筆，排除殭屍批次 89%）、分數帶仍無分辨力（64/60/59/60%）。殭屍批次無系統性偏差（57% vs 62%）。
+> **v8.3 變更**（2026-08-03）：新增 Step 9.5「逐檔資訊卷宗」強制閘門。起因：08-03 盤前推薦緯創，其 08/04 法說會資訊已在 topic_tracker.md（08:06 產出）卻未進盤前報告（08:23 完成），盤中才補標。逐事件補規則補不完，改為「標的驅動」：推薦定案後以股票代碼機械式彙整事件日曆（法說會/除權息/重大訊息）＋當日資料源全文掃描，強制逐檔過目後才准建檔。
+>
 > 同回測**否決**「T86 滯後 ≥2 交易日倉位減半/門檻 80→85」提案（07-14 盤後提議）：gap≥4 六個推薦日僅 07-13 全滅屬單日事件，其餘四日 20 勝 9 敗，整體 54% vs 正常日 59% 且平均報酬反而較高（+6.55% vs +5.90%）；門檻 80→85 模擬無改善（54% vs 54%）。連假後風控依靠既有「盤中 L4 鐵律 D1 出場」即可，禁止再提倉位減半。
 
 ---
@@ -37,7 +39,7 @@
 ### 📁 驗證機制
 
 每次分析完成後，必須存在以下文件：
-- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json` + `tw_market_news.json` + `catalyst_preposition_scan.json` + `catalyst_theme_signals.json` + `revenue_check.json` + `eps_check.json` + `foreign_ratio_check.json` + `price_position_check.json` + `tracking_YYYY-MM-DD.json` + `before_market_line.txt`
+- 盤前：`data/YYYY-MM-DD/before_market_analysis.md` + `us_asia_markets.json` + `us_leader_alerts.json` + `tw_market_news.json` + `catalyst_preposition_scan.json` + `catalyst_theme_signals.json` + `revenue_check.json` + `eps_check.json` + `foreign_ratio_check.json` + `price_position_check.json` + `stock_dossier.json` + `tracking_YYYY-MM-DD.json` + `before_market_line.txt`
 - 盤中：`data/YYYY-MM-DD/intraday_analysis.md` + `intraday_detector.json` + `intraday_line.txt` + 更新 `tracking_YYYY-MM-DD.json`
 - 盤後：`data/YYYY-MM-DD/after_market_analysis.md` + `after_market_line.txt` + 更新 `tracking_YYYY-MM-DD.json` + 更新 `predictions.json`
 
@@ -87,7 +89,7 @@ python3 scripts/check_market_status.py --date $(date +%Y-%m-%d) --mode before_ma
 
 ### 🔴 Step 0: 建立 TodoWrite（強制第一步）
 
-步驟清單：Step 1（國際市場）→ 1.5（龍頭預警）→ 2（台股時事）→ 3（即時股價）→ 4（歷史驗證）→ 5（法人TOP50）→ 5.5（Module A 預埋掃描）→ 5.7（Module B 催化主題）→ 模式追蹤器 → 營收/持股比/EPS季報查詢 → 6（雙軌候選）→ 7（五維度評分+多因子加減分）→ 8（籌碼分析）→ 9（產業分散）→ 10（建檔）
+步驟清單：Step 1（國際市場）→ 1.5（龍頭預警）→ 2（台股時事）→ 3（即時股價）→ 4（歷史驗證）→ 5（法人TOP50）→ 5.5（Module A 預埋掃描）→ 5.7（Module B 催化主題）→ 模式追蹤器 → 營收/持股比/EPS季報查詢 → 6（雙軌候選）→ 7（五維度評分+多因子加減分）→ 8（籌碼分析）→ 9（產業分散）→ 9.5（逐檔資訊卷宗）→ 10（建檔）
 
 ---
 
@@ -732,6 +734,34 @@ python3 scripts/check_industry_diversification.py --date $(date +%Y-%m-%d)
 
 ---
 
+### 🔴 Step 9.5: 逐檔資訊卷宗（強制閘門，v8.3 新增）
+
+**目的**：杜絕「資訊已在當日資料源、報告卻沒寫」。不依賴逐事件規則（補不完），改以股票代碼為索引做推薦定案後的最後一哩機械式彙整。
+
+```bash
+# 名單 = 最終推薦 + ⏳沿用追蹤 + 持倉加碼評估（my_holdings.yaml quantity>0），一檔不漏
+python3 scripts/stock_dossier.py [名單...] --date $(date +%Y-%m-%d)
+```
+
+腳本彙整兩類資訊：
+1. **事件日曆**（線上，來源狀態顯性標註）：法說會（MOPS 上市+上櫃整年度）、除權息預告（TWSE）、當日重大訊息（TWSE+TPEx）
+2. **當日資料源全文掃描**（本地）：topic_tracker.md / market_intelligence.md / industry_signals.json / tw_market_news.json / us_leader_alerts.md / cumulative_summary.json 中所有提及該股代碼或名稱的行
+
+**強制處理規則（逐檔過目，違反 = 資訊隱匿）**：
+
+| 卷宗內容 | 動作 |
+|---------|------|
+| 3 個交易日內有法說會 | reason 必須標註「⚠️ MM/DD 法說會」+ 風險段列出；法說會當天不開新倉；前一日進場須標註雙向波動風險 |
+| 窗口內有除權息 | reason 標註「⚠️ MM/DD 除權息」（停損/目標價須考慮除息缺口） |
+| 今日有重大訊息 | 讀取主旨判斷利多/利空，寫入 reason 或作為排除理由 |
+| mentions 內容與推薦理由矛盾（利空新聞、營收未跟上等） | 報告必須正面回應該矛盾，不得無視 |
+| mentions = 0 | 報告標註「當日時事資料無提及」，確認推薦依據（通常為法人數據）仍成立 |
+| `source_status` 有 error | 報告必須標註資訊缺口（例：「法說會日曆抓取失敗，事件風險未確認」），不得裝作已檢查 |
+
+**驗證**：✅ 必須生成 `stock_dossier.json` | ❌ 不存在 = 禁止進入 Step 10 建檔
+
+---
+
 ### 🔴 Step 10: 建檔（強制）
 
 **建立以下檔案**：
@@ -997,5 +1027,5 @@ python3 scripts/audit_industry_chains.py
 
 **文件導航**：`docs/README.md` | 歷史教訓：`docs/HISTORICAL_LESSONS.md` | 產業鏈：`data/industry_chains.json`
 
-**最後更新**：2026-07-29
-**版本**：v8.2.1（盤前 Step 4 新增全持倉反轉掃描：L4 開盤出場，禁止延遲至盤中）
+**最後更新**：2026-08-03
+**版本**：v8.3.0（盤前新增 Step 9.5 逐檔資訊卷宗強制閘門：事件日曆＋當日資料源全文掃描，推薦定案後逐檔過目才准建檔）
