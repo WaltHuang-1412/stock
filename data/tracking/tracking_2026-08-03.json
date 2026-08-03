@@ -22,7 +22,13 @@
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
       "intraday_note": "D0 +5.68%；反轉L0健康(今日法人+23,062張)；距目標190約2.2%；08/04法說會聚焦Vera Rubin，注意波動",
-      "result": "holding"
+      "result": "holding",
+      "actual_close": 186.0,
+      "day_change_pct": 5.68,
+      "change_vs_recommend_pct": 5.68,
+      "holding_status": "D0/10 收盤186.0（今日+5.68%，較推薦+5.68%） | 距目標190.0約2.2% | 距停損158.4約14.8% | D0不結算，D1起判定",
+      "close_price": 186.0,
+      "change_percent": 5.68
     },
     {
       "stock_code": "2882",
@@ -41,7 +47,13 @@
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
       "intraday_note": "D0 +0.00%；反轉L0健康(+19,696張)；距目標109.5約7.9%、距停損91.35約10%",
-      "result": "holding"
+      "result": "holding",
+      "actual_close": 100.5,
+      "day_change_pct": -0.99,
+      "change_vs_recommend_pct": -0.99,
+      "holding_status": "D0/10 收盤100.5（今日-0.99%，較推薦-0.99%） | 距目標109.5約9.0% | 距停損91.35約9.1% | D0不結算，D1起判定",
+      "close_price": 100.5,
+      "change_percent": -0.99
     },
     {
       "stock_code": "2324",
@@ -60,7 +72,13 @@
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
       "intraday_note": "D0 +0.69%；反轉L0健康(+22,121張)；距目標38.9約7.3%",
-      "result": "holding"
+      "result": "holding",
+      "actual_close": 36.35,
+      "day_change_pct": 0.97,
+      "change_vs_recommend_pct": 0.97,
+      "holding_status": "D0/10 收盤36.35（今日+0.97%，較推薦+0.97%） | 距目標38.9約7.0% | 距停損32.4約10.9% | D0不結算，D1起判定",
+      "close_price": 36.35,
+      "change_percent": 0.97
     },
     {
       "stock_code": "2356",
@@ -79,7 +97,13 @@
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
       "intraday_note": "D0 +4.05%；反轉L0(今日+2,792張小量買超，累計+27,747張)；距目標66.7約3.7%",
-      "result": "holding"
+      "result": "holding",
+      "actual_close": 63.9,
+      "day_change_pct": 3.4,
+      "change_vs_recommend_pct": 3.4,
+      "holding_status": "D0/10 收盤63.9（今日+3.40%，較推薦+3.40%） | 距目標66.7約4.4% | 距停損55.62約13.0% | D0不結算，D1起判定",
+      "close_price": 63.9,
+      "change_percent": 3.4
     },
     {
       "stock_code": "2609",
@@ -98,7 +122,13 @@
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
       "intraday_note": "D0 +0.20%；反轉L0健康(+5,451張)；距目標54.9約7.9%",
-      "result": "holding"
+      "result": "holding",
+      "actual_close": 50.8,
+      "day_change_pct": 0.0,
+      "change_vs_recommend_pct": 0.0,
+      "holding_status": "D0/10 收盤50.8（今日+0.00%，較推薦+0.00%） | 距目標54.9約8.1% | 距停損45.72約10.0% | D0不結算，D1起判定",
+      "close_price": 50.8,
+      "change_percent": 0.0
     },
     {
       "stock_code": "2881",
@@ -117,7 +147,13 @@
       "intraday_reversal_level": 0,
       "intraday_strategy": "續抱",
       "intraday_note": "D0 -0.77%；反轉L0健康(+11,796張)；距停損117約9.3%，正常波動",
-      "result": "holding"
+      "result": "holding",
+      "actual_close": 129.5,
+      "day_change_pct": -0.38,
+      "change_vs_recommend_pct": -0.38,
+      "holding_status": "D0/10 收盤129.5（今日-0.38%，較推薦-0.38%） | 距目標140.5約8.5% | 距停損117.0約9.7% | D0不結算，D1起判定",
+      "close_price": 129.5,
+      "change_percent": -0.38
     }
   ],
   "carried_holdings_note": {
@@ -134,11 +170,15 @@
   "settlement_watch": [
     {
       "stock_code": "2887",
-      "note": "D1，07-31收盤35.95已越目標35.8，今日收盤≥35.8即結算success（等盤後）"
+      "note": "D1收盤35.3未達目標35.8（今日-1.81%），續holding；明日D2收盤≥35.8即結算success"
     },
     {
       "stock_code": "1216",
-      "note": "D10到期日，依SOP等盤後收盤結算，禁止盤前/盤中提前判定；07-31收盤73.8低於推薦價80.0"
+      "note": "✅已結算：D10到期收盤73.0 ≤ 推薦價80.0（-8.75%）判fail，已寫入tracking_2026-07-20.json"
+    },
+    {
+      "stock_code": "2884",
+      "note": "玉山金D9收盤38.45距目標38.7僅0.7%，明日D10到期日，等盤後收盤結算（禁止盤前/盤中提前判定）"
     }
   ],
   "track_b_recommendations": [
@@ -158,7 +198,13 @@
       "result": "holding",
       "intraday_price": 92.4,
       "intraday_change_pct": -1.39,
-      "intraday_note": "盤中新推薦；非偵測器強訊號(無+5)；量能正常、法人10日9買1賣"
+      "intraday_note": "盤中新推薦；非偵測器強訊號(無+5)；量能正常、法人10日9買1賣",
+      "actual_close": 91.7,
+      "day_change_pct": -2.13,
+      "change_vs_recommend_pct": -0.76,
+      "holding_status": "D0/10 收盤91.7（今日-2.13%，較推薦-0.76%） | 距目標99.8約8.8% | 距停損87.78約4.3% | D0不結算，D1起判定",
+      "close_price": 91.7,
+      "change_percent": -2.13
     }
   ],
   "track_b_observations": [
@@ -223,5 +269,51 @@
       "note": "動能>100%一票否決排除（+144%~+500%）"
     }
   ],
-  "intraday_exit_note": "2836高雄銀（07-30推薦D2）依L4鐵律於盤中11.90出場-0.42%，已在tracking_2026-07-30.json記錄fail；其餘25檔holding無停損/連挫/法人反轉觸發"
+  "intraday_exit_note": "2836高雄銀（07-30推薦D2）依L4鐵律於盤中11.90出場-0.42%，已在tracking_2026-07-30.json記錄fail；其餘25檔holding無停損/連挫/法人反轉觸發",
+  "after_market_note": "盤後結算：1216統一(07-20)D10到期收盤73.0≤推薦80.0判fail(-8.75%)已回寫tracking_2026-07-20+手寫predictions；2836高雄銀(07-30)盤中L4出場fail亦補寫predictions（update_predictions跨日盲點既知）。2887台新新光金D1收35.3未達目標35.8續holding；2884玉山金D9收38.45距目標0.7%，明日D10到期等收盤結算。累計507筆結算58.0%(294s/213f)。",
+  "tomorrow_recommendations": [],
+  "tomorrow_no_new_recommendation_reason": "寧缺勿濫三重原因：①T86 08-03未公布，今日AI三檔大漲(緯創+5.68%/英業達+3.40%/仁寶+0.97%)後法人是否續買是明日方向關鍵；②候選全數未過門檻：鴻海95分但AI鏈集中度上限+蘋果鏈L2對沖沿用觀察、元大金71/華碩73/鴻準70未達門檻、奇鋐MA20+11.7%位置偏高且外資轉買觸發條件無新T86可驗；③持倉已滿25筆追蹤中，今日才新增7筆",
+  "removed_stocks": [],
+  "tomorrow_watchlist_triggers": [
+    {
+      "stock_code": "2317",
+      "trigger": "明晨蘋果鏈龍頭預警若降至L1以下＋當日推薦組合AI集中度<50% → 重審（今日盤中95分觀察首位，動能-84.2%/訊號A-L2）"
+    },
+    {
+      "stock_code": "3017",
+      "trigger": "T86 08-03外資轉大買 → 重審（營收YoY+60.6%，惟MA20+11.7%偏高）"
+    },
+    {
+      "stock_code": "2885",
+      "trigger": "5日漲幅回落至<5%（已大漲-10解除）→ 重審（基礎81分）"
+    },
+    {
+      "stock_code": "2357",
+      "trigger": "同上（基礎83分）"
+    }
+  ],
+  "yesterday_verification": {
+    "note": "今日結算2筆（皆跨日推薦）：1216統一(07-20)D10到期fail -8.75%；2836高雄銀(07-30)盤中L4出場fail -0.42%。今日7檔D0推薦依SOP不判定成敗全數holding。",
+    "accuracy": "58.0%（累計507筆結算：294 success / 213 fail；holding不計入分母）",
+    "results": [
+      {
+        "stock_code": "1216",
+        "stock_name": "統一",
+        "recommend_date": "2026-07-20",
+        "result": "fail",
+        "settled_price": 73.0,
+        "return_pct": -8.75,
+        "reason": "D10到期收盤73.0≤推薦價80.0"
+      },
+      {
+        "stock_code": "2836",
+        "stock_name": "高雄銀",
+        "recommend_date": "2026-07-30",
+        "result": "fail",
+        "settled_price": 11.9,
+        "return_pct": -0.42,
+        "reason": "D2反轉L4鐵律盤中出場"
+      }
+    ]
+  }
 }

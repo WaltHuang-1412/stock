@@ -20,12 +20,15 @@
       "reason": "📶訊號A L3佈局完成（連買3天+動能-38.6%+漲幅僅+0.8%）、法人avg_rank 13、佔成交45.1%、EPS YoY+26%+毛利率+2pp、月季雙線上；防禦屬性抗震",
       "intraday_price": 80.2,
       "intraday_change_pct": 0.25,
-      "result": "holding",
-      "holding_status": "D8/10 收盤75.6（今日-3.32%，較推薦-5.50%） | 距目標86.0約13.8% | 距停損72.0約4.8% | 今日-3.32%全持倉最弱，距停損4.8%為最接近停損者，明日觸價即機械停損",
-      "actual_close": 75.6,
-      "day_change_pct": 0.38,
-      "close_price": 75.6,
-      "change_percent": -5.5
+      "result": "fail",
+      "fail_reason": "D10到期結算：收盤73.0 ≤ 推薦價80.0（-8.75%），未觸目標86.0亦未觸停損72.0，依10日到期規則判fail",
+      "settled_date": "2026-08-03",
+      "settled_price": 73.0,
+      "holding_days": 10,
+      "actual_close": 73.0,
+      "day_change_pct": -1.08,
+      "close_price": 73.0,
+      "change_percent": -8.75
     },
     {
       "stock_code": "2324",
