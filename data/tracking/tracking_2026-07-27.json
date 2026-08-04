@@ -85,8 +85,11 @@
       "actual_close": 114.0,
       "close_price": 114.0,
       "change_percent": 0.44,
-      "result": "holding",
-      "holding_status": "D3/10 收盤114.0（今日+0.44%，較推薦+0.44%） | 距目標122.0約7.0% | 距停損102.15約10.4%"
+      "result": "fail",
+      "settled_date": "2026-08-04",
+      "settled_price": 111.5,
+      "holding_days": 6,
+      "fail_reason": "D6 L4出場鐵律：L4爆量賣超-1,001張(佔日均量9.2%)，08-04開盤111.5出場-1.76%（推薦價113.5）"
     },
     {
       "stock_code": "2883",
@@ -187,8 +190,11 @@
       "actual_close": 27.15,
       "close_price": 27.15,
       "change_percent": -0.73,
-      "result": "holding",
-      "holding_status": "D3/10 收盤27.15（今日-0.37%，較推薦-0.73%） | 距目標29.5約8.7% | 距停損24.62約9.3%"
+      "result": "fail",
+      "settled_date": "2026-08-04",
+      "settled_price": 26.7,
+      "holding_days": 6,
+      "fail_reason": "D6 L4出場鐵律：L4爆量賣超-903張(佔日均量8.8%)，08-04開盤26.7出場-2.38%（推薦價27.35）"
     }
   ],
   "track_a_holdings_status": "settlement_checker 掃描 18 檔追蹤中(holding)，盤前全數未觸停損/目標，續抱追蹤；距目標近者：2317鴻海D3(3.0%)、2892第一金D7(3.5%)、2867三商壽D6(3.7%)、2880華南金D6(4.5%)、2324仁寶D5(4.8%)",

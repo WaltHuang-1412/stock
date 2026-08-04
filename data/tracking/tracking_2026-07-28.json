@@ -23,8 +23,11 @@
       "actual_close": 27.0,
       "close_price": 27.0,
       "change_percent": 4.05,
-      "result": "holding",
-      "holding_status": "D2/10 收盤27.0（今日+3.45%，較推薦+4.05%） | 距目標28.0約3.7% | 距停損23.355約13.5%"
+      "result": "success",
+      "settled_date": "2026-08-04",
+      "settled_price": 26.5,
+      "holding_days": 5,
+      "success_note": "D5 L4出場鐵律：L4爆量賣超-2,898張(佔日均量9.5%)，08-04開盤26.5出場+2.12%（推薦價25.95）"
     },
     {
       "stock_code": "2646",
@@ -44,8 +47,11 @@
       "actual_close": 21.55,
       "close_price": 21.55,
       "change_percent": -0.23,
-      "result": "holding",
-      "holding_status": "D2/10 收盤21.55（今日+0.23%，較推薦-0.23%） | 距目標23.5約9.0% | 距停損19.44約9.8%"
+      "result": "fail",
+      "settled_date": "2026-08-04",
+      "settled_price": 21.05,
+      "holding_days": 5,
+      "fail_reason": "D5 L4出場鐵律：L4爆量賣超-1,805張(佔日均量34.8%)，08-04開盤21.05出場-2.55%（推薦價21.6）"
     }
   ],
   "track_b_recommendations": [
