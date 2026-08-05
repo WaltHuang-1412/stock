@@ -130,8 +130,19 @@
       "actual_close": 140.5,
       "close_price": 140.5,
       "change_percent": 1.08,
-      "result": "holding",
-      "holding_status": "D3/10 收盤140.5（今日+0.00%，較推薦+1.08%） | 距目標148.0約5.3% | 距停損125.1約11.0%"
+      "result": "fail",
+      "holding_status": "D3/10 收盤140.5（今日+0.00%，較推薦+1.08%） | 距目標148.0約5.3% | 距停損125.1約11.0%",
+      "intraday_price": 136.5,
+      "intraday_change_pct": 0.0,
+      "intraday_reversal_level": 4,
+      "intraday_strategy": "🛑 強制出場（L4鐵律）",
+      "intraday_note": "D7 反轉L4 → 08/05開盤136.5出場",
+      "exit_price": 136.5,
+      "return_pct": -1.8,
+      "settled_date": "2026-08-05",
+      "settled_price": 136.5,
+      "holding_days": 7,
+      "fail_reason": "D7 L4出場鐵律：L4爆量賣超-4,349張（佔日均量53.5%），08-05開盤136.5出場 -1.80%（推薦價139.0）；predictions.json 待盤後手寫入帳（update_predictions跨日盲點）"
     },
     {
       "stock_code": "4904",
@@ -148,8 +159,19 @@
       "actual_close": 105.5,
       "close_price": 105.5,
       "change_percent": 0.0,
-      "result": "holding",
-      "holding_status": "D3/10 收盤105.5（今日-0.94%，較推薦+0.00%） | 距目標114.0約8.1% | 距停損94.95約10.0%"
+      "result": "fail",
+      "holding_status": "D3/10 收盤105.5（今日-0.94%，較推薦+0.00%） | 距目標114.0約8.1% | 距停損94.95約10.0%",
+      "intraday_price": 101.0,
+      "intraday_change_pct": 0.0,
+      "intraday_reversal_level": 4,
+      "intraday_strategy": "🛑 強制出場（L4鐵律）",
+      "intraday_note": "D7 反轉L4 → 08/05開盤100.5出場",
+      "exit_price": 100.5,
+      "return_pct": -4.74,
+      "settled_date": "2026-08-05",
+      "settled_price": 100.5,
+      "holding_days": 7,
+      "fail_reason": "D7 L4出場鐵律：L4爆量賣超-1,337張（佔日均量23.9%），08-05開盤100.5出場 -4.74%（推薦價105.5）；predictions.json 待盤後手寫入帳（update_predictions跨日盲點）"
     },
     {
       "stock_code": "2881",
