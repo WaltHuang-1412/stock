@@ -7544,10 +7544,10 @@
     ]
   },
   "settled_accuracy": "57.4%",
-  "settled_count": 524,
-  "holding_count": 184,
-  "total_success": 301,
-  "total_fail": 223,
+  "settled_count": 526,
+  "holding_count": 187,
+  "total_success": 302,
+  "total_fail": 224,
   "2026-03-30": {
     "predictions": [
       {
@@ -14730,10 +14730,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 94,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-06",
+        "settled_price": 65.2,
+        "holding_days": 3,
+        "exit_type": "L4開盤出場"
       },
       {
         "symbol": "2609",
@@ -14745,10 +14746,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 90,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-06",
+        "settled_price": 50.4,
+        "holding_days": 3,
+        "exit_type": "L4開盤出場"
       },
       {
         "symbol": "2881",
@@ -14939,6 +14941,87 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 79,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-08-06": {
+    "predictions": [
+      {
+        "symbol": "2634",
+        "name": "漢翔",
+        "recommend_price": 63.5,
+        "target_price": 69.8,
+        "stop_loss": 57.15,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10%",
+        "score": 79,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2027",
+        "name": "大成鋼",
+        "recommend_price": 44.35,
+        "target_price": 48.4,
+        "stop_loss": 39.92,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "8%",
+        "score": 77,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2605",
+        "name": "新興",
+        "recommend_price": 32.0,
+        "target_price": 35.0,
+        "stop_loss": 28.8,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "8%",
+        "score": 77,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2376",
+        "name": "技嘉",
+        "recommend_price": 342.0,
+        "target_price": 372.0,
+        "stop_loss": 324.9,
+        "stop_loss_pct": -5,
+        "settlement_days": 10,
+        "position": "6%",
+        "score": 72,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "recommend_price": 18.9,
+        "target_price": 20.5,
+        "stop_loss": 17.01,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 70,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
