@@ -41,10 +41,14 @@
       "intraday_status": "續抱（無出場訊號）",
       "actual_close": 62.2,
       "close_change_pct": -2.05,
-      "result": "holding",
-      "holding_status": "D0/10，未觸目標 69.8 亦未觸停損 57.15；依規則 D0 不結算",
+      "result": "fail",
       "close_price": 62.2,
-      "change_percent": -2.05
+      "change_percent": -2.05,
+      "settled_date": "2026-08-07",
+      "settled_price": 61.6,
+      "exit_type": "L4開盤出場",
+      "exit_pnl_pct": -2.99,
+      "fail_reason": "🔴🔴 反轉 Level 4 → 2026-08-07 開盤出場 61.6（-2.99%）；依據：今日賣超-4,889張（佔日均量27.3%）；v8.2.1 全持倉反轉掃描鐵律，出場訊號無例外"
     },
     {
       "stock_code": "2027",
@@ -65,15 +69,18 @@
         "mentions": "11 處全為「2027」年份字串誤命中，實質 0 提及",
         "note": "當日時事資料無實質提及"
       },
-      "intraday_price": 46.45,
-      "intraday_change_pct": 4.74,
+      "intraday_price": 46.55,
+      "intraday_change_pct": 0.98,
       "intraday_status": "續抱（無出場訊號）",
       "actual_close": 46.1,
       "close_change_pct": 3.95,
       "result": "holding",
       "holding_status": "D0/10，未觸目標 48.4 亦未觸停損 39.92；依規則 D0 不結算",
       "close_price": 46.1,
-      "change_percent": 3.95
+      "change_percent": 3.95,
+      "intraday_reversal_level": 0,
+      "intraday_strategy": "✅ 續抱",
+      "intraday_note": "D1/10 盤中 46.55（今日 +0.98%，較推薦 +4.96%）｜籌碼健康（今日+13,840張）｜距目標48.4約4.0%｜距停損39.92約14.2%｜三條出場訊號（停損／2日累計-10%／反轉L3-4）全未觸發"
     },
     {
       "stock_code": "2605",
@@ -99,10 +106,14 @@
       "intraday_status": "續抱（無出場訊號）",
       "actual_close": 32.0,
       "close_change_pct": 0.0,
-      "result": "holding",
-      "holding_status": "D0/10，未觸目標 35.0 亦未觸停損 28.8；依規則 D0 不結算",
+      "result": "fail",
       "close_price": 32.0,
-      "change_percent": 0.0
+      "change_percent": 0.0,
+      "settled_date": "2026-08-07",
+      "settled_price": 32.0,
+      "exit_type": "L4開盤出場",
+      "exit_pnl_pct": 0.0,
+      "fail_reason": "🔴🔴 反轉 Level 4 → 2026-08-07 開盤出場 32.0（+0.00%）；依據：今日賣超-702張（佔日均量23.3%）；v8.2.1 全持倉反轉掃描鐵律，出場訊號無例外"
     },
     {
       "stock_code": "2376",
@@ -123,15 +134,18 @@
         "mentions": 1,
         "note": "market_intelligence L2 一線整機定位與推薦理由一致"
       },
-      "intraday_price": 343.5,
-      "intraday_change_pct": 0.44,
+      "intraday_price": 342.5,
+      "intraday_change_pct": -0.44,
       "intraday_status": "續抱（無出場訊號）",
       "actual_close": 344.0,
       "close_change_pct": 0.58,
       "result": "holding",
       "holding_status": "D0/10，未觸目標 372.0 亦未觸停損 324.9；依規則 D0 不結算",
       "close_price": 344.0,
-      "change_percent": 0.58
+      "change_percent": 0.58,
+      "intraday_reversal_level": 0,
+      "intraday_strategy": "✅ 續抱",
+      "intraday_note": "D1/10 盤中 342.5（今日 -0.44%，較推薦 +0.15%）｜反轉 Level 0（今日+1,691張）｜⚠️ Dell -5.41%／SMCI -3.10% AI伺服器承壓｜距目標372.0約8.6%｜距停損324.9約5.1%｜三條出場訊號（停損／2日累計-10%／反轉L3-4）全未觸發"
     },
     {
       "stock_code": "2002",
@@ -153,14 +167,17 @@
         "note": "industry_signals:1018 中鋼9月盤價可望止跌（正向），惟同句註明需觀察貿易摩擦效應"
       },
       "intraday_price": 19.05,
-      "intraday_change_pct": 0.79,
+      "intraday_change_pct": 0.26,
       "intraday_status": "續抱（無出場訊號）",
       "actual_close": 19.0,
       "close_change_pct": 0.53,
       "result": "holding",
       "holding_status": "D0/10，未觸目標 20.5 亦未觸停損 17.01；依規則 D0 不結算",
       "close_price": 19.0,
-      "change_percent": 0.53
+      "change_percent": 0.53,
+      "intraday_reversal_level": 0,
+      "intraday_strategy": "✅ 續抱",
+      "intraday_note": "D1/10 盤中 19.05（今日 +0.26%，較推薦 +0.79%）｜籌碼健康（今日+15,562張，佔成交44.6%）｜距目標20.5約7.6%｜距停損17.01約10.7%｜三條出場訊號（停損／2日累計-10%／反轉L3-4）全未觸發"
     }
   ],
   "open_exit_list": [
