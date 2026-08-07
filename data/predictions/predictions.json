@@ -7543,11 +7543,11 @@
       }
     ]
   },
-  "settled_accuracy": "57.4%",
-  "settled_count": 526,
-  "holding_count": 187,
-  "total_success": 302,
-  "total_fail": 224,
+  "settled_accuracy": "56.8%",
+  "settled_count": 537,
+  "holding_count": 177,
+  "total_success": 305,
+  "total_fail": 232,
   "2026-03-30": {
     "predictions": [
       {
@@ -14501,10 +14501,10 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 79,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-07",
+        "settled_price": 43.4,
+        "holding_days": 7
       },
       {
         "symbol": "2603",
@@ -14537,10 +14537,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 102,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-07",
+        "settled_price": 30.5,
+        "holding_days": 6
       },
       {
         "symbol": "2836",
@@ -14567,10 +14567,10 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 79,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-07",
+        "settled_price": 22.05,
+        "holding_days": 6
       },
       {
         "symbol": "2615",
@@ -14582,10 +14582,10 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 77,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-07",
+        "settled_price": 84.6,
+        "holding_days": 6
       }
     ],
     "settled_accuracy": null,
@@ -14618,10 +14618,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 83,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-07",
+        "settled_price": 35.4,
+        "holding_days": 5
       },
       {
         "symbol": "2002",
@@ -14700,10 +14700,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 109,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-07",
+        "settled_price": 99.4,
+        "holding_days": 4
       },
       {
         "symbol": "2324",
@@ -14762,10 +14762,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 87,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-07",
+        "settled_price": 127.0,
+        "holding_days": 4
       },
       {
         "symbol": "2347",
@@ -14859,10 +14859,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 81,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-07",
+        "settled_price": 39.05,
+        "holding_days": 3
       },
       {
         "symbol": "2812",
@@ -14911,10 +14911,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 91,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-07",
+        "settled_price": 188.0,
+        "holding_days": 2
       },
       {
         "symbol": "2618",
@@ -14962,9 +14962,9 @@
         "settlement_days": 10,
         "position": "10%",
         "score": 79,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "fail",
+        "settled_date": "2026-08-07",
+        "settled_price": 61.6,
         "holding_days": 1
       },
       {
@@ -14992,9 +14992,9 @@
         "settlement_days": 10,
         "position": "8%",
         "score": 77,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "fail",
+        "settled_date": "2026-08-07",
+        "settled_price": 32.0,
         "holding_days": 1
       },
       {
@@ -15022,6 +15022,27 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 70,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-08-07": {
+    "predictions": [
+      {
+        "symbol": "2867",
+        "name": "三商壽",
+        "recommend_price": 9.77,
+        "target_price": 10.75,
+        "stop_loss": 8.79,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "12%",
+        "score": 85,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
