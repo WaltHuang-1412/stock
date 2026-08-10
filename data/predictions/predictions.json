@@ -7543,10 +7543,10 @@
       }
     ]
   },
-  "settled_accuracy": "56.8%",
-  "settled_count": 537,
-  "holding_count": 177,
-  "total_success": 305,
+  "settled_accuracy": "56.9%",
+  "settled_count": 538,
+  "holding_count": 182,
+  "total_success": 306,
   "total_fail": 232,
   "2026-03-30": {
     "predictions": [
@@ -14896,10 +14896,10 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 94,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-10",
+        "settled_price": 502.0,
+        "holding_days": 3
       },
       {
         "symbol": "3231",
@@ -15043,6 +15043,102 @@
         "settlement_days": 10,
         "position": "12%",
         "score": 85,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-08-10": {
+    "predictions": [
+      {
+        "symbol": "2887",
+        "name": "台新新光金",
+        "recommend_price": 35.15,
+        "target_price": 38.67,
+        "stop_loss": 31.64,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "13%",
+        "score": 104,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2882",
+        "name": "國泰金",
+        "recommend_price": 99.4,
+        "target_price": 109.34,
+        "stop_loss": 89.46,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "12%",
+        "score": 92,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2610",
+        "name": "華航",
+        "recommend_price": 22.5,
+        "target_price": 24.75,
+        "stop_loss": 20.25,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "12%",
+        "score": 97,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2881",
+        "name": "富邦金",
+        "recommend_price": 127.0,
+        "target_price": 139.7,
+        "stop_loss": 114.3,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10%",
+        "score": 87,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "4904",
+        "name": "遠傳",
+        "recommend_price": 103.0,
+        "target_price": 113.3,
+        "stop_loss": 92.7,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10%",
+        "score": 84,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2603",
+        "name": "長榮",
+        "recommend_price": 207.5,
+        "target_price": 228.25,
+        "stop_loss": 186.75,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10%",
+        "score": 84,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
