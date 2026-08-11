@@ -7544,10 +7544,10 @@
     ]
   },
   "settled_accuracy": "56.9%",
-  "settled_count": 538,
-  "holding_count": 182,
-  "total_success": 306,
-  "total_fail": 232,
+  "settled_count": 541,
+  "holding_count": 185,
+  "total_success": 308,
+  "total_fail": 233,
   "2026-03-30": {
     "predictions": [
       {
@@ -14715,10 +14715,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 98,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-11",
+        "settled_price": 36.3,
+        "holding_days": 6
       },
       {
         "symbol": "2356",
@@ -14941,10 +14941,10 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 79,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-11",
+        "settled_price": 274.0,
+        "holding_days": 4
       }
     ],
     "settled_accuracy": null,
@@ -15094,9 +15094,9 @@
         "settlement_days": 10,
         "position": "12%",
         "score": 97,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "fail",
+        "settled_date": "2026-08-11",
+        "settled_price": 20.35,
         "holding_days": 1
       },
       {
@@ -15143,6 +15143,103 @@
         "settled_date": null,
         "settled_price": null,
         "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-08-11": {
+    "predictions": [
+      {
+        "symbol": "2356",
+        "name": "英業達",
+        "recommend_price": 66.0,
+        "target_price": 72.6,
+        "stop_loss": 59.4,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 93,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "6285",
+        "name": "啟碁",
+        "recommend_price": 256.0,
+        "target_price": 281.6,
+        "stop_loss": 230.4,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 91,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2609",
+        "name": "陽明",
+        "recommend_price": 51.6,
+        "target_price": 56.76,
+        "stop_loss": 46.44,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 81,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2615",
+        "name": "萬海",
+        "recommend_price": 87.5,
+        "target_price": 96.25,
+        "stop_loss": 78.75,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 74,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "3042",
+        "name": "晶技",
+        "recommend_price": 180.5,
+        "target_price": 198.55,
+        "stop_loss": 162.45,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 74,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2883",
+        "name": "凱基金",
+        "recommend_price": 30.8,
+        "target_price": 33.88,
+        "stop_loss": 29.26,
+        "stop_loss_pct": -5,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 90,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1,
+        "track": "B"
       }
     ],
     "settled_accuracy": null,
