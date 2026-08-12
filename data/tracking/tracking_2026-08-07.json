@@ -107,11 +107,16 @@
       "intraday_reversal_level": 0,
       "intraday_strategy": "✅ 續抱",
       "intraday_note": "D0/10 盤中 9.80（今日 +0.31%，較推薦 +0.31%）｜反轉 Level 0、籌碼健康今日+5,148張｜站穩 MA5 9.78／MA10 9.64｜量比 0.4x（低量整理）｜距目標 10.75 約 9.7%｜距停損 8.79 約 10.3%｜⚠️ 今晚 20:30 美國非農就業為利率敏感雙向風險，D0 不結算",
-      "actual_close": 9.81,
-      "result": "holding",
+      "actual_close": 9.43,
+      "result": "fail",
       "holding_status": "D0/10 — settlement_checker 嚴格排除 D0，不結算。收盤 9.81（+0.41%），距目標 10.75 尚 9.6%、距停損 8.79 尚 10.4%，反轉 Level 0（籌碼健康 +5,148 張），三條出場訊號全未觸發",
       "close_price": 9.81,
-      "change_percent": 0.41
+      "change_percent": 0.41,
+      "holding_days": 3,
+      "return_pct": -3.48,
+      "settled_date": "2026-08-12",
+      "settled_price": 9.43,
+      "fail_reason": "盤中法人反轉 Level 4 鐵律出場（盤中 5.6%／日均量），以當日收盤 9.43 入帳；⚠️ 盤後以完整日量複核降為 Level 2（3.8%），屬分母效應邊緣觸發，見盤後 Step 3"
     }
   ],
   "open_exit_list": [

@@ -7543,11 +7543,11 @@
       }
     ]
   },
-  "settled_accuracy": "56.9%",
-  "settled_count": 541,
-  "holding_count": 185,
-  "total_success": 308,
-  "total_fail": 233,
+  "settled_accuracy": "57.0%",
+  "settled_count": 547,
+  "holding_count": 182,
+  "total_success": 312,
+  "total_fail": 235,
   "2026-03-30": {
     "predictions": [
       {
@@ -14814,10 +14814,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 100,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-12",
+        "settled_price": 92.4,
+        "holding_days": 6,
+        "return_pct": 3.24
       },
       {
         "symbol": "2027",
@@ -14926,10 +14927,12 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 84,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-12",
+        "settled_price": 42.15,
+        "holding_days": 5,
+        "return_pct": -3.77,
+        "fail_reason": "法人反轉 Level 4 鐵律出場，收盤 42.15 入帳"
       },
       {
         "symbol": "2301",
@@ -14977,10 +14980,11 @@
         "settlement_days": 10,
         "position": "8%",
         "score": 77,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-12",
+        "settled_price": 46.85,
+        "holding_days": 4,
+        "return_pct": 5.64
       },
       {
         "symbol": "2605",
@@ -15007,10 +15011,11 @@
         "settlement_days": 10,
         "position": "6%",
         "score": 72,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-12",
+        "settled_price": 375.5,
+        "holding_days": 4,
+        "return_pct": 9.8
       },
       {
         "symbol": "2002",
@@ -15043,10 +15048,12 @@
         "settlement_days": 10,
         "position": "12%",
         "score": 85,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-12",
+        "settled_price": 9.43,
+        "holding_days": 3,
+        "return_pct": -3.48,
+        "fail_reason": "盤中法人反轉 Level 4 鐵律出場，收盤 9.43 入帳（盤後複核降為 L2）"
       }
     ],
     "settled_accuracy": null,
@@ -15220,10 +15227,11 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 74,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-12",
+        "settled_price": 181.5,
+        "holding_days": 1,
+        "return_pct": 0.55
       },
       {
         "symbol": "2883",
@@ -15240,6 +15248,57 @@
         "settled_price": null,
         "holding_days": 1,
         "track": "B"
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-08-12": {
+    "predictions": [
+      {
+        "symbol": "3231",
+        "name": "緯創",
+        "recommend_price": 191.0,
+        "target_price": 210.1,
+        "stop_loss": 171.9,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 102,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2006",
+        "name": "東和鋼鐵",
+        "recommend_price": 85.5,
+        "target_price": 94.05,
+        "stop_loss": 76.95,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 83,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2890",
+        "name": "永豐金",
+        "recommend_price": 39.05,
+        "target_price": 42.96,
+        "stop_loss": 35.15,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 88,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
       }
     ],
     "settled_accuracy": null,

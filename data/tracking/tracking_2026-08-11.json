@@ -124,11 +124,16 @@
       "intraday_reversal_level": 0,
       "intraday_strategy": "✅ 續抱",
       "intraday_note": "D0/10 盤中 178.0（今日 -1.39%，較推薦 -1.39%）｜反轉 Level 0（T86 08-10 +299張，籌碼薄為已知風險）｜盤中高187.0（+3.6%）後回落、站穩MA5 175.6｜量比0.6｜距停損162.45約8.7%｜三條出場鐵律全未觸發",
-      "actual_close": 179.0,
-      "result": "holding",
+      "actual_close": 181.5,
+      "result": "success",
       "holding_status": "D0 收179.0（-0.83%）盤中高187回落，籌碼薄波動大為已知風險，反轉L0",
       "close_price": 179.0,
-      "change_percent": -0.83
+      "change_percent": -0.83,
+      "holding_days": 1,
+      "return_pct": 0.55,
+      "settled_date": "2026-08-12",
+      "settled_price": 181.5,
+      "settle_reason": "盤中法人反轉 Level 4 鐵律出場（盤中 5.4%／日均量），以當日收盤 181.5 入帳；⚠️ 盤後以完整日量複核降為 Level 0，屬分母效應誤觸發，見盤後 Step 3"
     }
   ],
   "track_b_recommendations": [
