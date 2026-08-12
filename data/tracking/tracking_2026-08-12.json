@@ -309,5 +309,423 @@
       "price_position_check.json 遭第2次重跑分批覆蓋僅剩1筆，已帶完整16檔名單補跑"
     ],
     "report_completed_at": "2026-08-12 09:35"
+  },
+  "intraday": {
+    "run_time": "2026-08-12 12:30",
+    "market_status": "full",
+    "taiex": {
+      "price": 45381.32,
+      "prev_close": 45120.72,
+      "change_pct": 0.58
+    },
+    "price_basis": "2026-08-12 盤中即時報價（約 12:40 擷取）；法人資料源 T86 最新為 2026-08-11",
+    "exit_signals_triggered": [
+      {
+        "code": "3706",
+        "name": "神達",
+        "rec_price": 89.5,
+        "intraday": 92.5,
+        "pl_pct": 3.35,
+        "today_pct": 2.78,
+        "trigger": "法人反轉 Level 4（-4,801 張／日均量 32.6%）",
+        "action": "強制停損（獲利出場）",
+        "source": "盤前 open_exit_list 已列"
+      },
+      {
+        "code": "2618",
+        "name": "長榮航",
+        "rec_price": 43.8,
+        "intraday": 42.2,
+        "pl_pct": -3.65,
+        "today_pct": 1.08,
+        "trigger": "法人反轉 Level 4（-2,765 張／16.5%）",
+        "action": "強制停損",
+        "source": "盤前 open_exit_list 已列"
+      },
+      {
+        "code": "2027",
+        "name": "大成鋼",
+        "rec_price": 44.35,
+        "intraday": 47.0,
+        "pl_pct": 5.98,
+        "today_pct": 1.18,
+        "trigger": "法人反轉 Level 4（-2,536 張／34.8%）",
+        "action": "強制停損（獲利出場）",
+        "source": "盤前 open_exit_list 已列"
+      },
+      {
+        "code": "2867",
+        "name": "三商壽",
+        "rec_price": 9.77,
+        "intraday": 9.44,
+        "pl_pct": -3.38,
+        "today_pct": -0.42,
+        "trigger": "法人反轉 Level 4（-471 張／5.6%）— 盤中新增，盤前為 Level 2（3.6%）",
+        "action": "強制停損",
+        "source": "盤中重掃新增",
+        "note": "跌破 MA5/MA10；08/13 三商壽法說會"
+      },
+      {
+        "code": "3042",
+        "name": "晶技",
+        "rec_price": 180.5,
+        "intraday": 179.5,
+        "pl_pct": -0.55,
+        "today_pct": 0.28,
+        "trigger": "法人反轉 Level 4（-567 張／5.4%）— 盤中新增，盤前為 Level 0",
+        "action": "強制停損",
+        "source": "盤中重掃新增",
+        "note": "仍站上 MA5/MA10，L4 判定為分母效應邊緣觸發，已於報告揭露"
+      }
+    ],
+    "exit_signal_summary": "三條出場鐵律：觸停損 0 檔、2 日累計>-10% 0 檔、法人反轉 Level 3-4 共 5 檔（追蹤中）＋3 檔（實際持倉 3090/2313/1301，盤前已判定）。2356 英業達盤前 L4 已列開盤出場，盤中重掃降為 Level 0，依禁止事後諸葛原則不追回。",
+    "reversal_level_instability": {
+      "finding": "reversal_alert.py Level 4 門檻（賣超>5%日均量）的分子為 T86 昨日固定值、分母日均量隨盤中成交量浮動，導致同一份賣超數據在盤前/盤中得到相反結論",
+      "cases": [
+        {
+          "code": "2356",
+          "sell_lots": -786,
+          "pre_pct": 5.4,
+          "intra_pct": 1.7,
+          "change": "L4 → L0",
+          "volume_note": "今日爆量 64.1M 股，拉高日均量"
+        },
+        {
+          "code": "2867",
+          "sell_lots": -471,
+          "pre_pct": 3.6,
+          "intra_pct": 5.6,
+          "change": "L2 → L4",
+          "volume_note": "今日量縮 8.4M 股，壓低日均量"
+        },
+        {
+          "code": "3042",
+          "sell_lots": -567,
+          "pre_pct": null,
+          "intra_pct": 5.4,
+          "change": "L0 → L4",
+          "volume_note": "今日量縮 10.6M 股，壓低日均量"
+        },
+        {
+          "code": "3706",
+          "sell_lots": -4801,
+          "pre_pct": 38.6,
+          "intra_pct": 32.6,
+          "change": "L4 → L4",
+          "volume_note": "今日放量，比例下降但仍遠超門檻"
+        }
+      ],
+      "handling": "本時段仍依 CLAUDE.md「法人反轉 Level 3-4 → 強制停損，無例外」執行，未自行放寬規則；現象交盤後 Step 3 檢討，未修改任何腳本"
+    },
+    "track_a_status": [
+      {
+        "code": "3231",
+        "name": "緯創",
+        "rec": 191.0,
+        "intraday": 192.0,
+        "pl_pct": 0.52,
+        "today_pct": 0.52,
+        "reversal": "Level 0",
+        "action": "續抱"
+      },
+      {
+        "code": "2890",
+        "name": "永豐金",
+        "rec": 39.05,
+        "intraday": 39.7,
+        "pl_pct": 1.66,
+        "today_pct": 1.66,
+        "reversal": "Safe",
+        "action": "續抱",
+        "note": "08/14 Q2 財報申報期限"
+      },
+      {
+        "code": "2006",
+        "name": "東和鋼鐵",
+        "rec": 85.5,
+        "intraday": 83.9,
+        "pl_pct": -1.87,
+        "today_pct": -1.87,
+        "reversal": "Level 0",
+        "action": "續抱"
+      },
+      {
+        "code": "2609",
+        "name": "陽明",
+        "rec": 51.6,
+        "intraday": 51.4,
+        "pl_pct": -0.39,
+        "today_pct": -1.15,
+        "reversal": "Safe",
+        "action": "續抱（沿用追蹤）"
+      },
+      {
+        "code": "2883",
+        "name": "凱基金",
+        "rec": 30.8,
+        "intraday": 31.05,
+        "pl_pct": 0.81,
+        "today_pct": 0.0,
+        "reversal": "Safe",
+        "action": "續抱（沿用追蹤，軌道B 停損-5%）"
+      },
+      {
+        "code": "2891",
+        "name": "中信金",
+        "rec": 63.1,
+        "intraday": 65.8,
+        "pl_pct": 4.28,
+        "today_pct": -1.5,
+        "reversal": "Safe",
+        "action": "續抱（沿用追蹤，距目標 3.34%）"
+      },
+      {
+        "code": "2887",
+        "name": "台新新光金",
+        "rec": 35.15,
+        "intraday": 35.55,
+        "pl_pct": 1.14,
+        "today_pct": 0.0,
+        "reversal": "Safe",
+        "action": "續抱（沿用追蹤）"
+      },
+      {
+        "code": "2603",
+        "name": "長榮",
+        "rec": 207.5,
+        "intraday": 213.5,
+        "pl_pct": 2.89,
+        "today_pct": -2.06,
+        "reversal": "Safe",
+        "action": "續抱（沿用追蹤）"
+      },
+      {
+        "code": "2615",
+        "name": "萬海",
+        "rec": 87.5,
+        "intraday": 86.7,
+        "pl_pct": -0.91,
+        "today_pct": -0.46,
+        "reversal": "Safe",
+        "action": "續抱（沿用追蹤）"
+      },
+      {
+        "code": "2376",
+        "name": "技嘉",
+        "rec": 342.0,
+        "intraday": 373.0,
+        "pl_pct": 9.06,
+        "today_pct": 6.42,
+        "reversal": "Level 0",
+        "action": "盤中已越目標價 372.0，依 D0/D10 時點規則一律等盤後收盤結算，本時段不判定"
+      },
+      {
+        "code": "2317",
+        "name": "鴻海",
+        "rec": 253.0,
+        "intraday": 268.5,
+        "pl_pct": 6.13,
+        "today_pct": 2.09,
+        "reversal": "Level 2",
+        "action": "續抱但密切觀察"
+      },
+      {
+        "code": "2002",
+        "name": "中鋼",
+        "rec": 18.9,
+        "intraday": 19.75,
+        "pl_pct": 4.5,
+        "today_pct": 0.0,
+        "reversal": "Safe",
+        "action": "續抱，不加碼（動能+500%）"
+      },
+      {
+        "code": "2882",
+        "name": "國泰金",
+        "rec": 99.4,
+        "intraday": 98.8,
+        "pl_pct": -0.6,
+        "today_pct": -0.8,
+        "reversal": "Level 2",
+        "action": "續抱但觀察"
+      },
+      {
+        "code": "2881",
+        "name": "富邦金",
+        "rec": 127.0,
+        "intraday": 127.0,
+        "pl_pct": 0.0,
+        "today_pct": -0.78,
+        "reversal": "Level 0",
+        "action": "續抱"
+      },
+      {
+        "code": "4904",
+        "name": "遠傳",
+        "rec": 103.0,
+        "intraday": 101.5,
+        "pl_pct": -1.46,
+        "today_pct": 0.5,
+        "reversal": "Level 2",
+        "action": "續抱但觀察"
+      },
+      {
+        "code": "6285",
+        "name": "啟碁",
+        "rec": 256.0,
+        "intraday": 250.5,
+        "pl_pct": -2.15,
+        "today_pct": -1.38,
+        "reversal": "Level 0",
+        "action": "續抱"
+      },
+      {
+        "code": "2356",
+        "name": "英業達",
+        "rec": 66.0,
+        "intraday": 68.7,
+        "pl_pct": 4.09,
+        "today_pct": 5.53,
+        "reversal": "Level 0（盤前 Level 4）",
+        "action": "盤前已判定開盤出場（開盤 66.0，損益 0%），不追回"
+      }
+    ],
+    "detector_strong_signals": [
+      "1605",
+      "2344",
+      "8112"
+    ],
+    "detector_note": "偵測器「連買N天」為買超天數；依 CLAUDE.md 強制規則改用 chip_analysis 真連續買超後：2344=2天（非6天）、8112=8天、1319=5天",
+    "track_b_result": "今日無盤中新推薦",
+    "track_b_excluded": [
+      {
+        "code": "2344",
+        "name": "華邦電",
+        "reason": "5日+13.4%>10%「已大漲」預設不評分；催化脈絡例外不成立（今日記憶體訊號為延續性論述，SK海力士/鎧俠屬 NAND 版圖與 NOR Flash 為主的華邦電非直接相關，Topic Tracker 措辭明示為「延續受惠」）。avg_rank 2.0、動能-61.7%、外資持股比+0.73%，列觀察名單"
+      },
+      {
+        "code": "8112",
+        "name": "至上",
+        "reason": "動能+409.5%>100% 直接排除（非🔴超強催化鏈成員，超強催化覆寫不成立）＋5日+17.4% 已大漲"
+      },
+      {
+        "code": "1605",
+        "name": "華新",
+        "reason": "今日+4.18%≥3%，盤中漲幅門檻未過＋5日+13.5% 已大漲"
+      },
+      {
+        "code": "1319",
+        "name": "東陽",
+        "reason": "動能+500%>100% 直接排除；汽車零組件 AM 不在今日任何催化鏈（industry_chains.json 查無此股）"
+      }
+    ],
+    "track_b_observations": [
+      "2344 華邦電（法人第1名、動能佈局完成，僅卡5日已漲13.4%）",
+      "1216 統一（92分，僅卡催化對齊）",
+      "2357 華碩（98分，今日16:00法說會，法說後隔日重評）"
+    ],
+    "track_b_screen_coverage": "TOP50 買超 50 檔 − 已在追蹤/持倉 11 檔 = 39 檔全數逐檔給出排除理由（4 檔跑完 chip_analysis+reversal_alert+revenue+foreign_ratio，35 檔於前置閘門排除）",
+    "holdings_summary": {
+      "total_unrealized_pl": -209835,
+      "stocks": [
+        {
+          "code": "3090",
+          "name": "日電貿",
+          "qty": 1,
+          "cost": 285.0,
+          "intraday": 171.0,
+          "pl_pct": -40.0,
+          "pl": -114000,
+          "stop_loss": 256.5,
+          "reversal": "Level 4",
+          "action": "立即出場；處置倒數最快剩0天"
+        },
+        {
+          "code": "2313",
+          "name": "華通",
+          "qty": 2,
+          "cost": 262.2,
+          "intraday": 209.0,
+          "pl_pct": -20.29,
+          "pl": -106400,
+          "stop_loss": 235.98,
+          "reversal": "Level 4",
+          "action": "立即出場（已跌破停損）"
+        },
+        {
+          "code": "2337",
+          "name": "旺宏",
+          "qty": 1,
+          "cost": 164.0,
+          "intraday": 137.0,
+          "pl_pct": -16.46,
+          "pl": -27000,
+          "stop_loss": 147.6,
+          "reversal": "狀態不明（累計-4,326張）",
+          "action": "已跌破停損，人工判斷"
+        },
+        {
+          "code": "6770",
+          "name": "力積電",
+          "qty": 2,
+          "cost": 81.4,
+          "intraday": 73.7,
+          "pl_pct": -9.46,
+          "pl": -15400,
+          "stop_loss": 73.26,
+          "reversal": "狀態不明（累計-17,829張）",
+          "action": "距停損僅0.6%；今日+10.0%；處置預警🟡（6日+22.6%、週轉9.8%）"
+        },
+        {
+          "code": "1301",
+          "name": "台塑",
+          "qty": 1,
+          "cost": 60.085,
+          "intraday": 56.4,
+          "pl_pct": -6.13,
+          "pl": -3685,
+          "stop_loss": 54.08,
+          "reversal": "Level 4",
+          "action": "立即出場"
+        },
+        {
+          "code": "4938",
+          "name": "和碩",
+          "qty": 1,
+          "cost": 85.0,
+          "intraday": 91.4,
+          "pl_pct": 7.53,
+          "pl": 6400,
+          "stop_loss": 76.5,
+          "reversal": "Level 0",
+          "action": "續抱"
+        },
+        {
+          "code": "2330",
+          "name": "台積電",
+          "qty": 0.15,
+          "cost": 2070,
+          "intraday": 2405.0,
+          "pl_pct": 16.18,
+          "pl": 50250,
+          "stop_loss": null,
+          "reversal": "Safe",
+          "action": "續抱"
+        }
+      ]
+    },
+    "preflight": {
+      "errors": 1,
+      "warnings": 1,
+      "error_detail": "L4未出場 [3706,2618,2027,2356,2313,3090,1301] — 逐檔比對後確認 7 檔全部已在盤前 open_exit_list 揭露並判定開盤出場，屬重複告警；惟盤前報告延至09:35產出已錯過開盤，本時段以盤中價重新確認處置",
+      "warning_detail": "intraday_detector.json 缺失 → 本時段 12:34 已補跑"
+    },
+    "process_observation": [
+      "reversal_alert.py Level 判定在盤中不穩定：分子（T86 昨日賣超）固定、分母（日均量）隨盤中量浮動，今日三筆等級變動（2356 L4→L0、2867 L2→L4、3042 L0→L4）皆非新增賣壓所致，且全部落在 5% 門檻 ±0.6pp 內",
+      "今日 L4 強制出場中有 2 檔為獲利部位（3706 +3.35%、2027 +5.98%），與門檻邊緣觸發共同構成「規則執行結果與實際籌碼狀態脫節」樣本",
+      "check_revenue_yoy.py 快取覆蓋不全：2344/8112/1605 最新營收月僅到 2026-02（5個月前），盤前刷新僅覆蓋當時 45 檔，盤中新增候選讀到過期快取且無警告",
+      "check_* 系列腳本會覆蓋當日 JSON：本時段以 4 檔跑完後 revenue_check.json/foreign_ratio_check.json 由 45 筆變 4 筆，已手動合併回 48 筆",
+      "本時段未修改 scripts/ 下任何檔案"
+    ]
   }
 }
