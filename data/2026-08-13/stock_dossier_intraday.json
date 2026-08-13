@@ -1,0 +1,39 @@
+{
+  "date": "2026-08-13",
+  "window_days": 5,
+  "source_status": {
+    "法說會(MOPS)": "ok(cache)",
+    "除權息(TWSE)": "ok(cache)",
+    "重大訊息(TWSE+TPEx)": "ok"
+  },
+  "stocks": {
+    "2324": {
+      "name": "仁寶",
+      "events": [
+        {
+          "type": "法說會",
+          "date": "2026-08-13",
+          "days_until": 0,
+          "detail": "14:00 線上會議 UBS舉辦之仁寶電腦115年第二季財報線上法人說明會，說明本公司業務及現況"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 245,
+          "text": "| 2324 | 仁寶 | 704.6 | 🔺+22.3% | +7.7% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 255,
+          "text": "| 2324 | 仁寶 | 704.6 | 🔺+22.3% | +7.7% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 348,
+          "text": "| 2324 | 仁寶 | 704.6 | 🔺+22.3% | +7.7% |"
+        }
+      ]
+    }
+  }
+}
