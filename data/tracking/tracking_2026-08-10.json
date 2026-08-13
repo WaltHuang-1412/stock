@@ -116,8 +116,13 @@
       "actual_close": 128.5,
       "close_price": 128.5,
       "change_percent": 1.18,
-      "result": "holding",
-      "holding_status": "D0/10 收盤 128.5（較推薦 +1.18%）| 距目標 8.72% | 距停損 11.05% | D0 不結算，D1 起判定"
+      "result": "success",
+      "settled_date": "2026-08-13",
+      "settled_price": 128.5,
+      "holding_days": 3,
+      "return_pct": 1.18,
+      "exit_type": "鐵律出場（反轉 Level 4）",
+      "success_note": "D3 鐵律出場：08-13 盤前 reversal_alert 判 Level 4（T86 08-12 賣超-989張，佔日均量10.9%），依 v8.2.1「盤前 L4 列開盤出場清單」於開盤出場。盤中複掃 22.0%、盤後完整日量複掃 11.5%，三時點皆維持 L4，出場正確。入帳價依 v8.3.2 用當日收盤價 128.5（+1.18%）"
     },
     {
       "stock_code": "4904",
@@ -170,8 +175,13 @@
       "actual_close": 214.0,
       "close_price": 214.0,
       "change_percent": 3.13,
-      "result": "holding",
-      "holding_status": "D0/10 收盤 214.0（較推薦 +3.13%）| 距目標 6.66% | 距停損 12.73% | D0 不結算，D1 起判定"
+      "result": "success",
+      "settled_date": "2026-08-13",
+      "settled_price": 215.5,
+      "holding_days": 3,
+      "return_pct": 3.86,
+      "exit_type": "鐵律出場（反轉 Level 4）",
+      "success_note": "D3 鐵律出場：08-13 盤前判 Level 4（T86 08-12 賣超-1,328張，佔日均量14.2%），開盤出場。盤中 38.8%、盤後 22.0%，三時點皆維持 L4。入帳價依 v8.3.2 用當日收盤價 215.5（+3.86%）"
     }
   ],
   "carried_over_holdings": [

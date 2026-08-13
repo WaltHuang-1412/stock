@@ -50,10 +50,15 @@
       "intraday_strategy": "✅ 續抱",
       "intraday_note": "D0/10 盤中 256.5（今日 +0.2%，較推薦 +0.2%）｜反轉 Level 0（T86 08-10 +3,818張、外資+3,618）｜站穩MA5 250.3｜盤中高261.0（+2.0%）｜距停損230.4約10.2%｜三條出場鐵律全未觸發",
       "actual_close": 254.0,
-      "result": "holding",
-      "holding_status": "D0 收254.0（-0.78%）盤中高261回落，反轉L0，網通催化延續，距停損9.3%",
+      "result": "fail",
       "close_price": 254.0,
-      "change_percent": -0.78
+      "change_percent": -0.78,
+      "settled_date": "2026-08-13",
+      "settled_price": 246.5,
+      "holding_days": 2,
+      "return_pct": -3.71,
+      "exit_type": "鐵律出場（反轉 Level 4）",
+      "fail_reason": "D2 鐵律出場：08-13 盤前判 Level 4（T86 08-12 賣超-1,135張，佔日均量23.1%），開盤出場。盤中 28.9%、盤後 19.6%，三時點皆維持 L4 且遠離門檻。入帳價依 v8.3.2 用當日收盤價 246.5（-3.71%）。近5天外資-1,652張確為賣方，出場方向正確"
     },
     {
       "stock_code": "2609",
@@ -75,10 +80,15 @@
       "intraday_strategy": "✅ 續抱",
       "intraday_note": "D0/10 盤中 51.9（今日 +0.58%，較推薦 +0.58%）｜反轉 Level 0（T86 08-10 +12,428張、外資+12,116）｜站穩MA5/MA10、量比1.2｜距停損46.44約10.5%｜三條出場鐵律全未觸發",
       "actual_close": 52.0,
-      "result": "holding",
-      "holding_status": "D0 收52.0（+0.78%）站穩MA5/MA10，T86 08-10外資+12.1K，反轉L0",
+      "result": "fail",
       "close_price": 52.0,
-      "change_percent": 0.78
+      "change_percent": 0.78,
+      "settled_date": "2026-08-13",
+      "settled_price": 51.4,
+      "holding_days": 2,
+      "return_pct": -0.39,
+      "exit_type": "鐵律出場（反轉 Level 4）",
+      "fail_reason": "D2 鐵律出場：08-13 盤前判 Level 4（T86 08-12 賣超-1,509張，佔日均量14.6%），開盤出場。盤中 11.7%、盤後 8.7%，三時點皆維持 L4。入帳價依 v8.3.2 用當日收盤價 51.4（-0.39%）"
     },
     {
       "stock_code": "2615",
@@ -100,10 +110,15 @@
       "intraday_strategy": "✅ 續抱",
       "intraday_note": "D0/10 盤中 87.2（今日 -0.34%，較推薦 -0.34%）｜反轉 Level 0（T86 08-10 +11,235張、外資+10,228）｜站穩MA5/MA10、量比1.4｜盤中高88.8（+1.5%）｜距停損78.75約9.7%｜三條出場鐵律全未觸發",
       "actual_close": 87.1,
-      "result": "holding",
-      "holding_status": "D0 收87.1（-0.46%）反轉L0，T86 08-10外資+10.2K，距停損9.6%",
+      "result": "fail",
       "close_price": 87.1,
-      "change_percent": -0.46
+      "change_percent": -0.46,
+      "settled_date": "2026-08-13",
+      "settled_price": 87.5,
+      "holding_days": 2,
+      "return_pct": 0.0,
+      "exit_type": "鐵律出場（反轉 Level 4）",
+      "fail_reason": "D2 鐵律出場：08-13 盤前判 Level 4（T86 08-12 賣超-536張，佔盤前日均量7.6%），依規則開盤出場。⚠️ 盤後以完整日量複掃降為 Level 2（4.3%，低於 5% 門檻）→ 事後認定為 v8.3.2 分母效應之邊緣誤觸發（賣超僅-536張，10日累計仍 +21K張、近5天 +15K張）。惟 v8.3.2 明文「盤前 L4 不受待複核保護」，出場為當下規則的正確執行。入帳價依 v8.3.2 用當日收盤價 87.5（0.00%，平盤出場）。本案列入 Step 3 流程缺陷檢討"
     },
     {
       "stock_code": "3042",
