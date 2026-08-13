@@ -1,0 +1,60 @@
+{
+  "date": "2026-08-13",
+  "regime": "多頭",
+  "score": 4,
+  "details": [
+    "台股在年線上+33.1%",
+    "VIX 14.6（正常）",
+    "S&P500在季線上+3.3%"
+  ],
+  "taiex": {
+    "current": 45120.71875,
+    "ma20": 43615.0,
+    "ma60": 44398.0,
+    "ma240": 33888.0,
+    "high_52w": 47741.51171875,
+    "low_52w": 21002.7109375,
+    "vs_ma20": 3.45,
+    "vs_ma60": 1.63,
+    "vs_ma240": 33.14
+  },
+  "sp500": {
+    "current": 7748.5,
+    "ma60": 7502.0,
+    "vs_ma60": 3.29
+  },
+  "vix": 14.550000190734863,
+  "institutional": {
+    "foreign": {
+      "today_net": 110.21,
+      "consecutive_days": 3,
+      "net_5d": 463.69,
+      "net_10d": 1309.96
+    },
+    "trust": {
+      "today_net": 28.01,
+      "consecutive_days": 3,
+      "net_5d": 154.71,
+      "net_10d": 1164.97
+    },
+    "dealer": {
+      "today_net": 87.01,
+      "consecutive_days": 3,
+      "net_5d": 223.48,
+      "net_10d": -477.64
+    },
+    "total": {
+      "today_net": 225.23,
+      "net_5d": 841.88,
+      "net_10d": 1997.29
+    }
+  },
+  "etf_buy_multiplier": 1,
+  "stock_defense_ratio": "0-15%",
+  "settlement": {
+    "settlement_date": "2026-08-19",
+    "is_settlement_week": false,
+    "days_from_settlement": -6,
+    "status": "非結算週"
+  }
+}
