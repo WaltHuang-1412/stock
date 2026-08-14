@@ -1,0 +1,926 @@
+{
+  "date": "2026-08-14",
+  "window_days": 5,
+  "source_status": {
+    "法說會(MOPS)": "ok(cache)",
+    "除權息(TWSE)": "ok(cache)",
+    "重大訊息(TWSE+TPEx)": "ok"
+  },
+  "stocks": {
+    "2301": {
+      "name": "光寶科",
+      "events": [
+        {
+          "type": "除權息",
+          "date": "2026-08-19",
+          "days_until": 5,
+          "detail": "現金股利 2.500000｜配股率 "
+        }
+      ],
+      "mentions": []
+    },
+    "3017": {
+      "name": "奇鋐",
+      "events": [
+        {
+          "type": "法說會",
+          "date": "2026-08-19",
+          "days_until": 5,
+          "detail": "11:00 W Taipei 受邀參加Nomura Asia Tech Tour 2026，說明115年第二季營運結果與未來展望。"
+        },
+        {
+          "type": "除權息",
+          "date": "2026-08-19",
+          "days_until": 5,
+          "detail": "現金股利 20.881604｜配股率 "
+        }
+      ],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 15,
+          "text": "- **台股影響鏈**：廣達(2382)↑ AI伺服器訂單看到2028年，資本支出由300億上修至400億元（+33%）、Q2 EPS7.43元創單季新高；鴻海(2317)↑／緯創(3231)↑／和碩(4938)↑／仁寶(2324)↑ Neocloud新興雲端客戶成法說會新亮點；奇鋐(3017)↑ 財報動能延續"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 17,
+          "text": "- **關鍵轉折點**：08/17鴻海法說（台北）；08/19奇鋐法說；08/27 NVIDIA財報；09/03博通財報"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 164,
+          "text": "| L3 散熱/電源 | AI 伺服器核心零組件，高功耗帶動需求 | 奇鋐(3017)：液冷散熱龍頭、雙鴻(3324)：EPS上修57.97元、台達電(2308)：電源供應系統 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 229,
+          "text": "| 3017 | 奇鋐 | 158.7 | 🔺+60.6% | +90.3% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 248,
+          "text": "| 3017 | 奇鋐 | 158.7 | 🔺+60.6% | +90.3% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 758,
+          "text": "9. **奇鋐 選價內外10%** （2026-08-14 00:48）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 759,
+          "text": "> 奇鋐（3017）昨（13）日股價開高震盪走高鎖漲停3,200元。法人看好其受惠水冷散熱產品出貨持續成長，伺服器與網通領域需求看旺，因此維持「買進」評等，目標價3,580元。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 99,
+          "text": "\"code\": \"3017\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 100,
+          "text": "\"name\": \"奇鋐\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 109,
+          "text": "\"turning_points\": \"08/17鴻海法說（台北）；08/19奇鋐法說；08/27 NVIDIA財報；09/03博通財報\","
+        }
+      ]
+    },
+    "4967": {
+      "name": "十銓",
+      "events": [
+        {
+          "type": "除權息",
+          "date": "2026-08-17",
+          "days_until": 3,
+          "detail": "現金股利 8.619904｜配股率 "
+        }
+      ],
+      "mentions": []
+    },
+    "1216": {
+      "name": "統一",
+      "events": [],
+      "mentions": []
+    },
+    "2377": {
+      "name": "微星",
+      "events": [],
+      "mentions": []
+    },
+    "1504": {
+      "name": "東元",
+      "events": [],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 460,
+          "text": "8. **【東元法說會AI摘要】2026/08/13** （2026-08-13 20:20）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 504,
+          "text": "23. **〈東元法說〉東南亞資料中心訂單占整體接單3成 下半年四大事業業績同步升溫** （2026-08-13 18:59）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 505,
+          "text": "> 東元總經理高飛鳶指出，東南亞資料中心需求暢旺，目前東南亞資料中心訂單占整體資料中心接單達 3 成。下半年機電系統、電力能源、空調科技及能源暨系統自動化四大事業群下半年營收獲都將成長。"
+        },
+        {
+          "file": "tw_market_news.json",
+          "line": 36,
+          "text": "\"stock_code\": \"1504\","
+        },
+        {
+          "file": "tw_market_news.json",
+          "line": 37,
+          "text": "\"stock_name\": \"東元\","
+        },
+        {
+          "file": "tw_market_news.json",
+          "line": 38,
+          "text": "\"title\": \"【東元法說會AI摘要】2026/08/13\","
+        },
+        {
+          "file": "tw_market_news.json",
+          "line": 228,
+          "text": "\"title\": \"【東元法說會AI摘要】2026/08/13\","
+        },
+        {
+          "file": "tw_market_news.json",
+          "line": 232,
+          "text": "\"東元\","
+        }
+      ]
+    },
+    "3231": {
+      "name": "緯創",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 15,
+          "text": "- **台股影響鏈**：廣達(2382)↑ AI伺服器訂單看到2028年，資本支出由300億上修至400億元（+33%）、Q2 EPS7.43元創單季新高；鴻海(2317)↑／緯創(3231)↑／和碩(4938)↑／仁寶(2324)↑ Neocloud新興雲端客戶成法說會新亮點；奇鋐(3017)↑ 財報動能延續"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 18,
+          "text": "- **本週摘要**：廣達法說會證實AI伺服器訂單能見度已看到2028年，資本支出大幅上修33%至400億元，財務長直言對未來兩年展望「相當興奮」；鴻海、廣達、緯創、和碩、仁寶法說會同步點名Neocloud新興雲端業者成為訂單新支線，供應鏈廣度持續擴大。"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 79,
+          "text": "- **台股影響鏈**：廣達(2382)↑ 資本支出上修33%至400億元反映AI基建投資力道；鴻海(2317)↑／緯創(3231)↑ Neocloud新客戶訂單延續"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 231,
+          "text": "| 3231 | 緯創 | 2901.8 | 🔺+39.2% | +106.2% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 319,
+          "text": "| 3231 | 緯創 | 2901.8 | 🔺+39.2% | +106.2% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 357,
+          "text": "| 3231 | 緯創 | 2901.8 | 🔺+39.2% | +106.2% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 629,
+          "text": "> 大型雲端服務（CSP）業者今年資本支出衝破8,000億美元，成AI（人工智慧）伺服器採購主力，但令人矚目是，Neocloud新興雲端服務業者快速成長，成為鴻海（2317）、廣達、緯創及和碩及仁寶半年報法說會中大談的客戶新支線。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 73,
+          "text": "\"context\": \"／緯創(3231)↑／和碩(4938)↑／仁寶(2324)↑ Neocloud新興雲端客戶成法說會新亮點\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 78,
+          "text": "\"code\": \"3231\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 79,
+          "text": "\"name\": \"緯創\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 110,
+          "text": "\"summary\": \"廣達法說會證實AI伺服器訂單能見度已看到2028年，資本支出大幅上修33%至400億元，財務長直言對未來兩年展望「相當興奮」；鴻海、廣達、緯創、和碩、仁寶法說會同步點名Neocloud新興雲端業者成為訂單新支線，供應鏈廣度持續擴大。\""
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 596,
+          "text": "\"context\": \"／緯創(3231)↑ Neocloud新客戶訂單延續\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 601,
+          "text": "\"code\": \"3231\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 602,
+          "text": "\"name\": \"緯創\","
+        }
+      ]
+    },
+    "2451": {
+      "name": "創見",
+      "events": [],
+      "mentions": []
+    },
+    "2353": {
+      "name": "宏碁",
+      "events": [
+        {
+          "type": "法說會",
+          "date": "2026-08-18",
+          "days_until": 4,
+          "detail": "14:30 新北市汐止區新台五路一段88號1樓 本公司受邀參加國票綜合證券舉辦之法人說明會，將於上述時間地點，向法人投資者就已公開發佈之財務數字、經營績效等相關資訊做說明。"
+        }
+      ],
+      "mentions": []
+    },
+    "2356": {
+      "name": "英業達",
+      "events": [],
+      "mentions": []
+    },
+    "2887": {
+      "name": "台新新光金",
+      "events": [
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-08-14",
+          "days_until": 0,
+          "detail": "公告本公司暨主要子公司115年7月份合併自結業績資料"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 29,
+          "text": "- **台股影響鏈**：群聯(8299)↑ 上半年EPS187.43元創新高；廣達(2382)↑ Q2 EPS7.43元創單季新高；玉山金(2884)↑ 上半年獲利成長27.8%達214.3億元；台新新光金(2887)↑ 前7月EPS2.04元創新高；十金控前7月合計獲利3,601億元、九家創同期新高；漢測(7856)↑ 上半年賺超過2個股本、EPS21.50元創高；樺漢(6414)↑ Q2 EPS7.15元創單季次高"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 168,
+          "text": "- **強度**：中 | **方向**：↑加速（台新新光金前7月獲利創高，合併綜效初步驗證）| **持續**：11天（首見08/04）| **最後訊號**：08/14"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 169,
+          "text": "- **台股影響鏈**：台新新光金(2887)↑ 7月單月大賺89.4億元年增147%，前7月EPS達2.04元創新高"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 170,
+          "text": "- **本週摘要**：台新新光金公布7月自結獲利89.4億元、年增147%，前7月EPS達2.04元創歷史新高，合併後整合綜效已初步反映在獲利數字上，為明年元旦正式合併增添正面訊號。"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 297,
+          "text": "…泰山、信用槓桿過熱）；川普政府將台灣列入洗產地轉運風險第一級（川普貿易政策）；華星光等4檔飆股遭處置，列入AI泡沫檢查清單監管介入案例；新增「國票金公公併案生變」「化工業轉型電子材料收割期」二個觀察中主題；SpaceX解禁不跌反漲晉升中度；台新新光金前7月獲利創高晉升中度。…"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 465,
+          "text": "10. **台新新光金7月大賺89.4億元年增147%  前7月EPS達2.04元創新高** （2026-08-13 20:14）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 466,
+          "text": "> 台新新光金控 (2887 - TW) 今 (13) 日公布 2026 年 7 月自結成績單，單月合併稅後純益達 89.4 億元，較去年同期大幅成長 147%。累計前 7 月合併稅後純益衝上 527.8 億元"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 700,
+          "text": "> 截至昨（13）日為止，十家金控前七月合計獲利3,601億元，九家創歷年同期新高。國泰金前七月稅後純益873.4億元，年成長59.4%，每股稅後純益（EPS）為5.68元，暫時居冠。台新新光金2.04元、凱基金1.77元、兆豐金1.73元、華南金1.48元。"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 830,
+          "text": "3. **台新新光金前7月稅後淨利527.8億元，年成長281%、EPS 2.04元創新高** （2026-08-13 23:06）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 831,
+          "text": "> 【財訊快報／記者劉居全報導】台新新光金控(2887)7月自結稅後淨利為89.4億元，年成長147%，累計稅後淨利527.8億元，年成長281%，每股盈餘(EPS)為2.04元，創歷史新高。各子公司獲利"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 190,
+          "text": "\"code\": \"2887\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 191,
+          "text": "\"name\": \"台新新光金\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1125,
+          "text": "\"detail\": \"加速（台新新光金前7月獲利創高，合併綜效初步驗證）\""
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1134,
+          "text": "\"code\": \"2887\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1135,
+          "text": "\"name\": \"台新新光金\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1145,
+          "text": "\"summary\": \"台新新光金公布7月自結獲利89.4億元、年增147%，前7月EPS達2.04元創歷史新高，合併後整合綜效已初步反映在獲利數字上，為明年元旦正式合併增添正面訊號。\""
+        },
+        {
+          "file": "tw_market_news.json",
+          "line": 281,
+          "text": "\"title\": \"台新新光金7月大賺89.4億元年增147%  前7月EPS達2.04元創新高\","
+        },
+        {
+          "file": "tw_market_news.json",
+          "line": 283,
+          "text": "\"summary\": \"台新新光金控 (2887 - TW) 今 (13) 日公布 2026 年 7 月自結成績單，單月合併稅後純益達 89.4 億元，較去年同期大幅成長 147%。累計前 7 月合併稅後純益衝上 527.8\","
+        },
+        {
+          "file": "tw_market_news.json",
+          "line": 285,
+          "text": "\"台新新光金控\","
+        }
+      ]
+    },
+    "2883": {
+      "name": "凱基金",
+      "events": [
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-08-14",
+          "days_until": 0,
+          "detail": "公告本公司暨主要子公司115年7月份自結合併盈餘"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 146,
+          "text": "| 2026-08-13 18:55 | 2883 | 凱基金 | 公告本公司暨主要子公司115年7月份自結合併盈餘 | 營收 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 700,
+          "text": "> 截至昨（13）日為止，十家金控前七月合計獲利3,601億元，九家創歷年同期新高。國泰金前七月稅後純益873.4億元，年成長59.4%，每股稅後純益（EPS）為5.68元，暫時居冠。台新新光金2.04元、凱基金1.77元、兆豐金1.73元、華南金1.48元。"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 854,
+          "text": "11. **凱基金前7月稅後獲利305.29億元，EPS 1.77元，已超越去年全年表現** （2026-08-13 23:04）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 855,
+          "text": "> 【財訊快報／記者劉居全報導】凱基金控(2883)7月單月稅後獲利為20.89億元，今年前7月累計稅後獲利305.29億元，每股盈餘(EPS)1.77元，已超越去年全年度獲利及去年每股盈餘1.74元。7"
+        }
+      ]
+    },
+    "2882": {
+      "name": "國泰金",
+      "events": [
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-08-14",
+          "days_until": 0,
+          "detail": "公告本公司暨主要子公司115年07月自結合併稅後損益"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 40,
+          "text": "- **台股影響鏈**：國泰金(2882)↑ 前7月獲利873億元年增59.4%居金控之冠；富邦金(2881)↑／中信金(2891)↑／元大金(2885)↑／兆豐金(2886)↑ 前7月獲利256億元創同期高；華南金(2880)↑ 前7月206億元年增37.54%創高"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 270,
+          "text": "| 2882 | 國泰金 | 250.6 | 🔺+130.6% | +223.5% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 699,
+          "text": "9. **國泰金前七月大賺873億元 十金控獲利達3,601億元 九家創同期新高** （2026-08-14 00:46）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 700,
+          "text": "> 截至昨（13）日為止，十家金控前七月合計獲利3,601億元，九家創歷年同期新高。國泰金前七月稅後純益873.4億元，年成長59.4%，每股稅後純益（EPS）為5.68元，暫時居冠。台新新光金2.04元、凱基金1.77元、兆豐金1.73元、華南金1.48元。"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 737,
+          "text": "二、國泰金前七月大賺873億元 十金控獲利達3,601億元 九家創同期新高"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 274,
+          "text": "\"code\": \"2882\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 275,
+          "text": "\"name\": \"國泰金\","
+        }
+      ]
+    },
+    "2890": {
+      "name": "永豐金",
+      "events": [
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-08-14",
+          "days_until": 0,
+          "detail": "公告本公司115年第2季合併財務報告董事會預計召開日期為\r\n115年8月21日"
+        }
+      ],
+      "mentions": []
+    },
+    "2006": {
+      "name": "東和鋼鐵",
+      "events": [],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 972,
+          "text": "…tional debt. It is a massive storm that is clouding America's future. Yes, that was a US TV spot from 1992, but also in 2006, Barack Obama warned us. Paul Ryan again did the same in 2011 and before coming into office, Trump Treasury Secretary Scott Bassett openly stated that current US debt is fundament…"
+        }
+      ]
+    },
+    "2891": {
+      "name": "中信金",
+      "events": [
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-08-14",
+          "days_until": 0,
+          "detail": "代子公司中國信託商業銀行公告授信資產之轉讓"
+        },
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-08-14",
+          "days_until": 0,
+          "detail": "公告本公司將於115年08月18日召開115年度第二季法人說明會"
+        },
+        {
+          "type": "法說會",
+          "date": "2026-08-18",
+          "days_until": 4,
+          "detail": "14:00 中文實體(總行大樓)(14:00-15:00)；\r\n中英文線上同步 公布115年度第二季營運概況"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 40,
+          "text": "- **台股影響鏈**：國泰金(2882)↑ 前7月獲利873億元年增59.4%居金控之冠；富邦金(2881)↑／中信金(2891)↑／元大金(2885)↑／兆豐金(2886)↑ 前7月獲利256億元創同期高；華南金(2880)↑ 前7月206億元年增37.54%創高"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 95,
+          "text": "| 08-18（二） | 🔜 4天 | 2891 | 中信金 | 14:00 | 中文實體(總行大樓)(14:00-15:00)； |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 268,
+          "text": "| 2891 | 中信金 | 192.2 | 🔺+341.3% | +175.7% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 283,
+          "text": "\"context\": \"／中信金(2891)↑／元大金(2885)↑／兆豐金(2886)↑ 前7月獲利256億元創同期高\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 288,
+          "text": "\"code\": \"2891\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 289,
+          "text": "\"name\": \"中信金\","
+        }
+      ]
+    },
+    "3706": {
+      "name": "神達",
+      "events": [],
+      "mentions": []
+    },
+    "2330": {
+      "name": "台積電",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 16,
+          "text": "- **領頭指標**：SOX 12,456(+0.46%)、NVDA+0.70%、AVGO+0.63%、INTC+3.35%，AMD持平；台積電ADR小幅上漲"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 130,
+          "text": "- **台股影響鏈**：台積電(2330)↑ MSCI調整核心權重延續；009826↑／00981A↑ 掛牌募集動能延續"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 188,
+          "text": "### 台積電攜手Sony合資＋友達先進封裝＋CPO矽光子技術推進"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 280,
+          "text": "- 首見08/09 台積電龍潭1.4奈米廠居民支持度轉向、周邊徵才狂潮"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 24,
+          "text": "| 🔻 台積電 ADR | TSM | 430.49 | -0.90 | -0.21% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 166,
+          "text": "| L5 基礎晶片 | 晶圓代工與封裝，整條鏈的製造基礎 | 台積電(2330)：CoWoS先進封裝、聯發科(2454)：AI邊緣晶片 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 168,
+          "text": "### 台積電先進製程擴產鏈（主題鍵：台積電先進製程擴產）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 171,
+          "text": "| L1 晶圓廠主體 | 訂單來源，決定整條建廠供應鏈規模 | 台積電(2330)：2nm量產+N3擴產+CoWoS |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 172,
+          "text": "| L2 廠務工程 | 晶圓廠建設工程，最早獲益 | 漢唐(2404)：台積電廠務主力承包商、聖暉(5536)：製程工程 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 175,
+          "text": "| L5 IC設計客戶 | 採用台積電先進製程的本土IC設計 | 世芯-KY(3661)：ASIC設計，CoWoS受益 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 385,
+          "text": "| 2330 | 台積電 | 4169.8 | 🔺+30.1% | +30.0% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 786,
+          "text": "1. **台積電ADR小幅上漲 台指期夜盤上漲364點** （2026-08-14 07:22）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 787,
+          "text": "> 台股ADR周四（13日）漲跌互見，台積電ADR收盤上漲0.31%，報每股430.49美元，收盤最新價格換算並折合新台幣後為每股2,768.87元，較台北交易股票溢價率為13.71%。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 108,
+          "text": "\"lead_indicators\": \"SOX 12,456(+0.46%)、NVDA+0.70%、AVGO+0.63%、INTC+3.35%，AMD持平；台積電ADR小幅上漲\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 923,
+          "text": "\"code\": \"2330\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 924,
+          "text": "\"name\": \"台積電\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1242,
+          "text": "\"theme\": \"台積電攜手Sony合資＋友達先進封裝＋CPO矽光子技術推進\","
+        },
+        {
+          "file": "us_leader_alerts.md",
+          "line": 9,
+          "text": "- 台積電(2330)"
+        }
+      ]
+    },
+    "6770": {
+      "name": "力積電",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 8,
+          "text": "- **台股影響鏈**：台灣大(3045)↑ 收購精誠案後續發酵；精誠(6214)↑ 溢價收購題材延續；力積電(6770)↑；MSCI季度調整08/31生效估帶來2,500億資金活水"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 147,
+          "text": "### 力積電接班落地＋外資籌碼大舉進駐"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 218,
+          "text": "| 6770 | 力積電 | 57.7 | 🔺+58.9% | +31.4% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 302,
+          "text": "| 6770 | 力積電 | 57.7 | 🔺+58.9% | +31.4% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 400,
+          "text": "### 🟡 力積電接班落地＋外資籌碼大舉進駐（💪 強力支撐）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 404,
+          "text": "| 6770 | 力積電 | 57.7 | 🔺+58.9% | +31.4% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 36,
+          "text": "\"code\": \"6770\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 37,
+          "text": "\"name\": \"力積電\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1020,
+          "text": "\"theme\": \"力積電接班落地＋外資籌碼大舉進駐\","
+        }
+      ]
+    },
+    "2337": {
+      "name": "旺宏",
+      "events": [],
+      "mentions": []
+    },
+    "2313": {
+      "name": "華通",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 159,
+          "text": "- **台股影響鏈**：鴻海(2317)↑／華通(2313)↑ 供應鏈身分延續"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 411,
+          "text": "| 2313 | 華通 | 67.6 | +13.0% | +11.7% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1074,
+          "text": "\"context\": \"／華通(2313)↑ 供應鏈身分延續\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1079,
+          "text": "\"code\": \"2313\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1080,
+          "text": "\"name\": \"華通\","
+        }
+      ]
+    },
+    "3090": {
+      "name": "日電貿",
+      "events": [],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 198,
+          "text": "| L2 通路商 | 元件代理分銷，庫存指標 | 日電貿(3090)：2026/05法說：高階MLCC交期拉長、缺貨恐延至2027（鉅亨6463791）、羅昇(8374)：工業自動化元件通路、蜜望實(8043)：電子元件通路、大聯大(3702)：最大半導體通路商、文曄(3036)：半導體通路 |"
+        }
+      ]
+    },
+    "1301": {
+      "name": "台塑",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 22,
+          "text": "- **台股影響鏈**：群聯(8299)↑ Q2 EPS118.57元創台灣記憶體業單季新高，上半年EPS187.43元同創紀錄，擬配息60元；南亞科(2408)↑ 台塑集團規劃於雲林、屏東興建全新12吋晶圓廠，切入次世代DRAM及客製化DRAM；華邦電(2344)↑ 超級週期延續"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 25,
+          "text": "- **本週摘要**：群聯法說會公布Q2 EPS118.57元創台灣記憶體業史上單季新高，執行長潘健成直言AI帶動NAND供需吃緊恐持續至2027、2028年；台塑集團宣布南亞科將在雲林、屏東興建全新12吋晶圓廠，切入次世代DRAM，記憶體超級週期基本面持續強化，惟大陸長江存儲NAND市占竄升至全球第三，中系記憶體崛起壓力同步升溫。"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 47,
+          "text": "- **台股影響鏈**：長榮(2603)↑ 上半年賺逾一個股本、EPS11.24元居貨櫃三雄之冠；萬海(2615)↑ 上半年EPS6.84元；陽明(2609)↑ 上半年EPS2.05元；台塑化(6505)→／台塑(1301)→ 煉油價差題材隨油價回落降溫"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 65,
+          "text": "### 台塑集團H1獲利轉骨（含中東油價轉強）"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 67,
+          "text": "- **台股影響鏈**：南亞科(2408)↑ 規劃於雲林、屏東興建12吋晶圓廠切入次世代及客製化DRAM；台塑化(6505)→／台塑(1301)→ 油價回落煉油價差題材降溫，但集團科技化布局加速"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 68,
+          "text": "- **本週摘要**：台塑集團宣布啟動歷年來最大投資，由南亞科打前鋒規劃雲林、屏東兩座全新12吋晶圓廠切入次世代DRAM，同步擴大布局記憶體、IC載板、玻纖布、生技醫療、新能源、循環經濟四大領域，集團從石化本業向高階電子材料的轉骨敘事獲具體資本支出驗證。"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 297,
+          "text": "**主要更新（相較前版）**：MSCI三升估帶2,500億資金活水、外資單日買超757億元大幅擴大買盤（台股市場動態、台灣ETF資金流向）；群聯Q2單季EPS118.57元創台灣記憶體史上新高、台塑南亞科規劃雲林屏東12吋新廠（DRAM與記憶體、台塑集團H1轉骨）；廣達法說訂單看到2028年、資本支出上修33%（AI伺服器）；玉山金併三商壽增資220億時程明確化，晉升強催化劑；泰山搶標街口電支股權引爆治理新戰線（中聯油脂/泰山、信用槓桿過熱）；川普政府將台灣列入洗產地轉運風險第一級（川普貿易政策）；華星光等4檔飆股遭處置，列入AI泡沫檢查清單監管介入案…"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 277,
+          "text": "| 6505 | 台塑化 | 577.8 | 🔺+26.9% | +6.1% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 280,
+          "text": "| 1301 | 台塑 | 149.5 | +0.7% | -3.8% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 393,
+          "text": "### 🟡 台塑集團H1獲利轉骨（含中東油價轉強）（➡️ 溫和）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 397,
+          "text": "| 6505 | 台塑化 | 577.8 | 🔺+26.9% | +6.1% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 398,
+          "text": "| 1301 | 台塑 | 149.5 | +0.7% | -3.8% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 640,
+          "text": "5. **台塑集團拓科技版圖 南亞科12吋廠 落腳雲林、屏東** （2026-08-14 01:11）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 641,
+          "text": "> 台塑集團擴張科技版圖，啟動歷年來最大投資。首波由今年集團獲利最豐碩的南亞科打前鋒，規畫在雲林及屏東各興建全新的12吋晶圓廠，切入次世代動態隨機存取記憶體（DRAM）及客製化DRAM。"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 658,
+          "text": "11. **台塑集團擴大投資四領域** （2026-08-14 00:20）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 659,
+          "text": "> 台塑集團大變身，啟動多元布局，鎖定記憶體、IC載板、玻纖布等高階電子材料，還有生技健康醫療，新電力與新能源，以及循環經濟與綠色產品四大領域，開創集團發展新紀元。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 136,
+          "text": "\"context\": \"台塑集團規劃於雲林、屏東興建全新12吋晶圓廠，切入次世代DRAM及客製化DRAM\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 152,
+          "text": "\"summary\": \"群聯法說會公布Q2 EPS118.57元創台灣記憶體業史上單季新高，執行長潘健成直言AI帶動NAND供需吃緊恐持續至2027、2028年；台塑集團宣布南亞科將在雲林、屏東興建全新12吋晶圓廠，切入次世代DRAM，記憶體超級週期基本面持續強化，惟大陸長江存儲NAND市占竄升至全球第三，中系記憶體崛起壓力同步升溫。\""
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 359,
+          "text": "\"name\": \"台塑化\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 360,
+          "text": "\"context\": \"／台塑(1301)→ 煉油價差題材隨油價回落降溫\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 365,
+          "text": "\"code\": \"1301\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 366,
+          "text": "\"name\": \"台塑\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 475,
+          "text": "\"theme\": \"台塑集團H1獲利轉骨（含中東油價轉強）\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 497,
+          "text": "\"name\": \"台塑化\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 498,
+          "text": "\"context\": \"／台塑(1301)→ 油價回落煉油價差題材降溫，但集團科技化布局加速\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 503,
+          "text": "\"code\": \"1301\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 504,
+          "text": "\"name\": \"台塑\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 514,
+          "text": "\"summary\": \"台塑集團宣布啟動歷年來最大投資，由南亞科打前鋒規劃雲林、屏東兩座全新12吋晶圓廠切入次世代DRAM，同步擴大布局記憶體、IC載板、玻纖布、生技醫療、新能源、循環經濟四大領域，集團從石化本業向高階電子材料的轉骨敘事獲具體資本支出驗證。\""
+        }
+      ]
+    },
+    "4938": {
+      "name": "和碩",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 15,
+          "text": "- **台股影響鏈**：廣達(2382)↑ AI伺服器訂單看到2028年，資本支出由300億上修至400億元（+33%）、Q2 EPS7.43元創單季新高；鴻海(2317)↑／緯創(3231)↑／和碩(4938)↑／仁寶(2324)↑ Neocloud新興雲端客戶成法說會新亮點；奇鋐(3017)↑ 財報動能延續"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 18,
+          "text": "- **本週摘要**：廣達法說會證實AI伺服器訂單能見度已看到2028年，資本支出大幅上修33%至400億元，財務長直言對未來兩年展望「相當興奮」；鴻海、廣達、緯創、和碩、仁寶法說會同步點名Neocloud新興雲端業者成為訂單新支線，供應鏈廣度持續擴大。"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 232,
+          "text": "| 4938 | 和碩 | 959.6 | +12.0% | -7.3% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 628,
+          "text": "1. **Neocloud 新興雲端客戶大量找上門！鴻海、廣達、仁寶、和碩曝關鍵原因** （2026-08-14 02:23）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 629,
+          "text": "> 大型雲端服務（CSP）業者今年資本支出衝破8,000億美元，成AI（人工智慧）伺服器採購主力，但令人矚目是，Neocloud新興雲端服務業者快速成長，成為鴻海（2317）、廣達、緯創及和碩及仁寶半年報法說會中大談的客戶新支線。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 73,
+          "text": "\"context\": \"／緯創(3231)↑／和碩(4938)↑／仁寶(2324)↑ Neocloud新興雲端客戶成法說會新亮點\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 80,
+          "text": "\"context\": \"／和碩(4938)↑／仁寶(2324)↑ Neocloud新興雲端客戶成法說會新亮點\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 85,
+          "text": "\"code\": \"4938\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 86,
+          "text": "\"name\": \"和碩\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 110,
+          "text": "\"summary\": \"廣達法說會證實AI伺服器訂單能見度已看到2028年，資本支出大幅上修33%至400億元，財務長直言對未來兩年展望「相當興奮」；鴻海、廣達、緯創、和碩、仁寶法說會同步點名Neocloud新興雲端業者成為訂單新支線，供應鏈廣度持續擴大。\""
+        }
+      ]
+    }
+  }
+}

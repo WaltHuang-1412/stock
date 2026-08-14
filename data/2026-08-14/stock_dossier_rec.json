@@ -1,0 +1,114 @@
+{
+  "date": "2026-08-14",
+  "window_days": 5,
+  "source_status": {
+    "法說會(MOPS)": "ok(cache)",
+    "除權息(TWSE)": "ok(cache)",
+    "重大訊息(TWSE+TPEx)": "ok"
+  },
+  "stocks": {
+    "2301": {
+      "name": "光寶科",
+      "events": [
+        {
+          "type": "除權息",
+          "date": "2026-08-19",
+          "days_until": 5,
+          "detail": "現金股利 2.500000｜配股率 "
+        }
+      ],
+      "mentions": []
+    },
+    "3017": {
+      "name": "奇鋐",
+      "events": [
+        {
+          "type": "法說會",
+          "date": "2026-08-19",
+          "days_until": 5,
+          "detail": "11:00 W Taipei 受邀參加Nomura Asia Tech Tour 2026，說明115年第二季營運結果與未來展望。"
+        },
+        {
+          "type": "除權息",
+          "date": "2026-08-19",
+          "days_until": 5,
+          "detail": "現金股利 20.881604｜配股率 "
+        }
+      ],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 15,
+          "text": "- **台股影響鏈**：廣達(2382)↑ AI伺服器訂單看到2028年，資本支出由300億上修至400億元（+33%）、Q2 EPS7.43元創單季新高；鴻海(2317)↑／緯創(3231)↑／和碩(4938)↑／仁寶(2324)↑ Neocloud新興雲端客戶成法說會新亮點；奇鋐(3017)↑ 財報動能延續"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 17,
+          "text": "- **關鍵轉折點**：08/17鴻海法說（台北）；08/19奇鋐法說；08/27 NVIDIA財報；09/03博通財報"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 164,
+          "text": "| L3 散熱/電源 | AI 伺服器核心零組件，高功耗帶動需求 | 奇鋐(3017)：液冷散熱龍頭、雙鴻(3324)：EPS上修57.97元、台達電(2308)：電源供應系統 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 229,
+          "text": "| 3017 | 奇鋐 | 158.7 | 🔺+60.6% | +90.3% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 248,
+          "text": "| 3017 | 奇鋐 | 158.7 | 🔺+60.6% | +90.3% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 758,
+          "text": "9. **奇鋐 選價內外10%** （2026-08-14 00:48）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 759,
+          "text": "> 奇鋐（3017）昨（13）日股價開高震盪走高鎖漲停3,200元。法人看好其受惠水冷散熱產品出貨持續成長，伺服器與網通領域需求看旺，因此維持「買進」評等，目標價3,580元。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 99,
+          "text": "\"code\": \"3017\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 100,
+          "text": "\"name\": \"奇鋐\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 109,
+          "text": "\"turning_points\": \"08/17鴻海法說（台北）；08/19奇鋐法說；08/27 NVIDIA財報；09/03博通財報\","
+        }
+      ]
+    },
+    "4967": {
+      "name": "十銓",
+      "events": [
+        {
+          "type": "除權息",
+          "date": "2026-08-17",
+          "days_until": 3,
+          "detail": "現金股利 8.619904｜配股率 "
+        }
+      ],
+      "mentions": []
+    },
+    "1216": {
+      "name": "統一",
+      "events": [],
+      "mentions": []
+    },
+    "2377": {
+      "name": "微星",
+      "events": [],
+      "mentions": []
+    }
+  }
+}
