@@ -148,8 +148,11 @@
       "actual_close": 101.5,
       "close_price": 101.5,
       "change_percent": -1.46,
-      "result": "holding",
-      "holding_status": "D0/10 收盤 101.5（較推薦 -1.46%）| 距目標 11.63% | 距停損 8.67% | D0 不結算，D1 起判定"
+      "result": "fail",
+      "settled_date": "2026-08-14",
+      "settled_price": 99.0,
+      "holding_days": 4,
+      "fail_reason": "反轉 L4 鐵律出場（-2,090張/28.7%，盤後複掃 41.7% 仍 L4）。收盤 99.0 < 推薦 103.0（-3.88%），入帳價依 v8.3.2 取當日收盤價"
     },
     {
       "stock_code": "2603",
@@ -1217,7 +1220,12 @@
       "stop_loss": 92.7,
       "settlement_days": 10,
       "position": "⏳沿用，不重複建倉",
-      "reason": "📶訊號A L3：真連買3天、10日累計+37K張、動能-75.9%（+15）；avg_rank 40.0、buy_ratio 28.9%、外資+投信同步；EPS 2026Q1 毛利率QoQ+5.9pp（+2）；電信tier_0防禦核心＋🟢SpaceX低軌衛星回傳。⚠️ 催化僅🟢中度、法人排名 TOP36-50 偏後段；價格位置6分（月季雙線下）。"
+      "reason": "📶訊號A L3：真連買3天、10日累計+37K張、動能-75.9%（+15）；avg_rank 40.0、buy_ratio 28.9%、外資+投信同步；EPS 2026Q1 毛利率QoQ+5.9pp（+2）；電信tier_0防禦核心＋🟢SpaceX低軌衛星回傳。⚠️ 催化僅🟢中度、法人排名 TOP36-50 偏後段；價格位置6分（月季雙線下）。",
+      "result": "fail",
+      "settled_date": "2026-08-14",
+      "settled_price": 99.0,
+      "holding_days": 4,
+      "fail_reason": "反轉 L4 鐵律出場（-2,090張/28.7%，盤後複掃 41.7% 仍 L4）。收盤 99.0 < 推薦 103.0（-3.88%），入帳價依 v8.3.2 取當日收盤價"
     }
   ],
   "tomorrow_no_new_recommendation": {

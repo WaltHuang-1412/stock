@@ -19,7 +19,11 @@
       "result": "holding",
       "reason": "🛤️軌道A｜AI伺服器電源+AI資料中心電力瓶頸🔴超強；avg_rank 10.5、buy_ratio 32.5%、10日累計+81K張、近5日外資+16K；籌碼動能-70.5%（+15）；Q2 EPS 3.14元 YoY+125.9%、毛利率QoQ+5.6pp（+5）；MA20 +18.8%、MA60 +21.0% 雙線上（15分）。5日+6.7% 扣10分。⚠️ 08/19 除息 2.50元（缺口約-0.93%，目標/停損須計入）；⚠️ 營收快取落後至 2026-05，本因子未採計；⚠️ 當日資料源 0 筆提及，依據為法人籌碼＋產業定位",
       "intraday_price": 262.5,
-      "intraday_change_pct": -2.6
+      "intraday_change_pct": -2.6,
+      "actual_close": 267.0,
+      "holding_status": "D0/10。收 267.00（-0.93%），距停損 242.55 尚有 9.2%。三大法人 +12,157 張、反轉買超中、10 日累計 +81K。",
+      "close_price": 267.0,
+      "change_percent": -0.93
     },
     {
       "stock_code": "3017",
@@ -35,7 +39,11 @@
       "result": "holding",
       "reason": "🛤️軌道A｜液冷散熱龍頭，AI伺服器與半導體🔴超強；avg_rank 23.0、buy_ratio 27.4%、10日累計+10K張、真連買3天、9買1賣；籌碼動能-57.7%（+15）；Q2 EPS 24.37元 YoY+136.6%、毛利率QoQ+2.8pp（+5）；營收2026-07 YoY+60.4%（催化x營收✅有支撐）；MA20 +27.6%（15分）。5日+8.8% 扣10分。⚠️ 08/19 法說會（Nomura Asia Tech Tour）＋同日除息 20.88元（缺口約-0.65%），持有期跨越該日須留意雙向波動",
       "intraday_price": 3235.0,
-      "intraday_change_pct": 1.09
+      "intraday_change_pct": 1.09,
+      "actual_close": 3235.0,
+      "holding_status": "D0/10。收 3235.00（+1.09%），距停損 2880.0 尚有 11.0%。反轉 L0、10 日累計 +10K。⚠️ 08/19 法說會。",
+      "close_price": 3235.0,
+      "change_percent": 1.09
     },
     {
       "stock_code": "1216",
@@ -51,7 +59,11 @@
       "result": "holding",
       "reason": "🛤️軌道A｜📶訊號A L2（+10）；籌碼為全候選最佳：真連續買超10天、10買0賣、10日累計+85K張、近5日外資+42K、動能-4.1%（+10）；avg_rank 28.5、buy_ratio 41.3%；Q2 EPS 1.41元 YoY+45.4%（+3）；營收2026-07 fresh YoY+8.8%（不調整）；MA20 +0.0%、MA60 +1.1% 雙線上。⚠️ 時事僅10/25、產業僅10/20（無對應催化劑），純籌碼型標的；⚠️ 當日資料源 0 筆提及；防禦型部位，倉位配置於區間下緣",
       "intraday_price": 75.8,
-      "intraday_change_pct": -0.66
+      "intraday_change_pct": -0.66,
+      "actual_close": 75.8,
+      "holding_status": "D0/10。收 75.80（-0.66%），距停損 68.67 尚有 9.4%。真連買 10 天／賣超 0 天，10 日累計 +85K。",
+      "close_price": 75.8,
+      "change_percent": -0.66
     },
     {
       "stock_code": "1504",
@@ -67,7 +79,11 @@
       "result": "holding",
       "reason": "🛤️軌道B（時事）｜🟡強催化「機器人與物理AI」＋08/19 自動化展；卷宗 8 處提及：08/13 法說會揭露東南亞資料中心訂單占整體資料中心接單 3 成、下半年四大事業同步升溫；avg_rank 16.5、buy_ratio 49.6%、10日累計+21K張、近5日外資+11K；Q2 EPS 1.12元 YoY+62.3%（+5）；MA20 +6.5% 雙線上。5日+5.5% 扣10分；真連買僅1天；⚠️ 營收快取落後至 2026-02，本因子未採計",
       "intraday_price": 71.3,
-      "intraday_change_pct": 1.28
+      "intraday_change_pct": 1.28,
+      "actual_close": 70.6,
+      "holding_status": "D0/10。收 70.60（+0.28%），距停損 63.36 尚有 10.3%。反轉買超中、10 日累計 +21K。08/19 自動化展。",
+      "close_price": 70.6,
+      "change_percent": 0.28
     }
   ],
   "exit_at_open": [
@@ -80,7 +96,18 @@
       "recommend_date": "2026-08-04",
       "holding_days": 7,
       "action": "開盤出場",
-      "note": "賣超佔比 38.4% ≥8%，遠離門檻，非分母效應"
+      "note": "賣超佔比 38.4% ≥8%，遠離門檻，非分母效應",
+      "after_market_recheck": {
+        "pct_of_volume": 70.0,
+        "level": 4,
+        "verdict": "✅ 出場正確（遠離門檻）"
+      },
+      "settled": {
+        "settled_price": 259.5,
+        "result": "success",
+        "return": "+2.57%",
+        "basis": "v8.3.2 鐵律出場以當日收盤價入帳"
+      }
     },
     {
       "stock_code": "2002",
@@ -91,7 +118,18 @@
       "recommend_date": "2026-08-06",
       "holding_days": 5,
       "action": "開盤出場",
-      "note": "賣超佔比 50.9% ≥8%"
+      "note": "賣超佔比 50.9% ≥8%",
+      "after_market_recheck": {
+        "pct_of_volume": 67.7,
+        "level": 4,
+        "verdict": "✅ 出場正確（遠離門檻）"
+      },
+      "settled": {
+        "settled_price": 19.0,
+        "result": "success",
+        "return": "+0.53%",
+        "basis": "v8.3.2 鐵律出場以當日收盤價入帳"
+      }
     },
     {
       "stock_code": "4904",
@@ -102,7 +140,18 @@
       "recommend_date": "2026-08-10",
       "holding_days": 3,
       "action": "開盤出場",
-      "note": "賣超佔比 28.7% ≥8%"
+      "note": "賣超佔比 28.7% ≥8%",
+      "after_market_recheck": {
+        "pct_of_volume": 41.7,
+        "level": 4,
+        "verdict": "✅ 出場正確（遠離門檻）"
+      },
+      "settled": {
+        "settled_price": 99.0,
+        "result": "fail",
+        "return": "-3.88%",
+        "basis": "v8.3.2 鐵律出場以當日收盤價入帳"
+      }
     },
     {
       "stock_code": "2357",
@@ -113,7 +162,18 @@
       "recommend_date": "2026-08-13",
       "holding_days": 0,
       "action": "開盤出場",
-      "note": "賣超佔比 10.4% ≥8%；D0 收盤 937.0 已達目標價 937.0，惟 D0 不結算，依 L4 鐵律出場"
+      "note": "賣超佔比 10.4% ≥8%；D0 收盤 937.0 已達目標價 937.0，惟 D0 不結算，依 L4 鐵律出場",
+      "after_market_recheck": {
+        "pct_of_volume": 2.1,
+        "level": 2,
+        "verdict": "❌ 誤判：盤後完整日量複掃降為 Level 2，賣超僅 -336 張（10 日累計 +12K 的 2.8%），詳見 after_market_analysis.md Step 3 缺陷①"
+      },
+      "settled": {
+        "settled_price": 996.0,
+        "result": "success",
+        "return": "+16.90%",
+        "basis": "v8.3.2 鐵律出場以當日收盤價入帳"
+      }
     }
   ],
   "pending_recheck": [
@@ -136,6 +196,15 @@
         "result": "≥5% → 第1次複核成立",
         "action": "今日不出場，待盤後第2次複核；兩次皆≥5%才於次日開盤出場",
         "note": "賣超張數與盤前完全相同（-1,437張），佔比 5.2%→8.4% 純為分母（當日浮動成交量）效應"
+      },
+      "after_market_recheck": {
+        "time": "盤後（完整日量）",
+        "sell_lots": -1437,
+        "pct_of_volume": 5.7,
+        "level": 4,
+        "result": "≥5% → 第2次複核成立",
+        "action": "依 v8.3.3 本應次日開盤出場；惟該部位今日 D10 到期已結算為 success（65.8，+4.28%），部位終結，出場條款失去標的",
+        "note": "賣超張數三時點完全相同（-1,437 張），佔比 5.2%→8.4%→5.7% 純為分母（當日浮動成交量）效應"
       }
     }
   ],
@@ -153,7 +222,11 @@
       "score": 91,
       "result": "holding",
       "source": "盤中 Track B",
-      "reason": "🛤️軌道B：AI伺服器與半導體🔴超強（22週、↑加速，廣達法說訂單能見度看到2028年、資本支出上修33%）；SMCI +4.12%、DELL +2.07%。法人 avg_rank 13.0、真連買4天、9買1賣、10日累計+41K、近5天+22K（外資+19K）、外資投信同步、buy_ratio 19.64%。Q2 EPS 3.55元 YoY+123.3%、毛利率QoQ+1.0pp。MA20 +7.0%、月季雙線上（13分）。今日-4.17%縮量回檔（量比0.72），5日漲幅由+9.09%收斂至+4.9%脫離扣分帶。營收快取2026-07新鮮、YoY-0.0%不調整；外資持股比+0.03%不調整。卷宗：三來源皆ok、事件窗口內無法說會/除權息/重大訊息、當日資料源0筆提及（依據為法人數據＋Q2財報，成立）。⚠️產業集中度：今日推薦AI鏈將達3/5=60%，盤前曾因Step 9上限排除本檔（註明非分數不足）"
+      "reason": "🛤️軌道B：AI伺服器與半導體🔴超強（22週、↑加速，廣達法說訂單能見度看到2028年、資本支出上修33%）；SMCI +4.12%、DELL +2.07%。法人 avg_rank 13.0、真連買4天、9買1賣、10日累計+41K、近5天+22K（外資+19K）、外資投信同步、buy_ratio 19.64%。Q2 EPS 3.55元 YoY+123.3%、毛利率QoQ+1.0pp。MA20 +7.0%、月季雙線上（13分）。今日-4.17%縮量回檔（量比0.72），5日漲幅由+9.09%收斂至+4.9%脫離扣分帶。營收快取2026-07新鮮、YoY-0.0%不調整；外資持股比+0.03%不調整。卷宗：三來源皆ok、事件窗口內無法說會/除權息/重大訊息、當日資料源0筆提及（依據為法人數據＋Q2財報，成立）。⚠️產業集中度：今日推薦AI鏈將達3/5=60%，盤前曾因Step 9上限排除本檔（註明非分數不足）",
+      "actual_close": 159.0,
+      "holding_status": "D0/10。收 159.00（-0.93%），距停損 152.47 尚有 4.1%。反轉買超中、今日法人 +9,978 張、10 日累計 +41K。",
+      "close_price": 159.0,
+      "change_percent": -0.93
     }
   ],
   "track_b_observations": [
@@ -519,5 +592,305 @@
     "two_day_drawdown": "0 檔達 -10%；最深者 2006（08/12 83.8 → 08/14 80.70 = -3.70%）",
     "2357_downgrade": "華碩盤前L4(10.4%)開盤出場，盤中複掃降為L2(2.5%)，量比4.2x墊高分母所致；賣超僅-336張、10日累計+12K/近5天+4,822/外資+5,201皆正。盤中價1000.00已越過目標價937.0。v8.3.3 的≥8%立即出場分支無絕對張數下限，無法被待複核保護 → 列盤後Step 3流程缺陷檢討候選",
     "2006_watch": "跌破MA5(84.26)/MA10(83.73)、5日高點回落-9.5%，但反轉L0、今日法人+277張、10日累計+16K、真連買3天、動能-74.4% → 依鐵律不出場，盤後複查"
+  },
+  "after_market_settlements": [
+    {
+      "stock_code": "2357",
+      "stock_name": "華碩",
+      "recommend_date": "2026-08-13",
+      "recommend_price": 852.0,
+      "settled_price": 996.0,
+      "result": "success",
+      "holding_days": 1,
+      "return": "+16.90%",
+      "basis": "D1 收盤 ≥ 目標價 937.0"
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "recommend_date": "2026-07-31",
+      "recommend_price": 63.1,
+      "settled_price": 65.8,
+      "result": "success",
+      "holding_days": 10,
+      "return": "+4.28%",
+      "basis": "D10 到期，收盤 > 推薦價"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "recommend_date": "2026-08-04",
+      "recommend_price": 253.0,
+      "settled_price": 259.5,
+      "result": "success",
+      "holding_days": 8,
+      "return": "+2.57%",
+      "basis": "反轉 L4 鐵律出場"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "recommend_date": "2026-08-06",
+      "recommend_price": 18.9,
+      "settled_price": 19.0,
+      "result": "success",
+      "holding_days": 6,
+      "return": "+0.53%",
+      "basis": "反轉 L4 鐵律出場"
+    },
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "recommend_date": "2026-08-10",
+      "recommend_price": 103.0,
+      "settled_price": 99.0,
+      "result": "fail",
+      "holding_days": 4,
+      "return": "-3.88%",
+      "basis": "反轉 L4 鐵律出場"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "2357",
+      "stock_name": "華碩",
+      "reason": "已結算 success（+16.90%，D1 觸目標價 996.0 ≥ 937.0）；當日另因盤前 L4 鐵律開盤出場，盤後複掃降為 L2（2.1%）屬誤判，見 Step 3 缺陷①"
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "reason": "已結算 success（+4.28%，D10 到期）；v8.3.3 待複核兩次皆成立但部位已到期終結"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "reason": "反轉 L4 鐵律出場（-35,569 張，盤後 70.0% 仍 L4），結算 success +2.57%"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "reason": "反轉 L4 鐵律出場（-26,390 張，盤後 67.7% 仍 L4），結算 success +0.53%"
+    },
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "reason": "反轉 L4 鐵律出場（-2,090 張，盤後 41.7% 仍 L4），結算 fail -3.88%"
+    }
+  ],
+  "open_exit_list_tomorrow": [],
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "industry": "AI伺服器",
+      "score": 103,
+      "rank": 1,
+      "type": "⏳沿用進行中追蹤",
+      "day": "D3/10",
+      "recommend_price": 191.0,
+      "target_price": 210.1,
+      "stop_loss_pct": -10,
+      "stop_loss": 171.9,
+      "settlement_days": 10,
+      "position": "⏳沿用，不重複建倉",
+      "reason": "🛤️軌道A｜avg_rank 7.0、buy_ratio 24.67%、真連買5天、10日累計+139K、近5日+40K、外資投信同步；AI伺服器 tier_0（SMCI +4.12%、DELL +2.07%）；Q2 EPS 4.72元 YoY+114.5%（+5）；動能-59.4%（+15）。⚠️ 5日+5.45% 扣10；營收2026-07新鮮但回檔僅+5.4%不加分。",
+      "result": "holding"
+    },
+    {
+      "stock_code": "2301",
+      "stock_name": "光寶科",
+      "industry": "AI電源",
+      "score": 99,
+      "rank": 2,
+      "type": "⏳沿用進行中追蹤",
+      "day": "D1/10",
+      "recommend_price": 269.5,
+      "target_price": 296.45,
+      "stop_loss_pct": -10,
+      "stop_loss": 242.55,
+      "settlement_days": 10,
+      "position": "⏳沿用，不重複建倉",
+      "reason": "avg_rank 10.5、buy_ratio 32.51%、10日累計+81K；AI電源供應器 tier_1；Q2 EPS 3.14元 YoY+125.9%、毛利率QoQ+5.6pp（+5）；動能-70.5%（+15）；價格位置滿分15。⚠️ 5日+8.10% 扣10；⚠️營收快取落後至2026-05，本因子未採計。",
+      "result": "holding"
+    },
+    {
+      "stock_code": "2377",
+      "stock_name": "微星",
+      "industry": "AI PC/板卡",
+      "score": 89,
+      "rank": 3,
+      "type": "⏳沿用進行中追蹤",
+      "day": "D1/10",
+      "recommend_price": 160.5,
+      "target_price": 176.55,
+      "stop_loss_pct": -5,
+      "stop_loss": 152.47,
+      "settlement_days": 10,
+      "position": "⏳沿用，不重複建倉",
+      "reason": "avg_rank 13.0、真連買4天、10日累計+41K、近5日+22K；Q2 EPS 3.55元 YoY+123.3%（+5）；動能+18.2%正常、5日+3.92%不扣；營收2026-07新鮮 YoY-0.0% 不調整。盤中推薦故停損為 -5% 規格。",
+      "result": "holding"
+    },
+    {
+      "stock_code": "4967",
+      "stock_name": "十銓",
+      "industry": "記憶體模組",
+      "score": 88,
+      "rank": 4,
+      "type": "🆕新推薦",
+      "recommend_price": 266.5,
+      "target_price": 293.15,
+      "stop_loss_pct": -10,
+      "stop_loss": 239.85,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "reason": "🛤️軌道B｜記憶體🔴超強（MU +4.23%、WDC +7.31%、KOSPI +3.56%）；Q2 EPS 26.47元 YoY+20262%、毛利率QoQ+4.8pp（+5）；動能-69.5%（+15）；反轉L0、真連買2天。⚠️ 08/17 除息 8.619904 元，進場價採除息參考價 266.5（今日收 275.0）；⚠️ 法人數據僅7分（不在08-13 TOP50買超，10日累計僅+6,632）；⚠️ 外資持股比週減-1.61%（-3分，全池最大減碼）；⚠️營收快取落後至2026-02未採計；⚠️ 處置風險🟡接近注意門檻，08/17盤前須重查TWSE處置清單。法人現身門檻：乖離+12.6%（除息後約+9.0%）>5%，通過。",
+      "result": "holding"
+    },
+    {
+      "stock_code": "2451",
+      "stock_name": "創見",
+      "industry": "記憶體模組",
+      "score": 81,
+      "rank": 5,
+      "type": "⏳沿用進行中追蹤",
+      "day": "D1/10",
+      "recommend_price": 294.5,
+      "target_price": 324.0,
+      "stop_loss_pct": -5,
+      "stop_loss": 279.78,
+      "settlement_days": 10,
+      "position": "⏳沿用，不重複建倉",
+      "reason": "🔥超強催化覆寫：動能+217.6%>100%本應排除，惟記憶體位居Topic Tracker🔴超強區且MU/WDC龍頭皆>+4% → 覆寫成立（5日-1.52%未>20%、反轉L0非L3-4，不受保護條款限制），倉位限5-10%、停損-5%規格。avg_rank 33.0、buy_ratio 35.21%；Q2 EPS 27.70元 YoY+2726.5%（+5）。⚠️ 距停損僅4.4%，全持倉最窄，明日最需盯盤；⚠️營收快取落後至2026-06未採計。",
+      "result": "holding"
+    },
+    {
+      "stock_code": "2049",
+      "stock_name": "上銀",
+      "industry": "機器人",
+      "score": 74,
+      "rank": 6,
+      "type": "🆕新推薦",
+      "recommend_price": 373.5,
+      "target_price": 410.85,
+      "stop_loss_pct": -10,
+      "stop_loss": 336.15,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "reason": "🛤️軌道B｜機器人 tier_0 精密傳動核心，08/19 台北自動化展為明確催化窗口；Q2 EPS 2.40元 YoY+531.6%、毛利率QoQ+2.2pp（+5）；反轉L0、動能+2.3%正常、5日-3.49%不扣；月季雙線上（價格13）。⚠️ 催化劑方向為「→格局延續、無新增進展」非↑加速（時事僅16）；⚠️ avg_rank 31.0偏後、外資買投信賣不同步（法人14）；⚠️營收快取落後至2026-02未採計。倉位限5-10%。",
+      "result": "holding"
+    }
+  ],
+  "tomorrow_note": "明日 2026-08-17（一）。🔴 三項前置限制：①本節法人數據仍為 T86 2026-08-13（08-14 T86 於 14:34 未公布），08/17 盤前取得 08-14 T86 後排名與門檻須全部重算；②金控股 2887/2890/2882/2883 Q2 財報仍未公布（快取 2025Q4，永豐金重訊載明 08/21 董事會），EPS 因子歸 0，08/14 申報期限封鎖於 08/17 失效但須盤前確認是否當日公布；③營收快取 18 檔中 11 檔落後（2301/1504/2353/2356/2887/2451/3706/4967/2049/2882/2883），營收因子一律歸 0。🔴 法人現身門檻排除 4 檔（不在 TOP50 買超 × 乖離 0~+5%）：3706 神達(+2.6%)、2890 永豐金(+3.2%)、2882 國泰金(+3.4%)、2006 東和鋼鐵(+3.8%)，維持 ⏳追蹤不新建倉。🔴 3017 奇鋐 5日+16.16%>10% 不評分新倉，08/19 法說會。🔴 08/17 為週一，盤前 Step 0 之前須先跑 audit_industry_chains.py 每週產業鏈審核。🔴 明日開盤出場清單：空（15 檔持倉盤後複掃全為 L0 或買超中，無觸停損、無 2 日 -10%）。產業分散：AI 鏈 3 檔（50%，未逾上限）／記憶體 2 檔／機器人 1 檔＝3 產業；VIX 14.63 <20 ⇒ 防禦 0-15%。依 v8.2 禁止湊數，4 檔遭門檻排除後未拉進替補防禦股。",
+  "yesterday_verification": {
+    "note": "依 v7.9 多日追蹤結算制，今日 5 檔推薦（2301/3017/1216/1504 盤前＋2377 盤中）全為 D0，一律不判定成敗。本區塊統計對象為「今日實際完成結算的 5 筆歷史推薦」。",
+    "settled_today": 5,
+    "success": 4,
+    "fail": 1,
+    "accuracy": "80.0%",
+    "cumulative_accuracy": "57.1%",
+    "cumulative_settled": 557,
+    "cumulative_success": 318,
+    "cumulative_fail": 239,
+    "holding_count": 15,
+    "results": [
+      {
+        "stock_code": "2357",
+        "stock_name": "華碩",
+        "recommend_date": "2026-08-13",
+        "recommend_price": 852.0,
+        "close_price": 996.0,
+        "change_percent": 16.9,
+        "result": "success",
+        "holding_days": 1,
+        "basis": "D1 收盤 996.0 ≥ 目標價 937.0"
+      },
+      {
+        "stock_code": "2891",
+        "stock_name": "中信金",
+        "recommend_date": "2026-07-31",
+        "recommend_price": 63.1,
+        "close_price": 65.8,
+        "change_percent": 4.28,
+        "result": "success",
+        "holding_days": 10,
+        "basis": "D10 到期，收盤 65.8 > 推薦價 63.1"
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "recommend_date": "2026-08-04",
+        "recommend_price": 253.0,
+        "close_price": 259.5,
+        "change_percent": 2.57,
+        "result": "success",
+        "holding_days": 8,
+        "basis": "反轉 L4 鐵律出場（賣超 -35,569 張，盤後複掃 70.0% 仍 L4），入帳價依 v8.3.2 取當日收盤價"
+      },
+      {
+        "stock_code": "2002",
+        "stock_name": "中鋼",
+        "recommend_date": "2026-08-06",
+        "recommend_price": 18.9,
+        "close_price": 19.0,
+        "change_percent": 0.53,
+        "result": "success",
+        "holding_days": 6,
+        "basis": "反轉 L4 鐵律出場（賣超 -26,390 張，盤後複掃 67.7% 仍 L4），入帳價依 v8.3.2 取當日收盤價"
+      },
+      {
+        "stock_code": "4904",
+        "stock_name": "遠傳",
+        "recommend_date": "2026-08-10",
+        "recommend_price": 103.0,
+        "close_price": 99.0,
+        "change_percent": -3.88,
+        "result": "fail",
+        "holding_days": 4,
+        "basis": "反轉 L4 鐵律出場（賣超 -2,090 張，盤後複掃 41.7% 仍 L4），入帳價依 v8.3.2 取當日收盤價"
+      }
+    ],
+    "today_recommendations_d0": [
+      {
+        "stock_code": "2301",
+        "stock_name": "光寶科",
+        "recommend_price": 269.5,
+        "close_price": 267.0,
+        "change_percent": -0.93,
+        "result": "holding"
+      },
+      {
+        "stock_code": "3017",
+        "stock_name": "奇鋐",
+        "recommend_price": 3200.0,
+        "close_price": 3235.0,
+        "change_percent": 1.09,
+        "result": "holding"
+      },
+      {
+        "stock_code": "1216",
+        "stock_name": "統一",
+        "recommend_price": 76.3,
+        "close_price": 75.8,
+        "change_percent": -0.66,
+        "result": "holding"
+      },
+      {
+        "stock_code": "1504",
+        "stock_name": "東元",
+        "recommend_price": 70.4,
+        "close_price": 70.6,
+        "change_percent": 0.28,
+        "result": "holding"
+      },
+      {
+        "stock_code": "2377",
+        "stock_name": "微星",
+        "recommend_price": 160.5,
+        "close_price": 159.0,
+        "change_percent": -0.93,
+        "result": "holding",
+        "note": "盤中 Track B 推薦，停損 -5% 規格"
+      }
+    ]
   }
 }

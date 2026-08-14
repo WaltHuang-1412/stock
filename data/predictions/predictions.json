@@ -7543,11 +7543,11 @@
       }
     ]
   },
-  "settled_accuracy": "56.9%",
-  "settled_count": 552,
+  "settled_accuracy": "57.1%",
+  "settled_count": 557,
   "holding_count": 181,
-  "total_success": 314,
-  "total_fail": 238,
+  "total_success": 318,
+  "total_fail": 239,
   "2026-03-30": {
     "predictions": [
       {
@@ -14603,10 +14603,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 91,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-14",
+        "settled_price": 65.8,
+        "holding_days": 10
       },
       {
         "symbol": "2887",
@@ -14799,10 +14799,10 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 110,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-14",
+        "settled_price": 259.5,
+        "holding_days": 8
       },
       {
         "symbol": "3706",
@@ -15027,10 +15027,10 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 70,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-14",
+        "settled_price": 19.0,
+        "holding_days": 6
       }
     ],
     "settled_accuracy": null,
@@ -15131,10 +15131,10 @@
         "settlement_days": 10,
         "position": "10%",
         "score": 84,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-14",
+        "settled_price": 99.0,
+        "holding_days": 4
       },
       {
         "symbol": "2603",
@@ -15316,9 +15316,9 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 97,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "success",
+        "settled_date": "2026-08-14",
+        "settled_price": 996.0,
         "holding_days": 1
       },
       {
@@ -15365,6 +15365,88 @@
         "settled_date": null,
         "settled_price": null,
         "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-08-14": {
+    "predictions": [
+      {
+        "symbol": "2301",
+        "name": "光寶科",
+        "recommend_price": 269.5,
+        "target_price": 296.5,
+        "stop_loss": 242.55,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 100,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "3017",
+        "name": "奇鋐",
+        "recommend_price": 3200.0,
+        "target_price": 3520.0,
+        "stop_loss": 2880.0,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 99,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "1216",
+        "name": "統一",
+        "recommend_price": 76.3,
+        "target_price": 83.9,
+        "stop_loss": 68.67,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10%",
+        "score": 84,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "1504",
+        "name": "東元",
+        "recommend_price": 70.4,
+        "target_price": 77.4,
+        "stop_loss": 63.36,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 71,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2377",
+        "name": "微星",
+        "recommend_price": 160.5,
+        "target_price": 176.55,
+        "stop_loss": 152.47,
+        "stop_loss_pct": -5,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 91,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1,
+        "track": "B"
       }
     ],
     "settled_accuracy": null,
