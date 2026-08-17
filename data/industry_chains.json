@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-08-16",
+  "last_updated": "2026-08-17",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -2672,6 +2672,11 @@
               "code": "4938",
               "name": "和碩",
               "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "3702",
+              "name": "大聯大",
+              "category": "AI伺服器與半導體"
             }
           ]
         }
@@ -3706,6 +3711,11 @@
             {
               "code": "2376",
               "name": "技嘉",
+              "category": "企業財報重點"
+            },
+            {
+              "code": "3702",
+              "name": "大聯大",
               "category": "企業財報重點"
             }
           ]
@@ -6962,6 +6972,16 @@
               "code": "7856",
               "name": "漢測",
               "category": "AI晶片檢測與半導體設備產業鏈景氣回溫（SEMICON台灣先行論壇）"
+            },
+            {
+              "code": "7556",
+              "name": "意德士",
+              "category": "AI晶片檢測與半導體設備產業鏈景氣回溫"
+            },
+            {
+              "code": "8039",
+              "name": "台虹",
+              "category": "AI晶片檢測與半導體設備產業鏈景氣回溫"
             }
           ]
         }
@@ -7104,6 +7124,54 @@
               "code": "5347",
               "name": "世界先進",
               "category": "中國成熟製程晶圓代工崛起（中芯、華虹Q2雙雙報喜）"
+            }
+          ]
+        }
+      }
+    },
+    "台積電海外布局收割期": {
+      "name": "台積電海外布局收割期",
+      "catalysts": [
+        "台積電海外布局收割期",
+        "美國廠獲利大增"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "台積電海外布局收割期（美國廠獲利大增）"
+            }
+          ]
+        }
+      }
+    },
+    "SiC碳化矽功率半導體需求爆發": {
+      "name": "SiC碳化矽功率半導體需求爆發",
+      "catalysts": [
+        "SiC碳化矽功率半導體需求爆發",
+        "SiC",
+        "碳化矽功率半導體需求爆發",
+        "VDC",
+        "供電架構"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "3707",
+              "name": "漢磊",
+              "category": "SiC碳化矽功率半導體需求爆發（800VDC供電架構）"
+            },
+            {
+              "code": "3016",
+              "name": "嘉晶",
+              "category": "SiC碳化矽功率半導體需求爆發（800VDC供電架構）"
             }
           ]
         }
