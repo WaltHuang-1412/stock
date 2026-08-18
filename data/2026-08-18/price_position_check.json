@@ -301,18 +301,18 @@
   },
   {
     "code": "2330",
-    "current": 2400.0,
-    "ma20": 2363.75,
-    "ma60": 2376.5,
-    "vs_ma20": 1.53,
-    "vs_ma60": 0.99,
+    "current": 2380.0,
+    "ma20": 2362.25,
+    "ma60": 2377.67,
+    "vs_ma20": 0.75,
+    "vs_ma60": 0.1,
     "above_ma20": true,
     "above_ma60": true,
     "position": "月線上（貼近）",
     "base_score": 10,
     "ma60_mod": 1,
     "adj": 11,
-    "suggestion": "11分（MA20 +1.5% 基礎10 | MA60 +1（月季雙線上））"
+    "suggestion": "11分（MA20 +0.8% 基礎10 | MA60 +1（月季雙線上））"
   },
   {
     "code": "2337",
@@ -391,18 +391,18 @@
   },
   {
     "code": "2359",
-    "current": 175.0,
-    "ma20": 142.53,
-    "ma60": 139.98,
-    "vs_ma20": 22.79,
-    "vs_ma60": 25.01,
+    "current": 166.0,
+    "ma20": 143.9,
+    "ma60": 140.39,
+    "vs_ma20": 15.36,
+    "vs_ma60": 18.24,
     "above_ma20": true,
     "above_ma60": true,
     "position": "月線上強勢",
     "base_score": 14,
     "ma60_mod": 1,
     "adj": 15,
-    "suggestion": "15分（MA20 +22.8% 基礎14 | MA60 +1（月季雙線上））"
+    "suggestion": "15分（MA20 +15.4% 基礎14 | MA60 +1（月季雙線上））"
   },
   {
     "code": "2371",
@@ -556,18 +556,18 @@
   },
   {
     "code": "2486",
-    "current": 238.0,
-    "ma20": 218.97,
-    "ma60": 242.81,
-    "vs_ma20": 8.69,
-    "vs_ma60": -1.98,
+    "current": 238.5,
+    "ma20": 219.97,
+    "ma60": 241.82,
+    "vs_ma20": 8.42,
+    "vs_ma60": -1.37,
     "above_ma20": true,
     "above_ma60": false,
     "position": "月線上",
     "base_score": 12,
     "ma60_mod": 0,
     "adj": 12,
-    "suggestion": "12分（MA20 +8.7% 基礎12 | MA60 0（月線上但季線壓））"
+    "suggestion": "12分（MA20 +8.4% 基礎12 | MA60 0（月線上但季線壓））"
   },
   {
     "code": "2542",
@@ -961,18 +961,18 @@
   },
   {
     "code": "3045",
-    "current": 111.0,
-    "ma20": 111.5,
-    "ma60": 113.94,
-    "vs_ma20": -0.45,
-    "vs_ma60": -2.58,
+    "current": 110.5,
+    "ma20": 111.42,
+    "ma60": 113.92,
+    "vs_ma20": -0.83,
+    "vs_ma60": -3.01,
     "above_ma20": false,
     "above_ma60": false,
     "position": "月線下（剛跌破）",
     "base_score": 7,
     "ma60_mod": -1,
     "adj": 6,
-    "suggestion": "6分（MA20 -0.4% 基礎7 | MA60 -1（月季雙線下））"
+    "suggestion": "6分（MA20 -0.8% 基礎7 | MA60 -1（月季雙線下））"
   },
   {
     "code": "3081",
@@ -1363,5 +1363,35 @@
     "ma60_mod": 0,
     "adj": 12,
     "suggestion": "12分（MA20 +10.1% 基礎12 | MA60 0（月線上但季線壓））"
+  },
+  {
+    "code": "8105",
+    "current": 13.949999809265137,
+    "ma20": 16.25,
+    "ma60": 18.99,
+    "vs_ma20": -14.17,
+    "vs_ma60": -26.53,
+    "above_ma20": false,
+    "above_ma60": false,
+    "position": "月線下（深度）",
+    "base_score": 2,
+    "ma60_mod": -1,
+    "adj": 1,
+    "suggestion": "1分（MA20 -14.2% 基礎2 | MA60 -1（月季雙線下））"
+  },
+  {
+    "code": "2467",
+    "current": 559.0,
+    "ma20": 521.1,
+    "ma60": 567.7,
+    "vs_ma20": 7.27,
+    "vs_ma60": -1.53,
+    "above_ma20": true,
+    "above_ma60": false,
+    "position": "月線上",
+    "base_score": 12,
+    "ma60_mod": 0,
+    "adj": 12,
+    "suggestion": "12分（MA20 +7.3% 基礎12 | MA60 0（月線上但季線壓））"
   }
 ]

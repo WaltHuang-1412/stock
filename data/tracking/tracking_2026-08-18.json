@@ -23,7 +23,9 @@
       "stop_loss_pct": -10,
       "settlement_days": 10,
       "stop_loss": 471.6,
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 521.0,
+      "intraday_change_pct": -0.57
     },
     {
       "stock_code": "2606",
@@ -37,7 +39,9 @@
       "stop_loss_pct": -10,
       "settlement_days": 10,
       "stop_loss": 61.47,
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 69.0,
+      "intraday_change_pct": 1.02
     },
     {
       "stock_code": "2049",
@@ -51,7 +55,9 @@
       "stop_loss_pct": -10,
       "settlement_days": 10,
       "stop_loss": 343.35,
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 368.5,
+      "intraday_change_pct": -3.41
     },
     {
       "stock_code": "2603",
@@ -65,7 +71,9 @@
       "reason": "🛤️軌道A avg_rank 3.0(全場最強)、佔成交71.2%、單日+26,386張｜中東地緣🔴超強↑加速，貨櫃三雄Q3營運看俏｜10日三大+54K、真連買3天、近5外資+38K｜EPS Q2 YoY+46%／毛利率+7.3pp +5｜🔥 超強催化覆寫（動能+244.4%>100% 不排除改降級，倉位縮5-10%、停損改-5%）｜5日+8.2% -10分",
       "settlement_days": 10,
       "stop_loss": 219.92,
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 236.5,
+      "intraday_change_pct": 2.16
     },
     {
       "stock_code": "2609",
@@ -79,7 +87,9 @@
       "reason": "🛤️軌道A avg_rank 5.5(TOP10)、佔成交27.4%、單日+26,514張｜外資+23,735 與投信+289 同步買超｜中東地緣🔴超強↑加速｜10日三大+36K、真連買2天、近5外資+28K｜EPS Q2 YoY+486%／毛利率+10.2pp +5｜🔥 超強催化覆寫（動能+500%>100% 不排除改降級，倉位縮5-10%、停損改-5%）｜5日+6.0% -10分",
       "settlement_days": 10,
       "stop_loss": 51.97,
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 55.9,
+      "intraday_change_pct": 2.19
     },
     {
       "stock_code": "3189",
@@ -93,7 +103,9 @@
       "stop_loss_pct": -10,
       "settlement_days": 10,
       "stop_loss": 814.5,
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 863.0,
+      "intraday_change_pct": -4.64
     }
   ],
   "carry_over": [
@@ -188,5 +200,390 @@
       "action": "✅ 續抱（反轉L0 +328張、累計+4,492）"
     }
   ],
-  "removed_stocks": []
+  "removed_stocks": [],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "price": 2380.0,
+      "score": 77,
+      "reason": "時事22(半導體🔴超強+多催化共振)/法人14(avg_rank20.5)/產業20(晶圓代工龍頭+龍頭多點共振封頂)/技術10(反轉L0)/價格11(月季雙線上)；EPS Q2 YoY+77.4% +5、模式追蹤COLD半導體30.0%(20筆) -5",
+      "excluded_reason": "動能 +259.0%（🔴動能爆發）>100%，未過盤中Step3.5硬門檻。盤中篩選條件未列超強催化覆寫例外，依規則從嚴不擴張適用"
+    },
+    {
+      "stock_code": "2467",
+      "stock_name": "志聖",
+      "price": 559.0,
+      "score": 48,
+      "reason": "時事18(ABF載板🟡強)/法人6(不在TOP50買超)/產業14(載板設備二線)/技術8(L0扣短期跳水-2)/價格12；EPS YoY+198.5% +5、動能+51.3% -10、模式追蹤COLD PCB 26.7%(15筆) -5",
+      "excluded_reason": "總分48 <75。法人現身門檻未觸發（月線乖離+7.3%>+5%）"
+    },
+    {
+      "stock_code": "2359",
+      "stock_name": "所羅門",
+      "price": 166.0,
+      "score": null,
+      "excluded_reason": "偵測器🔥強訊號75分，但①5日+14.0%>10%已大漲不評分 ②今日-5.14%×量比2.77x=爆量崩跌非法人續買（偵測器缺陷，規則層攔截）③處置風險高：當日週轉13.1%、近6日52.3%，最快剩2交易日處置 ④外資持股比週減-0.57% -3分"
+    },
+    {
+      "stock_code": "8105",
+      "stock_name": "凌巨",
+      "price": 13.95,
+      "score": null,
+      "excluded_reason": "偵測器🔥強訊號75分，但①動能+500%>100% ②今日-7.62%×量比11.69x=爆量崩跌（規則層攔截）③不在TOP50買超、10日累計僅+1,247張 ④industry_chains登錄為『台股信用槓桿過熱』『AI泡沫前兆檢查清單』風險類，催化未對齊"
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "price": 110.5,
+      "score": null,
+      "excluded_reason": "10日累計三大法人-6,661為負；reversal『❓狀態不明』不可視為Safe；動能+61.7%"
+    },
+    {
+      "stock_code": "2486",
+      "stock_name": "一詮",
+      "price": 238.5,
+      "score": null,
+      "excluded_reason": "動能+287.9%>100%；reversal累計-566為負『❓狀態不明』"
+    },
+    {
+      "stock_code": "2615",
+      "stock_name": "萬海",
+      "price": 102.5,
+      "score": null,
+      "excluded_reason": "5日+13.8%>10%已大漲，預設不評分（觀察名單：回落至<10%可重評）"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "price": 41.85,
+      "score": null,
+      "excluded_reason": "準確率篩選未過：近5日外資-9,607；WTI 84.9高檔對航空為逆風（觀察名單）"
+    }
+  ],
+  "intraday_note": "今日無盤中新推薦：候選池機械過濾後0檔通過門檻（≥75分+反轉L0-1+動能≤100%+今日漲幅<3%）。最高分2330台積電77分卡動能+259%。依『寧缺勿濫、禁止湊數』不下修門檻。無新推薦故 stock_dossier_intraday.json 免跑。",
+  "intraday_exit_review": {
+    "reversal_rerun_time": "2026-08-18 12:30",
+    "note": "08/17 T86 賣超張數三時點一張未變；佔比變動全部來自 reversal_alert.py:495-497 分母（Yahoo 當日累計成交量，非日均量）重算。v8.3.3 規則生效。",
+    "premarket_exited_at_open": [
+      {
+        "stock_code": "2887",
+        "stock_name": "台新新光金",
+        "pct_premarket": 15.3,
+        "pct_intraday": 37.2,
+        "action": "開盤出場（≥8%，不適用待複核例外）",
+        "settled_price_rule": "盤後以當日收盤價入帳(v8.3.2)"
+      },
+      {
+        "stock_code": "2882",
+        "stock_name": "國泰金",
+        "pct_premarket": 32.3,
+        "pct_intraday": 103.5,
+        "action": "開盤出場",
+        "settled_price_rule": "盤後以當日收盤價入帳"
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "pct_premarket": 35.5,
+        "pct_intraday": 91.9,
+        "action": "開盤出場",
+        "settled_price_rule": "盤後以當日收盤價入帳"
+      },
+      {
+        "stock_code": "3231",
+        "stock_name": "緯創",
+        "pct_premarket": 25.8,
+        "pct_intraday": 49.4,
+        "action": "開盤出場",
+        "settled_price_rule": "盤後以當日收盤價入帳"
+      },
+      {
+        "stock_code": "3706",
+        "stock_name": "神達",
+        "pct_premarket": 17.9,
+        "pct_intraday": 20.8,
+        "action": "開盤出場",
+        "settled_price_rule": "盤後以當日收盤價入帳"
+      },
+      {
+        "stock_code": "2353",
+        "stock_name": "宏碁",
+        "pct_premarket": 38.4,
+        "pct_intraday": 129.1,
+        "action": "開盤出場（另 14:30 法說會）",
+        "settled_price_rule": "盤後以當日收盤價入帳"
+      }
+    ],
+    "pending_review": [
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "sell_lots": -2655,
+        "pct_premarket": 5.5,
+        "pct_intraday": 17.3,
+        "level_intraday": 4,
+        "cum10d_total": 33000,
+        "foreign_5d": -8284,
+        "momentum_pct": 70.2,
+        "check1_1230": "≥5% 成立",
+        "verdict": "待盤後第2次複核；兩次皆≥5%則次日開盤出場",
+        "risk_note": "近5日外資為負、動能+70.2%、真連買0天，三檔中體質最差"
+      },
+      {
+        "stock_code": "2301",
+        "stock_name": "光寶科",
+        "sell_lots": -1762,
+        "pct_premarket": 7.8,
+        "pct_intraday": 5.4,
+        "level_intraday": 4,
+        "cum10d_total": 73000,
+        "foreign_5d": 9391,
+        "momentum_pct": -84.9,
+        "check1_1230": "≥5% 成立",
+        "verdict": "待盤後第2次複核；完整日量下若<5%則維持追蹤",
+        "risk_note": "08/19除息2.5元（缺口約-0.92%），若次日開盤出場須以除息後價格判定"
+      },
+      {
+        "stock_code": "2883",
+        "stock_name": "凱基金",
+        "sell_lots": -1697,
+        "pct_premarket": 3.3,
+        "pct_intraday": 6.1,
+        "level_premarket": 2,
+        "level_intraday": 4,
+        "cum10d_total": 80000,
+        "foreign_5d": -11000,
+        "momentum_pct": 48.9,
+        "check1_1230": "盤中新增L4，佔比6.1%<8%",
+        "verdict": "依v8.3.2盤中新增規則不立即出場；盤後以完整日量重跑，仍L3/L4則次日開盤出場"
+      }
+    ],
+    "released": [
+      {
+        "stock_code": "2867",
+        "stock_name": "三商壽",
+        "sell_lots": -859,
+        "pct_premarket": 5.7,
+        "pct_intraday": 4.6,
+        "level_premarket": 4,
+        "level_intraday": 2,
+        "cum10d_total": 24000,
+        "foreign_5d": 9656,
+        "momentum_pct": -29.0,
+        "verdict": "12:30降級為L2（4.6%<5%門檻）→ 依規則『任一次降級則維持追蹤』解除待複核，盤後報告須揭露"
+      }
+    ],
+    "ironclad_checks": {
+      "stop_loss_triggered": [],
+      "two_day_drop_over_10pct": [],
+      "closest_to_stop": [
+        {
+          "stock_code": "3017",
+          "gap_pct": 4.7
+        },
+        {
+          "stock_code": "3189",
+          "gap_pct": 5.9
+        }
+      ],
+      "deepest_2day": [
+        {
+          "stock_code": "2356",
+          "pct": -7.73
+        },
+        {
+          "stock_code": "3017",
+          "pct": -7.42
+        },
+        {
+          "stock_code": "3231",
+          "pct": -6.72
+        }
+      ]
+    }
+  },
+  "intraday_holdings_snapshot": [
+    {
+      "stock_code": "2887",
+      "name": "台新新光金",
+      "d": 6,
+      "cost": 35.15,
+      "price": 37.3,
+      "ret_pct": 6.12,
+      "status": "已出場"
+    },
+    {
+      "stock_code": "2882",
+      "name": "國泰金",
+      "d": 6,
+      "cost": 99.4,
+      "price": 99.2,
+      "ret_pct": -0.2,
+      "status": "已出場"
+    },
+    {
+      "stock_code": "2356",
+      "name": "英業達",
+      "d": 5,
+      "cost": 66.0,
+      "price": 64.4,
+      "ret_pct": -2.42,
+      "status": "已出場"
+    },
+    {
+      "stock_code": "3231",
+      "name": "緯創",
+      "d": 4,
+      "cost": 191.0,
+      "price": 180.5,
+      "ret_pct": -5.5,
+      "status": "已出場"
+    },
+    {
+      "stock_code": "3706",
+      "name": "神達",
+      "d": 3,
+      "cost": 92.4,
+      "price": 91.0,
+      "ret_pct": -1.52,
+      "status": "已出場"
+    },
+    {
+      "stock_code": "2353",
+      "name": "宏碁",
+      "d": 3,
+      "cost": 31.75,
+      "price": 30.55,
+      "ret_pct": -3.78,
+      "status": "已出場"
+    },
+    {
+      "stock_code": "2890",
+      "name": "永豐金",
+      "d": 4,
+      "cost": 39.05,
+      "price": 40.05,
+      "ret_pct": 2.56,
+      "status": "待複核"
+    },
+    {
+      "stock_code": "2301",
+      "name": "光寶科",
+      "d": 2,
+      "cost": 269.5,
+      "price": 272.5,
+      "ret_pct": 1.11,
+      "status": "待複核"
+    },
+    {
+      "stock_code": "2883",
+      "name": "凱基金",
+      "d": 5,
+      "cost": 30.8,
+      "price": 31.25,
+      "ret_pct": 1.46,
+      "status": "待複核(盤中新增)"
+    },
+    {
+      "stock_code": "2867",
+      "name": "三商壽",
+      "d": 1,
+      "cost": 9.75,
+      "price": 9.84,
+      "ret_pct": 0.92,
+      "status": "解除待複核"
+    },
+    {
+      "stock_code": "3017",
+      "name": "奇鋐",
+      "d": 2,
+      "cost": 3200.0,
+      "price": 3015.0,
+      "ret_pct": -5.78,
+      "status": "續抱觀察"
+    },
+    {
+      "stock_code": "1216",
+      "name": "統一",
+      "d": 2,
+      "cost": 76.3,
+      "price": 75.9,
+      "ret_pct": -0.52,
+      "status": "續抱"
+    },
+    {
+      "stock_code": "1504",
+      "name": "東元",
+      "d": 2,
+      "cost": 70.4,
+      "price": 71.7,
+      "ret_pct": 1.85,
+      "status": "續抱"
+    },
+    {
+      "stock_code": "2605",
+      "name": "新興",
+      "d": 1,
+      "cost": 32.35,
+      "price": 34.75,
+      "ret_pct": 7.42,
+      "status": "續抱"
+    },
+    {
+      "stock_code": "2408",
+      "name": "南亞科",
+      "d": 0,
+      "cost": 524.0,
+      "price": 521.0,
+      "ret_pct": -0.57,
+      "status": "續抱"
+    },
+    {
+      "stock_code": "2606",
+      "name": "裕民",
+      "d": 0,
+      "cost": 68.3,
+      "price": 69.0,
+      "ret_pct": 1.02,
+      "status": "續抱"
+    },
+    {
+      "stock_code": "2049",
+      "name": "上銀",
+      "d": 0,
+      "cost": 381.5,
+      "price": 368.5,
+      "ret_pct": -3.41,
+      "status": "續抱觀察"
+    },
+    {
+      "stock_code": "2603",
+      "name": "長榮",
+      "d": 0,
+      "cost": 231.5,
+      "price": 236.5,
+      "ret_pct": 2.16,
+      "status": "續抱"
+    },
+    {
+      "stock_code": "2609",
+      "name": "陽明",
+      "d": 0,
+      "cost": 54.7,
+      "price": 55.9,
+      "ret_pct": 2.19,
+      "status": "續抱"
+    },
+    {
+      "stock_code": "3189",
+      "name": "景碩",
+      "d": 0,
+      "cost": 905.0,
+      "price": 863.0,
+      "ret_pct": -4.64,
+      "status": "續抱觀察"
+    }
+  ]
 }
