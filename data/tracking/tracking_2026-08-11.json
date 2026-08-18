@@ -24,11 +24,13 @@
       "intraday_reversal_level": 0,
       "intraday_strategy": "✅ 續抱",
       "intraday_note": "D0/10 盤中 64.7（今日 -1.97%，較推薦 -1.97%）｜反轉 Level 0（T86 08-10 +7,389張、外資+7,193，真連續3天）｜跌破MA5 65.18、站上MA10｜量比0.4低量回檔｜費半-2.94%之AI鏈回檔為盤前預期情境（低開貼近進場價64附近）｜距停損59.4約8.2%｜三條出場鐵律全未觸發",
-      "actual_close": 65.1,
-      "result": "holding",
-      "holding_status": "D0 收65.1（-1.36%）縮量回檔，T86 08-10外資+7,193真連3天，反轉L0，距停損8.8%",
+      "actual_close": 64.9,
+      "result": "fail",
       "close_price": 65.1,
-      "change_percent": -1.36
+      "change_percent": -1.36,
+      "settled_price": 64.9,
+      "settled_date": "2026-08-18",
+      "fail_reason": "反轉 L4 鐵律出場：08/18 盤前賣超 -12,865 張佔完整日量 66.3%，開盤出場。入帳價依 v8.3.2 採當日收盤價 64.9（vs 推薦價 66.00，-1.67%）。"
     },
     {
       "stock_code": "6285",
