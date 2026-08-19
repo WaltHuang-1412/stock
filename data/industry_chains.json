@@ -7291,6 +7291,31 @@
           ]
         }
       }
+    },
+    "美債殖利率飆升": {
+      "name": "美債殖利率飆升",
+      "catalysts": [
+        "美債殖利率飆升",
+        "全球債市拋售"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2881",
+              "name": "富邦金",
+              "category": "美債殖利率飆升／全球債市拋售"
+            },
+            {
+              "code": "2882",
+              "name": "國泰金",
+              "category": "美債殖利率飆升／全球債市拋售"
+            }
+          ]
+        }
+      }
     }
   }
 }
