@@ -1,7 +1,7 @@
 # 台股分析執行流程（v8.0 多因子版）
 
-**版本**：v8.3.3
-**更新日期**：2026-08-13
+**版本**：v8.3.5
+**更新日期**：2026-08-19
 **目的**：提供清晰、可執行的盤前/盤中/盤後分析流程
 
 > **v8.2 變更**（依據 2026-07-09 回測 395 筆結算，詳見 `data/backtest/2026-07-09_score_regime/`）：
@@ -30,6 +30,19 @@
 > 新規則：**盤前 L3/L4 若賣超佔比 <8% 且 10 日累計三大法人為正 → 列「待複核」不開盤出場**，12:30 與盤後各複核一次，兩次皆 ≥5% 才於次日開盤出場。佔比 ≥8%、>50K 張、10 日累計為負、或同時觸及停損／2 日 -10% 者，一律維持立即出場。
 > 根因（已於原始碼確認）：`scripts/reversal_alert.py:495-497` 的 `avg_daily_volume` 取自 Yahoo `get_stock_info()['volume']`，是**單一交易日成交量**而非變數名所示的多日均量，分子卻是 T86 前一交易日賣超 — 分子分母日期不對齊且分母全日浮動。腳本唯讀不得修改，故以規則層處理。
 > 回溯檢核：套用於已知樣本（08-13 五檔、08-12 三檔）**未延誤任何一筆真實出貨**。
+>
+> **v8.3.4 變更**（2026-08-19，撤銷一條「無法執行」的禁令）：
+> **Step 7 的「禁止寫入 `industry_chains.json` 的 `tier_from_tracker`」全面改寫為附條件允許**。原禁令建立在錯誤前提上 —— 它要求「新股票只記錄在 `industry_signals.json`」，但該檔由外部 `market-intelligence` repo 產出、每日 `gh api ... | base64 -d >` 覆蓋（`automation/prompts/before_market.md:33-38`），**本 repo 寫進去的內容隔日即被沖掉**。禁令等於關掉累積管道卻未提供替代品，於是流程每天撞上同一個缺口 —— 實測 HEAD 版本已有 **103 處** `tier_from_tracker`，違規累積 826 筆股票（佔全庫 82%），且改動每日隨排程 auto-commit 進版控（如 `7837933`、`413671c`）。
+> 查證紀錄：`scripts/` 下 6 支碰該檔的腳本（`dynamic_industry_expander` / `expand_industry` / `fetch_tw_market_news` / `identify_hotspots` / `sector_scanner` / `catalyst_preposition_scan`）**全部唯讀**，唯一寫入者是每週一的 `audit_industry_chains.py`；寫入行為實際來自流程執行者本身。
+> 新規則要點：① 僅在 `industry_signals.json` 的 `industry_chain_key` 為 `null`（知識庫缺該產業）時才准新增；② key 非 null 時一律沿用既有產業，禁止另建同義產業；③ `category` 須填觸發主題原名以利回溯；④ 當日報告必須揭露新增筆數；⑤ `tier_from_tracker` 屬待審區，產業邏輯**一律以 13-16 分計**，不得比照 tier_0。
+>
+> **v8.3.5 變更**（2026-08-19 盤後，依據當日兩項新發現缺陷，詳見 `data/2026-08-19/after_market_analysis.md` 第三節）：
+> ① **盤後 Step 4 新增「結算歸屬核對」**：`update_predictions.py:91-119` 以 symbol 為 key 由舊到新遍歷 predictions，命中**第一筆** `result=="holding"` 即寫入並刪除待處理項，**完全不比對推薦日**。專案累積 178 筆殭屍 holding，使同一代碼幾乎必然存在更舊的 holding。08-19 實證：當日 4 筆結算有 **3 筆掛錯** —— 2605 掛到 2026-03-25（41.7）而非 08-17（32.35）、2049 掛到 2026-04-24（302.0）而非 08-18（381.5）、2883 掛到 2026-06-16（29.8）而非 08-11（30.8）；其中 2049 出現「結算價 367.0 > 推薦價 302.0 卻判 fail」的自相矛盾記錄。腳本唯讀不得修改，故以規則層處理。
+> ② **Step 6/Step 7 新增「處置股清單抄錄」**：`reversal_alert.py` 的處置偵測結果**只寫 stdout**（第 721-754 行），`reversal_alerts.json` / `reversal_alerts_pool.json` 每筆記錄只有 level/alert_reason/warning_level，**不含任何處置欄位** → 候選池跑完後處置狀態無法從留存檔案回溯。08-19 實證：**6213 聯茂為 TWSE 處置股（禁止進場）**，卻以 88 分列全池第 5，盤中報告更載「真連買 10 天為全池最強籌碼，列首要觀察」，盤前與盤中皆未揭露其處置狀態。
+>
+> 同日盤後**否決**兩項提案，禁止再提：
+> ・「待複核定案後見反向 T86 即撤銷出場」—— 2890 永豐金 08-18 定案（分子為 08-17 T86 的 -2,655 張），08-19 執行日 08-18 T86 翻買 +5,832 張。惟 v8.3.3 上線以來「定案→次日執行」乾淨樣本僅 **n=1**，且結果為獲利出場（+0.90%），無損害證據；該提案與「已決事項不重評」直接衝突，會重開 08-18 已修補的「挑選有利時點資料」漏洞。**累積至 n≥5 再議。**
+> ・「持倉命中龍頭預警 Level≥2 → 強制減碼／出場」—— 回測 185 個交易日 × 當日 holding，樣本僅 **7 筆**（含 08-19 的 2408 南亞科 -6.60%），平均當日 -2.06%、5/7 下跌，但**其中 2 筆為上漲**（1303 +1.74%、2337 +1.39%），強制減碼將誤殺；平均衝擊亦遠小於 -10% 停損帶。**鐵律清單維持窮舉不擴張**，改列「盤前標註最高警戒、不加碼」，n≥20 再議。
 
 ---
 
@@ -294,6 +307,21 @@ python3 scripts/chip_analysis.py [候選股...] --days 10
 python3 scripts/reversal_alert.py [候選股...]
 ```
 
+**🔴 處置股清單抄錄（v8.3.5 新增，強制）**：候選池跑完 `reversal_alert` 後，必須將 stdout 的「🔴🔴 已處置」「🔴 注意股」「⚠️ 處置預警」三段**逐字抄入報告的資料品質區塊**。
+
+| 分類 | 動作 |
+|------|------|
+| 🔴🔴 **已在 TWSE 處置股清單** | **機械式排除**，不得列入評分表、觀察名單或推薦（流動性極低，禁止進場） |
+| 🔴 已在 TWSE 注意股清單 | 標註於報告，倉位減半 |
+| ⚠️ 接近／已達觸發門檻（含「⏳最快剩 N 天處置」） | 標註於報告與 reason |
+
+清單亦可獨立取得（零成本，不必重跑全池）：
+```bash
+python3 -c "import sys;sys.path.insert(0,'scripts');import reversal_alert as ra;d,a=ra.fetch_twse_lists();print('處置',sorted(d));print('注意',sorted(a))"
+```
+
+> 依據：2026-08-19 盤前 60 檔候選池的處置區塊漏抄，**6213 聯茂（TWSE 處置股、禁止進場）**以 88 分列全池第 5，盤中報告稱「首要觀察」。根因為 `reversal_alert.py` 的處置欄位**只走 stdout、不寫入 JSON**，事後無法從留存檔案回溯（連「盤前是否已在清單」都無法判定）。腳本唯讀不得修改。
+
 #### 🔄 合併去重
 
 軌道 A + 軌道 B 候選股合併去重，進入 Step 7 評分。
@@ -358,7 +386,27 @@ print('實際持有（加碼評估）：', held)
 ```
 **禁止憑公司名稱、印象或推測填寫 industry 欄位。找不到就寫「未分類」，不得捏造。**
 
-**🔴 禁止寫入 `industry_chains.json` 的 `tier_from_tracker`**：該欄位已廢除。時事驅動發現的新股票只記錄在 `industry_signals.json`，不得修改 `industry_chains.json`。
+**🟡 `tier_from_tracker` 寫入規範（v8.3.4 改寫，原「一律禁止」已撤銷）**：
+
+`industry_signals.json` 由外部 `market-intelligence` repo 產出、每日下載覆蓋（見 `automation/prompts/before_market.md:33-38`），**本 repo 寫入它明日即失效** → 它不是可累積的儲存空間。`industry_chains.json` 是本專案**唯一**能累積產業知識的檔案，故時事驅動發現的新產業／新股票**允許**寫入其 `tier_from_tracker`。
+
+寫入條件（全部滿足才准寫）：
+
+| 條件 | 說明 |
+|------|------|
+| ① 觸發來源明確 | 該主題在當日 `industry_signals.json` 的 `industry_chain_key` 為 **`null`**（＝知識庫缺這個產業），或該股票在 topic_tracker 出現但知識庫查無 |
+| ② 沿用官方 key | 若 `industry_chain_key` **非 null**，一律寫入該 key 指向的既有產業，**禁止**另建同義新產業 |
+| ③ 逐檔註明出處 | 每筆 stock 的 `category` 欄填**觸發主題原名**（非自行改寫），使日後審核可回溯 |
+| ④ 當日報告揭露 | 盤前/盤中報告須列出「本次新增 N 筆 tier_from_tracker（產業／股票／來源主題）」，不得靜默寫入 |
+
+**仍然禁止**：
+- 憑印象、公司名稱推測產業而寫入（違反上方「禁止捏造」原則）
+- 直接寫入 `tier_0`～`tier_3`（tier 分級只能由 `audit_industry_chains.py` 或人工審核決定）
+- 為了讓某檔股票拿到較高產業邏輯分數而移動其 tier
+
+**評分時的效力**：`tier_from_tracker` 屬**待審區**，產業邏輯維度**一律以「二線/配套 13-16 分」計**，不得因它出現在某產業就給龍頭分。要拿 tier_0 的 16-20 分，該股必須實際登錄在 `tier_0`。
+
+> 現況（2026-08-19 盤點）：117 個產業、1,011 筆股票，其中 **826 筆（82%）滯留 `tier_from_tracker`**，僅 22 個產業定義了 `tier_0`。此為長期未審核所致 —— 每週一 `audit_industry_chains.py` 的歸位工作應優先處理「有 tier_0 缺口的產業」。已知誤分類案例：3005 神基（軍用強固電腦）登錄為「面板顯示/tier_1」，致 08-18 軍工🔴超強催化覆寫不成立而被動能排除。
 
 **評分維度**：時事現況 25% | 法人數據 25% | 產業邏輯 20% | 技術面 15% | 價格位置 15%
 
@@ -1030,6 +1078,30 @@ python3 scripts/update_predictions.py --date $(date +%Y-%m-%d)
 - result：`"success"` / `"fail"` / `"holding"`（holding 不計入準確率）
 - 頂層：`settled_accuracy` = success/(success+fail)、`settled_count`、`holding_count`
 
+**🔴 結算歸屬核對（v8.3.5 新增，強制，跑完腳本後立即執行）**：
+
+`update_predictions.py:91-119` 以 symbol 為 key 由舊到新遍歷 predictions，命中**第一筆** `result=="holding"` 即寫入並 `del settled_stocks[symbol]`，**不比對推薦日**。專案累積大量殭屍 holding，同一代碼幾乎必然存在更舊的 holding → 結算會掛錯筆。
+
+```bash
+# 逐筆列出今日被結算者，確認 date_key 為該股票最近一次 holding 的推薦日
+python3 -c "
+import json
+p=json.load(open('data/predictions/predictions.json',encoding='utf-8'))
+for k,v in p.items():
+    if not isinstance(v,dict) or 'predictions' not in v: continue
+    for r in v['predictions']:
+        if r.get('settled_date')=='YYYY-MM-DD':
+            print(k, r['symbol'], r.get('recommend_price'), r['result'], r.get('settled_price'))
+"
+```
+
+| 檢查 | 處置 |
+|------|------|
+| 結算的 `date_key` **＝** 該股票最近一次 holding 的推薦日 | ✅ 正常 |
+| 結算的 `date_key` **早於**最近一次推薦日 | 🔴 **掛錯**：把誤掛筆還原為 `holding`（加註 `zombie_note`）、改掛正確筆、**重算頂層統計** |
+
+> 依據：2026-08-19 當日 4 筆結算有 **3 筆掛到 2026-03~06 的殭屍 holding**（2605 掛 03-25 而非 08-17、2049 掛 04-24 而非 08-18、2883 掛 06-16 而非 08-11）。其中 2049 產生「結算價 367.0 > 誤掛筆推薦價 302.0 卻判 fail」的自相矛盾記錄；若未察覺，往後所有回測都會沿用錯誤的推薦價基準。腳本唯讀不得修改。
+
 ---
 
 ### 🔴 Step 5: 明日預測（強制）
@@ -1086,5 +1158,5 @@ python3 scripts/audit_industry_chains.py
 
 **文件導航**：`docs/README.md` | 歷史教訓：`docs/HISTORICAL_LESSONS.md` | 產業鏈：`data/industry_chains.json`
 
-**最後更新**：2026-08-13
-**版本**：v8.3.3（L3/L4 邊緣值待複核擴大至盤前判定：佔比 <8% 且 10 日累計為正者不開盤出場，改 12:30＋盤後兩次複核）
+**最後更新**：2026-08-19
+**版本**：v8.3.5（新增 predictions 結算歸屬核對＋處置股清單抄錄；否決「待複核定案撤銷條款」與「龍頭預警 L2 持倉出場」兩提案）
