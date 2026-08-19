@@ -403,15 +403,21 @@ def is_market_hours():
     return MARKET_OPEN <= t <= MARKET_CLOSE
 
 
-def run_once():
+def run_once(force=False):
     now = datetime.now()
 
-    if not DRY_RUN and not is_market_hours():
+    if not DRY_RUN and not force and not is_market_hours():
         print(f"[{now.strftime('%H:%M:%S')}] 非盤中時段，跳過")
         return
 
     is_friday = (now.weekday() == 4)
     today = now.strftime("%Y-%m-%d")
+
+    # 價格快取僅供同一輪內共用（持倉與買入掃描查同一檔），跨輪必須重抓最新價
+    _price_cache.clear()
+    # 週五收盤確認需含今日收盤的週K，不可沿用盤中快取
+    if is_friday and now.strftime("%H:%M") >= MARKET_CLOSE:
+        _weekly_cache.clear()
     print(f"[{now.strftime('%H:%M:%S')}] 持倉檢查中...{'（週五確認）' if is_friday else ''}{'（dry-run）' if DRY_RUN else ''}")
 
     holdings = load_holdings()
@@ -504,7 +510,16 @@ def run_loop():
             now = datetime.now()
             t = now.strftime("%H:%M")
             if t > MARKET_CLOSE:
-                print(f"[{t}] 已收盤，監控結束")
+                # 週五收盤後補做一次確認（Method B/C 需要 ≥13:30 才判斷，
+                # 盤中循環不可能滿足，故收盤後強制執行一輪）
+                if now.weekday() == 4:
+                    target = now.replace(hour=13, minute=45, second=0, microsecond=0)
+                    wait = (target - now).total_seconds()
+                    if wait > 0:
+                        print(f"[{t}] 已收盤，等待 {int(wait // 60) + 1} 分鐘讓收盤資料落地後執行週五週K確認...")
+                        time.sleep(wait)
+                    run_once(force=True)
+                print(f"[{datetime.now().strftime('%H:%M')}] 已收盤，監控結束")
                 break
             elif t < MARKET_OPEN:
                 wait = max(0, (datetime.strptime(MARKET_OPEN, "%H:%M").replace(
