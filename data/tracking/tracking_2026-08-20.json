@@ -163,5 +163,41 @@
     {"time": "10:00", "code": "2408", "name": "南亞科", "type": "法說會（JPMorgan）", "note": "同為開盤出場標的"},
     {"time": "11:00", "code": "2313", "name": "華通", "type": "法說會（JPMorgan）", "note": "使用者持倉"},
     {"time": "14:30", "code": "2610", "name": "華航", "type": "法說會"}
-  ]
+  ],
+  "intraday_check": {
+    "time": "12:30",
+    "iron_rule_exits": [],
+    "note": "17 檔 holding 複掃：無停損觸及、無2日累計-10%、無反轉L3/L4，全數續抱。preflight「L4未出場 2002/3231/2882/2634」確認為候選股誤報（全在 excluded_notables，非持倉）",
+    "prices": {
+      "2464": 179.0, "2353": 31.05, "2618": 41.9, "2030": 21.65, "2455": 403.0,
+      "2301": 268.0, "3017": 2970.0, "1216": 77.9, "1504": 73.2, "2867": 9.7,
+      "2606": 69.7, "2049": 367.0, "2603": 244.5, "2609": 59.5, "3189": 855.0,
+      "2881": 127.5, "2637": 92.8, "2408": 516.0, "2883": 30.55, "2890": 39.45
+    },
+    "target_touched_pending_close": [
+      {"stock_code": "2609", "stock_name": "陽明", "intraday_price": 59.5, "target_price": 59.1, "note": "盤中越目標，待盤後收盤確認結算（盤中不寫帳）；結算時執行 v8.3.5 歸屬核對"}
+    ],
+    "manual_review_1230": [
+      {"stock_code": "3189", "stock_name": "景碩", "status": "狀態不明持續：今日+312張轉小買超、盤中+0.71%回穩，但10日累計-112張仍負 → 維持最高警戒、不加碼、續抱，盤後再複核"}
+    ],
+    "high_alert_near_stop": [
+      {"stock_code": "3017", "dist_to_stop_pct": 2.9, "note": "2日累計-2.1%未觸鐵律"},
+      {"stock_code": "2881", "dist_to_stop_pct": 3.5},
+      {"stock_code": "3189", "dist_to_stop_pct": 4.1}
+    ]
+  },
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {"stock_code": "2478", "stock_name": "大毅", "detector_score": 80, "reason": "偵測器強訊號但排除：催化對齊FAIL（無被動元件主題）＋10日累計-7,378負（狀態不明）＋外資-7,995＋⏳最快剩2天處置＋今日-4.8%量比2.2x貼近崩跌攔截型態"},
+    {"stock_code": "2492", "stock_name": "華新科", "reason": "盤中-7.9%崩跌除名；接近注意門檻（週轉9.5%）"},
+    {"stock_code": "2382", "stock_name": "廣達", "reason": "催化對齊FAIL：AI伺服器方向↓（星際之門卡關）；外資持股比週減-0.16% -3"},
+    {"stock_code": "3045", "stock_name": "台灣大", "reason": "催化對齊FAIL：電信無催化主題"},
+    {"stock_code": "2886", "stock_name": "兆豐金", "reason": "催化對齊FAIL：金融無催化主題；外資持股比週減-0.12% -3"},
+    {"stock_code": "1102", "stock_name": "亞泥", "reason": "催化對齊FAIL；營收快取落後2026-02未採計；外資持股比週減-0.13% -3"},
+    {"stock_code": "2542", "stock_name": "興富發", "reason": "催化對齊FAIL：房市主題利空向（建照年減28.2%）；營收YoY+4078%但無回檔不加分"},
+    {"stock_code": "2027", "stock_name": "大成鋼", "reason": "催化對齊FAIL：鋼鐵無主題＋COLD 33.3%(n=6)；真連續買超僅1天"},
+    {"stock_code": "6116", "stock_name": "彩晶", "reason": "狀態不明：10日累計-10,163負；外資持股比週減-0.15%"},
+    {"stock_code": "2903", "stock_name": "遠百", "reason": "狀態不明：10日累計-2,158負；營收YoY-1.7%"}
+  ],
+  "intraday_no_new_recommendation": true
 }
