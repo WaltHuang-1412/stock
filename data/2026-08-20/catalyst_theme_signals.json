@@ -1,0 +1,493 @@
+{
+  "date": "2026-08-20",
+  "lookback_dates": [
+    "2026-08-20",
+    "2026-08-19",
+    "2026-08-18",
+    "2026-08-17",
+    "2026-08-16",
+    "2026-08-15",
+    "2026-08-14"
+  ],
+  "leader_trends": {
+    "Micron": {
+      "cumulative": 7.85,
+      "consecutive_up": 0,
+      "latest_change": -0.39,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    },
+    "NVIDIA": {
+      "cumulative": -3.04,
+      "consecutive_up": 0,
+      "latest_change": -0.99,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Apple": {
+      "cumulative": 5.19,
+      "consecutive_up": 2,
+      "latest_change": 2.19,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    },
+    "AMD": {
+      "cumulative": 9.91,
+      "consecutive_up": 0,
+      "latest_change": -3.71,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    },
+    "Tesla": {
+      "cumulative": 8.48,
+      "consecutive_up": 1,
+      "latest_change": 4.23,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    },
+    "Super Micro": {
+      "cumulative": 0.93,
+      "consecutive_up": 0,
+      "latest_change": -2.22,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Broadcom": {
+      "cumulative": -25.31,
+      "consecutive_up": 0,
+      "latest_change": -4.61,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Lam Research": {
+      "cumulative": -8.31,
+      "consecutive_up": 0,
+      "latest_change": -6.33,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Applied Materials": {
+      "cumulative": -19.74,
+      "consecutive_up": 0,
+      "latest_change": -3.53,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Western Digital": {
+      "cumulative": 11.59,
+      "consecutive_up": 0,
+      "latest_change": -6.87,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Dell": {
+      "cumulative": -11.39,
+      "consecutive_up": 0,
+      "latest_change": -6.64,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "ASML": {
+      "cumulative": -3.52,
+      "consecutive_up": 0,
+      "latest_change": -2.84,
+      "signal_level": "none",
+      "days_tracked": 7
+    }
+  },
+  "preposition_candidates": [
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -32221,
+        "buy_days": 3,
+        "sell_days": 7,
+        "momentum_pct": 131.52044546459237,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 20133,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-32,221為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 12882,
+        "buy_days": 6,
+        "sell_days": 4,
+        "momentum_pct": -171.29359331476323,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 29769,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜動能-171%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "6770",
+      "name": "力積電",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 192005,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -65.66125127688454,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 185692,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "4967",
+      "name": "十銓",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 73,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": -197.83639596917607,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 227,
+        "reversal_level": "Level 3",
+        "exclusion_reason": "反轉Level 3排除｜動能-198%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "2451",
+      "name": "創見",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 6817,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -111.73119254175839,
+        "consecutive_buy": 1,
+        "cumulative_foreign": 7355,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "動能-112%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3260",
+      "name": "威剛",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "6239",
+      "name": "力成",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -14864,
+        "buy_days": 2,
+        "sell_days": 8,
+        "momentum_pct": 16.765285996055226,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -12527,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-14,864為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "8299",
+      "name": "群聯",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "5289",
+      "name": "宜鼎",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "3006",
+      "name": "晶豪科",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 13839,
+        "buy_days": 8,
+        "sell_days": 2,
+        "momentum_pct": -108.0404013555718,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 14915,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜動能-108%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "4958",
+      "name": "臻鼎-KY",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "6488",
+      "name": "環球晶",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "5351",
+      "name": "鈺創",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "8096",
+      "name": "擎亞",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    },
+    {
+      "code": "8150",
+      "name": "南茂",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "signal_level": "strong",
+      "leader_cumulative": 11.59,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {}
+    }
+  ],
+  "already_in_top50": [
+    {
+      "code": "2449",
+      "name": "京元電",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "leader_cumulative": 11.59,
+      "tw_5d_change": -9.266409266409266
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "leader_cumulative": 11.59,
+      "tw_5d_change": -1.2195121951219512
+    },
+    {
+      "code": "2353",
+      "name": "宏碁",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "leader_cumulative": 5.19,
+      "tw_5d_change": -2.6771665558101625
+    },
+    {
+      "code": "3711",
+      "name": "日月光",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 9.91,
+      "tw_5d_change": -2.380952380952381
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 9.91,
+      "tw_5d_change": 1.6897081413210446
+    },
+    {
+      "code": "2301",
+      "name": "光寶科",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 9.91,
+      "tw_5d_change": 1.86219739292365
+    },
+    {
+      "code": "2049",
+      "name": "上銀",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 8.48,
+      "tw_5d_change": -1.421188630490956
+    },
+    {
+      "code": "2408",
+      "name": "南亞科",
+      "tw_industry": "NAND/儲存",
+      "us_leader": "Western Digital",
+      "leader_cumulative": 11.59,
+      "tw_5d_change": 5.316973415132924
+    },
+    {
+      "code": "2371",
+      "name": "大同",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 8.48,
+      "tw_5d_change": 2.4253788969517864
+    },
+    {
+      "code": "1504",
+      "name": "東元",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 8.48,
+      "tw_5d_change": 6.686478151478277
+    }
+  ],
+  "already_moved_count": 7
+}

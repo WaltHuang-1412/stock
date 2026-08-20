@@ -1,0 +1,167 @@
+{
+  "date": "2026-08-20",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "regime": "偏多",
+    "vix": 14.89,
+    "sox": -2.12,
+    "nasdaq": 0.16,
+    "kospi": -5.8,
+    "nikkei": -3.16,
+    "institutional_net_yesterday_100m": -753.58,
+    "note": "美股指數止穩但晶片重挫、亞股全面殺盤；記憶體族群整體迴避"
+  },
+  "disposition_lists": {
+    "source": "reversal_alert.fetch_twse_lists() 2026-08-20",
+    "twse_disposition": ["3026", "6213", "6225", "7795", "8033"],
+    "twse_attention": [],
+    "pool_hits": [],
+    "disposition_risk_warnings": [
+      {"code": "1727", "name": "中華化", "status": "處置風險高：連2天達標，最快明日處置", "turnover": 14.2, "action": "本日排除"},
+      {"code": "5608", "name": "四維航", "status": "已達注意標準連1天，最快剩2天", "turnover": 9.3},
+      {"code": "2455", "name": "全新", "status": "接近注意門檻", "turnover": 8.1, "action": "已推薦並標註"},
+      {"code": "2464", "name": "盟立", "status": "接近注意門檻", "turnover": 7.6, "action": "已推薦並標註"},
+      {"code": "6214", "name": "精誠", "status": "接近注意門檻", "turnover": 3.6},
+      {"code": "2615", "name": "萬海", "status": "接近注意門檻", "turnover": 1.5},
+      {"code": "2492", "name": "華新科", "status": "接近注意門檻", "turnover": 9.5},
+      {"code": "2478", "name": "大毅", "status": "接近注意門檻", "turnover": 8.0},
+      {"code": "2617", "name": "台航", "status": "接近注意門檻", "turnover": 1.1},
+      {"code": "2634", "name": "漢翔", "status": "接近注意門檻", "turnover": 6.3}
+    ]
+  },
+  "recommendations": [
+    {
+      "stock_code": "2464",
+      "stock_name": "盟立",
+      "industry": "自動化/AI伺服器（industry_chains: AI伺服器 tier_from_tracker）",
+      "recommend_price": 181.5,
+      "target_price": 199.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 163.35,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 97,
+      "result": "holding",
+      "reason": "訊號A L2 +10｜動能-81.0% 佈局完成 +15｜外資持股比週增+1.38%（全池最大）+5｜Q2 EPS YoY+170%、毛利率+3.5pp +5｜反轉 Level 0、10日累計+15K。⚠️ 不在當日 TOP50 買超（法人維度僅 6/25）；5日-9.4%；🟡處置預警（週轉7.6%）；AI伺服器鏈今日方向↓（星際之門卡關+SOX-2.12%）；⚠️ 營收快取落後 2026-02，本因子未採計；當日時事資料 mentions=0"
+    },
+    {
+      "stock_code": "2353",
+      "stock_name": "宏碁",
+      "industry": "消費電子/蘋果鏈（industry_chains: 蘋果漲價 tier_from_tracker）",
+      "recommend_price": 30.9,
+      "target_price": 34.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 27.81,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 96,
+      "result": "holding",
+      "reason": "訊號A L2 +10｜動能-66.4% +15｜Q2 EPS YoY+100% +5｜法人 avg_rank 29.5、buy_ratio 19.7%、外資投信同步｜AAPL +2.19%｜反轉 Level 0、10日累計+22K、外資近5日+3,196。⚠️ 營收快取落後 2026-05，原 +5 作廢為 0；蘋果鏈主題方向為↓供應鏈雜音；當日時事資料 mentions=0"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "industry": "航空運輸（industry_chains: 航空運輸 tier_0 航空客運）",
+      "recommend_price": 41.6,
+      "target_price": 45.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 37.44,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 92,
+      "result": "holding",
+      "reason": "訊號A L3 佈局完成 +15｜動能-75.9% +15｜產業 tier_0 龍頭 17/20｜真連買3天、10日累計+23K、外資近5日+6,740｜反轉 Level 0。⚠️ 矛盾已回應：中東地緣使布蘭特原油站上91.72美元，topic_tracker 標註「華航2610↓ 油價高檔壓抑獲利」，長榮航同為燃油成本受害者；Q2 EPS YoY-42.7%、毛利率-12.1pp 已證實成本侵蝕 → EPS -5。多方論點為暑假客運旺季+AI貨運+法人連買佈局型態，非中東題材。油價續攻時本檔最先出場。⚠️ 營收快取落後 2026-05；mentions=0"
+    },
+    {
+      "stock_code": "2030",
+      "stock_name": "彰源",
+      "industry": "鋼鐵（不鏽鋼焊管；industry_chains 未分類，產業邏輯僅 6/20）",
+      "recommend_price": 21.5,
+      "target_price": 23.7,
+      "stop_loss_pct": -10,
+      "stop_loss": 19.35,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 78,
+      "result": "holding",
+      "reason": "動能-89.2% 佈局完成 +15｜Q2 EPS YoY+520%、毛利率+3.7pp +5｜外資持股比週增+0.54% +5｜COLD 模式「鋼鐵」33.3%(n=6) -3｜反轉 Level 0、10日累計+6,585、外資近5日+651｜價格位置 13（MA20+14.2% 月季雙線上）。⚠️ 矛盾已回應：同產業 2002 中鋼今日反轉 Level 4（賣超佔日均量10.7%）已遭排除，龍頭遭倒貨與「鋼鐵觸底反轉」論點衝突；彰源為不鏽鋼焊管與中鋼碳鋼線不同，且 EPS/外資持股比方向相反。本清單論點最薄弱者。⚠️ 鋼鐵主題最後訊號 08/14 已逾6天接近降級；mentions=0"
+    },
+    {
+      "stock_code": "2455",
+      "stock_name": "全新",
+      "industry": "光通訊（industry_chains: 光通訊 tier_1 光通訊元件）",
+      "recommend_price": 396.5,
+      "target_price": 436.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 356.85,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "result": "holding",
+      "reason": "時事 22/25 全池最高（光通訊與網通🔴超強↑加速）｜動能-25.9% +10｜Q2 EPS YoY+475% +5｜5日漲幅+8.6%（5-10%區間）-10｜真連買3天、10日累計+4,376、外資近5日+1,048｜反轉 Level 0。📎 本日唯一有時事佐證：topic_tracker.md:35「全新(2455)↑／聯亞(3081)↑ InP基板龍頭，7月EPS年增503%」、營收YoY+45.1%。⚠️ 不在當日 TOP50（法人 6/25）；🟡處置預警（週轉8.1%）；⚠️ 營收快取落後 2026-02"
+    }
+  ],
+  "opening_exits": [
+    {"stock_code": "2408", "stock_name": "南亞科", "recommend_date": "2026-08-18", "last_close": 481.0, "reason": "反轉 Level 4：賣超-14,427張佔日均量21.7%（≥8% 不受 v8.3.3 待複核保護）。加重：今日10:00 JPMorgan法說會、WDC-6.87% Level 2 -15分、昨日-8.2%距停損僅2.0%、Cerebras CS-4 無需HBM衝擊記憶體敘事"},
+    {"stock_code": "2883", "stock_name": "凱基金", "recommend_date": "2026-08-11", "last_close": 30.4, "reason": "反轉 Level 4：賣超-7,813張佔日均量19.1%（≥8%）"},
+    {"stock_code": "2890", "stock_name": "永豐金", "recommend_date": "2026-08-12", "last_close": 39.4, "reason": "反轉 Level 4：賣超-2,945張佔日均量12.1%（≥8%）"}
+  ],
+  "manual_review": [
+    {"stock_code": "3189", "stock_name": "景碩", "recommend_date": "2026-08-18", "last_close": 849.0, "status": "❓ 狀態不明：今日+312張但10日累計-112張轉負，未匹配任何預警等級。D1/10、距停損4.1%、昨日-6.2%。列最高警戒不加碼，盤中12:30複核"}
+  ],
+  "settled_today": [
+    {"stock_code": "2605", "stock_name": "新興", "recommend_date": "2026-08-17", "result": "success", "settled_price": 36.75, "settled_date": "2026-08-19", "return_pct": 13.6, "note": "D2 收盤 36.75 ≥ 目標 35.6"}
+  ],
+  "excluded_notables": [
+    {"stock_code": "1402", "stock_name": "遠東新", "score": 92, "reason": "準確率篩選未過：紡織在 topic_tracker 無對應催化主題（催化對齊 FAIL）。另 COLD 模式「紡織」28.6%(n=7) -5"},
+    {"stock_code": "2312", "stock_name": "金寶", "score": 92, "reason": "準確率篩選未過：衛星通訊今日無催化主題（催化對齊 FAIL）"},
+    {"stock_code": "3034", "stock_name": "聯詠", "score": 82, "reason": "準確率篩選未過：面板驅動IC 今日無催化主題"},
+    {"stock_code": "1904", "stock_name": "正隆", "score": 82, "reason": "準確率篩選未過：造紙無催化主題"},
+    {"stock_code": "1802", "stock_name": "台玻", "score": 70, "reason": "準確率篩選未過：玻璃無催化主題"},
+    {"stock_code": "3443", "stock_name": "創意", "score": 65, "reason": "動能+191.7%>100%（ASIC🔴超強催化覆寫適用故不排除但不加分）；5日+7.9% -10；<70 不推薦。另 655億元籌資屬股權稀釋"},
+    {"stock_code": "9914", "stock_name": "美利達", "score": null, "reason": "準確率篩選未過：外資近5日 -1,186 張為負"},
+    {"stock_code": "2002", "stock_name": "中鋼", "reason": "反轉 Level 4：賣超-3,323張佔日均量10.7%"},
+    {"stock_code": "3231", "stock_name": "緯創", "reason": "反轉 Level 4：賣超-2,902張佔日均量10.4%；星際之門卡關"},
+    {"stock_code": "2882", "stock_name": "國泰金", "reason": "反轉 Level 4：賣超-1,929張佔日均量17.9%"},
+    {"stock_code": "2634", "stock_name": "漢翔", "reason": "反轉 Level 4：賣超-16,141張佔日均量27.1%"},
+    {"stock_code": "1727", "stock_name": "中華化", "reason": "處置風險高：週轉14.2%連2天達標，最快明日處置"},
+    {"stock_code": "3042", "stock_name": "晶技", "reason": "狀態不明：10日累計-604張轉負，非 Level 0。雖有光通訊🔴超強法說會利多（打入前十大光通訊模組供應鏈），仍不符準確率篩選；另外資持股比週減-0.10% -3"},
+    {"stock_code": "3706", "stock_name": "神達", "reason": "法人現身門檻：不在當日 TOP50 買超 × 月線乖離 +0.2%（0~+5% 區間）"},
+    {"stock_code": "2354", "stock_name": "鴻準", "reason": "法人現身門檻：不在當日 TOP50 買超 × 月線乖離 +3.6%"},
+    {"stock_code": "3661", "stock_name": "世芯-KY", "reason": "法人現身門檻：不在當日 TOP50 買超 × 月線乖離 +1.7%"},
+    {"stock_code": "2308", "stock_name": "台達電", "reason": "法人現身門檻：不在當日 TOP50 買超 × 月線乖離 +2.3%"}
+  ],
+  "portfolio_add_evaluation": [
+    {"stock_code": "1301", "stock_name": "台塑", "last_close": 56.8, "reversal": "Level 4", "sell_ratio_pct": 47.6, "rating": "⚠️ 留意減碼", "note": "賣超佔日均量全場最高。卷宗7處 mentions 全為台塑化(6505) 誤判"},
+    {"stock_code": "2330", "stock_name": "台積電", "last_close": 2350.0, "reversal": "Level 4", "sell_ratio_pct": 36.7, "rating": "⚠️ 留意減碼", "note": "LRCX Level 2 -15 + AMAT Level 1 -5；惟 08/24 美國法說會、美銀上修2027資本支出至850億美元"},
+    {"stock_code": "6770", "stock_name": "力積電", "last_close": 66.6, "reversal": "Level 4", "sell_ratio_pct": 28.9, "rating": "⚠️ 留意減碼", "note": "WDC Level 2 -15；外資現貨賣壓最重（與群創合計近11萬張）；🟡處置預警"},
+    {"stock_code": "4938", "stock_name": "和碩", "last_close": 89.4, "reversal": "Level 4", "sell_ratio_pct": 28.1, "rating": "⚠️ 留意減碼", "note": "當日資料源無提及"},
+    {"stock_code": "2313", "stock_name": "華通", "last_close": 207.5, "reversal": "Level 4", "sell_ratio_pct": 19.3, "rating": "⚠️ 留意減碼", "note": "今日11:00 JPMorgan法說會（雙向波動）+ 今日重大訊息（子公司購置機器設備）"},
+    {"stock_code": "2337", "stock_name": "旺宏", "last_close": 119.0, "reversal": "Level 4", "sell_ratio_pct": 12.6, "rating": "⚠️ 留意減碼", "note": "WDC Level 2 -15"},
+    {"stock_code": "3090", "stock_name": "日電貿", "last_close": 177.5, "reversal": "狀態不明", "sell_ratio_pct": null, "rating": "🟡 續抱觀察", "note": "10日累計-9,101張轉負，不加碼"}
+  ],
+  "data_quality_flags": {
+    "revenue_cache_stale": {
+      "rule": "v8.3.2 快取新鮮度：8/20 應為 2026-07",
+      "stale_codes": ["2618", "2312", "2353", "2301", "3034", "3443", "2464", "4904", "2455", "2027", "2867", "1504", "2049", "3189", "2408", "3042", "2881"],
+      "voided_adjustments": ["2353 原 +5 作廢", "2312 原 -5 作廢", "2881 原 -5 作廢"]
+    },
+    "eps_not_published": [
+      {"codes": ["2881", "2867"], "cached_quarter": "2025-12-31", "note": "金融保險業半年報申報期限 8/31（非 8/14），屬未公布 → EPS 加減分視為 0，公布日落在持有期內"},
+      {"codes": ["2637"], "cached_quarter": "2026-03-31", "note": "Q2 申報期限 8/14 已過但快取未更新 → EPS 加減分視為 0"}
+    ],
+    "dossier_source_status": {"法說會(MOPS)": "ok", "除權息(TWSE)": "ok", "重大訊息(TWSE+TPEx)": "ok"},
+    "dossier_name_prefix_false_positive": ["1301 台塑 7處 mentions 全為台塑化(6505)", "2455 全新 market_intelligence.md:435「全新CS-4」為形容詞"],
+    "tier_from_tracker_added": 0,
+    "execution_incident": "初次以 gh api > file 重導向抓取 topic_tracker/industry_signals/market_regime 產生 3 個 0 byte 檔，已由本地 market-intelligence repo（07:41 產出）複製修復"
+  },
+  "today_events": [
+    {"time": "09:00", "code": "2383", "name": "台光電", "type": "法說會"},
+    {"time": "10:00", "code": "2408", "name": "南亞科", "type": "法說會（JPMorgan）", "note": "同為開盤出場標的"},
+    {"time": "11:00", "code": "2313", "name": "華通", "type": "法說會（JPMorgan）", "note": "使用者持倉"},
+    {"time": "14:30", "code": "2610", "name": "華航", "type": "法說會"}
+  ]
+}
