@@ -1,254 +1,259 @@
 {
-  "date": "2026-08-17",
-  "data_range": "20260506~20260814",
-  "total_cycles": 733,
-  "overall_success_rate": 59.8,
+  "date": "2026-08-21",
+  "data_range": "20260506~20260820",
+  "total_cycles": 769,
+  "overall_success_rate": 57.1,
   "dimension_stats": {
     "buy_days": {
       "2天": {
-        "accuracy": 53.9,
-        "avg_return": 1.61,
-        "sample": 280
+        "accuracy": 53.8,
+        "avg_return": 1.64,
+        "sample": 286
       },
       "4天": {
-        "accuracy": 66.4,
-        "avg_return": 4.82,
-        "sample": 107
+        "accuracy": 65.0,
+        "avg_return": 4.32,
+        "sample": 120
       },
       "6天+": {
-        "accuracy": 64.1,
-        "avg_return": 4.29,
-        "sample": 128
+        "accuracy": 62.3,
+        "avg_return": 4.12,
+        "sample": 138
       },
       "3天": {
-        "accuracy": 58.4,
-        "avg_return": 1.91,
-        "sample": 161
+        "accuracy": 54.8,
+        "avg_return": 1.74,
+        "sample": 166
       },
       "5天": {
-        "accuracy": 70.2,
-        "avg_return": 7.39,
-        "sample": 57
+        "accuracy": 50.8,
+        "avg_return": 5.6,
+        "sample": 59
       }
     },
     "volume": {
       "30K+": {
-        "accuracy": 62.8,
-        "avg_return": 3.96,
-        "sample": 231
+        "accuracy": 58.2,
+        "avg_return": 3.22,
+        "sample": 244
       },
       "10K-30K": {
-        "accuracy": 58.8,
-        "avg_return": 3.39,
-        "sample": 226
+        "accuracy": 53.8,
+        "avg_return": 3.29,
+        "sample": 236
       },
       "5K-10K": {
-        "accuracy": 59.4,
-        "avg_return": 2.21,
-        "sample": 143
+        "accuracy": 57.3,
+        "avg_return": 2.02,
+        "sample": 150
       },
       "<5K": {
-        "accuracy": 56.4,
-        "avg_return": 1.85,
-        "sample": 133
+        "accuracy": 60.4,
+        "avg_return": 2.24,
+        "sample": 139
       }
     },
     "stealth": {
       "偷偷買": {
-        "accuracy": 57.3,
-        "avg_return": 1.52,
-        "sample": 157
+        "accuracy": 55.4,
+        "avg_return": 1.97,
+        "sample": 168
       },
       "邊買邊漲": {
-        "accuracy": 59.4,
-        "avg_return": 1.67,
-        "sample": 251
+        "accuracy": 57.5,
+        "avg_return": 1.38,
+        "sample": 273
       },
       "追漲": {
-        "accuracy": 65.9,
-        "avg_return": 6.14,
-        "sample": 261
+        "accuracy": 61.9,
+        "avg_return": 5.73,
+        "sample": 265
       },
       "越買越跌": {
-        "accuracy": 42.2,
-        "avg_return": -0.27,
-        "sample": 64
+        "accuracy": 39.7,
+        "avg_return": -0.81,
+        "sample": 63
       }
     },
     "leader": {
       "外資主導": {
-        "accuracy": 58.6,
-        "avg_return": 2.85,
-        "sample": 616
+        "accuracy": 56.2,
+        "avg_return": 2.58,
+        "sample": 642
       },
       "混合": {
-        "accuracy": 66.7,
-        "avg_return": 5.52,
-        "sample": 45
+        "accuracy": 59.6,
+        "avg_return": 5.79,
+        "sample": 47
       },
       "投信主導": {
-        "accuracy": 65.3,
-        "avg_return": 3.32,
-        "sample": 72
+        "accuracy": 62.5,
+        "avg_return": 3.05,
+        "sample": 80
       }
     },
     "sell_speed": {
       "快速出貨": {
-        "accuracy": 50.1,
-        "avg_return": 1.54,
-        "sample": 495
+        "accuracy": 49.5,
+        "avg_return": 1.52,
+        "sample": 525
       },
       "緩慢出貨": {
-        "accuracy": 78.1,
-        "avg_return": 6.94,
-        "sample": 201
+        "accuracy": 72.2,
+        "avg_return": 6.16,
+        "sample": 212
       },
       "沒出貨": {
-        "accuracy": 89.2,
-        "avg_return": 2.3,
-        "sample": 37
+        "accuracy": 81.2,
+        "avg_return": 2.26,
+        "sample": 32
       }
     },
     "industry": {
-      "鋼鐵（industry_chains: 鋼鐵原物料 tier_0 鋼鐵龍頭）": {
-        "accuracy": 33.3,
-        "avg_return": -0.89,
+      "鋼鐵（industry_chains: 鋼鐵原物料/tier_0 鋼鐵龍頭）": {
+        "accuracy": 50.0,
+        "avg_return": -0.58,
         "sample": 6
       },
       "面板/電子紙": {
-        "accuracy": 77.8,
-        "avg_return": 7.13,
-        "sample": 9
+        "accuracy": 70.0,
+        "avg_return": 6.14,
+        "sample": 10
       },
       "光通訊": {
-        "accuracy": 75.0,
-        "avg_return": 11.64,
-        "sample": 12
+        "accuracy": 69.2,
+        "avg_return": 10.19,
+        "sample": 13
       },
-      "記憶體": {
-        "accuracy": 100.0,
-        "avg_return": 12.77,
+      "記憶體-DRAM/Flash（industry_chains: 記憶體/tier_0）": {
+        "accuracy": 85.7,
+        "avg_return": 10.79,
         "sample": 7
       },
       "金融": {
-        "accuracy": 70.1,
-        "avg_return": 2.38,
-        "sample": 77
+        "accuracy": 63.9,
+        "avg_return": 1.8,
+        "sample": 72
+      },
+      "AI伺服器（industry_chains: AI tier_1 AI伺服器）": {
+        "accuracy": 57.1,
+        "avg_return": 2.1,
+        "sample": 7
+      },
+      "金融-銀行（industry_chains: 聯準會利率／台灣ETF tier_from_tracker）": {
+        "accuracy": 77.8,
+        "avg_return": 2.65,
+        "sample": 9
+      },
+      "記憶體/半導體代工": {
+        "accuracy": 16.7,
+        "avg_return": -4.61,
+        "sample": 6
       },
       "半導體": {
         "accuracy": 30.0,
-        "avg_return": -0.79,
+        "avg_return": -1.06,
         "sample": 20
       },
-      "AI伺服器（industry_chains: AI tier_1 AI伺服器）": {
-        "accuracy": 71.4,
-        "avg_return": 4.06,
-        "sample": 7
-      },
-      "記憶體/半導體代工": {
-        "accuracy": 33.3,
-        "avg_return": -2.09,
-        "sample": 6
-      },
-      "記憶體-NOR Flash": {
-        "accuracy": 14.3,
-        "avg_return": -7.8,
-        "sample": 7
-      },
       "金融（industry_chains: 金融/tier_0 金控）": {
-        "accuracy": 81.2,
-        "avg_return": 5.49,
+        "accuracy": 56.2,
+        "avg_return": 4.26,
         "sample": 16
       },
-      "電線電纜": {
-        "accuracy": 55.6,
-        "avg_return": 0.44,
-        "sample": 9
-      },
       "紡織": {
-        "accuracy": 28.6,
-        "avg_return": -2.84,
+        "accuracy": 50.0,
+        "avg_return": -1.05,
+        "sample": 8
+      },
+      "記憶體-NOR Flash": {
+        "accuracy": 0.0,
+        "avg_return": -9.38,
         "sample": 7
       },
-      "記憶體（DRAM tier_0）": {
-        "accuracy": 50.0,
-        "avg_return": -0.82,
-        "sample": 8
+      "記憶體-DRAM（industry_chains: 記憶體/tier_0 DRAM；AI/tier_2 HBM/DDR5）": {
+        "accuracy": 44.4,
+        "avg_return": -0.66,
+        "sample": 9
+      },
+      "AI伺服器": {
+        "accuracy": 58.1,
+        "avg_return": 3.72,
+        "sample": 43
       },
       "塑化（tier_0）": {
         "accuracy": 100.0,
         "avg_return": 19.78,
         "sample": 5
       },
-      "AI伺服器": {
-        "accuracy": 71.4,
-        "avg_return": 5.69,
-        "sample": 42
-      },
-      "水泥": {
-        "accuracy": 30.0,
-        "avg_return": -0.88,
-        "sample": 10
-      },
-      "金融（industry_chains: 企業財報重點/新台幣匯率 tier_from_tracker）": {
-        "accuracy": 77.8,
-        "avg_return": 3.82,
+      "電線電纜": {
+        "accuracy": 44.4,
+        "avg_return": -0.93,
         "sample": 9
       },
-      "航空（tier_0 客運）": {
-        "accuracy": 75.0,
-        "avg_return": 1.86,
-        "sample": 4
+      "水泥": {
+        "accuracy": 45.5,
+        "avg_return": 0.0,
+        "sample": 11
+      },
+      "金融（industry_chains: 企業財報重點/新台幣匯率 tier_from_tracker）": {
+        "accuracy": 66.7,
+        "avg_return": 3.16,
+        "sample": 9
+      },
+      "航空運輸（industry_chains: 航空運輸 tier_0 航空客運）": {
+        "accuracy": 100.0,
+        "avg_return": 2.78,
+        "sample": 5
       },
       "未知": {
-        "accuracy": 51.9,
-        "avg_return": 3.78,
-        "sample": 135
+        "accuracy": 52.9,
+        "avg_return": 3.59,
+        "sample": 138
       },
       "塑化": {
-        "accuracy": 53.6,
-        "avg_return": 2.48,
-        "sample": 28
+        "accuracy": 48.3,
+        "avg_return": 2.16,
+        "sample": 29
       },
-      "IC設計/ASIC測試": {
-        "accuracy": 16.7,
-        "avg_return": -8.53,
-        "sample": 6
+      "航運-貨櫃（industry_chains: 中東地緣政治/tier_from_tracker；SCFI貨櫃運價止跌反彈）": {
+        "accuracy": 68.4,
+        "avg_return": 3.98,
+        "sample": 19
       },
-      "貨櫃航運": {
-        "accuracy": 71.4,
-        "avg_return": 1.73,
-        "sample": 21
+      "鋼鐵-不鏽鋼/鋁（industry_chains: 鋼鐵市場需求觸底反轉 tier_from_tracker）": {
+        "accuracy": 88.9,
+        "avg_return": 3.87,
+        "sample": 9
       },
-      "鋼鐵通路/不鏽鋼（industry_chains 未分類）": {
-        "accuracy": 75.0,
-        "avg_return": 2.76,
-        "sample": 8
+      "金融（industry_chains: 金融/tier_0 金控龍頭；聯準會利率/台股市場動態 tier_from_tracker）": {
+        "accuracy": 69.2,
+        "avg_return": 3.52,
+        "sample": 13
       },
-      "金融（industry_chains: 金融/tier_0 金控龍頭）": {
-        "accuracy": 83.3,
-        "avg_return": 4.14,
-        "sample": 12
-      },
-      "未分類（壽險，不在 industry_chains 知識庫）": {
-        "accuracy": 87.5,
-        "avg_return": 3.63,
-        "sample": 8
+      "壽險（industry_chains: 玉山金併三商壽 tier_from_tracker）": {
+        "accuracy": 77.8,
+        "avg_return": 3.04,
+        "sample": 9
       },
       "航空（industry_chains: 航空/tier_0 航空客運）": {
         "accuracy": 57.1,
         "avg_return": 0.88,
         "sample": 7
       },
-      "未分類（PC品牌）／蘋果漲價與消費電子壓力（tier_from_tracker）": {
-        "accuracy": 60.0,
-        "avg_return": 3.85,
-        "sample": 10
+      "IC設計/ASIC測試": {
+        "accuracy": 16.7,
+        "avg_return": -8.53,
+        "sample": 6
+      },
+      "消費電子/蘋果鏈（industry_chains: 蘋果漲價 tier_from_tracker）": {
+        "accuracy": 54.5,
+        "avg_return": 2.7,
+        "sample": 11
       },
       "金融（tier_0 金控）": {
-        "accuracy": 83.3,
-        "avg_return": 4.49,
-        "sample": 6
+        "accuracy": 71.4,
+        "avg_return": 3.67,
+        "sample": 7
       },
       "半導體封測": {
         "accuracy": 50.0,
@@ -256,140 +261,143 @@
         "sample": 6
       },
       "電信": {
-        "accuracy": 55.6,
-        "avg_return": -1.12,
-        "sample": 9
-      },
-      "綠能/儲能": {
-        "accuracy": 66.7,
-        "avg_return": -1.68,
-        "sample": 6
+        "accuracy": 54.5,
+        "avg_return": -0.66,
+        "sample": 11
       },
       "未分類（食品內需）": {
         "accuracy": 50.0,
-        "avg_return": -0.71,
+        "avg_return": -0.24,
         "sample": 6
       },
-      "未分類（銀行，不在industry_chains知識庫）": {
-        "accuracy": 77.8,
-        "avg_return": 1.02,
-        "sample": 9
+      "綠能/儲能": {
+        "accuracy": 50.0,
+        "avg_return": -2.39,
+        "sample": 6
       },
       "半導體封測(CoWoS先進封裝)": {
         "accuracy": 50.0,
         "avg_return": -3.84,
         "sample": 6
       },
-      "AI伺服器電源": {
-        "accuracy": 57.1,
-        "avg_return": 3.06,
-        "sample": 7
-      },
-      "光通訊與網通": {
-        "accuracy": 77.8,
-        "avg_return": 9.59,
-        "sample": 9
-      },
-      "光通訊/PCB": {
-        "accuracy": 77.8,
-        "avg_return": 2.0,
-        "sample": 9
-      },
       "被動元件/電子零組件": {
         "accuracy": 60.0,
         "avg_return": 17.25,
         "sample": 10
       },
-      "PCB/HDI": {
+      "未分類（銀行，不在industry_chains知識庫）": {
+        "accuracy": 70.0,
+        "avg_return": 0.85,
+        "sample": 10
+      },
+      "光通訊與網通": {
+        "accuracy": 66.7,
+        "avg_return": 8.15,
+        "sample": 9
+      },
+      "光通訊/PCB": {
+        "accuracy": 66.7,
+        "avg_return": 1.39,
+        "sample": 9
+      },
+      "AI伺服器電源": {
+        "accuracy": 42.9,
+        "avg_return": 2.36,
+        "sample": 7
+      },
+      "ABF載板（industry_chains: AI/tier_0 AI晶片ABF載板；半導體/tier_2 IC載板）": {
         "accuracy": 71.4,
-        "avg_return": 4.05,
+        "avg_return": 6.56,
+        "sample": 7
+      },
+      "未分類(輪胎)": {
+        "accuracy": 57.1,
+        "avg_return": -0.26,
         "sample": 7
       },
       "AI（tier_3 電源供應器）": {
         "accuracy": 60.0,
-        "avg_return": 2.5,
+        "avg_return": 2.77,
         "sample": 10
-      },
-      "電動車（tier_1 充電樁）／綠能儲能（tier_1）／AI伺服器（tier_from_tracker）": {
-        "accuracy": 75.0,
-        "avg_return": 0.43,
-        "sample": 8
-      },
-      "未分類(輪胎)": {
-        "accuracy": 33.3,
-        "avg_return": -1.04,
-        "sample": 6
-      },
-      "航運貨櫃（industry_chains: 中東地緣政治/SCFI貨櫃運價 tier_from_tracker；無 tier_0 定位）": {
-        "accuracy": 66.7,
-        "avg_return": 0.76,
-        "sample": 9
       },
       "被動元件族群": {
         "accuracy": 57.1,
         "avg_return": 6.4,
         "sample": 7
       },
-      "記憶體IC": {
+      "電動車（tier_1 充電樁）／綠能儲能（tier_1）／AI伺服器（tier_from_tracker）": {
         "accuracy": 50.0,
-        "avg_return": 1.64,
+        "avg_return": -0.28,
         "sample": 8
       },
+      "貨櫃航運": {
+        "accuracy": 75.0,
+        "avg_return": 6.76,
+        "sample": 12
+      },
       "蘋果供應鏈": {
-        "accuracy": 63.6,
-        "avg_return": 2.71,
+        "accuracy": 54.5,
+        "avg_return": 1.64,
         "sample": 11
       },
       "未分類（重電/機器人/AI資料中心電力）": {
         "accuracy": 50.0,
-        "avg_return": 0.23,
+        "avg_return": 1.19,
+        "sample": 8
+      },
+      "電動車-充電系統/重電（industry_chains: 電動車/tier_1 充電系統）": {
+        "accuracy": 25.0,
+        "avg_return": -2.02,
+        "sample": 8
+      },
+      "光通訊網通元件": {
+        "accuracy": 63.6,
+        "avg_return": 5.07,
+        "sample": 11
+      },
+      "記憶體IC": {
+        "accuracy": 37.5,
+        "avg_return": 0.42,
         "sample": 8
       },
       "PCB": {
-        "accuracy": 26.7,
-        "avg_return": -6.22,
-        "sample": 15
+        "accuracy": 30.0,
+        "avg_return": -6.37,
+        "sample": 10
       },
-      "光通訊網通元件": {
-        "accuracy": 54.5,
-        "avg_return": 4.37,
+      "軍工/航太（industry_chains: 軍工與無人機 tier_from_tracker）": {
+        "accuracy": 63.6,
+        "avg_return": 6.08,
         "sample": 11
       },
       "CCL材料": {
         "accuracy": 63.6,
-        "avg_return": 14.01,
+        "avg_return": 14.05,
         "sample": 11
       },
       "電信（industry_chains: 電信/tier_0；另 光通訊 tier_from_tracker）": {
-        "accuracy": 37.5,
-        "avg_return": 0.8,
+        "accuracy": 55.6,
+        "avg_return": 1.32,
+        "sample": 9
+      },
+      "光通訊-PD/LED 封裝（industry_chains: 光通訊 tier_from_tracker）": {
+        "accuracy": 62.5,
+        "avg_return": 4.68,
         "sample": 8
       },
-      "軍工/航太（industry_chains: 軍工與無人機 tier_from_tracker）": {
-        "accuracy": 63.6,
-        "avg_return": 6.47,
-        "sample": 11
-      },
-      "網通設備": {
-        "accuracy": 66.7,
-        "avg_return": 6.73,
+      "營建": {
+        "accuracy": 75.0,
+        "avg_return": 2.24,
         "sample": 12
       },
-      "IC通路/半導體": {
-        "accuracy": 40.0,
-        "avg_return": -0.53,
-        "sample": 10
+      "半導體通路": {
+        "accuracy": 63.6,
+        "avg_return": 5.19,
+        "sample": 11
       }
     }
   },
   "hot_patterns": [
-    {
-      "dimension": "industry",
-      "value": "記憶體",
-      "accuracy": 100.0,
-      "avg_return": 12.77,
-      "sample": 7
-    },
     {
       "dimension": "industry",
       "value": "塑化（tier_0）",
@@ -398,69 +406,83 @@
       "sample": 5
     },
     {
+      "dimension": "industry",
+      "value": "航空運輸（industry_chains: 航空運輸 tier_0 航空客運）",
+      "accuracy": 100.0,
+      "avg_return": 2.78,
+      "sample": 5
+    },
+    {
+      "dimension": "industry",
+      "value": "鋼鐵-不鏽鋼/鋁（industry_chains: 鋼鐵市場需求觸底反轉 tier_from_tracker）",
+      "accuracy": 88.9,
+      "avg_return": 3.87,
+      "sample": 9
+    },
+    {
+      "dimension": "industry",
+      "value": "記憶體-DRAM/Flash（industry_chains: 記憶體/tier_0）",
+      "accuracy": 85.7,
+      "avg_return": 10.79,
+      "sample": 7
+    },
+    {
       "dimension": "sell_speed",
       "value": "沒出貨",
-      "accuracy": 89.2,
-      "avg_return": 2.3,
-      "sample": 37
+      "accuracy": 81.2,
+      "avg_return": 2.26,
+      "sample": 32
     },
     {
       "dimension": "industry",
-      "value": "未分類（壽險，不在 industry_chains 知識庫）",
-      "accuracy": 87.5,
-      "avg_return": 3.63,
-      "sample": 8
+      "value": "金融-銀行（industry_chains: 聯準會利率／台灣ETF tier_from_tracker）",
+      "accuracy": 77.8,
+      "avg_return": 2.65,
+      "sample": 9
     },
     {
       "dimension": "industry",
-      "value": "金融（industry_chains: 金融/tier_0 金控龍頭）",
-      "accuracy": 83.3,
-      "avg_return": 4.14,
+      "value": "壽險（industry_chains: 玉山金併三商壽 tier_from_tracker）",
+      "accuracy": 77.8,
+      "avg_return": 3.04,
+      "sample": 9
+    },
+    {
+      "dimension": "industry",
+      "value": "貨櫃航運",
+      "accuracy": 75.0,
+      "avg_return": 6.76,
       "sample": 12
     },
     {
       "dimension": "industry",
-      "value": "金融（tier_0 金控）",
-      "accuracy": 83.3,
-      "avg_return": 4.49,
-      "sample": 6
-    },
-    {
-      "dimension": "industry",
-      "value": "金融（industry_chains: 金融/tier_0 金控）",
-      "accuracy": 81.2,
-      "avg_return": 5.49,
-      "sample": 16
+      "value": "營建",
+      "accuracy": 75.0,
+      "avg_return": 2.24,
+      "sample": 12
     },
     {
       "dimension": "sell_speed",
       "value": "緩慢出貨",
-      "accuracy": 78.1,
-      "avg_return": 6.94,
-      "sample": 201
-    },
-    {
-      "dimension": "industry",
-      "value": "面板/電子紙",
-      "accuracy": 77.8,
-      "avg_return": 7.13,
-      "sample": 9
-    },
-    {
-      "dimension": "industry",
-      "value": "金融（industry_chains: 企業財報重點/新台幣匯率 tier_from_tracker）",
-      "accuracy": 77.8,
-      "avg_return": 3.82,
-      "sample": 9
+      "accuracy": 72.2,
+      "avg_return": 6.16,
+      "sample": 212
     }
   ],
   "cold_patterns": [
     {
       "dimension": "industry",
       "value": "記憶體-NOR Flash",
-      "accuracy": 14.3,
-      "avg_return": -7.8,
+      "accuracy": 0.0,
+      "avg_return": -9.38,
       "sample": 7
+    },
+    {
+      "dimension": "industry",
+      "value": "記憶體/半導體代工",
+      "accuracy": 16.7,
+      "avg_return": -4.61,
+      "sample": 6
     },
     {
       "dimension": "industry",
@@ -471,52 +493,24 @@
     },
     {
       "dimension": "industry",
-      "value": "PCB",
-      "accuracy": 26.7,
-      "avg_return": -6.22,
-      "sample": 15
-    },
-    {
-      "dimension": "industry",
-      "value": "紡織",
-      "accuracy": 28.6,
-      "avg_return": -2.84,
-      "sample": 7
+      "value": "電動車-充電系統/重電（industry_chains: 電動車/tier_1 充電系統）",
+      "accuracy": 25.0,
+      "avg_return": -2.02,
+      "sample": 8
     },
     {
       "dimension": "industry",
       "value": "半導體",
       "accuracy": 30.0,
-      "avg_return": -0.79,
+      "avg_return": -1.06,
       "sample": 20
     },
     {
       "dimension": "industry",
-      "value": "水泥",
+      "value": "PCB",
       "accuracy": 30.0,
-      "avg_return": -0.88,
+      "avg_return": -6.37,
       "sample": 10
-    },
-    {
-      "dimension": "industry",
-      "value": "鋼鐵（industry_chains: 鋼鐵原物料 tier_0 鋼鐵龍頭）",
-      "accuracy": 33.3,
-      "avg_return": -0.89,
-      "sample": 6
-    },
-    {
-      "dimension": "industry",
-      "value": "記憶體/半導體代工",
-      "accuracy": 33.3,
-      "avg_return": -2.09,
-      "sample": 6
-    },
-    {
-      "dimension": "industry",
-      "value": "未分類(輪胎)",
-      "accuracy": 33.3,
-      "avg_return": -1.04,
-      "sample": 6
     },
     {
       "dimension": "industry",
@@ -524,61 +518,32 @@
       "accuracy": 50.0,
       "avg_return": -6.14,
       "sample": 6
+    },
+    {
+      "dimension": "industry",
+      "value": "半導體封測(CoWoS先進封裝)",
+      "accuracy": 50.0,
+      "avg_return": -3.84,
+      "sample": 6
     }
   ],
   "best_combos": [
     {
-      "combo": "volume=30K+ + industry=記憶體",
+      "combo": "stealth=追漲 + industry=記憶體-DRAM/Flash（industry_chains: 記憶體/tier_0）",
       "accuracy": 100.0,
-      "avg_return": 12.94,
+      "avg_return": 12.8,
       "sample": 6
-    },
-    {
-      "combo": "stealth=追漲 + industry=記憶體",
-      "accuracy": 100.0,
-      "avg_return": 14.46,
-      "sample": 6
-    },
-    {
-      "combo": "leader=外資主導 + industry=記憶體",
-      "accuracy": 100.0,
-      "avg_return": 10.22,
-      "sample": 5
-    },
-    {
-      "combo": "sell_speed=快速出貨 + industry=記憶體",
-      "accuracy": 100.0,
-      "avg_return": 12.77,
-      "sample": 7
-    },
-    {
-      "combo": "buy_days=6天+ + sell_speed=沒出貨",
-      "accuracy": 100.0,
-      "avg_return": 5.82,
-      "sample": 6
-    },
-    {
-      "combo": "volume=30K+ + sell_speed=沒出貨",
-      "accuracy": 100.0,
-      "avg_return": 2.55,
-      "sample": 12
-    },
-    {
-      "combo": "stealth=邊買邊漲 + sell_speed=沒出貨",
-      "accuracy": 100.0,
-      "avg_return": 1.35,
-      "sample": 18
     },
     {
       "combo": "stealth=追漲 + sell_speed=沒出貨",
       "accuracy": 100.0,
-      "avg_return": 6.26,
-      "sample": 10
+      "avg_return": 9.06,
+      "sample": 6
     },
     {
-      "combo": "buy_days=6天+ + industry=金融（industry_chains: 金融/tier_0 金控）",
+      "combo": "volume=<5K + industry=金融",
       "accuracy": 100.0,
-      "avg_return": 7.54,
+      "avg_return": 4.93,
       "sample": 5
     },
     {
@@ -586,14 +551,68 @@
       "accuracy": 100.0,
       "avg_return": 19.78,
       "sample": 5
+    },
+    {
+      "combo": "sell_speed=緩慢出貨 + industry=航運-貨櫃（industry_chains: 中東地緣政治/tier_from_tracker；SCFI貨櫃運價止跌反彈）",
+      "accuracy": 100.0,
+      "avg_return": 10.63,
+      "sample": 5
+    },
+    {
+      "combo": "sell_speed=緩慢出貨 + industry=鋼鐵-不鏽鋼/鋁（industry_chains: 鋼鐵市場需求觸底反轉 tier_from_tracker）",
+      "accuracy": 100.0,
+      "avg_return": 5.82,
+      "sample": 6
+    },
+    {
+      "combo": "stealth=追漲 + industry=鋼鐵-不鏽鋼/鋁（industry_chains: 鋼鐵市場需求觸底反轉 tier_from_tracker）",
+      "accuracy": 100.0,
+      "avg_return": 5.97,
+      "sample": 5
+    },
+    {
+      "combo": "stealth=邊買邊漲 + sell_speed=沒出貨",
+      "accuracy": 93.8,
+      "avg_return": 1.17,
+      "sample": 16
+    },
+    {
+      "combo": "volume=30K+ + sell_speed=沒出貨",
+      "accuracy": 90.9,
+      "avg_return": 4.16,
+      "sample": 11
+    },
+    {
+      "combo": "buy_days=2天 + sell_speed=沒出貨",
+      "accuracy": 90.0,
+      "avg_return": 0.52,
+      "sample": 10
     }
   ],
   "worst_combos": [
     {
+      "combo": "volume=30K+ + industry=記憶體-NOR Flash",
+      "accuracy": 0.0,
+      "avg_return": -10.47,
+      "sample": 5
+    },
+    {
+      "combo": "leader=外資主導 + industry=記憶體-NOR Flash",
+      "accuracy": 0.0,
+      "avg_return": -9.38,
+      "sample": 7
+    },
+    {
       "combo": "sell_speed=快速出貨 + industry=記憶體-NOR Flash",
       "accuracy": 0.0,
-      "avg_return": -9.32,
-      "sample": 6
+      "avg_return": -9.38,
+      "sample": 7
+    },
+    {
+      "combo": "sell_speed=快速出貨 + industry=電動車-充電系統/重電（industry_chains: 電動車/tier_1 充電系統）",
+      "accuracy": 0.0,
+      "avg_return": -5.22,
+      "sample": 5
     },
     {
       "combo": "stealth=越買越跌 + leader=投信主導",
@@ -602,34 +621,22 @@
       "sample": 7
     },
     {
-      "combo": "leader=外資主導 + industry=記憶體-NOR Flash",
-      "accuracy": 14.3,
-      "avg_return": -7.8,
-      "sample": 7
-    },
-    {
       "combo": "stealth=邊買邊漲 + industry=PCB",
       "accuracy": 14.3,
-      "avg_return": -10.32,
+      "avg_return": -10.65,
       "sample": 7
     },
     {
-      "combo": "volume=<5K + industry=PCB",
+      "combo": "volume=30K+ + industry=記憶體/半導體代工",
       "accuracy": 16.7,
-      "avg_return": -8.45,
+      "avg_return": -4.61,
       "sample": 6
     },
     {
-      "combo": "leader=外資主導 + industry=電信（industry_chains: 電信/tier_0；另 光通訊 tier_from_tracker）",
+      "combo": "leader=外資主導 + industry=記憶體/半導體代工",
       "accuracy": 16.7,
-      "avg_return": -2.24,
+      "avg_return": -4.61,
       "sample": 6
-    },
-    {
-      "combo": "stealth=偷偷買 + industry=半導體",
-      "accuracy": 20.0,
-      "avg_return": -1.86,
-      "sample": 5
     },
     {
       "combo": "sell_speed=快速出貨 + industry=記憶體/半導體代工",
@@ -638,15 +645,9 @@
       "sample": 5
     },
     {
-      "combo": "volume=30K+ + industry=記憶體-NOR Flash",
+      "combo": "stealth=偷偷買 + industry=半導體",
       "accuracy": 20.0,
-      "avg_return": -8.25,
-      "sample": 5
-    },
-    {
-      "combo": "stealth=邊買邊漲 + industry=紡織",
-      "accuracy": 20.0,
-      "avg_return": -2.98,
+      "avg_return": -2.76,
       "sample": 5
     }
   ]
