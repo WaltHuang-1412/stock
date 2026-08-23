@@ -1,0 +1,47 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Western Digital",
+      "change_pct": -2.05,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "NAND/儲存",
+      "affected_stocks": {
+        "2408": "南亞科",
+        "2344": "華邦電",
+        "2337": "旺宏",
+        "6770": "力積電"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Western Digital 跌幅 -2.05%，NAND/儲存產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-08-23",
+    "total_alerts": 1,
+    "level_3_count": 0,
+    "level_2_count": 0,
+    "level_1_count": 1,
+    "excluded_stocks": [],
+    "downgraded_stocks": {},
+    "warning_stocks": {
+      "2408": {
+        "reason": "Western Digital 跌幅 -2.05%",
+        "adjustment": -5
+      },
+      "2344": {
+        "reason": "Western Digital 跌幅 -2.05%",
+        "adjustment": -5
+      },
+      "2337": {
+        "reason": "Western Digital 跌幅 -2.05%",
+        "adjustment": -5
+      },
+      "6770": {
+        "reason": "Western Digital 跌幅 -2.05%",
+        "adjustment": -5
+      }
+    }
+  }
+}
