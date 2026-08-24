@@ -615,8 +615,107 @@
       "5475 德宏"
     ]
   },
-  "removed_stocks": [],
-  "tomorrow_opening_exits": [],
+  "removed_stocks": [
+    {
+      "stock_code": "2426",
+      "stock_name": "鼎元",
+      "recommend_date": "2026-08-21",
+      "recommend_price": 74.8,
+      "settled_price": 82.6,
+      "last_close": 82.6,
+      "return_pct": 10.43,
+      "result": "success",
+      "removal_reason": "D1 收盤 82.6 ≥ 目標 80.8",
+      "settled_by": "settlement_checker"
+    },
+    {
+      "stock_code": "1504",
+      "stock_name": "東元",
+      "recommend_date": "2026-08-14",
+      "recommend_price": 70.4,
+      "settled_price": 71.5,
+      "last_close": 71.5,
+      "return_pct": 1.56,
+      "result": "success",
+      "removal_reason": "反轉 L4 鐵律開盤出場（賣超佔比 30.0%）；收盤 71.5 入帳，> 推薦價 70.4",
+      "settled_by": "manual_ironrule"
+    },
+    {
+      "stock_code": "2353",
+      "stock_name": "宏碁",
+      "recommend_date": "2026-08-20",
+      "recommend_price": 30.9,
+      "settled_price": 31.1,
+      "last_close": 31.1,
+      "return_pct": 0.65,
+      "result": "success",
+      "removal_reason": "反轉 L4 鐵律開盤出場（賣超佔比 21.8%）；收盤 31.1 入帳，> 推薦價 30.9",
+      "settled_by": "manual_ironrule"
+    },
+    {
+      "stock_code": "2393",
+      "stock_name": "億光",
+      "recommend_date": "2026-08-21",
+      "recommend_price": 66.3,
+      "settled_price": 65.4,
+      "last_close": 65.4,
+      "return_pct": -1.36,
+      "result": "fail",
+      "removal_reason": "反轉 L4 鐵律開盤出場（賣超佔比 26.7%，D0 推薦次日翻臉）；收盤 65.4 入帳",
+      "settled_by": "manual_ironrule"
+    },
+    {
+      "stock_code": "2634",
+      "stock_name": "漢翔",
+      "recommend_date": "2026-08-21",
+      "recommend_price": 69.4,
+      "settled_price": 68.6,
+      "last_close": 68.6,
+      "return_pct": -1.15,
+      "result": "fail",
+      "removal_reason": "反轉 L4 鐵律開盤出場（賣超佔比 50.0%，🛤️軌道B）；收盤 68.6 入帳",
+      "settled_by": "manual_ironrule"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "settled_price": 212.5,
+      "removal_reason": "已決事項（08-19 定案）開盤出場執行；my_holdings 持倉不進 predictions；08-24 收盤 212.5",
+      "settled_by": "manual_ironrule（my_holdings，不進 predictions）"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "settled_price": 163.0,
+      "removal_reason": "反轉 L4 鐵律開盤出場（賣超佔比 19.6%、10日累計 -9,392 張）；my_holdings 持倉不進 predictions；08-24 收盤 163.0",
+      "settled_by": "manual_ironrule（my_holdings，不進 predictions）"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "settled_price": 89.3,
+      "removal_reason": "反轉 L4 鐵律開盤出場（賣超佔比 16.9%）；my_holdings 持倉不進 predictions；08-24 收盤 89.3",
+      "settled_by": "manual_ironrule（my_holdings，不進 predictions）"
+    }
+  ],
+  "tomorrow_opening_exits": [
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "category": "停損鐵律（my_holdings 實際持倉）",
+      "decided_date": "2026-08-24",
+      "reference_price": 70.8,
+      "reason": "08-24 收盤 70.8 低於停損價 73.26（低於停損 -3.4%），前一日收盤 68.4 亦低於；鐵律「觸及停損價→強制停損無例外」。盤中已標記衝突移交盤後，本日定案：08-25 開盤出場。已決事項，明日盤前依 Step 4-0 原樣抄入，禁止重評。"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "category": "停損鐵律（my_holdings 實際持倉）",
+      "decided_date": "2026-08-24",
+      "reference_price": 124.0,
+      "reason": "08-24 收盤 124.0 低於停損價 147.6（-24.1%），長期未執行；鐵律強制停損。本日定案：08-25 開盤出場。已決事項，明日盤前依 Step 4-0 原樣抄入，禁止重評。"
+    }
+  ],
   "intraday_update": {
     "time": "12:30",
     "institutional_basis_date": "2026-08-21（最新T86，今日T86盤後才公布）",
@@ -873,5 +972,32 @@
     {
       "note": "根因：my_holdings.yaml持倉不進predictions、settlement_checker不掃、preflight只查L4不查停損→停損跌破無任何自動偵測點"
     }
-  ]
+  ],
+  "tomorrow_recommendations": [],
+  "after_market_update": {
+    "run_mode": "manual（排程失敗人工補跑）",
+    "settled_today": 6,
+    "settled_success": 4,
+    "settled_fail": 2,
+    "settled_accuracy_total": "56.4%（331s/256f/587t）",
+    "holding_after": 9,
+    "frozen": [
+      {
+        "stock_code": "2867",
+        "stock_name": "三商壽",
+        "reason": "v8.3.8 序列停滯凍結（末日 2026-08-19，疑玉山金併三商壽停止買賣），不結算不出場不推進D"
+      }
+    ],
+    "attribution_fix": [
+      {
+        "stock_code": "2353",
+        "wrong_key": "2026-04-01",
+        "correct_key": "2026-08-20",
+        "note": "v8.3.5 歸屬核對修復"
+      }
+    ],
+    "claude_md_version": "v8.3.8",
+    "tomorrow_new_recommendations": 0,
+    "tomorrow_note": "今日T86未公布＋盤中候選池全數卡關 → 0檔新推薦，明日盤前完整重評"
+  }
 }

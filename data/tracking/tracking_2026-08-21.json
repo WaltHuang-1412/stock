@@ -138,7 +138,7 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 87,
-      "result": "holding",
+      "result": "fail",
       "reason": "訊號A L2 +10、動能 -50.8% +15｜Q2 EPS YoY+70% +5｜法人 TOP50 第 46（佔成交 59.2%）｜反轉 Level 0、10日累計 +5K｜財訊：成本壓力和緩＋新產能，H2 優於 H1。⚠️ industry_chains 未分類（產業邏輯僅 7/20）；⚠️ 營收快取落後 2026-04（原 -5 作廢，本因子未採計）；季線下（+0 修正）",
       "intraday_price": 64.6,
       "intraday_change_pct": -2.56,
@@ -146,7 +146,13 @@
       "actual_close": 64.7,
       "change_percent": -2.41,
       "holding_status": "D0/10，收盤 64.7（對進場 -2.41%）；反轉 🟢L0 +1,740，10日+5,046",
-      "close_price": 64.7
+      "close_price": 64.7,
+      "settled_price": 65.4,
+      "settled_date": "2026-08-24",
+      "return_pct": -1.36,
+      "settle_note": "反轉 L4 鐵律開盤出場（賣超 -438 張佔日均量 26.7%，推薦次日翻臉）；入帳價依 v8.3.2 採 08-24 收盤 65.4 < 推薦價 66.3 → fail",
+      "sync_note": "v8.3.7 三處同步：來源檔回寫於 2026-08-24 盤後",
+      "fail_reason": "反轉 L4 鐵律開盤出場（賣超 -438 張佔日均量 26.7%，推薦次日翻臉）；入帳價依 v8.3.2 採 08-24 收盤 65.4 < 推薦價 66.3 → fail"
     },
     {
       "stock_code": "2371",
@@ -201,7 +207,7 @@
       "settlement_days": 10,
       "position": "5%",
       "score": 72,
-      "result": "holding",
+      "result": "success",
       "reason": "🔥 超強催化覆寫（光通訊 🔴超強 ↑加速：SK 海力士 CPO 路線圖、聯亞矽光放量；動能 +500% 不扣分，倉位 5%、停損 -5%）｜Q2 轉虧為盈、EPS YoY+414%、毛利率 QoQ+2.9pp +5｜法人 TOP50 第 25（+3,715）、反轉 Level 0｜月線乖離 +19%、季線上（價格位置 15/15）。⚠️ 08-20 跳空漲停，5 日 +9.0% 已小漲 -10；⚠️ 處置預警 🟡（6 日 +8.6%／當日週轉率 9.6% 接近 10% 門檻，今日再達標即可能列注意股）；外資持股比週減 -0.18% -3；⚠️ 營收快取落後 2026-05，本因子未採計",
       "intraday_price": 82.2,
       "intraday_change_pct": 9.89,
@@ -210,7 +216,12 @@
       "actual_close": 82.2,
       "change_percent": 9.89,
       "holding_status": "D0/10，收盤 82.2（對進場 +9.89%）；反轉 ✅健康 +3,715，10日+1,918；🟡處置預警（週轉9.5%／6日累積41.8%）；⚠️ 收盤 82.2 已越目標 80.8，惟 D0 依規不結算（settlement_checker 嚴格排除 D0），最快 D1（08/24）判定",
-      "close_price": 82.2
+      "close_price": 82.2,
+      "settled_price": 82.6,
+      "settled_date": "2026-08-24",
+      "return_pct": 10.43,
+      "settle_note": "D1 收盤 82.6 ≥ 目標 80.8（settlement_checker 08-24）",
+      "sync_note": "v8.3.7 三處同步：來源檔回寫於 2026-08-24 盤後"
     }
   ],
   "opening_exits": [
@@ -516,13 +527,19 @@
       "settlement_days": 10,
       "position": "5-8%",
       "score": 93,
-      "result": "holding",
+      "result": "fail",
       "recommend_time": "2026-08-21 12:30",
       "reason": "🔥 超強催化覆寫（軍工與無人機 🔴超強 ↑加速：法說會證實與美商 Shield-AI 首批合作無人機標案落地、2,100 億無人機特別條例協商中；動能 +500% 不扣分，倉位 5-8%、停損 -5%）｜法人 TOP50 avg_rank 6.5（TOP10），08-20 三大法人 +21,840 張（外資 +21,030、投信 0），buy_ratio 27.5% >20% +2｜Q2 EPS 1.02 YoY+525%、毛利率 QoQ+11.2pp +5｜反轉 Level 0 籌碼健康、10日累計 +52K、近5日 +45K｜月線乖離 +7.8%、季線 +20.2% 雙線上｜卷宗：事件窗口無法說會/除權息/重大訊息，10 處 mentions 全為同向利多、無矛盾。⚠️ 產業僅登錄 tier_from_tracker 待審區，產業邏輯依 v8.3.4 以 13-16 分計（給 16+2 法說會催化=18），未給龍頭分；⚠️ 真連買僅 1 天（6買4賣）；⚠️ 營收快取落後 2026-05，本因子視為 0；⚠️ 08-19 曾單日 -6.4% 波動度偏高；⚠️ 同主題 8033 雷虎為 TWSE 處置股（禁止進場），本次未列入",
       "actual_close": 69.3,
       "change_percent": -0.14,
       "holding_status": "D0/10，收盤 69.3（對進場 -0.14%）；反轉 ✅健康 +21,840",
-      "close_price": 69.3
+      "close_price": 69.3,
+      "settled_price": 68.6,
+      "settled_date": "2026-08-24",
+      "return_pct": -1.15,
+      "settle_note": "反轉 L4 鐵律開盤出場（賣超 -29,748 張佔日均量 50.0%，全池最嚴重）；入帳價依 v8.3.2 採 08-24 收盤 68.6 < 推薦價 69.4 → fail",
+      "sync_note": "v8.3.7 三處同步：來源檔回寫於 2026-08-24 盤後",
+      "fail_reason": "反轉 L4 鐵律開盤出場（賣超 -29,748 張佔日均量 50.0%，全池最嚴重）；入帳價依 v8.3.2 採 08-24 收盤 68.6 < 推薦價 69.4 → fail"
     }
   ],
   "track_b_observations": [

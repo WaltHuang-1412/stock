@@ -7547,11 +7547,11 @@
       }
     ]
   },
-  "settled_accuracy": "56.4%",
-  "settled_count": 582,
-  "holding_count": 181,
-  "total_success": 328,
-  "total_fail": 254,
+  "settled_accuracy": 56.4,
+  "settled_count": 587,
+  "holding_count": 176,
+  "total_success": 331,
+  "total_fail": 256,
   "2026-03-30": {
     "predictions": [
       {
@@ -7935,7 +7935,10 @@
         "holding_days": 1,
         "actual_close": 27.3,
         "holding_from": "2026-04-01",
-        "holding_status": "Day1：+0.18%，6買+23K Safe，動能-59.6%佈局完成"
+        "holding_status": "Day1：+0.18%，6買+23K Safe，動能-59.6%佈局完成",
+        "settled_date": null,
+        "settled_price": null,
+        "zombie_note": "2026-08-24 盤後歸屬核對：update_predictions 誤將 08-20 推薦之結算掛至本筆殭屍 holding，已還原（v8.3.5）"
       },
       {
         "symbol": "4904",
@@ -15440,10 +15443,11 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 71,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-24",
+        "settled_price": 71.5,
+        "holding_days": 1,
+        "fail_reason": "反轉 L4 鐵律開盤出場（賣超佔比 30.0%）；收盤 71.5 入帳，> 推薦價 70.4"
       },
       {
         "symbol": "2377",
@@ -15682,10 +15686,12 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 96,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-24",
+        "settled_price": 31.1,
+        "holding_days": 1,
+        "return_pct": 0.65,
+        "success_note": "反轉 L4 鐵律開盤出場（賣超佔比 21.8%）；收盤 31.1 入帳 > 推薦價 30.9（歸屬核對改掛，v8.3.5）"
       },
       {
         "symbol": "2618",
@@ -15810,10 +15816,11 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 87,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-24",
+        "settled_price": 65.4,
+        "holding_days": 1,
+        "fail_reason": "反轉 L4 鐵律開盤出場（賣超佔比 26.7%，D0 推薦次日翻臉）；收盤 65.4 入帳"
       },
       {
         "symbol": "2371",
@@ -15855,10 +15862,11 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 72,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-24",
+        "settled_price": 82.6,
+        "holding_days": 1,
+        "fail_reason": "D1 收盤 82.6 ≥ 目標 80.8"
       },
       {
         "symbol": "2634",
@@ -15870,11 +15878,12 @@
         "settlement_days": 10,
         "position": "5-8%",
         "score": 93,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
+        "result": "fail",
+        "settled_date": "2026-08-24",
+        "settled_price": 68.6,
         "holding_days": 1,
-        "track": "B"
+        "track": "B",
+        "fail_reason": "反轉 L4 鐵律開盤出場（賣超佔比 50.0%，🛤️軌道B）；收盤 68.6 入帳"
       }
     ],
     "settled_accuracy": null,
