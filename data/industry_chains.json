@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-08-23",
+  "last_updated": "2026-08-24",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -4609,6 +4609,21 @@
               "code": "2426",
               "name": "鼎元",
               "category": "台股市場動態"
+            },
+            {
+              "code": "3034",
+              "name": "聯詠",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "2027",
+              "name": "大成鋼",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "2542",
+              "name": "興富發",
+              "category": "台股市場動態"
             }
           ]
         }
@@ -7523,6 +7538,55 @@
               "code": "3711",
               "name": "日月光",
               "category": "半導體材料在地化／SEMI材料聯盟"
+            }
+          ]
+        }
+      }
+    },
+    "半導體矽晶圓漲價": {
+      "name": "半導體矽晶圓漲價",
+      "catalysts": [
+        "半導體矽晶圓漲價",
+        "三年多首見"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "6488",
+              "name": "環球晶",
+              "category": "半導體矽晶圓漲價（三年多首見）"
+            },
+            {
+              "code": "6510",
+              "name": "精測",
+              "category": "半導體矽晶圓漲價（三年多首見）"
+            },
+            {
+              "code": "6182",
+              "name": "合晶",
+              "category": "半導體矽晶圓漲價（三年多首見）"
+            }
+          ]
+        }
+      }
+    },
+    "巨大集團收購鼎鎂新材料": {
+      "name": "巨大集團收購鼎鎂新材料",
+      "catalysts": [
+        "巨大集團收購鼎鎂新材料"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "9921",
+              "name": "巨大",
+              "category": "巨大集團收購鼎鎂新材料"
             }
           ]
         }
