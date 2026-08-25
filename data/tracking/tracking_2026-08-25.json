@@ -115,7 +115,9 @@
       "sell_ratio_pct": 6.8,
       "cumulative_10d": 39000,
       "rule": "盤中新增 L3/L4 且賣超佔比 <8% → 不立即出場；盤後以完整日量重跑 reversal_alert，仍 L3/L4 才於次日開盤出場",
-      "note": "同一份 T86（08-24 賣超 -4,792 張）盤前判 L0、盤中判 L4（佔比 6.8%），典型分母效應。10 日累計 +39K 為正、未觸 -5% 停損（現價 173.5 vs 停損 167.67）。盤後必複核。"
+      "note": "同一份 T86（08-24 賣超 -4,792 張）盤前判 L0、盤中判 L4（佔比 6.8%），典型分母效應。10 日累計 +39K 為正、未觸 -5% 停損（現價 173.5 vs 停損 167.67）。盤後必複核。",
+      "after_market_recheck": "2026-08-25 盤後完整日量重跑 reversal_alert：仍 Level 4（賣超 -4,792 張，佔比 5.2% ≥5%）→ 依 v8.3.2 定案次日開盤出場",
+      "verdict": "confirmed_exit_next_open"
     }
   ],
   "pending_review_note": "2344 華邦電盤中新增 L4（6.8% <8%、10日累計為正）列待複核不出場，盤後以完整日量複核；其餘無待複核。",
@@ -141,7 +143,12 @@
       "score": 82,
       "reason": "中東地緣🔴超強催化利空鈍化、航運為本週台股最強族群；avg_rank 5.5（TOP10）、真連續買超 8 天、外資近5天 +56K、buy_ratio 44.7%；EPS Q2 +46.4%＋毛利率 QoQ+7.3pp（+5）；營收 2026-07 +43.1%（新鮮，回檔未達不加分）；月季雙線上（價位13）。已大漲 5日+8.2% 扣 -10。無事件、卷宗 7 處提及全為利多。",
       "intraday_price": 244.0,
-      "intraday_change_pct": -2.59
+      "intraday_change_pct": -2.59,
+      "result": "holding",
+      "actual_close": 246.0,
+      "holding_status": "D0 收盤 246.0（-1.8%），未觸目標/停損，續追蹤（D0 不結算）",
+      "close_price": 246.0,
+      "change_percent": -1.8
     },
     {
       "stock_code": "3532",
@@ -156,7 +163,12 @@
       "score": 78,
       "reason": "矽晶圓漲價🟡強催化（三年多首見，環球晶/台勝科/合晶行情延續）；TOP50 avg_rank 23、buy_ratio 29%、外資近5天 +6,869；EPS Q2 +131.6%＋毛利率 QoQ+6.1pp（+5）；營收 2026-07 +28.8%（新鮮）；月季雙線上、vs MA20 +17%（價位15，追高風險標註）；反轉 L0。卷宗 3 處提及均利多（量增價揚）。",
       "intraday_price": 369.5,
-      "intraday_change_pct": -1.86
+      "intraday_change_pct": -1.86,
+      "result": "holding",
+      "actual_close": 378.0,
+      "holding_status": "D0 收盤 378.0（+0.4%），未觸目標/停損，續追蹤（D0 不結算）",
+      "close_price": 378.0,
+      "change_percent": 0.4
     },
     {
       "stock_code": "1605",
@@ -171,7 +183,12 @@
       "score": 72,
       "reason": "📶訊號A L2 早期佈局（+10）；TOP50 avg_rank 25、10日累計 +82K、外資近5天 +3,697、動能 -95% 佈局中；EPS Q2 +1600%（+5）；⚠️ 營收快取落後至 2026-02，本因子未採計；月季雙線上（價位13）。⚠️ 卷宗唯一提及經查為華新科(2492)子字串誤報，真實 mentions=0，當日時事資料無提及，推薦依據為法人數據。",
       "intraday_price": 38.35,
-      "intraday_change_pct": 0.66
+      "intraday_change_pct": 0.66,
+      "result": "holding",
+      "actual_close": 38.45,
+      "holding_status": "D0 收盤 38.45（+0.9%），未觸目標/停損，續追蹤（D0 不結算）",
+      "close_price": 38.45,
+      "change_percent": 0.9
     },
     {
       "stock_code": "2886",
@@ -186,7 +203,12 @@
       "score": 71,
       "reason": "金融防禦＋聯準會利率🔴超強催化（AI放款授信商機、富邦金法說利多外溢）；avg_rank 14.5、buy_ratio 46%、真連續買超 8 天、外資近5天 +73K；⚠️ 08/27 法說會（2天後，法說當天不加碼/不開新倉）；⚠️ 金融業 Q2 半年報期限 8/31 未公布，EPS 加減分視為 0，公布日落在持有期內；⚠️ 營收快取落後至 2026-05 未採計；外資持股比週減 -0.12%（-3）；月線下但季線撐（價位8）。",
       "intraday_price": 46.85,
-      "intraday_change_pct": 0.0
+      "intraday_change_pct": 0.0,
+      "result": "holding",
+      "actual_close": 47.0,
+      "holding_status": "D0 收盤 47.0（+0.3%），未觸目標/停損，續追蹤（D0 不結算）",
+      "close_price": 47.0,
+      "change_percent": 0.3
     }
   ],
   "recommendation_note": "v8.2 寧缺勿濫：僅 4 檔過全部門檻。2382 廣達(77)/2356 英業達(75) 因 NVDA 08/27 財報距今 2 天（⏰最後進場期，不開新倉）列觀察；2324 仁寶/3706 神達/2312 金寶/5880 合庫金 外資近5天為負不過準確率篩選；1503 士電觸法人現身門檻（不在TOP50買超×乖離+1.6%）；2615 萬海（處置預警最快今日）/2609 陽明（處置預警剩2天＋6日+25%已大漲）排除；2881 富邦金 L4；8299 群聯/6488 環球晶/6182 合晶 T86 數據不足不可視為安全。",
@@ -360,7 +382,11 @@
       "score_note": "時事16＋法人20＋產業14＋技術12＋價格13＝75；動能-10.5%＋10、EPS Q2 YoY+880%/毛利率QoQ+21.2pp＋5＝90。若比照記憶體產業套用 Micron L2 -15 仍為 75，達門檻",
       "result": "holding",
       "reason": "法人 TOP50 avg_rank 16.5、buy_ratio 22.4%、外資近5天+3,110 張；反轉 L0；動能-10.5% 佈局中；EPS Q2 20.21 元 YoY+880%、毛利率 68.7%（QoQ+21.2pp）；DRAM 控制器利基定位（MI L3 控制器IC）。⚠️ 營收快取停在 2026-02 落後 6 個月，本因子未採計；⚠️ Micron -5.83% 龍頭預警 L2 記憶體逆風（3006 不在官方對應清單）＋今日 -5.67% 回檔進場；⚠️ 08/27 NVIDIA 財報本週最大變數 → 倉位取下緣 5%",
-      "dossier": "stock_dossier_intraday.json：事件窗口無法說會/除權息/重大訊息；mentions 2 處皆正面（DRAM 控制器定位、營收動能表）"
+      "dossier": "stock_dossier_intraday.json：事件窗口無法說會/除權息/重大訊息；mentions 2 處皆正面（DRAM 控制器定位、營收動能表）",
+      "actual_close": 270.0,
+      "holding_status": "D0 收盤 270.0（+1.7%），未觸目標/停損，續追蹤（D0 不結算）",
+      "close_price": 270.0,
+      "change_percent": 1.7
     }
   ],
   "track_b_observations": [
@@ -407,7 +433,52 @@
       "note": "偵測器強訊號 65 分，但今日 -10.0% 爆量崩跌（量比4.1x）＝型態轉弱攔截；且為官方處置股，機械式排除"
     }
   ],
-  "removed_stocks": [],
+  "removed_stocks": [
+    {
+      "stock_code": "2606",
+      "stock_name": "裕民",
+      "recommend_date": "2026-08-18",
+      "recommend_price": 68.3,
+      "settled_price": 78.0,
+      "return_pct": 14.2,
+      "result": "success",
+      "removal_reason": "D5 收盤 78.0 ≥ 目標 75.8，達標結算",
+      "settled_by": "settlement_checker 2026-08-25 盤後"
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "recommend_date": "2026-08-21",
+      "recommend_price": 517.0,
+      "settled_price": 510.0,
+      "return_pct": -1.35,
+      "result": "fail",
+      "removal_reason": "反轉 L4 鐵律開盤出場（盤前賣超佔比 16.0% ≥8%，Micron Level 2）；收盤 510.0 入帳",
+      "settled_by": "鐵律人工出場 2026-08-25"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "recommend_date": "2026-08-21",
+      "recommend_price": 19.35,
+      "settled_price": 19.05,
+      "return_pct": -1.55,
+      "result": "fail",
+      "removal_reason": "反轉 L4 鐵律開盤出場（盤前賣超佔比 9.5% ≥8%）；收盤 19.05 入帳",
+      "settled_by": "鐵律人工出場 2026-08-25"
+    },
+    {
+      "stock_code": "2371",
+      "stock_name": "大同",
+      "recommend_date": "2026-08-21",
+      "recommend_price": 27.55,
+      "settled_price": 27.7,
+      "return_pct": 0.54,
+      "result": "success",
+      "removal_reason": "反轉 L4 鐵律開盤出場（盤前賣超佔比 11.7%，近5天累計 -3,202）；收盤 27.7 入帳 > 推薦價",
+      "settled_by": "鐵律人工出場 2026-08-25"
+    }
+  ],
   "tomorrow_recommendations": [],
   "intraday_disposition_update": {
     "official_twse_disposal": [
@@ -421,5 +492,66 @@
       "2606 裕民｜爆量近60日均量9.9倍｜🟡接近注意門檻（持倉追蹤中，留意）"
     ],
     "note": "reversal_alert 處置欄位只走 stdout，此處為 v8.3.5 抄錄"
+  },
+  "tomorrow_opening_exits": [
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "category": "已決事項（v8.3.2 盤中新增 L4 待複核 → 盤後複核仍 L4，兩次皆 ≥5%）",
+      "recommend_date": "2026-08-21",
+      "recommend_price": 176.5,
+      "stop_loss": 167.67,
+      "reason": "08-25 盤中新增 L4（佔比 6.8%）→ 盤後完整日量複核仍 L4（佔比 5.2% ≥5%）→ 2026-08-26 開盤出場，收盤價入帳。禁止明日盤前重評／重算佔比／重啟計時器（v8.3.7 Step 4-0）"
+    }
+  ],
+  "after_market_note": "2026-08-25 盤後：結算 4 筆（2606 success +14.2%／2408 fail -1.35%／2002 fail -1.55%／2371 success +0.54%，後三筆為盤前 L4 鐵律開盤出場收盤入帳）；2344 華邦電待複核定案次日開盤出場；2867 三商壽維持 v8.3.8 凍結（序列停滯末日 08-19，n=3）；明日新推薦 0 檔（14:36 執行時今日 T86 尚未公布）",
+  "yesterday_verification": {
+    "note": "v7.9 多日追蹤結算制：holding 不計入準確率分母；本欄統計「今日實際結算」的推薦（來自 08-18/08-21 推薦日）",
+    "settled_today": 4,
+    "success": 2,
+    "fail": 2,
+    "accuracy": "50.0%",
+    "results": [
+      {
+        "stock_code": "2606",
+        "stock_name": "裕民",
+        "recommend_date": "2026-08-18",
+        "recommend_price": 68.3,
+        "settled_price": 78.0,
+        "return_pct": 14.2,
+        "result": "success",
+        "reason": "D5 收盤 78.0 ≥ 目標 75.8"
+      },
+      {
+        "stock_code": "2371",
+        "stock_name": "大同",
+        "recommend_date": "2026-08-21",
+        "recommend_price": 27.55,
+        "settled_price": 27.7,
+        "return_pct": 0.54,
+        "result": "success",
+        "reason": "反轉 L4 鐵律開盤出場（佔比 11.7%），收盤入帳 > 推薦價"
+      },
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "recommend_date": "2026-08-21",
+        "recommend_price": 517.0,
+        "settled_price": 510.0,
+        "return_pct": -1.35,
+        "result": "fail",
+        "reason": "反轉 L4 鐵律開盤出場（佔比 16.0%，Micron L2）"
+      },
+      {
+        "stock_code": "2002",
+        "stock_name": "中鋼",
+        "recommend_date": "2026-08-21",
+        "recommend_price": 19.35,
+        "settled_price": 19.05,
+        "return_pct": -1.55,
+        "result": "fail",
+        "reason": "反轉 L4 鐵律開盤出場（佔比 9.5%）"
+      }
+    ]
   }
 }
