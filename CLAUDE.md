@@ -166,6 +166,12 @@ python3 scripts/fetch_us_asia_markets.py > data/$(date +%Y-%m-%d)/us_asia_market
 
 **驗證**：✅ 必須生成 `us_asia_markets.json`，包含 NASDAQ、費半、WTI原油、輝達等 | ❌ 不存在 = 禁止繼續
 
+**🟢 Step 1-b（選用，2026-08-26 新增）：美股判勢深度補充** — `.claude/skills/` 已安裝 4 個外部 skill（tradermonty/claude-trading-skills，僅供大盤判勢參考，**不參與個股評分**）：
+- `market-breadth-analyzer`（免 key）：S&P 廣度 0-100 綜合分＋建議曝險區間，可輔助 `market_regime` 判定與 Step 9 防禦比例
+- `sector-analyst`（免 key）：美股類股輪動／超買超賣，輔助軌道 B 產業方向
+- `ibd-distribution-day-monitor`、`market-top-detector`（需 `FMP_API_KEY` 環境變數，未設則跳過）：出貨日計數／頂部機率
+失敗或逾時不阻斷流程，僅於報告標註「判勢補充不可用」。
+
 ---
 
 ### 🟢 Step 1.2: 累積摘要檢查（自動判斷）
