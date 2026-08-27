@@ -164,11 +164,16 @@
       "reason": "矽晶圓漲價🟡強催化（三年多首見，環球晶/台勝科/合晶行情延續）；TOP50 avg_rank 23、buy_ratio 29%、外資近5天 +6,869；EPS Q2 +131.6%＋毛利率 QoQ+6.1pp（+5）；營收 2026-07 +28.8%（新鮮）；月季雙線上、vs MA20 +17%（價位15，追高風險標註）；反轉 L0。卷宗 3 處提及均利多（量增價揚）。",
       "intraday_price": 369.5,
       "intraday_change_pct": -1.86,
-      "result": "holding",
-      "actual_close": 378.0,
+      "result": "success",
+      "actual_close": 394.0,
       "holding_status": "D0 收盤 378.0（+0.4%），未觸目標/停損，續追蹤（D0 不結算）",
       "close_price": 378.0,
-      "change_percent": 0.4
+      "change_percent": 0.4,
+      "settled_date": "2026-08-27",
+      "settled_price": 394.0,
+      "return_pct": 4.65,
+      "success_note": "鐵律出場（v8.3.3 兩次複核成立，08-26 定案、08-27 開盤執行、收盤價入帳 v8.3.2）",
+      "sync_note": "v8.3.7 三處同步：本檔／tracking_2026-08-27 removed_stocks／predictions.json"
     },
     {
       "stock_code": "1605",
@@ -380,13 +385,18 @@
       "position": "5%",
       "score": 90,
       "score_note": "時事16＋法人20＋產業14＋技術12＋價格13＝75；動能-10.5%＋10、EPS Q2 YoY+880%/毛利率QoQ+21.2pp＋5＝90。若比照記憶體產業套用 Micron L2 -15 仍為 75，達門檻",
-      "result": "holding",
+      "result": "success",
       "reason": "法人 TOP50 avg_rank 16.5、buy_ratio 22.4%、外資近5天+3,110 張；反轉 L0；動能-10.5% 佈局中；EPS Q2 20.21 元 YoY+880%、毛利率 68.7%（QoQ+21.2pp）；DRAM 控制器利基定位（MI L3 控制器IC）。⚠️ 營收快取停在 2026-02 落後 6 個月，本因子未採計；⚠️ Micron -5.83% 龍頭預警 L2 記憶體逆風（3006 不在官方對應清單）＋今日 -5.67% 回檔進場；⚠️ 08/27 NVIDIA 財報本週最大變數 → 倉位取下緣 5%",
       "dossier": "stock_dossier_intraday.json：事件窗口無法說會/除權息/重大訊息；mentions 2 處皆正面（DRAM 控制器定位、營收動能表）",
-      "actual_close": 270.0,
+      "actual_close": 274.0,
       "holding_status": "D0 收盤 270.0（+1.7%），未觸目標/停損，續追蹤（D0 不結算）",
       "close_price": 270.0,
-      "change_percent": 1.7
+      "change_percent": 1.7,
+      "settled_date": "2026-08-27",
+      "settled_price": 274.0,
+      "return_pct": 3.2,
+      "success_note": "鐵律出場（v8.3.3 兩次複核成立，08-26 定案、08-27 開盤執行、收盤價入帳 v8.3.2）",
+      "sync_note": "v8.3.7 三處同步：本檔／tracking_2026-08-27 removed_stocks／predictions.json"
     }
   ],
   "track_b_observations": [

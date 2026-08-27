@@ -94,7 +94,11 @@
       "reason": "輝達 Q2 財報超預期＋AWS 200萬顆 GPU 大單、Vera Rubin 機櫃訂單看至 2027-28（🔴AI伺服器↑加速）；法人 avg_rank 25、buy_ratio 36.8%、外資+投信同步、真連買3天累計+15K；動能-55.8%佈局完成(+15)；EPS Q2 YoY+70%(+5)；⚠️ 營收快取落後至 2026-02 本因子未採計；外資持股比週減-0.16%(-3)；5日僅+0.5% 利多未反映",
       "intraday_price": 335.0,
       "intraday_change": "+0.75%",
-      "intraday_status": "續抱（12:30 檢查：反轉L0、無鐵律觸發）"
+      "intraday_status": "續抱（12:30 檢查：反轉L0、無鐵律觸發）",
+      "actual_close": 333.5,
+      "holding_status": "D0，收+0.3%，距目標9.6%/距停損10.3%，L0 續抱",
+      "close_price": 333.5,
+      "change_percent": 0.3
     },
     {
       "stock_code": "2356",
@@ -111,7 +115,11 @@
       "reason": "🔴AI伺服器↑加速（輝達財報利多）＋📶訊號A L2 早期佈局(+10)；法人 avg_rank 21、buy_ratio 51.5%(+2)、10日買超6天累計+15K、外資近5天+9,754；動能+36.6%正常；EPS Q2 YoY+79%(+5)；⚠️ 營收快取落後至 2026-05 本因子未採計；5日+2.5% 未大漲",
       "intraday_price": 65.9,
       "intraday_change": "-1.35%",
-      "intraday_status": "續抱（12:30 檢查：反轉L0、無鐵律觸發）"
+      "intraday_status": "續抱（12:30 檢查：反轉L0、無鐵律觸發）",
+      "actual_close": 65.6,
+      "holding_status": "D0，收-1.8%，距目標12.0%/距停損8.4%，L0（+6,581張）續抱",
+      "close_price": 65.6,
+      "change_percent": -1.8
     },
     {
       "stock_code": "2408",
@@ -128,7 +136,11 @@
       "reason": "🔴DRAM與記憶體↑加速（營收 YoY+719.6% 列影響鏈首位、記憶體漲價向終端轉嫁持續驗證）；法人 avg_rank 21、10日買超6天累計+60K、外資近5天+23K、投信同步；動能-33.3%佈局中(+10)；EPS Q2 YoY+1211%＋毛利率+11.6pp(+5)；⚠️ 營收快取落後至 2026-02 本因子未採計（已知頑固過期檔）；⚠️ 處置預警🟡接近注意門檻（30日+7.5%）；5日+7.5%(-10)；⚠️ 中國長鑫 LPDDR6 傳量產為新競爭變數",
       "intraday_price": 546.0,
       "intraday_change": "+5.61%",
-      "intraday_status": "續抱（12:30 檢查：反轉L0、無鐵律觸發）"
+      "intraday_status": "續抱（12:30 檢查：反轉L0、無鐵律觸發）",
+      "actual_close": 541.0,
+      "holding_status": "D0，收+4.6%，距目標5.1%，L0；⚠️自算處置預警🟡接近注意門檻，禁加碼",
+      "close_price": 541.0,
+      "change_percent": 4.64
     },
     {
       "stock_code": "2344",
@@ -145,7 +157,11 @@
       "reason": "🔥超強催化覆寫（動能+191.6%>100%，🔴DRAM超強區成立→不扣分、倉位5-10%、停損-5%）；法人 avg_rank 5（TOP10）、buy_ratio 17.6%、累計+58K、外資近5天+45K；外資持股比週增+0.73%(+5)；EPS Q2 YoY+1962%＋毛利率+12.9pp(+5)；5日+8.0%(-10)；⚠️ 營收快取落後至 2026-02 本因子未採計（v8.3.2 已知頑固過期檔）",
       "intraday_price": 187.0,
       "intraday_change": "+3.03%",
-      "intraday_status": "續抱（12:30 檢查：反轉L0、無鐵律觸發）"
+      "intraday_status": "續抱（12:30 檢查：反轉L0、無鐵律觸發）",
+      "actual_close": 186.0,
+      "holding_status": "D0，收+2.5%，距目標7.3%/距停損7.3%（覆寫停損-5%），L0（+14,924張）續抱",
+      "close_price": 186.0,
+      "change_percent": 2.48
     }
   ],
   "recommendation_note": "寧缺勿濫：僅 2 個產業 4 檔（AI 伺服器×2、記憶體×2，各 50% 達單一產業上限）。湊分散的候選全數未過門檻：1608 華榮/1802 台玻/2002 中鋼/1301 台塑/2883 凱基金皆動能>100%且無🔴覆寫資格；5880 合庫金 68 分未達 70；2812 台中銀觸法人現身門檻（不在當日 TOP50 買超×乖離+0.3%）；2324 仁寶催化方向為↓（記憶體漲價衝擊終端，topic_tracker 兩處標↓）列觀察。",
@@ -546,7 +562,41 @@
       "note": "光通訊🔴區點名（博通/超微包FOPLP產能）但動能+138.8%、累計-4,135負、真連買1天，籌碼未過排除"
     }
   ],
-  "removed_stocks": [],
+  "removed_stocks": [
+    {
+      "stock_code": "3532",
+      "stock_name": "台勝科",
+      "recommend_date": "2026-08-25",
+      "recommend_price": 376.5,
+      "settled_price": 394.0,
+      "return_pct": 4.65,
+      "result": "success",
+      "removal_reason": "鐵律出場（v8.3.3 兩次複核成立，08-26 定案、08-27 開盤執行、收盤價入帳 v8.3.2）",
+      "settled_by": "manual_iron_rule_exit"
+    },
+    {
+      "stock_code": "3006",
+      "stock_name": "晶豪科",
+      "recommend_date": "2026-08-25",
+      "recommend_price": 265.5,
+      "settled_price": 274.0,
+      "return_pct": 3.2,
+      "result": "success",
+      "removal_reason": "鐵律出場（v8.3.3 兩次複核成立，08-26 定案、08-27 開盤執行、收盤價入帳 v8.3.2）",
+      "settled_by": "manual_iron_rule_exit"
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "recommend_date": "2026-08-26",
+      "recommend_price": 39.3,
+      "settled_price": 39.35,
+      "return_pct": 0.13,
+      "result": "success",
+      "removal_reason": "鐵律出場（08-27 盤前 L4 賣超佔比18.9%≥8% 不受邊緣值例外保護，開盤出場、收盤價入帳 v8.3.2）",
+      "settled_by": "manual_iron_rule_exit"
+    }
+  ],
   "tomorrow_recommendations": [],
   "tomorrow_opening_exits": [],
   "track_b_note": "今日無盤中新推薦：存活候選 2615 萬海63分／6116 彩晶69分／3045 台灣大48分，全數未達75門檻（寧缺勿濫）",
@@ -560,5 +610,63 @@
       "3037 欣興 1170距目標1205 3.0%",
       "2408 南亞科 546距目標568.5 4.1%"
     ]
+  },
+  "after_market_summary": {
+    "settled_today": [
+      {
+        "stock_code": "3532",
+        "stock_name": "台勝科",
+        "return_pct": 4.65,
+        "result": "success",
+        "note": "已決事項鐵律出場，收盤394.0入帳"
+      },
+      {
+        "stock_code": "3006",
+        "stock_name": "晶豪科",
+        "return_pct": 3.2,
+        "result": "success",
+        "note": "已決事項鐵律出場，收盤274.0入帳"
+      },
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "return_pct": 0.13,
+        "result": "success",
+        "note": "盤前L4鐵律（18.9%≥8%）出場，收盤39.35入帳"
+      }
+    ],
+    "series_alignment_check": "20筆逐檔核對：19檔末日=2026-08-27 OK；2867三商壽末日2026-08-19（第6個資料日）維持v8.3.8凍結",
+    "aftermarket_reversal_scan": "16檔續追蹤持倉全L0/買超中，零L3/L4；分子仍為08-26 T86（08-27 T86 14:33尚未公布）；2408🟡處置預警接近注意門檻",
+    "tomorrow_new_recommendations": 0,
+    "tomorrow_note": "明日08/28華許傑克森洞演說＋台股月結；候選2615萬海63/6116彩晶69/3045台灣大48皆未達75，寧缺勿濫0檔；08-27 T86明晨盤前補抓後完整評分",
+    "predictions_stats": "準確率56.6%（337s/258f/595筆結算），holding 183；歸屬核對3筆全數掛最近holding筆（3532/3006→08-25、2890→08-26）"
+  },
+  "yesterday_verification": {
+    "accuracy": 56.6,
+    "settled_count": 595,
+    "success": 337,
+    "fail": 258,
+    "holding": 183,
+    "results": [
+      {
+        "stock_code": "3532",
+        "stock_name": "台勝科",
+        "result": "success",
+        "return_pct": 4.65
+      },
+      {
+        "stock_code": "3006",
+        "stock_name": "晶豪科",
+        "result": "success",
+        "return_pct": 3.2
+      },
+      {
+        "stock_code": "2890",
+        "stock_name": "永豐金",
+        "result": "success",
+        "return_pct": 0.13
+      }
+    ],
+    "note": "本日結算3筆（鐵律出場，收盤價入帳）；準確率為 predictions.json 全期統計"
   }
 }
