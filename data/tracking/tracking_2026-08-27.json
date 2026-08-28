@@ -111,15 +111,20 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 88,
-      "result": "holding",
+      "result": "fail",
       "reason": "🔴AI伺服器↑加速（輝達財報利多）＋📶訊號A L2 早期佈局(+10)；法人 avg_rank 21、buy_ratio 51.5%(+2)、10日買超6天累計+15K、外資近5天+9,754；動能+36.6%正常；EPS Q2 YoY+79%(+5)；⚠️ 營收快取落後至 2026-05 本因子未採計；5日+2.5% 未大漲",
       "intraday_price": 65.9,
       "intraday_change": "-1.35%",
       "intraday_status": "續抱（12:30 檢查：反轉L0、無鐵律觸發）",
-      "actual_close": 65.6,
+      "actual_close": 64.9,
       "holding_status": "D0，收-1.8%，距目標12.0%/距停損8.4%，L0（+6,581張）續抱",
       "close_price": 65.6,
-      "change_percent": -1.8
+      "change_percent": -1.8,
+      "settled_date": "2026-08-28",
+      "settled_price": 64.9,
+      "return_pct": -2.84,
+      "fail_reason": "鐵律出場（08-28 盤前 L4 賣超佔比40.2%，遠離門檻，開盤出場、收盤價入帳 v8.3.2）",
+      "sync_note": "v8.3.7 結算同步寫三處：來源檔＋當日 removed_stocks＋predictions.json"
     },
     {
       "stock_code": "2408",

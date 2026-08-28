@@ -106,15 +106,20 @@
       "settlement_days": 10,
       "position": "10-15%",
       "score": 99,
-      "result": "holding",
+      "result": "fail",
       "reason": "訊號A L2（5 天在 TOP50、avg_rank 最佳 8.0）+10｜動能 -73.9% +15｜Q2 EPS YoY+360%、毛利率 QoQ+3.2pp +5｜反轉 Level 0、10日累計 +51K、近5日外資 +27K｜月線乖離 +9.2%、季線上。⚠️ 投信 10 日 -17K 與外資對作；真連買 2 天；⚠️ 營收快取落後 2026-02，本因子未採計；當日時事資料無直接提及（卷宗 4 筆 mentions 皆為『2027 年』字串誤中）",
       "intraday_price": 50.0,
       "intraday_change_pct": -0.99,
       "intraday_reversal": "Level 0",
-      "actual_close": 50.3,
+      "actual_close": 48.4,
       "change_percent": -0.4,
       "holding_status": "D0/10，收盤 50.3（對進場 -0.4%）；反轉 🟢L0 +2,901，10日+45K",
-      "close_price": 50.3
+      "close_price": 50.3,
+      "settled_date": "2026-08-28",
+      "settled_price": 48.4,
+      "return_pct": -4.16,
+      "fail_reason": "鐵律出場（08-28 盤前 L4 賣超佔比16.6%≥8%，開盤出場、收盤價入帳 v8.3.2）",
+      "sync_note": "v8.3.7 結算同步寫三處：來源檔＋當日 removed_stocks＋predictions.json"
     },
     {
       "stock_code": "2344",

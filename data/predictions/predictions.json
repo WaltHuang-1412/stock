@@ -7547,11 +7547,11 @@
       }
     ]
   },
-  "settled_accuracy": "56.6%",
-  "settled_count": 595,
-  "holding_count": 183,
-  "total_success": 337,
-  "total_fail": 258,
+  "settled_accuracy": "56.5%",
+  "settled_count": 600,
+  "holding_count": 182,
+  "total_success": 339,
+  "total_fail": 261,
   "2026-03-30": {
     "predictions": [
       {
@@ -15428,10 +15428,12 @@
         "settlement_days": 10,
         "position": "10%",
         "score": 84,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-28",
+        "settled_price": 75.7,
+        "holding_days": 1,
+        "return_pct": -0.79,
+        "fail_reason": "D10 到期結算：收盤 75.7 ≤ 推薦價 76.3（settlement_checker 機械判定）"
       },
       {
         "symbol": "1504",
@@ -15704,10 +15706,12 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 92,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-28",
+        "settled_price": 41.8,
+        "holding_days": 1,
+        "return_pct": 0.48,
+        "fail_reason": "鐵律出場（08-28 盤前 L4 賣超佔比12.8%≥8%，開盤出場、收盤價入帳 v8.3.2）"
       },
       {
         "symbol": "2030",
@@ -15789,10 +15793,12 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 99,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-28",
+        "settled_price": 48.4,
+        "holding_days": 1,
+        "return_pct": -4.16,
+        "fail_reason": "鐵律出場（08-28 盤前 L4 賣超佔比16.6%≥8%，開盤出場、收盤價入帳 v8.3.2）"
       },
       {
         "symbol": "2344",
@@ -16036,10 +16042,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 80,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-08-28",
+        "settled_price": 105.5,
+        "holding_days": 1,
+        "return_pct": 2.43,
+        "fail_reason": "鐵律出場（08-28 盤前 L4 賣超佔比11.6%≥8%，開盤出場、收盤價入帳 v8.3.2）"
       },
       {
         "symbol": "2371",
@@ -16102,10 +16110,12 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 88,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-08-28",
+        "settled_price": 64.9,
+        "holding_days": 1,
+        "return_pct": -2.84,
+        "fail_reason": "鐵律出場（08-28 盤前 L4 賣超佔比40.2%，遠離門檻，開盤出場、收盤價入帳 v8.3.2）"
       },
       {
         "symbol": "2408",
@@ -16132,6 +16142,72 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 84,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-08-28": {
+    "predictions": [
+      {
+        "symbol": "2609",
+        "name": "陽明",
+        "recommend_price": 57.9,
+        "target_price": 63.7,
+        "stop_loss": 52.11,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 100,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "1504",
+        "name": "東元",
+        "recommend_price": 73.4,
+        "target_price": 80.7,
+        "stop_loss": 66.06,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 90,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2801",
+        "name": "彰銀",
+        "recommend_price": 24.7,
+        "target_price": 26.7,
+        "stop_loss": 22.23,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 81,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "1326",
+        "name": "台化",
+        "recommend_price": 63.2,
+        "target_price": 68.0,
+        "stop_loss": 60.04,
+        "stop_loss_pct": -5,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 73,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
