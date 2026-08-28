@@ -489,12 +489,18 @@ def detect_reversal(stock_code, stock_name="", days=10):
     cumulative_total = sum(d['total'] for d in data_list)
 
     # 🆕 v3.0：取得日均成交量，用比例判斷門檻（大小型股公平）
+    # 2026-08-28 修正：改用 avg_5day_volume（前5日真均量，不含今日）。
+    # 舊版誤用 info['volume']（單一交易日量：盤中為未完成累計量、盤後為全日量），
+    # 分子（T86 前一交易日賣超）與分母日期不對齊且分母盤中浮動，
+    # 導致同一份賣超在盤前/盤中/盤後判出相反等級（v8.3.2/v8.3.3 分母效應）。
     avg_daily_volume = 0  # 日均量（張）
     if HAS_YAHOO:
         try:
             info = get_stock_info(stock_code)
-            if info and info.get('volume'):
-                avg_daily_volume = info['volume'] // 1000  # 股→張
+            if info:
+                vol = info.get('avg_5day_volume') or info.get('volume')
+                if vol:
+                    avg_daily_volume = vol // 1000  # 股→張
         except Exception:
             pass
     if avg_daily_volume <= 0:

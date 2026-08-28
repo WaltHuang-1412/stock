@@ -152,6 +152,15 @@ def check_settlement(entries, date_str):
     """逐筆用歷史收盤從推薦日重演結算"""
     results = []
 
+    # 先抓齊全部序列，求「市場最新交易日」＝所有序列末日的最大值。
+    # 個股序列末日落後市場最新日 ＝ 序列停滯（停牌/斷更），凍結判定（v8.3.8）。
+    all_series = {}
+    for info in entries:
+        code = info["stock_code"]
+        if code and code not in all_series:
+            all_series[code] = get_close_series(code)
+    market_last = max((s[-1][0] for s in all_series.values() if s), default=None)
+
     for info in entries:
         code = info["stock_code"]
         recommend_price = _num(info["recommend_price"])
@@ -162,10 +171,18 @@ def check_settlement(entries, date_str):
                             "reason": f"recommend_price 缺漏或非數字（{info['recommend_price']!r}），無法結算"})
             continue
 
-        series = get_close_series(code)
+        series = all_series.get(code)
         if not series:
             results.append({**info, "close": None, "result": "error",
                             "reason": "無法取得收盤價序列"})
+            continue
+
+        if market_last and series[-1][0] < market_last:
+            results.append({**info, "close": series[-1][1], "result": "holding",
+                            "stale_series": True, "change_pct": round(
+                                (series[-1][1] - recommend_price) / recommend_price * 100, 2),
+                            "reason": (f"⚠️ 序列停滯（末日 {series[-1][0]}，市場最新 {market_last}）"
+                                       f"｜凍結判定：不結算、不出場、D 不推進（v8.3.8）")})
             continue
 
         # 用 stop_loss_pct 重算 stop_loss（非數字時依軌道預設）

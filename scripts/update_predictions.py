@@ -67,6 +67,7 @@ def update_from_tracking(predictions, tracking, date_str):
                 "close": close,
                 "return_pct": rec.get("return_pct"),
                 "fail_reason": rec.get("removal_reason"),
+                "recommend_date": rec.get("recommend_date"),
             }
 
     # 再掃 recommendations（有更完整的價格資訊，覆蓋 removed_stocks）
@@ -81,6 +82,7 @@ def update_from_tracking(predictions, tracking, date_str):
                     "close": close,
                     "return_pct": rec.get("return_pct"),
                     "fail_reason": rec.get("fail_reason"),
+                    "recommend_date": rec.get("recommend_date") or tracking.get("date"),
                 }
 
     if not settled_stocks:
@@ -88,36 +90,52 @@ def update_from_tracking(predictions, tracking, date_str):
         return changes
 
     # 在 predictions 中找到對應的 holding 項目並更新
+    # 歸屬規則（2026-08-28 修正，取代舊版「掃到第一筆 holding 就寫」的錯誤行為）：
+    # ① 優先寫入 date_key == 該筆結算的 recommend_date 的 holding
+    # ② 無 recommend_date 或找不到對應筆 → 寫入「最新」的 holding（殭屍 holding 都在舊日期）
+    holding_index = {}  # symbol -> [(date_key, pred), ...]
     for date_key, day_data in predictions.items():
         if not isinstance(day_data, dict) or "predictions" not in day_data:
             continue
-
         for pred in day_data["predictions"]:
-            symbol = pred.get("symbol")
-            if symbol not in settled_stocks:
-                continue
-            if pred.get("result") != "holding":
-                continue
+            if pred.get("result") == "holding" and pred.get("symbol") in settled_stocks:
+                holding_index.setdefault(pred["symbol"], []).append((date_key, pred))
 
-            settlement = settled_stocks[symbol]
-            old_result = pred["result"]
-            pred["result"] = settlement["result"]
-            pred["settled_date"] = date_str
-            pred["settled_price"] = settlement["close"]
-            if settlement.get("fail_reason"):
-                pred["fail_reason"] = settlement["fail_reason"]
+    for symbol, settlement in list(settled_stocks.items()):
+        candidates = holding_index.get(symbol)
+        if not candidates:
+            continue
+        rec_date = settlement.get("recommend_date")
+        exact = [c for c in candidates if c[0] == rec_date]
+        if exact:
+            date_key, pred = exact[0]
+        else:
+            date_key, pred = max(candidates, key=lambda c: c[0])  # 最新的 holding
+            if rec_date:
+                print(f"  ⚠️ {symbol} 找不到 date_key={rec_date} 的 holding，改寫入最新筆 {date_key}",
+                      file=sys.stderr)
 
-            changes.append({
-                "symbol": symbol,
-                "name": pred.get("name", ""),
-                "from": old_result,
-                "to": settlement["result"],
-                "date_key": date_key,
-                "settled_price": settlement["close"],
-            })
+        old_result = pred["result"]
+        pred["result"] = settlement["result"]
+        pred["settled_date"] = date_str
+        pred["settled_price"] = settlement["close"]
+        if settlement.get("return_pct") is not None:
+            pred["return_pct"] = settlement["return_pct"]
+        elif settlement["close"] and pred.get("recommend_price"):
+            pred["return_pct"] = round(
+                (settlement["close"] - pred["recommend_price"]) / pred["recommend_price"] * 100, 2)
+        if settlement.get("fail_reason"):
+            pred["fail_reason"] = settlement["fail_reason"]
 
-            # 移除已處理的
-            del settled_stocks[symbol]
+        changes.append({
+            "symbol": symbol,
+            "name": pred.get("name", ""),
+            "from": old_result,
+            "to": settlement["result"],
+            "date_key": date_key,
+            "settled_price": settlement["close"],
+        })
+        del settled_stocks[symbol]
 
     return changes
 
