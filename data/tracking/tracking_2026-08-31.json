@@ -1,17 +1,31 @@
 {
   "date": "2026-08-31",
-  "settings": { "stop_loss_pct": -10, "settlement_days": 10 },
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
   "market_context": {
     "us_session": "2026-08-28（美股上週五收盤，今日台股開盤前唯一新場次）",
-    "sox": -3.47, "nasdaq": -0.52, "nvda": -4.57, "mrvl": -10.28,
-    "lam_research": -5.24, "amat": -4.29, "klac": -4.48,
-    "aapl": 1.63, "amzn": 3.97, "msft": 1.68, "googl": 1.74,
-    "vix": 14.43, "wti": 1.45, "usd_twd": 31.62,
+    "sox": -3.47,
+    "nasdaq": -0.52,
+    "nvda": -4.57,
+    "mrvl": -10.28,
+    "lam_research": -5.24,
+    "amat": -4.29,
+    "klac": -4.48,
+    "aapl": 1.63,
+    "amzn": 3.97,
+    "msft": 1.68,
+    "googl": 1.74,
+    "vix": 14.43,
+    "wti": 1.45,
+    "usd_twd": 31.62,
     "regime_note": "VIX 14.43 <20 → 防禦 0-15%／進攻 85-100%；market_regime.json 今日 MI 未產出，依 CLAUDE.md VIX 表格判定"
   },
   "prior_decisions_executed": [
     {
-      "stock_code": "3090", "stock_name": "日電貿",
+      "stock_code": "3090",
+      "stock_name": "日電貿",
       "source": "my_holdings.yaml（持倉決議，不進 predictions）",
       "decided_date": "2026-08-28",
       "category": "L4 鐵律（v8.3.2 待複核兩次成立）",
@@ -20,85 +34,324 @@
     }
   ],
   "opening_exits_today": [
-    { "stock_code": "3090", "stock_name": "日電貿", "type": "已決事項", "reason": "08-28 定案 L4 待複核兩次成立（盤後完整日量 15.5%）", "source": "my_holdings.yaml 持倉" },
-    { "stock_code": "2371", "stock_name": "大同", "type": "L4 鐵律", "sell_pct_of_avg_vol": 77.9, "sell_lots": -9582, "recommend_date": "2026-08-26" },
-    { "stock_code": "2344", "stock_name": "華邦電", "type": "L4 鐵律", "sell_pct_of_avg_vol": 36.9, "sell_lots": -38816, "recommend_date": "2026-08-27" },
-    { "stock_code": "2609", "stock_name": "陽明", "type": "L4 鐵律", "sell_pct_of_avg_vol": 11.3, "sell_lots": -17498, "recommend_date": "2026-08-28" },
-    { "stock_code": "1504", "stock_name": "東元", "type": "L4 鐵律", "sell_pct_of_avg_vol": 53.5, "sell_lots": -5326, "recommend_date": "2026-08-28" },
-    { "stock_code": "2801", "stock_name": "彰銀", "type": "L4 鐵律", "sell_pct_of_avg_vol": 14.6, "sell_lots": -2203, "recommend_date": "2026-08-28" },
-    { "stock_code": "2887", "stock_name": "台新新光金", "type": "L4 鐵律", "sell_pct_of_avg_vol": 7.1, "sell_lots": -2847, "note": "佔比 7.1% <8%，但 10 日累計三大法人 -18K 為負 → 不受 v8.3.3 待複核保護，立即出場", "recommend_date": "2026-08-26" },
-    { "stock_code": "4938", "stock_name": "和碩", "type": "L4 鐵律", "sell_pct_of_avg_vol": 29.0, "sell_lots": -1657, "source": "my_holdings.yaml 持倉（1 張）" }
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "type": "已決事項",
+      "reason": "08-28 定案 L4 待複核兩次成立（盤後完整日量 15.5%）",
+      "source": "my_holdings.yaml 持倉"
+    },
+    {
+      "stock_code": "2371",
+      "stock_name": "大同",
+      "type": "L4 鐵律",
+      "sell_pct_of_avg_vol": 77.9,
+      "sell_lots": -9582,
+      "recommend_date": "2026-08-26"
+    },
+    {
+      "stock_code": "2344",
+      "stock_name": "華邦電",
+      "type": "L4 鐵律",
+      "sell_pct_of_avg_vol": 36.9,
+      "sell_lots": -38816,
+      "recommend_date": "2026-08-27"
+    },
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "type": "L4 鐵律",
+      "sell_pct_of_avg_vol": 11.3,
+      "sell_lots": -17498,
+      "recommend_date": "2026-08-28"
+    },
+    {
+      "stock_code": "1504",
+      "stock_name": "東元",
+      "type": "L4 鐵律",
+      "sell_pct_of_avg_vol": 53.5,
+      "sell_lots": -5326,
+      "recommend_date": "2026-08-28"
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "type": "L4 鐵律",
+      "sell_pct_of_avg_vol": 14.6,
+      "sell_lots": -2203,
+      "recommend_date": "2026-08-28"
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "type": "L4 鐵律",
+      "sell_pct_of_avg_vol": 7.1,
+      "sell_lots": -2847,
+      "note": "佔比 7.1% <8%，但 10 日累計三大法人 -18K 為負 → 不受 v8.3.3 待複核保護，立即出場",
+      "recommend_date": "2026-08-26"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "type": "L4 鐵律",
+      "sell_pct_of_avg_vol": 29.0,
+      "sell_lots": -1657,
+      "source": "my_holdings.yaml 持倉（1 張）"
+    }
   ],
   "pending_review": [
     {
-      "stock_code": "2603", "stock_name": "長榮",
-      "level": "L4", "sell_pct_of_avg_vol": 5.7, "sell_lots": -1434,
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "level": "L4",
+      "sell_pct_of_avg_vol": 5.7,
+      "sell_lots": -1434,
       "cum_10d_institutional": 89000,
       "rule": "v8.3.3：賣超佔比 <8% 且 10 日累計三大法人為正 → 不開盤出場，12:30 與盤後各複核一次，兩次皆 ≥5% 才於次日開盤出場",
-      "review_count": 0, "recommend_date": "2026-08-25"
+      "review_count": 0,
+      "recommend_date": "2026-08-25"
     }
   ],
   "frozen": [
     {
-      "stock_code": "2867", "stock_name": "三商壽",
+      "stock_code": "2867",
+      "stock_name": "三商壽",
       "reason": "⚠️ 序列停滯（末日 2026-08-19，市場最新 2026-08-28）→ 凍結判定：不結算、不出場、D 不推進（v8.3.8；v8.3.9 已由 settlement_checker 自動標記）",
       "recommend_date": "2026-08-17"
     }
   ],
   "recommendations": [
     {
-      "stock_code": "2880", "stock_name": "華南金", "industry": "金融（industry_chains: 金融/tier_0 金控）",
-      "recommend_price": 40.25, "target_price": 43.5,
-      "stop_loss_pct": -10, "stop_loss": 36.23, "settlement_days": 10,
-      "position": "10-15%", "score": 104,
-      "reason": "📶 訊號A L2 早期佈局(+10)｜法人 TOP50 #10、avg_rank 14.5、buy_ratio 38.1%、外資 +14,103 張｜籌碼動能 -48.1% 佈局完成(+15)｜反轉 Level 0、10 日累計 +41K 張｜月線 -1.6%／季線 +3.0%（季線撐）｜⚠️ Q2 半年報未公布（金融業申報期限 08/31＝今日），EPS 因子未採計；若盤中公布財報，不加碼｜⚠️ 營收快取落後至 2026-05，營收因子未採計｜卷宗：無法說會／無除權息／無重大訊息"
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "industry": "金融（industry_chains: 金融/tier_0 金控）",
+      "recommend_price": 40.25,
+      "target_price": 43.5,
+      "stop_loss_pct": -10,
+      "stop_loss": 36.23,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 104,
+      "reason": "📶 訊號A L2 早期佈局(+10)｜法人 TOP50 #10、avg_rank 14.5、buy_ratio 38.1%、外資 +14,103 張｜籌碼動能 -48.1% 佈局完成(+15)｜反轉 Level 0、10 日累計 +41K 張｜月線 -1.6%／季線 +3.0%（季線撐）｜⚠️ Q2 半年報未公布（金融業申報期限 08/31＝今日），EPS 因子未採計；若盤中公布財報，不加碼｜⚠️ 營收快取落後至 2026-05，營收因子未採計｜卷宗：無法說會／無除權息／無重大訊息",
+      "intraday_price": 41.0,
+      "intraday_return_pct": 1.86,
+      "result": "holding"
     },
     {
-      "stock_code": "2615", "stock_name": "萬海", "industry": "航運（industry_chains: 中東地緣政治/tier_from_tracker 含航運）",
-      "recommend_price": 111.5, "target_price": 125.0,
-      "stop_loss_pct": -10, "stop_loss": 100.35, "settlement_days": 10,
-      "position": "10-15%", "score": 97,
-      "reason": "🔴 中東地緣政治（含航運）超強催化＋美軍打擊伊朗荷莫茲海峽設施、WTI +1.45%｜10 日法人累計 +80K 張、9買1賣、近5日外資 +21K 張｜籌碼動能 -64.6% 佈局完成(+15)｜營收 2026-07 YoY +50.1% ＋近5日回檔 -10.4% → 黃金買點(+5)｜EPS 2026Q2 YoY +981.6%、毛利率 QoQ +7.6pp(+5)｜反轉 Level 0｜月線乖離 +11.1% 免受法人現身門檻限制｜卷宗：無事件"
+      "stock_code": "2615",
+      "stock_name": "萬海",
+      "industry": "航運（industry_chains: 中東地緣政治/tier_from_tracker 含航運）",
+      "recommend_price": 111.5,
+      "target_price": 125.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 100.35,
+      "settlement_days": 10,
+      "position": "10-15%",
+      "score": 97,
+      "reason": "🔴 中東地緣政治（含航運）超強催化＋美軍打擊伊朗荷莫茲海峽設施、WTI +1.45%｜10 日法人累計 +80K 張、9買1賣、近5日外資 +21K 張｜籌碼動能 -64.6% 佈局完成(+15)｜營收 2026-07 YoY +50.1% ＋近5日回檔 -10.4% → 黃金買點(+5)｜EPS 2026Q2 YoY +981.6%、毛利率 QoQ +7.6pp(+5)｜反轉 Level 0｜月線乖離 +11.1% 免受法人現身門檻限制｜卷宗：無事件",
+      "intraday_price": 111.0,
+      "intraday_return_pct": -0.45,
+      "result": "holding"
     },
     {
-      "stock_code": "6108", "stock_name": "競國", "industry": "光通訊與網通（industry_chains: 光通訊/tier_from_tracker）",
-      "recommend_price": 25.7, "target_price": 28.8,
-      "stop_loss_pct": -10, "stop_loss": 23.13, "settlement_days": 10,
-      "position": "5-10%", "score": 79,
-      "reason": "🔴 光通訊與網通（含CPO/矽光子量產）超強催化、MI 標✅有支撐｜法人 TOP50 #34、buy_ratio 21.7%、真連買 4 天、10 日累計 +7,786 張｜反轉 Level 0｜動能 +7.8% 正常區｜月線 +19.0%／季線 +33.6% 雙線上（價格位置 15 分滿分）｜EPS 2026Q2 YoY +450%、毛利率 QoQ +15.9pp(+5)｜營收 2026-07 新鮮 YoY +63.2%，惟回檔僅 -1.0% 未達門檻不加分｜卷宗：無事件"
+      "stock_code": "6108",
+      "stock_name": "競國",
+      "industry": "光通訊與網通（industry_chains: 光通訊/tier_from_tracker）",
+      "recommend_price": 25.7,
+      "target_price": 28.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 23.13,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 79,
+      "reason": "🔴 光通訊與網通（含CPO/矽光子量產）超強催化、MI 標✅有支撐｜法人 TOP50 #34、buy_ratio 21.7%、真連買 4 天、10 日累計 +7,786 張｜反轉 Level 0｜動能 +7.8% 正常區｜月線 +19.0%／季線 +33.6% 雙線上（價格位置 15 分滿分）｜EPS 2026Q2 YoY +450%、毛利率 QoQ +15.9pp(+5)｜營收 2026-07 新鮮 YoY +63.2%，惟回檔僅 -1.0% 未達門檻不加分｜卷宗：無事件",
+      "intraday_price": 24.25,
+      "intraday_return_pct": -5.64,
+      "result": "holding"
     }
   ],
   "carry_over": [
-    { "stock_code": "3037", "stock_name": "欣興", "score_today": 104, "holding_days": "D2/10", "note": "⏳沿用進行中追蹤（D2/10），維持原進場價／停損不變，不重複建倉。⚠️ 卷宗揭露：08/28 遭桃園地檢署指揮調查局搜索（PCB 產地標示爭議），公司已發重訊澄清非重大財務影響 → 維持追蹤但不加碼" },
-    { "stock_code": "2886", "stock_name": "兆豐金", "score_today": 91, "holding_days": "D3/10", "note": "⏳沿用進行中追蹤（D3/10），不重複建倉。⚠️ 今日 09:00 香港法說會揭露 2026 Q2 營運概況 → 雙向波動風險，不加碼" },
-    { "stock_code": "2892", "stock_name": "第一金", "score_today": 82, "holding_days": "D5/10", "note": "⏳沿用進行中追蹤（D5/10），不重複建倉。⚠️ Q2 半年報未公布，EPS 因子未採計" },
-    { "stock_code": "2408", "stock_name": "南亞科", "score_today": 80, "holding_days": "D1/10", "note": "⏳沿用進行中追蹤（D1/10），不重複建倉。⚠️ 處置自算預警：近90日漲幅 146.6%，接近 160% 注意門檻" },
-    { "stock_code": "1605", "stock_name": "華新", "holding_days": "D3/10", "note": "⏳沿用追蹤。籌碼動能 +500% >100% → 不列新推薦（動能一票否決），持倉續抱" },
-    { "stock_code": "1326", "stock_name": "台化", "holding_days": "D0/10", "note": "⏳沿用追蹤。籌碼動能 +500% >100% → 不列新推薦，持倉續抱" },
-    { "stock_code": "2382", "stock_name": "廣達", "holding_days": "D1/10", "note": "⏳沿用追蹤。反轉 Level 2（賣超佔比 4.2%）-15 分；NVIDIA -4.57% 龍頭預警 Level 1 -5 分 → 密切觀察，不加碼" }
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "score_today": 104,
+      "holding_days": "D2/10",
+      "note": "⏳沿用進行中追蹤（D2/10），維持原進場價／停損不變，不重複建倉。⚠️ 卷宗揭露：08/28 遭桃園地檢署指揮調查局搜索（PCB 產地標示爭議），公司已發重訊澄清非重大財務影響 → 維持追蹤但不加碼"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "score_today": 91,
+      "holding_days": "D3/10",
+      "note": "⏳沿用進行中追蹤（D3/10），不重複建倉。⚠️ 今日 09:00 香港法說會揭露 2026 Q2 營運概況 → 雙向波動風險，不加碼"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "score_today": 82,
+      "holding_days": "D5/10",
+      "note": "⏳沿用進行中追蹤（D5/10），不重複建倉。⚠️ Q2 半年報未公布，EPS 因子未採計"
+    },
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "score_today": 80,
+      "holding_days": "D1/10",
+      "note": "⏳沿用進行中追蹤（D1/10），不重複建倉。⚠️ 處置自算預警：近90日漲幅 146.6%，接近 160% 注意門檻"
+    },
+    {
+      "stock_code": "1605",
+      "stock_name": "華新",
+      "holding_days": "D3/10",
+      "note": "⏳沿用追蹤。籌碼動能 +500% >100% → 不列新推薦（動能一票否決），持倉續抱"
+    },
+    {
+      "stock_code": "1326",
+      "stock_name": "台化",
+      "holding_days": "D0/10",
+      "note": "⏳沿用追蹤。籌碼動能 +500% >100% → 不列新推薦，持倉續抱"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "holding_days": "D1/10",
+      "note": "⏳沿用追蹤。反轉 Level 2（賣超佔比 4.2%）-15 分；NVIDIA -4.57% 龍頭預警 Level 1 -5 分 → 密切觀察，不加碼"
+    }
   ],
   "portfolio_add_evaluation": [
-    { "stock_code": "3090", "stock_name": "日電貿", "verdict": "🛑 開盤出場（已決事項）" },
-    { "stock_code": "4938", "stock_name": "和碩", "verdict": "🛑 開盤出場（L4 賣超佔比 29.0%）" },
-    { "stock_code": "1301", "stock_name": "台塑", "score": 73, "verdict": "🟡 續抱觀察（不加碼）", "note": "法人買超健康、塑化 tier_0、中東油價受惠；惟 5 日 +5.6% 落在 5-10% 帶 -10 分" },
-    { "stock_code": "2330", "stock_name": "台積電", "verdict": "🟡 續抱觀察（不加碼）", "note": "反轉 Level 0、10 日累計 +6,550 張；惟 Lam Research -5.24% 觸發龍頭預警 Level 2 → -15 分" },
-    { "stock_code": "2313", "stock_name": "華通", "verdict": "🟡 續抱觀察（不加碼）", "note": "Level 0、累計 +20,968 張，惟 5 日 +12.9% 已大漲不追" },
-    { "stock_code": "6770", "stock_name": "力積電", "verdict": "⚠️ 留意減碼", "note": "❓狀態不明：今日 +1,515 張但 10 日累計 -109,589 張為負，不可視為 Safe" },
-    { "stock_code": "2337", "stock_name": "旺宏", "verdict": "⚠️ 留意減碼", "note": "❓狀態不明：今日 -1,133 張、10 日累計 -2,075 張為負" }
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "verdict": "🛑 開盤出場（已決事項）"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "verdict": "🛑 開盤出場（L4 賣超佔比 29.0%）"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "score": 73,
+      "verdict": "🟡 續抱觀察（不加碼）",
+      "note": "法人買超健康、塑化 tier_0、中東油價受惠；惟 5 日 +5.6% 落在 5-10% 帶 -10 分"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "verdict": "🟡 續抱觀察（不加碼）",
+      "note": "反轉 Level 0、10 日累計 +6,550 張；惟 Lam Research -5.24% 觸發龍頭預警 Level 2 → -15 分"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "verdict": "🟡 續抱觀察（不加碼）",
+      "note": "Level 0、累計 +20,968 張，惟 5 日 +12.9% 已大漲不追"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "verdict": "⚠️ 留意減碼",
+      "note": "❓狀態不明：今日 +1,515 張但 10 日累計 -109,589 張為負，不可視為 Safe"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "verdict": "⚠️ 留意減碼",
+      "note": "❓狀態不明：今日 -1,133 張、10 日累計 -2,075 張為負"
+    }
   ],
   "gate_exclusions": {
-    "法人現身門檻（不在當日TOP50買超 × 月線乖離0~+5%）": ["3045 台灣大(+2.9%，📶訊號A L3)", "1102 亞泥(+2.9%)", "1402 遠東新(+0.8%)", "1314 中石化(+2.6%)", "2812 台中銀(+0.1%)", "6505 台塑化(+1.3%)", "2634 漢翔(+2.3%)", "8299 群聯(+5.0%)", "4958 臻鼎-KY(+2.9%)", "2451 創見(+0.3%)", "3034 聯詠(+1.9%)"],
-    "法說會當天不開新倉（Step 9.5 卷宗閘門）": ["5880 合庫金（今日 14:30 法說，Q2 營運及財務概況；評分 101 分，否則為第 2 順位推薦）", "2890 永豐金（今日 22:00 紐約/倫敦法說，Q2 財務業務；評分 92 分）"],
-    "反轉 L3/L4 直接排除": ["1216 統一(20.9%)", "2618 長榮航(31.9%)", "1102 亞泥(16.5%)", "1402 遠東新(18.6%)", "1314 中石化(10.5%)", "2812 台中銀(53.7%)", "2606 裕民(9.7%)", "6505 台塑化(5.1%)", "2634 漢翔(58.5%)", "2345 智邦(22.2%)", "2451 創見(13.5%)"],
-    "動能 >+100% 一票否決": ["2883 凱基金(+204.1%)", "3706 神達(+229.3%)", "3044 健鼎(+118.4%)", "1605 華新(+500%)", "1326 台化(+500%)", "3035 智原(+500%)", "3017 奇鋐(+500%)"],
-    "已大漲 5 日 >10% 不評分": ["2303 聯電(+11.6%)", "1303 南亞(+14.8%)", "2449 京元電子(+16.4%)", "2481 強茂(+15.8%)", "3049 精金(+16.9%)", "1312 國喬(+17.9%)", "2301 光寶科(+21.6%)", "6257 矽格(+10.3%)", "3450 聯鈞(+15.2%)", "3406 玉晶光(+40.6%)", "3376 新日興(+18.6%)", "2313 華通(+12.9%)", "4927 泰鼎-KY(+30.1%)", "2492 華新科(+17.9%)", "3504 揚明光(+12.3%)", "2421 建準(+14.7%)", "2489 瑞軒(+12.8%)", "4989 榮科(+10.2%)", "3008 大立光(乖離 +37.3%)"],
-    "❓狀態不明（10日累計為負，不可視為Safe）": ["3481 群創(-92,945)", "2409 友達(-45,421)", "2834 臺企銀(-22,075)", "6239 力成(-5,251)", "1709 和益(-309)", "1101 台泥(-8,104)", "8150 南茂(-444)", "2891 中信金(-30,921)", "2605 新興(-10,686)", "2441 超豐(-947)", "6770 力積電(-109,589)", "4958 臻鼎-KY(-14,688)", "2337 旺宏(-2,075)"],
-    "分數未達 70": ["8422 可寧衛*(54)", "1802 台玻(62)", "3576 聯合再生(62)"]
+    "法人現身門檻（不在當日TOP50買超 × 月線乖離0~+5%）": [
+      "3045 台灣大(+2.9%，📶訊號A L3)",
+      "1102 亞泥(+2.9%)",
+      "1402 遠東新(+0.8%)",
+      "1314 中石化(+2.6%)",
+      "2812 台中銀(+0.1%)",
+      "6505 台塑化(+1.3%)",
+      "2634 漢翔(+2.3%)",
+      "8299 群聯(+5.0%)",
+      "4958 臻鼎-KY(+2.9%)",
+      "2451 創見(+0.3%)",
+      "3034 聯詠(+1.9%)"
+    ],
+    "法說會當天不開新倉（Step 9.5 卷宗閘門）": [
+      "5880 合庫金（今日 14:30 法說，Q2 營運及財務概況；評分 101 分，否則為第 2 順位推薦）",
+      "2890 永豐金（今日 22:00 紐約/倫敦法說，Q2 財務業務；評分 92 分）"
+    ],
+    "反轉 L3/L4 直接排除": [
+      "1216 統一(20.9%)",
+      "2618 長榮航(31.9%)",
+      "1102 亞泥(16.5%)",
+      "1402 遠東新(18.6%)",
+      "1314 中石化(10.5%)",
+      "2812 台中銀(53.7%)",
+      "2606 裕民(9.7%)",
+      "6505 台塑化(5.1%)",
+      "2634 漢翔(58.5%)",
+      "2345 智邦(22.2%)",
+      "2451 創見(13.5%)"
+    ],
+    "動能 >+100% 一票否決": [
+      "2883 凱基金(+204.1%)",
+      "3706 神達(+229.3%)",
+      "3044 健鼎(+118.4%)",
+      "1605 華新(+500%)",
+      "1326 台化(+500%)",
+      "3035 智原(+500%)",
+      "3017 奇鋐(+500%)"
+    ],
+    "已大漲 5 日 >10% 不評分": [
+      "2303 聯電(+11.6%)",
+      "1303 南亞(+14.8%)",
+      "2449 京元電子(+16.4%)",
+      "2481 強茂(+15.8%)",
+      "3049 精金(+16.9%)",
+      "1312 國喬(+17.9%)",
+      "2301 光寶科(+21.6%)",
+      "6257 矽格(+10.3%)",
+      "3450 聯鈞(+15.2%)",
+      "3406 玉晶光(+40.6%)",
+      "3376 新日興(+18.6%)",
+      "2313 華通(+12.9%)",
+      "4927 泰鼎-KY(+30.1%)",
+      "2492 華新科(+17.9%)",
+      "3504 揚明光(+12.3%)",
+      "2421 建準(+14.7%)",
+      "2489 瑞軒(+12.8%)",
+      "4989 榮科(+10.2%)",
+      "3008 大立光(乖離 +37.3%)"
+    ],
+    "❓狀態不明（10日累計為負，不可視為Safe）": [
+      "3481 群創(-92,945)",
+      "2409 友達(-45,421)",
+      "2834 臺企銀(-22,075)",
+      "6239 力成(-5,251)",
+      "1709 和益(-309)",
+      "1101 台泥(-8,104)",
+      "8150 南茂(-444)",
+      "2891 中信金(-30,921)",
+      "2605 新興(-10,686)",
+      "2441 超豐(-947)",
+      "6770 力積電(-109,589)",
+      "4958 臻鼎-KY(-14,688)",
+      "2337 旺宏(-2,075)"
+    ],
+    "分數未達 70": [
+      "8422 可寧衛*(54)",
+      "1802 台玻(62)",
+      "3576 聯合再生(62)"
+    ]
   },
   "track_b_recommendations": [],
   "track_b_observations": [
-    "3008 大立光｜📶訊號B 唯一通過基礎篩選者（Level 0、10 日累計 +279 張、動能 -25.6%），惟催化劑🔴成熟（Apple 連漲 5 天累計 +6.6%）且月線乖離 +37.3% → 標註追高風險，不推薦",
-    "3045 台灣大｜📶訊號A L3 佈局完成（真連買 10 天、動能 -58.5%、累計 +32K 張，催化『台灣大哥大收購精誠資訊』）→ 唯一卡在法人現身門檻（不在當日 TOP50 買超 × 乖離 +2.9%），依 v8.2 無例外，列觀察名單"
+    "🚫 今日無盤中新推薦 —— 5 檔軌道B 候選無一同時通過「≥75 分 + 反轉 L0-1 + 動能 ≤100% + 今日漲幅 <3% + 卷宗閘門」",
+    "2881 富邦金｜88 分（全池最高）｜Step 9.5 卷宗閘門：08/31 為金融業半年報法定申報期限、EPS 快取仍為 2025-12-31 → 財報公布當日不開新倉（與盤前排除 5880/2890 同一條規則）",
+    "1727 中華化｜籌碼動能 +198.9% >+100% 一票否決；化工非今日超強催化區，不符覆寫條件；月線乖離 +18.6%",
+    "1711 永光｜42 分｜買5賣5不連續、產業未分類(6分)、外資持股比週減 -0.61%(-3)、動能 +64.4%(-10)、營收快取 2026-02 落後歸零、EPS +5",
+    "6456 GIS-KY｜36 分｜EPS 連4季 YoY 負成長(2026Q2 -3.15，-5)、毛利率 3.3% QoQ -1.6pp、蘋果鏈催化成熟、動能 +55.4%(-10)",
+    "2033 佳大｜偵測器唯一強訊號(60分，量比4.41x)，但法人量體極小(10日累計僅 +401 張)、動能 +500% 一票否決、營收連3月衰退(-16.5%)、已觸自算處置預警(當日量為60日均量7.7倍)",
+    "2882 國泰金(+3.32%)／1717 長興(+5.41%)｜今日漲幅 ≥3% 已反映，不列候選"
   ],
   "tier_from_tracker_writes": [],
   "tier_from_tracker_note": "本次新增 0 筆。v8.3.4 條件①不成立 —— 2880/2615/6108/2892/5880/2890 皆未出現在今日 industry_signals.json，且全部已登錄於 industry_chains.json 既有產業（6108 競國 在 光通訊/tier_from_tracker；2892/5880 在 聯準會利率/tier_from_tracker；2890 在 新台幣匯率/tier_from_tracker；2615 在 中東地緣政治/tier_from_tracker；2880 在 金融/tier_0），故不寫入。",
@@ -117,7 +370,9 @@
       "4971 IET-KY 英特磊｜08/25~08/31｜連續 5 個營業日達注意"
     ],
     "twse_注意": [],
-    "自算處置預警": ["2408 南亞科｜🟡 接近注意門檻｜近 90 日漲幅 146.6%（門檻 160%）"],
+    "自算處置預警": [
+      "2408 南亞科｜🟡 接近注意門檻｜近 90 日漲幅 146.6%（門檻 160%）"
+    ],
     "note": "以上 9 檔處置股一律機械式排除，均未出現在今日候選池。名稱取自官方清單自帶證券名稱欄（TWSE announcement/punish、TPEx tpex_disposal_information）。CB／權證代號已濾除。"
   },
   "data_quality_flags": [
@@ -139,11 +394,233 @@
     "3037 欣興 08/28 遭桃園地檢署指揮調查局搜索（PCB 產地標示爭議），公司已發重訊澄清"
   ],
   "diversification": {
-    "industries": { "金融": 1, "航運": 1, "光通訊與網通": 1 },
+    "industries": {
+      "金融": 1,
+      "航運": 1,
+      "光通訊與網通": 1
+    },
     "max_share_pct": 33.3,
     "defensive_ratio": "0-15%",
     "offensive_ratio": "85-100%",
     "basis": "VIX 14.43 < 20 → 依 CLAUDE.md 動態防禦比例表，任何催化強度皆為防禦 0-15%",
     "note": "僅 3 檔推薦（低於 4-8 檔區間）。依 v8.2「寧缺勿濫、禁止湊數」：5880 合庫金(101)、2890 永豐金(92) 兩檔均通過所有評分門檻，但被 Step 9.5 卷宗閘門「法說會當天不開新倉」攔下；其餘候選皆遭 L3/L4、動能一票否決、已大漲或法人現身門檻排除。禁止為湊檔數拉進未過門檻標的。"
+  },
+  "intraday": {
+    "time": "2026-08-31 12:30",
+    "market_status": "full",
+    "taiex": "Yahoo ^TWII 盤中回傳 None，未取得大盤點位（不臆測）",
+    "opening_exits_executed": [
+      {
+        "stock_code": "3090",
+        "stock_name": "日電貿",
+        "type": "已決事項",
+        "intraday_price": 170.5,
+        "status": "已執行"
+      },
+      {
+        "stock_code": "2371",
+        "stock_name": "大同",
+        "type": "L4鐵律",
+        "recommend_price": 27.7,
+        "intraday_price": 28.45,
+        "return_pct": 2.71,
+        "status": "已執行"
+      },
+      {
+        "stock_code": "2344",
+        "stock_name": "華邦電",
+        "type": "L4鐵律",
+        "recommend_price": 181.5,
+        "intraday_price": 182.5,
+        "return_pct": 0.55,
+        "status": "已執行"
+      },
+      {
+        "stock_code": "2609",
+        "stock_name": "陽明",
+        "type": "L4鐵律",
+        "recommend_price": 57.9,
+        "intraday_price": 57.8,
+        "return_pct": -0.17,
+        "status": "已執行"
+      },
+      {
+        "stock_code": "1504",
+        "stock_name": "東元",
+        "type": "L4鐵律",
+        "recommend_price": 73.4,
+        "intraday_price": 72.3,
+        "return_pct": -1.5,
+        "status": "已執行"
+      },
+      {
+        "stock_code": "2801",
+        "stock_name": "彰銀",
+        "type": "L4鐵律",
+        "recommend_price": 24.7,
+        "intraday_price": 24.95,
+        "return_pct": 1.01,
+        "status": "已執行"
+      },
+      {
+        "stock_code": "2887",
+        "stock_name": "台新新光金",
+        "type": "L4鐵律",
+        "recommend_price": 37.15,
+        "intraday_price": 38.65,
+        "return_pct": 4.04,
+        "status": "已執行"
+      },
+      {
+        "stock_code": "4938",
+        "stock_name": "和碩",
+        "type": "L4鐵律",
+        "intraday_price": 91.6,
+        "status": "已執行"
+      }
+    ],
+    "settlement_todo_after_market": "v8.3.7 結算同步寫三處：上列 8 筆須以【當日收盤價】(v8.3.2) 同時寫入 來源 tracking_{推薦日}.json / 今日 removed_stocks / predictions.json（3090、4938 為 my_holdings 持倉，僅寫前兩處）",
+    "pending_review_1st": [
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "level": "L4",
+        "sell_pct_pre": 5.7,
+        "sell_pct_1230": 7.0,
+        "sell_lots": -1434,
+        "cum_10d": 89000,
+        "review_count": 1,
+        "verdict": "≥5% 成立但 <8% 且 10 日累計為正 → 不出場，盤後第 2 次複核；兩次皆 ≥5% 則明日開盤出場"
+      }
+    ],
+    "frozen": [
+      {
+        "stock_code": "2867",
+        "stock_name": "三商壽",
+        "reason": "stale_series 末日 2026-08-19 → 凍結：不結算/不出場/D 不推進"
+      }
+    ],
+    "carry_over_status": [
+      {
+        "stock_code": "3037",
+        "stock_name": "欣興",
+        "recommend_price": 1095.0,
+        "intraday_price": 999.0,
+        "return_pct": -8.77,
+        "stop_loss": 985.5,
+        "note": "距停損僅 1.4%，最高警戒"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_price": 33.3,
+        "intraday_price": 35.0,
+        "return_pct": 5.11,
+        "note": "續抱，距目標 2.9%"
+      },
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "recommend_price": 46.85,
+        "intraday_price": 48.4,
+        "return_pct": 3.31,
+        "note": "續抱，法說會日不加碼"
+      },
+      {
+        "stock_code": "1605",
+        "stock_name": "華新",
+        "recommend_price": 38.1,
+        "intraday_price": 39.1,
+        "return_pct": 2.62,
+        "note": "續抱"
+      },
+      {
+        "stock_code": "1326",
+        "stock_name": "台化",
+        "recommend_price": 63.2,
+        "intraday_price": 67.2,
+        "return_pct": 6.33,
+        "note": "續抱，距目標 1.2%"
+      },
+      {
+        "stock_code": "3443",
+        "stock_name": "創意",
+        "recommend_price": 5570.0,
+        "intraday_price": 5905.0,
+        "return_pct": 6.01,
+        "note": "續抱，距目標 3.8%"
+      },
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "recommend_price": 517.0,
+        "intraday_price": 544.0,
+        "return_pct": 5.22,
+        "note": "處置風險升級：近90日 +161.5% 已達注意標準，最快剩 2 交易日處置，禁止加碼"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "recommend_price": 332.5,
+        "intraday_price": 331.5,
+        "return_pct": -0.3,
+        "note": "反轉 Level 2（-343 張/4.0%），密切觀察不加碼"
+      }
+    ],
+    "portfolio_status": [
+      {
+        "stock_code": "2330",
+        "stock_name": "台積電",
+        "intraday_price": 2380.0,
+        "verdict": "續抱觀察（Lam Research -5.24% 龍頭預警 Level 2）"
+      },
+      {
+        "stock_code": "2313",
+        "stock_name": "華通",
+        "intraday_price": 247.0,
+        "verdict": "續抱觀察（5日 +12.9% 不加碼）"
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "intraday_price": 65.3,
+        "verdict": "續抱觀察"
+      },
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "intraday_price": 71.5,
+        "verdict": "留意減碼（10日累計 -109,589，狀態不明）"
+      },
+      {
+        "stock_code": "2337",
+        "stock_name": "旺宏",
+        "intraday_price": 123.0,
+        "verdict": "留意減碼（10日累計 -2,075，狀態不明）"
+      }
+    ],
+    "detector": {
+      "strong": [
+        "2033 佳大 60分 量比4.41x → 強制納入軌道B 評分（結果排除）"
+      ],
+      "intercepted": [
+        "2492 華新科 -7.8%/量比2.32x → 型態轉弱，偵測器誤判攔截",
+        "3711 日月光投控 -7.2% → 型態轉弱，偵測器誤判攔截"
+      ]
+    },
+    "data_quality_flags": [
+      "Pre-flight L4 ERROR 確認為誤報：1216/2618/1102/1402/1314/2812/2606/6505/2634/2345/2451 皆為盤前候選池 L3/L4 排除項（非持倉），2603 為 v8.3.3 待複核中 → 無持倉漏出場",
+      "L4 分母殘餘漂移：v8.3.9 已改用 avg_5day_volume（reversal_alert.py:489-506），但 2603 同一筆 -1,434 張盤前 5.7% → 12:30 7.0%（分母 ~25,157 → 20,394 張），Yahoo avg_5day_volume 仍隨當日視窗滾動 → 建議盤後 Step 3 列為缺陷檢討項",
+      "check_price_position / check_foreign_ratio / check_revenue_yoy / check_eps_quarterly 曾被 5 檔軌道B 候選覆蓋，已用「盤前名單 ∪ 2033」重跑復原（57/27/27/27 筆）",
+      "外資持股比：軌道B 候選 4/5 檔資料日為 2026-08-11（落後約 3 週），僅 2033 為 08-28",
+      "營收快取新鮮度：2881(2026-06)／1711(2026-02)／6456(2026-04) 落後 → 營收因子歸零；1727、2033 為 2026-07 新鮮",
+      "加權指數未取得（Yahoo ^TWII 回傳 None），報告不臆測",
+      "institutional_top50.json 不在 data/2026-08-31/，最新 T86(20260828) 引用 data/2026-08-28/institutional_top50.json",
+      "tier_from_tracker 盤中新增 0 筆"
+    ],
+    "disposition_escalation": [
+      "2408 南亞科｜近90日 +161.5% ≥160% 已達注意標準（連續 1 天）｜最快剩 2 個交易日處置",
+      "2033 佳大｜當日量為近60日均量 7.7 倍｜接近注意門檻"
+    ]
   }
 }
