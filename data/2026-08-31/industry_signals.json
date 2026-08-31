@@ -1,0 +1,1239 @@
+{
+  "date": "2026-08-31",
+  "updated_at": "2026-08-31 07:44",
+  "revenue_period": "2026-07",
+  "signal_count": 54,
+  "signals": [
+    {
+      "theme": "台股市場動態",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（MSCI季度權重調整08/31生效，被動資金提前布局帶動電子權值股回補；經濟日報點名三大利多－台積電8月業績可望續創新猷、上市櫃公司8月營收挑戰6兆元新高、法人滾動調升上市櫃獲利－加持9月行情；外資8月來已轉買超3,712億元，投信連七個月站買方）"
+      },
+      "duration": {
+        "text": "14週（05/28起）| **最後訊號**：08/31",
+        "weeks": 14,
+        "since": "05/28"
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "context": "8月營收可望續創新高，代工價喊漲10-15%",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3105",
+          "name": "穩懋",
+          "context": "外資連4買逾1.2萬張，周漲17.69%站上所有均線",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "1815",
+          "name": "富喬",
+          "context": "「三強共振股」法人買超力挺",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "✅",
+      "lead_indicators": "TWII 46,331(+0.79%)週五收盤反映跳空上漲後獲利了結收斂；SOX 11,470(-3.47%)、NVDA 217.55(-3.80%)週五收黑尚待新交易日驗證",
+      "turning_points": "08/31 MSCI季度權重調整生效；09/02 SEMICON Taiwan登場；09/03 博通財報；09/04 美國8月非農就業報告",
+      "summary": "台股9月開局三大基本面利多（台積電營收、上市櫃6兆營收、法人上修獲利）疊加MSCI被動資金效應，法人與散戶信心同步回籠；惟需觀察週一MSCI生效後量能是否延續，以及本週非農數據對Fed升息預期的最終驗證。"
+    },
+    {
+      "theme": "AI伺服器與半導體",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速（輝達Vera Rubin+Groq 3 LPX雙引擎機櫃量產、報價翻倍效應持續發酵；日月光受惠Google TPU量能放大大舉追加先進封測訂單，加上Intel EMIB先進封裝平台擴大委外、先前調高封測報價效益顯現，三喜臨門營運迎爆發期；京元電、矽格AI晶片後段測試訂單能見度同步升高，矽格新產能開出前已被訂光；台積電先進製程產能吃緊，市場預期N2/N3/N5代工價喊漲5-10%，成熟製程同步醞釀調價）"
+      },
+      "duration": {
+        "text": "25週（03/12起）| **最後訊號**：08/31",
+        "weeks": 25,
+        "since": "03/12"
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "3711",
+          "name": "日月光投控",
+          "context": "Google TPU追加訂單＋Intel EMIB委外＋漲價三利多",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2449",
+          "name": "京元電",
+          "context": "AI測試晶片接單熱",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6257",
+          "name": "矽格",
+          "context": "新產能開出前被訂光",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6669",
+          "name": "緯穎",
+          "context": "Vera Rubin+Trainium3雙引擎受惠，營收YoY+39.2%",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2376",
+          "name": "技嘉",
+          "context": "營收YoY+59.7%創高",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2345",
+          "name": "智邦",
+          "context": "AMD Helios網路交換器受惠",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 6,
+      "revenue_support": "✅",
+      "lead_indicators": "NVDA 217.55(-3.80%)、TSM ADR 417.52(-1.90%)週五收黑，惟台積電代工漲價與日月光封測滿載激勵供應鏈訂單能見度",
+      "turning_points": "",
+      "summary": "AI伺服器供應鏈從機櫃組裝擴散至先進封裝（日月光）與後段測試（京元電、矽格），台積電代工漲價進一步驗證議價權強勢；整條產業鏈廣度與獲利能見度同步提升。"
+    },
+    {
+      "theme": "DRAM與記憶體",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速（Gartner上修2026年全球記憶體營收至8,373億美元、占半導體市場54%；南韓總統李在明大改組內閣，首要任務為分配記憶體業暴增稅收，三星、SK海力士上半年繳稅暴增167%至11.2兆韓元；中國7月積體電路出口暴增116.57%超越汽車成最大出口品；蘋果因記憶體缺貨轉向採購長鑫存儲，凸顯美中禁令形同虛設；惟摩根士丹利示警2028年後中國新增產能恐衝擊全球供需週期）"
+      },
+      "duration": {
+        "text": "15週（05/21起）| **最後訊號**：08/31",
+        "weeks": 15,
+        "since": "05/21"
+      },
+      "industry_chain_key": "記憶體",
+      "stocks": [
+        {
+          "code": "2408",
+          "name": "南亞科",
+          "context": "營收YoY+719.6%創天量成長",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "5289",
+          "name": "宜鼎",
+          "context": "營收YoY+636.5%",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "8299",
+          "name": "群聯",
+          "context": "營收YoY+377.6%",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "💪",
+      "lead_indicators": "MU 932.86(+1.43%)逆勢走強",
+      "turning_points": "",
+      "summary": "記憶體超級循環敘事持續強化－南韓稅收暴增、中國IC出口創高、蘋果轉單長鑫皆佐證缺貨漲價力道未歇，惟大摩2028年供需轉折警訊為長線週期埋下伏筆，短多長空格局漸趨清晰。"
+    },
+    {
+      "theme": "光通訊與網通（含CPO/矽光子量產）",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速（大立光FAU題材延燒，股價創七字頭新高；磊晶廠全新再獲美系磷化銦基板龍頭來料，加上美國光通訊晶片大客戶自帶料源下單，生產線「極度忙碌」，Q3起毛利率喊衝；外資圈目標價上修潮同步鎖定萬潤CPO設備供應鏈）"
+      },
+      "duration": {
+        "text": "17週（05/14起）| **最後訊號**：08/31",
+        "weeks": 17,
+        "since": "05/14"
+      },
+      "industry_chain_key": "光通訊",
+      "stocks": [
+        {
+          "code": "3008",
+          "name": "大立光",
+          "context": "FAU題材＋CPO布局，股價創新高",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2455",
+          "name": "全新",
+          "context": "磷化銦料源到位＋大客戶下單，Q3毛利率喊衝",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6187",
+          "name": "萬潤",
+          "context": "外資升目標價，CPO光耦合設備新切入",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3105",
+          "name": "穩懋",
+          "context": "外資連4買，周漲17.69%",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 4,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": "光通訊供應鏈從矽光子（大立光）延伸至磊晶材料（全新）與設備（萬潤），SEMICON Taiwan本週登場為下一驗證窗口，供應鏈廣度持續加深。"
+    },
+    {
+      "theme": "聯準會利率政策",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "鷹派確立但分歧浮現（華許傑克森洞演說「180度大轉彎」帶動9月升息機率彈升近60%，惟高盛、摩根大通仍預期按兵不動；MacroMicro財經M平方分析指出，Kevin Warsh淡化前瞻指引、市場需自行判斷反應函數，疊加財政部發債結構轉向短債、期限溢價飆升，長天期美債殖利率30年一度突破5.2-5.3%；克魯曼解讀華許基調偏鷹、降息訊號全缺席）"
+      },
+      "duration": {
+        "text": "14週（05/28起）| **最後訊號**：08/31",
+        "weeks": 14,
+        "since": "05/28"
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "2886",
+          "name": "兆豐金",
+          "context": "／國泰金(2882)↑ 法說上調NIM展望正面",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2882",
+          "name": "國泰金",
+          "context": "法說上調NIM展望正面",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 2,
+      "revenue_support": "⚠️",
+      "lead_indicators": "",
+      "turning_points": "09/01 非農就業報告；09/17 台灣央行第3季理監事會議（是否跟進日韓升息受矚目）；09月FOMC升息機率五五波至六成",
+      "summary": "華許鷹派表態雖扭轉短期升息預期，但美債長端因期限溢價（財政赤字、AI巨頭發債排擠美債買盤）飆升與短端脫鉤，反映市場對財政紀律與聯準會前瞻指引透明度的深層疑慮，09/01非農仍是最終仲裁者。"
+    },
+    {
+      "theme": "中東地緣政治（含航運）",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "地緣風險驟然升溫（美軍打擊伊朗Larak島火箭發射設施，國際油價應聲跳漲逾2%，WTI 84.81(+1.69%)、Brent 89.69(+1.80%)；此前伊朗總統與阿曼就重開荷莫茲海峽初步達成共識的談判進度恐生變數，戰事重新升溫）"
+      },
+      "duration": {
+        "text": "13週（06/07起）| **最後訊號**：08/31",
+        "weeks": 13,
+        "since": "06/07"
+      },
+      "industry_chain_key": "航空",
+      "stocks": [
+        {
+          "code": "2603",
+          "name": "長榮",
+          "context": "SCFI美東線破萬美元＋油價上漲挹注運價，營收YoY+43.1%",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6505",
+          "name": "台塑化",
+          "context": "油價跳漲直接受惠，營收YoY+32.3%",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 2,
+      "revenue_support": "✅",
+      "lead_indicators": "WTI 84.81(+1.69%)、Brent 89.69(+1.80%)今日跳漲",
+      "turning_points": "",
+      "summary": "美軍直接打擊伊朗設施使荷莫茲海峽談判籌碼生變，油價由本週回穩轉為跳漲，地緣風險由「降溫」急轉「升溫」，需持續留意是否進一步升級。"
+    },
+    {
+      "theme": "ASIC自研晶片與去輝達化（含開源vs閉源路線之爭）",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "短線回穩／長線邏輯強化（日月光受惠Google TPU量能放大大舉追加先進封測訂單，驗證ASIC客製晶片後段需求持續擴張；Intel 14A製程缺陷密度創22奈米後最佳、外部客戶詢問產能，先進製程代工格局添變數，惟尚未直接波及台積電ASIC客戶）"
+      },
+      "duration": {
+        "text": "8週（07/07起）| **最後訊號**：08/31",
+        "weeks": 8,
+        "since": "07/07"
+      },
+      "industry_chain_key": "IC設計",
+      "stocks": [
+        {
+          "code": "3711",
+          "name": "日月光投控",
+          "context": "Google TPU先進封測訂單追加",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3661",
+          "name": "世芯-KY",
+          "context": "營收YoY+181.8%",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "3443",
+          "name": "創意",
+          "context": "營收YoY+158.4%",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": "Google TPU訂單追加至封測端（日月光）驗證ASIC生態系需求廣度持續擴大，長線邏輯未變，惟Intel 14A製程進展為先進製程代工格局添入新變數需持續觀察。"
+    },
+    {
+      "theme": "軍工與無人機",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "8週（07/10起）| **最後訊號**：08/28",
+        "weeks": 8,
+        "since": "07/10"
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "Anthropic IPO前哨戰與算力合作",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（摩根士丹利點名SpaceX等5檔AI主權概念股，SpaceX目標價喊上300美元、潛在漲幅105%，看好其1,000億美元路易斯安那新發射基地成股價新催化劑；輝達財報電話會議提及「算力證券化」風險再度成焦點，市場關注是否醞釀次貸式系統性風險）"
+      },
+      "duration": {
+        "text": "7週（07/16起）| **最後訊號**：08/31",
+        "weeks": 7,
+        "since": "07/16"
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "AI泡沫前兆檢查清單（系統性風險監控）【每日必檢】",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↓",
+        "detail": "風險維持警戒（《巴隆》援引「25法則」指AI投資距危險門檻仍有距離，惟輝達財報後美股七巨頭走勢分化加劇－Alphabet市值3個月蒸發6,920億美元、Meta自由現金流暴跌91%，「利多不漲」疑慮延續；黃金今日回穩4,512美元(-0.40%)、VIX 14.43續低檔，避險資產與美股背離未擴大但也未收斂；比特幣77,633美元(-0.77%)、ETF連9日資金淨流入紀錄中止，囤幣業市值年減830億美元反映投機末段退燒訊號；三大法人買超力道未見系統性撤離）"
+      },
+      "duration": {
+        "text": "9週（06/25起）| **最後訊號**：08/31",
+        "weeks": 9,
+        "since": "06/25"
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "①利多不漲：Alphabet、Meta財報後市值/現金流雙雙承壓，七巨頭分化加劇②AI權值股與費半：SOX(-3.47%)、NVDA(-3.80%)週五重挫延續③VIX 14.43續低檔，與美股/黃金背離未擴大④信用槓桿：欣興檢調案證實無重大財務影響⑤投機末段：比特幣ETF連9日資金淨流入中止、囤幣股市值蒸發830億美元，投機情緒降溫⑥監管介入：無新增動作⑦資金背離：三大法人買超力道續強，惟資金偏好金融傳產甚於AI股",
+      "turning_points": "",
+      "summary": "風險階段維持【警戒】，較前日持平：七巨頭分化與美債期限溢價飆升是新增觀察點，惟比特幣投機情緒降溫、VIX仍低檔顯示尚未達系統性拋售，暫未達【惡化】門檻；09/01非農與博通財報是下週關鍵驗證點。"
+    },
+    {
+      "theme": "川普貿易政策與關稅（含關鍵礦物國防去中化）",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（川普宣布明年1月對加拿大部分商品加徵50%關稅，美加貿易談判陷僵局；G20財長會議醞釀聯手施壓人民幣升值以縮小陸方貿易順差，重演「廣場協議」式操作；UAE調查埃及Banque Misr美元清算受阻，制裁工具外溢效應擴大）"
+      },
+      "duration": {
+        "text": "多週（持續追蹤）| **最後訊號**：08/31"
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "美股估值過熱疑慮",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↓",
+        "detail": "疑慮加深（《巴隆》「25法則」文章顯示市場仍在辯論AI泡沫風險；輝達財報電話會議「算力證券化」議題再引法人質疑；Pimco示警AI資本支出債務融資「過多過快」）"
+      },
+      "duration": {
+        "text": "33天（首見07/29）| **最後訊號**：08/31",
+        "days": 33
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "加密貨幣市場（貶值交易受惠）",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↓",
+        "detail": "短線降溫（比特幣77,633美元(-0.77%)；比特幣ETF連9日資金淨流入紀錄中止；囤幣業市值去年中以來蒸發830億美元，「囤幣潮」退燒；惟橋水達里歐改口建議配置比特幣、Ripple跨入華爾街股票經紀業務）"
+      },
+      "duration": {
+        "text": "7天（首見08/24）| **最後訊號**：08/31",
+        "days": 7
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台灣ETF與資金流向",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（上市櫃公司8月營收挑戰6兆元新高；外資8月來已轉買超3,712億元；投信連七個月站買方；9月上市櫃217檔個股將發放現金股利共2,030億元，股息再投資效應可望啟動）"
+      },
+      "duration": {
+        "text": "12週（06/07起）| **最後訊號**：08/31",
+        "weeks": 12,
+        "since": "06/07"
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "ABF載板/PCB基板缺口擴大帶動漲價",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "→",
+        "detail": "（欣興澄清檢調搜索主要涉及PCB產地標示爭議，非重大財務影響；健鼎、臻鼎-KY基本面續強）"
+      },
+      "duration": {
+        "text": "5週（07/25起）| **最後訊號**：08/31",
+        "weeks": 5,
+        "since": "07/25"
+      },
+      "industry_chain_key": "PCB",
+      "stocks": [
+        {
+          "code": "3037",
+          "name": "欣興",
+          "context": "產地標示爭議澄清但輿情延續",
+          "sentiment": "bearish",
+          "sentiment_arrow": "↓"
+        },
+        {
+          "code": "3044",
+          "name": "健鼎",
+          "context": "營收YoY+56.5%",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "4958",
+          "name": "臻鼎-KY",
+          "context": "營收YoY+31.8%",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台灣總經暢旺與對美出超",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "5週（估算）| **最後訊號**：08/29",
+        "weeks": 5
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "力積電接班落地＋外資籌碼動向",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展，最後訊號滿6天）"
+      },
+      "duration": {
+        "text": "4週（首見07/31）| **最後訊號**：08/25",
+        "weeks": 4
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "貿聯-KY及線束/連接器族群獲利動能",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "5週（首見07/27）| **最後訊號**：08/30",
+        "weeks": 5
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "半導體矽晶圓漲價（三年多首見）",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展，最後訊號滿7天，接近降級門檻）"
+      },
+      "duration": {
+        "text": "8天（首見08/24）| **最後訊號**：08/24",
+        "days": 8
+      },
+      "industry_chain_key": "半導體",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "折疊手機與iPhone 18供應鏈題材（蘋果9/10秋季發表會）",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（i18散熱導入史上最大面積均熱板，散熱區域延伸至機身頂部，台廠散熱供應鏈受惠）"
+      },
+      "duration": {
+        "text": "5天（首見08/27）| **最後訊號**：08/31",
+        "days": 5
+      },
+      "industry_chain_key": "蘋果供應鏈",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "機器人與物理AI",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "8週（07/08起）| **最後訊號**：08/29",
+        "weeks": 8,
+        "since": "07/08"
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "鋼鐵市場需求觸底反轉（中鋼Q2結束連四季虧損）",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "6週（首見07/23）| **最後訊號**：08/28",
+        "weeks": 6
+      },
+      "industry_chain_key": "鋼鐵",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "AI基建融資熱潮（含私人信貸與電力投資擴散）",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↓",
+        "detail": "疑慮加劇（輝達財報電話會議「算力證券化」風險議題再受關注，法人質疑GPU抵押品循環放大系統性風險；Druckenmiller公開批評財政部回購計畫治標不治本；Pimco示警債務融資過多過快）"
+      },
+      "duration": {
+        "text": "7週（07/19起）| **最後訊號**：08/31",
+        "weeks": 7,
+        "since": "07/19"
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "中國長鑫存儲（CXMT）/長江存儲擴產：成熟製程競爭壓力同步升高",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "短線／⚠️長線添隱憂（蘋果因記憶體缺貨轉向採購長鑫存儲，凸顯美中禁令形同虛設；全球首款LPDDR6正式量產、小米18 Fold率先搭載；惟摩根士丹利示警2028年後中國新增產能恐衝擊全球DRAM/NAND供需與獲利週期）"
+      },
+      "duration": {
+        "text": "7週（07/16起）| **最後訊號**：08/31",
+        "weeks": 7,
+        "since": "07/16"
+      },
+      "industry_chain_key": "記憶體",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台塑集團H1獲利轉骨（含中東油價轉強）",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（美軍打擊伊朗設施帶動油價跳漲，WTI 84.81(+1.69%)、Brent 89.69(+1.80%)，台塑化直接受惠）"
+      },
+      "duration": {
+        "text": "7週（07/14起）| **最後訊號**：08/31",
+        "weeks": 7,
+        "since": "07/14"
+      },
+      "industry_chain_key": "塑化",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "美股七雄AI資本支出分化",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（輝達財報後AI行情續強，惟Alphabet、Meta因資本支出、現金流與商業化疑慮承壓，Alphabet市值3個月蒸發6,920億美元、Meta自由現金流暴跌91%，七巨頭分化加劇）"
+      },
+      "duration": {
+        "text": "4週（首見08/01）| **最後訊號**：08/31",
+        "weeks": 4
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "欣興(3037)遭檢調搜索：ABF龍頭治理風險事件",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↓",
+        "detail": "趨緩但輿情延續（公司澄清檢調搜索主要涉及PCB產地標示爭議，非重大財務業務影響，外資本週仍持續買超）"
+      },
+      "duration": {
+        "text": "4天（首見08/28）| **最後訊號**：08/31",
+        "days": 4
+      },
+      "industry_chain_key": "PCB",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "SpaceX IPO生態系與估值重估",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（摩根士丹利喊上目標價300美元、潛在漲幅105%，看好路易斯安那1,000億美元新發射基地成股價新催化劑）"
+      },
+      "duration": {
+        "text": "5天（首見08/27）| **最後訊號**：08/31",
+        "days": 5
+      },
+      "industry_chain_key": "衛星通訊",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "企業財報重點彙整",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↑",
+        "detail": "金融股獲利普遍創高（富邦金上半年稅後純益974億元YoY+89%；漢翔Q2營益率15.2%優於預期；凱基金8/31、台新新光金9/1接力法說，市場關注股利政策）"
+      },
+      "duration": {
+        "text": "6天（首見08/26）| **最後訊號**：08/30",
+        "days": 6
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台灣房市結構分化（移轉量創高與建照銳減並存）",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↓",
+        "detail": "（住宅自有率跌破84%創16年新低，租屋占比連三年走升）"
+      },
+      "duration": {
+        "text": "12天（首見08/20）| **最後訊號**：08/30",
+        "days": 12
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "銅價創新高帶動線纜廠獲利",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "5天（首見08/27）| **最後訊號**：08/27",
+        "days": 5
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "MLCC/被動元件缺貨漲價（三星電機Q4報價最高漲30%）",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（無新增獨立進展，惟國巨YoY+51.5%、華新科+42.0%基本面持續驗證）"
+      },
+      "duration": {
+        "text": "6天（首見08/26）| **最後訊號**：08/28",
+        "days": 6
+      },
+      "industry_chain_key": "被動元件",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "世界先進(5347)晶圓三廠火警",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↓",
+        "detail": "趨緩（本週可望恢復運轉）"
+      },
+      "duration": {
+        "text": "4天（首見08/28）| **最後訊號**：08/28",
+        "days": 4
+      },
+      "industry_chain_key": "半導體",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "彰銀-國票金公公併評估",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "7天（首見08/25）| **最後訊號**：08/27",
+        "days": 7
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "Intel 14A製程進度：挑戰台積電先進製程龍頭地位",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（財務長辛斯納透露14A製程缺陷密度下降速度為22奈米以來最佳，外部客戶已從檢視技術數據進一步詢問可取得產能；台積電積極衝刺先進製程並強化異質整合布局應戰，先進封裝設備廠印能科技、鈦昇同步受惠Intel EMIB擴產）"
+      },
+      "duration": {
+        "text": "2天（首見08/30）| **最後訊號**：08/31",
+        "days": 2
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "AI BBU電池備援模組",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（AES-KY電池備援模組訂單持續暢旺，法人看好下半年營收逐季走升，全年EPS可望首度衝破50元大關）"
+      },
+      "duration": {
+        "text": "6週（首見07/22）| **最後訊號**：08/31",
+        "weeks": 6
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "藥華藥(6446)Ropeg獲美FDA藥證：搶攻400億美元罕見血症市場",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "3天（首見08/29）| **最後訊號**：08/30",
+        "days": 3
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "邁威爾(Marvell)與Google TPU合作：短線分化、長線商機未變",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（Google TPU量能放大同步帶動日月光先進封測訂單追加，驗證TPU生態系需求擴張；惟Marvell股價受毛利率壓力短線仍承壓）"
+      },
+      "duration": {
+        "text": "3天（首見08/29）| **最後訊號**：08/31",
+        "days": 3
+      },
+      "industry_chain_key": "IC設計",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "SK海力士記憶體短缺至2030／美國HBM4E新廠",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（Gartner上修2026記憶體營收至8,373億美元、SK海力士上半年繳稅暴增167%，佐證供給緊俏與獲利同步噴發）"
+      },
+      "duration": {
+        "text": "3天（首見08/29）| **最後訊號**：08/31",
+        "days": 3
+      },
+      "industry_chain_key": "記憶體",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "Salesforce/CrowdStrike AI代理與資安需求超預期（軟體股全面走強）",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "5天（首見08/27）| **最後訊號**：08/29",
+        "days": 5
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "日圓貶值破160關卡與日銀升息路徑",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↓",
+        "detail": "（財政部長貝森特稱日圓波動「相對可控」、非失序狀態，惟日圓仍貼近160關卡，先前史上最大規模逾15兆日圓干預漲幅已回吐過半）"
+      },
+      "duration": {
+        "text": "6天（首見08/26）| **最後訊號**：08/31",
+        "days": 6
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "處置股擴大／投機末段訊號",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "7天（首見08/25）| **最後訊號**：08/30",
+        "days": 7
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "美元信任度鬆動：黃金與貶值交易",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（黃金今日回穩4,512美元(-0.40%)，MacroMicro分析指黃金與比特幣同步走強反映「貶值交易」(Debasement Trade)重返，市場對美元與長天期美債信心受財政赤字、期限溢價飆升動搖；穩定幣與貨幣市場基金監管動向為Jackson Hole後續觀察重點）"
+      },
+      "duration": {
+        "text": "8天（首見08/24）| **最後訊號**：08/31",
+        "days": 8
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "阿里巴巴AI投資引發中概股拋售疑慮",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "8天（首見08/24）| **最後訊號**：08/26",
+        "days": 8
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "特斯拉Cybercab/Robotaxi供應鏈題材",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "9天（首見08/23）| **最後訊號**：08/27",
+        "days": 9
+      },
+      "industry_chain_key": "電動車",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "NAND製造「由鎢轉鉬」",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（無新增獨立進展，最後訊號滿6天）"
+      },
+      "duration": {
+        "text": "8天（首見08/24）| **最後訊號**：08/25",
+        "days": 8
+      },
+      "industry_chain_key": "記憶體",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "巨大集團收購鼎鎂新材料",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↓",
+        "detail": "（無新增獨立進展，最後訊號滿7天，接近降級門檻）"
+      },
+      "duration": {
+        "text": "11天（首見08/21）| **最後訊號**：08/24",
+        "days": 11
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "半導體材料在地化／SEMI材料聯盟（連續降級，接近14天移除門檻）",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↓",
+        "detail": "（最後訊號滿10天，無新增獨立進展）"
+      },
+      "duration": {
+        "text": "11天（首見08/21）| **最後訊號**：08/21",
+        "days": 11
+      },
+      "industry_chain_key": "半導體",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "美中AI晶片出口管制鬆綁",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "13天（首見08/19）| **最後訊號**：08/25",
+        "days": 13
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "美「星際之門」計畫延宕：AI資料中心供應鏈風險",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↓",
+        "detail": "（美國AI新創未揭露碳排引發質疑；資料中心電費/噪音民怨升溫，意外成11月期中選舉攻擊焦點，政治風險升高）"
+      },
+      "duration": {
+        "text": "12天（首見08/20）| **最後訊號**：08/31",
+        "days": 12
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "川湖(2059)傳動元件挑戰股王地位",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↓",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "15天（首見08/17）| **最後訊號**：08/25",
+        "days": 15
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "中國房地產制度改革（現房銷售優先／房貸延至40年）",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展）"
+      },
+      "duration": {
+        "text": "3天（首見08/29）| **最後訊號**：08/29",
+        "days": 3
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "航空暑假旺季與AI貨運（連續降級，接近14天移除門檻）",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↓",
+        "detail": ""
+      },
+      "duration": {
+        "text": "8週（首見07/09）| **最後訊號**：08/20",
+        "weeks": 8
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "中國限制關鍵材料出口：台廠供應鏈受阻",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "（無新增獨立進展，最後訊號滿7天，接近降級門檻）"
+      },
+      "duration": {
+        "text": "12天（首見08/20）| **最後訊號**：08/24",
+        "days": 12
+      },
+      "industry_chain_key": "半導體",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    }
+  ]
+}
