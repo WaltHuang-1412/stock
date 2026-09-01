@@ -144,11 +144,16 @@
       "reason": "中東地緣🔴超強催化利空鈍化、航運為本週台股最強族群；avg_rank 5.5（TOP10）、真連續買超 8 天、外資近5天 +56K、buy_ratio 44.7%；EPS Q2 +46.4%＋毛利率 QoQ+7.3pp（+5）；營收 2026-07 +43.1%（新鮮，回檔未達不加分）；月季雙線上（價位13）。已大漲 5日+8.2% 扣 -10。無事件、卷宗 7 處提及全為利多。",
       "intraday_price": 244.0,
       "intraday_change_pct": -2.59,
-      "result": "holding",
-      "actual_close": 246.0,
+      "result": "fail",
+      "actual_close": 238.0,
       "holding_status": "D0 收盤 246.0（-1.8%），未觸目標/停損，續追蹤（D0 不結算）",
       "close_price": 246.0,
-      "change_percent": -1.8
+      "change_percent": -1.8,
+      "settled_date": "2026-09-01",
+      "settled_price": 238.0,
+      "return_pct": -4.99,
+      "fail_reason": "鐵律出場（v8.3.3 待複核兩次成立 08-31 定案，09-01 開盤執行；收盤價入帳 v8.3.2）",
+      "sync_note": "v8.3.7 結算同步寫三處：來源檔①已回寫（2026-09-01 盤後）"
     },
     {
       "stock_code": "3532",
