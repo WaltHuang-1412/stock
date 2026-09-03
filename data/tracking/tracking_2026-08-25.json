@@ -194,11 +194,17 @@
       "reason": "📶訊號A L2 早期佈局（+10）；TOP50 avg_rank 25、10日累計 +82K、外資近5天 +3,697、動能 -95% 佈局中；EPS Q2 +1600%（+5）；⚠️ 營收快取落後至 2026-02，本因子未採計；月季雙線上（價位13）。⚠️ 卷宗唯一提及經查為華新科(2492)子字串誤報，真實 mentions=0，當日時事資料無提及，推薦依據為法人數據。",
       "intraday_price": 38.35,
       "intraday_change_pct": 0.66,
-      "result": "holding",
-      "actual_close": 38.45,
+      "result": "fail",
+      "actual_close": 37.6,
       "holding_status": "D0 收盤 38.45（+0.9%），未觸目標/停損，續追蹤（D0 不結算）",
-      "close_price": 38.45,
-      "change_percent": 0.9
+      "close_price": 37.6,
+      "change_percent": -1.31,
+      "settled_date": "2026-09-03",
+      "settled_price": 37.6,
+      "return_pct": -1.31,
+      "holding_days": "D7/10（提前出場）",
+      "fail_reason": "鐵律出場（09-02 兩次複核皆 6.9% ≥5% 定案；09-03 盤前再掃 L4 賣超 -2,357 張佔 5 日均量 9.4% ≥8%；09-03 開盤執行、收盤價 37.6 入帳 v8.3.2）",
+      "sync_note": "v8.3.7 結算同步寫三處：①本來源檔已回寫（2026-09-03 盤後）②tracking_2026-09-03.removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2886",
