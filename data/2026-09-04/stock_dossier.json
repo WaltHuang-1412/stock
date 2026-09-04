@@ -1,0 +1,447 @@
+{
+  "date": "2026-09-04",
+  "window_days": 5,
+  "source_status": {
+    "法說會(MOPS)": "ok",
+    "除權息(TWSE)": "ok",
+    "重大訊息(TWSE+TPEx)": "ok"
+  },
+  "stocks": {
+    "2354": {
+      "name": "鴻準",
+      "events": [],
+      "mentions": []
+    },
+    "3045": {
+      "name": "台灣大",
+      "events": [],
+      "mentions": []
+    },
+    "1102": {
+      "name": "亞泥",
+      "events": [],
+      "mentions": []
+    },
+    "1605": {
+      "name": "華新",
+      "events": [],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 202,
+          "text": "| L1 品牌製造 | MLCC/電阻等被動元件製造，掌握報價話語權 | 國巨(2327)：全球前三大MLCC、華新科(2492)：MLCC+電阻，法人加持 |"
+        }
+      ]
+    },
+    "2542": {
+      "name": "興富發",
+      "events": [],
+      "mentions": []
+    },
+    "2886": {
+      "name": "兆豐金",
+      "events": [
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-09-04",
+          "days_until": 0,
+          "detail": "代本公司之子公司兆豐國際證券投資信託股份有限公司公告\r\n董事會推選張傳章先生擔任董事長"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 38,
+          "text": "- **台股影響鏈**：新台幣31.72元（升0.06%）；兆豐金(2886)↑／國泰金(2882)↑ 金融股逆勢撐盤；房地產族群→ 六都買賣移轉棟數創10年低點，央行升息與信用管制鬆綁角力"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 272,
+          "text": "| 2886 | 兆豐金 | 86.4 | +4.1% | +16.7% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 454,
+          "text": "> 財政部正積極推動公股投信整併案，兆豐金控昨（3）日代子公司兆豐投信公告重大訊息，董事會決議推選兆豐金控總經理張傳章擔任兆豐投信董事長，職務由原先的「暫代董事長」調整為正式董事長，新人事案自即日起生效。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 289,
+          "text": "\"code\": \"2886\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 290,
+          "text": "\"name\": \"兆豐金\","
+        }
+      ]
+    },
+    "2382": {
+      "name": "廣達",
+      "events": [
+        {
+          "type": "法說會",
+          "date": "2026-09-09",
+          "days_until": 5,
+          "detail": "09:00 馬來西亞與新加坡 本公司受邀參加大和國泰證券所舉辦之&quot;Daiwa-Affin Hwang Greater China Conference &amp; Taiwan Corporate Day&quot;投資論壇就本公司目前之營運概況，作回顧及展望說明。"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 168,
+          "text": "| L2 一線整機 | 直接組裝 AI 伺服器，最先受訂單增益 | 廣達(2382)：NVIDIA GB200 NVL主力、技嘉(2376)：DGX/HGX伺服器、鴻海(2317)：Google AI代理供應鏈 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 581,
+          "text": "> Meta宣布，推出該公司史上最強AI模型「Muse Spark 1.3」，效能更接近主流對手高階產品。Meta將更強大生成式AI技術推向市場，業界看好有望引爆更多AI算力需求，鴻海、廣達、緯穎等相關供應鏈吃補。"
+        }
+      ]
+    },
+    "2880": {
+      "name": "華南金",
+      "events": [],
+      "mentions": []
+    },
+    "2801": {
+      "name": "彰銀",
+      "events": [],
+      "mentions": []
+    },
+    "2812": {
+      "name": "台中銀",
+      "events": [],
+      "mentions": [
+        {
+          "file": "tw_market_news.json",
+          "line": 53,
+          "text": "\"subject\": \"辦理台中銀證券股份有限公司就其輔導仲恩生醫科技股份有限公司於115年9月2日初次申請股票上市案意見徵詢作業相關事宜。\","
+        }
+      ]
+    },
+    "5880": {
+      "name": "合庫金",
+      "events": [],
+      "mentions": []
+    },
+    "2618": {
+      "name": "長榮航",
+      "events": [],
+      "mentions": []
+    },
+    "5876": {
+      "name": "上海商銀",
+      "events": [],
+      "mentions": []
+    },
+    "2356": {
+      "name": "英業達",
+      "events": [],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 587,
+          "text": "> 全球第二大伺服器品牌廠慧與（HPE）2日公布上季營收、獲利雙創新高，受惠AI伺服器和網路設備需求持續火熱，調高今年度與明年度營收展望。法人看好，慧與產品出貨熱，主力代工廠鴻海、英業達與緯創等可望受惠。"
+        }
+      ]
+    },
+    "2392": {
+      "name": "正崴",
+      "events": [],
+      "mentions": []
+    },
+    "2867": {
+      "name": "",
+      "events": [],
+      "mentions": []
+    },
+    "2330": {
+      "name": "台積電",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 8,
+          "text": "- **台股影響鏈**：台積電(2330)↑ 尾盤逆勢收紅；聯發科(2454)↑ 跌幅僅0.93%展現抗跌；南亞科(2408)↓ 重挫7.82%失守500元、單月量589億居冠；金融股(13檔金控)↑ 逆勢走強；載板/PCB族群(欣興3037、南電8046、景碩3189)↓ 全面重挫"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 11,
+          "text": "- **本週摘要**：09/01單日大漲後連兩日拉回，外資轉為連續賣超且近5日資金背離明顯轉負，短線籌碼出現獲利了結，惟指數仍守住10日線、台積電與聯發科逆勢抗跌，中長期格局未破壞；09/04非農為下一驗證關鍵。"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 54,
+          "text": "- **本週摘要**：風險階段維持【警戒】，較前日略升溫：利多不漲案例罕見地單日湧現三起，外資由單日大買轉為連續賣超且5日資金面轉為明顯背離，MIC正式提出系統性融資風險警告，投機末段訊號（漢測天價承銷）持續存在；惟大盤跌幅仍在1%以內、台積電與聯發科逆勢抗跌，尚未達【惡化】門檻，09/04非農與09/17台灣央行會議為下一驗證點。"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 126,
+          "text": "### Intel 14A製程進度：挑戰台積電先進製程龍頭地位"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 24,
+          "text": "| 🔺 台積電 ADR | TSM | 417.01 | +1.04 | +0.25% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 72,
+          "text": "| 10/15（四） | 41天 | TSM | 台積電 ADR | $4.45 (4.26~4.72) | $1454.5B | 🔴 A類-指標性 | - |  |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 171,
+          "text": "| L5 基礎晶片 | 晶圓代工與封裝，整條鏈的製造基礎 | 台積電(2330)：CoWoS先進封裝、聯發科(2454)：AI邊緣晶片 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 173,
+          "text": "### 台積電先進製程擴產鏈（主題鍵：台積電先進製程擴產）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 176,
+          "text": "| L1 晶圓廠主體 | 訂單來源，決定整條建廠供應鏈規模 | 台積電(2330)：2nm量產+N3擴產+CoWoS |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 177,
+          "text": "| L2 廠務工程 | 晶圓廠建設工程，最早獲益 | 漢唐(2404)：台積電廠務主力承包商、聖暉(5536)：製程工程 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 180,
+          "text": "| L5 IC設計客戶 | 採用台積電先進製程的本土IC設計 | 世芯-KY(3661)：ASIC設計，CoWoS受益 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 225,
+          "text": "| 2330 | 台積電 | 4675.8 | 🔺+44.7% | +37.0% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 384,
+          "text": "> 台積電重要夥伴崇越（5434）昨（3）日在SEMICON Taiwan 2026 國際半導體展分享產業趨勢，董事長曾海華提到，受惠人工智慧（AI）多元應用成長，看好營運季季增，目前產能追不上訂單成長，對明年與後年也樂觀看待。"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 530,
+          "text": "15. **台積電ADR3日上漲1.51美元漲幅0.36%折台股2648.43元** （2026-09-03 22:30）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 531,
+          "text": "> (中央社台北2026年 9月 4日電)台積電在NYSE掛牌 ADR以 417.01美元作收，上漲1.51美元，漲幅 0.36%。由於每單位台積電 ADR相當於台股 5股台積電普通股，以 9月 3日新台"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 572,
+          "text": "> SEMICON Taiwan 2026國際半導體展，今年吸引上百家機械業者參展。台灣機械公會昨（3）日建議政府，複製發展台積電等半導體產業模式，由企業及政府共同投資成立大型新創公司，全力孵化「本土」半導體設備供應鏈。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 22,
+          "text": "\"code\": \"2330\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 23,
+          "text": "\"name\": \"台積電\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 62,
+          "text": "\"summary\": \"09/01單日大漲後連兩日拉回，外資轉為連續賣超且近5日資金背離明顯轉負，短線籌碼出現獲利了結，惟指數仍守住10日線、台積電與聯發科逆勢抗跌，中長期格局未破壞；09/04非農為下一驗證關鍵。\""
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 394,
+          "text": "\"summary\": \"風險階段維持【警戒】，較前日略升溫：利多不漲案例罕見地單日湧現三起，外資由單日大買轉為連續賣超且5日資金面轉為明顯背離，MIC正式提出系統性融資風險警告，投機末段訊號（漢測天價承銷）持續存在；惟大盤跌幅仍在1%以內、台積電與聯發科逆勢抗跌，尚未達【惡化】門檻，09/04非農與09/17台灣央行會議為下一驗證點。\""
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 828,
+          "text": "\"theme\": \"Intel 14A製程進度：挑戰台積電先進製程龍頭地位\","
+        }
+      ]
+    },
+    "6770": {
+      "name": "力積電",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 74,
+          "text": "### 力積電接班落地＋外資籌碼動向"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 522,
+          "text": "\"theme\": \"力積電接班落地＋外資籌碼動向\","
+        }
+      ]
+    },
+    "2337": {
+      "name": "旺宏",
+      "events": [],
+      "mentions": []
+    },
+    "2313": {
+      "name": "華通",
+      "events": [
+        {
+          "type": "法說會",
+          "date": "2026-09-04",
+          "days_until": 0,
+          "detail": "15:15 台北君悅酒店(台北市信義區松壽路2號) 本公司受邀參加統一證券舉辦之2026Q3秋季投資論壇,於會中說明公司營運概況與產業趨勢"
+        }
+      ],
+      "mentions": []
+    },
+    "3090": {
+      "name": "日電貿",
+      "events": [],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 203,
+          "text": "| L2 通路商 | 元件代理分銷，庫存指標 | 日電貿(3090)：2026/05法說：高階MLCC交期拉長、缺貨恐延至2027（鉅亨6463791）、羅昇(8374)：工業自動化元件通路、蜜望實(8043)：電子元件通路、大聯大(3702)：最大半導體通路商、文曄(3036)：半導體通路 |"
+        }
+      ]
+    },
+    "1301": {
+      "name": "台塑",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 44,
+          "text": "- **台股影響鏈**：南亞(1303)↑／台塑化(6505)↑／台化(1301)↑ 油價高檔持續受惠"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 83,
+          "text": "### 台塑集團H1獲利轉骨（含中東油價轉強）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 280,
+          "text": "| 6505 | 台塑化 | 748.2 | 🔺+32.3% | +11.8% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 281,
+          "text": "| 1301 | 台塑 | 152.9 | +4.8% | -2.5% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 326,
+          "text": "\"context\": \"／台塑化(6505)↑／台化(1301)↑ 油價高檔持續受惠\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 332,
+          "text": "\"name\": \"台塑化\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 333,
+          "text": "\"context\": \"／台化(1301)↑ 油價高檔持續受惠\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 338,
+          "text": "\"code\": \"1301\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 347,
+          "text": "\"context\": \"台化(1301)↑ 油價高檔持續受惠\""
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 579,
+          "text": "\"theme\": \"台塑集團H1獲利轉骨（含中東油價轉強）\","
+        }
+      ]
+    },
+    "4938": {
+      "name": "和碩",
+      "events": [],
+      "mentions": []
+    },
+    "2615": {
+      "name": "萬海",
+      "events": [],
+      "mentions": []
+    },
+    "2353": {
+      "name": "宏碁",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 26,
+          "text": "- **強度**：超強 | **方向**：→高位震盪（創見8月營收48.4億元、YoY+275%創高；但南亞科儘管營收YoY+719.6%創紀錄，股價今日仍重挫7.82%失守500元及月線、爆出11.75萬張大量，為典型「利多不漲」案例；iPhone 18記憶體成本較去年同期暴增近4倍，TrendForce估新機漲價10-20%；宏碁示警記憶體漲價恐壓抑下半年PC出貨）| **持續**：15週（05/21起）| **最後訊號**：09/03"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 27,
+          "text": "- **台股影響鏈**：南亞科(2408)↓ 創紀錄營收卻重挫7.82%失守500元；創見(2451)↑ 營收YoY+275%創高；宜鼎(5289)↑／群聯(8299)↑ 延續高成長；宏碁(2353)→ 下半年PC出貨可能受壓抑"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 258,
+          "text": "| 2353 | 宏碁 | 269.0 | 🔺+21.9% | +23.1% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 409,
+          "text": "6. **首批輝達RTX Spark電腦　聯想宏碁10月率先開賣** （2026-09-04 03:07）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 410,
+          "text": "> 晶片巨擘輝達今天表示，聯想與宏碁10月將推出首批搭載自家RTXSpark晶片的Windows個人電腦。輝達目前正致力將A..."
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 568,
+          "text": "4. **宏碁：PC 漲價幅度趨緩 樂觀看待輝達 RTX Spark PC 商機** （2026-09-04 01:25）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 569,
+          "text": "> 宏碁董事長陳俊聖坦言，下半年PC還會依著成本的調漲而漲價，但預期漲幅會趨緩，他強調，宏碁一直在嘗試找到新的使用模式，發掘市場新的需求，而剛亮相的自家輝達（NVIDIA）RTX Spark PC通路客戶反饋良好，對於相關商機樂觀看待。"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 615,
+          "text": "2. **輝達把Blackwell塞進電腦！聯想、宏碁10月首發RTX Spark** （2026-09-04 02:30）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 616,
+          "text": "> 輝達(NVDA-US)周四(3日)宣布，聯想集團(00992-HK)與宏碁(2353-TW)將於10月推出首批搭載RTX Spark晶片的Windows個人電腦，進一步將人工智慧(AI)運算能力從雲端帶進筆電與桌上型電腦"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 181,
+          "text": "\"detail\": \"高位震盪（創見8月營收48.4億元、YoY+275%創高；但南亞科儘管營收YoY+719.6%創紀錄，股價今日仍重挫7.82%失守500元及月線、爆出11.75萬張大量，為典型「利多不漲」案例；iPhone 18記憶體成本較去年同期暴增近4倍，TrendForce估新機漲價10-20%；宏碁示警記憶體漲價恐壓抑下半年PC出貨）\""
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 219,
+          "text": "\"code\": \"2353\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 220,
+          "text": "\"name\": \"宏碁\","
+        }
+      ]
+    }
+  }
+}

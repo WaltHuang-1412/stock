@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-09-01",
+  "last_updated": "2026-09-03",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -1230,6 +1230,11 @@
               "code": "2317",
               "name": "鴻海",
               "category": "DRAM與記憶體"
+            },
+            {
+              "code": "2353",
+              "name": "宏碁",
+              "category": "DRAM與記憶體"
             }
           ]
         }
@@ -1633,6 +1638,11 @@
             {
               "code": "7942",
               "name": "東佑達",
+              "category": "光通訊與網通（含CPO/矽光子量產）"
+            },
+            {
+              "code": "4903",
+              "name": "聯光通",
               "category": "光通訊與網通（含CPO/矽光子量產）"
             }
           ]
@@ -2851,6 +2861,16 @@
             {
               "code": "3105",
               "name": "穩懋",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "6667",
+              "name": "信紘科",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "6217",
+              "name": "中探針",
               "category": "AI伺服器與半導體"
             }
           ]
@@ -8032,6 +8052,31 @@
               "code": "3189",
               "name": "景碩",
               "category": "欣興(3037)遭檢調搜索：ABF龍頭治理風險事件"
+            }
+          ]
+        }
+      }
+    },
+    "聯準會利率政策": {
+      "name": "聯準會利率政策",
+      "catalysts": [
+        "聯準會利率政策",
+        "含台灣央行升息預期"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2886",
+              "name": "兆豐金",
+              "category": "聯準會利率政策（含台灣央行升息預期）"
+            },
+            {
+              "code": "2882",
+              "name": "國泰金",
+              "category": "聯準會利率政策（含台灣央行升息預期）"
             }
           ]
         }
