@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-04",
+  "window_days": 5,
+  "source_status": {
+    "法說會(MOPS)": "ok(cache)",
+    "除權息(TWSE)": "ok(cache)",
+    "重大訊息(TWSE+TPEx)": "ok"
+  },
+  "stocks": {
+    "2603": {
+      "name": "長榮",
+      "events": [],
+      "mentions": [
+        {
+          "file": "tw_market_news.json",
+          "line": 77,
+          "text": "\"subject\": \"元大證券股份有限公司蘆洲中正分公司更名為長榮分公司，訂於115年9月16日(更名基準日)於原址開始營業。\","
+        }
+      ]
+    },
+    "2820": {
+      "name": "華票",
+      "events": [],
+      "mentions": []
+    }
+  }
+}
