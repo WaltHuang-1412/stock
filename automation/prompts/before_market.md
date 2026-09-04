@@ -70,6 +70,11 @@ VIX {vix} | 台股vs年線{vs_ma240}%
 🔍 Module A/B
 
 📋 推薦N檔
+🔴 排序規則：**一律依總分遞減排列**（CLAUDE.md Step 7「評分後依總分排名」）。
+   分析報告 md、tracking.json、LINE 摘要三份的推薦順序與分數必須完全一致。
+   信心/證據品質的主觀判斷只能寫成該檔的**附註**，禁止用來調動排序，
+   亦禁止加註「最推薦」這類規範外的標籤。
+   （依據：2026-08-31 LINE 把 97 分的 2615 萬海排在 104 分的 2880 華南金之前）
 每檔格式：
   代碼名稱 分數⭐ 倉位
   推{price} 目標{target} 停損{stop_loss}(-10%) Day{N}/10
@@ -82,7 +87,7 @@ VIX {vix} | 台股vs年線{vs_ma240}%
 
 自動化注意事項：
 1. 今天日期用系統日期
-2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py before_market $(date +%Y-%m-%d)`，通過才能 git commit。驗證失敗必須修正報告後重跑
-3. 禁止修改 scripts/ 目錄下的任何 .py 檔案，只能執行不能改
+2. commit 前必須先跑驗證：`python3 scripts/validate_analysis.py before_market $(date +%Y-%m-%d)`，通過才能 git commit。驗證失敗必須修正報告後重跑。（排程 `before_market.ps1` 亦會自行再跑一次，未通過會發 LINE 警示）
+3. 發現 scripts/ 下的腳本有 bug，**直接修在源頭**（CLAUDE.md v8.3.9 已廢止「腳本唯讀」慣例）；修改須在當日報告揭露，並附上驗證方式
 4. git commit 完成後，執行 `git push`
 5. 🚫 **絕對禁止執行 `scripts/notify_line.py`**（見文件最頂端說明）。違反此規則 = 使用者收到重複 LINE 通知

@@ -20,7 +20,81 @@
 import sys
 import json
 import os
+import re
 from datetime import datetime
+
+# Windows 主控台預設 cp950，emoji 會 UnicodeEncodeError 而讓驗證整支掛掉
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
+except AttributeError:
+    pass
+
+_MARKER_RE = re.compile(r"[1-9]️?⃣")
+
+
+def extract_ranked_recs(text):
+    """抽出報告/LINE 中以 1️⃣2️⃣… 標號的推薦序列，回傳 [(code, score), ...]。
+
+    只採計「同一行同時含標號 + 4 碼代號 + N 分」者，避免誤抓沿用追蹤、
+    持倉評估等不使用標號的區塊。
+    """
+    seq = []
+    for line in text.split(chr(10)):
+        if not _MARKER_RE.search(line):
+            continue
+        m_code = re.search(r"(?<!\d)(\d{4})(?!\d)", line)
+        m_score = re.search(r"(\d{2,3})\s*分", line)
+        if m_code and m_score:
+            seq.append((m_code.group(1), int(m_score.group(1))))
+    return seq
+
+
+def check_recommendation_consistency(date_str, recs):
+    """三方一致性：tracking.json / 分析報告 / LINE 摘要
+
+    依 CLAUDE.md Step 7「評分後依總分排名」，三份檔案的推薦順序必須一致
+    且皆為分數遞減。2026-08-31 曾發生 LINE 把 97 分排在 104 分之前。
+    """
+    errs, warns = [], []
+    base = [(str(r.get("stock_code", "")), r.get("score")) for r in recs]
+
+    # (a) tracking.json 本身必須分數遞減
+    scores = [s for _, s in base if isinstance(s, (int, float))]
+    if scores != sorted(scores, reverse=True):
+        errs.append(f"❌ tracking.json 推薦未依總分遞減排序: {scores}")
+
+    sources = {
+        "分析報告": f"data/{date_str}/before_market_analysis.md",
+        "LINE 摘要": f"data/{date_str}/before_market_line.txt",
+    }
+    for label, path in sources.items():
+        if not os.path.exists(path):
+            continue
+        with open(path, "r", encoding="utf-8") as f:
+            seq = extract_ranked_recs(f.read())
+        if not seq:
+            warns.append(f"⚠️  {label} 找不到標號推薦序列，一致性未檢查")
+            continue
+        if len(seq) != len(base):
+            errs.append(
+                f"❌ {label} 推薦 {len(seq)} 檔與 tracking.json {len(base)} 檔不符: "
+                f"{[c for c, _ in seq]} vs {[c for c, _ in base]}"
+            )
+            continue
+        for i, ((c1, s1), (c2, s2)) in enumerate(zip(seq, base), 1):
+            if c1 != c2:
+                errs.append(
+                    f"❌ {label} 第 {i} 檔為 {c1}，tracking.json 為 {c2}（排序不一致，"
+                    f"應一律依總分遞減）"
+                )
+            elif s2 is not None and s1 != s2:
+                errs.append(f"❌ {label} {c1} 分數 {s1} 與 tracking.json {s2} 不符")
+        seq_scores = [s for _, s in seq]
+        if seq_scores != sorted(seq_scores, reverse=True):
+            errs.append(f"❌ {label} 推薦未依總分遞減排序: {seq_scores}")
+    return errs, warns
+
 
 def validate_before_market(date_str):
     """驗證盤前分析完整性（v5.7規範）"""
@@ -43,10 +117,13 @@ def validate_before_market(date_str):
 
     # 2.1 檢查推薦數量
     recs = tracking.get('recommendations', [])
-    if len(recs) < 6:
-        errors.append(f"❌ 推薦數量不足: {len(recs)}檔（應為 6-8檔）")
+    # v8.2：倉位與分數帶脫鉤、「寧缺勿濫禁止湊數」→ 少於 4 檔屬合法結果，只警告
+    if len(recs) == 0:
+        warnings.append(f"⚠️  今日 0 檔新推薦（若為全數卡門檻屬合法結果，須於報告寫明原因）")
+    elif len(recs) < 4:
+        warnings.append(f"⚠️  推薦 {len(recs)}檔 低於 4-8 區間，須確認為寧缺勿濫而非遺漏")
     elif len(recs) > 8:
-        warnings.append(f"⚠️  推薦數量過多: {len(recs)}檔（建議 6-8檔）")
+        warnings.append(f"⚠️  推薦數量過多: {len(recs)}檔（建議 4-8檔）")
 
     # 2.2 檢查產業分散（動態：直接讀取 industry 欄位，不硬編碼產業清單）
     industries = {}
@@ -62,9 +139,9 @@ def validate_before_market(date_str):
     if missing_industry > 0:
         warnings.append(f"⚠️  {missing_industry} 檔推薦缺少 industry 欄位（tracking.json 每檔應包含 industry）")
 
-    if len(industries) < 4:
-        errors.append(f"❌ 產業數量不足: {len(industries)}個（應至少4個）")
-        errors.append(f"   目前產業: {', '.join(industries.keys())}")
+    # v8.2：產業分散改軟性目標（盡量 ≥3），禁止為湊產業拉進未過門檻標的
+    if len(industries) < 3:
+        warnings.append(f"⚠️  產業數量 {len(industries)}個 低於軟性目標 3 個: {', '.join(industries.keys())}")
 
     for ind, count in industries.items():
         ratio = count / len(recs)
@@ -142,6 +219,7 @@ def validate_before_market(date_str):
         # Module A: 催化預埋掃描（強制）
         has_module_a = ('催化預埋掃描' in md_content or
                        'Module A' in md_content or
+                       '訊號A' in md_content or
                        'L3 佈局完成' in md_content)
         if not has_module_a:
             errors.append(f"❌ 缺少 Module A 催化預埋掃描段落（強制）")
@@ -149,7 +227,9 @@ def validate_before_market(date_str):
 
         # Module B: 催化主題預警（強制）
         has_module_b = ('催化主題預警' in md_content or
-                       'Module B' in md_content)
+                       'Module B' in md_content or
+                       '訊號B' in md_content or
+                       '催化主題' in md_content)
         if not has_module_b:
             errors.append(f"❌ 缺少 Module B 催化主題預警段落（強制）")
             errors.append(f"   報告必須包含獨立的 Module B 段落，逐檔列出篩選結果")
@@ -220,12 +300,14 @@ def validate_before_market(date_str):
             line_content = f.read()
 
         has_line_module_a = ('Module A' in line_content or
+                           '訊號A' in line_content or
                            '催化預埋' in line_content or
                            'L3' in line_content)
         if not has_line_module_a:
             errors.append(f"❌ LINE 摘要缺少 Module A（催化預埋掃描）")
 
         has_line_module_b = ('Module B' in line_content or
+                           '訊號B' in line_content or
                            '催化主題' in line_content)
         if not has_line_module_b:
             errors.append(f"❌ LINE 摘要缺少 Module B（催化主題預警）")
@@ -233,9 +315,17 @@ def validate_before_market(date_str):
         # 籌碼深度分析（強制）
         has_chip_analysis = ('籌碼深度分析' in md_content or
                             '反轉預警' in md_content or
-                            '近10日法人' in md_content)
+                            '近10日法人' in md_content or
+                            '真連買' in md_content or
+                            '10 日累計' in md_content or
+                            '反轉 Level' in md_content)
         if not has_chip_analysis:
             errors.append(f"❌ 缺少籌碼深度分析（強制）")
+
+    # 2.7 三方一致性：tracking.json / 分析報告 / LINE 摘要 排序與分數
+    cons_errs, cons_warns = check_recommendation_consistency(date_str, recs)
+    errors.extend(cons_errs)
+    warnings.extend(cons_warns)
 
     return errors, warnings
 

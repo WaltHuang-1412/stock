@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-04",
+  "window_days": 5,
+  "source_status": {
+    "法說會(MOPS)": "ok(cache)",
+    "除權息(TWSE)": "ok(cache)",
+    "重大訊息(TWSE+TPEx)": "error(上市: HTTPSConnectionPool(host='openapi.twse.com.tw', port=443): Max retries exceeded with url: /v1/opendata/t187ap04_L (Caused by NameResolutionError(\"HTTPSConnection(host='openapi.twse.com.tw', port=443): Failed to resolve 'openapi.twse.com.tw' ([Errno 11001] getaddrinfo failed)\")))"
+  },
+  "stocks": {
+    "2882": {
+      "name": "國泰金",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 38,
+          "text": "- **台股影響鏈**：新台幣31.72元（升0.06%）；兆豐金(2886)↑／國泰金(2882)↑ 金融股逆勢撐盤；房地產族群→ 六都買賣移轉棟數創10年低點，央行升息與信用管制鬆綁角力"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 273,
+          "text": "| 2882 | 國泰金 | 251.4 | 🔻-69.7% | +422.1% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 602,
+          "text": "> 國泰金控資訊長吳建興昨（3）日提到，近期的確有銀行客戶提出穩定幣需求，目前只能請客戶去虛擬資產交易平台開個帳戶，但有些大公司金額都很大，放在規模相對小的虛擬資產交易平台，也不放心，他希望銀行將來能做穩定幣等虛擬資產的交換、移轉。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 291,
+          "text": "\"context\": \"／國泰金(2882)↑ 金融股逆勢撐盤\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 296,
+          "text": "\"code\": \"2882\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 297,
+          "text": "\"name\": \"國泰金\","
+        }
+      ]
+    }
+  }
+}

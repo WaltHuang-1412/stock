@@ -201,6 +201,16 @@ if ($MarketStatus -eq "snapshot") {
         }
     }
 
+    Write-Output "" | Tee-Object -FilePath $LogFile -Append
+    Write-Output "[validate] 執行 validate_analysis.py before_market..." | Tee-Object -FilePath $LogFile -Append
+    python "$ProjectDir\scripts\validate_analysis.py" before_market $Date 2>&1 | Tee-Object -FilePath $LogFile -Append
+    if ($LASTEXITCODE -ne 0) {
+        Write-Output "[validate] 驗證未通過（見上方輸出），資料仍保留但需人工修正" | Tee-Object -FilePath $LogFile -Append
+        python "$ProjectDir\scripts\notify_line.py" "⚠️ before_market 驗證未通過 ($Date)，請檢查 log"
+    } else {
+        Write-Output "[validate] 通過" | Tee-Object -FilePath $LogFile -Append
+    }
+
     $EndTime = Get-Date
     $Duration = $EndTime - $StartTime
     Write-Output "" | Tee-Object -FilePath $LogFile -Append
