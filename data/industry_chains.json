@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-09-04",
+  "last_updated": "2026-09-06",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -2897,6 +2897,16 @@
               "code": "6182",
               "name": "合晶",
               "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "3406",
+              "name": "玉晶光",
+              "category": "AI伺服器與半導體"
+            },
+            {
+              "code": "6446",
+              "name": "藥華藥",
+              "category": "AI伺服器與半導體"
             }
           ]
         }
@@ -4854,6 +4864,26 @@
               "code": "1717",
               "name": "長興",
               "category": "台股市場動態"
+            },
+            {
+              "code": "2377",
+              "name": "微星",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "2464",
+              "name": "盟立",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "2884",
+              "name": "永豐金",
+              "category": "台股市場動態"
+            },
+            {
+              "code": "6446",
+              "name": "藥華藥",
+              "category": "台股市場動態"
             }
           ]
         }
@@ -6526,6 +6556,11 @@
               "code": "1303",
               "name": "南亞",
               "category": "ABF載板/PCB基板缺口擴大帶動漲價"
+            },
+            {
+              "code": "2303",
+              "name": "聯電",
+              "category": "ABF載板/PCB基板缺口擴大帶動漲價（新增欣興洗產地事件）"
             }
           ]
         }
@@ -8174,6 +8209,51 @@
               "code": "2881",
               "name": "富邦金",
               "category": "台灣壽險美元曝險與新台幣升值錯配風險"
+            }
+          ]
+        }
+      }
+    },
+    "特斯拉Cybercab": {
+      "name": "特斯拉Cybercab",
+      "catalysts": [
+        "特斯拉Cybercab",
+        "特斯拉",
+        "Cybercab",
+        "Robotaxi",
+        "供應鏈題材"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "4919",
+              "name": "新唐",
+              "category": "特斯拉Cybercab/Robotaxi供應鏈題材"
+            }
+          ]
+        }
+      }
+    },
+    "特斯拉Cybercab監管風險升溫": {
+      "name": "特斯拉Cybercab監管風險升溫",
+      "catalysts": [
+        "特斯拉Cybercab監管風險升溫",
+        "特斯拉",
+        "Cybercab",
+        "監管風險升溫"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "4919",
+              "name": "新唐",
+              "category": "特斯拉Cybercab監管風險升溫"
             }
           ]
         }
