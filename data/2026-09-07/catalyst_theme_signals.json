@@ -1,0 +1,493 @@
+{
+  "date": "2026-09-07",
+  "lookback_dates": [
+    "2026-09-07",
+    "2026-09-06",
+    "2026-09-05",
+    "2026-09-04",
+    "2026-09-03",
+    "2026-09-02",
+    "2026-09-01"
+  ],
+  "leader_trends": {
+    "Micron": {
+      "cumulative": 20.81,
+      "consecutive_up": 5,
+      "latest_change": 6.1,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "NVIDIA": {
+      "cumulative": 2.86,
+      "consecutive_up": 5,
+      "latest_change": 0.84,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Apple": {
+      "cumulative": -3.25,
+      "consecutive_up": 0,
+      "latest_change": -2.51,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "AMD": {
+      "cumulative": 9.71,
+      "consecutive_up": 3,
+      "latest_change": 4.69,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Tesla": {
+      "cumulative": -11.6,
+      "consecutive_up": 0,
+      "latest_change": -5.92,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Super Micro": {
+      "cumulative": 12.16,
+      "consecutive_up": 5,
+      "latest_change": 4.54,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Broadcom": {
+      "cumulative": -3.27,
+      "consecutive_up": 3,
+      "latest_change": 0.21,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Lam Research": {
+      "cumulative": 7.12,
+      "consecutive_up": 4,
+      "latest_change": 5.12,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Applied Materials": {
+      "cumulative": 3.0,
+      "consecutive_up": 3,
+      "latest_change": 4.31,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Western Digital": {
+      "cumulative": 13.11,
+      "consecutive_up": 3,
+      "latest_change": 5.86,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Dell": {
+      "cumulative": 14.98,
+      "consecutive_up": 5,
+      "latest_change": 1.5,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "ASML": {
+      "cumulative": 7.32,
+      "consecutive_up": 3,
+      "latest_change": 4.17,
+      "signal_level": "strong",
+      "days_tracked": 7
+    }
+  },
+  "preposition_candidates": [
+    {
+      "code": "3661",
+      "name": "世芯-KY",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 1093,
+        "buy_days": 6,
+        "sell_days": 4,
+        "momentum_pct": 78.82653061224487,
+        "consecutive_buy": 1,
+        "cumulative_foreign": 357,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
+      }
+    },
+    {
+      "code": "3443",
+      "name": "創意",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 882,
+        "buy_days": 7,
+        "sell_days": 3,
+        "momentum_pct": -97.7983777520278,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 396,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
+      }
+    },
+    {
+      "code": "3707",
+      "name": "漢磊",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "2449",
+      "name": "京元電",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -10901,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -262.6170371646849,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -19408,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-10,901為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 10824,
+        "buy_days": 7,
+        "sell_days": 3,
+        "momentum_pct": -101.40280561122246,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 19686,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜動能-101%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3189",
+      "name": "景碩",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -4769,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -466.4245810055866,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -3830,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-4,769為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -10257,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": -281.77548144668856,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -6844,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-10,257為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "3017",
+      "name": "奇鋐",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 3549,
+        "buy_days": 7,
+        "sell_days": 2,
+        "momentum_pct": -8.576051779935277,
+        "consecutive_buy": 2,
+        "cumulative_foreign": 867,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
+      }
+    },
+    {
+      "code": "3324",
+      "name": "雙鴻",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "6230",
+      "name": "超眾",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": 67,
+        "buy_days": 8,
+        "sell_days": 1,
+        "momentum_pct": -80.35714285714286,
+        "consecutive_buy": 1,
+        "cumulative_foreign": 69,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
+      }
+    },
+    {
+      "code": "2368",
+      "name": "金像電",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "2367",
+      "name": "燿華",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "3234",
+      "name": "光環",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "4977",
+      "name": "眾達-KY",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "2392",
+      "name": "正崴",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 9.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    }
+  ],
+  "already_in_top50": [
+    {
+      "code": "3711",
+      "name": "日月光",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 9.71,
+      "tw_5d_change": -2.644628099173554
+    },
+    {
+      "code": "2301",
+      "name": "光寶科",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 9.71,
+      "tw_5d_change": -2.9921259842519685
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 9.71,
+      "tw_5d_change": 0.0
+    },
+    {
+      "code": "4904",
+      "name": "遠傳",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": -3.27,
+      "tw_5d_change": 1.4851485148514851
+    },
+    {
+      "code": "4906",
+      "name": "正文",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": -3.27,
+      "tw_5d_change": 1.3736263160443016
+    },
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "leader_cumulative": 7.12,
+      "tw_5d_change": -1.3774104683195594
+    },
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "leader_cumulative": 7.12,
+      "tw_5d_change": -3.9525691699604746
+    },
+    {
+      "code": "6213",
+      "name": "聯茂",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Lam Research",
+      "leader_cumulative": 7.12,
+      "tw_5d_change": -9.058614564831261
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 9.71,
+      "tw_5d_change": 3.7593984962406015
+    },
+    {
+      "code": "2356",
+      "name": "英業達",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 9.71,
+      "tw_5d_change": 4.00616088288433
+    }
+  ],
+  "already_moved_count": 10
+}
