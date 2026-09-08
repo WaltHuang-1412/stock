@@ -223,12 +223,16 @@
       "intraday_price": 83.2,
       "intraday_return_pct": 1.84,
       "intraday_status": "✅續抱",
-      "result": "holding",
-      "actual_close": 82.9,
-      "return_pct": 1.47,
+      "result": "fail",
+      "actual_close": 80.1,
+      "return_pct": -1.96,
       "holding_status": "持有中，09-07 收盤 82.9",
       "close_price": 82.9,
-      "change_percent": 1.47
+      "change_percent": 1.47,
+      "settled_date": "2026-09-08",
+      "settled_price": 80.1,
+      "fail_reason": "鐵律③ L4（賣超 -116 張但佔 5 日均量 42.5%）；D1 隔日即出場；收盤價入帳 v8.3.2",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-07.json ②tracking_2026-09-08.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2324",
@@ -254,12 +258,16 @@
       "intraday_price": 39.6,
       "intraday_return_pct": -4.81,
       "intraday_status": "⚠️逼近停損",
-      "result": "holding",
-      "actual_close": 40.05,
-      "return_pct": -3.73,
+      "result": "fail",
+      "actual_close": 39.05,
+      "return_pct": -6.13,
       "holding_status": "持有中，09-07 收盤 40.05",
       "close_price": 40.05,
-      "change_percent": -3.73
+      "change_percent": -3.73,
+      "settled_date": "2026-09-08",
+      "settled_price": 39.05,
+      "fail_reason": "D1 收盤 39.05 ≤ 停損 39.52（settlement_checker 機械判定）；同日亦命中鐵律③ L4（賣超 -53,618 張、佔 5 日均量 70.7%、>50K 張雙重觸發）",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-07.json ②tracking_2026-09-08.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2376",
@@ -317,12 +325,16 @@
       "intraday_price": 3440.0,
       "intraday_return_pct": -3.64,
       "intraday_status": "✅續抱",
-      "result": "holding",
-      "actual_close": 3420.0,
-      "return_pct": -4.2,
+      "result": "fail",
+      "actual_close": 3285.0,
+      "return_pct": -7.98,
       "holding_status": "持有中，09-07 收盤 3420.0",
       "close_price": 3420.0,
-      "change_percent": -4.2
+      "change_percent": -4.2,
+      "settled_date": "2026-09-08",
+      "settled_price": 3285.0,
+      "fail_reason": "鐵律③ L4（賣超 -615 張佔 5 日均量 16.7%）；D1 隔日即出場；收盤價入帳 v8.3.2",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-07.json ②tracking_2026-09-08.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2317",
@@ -349,12 +361,16 @@
       "intraday_price": 256.0,
       "intraday_return_pct": 0.0,
       "intraday_status": "✅續抱",
-      "result": "holding",
-      "actual_close": 256.0,
-      "return_pct": 0.0,
+      "result": "fail",
+      "actual_close": 251.5,
+      "return_pct": -1.76,
       "holding_status": "持有中，09-07 收盤 256.0",
       "close_price": 256.0,
-      "change_percent": 0.0
+      "change_percent": 0.0,
+      "settled_date": "2026-09-08",
+      "settled_price": 251.5,
+      "fail_reason": "鐵律③ L4（賣超 -3,299 張佔 5 日均量 9.8%）＋Tesla -5.92% Level 2／Apple -2.51% Level 1 雙龍頭預警；D1 隔日即出場；收盤價入帳 v8.3.2",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-07.json ②tracking_2026-09-08.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2892",
@@ -1344,7 +1360,7 @@
       "position": "5-10%",
       "score": 82,
       "rating": "⭐⭐⭐⭐",
-      "result": "holding",
+      "result": "fail",
       "recommend_date": "2026-09-07",
       "source": "盤中軌道B",
       "reason": "🔴超強「AI伺服器與半導體」｜法人 avg_rank 12.5、今日買超 +14,175 張、buy_ratio 52.9%、近 5 日外資 +23K｜產業 AI/tier_1 AI伺服器組裝＋龍頭多點共振（SOX +3.37%、MU +6.10%、KLA +7.32%、MRVL +7.05%）+2｜EPS Q2 YoY +78.7% +5｜反轉 Level 0｜今日 -2.37%、5 日 +4.0%｜🔥 動能 +500% 經超強催化覆寫降級",
@@ -1355,11 +1371,15 @@
         "⚠️ 外資持股比快取 2026-08-11 落後 27 天 → 本因子視為 0",
         "卷宗事件窗口內無法說會／除權息／重大訊息"
       ],
-      "actual_close": 66.1,
-      "return_pct": 0.46,
+      "actual_close": 64.0,
+      "return_pct": -2.74,
       "holding_status": "持有中，09-07 收盤 66.1",
       "close_price": 66.1,
-      "change_percent": 0.46
+      "change_percent": 0.46,
+      "settled_date": "2026-09-08",
+      "settled_price": 64.0,
+      "fail_reason": "鐵律③ L4；本筆為軌道B 重複推薦（project_track_b_duplicate_holding），與 09-03 [A] 筆同時出場",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-07.json ②tracking_2026-09-08.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "3714",

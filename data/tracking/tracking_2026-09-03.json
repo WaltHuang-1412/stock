@@ -175,12 +175,17 @@
       "risk": "董事長遭告發之治理／法律風險（本 repo 已有 3037 欣興治理風波 5 日 -16.3% 前例）；亞股重挫、台股 09-02 -1.67%，開盤有系統性壓力",
       "intraday_price": 66.3,
       "intraday_return_pct": -0.45,
-      "result": "holding",
-      "actual_close": 65.0,
+      "result": "fail",
+      "actual_close": 64.0,
       "close_price": 65.0,
       "change_percent": -2.4,
       "recommend_date": "2026-09-03",
-      "holding_status": "D0/10 收盤 65.0（-2.40%），未觸目標／停損，續追蹤（D0 不結算）"
+      "holding_status": "D0/10 收盤 65.0（-2.40%），未觸目標／停損，續追蹤（D0 不結算）",
+      "settled_date": "2026-09-08",
+      "settled_price": 64.0,
+      "return_pct": -3.9,
+      "fail_reason": "鐵律③ L4（賣超 -11,752 張佔 5 日均量 59.1%）；09-08 開盤執行、收盤價入帳 v8.3.2",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-03.json ②tracking_2026-09-08.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2392",
@@ -197,12 +202,17 @@
       "risk": "法人尚未進場，屬搶在法人前面的部位，倉位不宜放大；月線乖離 +8% 已非低基期",
       "intraday_price": 45.85,
       "intraday_return_pct": 0.77,
-      "result": "holding",
-      "actual_close": 45.35,
+      "result": "fail",
+      "actual_close": 42.8,
       "close_price": 45.35,
       "change_percent": -0.33,
       "recommend_date": "2026-09-03",
-      "holding_status": "D0/10 收盤 45.35（-0.33%），未觸目標／停損，續追蹤（D0 不結算）"
+      "holding_status": "D0/10 收盤 45.35（-0.33%），未觸目標／停損，續追蹤（D0 不結算）",
+      "settled_date": "2026-09-08",
+      "settled_price": 42.8,
+      "return_pct": -5.93,
+      "fail_reason": "鐵律③ L4（賣超 -578 張佔 5 日均量 9.6%）；09-08 開盤執行、收盤價入帳 v8.3.2",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-03.json ②tracking_2026-09-08.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2886",
