@@ -203,12 +203,29 @@ if ($MarketStatus -eq "snapshot") {
 
     Write-Output "" | Tee-Object -FilePath $LogFile -Append
     Write-Output "[validate] 執行 validate_analysis.py before_market..." | Tee-Object -FilePath $LogFile -Append
-    python "$ProjectDir\scripts\validate_analysis.py" before_market $Date 2>&1 | Tee-Object -FilePath $LogFile -Append
-    if ($LASTEXITCODE -ne 0) {
-        Write-Output "[validate] 驗證未通過（見上方輸出），資料仍保留但需人工修正" | Tee-Object -FilePath $LogFile -Append
-        python "$ProjectDir\scripts\notify_line.py" "⚠️ before_market 驗證未通過 ($Date)，請檢查 log"
-    } else {
+    $ValidateOut = python "$ProjectDir\scripts\validate_analysis.py" before_market $Date 2>&1
+    $ValidatePassed = ($LASTEXITCODE -eq 0)
+    $ValidateOut | Tee-Object -FilePath $LogFile -Append
+
+    # 驗證未過 → 讓 Claude 針對錯誤只做修復，再驗一次（不重跑全流程）
+    if (-not $ValidatePassed) {
+        Write-Output "" | Tee-Object -FilePath $LogFile -Append
+        Write-Output "[validate] 未通過 → 啟動自動修復（最多 1 次）" | Tee-Object -FilePath $LogFile -Append
+        $ErrLines = ($ValidateOut | Out-String)
+        $FixPrompt = "盤前分析 $Date 的 validate_analysis.py 驗證未通過。驗證輸出：" + [Environment]::NewLine + "" + $ErrLines + "" + [Environment]::NewLine + "請只做修復，不要重跑整個盤前流程：" + [Environment]::NewLine + "1. 逐條修正 data/$Date/before_market_analysis.md、data/$Date/before_market_line.txt、data/tracking/tracking_$Date.json" + [Environment]::NewLine + "2. 內容一律取自今日既有的 JSON 與 md 報告，禁止編造；LINE 摘要須 <=5000 字元" + [Environment]::NewLine + "3. 若錯誤為「LINE 摘要缺少 Module A/B」，把 md 報告中的訊號A（預埋掃描）與訊號B（催化主題）兩節摘要抄進 LINE 摘要；即使 L3=0 或通過 0 檔也必須寫出並註明 0 檔" + [Environment]::NewLine + "4. 修完執行 python3 scripts/validate_analysis.py before_market $Date，必須顯示「可以 commit」才算完成" + [Environment]::NewLine + "5. 絕對禁止執行 scripts/notify_line.py"
+        $env:CLAUDECODE = $null
+        claude -p $FixPrompt --dangerously-skip-permissions 2>&1 | Tee-Object -FilePath $LogFile -Append
+
+        Write-Output "[validate] 修復後重驗..." | Tee-Object -FilePath $LogFile -Append
+        python "$ProjectDir\scripts\validate_analysis.py" before_market $Date 2>&1 | Tee-Object -FilePath $LogFile -Append
+        $ValidatePassed = ($LASTEXITCODE -eq 0)
+    }
+
+    if ($ValidatePassed) {
         Write-Output "[validate] 通過" | Tee-Object -FilePath $LogFile -Append
+    } else {
+        Write-Output "[validate] 自動修復後仍未通過，資料保留但需人工修正；不推送盤前摘要" | Tee-Object -FilePath $LogFile -Append
+        python "$ProjectDir\scripts\notify_line.py" "⚠️ before_market 驗證未通過 ($Date)，自動修復失敗，已停止推送盤前摘要，請檢查 log"
     }
 
     $EndTime = Get-Date
@@ -218,7 +235,9 @@ if ($MarketStatus -eq "snapshot") {
     if ($AllExist) {
         Write-Output "盤前分析完成 (耗時: $($Duration.ToString('hh\:mm\:ss')))" | Tee-Object -FilePath $LogFile -Append
         $LineFile = "$ProjectDir\data\$Date\before_market_line.txt"
-        if (Test-Path $LineFile) {
+        if (-not $ValidatePassed) {
+            Write-Output "[LINE] 驗證未通過，略過盤前摘要推送（已另發警示）" | Tee-Object -FilePath $LogFile -Append
+        } elseif (Test-Path $LineFile) {
             python "$ProjectDir\scripts\notify_line.py" --file $LineFile 2>&1 | Tee-Object -FilePath $LogFile -Append
         } else {
             Write-Output "[WARN] before_market_line.txt 不存在，略過 LINE 推送" | Tee-Object -FilePath $LogFile -Append

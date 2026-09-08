@@ -299,10 +299,11 @@ def validate_before_market(date_str):
         with open(line_file, 'r', encoding='utf-8') as f:
             line_content = f.read()
 
+        # 'L3' 曾是合格關鍵字，但推薦理由裡出現的 'L3' 會讓沒有訊號A 區塊的
+        # LINE 假性通過（2026-07-17／07-30／07-31／09-07 共 4 天）→ 移除。
         has_line_module_a = ('Module A' in line_content or
                            '訊號A' in line_content or
-                           '催化預埋' in line_content or
-                           'L3' in line_content)
+                           '催化預埋' in line_content)
         if not has_line_module_a:
             errors.append(f"❌ LINE 摘要缺少 Module A（催化預埋掃描）")
 
