@@ -79,6 +79,9 @@ VIX {vix} | 台股vs年線{vs_ma240}%
      預先佈局 N 檔／法人已進場 N 檔／已大漲排除 N 檔
      ✅通過：… ／ ❌排除：…（附理由）
      ➡️ 最終 N 檔以訊號B 進入推薦
+   ⚙️ 保險：排程會在驗證前跑 `python3 scripts/ensure_line_modules.py --date $(date +%Y-%m-%d)`，
+     從 catalyst_preposition_scan.json／catalyst_theme_signals.json 機械式補上這段。
+     你仍須自己寫（腳本版較精簡、且無法帶入你的判讀），但漏寫不會再流到使用者手上。
    （依據：2026-09-07 缺 Module B、2026-09-08 缺 Module A+B，連兩個交易日驗證失敗；
      回溯近 45 個交易日，缺 Module B 達 19 天、缺 Module A 達 6 天 —— 本項為 LINE 摘要
      最常漏寫的一段，md 報告有寫、抄進 LINE 時整段掉了）

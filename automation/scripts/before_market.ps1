@@ -201,6 +201,11 @@ if ($MarketStatus -eq "snapshot") {
         }
     }
 
+    # LINE 摘要「訊號A／訊號B」機械式補寫（內容 100% 取自 Step 5.5／5.7 的 JSON，
+    # 不依賴模型手抄；已存在則不動檔案）
+    Write-Output "[ensure] 檢查 LINE 摘要訊號A／訊號B 區塊..." | Tee-Object -FilePath $LogFile -Append
+    python "$ProjectDir\scripts\ensure_line_modules.py" --date $Date 2>&1 | Tee-Object -FilePath $LogFile -Append
+
     Write-Output "" | Tee-Object -FilePath $LogFile -Append
     Write-Output "[validate] 執行 validate_analysis.py before_market..." | Tee-Object -FilePath $LogFile -Append
     $ValidateOut = python "$ProjectDir\scripts\validate_analysis.py" before_market $Date 2>&1
