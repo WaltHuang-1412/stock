@@ -1,0 +1,34 @@
+{
+  "date": "2026-09-08",
+  "window_days": 5,
+  "source_status": {
+    "法說會(MOPS)": "ok(cache)",
+    "除權息(TWSE)": "ok(cache)",
+    "重大訊息(TWSE+TPEx)": "ok"
+  },
+  "stocks": {
+    "3042": {
+      "name": "晶技",
+      "events": [
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-09-08",
+          "days_until": 0,
+          "detail": "澄清媒體報導內容"
+        },
+        {
+          "type": "法說會",
+          "date": "2026-09-10",
+          "days_until": 2,
+          "detail": "11:00 集思北科大會議中心(台北市大安區忠孝東路三段1號) 本公司受邀參加凱基證券2026年第三季投資論壇，說明本公司營運概況。"
+        }
+      ],
+      "mentions": []
+    },
+    "2615": {
+      "name": "萬海",
+      "events": [],
+      "mentions": []
+    }
+  }
+}

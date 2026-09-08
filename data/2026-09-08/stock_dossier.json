@@ -1,0 +1,456 @@
+{
+  "date": "2026-09-08",
+  "window_days": 5,
+  "source_status": {
+    "法說會(MOPS)": "ok",
+    "除權息(TWSE)": "ok",
+    "重大訊息(TWSE+TPEx)": "ok"
+  },
+  "stocks": {
+    "3037": {
+      "name": "欣興",
+      "events": [
+        {
+          "type": "法說會",
+          "date": "2026-09-08",
+          "days_until": 0,
+          "detail": "15:30 台北宏遠證券辦公室 本公司受邀參加宏遠證券舉辦之2026年趨勢產業論壇\r\n，會中就本公司已公開發布之\r\n財務數字、經營績效等相關資訊作說明。"
+        },
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-09-08",
+          "days_until": 0,
+          "detail": "公告欣興電子股份有限公司第一次無擔保轉換公司債\r\n(簡稱：欣興一，代碼：30371)於櫃檯買賣市場交易達公布\r\n注意交易資訊標準，故公布相關訊息，以利投資人區別瞭解。"
+        },
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-09-08",
+          "days_until": 0,
+          "detail": "本公司取得廠務工程之相關資料"
+        }
+      ],
+      "mentions": []
+    },
+    "2883": {
+      "name": "凱基金",
+      "events": [
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-09-08",
+          "days_until": 0,
+          "detail": "代子公司凱基證券公告發行115年度第3次無擔保次順位\r\n普通公司債新臺幣參拾億元整(補充115/02/04及115/05/22\r\n公告)"
+        },
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-09-08",
+          "days_until": 0,
+          "detail": "代子公司凱基銀行公告承銷取得凱基證券115年度第3次無擔保次順位普通公司債"
+        }
+      ],
+      "mentions": []
+    },
+    "3711": {
+      "name": "日月光投控",
+      "events": [
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-09-08",
+          "days_until": 0,
+          "detail": "代子公司矽品精密工業(股)公司公告取得營業用機器設備達十億元"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 21,
+          "text": "- **台股影響鏈**：聯發科(2454)↑ 輝達ECB認購續發酵；富喬(1815)↑ ASIC產品獲CSP大廠認證，漲停創歷史新高；日月光投控(3711)↑ ASIC封測需求延伸受惠"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 265,
+          "text": "| 3711 | 日月光投控 | 737.8 | 🔺+43.2% | +25.1% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 163,
+          "text": "\"code\": \"3711\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 164,
+          "text": "\"name\": \"日月光投控\","
+        }
+      ]
+    },
+    "3034": {
+      "name": "聯詠",
+      "events": [],
+      "mentions": []
+    },
+    "2880": {
+      "name": "華南金",
+      "events": [],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 363,
+          "text": "> 金融存股進入淘汰賽。據集保中心統計，截至今年9月4日止，13家金控僅玉山（2884）、元大（2885）、中信（2891）、華南（2880）及永豐（2890）等五家「守住高峰」，股東數仍高於2023年底水準，其中四家屬銀行型金控。"
+        }
+      ]
+    },
+    "1326": {
+      "name": "台化",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 43,
+          "text": "- **台股影響鏈**：台塑化(6505)↑／南亞(1303)↑／台化(1301)↑ 布蘭特原油97美元支撐油品報價；長榮(2603)↑／陽明(2609)↑ 荷姆茲風險疊加巴拿馬運河缺水雙重運力壓力"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 469,
+          "text": "營收公布：台塑、南亞、台化、台塑化"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 290,
+          "text": "\"context\": \"／南亞(1303)↑／台化(1301)↑ 布蘭特原油97美元支撐油品報價\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 297,
+          "text": "\"context\": \"／台化(1301)↑ 布蘭特原油97美元支撐油品報價\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 303,
+          "text": "\"name\": \"台化\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 323,
+          "text": "\"code\": \"1326\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 324,
+          "text": "\"name\": \"台化\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 325,
+          "text": "\"context\": \"台化(1301)↑ 布蘭特原油97美元支撐油品報價\""
+        }
+      ]
+    },
+    "2886": {
+      "name": "兆豐金",
+      "events": [],
+      "mentions": []
+    },
+    "2382": {
+      "name": "廣達",
+      "events": [
+        {
+          "type": "法說會",
+          "date": "2026-09-09",
+          "days_until": 1,
+          "detail": "09:00 馬來西亞與新加坡 本公司受邀參加大和國泰證券所舉辦之&quot;Daiwa-Affin Hwang Greater China Conference &amp; Taiwan Corporate Day&quot;投資論壇就本公司目前之營運概況，作回顧及展望說明。"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 188,
+          "text": "| L2 一線整機 | 直接組裝 AI 伺服器，最先受訂單增益 | 廣達(2382)：NVIDIA GB200 NVL主力、技嘉(2376)：DGX/HGX伺服器、鴻海(2317)：Google AI代理供應鏈 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 243,
+          "text": "| 2382 | 廣達 | 3662.7 | 🔺+131.3% | +92.7% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 646,
+          "text": "> 今日推介 - 舜宇光學(2382, $69.55), 目標價$76.5, 止損價$66.5"
+        }
+      ]
+    },
+    "2330": {
+      "name": "台積電",
+      "events": [
+        {
+          "type": "法說會",
+          "date": "2026-09-08",
+          "days_until": 0,
+          "detail": "23:10 Palace Hotel - San Francisco 本公司受邀參加美商高盛證券所舉辦之『Goldman Sachs Communacopia + Technology Conference 2026』，會中就本公司7/16法說會已公開之財務數字、經營績效等相關資訊進行說明。"
+        },
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-09-08",
+          "days_until": 0,
+          "detail": "本公司受邀參加機構投資人說明會"
+        },
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-09-08",
+          "days_until": 0,
+          "detail": "本公司受邀參加機構投資人說明會"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 8,
+          "text": "- **台股影響鏈**：台積電(2330)↑／聯電(2303)↑ 代工漲價效益持續發酵；南亞(1303)↑／南亞科(2408)↑ 集團股資金輪動強勢；富喬(1815)↑ ASIC產品獲CSP認證強鎖漲停創歷史新高"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 82,
+          "text": "- **強度**：強 | **方向**：↑（台塑四寶09/08公布8月業績為本週焦點；美光財報延至10/01為記憶體行情續航關鍵；台積電代工漲價效益將反映Q3財報）| **持續**：2週（首見08/26）| **最後訊號**：09/08"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 95,
+          "text": "### Intel 14A製程進度：挑戰台積電先進製程龍頭地位"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 24,
+          "text": "| 🔺 台積電 ADR | TSM | 428.91 | +12.48 | +3.00% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 103,
+          "text": "| 10/15（四） | 37天 | TSM | 台積電 ADR | $4.45 (4.26~4.72) | $1454.5B | 🔴 A類-指標性 | - |  |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 122,
+          "text": "| 09-08（二） | ⚡ 今天 | 2330 | 台積電 | 23:10 | Palace Hotel - San Francisco |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 126,
+          "text": "| 09-14（一） | 🔜 6天 | 2330 | 台積電 | 08:00 | W Hotel Taipei |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 191,
+          "text": "| L5 基礎晶片 | 晶圓代工與封裝，整條鏈的製造基礎 | 台積電(2330)：CoWoS先進封裝、聯發科(2454)：AI邊緣晶片 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 193,
+          "text": "### 台積電先進製程擴產鏈（主題鍵：台積電先進製程擴產）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 196,
+          "text": "| L1 晶圓廠主體 | 訂單來源，決定整條建廠供應鏈規模 | 台積電(2330)：2nm量產+N3擴產+CoWoS |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 197,
+          "text": "| L2 廠務工程 | 晶圓廠建設工程，最早獲益 | 漢唐(2404)：台積電廠務主力承包商、聖暉(5536)：製程工程 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 200,
+          "text": "| L5 IC設計客戶 | 採用台積電先進製程的本土IC設計 | 世芯-KY(3661)：ASIC設計，CoWoS受益 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 244,
+          "text": "| 2330 | 台積電 | 4675.8 | 🔺+44.7% | +37.0% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 441,
+          "text": "11. **台積電秦永沛談成功方程式 半導體研發沒有任何捷徑** （2026-09-08 01:33）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 442,
+          "text": "> 工研院新任院士、台積電執行副總經理暨共同營運長秦永沛昨（7）日分享他的成功方程式，強調秉持「追根究柢，做到極致」精神，將實驗室製程技術轉化為世界級量產能力。在他看來，半導體卓越製造與技術研發，「沒有任何捷徑」。"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 451,
+          "text": "> 三星電子緊追晶圓代工一哥台積電，採用與台積電相同的探針卡供應商，來測試旗下的矽光子晶圓，台廠旺矽因此受惠。三星計劃今年內完成相關測試，2027年啟動矽光子晶圓代工服務。"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 481,
+          "text": "> 台股昨（7）日在權王台積電與股王信驊強漲引領多頭攻勢，伴隨外資大買883億元，三大法人合計買超逾千億元助陣，推升加權指數勁揚775點收47,326點，為史上收盤第二高點位。法人看好，台股奔向歷史新高點指日可待，樂觀情境下，不排除9月便可挑戰5萬點。"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 492,
+          "text": "7. **台積電、聯電 認購搶鏡** （2026-09-08 01:19）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 493,
+          "text": "> 半導體展後，隨市場確認資本支出保持強勁，訂單需求也堅挺不墜，加上代工價格調漲趨勢成型，激勵市場買盤重新聚焦晶圓代工股，帶動台積電（2330）昨（7）日股價上漲1.6%，聯電更是亮燈強鎖漲停，表現均相當強勢。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 22,
+          "text": "\"code\": \"2330\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 23,
+          "text": "\"name\": \"台積電\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 533,
+          "text": "\"detail\": \"（台塑四寶09/08公布8月業績為本週焦點；美光財報延至10/01為記憶體行情續航關鍵；台積電代工漲價效益將反映Q3財報）\""
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 606,
+          "text": "\"theme\": \"Intel 14A製程進度：挑戰台積電先進製程龍頭地位\","
+        }
+      ]
+    },
+    "6770": {
+      "name": "力積電",
+      "events": [],
+      "mentions": []
+    },
+    "2337": {
+      "name": "旺宏",
+      "events": [],
+      "mentions": []
+    },
+    "2313": {
+      "name": "華通",
+      "events": [],
+      "mentions": []
+    },
+    "3090": {
+      "name": "日電貿",
+      "events": [],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 223,
+          "text": "| L2 通路商 | 元件代理分銷，庫存指標 | 日電貿(3090)：2026/05法說：高階MLCC交期拉長、缺貨恐延至2027（鉅亨6463791）、羅昇(8374)：工業自動化元件通路、蜜望實(8043)：電子元件通路、大聯大(3702)：最大半導體通路商、文曄(3036)：半導體通路 |"
+        }
+      ]
+    },
+    "1301": {
+      "name": "台塑",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 10,
+          "text": "- **關鍵轉折點**：09/08 CPI公布＋台塑四寶8月營收；09/10 ECB利率決議＋PPI；09/11 CPI"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 43,
+          "text": "- **台股影響鏈**：台塑化(6505)↑／南亞(1303)↑／台化(1301)↑ 布蘭特原油97美元支撐油品報價；長榮(2603)↑／陽明(2609)↑ 荷姆茲風險疊加巴拿馬運河缺水雙重運力壓力"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 75,
+          "text": "### 台塑集團H1獲利轉骨（含中東油價轉強）"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 76,
+          "text": "- **強度**：強 | **方向**：↑（台塑四寶09/08公布8月業績為本週關鍵事件；布蘭特原油逼近98美元續撐營收預期）| **持續**：8週（07/14起）| **最後訊號**：09/08"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 82,
+          "text": "- **強度**：強 | **方向**：↑（台塑四寶09/08公布8月業績為本週焦點；美光財報延至10/01為記憶體行情續航關鍵；台積電代工漲價效益將反映Q3財報）| **持續**：2週（首見08/26）| **最後訊號**：09/08"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 293,
+          "text": "| 6505 | 台塑化 | 748.2 | 🔺+32.3% | +11.8% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 294,
+          "text": "| 1301 | 台塑 | 152.9 | +4.8% | -2.5% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 469,
+          "text": "營收公布：台塑、南亞、台化、台塑化"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 60,
+          "text": "\"turning_points\": \"09/08 CPI公布＋台塑四寶8月營收；09/10 ECB利率決議＋PPI；09/11 CPI\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 289,
+          "text": "\"name\": \"台塑化\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 290,
+          "text": "\"context\": \"／南亞(1303)↑／台化(1301)↑ 布蘭特原油97美元支撐油品報價\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 297,
+          "text": "\"context\": \"／台化(1301)↑ 布蘭特原油97美元支撐油品報價\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 302,
+          "text": "\"code\": \"1301\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 325,
+          "text": "\"context\": \"台化(1301)↑ 布蘭特原油97美元支撐油品報價\""
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 490,
+          "text": "\"theme\": \"台塑集團H1獲利轉骨（含中東油價轉強）\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 494,
+          "text": "\"detail\": \"（台塑四寶09/08公布8月業績為本週關鍵事件；布蘭特原油逼近98美元續撐營收預期）\""
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 533,
+          "text": "\"detail\": \"（台塑四寶09/08公布8月業績為本週焦點；美光財報延至10/01為記憶體行情續航關鍵；台積電代工漲價效益將反映Q3財報）\""
+        }
+      ]
+    },
+    "4938": {
+      "name": "和碩",
+      "events": [
+        {
+          "type": "重大訊息(今日)",
+          "date": "2026-09-08",
+          "days_until": 0,
+          "detail": "代子公司華毓\\華瑋投資(股)公司公告修正盈餘分派\r\n之董事會決議"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "us_leader_alerts.md",
+          "line": 25,
+          "text": "- 和碩(4938)"
+        }
+      ]
+    }
+  }
+}
