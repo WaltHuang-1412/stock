@@ -450,13 +450,18 @@
       "risk": "油價驅動型推薦，若中東情勢緩和則催化立即消失；今日 8 月營收若不如預期為當日直接風險",
       "intraday_price": 70.6,
       "intraday_return_pct": -1.81,
-      "result": "holding",
-      "actual_close": 70.6,
-      "return_pct": -1.81,
+      "result": "fail",
+      "actual_close": 71.8,
+      "return_pct": -0.14,
       "holding_days": "D0/10",
       "holding_status": "D0/10 收盤 70.6（-1.81%）；反轉 Level 0／法人買超中，未觸目標亦未觸停損 → 續抱",
       "close_price": 70.6,
-      "change_percent": -1.81
+      "change_percent": -1.81,
+      "settled_date": "2026-09-09",
+      "settled_price": 71.8,
+      "fail_reason": "鐵律③ L4（賣超 -6,996 張佔 5 日均量 9.7%）；D1/10，昨日推薦隔日即翻賣超出場；收盤價入帳 v8.3.2",
+      "settled_by": "manual_iron_rule_exit",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-08.json ②tracking_2026-09-09.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2615",
@@ -484,13 +489,18 @@
       "risk": "70 分為推薦門檻下緣；中東情勢一旦緩和，運價與風險溢價同步回落。若 12:30 仍無法人買盤進場即應保守",
       "intraday_price": 111.5,
       "intraday_return_pct": -2.62,
-      "result": "holding",
-      "actual_close": 112.0,
-      "return_pct": -2.18,
+      "result": "success",
+      "actual_close": 116.0,
+      "return_pct": 1.31,
       "holding_days": "D0/10",
       "holding_status": "D0/10 收盤 112.0（-2.18%）；反轉 Level 0／法人買超中，未觸目標亦未觸停損 → 續抱",
       "close_price": 112.0,
-      "change_percent": -2.18
+      "change_percent": -2.18,
+      "settled_date": "2026-09-09",
+      "settled_price": 116.0,
+      "success_note": "鐵律③ L4（賣超 -2,692 張佔 5 日均量 15.4%）；D1/10，昨日推薦隔日即翻賣超出場；收盤價入帳 v8.3.2",
+      "settled_by": "manual_iron_rule_exit",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-08.json ②tracking_2026-09-09.json removed_stocks ③predictions.json"
     }
   ],
   "carry_over": [

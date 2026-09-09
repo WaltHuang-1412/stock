@@ -192,12 +192,17 @@
       "intraday_price": 150.0,
       "intraday_return_pct": -0.33,
       "intraday_status": "✅續抱",
-      "result": "holding",
-      "actual_close": 149.5,
-      "return_pct": -0.66,
+      "result": "fail",
+      "actual_close": 147.0,
+      "return_pct": -2.33,
       "holding_status": "持有中，09-07 收盤 149.5",
       "close_price": 149.5,
-      "change_percent": -0.66
+      "change_percent": -0.66,
+      "settled_date": "2026-09-09",
+      "settled_price": 147.0,
+      "fail_reason": "鐵律③ L4 已決事項（09-08 v8.3.3 待複核定案，賣超佔 5 日均量 7.2%）；09-09 開盤執行、收盤價入帳 v8.3.2。今日重掃已降為 Level 0（-234 張、10 日累計 +4,758 張），依 v8.3.7『已決事項不重評』仍執行",
+      "settled_by": "manual_iron_rule_exit",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-07.json ②tracking_2026-09-09.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "8374",
@@ -293,12 +298,17 @@
       "intraday_price": 362.0,
       "intraday_return_pct": 0.28,
       "intraday_status": "✅續抱",
-      "result": "holding",
-      "actual_close": 364.5,
-      "return_pct": 0.97,
+      "result": "fail",
+      "actual_close": 349.5,
+      "return_pct": -3.19,
       "holding_status": "持有中，09-07 收盤 364.5",
       "close_price": 364.5,
-      "change_percent": 0.97
+      "change_percent": 0.97,
+      "settled_date": "2026-09-09",
+      "settled_price": 349.5,
+      "fail_reason": "鐵律③ L4（賣超 -2,389 張佔 5 日均量 38.7%）＋NVIDIA -2.01% 龍頭預警 Level 1；D2/10 出場；收盤價入帳 v8.3.2",
+      "settled_by": "manual_iron_rule_exit",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-07.json ②tracking_2026-09-09.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "3017",
@@ -1393,7 +1403,7 @@
       "position": "5-10%",
       "score": 80,
       "rating": "⭐⭐⭐⭐",
-      "result": "holding",
+      "result": "fail",
       "recommend_date": "2026-09-07",
       "source": "盤中軌道B",
       "reason": "🔴超強「光通訊與網通（CPO/矽光子）」今日直接點名（topic_tracker.md:32）｜法人 avg_rank 18.5、今日買超 +9,572 張、真連買 4 天、8 買 2 賣、近 5 日外資 +11K｜龍頭 Marvell +7.05%｜EPS Q2 YoY +242.0% +5｜反轉 Level 0｜價格位置 13（月線 +9.4%、季線 +10.4%）｜量比 0.83 縮量整理 +1｜🔥 動能 +254.9% 經超強催化覆寫降級",
@@ -1404,11 +1414,16 @@
         "⚠️ 外資持股比快取 2026-08-11 落後 → 原判 -3 分不採計",
         "卷宗 9 處提及全部利多，無矛盾；事件窗口內無法說會／除權息／重大訊息"
       ],
-      "actual_close": 67.2,
-      "return_pct": 2.28,
+      "actual_close": 63.7,
+      "return_pct": -3.04,
       "holding_status": "持有中，09-07 收盤 67.2",
       "close_price": 67.2,
-      "change_percent": 2.28
+      "change_percent": 2.28,
+      "settled_date": "2026-09-09",
+      "settled_price": 63.7,
+      "fail_reason": "鐵律③ L4 已決事項（09-08 定案）；09-09 重掃仍為 L4（賣超 -1,328 張佔 5 日均量 5.3%）確認出場；收盤價入帳 v8.3.2",
+      "settled_by": "manual_iron_rule_exit",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-07.json ②tracking_2026-09-09.json removed_stocks ③predictions.json"
     }
   ],
   "track_b_observations": [
