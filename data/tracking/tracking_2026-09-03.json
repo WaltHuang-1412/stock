@@ -230,13 +230,18 @@
       "status": "同時為進行中追蹤（2026-08-25 推薦，D6/10）→ 沿用原進場價／停損，不重複建倉；本筆為當日評分排名呈現",
       "intraday_price": 50.7,
       "intraday_return_pct": 3.47,
-      "result": "holding",
+      "result": "carry_over_closed",
       "actual_close": 50.4,
       "close_price": 50.4,
       "change_percent": 2.86,
       "recommend_date": "2026-08-25",
       "holding_status": "D7/10 收盤 50.4（vs 原推薦價 46.85 為 +7.58%；vs 今日評分基準價 49.0 為 +2.86%），距目標 51.5 尚差 2.18%，未觸目標／停損 → 續追蹤",
-      "carry_over_note": "本筆為當日評分排名呈現，非新建倉；recommend_date 標回 2026-08-25 以避免 update_predictions 產生第二筆重複 holding（v8.3.10 修補，見盤後 Step 3）"
+      "carry_over_note": "本筆為當日評分排名呈現，非新建倉；recommend_date 標回 2026-08-25 以避免 update_predictions 產生第二筆重複 holding（v8.3.10 修補，見盤後 Step 3）",
+      "settled_date": "2026-09-08",
+      "settled_price": 50.6,
+      "duplicate_of": "tracking_2026-08-25.json 2886 兆豐金 @46.85（已於 2026-09-08 D10 到期結算 success，+8.0%）",
+      "exclude_from_stats": true,
+      "sync_note": "v8.3.7 三處同步補正（2026-09-09 盤前 Step 4）：本筆為 ⏳沿用追蹤的當日評分呈現，非獨立建倉。09-08 盤後只回寫 08-25 來源檔，本筆漏寫致 settlement_checker 於 09-09 盤前重複列為「D10 應結算」。改標 carry_over_closed 並排除統計，避免同一部位重複計入準確率分母。"
     }
   ],
   "carry_over": [
