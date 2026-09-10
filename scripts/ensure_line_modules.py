@@ -36,6 +36,38 @@ MAX_LINE_CHARS = 5000
 KEYS_A = ('Module A', '訊號A', '催化預埋')
 KEYS_B = ('Module B', '訊號B', '催化主題')
 
+
+def has_block(content, which):
+    """判斷 LINE 摘要是否真的有訊號A／訊號B 的「區塊標題行」。
+
+    不可用全檔字串搜尋，也不可只看「該行以 📶 開頭」——
+    推薦理由本來就常寫成「📶訊號A L3 +15｜動能 -59.4%｜真連買 3 天」
+    （2026-09-10 實際檔案即有此行），只看開頭仍會假性通過。
+
+    區塊標題的實際長相（09-07~09-10 四份檔案）：
+        📶 訊號A（催化預埋，Module A）
+        📶 訊號A（預埋）L3=1／L2=14／L1=3
+        📶 訊號B（催化）→ 今日 0 檔進入評分
+    共同特徵是關鍵字後緊接一個括號；逐檔理由行則是關鍵字後接等級與分數。
+    故規則為：以 📶 開頭 ＋ 含關鍵字 ＋（關鍵字後緊接括號 或 同行並列 L3/L2 統計）。
+    """
+    keys = KEYS_A if which == 'A' else KEYS_B
+    for line in content.splitlines():
+        s = line.strip()
+        if not s.startswith(chr(128246)):
+            continue
+        for k in keys:
+            i = s.find(k)
+            if i < 0:
+                continue
+            tail = s[i + len(k):].lstrip()
+            if tail[:1] in ('（', '('):
+                return True
+            if which == 'A' and 'L3' in s and 'L2' in s:
+                return True
+    return False
+
+
 # 插入位置：命中第一個就插在它前面；都沒有就附加在檔尾
 ANCHORS = ('🚫 分數夠卻被擋下', '🚫 主要落榜', '🚫 落榜', '🚨 處置股',
            '⚠️ 處置股', '📌 資料品質', '📅 本週事件')
@@ -124,8 +156,8 @@ def main():
     with open(line_file, encoding='utf-8') as f:
         content = f.read()
 
-    has_a = any(k in content for k in KEYS_A)
-    has_b = any(k in content for k in KEYS_B)
+    has_a = has_block(content, 'A')
+    has_b = has_block(content, 'B')
     if has_a and has_b:
         print('[OK] LINE 摘要已含訊號A／訊號B，不需補寫')
         return 0

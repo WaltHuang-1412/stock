@@ -30,6 +30,22 @@ try:
 except AttributeError:
     pass
 
+def _has_line_block(content, which):
+    """LINE 摘要是否含訊號A／訊號B 的區塊標題行（與 ensure_line_modules 同規則）。"""
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from ensure_line_modules import has_block
+        return has_block(content, which)
+    except Exception:
+        keys = (('Module A', '訊號A', '催化預埋') if which == 'A'
+                else ('Module B', '訊號B', '催化主題'))
+        for line in content.splitlines():
+            s = line.strip()
+            if s.startswith(chr(128246)) and any(k in s for k in keys):
+                return True
+        return False
+
+
 _MARKER_RE = re.compile(r"[1-9]️?⃣")
 
 
@@ -299,17 +315,16 @@ def validate_before_market(date_str):
         with open(line_file, 'r', encoding='utf-8') as f:
             line_content = f.read()
 
-        # 'L3' 曾是合格關鍵字，但推薦理由裡出現的 'L3' 會讓沒有訊號A 區塊的
-        # LINE 假性通過（2026-07-17／07-30／07-31／09-07 共 4 天）→ 移除。
-        has_line_module_a = ('Module A' in line_content or
-                           '訊號A' in line_content or
-                           '催化預埋' in line_content)
+        # 判斷方式：必須有「以 📶 開頭的區塊標題行」，不可全檔字串搜尋。
+        # 歷史教訓：'L3' 曾是合格關鍵字，推薦理由裡的 L3 讓 4 天假性通過
+        # （07-17／07-30／07-31／09-07）；改成關鍵字後仍不夠 ——
+        # 推薦理由本來就常寫「📶訊號A L2(+10)」，同樣會讓沒有區塊的 LINE 過關。
+        # 與 ensure_line_modules.has_block() 共用同一規則，避免兩邊判斷不一致。
+        has_line_module_a = _has_line_block(line_content, 'A')
         if not has_line_module_a:
             errors.append(f"❌ LINE 摘要缺少 Module A（催化預埋掃描）")
 
-        has_line_module_b = ('Module B' in line_content or
-                           '訊號B' in line_content or
-                           '催化主題' in line_content)
+        has_line_module_b = _has_line_block(line_content, 'B')
         if not has_line_module_b:
             errors.append(f"❌ LINE 摘要缺少 Module B（催化主題預警）")
 
