@@ -32,3 +32,6 @@ automation/logs/
 .env
 .env.local
 data/backtest_cache/
+
+# holdings_monitor 執行期鎖檔，不入版控
+data/holdings_monitor.lock
