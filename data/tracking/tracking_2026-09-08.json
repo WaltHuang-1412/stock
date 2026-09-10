@@ -348,13 +348,17 @@
       "risk": "外資單日淨賣 -3,642 張、全靠投信 +7,322 張撐盤，籌碼結構偏單邊；金融族群今日已有 2812 台中銀 L4 出場，族群同步轉弱時不可續留",
       "intraday_price": 37.4,
       "intraday_return_pct": 1.22,
-      "result": "holding",
-      "actual_close": 37.3,
-      "return_pct": 0.95,
+      "result": "success",
+      "actual_close": 37.2,
+      "return_pct": 0.68,
       "holding_days": "D0/10",
       "holding_status": "D0/10 收盤 37.3（+0.95%）；反轉 Level 0／法人買超中，未觸目標亦未觸停損 → 續抱",
       "close_price": 37.3,
-      "change_percent": 0.95
+      "change_percent": 0.95,
+      "settled_date": "2026-09-10",
+      "settled_price": 37.2,
+      "success_note": "鐵律③ L4（賣超佔 5 日均量 30.0%，≥8%）；09-10 開盤執行、收盤價入帳 v8.3.2；D2/10",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-08.json ②tracking_2026-09-10.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "3711",
