@@ -186,7 +186,13 @@
       "score": 88,
       "rank": 1,
       "reason": "🛤️軌道A｜法人TOP5買超（avg_rank 17.0，今日+10,045張，buy_ratio 22.3%>20% +2）｜真連續買超3天（法人加速買進）｜動能-63.2%（<-30% 佈局完成 +15）｜反轉Level 0（籌碼健康）｜EPS Q2 2026 YoY+44.6%轉正 +3、毛利率QoQ+3.7pp +2｜5日僅+0.3%未追高｜產業邏輯：中東地緣政治🔴超強催化的塑化鏈邊緣配套股（非影響鏈直接列名之台塑化/南亞/台化核心三檔）",
-      "risks": "⚠️ 營收快取停滯2026-02（落後7個月，本因子視為0，不採計原可能的YoY+15.7%加分）｜⚠️ 外資持股比僅2.70%、快取停滯2026-08-11｜⚠️ 卷宗掃描mentions=0，當日時事資料無提及，推薦依據為法人數據+EPS+動能三項獨立訊號｜⚠️ 法說會日曆(MOPS上市)查詢因DNS解析失敗未能確認，事件風險未完全排除｜EPS本業仍虧損（-0.51元/股），YoY轉正僅代表虧損收斂"
+      "risks": "⚠️ 營收快取停滯2026-02（落後7個月，本因子視為0，不採計原可能的YoY+15.7%加分）｜⚠️ 外資持股比僅2.70%、快取停滯2026-08-11｜⚠️ 卷宗掃描mentions=0，當日時事資料無提及，推薦依據為法人數據+EPS+動能三項獨立訊號｜⚠️ 法說會日曆(MOPS上市)查詢因DNS解析失敗未能確認，事件風險未完全排除｜EPS本業仍虧損（-0.51元/股），YoY轉正僅代表虧損收斂",
+      "result": "holding",
+      "close_price": 14.35,
+      "change_percent": -4.01,
+      "actual_close": 14.35,
+      "return_pct": -4.01,
+      "holding_status": "D0/10 持有中，收盤14.35（-4.01%），未觸目標16.4／停損13.455"
     }
   ],
   "carry_over": [],
@@ -402,8 +408,99 @@
     "chosen": "防禦15% / 進攻85%（採區間上緣）",
     "reason": "雖VIX技術上<20，惟今日AI泡沫檢查清單惡化、外資單日大賣383億元由連買轉連賣、美股連四黑，风险訊號密集（見market_context.risk_flags），採防禦區間上緣以反映當日風險升溫，非例行防禦比例"
   },
-  "removed_stocks": [],
-  "tomorrow_opening_exits": [],
+  "removed_stocks": [
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "recommend_date": "2026-09-09",
+      "result": "fail",
+      "settled_price": 493.0,
+      "last_close": 493.0,
+      "return_pct": -7.16,
+      "removal_reason": "鐵律③ L4邊緣值待複核，兩次複核皆≥5%定案出場（v8.3.3）；收盤價入帳v8.3.2",
+      "settled_by": "已決事項（09-10定案）"
+    },
+    {
+      "stock_code": "1605",
+      "stock_name": "華新",
+      "recommend_date": "2026-09-09",
+      "result": "fail",
+      "settled_price": 37.4,
+      "last_close": 37.4,
+      "return_pct": -2.48,
+      "removal_reason": "鐵律③ L4（賣超佔5日均量27.8%）",
+      "settled_by": "今日開盤出場"
+    },
+    {
+      "stock_code": "1314",
+      "stock_name": "中石化",
+      "recommend_date": "2026-09-10",
+      "result": "fail",
+      "settled_price": 8.12,
+      "last_close": 8.12,
+      "return_pct": -1.1,
+      "removal_reason": "鐵律③ L4（賣超佔5日均量27.6%）",
+      "settled_by": "今日開盤出場"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "recommend_date": "2026-09-10",
+      "result": "fail",
+      "settled_price": 336.5,
+      "last_close": 336.5,
+      "return_pct": -1.61,
+      "removal_reason": "鐵律③ L4（賣超佔5日均量17.1%）",
+      "settled_by": "今日開盤出場"
+    },
+    {
+      "stock_code": "2377",
+      "stock_name": "微星",
+      "recommend_date": "2026-09-10",
+      "result": "fail",
+      "settled_price": 149.0,
+      "last_close": 149.0,
+      "return_pct": -4.79,
+      "removal_reason": "鐵律③ L4（賣超佔5日均量43.3%）",
+      "settled_by": "今日開盤出場"
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "recommend_date": "2026-09-10",
+      "result": "fail",
+      "settled_price": 86.7,
+      "last_close": 86.7,
+      "return_pct": -5.25,
+      "removal_reason": "鐵律③ L4（賣超佔5日均量17.4%）",
+      "settled_by": "今日開盤出場"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電（追蹤筆，非零股持倉）",
+      "recommend_date": "2026-09-09",
+      "result": "already_settled_0910",
+      "settled_price": null,
+      "last_close": null,
+      "return_pct": null,
+      "removal_reason": "已於09-10結算fail@2450.0，非今日事項，此處僅記錄避免混淆",
+      "settled_by": "note"
+    }
+  ],
+  "tomorrow_opening_exits": [
+    {
+      "stock_code": "1326",
+      "stock_name": "台化",
+      "category": "鐵律③ 法人反轉L4邊緣值待複核定案",
+      "reason": "v8.3.3複核①②皆≥5%（7.4%/7.4%），依規則09-12開盤出場，收盤價入帳"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "category": "鐵律③ 法人反轉L4（盤中新增，盤後複核維持）",
+      "reason": "盤中新增L4 7.8%<8%列待複核，盤後完整日量重跑仍為L4 → 09-12開盤出場；my_holdings.yaml實際持股1張，出場後請使用者更新yaml"
+    }
+  ],
   "notes": "今日為法人單日大賣383億元的風險偏好轉弱交易日：昨日(09-10)新推薦5檔中5檔（1605/1314/2382/2377/8150）於D0-D1即觸發反轉Level4，1檔(2408)延續09-10已決定案出場，凸顯AI伺服器/散熱/記憶體鏈籌碼今日集體轉弱（與外資轉賣、AI泡沫檢查清單惡化一致）。新推薦僅1312國喬一檔通過完整篩選（分數88），其餘候選（金融股族群）因動能過熱(2412/2834)或分數不足(5876)未達推薦門檻，符合『寧缺勿濫』原則。持倉停損機械比對（v8.3.10）發現2337/2313/3090連續第2日觸發同一批停損，研判為使用者尚未依前次建議更新my_holdings.yaml quantity欄位，非新事件。",
   "intraday_check_1230": {
     "new_forced_exits": [
@@ -479,5 +576,217 @@
       "stock_name": "華票",
       "reason": "偵測器強訊號65分，評分約58分未達75分門檻"
     }
-  ]
+  ],
+  "after_market_settlement_v837": {
+    "note": "本日 6 筆結算（2408/1605/1314/2382/2377/8150），三處同步：①來源tracking檔②本檔removed_stocks③predictions.json（由update_predictions.py寫入）",
+    "settled_count": 6,
+    "avg_return": -3.73
+  },
+  "pending_review_v833_final": [
+    {
+      "stock_code": "1326",
+      "stock_name": "台化",
+      "check1_1230": "7.4%≥5%",
+      "check2_afterclose": "7.4%≥5%",
+      "cumulative_10d": "確認為正",
+      "verdict": "兩次皆≥5% → 定案，09-12開盤出場",
+      "note": "非personal holding，屬tracking追蹤筆，recommend_date 2026-09-10 @71.8"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "check_intraday_new": "7.8%<8%",
+      "check_afterclose_fullday": "7.8%<8%，仍為L4",
+      "cumulative_10d": "轉負-1,872張",
+      "verdict": "盤中新增L4，盤後完整日量重跑仍為L4 → 依規則09-12開盤出場",
+      "note": "my_holdings.yaml實際持股1張，非tracking推薦；出場後請使用者更新yaml quantity"
+    }
+  ],
+  "holdings_exit_status_v8310": {
+    "note": "my_holdings.yaml quantity>0 且今日已依鐵律出場者（yaml未同步，見已知缺陷project_holdings_exit_not_recorded_repeats）",
+    "exited_today": [
+      {
+        "symbol": "6770",
+        "name": "力積電",
+        "exit_time": "盤中12:30",
+        "category": "鐵律①觸及停損價",
+        "cost": 81.4,
+        "close_2026_09_11": 70.7,
+        "return_pct": -13.14
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "exit_time": "盤中12:30",
+        "category": "鐵律③法人反轉L4（17.7%）",
+        "cost": 60.085,
+        "close_2026_09_11": 64.6,
+        "return_pct": 7.51
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "exit_time": "今日開盤",
+        "category": "鐵律①觸及停損價",
+        "cost": 164.0,
+        "close_2026_09_11": 119.0,
+        "return_pct": -27.44
+      },
+      {
+        "symbol": "2313",
+        "name": "華通",
+        "exit_time": "今日開盤",
+        "category": "鐵律①觸及停損價",
+        "cost": 262.2,
+        "close_2026_09_11": 221.5,
+        "return_pct": -15.52
+      },
+      {
+        "symbol": "3090",
+        "name": "日電貿",
+        "exit_time": "今日開盤",
+        "category": "鐵律①觸及停損價",
+        "cost": 285.0,
+        "close_2026_09_11": 163.0,
+        "return_pct": -42.81
+      }
+    ],
+    "still_holding_pending_tomorrow_exit": [
+      {
+        "symbol": "4938",
+        "name": "和碩",
+        "reason": "見tomorrow_opening_exits"
+      }
+    ],
+    "yaml_sync_needed": "6770/1301/2337/2313/3090 五檔quantity應歸零；4938待09-12出場後亦需歸零。流程不代為修改my_holdings.yaml，僅提醒使用者。"
+  },
+  "yesterday_verification": {
+    "accuracy": "55.6%（累積 364 success／291 fail／655 settled）",
+    "today_settled": 6,
+    "today_success": 0,
+    "today_fail": 6,
+    "today_accuracy": "0.0%",
+    "holding_count": 175,
+    "results": [
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "recommend_date": "2026-09-09",
+        "recommend_price": 531.0,
+        "settled_price": 493.0,
+        "return_pct": -7.16,
+        "result": "fail",
+        "note": "鐵律③ L4邊緣值待複核定案（兩次複核皆≥5%），收盤價入帳"
+      },
+      {
+        "stock_code": "1605",
+        "stock_name": "華新",
+        "recommend_date": "2026-09-09",
+        "recommend_price": 38.35,
+        "settled_price": 37.4,
+        "return_pct": -2.48,
+        "result": "fail",
+        "note": "鐵律③ L4（27.8%）出場，收盤價入帳"
+      },
+      {
+        "stock_code": "1314",
+        "stock_name": "中石化",
+        "recommend_date": "2026-09-10",
+        "recommend_price": 8.21,
+        "settled_price": 8.12,
+        "return_pct": -1.1,
+        "result": "fail",
+        "note": "鐵律③ L4（27.6%）出場，收盤價入帳"
+      },
+      {
+        "stock_code": "2382",
+        "stock_name": "廣達",
+        "recommend_date": "2026-09-10",
+        "recommend_price": 342.0,
+        "settled_price": 336.5,
+        "return_pct": -1.61,
+        "result": "fail",
+        "note": "鐵律③ L4（17.1%）出場，收盤價入帳"
+      },
+      {
+        "stock_code": "2377",
+        "stock_name": "微星",
+        "recommend_date": "2026-09-10",
+        "recommend_price": 156.5,
+        "settled_price": 149.0,
+        "return_pct": -4.79,
+        "result": "fail",
+        "note": "鐵律③ L4（43.3%）出場，收盤價入帳"
+      },
+      {
+        "stock_code": "8150",
+        "stock_name": "南茂",
+        "recommend_date": "2026-09-10",
+        "recommend_price": 91.5,
+        "settled_price": 86.7,
+        "return_pct": -5.25,
+        "result": "fail",
+        "note": "鐵律③ L4（17.4%）出場，收盤價入帳"
+      }
+    ],
+    "carry_over_holding": [
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "D": "D8/10",
+        "close": 27.2,
+        "return_pct": 6.46,
+        "result": "holding"
+      },
+      {
+        "stock_code": "3711",
+        "stock_name": "日月光投控",
+        "D": "D3/10",
+        "close": 618.0,
+        "return_pct": -0.48,
+        "result": "holding"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "D": "D4/10",
+        "close": 38.9,
+        "return_pct": 4.29,
+        "result": "holding"
+      },
+      {
+        "stock_code": "3045",
+        "stock_name": "台灣大",
+        "D": "D5/10",
+        "close": 121.0,
+        "return_pct": 2.54,
+        "result": "holding"
+      },
+      {
+        "stock_code": "2880",
+        "stock_name": "華南金",
+        "D": "D3/10",
+        "close": 45.85,
+        "return_pct": 3.38,
+        "result": "holding"
+      },
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "D": "D2/10",
+        "close": 51.7,
+        "return_pct": 2.17,
+        "result": "holding"
+      },
+      {
+        "stock_code": "1326",
+        "stock_name": "台化",
+        "D": "D1/10",
+        "close": 70.2,
+        "return_pct": -2.23,
+        "result": "holding",
+        "note": "v8.3.3複核①②皆≥5%定案 → 2026-09-12開盤出場"
+      }
+    ]
+  }
 }

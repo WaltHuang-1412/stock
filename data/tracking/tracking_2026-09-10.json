@@ -224,7 +224,8 @@
       "close_price": 71.3,
       "change_percent": -0.7,
       "result": "holding",
-      "holding_status": "D0/10；反轉 Level 0，未觸及停損 64.62、2 日累計跌幅未達 -10%，續追蹤"
+      "holding_status": "D0/10；反轉 Level 0，未觸及停損 64.62、2 日累計跌幅未達 -10%，續追蹤",
+      "intraday_price_check_note": "v8.3.3待複核：複核①(12:30)7.4%確認≥5%、複核②(盤後)7.4%確認≥5%，兩次皆≥5%→依規則09-12開盤出場定案（見tracking_2026-09-11.json pending_review_v833）"
     },
     {
       "stock_code": "1314",
@@ -242,8 +243,14 @@
       "risks": "⚠️ 今日重大訊息：補充公告一年內實際處分同一有價證券金額達 3 億元（業外損益，非本業，中性偏須留意）｜⚠️ 營收快取停滯 2026-05 → 營收因子視為 0（原 -5 分作廢）｜⚠️ 外資持股比視為 0｜⚠️ 卷宗當日資料源無直接提及，推薦依據為法人數據＋產業催化",
       "close_price": 8.13,
       "change_percent": -0.97,
-      "result": "holding",
-      "holding_status": "D0/10；反轉 Level 0，未觸及停損 7.389、2 日累計跌幅未達 -10%，續追蹤"
+      "result": "fail",
+      "holding_status": "D0/10；反轉 Level 0，未觸及停損 7.389、2 日累計跌幅未達 -10%，續追蹤",
+      "settled_date": "2026-09-11",
+      "settled_price": 8.12,
+      "return_pct": -1.1,
+      "actual_close": 8.12,
+      "fail_reason": "鐵律③ L4（今日賣超-4,249張，佔5日均量27.6%）；收盤價入帳v8.3.2；D1/10",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-10.json ②tracking_2026-09-11.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2382",
@@ -261,8 +268,14 @@
       "risks": "⚠️ 動能 +48.6%（0~+50% 區間，倉位正常但非佈局完成）｜⚠️ 卷宗矛盾必回應：緯創 8 月營收 4,600.65 億元超車廣達 4,239 億元、躍居本土代工二哥 → 廣達 AI 伺服器份額面臨同業擠壓，惟法人 09-09 仍以 52.6% 主導力買超，籌碼面未反映此利空｜⚠️ 營收快取停滯 2026-02 → 營收因子視為 0｜⚠️ 外資持股比視為 0｜09-09 已辦法說（大和國泰 Greater China Conference），窗口內無新事件",
       "close_price": 336.0,
       "change_percent": -1.75,
-      "result": "holding",
-      "holding_status": "D0/10；反轉 Level 0，未觸及停損 307.8、2 日累計跌幅未達 -10%，續追蹤"
+      "result": "fail",
+      "holding_status": "D0/10；反轉 Level 0，未觸及停損 307.8、2 日累計跌幅未達 -10%，續追蹤",
+      "settled_date": "2026-09-11",
+      "settled_price": 336.5,
+      "return_pct": -1.61,
+      "actual_close": 336.5,
+      "fail_reason": "鐵律③ L4（今日賣超-3,632張，佔5日均量17.1%）；收盤價入帳v8.3.2；D1/10",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-10.json ②tracking_2026-09-11.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2377",
@@ -280,8 +293,14 @@
       "risks": "⚠️ 投信 -893 張與外資 +4,610 張對做，法人態度分歧｜⚠️ 產業僅登錄 tier_from_tracker（待審區），產業邏輯以 14 分計、未給龍頭分｜⚠️ 外資持股比視為 0",
       "close_price": 149.0,
       "change_percent": -4.79,
-      "result": "holding",
-      "holding_status": "D0/10；反轉 Level 0，未觸及停損 140.85、2 日累計跌幅未達 -10%，續追蹤"
+      "result": "fail",
+      "holding_status": "D0/10；反轉 Level 0，未觸及停損 140.85、2 日累計跌幅未達 -10%，續追蹤",
+      "settled_date": "2026-09-11",
+      "settled_price": 149.0,
+      "return_pct": -4.79,
+      "actual_close": 149.0,
+      "fail_reason": "鐵律③ L4（今日賣超-6,080張，佔5日均量43.3%）；收盤價入帳v8.3.2；D1/10",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-10.json ②tracking_2026-09-11.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "8150",
@@ -299,8 +318,14 @@
       "risks": "⚠️ 動能 +28.0%（0~+50%，非佈局完成）→ 倉位壓至 5-10%｜⚠️ 📶訊號A 僅 L1（不加分）｜⚠️ 卷宗 mentions 1 處為『標普500喊上8150點』字串誤配，實質當日資料源提及＝0｜⚠️ 營收快取停滯 2026-05 → 視為 0｜⚠️ 外資持股比視為 0",
       "close_price": 90.9,
       "change_percent": -0.66,
-      "result": "holding",
-      "holding_status": "D0/10；反轉 Level 0，未觸及停損 82.35、2 日累計跌幅未達 -10%，續追蹤"
+      "result": "fail",
+      "holding_status": "D0/10；反轉 Level 0，未觸及停損 82.35、2 日累計跌幅未達 -10%，續追蹤",
+      "settled_date": "2026-09-11",
+      "settled_price": 86.7,
+      "return_pct": -5.25,
+      "actual_close": 86.7,
+      "fail_reason": "鐵律③ L4（今日賣超-3,382張，佔5日均量17.4%）；收盤價入帳v8.3.2；D1/10",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-10.json ②tracking_2026-09-11.json removed_stocks ③predictions.json"
     }
   ],
   "carry_over": [
