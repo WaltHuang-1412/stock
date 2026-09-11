@@ -20,19 +20,71 @@
   "prior_decisions_executed": {
     "source": "tracking_2026-09-10.json → tomorrow_opening_exits",
     "items": [
-      {"stock_code": "2408", "stock_name": "南亞科", "category": "鐵律③ 法人反轉 L4", "action": "已決事項，原樣抄入今日開盤出場清單，不重評"},
-      {"stock_code": "2330", "stock_name": "台積電", "category": "鐵律③ 法人反轉 L4（零股）", "action": "已決事項，原樣抄入今日開盤出場清單，不重評；yaml 無 stop_loss 欄位待補設"}
+      {
+        "stock_code": "2408",
+        "stock_name": "南亞科",
+        "category": "鐵律③ 法人反轉 L4",
+        "action": "已決事項，原樣抄入今日開盤出場清單，不重評"
+      },
+      {
+        "stock_code": "2330",
+        "stock_name": "台積電",
+        "category": "鐵律③ 法人反轉 L4（零股）",
+        "action": "已決事項，原樣抄入今日開盤出場清單，不重評；yaml 無 stop_loss 欄位待補設"
+      }
     ]
   },
   "stop_loss_check_v8310": {
     "note": "Step 4-1 機械比對 my_holdings.yaml 全部 quantity>0 且有 stop_loss 欄位者",
     "results": [
-      {"symbol": "6770", "name": "力積電", "close_date": "2026-09-10", "close": 73.5, "stop_loss": 73.26, "hit": false},
-      {"symbol": "2337", "name": "旺宏", "close_date": "2026-09-10", "close": 122.5, "stop_loss": 147.6, "hit": true},
-      {"symbol": "2313", "name": "華通", "close_date": "2026-09-10", "close": 225.5, "stop_loss": 235.98, "hit": true},
-      {"symbol": "3090", "name": "日電貿", "close_date": "2026-09-10", "close": 171.0, "stop_loss": 256.5, "hit": true},
-      {"symbol": "1301", "name": "台塑", "close_date": "2026-09-10", "close": 65.6, "stop_loss": 54.08, "hit": false},
-      {"symbol": "4938", "name": "和碩", "close_date": "2026-09-10", "close": 91.0, "stop_loss": 76.5, "hit": false}
+      {
+        "symbol": "6770",
+        "name": "力積電",
+        "close_date": "2026-09-10",
+        "close": 73.5,
+        "stop_loss": 73.26,
+        "hit": false
+      },
+      {
+        "symbol": "2337",
+        "name": "旺宏",
+        "close_date": "2026-09-10",
+        "close": 122.5,
+        "stop_loss": 147.6,
+        "hit": true
+      },
+      {
+        "symbol": "2313",
+        "name": "華通",
+        "close_date": "2026-09-10",
+        "close": 225.5,
+        "stop_loss": 235.98,
+        "hit": true
+      },
+      {
+        "symbol": "3090",
+        "name": "日電貿",
+        "close_date": "2026-09-10",
+        "close": 171.0,
+        "stop_loss": 256.5,
+        "hit": true
+      },
+      {
+        "symbol": "1301",
+        "name": "台塑",
+        "close_date": "2026-09-10",
+        "close": 65.6,
+        "stop_loss": 54.08,
+        "hit": false
+      },
+      {
+        "symbol": "4938",
+        "name": "和碩",
+        "close_date": "2026-09-10",
+        "close": 91.0,
+        "stop_loss": 76.5,
+        "hit": false
+      }
     ],
     "risk_note": "2337/2313/3090 為連續第2日重複觸發（見記憶 project_holdings_exit_not_recorded_repeats.md）：09-10 已列為鐵律出場但 my_holdings.yaml 未更新（quantity 未歸零），今日機械比對再次命中同一批。此為已知的持倉檔案未同步問題，非新事件；提醒使用者實際執行出場後應更新 yaml。"
   },
@@ -49,16 +101,66 @@
     "detail": "5880/3045/2892/3711/2880/2886/2408/1605/1326/1314/2382/2377/8150 為 holding；2867 序列停滯凍結"
   },
   "opening_exits_today": [
-    {"stock_code": "2408", "stock_name": "南亞科", "category": "已決事項（09-10 定案）", "reason": "見 prior_decisions_executed"},
-    {"stock_code": "2330", "stock_name": "台積電", "category": "已決事項（09-10 定案，零股）", "reason": "見 prior_decisions_executed"},
-    {"stock_code": "1605", "stock_name": "華新", "category": "鐵律③ 法人反轉 L4", "reason": "今日賣超-3,916張，佔日均量25.4%（≥8%不受v8.3.3待複核保護），立即出場"},
-    {"stock_code": "1314", "stock_name": "中石化", "category": "鐵律③ 法人反轉 L4", "reason": "今日賣超-4,249張，佔日均量22.1%，立即出場；⚠️ 該股今日16:00召開法說會，出場後不受此影響"},
-    {"stock_code": "2382", "stock_name": "廣達", "category": "鐵律③ 法人反轉 L4", "reason": "今日賣超-3,632張，佔日均量17.4%，立即出場"},
-    {"stock_code": "2377", "stock_name": "微星", "category": "鐵律③ 法人反轉 L4", "reason": "今日賣超-6,080張，佔日均量44.0%，立即出場"},
-    {"stock_code": "8150", "stock_name": "南茂", "category": "鐵律③ 法人反轉 L4", "reason": "今日賣超-3,382張，佔日均量15.5%，立即出場"},
-    {"stock_code": "2337", "stock_name": "旺宏", "category": "鐵律① 觸及停損價", "reason": "09-10收盤122.5 < 停損147.6（見 stop_loss_check_v8310）；不受v8.3.3保護，立即出場"},
-    {"stock_code": "2313", "stock_name": "華通", "category": "鐵律① 觸及停損價", "reason": "09-10收盤225.5 < 停損235.98；立即出場"},
-    {"stock_code": "3090", "stock_name": "日電貿", "category": "鐵律① 觸及停損價", "reason": "09-10收盤171.0 < 停損256.5；立即出場"}
+    {
+      "stock_code": "2408",
+      "stock_name": "南亞科",
+      "category": "已決事項（09-10 定案）",
+      "reason": "見 prior_decisions_executed"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "category": "已決事項（09-10 定案，零股）",
+      "reason": "見 prior_decisions_executed"
+    },
+    {
+      "stock_code": "1605",
+      "stock_name": "華新",
+      "category": "鐵律③ 法人反轉 L4",
+      "reason": "今日賣超-3,916張，佔日均量25.4%（≥8%不受v8.3.3待複核保護），立即出場"
+    },
+    {
+      "stock_code": "1314",
+      "stock_name": "中石化",
+      "category": "鐵律③ 法人反轉 L4",
+      "reason": "今日賣超-4,249張，佔日均量22.1%，立即出場；⚠️ 該股今日16:00召開法說會，出場後不受此影響"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "category": "鐵律③ 法人反轉 L4",
+      "reason": "今日賣超-3,632張，佔日均量17.4%，立即出場"
+    },
+    {
+      "stock_code": "2377",
+      "stock_name": "微星",
+      "category": "鐵律③ 法人反轉 L4",
+      "reason": "今日賣超-6,080張，佔日均量44.0%，立即出場"
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "category": "鐵律③ 法人反轉 L4",
+      "reason": "今日賣超-3,382張，佔日均量15.5%，立即出場"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "category": "鐵律① 觸及停損價",
+      "reason": "09-10收盤122.5 < 停損147.6（見 stop_loss_check_v8310）；不受v8.3.3保護，立即出場"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "category": "鐵律① 觸及停損價",
+      "reason": "09-10收盤225.5 < 停損235.98；立即出場"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "category": "鐵律① 觸及停損價",
+      "reason": "09-10收盤171.0 < 停損256.5；立即出場"
+    }
   ],
   "pending_review_v833": [
     {
@@ -91,33 +193,151 @@
   "carry_over_recommendations": [],
   "carry_over_note": "無標『⏳沿用進行中追蹤』者，今日既有持倉皆以獨立『持倉加碼評估』區塊處理，不重複建檔",
   "portfolio_add_evaluation": [
-    {"stock_code": "2892", "stock_name": "第一金", "recommend_date": "2026-09-07", "holding_day": "D3/10", "score_context": "📶訊號A L3佈局完成（連10天買超+動能-49.5%）", "verdict": "🔄可加碼", "note": "距目標6.6%、距停損11.7%，籌碼健康"},
-    {"stock_code": "5880", "stock_name": "合庫金", "recommend_date": "2026-09-01", "holding_day": "D7/10", "score_context": "📶訊號A L3佈局完成", "verdict": "🟡續抱觀察", "note": "D7接近到期，距目標僅3.5%"},
-    {"stock_code": "3045", "stock_name": "台灣大", "recommend_date": "2026-09-04", "holding_day": "D4/10", "score_context": "📶訊號A L3佈局完成（併購精誠資訊題材）", "verdict": "🔄可加碼", "note": "距目標5.8%、距停損11.5%"},
-    {"stock_code": "3711", "stock_name": "日月光投控", "recommend_date": "2026-09-08", "holding_day": "D2/10", "score_context": "籌碼健康，今日+4,338張", "verdict": "🔄可加碼", "note": "距目標4.2%"},
-    {"stock_code": "2880", "stock_name": "華南金", "recommend_date": "2026-09-08", "holding_day": "D2/10", "score_context": "📶訊號A L2、籌碼健康", "verdict": "🔄可加碼", "note": "距目標8.3%"},
-    {"stock_code": "2886", "stock_name": "兆豐金", "recommend_date": "2026-09-09", "holding_day": "D1/10", "score_context": "📶訊號A L2、籌碼健康+6,888張", "verdict": "🟡續抱觀察", "note": "現價-1.4%小幅回檔"},
-    {"stock_code": "6770", "stock_name": "力積電", "holding_source": "my_holdings.yaml 實際持股2張", "stop_loss_check": "未觸及（73.5>73.26）", "verdict": "🟡續抱觀察"},
-    {"stock_code": "1301", "stock_name": "台塑", "holding_source": "my_holdings.yaml 實際持股1張", "stop_loss_check": "未觸及（65.6>54.08）", "verdict": "🔄可加碼", "note": "📶訊號A L2中石化同族群油價受惠，惟已持股不重複建倉"},
-    {"stock_code": "4938", "stock_name": "和碩", "holding_source": "my_holdings.yaml 實際持股1張", "stop_loss_check": "未觸及（91.0>76.5）", "verdict": "🟡續抱觀察"}
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "recommend_date": "2026-09-07",
+      "holding_day": "D3/10",
+      "score_context": "📶訊號A L3佈局完成（連10天買超+動能-49.5%）",
+      "verdict": "🔄可加碼",
+      "note": "距目標6.6%、距停損11.7%，籌碼健康"
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "recommend_date": "2026-09-01",
+      "holding_day": "D7/10",
+      "score_context": "📶訊號A L3佈局完成",
+      "verdict": "🟡續抱觀察",
+      "note": "D7接近到期，距目標僅3.5%"
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "recommend_date": "2026-09-04",
+      "holding_day": "D4/10",
+      "score_context": "📶訊號A L3佈局完成（併購精誠資訊題材）",
+      "verdict": "🔄可加碼",
+      "note": "距目標5.8%、距停損11.5%"
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光投控",
+      "recommend_date": "2026-09-08",
+      "holding_day": "D2/10",
+      "score_context": "籌碼健康，今日+4,338張",
+      "verdict": "🔄可加碼",
+      "note": "距目標4.2%"
+    },
+    {
+      "stock_code": "2880",
+      "stock_name": "華南金",
+      "recommend_date": "2026-09-08",
+      "holding_day": "D2/10",
+      "score_context": "📶訊號A L2、籌碼健康",
+      "verdict": "🔄可加碼",
+      "note": "距目標8.3%"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "recommend_date": "2026-09-09",
+      "holding_day": "D1/10",
+      "score_context": "📶訊號A L2、籌碼健康+6,888張",
+      "verdict": "🟡續抱觀察",
+      "note": "現價-1.4%小幅回檔"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "holding_source": "my_holdings.yaml 實際持股2張",
+      "stop_loss_check": "未觸及（73.5>73.26）",
+      "verdict": "🟡續抱觀察"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "holding_source": "my_holdings.yaml 實際持股1張",
+      "stop_loss_check": "未觸及（65.6>54.08）",
+      "verdict": "🔄可加碼",
+      "note": "📶訊號A L2中石化同族群油價受惠，惟已持股不重複建倉"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "holding_source": "my_holdings.yaml 實際持股1張",
+      "stop_loss_check": "未觸及（91.0>76.5）",
+      "verdict": "🟡續抱觀察"
+    }
   ],
   "watchlist": [
-    {"stock_code": "5876", "stock_name": "上海商銀", "score": 63, "reason": "動能+45.2%（0~50%正常區）、EPS快取停滯2025-12-31視為0、法人8天連買但無明確時事對應，分數不足70"},
-    {"stock_code": "2834", "stock_name": "臺企銀", "score": 57, "reason": "動能+65.4%（+50~100%區間-10分）、名列『金融股8月獲利創高』🟡中度催化，惟動能扣分後不足70"},
-    {"stock_code": "2412", "stock_name": "中華電", "excluded": true, "reason": "動能+116.6%>100%，直接排除（無超強催化覆寫適用）"}
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "score": 63,
+      "reason": "動能+45.2%（0~50%正常區）、EPS快取停滯2025-12-31視為0、法人8天連買但無明確時事對應，分數不足70"
+    },
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "score": 57,
+      "reason": "動能+65.4%（+50~100%區間-10分）、名列『金融股8月獲利創高』🟡中度催化，惟動能扣分後不足70"
+    },
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電",
+      "excluded": true,
+      "reason": "動能+116.6%>100%，直接排除（無超強催化覆寫適用）"
+    }
   ],
   "gate_exclusions": [
-    {"stock_code": "2889", "stock_name": "國票金", "reason": "反轉Level 4（賣超佔日均量21.5%），排除"},
-    {"stock_code": "2845", "stock_name": "遠東銀", "reason": "反轉Level 4（9.1%），排除"},
-    {"stock_code": "2897", "stock_name": "王道銀行", "reason": "反轉Level 4（8.6%），排除"},
-    {"stock_code": "1301(候選池，非持股)", "stock_name": "台塑", "reason": "候選池掃描顯示反轉Level 4（14.4%），但實際持股已於stop_loss_check確認未觸停損，續抱；不作為新推薦"},
-    {"stock_code": "1101", "stock_name": "台泥", "reason": "累計轉負（-3,126張），狀態不明未達Safe，排除"},
-    {"stock_code": "6257", "stock_name": "矽格", "reason": "累計轉負（-9,984張），排除"},
-    {"stock_code": "2481", "stock_name": "強茂", "reason": "累計轉負（-20,712張）＋處置預警（⏳最快剩1天處置），排除"},
-    {"stock_code": "1802", "stock_name": "台玻", "reason": "累計轉負（-1,586張），排除"}
+    {
+      "stock_code": "2889",
+      "stock_name": "國票金",
+      "reason": "反轉Level 4（賣超佔日均量21.5%），排除"
+    },
+    {
+      "stock_code": "2845",
+      "stock_name": "遠東銀",
+      "reason": "反轉Level 4（9.1%），排除"
+    },
+    {
+      "stock_code": "2897",
+      "stock_name": "王道銀行",
+      "reason": "反轉Level 4（8.6%），排除"
+    },
+    {
+      "stock_code": "1301(候選池，非持股)",
+      "stock_name": "台塑",
+      "reason": "候選池掃描顯示反轉Level 4（14.4%），但實際持股已於stop_loss_check確認未觸停損，續抱；不作為新推薦"
+    },
+    {
+      "stock_code": "1101",
+      "stock_name": "台泥",
+      "reason": "累計轉負（-3,126張），狀態不明未達Safe，排除"
+    },
+    {
+      "stock_code": "6257",
+      "stock_name": "矽格",
+      "reason": "累計轉負（-9,984張），排除"
+    },
+    {
+      "stock_code": "2481",
+      "stock_name": "強茂",
+      "reason": "累計轉負（-20,712張）＋處置預警（⏳最快剩1天處置），排除"
+    },
+    {
+      "stock_code": "1802",
+      "stock_name": "台玻",
+      "reason": "累計轉負（-1,586張），排除"
+    }
   ],
   "module_a_result": {
-    "l3_stocks": ["2892 第一金（已持有）", "5880 合庫金（已持有）", "3045 台灣大（已持有）"],
+    "l3_stocks": [
+      "2892 第一金（已持有）",
+      "5880 合庫金（已持有）",
+      "3045 台灣大（已持有）"
+    ],
     "l2_stocks_count": 18,
     "note": "L3全數為既有持倉，未產生新推薦；L2清單詳見catalyst_preposition_scan.json"
   },
@@ -130,11 +350,20 @@
   },
   "tier_from_tracker_writes": 0,
   "disposition_stocks": {
-    "twse_disposition": ["2455", "3450", "6933", "8021"],
+    "twse_disposition": [
+      "2455",
+      "3450",
+      "6933",
+      "8021"
+    ],
     "twse_attention": [],
     "note": "皆非本日候選股或持倉，無需額外處理"
   },
-  "us_leader_alerts": {"total": 6, "level3": 0, "note": "無龍頭暴跌一票否決個股"},
+  "us_leader_alerts": {
+    "total": 6,
+    "level3": 0,
+    "note": "無龍頭暴跌一票否決個股"
+  },
   "data_quality_flags": [
     "營收快取（check_revenue_yoy）整批停滯於2026-02，落後7個月，今日所有候選股營收因子皆視為0並標註",
     "外資持股比快取（check_foreign_ratio）停滯於2026-08-11，本因子今日所有候選股皆視為參考不採計",
@@ -143,9 +372,24 @@
     "market_regime.json的taiex.current已知落後2交易日，本日未另行使用該欄位判斷大盤"
   ],
   "today_events": [
-    {"stock_code": "1314", "stock_name": "中石化", "event": "法人說明會 今日16:00", "note": "已列鐵律L4出場，出場後不受影響"},
-    {"stock_code": "8150", "stock_name": "南茂", "event": "瑞銀證券Taiwan Summit 09-15（4天後）", "note": "已列鐵律L4出場"},
-    {"stock_code": "2330", "stock_name": "台積電", "event": "8月營收報告(今日)＋除權息09-16(5天後，現金股利7.000001元)", "note": "零股部位依已決事項今日開盤出場，不受除息影響"}
+    {
+      "stock_code": "1314",
+      "stock_name": "中石化",
+      "event": "法人說明會 今日16:00",
+      "note": "已列鐵律L4出場，出場後不受影響"
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "event": "瑞銀證券Taiwan Summit 09-15（4天後）",
+      "note": "已列鐵律L4出場"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "event": "8月營收報告(今日)＋除權息09-16(5天後，現金股利7.000001元)",
+      "note": "零股部位依已決事項今日開盤出場，不受除息影響"
+    }
   ],
   "diversification": {
     "new_recommendations": 1,
@@ -160,5 +404,80 @@
   },
   "removed_stocks": [],
   "tomorrow_opening_exits": [],
-  "notes": "今日為法人單日大賣383億元的風險偏好轉弱交易日：昨日(09-10)新推薦5檔中5檔（1605/1314/2382/2377/8150）於D0-D1即觸發反轉Level4，1檔(2408)延續09-10已決定案出場，凸顯AI伺服器/散熱/記憶體鏈籌碼今日集體轉弱（與外資轉賣、AI泡沫檢查清單惡化一致）。新推薦僅1312國喬一檔通過完整篩選（分數88），其餘候選（金融股族群）因動能過熱(2412/2834)或分數不足(5876)未達推薦門檻，符合『寧缺勿濫』原則。持倉停損機械比對（v8.3.10）發現2337/2313/3090連續第2日觸發同一批停損，研判為使用者尚未依前次建議更新my_holdings.yaml quantity欄位，非新事件。"
+  "notes": "今日為法人單日大賣383億元的風險偏好轉弱交易日：昨日(09-10)新推薦5檔中5檔（1605/1314/2382/2377/8150）於D0-D1即觸發反轉Level4，1檔(2408)延續09-10已決定案出場，凸顯AI伺服器/散熱/記憶體鏈籌碼今日集體轉弱（與外資轉賣、AI泡沫檢查清單惡化一致）。新推薦僅1312國喬一檔通過完整篩選（分數88），其餘候選（金融股族群）因動能過熱(2412/2834)或分數不足(5876)未達推薦門檻，符合『寧缺勿濫』原則。持倉停損機械比對（v8.3.10）發現2337/2313/3090連續第2日觸發同一批停損，研判為使用者尚未依前次建議更新my_holdings.yaml quantity欄位，非新事件。",
+  "intraday_check_1230": {
+    "new_forced_exits": [
+      {
+        "stock_code": "6770",
+        "stock_name": "力積電",
+        "category": "鐵律①觸及停損價",
+        "reason": "現價70.80<停損73.26（09-10收盤73.5未觸發，今日盤中新增跌破），成本81.4虧損-13.0%"
+      },
+      {
+        "stock_code": "1301",
+        "stock_name": "台塑",
+        "category": "鐵律③法人反轉L4",
+        "reason": "今日賣超-4,687張佔日均量17.7%（≥8%不受v8.3.3待複核保護）；流程缺陷：before_market候選池已顯示14.4%≥8%卻未對持股套用強制出場規則"
+      }
+    ],
+    "pending_review": [
+      {
+        "stock_code": "1326",
+        "stock_name": "台化",
+        "check_seq": "第1次（12:30）",
+        "sell_ratio": "7.4%",
+        "verdict": "≥5%確認，10日累計+76K正，維持待複核，需盤後第2次複核皆≥5%才次日開盤出場"
+      },
+      {
+        "stock_code": "4938",
+        "stock_name": "和碩",
+        "check_seq": "盤中新增L4",
+        "sell_ratio": "7.8%（<8%）",
+        "verdict": "列待複核不立即出場；10日累計轉負-1,872張、動能+134.2%追高風險，列高關注優先序，盤後以完整日量重跑仍為L3/L4即次日開盤出場"
+      }
+    ],
+    "holding_continue": [
+      "1312",
+      "5880",
+      "3045",
+      "2892",
+      "3711",
+      "2880",
+      "2886"
+    ],
+    "detector_signals": {
+      "strong": [
+        "3016",
+        "2820"
+      ],
+      "source": "intraday_institutional_detector.json"
+    },
+    "track_b_evaluation": [
+      {
+        "stock_code": "3016",
+        "stock_name": "嘉晶",
+        "result": "排除",
+        "reason": "動能變化+359.8%>100%，動能一票否決，無超強催化覆寫適用"
+      },
+      {
+        "stock_code": "2820",
+        "stock_name": "華票",
+        "result": "不推薦",
+        "reason": "五維度概估約58分，未達75分門檻"
+      }
+    ]
+  },
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "3016",
+      "stock_name": "嘉晶",
+      "reason": "偵測器強訊號90分，惟動能一票否決排除"
+    },
+    {
+      "stock_code": "2820",
+      "stock_name": "華票",
+      "reason": "偵測器強訊號65分，評分約58分未達75分門檻"
+    }
+  ]
 }

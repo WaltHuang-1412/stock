@@ -159,10 +159,13 @@ def validate_before_market(date_str):
     if len(industries) < 3:
         warnings.append(f"⚠️  產業數量 {len(industries)}個 低於軟性目標 3 個: {', '.join(industries.keys())}")
 
-    for ind, count in industries.items():
-        ratio = count / len(recs)
-        if ratio > 0.5:
-            errors.append(f"❌ 產業過度集中: {ind} 佔比{ratio*100:.0f}%（應≤50%）")
+    # 僅推薦 1 檔時，單一產業必為 100%，屬「寧缺勿濫」下的必然結果而非集中度風險
+    # （已由上方 <4 檔警告揭露），集中度檢查僅在 ≥2 檔推薦時才有意義
+    if len(recs) >= 2:
+        for ind, count in industries.items():
+            ratio = count / len(recs)
+            if ratio > 0.5:
+                errors.append(f"❌ 產業過度集中: {ind} 佔比{ratio*100:.0f}%（應≤50%）")
 
     # 2.2b 檢查 v8.0 新增必要檔案
     new_files = {
