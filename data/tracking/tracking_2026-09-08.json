@@ -386,13 +386,17 @@
       "risk": "動能 +277.7% 屬爆發區，覆寫僅降級不代表安全；若費半次日回檔，為本組追高風險最高者。停損已縮至 -5%",
       "intraday_price": 616.0,
       "intraday_return_pct": -0.81,
-      "result": "holding",
-      "actual_close": 618.0,
-      "return_pct": -0.48,
+      "result": "fail",
+      "actual_close": 612.0,
+      "return_pct": -1.45,
       "holding_days": "D0/10",
-      "holding_status": "D0/10 收盤 618.0（-0.48%）；反轉 Level 0／法人買超中，未觸目標亦未觸停損 → 續抱",
+      "holding_status": "已結算 fail @ 612.0（2026-09-14，D4/10）",
       "close_price": 618.0,
-      "change_percent": -0.48
+      "change_percent": -0.48,
+      "settled_date": "2026-09-14",
+      "settled_price": 612.0,
+      "fail_reason": "鐵律③ L4（09-11 T86 賣超-7,819張＝39.9%≥8%，立即出場）→ 09-14 開盤出場；收盤價入帳v8.3.2；D4/10",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-08.json ②tracking_2026-09-14.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2880",
