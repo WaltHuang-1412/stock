@@ -1,0 +1,150 @@
+{
+  "date": "2026-09-14",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "us_markets": "那斯達克+0.96%、費半+1.81%、VIX -11.21%(15.84)，風險偏好回升",
+    "vix": 15.84,
+    "wti": "102.43 (+2.38%)",
+    "note": "topic_tracker.md 與 market_regime.json 今日外部倉庫尚未產出（僅 raw_for_claude.md 可用），時事現況維度以 market_intelligence.md/tw_market_news.json 替代，證據力較弱，已於報告揭露"
+  },
+  "data_quality_flags": [
+    "topic_tracker.md 缺失：today's outputs 僅有 raw_for_claude.md，時事現況評分基準薄弱",
+    "market_regime.json 缺失：大盤局勢/防禦比例判斷改以 VIX 15.84（近1個月低點）+ us_asia_markets 自行研判",
+    "revenue_check.json 全數過期（最新僅至 2026-07，多數仍在 2026-02~06），本次全數候選股營收加減分視為 0",
+    "eps_check.json：16 檔金融股（2812/2892/2801/2883/2886/5880/2887/2884/2889/2880/2845/2890/5876/2891/2897/2885）最新季別仍為 2025-12-31（Q4），落後 Q2 2026 財報期限(金融業8/31)，EPS加減分視為0；非金融股(2412/2618/2354/2610/3045/2382/1301)已更新至2026-06-30，正常採計",
+    "foreign_ratio_check.json 全數候選股 as_of=2026-08-11（5週未更新），外資持股比加減分本次全數視為0並揭露",
+    "reversal_alert 處置/注意股清單查核：候選池與持倉合計42檔均未命中TWSE處置(2455/3055/8021)或注意股清單"
+  ],
+  "prior_decisions_executed": [
+    {"stock_code": "1326", "stock_name": "台化", "category": "已決事項（tomorrow_opening_exits, 09-11 定案）", "reason": "鐵律③法人反轉L4邊緣值待複核定案：v8.3.3複核①②皆≥5%，依規則本日開盤出場，收盤價入帳", "action": "開盤出場"},
+    {"stock_code": "4938", "stock_name": "和碩", "category": "已決事項（tomorrow_opening_exits, 09-11 定案）", "reason": "鐵律③法人反轉L4（盤中新增，盤後複核維持），my_holdings.yaml實際持股1張，出場後請使用者更新yaml；今日reversal_alert複掃仍為L4(10.0%)，確認出場正確", "action": "開盤出場（含 my_holdings.yaml 持股1張）"}
+  ],
+  "stop_loss_check_v8310": [
+    {"stock_code": "6770", "stock_name": "力積電", "close_date": "2026-09-11", "close": 70.7, "stop_loss": 73.26, "result": "🛑 觸及停損", "note": "已連續多日跌破停損未出場（09-03起累積），my_holdings.yaml 未更新，本日再度標記"},
+    {"stock_code": "2337", "stock_name": "旺宏", "close_date": "2026-09-11", "close": 119.0, "stop_loss": 147.6, "result": "🛑 觸及停損", "note": "已連續多日跌破停損未出場（09-03起累積），my_holdings.yaml 未更新，本日再度標記"},
+    {"stock_code": "2313", "stock_name": "華通", "close_date": "2026-09-11", "close": 221.5, "stop_loss": 235.98, "result": "🛑 觸及停損", "note": "已連續多日跌破停損未出場，my_holdings.yaml 未更新，本日再度標記"},
+    {"stock_code": "3090", "stock_name": "日電貿", "close_date": "2026-09-11", "close": 163.0, "stop_loss": 256.5, "result": "🛑 觸及停損", "note": "同時觸發反轉L4(8.6%)，雙重出場理由"},
+    {"stock_code": "1301", "stock_name": "台塑", "close_date": "2026-09-11", "close": 64.6, "stop_loss": 54.08, "result": "✅ 未觸發", "note": "續抱，惟今日reversal_alert轉為Level2單日反轉，密切觀察明日"},
+    {"stock_code": "4938", "stock_name": "和碩", "close_date": "2026-09-11", "close": 91.0, "stop_loss": 76.5, "result": "✅ 未觸發（但已因鐵律③另案決議出場，見上）", "note": "停損未觸及，出場理由為法人反轉L4，非停損"}
+  ],
+  "series_alignment_check_v838": [
+    {"stock_code": "2867", "stock_name": "三商壽", "series_last_date": "2026-08-19", "expected_last_date": "2026-09-11", "result": "⚠️ 序列停滯（凍結判定，第4次確認，已凍結近1個月）"}
+  ],
+  "holdings_full_reversal_scan": [
+    {"stock_code": "3711", "stock_name": "日月光投控", "level": "L4", "sell_ratio_pct": 42.8, "action": "🛑 開盤出場（來源tracking 09-08, D3/10）"},
+    {"stock_code": "1312", "stock_name": "國喬", "level": "L4", "sell_ratio_pct": 36.3, "action": "🛑 開盤出場（來源tracking 09-11, D0/10）"},
+    {"stock_code": "2330", "stock_name": "台積電", "level": "L4", "sell_ratio_pct": 46.6, "action": "🛑 開盤出場（my_holdings.yaml持股0.15張）"},
+    {"stock_code": "6770", "stock_name": "力積電", "level": "L4", "sell_ratio_pct": 27.7, "action": "🛑 開盤出場（同時觸發停損）"},
+    {"stock_code": "3090", "stock_name": "日電貿", "level": "L4", "sell_ratio_pct": 8.6, "action": "🛑 開盤出場（同時觸發停損，佔比≥8%不受待複核保護）"},
+    {"stock_code": "4938", "stock_name": "和碩", "level": "L4", "sell_ratio_pct": 10.0, "action": "🛑 開盤出場（已決事項，本日複掃確認）"},
+    {"stock_code": "2337", "stock_name": "旺宏", "level": "L3", "note": "累計已轉負，不受v8.3.3待複核保護，同時觸發停損", "action": "🛑 開盤出場"},
+    {"stock_code": "2313", "stock_name": "華通", "level": "狀態不明（累計負但未達L3/L4門檻）", "action": "🛑 開盤出場（已觸發停損鐵律①，不依賴此判定）"},
+    {"stock_code": "1301", "stock_name": "台塑", "level": "L2", "sell_ratio_pct": 4.7, "action": "⚠️ 續抱觀察，未觸停損，準備明日停損"}
+  ],
+  "opening_exits_today": [
+    "1326 台化（已決事項）", "4938 和碩（已決事項+L4複掃確認）",
+    "6770 力積電（鐵律①觸及停損價）", "2337 旺宏（鐵律①觸及停損價+L3累計轉負）",
+    "2313 華通（鐵律①觸及停損價）", "3090 日電貿（鐵律①觸及停損價+L4 8.6%）",
+    "2330 台積電（鐵律③反轉L4 46.6%，my_holdings.yaml持股0.15張）",
+    "3711 日月光投控（鐵律③反轉L4 42.8%，僅為tracking推薦holding，非實際持股）",
+    "1312 國喬（鐵律③反轉L4 36.3%，僅為tracking推薦holding，非實際持股）"
+  ],
+  "recommendations": [
+    {
+      "stock_code": "2883",
+      "stock_name": "凱基金",
+      "industry": "金融",
+      "recommend_price": 37.8,
+      "target_price": 41.6,
+      "stop_loss_pct": -10,
+      "stop_loss": 34.02,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 78,
+      "reason": "avg_rank 6.5（TOP1-20）、真連買2天、10日累計+81K、外資投信同步；升息題材對金融股利多；EPS/營收/外資持股比快取過期本次不採計；當日資料源無提及，依據為法人數據"
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "industry": "金融",
+      "recommend_price": 27.9,
+      "target_price": 30.7,
+      "stop_loss_pct": -10,
+      "stop_loss": 25.11,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 73,
+      "reason": "avg_rank 8.5（TOP1-20）、買超佔成交48.8%、升息題材金融股受惠；EPS/營收/外資持股比快取過期本次不採計；當日資料源無提及，依據為法人數據"
+    },
+    {
+      "stock_code": "2354",
+      "stock_name": "鴻準",
+      "industry": "蘋果供應鏈/AI伺服器機構件",
+      "recommend_price": 65.7,
+      "target_price": 72.3,
+      "stop_loss_pct": -10,
+      "stop_loss": 59.13,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 72,
+      "reason": "avg_rank 12.0、真連買3天、Module A L3佈局完成、Module B確認Apple動能已進場；EPS Q2 2026 YoY+66%（新鮮，+5分）；營收/外資持股比快取過期不採計"
+    },
+    {
+      "stock_code": "2382",
+      "stock_name": "廣達",
+      "industry": "AI伺服器",
+      "recommend_price": 336.5,
+      "target_price": 360.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 302.85,
+      "settlement_days": 10,
+      "position": "5%（降低，見風險揭露）",
+      "score": 71,
+      "reason": "⚠️ 2天後(09-16)法說會（UBS Taiwan Summit + 兆豐證券Q3產業論壇），事件風險列入；當日market_intelligence同時出現正面(避風港股防護力)與負面(AI三強降速衝擊供應鏈)矛盾新聞，正面回應：籌碼面近5天動能轉弱(-104.3%，前5日均+5003→近5日均-214)，法人買超已出現反轉警告；EPS Q2 2026 YoY+70%（新鮮，+5分）；營收/外資持股比快取過期不採計。矛盾與轉弱訊號並存，故降倉位至5%"
+    }
+  ],
+  "carry_over": ["5880", "3045", "2892", "2880", "2886"],
+  "carry_over_recommendations": [
+    {"stock_code": "5880", "stock_name": "合庫金", "recommend_date": "2026-09-01", "recommend_price": 25.55, "target_price": 27.8, "stop_loss": 23.0, "stop_loss_pct": -10, "settlement_days": 10, "score": 83, "position": "10-15%", "holding_days": "D8/10（照抄settlement_checker）", "reason": "⏳沿用進行中追蹤：現價27.2(+6.5%)，距目標2.2%，Module A L3佈局完成，籌碼健康續抱"},
+    {"stock_code": "3045", "stock_name": "台灣大", "recommend_date": "2026-09-04", "recommend_price": 118.0, "target_price": 127.0, "stop_loss": 106.2, "stop_loss_pct": -10, "settlement_days": 10, "score": 96, "position": "10-15%", "holding_days": "D5/10（照抄settlement_checker）", "reason": "⏳沿用進行中追蹤：現價121.0(+2.5%)，距目標5.0%，Module A L3佈局完成，籌碼健康續抱，升息題材受惠"},
+    {"stock_code": "2892", "stock_name": "第一金", "recommend_date": "2026-09-07", "recommend_price": 37.3, "target_price": 40.5, "stop_loss": 33.57, "stop_loss_pct": -10, "settlement_days": 10, "score": 71, "position": "10-15%", "holding_days": "D4/10（照抄settlement_checker）", "reason": "⏳沿用進行中追蹤：現價38.9(+4.3%)，距目標4.1%，Module A L3佈局完成（真連買10天），籌碼最健康"},
+    {"stock_code": "2880", "stock_name": "華南金", "recommend_date": "2026-09-08", "recommend_price": 44.35, "target_price": 48.5, "stop_loss": 39.92, "stop_loss_pct": -10, "settlement_days": 10, "score": 80, "position": "10-15%", "holding_days": "D3/10（照抄settlement_checker）", "reason": "⏳沿用進行中追蹤：現價45.85(+3.4%)，距目標5.8%，籌碼健康續抱"},
+    {"stock_code": "2886", "stock_name": "兆豐金", "recommend_date": "2026-09-09", "recommend_price": 50.6, "target_price": 55.5, "stop_loss": 45.54, "stop_loss_pct": -10, "settlement_days": 10, "score": 96, "position": "10-15%", "holding_days": "D2/10（照抄settlement_checker）", "reason": "⏳沿用進行中追蹤：現價51.7(+2.2%)，距目標7.4%，升息題材受惠，籌碼健康續抱"}
+  ],
+  "carry_over_note": "5檔均為quantity=0之tracking推薦（非my_holdings.yaml實際持股），持續追蹤中，均帶recommend_date避免重複建檔",
+  "portfolio_add_evaluation": [
+    {"stock_code": "1301", "stock_name": "台塑", "quantity": 1, "current_price": 64.6, "stop_loss": 54.08, "score": 71, "verdict": "🟡續抱觀察（不建議加碼）", "reason": "EPS YoY+261%新鮮亮眼，AI電力題材延續，惟今日reversal轉Level2單日反轉，密切觀察明日，未觸停損"}
+  ],
+  "watchlist": ["2891 中信金（L2 Module A但近5天籌碼反轉警告，先觀察）", "2887 台新新光金（EPS快取過期不採計，避免過度集中金融股）", "2884 玉山金（未入Module A/B加分名單）"],
+  "gate_exclusions": [
+    "2609 陽明：動能爆發>100%排除（追高）",
+    "2820 華票：動能爆發>100%排除（追高）",
+    "2605 新興：動能爆發>100%排除（追高）",
+    "2618 長榮航：EPS YoY-42.7%+毛利率QoQ-12.1pp（-5分），且油價上漲102.43(+2.38%)為航空成本利空，排除",
+    "2610 華航：EPS YoY-63.5%+毛利率QoQ-9.5pp（-5分），排除",
+    "5876 上海商銀：EPS連續2季YoY負成長（-5分），排除",
+    "2897 王道銀行：EPS連續4季YoY負成長（-5分），排除",
+    "2885 元大金：五維度均平庸未達70分門檻",
+    "2412 中華電：動能⭐⭐（謹慎）非佈局完成階段，五維度合計未達70分"
+  ],
+  "module_a_result": {"l3_count": 4, "l2_count": 16, "l1_count": 3, "note": "L3: 2892/5880/3045/2354皆已納入評分（3檔carryover+1檔新推薦）"},
+  "module_b_result": {"preposition_candidates": 103, "confirmed_entered": 24, "auto_screened": 10, "passed": 0, "note": "10檔自動篩選候選（蘋果供應鏈/AI晶片主題）全數被反轉L3/L4或動能>100%排除，本次無Module B新推薦"},
+  "disposition_stocks": {"twse_disposition": ["2455", "3055", "8021"], "twse_attention": [], "note": "候選池與持倉合計42檔均未命中"},
+  "us_leader_alerts": {"level3_count": 0, "total_alerts": 1, "note": "us_leader_alerts.json：無Level3排除，1檔預警（力積電，本身已因停損+反轉出場）"},
+  "today_events": {
+    "2382": "⚠️ 09-16 兩場法說會（UBS Taiwan Summit、兆豐證券Q3產業論壇）",
+    "2330": "⚠️ 09-14 法說會（今日）+ 09-16 除權息，本身已因反轉L4出場，無新倉考量"
+  },
+  "diversification": {"new_recommendations_industries": {"金融": 2, "蘋果供應鏈/AI伺服器機構件": 1, "AI伺服器": 1}, "note": "新推薦4檔中金融佔50%，達軟性上限；carry_over另有4檔金融+1檔電信，屬既有部位延續非新增資金，未強行湊產業"},
+  "defense_ratio": {"vix": 15.84, "vix_bucket": "<20", "catalyst_strength": "中（缺topic_tracker佐證，以market_intelligence替代判斷AI伺服器/金融升息為主要主題）", "recommended_range": "防禦0-15% / 進攻85-100%（依VIX<20標準區間，惟催化強度證據力較弱，建議偏保守端）"},
+  "removed_stocks": [],
+  "tomorrow_opening_exits": [],
+  "notes": [
+    "本日盤前發現4檔持倉再度觸及停損（6770/2337/2313/3090）卻連續多日未被my_holdings.yaml移除，反映v8.3.10上線後執行面仍需使用者手動更新yaml持股，建議出場後立即更新",
+    "topic_tracker.md與market_regime.json今日未能取得，時事現況與防禦比例判斷證據力較平時弱，已於data_quality_flags揭露",
+    "Module B今日10檔候選全數被反轉/動能排除，顯示蘋果供應鏈次階個股多數已提前反映或籌碼轉弱"
+  ]
+}
