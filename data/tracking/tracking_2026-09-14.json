@@ -234,12 +234,16 @@
       "intraday_price": 64.5,
       "intraday_change_vs_rec_pct": -1.83,
       "intraday_status": "12:30 現價64.5（vs推薦價65.7 -1.83%），停損59.13未觸及，2日累計未達-10%，反轉✅健康 → 續抱；exit_signal_checker：跌破MA5/MA10、5日高點回落-3.1% → 軟性建議減碼30-50%，未達鐵律",
-      "actual_close": 64.7,
+      "actual_close": 64.6,
       "close_price": 64.7,
-      "return_pct": -1.52,
-      "result": "holding",
-      "holding_status": "D0/10（照抄settlement_checker）收盤64.7（-1.52%），未觸目標72.3／停損59.13，2日累計未達-10%，盤後反轉複掃 Level 0／健康 → 續抱",
-      "change_percent": -1.52
+      "return_pct": -1.67,
+      "result": "fail",
+      "holding_status": "已結算 fail @ 64.6（2026-09-15，D1/10）",
+      "change_percent": -1.52,
+      "settled_date": "2026-09-15",
+      "settled_price": 64.6,
+      "fail_reason": "鐵律③ L4（09-14 T86 賣超 -1,042 張＝8.8%≥8%，不適用 v8.3.3 待複核）→ 09-15 開盤出場；12:30 複掃 9.3%、盤後複掃 9.3% 仍 L4；收盤價入帳 v8.3.2；D1/10",
+      "sync_note": "v8.3.7 三處已同步：①tracking_2026-09-14.json ②tracking_2026-09-15.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2382",
