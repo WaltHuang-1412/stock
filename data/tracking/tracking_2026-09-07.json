@@ -408,12 +408,16 @@
       "intraday_price": 37.1,
       "intraday_return_pct": -0.54,
       "intraday_status": "✅續抱",
-      "result": "holding",
-      "actual_close": 37.3,
-      "return_pct": 0.0,
+      "result": "success",
+      "actual_close": 40.75,
+      "return_pct": 9.25,
       "holding_status": "持有中，09-07 收盤 37.3",
       "close_price": 37.3,
-      "change_percent": 0.0
+      "change_percent": 0.0,
+      "settled_date": "2026-09-17",
+      "settled_price": 40.75,
+      "success_note": "收盤 40.75 ≥ 目標 40.5（settlement_checker 機械判定）；D8/10",
+      "sync_note": "v8.3.7 結算同步寫三處：來源檔①已回寫（2026-09-17 盤後）"
     }
   ],
   "carry_over": [

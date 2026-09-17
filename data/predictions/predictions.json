@@ -7547,10 +7547,10 @@
       }
     ]
   },
-  "settled_accuracy": "55.2%",
-  "settled_count": 667,
-  "holding_count": 182,
-  "total_success": 368,
+  "settled_accuracy": "55.3%",
+  "settled_count": 669,
+  "holding_count": 183,
+  "total_success": 370,
   "total_fail": 299,
   "2026-03-30": {
     "predictions": [
@@ -16782,10 +16782,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 71,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-09-17",
+        "settled_price": 40.75,
+        "holding_days": 1,
+        "return_pct": 9.25,
+        "fail_reason": "收盤 40.75 ≥ 目標 40.5 → 達標結算；D8/10"
       },
       {
         "symbol": "3714",
@@ -17433,6 +17435,59 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 77,
+        "result": "success",
+        "settled_date": "2026-09-17",
+        "settled_price": 111.0,
+        "holding_days": 1,
+        "return_pct": 3.74,
+        "fail_reason": "鐵律③ 法人反轉 Level 4（09-16 T86 賣超 -800 張＝10.4% 日均量，≥8%）→ 09-17 開盤出場；收盤價 111.0 入帳（v8.3.2）；D1/10"
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-09-17": {
+    "predictions": [
+      {
+        "symbol": "5880",
+        "name": "合庫金",
+        "recommend_price": 27.35,
+        "target_price": 29.5,
+        "stop_loss": 24.62,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "8-10%（組合金融曝險偏高，壓在區間下緣）",
+        "score": 95,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "3714",
+        "name": "富采",
+        "recommend_price": 64.3,
+        "target_price": 69.5,
+        "stop_loss": 57.87,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "8-10%",
+        "score": 83,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "3017",
+        "name": "奇鋐",
+        "recommend_price": 3175.0,
+        "target_price": 3430.0,
+        "stop_loss": 2857.5,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "8-10%（法說會前，建議分批）",
+        "score": 83,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,

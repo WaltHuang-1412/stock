@@ -147,7 +147,11 @@
       "intraday_return_pct": 0.3,
       "intraday_2day_change_pct": 0.3,
       "intraday_reversal": "L0 中性",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 49.95,
+      "holding_status": "D1/10（照抄 settlement_checker）收盤 49.95（+0.30%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱",
+      "close_price": 49.95,
+      "change_percent": 0.4
     },
     {
       "stock_code": "5880",
@@ -181,7 +185,11 @@
       "intraday_return_pct": 0.73,
       "intraday_2day_change_pct": 2.04,
       "intraday_reversal": "✅ 籌碼健康",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 27.55,
+      "holding_status": "D0/10（照抄 settlement_checker）收盤 27.55（+0.73%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱",
+      "close_price": 27.55,
+      "change_percent": 0.73
     },
     {
       "stock_code": "3714",
@@ -214,7 +222,11 @@
       "intraday_return_pct": 1.87,
       "intraday_2day_change_pct": 8.82,
       "intraday_reversal": "✅ 籌碼健康",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 65.5,
+      "holding_status": "D0/10（照抄 settlement_checker）收盤 65.5（+1.87%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱",
+      "close_price": 65.5,
+      "change_percent": 1.87
     },
     {
       "stock_code": "3017",
@@ -247,7 +259,11 @@
       "intraday_return_pct": 1.1,
       "intraday_2day_change_pct": 3.21,
       "intraday_reversal": "L0 中性（-91 張，累計 +576）",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 3185.0,
+      "holding_status": "D0/10（照抄 settlement_checker）收盤 3185.0（+0.31%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱",
+      "close_price": 3185.0,
+      "change_percent": 0.31
     }
   ],
   "carry_over_recommendations": [
@@ -269,7 +285,9 @@
       "intraday_return_pct": 5.08,
       "intraday_2day_change_pct": 0.0,
       "intraday_reversal": "L0 中性",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 124.0,
+      "holding_status": "D9/10（照抄 settlement_checker）收盤 124.0（+5.08%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "2892",
@@ -281,7 +299,7 @@
       "stop_loss": 33.57,
       "stop_loss_pct": -10,
       "settlement_days": 10,
-      "result": "holding",
+      "result": "success",
       "position": "⏳沿用進行中追蹤（D7/10），維持原進場價 37.3／停損 33.57 不變，不重複建倉",
       "note": "D7/10，今日翻買+7,968張（昨日 L2 解除→籌碼健康）；5日+5.8%",
       "intraday_price": 40.65,
@@ -289,7 +307,12 @@
       "intraday_return_pct": 8.98,
       "intraday_2day_change_pct": 3.03,
       "intraday_reversal": "✅ 籌碼健康",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 40.75,
+      "settled_date": "2026-09-17",
+      "settled_price": 40.75,
+      "return_pct": 9.25,
+      "success_note": "收盤 40.75 ≥ 目標 40.5；D8/10"
     },
     {
       "stock_code": "2880",
@@ -309,7 +332,9 @@
       "intraday_return_pct": 8.23,
       "intraday_2day_change_pct": 2.45,
       "intraday_reversal": "L0 中性",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 47.9,
+      "holding_status": "D7/10（照抄 settlement_checker）收盤 47.9（+8.00%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "2886",
@@ -329,7 +354,9 @@
       "intraday_return_pct": 2.17,
       "intraday_2day_change_pct": 0.0,
       "intraday_reversal": "⚠️⚠️ L2（-544 張＝2.2%）",
-      "intraday_strategy": "✅ 續抱｜⚠️ L2 最高警戒、不加碼"
+      "intraday_strategy": "✅ 續抱｜⚠️ L2 最高警戒、不加碼",
+      "actual_close": 51.9,
+      "holding_status": "D6/10（照抄 settlement_checker）收盤 51.9（+2.57%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "2382",
@@ -349,7 +376,9 @@
       "intraday_return_pct": 1.63,
       "intraday_2day_change_pct": 2.55,
       "intraday_reversal": "✅ 籌碼健康",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 344.0,
+      "holding_status": "D3/10（照抄 settlement_checker）收盤 344.0（+2.23%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "2891",
@@ -369,7 +398,9 @@
       "intraday_return_pct": 5.29,
       "intraday_2day_change_pct": 2.73,
       "intraday_reversal": "✅ 籌碼健康",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 71.2,
+      "holding_status": "D2/10（照抄 settlement_checker）收盤 71.2（+4.55%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "2887",
@@ -389,7 +420,9 @@
       "intraday_return_pct": 2.64,
       "intraday_2day_change_pct": 3.11,
       "intraday_reversal": "✅ 籌碼健康",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 44.05,
+      "holding_status": "D2/10（照抄 settlement_checker）收盤 44.05（+1.15%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "2377",
@@ -409,7 +442,9 @@
       "intraday_return_pct": 2.99,
       "intraday_2day_change_pct": 5.07,
       "intraday_reversal": "L0 中性",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 153.0,
+      "holding_status": "D2/10（照抄 settlement_checker）收盤 153.0（+1.66%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "4904",
@@ -429,7 +464,9 @@
       "intraday_return_pct": 0.94,
       "intraday_2day_change_pct": 0.47,
       "intraday_reversal": "⚠️⚠️ L2（-80 張＝2.2%）",
-      "intraday_strategy": "✅ 續抱｜⚠️ L2 最高警戒、不加碼"
+      "intraday_strategy": "✅ 續抱｜⚠️ L2 最高警戒、不加碼",
+      "actual_close": 106.5,
+      "holding_status": "D2/10（照抄 settlement_checker）收盤 106.5（+0.47%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "2395",
@@ -449,7 +486,9 @@
       "intraday_return_pct": 1.46,
       "intraday_2day_change_pct": 1.46,
       "intraday_reversal": "L0 中性",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 686.0,
+      "holding_status": "D1/10（照抄 settlement_checker）收盤 686.0（+0.15%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "2354",
@@ -469,7 +508,9 @@
       "intraday_return_pct": 2.79,
       "intraday_2day_change_pct": 2.79,
       "intraday_reversal": "L0 中性",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 66.3,
+      "holding_status": "D1/10（照抄 settlement_checker）收盤 66.3（+2.63%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "2412",
@@ -489,7 +530,9 @@
       "intraday_return_pct": 0.35,
       "intraday_2day_change_pct": 0.35,
       "intraday_reversal": "✅ 籌碼健康",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 145.0,
+      "holding_status": "D1/10（照抄 settlement_checker）收盤 145.0（+1.05%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "2609",
@@ -509,7 +552,9 @@
       "intraday_return_pct": 4.59,
       "intraday_2day_change_pct": 4.59,
       "intraday_reversal": "✅ 籌碼健康",
-      "intraday_strategy": "✅ 續抱"
+      "intraday_strategy": "✅ 續抱",
+      "actual_close": 62.0,
+      "holding_status": "D1/10（照抄 settlement_checker）收盤 62.0（+5.44%），未觸目標／停損，2日累計未達-10%，盤後反轉複掃無 L3/L4 → 續抱"
     },
     {
       "stock_code": "2867",
@@ -523,7 +568,8 @@
       "settlement_days": 10,
       "result": "holding",
       "position": "⏳沿用進行中追蹤（凍結），維持原進場價 9.75／停損 8.78 不變，不重複建倉",
-      "note": "⚠️ 序列停滯（末日 2026-08-19）→ 凍結判定：不結算、不出場、D 不推進"
+      "note": "⚠️ 序列停滯（末日 2026-08-19）→ 凍結判定：不結算、不出場、D 不推進",
+      "holding_status": "⚠️ 序列停滯（末日 2026-08-19，市場最新 2026-09-17）凍結判定（v8.3.8）"
     }
   ],
   "carry_over": [
@@ -770,7 +816,34 @@
     "2834 臺企銀（66 分）",
     "2367 燿華（訊號B 唯一通過，61 分）"
   ],
-  "removed_stocks": [],
+  "removed_stocks": [
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "recommend_date": "2026-09-07",
+      "recommend_price": 37.3,
+      "result": "success",
+      "settled_price": 40.75,
+      "last_close": 40.75,
+      "return_pct": 9.25,
+      "removal_reason": "收盤 40.75 ≥ 目標 40.5 → 達標結算；D8/10",
+      "settled_by": "settlement_checker.py 機械判定（盤後收盤價）",
+      "holding_days": "D8/10"
+    },
+    {
+      "stock_code": "3702",
+      "stock_name": "大聯大",
+      "recommend_date": "2026-09-16",
+      "recommend_price": 107.0,
+      "result": "success",
+      "settled_price": 111.0,
+      "last_close": 111.0,
+      "return_pct": 3.74,
+      "removal_reason": "鐵律③ 法人反轉 Level 4（09-16 T86 賣超 -800 張＝10.4% 日均量，≥8%）→ 09-17 開盤出場；收盤價 111.0 入帳（v8.3.2）；D1/10",
+      "settled_by": "開盤出場清單（09-17 盤前判定 L4，盤後收盤價入帳 v8.3.2）",
+      "holding_days": "D1/10"
+    }
+  ],
   "tomorrow_opening_exits": [],
   "track_b_recommendations": [],
   "track_b_observations": [
@@ -1011,5 +1084,137 @@
       "status": "✅ 已執行開盤出場（鐵律③ L4，盤中複查 11.2%）",
       "settle_note": "結算價盤後以當日收盤價入帳"
     }
-  ]
+  ],
+  "tomorrow_opening_exits_note": "09-17 盤後全持倉 16 檔 reversal_alert（T86 基準 09-16，09-17 T86 盤後未公布）：L3/L4 0 檔、L2 2 檔（2886 兆豐金 2.2%、4904 遠傳 2.2%）→ 無次日開盤出場；v8.3.3 待複核清單：無。明日盤前須以 09-17 T86 重跑",
+  "tomorrow_recommendations": [
+    {
+      "stock_code": "2889",
+      "stock_name": "國票金",
+      "industry": "金融（票券／金控）",
+      "recommend_price": 17.3,
+      "target_price": 18.7,
+      "stop_loss_pct": -10,
+      "stop_loss": 15.57,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 90,
+      "score_is_estimate": true,
+      "reason": "📶訊號A L2(+10)｜avg_rank 25.5（09-16 TOP50 買超內，法人現身門檻通過）｜10日累計三大+52K張、近5天外資+15K｜動能-56.5% 佈局完成｜反轉：買超中｜月線+6.1%／季線+10.5%（價格位置13）｜分數沿用 09-17 盤前評分 90，盤中重查籌碼/動能/反轉一致｜盤前因當日推薦清單金融 3/5＝60% 超過 Step 9 上限排除，明日單獨推薦時組合層金融 7/17≈41%｜⚠️ 09-16 才依鐵律③ L4 出場（38.5%），09-16 T86 翻買 +9,670 屬單日反覆｜⚠️ 票券業務對升息偏不利；台灣央行 09-17 決議盤後公布、本報告產出時未取得｜⚠️ 財政部促大股東檢討薪酬結構（market_intelligence）｜⚠️ 今日重大訊息2則（國票創投總經理異動／解除董事競業禁止，例行）｜⚠️ 真連續買超僅1天｜⚠️ 營收快取2026-02、外資持股比08-11、金融EPS 2025-12-31，皆未採計",
+      "data_caveat": "法人維度使用 09-16 T86（09-17 未公布）→ 明日盤前須以 09-17 T86 重跑 Step 7 重新評分"
+    }
+  ],
+  "tomorrow_excluded": [
+    {
+      "stock_code": "2834",
+      "stock_name": "臺企銀",
+      "reason": "動能 +500%＞+100%；盤前總分 66＜70；近5天投信 -4,439 與外資對決"
+    },
+    {
+      "stock_code": "2367",
+      "stock_name": "燿華",
+      "reason": "盤前 61 分＜70；價格位置 6（月季雙線下）；法人態度轉變（累計買超但最近開始賣）；營收 YoY -19.1%（快取 2026-02，未採計）"
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "reason": "準確率篩選②：近5天外資為負（盤中 chip_analysis -5,460）；10日外資累計 -12K"
+    },
+    {
+      "stock_code": "3711",
+      "stock_name": "日月光投控",
+      "reason": "準確率篩選②：近5天外資 -5,783；營收 +5 分因快取 2026-05 落後不採計"
+    },
+    {
+      "stock_code": "3055",
+      "stock_name": "蔚華科",
+      "reason": "TWSE 處置股 09/14~09/18，機械排除"
+    },
+    {
+      "stock_code": "8996",
+      "stock_name": "高力",
+      "reason": "TWSE 處置股 09/15~09/21，機械排除"
+    }
+  ],
+  "settlement_sync_three_places_v837": {
+    "2892 第一金": "①tracking_2026-09-07.json ✅ ②removed_stocks ✅ ③predictions.json 2026-09-07 ✅",
+    "3702 大聯大": "①tracking_2026-09-16.json ✅ ②removed_stocks ✅ ③predictions.json 2026-09-16 ✅"
+  },
+  "settlement_attribution_check_v835": "2/2 正確（2892→2026-09-07、3702→2026-09-16）；5876 上海商銀帶 recommend_date 未重複新增",
+  "two_day_drawdown_check_after_market": "16/16 未觸發（09-15→09-17，最差 3045 台灣大／4904 遠傳 0.00%）",
+  "stop_loss_check_after_market_v8310": "my_holdings 7 檔：6770/2337/2313/3090 觸及（09-11 已出場，重複輸出）；1301/4938 未觸發；2330 無 stop_loss",
+  "series_alignment_check_after_market_v838": "18 筆中 17 筆末日＝2026-09-17；2867 三商壽停滯（末日 08-19）凍結",
+  "after_market_summary": {
+    "taiex_close": 46288.0,
+    "taiex_change": 439.1,
+    "taiex_change_pct": 0.96,
+    "settled": "2 筆 2 成功（2892 +9.25%、3702 +3.74%）",
+    "today_recs_avg_pct": 0.8,
+    "accuracy": "55.3%（370/299/669）",
+    "holding_count": 183
+  },
+  "yesterday_verification": {
+    "date": "2026-09-16",
+    "total_recommendations": 6,
+    "settled": 1,
+    "success": 1,
+    "fail": 0,
+    "holding": 5,
+    "accuracy": "100.0%（1 成功／0 失敗，5 檔 holding 不計入分母）",
+    "results": [
+      {
+        "stock_code": "5876",
+        "stock_name": "上海商銀",
+        "recommend_price": 49.8,
+        "close_price": 49.95,
+        "change_percent": 0.3,
+        "result": "holding",
+        "reason": "D1/10，反轉 L0"
+      },
+      {
+        "stock_code": "2395",
+        "stock_name": "研華",
+        "recommend_price": 685.0,
+        "close_price": 686.0,
+        "change_percent": 0.15,
+        "result": "holding",
+        "reason": "D1/10，反轉 L0"
+      },
+      {
+        "stock_code": "2354",
+        "stock_name": "鴻準",
+        "recommend_price": 64.6,
+        "close_price": 66.3,
+        "change_percent": 2.63,
+        "result": "holding",
+        "reason": "D1/10，反轉 L0"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_price": 143.5,
+        "close_price": 145.0,
+        "change_percent": 1.05,
+        "result": "holding",
+        "reason": "D1/10，籌碼健康"
+      },
+      {
+        "stock_code": "2609",
+        "stock_name": "陽明",
+        "recommend_price": 58.8,
+        "close_price": 62.0,
+        "change_percent": 5.44,
+        "result": "holding",
+        "reason": "D1/10，籌碼健康，距目標 2.4%"
+      },
+      {
+        "stock_code": "3702",
+        "stock_name": "大聯大",
+        "recommend_price": 107.0,
+        "close_price": 111.0,
+        "change_percent": 3.74,
+        "result": "success",
+        "reason": "鐵律③ L4（10.4%）09-17 開盤出場，收盤價 111.0 入帳"
+      }
+    ]
+  }
 }
