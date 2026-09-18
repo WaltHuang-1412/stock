@@ -196,13 +196,34 @@
         "verdict": "<5% → 未滿足「兩次皆 ≥5%」，待複核解除、維持追蹤（盤後仍依規複核並揭露）",
         "note": "佔比 = 09-17 T86 -88 張 ÷ Yahoo avg_5day_volume 2,516,513 股（12:3x 取樣）；今日股價 +5.34%"
       }
+    ],
+    "after_market_recheck": [
+      {
+        "symbol": "3017",
+        "name": "奇鋐",
+        "verdict": "盤中 3.5% 已解除；盤後收盤 3430.0 達目標價，已由 settlement_checker 結算 success，待複核事項結案"
+      }
     ]
   },
   "settlement_today": {
     "settled": [],
     "holding_count": 17,
     "query_failures": 0,
-    "note": "✅ settlement_checker 查詢失敗 0 筆（v8.3.2 清零通過）；今日無到期結算"
+    "note": "✅ settlement_checker 查詢失敗 0 筆（v8.3.2 清零通過）；今日無到期結算",
+    "after_market": {
+      "settled": [
+        "3045 台灣大 success +5.08%（D10 到期）",
+        "3017 奇鋐 success +8.03%（達標）",
+        "2887 台新新光金 success +1.95%（L4 開盤出場）",
+        "3714 富采 success +4.82%（L4 開盤出場）"
+      ],
+      "query_failures": 0,
+      "stale_series": [
+        "2867 三商壽（末日 2026-08-19）"
+      ],
+      "holding_count_after": 17,
+      "note": "盤前 settlement_today 記「今日無到期結算」係因 D10 到期結算須等盤後收盤；盤後 settlement_checker 判定 3045 D10 到期、3017 D1 達標"
+    }
   },
   "recommendations": [
     {
@@ -222,7 +243,12 @@
       "intraday_price": 155.5,
       "intraday_change_pct": 5.42,
       "intraday_return_pct": 5.42,
-      "intraday_status": "✅ 健康｜續抱"
+      "intraday_status": "✅ 健康｜續抱",
+      "actual_close": 156.0,
+      "close_price": 156.0,
+      "change_percent": 5.76,
+      "return_pct_unsettled": 5.76,
+      "holding_status": "D0/10，不判定成敗（settlement_checker）；收盤 156.0，報酬 +5.76%"
     },
     {
       "stock_code": "2886",
@@ -242,7 +268,12 @@
       "intraday_price": 50.8,
       "intraday_change_pct": -2.12,
       "intraday_return_pct": 0.4,
-      "intraday_status": "✅ 健康｜續抱｜跌破MA5 51.56/MA10 51.05"
+      "intraday_status": "✅ 健康｜續抱｜跌破MA5 51.56/MA10 51.05",
+      "actual_close": 51.1,
+      "close_price": 51.1,
+      "change_percent": -1.54,
+      "return_pct_unsettled": 0.99,
+      "holding_status": "D7/10，不判定成敗（settlement_checker）；收盤 51.1，報酬 +0.99%"
     },
     {
       "stock_code": "3702",
@@ -261,7 +292,12 @@
       "intraday_price": 114.0,
       "intraday_change_pct": 2.7,
       "intraday_return_pct": 2.7,
-      "intraday_status": "✅ 健康｜續抱"
+      "intraday_status": "✅ 健康｜續抱",
+      "actual_close": 114.5,
+      "close_price": 114.5,
+      "change_percent": 3.15,
+      "return_pct_unsettled": 3.15,
+      "holding_status": "D0/10，不判定成敗（settlement_checker）；收盤 114.5，報酬 +3.15%"
     },
     {
       "stock_code": "2892",
@@ -280,7 +316,12 @@
       "intraday_price": 39.85,
       "intraday_change_pct": -2.21,
       "intraday_return_pct": -2.21,
-      "intraday_status": "✅ 健康｜續抱｜跌破MA5 40.00"
+      "intraday_status": "✅ 健康｜續抱｜跌破MA5 40.00",
+      "actual_close": 39.8,
+      "close_price": 39.8,
+      "change_percent": -2.33,
+      "return_pct_unsettled": -2.33,
+      "holding_status": "D0/10，不判定成敗（settlement_checker）；收盤 39.8，報酬 -2.33%｜距停損 7.8%（全持倉最近）"
     },
     {
       "stock_code": "6426",
@@ -299,7 +340,12 @@
       "intraday_price": 376.5,
       "intraday_change_pct": 3.72,
       "intraday_return_pct": 3.72,
-      "intraday_status": "🟢 L0｜續抱不加碼｜⚠️處置預警升級：週轉16.5%、連1天/最快剩0天處置"
+      "intraday_status": "🟢 L0｜續抱不加碼｜⚠️處置預警升級：週轉16.5%、連1天/最快剩0天處置",
+      "actual_close": 373.5,
+      "close_price": 373.5,
+      "change_percent": 2.89,
+      "return_pct_unsettled": 2.89,
+      "holding_status": "D0/10，不判定成敗（settlement_checker）；收盤 373.5，報酬 +2.89%｜⚠️ 處置預警：週轉 18.9%、6日+16.0%、連1天/最快剩0天處置 → 不加碼"
     },
     {
       "stock_code": "2382",
@@ -319,7 +365,12 @@
       "intraday_price": 341.0,
       "intraday_change_pct": -0.87,
       "intraday_return_pct": 1.34,
-      "intraday_status": "✅ 健康｜續抱｜09/21 CLSA 論壇不加碼"
+      "intraday_status": "✅ 健康｜續抱｜09/21 CLSA 論壇不加碼",
+      "actual_close": 343.0,
+      "close_price": 343.0,
+      "change_percent": -0.29,
+      "return_pct_unsettled": 1.93,
+      "holding_status": "D4/10，不判定成敗（settlement_checker）；收盤 343.0，報酬 +1.93%"
     },
     {
       "stock_code": "5880",
@@ -339,7 +390,12 @@
       "intraday_price": 27.35,
       "intraday_change_pct": -0.73,
       "intraday_return_pct": 0.0,
-      "intraday_status": "✅ 健康｜續抱"
+      "intraday_status": "✅ 健康｜續抱",
+      "actual_close": 27.3,
+      "close_price": 27.3,
+      "change_percent": -0.91,
+      "return_pct_unsettled": -0.18,
+      "holding_status": "D1/10，不判定成敗（settlement_checker）；收盤 27.3，報酬 -0.18%"
     }
   ],
   "carry_over": [
@@ -564,7 +620,60 @@
     "2409 友達｜單日 +55,524 張為全市場最大，動能 -140.5% 佈局完成型，但近5天外資 -122K 未過篩選②",
     "3017 奇鋐｜追蹤中 D0/10，今日 L3 待複核，12:30 與盤後各複核一次"
   ],
-  "removed_stocks": [],
+  "removed_stocks": [
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "recommend_date": "2026-09-04",
+      "recommend_price": 118.0,
+      "result": "success",
+      "settled_price": 124.0,
+      "last_close": 124.0,
+      "return_pct": 5.08,
+      "removal_reason": "D10 到期，收盤 124.0 > 推薦價 118.0 → success；D10/10",
+      "settled_by": "settlement_checker.py 機械判定（盤後收盤價）",
+      "holding_days": "D10/10"
+    },
+    {
+      "stock_code": "3017",
+      "stock_name": "奇鋐",
+      "recommend_date": "2026-09-17",
+      "recommend_price": 3175.0,
+      "result": "success",
+      "settled_price": 3430.0,
+      "last_close": 3430.0,
+      "return_pct": 8.03,
+      "removal_reason": "收盤 3430.0 ≥ 目標 3430.0 → 達標結算；D1/10（盤前 L3 待複核於盤中 3.5% 解除）",
+      "settled_by": "settlement_checker.py 機械判定（盤後收盤價）",
+      "holding_days": "D1/10"
+    },
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "recommend_date": "2026-09-15",
+      "recommend_price": 43.55,
+      "result": "success",
+      "settled_price": 44.4,
+      "last_close": 44.4,
+      "return_pct": 1.95,
+      "removal_reason": "鐵律③ 法人反轉 Level 4（09-17 T86 賣超 -5,406 張＝11.8%，盤中複查 10.8%，≥8%）→ 09-18 開盤出場；收盤價 44.4 入帳（v8.3.2）；D3/10",
+      "settled_by": "開盤出場清單（09-18 盤前判定 L4，盤後收盤價入帳 v8.3.2）",
+      "holding_days": "D3/10"
+    },
+    {
+      "stock_code": "3714",
+      "stock_name": "富采",
+      "recommend_date": "2026-09-17",
+      "recommend_price": 64.3,
+      "result": "success",
+      "settled_price": 67.4,
+      "last_close": 67.4,
+      "return_pct": 4.82,
+      "removal_reason": "鐵律③ 法人反轉 Level 4（09-17 T86 賣超 -1,080 張＝17.1%，盤中複查 12.7%，≥8%）→ 09-18 開盤出場；收盤價 67.4 入帳（v8.3.2）；D1/10",
+      "settled_by": "開盤出場清單（09-18 盤前判定 L4，盤後收盤價入帳 v8.3.2）",
+      "holding_days": "D1/10"
+    }
+  ],
   "tomorrow_opening_exits": [],
   "track_b_recommendations": [],
   "track_b_observations": [
@@ -863,6 +972,81 @@
     "preflight_l4_true_executed": [
       "2887 台新新光金",
       "3714 富采"
+    ]
+  },
+  "after_market_reversal_scan": {
+    "t86_basis": "2026-09-17（09-18 T86 於 14:3x 查無）",
+    "scanned": 16,
+    "l3_l4": [],
+    "l2": [],
+    "unknown": [
+      "2377 微星（今日+1,668 張，10 日累計 -2,841）"
+    ],
+    "disposition_warning": [
+      "6426 統新（週轉 18.9%／6日+16.0%／30日+81.8%，連1天最快剩0天處置）"
+    ],
+    "file": "data/2026-09-18/reversal_alerts_after_market.json"
+  },
+  "after_market_stop_loss_recheck_v8310": [
+    "2330 台積電｜2460.0｜無停損欄｜09-11 已出場",
+    "6770 力積電｜74.0｜73.26｜✅ 未觸發（09-11 已出場）",
+    "2337 旺宏｜121.0｜147.6｜🛑 觸及（09-11 已出場，殘留）",
+    "2313 華通｜228.5｜235.98｜🛑 觸及（09-11 已出場，殘留）",
+    "3090 日電貿｜165.0｜256.5｜🛑 觸及（09-11 已出場，殘留）",
+    "1301 台塑｜65.0｜54.08｜✅ 未觸發（09-11 已出場）",
+    "4938 和碩｜90.3｜76.5｜✅ 未觸發（09-14 已出場）"
+  ],
+  "two_day_drawdown_after_market": {
+    "basis": "get_close_series 09-16→09-18",
+    "triggered": [],
+    "worst": "2891 中信金 -1.84%"
+  },
+  "tomorrow_opening_exits_note": "T86 基準 2026-09-17（09-18 T86 盤後 14:3x 尚未公布）→ 09-21 盤前必須以 09-18 T86 重跑全持倉 reversal_alert",
+  "tomorrow_recommendations": [],
+  "tomorrow_recommendations_note": "盤後候選 5 檔（1102/2889/6230/2834/2883）全數未過門檻，依 v8.2 禁止湊數，明日盤後預測 0 檔；09-21 盤前以 09-18 T86 重新評分",
+  "tomorrow_excluded": [
+    "1102 亞泥｜預估 64-69 分 <70：盤中 74 分再扣 cold_patterns 水泥（0.0%，n=8）-5、worst_combos「外資主導＋水泥」（0.0%，n=8）-5；價格位置 11",
+    "2889 國票金｜反轉 Level 4（09-17 T86 賣超 -1,550 張＝9.5% ≥8%）→ 直接排除（昨日盤後預估推薦作廢）",
+    "6230 尼得科超眾｜法人現身門檻：不在 09-17 TOP50 買超 × 乖離 +3.2%；EPS 連續 4 季 YoY 負成長 -5",
+    "2834 臺企銀｜動能 +54.4% -10；近5天外資買、投信賣（對決中）；盤前 63／盤中 67 <70",
+    "2883 凱基金｜動能 +88.4% -10；盤前 62／盤中 64 <70"
+  ],
+  "yesterday_verification": {
+    "date": "2026-09-17",
+    "total_recommendations": 3,
+    "settled": 2,
+    "success": 2,
+    "fail": 0,
+    "holding": 1,
+    "accuracy": "100.0%（2 成功／0 失敗，1 檔 holding 不計入分母）",
+    "results": [
+      {
+        "stock_code": "3017",
+        "stock_name": "奇鋐",
+        "recommend_price": 3175.0,
+        "close_price": 3430.0,
+        "change_percent": 8.03,
+        "result": "success",
+        "reason": "收盤 3430.0 ≥ 目標 3430.0，D1/10"
+      },
+      {
+        "stock_code": "3714",
+        "stock_name": "富采",
+        "recommend_price": 64.3,
+        "close_price": 67.4,
+        "change_percent": 4.82,
+        "result": "success",
+        "reason": "鐵律③ L4（17.1%）09-18 開盤出場，收盤價 67.4 入帳"
+      },
+      {
+        "stock_code": "5880",
+        "stock_name": "合庫金",
+        "recommend_price": 27.35,
+        "close_price": 27.3,
+        "change_percent": -0.18,
+        "result": "holding",
+        "reason": "D1/10，籌碼健康"
+      }
     ]
   }
 }

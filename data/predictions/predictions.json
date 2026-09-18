@@ -7547,10 +7547,10 @@
       }
     ]
   },
-  "settled_accuracy": "55.3%",
-  "settled_count": 669,
+  "settled_accuracy": "55.6%",
+  "settled_count": 673,
   "holding_count": 183,
-  "total_success": 370,
+  "total_success": 374,
   "total_fail": 299,
   "2026-03-30": {
     "predictions": [
@@ -16572,10 +16572,12 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 96,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-09-18",
+        "settled_price": 124.0,
+        "holding_days": 1,
+        "return_pct": 5.08,
+        "fail_reason": "D10 到期，收盤 124.0 > 推薦價 118.0 → success；D10/10"
       },
       {
         "symbol": "1102",
@@ -17274,10 +17276,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 78,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-09-18",
+        "settled_price": 44.4,
+        "holding_days": 1,
+        "return_pct": 1.95,
+        "fail_reason": "鐵律③ 法人反轉 Level 4（09-17 T86 賣超 -5,406 張＝11.8%，盤中複查 10.8%，≥8%）→ 09-18 開盤出場；收盤價 44.4 入帳（v8.3.2）；D3/10"
       },
       {
         "symbol": "2377",
@@ -17473,10 +17477,12 @@
         "settlement_days": 10,
         "position": "8-10%",
         "score": 83,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-09-18",
+        "settled_price": 67.4,
+        "holding_days": 1,
+        "return_pct": 4.82,
+        "fail_reason": "鐵律③ 法人反轉 Level 4（09-17 T86 賣超 -1,080 張＝17.1%，盤中複查 12.7%，≥8%）→ 09-18 開盤出場；收盤價 67.4 入帳（v8.3.2）；D1/10"
       },
       {
         "symbol": "3017",
@@ -17487,6 +17493,74 @@
         "stop_loss_pct": -10,
         "settlement_days": 10,
         "position": "8-10%（法說會前，建議分批）",
+        "score": 83,
+        "result": "success",
+        "settled_date": "2026-09-18",
+        "settled_price": 3430.0,
+        "holding_days": 1,
+        "return_pct": 8.03,
+        "fail_reason": "收盤 3430.0 ≥ 目標 3430.0 → 達標結算；D1/10（盤前 L3 待複核於盤中 3.5% 解除）"
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-09-18": {
+    "predictions": [
+      {
+        "symbol": "2303",
+        "name": "聯電",
+        "recommend_price": 147.5,
+        "target_price": 161.0,
+        "stop_loss": 132.75,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 99,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "3702",
+        "name": "大聯大",
+        "recommend_price": 111.0,
+        "target_price": 121.0,
+        "stop_loss": 99.9,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 90,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2892",
+        "name": "第一金",
+        "recommend_price": 40.75,
+        "target_price": 44.0,
+        "stop_loss": 36.68,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 83,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "6426",
+        "name": "統新",
+        "recommend_price": 363.0,
+        "target_price": 395.0,
+        "stop_loss": 326.7,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5%（催化脈絡例外小倉位＋處置預警再減半）",
         "score": 83,
         "result": "holding",
         "settled_date": null,
