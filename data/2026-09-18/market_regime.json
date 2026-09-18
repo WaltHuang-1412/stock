@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-18",
+  "regime": "多頭",
+  "score": 3,
+  "details": [
+    "台股在年線上+26.6%",
+    "VIX 15.4（正常）"
+  ],
+  "taiex": {
+    "current": 45848.8984375,
+    "ma20": 46092.0,
+    "ma60": 45153.0,
+    "ma240": 36207.0,
+    "high_52w": 47741.51171875,
+    "low_52w": 22362.26953125,
+    "vs_ma20": -0.53,
+    "vs_ma60": 1.54,
+    "vs_ma240": 26.63
+  },
+  "sp500": {
+    "current": 7637.759765625,
+    "ma60": 7588.0,
+    "vs_ma60": 0.66
+  },
+  "vix": 15.4399995803833,
+  "institutional": {
+    "foreign": {
+      "today_net": 121.85,
+      "consecutive_days": 1,
+      "net_5d": -1947.28,
+      "net_10d": -543.48
+    },
+    "trust": {
+      "today_net": 77.14,
+      "consecutive_days": 2,
+      "net_5d": 245.21,
+      "net_10d": 347.91
+    },
+    "dealer": {
+      "today_net": 15.78,
+      "consecutive_days": 1,
+      "net_5d": -708.97,
+      "net_10d": -830.28
+    },
+    "total": {
+      "today_net": 214.77,
+      "net_5d": -2411.04,
+      "net_10d": -1025.85
+    }
+  },
+  "etf_buy_multiplier": 1,
+  "stock_defense_ratio": "0-15%",
+  "settlement": {
+    "settlement_date": "2026-09-16",
+    "is_settlement_week": true,
+    "days_from_settlement": 2,
+    "status": "✅ 結算後2天（真實方向確認期）"
+  }
+}
