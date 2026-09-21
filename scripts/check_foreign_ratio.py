@@ -15,7 +15,7 @@ import io
 import json
 import time
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta
 import requests
 
 os.environ['PYTHONUTF8'] = '1'
@@ -40,6 +40,23 @@ def save_cache(data):
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
     with open(CACHE_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False)
+
+
+def stale_cutoff(days=7):
+    """外資持股比為週頻（證交所每週五公布）→ 超過 N 天未更新即視為過期"""
+    return (datetime.now() - timedelta(days=days)).strftime('%Y-%m-%d')
+
+
+def latest_cached_date(stock_id, cache):
+    rows = cache.get(stock_id) or []
+    dates = [r['date'] for r in rows if r.get('date')]
+    return max(dates) if dates else None
+
+
+def is_stale(stock_id, cache, cutoff=None):
+    cutoff = cutoff or stale_cutoff()
+    d = latest_cached_date(stock_id, cache)
+    return d is None or d < cutoff
 
 
 def fetch_shareholding(stock_id):
@@ -97,17 +114,8 @@ def update_cache(stock_codes=None):
                 if code.isdigit() and len(code) == 4 and not code.startswith('00'):
                     if abs(data[code].get('total', 0)) > 500:
                         freq[code] += 1
-        from datetime import datetime, timedelta
-        cutoff = (datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')
-        def needs_update(code):
-            if code not in cache:
-                return True
-            rows = cache[code]
-            if not rows:
-                return True
-            latest = max(r['date'] for r in rows if r.get('date'))
-            return latest < cutoff
-        targets = [c for c, f in freq.items() if f >= 5 and needs_update(c)]
+        cutoff = stale_cutoff()
+        targets = [c for c, f in freq.items() if f >= 5 and is_stale(c, cache, cutoff)]
 
     print(f"更新 {len(targets)} 檔持股數據...")
     for i, code in enumerate(targets):
@@ -138,11 +146,12 @@ def main():
 
     cache = load_cache()
 
-    # 抓缺少的
-    missing = [c for c in stock_codes if c not in cache]
-    if missing:
-        print(f"抓取 {len(missing)} 檔持股數據...", flush=True)
-        for code in missing:
+    # 抓缺少的 + 刷新過期的（v8.3.11：原本只補 `c not in cache`，既有快取永不更新）
+    cutoff = stale_cutoff()
+    need = [c for c in stock_codes if is_stale(c, cache, cutoff)]
+    if need:
+        print(f"抓取/刷新 {len(need)} 檔持股數據（快取早於 {cutoff} 者）...", flush=True)
+        for code in need:
             rows = fetch_shareholding(code)
             if rows:
                 cache[code] = rows
@@ -171,6 +180,10 @@ def main():
         else:
             suggestion = "無數據"
 
+        stale = (date is None) or (date == '') or (date < cutoff)
+        if stale:
+            suggestion = f"[警告] 資料日 {date or 'N/A'} 早於 {cutoff}，本因子不採計"
+
         ratio_str = f"{ratio:.2f}%" if ratio is not None else "N/A"
         change_str = f"{change:+.2f}%" if change is not None else "N/A"
         date_str = date if date else "N/A"
@@ -179,8 +192,12 @@ def main():
         results.append({
             'code': code,
             'date': date,
+            'as_of': date,
+            'stale': stale,
+            'cutoff': cutoff,
             'foreign_ratio': ratio,
             'ratio_change': change,
+            'suggestion': suggestion,
         })
 
     # 輸出 JSON
@@ -189,6 +206,14 @@ def main():
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f"\n結果已存: {json_path}")
+
+    stale_codes = [r['code'] for r in results if r.get('stale')]
+    print()
+    if stale_codes:
+        print(f"[警告] 外資持股比快取過期（早於 {cutoff}）共 {len(stale_codes)} 檔，"
+              f"本因子已強制歸零：{chr(44).join(stale_codes)}")
+    else:
+        print(f"[OK] 全部 {len(results)} 檔持股比皆不早於 {cutoff}")
 
 
 if __name__ == "__main__":

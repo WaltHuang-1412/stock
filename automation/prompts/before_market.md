@@ -37,7 +37,14 @@ else
   rm -f data/${TODAY}/industry_signals.json; echo "[SKIP] industry_signals.json"
 fi
 
-gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/market_regime.json --jq '.content' | base64 -d > data/${TODAY}/market_regime.json 2>/dev/null || true
+_mr=$(gh api repos/WaltHuang-1412/market-intelligence/contents/outputs/market_regime.json --jq '.content' 2>/dev/null | tr -d '\n')
+if echo "$_mr" | base64 -d > data/${TODAY}/market_regime.json 2>/dev/null && [ $(wc -c < data/${TODAY}/market_regime.json) -gt 100 ]; then
+  echo "[OK] market_regime.json"
+  # v8.3.11：MI 的 taiex.current 恆落後 2 個交易日（09-18 差 1332 點、乖離正負號相反）→ 強制以 Yahoo ^TWII 校正
+  python3 scripts/fix_market_regime_taiex.py --date ${TODAY}
+else
+  rm -f data/${TODAY}/market_regime.json; echo "[SKIP] market_regime.json（Step 9 防禦比例無大盤輸入，報告須揭露）"
+fi
 ```
 
 v8.0 關鍵數值（強制遵守）：

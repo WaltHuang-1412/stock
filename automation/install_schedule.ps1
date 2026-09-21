@@ -30,8 +30,8 @@ $Tasks = @(
     },
     @{
         Name        = "Stock_AfterMarket"
-        Description = "台股盤後分析 (14:30)"
-        Time        = "14:30"
+        Description = "台股盤後分析 (16:00，等 TWSE T86 當日法人數據公布)"
+        Time        = "16:00"
         Script      = "after_market.ps1"
     }
 )

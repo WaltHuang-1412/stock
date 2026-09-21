@@ -42,6 +42,35 @@ def save_cache(data):
         json.dump(data, f, ensure_ascii=False)
 
 
+def expected_revenue_month(today=None):
+    """台股月營收申報期限為次月 10 日 → 10 日(含)後應有上月，之前應有上上月"""
+    today = today or datetime.now()
+    back = 1 if today.day >= 10 else 2
+    y, m = today.year, today.month - back
+    while m <= 0:
+        m += 12
+        y -= 1
+    return f"{y}-{m:02d}"
+
+
+def latest_cached_month(stock_id, cache):
+    """快取中最新的營收月（不管 YoY 是否算得出來）"""
+    rows = cache.get(stock_id) or []
+    months = [
+        f"{r['revenue_year']}-{int(r['revenue_month']):02d}"
+        for r in rows
+        if r.get('revenue_year') and r.get('revenue_month')
+    ]
+    return max(months) if months else None
+
+
+def is_stale(stock_id, cache, expected=None):
+    """快取缺漏或落後應有月份 → 需要重抓"""
+    expected = expected or expected_revenue_month()
+    m = latest_cached_month(stock_id, cache)
+    return m is None or m < expected
+
+
 def fetch_revenue(stock_id):
     """從 FinMind 取得月營收"""
     url = 'https://api.finmindtrade.com/api/v4/data'
@@ -156,7 +185,7 @@ def update_cache(stock_codes=None):
                 if code.isdigit() and len(code) == 4 and not code.startswith('00'):
                     if abs(data[code].get('total', 0)) > 500:
                         freq[code] += 1
-        targets = [c for c, f in freq.items() if f >= 5 and c not in cache]
+        targets = [c for c, f in freq.items() if f >= 5 and is_stale(c, cache)]
 
     print(f"更新 {len(targets)} 檔營收數據...")
     for i, code in enumerate(targets):
@@ -187,11 +216,12 @@ def main():
 
     cache = load_cache()
 
-    # 抓缺少的
-    missing = [c for c in stock_codes if c not in cache]
-    if missing:
-        print(f"抓取 {len(missing)} 檔營收...", flush=True)
-        for code in missing:
+    # 抓缺少的 + 刷新過期的（v8.3.11：原本只補 `c not in cache`，既有快取永不更新）
+    expected = expected_revenue_month()
+    need = [c for c in stock_codes if is_stale(c, cache, expected)]
+    if need:
+        print(f"抓取/刷新 {len(need)} 檔營收（應有月份 {expected}）...", flush=True)
+        for code in need:
             revs = fetch_revenue(code)
             if revs:
                 cache[code] = revs
@@ -239,14 +269,22 @@ def main():
         else:
             suggestion = "無數據"
 
+        # v8.3.11 快取新鮮度：落後應有月份 → 本因子一律不採計（原本靜默用舊營收加減分）
+        stale = (month is None) or (month < expected)
+        if stale and month is not None:
+            adj = 0
+            suggestion = f"⚠️ 營收落後至 {month}（應為 {expected}），本因子不採計"
+
         yoy_str = f"{yoy:+.1f}%" if yoy is not None else "N/A"
         pullback_str = f"{pullback:+.1f}%" if pullback is not None else "N/A"
-        month_str = month if month else "N/A"
-        print(f"{code:>6} | {month_str:>10} | {yoy_str:>8} | {pullback_str:>8} | {suggestion}")
+        month_str = (month + " ⚠️") if (stale and month) else (month or "N/A")
+        print(f"{code:>6} | {month_str:>12} | {yoy_str:>8} | {pullback_str:>8} | {suggestion}")
 
         results.append({
             'code': code,
             'month': month,
+            'expected_month': expected,
+            'stale': stale,
             'yoy': yoy,
             'pullback_5d': round(pullback, 2) if pullback is not None else None,
             'growth_streak': growth_streak,
@@ -261,6 +299,14 @@ def main():
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f"\n結果已存: {json_path}")
+
+    stale_codes = [r['code'] for r in results if r.get('stale')]
+    print()
+    if stale_codes:
+        print(f"[警告] 營收快取落後（應有 {expected}）共 {len(stale_codes)} 檔，"
+              f"營收因子已強制歸零：{chr(44).join(stale_codes)}")
+    else:
+        print(f"[OK] 全部 {len(results)} 檔營收皆為 {expected}")
 
 
 if __name__ == "__main__":
