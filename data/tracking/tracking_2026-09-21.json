@@ -247,11 +247,17 @@
       "reason": "法人TOP50#6(+16,000張)、avg_rank 10.5、真連買3天；記憶體+封測雙🔴催化，MU+3.92%/WDC+4.13%/日月光ADR+4.10%；EPS Q2 YoY+271%、毛利率QoQ+4.2pp。已大漲5日+8.42%→-10分、倉位縮減；⚠️營收/外資持股比快取皆落後未採計",
       "intraday_price": 103.0,
       "intraday_return_pct": 9.57,
-      "actual_close": 103.0,
+      "actual_close": 105.5,
       "close_price": 103.0,
       "change_percent": 9.57,
-      "result": "holding",
-      "holding_status": "D0/10，未觸目標/停損 → holding（不判定成敗）；收盤 103.0，報酬 9.57%"
+      "result": "success",
+      "holding_status": "D0/10，未觸目標/停損 → holding（不判定成敗）；收盤 103.0，報酬 9.57%",
+      "settled_date": "2026-09-22",
+      "settled_price": 105.5,
+      "return_pct": 12.23,
+      "holding_days": "D1/10",
+      "success_note": "D1 收盤 105.5 ≥ 目標 103.0，settlement_checker 機械判定",
+      "sync_note": "v8.3.7 三處已同步：①本檔 ②tracking_2026-09-22.removed_stocks ③predictions.json"
     },
     {
       "stock_code": "3037",
@@ -267,11 +273,17 @@
       "reason": "法人TOP50#26、avg_rank 18.0、buy_ratio 190%、5日僅+0.41%未反映；AI🔴超強，AMAT+6.51%/LRCX+6.98%設備鏈共振；EPS Q2 YoY+42150%、毛利率QoQ+6.8pp。⚠️法人模式追蹤 COLD「PCB」命中率33.3%(n=12、平均-5.71%) -3分；⚠️營收快取落後(2026-05)未採計",
       "intraday_price": 1030.0,
       "intraday_return_pct": 4.99,
-      "actual_close": 1020.0,
+      "actual_close": 1120.0,
       "close_price": 1020.0,
       "change_percent": 3.98,
-      "result": "holding",
-      "holding_status": "D0/10，未觸目標/停損 → holding（不判定成敗）；收盤 1020.0，報酬 3.98%"
+      "result": "success",
+      "holding_status": "D0/10，未觸目標/停損 → holding（不判定成敗）；收盤 1020.0，報酬 3.98%",
+      "settled_date": "2026-09-22",
+      "settled_price": 1120.0,
+      "return_pct": 14.17,
+      "holding_days": "D1/10",
+      "success_note": "D1 收盤 1120.0 ≥ 目標 1070.0，settlement_checker 機械判定",
+      "sync_note": "v8.3.7 三處已同步：①本檔 ②tracking_2026-09-22.removed_stocks ③predictions.json"
     }
   ],
   "carry_over": [
