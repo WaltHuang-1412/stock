@@ -582,8 +582,9 @@ def scan(target_date_str, lookback=7):
             if rev in ('Level 3', 'Level 4'):
                 reasons.append(f"反轉{rev}排除")
             mom = r.get('momentum_pct')
-            if mom is not None and abs(mom) > 100 and (r.get('cumulative_total') or 0) >= 0:
+            if mom is not None and mom > 100 and (r.get('cumulative_total') or 0) >= 0:
                 # 動能>100% 但要注意負累計的動能是假的
+                # 2026-09-23 修：原為 abs(mom)>100，會把 <-100%（CLAUDE.md「佈局完成」+15 區）誤排除
                 reasons.append(f"動能{mom:+.0f}%>100%排除")
             cum = r.get('cumulative_total')
             if cum is not None and cum < 0:

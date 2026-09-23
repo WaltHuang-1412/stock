@@ -99,6 +99,7 @@ def find_all_holdings():
     carry over 時只取最早（原始）檔的版本；同一股票不同日期的推薦各自保留。
     """
     holdings = {}  # key=(recommend_date, code, track)
+    settled = set()  # 任一檔已結算（success/fail）的身分 → 後續 carry over 副本不得復活
 
     for path in sorted(glob.glob(str(TRACKING_DIR / "tracking_*.json"))):
         file_date = Path(path).stem.replace("tracking_", "")
@@ -112,6 +113,10 @@ def find_all_holdings():
         for list_key, track in (("recommendations", "A"), ("track_b_recommendations", "B")):
             for rec in data.get(list_key) or []:
                 if not isinstance(rec, dict):
+                    continue
+                if rec.get("result", "holding") in ("success", "fail"):
+                    e = _entry_from_rec(rec, file_date, track)
+                    settled.add((e["recommend_date"], e["stock_code"], track))
                     continue
                 if rec.get("result", "holding") != "holding":
                     continue
@@ -133,7 +138,11 @@ def find_all_holdings():
                 continue
             holdings[(rd, code, "A")] = entry
 
-    return list(holdings.values())
+    # 2026-09-23 修：原始檔已結算、但後續檔的沿用副本仍寫 holding 時，
+    # 舊邏輯會「跳過已結算原始檔 → 收下副本」使該筆復活（09-22 結算的 2886 兆豐金
+    # 因 tracking_09-18 recommendations 內的沿用副本而重新列為 holding）。
+    return [v for k, v in holdings.items()
+            if k not in settled and (k[0], k[1], "A") not in settled]
 
 
 def _num(v):
