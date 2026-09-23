@@ -102,13 +102,19 @@
       "stock_code": "2883",
       "stock_name": "凱基金",
       "category": "鐵律③法人反轉 L4",
-      "reason": "09-22 T86 賣超 -28,639 張＝52.1% 5日均量（≥8%，不受 v8.3.3 保護）；推薦日 09-22，收盤價入帳（v8.3.2）"
+      "reason": "09-22 T86 賣超 -28,639 張＝52.1% 5日均量（≥8%，不受 v8.3.3 保護）；推薦日 09-22，收盤價入帳（v8.3.2）",
+      "intraday_price": 39.1,
+      "intraday_time": "2026-09-23 12:11",
+      "execution_status": "盤前已列開盤出場清單，已執行；入帳價依 v8.3.2 盤後填當日收盤價"
     },
     {
       "stock_code": "2330",
       "stock_name": "台積電（持倉零股 0.15 張）",
       "category": "鐵律③法人反轉 L4（my_holdings.yaml）",
-      "reason": "09-22 T86 賣超 -4,268 張＝21.9%（≥8%），10 日累計 -24K 為負；⚠️ 09-11/09-14 報告已記出場，yaml 仍列 0.15 張 → 若仍持有則開盤出場"
+      "reason": "09-22 T86 賣超 -4,268 張＝21.9%（≥8%），10 日累計 -24K 為負；⚠️ 09-11/09-14 報告已記出場，yaml 仍列 0.15 張 → 若仍持有則開盤出場",
+      "intraday_price": 2490.0,
+      "intraday_time": "2026-09-23 12:11",
+      "execution_status": "盤前已列開盤出場清單，已執行；入帳價依 v8.3.2 盤後填當日收盤價"
     }
   ],
   "pending_review_v833": [
@@ -119,7 +125,16 @@
       "sell_lots": -3329,
       "cum10": "+45K",
       "status": "⚠️ 待複核（<8% 且 10 日累計為正）",
-      "next": "12:30 與盤後各複核一次，兩次皆 ≥5% 才於 09-24 開盤出場"
+      "next": "12:30 與盤後各複核一次，兩次皆 ≥5% 才於 09-24 開盤出場",
+      "intraday_recheck_1230": {
+        "time": "2026-09-23 12:11",
+        "sell": -3329,
+        "ratio_pct": 8.4,
+        "result": "≥5%（複核①成立）",
+        "note": "賣超張數與盤前相同（仍為 09-22 T86 -3,329 張），佔比 6.9%→8.4% 純屬 avg_5day_volume 分母漂移；依 v8.3.3 待複核程序，不因盤中跨過 8% 改判立即出場，盤後複核②仍 ≥5% 即 09-24 開盤出場",
+        "cum10_three_inst": "+45K",
+        "intraday_price": 69.3
+      }
     }
   ],
   "holdings_reversal_scan": {
@@ -155,7 +170,10 @@
       "result": "holding",
       "track": "A",
       "score_detail": "五維度小計 76 ＝ 時事 20＋法人 16（TOP21-35 基礎14＋佔成交>20% +2）＋產業 17（tier_0 金控）＋技術 12（L0 佈局中：動能<-30% 但真連買僅2天）＋價位 11｜modifiers：動能 +15｜訊號A L2 +10｜營收 +13.1% 不調整｜EPS 快取落後 0｜持股比 +0.03% 0｜模式追蹤器：金融 tier_0 為 hot（僅標註）",
-      "reason": "🛤️軌道A｜🔴超強催化『聯準會利率政策』（升息↑轉鷹、CME 12 月升息機率 90%，利差結構利多）｜📶訊號A（預埋）L2 +10｜籌碼動能 -41.2%（<-30%）+15、10 日買7賣3、真連買 2 天、近5天外資 +18K 張｜09-22 T86 +8,422 張（外資 +12,736／投信 -4,781，非同步）avg_rank 22.0、佔成交 39.8%｜反轉 Level 0｜法人現身門檻 ✅｜vs MA20 +1.06%｜⚠️ 09-22 才因 09-21 T86 L4（5.4%）開盤出場，本筆為 09-22 T86 翻買後的新推薦，非撤銷原出場｜⚠️ EPS 快取停於 2025-12-31（金融業半年報期限 8/31 已過）視為 0｜卷宗：今日重大訊息＝子公司兆豐投信董監異動（行政事項）；當日資料源 mentions=0，依據為法人籌碼＋知識庫催化對應"
+      "reason": "🛤️軌道A｜🔴超強催化『聯準會利率政策』（升息↑轉鷹、CME 12 月升息機率 90%，利差結構利多）｜📶訊號A（預埋）L2 +10｜籌碼動能 -41.2%（<-30%）+15、10 日買7賣3、真連買 2 天、近5天外資 +18K 張｜09-22 T86 +8,422 張（外資 +12,736／投信 -4,781，非同步）avg_rank 22.0、佔成交 39.8%｜反轉 Level 0｜法人現身門檻 ✅｜vs MA20 +1.06%｜⚠️ 09-22 才因 09-21 T86 L4（5.4%）開盤出場，本筆為 09-22 T86 翻買後的新推薦，非撤銷原出場｜⚠️ EPS 快取停於 2025-12-31（金融業半年報期限 8/31 已過）視為 0｜卷宗：今日重大訊息＝子公司兆豐投信董監異動（行政事項）；當日資料源 mentions=0，依據為法人籌碼＋知識庫催化對應",
+      "intraday_price": 49.8,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": -1.39
     },
     {
       "stock_code": "2892",
@@ -174,7 +192,10 @@
       "score_today": 97,
       "result": "holding",
       "note": "今日評分 97：時事 20＋法人 18＋產業 14＋技術 12＋價位 13＋動能 +10＋訊號A L2 +10；09-22 T86 +9,287 張、外資投信同步",
-      "reason": "⏳沿用進行中追蹤（原推薦日 2026-09-18）｜今日評分 97：時事 20＋法人 18＋產業 14＋技術 12＋價位 13＋動能 +10＋訊號A L2 +10；09-22 T86 +9,287 張、外資投信同步"
+      "reason": "⏳沿用進行中追蹤（原推薦日 2026-09-18）｜今日評分 97：時事 20＋法人 18＋產業 14＋技術 12＋價位 13＋動能 +10＋訊號A L2 +10；09-22 T86 +9,287 張、外資投信同步",
+      "intraday_price": 39.8,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": -2.33
     },
     {
       "stock_code": "8046",
@@ -192,7 +213,10 @@
       "result": "holding",
       "track": "A",
       "score_detail": "五維度小計 78 ＝ 時事 21（🔴20＋↑加速+1）＋法人 19（TOP11-20 基礎17＋佔成交>20% +2）＋產業 17（AI tier_0）＋技術 10（L0 正常型態，真連買1天）＋價位 11｜modifiers：動能 +15｜5日 +7.4% -10｜EPS +5｜持股比 +5｜模式 PCB cold -3",
-      "reason": "🛤️軌道A｜🔴超強催化『AI伺服器與半導體』（SOX +2.06% 連六漲、MU +5.00%）＋🟡『ABF載板/PCB基板缺口擴大』↑加速｜09-22 T86 +5,982 張、avg_rank 13.0、佔成交 37.4%｜籌碼動能 -50.6%（<-30%）+15、10 日買6賣4、近5天外資 +2,252 張｜反轉 Level 0｜法人現身門檻 ✅｜營收 2026-08 YoY +40.6%、Q2 EPS +5、外資持股比週增 +0.86% +5｜⚠️ 5 日 +7.4% → -10｜⚠️ 模式追蹤器 PCB cold（38.5%／13 筆）保守套用 -3｜卷宗：窗口內無事件、當日資料源 mentions=0"
+      "reason": "🛤️軌道A｜🔴超強催化『AI伺服器與半導體』（SOX +2.06% 連六漲、MU +5.00%）＋🟡『ABF載板/PCB基板缺口擴大』↑加速｜09-22 T86 +5,982 張、avg_rank 13.0、佔成交 37.4%｜籌碼動能 -50.6%（<-30%）+15、10 日買6賣4、近5天外資 +2,252 張｜反轉 Level 0｜法人現身門檻 ✅｜營收 2026-08 YoY +40.6%、Q2 EPS +5、外資持股比週增 +0.86% +5｜⚠️ 5 日 +7.4% → -10｜⚠️ 模式追蹤器 PCB cold（38.5%／13 筆）保守套用 -3｜卷宗：窗口內無事件、當日資料源 mentions=0",
+      "intraday_price": 1195.0,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": 2.58
     },
     {
       "stock_code": "2609",
@@ -210,7 +234,10 @@
       "result": "holding",
       "track": "A",
       "score_detail": "五維度小計 72 ＝ 時事 21（🔴）＋法人 16（TOP21-35 基礎13＋佔成交>20% +2＋外資投信同步 +1）＋產業 14（tier_from_tracker）＋技術 10＋價位 11｜modifiers：訊號A L2 +10｜EPS +5｜動能 0｜營收 0｜持股比 -0.08% 0｜模式追蹤器：中東航運為 hot（僅標註）",
-      "reason": "🛤️軌道A｜🔴超強催化『中東地緣政治（含航運）』：亞洲-美東運價逾 1 萬美元/40呎櫃創 4 年新高、陽明 09-22 法說指四大結構性問題支撐運價（topic_tracker 影響鏈直接點名陽明↑）｜📶訊號A（預埋）L2 +10｜09-22 T86 +3,360 張（外資 +3,611／投信 +74 同步）、avg_rank 34.5、佔成交 20.4%｜10 日買7賣3、近5天外資 +38K 張、動能 +40.7%（0~50% 正常）｜反轉 Level 0｜法人現身門檻 ✅｜營收 2026-08 YoY +56.2%、Q2 EPS +5｜卷宗：法說會已於 09-22 舉行（事件已過），當日資料源提及 14 處皆為正面運價敘事｜⚠️ WTI -6.38% 對燃料成本為順風，但同時削弱「地緣風險」敘事，雙向揭露"
+      "reason": "🛤️軌道A｜🔴超強催化『中東地緣政治（含航運）』：亞洲-美東運價逾 1 萬美元/40呎櫃創 4 年新高、陽明 09-22 法說指四大結構性問題支撐運價（topic_tracker 影響鏈直接點名陽明↑）｜📶訊號A（預埋）L2 +10｜09-22 T86 +3,360 張（外資 +3,611／投信 +74 同步）、avg_rank 34.5、佔成交 20.4%｜10 日買7賣3、近5天外資 +38K 張、動能 +40.7%（0~50% 正常）｜反轉 Level 0｜法人現身門檻 ✅｜營收 2026-08 YoY +56.2%、Q2 EPS +5｜卷宗：法說會已於 09-22 舉行（事件已過），當日資料源提及 14 處皆為正面運價敘事｜⚠️ WTI -6.38% 對燃料成本為順風，但同時削弱「地緣風險」敘事，雙向揭露",
+      "intraday_price": 59.7,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": -1.81
     },
     {
       "stock_code": "3042",
@@ -229,7 +256,10 @@
       "score_today": 80,
       "result": "holding",
       "note": "今日評分 80：時事 20（光通訊🔴）＋法人 16＋產業 14＋技術 9＋價位 11＋EPS +5＋持股比 +5；動能 +500% 走🔥超強催化覆寫不扣分",
-      "reason": "⏳沿用進行中追蹤（原推薦日 2026-09-21）｜今日評分 80：時事 20（光通訊🔴）＋法人 16＋產業 14＋技術 9＋價位 11＋EPS +5＋持股比 +5；動能 +500% 走🔥超強催化覆寫不扣分"
+      "reason": "⏳沿用進行中追蹤（原推薦日 2026-09-21）｜今日評分 80：時事 20（光通訊🔴）＋法人 16＋產業 14＋技術 9＋價位 11＋EPS +5＋持股比 +5；動能 +500% 走🔥超強催化覆寫不扣分",
+      "intraday_price": 201.5,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": 9.21
     },
     {
       "stock_code": "3023",
@@ -247,7 +277,10 @@
       "result": "holding",
       "track": "A",
       "score_detail": "五維度小計 58 ＝ 時事 20（AI 🔴，取最強對應）＋法人 6（不在 TOP50）＋產業 14（tier_2）＋技術 10＋價位 8｜modifiers：動能 +10｜訊號B 🟢早期 +5｜EPS 0｜營收 0｜持股比 0",
-      "reason": "🛤️軌道B（時事）＋📶訊號B（催化）🟢早期 +5：Apple 連漲 2 天、信邦尚未進入 TOP50｜對應🔴『AI伺服器與半導體』（AI tier_2 連接器）｜chip：10 日買8賣2、累計 +756 張、近5天外資 +391 張、動能 -25.4%（-30~0%）+10｜反轉 Level 0｜法人現身門檻：不在 TOP50，但 vs MA20 -0.86%（非 0~+5% 區）→ 不適用｜營收 2026-08 YoY +32.5%｜⚠️ 法人參與度低（不在 TOP50，法人分僅 6）＋當日資料源 mentions=0，推薦依據為訊號B＋知識庫產業對應，倉位壓在 5-10%"
+      "reason": "🛤️軌道B（時事）＋📶訊號B（催化）🟢早期 +5：Apple 連漲 2 天、信邦尚未進入 TOP50｜對應🔴『AI伺服器與半導體』（AI tier_2 連接器）｜chip：10 日買8賣2、累計 +756 張、近5天外資 +391 張、動能 -25.4%（-30~0%）+10｜反轉 Level 0｜法人現身門檻：不在 TOP50，但 vs MA20 -0.86%（非 0~+5% 區）→ 不適用｜營收 2026-08 YoY +32.5%｜⚠️ 法人參與度低（不在 TOP50，法人分僅 6）＋當日資料源 mentions=0，推薦依據為訊號B＋知識庫產業對應，倉位壓在 5-10%",
+      "intraday_price": 315.0,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": -1.72
     }
   ],
   "carry_over": [
@@ -283,7 +316,10 @@
       "score": 79,
       "position": "8%",
       "holding_days": "⏸️ 凍結",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 9.7,
+      "intraday_time": "序列停滯凍結（Yahoo 報價 9.7 為 08-19 舊值）",
+      "intraday_return_pct": -0.51
     },
     {
       "stock_code": "2382",
@@ -299,7 +335,10 @@
       "score": 71,
       "position": "5%（降低，見風險揭露）",
       "holding_days": "D6/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 341.5,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": 1.49
     },
     {
       "stock_code": "2891",
@@ -315,7 +354,10 @@
       "score": 87,
       "position": "10-15%",
       "holding_days": "D5/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 69.3,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": 1.76
     },
     {
       "stock_code": "2377",
@@ -331,7 +373,10 @@
       "score": 78,
       "position": "5%（下限，見費半風險揭露）",
       "holding_days": "D5/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 152.5,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": 1.33
     },
     {
       "stock_code": "4904",
@@ -347,7 +392,10 @@
       "score": 71,
       "position": "5-10%",
       "holding_days": "D5/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 105.5,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": -0.47
     },
     {
       "stock_code": "5876",
@@ -363,7 +411,10 @@
       "score": 98,
       "position": "8-10%",
       "holding_days": "D4/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 48.95,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": -1.71
     },
     {
       "stock_code": "2395",
@@ -379,7 +430,10 @@
       "score": 78,
       "position": "5%",
       "holding_days": "D4/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 702.0,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": 2.48
     },
     {
       "stock_code": "2412",
@@ -395,7 +449,10 @@
       "score": 77,
       "position": "5%",
       "holding_days": "D4/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 145.5,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": 1.39
     },
     {
       "stock_code": "5880",
@@ -411,7 +468,10 @@
       "score": 95,
       "position": "8-10%（組合金融曝險偏高，壓在區間下緣）",
       "holding_days": "D3/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 26.8,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": -2.01
     },
     {
       "stock_code": "2303",
@@ -427,7 +487,10 @@
       "score": 99,
       "position": "10-15%",
       "holding_days": "D2/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 159.5,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": 8.14
     },
     {
       "stock_code": "2892",
@@ -443,7 +506,10 @@
       "score": 83,
       "position": "10-15%",
       "holding_days": "D2/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 39.8,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": -2.33
     },
     {
       "stock_code": "3711",
@@ -459,7 +525,10 @@
       "score": 124,
       "position": "10%",
       "holding_days": "D1/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 693.0,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": 8.62
     },
     {
       "stock_code": "3042",
@@ -475,7 +544,10 @@
       "score": 81,
       "position": "10%",
       "holding_days": "D1/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 201.5,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": 9.21
     },
     {
       "stock_code": "2883",
@@ -491,7 +563,10 @@
       "score": 85,
       "position": "10-15%",
       "holding_days": "D0/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 39.1,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": -3.34
     },
     {
       "stock_code": "3481",
@@ -507,7 +582,10 @@
       "score": 78,
       "position": "5-10%",
       "holding_days": "D0/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 49.95,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": -0.89
     },
     {
       "stock_code": "2454",
@@ -523,7 +601,10 @@
       "score": 71,
       "position": "5-10%",
       "holding_days": "D0/10",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 5175.0,
+      "intraday_time": "2026-09-23 12:11",
+      "intraday_return_pct": 3.29
     }
   ],
   "carry_over_note": "16 筆 holding（含 2867 凍結）照抄 settlement_checker 輸出；進場價／停損一律取自來源 tracking_{推薦日}.json",
@@ -614,5 +695,197 @@
   "removed_stocks": [],
   "tomorrow_opening_exits": [],
   "track_b_recommendations": [],
-  "track_b_observations": []
+  "track_b_observations": [
+    {
+      "stock_code": "2409",
+      "stock_name": "友達",
+      "intraday_price": 35.2,
+      "note": "動能 +455% 一票否決；5日 +31.4%；處置預警⏳連3天/最快剩0天；今日 -3.96%"
+    },
+    {
+      "stock_code": "2449",
+      "stock_name": "京元電子",
+      "intraday_price": 304.5,
+      "note": "偵測器強訊號 80；動能 +500% 一票否決＋5日 +23.3% 已大漲；今日 -3.94%"
+    },
+    {
+      "stock_code": "3189",
+      "stock_name": "景碩",
+      "intraday_price": 906.0,
+      "note": "5日 +14.3% 已大漲（>10% 預設不評分）；動能 +80.2%"
+    },
+    {
+      "stock_code": "4958",
+      "stock_name": "臻鼎-KY",
+      "intraday_price": 475.5,
+      "note": "反轉狀態不明（累計 -12,098）、近5天外資 -6,192 → 準確率②③未過"
+    },
+    {
+      "stock_code": "8150",
+      "stock_name": "南茂",
+      "intraday_price": 107.5,
+      "note": "動能 +500%、5日 +25.0%；處置預警⏳最快剩1天"
+    },
+    {
+      "stock_code": "2327",
+      "stock_name": "國巨*",
+      "intraday_price": 577.0,
+      "note": "動能 +206% 一票否決（🟡被動元件，無超強覆寫）"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "intraday_price": 256.5,
+      "note": "反轉狀態不明（累計 -5,432）、動能 +156%"
+    },
+    {
+      "stock_code": "6168",
+      "stock_name": "宏齊",
+      "intraday_price": 40.7,
+      "note": "偵測器強訊號 90，但今日 -7.5%／量比 2.18x → 型態轉弱攔截；動能 +500%、5日 +50.4%；處置⏳最快剩0天"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "intraday_price": 42.5,
+      "note": "動能 +254%；近5天外資 -1,958 → 準確率②未過"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "intraday_price": 73.3,
+      "note": "動能 +328%（🔴DRAM 覆寫）但盤前評分 68 <75；5日 +7.3%"
+    },
+    {
+      "stock_code": "6257",
+      "stock_name": "矽格",
+      "intraday_price": 247.5,
+      "note": "動能 +461%、5日 +20.0% 已大漲"
+    },
+    {
+      "stock_code": "2481",
+      "stock_name": "強茂",
+      "intraday_price": 174.5,
+      "note": "動能 +156%、5日 +11.4%"
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "intraday_price": 20.35,
+      "note": "動能 +204%（航空未列🔴影響鏈，不覆寫）"
+    },
+    {
+      "stock_code": "6278",
+      "stock_name": "台表科",
+      "intraday_price": 209.0,
+      "note": "5日 +18.3% 已大漲"
+    },
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "intraday_price": 122.5,
+      "note": "籌碼乾淨（真連買10天、動能 -7.6%）但準確率①催化對齊未過（電信不在今日🔴影響鏈）"
+    },
+    {
+      "stock_code": "6116",
+      "stock_name": "彩晶",
+      "intraday_price": 15.05,
+      "note": "動能 +269% 一票否決"
+    },
+    {
+      "stock_code": "3035",
+      "stock_name": "智原",
+      "intraday_price": 205.0,
+      "note": "動能 +500% 一票否決"
+    },
+    {
+      "stock_code": "2354",
+      "stock_name": "鴻準",
+      "intraday_price": 65.9,
+      "note": "準確率①未過（蘋果鏈🟢↓）；外資持股比 -0.26% -3"
+    },
+    {
+      "stock_code": "2492",
+      "stock_name": "華新科",
+      "intraday_price": 308.0,
+      "note": "反轉狀態不明（累計 -12,993）"
+    },
+    {
+      "stock_code": "6213",
+      "stock_name": "聯茂",
+      "intraday_price": 544.0,
+      "note": "近5天外資 -1,763 → 準確率②未過"
+    },
+    {
+      "stock_code": "2379",
+      "stock_name": "瑞昱",
+      "intraday_price": 753.0,
+      "note": "🔴光通訊與網通 超強覆寫動能 +114%，五維度 74（時事21/法人17/產業15/技術10/價位11）－5日+7.4% -10－EPS 連5季YoY負 -5 ＝ 59 <75"
+    },
+    {
+      "stock_code": "6674",
+      "stock_name": "鋐寶科技",
+      "intraday_price": 18.2,
+      "note": "偵測器強訊號 70；產業未分類、不在TOP50；五維度約 44＋偵測器 +5－營收連4月衰退 -5－EPS -5 ＝ 39 <75"
+    },
+    {
+      "stock_code": "3037",
+      "stock_name": "欣興",
+      "intraday_price": 1160.0,
+      "note": "今日 +3.57% ≥3% 已反映"
+    },
+    {
+      "stock_code": "1101",
+      "stock_name": "台泥",
+      "intraday_price": 25.65,
+      "note": "今日 +4.48% ≥3% 已反映"
+    },
+    {
+      "stock_code": "3016",
+      "stock_name": "嘉晶",
+      "intraday_price": 145.5,
+      "note": "今日 +9.81% 漲停 已反映"
+    },
+    {
+      "stock_code": "6189",
+      "stock_name": "豐藝",
+      "intraday_price": 49.15,
+      "note": "偵測器強訊號 60；動能 +269% 一票否決、產業未分類無覆寫依據"
+    }
+  ],
+  "intraday": {
+    "time": "2026-09-23 12:30",
+    "taiex": 48100.46,
+    "taiex_change_pct": 0.63,
+    "taiex_base": "09-22 收盤 47,800.17（盤前報告 Yahoo ^TWII；本次 chart 序列 09-22 close=None）",
+    "preflight": {
+      "warnings": 1,
+      "errors": 1,
+      "l4_error_verdict": "2883/2330 為盤前已列開盤出場；2891 為 v8.3.3 待複核；2834/2408/2344/2337 為盤前候選池排除股（2337 yaml 殘留，09-11 已出場）→ 無漏出場"
+    },
+    "exit_rules": {
+      "stop_loss_hits": 0,
+      "two_day_drawdown_hits": 0,
+      "reversal_l3_l4_new": 0,
+      "pending_review": 1
+    },
+    "targets_reached_intraday_not_settled": [
+      "3042 晶技 201.5（漲停）/目標 201.0",
+      "2303 聯電 盤中高 163.0/目標 161.0（12:11 回落 159.5）",
+      "3711 日月光投控 盤中高 711.0/目標 695.0（12:11 回落 693.0）"
+    ],
+    "frozen": [
+      "2867 三商壽（序列停滯，末日 2026-08-19）"
+    ],
+    "holdings_stop_loss_recheck": "0 筆新觸發；2337/2313/3090 低於停損為已出場部位重複輸出（yaml 未更新）；6770 73.3 回到停損 73.26 之上（09-21 已出場）",
+    "prior_decisions_status": "盤前已決事項 0 筆；當日 L4 開盤出場 2/2（2883 凱基金、2330 台積電零股）",
+    "track_b_result": "今日無盤中新推薦（0 檔）；26 檔候選排除理由見 track_b_observations",
+    "dossier_intraday": "無盤中新推薦 → 依 Step 3.5 免跑",
+    "tier_from_tracker_added": 0,
+    "data_source_notes": [
+      "現價取 Yahoo chart meta.regularMarketPrice（12:07~12:11）",
+      "前收取 get_close_series 09-22 收盤",
+      "盤中分批執行 check_* 腳本的 JSON 已另存 _intraB/*_intraday.json，盤前版本以 git 還原"
+    ]
+  }
 }
