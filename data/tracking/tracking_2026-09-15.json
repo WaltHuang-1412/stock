@@ -227,14 +227,20 @@
         "加減分說明": "EPS 金融快取落後視為 0、營收快取落後視為 0、外資持股比快取落後視為 0、模式追蹤器過期跳過、龍頭預警 0"
       },
       "reason": "紅 聯準會利率政策（含台灣央行升息預期）方向升溫（catalyst_level 紅）＋綠 金融股8月獲利全面創高。法人 avg_rank 9.5（TOP10）、09-14 三大法人 +8,420 張、buy_ratio 30.2%、外資+投信同步買超。訊號A（預埋）L3 佈局完成：真連續買超 3 天、動能 -68.8%、5日漲幅僅 +1.0%。反轉 Level 0。卷宗：今日重大訊息「115年8月自結盈餘」—— 前8月合併稅後 538.79 億、EPS 2.7 元、加計處分利益 5.29 元皆創歷史高（利多，與推薦理由一致）；另有美國子行 CTBC Bank (USA) 授信資產轉讓公告（中性）。注意：Q2 2026 EPS 快取仍為 2025-12-31，已逾金融業半年報期限 8/31，本因子未採計。注意：FOMC 09-17 凌晨為持有期內二元事件。",
-      "result": "holding",
+      "result": "success",
       "intraday_price": 69.3,
       "intraday_change_vs_rec_pct": 1.76,
       "close_price": 69.7,
-      "actual_close": 69.7,
+      "actual_close": 68.5,
       "change_percent": 2.35,
       "return_vs_rec_pct": 2.35,
-      "holding_status": "D0/10（推薦當日不判定）｜收盤 69.7｜vs推薦價 +2.35%｜停損 61.29｜反轉 Level 0/健康"
+      "holding_status": "D0/10（推薦當日不判定）｜收盤 69.7｜vs推薦價 +2.35%｜停損 61.29｜反轉 Level 0/健康",
+      "settled_date": "2026-09-24",
+      "settled_price": 68.5,
+      "return_pct": 0.59,
+      "holding_days": "D7/10",
+      "sync_note": "v8.3.7 三處同步：①本檔 ②tracking_2026-09-24.json removed_stocks ③predictions.json",
+      "success_note": "鐵律③ L4 已決事項（v8.3.3 待複核定案：09-22 T86 -3,329 張兩次複核 8.4% ≥5%）→ 09-24 開盤出場；收盤價入帳 v8.3.2"
     },
     {
       "stock_code": "2885",
@@ -330,14 +336,20 @@
         "加減分說明": "EPS +5（2026-06-30 當期有效：EPS 3.55 元 YoY+123.3%、毛利率 QoQ +1.0pp）；營收/外資持股比快取落後視為 0"
       },
       "reason": "紅 AI伺服器與半導體 方向分化（基本面強勁惟股價短線重挫）。法人 avg_rank 29.0、09-14 三大法人 +1,459 張、buy_ratio 20.6%、外資+投信同步、10日累計 +10K 張、買超天數 6/10。訊號A（預埋）L2 早期佈局：動能 -111.9%（佈局完成級）、5日 -5.0% 股價未反映。反轉 Level 0。卷宗：無法說會/除權息/重大訊息，當日資料源無提及 → 依據為法人數據＋訊號A。重大風險揭露：費半單日 -5.86%（LRCX -8.29%／ASML -7.25%／AMAT -7.07%／SMCI -8.38%／DELL -5.82%），但 us_leader_alert 的硬編碼對應表未涵蓋微星，故本檔未吃 Level 2 的 -15 分。此為腳本對應缺口而非風險不存在 —— 已壓至最低倉位 5%，12:30 盤中必須複查，並列入盤後 Step 3 檢討。另：AI泡沫前兆檢查清單 catalyst_level 紅、方向惡化（較昨日升級）。",
-      "result": "holding",
+      "result": "success",
       "intraday_price": 149.0,
       "intraday_change_vs_rec_pct": -1.0,
       "close_price": 148.0,
-      "actual_close": 148.0,
+      "actual_close": 151.5,
       "change_percent": -1.66,
       "return_vs_rec_pct": -1.66,
-      "holding_status": "D0/10（推薦當日不判定）｜收盤 148.0｜vs推薦價 -1.66%｜停損 135.45｜反轉 Level 0/健康"
+      "holding_status": "D0/10（推薦當日不判定）｜收盤 148.0｜vs推薦價 -1.66%｜停損 135.45｜反轉 Level 0/健康",
+      "settled_date": "2026-09-24",
+      "settled_price": 151.5,
+      "return_pct": 0.66,
+      "holding_days": "D7/10",
+      "sync_note": "v8.3.7 三處同步：①本檔 ②tracking_2026-09-24.json removed_stocks ③predictions.json",
+      "success_note": "鐵律③ L4（09-23 T86 賣超 -629 張＝10.6% ≥8%）→ 09-24 開盤出場；收盤價入帳 v8.3.2"
     },
     {
       "stock_code": "3034",

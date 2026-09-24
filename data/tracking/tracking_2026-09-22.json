@@ -271,13 +271,17 @@
       "intraday_price": 50.6,
       "intraday_time": "2026-09-22 12:14",
       "intraday_return_pct": 0.4,
-      "actual_close": 50.5,
-      "result": "holding",
-      "holding_days": "D0/10",
-      "return_pct": 0.2,
+      "actual_close": 49.55,
+      "result": "fail",
+      "holding_days": "D2/10",
+      "return_pct": -1.69,
       "holding_status": "續抱：反轉 Level 0／籌碼健康，鐵律①②③ 全無觸發；收盤 50.5（+0.20%）",
       "close_price": 50.5,
-      "change_percent": 0.2
+      "change_percent": 0.2,
+      "settled_date": "2026-09-24",
+      "settled_price": 49.55,
+      "sync_note": "v8.3.7 三處同步：①本檔 ②tracking_2026-09-24.json removed_stocks ③predictions.json",
+      "fail_reason": "鐵律③ L4（09-23 T86 賣超 -57,816 張＝25.1%、>50K 張、10 日累計 -64K）→ 09-24 開盤出場；收盤價入帳 v8.3.2"
     },
     {
       "stock_code": "2454",
