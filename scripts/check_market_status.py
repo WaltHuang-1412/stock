@@ -121,10 +121,11 @@ def is_tw_trading_day(date_str):
     if _is_weekend(date_str):
         return False
 
-    # 未來日期無法查 TWSE
+    # 未來日期：T86 必然無資料，但官方假日行事曆已公布 → 先查行事曆
+    # （2026-09-24 修：原本未來日期一律回 True，查 09-25 中秋節被判「開市」）
     dt = datetime.strptime(date_str, "%Y-%m-%d")
     if dt.date() > datetime.now().date():
-        return True
+        return not _check_twse_holiday_schedule(date_str)
 
     # 本地快取（需確認有實際資料，空檔案不算）
     date_compact = date_str.replace("-", "")

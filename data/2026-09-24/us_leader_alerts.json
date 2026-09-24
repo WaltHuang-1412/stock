@@ -1,0 +1,89 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Micron",
+      "change_pct": -2.22,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "DRAM/記憶體",
+      "affected_stocks": {
+        "2408": "南亞科",
+        "1303": "南亞",
+        "2344": "華邦電",
+        "2337": "旺宏",
+        "5347": "世界",
+        "6770": "力積電"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Micron 跌幅 -2.22%，DRAM/記憶體產業受壓"
+    },
+    {
+      "us_stock": "Broadcom",
+      "change_pct": -2.62,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "網通",
+      "affected_stocks": {
+        "2345": "智邦",
+        "2412": "中華電",
+        "3042": "晶技",
+        "2449": "京元電子"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Broadcom 跌幅 -2.62%，網通產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-09-24",
+    "total_alerts": 2,
+    "level_3_count": 0,
+    "level_2_count": 0,
+    "level_1_count": 2,
+    "excluded_stocks": [],
+    "downgraded_stocks": {},
+    "warning_stocks": {
+      "2408": {
+        "reason": "Micron 跌幅 -2.22%",
+        "adjustment": -5
+      },
+      "1303": {
+        "reason": "Micron 跌幅 -2.22%",
+        "adjustment": -5
+      },
+      "2344": {
+        "reason": "Micron 跌幅 -2.22%",
+        "adjustment": -5
+      },
+      "2337": {
+        "reason": "Micron 跌幅 -2.22%",
+        "adjustment": -5
+      },
+      "5347": {
+        "reason": "Micron 跌幅 -2.22%",
+        "adjustment": -5
+      },
+      "6770": {
+        "reason": "Micron 跌幅 -2.22%",
+        "adjustment": -5
+      },
+      "2345": {
+        "reason": "Broadcom 跌幅 -2.62%",
+        "adjustment": -5
+      },
+      "2412": {
+        "reason": "Broadcom 跌幅 -2.62%",
+        "adjustment": -5
+      },
+      "3042": {
+        "reason": "Broadcom 跌幅 -2.62%",
+        "adjustment": -5
+      },
+      "2449": {
+        "reason": "Broadcom 跌幅 -2.62%",
+        "adjustment": -5
+      }
+    }
+  }
+}

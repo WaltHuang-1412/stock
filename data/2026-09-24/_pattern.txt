@@ -1,0 +1,57 @@
+法人模式追蹤器 — 2026-09-24
+
+交易日: 100 天
+活躍股: 100 檔
+取得股價...
+  10/100
+  20/100
+  30/100
+  40/100
+  50/100
+  60/100
+  70/100
+  80/100
+  90/100
+  100/100
+偵測交易週期...
+共 1020 個週期
+
+============================================================
+  法人當前賺錢模式 (2026-09-24)
+  數據: 20260506~20260923, 1020 個週期
+============================================================
+
+HOT (最近在賺的模式):
+  industry=金融/tier_0 金控龍頭: 87.5% (+5.48%, 16筆)
+  industry=塑化（tier_0）: 85.7% (+15.15%, 7筆)
+  industry=營建/水泥 tier_1（水泥）: 85.7% (+1.57%, 7筆)
+  industry=AI伺服器/tier_from_tracker: 83.3% (+2.59%, 6筆)
+  industry=金融產業/tier_0 金控: 80.0% (+5.25%, 10筆)
+  sell_speed=沒出貨: 78.6% (+1.83%, 28筆)
+  industry=航空/tier_0: 77.8% (+1.83%, 9筆)
+  industry=壽險（industry_chains: 玉山金併三商壽 tier_from_tracker）: 77.8% (+3.04%, 9筆)
+
+COLD (最近在虧的模式):
+  industry=記憶體-NOR Flash: 10.0% (-6.90%, 10筆)
+  industry=水泥: 30.0% (+0.17%, 10筆)
+  industry=重電/AI電力基建（industry_chains: AI資料中心電力瓶頸/tier_from_tracker，產業邏輯以二線 14 分計）: 30.0% (-0.24%, 10筆)
+  industry=鋼鐵（industry_chains: 鋼鐵原物料/tier_0 鋼鐵龍頭）: 33.3% (-1.04%, 9筆)
+  industry=塑化/tier_2 化學纖維: 33.3% (+3.32%, 12筆)
+  industry=IC設計/ASIC測試: 37.5% (-5.22%, 8筆)
+  industry=半導體產業 tier_1（封測）: 57.1% (-3.82%, 7筆)
+
+BEST COMBO (最強組合):
+  stealth=追漲 + industry=記憶體 tier_0（DRAM/Flash，industry_chains.json 已登錄）: 100.0% (+12.80%, 6筆)
+  stealth=追漲 + industry=金融: 100.0% (+4.79%, 8筆)
+  sell_speed=緩慢出貨 + industry=金融／金控（industry_chains 僅 tier_from_tracker，產業邏輯以 13-16 分計）: 100.0% (+8.93%, 5筆)
+  sell_speed=緩慢出貨 + industry=金融／金控（industry_chains 金融 tier_0 金控）: 100.0% (+9.08%, 6筆)
+  buy_days=6天+ + industry=金融／金控（industry_chains 金融 tier_0 金控）: 100.0% (+6.09%, 5筆)
+
+WORST COMBO (最差組合):
+  volume=30K+ + industry=記憶體-NOR Flash: 0.0% (-9.81%, 5筆)
+  stealth=邊買邊漲 + industry=塑化/tier_2 化學纖維: 0.0% (-1.44%, 5筆)
+  leader=外資主導 + industry=記憶體-NOR Flash: 10.0% (-6.90%, 10筆)
+  sell_speed=快速出貨 + industry=記憶體-NOR Flash: 10.0% (-6.90%, 10筆)
+  sell_speed=快速出貨 + industry=鋼鐵（industry_chains: 鋼鐵原物料/tier_0 鋼鐵龍頭）: 14.3% (-1.44%, 7筆)
+
+已存: C:\Users\walter.huang\Documents\github\stock\data\strategy\pattern_today.json

@@ -51,17 +51,44 @@ def _prev_trading_close(result: Dict[str, Any], meta: Dict[str, Any]):
         if market_time is None:
             return None
         offset = meta.get('gmtoffset', 0)
-        valid = [(t, c) for t, c in zip(timestamps, closes) if c is not None]
-        if len(valid) < 2:
+        bars = list(zip(timestamps, closes))
+        if len(bars) < 2:
             return None
 
         def to_local_date(ts):
             return datetime.datetime.fromtimestamp(
                 ts + offset, tz=datetime.timezone.utc).date()
 
-        if to_local_date(valid[-1][0]) >= to_local_date(market_time):
-            return valid[-2][1]
-        return valid[-1][1]
+        # 2026-09-24 修：不可先濾掉 None 再取倒數第二根 —— Yahoo 偶有某日收盤缺值
+        # （09-22 ^SOX/^IXIC close=None），濾掉後會拿「前兩日」收盤當前收，把兩日
+        # 漲跌誤報成單日（費半實際 -1.23% 被報成 +0.81%）。改為依日期定位前一根，
+        # 若其收盤缺值則以 60 分 K 該日最後一筆補，仍缺則回傳 None 讓呼叫端標示。
+        if to_local_date(bars[-1][0]) >= to_local_date(market_time):
+            prev_ts, prev_c = bars[-2]
+        else:
+            prev_ts, prev_c = bars[-1]
+        if prev_c is not None:
+            return prev_c
+        return _intraday_last_close(meta.get('symbol'), to_local_date(prev_ts), offset)
+    except Exception:
+        return None
+
+
+def _intraday_last_close(symbol, target_date, offset):
+    """日 K 收盤缺值時，改抓 60 分 K 取該日最後一筆收盤。"""
+    if not symbol:
+        return None
+    try:
+        url = f'https://query1.finance.yahoo.com/v8/finance/chart/{symbol}?interval=60m&range=5d'
+        r = requests.get(url, headers=HEADERS, timeout=10).json()['chart']['result'][0]
+        ts = r.get('timestamp') or []
+        cl = r['indicators']['quote'][0].get('close') or []
+        last = None
+        for t, c in zip(ts, cl):
+            d = datetime.datetime.fromtimestamp(t + offset, tz=datetime.timezone.utc).date()
+            if d == target_date and c is not None:
+                last = c
+        return last
     except Exception:
         return None
 
