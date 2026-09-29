@@ -7547,11 +7547,11 @@
       }
     ]
   },
-  "settled_accuracy": "55.8%",
-  "settled_count": 690,
-  "holding_count": 180,
-  "total_success": 385,
-  "total_fail": 305,
+  "settled_accuracy": "55.7%",
+  "settled_count": 695,
+  "holding_count": 177,
+  "total_success": 387,
+  "total_fail": 308,
   "2026-03-30": {
     "predictions": [
       {
@@ -17533,10 +17533,12 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 99,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-09-29",
+        "settled_price": 153.5,
+        "holding_days": 1,
+        "return_pct": 4.07,
+        "fail_reason": "鐵律③ L4（09-24 T86 賣超 -44,181 張＝盤前 19.8%／盤中 21.7%／盤後 21.7% ≥8%）→ 09-29 開盤出場；收盤價入帳 v8.3.2"
       },
       {
         "symbol": "3702",
@@ -17747,10 +17749,12 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 90,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-09-29",
+        "settled_price": 1270.0,
+        "holding_days": 1,
+        "return_pct": 9.01,
+        "fail_reason": "收盤 1270.0 ≥ 目標 1260.0（settlement_checker 機械判定）"
       },
       {
         "symbol": "2609",
@@ -17800,10 +17804,12 @@
         "settlement_days": 10,
         "position": "5-10%（🔥超強催化覆寫，倉位上限 5-10%）",
         "score": 84,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-09-29",
+        "settled_price": 72.3,
+        "holding_days": 1,
+        "return_pct": -1.09,
+        "fail_reason": "鐵律③ L4（09-24 T86 賣超 -44,817 張＝盤前 37.6%／盤中 39.1%／盤後 39.1% ≥8%）→ 09-29 開盤出場；收盤價入帳 v8.3.2"
       },
       {
         "symbol": "2408",
@@ -17815,10 +17821,12 @@
         "settlement_days": 10,
         "position": "5-10%（🔥超強催化覆寫，倉位上限 5-10%）",
         "score": 83,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-09-29",
+        "settled_price": 506.0,
+        "holding_days": 1,
+        "return_pct": -1.75,
+        "fail_reason": "鐵律③ L4（09-24 T86 賣超 -22,678 張＝盤前 41.2%／盤中 42.1%／盤後 42.1% ≥8%、10 日累計為負）→ 09-29 開盤出場；收盤價入帳 v8.3.2"
       },
       {
         "symbol": "2317",
@@ -17830,6 +17838,44 @@
         "settlement_days": 10,
         "position": "5-10%（🔥超強催化覆寫，倉位上限 5-10%）",
         "score": 79,
+        "result": "fail",
+        "settled_date": "2026-09-29",
+        "settled_price": 250.5,
+        "holding_days": 1,
+        "return_pct": -2.15,
+        "fail_reason": "鐵律③ L4（09-24 T86 賣超 -24,232 張＝盤前 76.5%／盤中 73.2%／盤後 73.2% ≥8%、10 日累計為負）→ 09-29 開盤出場；收盤價入帳 v8.3.2"
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-09-29": {
+    "predictions": [
+      {
+        "symbol": "3702",
+        "name": "大聯大",
+        "recommend_price": 117.5,
+        "target_price": 127.0,
+        "stop_loss": 105.75,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 91,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "6196",
+        "name": "帆宣",
+        "recommend_price": 565.0,
+        "target_price": 610.0,
+        "stop_loss": 508.5,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 72,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
