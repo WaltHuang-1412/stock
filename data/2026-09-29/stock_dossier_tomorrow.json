@@ -7,14 +7,81 @@
     "重大訊息(TWSE+TPEx)": "ok"
   },
   "stocks": {
-    "4904": {
-      "name": "遠傳",
+    "1303": {
+      "name": "南亞",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 29,
+          "text": "- **台股影響鏈**：南亞科(2408)↑ EPS估74.6元；群聯(8299)↑ 輝達儲能認證＋NAND；華邦電(2344)↑；旺宏(2337)↑"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 243,
+          "text": "| L2 台廠DRAM | DRAM製造，三星干擾時受轉單 | 南亞科(2408)：787億私募擴產、華邦電(2344)：消費DRAM |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 302,
+          "text": "| 2408 | 南亞科 | 438.7 | 🔺+719.6% | +660.9% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 451,
+          "text": "> 東元（1504）受惠北美大馬達、離岸風電與AI資料中心等三大動能齊發，營運持續加溫。高盛證券最新報告指出，東元大舉搶進東南亞模組化資料中心（MDC）商機，不僅切入美系一線雲端服務供應商（CSP）供應鏈，亦瞄準日本主權AI市場，產品組合持續優化，後市看俏。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 220,
+          "text": "\"name\": \"南亞科\","
+        },
+        {
+          "file": "us_leader_alerts.md",
+          "line": 9,
+          "text": "- 南亞科(2408)"
+        },
+        {
+          "file": "us_leader_alerts.md",
+          "line": 10,
+          "text": "- 南亞(1303)"
+        }
+      ]
+    },
+    "2376": {
+      "name": "技嘉",
       "events": [],
       "mentions": [
         {
           "file": "market_intelligence.md",
-          "line": 237,
-          "text": "| L5 電信/終端 | 服務落地端，間接受益 | 遠傳(4904)：AI升級+低軌衛星回傳 |"
+          "line": 216,
+          "text": "| L2 一線整機 | 直接組裝 AI 伺服器，最先受訂單增益 | 廣達(2382)：NVIDIA GB200 NVL主力、技嘉(2376)：DGX/HGX伺服器、鴻海(2317)：Google AI代理供應鏈 |"
+        }
+      ]
+    },
+    "6505": {
+      "name": "台塑化",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 15,
+          "text": "- **台股影響鏈**：台塑化(6505)↑／台化(1326)↑ 油價回升受惠；長榮(2603)↑／陽明(2609)↑／萬海(2615)↑ 運價與運力吃緊延續；長榮航(2618)↓／華航(2610)↓ 燃油成本回升壓力"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 284,
+          "text": "| 6505 | 台塑化 | 748.2 | 🔺+32.3% | +11.8% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 65,
+          "text": "\"code\": \"6505\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 66,
+          "text": "\"name\": \"台塑化\","
         }
       ]
     },
@@ -32,6 +99,38 @@
       "name": "中華電",
       "events": [],
       "mentions": []
+    },
+    "2886": {
+      "name": "兆豐金",
+      "events": [],
+      "mentions": []
+    },
+    "3702": {
+      "name": "大聯大",
+      "events": [],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 251,
+          "text": "| L2 通路商 | 元件代理分銷，庫存指標 | 日電貿(3090)：2026/05法說：高階MLCC交期拉長、缺貨恐延至2027（鉅亨6463791）、羅昇(8374)：工業自動化元件通路、蜜望實(8043)：電子元件通路、大聯大(3702)：最大半導體通路商、文曄(3036)：半導體通路 |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 329,
+          "text": "| 3702 | 大聯大 | 1461.0 | 🔺+90.8% | +59.9% |"
+        }
+      ]
+    },
+    "4904": {
+      "name": "遠傳",
+      "events": [],
+      "mentions": [
+        {
+          "file": "market_intelligence.md",
+          "line": 237,
+          "text": "| L5 電信/終端 | 服務落地端，間接受益 | 遠傳(4904)：AI升級+低軌衛星回傳 |"
+        }
+      ]
     },
     "2892": {
       "name": "第一金",
@@ -154,11 +253,6 @@
         }
       ]
     },
-    "2886": {
-      "name": "兆豐金",
-      "events": [],
-      "mentions": []
-    },
     "2609": {
       "name": "陽明",
       "events": [],
@@ -212,22 +306,6 @@
           "file": "industry_signals.json",
           "line": 987,
           "text": "\"name\": \"陽明\","
-        }
-      ]
-    },
-    "3702": {
-      "name": "大聯大",
-      "events": [],
-      "mentions": [
-        {
-          "file": "market_intelligence.md",
-          "line": 251,
-          "text": "| L2 通路商 | 元件代理分銷，庫存指標 | 日電貿(3090)：2026/05法說：高階MLCC交期拉長、缺貨恐延至2027（鉅亨6463791）、羅昇(8374)：工業自動化元件通路、蜜望實(8043)：電子元件通路、大聯大(3702)：最大半導體通路商、文曄(3036)：半導體通路 |"
-        },
-        {
-          "file": "market_intelligence.md",
-          "line": 329,
-          "text": "| 3702 | 大聯大 | 1461.0 | 🔺+90.8% | +59.9% |"
         }
       ]
     },
