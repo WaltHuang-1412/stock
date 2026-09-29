@@ -1,0 +1,75 @@
+{
+  "date": "2026-09-29",
+  "regime": "多頭",
+  "score": 3,
+  "details": [
+    "台股在年線上+30.7%",
+    "台股在季線上+6.0%",
+    "VIX 16.1（正常）",
+    "外資今日大賣 338 億"
+  ],
+  "taiex": {
+    "current": 48024.6,
+    "as_of": "2026-09-24",
+    "ma20": 46755.77,
+    "ma60": 45321.99,
+    "ma240": 36747.03,
+    "high_52w": 48157.29,
+    "low_52w": 25820.54,
+    "vs_ma20": 2.71,
+    "vs_ma60": 5.96,
+    "vs_ma240": 30.69,
+    "source": "Yahoo ^TWII (fix_market_regime_taiex.py)"
+  },
+  "sp500": {
+    "current": 7683.68994140625,
+    "ma60": 7622.0,
+    "vs_ma60": 0.81
+  },
+  "vix": 16.06999969482422,
+  "institutional": {
+    "foreign": {
+      "today_net": -338.02,
+      "consecutive_days": -1,
+      "net_5d": 1556.08,
+      "net_10d": -391.2
+    },
+    "trust": {
+      "today_net": -114.09,
+      "consecutive_days": -2,
+      "net_5d": -61.64,
+      "net_10d": 183.57
+    },
+    "dealer": {
+      "today_net": 13.38,
+      "consecutive_days": 6,
+      "net_5d": 700.5,
+      "net_10d": -8.47
+    },
+    "total": {
+      "today_net": -438.73,
+      "net_5d": 2194.94,
+      "net_10d": -216.1
+    }
+  },
+  "etf_buy_multiplier": 1,
+  "stock_defense_ratio": "0-15%",
+  "settlement": {
+    "settlement_date": "2026-09-16",
+    "is_settlement_week": false,
+    "days_from_settlement": 13,
+    "status": "非結算週"
+  },
+  "taiex_original": {
+    "current": 48024.6015625,
+    "ma20": 46756.0,
+    "ma60": 45322.0,
+    "ma240": 36747.0,
+    "high_52w": 48157.2890625,
+    "low_52w": 22362.26953125,
+    "vs_ma20": 2.71,
+    "vs_ma60": 5.96,
+    "vs_ma240": 30.69
+  },
+  "taiex_fixed_at": "2026-09-29 08:01:04"
+}
