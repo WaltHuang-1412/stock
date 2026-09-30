@@ -1,0 +1,2506 @@
+{
+  "date": "2026-09-30",
+  "updated_at": "2026-09-30 07:40",
+  "revenue_period": "2026-08",
+  "signal_count": 75,
+  "signals": [
+    {
+      "theme": "聯準會利率政策（含台灣央行升息預期）",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速轉鷹"
+      },
+      "duration": {
+        "text": "20週（05/28起）| **最後訊號**：09/30（30年債盤中5.62%創2002年來新高、10年債5.29%；FedWatch顯示10月再升息1碼機率約70-72%；威廉斯稱年底前或再升息1次，AI需求與能源推升通膨；巴爾稱可能需進一步升息；巴克萊警告30年債恐見6%；RBA升息至4.6%）",
+        "weeks": 20,
+        "since": "05/28"
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "context": "高利率壓評價但AI業績抵銷",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "2882",
+          "name": "國泰金",
+          "context": "債券評價損失與外價金水庫、避險成本減半互抵",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "2891",
+          "name": "中信金",
+          "context": "AI融資商機",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "⚠️",
+      "lead_indicators": "DXY 101.38(+0.09%)、USDTWD 31.85；美9月消費者信心81.9（逾12年低）、1年通膨預期6.1%、8月職缺707.9萬（低於預測723萬）",
+      "turning_points": "今日ADP（預測7.3萬）、核心PCE（預測0.3%）、GDP終值；10/1 ISM製造業（預測54.8）與Waller談話；10/2非農（預測9萬、失業率4.1%）",
+      "summary": "殖利率續創高、升息預期升至七成，但消費者信心與職缺轉弱使Fed面臨兩難；今晚PCE與週五非農決定10月是否升息。"
+    },
+    {
+      "theme": "中東地緣政治（含航運）",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "→",
+        "detail": "油價回落但談判僵局未解"
+      },
+      "duration": {
+        "text": "18週（06/07起）| **最後訊號**：09/30（沙國恢復東西管線輸油、Yanbu重啟裝船，Brent鉅亨口徑收102.59(-2.6%)、WTI 89.38(-3.5%)；美再釋4,000萬桶戰略儲油、SPR處於42年低點；美伊談判僵局、荷莫茲風險未消；歐盟柴油均價2.23歐元創高）",
+        "weeks": 18,
+        "since": "06/07"
+      },
+      "industry_chain_key": "航空",
+      "stocks": [
+        {
+          "code": "6505",
+          "name": "台塑化",
+          "context": "／南亞(1303)↑／台化(1326)↑ 外資調升目標價，但油價回落使短線追價力道降溫",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "1303",
+          "name": "南亞",
+          "context": "／台化(1326)↑ 外資調升目標價，但油價回落使短線追價力道降溫",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "1326",
+          "name": "台化",
+          "context": "外資調升目標價，但油價回落使短線追價力道降溫",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2603",
+          "name": "長榮",
+          "context": "／陽明(2609)↑／萬海(2615)↑ 運價吃緊",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2609",
+          "name": "陽明",
+          "context": "／萬海(2615)↑ 運價吃緊",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2615",
+          "name": "萬海",
+          "context": "運價吃緊",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2618",
+          "name": "長榮航",
+          "context": "／華航(2610)↑ 油價回落減輕燃油成本",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2610",
+          "name": "華航",
+          "context": "油價回落減輕燃油成本",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 8,
+      "revenue_support": "✅",
+      "lead_indicators": "期貨BZ=F 95.99(-3.64%)、CL=F 89.26(-5.16%)；Brent 9月仍估漲約13%",
+      "turning_points": "美方對伊朗荷莫茲重啟方案的回應、沙國供應恢復程度、柴油出口禁令、11月期中選前SPR釋放",
+      "summary": "供給端（沙國恢復輸油、美釋儲油）使油價大幅回落，緩解殖利率與通膨壓力，但美伊僵局仍在，回落是否持續待驗證。"
+    },
+    {
+      "theme": "AI伺服器與半導體",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速（費半反彈、台股權值分歧）"
+      },
+      "duration": {
+        "text": "32週（03/12起）| **最後訊號**：09/30（費半反彈+1.32%，AMAT+5.02%；台積電ADR+1.07%、聯電ADR+3.65%、日月光ADR逾+3%；台指期夜盤大漲698點；傳台積電德州第二園區帶動設備廠務鏈，萬潤、瑞耘漲停；台積電將約兩成OS段訂單委外精材，明年精材產能較今年成長2.5倍；H1科學園區營收3.54兆元年增29.27%；輝達推1,500億美元回購）",
+        "weeks": 32,
+        "since": "03/12"
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "context": "漲價＋德州擴廠",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3374",
+          "name": "精材",
+          "context": "承接先進封裝OS訂單",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6187",
+          "name": "萬潤",
+          "context": "／弘塑(3131)↑／志聖(6072)↑ 設備鏈",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3131",
+          "name": "弘塑",
+          "context": "／志聖(6072)↑ 設備鏈",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6072",
+          "name": "志聖",
+          "context": "設備鏈",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "5347",
+          "name": "世界先進",
+          "context": "8吋滿載",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2303",
+          "name": "聯電",
+          "context": "／日月光投控(3711)↑ ADR大漲",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3711",
+          "name": "日月光投控",
+          "context": "ADR大漲",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2308",
+          "name": "台達電",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "3017",
+          "name": "奇鋐",
+          "context": "／雙鴻(3324)→ 液冷首批未入列",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "3324",
+          "name": "雙鴻",
+          "context": "液冷首批未入列",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "2404",
+          "name": "漢唐",
+          "context": "／帆宣(6196)↑ 建廠",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6196",
+          "name": "帆宣",
+          "context": "建廠",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2467",
+          "name": "志聖",
+          "context": "志聖(6072)↑ 設備鏈"
+        }
+      ],
+      "stock_count": 14,
+      "revenue_support": "💪",
+      "lead_indicators": "SOX 12,629(+1.32%)、NVDA 227.21(-0.99%)、AMD 607.57(-0.45%)、AVGO 355.10(+1.63%)、TSM ADR 456.94(+1.07%)",
+      "turning_points": "10/1美光財報、10/8台積電9月營收、10/15台積電法說",
+      "summary": "費半反彈、設備與先進封裝供應鏈訂單擴散，但輝達雖有巨額回購仍下跌，個股強弱分歧延續。"
+    },
+    {
+      "theme": "DRAM與記憶體",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "20週（05/21起）| **最後訊號**：09/30（美光財報倒數1天，MU 1,065(+0.92%)；市場「押寶美光」，旺宏、力積電逆勢走強；旺宏220億元聯貸案由合庫統籌、9家銀行簽約，用於增建廠房；EPS預估$31.82、營收$51.5B）",
+        "weeks": 20,
+        "days": 1,
+        "since": "05/21"
+      },
+      "industry_chain_key": "記憶體",
+      "stocks": [
+        {
+          "code": "2408",
+          "name": "南亞科",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "8299",
+          "name": "群聯",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2344",
+          "name": "華邦電",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2337",
+          "name": "旺宏",
+          "context": "擴產資金到位",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6770",
+          "name": "力積電",
+          "context": "財報前卡位",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 5,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "10/1美光財報與罷工投票，防利多出盡",
+      "summary": "長約與HBM排擠敘事支撐供需緊俏，旺宏取得聯貸擴產資金，財報前資金卡位。"
+    },
+    {
+      "theme": "光通訊與網通（含CPO/矽光子量產）",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "21週（05/14起）| **最後訊號**：09/30（聯嘉法說：第4季啟動800G VCSEL試產線；輝達、博通明年上半年推CPO新平台；美擬禁用資料中心中國零組件，台廠轉單題材延續）",
+        "weeks": 21,
+        "since": "05/14"
+      },
+      "industry_chain_key": "光通訊",
+      "stocks": [
+        {
+          "code": "3363",
+          "name": "上詮",
+          "context": "／波若威(3163)↑／合聖(6772)↑ CPO",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3163",
+          "name": "波若威",
+          "context": "／合聖(6772)↑ CPO",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6772",
+          "name": "合聖",
+          "context": "CPO",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "4979",
+          "name": "華星光",
+          "context": "／訊芯-KY(6451)↑／眾達-KY(4977)↑ 轉單",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6451",
+          "name": "訊芯-KY",
+          "context": "／眾達-KY(4977)↑ 轉單",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "4977",
+          "name": "眾達-KY",
+          "context": "轉單",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2345",
+          "name": "智邦",
+          "context": "交換器",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3717",
+          "name": "聯嘉投控",
+          "context": "VCSEL",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 8,
+      "revenue_support": "✅",
+      "lead_indicators": "AVGO +1.63%、SOX +1.32%",
+      "turning_points": "美國光模組禁令法案進度、輝達/博通CPO量產時程",
+      "summary": "CPO時程明確、美方管制中國零組件，台廠轉單與新產品題材同步發酵。"
+    },
+    {
+      "theme": "AI基建融資熱潮（含私人信貸與電力投資擴散）",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（融資規模與風險訊號同步擴大）"
+      },
+      "duration": {
+        "text": "12週（07/19起）| **最後訊號**：09/30（Anthropic IPO說明書揭露未來算力承諾5,180億美元、47%營收經亞馬遜與Google；OpenAI ARR近700億美元，Oracle+4%（RPO 6,640億中約45%來自OpenAI）；特斯拉備妥300億美元信用額度；輝達回購合計2,350億美元；Oracle星際之門聯貸折價至0.89-0.91仍是風險點）",
+        "weeks": 12,
+        "since": "07/19"
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": "融資與客戶集中度持續放大，OpenAI營收加速提振信心，但Oracle聯貸折價與電力瓶頸使信用端警訊並存。"
+    },
+    {
+      "theme": "AI泡沫前兆檢查清單（系統性風險監控）【每日必檢】",
+      "catalyst_level": "🔴",
+      "direction": {
+        "arrow": "→",
+        "detail": "拉鋸（風險階段維持【警戒】，較前一日持平）"
+      },
+      "duration": {
+        "text": "19週（06/25起）| **最後訊號**：09/30",
+        "weeks": 19,
+        "since": "06/25"
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "①利多不漲：輝達宣布1,500億回購與Anthropic 2.6GW大單仍-0.99%，蘋果新品週期下仍-2.66%；昨日聯發科-7.1%、台達電-3.93%②AI權值股：SOX+1.32%、NVDA-0.99%、AMD-0.45%、MU+0.92%、AVGO+1.63%、TSM ADR+1.07%，今日整體反彈③VIX 16.04(-0.19%)，仍低於20④信用槓桿：30年債5.62%、10年債5.29%、CCC級利差968bp、高收益債9月發行385億美元；美消費者信心12年低；台灣銀行LCR傳月中跌破100%、超額準備501億；融資約6,000億（前日）⑤投機末段：貝瑞轉買賣權看AI泡沫明年夏季轉折；九暘、台亞、晶呈題材股急漲；Robinhood擬開放美股週末24小時交易、湧盛擬10月上櫃⑥監管：川普簽署AI安全協議、教宗籲正視AI風險；金管會金檢揭房貸搭售壽險⑦資金背離：外資9/29賣超632億、連賣2日（近5日+54.1億、近10日-130.5億），期貨空單增至7.9萬口，成交7,850億價跌量增；三大法人9/30數據尚未公布，台指期夜盤+698點反彈",
+      "turning_points": "",
+      "summary": "殖利率與信用利差續創高、量價背離未解，但VIX低檔、費半反彈、近5日法人合計仍買超247億，尚未見破裂訊號。目前風險階段：【警戒】，與前一日相比持平。10/1美光財報與PCE為下一觀察窗口。"
+    },
+    {
+      "theme": "美債殖利率飆升：10年期5.29%、30年期5.62%創多年高，全球長債同步拋售",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "高檔"
+      },
+      "duration": {
+        "text": "12天（首見09/18）| **最後訊號**：09/30（30年債盤中5.6206%、10年債5.29%，美債正邁向2023年來最差9月；美元兌歐元、瑞郎創16個月高；巴克萊點名AI投資推升長債殖利率；企業信用市場恐先出現裂痕，2026年美債與企業債發行量近8兆美元）",
+        "days": 12
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "2882",
+          "name": "國泰金",
+          "context": "債券評價損失",
+          "sentiment": "bearish",
+          "sentiment_arrow": "↓"
+        },
+        {
+          "code": "2330",
+          "name": "台積電",
+          "context": "高評價承壓但AI基本面抵銷",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        }
+      ],
+      "stock_count": 2,
+      "revenue_support": "⚠️",
+      "lead_indicators": "",
+      "turning_points": "今日PCE與GDP、10/2非農",
+      "summary": "殖利率再創高並壓抑股市估值，PCE與非農將決定是否進一步惡化。"
+    },
+    {
+      "theme": "台股市場動態：節後補跌失守48,000、外資賣超632億，夜盤反彈",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "→",
+        "detail": "短線震盪（夜盤反彈，中期多頭未變）"
+      },
+      "duration": {
+        "text": "18天（首見09/12）| **最後訊號**：09/30（加權9/29收47,631.96(-0.82%)，成交7,850億，失守5日線；外資賣超632億、三大法人賣超781.9億，大砍元大台50與00406A各逾6萬張；台指期夜盤+698點收48,479；法人稱第4季大跌空間有限、把握回檔機會；資金轉向塑化等傳產題材）",
+        "days": 18
+      },
+      "industry_chain_key": "塑化",
+      "stocks": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "context": "平盤抗跌，ADR+1.07%",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "context": "昨日重挫",
+          "sentiment": "bearish",
+          "sentiment_arrow": "↓"
+        },
+        {
+          "code": "6505",
+          "name": "台塑化",
+          "context": "輪動",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2303",
+          "name": "聯電",
+          "context": "ADR大漲",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 4,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "48,000收復與否、46,000下檔支撐、外資是否續賣、10/8台積電營收、10/15法說",
+      "summary": "美股費半反彈帶動夜盤，但外資連賣與量價背離未解，今日開盤能否守住5日線是關鍵。"
+    },
+    {
+      "theme": "川普貿易政策與關稅（含川習會結果、稀土、關稅互降）",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "→",
+        "detail": "（互降清單落地但雜音未解）"
+      },
+      "duration": {
+        "text": "多週（持續追蹤）| **最後訊號**：09/29（美對加拿大近10億美元酒類、乳製品、機車實施進口禁令；中美互降關稅清單前已落地；川習會延長貿易休戰2個月）"
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "2227",
+          "name": "裕日車",
+          "context": "／裕隆(2201)→ 觀察汽車關稅",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "2201",
+          "name": "裕隆",
+          "context": "觀察汽車關稅",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "context": "間接觀察",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "➡️",
+      "lead_indicators": "",
+      "turning_points": "USTR公布協議細節、年底前兩次川習會",
+      "summary": "中美休戰延續，貿易戰風險轉向盟友。"
+    },
+    {
+      "theme": "企業財報重點彙整",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "8週（首見08/26）| **最後訊號**：09/30（環球晶8月EPS 1.47元、淨利年增1.44倍；禾伸堂8月EPS 1.33元、淨利年增285%；金像電79億擴產；Factset：緯創EPS上修至16.97元、穩懋下修至7.54元、健策下修至69.76元；今日材料-KY、全漢、鴻準、八方雲集、台新新光金法說）",
+        "weeks": 8
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": "AI板材、被動元件與晶圓月營收續創高，美光10/1、台積電10/15為關鍵財報。"
+    },
+    {
+      "theme": "美股估值過熱疑慮",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "警戒加深"
+      },
+      "duration": {
+        "text": "66天（首見07/29）| **最後訊號**：09/30（大摩Wilson：標普若回檔5-10%反為年底行情鋪路，資金轉向高品質大型股，汽車、半導體、工業股轉弱；Meta Muse衝擊依賴消費慣性的電信、保險、旅遊股，高盛籃子一度跌約10%）",
+        "days": 66
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": "指數近高點但市場廣度惡化，殖利率是主要壓抑因素。"
+    },
+    {
+      "theme": "台積電產能瓶頸與美國第二園區、Intel 14A轉單觀察",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速"
+      },
+      "duration": {
+        "text": "5週（首見08/30）| **最後訊號**：09/30（傳台積電赴德州達拉斯建第二園區、六座先進晶圓廠，設備廠務鏈買盤湧入；先進封裝OS訂單約兩成委外精材；小摩預期先進製程明年漲價8-10%；法說行情升溫）",
+        "weeks": 5
+      },
+      "industry_chain_key": "廠務工程",
+      "stocks": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3374",
+          "name": "精材",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6187",
+          "name": "萬潤",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6488",
+          "name": "環球晶",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2404",
+          "name": "漢唐",
+          "context": "／帆宣(6196)↑",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6196",
+          "name": "帆宣",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "4772",
+          "name": "台特化",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 7,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "ABF載板/PCB基板缺口擴大帶動漲價（含CCL）",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速"
+      },
+      "duration": {
+        "text": "10週（07/25起）| **最後訊號**：09/30（Amazon以每股856元、約15.88億元全數認購金像電私募，關係升級為戰略同盟；金像電79億新廠資本支出、產能持續緊張；臻鼎-KY 8億美元ECB）",
+        "weeks": 10,
+        "since": "07/25"
+      },
+      "industry_chain_key": "PCB",
+      "stocks": [
+        {
+          "code": "2383",
+          "name": "台光電",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6274",
+          "name": "台燿",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6213",
+          "name": "聯茂",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3037",
+          "name": "欣興",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "4958",
+          "name": "臻鼎-KY",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2368",
+          "name": "金像電",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "1717",
+          "name": "長興",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 7,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "美中AI技術戰升級",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↓",
+        "detail": "緊縮再升級"
+      },
+      "duration": {
+        "text": "4週（首見09/09）| **最後訊號**：09/30（川普稱「誰掌握超級智慧誰就贏」；美擬禁用資料中心中國零組件；中國擴大AI主管出境管制）",
+        "weeks": 4
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "3231",
+          "name": "緯創",
+          "context": "／廣達(2382)→ 觀察對中出貨規則",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "2382",
+          "name": "廣達",
+          "context": "觀察對中出貨規則",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "中國人才管制是否擴大、美方反制",
+      "summary": ""
+    },
+    {
+      "theme": "被動元件缺貨漲價（村田擴產效應＋矽電容）",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速"
+      },
+      "duration": {
+        "text": "6週（首見08/26）| **最後訊號**：09/30（禾伸堂8月EPS 1.33元，AI伺服器電源升級帶動高階MLCC需求，積極擴充台灣、日本產能；宏齊列量大強漲股；國巨等為輪動題材）",
+        "weeks": 6
+      },
+      "industry_chain_key": "被動元件",
+      "stocks": [
+        {
+          "code": "2327",
+          "name": "國巨",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3026",
+          "name": "禾伸堂",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 2,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "標普AI基建信用警報：循環融資風險",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "25天（首見09/05）| **最後訊號**：09/30（債市賣壓下企業信用恐先現裂痕；Anthropic龐大不可取消算力承諾；Oracle聯貸折價；設備商以資金換訂單的循環融資受質疑）",
+        "days": 25
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "邁威爾(Marvell)與Google TPU合作／ASIC客製化需求鏈",
+      "catalyst_level": "🟡",
+      "direction": {
+        "arrow": "↑",
+        "detail": "（台廠股價分歧）"
+      },
+      "duration": {
+        "text": "6週（首見08/29）| **最後訊號**：09/30（AVGO+1.63%；法人建議ASIC、資料中心分批布局；聯發科昨日-7.1%）",
+        "weeks": 6
+      },
+      "industry_chain_key": "IC設計",
+      "stocks": [
+        {
+          "code": "2454",
+          "name": "聯發科",
+          "context": "",
+          "sentiment": "bearish",
+          "sentiment_arrow": "↓"
+        },
+        {
+          "code": "3443",
+          "name": "創意",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3661",
+          "name": "世芯-KY",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "加密貨幣市場",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "→",
+        "detail": "區間"
+      },
+      "duration": {
+        "text": "6週（首見08/24）| **最後訊號**：09/30（BTC 83,696(+0.29%)；金管會VASP洗錢防制登記名單擴至11家）",
+        "weeks": 6
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台灣ETF與資金流向",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↓",
+        "detail": "資金流出"
+      },
+      "duration": {
+        "text": "17週（06/07起）| **最後訊號**：09/30（外資大砍元大台50、00406A各逾6萬張；0052掛牌20週年規模逾1,600億、報酬逾24倍；富蘭克林華美009831儲能ETF 10/5開募）",
+        "weeks": 17,
+        "since": "06/07"
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": "外資賣超集中於ETF，需觀察是否為短線調節。"
+    },
+    {
+      "theme": "AI放空潮擴大：從晶片延伸至軟體、機器人、雲端",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "4天（首見09/27）| **最後訊號**：09/30（Atlassian-5.05%、Workday裁員525人；Meta Muse衝擊軟體與消費服務股；廣達、緯穎被點名放空）",
+        "days": 4
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "2382",
+          "name": "廣達",
+          "context": "／緯穎(6669)↓ 遭放空關注",
+          "sentiment": "bearish",
+          "sentiment_arrow": "↓"
+        },
+        {
+          "code": "6669",
+          "name": "緯穎",
+          "context": "遭放空關注",
+          "sentiment": "bearish",
+          "sentiment_arrow": "↓"
+        }
+      ],
+      "stock_count": 2,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "友達先進封裝雙線作戰（英特爾CPO＋台積電FOPLP＋Micro LED）",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "11天（首見09/21）| **最後訊號**：09/30（友達ADR+3.05%報11.02美元）",
+        "days": 11
+      },
+      "industry_chain_key": "光通訊",
+      "stocks": [
+        {
+          "code": "2409",
+          "name": "友達",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "⚠️",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "NAND/SSD漲價潮＋輝達儲能認證群聯搶頭香",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "10天（首見09/21）| **最後訊號**：09/29（輝達AI電力儲能，009831 10/5開募；群聯首家符合規範台廠）",
+        "days": 10
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "8299",
+          "name": "群聯",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2337",
+          "name": "旺宏",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 2,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "邊緣AI／工業電腦接單暢旺",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "10天（首見09/21）| **最後訊號**：09/30（東擎發表英特爾Core系列3工業邊緣平台；研揚搶攻機器人商機，今年營收拚新高）",
+        "days": 10
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "7710",
+          "name": "東擎",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6579",
+          "name": "研揚",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6680",
+          "name": "鑫創電子",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "7796",
+          "name": "擷發科技",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 4,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "美光台灣勞資爭議：罷工投票10/1啟動",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↓",
+        "detail": "惡化"
+      },
+      "duration": {
+        "text": "29天（首見09/01）| **最後訊號**：09/29（傳94.3%員工挺罷工；10/1財報與罷工投票同日）",
+        "days": 29
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台灣房市與信貸結構：央行「隱形緊縮」、跨業信用查核平台10月底上線",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↓",
+        "detail": "（監管收緊）"
+      },
+      "duration": {
+        "text": "6週（首見08/20）| **最後訊號**：09/30（股房大脫鉤：股市破4.6萬、房市移轉量九年新低；「四貸同堂」受關注；青安等補貼9/30截止）",
+        "weeks": 6
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "日圓政策轉折：貶勢收斂但財政疑慮壓抑升值空間",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "→",
+        "detail": "區間偏弱"
+      },
+      "duration": {
+        "text": "13天（首見09/18）| **最後訊號**：09/30（日圓守157.30；日本企業掀股票分割潮；日銀升息未達鷹派預期）",
+        "days": 13
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "原油運輸超級週期：油輪運力吃緊格局未解",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "→",
+        "detail": "（油價回落）"
+      },
+      "duration": {
+        "text": "6天（首見09/25）| **最後訊號**：09/30（荷莫茲油輪運輸增加前景待評估，Brent 102.59；歐洲柴油依賴美國、運距拉長）",
+        "days": 6
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "2603",
+          "name": "長榮",
+          "context": "／陽明(2609)↑／萬海(2615)↑",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2609",
+          "name": "陽明",
+          "context": "／萬海(2615)↑",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2615",
+          "name": "萬海",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "貴金屬重挫：黃金失守4,200創近2月低",
+      "catalyst_level": "🟢",
+      "direction": {
+        "arrow": "↑",
+        "detail": "低檔反彈"
+      },
+      "duration": {
+        "text": "3天（首見09/28）| **最後訊號**：09/30（從七周低點反彈，GC=F 4,215(+1.22%)，仍低於100日均線；美元指數101.38）",
+        "days": 3
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台灣大公開收購精誠：期間延長至11/5",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": ""
+      },
+      "duration": {
+        "text": "2天（首見09/29）| **最後訊號**：09/30（配合公平會審議延長30天；換股0.84股台灣大＋現金92.5元；最低收購門檻約39%）",
+        "days": 2
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "3045",
+          "name": "台灣大",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "6214",
+          "name": "精誠",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        }
+      ],
+      "stock_count": 2,
+      "revenue_support": "➡️",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "塑化股逆勢走強：外資調升＋台塑集團電子材料布局",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "2天（首見09/29）| **最後訊號**：09/30（台塑集團台、美兩地電子化學品基地合計投資逾百億，鎖定電子級硫酸、鹽酸；「最強AI材料庫」成形；花旗台塑化目標價108元、瑞銀南亞300元；油價回落為短線變數）",
+        "days": 2
+      },
+      "industry_chain_key": "塑化",
+      "stocks": [
+        {
+          "code": "6505",
+          "name": "台塑化",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "1303",
+          "name": "南亞",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "1301",
+          "name": "台塑",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "1326",
+          "name": "台化",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "1727",
+          "name": "中華化",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 5,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台廠籌資擴產潮：神達現增、金像電、臻鼎、尖點、旺宏聯貸",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "2天（首見09/29）| **最後訊號**：09/30（神達現增12萬張、對神雲貸與餘額80億元；金像電79億資本支出、Amazon入股；旺宏220億聯貸；三商美邦人壽現增160億完成；中石化增資鼎越5億並向聯貸銀行申請展延授信）",
+        "days": 2
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "3706",
+          "name": "神達",
+          "context": "稀釋疑慮",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "2368",
+          "name": "金像電",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "4958",
+          "name": "臻鼎-KY",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2337",
+          "name": "旺宏",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "8021",
+          "name": "尖點",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "1314",
+          "name": "中石化",
+          "context": "財務調度觀察",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        }
+      ],
+      "stock_count": 6,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "三星晶圓代工2奈米追趕",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "2天（首見09/29）| **最後訊號**：09/30（良率近60%，客戶數2029年前較2017年翻四倍；三星入股Helix）",
+        "days": 2
+      },
+      "industry_chain_key": "半導體",
+      "stocks": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "context": "先進製程仍具定價權",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台灣景氣燈號連9紅",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": ""
+      },
+      "duration": {
+        "text": "2天（首見09/29）| **最後訊號**：09/29（41分追平最長紀錄；提醒美伊、關稅、央行政策）",
+        "days": 2
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "銅供給吃緊：智利Centinela罷工、加工費負值",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "2天（首見09/29）| **最後訊號**：09/29（LME銅逼近新高、TC負267美元）",
+        "days": 2
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "1605",
+          "name": "華新",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "1609",
+          "name": "大亞",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        }
+      ],
+      "stock_count": 2,
+      "revenue_support": "➡️",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "AI Factory電力架構：800VDC、模組化資料中心",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "2天（首見09/29）| **最後訊號**：09/30（東元10MW模組化資料中心亮相新加坡、累計承攬建置1GW；仁寶OCP展示800VDC；技嘉10/12 OCP展AI機櫃）",
+        "days": 2
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "2308",
+          "name": "台達電",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2324",
+          "name": "仁寶",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "1504",
+          "name": "東元",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2376",
+          "name": "技嘉",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 4,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "AMD收購李飛飛World Labs：布局物理AI",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "2天（首見09/29）| **最後訊號**：09/30（82億美元全股票收購；分析師稱李飛飛是最有價值資產；宏達電為唯一策略合作台廠）",
+        "days": 2
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "2498",
+          "name": "宏達電",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "Solidigm擬赴美上市：估值1,500億美元",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "2天（首見09/29）| **最後訊號**：09/29（最快2027上市；上半年營收年增265%）",
+        "days": 2
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "生技族群Q4收成期：藥華藥、仁新、保瑞、美時",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "4天（首見09/27）| **最後訊號**：09/29（藥華藥前八月營收年增81.2%；美時庫藏股註銷減資）",
+        "days": 4
+      },
+      "industry_chain_key": "生技",
+      "stocks": [
+        {
+          "code": "1795",
+          "name": "美時",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "6446",
+          "name": "藥華藥",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 2,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "美國兩黨法案擬限制中國光模組：新易盛、中際旭創列管",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "4天（首見09/27）| **最後訊號**：09/29（華星光、訊芯-KY、眾達-KY迎轉單）",
+        "days": 4
+      },
+      "industry_chain_key": "光通訊",
+      "stocks": [
+        {
+          "code": "2345",
+          "name": "智邦",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "5388",
+          "name": "中磊",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "4979",
+          "name": "華星光",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "輝達玻璃基板封裝：2028年前導入下一代GPU",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "4天（首見09/27）| **最後訊號**：09/29",
+        "days": 4
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "2330",
+          "name": "台積電",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "AI晶片高階測試與溫控設備：京元電、日月光投控、漢測、鴻勁、精測",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "4天（首見09/27）| **最後訊號**：09/27（維持前訊號）",
+        "days": 4
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "AI散熱設備：先進封裝散熱、SiC 12吋競逐",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "4天（首見09/27）| **最後訊號**：09/29（漢磊SiC平台擴至AI伺服器800V HVDC）",
+        "days": 4
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "3131",
+          "name": "弘塑",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3583",
+          "name": "辛耘",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6072",
+          "name": "志聖",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3707",
+          "name": "漢磊",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2467",
+          "name": "志聖",
+          "context": "志聖(6072)↑"
+        }
+      ],
+      "stock_count": 5,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "鴻海攻具身智能機器人：與阿爾特合資成立富特康",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "4天（首見09/27）| **最後訊號**：09/29（劉揚偉獲選全球百大製造業領袖第7）",
+        "days": 4
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "2317",
+          "name": "鴻海",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "材料-KY併購瑞士Cerdia：今日15:00法說",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "9天（首見09/22）| **最後訊號**：09/30（今日15:00法說，聚焦併購整合與財務槓桿）",
+        "days": 9
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "4763",
+          "name": "材料-KY",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "AI算力大單擴散：Anthropic、OpenAI、xAI、輝達2.6GW",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": "加速"
+      },
+      "duration": {
+        "text": "6天（首見09/25）| **最後訊號**：09/30（OpenAI ARR近700億美元、GPT-6.1 Sol中階模型價格僅旗艦五分之一；Anthropic IPO說明書揭露5,180億美元算力承諾；SpaceX獲TD Cowen、德銀買進，看好AI算力租賃）",
+        "days": 6
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "AI建廠潮外溢與台廠海外擴產：洋基、崇友、聖暉／漢唐、啟碁越南",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "6天（首見09/25）| **最後訊號**：09/30（投審會核准僑外資233億、對外投資約35億美元，南亞科、廣達、緯創、英業達擴大美國、泰國布局；大摩、小摩、美林增資139億）",
+        "days": 6
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "2408",
+          "name": "南亞科",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2382",
+          "name": "廣達",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3231",
+          "name": "緯創",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2356",
+          "name": "英業達",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 4,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台積電特化供應鏈與先進封裝化學材料在地化",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "5天（首見09/26）| **最後訊號**：09/30（台塑集團電子級硫酸、鹽酸投資逾百億卡位晶圓廠擴產；台特化、晶呈前日強勢）",
+        "days": 5
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "4772",
+          "name": "台特化",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "4768",
+          "name": "晶呈科技",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "4749",
+          "name": "新應材",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "1711",
+          "name": "永光",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6937",
+          "name": "天虹",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 5,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台灣銀行資金吃緊與信用擴張：放款暴增、LCR保衛戰、央行減發存單",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": "資金寬鬆與銀行缺錢並存"
+      },
+      "duration": {
+        "text": "19天（首見09/11）| **最後訊號**：09/30（央行9月累計減發存單6,417億，餘額5.9兆；銀行淨拆出4,069億歷史新高，超額準備降至501億；傳銀行月中LCR一度跌破100%、存放款利率調升；AI借款潮與企業赴美投資推升資金需求；國銀新南向放款單月增701億創同期新高）",
+        "days": 19
+      },
+      "industry_chain_key": "金融",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "鴻海電動車海外布局：沙國Ceer、三菱ASX紐西蘭上市",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "7天（首見09/24）| **最後訊號**：09/25（無新訊息）",
+        "days": 7
+      },
+      "industry_chain_key": "電動車",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台泥歐洲併購擴張",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "8天（首見09/23）| **最後訊號**：09/25（無新訊息）",
+        "days": 8
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "環球晶GDS增資完成，超額認購4倍",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "8天（首見09/23）| **最後訊號**：09/30（8月淨利7.04億年增1.44倍，EPS 1.47元）",
+        "days": 8
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "6488",
+          "name": "環球晶",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "➡️",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "貿聯-KY完成收購Interplex資料通訊業務",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "7天（首見09/24）| **最後訊號**：09/29（逆勢漲4.49%）",
+        "days": 7
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "散熱與ASIC選股：健策、雙鴻重回輝達名單",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "分歧"
+      },
+      "duration": {
+        "text": "7天（首見09/24）| **最後訊號**：09/30（Factset下修健策EPS至69.76元；輝達首批液冷認證未見奇鋐、雙鴻）",
+        "days": 7
+      },
+      "industry_chain_key": "IC設計",
+      "stocks": [
+        {
+          "code": "3653",
+          "name": "健策",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "3324",
+          "name": "雙鴻",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "3017",
+          "name": "奇鋐",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "3443",
+          "name": "創意",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "3661",
+          "name": "世芯-KY",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 5,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "太空AI、低軌衛星與6G：SpaceX獲買進評級",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "7天（首見09/24）| **最後訊號**：09/30（TD Cowen、德銀給SpaceX買進，目標價200/235美元；工研院攜手光寶、仁寶、智易、達運打造5G基站與低軌UT；中華電布局5G SA與6G）",
+        "days": 7
+      },
+      "industry_chain_key": "衛星通訊",
+      "stocks": [
+        {
+          "code": "6285",
+          "name": "啟碁",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "6072",
+          "name": "志聖",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2301",
+          "name": "光寶",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2412",
+          "name": "中華電",
+          "context": "",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "2467",
+          "name": "志聖",
+          "context": "志聖(6072)↑"
+        }
+      ],
+      "stock_count": 5,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "台灣最低工資首破3萬",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "7天（首見09/24）| **最後訊號**：09/26（無新訊息）",
+        "days": 7
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "金融監理裁罰與人事異動：台壽懸帳、新壽外價金錯報、元大金韓國子公司",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↓",
+        "detail": ""
+      },
+      "duration": {
+        "text": "7天（首見09/24）| **最後訊號**：09/30（金管會金檢：房貸不當搭售壽險、人頭戶防詐漏洞；樂天銀董座辭任、華南永昌證董事長異動）",
+        "days": 7
+      },
+      "industry_chain_key": "金融",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "高通/聯發科AI晶片戰線擴大",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "分歧"
+      },
+      "duration": {
+        "text": "14天（首見09/16）| **最後訊號**：09/29（聯發科重跌7.1%，大摩喊買）",
+        "days": 14
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "全球資料中心用電需求與在地反彈",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "9天（首見09/22）| **最後訊號**：09/30（賓州哈茲爾鎮4,500戶拒絕每戶1萬美元資料中心補貼；Oracle Project Jupiter電力環評卡關）",
+        "days": 9
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "AI光模組上游材料：載體銅箔（HVLP4）需求",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "5天（首見09/26）| **最後訊號**：09/26（無新訊息）",
+        "days": 5
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "處置股擴大／投機末段訊號",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "37天（首見08/25）| **最後訊號**：09/29（九暘+9%、台亞漲停、晶呈漲停；貝瑞轉買賣權）",
+        "days": 37
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "鋼鐵市場需求觸底反轉與成本上揚",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": "轉強"
+      },
+      "duration": {
+        "text": "10週（首見07/23）| **最後訊號**：09/30（華新10月不銹鋼牌價調漲1,000-2,000元、廢不銹鋼月增近5%；豐興鋼筋盤價止漲轉平、下游需求偏弱；川普宣布150億美元Mesabi鋼廠；中鋼總經理陳守道今日退休，新任待公告）",
+        "weeks": 10
+      },
+      "industry_chain_key": "鋼鐵",
+      "stocks": [
+        {
+          "code": "1605",
+          "name": "華新",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2002",
+          "name": "中鋼",
+          "context": "中鋼(2002)→"
+        },
+        {
+          "code": "2015",
+          "name": "豐興",
+          "context": "豐興(2015)→"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "➡️",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "亞幣分歧：新台幣31.85、日圓157.30",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": ""
+      },
+      "duration": {
+        "text": "22天（首見09/08）| **最後訊號**：09/30（新台幣9/29收31.876，報價31.85；澳幣因升息與美元走強震盪）",
+        "days": 22
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "全球柴油/燃料價格：川普考慮出口禁令",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "油價回落"
+      },
+      "duration": {
+        "text": "24天（首見09/07）| **最後訊號**：09/30（歐盟柴油均價2.23歐元創高，IEA稱歐洲約五成柴油來自美國；美釋4,000萬桶儲油；川普出口管制仍在考慮）",
+        "days": 24
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "AI安全疑慮與監管：川普簽AI安全協議、佛州提告OpenAI",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "18天（首見09/12）| **最後訊號**：09/30（川普與祖克柏、黃仁勳、馬斯克、皮查伊簽署具道德約束力AI安全協議，主張企業自律、由DOJ與FBI監督；教宗籲正視AI失控風險；Fed鮑曼警告銀行強化AI資安；紐約市議會10/5聽證）",
+        "days": 18
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "美國就業市場（護城主題）",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↓",
+        "detail": "勞動轉弱"
+      },
+      "duration": {
+        "text": "18天（首見09/12）| **最後訊號**：09/30（8月職缺降至707.9萬、5個月低點；消費者信心81.9；預測市場押9月非農優於預期；今日ADP預測7.3萬、10/2非農預測9萬、失業率4.1%）",
+        "days": 18
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "軍工與無人機（護城主題）",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "24天（首見09/06）| **最後訊號**：09/29（擷發科技AI無人機叩關美國）",
+        "days": 24
+      },
+      "industry_chain_key": null,
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "特斯拉AI／機器人供應鏈",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "38天（首見08/23）| **最後訊號**：09/30（簽署300億美元信用融資，含200億美元3年期延遲提款貸款，支援AI、Robotaxi、Optimus、半導體與能源擴張）",
+        "days": 38
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "中國金融維穩與人民幣管理性升值",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": "政策加碼"
+      },
+      "duration": {
+        "text": "23天（首見09/07）| **最後訊號**：09/30（10/1起首套房貸貼息1個百分點、最長5年；人行降PSL利率至1.50%並增7,000億人民幣再貸款；傳設不限額低息再貸款助地方國企清償欠款；大摩估貼息規模僅150-200億人民幣，難扭轉去槓桿；恒指-0.5%）",
+        "days": 23
+      },
+      "industry_chain_key": "金融",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "Salesforce/CrowdStrike/Okta AI代理與資安需求",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": "分歧"
+      },
+      "duration": {
+        "text": "34天（首見08/27）| **最後訊號**：09/26（無新訊息）",
+        "days": 34
+      },
+      "industry_chain_key": "AI",
+      "stocks": [],
+      "stock_count": 0,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "離岸風電：富崴破產申請 vs 台電二期糾紛、3-3期選商9/30截止",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↓",
+        "detail": ""
+      },
+      "duration": {
+        "text": "5天（首見09/26，自雛形升級）| **最後訊號**：09/30（富崴董事會通過破產申請，稱台電扣留履約保證金與保留款約60億元；台電稱已付逾九成工程款並已接管風機；3-3期選商今日截止、釋出3.6GW）",
+        "days": 5
+      },
+      "industry_chain_key": "綠能",
+      "stocks": [
+        {
+          "code": "6806",
+          "name": "森崴能源",
+          "context": "母公司連帶風險",
+          "sentiment": "bearish",
+          "sentiment_arrow": "↓"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": null,
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "蘋果新品週期與供應鏈：iPhone 18 Pro/Duo、10月新品",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "→",
+        "detail": ""
+      },
+      "duration": {
+        "text": "1天（首見09/30）| **最後訊號**：09/30（10月傳出iPad mini 8、HomePod mini 2、Apple TV 4K與新Mac；特納斯擬改變春秋發表節奏、記憶體成本上升；蘋果股價-2.66%）",
+        "days": 1
+      },
+      "industry_chain_key": "蘋果供應鏈",
+      "stocks": [
+        {
+          "code": "2317",
+          "name": "鴻海",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2382",
+          "name": "廣達",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2324",
+          "name": "仁寶",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "💪",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "壽險業獲利創高：股市助攻、外價金1.1兆、避險成本減半",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "1天（首見09/30）| **最後訊號**：09/30（8月壽險稅前盈餘617億、前八月3,394億創同期新高，產壽險合計3,807億；外價金加特別盈餘公積1.1015兆創高；匯率攤銷新制使全年避險成本降至1,200-1,500億；外幣保單前七月保費年增39%）",
+        "days": 1
+      },
+      "industry_chain_key": "金融",
+      "stocks": [
+        {
+          "code": "2882",
+          "name": "國泰金",
+          "context": "獲利佳但債券評價受殖利率壓抑",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        },
+        {
+          "code": "2881",
+          "name": "富邦金",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2887",
+          "name": "台新新光金",
+          "context": "今日法說",
+          "sentiment": "neutral",
+          "sentiment_arrow": "→"
+        }
+      ],
+      "stock_count": 3,
+      "revenue_support": "⚠️",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "上市櫃庫藏股護盤：燁輝、可成",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "1天（首見09/30）| **最後訊號**：09/30（燁輝第26次庫藏股，上限64.9億元、1,500萬股；可成累積買回逾3億元、持有比率5.49%）",
+        "days": 1
+      },
+      "industry_chain_key": null,
+      "stocks": [
+        {
+          "code": "2474",
+          "name": "可成",
+          "context": "",
+          "sentiment": "bullish",
+          "sentiment_arrow": "↑"
+        },
+        {
+          "code": "2023",
+          "name": "燁輝",
+          "context": "燁輝(2023)↑"
+        }
+      ],
+      "stock_count": 2,
+      "revenue_support": "⚠️",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    },
+    {
+      "theme": "美國期中選舉倒數：政策動作與通膨甩鍋",
+      "catalyst_level": "⚪",
+      "direction": {
+        "arrow": "↑",
+        "detail": ""
+      },
+      "duration": {
+        "text": "7天（首見09/24，自雛形升級）| **最後訊號**：09/30（川普宣布150億美元史上最大鋼廠；11月前釋放4,000萬桶戰略儲油；白宮顧問Hassett指通膨源自拜登刺激；花旗稱晶片投資人偏好共和黨）",
+        "days": 7
+      },
+      "industry_chain_key": "AI",
+      "stocks": [
+        {
+          "code": "2002",
+          "name": "中鋼",
+          "context": "中鋼(2002)→ 美國鋼廠投資影響待觀察"
+        }
+      ],
+      "stock_count": 1,
+      "revenue_support": "✅",
+      "lead_indicators": "",
+      "turning_points": "",
+      "summary": ""
+    }
+  ]
+}

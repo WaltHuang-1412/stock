@@ -53,12 +53,26 @@ def fetch_taiex_daily(rng="2y"):
     stamps = result["timestamp"]
     closes = result["indicators"]["quote"][0]["close"]
 
+    # 收盤後 Yahoo 偶爾讓最新一根日K的 close 為 None（2026-09-30 實測：09-29 日K
+    # close=None，但 meta.regularMarketPrice=47631.96、regularMarketTime=09-29 13:33）。
+    # 若直接略過會退回前一交易日收盤（09-24 的 48024.6）且零警告 → 以 meta 收盤價補上。
+    meta = result.get("meta", {})
+    meta_price = meta.get("regularMarketPrice")
+    meta_time = meta.get("regularMarketTime")
+    meta_dt = datetime.fromtimestamp(meta_time, TPE) if meta_time else None
+
     series = []
     dropped = []
     for ts, close in zip(stamps, closes):
-        if close is None:
-            continue
         dt = datetime.fromtimestamp(ts, TPE)
+        if close is None:
+            if (meta_price and meta_dt and meta_dt.date() == dt.date()
+                    and (dt.hour, dt.minute, dt.second) == (9, 0, 0)
+                    and meta_dt.hour * 60 + meta_dt.minute >= 13 * 60 + 30):
+                print(f"[補值] {dt.strftime('%Y-%m-%d')} 日K close=None，"
+                      f"改用 meta.regularMarketPrice {meta_price}（{meta_dt.strftime('%H:%M:%S')}）")
+                series.append((dt.strftime("%Y-%m-%d"), float(meta_price)))
+            continue
         # 真實日K的時間戳一律為台北時間 09:00:00；其餘為盤中報價幻影列
         if (dt.hour, dt.minute, dt.second) != (9, 0, 0):
             dropped.append((dt.strftime("%Y-%m-%d %H:%M:%S"), round(close, 2)))
