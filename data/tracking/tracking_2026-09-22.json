@@ -298,13 +298,16 @@
       "intraday_price": 5165.0,
       "intraday_time": "2026-09-22 12:14",
       "intraday_return_pct": 3.09,
-      "actual_close": 5180.0,
-      "result": "holding",
-      "holding_days": "D0/10",
-      "return_pct": 3.39,
-      "holding_status": "續抱：反轉 Level 0／籌碼健康，鐵律①②③ 全無觸發；收盤 5180.0（+3.39%）",
+      "actual_close": 4920.0,
+      "result": "fail",
+      "holding_days": "D4/10",
+      "return_pct": -1.8,
       "close_price": 5180.0,
-      "change_percent": 3.39
+      "change_percent": 3.39,
+      "settled_date": "2026-09-30",
+      "settled_price": 4920.0,
+      "sync_note": "v8.3.7 三處同步：①本檔 ②tracking_2026-09-30.json removed_stocks ③predictions.json",
+      "fail_reason": "鐵律③ L4（09-29 T86 賣超 -4,812 張＝盤前 57.0%／盤中 54.4%／盤後 54.4% ≥8%；10 日累計 +6,238 為正但佔比 ≥8% 不受 v8.3.3 保護）→ 09-29 盤後定案、09-30 開盤出場（v8.3.7 已決事項）；收盤價入帳 v8.3.2"
     }
   ],
   "carry_over": [

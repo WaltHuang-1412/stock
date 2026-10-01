@@ -63,10 +63,15 @@ def _prev_trading_close(result: Dict[str, Any], meta: Dict[str, Any]):
         # （09-22 ^SOX/^IXIC close=None），濾掉後會拿「前兩日」收盤當前收，把兩日
         # 漲跌誤報成單日（費半實際 -1.23% 被報成 +0.81%）。改為依日期定位前一根，
         # 若其收盤缺值則以 60 分 K 該日最後一筆補，仍缺則回傳 None 讓呼叫端標示。
-        if to_local_date(bars[-1][0]) >= to_local_date(market_time):
-            prev_ts, prev_c = bars[-2]
-        else:
-            prev_ts, prev_c = bars[-1]
+        # 2026-10-01 修：亞股盤前執行時 Yahoo 會在「上一交易日棒」之後再附一根今日
+        # 空棒（^N225/^KS11：09-30 close=None、10-01 close=None），取 bars[-2] 會拿到
+        # regularMarketTime 當日那根 → 以當日收盤補值 → 漲跌恆為 0.00%（日經實際
+        # +1.94% 被報成 +0.00%）。改為取「日期 < regularMarketTime 日期」的最後一根。
+        market_date = to_local_date(market_time)
+        prior = [b for b in bars if to_local_date(b[0]) < market_date]
+        if not prior:
+            return None
+        prev_ts, prev_c = prior[-1]
         if prev_c is not None:
             return prev_c
         return _intraday_last_close(meta.get('symbol'), to_local_date(prev_ts), offset)
