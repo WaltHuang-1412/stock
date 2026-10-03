@@ -1,0 +1,78 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Micron",
+      "change_pct": -2.05,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "DRAM/記憶體",
+      "affected_stocks": {
+        "2408": "南亞科",
+        "1303": "南亞",
+        "2344": "華邦電",
+        "2337": "旺宏",
+        "5347": "世界",
+        "6770": "力積電"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Micron 跌幅 -2.05%，DRAM/記憶體產業受壓"
+    },
+    {
+      "us_stock": "Western Digital",
+      "change_pct": -10.22,
+      "level": 3,
+      "level_name": "🔴 直接排除",
+      "tw_industry": "NAND/儲存",
+      "affected_stocks": {
+        "2408": "南亞科",
+        "2344": "華邦電",
+        "2337": "旺宏",
+        "6770": "力積電"
+      },
+      "action": "exclude",
+      "score_adjustment": 0,
+      "reason": "Western Digital 跌幅 -10.22%，NAND/儲存產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-10-03",
+    "total_alerts": 2,
+    "level_3_count": 1,
+    "level_2_count": 0,
+    "level_1_count": 1,
+    "excluded_stocks": [
+      "2344",
+      "6770",
+      "2337",
+      "2408"
+    ],
+    "downgraded_stocks": {},
+    "warning_stocks": {
+      "2408": {
+        "reason": "Micron 跌幅 -2.05%",
+        "adjustment": -5
+      },
+      "1303": {
+        "reason": "Micron 跌幅 -2.05%",
+        "adjustment": -5
+      },
+      "2344": {
+        "reason": "Micron 跌幅 -2.05%",
+        "adjustment": -5
+      },
+      "2337": {
+        "reason": "Micron 跌幅 -2.05%",
+        "adjustment": -5
+      },
+      "5347": {
+        "reason": "Micron 跌幅 -2.05%",
+        "adjustment": -5
+      },
+      "6770": {
+        "reason": "Micron 跌幅 -2.05%",
+        "adjustment": -5
+      }
+    }
+  }
+}
