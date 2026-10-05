@@ -101,13 +101,24 @@ def get_available_dates(target_date, lookback=7):
     """取得有 us_asia_markets.json 的交易日列表"""
     dates = []
     current = target_date
+    last_data = None
     for _ in range(lookback * 3):
         if len(dates) >= lookback:
             break
         date_str = current.strftime('%Y-%m-%d')
         json_path = DATA_DIR / date_str / 'us_asia_markets.json'
         if json_path.exists():
-            dates.append(date_str)
+            # 週六/週日假日快照與週一盤前是同一場美股行情：內容相同者只計一次，
+            # 否則同一日漲跌被重複累計（2026-10-05：WDC -10.22% 被算 3 次成 -29.38%、
+            # Tesla 單日 +4.65% 被判「連漲3天」）
+            # 只比美股欄位：油價/黃金等商品週末仍會更新，整檔比對會漏判
+            data = load_us_market_data(date_str)
+            sig = None if data is None else tuple(
+                data.get(k) for k in ('NASDAQ', 'S&P 500', '道瓊', '費城半導體',
+                                      'NVIDIA', 'Micron', 'Tesla', 'Apple'))
+            if sig is None or sig != last_data:
+                dates.append(date_str)
+                last_data = sig
         current -= timedelta(days=1)
     return dates
 

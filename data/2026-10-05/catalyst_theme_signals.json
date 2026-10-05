@@ -1,0 +1,493 @@
+{
+  "date": "2026-10-05",
+  "lookback_dates": [
+    "2026-10-05",
+    "2026-10-02",
+    "2026-10-01",
+    "2026-09-30",
+    "2026-09-29",
+    "2026-09-28",
+    "2026-09-25"
+  ],
+  "leader_trends": {
+    "Micron": {
+      "cumulative": 0.39,
+      "consecutive_up": 0,
+      "latest_change": -2.05,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "NVIDIA": {
+      "cumulative": 3.71,
+      "consecutive_up": 3,
+      "latest_change": 1.34,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Apple": {
+      "cumulative": -0.93,
+      "consecutive_up": 1,
+      "latest_change": 1.02,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "AMD": {
+      "cumulative": 3.23,
+      "consecutive_up": 3,
+      "latest_change": 2.95,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Tesla": {
+      "cumulative": -2.33,
+      "consecutive_up": 1,
+      "latest_change": 4.65,
+      "signal_level": "weak",
+      "days_tracked": 7
+    },
+    "Super Micro": {
+      "cumulative": 5.56,
+      "consecutive_up": 3,
+      "latest_change": 4.22,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Broadcom": {
+      "cumulative": 0.16,
+      "consecutive_up": 1,
+      "latest_change": 3.35,
+      "signal_level": "weak",
+      "days_tracked": 7
+    },
+    "Lam Research": {
+      "cumulative": 12.48,
+      "consecutive_up": 4,
+      "latest_change": 2.17,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Applied Materials": {
+      "cumulative": 13.2,
+      "consecutive_up": 2,
+      "latest_change": 2.03,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Western Digital": {
+      "cumulative": -12.44,
+      "consecutive_up": 0,
+      "latest_change": -10.22,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Dell": {
+      "cumulative": 2.57,
+      "consecutive_up": 2,
+      "latest_change": 3.84,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    },
+    "ASML": {
+      "cumulative": 6.94,
+      "consecutive_up": 1,
+      "latest_change": 3.25,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    }
+  },
+  "preposition_candidates": [
+    {
+      "code": "3661",
+      "name": "世芯-KY",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "signal_level": "strong",
+      "leader_cumulative": 13.2,
+      "leader_consecutive_up": 2,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -263,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -500,
+        "consecutive_buy": 1,
+        "cumulative_foreign": 2022,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "累計-263為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "2449",
+      "name": "京元電",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "signal_level": "strong",
+      "leader_cumulative": 13.2,
+      "leader_consecutive_up": 2,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": 27460,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -145.29989442441388,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 20723,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "2313",
+      "name": "華通",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "signal_level": "strong",
+      "leader_cumulative": 13.2,
+      "leader_consecutive_up": 2,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -10153,
+        "buy_days": 6,
+        "sell_days": 4,
+        "momentum_pct": 110.07882384199806,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -10131,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "累計-10,153為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "6488",
+      "name": "環球晶",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "signal_level": "strong",
+      "leader_cumulative": 13.2,
+      "leader_consecutive_up": 2,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "2383",
+      "name": "台光電",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "signal_level": "strong",
+      "leader_cumulative": 13.2,
+      "leader_consecutive_up": 2,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -2032,
+        "buy_days": 1,
+        "sell_days": 9,
+        "momentum_pct": 23.916811091854427,
+        "consecutive_buy": 1,
+        "cumulative_foreign": 484,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-2,032為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "3131",
+      "name": "弘塑",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "signal_level": "strong",
+      "leader_cumulative": 13.2,
+      "leader_consecutive_up": 2,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "3583",
+      "name": "辛耘",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "signal_level": "strong",
+      "leader_cumulative": 13.2,
+      "leader_consecutive_up": 2,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": -161,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -11.8421052631579,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -225,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-161為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "3680",
+      "name": "家登",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "signal_level": "strong",
+      "leader_cumulative": 13.2,
+      "leader_consecutive_up": 2,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 90,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": 3.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -4687,
+        "buy_days": 3,
+        "sell_days": 7,
+        "momentum_pct": -284.86329893174,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -21277,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-4,687為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "2356",
+      "name": "英業達",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": 3.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {
+        "cumulative_total": -26784,
+        "buy_days": 0,
+        "sell_days": 10,
+        "momentum_pct": -138.48098066472895,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -26331,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-26,784為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "6669",
+      "name": "緯穎",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": 3.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "2376",
+      "name": "技嘉",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": 3.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "3017",
+      "name": "奇鋐",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": 3.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "3324",
+      "name": "雙鴻",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": 3.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    },
+    {
+      "code": "6230",
+      "name": "超眾",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "signal_level": "strong",
+      "leader_cumulative": 3.71,
+      "leader_consecutive_up": 3,
+      "maturity": "mid",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 82,
+      "chip_data": {}
+    }
+  ],
+  "already_in_top50": [
+    {
+      "code": "2303",
+      "name": "聯電",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "leader_cumulative": 13.2,
+      "tw_5d_change": 0.9375
+    },
+    {
+      "code": "2324",
+      "name": "仁寶",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": 3.71,
+      "tw_5d_change": -1.329787288007829
+    },
+    {
+      "code": "2354",
+      "name": "鴻準",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": 3.71,
+      "tw_5d_change": 1.2326585570946138
+    },
+    {
+      "code": "2301",
+      "name": "光寶科",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": 3.71,
+      "tw_5d_change": 0.0
+    },
+    {
+      "code": "2377",
+      "name": "微星",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": 3.71,
+      "tw_5d_change": -0.6514657980456027
+    },
+    {
+      "code": "2353",
+      "name": "宏碁",
+      "tw_industry": "AI伺服器",
+      "us_leader": "NVIDIA",
+      "leader_cumulative": 3.71,
+      "tw_5d_change": 1.4331234662623735
+    },
+    {
+      "code": "2408",
+      "name": "南亞科",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "leader_cumulative": 13.2,
+      "tw_5d_change": 2.1359223300970873
+    },
+    {
+      "code": "2337",
+      "name": "旺宏",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "leader_cumulative": 13.2,
+      "tw_5d_change": 2.5210084033613445
+    },
+    {
+      "code": "3711",
+      "name": "日月光",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "leader_cumulative": 13.2,
+      "tw_5d_change": 6.033182503770739
+    },
+    {
+      "code": "2344",
+      "name": "華邦電",
+      "tw_industry": "半導體設備/製造",
+      "us_leader": "Applied Materials",
+      "leader_cumulative": 13.2,
+      "tw_5d_change": 5.263157894736842
+    }
+  ],
+  "already_moved_count": 44
+}
