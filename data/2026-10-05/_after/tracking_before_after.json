@@ -139,12 +139,7 @@
       "intraday_return_pct": -0.79,
       "intraday_day_change_pct": 1.34,
       "sell_ratio_intraday": "63.9%（L4）",
-      "execution_status": "已決事項（10-02 盤後定案，v8.3.7 不重評）；入帳價依 v8.3.2 盤後填 10-05 收盤價",
-      "executed": true,
-      "settled_price": 189.5,
-      "return_pct": -0.52,
-      "result": "fail",
-      "settled_date": "2026-10-05"
+      "execution_status": "已決事項（10-02 盤後定案，v8.3.7 不重評）；入帳價依 v8.3.2 盤後填 10-05 收盤價"
     },
     {
       "stock_code": "2330",
@@ -163,12 +158,7 @@
       "intraday_return_pct": 2.19,
       "intraday_day_change_pct": 2.6,
       "sell_ratio_intraday": "26.5%（L4）",
-      "execution_status": "已決事項（10-02 盤後定案，v8.3.7 不重評）；入帳價依 v8.3.2 盤後填 10-05 收盤價",
-      "executed": true,
-      "settled_price": 2575.0,
-      "return_pct": 2.59,
-      "result": "success",
-      "settled_date": "2026-10-05"
+      "execution_status": "已決事項（10-02 盤後定案，v8.3.7 不重評）；入帳價依 v8.3.2 盤後填 10-05 收盤價"
     },
     {
       "stock_code": "2344",
@@ -187,12 +177,7 @@
       "intraday_return_pct": -0.83,
       "intraday_day_change_pct": -0.28,
       "sell_ratio_intraday": "11.3%（L4）",
-      "execution_status": "已決事項（10-02 盤後定案，v8.3.7 不重評）；入帳價依 v8.3.2 盤後填 10-05 收盤價",
-      "executed": true,
-      "settled_price": 181.0,
-      "return_pct": 0.56,
-      "result": "success",
-      "settled_date": "2026-10-05"
+      "execution_status": "已決事項（10-02 盤後定案，v8.3.7 不重評）；入帳價依 v8.3.2 盤後填 10-05 收盤價"
     },
     {
       "stock_code": "2379",
@@ -211,12 +196,7 @@
       "intraday_return_pct": -1.84,
       "intraday_day_change_pct": -0.8,
       "sell_ratio_intraday": "11.5%（L4）",
-      "execution_status": "已決事項（10-02 盤後定案，v8.3.7 不重評）；入帳價依 v8.3.2 盤後填 10-05 收盤價",
-      "executed": true,
-      "settled_price": 755.0,
-      "return_pct": -0.92,
-      "result": "fail",
-      "settled_date": "2026-10-05"
+      "execution_status": "已決事項（10-02 盤後定案，v8.3.7 不重評）；入帳價依 v8.3.2 盤後填 10-05 收盤價"
     },
     {
       "stock_code": "4938",
@@ -235,9 +215,7 @@
       "intraday_return_pct": 4.71,
       "intraday_day_change_pct": -0.22,
       "sell_ratio_intraday": "26.2%（L4）",
-      "execution_status": "已決事項（10-02 盤後定案，v8.3.7 不重評）；入帳價依 v8.3.2 盤後填 10-05 收盤價",
-      "executed": "持倉決議，流程不代改 yaml；10-05 收盤 88.7（-0.56%）",
-      "last_close_1005": 88.7
+      "execution_status": "已決事項（10-02 盤後定案，v8.3.7 不重評）；入帳價依 v8.3.2 盤後填 10-05 收盤價"
     }
   ],
   "pending_review_v833": [],
@@ -387,14 +365,7 @@
       "intraday_dist_to_stop_pct": 11.27,
       "intraday_two_day_pct": 6.06,
       "intraday_high": 73.0,
-      "intraday_low": 70.9,
-      "actual_close": 71.6,
-      "close_price": 71.6,
-      "current_price": 71.6,
-      "change_percent": -0.14,
-      "return_pct_at_close": -0.14,
-      "holding_days_label": "D0/10",
-      "holding_status": "續抱：收盤 71.6（今日 -0.14%，相對推薦價 -0.14%）；鐵律①停損、②2 日 -10% 無觸發（2 日 +5.76%）；距停損 +10.96%、距目標 8.10%；D0 當日不判定；🔥覆寫型推薦，不加碼；鐵律③待 10-05 T86 公布後重掃"
+      "intraday_low": 70.9
     }
   ],
   "carry_over": [
@@ -420,13 +391,13 @@
       "score": 109,
       "recommend_date": "2026-10-01",
       "result": "holding",
-      "holding_days": 2,
-      "holding_days_label": "D2/10",
+      "holding_days": 1,
+      "holding_days_label": "D1/10",
       "today_score": 105,
       "last_close": 59.70000076293945,
-      "return_pct_at_close": -1.18,
+      "return_pct_at_close": 0.51,
       "reversal_level": "L0",
-      "holding_status": "續抱：收盤 58.7（今日 -1.68%，相對推薦價 -1.18%）；鐵律①停損、②2 日 -10% 無觸發（2 日 -0.17%）；距停損 +9.80%、距目標 9.28%；鐵律③待 10-05 T86 公布後重掃",
+      "holding_status": "續抱；L0（10-02 T86 +5,135 張）；📶訊號A L2；今日重評 105 分，三項篩選全過（列榜）",
       "source_file": "tracking_2026-10-01.json",
       "intraday_price": 58.8,
       "intraday_time": "2026-10-05 12:10",
@@ -435,11 +406,7 @@
       "intraday_dist_to_stop_pct": 9.99,
       "intraday_two_day_pct": 0.0,
       "intraday_high": 59.6,
-      "intraday_low": 58.7,
-      "actual_close": 58.7,
-      "close_price": 58.7,
-      "current_price": 58.7,
-      "change_percent": -1.68
+      "intraday_low": 58.7
     },
     {
       "stock_code": "3711",
@@ -453,13 +420,13 @@
       "score": 73,
       "recommend_date": "2026-10-01",
       "result": "holding",
-      "holding_days": 2,
-      "holding_days_label": "D2/10",
+      "holding_days": 1,
+      "holding_days_label": "D1/10",
       "today_score": 94,
       "last_close": 713.0,
-      "return_pct_at_close": 5.55,
+      "return_pct_at_close": 1.42,
       "reversal_level": "L0",
-      "holding_status": "續抱：收盤 742.0（今日 +4.07%，相對推薦價 +5.55%）；鐵律①停損、②2 日 -10% 無觸發（2 日 +4.51%）；距停損 +17.28%、距目標 2.29%；盤中高 758.0，距目標 759.0 差 1 元；鐵律③待 10-05 T86 公布後重掃",
+      "holding_status": "續抱；L0（+775 張）、真連買 3 天；日月光 ADR +6.08%；今日重評 94 分，三項篩選全過（列榜）",
       "source_file": "tracking_2026-10-01.json",
       "intraday_price": 731.0,
       "intraday_time": "2026-10-05 12:10",
@@ -468,11 +435,7 @@
       "intraday_dist_to_stop_pct": 15.54,
       "intraday_two_day_pct": 2.96,
       "intraday_high": 758.0,
-      "intraday_low": 730.0,
-      "actual_close": 742.0,
-      "close_price": 742.0,
-      "current_price": 742.0,
-      "change_percent": 4.07
+      "intraday_low": 730.0
     },
     {
       "stock_code": "3035",
@@ -486,13 +449,13 @@
       "score": 108,
       "recommend_date": "2026-10-02",
       "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
       "today_score": 83,
       "last_close": 215.5,
-      "return_pct_at_close": 1.41,
+      "return_pct_at_close": 1.17,
       "reversal_level": "L0",
-      "holding_status": "續抱：收盤 216.0（今日 +0.23%，相對推薦價 +1.41%）；鐵律①停損、②2 日 -10% 無觸發（2 日 +1.41%）；距停損 +12.68%、距目標 6.48%；鐵律③待 10-05 T86 公布後重掃",
+      "holding_status": "續抱；L0（+1,164 張）、真連買 2 天；今日重評 83 分（5 日 +5.64% -10），三項篩選全過（列榜）",
       "source_file": "tracking_2026-10-02.json",
       "intraday_price": 215.5,
       "intraday_time": "2026-10-05 12:10",
@@ -501,11 +464,7 @@
       "intraday_dist_to_stop_pct": 12.42,
       "intraday_two_day_pct": 1.17,
       "intraday_high": 223.5,
-      "intraday_low": 215.0,
-      "actual_close": 216.0,
-      "close_price": 216.0,
-      "current_price": 216.0,
-      "change_percent": 0.23
+      "intraday_low": 215.0
     },
     {
       "stock_code": "6257",
@@ -519,13 +478,13 @@
       "score": 102,
       "recommend_date": "2026-10-01",
       "result": "holding",
-      "holding_days": 2,
-      "holding_days_label": "D2/10",
+      "holding_days": 1,
+      "holding_days_label": "D1/10",
       "today_score": 83,
       "last_close": 257.5,
-      "return_pct_at_close": 2.36,
+      "return_pct_at_close": 1.38,
       "reversal_level": "L0",
-      "holding_status": "續抱：收盤 260.0（今日 +0.97%，相對推薦價 +2.36%）；鐵律①停損、②2 日 -10% 無觸發（2 日 +1.36%）；距停損 +13.74%、距目標 5.58%；盤中高 275.0 曾越目標 274.5 後回落；⚠️ 10/06 法說會（凱基聯合法說 14:30），當日不加碼；鐵律③待 10-05 T86 公布後重掃",
+      "holding_status": "續抱；L0（+2,030 張，L2 解除）；②外資近 5 天 -2,770 為負（今日重評 83 分不列榜）；⚠️ 10/06 法說會（3 個交易日內）→ 法說當日不加碼",
       "source_file": "tracking_2026-10-01.json",
       "intraday_price": 255.0,
       "intraday_time": "2026-10-05 12:10",
@@ -534,11 +493,7 @@
       "intraday_dist_to_stop_pct": 11.55,
       "intraday_two_day_pct": -0.58,
       "intraday_high": 275.0,
-      "intraday_low": 253.5,
-      "actual_close": 260.0,
-      "close_price": 260.0,
-      "current_price": 260.0,
-      "change_percent": 0.97
+      "intraday_low": 253.5
     },
     {
       "stock_code": "3037",
@@ -551,14 +506,14 @@
       "settlement_days": 10,
       "score": 84,
       "recommend_date": "2026-10-02",
-      "result": "success",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
+      "result": "holding",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
       "today_score": 107,
       "last_close": 1305.0,
       "return_pct_at_close": 7.41,
       "reversal_level": "L0",
-      "holding_status": "已結算（success，+9.05%）：D1 收盤 1325.0 ≥ 目標價 1312.0",
+      "holding_status": "續抱；L0（+6,042 張）、真連買 3 天；10-02 收 1305.0 距目標 1312.0 僅 0.5%；5 日 +12.5% 已大漲（今日重評 107 分不列榜）",
       "source_file": "tracking_2026-10-02.json",
       "intraday_price": 1330.0,
       "intraday_time": "2026-10-05 12:10",
@@ -567,14 +522,7 @@
       "intraday_dist_to_stop_pct": 21.63,
       "intraday_two_day_pct": 9.47,
       "intraday_high": 1420.0,
-      "intraday_low": 1310.0,
-      "actual_close": 1325.0,
-      "close_price": 1325.0,
-      "current_price": 1325.0,
-      "change_percent": 1.53,
-      "settled_date": "2026-10-05",
-      "settled_price": 1325.0,
-      "return_pct": 9.05
+      "intraday_low": 1310.0
     },
     {
       "stock_code": "8150",
@@ -588,13 +536,13 @@
       "score": 87,
       "recommend_date": "2026-10-02",
       "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
       "today_score": 104,
       "last_close": 127.0,
-      "return_pct_at_close": 7.36,
+      "return_pct_at_close": 9.96,
       "reversal_level": "L0",
-      "holding_status": "續抱：收盤 124.0（今日 -2.36%，相對推薦價 +7.36%）；鐵律①停損、②2 日 -10% 無觸發（2 日 +7.36%）；距停損 +19.29%、距目標 0.40%；盤中高 133.0 曾越目標 124.5，收盤 124.0 低於目標 0.5 元 → 不結算（checker 以收盤價判定）；⚠️ 自算處置預警連續達標 4 天、最快 10-06 處置；鐵律③待 10-05 T86 公布後重掃",
+      "holding_status": "續抱；L0（+6,268 張）；⚠️ 10-02 收 127.0 已越目標 124.5（D0 不結算）→ 今日收盤 ≥124.5 即盤後結算 success；⚠️ 處置預警連續達標 3 天、最快今日公告處置；5 日 +18.7%（今日重評 104 分不列榜）",
       "source_file": "tracking_2026-10-02.json",
       "intraday_price": 123.5,
       "intraday_time": "2026-10-05 12:10",
@@ -603,11 +551,7 @@
       "intraday_dist_to_stop_pct": 18.81,
       "intraday_two_day_pct": 6.93,
       "intraday_high": 133.0,
-      "intraday_low": 123.0,
-      "actual_close": 124.0,
-      "close_price": 124.0,
-      "current_price": 124.0,
-      "change_percent": -2.36
+      "intraday_low": 123.0
     },
     {
       "stock_code": "2327",
@@ -621,13 +565,13 @@
       "score": 90,
       "recommend_date": "2026-10-02",
       "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
       "today_score": 64,
       "last_close": 626.0,
       "return_pct_at_close": 3.99,
       "reversal_level": "L0",
-      "holding_status": "續抱：收盤 626.0（今日 +0.00%，相對推薦價 +3.99%）；鐵律①停損、②2 日 -10% 無觸發（2 日 +3.99%）；距停損 +15.54%、距目標 3.83%；盤中高 658.0 曾越目標 650.0，收平盤 626.0；鐵律③待 10-05 T86 公布後重掃",
+      "holding_status": "續抱；L0（+2,497 張）；10-02 收 626.0（+4.0%）；今日重評 64 分（<70，不列榜）",
       "source_file": "tracking_2026-10-02.json",
       "intraday_price": 632.0,
       "intraday_time": "2026-10-05 12:10",
@@ -636,11 +580,7 @@
       "intraday_dist_to_stop_pct": 16.65,
       "intraday_two_day_pct": 4.98,
       "intraday_high": 658.0,
-      "intraday_low": 629.0,
-      "actual_close": 626.0,
-      "close_price": 626.0,
-      "current_price": 626.0,
-      "change_percent": 0.0
+      "intraday_low": 629.0
     },
     {
       "stock_code": "2867",
@@ -811,88 +751,7 @@
     "tw_market_news": "證交所新聞 10、公告 8、鉅亨網 1、經濟日報法說 1；MOPS／Yahoo 0 則 → 覆蓋有限",
     "d5_fill": "非 TOP50 個股無 5day_change 欄 → 本次以 get_close_series 自算補上「已大漲」檢查（_d5.json），攔下 3189 景碩／8046 南電／6196 帆宣"
   },
-  "removed_stocks": [
-    {
-      "stock_code": "3037",
-      "stock_name": "欣興",
-      "track": "A",
-      "recommend_date": "2026-10-02",
-      "recommend_price": 1215.0,
-      "settled_price": 1325.0,
-      "last_close": 1325.0,
-      "return_pct": 9.05,
-      "result": "success",
-      "holding_days": "D1/10",
-      "removal_reason": "D1 收盤 1325.0 ≥ 目標價 1312.0（settlement_checker 機械判定）；10-02 D0 收 1305.0 未結算，10-05 盤中高 1,420",
-      "settled_by": "settlement_checker 觸及目標價",
-      "sync_note": "v8.3.7 三處同步：①tracking_2026-10-02.json ②本檔 removed_stocks ③predictions.json",
-      "success_note": "D1 收盤 1325.0 ≥ 目標價 1312.0（settlement_checker 機械判定）；10-02 D0 收 1305.0 未結算，10-05 盤中高 1,420"
-    },
-    {
-      "stock_code": "3231",
-      "stock_name": "緯創",
-      "track": "A",
-      "recommend_date": "2026-10-02",
-      "recommend_price": 190.5,
-      "settled_price": 189.5,
-      "last_close": 189.5,
-      "return_pct": -0.52,
-      "result": "fail",
-      "holding_days": "D1/10",
-      "removal_reason": "鐵律③ L4（10-02 T86 賣超 -22,097 張＝68.8% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +1.61% 不重評）；收盤價入帳 v8.3.2，低於推薦價故記 fail",
-      "settled_by": "已決事項開盤出場（v8.3.7 Step 4-0，10-02 盤後定案；盤後收盤價入帳 v8.3.2）",
-      "sync_note": "v8.3.7 三處同步：①tracking_2026-10-02.json ②本檔 removed_stocks ③predictions.json",
-      "fail_reason": "鐵律③ L4（10-02 T86 賣超 -22,097 張＝68.8% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +1.61% 不重評）；收盤價入帳 v8.3.2，低於推薦價故記 fail"
-    },
-    {
-      "stock_code": "2330",
-      "stock_name": "台積電",
-      "track": "A",
-      "recommend_date": "2026-10-02",
-      "recommend_price": 2510.0,
-      "settled_price": 2575.0,
-      "last_close": 2575.0,
-      "return_pct": 2.59,
-      "result": "success",
-      "holding_days": "D1/10",
-      "removal_reason": "鐵律③ L4（10-02 T86 賣超 -5,344 張＝24.9% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +3.00% 不重評）；收盤價入帳 v8.3.2，高於推薦價故記 success",
-      "settled_by": "已決事項開盤出場（v8.3.7 Step 4-0，10-02 盤後定案；盤後收盤價入帳 v8.3.2）",
-      "sync_note": "v8.3.7 三處同步：①tracking_2026-10-02.json ②本檔 removed_stocks ③predictions.json",
-      "success_note": "鐵律③ L4（10-02 T86 賣超 -5,344 張＝24.9% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +3.00% 不重評）；收盤價入帳 v8.3.2，高於推薦價故記 success"
-    },
-    {
-      "stock_code": "2344",
-      "stock_name": "華邦電",
-      "track": "A",
-      "recommend_date": "2026-10-02",
-      "recommend_price": 180.0,
-      "settled_price": 181.0,
-      "last_close": 181.0,
-      "return_pct": 0.56,
-      "result": "success",
-      "holding_days": "D1/10",
-      "removal_reason": "鐵律③ L4（10-02 T86 賣超 -7,123 張＝11.4% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +1.12% 不重評）；收盤價入帳 v8.3.2，高於推薦價故記 success",
-      "settled_by": "已決事項開盤出場（v8.3.7 Step 4-0，10-02 盤後定案；盤後收盤價入帳 v8.3.2）",
-      "sync_note": "v8.3.7 三處同步：①tracking_2026-10-02.json ②本檔 removed_stocks ③predictions.json",
-      "success_note": "鐵律③ L4（10-02 T86 賣超 -7,123 張＝11.4% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +1.12% 不重評）；收盤價入帳 v8.3.2，高於推薦價故記 success"
-    },
-    {
-      "stock_code": "2379",
-      "stock_name": "瑞昱",
-      "track": "A",
-      "recommend_date": "2026-10-02",
-      "recommend_price": 762.0,
-      "settled_price": 755.0,
-      "last_close": 755.0,
-      "return_pct": -0.92,
-      "result": "fail",
-      "holding_days": "D1/10",
-      "removal_reason": "鐵律③ L4（10-02 T86 賣超 -285 張＝9.2% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +0.13% 不重評）；收盤價入帳 v8.3.2，低於推薦價故記 fail",
-      "settled_by": "已決事項開盤出場（v8.3.7 Step 4-0，10-02 盤後定案；盤後收盤價入帳 v8.3.2）",
-      "sync_note": "v8.3.7 三處同步：①tracking_2026-10-02.json ②本檔 removed_stocks ③predictions.json",
-      "fail_reason": "鐵律③ L4（10-02 T86 賣超 -285 張＝9.2% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +0.13% 不重評）；收盤價入帳 v8.3.2，低於推薦價故記 fail"
-    }
-  ],
+  "removed_stocks": [],
   "tomorrow_opening_exits": [],
   "track_b_recommendations": [],
   "track_b_observations": [
@@ -1322,79 +1181,5 @@
       "法人數據為 10-02 T86（與盤前同一份），10-05 T86 盤後才公布",
       "exit_signal_checker 逐檔帶各自推薦價執行（13 檔）"
     ]
-  },
-  "yesterday_verification": {
-    "date": "2026-10-05",
-    "settled_count": 5,
-    "success_count": 3,
-    "fail_count": 2,
-    "accuracy": 60.0,
-    "results": [
-      {
-        "stock_code": "3037",
-        "stock_name": "欣興",
-        "recommend_date": "2026-10-02",
-        "recommend_price": 1215.0,
-        "settled_price": 1325.0,
-        "return_pct": 9.05,
-        "result": "success",
-        "removal_reason": "D1 收盤 1325.0 ≥ 目標價 1312.0（settlement_checker 機械判定）；10-02 D0 收 1305.0 未結算，10-05 盤中高 1,420"
-      },
-      {
-        "stock_code": "3231",
-        "stock_name": "緯創",
-        "recommend_date": "2026-10-02",
-        "recommend_price": 190.5,
-        "settled_price": 189.5,
-        "return_pct": -0.52,
-        "result": "fail",
-        "removal_reason": "鐵律③ L4（10-02 T86 賣超 -22,097 張＝68.8% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +1.61% 不重評）；收盤價入帳 v8.3.2，低於推薦價故記 fail"
-      },
-      {
-        "stock_code": "2330",
-        "stock_name": "台積電",
-        "recommend_date": "2026-10-02",
-        "recommend_price": 2510.0,
-        "settled_price": 2575.0,
-        "return_pct": 2.59,
-        "result": "success",
-        "removal_reason": "鐵律③ L4（10-02 T86 賣超 -5,344 張＝24.9% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +3.00% 不重評）；收盤價入帳 v8.3.2，高於推薦價故記 success"
-      },
-      {
-        "stock_code": "2344",
-        "stock_name": "華邦電",
-        "recommend_date": "2026-10-02",
-        "recommend_price": 180.0,
-        "settled_price": 181.0,
-        "return_pct": 0.56,
-        "result": "success",
-        "removal_reason": "鐵律③ L4（10-02 T86 賣超 -7,123 張＝11.4% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +1.12% 不重評）；收盤價入帳 v8.3.2，高於推薦價故記 success"
-      },
-      {
-        "stock_code": "2379",
-        "stock_name": "瑞昱",
-        "recommend_date": "2026-10-02",
-        "recommend_price": 762.0,
-        "settled_price": 755.0,
-        "return_pct": -0.92,
-        "result": "fail",
-        "removal_reason": "鐵律③ L4（10-02 T86 賣超 -285 張＝9.2% ≥8%，不受 v8.3.3 保護）→ 10-02 盤後定案、10-05 開盤出場（v8.3.7 已決事項，當日 +0.13% 不重評）；收盤價入帳 v8.3.2，低於推薦價故記 fail"
-      }
-    ],
-    "note": "1 筆為 settlement_checker 機械判定觸及目標價（3037 欣興 success），4 筆為 10-02 盤後定案的鐵律③ L4 開盤出場（v8.3.7 已決事項：2330 台積電／2344 華邦電 success、3231 緯創／2379 瑞昱 fail），入帳價皆用 10-05 收盤"
-  },
-  "tomorrow_recommendations": [],
-  "tomorrow_recommendations_note": "v1（14:4x）：10-05 T86 尚未公布，明日推薦暫列 0 檔；T86 公布後重掃改寫",
-  "after_market": {
-    "report_time": "2026-10-05 14:45（v1，10-05 T86 未公布）",
-    "taiex_close": 49712.04,
-    "taiex_change_pct": 2.55,
-    "taiex_change_pts": 1236.3,
-    "taiex_source": "Yahoo ^TWII 日K 10-05 收盤與 regularMarketPrice（13:33）一致；基準 10-02 收 48,475.74",
-    "t86_today_published": false,
-    "settled_today": 5,
-    "settled_win": 3,
-    "settled_loss": 2,
-    "settled_accuracy_today": 60.0
   }
 }
