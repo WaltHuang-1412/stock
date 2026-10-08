@@ -7,7 +7,7 @@
 
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
-$ProjectDir = "C:\Users\walter.huang\Documents\github\stock"
+$ProjectDir = "C:\Users\walter.huang\Documents\github\investing\stock"
 
 Write-Output "========================================"
 Write-Output "台股分析自動排程安裝器"

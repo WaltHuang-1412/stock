@@ -1,5 +1,5 @@
 @echo off
-cd /d "C:\Users\walter.huang\Documents\github\stock"
+cd /d "C:\Users\walter.huang\Documents\github\investing\stock"
 
 echo ========================================
 echo Quick Check - Reversal Alert

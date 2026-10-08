@@ -39,7 +39,7 @@ claude --dangerously-skip-permissions
 ```powershell
 # 以系統管理員身分開啟 PowerShell
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-cd C:\Users\walter.huang\Documents\github\stock
+cd C:\Users\walter.huang\Documents\github\investing\stock
 .\automation\install_schedule.ps1
 
 # 確認安裝

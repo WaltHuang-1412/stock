@@ -173,7 +173,7 @@ python3 scripts/check_market_status.py --date $(date +%Y-%m-%d) --mode before_ma
 ### 🔴 Step 1: 獲取國際市場數據（強制）
 
 ```bash
-cd /c/Users/walter.huang/Documents/github/stock
+cd /c/Users/walter.huang/Documents/github/investing/stock
 python3 scripts/fetch_us_asia_markets.py > data/$(date +%Y-%m-%d)/us_asia_markets.json
 ```
 

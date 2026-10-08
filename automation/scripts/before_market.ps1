@@ -6,7 +6,7 @@ $ErrorActionPreference = "Continue"
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 
 # === 設定 ===
-$ProjectDir = "C:\Users\walter.huang\Documents\github\stock"
+$ProjectDir = "C:\Users\walter.huang\Documents\github\investing\stock"
 $Date = Get-Date -Format "yyyy-MM-dd"
 $LogDir = "$ProjectDir\automation\logs"
 $LogFile = "$LogDir\${Date}_before_market.log"

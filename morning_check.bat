@@ -6,7 +6,7 @@ echo 執行時間: %date% %time%
 echo ============================================================
 echo.
 
-cd /d "C:\Users\walter.huang\Documents\github\stock"
+cd /d "C:\Users\walter.huang\Documents\github\investing\stock"
 
 echo [1/3] 檢查持股法人反轉預警...
 echo.
