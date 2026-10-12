@@ -1,0 +1,493 @@
+{
+  "date": "2026-10-12",
+  "lookback_dates": [
+    "2026-10-12",
+    "2026-10-09",
+    "2026-10-08",
+    "2026-10-07",
+    "2026-10-06",
+    "2026-10-05",
+    "2026-10-02"
+  ],
+  "leader_trends": {
+    "Micron": {
+      "cumulative": -3.16,
+      "consecutive_up": 0,
+      "latest_change": -0.66,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "NVIDIA": {
+      "cumulative": 0.49,
+      "consecutive_up": 0,
+      "latest_change": -0.52,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Apple": {
+      "cumulative": 1.1,
+      "consecutive_up": 0,
+      "latest_change": -1.11,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "AMD": {
+      "cumulative": -0.42,
+      "consecutive_up": 0,
+      "latest_change": -2.03,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Tesla": {
+      "cumulative": 7.72,
+      "consecutive_up": 1,
+      "latest_change": 2.05,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    },
+    "Super Micro": {
+      "cumulative": 2.22,
+      "consecutive_up": 0,
+      "latest_change": -2.14,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Broadcom": {
+      "cumulative": 3.18,
+      "consecutive_up": 1,
+      "latest_change": 0.39,
+      "signal_level": "nascent",
+      "days_tracked": 7
+    },
+    "Lam Research": {
+      "cumulative": -2.8,
+      "consecutive_up": 0,
+      "latest_change": -0.55,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Applied Materials": {
+      "cumulative": -0.71,
+      "consecutive_up": 0,
+      "latest_change": -0.5,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Western Digital": {
+      "cumulative": -12.38,
+      "consecutive_up": 1,
+      "latest_change": 1.01,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Dell": {
+      "cumulative": 8.75,
+      "consecutive_up": 1,
+      "latest_change": 2.0,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    },
+    "ASML": {
+      "cumulative": -1.66,
+      "consecutive_up": 1,
+      "latest_change": 0.6,
+      "signal_level": "none",
+      "days_tracked": 7
+    }
+  },
+  "preposition_candidates": [
+    {
+      "code": "1513",
+      "name": "中興電",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": 4323,
+        "buy_days": 8,
+        "sell_days": 2,
+        "momentum_pct": -25.26273241713824,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 3660,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
+      }
+    },
+    {
+      "code": "1519",
+      "name": "華城",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -1986,
+        "buy_days": 1,
+        "sell_days": 9,
+        "momentum_pct": 24.86772486772487,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -1966,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-1,986為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "1503",
+      "name": "士電",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -37,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 171.53846153846155,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -124,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-37為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "2049",
+      "name": "上銀",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": 250,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": -98.3739837398374,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 1411,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "2231",
+      "name": "為升",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -65,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -500,
+        "consecutive_buy": 2,
+        "cumulative_foreign": 19,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-65為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "5284",
+      "name": "jpp-KY",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -288,
+        "buy_days": 3,
+        "sell_days": 7,
+        "momentum_pct": -120.00000000000001,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -167,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-288為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "2371",
+      "name": "大同",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -8770,
+        "buy_days": 3,
+        "sell_days": 7,
+        "momentum_pct": 43.28091493924232,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -9063,
+        "reversal_level": "Level 3",
+        "exclusion_reason": "反轉Level 3排除｜累計-8,770為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": 20590,
+        "buy_days": 9,
+        "sell_days": 1,
+        "momentum_pct": 28.295819935691313,
+        "consecutive_buy": 7,
+        "cumulative_foreign": 23440,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
+      }
+    },
+    {
+      "code": "8111",
+      "name": "至上",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "2347",
+      "name": "聯強",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": 13707,
+        "buy_days": 10,
+        "sell_days": 0,
+        "momentum_pct": -36.11908177905308,
+        "consecutive_buy": 10,
+        "cumulative_foreign": 13016,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "通過基礎篩選",
+        "passed": true
+      }
+    },
+    {
+      "code": "1477",
+      "name": "聚陽",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {}
+    },
+    {
+      "code": "2449",
+      "name": "京元電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "moderate",
+      "leader_cumulative": 8.75,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {}
+    },
+    {
+      "code": "3189",
+      "name": "景碩",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "moderate",
+      "leader_cumulative": 8.75,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {}
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "moderate",
+      "leader_cumulative": 8.75,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {}
+    },
+    {
+      "code": "2356",
+      "name": "英業達",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "signal_level": "moderate",
+      "leader_cumulative": 8.75,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {}
+    }
+  ],
+  "already_in_top50": [
+    {
+      "code": "3706",
+      "name": "神達",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 7.72,
+      "tw_5d_change": -1.827040228840952
+    },
+    {
+      "code": "2382",
+      "name": "廣達",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 8.75,
+      "tw_5d_change": -0.8915304606240713
+    },
+    {
+      "code": "3231",
+      "name": "緯創",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 8.75,
+      "tw_5d_change": -1.0498687664041995
+    },
+    {
+      "code": "2353",
+      "name": "宏碁",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 8.75,
+      "tw_5d_change": -1.7268481564263007
+    },
+    {
+      "code": "3711",
+      "name": "日月光",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 8.75,
+      "tw_5d_change": 4.788732394366197
+    },
+    {
+      "code": "2408",
+      "name": "南亞科",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 8.75,
+      "tw_5d_change": 2.5048169556840074
+    },
+    {
+      "code": "1504",
+      "name": "東元",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 7.72,
+      "tw_5d_change": 6.078154371030382
+    },
+    {
+      "code": "2327",
+      "name": "國巨",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 7.72,
+      "tw_5d_change": 18.065693430656935
+    },
+    {
+      "code": "2368",
+      "name": "金像電",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 8.75,
+      "tw_5d_change": 12.5
+    },
+    {
+      "code": "6239",
+      "name": "力成",
+      "tw_industry": "AI伺服器",
+      "us_leader": "Dell",
+      "leader_cumulative": 8.75,
+      "tw_5d_change": 10.498220640569395
+    }
+  ],
+  "already_moved_count": 5
+}
