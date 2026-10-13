@@ -393,7 +393,7 @@
       "position": "10-15%",
       "score": 108,
       "rating": "⭐⭐⭐⭐⭐",
-      "result": "holding",
+      "result": "fail",
       "track": "A",
       "holding_days": 0,
       "score_detail": "五維度 73＝時事 17＋法人 16＋產業 15＋技術 12＋價位 13｜動能<-30% +15｜📶訊號A L2 +10｜EPS +5｜持股比 +5｜🟡ASIC 客製化需求鏈（未點名，中段 17）；ASIC tier_1",
@@ -406,7 +406,7 @@
       "intraday_dist_to_stop_pct": 12.15,
       "intraday_high": 217.0,
       "intraday_low": 210.0,
-      "actual_close": 215.5,
+      "actual_close": 192.0,
       "close_price": 215.5,
       "current_price": 215.5,
       "change_percent": 1.17,
@@ -414,7 +414,12 @@
       "holding_days_label": "D0/10",
       "holding_status": "續抱：收盤 215.5（今日 +1.17%，相對推薦價 +1.17%）；10-02 T86 +1,164 張（L0）；鐵律①②③ 無觸發；距停損 +12.42%、距目標 6.73%",
       "reversal_level_1002t86": "L0",
-      "sell_ratio_pct_1002t86": null
+      "sell_ratio_pct_1002t86": null,
+      "settled_date": "2026-10-13",
+      "settled_price": 192.0,
+      "return_pct": -9.86,
+      "sync_note": "2026-10-13 盤後結算（鐵律③L4 已決（v8.3.3））；同步寫入 來源檔／tracking_2026-10-13.removed_stocks／predictions",
+      "fail_reason": "v8.3.3 待複核定案（10-08 T86 -354 張 8.2~8.4%，複核①②皆 ≥5%）→ 10-13 開盤出場，入帳用當日收盤 192.0（-9.86%）；收盤仍高於停損 191.7 僅 0.16%，非停損觸發"
     },
     {
       "stock_code": "2379",

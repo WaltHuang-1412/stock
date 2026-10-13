@@ -7547,11 +7547,11 @@
       }
     ]
   },
-  "settled_accuracy": "55.8%",
-  "settled_count": 726,
-  "holding_count": 179,
-  "total_success": 405,
-  "total_fail": 321,
+  "settled_accuracy": "55.6%",
+  "settled_count": 732,
+  "holding_count": 176,
+  "total_success": 407,
+  "total_fail": 325,
   "2026-03-30": {
     "predictions": [
       {
@@ -18082,10 +18082,12 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 108,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-10-13",
+        "settled_price": 192.0,
+        "holding_days": 1,
+        "return_pct": -9.86,
+        "fail_reason": "v8.3.3 待複核定案（10-08 T86 -354 張 8.2~8.4%，複核①②皆 ≥5%）→ 10-13 開盤出場，入帳用當日收盤 192.0（-9.86%）；收盤仍高於停損 191.7 僅 0.16%，非停損觸發"
       },
       {
         "symbol": "2379",
@@ -18334,10 +18336,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 77,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-10-13",
+        "settled_price": 1140.0,
+        "holding_days": 1,
+        "return_pct": -14.61,
+        "fail_reason": "D2 收 1140.0 ≤ 停損 1201.5（鐵律①）；另 10-08→10-13 兩日 -12.64%（鐵律②）；10-12 T86 -420 張佔 33.7% L4（鐵律③）。三條同時觸發"
       },
       {
         "symbol": "2609",
@@ -18349,10 +18353,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 77,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-10-13",
+        "settled_price": 64.5,
+        "holding_days": 1,
+        "return_pct": 8.95,
+        "fail_reason": "D2 收 64.5 ≥ 目標 63.94（+8.95%）；外資連買、10-12 +25,714 張，航運催化延續"
       }
     ],
     "settled_accuracy": null,
@@ -18370,10 +18376,12 @@
         "settlement_days": 10,
         "position": "10-15%（建議取下緣 10%）",
         "score": 96,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-10-13",
+        "settled_price": 17.65,
+        "holding_days": 1,
+        "return_pct": 17.28,
+        "fail_reason": "D1 收 17.65 ≥ 目標 16.25（+17.28%）；10-12 +10,645 張，石化催化；已近處置注意門檻"
       }
     ],
     "settled_accuracy": null,
@@ -18436,10 +18444,12 @@
         "settlement_days": 10,
         "position": "10%（取下緣：外資 10 日仍為負）",
         "score": 92,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-10-13",
+        "settled_price": 195.5,
+        "holding_days": 1,
+        "return_pct": -7.35,
+        "fail_reason": "L4：10-12 T86 -2,212 張佔 10.4%（≥8% 不受待複核保護，10-13 盤前定案開盤出場），入帳用當日收盤 195.5（-7.35%）；推薦隔日即被法人反手賣超"
       },
       {
         "symbol": "3026",
@@ -18451,10 +18461,12 @@
         "settlement_days": 10,
         "position": "10%（取下緣：處置預警）",
         "score": 91,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-10-13",
+        "settled_price": 806.0,
+        "holding_days": 1,
+        "return_pct": -8.1,
+        "fail_reason": "L4：10-12 T86 -1,941 張佔 17.1%（10-13 盤前定案開盤出場），入帳用當日收盤 806.0（-8.10%）；推薦隔日即被法人反手賣超；另有處置預警"
       },
       {
         "symbol": "3189",
@@ -18481,6 +18493,57 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 78,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-10-13": {
+    "predictions": [
+      {
+        "symbol": "2002",
+        "name": "中鋼",
+        "recommend_price": 19.2,
+        "target_price": 20.74,
+        "stop_loss": 17.28,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "12-15%",
+        "score": 108,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "recommend_price": 50.0,
+        "target_price": 54.0,
+        "stop_loss": 45.0,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10%",
+        "score": 96,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2892",
+        "name": "第一金",
+        "recommend_price": 39.7,
+        "target_price": 42.88,
+        "stop_loss": 35.73,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10%",
+        "score": 93,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,

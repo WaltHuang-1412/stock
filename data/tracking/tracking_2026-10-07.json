@@ -412,7 +412,7 @@
       "position": "5-10%",
       "score": 77,
       "rating": "⭐⭐⭐ 可考慮",
-      "result": "holding",
+      "result": "fail",
       "recommend_date": "2026-10-07",
       "score_breakdown": {
         "時事": 21,
@@ -465,12 +465,16 @@
       "intraday_high": 1340.0,
       "intraday_low": 1305.0,
       "close_price": 1330.0,
-      "actual_close": 1330.0,
+      "actual_close": 1140.0,
       "change_percent": -0.37,
-      "return_pct": -0.37,
+      "return_pct": -14.61,
       "holding_days": 0,
       "holding_days_label": "D0/10",
-      "holding_status": "D0/10；10-07 收 1330.0（今日 -0.37%，相對推薦價 -0.37%）；距目標 8.4%／距停損 9.66%；10-06 T86 +571（L0）（10-07 T86 盤後 14:30~ 未公布）"
+      "holding_status": "D0/10；10-07 收 1330.0（今日 -0.37%，相對推薦價 -0.37%）；距目標 8.4%／距停損 9.66%；10-06 T86 +571（L0）（10-07 T86 盤後 14:30~ 未公布）",
+      "settled_date": "2026-10-13",
+      "settled_price": 1140.0,
+      "sync_note": "2026-10-13 盤後結算（settlement_checker＋鐵律）；同步寫入 來源檔／tracking_2026-10-13.removed_stocks／predictions",
+      "fail_reason": "D2 收 1140.0 ≤ 停損 1201.5（鐵律①）；另 10-08→10-13 兩日 -12.64%（鐵律②）；10-12 T86 -420 張佔 33.7% L4（鐵律③）。三條同時觸發"
     },
     {
       "stock_code": "2609",
@@ -485,7 +489,7 @@
       "position": "5-10%",
       "score": 77,
       "rating": "⭐⭐⭐ 可考慮｜🔥 超強催化覆寫",
-      "result": "holding",
+      "result": "success",
       "recommend_date": "2026-10-07",
       "score_breakdown": {
         "時事": 20,
@@ -540,12 +544,16 @@
       "intraday_high": 59.6,
       "intraday_low": 58.8,
       "close_price": 59.1,
-      "actual_close": 59.1,
+      "actual_close": 64.5,
       "change_percent": -0.17,
-      "return_pct": -0.17,
+      "return_pct": 8.95,
       "holding_days": 0,
       "holding_days_label": "D0/10",
-      "holding_status": "D0/10；10-07 收 59.1（今日 -0.17%，相對推薦價 -0.17%）；距目標 8.2%／距停損 4.84%；10-06 T86 +5,303（買超中）（10-07 T86 盤後 14:30~ 未公布）"
+      "holding_status": "D0/10；10-07 收 59.1（今日 -0.17%，相對推薦價 -0.17%）；距目標 8.2%／距停損 4.84%；10-06 T86 +5,303（買超中）（10-07 T86 盤後 14:30~ 未公布）",
+      "settled_date": "2026-10-13",
+      "settled_price": 64.5,
+      "sync_note": "2026-10-13 盤後結算（settlement_checker）；同步寫入 來源檔／tracking_2026-10-13.removed_stocks／predictions",
+      "success_note": "D2 收 64.5 ≥ 目標 63.94（+8.95%）；外資連買、10-12 +25,714 張，航運催化延續"
     }
   ],
   "carry_over": [
