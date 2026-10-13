@@ -169,6 +169,20 @@ def get_history(code, period='5d', interval='1d'):
     except (KeyError, IndexError):
         pass
 
+    # 最新日K close=None（量已有、收盤未回填）→ 以 meta.regularMarketPrice 補值，
+    # 僅限 regularMarketTime 與該根日期相同者（2026-10-13：全持倉 10-12 收盤 None，序列停在 10-08）
+    try:
+        closes, tss = history.get('closes'), history.get('timestamps')
+        meta = result.get('meta', {})
+        px, mt = meta.get('regularMarketPrice'), meta.get('regularMarketTime')
+        if closes and tss and closes[-1] is None and px and mt:
+            from datetime import datetime, timedelta, timezone
+            tpe = timezone(timedelta(hours=8))
+            if datetime.fromtimestamp(tss[-1], tz=tpe).date() == datetime.fromtimestamp(mt, tz=tpe).date():
+                closes[-1] = px
+    except Exception:
+        pass
+
     return history
 
 
