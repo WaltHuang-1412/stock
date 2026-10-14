@@ -199,7 +199,12 @@
       "holding_days_label": "D1/10",
       "recommend_date": "2026-10-12",
       "last_close": 187.0,
-      "status": "⏳沿用進行中追蹤（D1/10），維持原進場價 188.5／停損 169.65 不變，不重複建倉"
+      "status": "⏳沿用進行中追蹤（D1/10），維持原進場價 188.5／停損 169.65 不變，不重複建倉",
+      "intraday_price": 187.5,
+      "intraday_change_pct": -0.53,
+      "intraday_note": "盤中12:12 Yahoo regularMarketPrice；D2/10 照抄 settlement_checker",
+      "to_target": 8.6,
+      "to_stop": 10.5
     },
     {
       "stock_code": "8046",
@@ -235,7 +240,12 @@
       "holding_days_label": "D1/10",
       "recommend_date": "2026-10-12",
       "last_close": 1440.0,
-      "status": "⏳沿用進行中追蹤（D1/10），維持原進場價 1475.0／停損 1327.5 不變，不重複建倉"
+      "status": "⏳沿用進行中追蹤（D1/10），維持原進場價 1475.0／停損 1327.5 不變，不重複建倉",
+      "intraday_price": 1410.0,
+      "intraday_change_pct": -4.41,
+      "intraday_note": "盤中12:12 Yahoo regularMarketPrice；D2/10 照抄 settlement_checker",
+      "to_target": 13.0,
+      "to_stop": 6.2
     },
     {
       "stock_code": "3189",
@@ -271,7 +281,12 @@
         "反轉": 0
       },
       "holding_days": 1,
-      "industry": "AI（ABF載板 tier_0）"
+      "industry": "AI（ABF載板 tier_0）",
+      "intraday_price": 1035.0,
+      "intraday_change_pct": -3.72,
+      "intraday_note": "盤中12:12 Yahoo regularMarketPrice；D2/10 照抄 settlement_checker",
+      "to_target": 12.2,
+      "to_stop": 7.0
     },
     {
       "stock_code": "2002",
@@ -307,7 +322,12 @@
       "last_close": 19.15,
       "holding_days": 0,
       "holding_days_label": "D0/10",
-      "status": "⏳沿用進行中追蹤（D0/10），維持原進場價 19.2／停損 17.28 不變，不重複建倉"
+      "status": "⏳沿用進行中追蹤（D0/10），維持原進場價 19.2／停損 17.28 不變，不重複建倉",
+      "intraday_price": 19.5,
+      "intraday_change_pct": 1.56,
+      "intraday_note": "盤中12:12 Yahoo regularMarketPrice；D1/10 照抄 settlement_checker",
+      "to_target": 6.4,
+      "to_stop": 12.8
     },
     {
       "stock_code": "2886",
@@ -343,7 +363,12 @@
       "last_close": 50.9,
       "holding_days": 0,
       "holding_days_label": "D0/10",
-      "status": "⏳沿用進行中追蹤（D0/10），維持原進場價 50.0／停損 45.0 不變，不重複建倉"
+      "status": "⏳沿用進行中追蹤（D0/10），維持原進場價 50.0／停損 45.0 不變，不重複建倉",
+      "intraday_price": 50.8,
+      "intraday_change_pct": 1.6,
+      "intraday_note": "盤中12:12 Yahoo regularMarketPrice；D1/10 照抄 settlement_checker",
+      "to_target": 6.3,
+      "to_stop": 12.9
     },
     {
       "stock_code": "3443",
@@ -379,7 +404,12 @@
         "反轉": 0
       },
       "holding_days": 4,
-      "industry": "IC設計（tier_0）"
+      "industry": "IC設計（tier_0）",
+      "intraday_price": 8225.0,
+      "intraday_change_pct": -4.36,
+      "intraday_note": "盤中12:12 Yahoo regularMarketPrice；D5/10 照抄 settlement_checker",
+      "to_target": 12.9,
+      "to_stop": 6.3
     },
     {
       "stock_code": "2892",
@@ -416,7 +446,12 @@
       "last_close": 40.5,
       "holding_days": 0,
       "holding_days_label": "D0/10",
-      "status": "⏳沿用進行中追蹤（D0/10），維持原進場價 39.7／停損 35.73 不變，不重複建倉"
+      "status": "⏳沿用進行中追蹤（D0/10），維持原進場價 39.7／停損 35.73 不變，不重複建倉",
+      "intraday_price": 40.5,
+      "intraday_change_pct": 2.02,
+      "intraday_note": "盤中12:12 Yahoo regularMarketPrice；D1/10 照抄 settlement_checker",
+      "to_target": 5.9,
+      "to_stop": 13.4
     }
   ],
   "carry_over": [
@@ -547,5 +582,19 @@
     "fix_market_regime_taiex：MI taiex.current 49,301.96（落後）→ Yahoo 校正 48,341.31（資料日 2026-10-13，差 -960.65 點）",
     "EPS 快取 Q2（2026-06-30）全部當期；營收 --update-cache 後 stale 旗標者（金融股落後至 2026-08）因子歸零；外資持股比 as_of 10-12 ≥ cutoff 10-07",
     "Step 1-b 判勢補充未執行（選用）"
-  ]
+  ],
+  "intraday_status": {
+    "time": "2026-10-14 12:30",
+    "price_source": "Yahoo regularMarketPrice 12:12",
+    "track_b_note": "今日無盤中新推薦",
+    "holdings_stop_check": {
+      "6770": "71.0<73.26 觸及",
+      "2337": "110.0<147.6 觸及",
+      "3090": "183.5<256.5 觸及",
+      "2313": "246.0>235.98 未觸發",
+      "1301": "88.9>54.08 未觸發",
+      "4938": "100.0>76.5 未觸發",
+      "2330": "無停損欄"
+    }
+  }
 }
