@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-14",
+  "regime": "多頭",
+  "score": 3,
+  "details": [
+    "台股在年線上+31.2%",
+    "台股在季線上+7.7%",
+    "VIX 15.3（正常）",
+    "外資連賣 5 日（近5日 -3131 億）"
+  ],
+  "taiex": {
+    "current": 48341.31,
+    "as_of": "2026-10-13",
+    "ma20": 47863.82,
+    "ma60": 45833.23,
+    "ma240": 37668.63,
+    "high_52w": 49822.55,
+    "low_52w": 26434.94,
+    "vs_ma20": 1.0,
+    "vs_ma60": 5.47,
+    "vs_ma240": 28.33,
+    "source": "Yahoo ^TWII (fix_market_regime_taiex.py)"
+  },
+  "sp500": {
+    "current": 7807.240234375,
+    "ma60": 7659.0,
+    "vs_ma60": 1.94
+  },
+  "vix": 15.270000457763672,
+  "institutional": {
+    "foreign": {
+      "today_net": -1653.42,
+      "consecutive_days": -5,
+      "net_5d": -3130.93,
+      "net_10d": -2502.02
+    },
+    "trust": {
+      "today_net": 238.72,
+      "consecutive_days": 3,
+      "net_5d": 194.17,
+      "net_10d": 327.87
+    },
+    "dealer": {
+      "today_net": -569.76,
+      "consecutive_days": -4,
+      "net_5d": -960.77,
+      "net_10d": -966.07
+    },
+    "total": {
+      "today_net": -1984.46,
+      "net_5d": -3897.53,
+      "net_10d": -3140.22
+    }
+  },
+  "etf_buy_multiplier": 1,
+  "stock_defense_ratio": "0-15%",
+  "settlement": {
+    "settlement_date": "2026-10-21",
+    "is_settlement_week": false,
+    "days_from_settlement": -7,
+    "status": "非結算週"
+  },
+  "taiex_original": {
+    "current": 49301.9609375,
+    "ma20": 47794.0,
+    "ma60": 45788.0,
+    "ma240": 37581.0,
+    "high_52w": 49822.55078125,
+    "low_52w": 22987.919921875,
+    "vs_ma20": 3.16,
+    "vs_ma60": 7.67,
+    "vs_ma240": 31.19
+  },
+  "taiex_fixed_at": "2026-10-14 08:01:13"
+}
