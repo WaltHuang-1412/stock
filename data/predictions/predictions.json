@@ -7547,11 +7547,11 @@
       }
     ]
   },
-  "settled_accuracy": "55.6%",
-  "settled_count": 734,
+  "settled_accuracy": "55.4%",
+  "settled_count": 736,
   "holding_count": 174,
   "total_success": 408,
-  "total_fail": 326,
+  "total_fail": 328,
   "2026-03-30": {
     "predictions": [
       {
@@ -18264,10 +18264,12 @@
         "settlement_days": 10,
         "position": "10%（取下緣：不在 10-05 TOP50 買超名單、10-05 單日 +8.86% 由散戶追價而非法人）",
         "score": 87,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-10-15",
+        "settled_price": 7670.0,
+        "holding_days": 1,
+        "return_pct": -10.81,
+        "fail_reason": "鐵律①：收盤 7670 ≤ 停損 7740（-10.81%）；10-15 台積電法說日、大盤 -3.41%、AI 供應鏈全面重挫；籌碼 L0（10-14 T86 +104 張）非法人轉賣"
       },
       {
         "symbol": "3231",
@@ -18399,10 +18401,12 @@
         "settlement_days": 10,
         "position": "10%（取下緣：10-07 L4 後 10-08 翻買，籌碼反覆）",
         "score": 103,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-10-15",
+        "settled_price": 176.0,
+        "holding_days": 1,
+        "return_pct": -6.63,
+        "fail_reason": "鐵律③L4：10-14 T86 -3,059 張佔 9.3%（≥8%，不受待複核保護），盤前列開盤出場；入帳用當日收盤 176.0（-6.63%，距停損 169.65 仍有 3.7%，非停損觸發）"
       },
       {
         "symbol": "3711",
@@ -18548,6 +18552,42 @@
         "settlement_days": 10,
         "position": "10%",
         "score": 93,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-10-15": {
+    "predictions": [
+      {
+        "symbol": "3576",
+        "name": "聯合再生",
+        "recommend_price": 18.65,
+        "target_price": 20.14,
+        "stop_loss": 16.79,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10%",
+        "score": 83,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2323",
+        "name": "中環",
+        "recommend_price": 11.9,
+        "target_price": 12.85,
+        "stop_loss": 10.71,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 79,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
