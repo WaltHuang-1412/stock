@@ -81,6 +81,17 @@ def fetch_twse_lists():
         if (now - _TWSE_LIST_CACHE['fetched_at']).total_seconds() < 3600:
             return _TWSE_LIST_CACHE['disposed'], _TWSE_LIST_CACHE['attention']
 
+    # 優先使用官方資料模組（TWSE+TPEx；openapi 處置期間 + 注意股公告），失敗才退回舊的 HTML 解析
+    try:
+        import official_attention as _oa
+        got = _oa.get_lists()
+        if got:
+            _TWSE_LIST_CACHE['disposed'], _TWSE_LIST_CACHE['attention'] = got[0], got[1]
+            _TWSE_LIST_CACHE['fetched_at'] = now
+            return got[0], got[1]
+    except Exception:
+        pass
+
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
     disposed_codes, attention_codes = set(), set()
 
@@ -313,6 +324,50 @@ def check_disposition_risk(stock_code):
                                 result['risk_level'] = 'warning'
         except Exception:
             pass
+
+    # Step 3：以官方注意股公告覆寫自算結果。
+    # 自算只比對漲幅／週轉率，漏掉官方各款的附加條件，實測嚴重高估
+    # （2026-10-12：1303 自算連續達標 15 天，官方近 30 日僅公告 1 次、未處置）。
+    official = None
+    try:
+        import official_attention as _oa
+        official = _oa.get_status(stock_code)
+    except Exception:
+        official = None
+
+    if official:
+        result['official'] = official
+        dates = official['dates']
+        result['attention_today'] = bool(dates and dates[-1] == official['as_of'])
+        result['consecutive_attention'] = official['consecutive_1_8']
+        result['attention_in_10'] = official['in10']
+        result['attention_in_30'] = official['in30']
+        result['days_to_disposition'] = official['days_to_disposition']
+        # 去掉自算的倒數字樣；「已達注意標準」改註明是自算
+        result['reasons'] = [
+            r.replace('（已達注意標準）', '（自算達標，以官方公告為準）')
+            for r in result['reasons'] if not r.startswith('⏳')
+        ]
+        if result['risk_level'] == 'warning':
+            result['risk_level'] = 'watch'
+        if result['risk_level'] in ('disposed',):
+            pass
+        elif official['official_warn']:
+            result['risk_level'] = 'warning'
+            result['reasons'].append(
+                f"⏳ 官方預告：次一營業日再被公告注意即處置（近10日{official['in10']}次／近30日{official['in30']}次）")
+        elif result['attention_today']:
+            if result['risk_level'] not in ('attention',):
+                result['risk_level'] = 'warning'
+            dtd = official['days_to_disposition']
+            tail = f"，若持續被公告最快剩 {dtd} 個營業日處置" if dtd else ''
+            result['reasons'].append(
+                f"官方已公告注意（近10日{official['in10']}次／近30日{official['in30']}次{tail}）")
+        elif official['in30'] >= 1:
+            result['reasons'].append(
+                f"官方近30日曾公告注意 {official['in30']} 次（最近一次已脫離，非當前注意股）")
+    elif result['risk_level'] == 'warning' or result['attention_today']:
+        result['reasons'].append('⚠️ 官方注意股資料無法取得，上列倒數為自算估計，已知會高估')
 
     level_labels = {
         'disposed':  '🔴🔴 處置股（禁止進場）',
@@ -756,8 +811,10 @@ def main():
                 trn = f"週轉{dr['turnover_today']:.1f}%" if dr.get('turnover_today') is not None else ''
                 pcts = ' / '.join(x for x in [p6, p30, trn] if x)
                 cd = ''
-                if dr.get('attention_today') and dr.get('days_to_disposition') is not None:
-                    cd = f" ⏳連{dr['consecutive_attention']}天/最快剩{dr['days_to_disposition']}天處置"
+                if dr.get('official') and dr.get('days_to_disposition') is not None:
+                    cd = f" ⏳官方注意:近10日{dr['attention_in_10']}次/近30日{dr['attention_in_30']}次/最快剩{dr['days_to_disposition']}天處置"
+                elif dr.get('attention_today') and dr.get('days_to_disposition') is not None:
+                    cd = f" ⏳連{dr['consecutive_attention']}天/最快剩{dr['days_to_disposition']}天處置(自算)"
                 print(f"   • {a['stock_name']}({a['stock_code']}): {pcts}  {dr['label']}{cd}")
 
     total_alerts = len(alerts['level4']) + len(alerts['level3']) + len(alerts['level2']) + len(alerts['level1'])
