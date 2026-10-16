@@ -206,6 +206,10 @@ if ($MarketStatus -eq "snapshot") {
     Write-Output "[ensure] 檢查 LINE 摘要訊號A／訊號B 區塊..." | Tee-Object -FilePath $LogFile -Append
     python "$ProjectDir\scripts\ensure_line_modules.py" --date $Date 2>&1 | Tee-Object -FilePath $LogFile -Append
 
+    # LINE 摘要每檔推薦插入「🏢 公司簡介」（取自 data/company_profiles.json；缺簡介只記 log，不編造）
+    Write-Output "[ensure] 插入 LINE 摘要公司簡介..." | Tee-Object -FilePath $LogFile -Append
+    python "$ProjectDir\scripts\ensure_line_profiles.py" --date $Date 2>&1 | Tee-Object -FilePath $LogFile -Append
+
     Write-Output "" | Tee-Object -FilePath $LogFile -Append
     Write-Output "[validate] 執行 validate_analysis.py before_market..." | Tee-Object -FilePath $LogFile -Append
     $ValidateOut = python "$ProjectDir\scripts\validate_analysis.py" before_market $Date 2>&1

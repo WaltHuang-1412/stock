@@ -3,6 +3,9 @@
 **版本**：v8.3.10
 **更新日期**：2026-09-03
 
+> **v8.3.11 變更（2026-10-12，處置風險改用官方資料）：** 新增 `scripts/official_attention.py`，`reversal_alert.check_disposition_risk()` 與 `fetch_twse_lists()` 改以**官方**資料為準：TWSE 注意交易資訊歷史（`rwd/zh/announcement/notice?startDate&endDate`）、處置期間（`openapi.../announcement/punish`）、累計次數異常預告（`.../notetrans`），TPEx 處置／注意（注意只給最新一日，由 `data/cache/tpex_attention_log.json` 每日快照累積，初期 `coverage_days` 不足）。處置條件採官方說明：連續 3 日達第一款，或連續 5 日／10 日內 6 日／30 日內 12 日達第一至八款。
+> 起因：原自算版只比對漲幅／週轉率，漏掉官方各款附加條件而嚴重高估 —— 1303 南亞自算「連續達標 15 天、早該處置」，官方近 30 日僅公告 1 次且未處置；2340 台亞自算「最快今日處置」，官方為近 10 日 4 次、最快剩 2 日。官方資料取不到時退回自算，並於 reasons 標註「已知會高估」。「接近門檻」的漲幅／週轉率提示仍保留（自算，僅供參考）。原檔備份 `scripts/reversal_alert.py.bak_20261012`。
+
 > **v8.3.10 變更（2026-09-03 盤後，兩條，依當日發現）：**
 > ① **盤前 Step 4 新增 Step 4-1「持倉停損價機械比對」（強制）** —— 鐵律①「觸及停損價」對 `my_holdings.yaml` 持倉**從來沒有任何腳本偵測**：盤前持倉評估只跑 `reversal_alert` 等級判斷，完全不讀 yaml 的 `stop_loss` 欄位。實測證據（`get_close_series` 近 30 個交易日逐日比對）：**6770 力積電收盤低於停損 73.26 達 26/30 日（最早 2026-07-24）、2337 旺宏低於 147.6 達 30/30 日、2313 華通低於 235.98 達 24/30 日**，期間盤前一律只標「留意減碼／續抱觀察」，鐵律從未執行。09-03 盤中 12:30 才由人工比對發現 6770（-14.75%）與 2337（-26.52%），盤前漏檢。
 > 新規則：盤前 Step 4-0 之後、`settlement_checker` 之前，機械式讀取 `my_holdings.yaml` 中 `quantity > 0` 且有 `stop_loss` 欄位者，逐檔比對「前一交易日收盤價 vs `stop_loss`」，**低於即列入當日開盤出場清單並標「鐵律①觸及停損價」**，不受 v8.3.3 待複核規則保護（該規則僅適用「法人反轉 L3/L4」）。盤中 12:30、盤後各複查一次。報告必須列出逐檔比對結果（含未觸發者），不得只寫觸發者。
@@ -982,6 +985,8 @@ python3 scripts/stock_dossier.py [名單...] --date $(date +%Y-%m-%d)
 - 當前設定：盤前推薦 `stop_loss_pct = -10`、盤中推薦 `stop_loss_pct = -5`、`settlement_days = 10`
 
 **LINE 摘要**（≤5000字元）：推薦股完整資訊 + 今日注意事項
+
+**🔴 推薦股公司簡介（強制）**：使用者沒空查公司背景，LINE 每檔推薦下一行須有「🏢 這家公司做什麼」。簡介存放於 `data/company_profiles.json`（`business` 一句話 ≤60 字，含主要產品／營收來源），由 `scripts/ensure_line_profiles.py` 在推送前機械式插入（`before_market.ps1` 已掛）。**新推薦股若該檔無條目，建檔前必須先 WebSearch 查證並寫入**（附 `source`），禁止憑印象編造；查不到就寫「簡介查無」並在報告揭露。推薦行格式需維持 `1️⃣ 代號 名稱 …`，腳本才抓得到。同一腳本還會機械式插入 📈基本面（`revenue_check`／`eps_check`）、⚖️賺賠比（tracking 的進場／目標／停損，含「開盤高3%才買」剩餘空間）、📊系統歷史勝率（`data/tracking` 已結算推薦：總體、近2個月、同分數段），數字一律取自檔案，不得手改。
 
 **🔴 ⏳沿用追蹤者必帶 `recommend_date`（v8.3.10 新增，強制）**：凡標「⏳沿用進行中追蹤」而列入當日 `recommendations` 的股票，**必須**帶 `recommend_date` = **原推薦日**。依據：`update_predictions.py:151-153` 的略過條件是「欄位存在且 ≠ 今日」，**欄位不存在時一律新增** → 會在 `predictions.json` 產生第二筆重複 holding，違反 Step 7「禁止新增第二筆重複記錄」。09-03 盤前的 2886 兆豐金（原推薦日 08-25）即漏帶，於盤後執行腳本前補寫才避免。
 
