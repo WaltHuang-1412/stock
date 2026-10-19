@@ -175,7 +175,14 @@
       "reason": "🛤️軌道A 法人TOP50 #23（avg_rank 21）；📶訊號A L2（4天在TOP50、動能-73.9%、5日+1.4%，+10）、動能<-30% +15；10-16 三大法人+8,570張、10日累計+69K、近5天外資+12K；反轉L0；EPS YoY+190%（+5）；營收YoY+44.8%（5日未回檔故不加分）；月線+9.3%。⚠️風險：真連買僅1天；催化僅「塑化」中度（中東地緣為超強但標→）；美股對應龍頭無；週一預期跳空低開",
       "intraday_price": 75.7,
       "intraday_change_pct": -3.81,
-      "intraday_note": "12:30 反轉L0、法人買超；exit_signal_checker 提示減碼但未觸及鐵律（停損/2日-10%/L3-4皆無）→ 續抱"
+      "intraday_note": "12:30 反轉L0、法人買超；exit_signal_checker 提示減碼但未觸及鐵律（停損/2日-10%/L3-4皆無）→ 續抱",
+      "actual_close": 75.5,
+      "close_price": 75.5,
+      "return_pct": -4.07,
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "holding_status": "D0/10；持有中，D0 不結算",
+      "change_percent": -4.07
     },
     {
       "stock_code": "1802",
@@ -193,7 +200,14 @@
       "reason": "🛤️軌道A 法人TOP50 #7（avg_rank 8.0）；📶訊號A L2（2天在TOP50、動能+45.5%，+10）；10-16 三大法人+18K、10日累計+73K、近5天外資+39K、外資持股比週增+0.48%；反轉L0；EPS YoY+247%、毛利率QoQ+4.1pp（+5）；營收YoY+34.1%連7月成長；月線+9.9%。⚠️風險：「玻纖布漲停」已列MI投機末段訊號、真連買僅1天、10日內賣超4天、費半連8黑",
       "intraday_price": 67.7,
       "intraday_change_pct": 1.2,
-      "intraday_note": "12:30 反轉L0、站穩MA5 → 續抱"
+      "intraday_note": "12:30 反轉L0、站穩MA5 → 續抱",
+      "actual_close": 66.0,
+      "close_price": 66.0,
+      "return_pct": -1.35,
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "holding_status": "D0/10；持有中，D0 不結算",
+      "change_percent": -1.35
     },
     {
       "stock_code": "1605",
@@ -211,7 +225,14 @@
       "reason": "🛤️軌道A 法人TOP50 #17（avg_rank 25）；📶訊號A L2（2天在TOP50、動能-44.0%、5日-1.5%，+10）、動能<-30% 區間+10；10-16 三大法人+9,561張、10日累計+49K、近5天外資+11K；反轉L0；EPS YoY+1600%（+5）；營收YoY+10.3%；外資持股比週減-0.15%（-3）；月線+1.0%但在TOP50（過法人現身門檻）。⚠️風險：催化僅中度（鋼鐵／能源週）、法人排名偏後",
       "intraday_price": 37.4,
       "intraday_change_pct": -2.86,
-      "intraday_note": "12:30 反轉L0、法人買超；exit_signal_checker 提示減碼但未觸及鐵律（停損/2日-10%/L3-4皆無）→ 續抱"
+      "intraday_note": "12:30 反轉L0、法人買超；exit_signal_checker 提示減碼但未觸及鐵律（停損/2日-10%/L3-4皆無）→ 續抱",
+      "actual_close": 37.55,
+      "close_price": 37.55,
+      "return_pct": -2.47,
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "holding_status": "D0/10；持有中，D0 不結算",
+      "change_percent": -2.47
     }
   ],
   "carry_over": [
@@ -347,14 +368,79 @@
     "defense_pct": "15-25%",
     "note": "3檔新推薦偏防禦（塑化／材料／電纜），已揭露"
   },
-  "removed_stocks": [],
+  "removed_stocks": [
+    {
+      "stock_code": "6209",
+      "stock_name": "今國光",
+      "recommend_date": "2026-10-16",
+      "recommend_price": 93.0,
+      "result": "success",
+      "settled_date": "2026-10-19",
+      "settled_price": 102.0,
+      "last_close": 102.0,
+      "return_pct": 9.68,
+      "removal_reason": "D1 收盤 102.0 ≥ 目標 100.44，達目標價結算",
+      "settled_by": "settlement_checker",
+      "source_tracking": "tracking_2026-10-16.json"
+    }
+  ],
   "disposition_stocks": {
     "twse_disposition": 14,
     "note": "候選池與持倉無官方處置股；6209 今國光為自算接近注意門檻（非官方）"
   },
   "track_b_recommendations": [],
   "tomorrow_pending_review": [],
-  "tomorrow_opening_exits": [],
+  "tomorrow_opening_exits": [
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "category": "持倉 my_holdings.yaml（已決事項，yaml 未更新）",
+      "reason": "收盤65.3<停損73.26（鐵律①）",
+      "decided": true
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "category": "持倉 my_holdings.yaml（已決事項，yaml 未更新）",
+      "reason": "收盤102.0<停損147.6（鐵律①）",
+      "decided": true
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "category": "持倉 my_holdings.yaml（已決事項，yaml 未更新）",
+      "reason": "收盤162.5<停損256.5（鐵律①）；10-16 T86 L4",
+      "decided": true
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "category": "持倉 my_holdings.yaml（已決事項，yaml 未更新）",
+      "reason": "已決L4（10-16 T86 -15,095張佔10.1%）；損益約+30%超過yaml停利20%",
+      "decided": true
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "category": "持倉 my_holdings.yaml（已決事項，yaml 未更新）",
+      "reason": "已決事項（10-15 L4），不重評",
+      "decided": true
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "category": "持倉 my_holdings.yaml（已決事項，yaml 未更新）",
+      "reason": "已決事項，不重評",
+      "decided": true
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電零股",
+      "category": "持倉 my_holdings.yaml（已決事項，yaml 未更新）",
+      "reason": "已決L4（10-16 T86 -22,372張佔69.9%）",
+      "decided": true
+    }
+  ],
   "tomorrow_recommendations": [],
   "track_b_observations": [
     {
@@ -415,5 +501,28 @@
       "stop": 76.5,
       "hit": false
     }
-  ]
+  ],
+  "after_market_note": "2026-10-19 盤後：6209 今國光結算成功；T86 14:31 仍未公布，明日推薦 0 檔",
+  "yesterday_verification": {
+    "date": "2026-10-19",
+    "settled_count": 1,
+    "success": 1,
+    "fail": 0,
+    "note": "6209 今國光 D1 收盤達目標價結算",
+    "accuracy": 55.2,
+    "cumulative": {
+      "success": 409,
+      "fail": 332,
+      "settled": 741
+    },
+    "results": [
+      {
+        "stock_code": "6209",
+        "stock_name": "今國光",
+        "result": "success",
+        "settled_price": 102.0,
+        "return_pct": 9.68
+      }
+    ]
+  }
 }
