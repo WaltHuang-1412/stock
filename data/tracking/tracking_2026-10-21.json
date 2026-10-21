@@ -246,5 +246,28 @@
   "removed_stocks": [],
   "track_b_recommendations": [],
   "tomorrow_opening_exits": [],
-  "tomorrow_recommendations": []
+  "tomorrow_recommendations": [],
+  "intraday_update": {
+    "time": "12:44",
+    "prices": {
+      "2002": 19.55,
+      "2886": 53.4,
+      "2892": 41.3,
+      "2882": 113.5,
+      "2887": 41.8,
+      "3706": 82.0
+    },
+    "note": "2882/2887 已決出場，盤後以收盤價結算；其餘續抱"
+  },
+  "track_b_observations": [
+    {
+      "stock_code": "3231",
+      "stock_name": "緯創",
+      "note": "偵測器強訊號65，但真連買1天、近5天外資-5,467，準確率篩選②未過，不推薦"
+    },
+    {
+      "stock_code": "7791",
+      "note": "連買9天但累計僅+125張、非TOP30，不納入"
+    }
+  ]
 }
