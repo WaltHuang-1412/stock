@@ -26,7 +26,7 @@
       "settlement_days": 10,
       "position": "10%",
       "score": 106,
-      "result": "holding",
+      "result": "fail",
       "reason": "🛤️軌道A 法人TOP50 #12.5（avg_rank 12.5，買超+5,661張、buy_ratio 17.9%）；📶訊號A L2（4天在TOP50、動能-42.6%、5日-1.5%，+10）；動能<-30%佈局完成+15；近5天外資+8,443張、10日累計三大法人+84K；反轉L0；EPS YoY+131.6%（+5）；月線+0.04%且在TOP50（過法人現身門檻）；時事：Fed/升息預期超強催化，金融股↑。⚠️風險：營收YoY-30.8%（1月，未達連3月）；今日外資-3,030張、10日有3天賣超；含壽險子公司，長債殖利率>5%有評價壓力；與沿用 2886/2892 同為金融，組合層集中；結算週(10/21)、FOMC 10/27-28；大盤收盤在月線下-2.8%",
       "intraday_price": 41.2,
       "intraday_change_pct": -2.72,
@@ -34,14 +34,18 @@
       "two_day_pct": -2.94,
       "holding_days": 0,
       "holding_days_label": "D0/10",
-      "actual_close": 41.0,
+      "actual_close": 41.95,
       "close_price": 41.0,
-      "return_pct": -3.19,
+      "return_pct": -0.94,
       "t86_today": -19629,
       "reversal_after": "L4 37.6%",
       "holding_status": "D0 不判定；10-20 T86 賣超 -19,629 張佔 5 日均量 37.6% ≥8%（外資 -22,524）→ 鐵律③ L4，不受 v8.3.3 保護 → 10-21 開盤出場（已決事項）",
       "change_percent": -3.19,
-      "change_pct": -3.19
+      "change_pct": -3.19,
+      "settled_date": "2026-10-21",
+      "settled_price": 41.95,
+      "sync_note": "2026-10-21 盤後 v8.3.7 三處同步：①本檔 ②tracking_2026-10-21.json removed_stocks ③predictions.json",
+      "fail_reason": "鐵律③ L4（10-20 T86 賣超 -19,629 張佔 37.6% ≥8%）→ 10-21 開盤出場，已決事項不重評（v8.3.7）；入帳 10-21 收盤 41.95（v8.3.2），低於推薦價 42.35 記 fail。10-21 T86 該股翻買（反向樣本）"
     }
   ],
   "carry_over": [
