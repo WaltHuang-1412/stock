@@ -1,0 +1,47 @@
+{
+  "alerts": [
+    {
+      "us_stock": "Lam Research",
+      "change_pct": -3.21,
+      "level": 1,
+      "level_name": "⚪ 提示注意",
+      "tw_industry": "半導體設備/製造",
+      "affected_stocks": {
+        "2330": "台積電",
+        "3711": "日月光",
+        "2303": "聯電",
+        "6488": "環球晶"
+      },
+      "action": "warning",
+      "score_adjustment": -5,
+      "reason": "Lam Research 跌幅 -3.21%，半導體設備/製造產業受壓"
+    }
+  ],
+  "summary": {
+    "date": "2026-10-21",
+    "total_alerts": 1,
+    "level_3_count": 0,
+    "level_2_count": 0,
+    "level_1_count": 1,
+    "excluded_stocks": [],
+    "downgraded_stocks": {},
+    "warning_stocks": {
+      "2330": {
+        "reason": "Lam Research 跌幅 -3.21%",
+        "adjustment": -5
+      },
+      "3711": {
+        "reason": "Lam Research 跌幅 -3.21%",
+        "adjustment": -5
+      },
+      "2303": {
+        "reason": "Lam Research 跌幅 -3.21%",
+        "adjustment": -5
+      },
+      "6488": {
+        "reason": "Lam Research 跌幅 -3.21%",
+        "adjustment": -5
+      }
+    }
+  }
+}
