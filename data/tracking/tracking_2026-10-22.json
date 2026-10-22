@@ -1,0 +1,243 @@
+{
+  "date": "2026-10-22",
+  "version": "v8.3.11",
+  "phase": "before_market",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "taiex": 46887.77,
+    "as_of": "2026-10-21",
+    "vs_ma20": -2.63,
+    "regime": "多頭",
+    "vix": 16.68,
+    "defense_ratio": "0-15%",
+    "ai_bubble_stage": "惡化",
+    "foreign_note": "外資終止連賣10日 +9.6億"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2885",
+      "stock_name": "元大金",
+      "industry": "金融（金控）",
+      "recommend_date": "2026-10-22",
+      "recommend_price": 71.3,
+      "target_price": 77.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 64.17,
+      "settlement_days": 10,
+      "position": "10%",
+      "score": 87,
+      "result": "holding",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "score_breakdown": {
+        "時事": 14,
+        "法人": 18,
+        "產業": 13,
+        "技術": 11,
+        "價格": 11,
+        "動能-57.5%": 15,
+        "EPS YoY+154%": 5,
+        "營收YoY+22.7%": 0,
+        "外資持股比+0.01%": 0
+      },
+      "reason": "🛤️軌道A 法人TOP50 買超 #19.5（10-21 +6,937 張、買超佔比 29.7%）；10 日累計 +92K、近 5 天外資 +22K；動能 -57.5% 佈局中 +15；反轉 L0；月線 +1.9%、季線上；EPS(Q2) YoY +154%；時事：壽險與金融業獲利創高（🟢中度）＋聯準會升息預期。⚠️風險：真連買僅 1 天、投信 -1,154 張；金融集中；開盤 >73.4 不追",
+      "checks": {
+        "法人現身門檻": "在 TOP50 買超 → 通過",
+        "準確率①": "金控群↑（中度）",
+        "準確率②外資近5天": "+22K ✓",
+        "準確率③反轉": "L0 ✓",
+        "處置/注意": "不在官方清單",
+        "dossier": "事件 0，mentions 14"
+      }
+    },
+    {
+      "stock_code": "3702",
+      "stock_name": "大聯大",
+      "industry": "半導體通路（AI伺服器/被動元件鏈，tier_from_tracker 待審）",
+      "recommend_date": "2026-10-22",
+      "recommend_price": 115.0,
+      "target_price": 124.2,
+      "stop_loss_pct": -10,
+      "stop_loss": 103.5,
+      "settlement_days": 10,
+      "position": "10%",
+      "score": 87,
+      "result": "holding",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "score_breakdown": {
+        "時事": 16,
+        "法人": 14,
+        "產業": 13,
+        "技術": 11,
+        "價格": 8,
+        "動能-59.5%": 15,
+        "營收YoY+146.5%回檔-3.0%": 5,
+        "EPS YoY+388%": 5,
+        "外資持股比+0.08%": 0
+      },
+      "reason": "🛤️軌道A 法人TOP50 買超 #33（10-21 +3,479 張、佔比 31.3%）；10 日累計 +23K、賣超僅 1 天；動能 -59.5% 佈局中 +15；反轉 L0；營收 YoY +146.5%＋回檔 -3.0% +5；EPS(Q2) YoY +388% +5；時事：被動元件缺貨漲價（🟡強）、半導體漲價潮。⚠️風險：近 5 天外資僅 +3,243；月線 -1.2%（價格位置僅 8）；Q3 財報 11/14 前公布；開盤 >118.4 不追",
+      "checks": {
+        "法人現身門檻": "在 TOP50 買超 → 通過",
+        "準確率①": "被動元件缺貨漲價（🟡強）",
+        "準確率②外資近5天": "+3,243 ✓",
+        "準確率③反轉": "L0 ✓",
+        "處置/注意": "不在官方清單",
+        "dossier": "事件 0，mentions 8"
+      }
+    }
+  ],
+  "carry_over": [
+    "2002",
+    "2886",
+    "2892",
+    "3706",
+    "2867"
+  ],
+  "carry_over_recommendations": [
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "recommend_date": "2026-10-13",
+      "recommend_price": 19.2,
+      "target_price": 20.74,
+      "stop_loss_pct": -10,
+      "stop_loss": 17.28,
+      "settlement_days": 10,
+      "result": "holding",
+      "holding_days": 6,
+      "holding_days_label": "D6/10",
+      "actual_close_prev": 19.6,
+      "return_pct_prev": 2.08,
+      "holding_status": "續抱；10-21 T86 +7,834 張 L0；今日訊號A L3"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "recommend_date": "2026-10-13",
+      "recommend_price": 50.0,
+      "target_price": 54.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 45.0,
+      "settlement_days": 10,
+      "result": "holding",
+      "holding_days": 6,
+      "holding_days_label": "D6/10",
+      "actual_close_prev": 53.6,
+      "return_pct_prev": 7.2,
+      "holding_status": "續抱；距目標 0.7%；+4,781 張 L0"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "recommend_date": "2026-10-13",
+      "recommend_price": 39.7,
+      "target_price": 42.88,
+      "stop_loss_pct": -10,
+      "stop_loss": 35.73,
+      "settlement_days": 10,
+      "result": "holding",
+      "holding_days": 6,
+      "holding_days_label": "D6/10",
+      "actual_close_prev": 41.3,
+      "return_pct_prev": 4.03,
+      "holding_status": "續抱；+4,226 張 L0；今日有法說會公告"
+    },
+    {
+      "stock_code": "3706",
+      "stock_name": "神達",
+      "recommend_date": "2026-10-21",
+      "recommend_price": 80.7,
+      "target_price": 87.16,
+      "stop_loss_pct": -10,
+      "stop_loss": 72.63,
+      "settlement_days": 10,
+      "result": "holding",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "actual_close_prev": 81.3,
+      "return_pct_prev": 0.74,
+      "holding_status": "續抱（D0 不結算）；+1,216 張 L0"
+    },
+    {
+      "stock_code": "2867",
+      "stock_name": "三商壽",
+      "recommend_date": "2026-08-17",
+      "result": "holding",
+      "holding_status": "⚠️ 序列停滯（末日 08-19）凍結判定，不結算（v8.3.8）"
+    }
+  ],
+  "module_a_result": {
+    "L3": 2,
+    "L2": 16,
+    "L1": 2,
+    "selected": [
+      "2885"
+    ],
+    "note": "L3=2002 中鋼(追蹤中)、2880 華南金(外資近5天 -6,095 未過準確率②)"
+  },
+  "module_b_result": {
+    "candidates": 10,
+    "passed": 3,
+    "note": "1513 中興電/1503 士電/2347 聯強通過基礎篩選但皆非法人TOP50且未達推薦；其餘 L3/L4/累計為負；0 檔以訊號B 進入推薦"
+  },
+  "defense_ratio": "0-15%",
+  "opening_exits_today": [
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "category": "持倉已決（10-21 T86 L4）",
+      "reason": "10-21 賣超 -15,738 張佔 49.7% L4；今日重掃仍 L4"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電零股",
+      "category": "持倉已決",
+      "reason": "10-21 賣超 -5,815 張佔 19.9% L4；今日重掃仍 L4"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "category": "持倉已決",
+      "reason": "收盤 66.2<停損 73.26（Step 4-1）"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "category": "持倉已決",
+      "reason": "收盤 103.0<停損 147.6（Step 4-1）；10-27 法說"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "category": "持倉已決",
+      "reason": "收盤 164.0<停損 256.5（Step 4-1）"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "category": "持倉已決",
+      "reason": "10-20 L4、損益 >停利 20%（已決不重評）"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "category": "持倉已決",
+      "reason": "已決事項不重評（10-21 仍買超 +4,944）"
+    }
+  ],
+  "tomorrow_opening_exits": [],
+  "removed_stocks": [],
+  "stop_loss_check_v8310": "6770/2337/3090 觸及停損；2313/1301/4938 未觸發；追蹤 2002/2886/2892 未觸發",
+  "observations": [
+    {
+      "stock_code": "2881",
+      "stock_name": "富邦金",
+      "score": 82,
+      "note": "過門檻但金融已 50%，Step 9 單一產業≤50% 不再增加（validator 擋），列觀察"
+    }
+  ]
+}
