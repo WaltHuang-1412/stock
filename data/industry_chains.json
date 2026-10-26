@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "last_updated": "2026-10-25",
+  "last_updated": "2026-10-26",
   "description": "台股產業鏈知識庫 - 時事驅動動態展開系統",
   "industries": {
     "AI": {
@@ -1963,6 +1963,11 @@
             {
               "code": "2360",
               "name": "致茂",
+              "category": "光通訊與網通（含CPO/矽光子量產）"
+            },
+            {
+              "code": "3533",
+              "name": "嘉澤",
               "category": "光通訊與網通（含CPO/矽光子量產）"
             }
           ]
@@ -6876,6 +6881,16 @@
             {
               "code": "2357",
               "name": "華碩",
+              "category": "台灣ETF與資金流向"
+            },
+            {
+              "code": "3231",
+              "name": "緯創",
+              "category": "台灣ETF與資金流向"
+            },
+            {
+              "code": "3264",
+              "name": "欣銓",
               "category": "台灣ETF與資金流向"
             }
           ]
@@ -12773,6 +12788,11 @@
               "code": "2465",
               "name": "麗臺",
               "category": "美中AI技術戰升級"
+            },
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "美中AI技術戰升級（含中國去輝達化）"
             }
           ]
         }
@@ -15089,6 +15109,11 @@
             {
               "code": "3504",
               "name": "揚明光",
+              "category": "企業財報重點彙整"
+            },
+            {
+              "code": "2459",
+              "name": "敦吉",
               "category": "企業財報重點彙整"
             }
           ]
@@ -20707,6 +20732,11 @@
               "code": "2049",
               "name": "上銀",
               "category": "半導體設備與自動化零組件：和椿、亞德客、弘塑、志聖、均華"
+            },
+            {
+              "code": "6234",
+              "name": "高僑",
+              "category": "半導體設備與自動化零組件：和椿、亞德客、弘塑、志聖、均華"
             }
           ]
         }
@@ -22056,6 +22086,11 @@
               "code": "2412",
               "name": "中華電",
               "category": "AI資安與AI基本法：黃仁勳點名網路安全、賴清德談AI治理"
+            },
+            {
+              "code": "6590",
+              "name": "普鴻",
+              "category": "AI資安與AI基本法：PHP漏洞、AI代理權限風險"
             }
           ]
         }
@@ -24430,6 +24465,11 @@
               "code": "1802",
               "name": "台玻",
               "category": "台股市場動態：休市四天、10/22收46,041(-1.81%)失守季線"
+            },
+            {
+              "code": "3264",
+              "name": "欣銓",
+              "category": "台股市場動態：休市四天、10/22收46,041失守季線"
             }
           ]
         }
@@ -24493,6 +24533,11 @@
             {
               "code": "3037",
               "name": "欣興",
+              "category": "Meta財報後AI資本支出回報疑慮：費半-6.7%、特斯拉砍資本支出"
+            },
+            {
+              "code": "2345",
+              "name": "智邦",
               "category": "Meta財報後AI資本支出回報疑慮：費半-6.7%、特斯拉砍資本支出"
             }
           ]
@@ -24764,6 +24809,217 @@
               "code": "5203",
               "name": "訊連",
               "category": "訊連遭Apple平台下架：蘋果平台占營收約14.69%"
+            }
+          ]
+        }
+      }
+    },
+    "美國期中選舉11": {
+      "name": "美國期中選舉11",
+      "catalysts": [
+        "美國期中選舉11",
+        "美國期中選舉",
+        "AI",
+        "資本支出政策風險"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "美國期中選舉11/3與AI資本支出政策風險"
+            },
+            {
+              "code": "2382",
+              "name": "廣達",
+              "category": "美國期中選舉11/3與AI資本支出政策風險"
+            },
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "美國期中選舉11/3與AI資本支出政策風險"
+            },
+            {
+              "code": "6669",
+              "name": "緯穎",
+              "category": "美國期中選舉11/3與AI資本支出政策風險"
+            },
+            {
+              "code": "2308",
+              "name": "台達電",
+              "category": "美國期中選舉11/3與AI資本支出政策風險"
+            }
+          ]
+        }
+      }
+    },
+    "蘋果折疊iPhone": {
+      "name": "蘋果折疊iPhone",
+      "catalysts": [
+        "蘋果折疊iPhone",
+        "蘋果折疊",
+        "iPhone",
+        "Duo",
+        "熱賣",
+        "傳追加三成訂單"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2317",
+              "name": "鴻海",
+              "category": "蘋果折疊iPhone Duo熱賣：傳追加三成訂單"
+            },
+            {
+              "code": "2330",
+              "name": "台積電",
+              "category": "蘋果折疊iPhone Duo熱賣：傳追加三成訂單"
+            },
+            {
+              "code": "3376",
+              "name": "新日興",
+              "category": "蘋果折疊iPhone Duo熱賣：傳追加三成訂單"
+            },
+            {
+              "code": "4938",
+              "name": "和碩",
+              "category": "蘋果折疊iPhone Duo熱賣：傳追加三成訂單"
+            },
+            {
+              "code": "4958",
+              "name": "臻鼎-KY",
+              "category": "蘋果折疊iPhone Duo熱賣：傳追加三成訂單"
+            },
+            {
+              "code": "3008",
+              "name": "大立光",
+              "category": "蘋果折疊iPhone Duo熱賣：傳追加三成訂單"
+            },
+            {
+              "code": "5203",
+              "name": "訊連",
+              "category": "蘋果折疊iPhone Duo熱賣：傳追加三成訂單"
+            }
+          ]
+        }
+      }
+    },
+    "輝達點名PTFE高速材料：台郡躍短線焦點": {
+      "name": "輝達點名PTFE高速材料：台郡躍短線焦點",
+      "catalysts": [
+        "輝達點名PTFE高速材料：台郡躍短線焦點",
+        "輝達點名",
+        "PTFE",
+        "高速材料",
+        "台郡躍短線焦點"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "6269",
+              "name": "台郡",
+              "category": "輝達點名PTFE高速材料：台郡躍短線焦點"
+            },
+            {
+              "code": "6274",
+              "name": "台燿",
+              "category": "輝達點名PTFE高速材料：台郡躍短線焦點"
+            },
+            {
+              "code": "6213",
+              "name": "聯茂",
+              "category": "輝達點名PTFE高速材料：台郡躍短線焦點"
+            },
+            {
+              "code": "2383",
+              "name": "台光電",
+              "category": "輝達點名PTFE高速材料：台郡躍短線焦點"
+            },
+            {
+              "code": "1815",
+              "name": "富喬",
+              "category": "輝達點名PTFE高速材料：台郡躍短線焦點"
+            }
+          ]
+        }
+      }
+    },
+    "航空貨運AI搶運": {
+      "name": "航空貨運AI搶運",
+      "catalysts": [
+        "航空貨運AI搶運",
+        "航空貨運",
+        "AI",
+        "搶運與燃油成本",
+        "運價漲一成",
+        "獲利受侵蝕"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2618",
+              "name": "長榮航",
+              "category": "航空貨運AI搶運與燃油成本：運價漲一成、獲利受侵蝕"
+            },
+            {
+              "code": "2610",
+              "name": "華航",
+              "category": "航空貨運AI搶運與燃油成本：運價漲一成、獲利受侵蝕"
+            },
+            {
+              "code": "2646",
+              "name": "星宇",
+              "category": "航空貨運AI搶運與燃油成本：運價漲一成、獲利受侵蝕"
+            },
+            {
+              "code": "2603",
+              "name": "長榮",
+              "category": "航空貨運AI搶運與燃油成本：運價漲一成、獲利受侵蝕"
+            }
+          ]
+        }
+      }
+    },
+    "中鋼熱鐵磚": {
+      "name": "中鋼熱鐵磚",
+      "catalysts": [
+        "中鋼熱鐵磚",
+        "HBI",
+        "低碳鐵源布局",
+        "潛在投資",
+        "億元"
+      ],
+      "tiers": {
+        "tier_from_tracker": {
+          "name": "催化劑追蹤（自動同步）",
+          "description": "從 topic_tracker.md 自動識別，請人工審核後移至正確 tier",
+          "stocks": [
+            {
+              "code": "2002",
+              "name": "中鋼",
+              "category": "中鋼熱鐵磚(HBI)低碳鐵源布局：潛在投資250億元"
+            },
+            {
+              "code": "2015",
+              "name": "豐興",
+              "category": "中鋼熱鐵磚(HBI)低碳鐵源布局：潛在投資250億元"
+            },
+            {
+              "code": "2006",
+              "name": "東和鋼鐵",
+              "category": "中鋼熱鐵磚(HBI)低碳鐵源布局：潛在投資250億元"
             }
           ]
         }
