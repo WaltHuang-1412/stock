@@ -1,0 +1,379 @@
+{
+  "date": "2026-10-27",
+  "version": "v8.3.11",
+  "phase": "before_market",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "as_of": "2026-10-22",
+    "taiex": 46041.43,
+    "vs_ma20": -4.22,
+    "regime": "偏多",
+    "regime_score": 2,
+    "vix": 18.39,
+    "defense_ratio": "0-15%",
+    "ai_bubble_stage": "惡化",
+    "foreign_note": "外資10-22賣超816.6億，近5日-2,831億；台股連假四天後復市",
+    "us": "費半+2.82%、NASDAQ+0.82%、S&P+0.70%"
+  },
+  "recommendations": [
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "industry": "金融（金控）",
+      "recommend_date": "2026-10-27",
+      "recommend_price": 55.2,
+      "target_price": 59.62,
+      "stop_loss_pct": -10,
+      "stop_loss": 49.68,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 111,
+      "result": "holding",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "score_breakdown": {
+        "時事": 17,
+        "法人": 23,
+        "產業": 14,
+        "技術": 14,
+        "價格": 13,
+        "動能-41.2%": 15,
+        "EPS YoY+16%": 0,
+        "ModuleA L3": 15
+      },
+      "reason": "🛤️軌道A 法人TOP50 買超（10-22 +9,679 張、avg_rank 9.0）；真連買10天、10日累計+95K、近5天+35K；動能-41.2%；反轉L0；月線+8.0%；時事：台股市場動態鏈↑＋AI以外資金輪動。⚠️風險：10-22 剛以+10.4%結算成功（10-13推薦），股價離月線+8%；金融集中；投信10日-25K；開盤高於56.9不追",
+      "checks": {
+        "法人現身門檻": "在TOP50買超→通過",
+        "準確率①": "台股市場動態超強鏈↑",
+        "準確率②外資近5天": "+14K ✓",
+        "準確率③反轉": "L0 ✓",
+        "處置/注意": "不在官方清單",
+        "dossier": "事件0，mentions 16"
+      }
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "industry": "金融（金控）",
+      "recommend_date": "2026-10-27",
+      "recommend_price": 49.75,
+      "target_price": 53.73,
+      "stop_loss_pct": -10,
+      "stop_loss": 44.77,
+      "settlement_days": 10,
+      "position": "10%",
+      "score": 106,
+      "result": "holding",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "score_breakdown": {
+        "時事": 18,
+        "法人": 21,
+        "產業": 14,
+        "技術": 12,
+        "價格": 13,
+        "動能-39.2%": 15,
+        "EPS YoY+43%": 3,
+        "ModuleA L2": 10
+      },
+      "reason": "🛤️軌道A 法人TOP50 買超（10-22 +10,313 張、avg_rank 9.0）；10日累計+86K、外資近5日+16K；動能-39.2%佈局；反轉L0；月線+6.2%、季線上；EPS Q2 YoY+43%；時事：聯準會升息預期（🔴超強，金融鏈↑）＋台股市場動態（🔴超強鏈↑）＋AI以外資金輪動。⚠️風險：真連買僅2天、投信10-22 -2,537 張；金融集中（追蹤中已有第一金、元大金）；開盤高於51.2不追",
+      "checks": {
+        "法人現身門檻": "在TOP50買超→通過",
+        "準確率①": "聯準會/台股動態超強鏈↑",
+        "準確率②外資近5天": "+16K ✓",
+        "準確率③反轉": "L0 ✓",
+        "處置/注意": "不在官方清單",
+        "dossier": "事件0，mentions 21"
+      }
+    },
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "industry": "航運",
+      "recommend_date": "2026-10-27",
+      "recommend_price": 260.0,
+      "target_price": 280.8,
+      "stop_loss_pct": -10,
+      "stop_loss": 234.0,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 94,
+      "result": "holding",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "score_breakdown": {
+        "時事": 16,
+        "法人": 15,
+        "產業": 14,
+        "技術": 13,
+        "價格": 11,
+        "動能-69.6%": 15,
+        "EPS YoY+46%": 5,
+        "營收YoY+65%且回檔-2.1%": 5
+      },
+      "reason": "🛤️軌道A 法人TOP50 買超（10-22 +2,926 張、avg_rank 23.0）；10日累計+46K、真連買5天、10天只賣2天；動能-69.6%佈局；反轉L0；月線+4.4%、季線上；營收YoY+65%＋回檔-2.1%；EPS Q2 YoY+46%、毛利率QoQ+7.3pp；時事：中東地緣（🔴超強，航運鏈↑）＋台股市場動態鏈↑。⚠️風險：中東談判曙光、油價回落方向不明；當日買超量偏小；非Module A；開盤高於267.8不追",
+      "checks": {
+        "法人現身門檻": "在TOP50買超→通過",
+        "準確率①": "中東地緣/台股動態超強鏈↑",
+        "準確率②外資近5天": "+2,724+429+627-1,003+1,625 ✓",
+        "準確率③反轉": "L0 ✓",
+        "處置/注意": "不在官方清單",
+        "dossier": "事件0，mentions 46（含長榮航誤配）"
+      }
+    },
+    {
+      "stock_code": "1101",
+      "stock_name": "台泥",
+      "industry": "水泥",
+      "recommend_date": "2026-10-27",
+      "recommend_price": 27.95,
+      "target_price": 30.19,
+      "stop_loss_pct": -10,
+      "stop_loss": 25.16,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 82,
+      "result": "holding",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "score_breakdown": {
+        "時事": 16,
+        "法人": 23,
+        "產業": 14,
+        "技術": 11,
+        "價格": 13,
+        "ModuleA L2": 10,
+        "過量買超": -5
+      },
+      "reason": "🛤️軌道A 法人TOP50 買超第1（10-22 +33,359 張、avg_rank 2.0）；10日累計+100K、近5天外資+38K、外資+投信同步；真連買3天；動能+8.6%；反轉L0；月線+6.3%；外資持股比週增+0.29%；時事：台股市場動態（🔴超強鏈↑）＋台泥戰後重建／法人籌碼穩定股（觀察中）。⚠️風險：單日買超≥30K且連買<7天→過量買超-5；營收YoY僅+7.6%；EPS YoY無資料；開盤高於28.8不追",
+      "checks": {
+        "法人現身門檻": "在TOP50買超→通過",
+        "準確率①": "台股市場動態超強鏈↑",
+        "準確率②外資近5天": "+38K ✓",
+        "準確率③反轉": "L0 ✓",
+        "處置/注意": "不在官方清單",
+        "dossier": "事件0，mentions 18"
+      }
+    }
+  ],
+  "carry_over": [
+    "2002",
+    "2892",
+    "3706",
+    "2885",
+    "3702",
+    "2867"
+  ],
+  "carry_over_recommendations": [
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "recommend_date": "2026-10-13",
+      "recommend_price": 19.2,
+      "target_price": 20.74,
+      "stop_loss_pct": -10,
+      "stop_loss": 17.28,
+      "settlement_days": 10,
+      "result": "holding",
+      "holding_days": 6,
+      "holding_days_label": "D7/10",
+      "actual_close_prev": 19.55,
+      "return_pct_prev": 1.8,
+      "holding_status": "續抱；10-22 T86 L0（序列末日10-22，無新交易日）",
+      "actual_close": 19.55,
+      "return_pct": 1.8
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "recommend_date": "2026-10-13",
+      "recommend_price": 39.7,
+      "target_price": 42.88,
+      "stop_loss_pct": -10,
+      "stop_loss": 35.73,
+      "settlement_days": 10,
+      "result": "holding",
+      "holding_days": 6,
+      "holding_days_label": "D7/10",
+      "actual_close_prev": 42.35,
+      "return_pct_prev": 6.7,
+      "holding_status": "續抱；10-22 T86 L0（序列末日10-22，無新交易日）",
+      "actual_close": 42.35,
+      "return_pct": 6.7
+    },
+    {
+      "stock_code": "3706",
+      "stock_name": "神達",
+      "recommend_date": "2026-10-21",
+      "recommend_price": 80.7,
+      "target_price": 87.16,
+      "stop_loss_pct": -10,
+      "stop_loss": 72.63,
+      "settlement_days": 10,
+      "result": "holding",
+      "holding_days": 0,
+      "holding_days_label": "D1/10",
+      "actual_close_prev": 80.5,
+      "return_pct_prev": -0.2,
+      "holding_status": "續抱；10-22 T86 L0（序列末日10-22，無新交易日）",
+      "actual_close": 80.5,
+      "return_pct": -0.2
+    },
+    {
+      "stock_code": "2885",
+      "stock_name": "元大金",
+      "recommend_date": "2026-10-22",
+      "recommend_price": 71.3,
+      "target_price": 77.0,
+      "stop_loss_pct": -10,
+      "stop_loss": 64.17,
+      "settlement_days": 10,
+      "result": "holding",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "holding_status": "續抱 D0；10-22 T86 L0"
+    },
+    {
+      "stock_code": "3702",
+      "stock_name": "大聯大",
+      "recommend_date": "2026-10-22",
+      "recommend_price": 115.0,
+      "target_price": 124.2,
+      "stop_loss_pct": -10,
+      "stop_loss": 103.5,
+      "settlement_days": 10,
+      "result": "holding",
+      "holding_days": 0,
+      "holding_days_label": "D0/10",
+      "holding_status": "續抱 D0；10-22 T86 L0"
+    }
+  ],
+  "module_a_result": {
+    "L3": 6,
+    "L2": 18,
+    "L1": 1,
+    "selected": [
+      "2884",
+      "1101",
+      "2886"
+    ],
+    "note": "L3=兆豐金、統一、寶成(重訊盈警)、亞泥、第一金(追蹤中)、中華電"
+  },
+  "module_b_result": {
+    "note": "cumulative_summary 僅含10-24快照(MU -2.5%、AMD -5.0% 為過期值)，與今日美股MU+2.98%/AMD+2.80%不符；候選全數被排除(旺宏/力成L4、創見動能>100%、其餘數據不足)，0檔進入推薦"
+  },
+  "defense_ratio": "0-15%",
+  "opening_exits_today": [
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "category": "已決事項（v8.3.7）",
+      "reason": "10-21 T86 賣超佔 49.7% L4；10-22 收盤 224.5 跌破停損 235.98，鐵律①②皆成立"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電零股",
+      "category": "已決事項（v8.3.7）",
+      "reason": "10-21 T86 賣超 -5,815 張 19.9% L4"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "category": "已決事項（v8.3.7）",
+      "reason": "收盤 66.4<停損 73.26（Step 4-1）"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "category": "已決事項（v8.3.7）",
+      "reason": "收盤 99.5<停損 147.6（Step 4-1）；10-27 法說"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "category": "已決事項（v8.3.7）",
+      "reason": "收盤 156.5<停損 256.5（Step 4-1）"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "category": "已決事項（v8.3.7）",
+      "reason": "10-20 L4、損益>停利 20%（已決不重評）"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "category": "已決事項（v8.3.7）",
+      "reason": "已決不重評"
+    }
+  ],
+  "tomorrow_opening_exits": [],
+  "removed_stocks": [],
+  "stop_loss_check_v8310": [
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "close": 66.4,
+      "stop_loss": 73.26,
+      "hit": true
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "close": 99.5,
+      "stop_loss": 147.6,
+      "hit": true
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "close": 224.5,
+      "stop_loss": 235.98,
+      "hit": true
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "close": 156.5,
+      "stop_loss": 256.5,
+      "hit": true
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "close": 73.8,
+      "stop_loss": 54.08,
+      "hit": false
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "close": 103.5,
+      "stop_loss": 76.5,
+      "hit": false
+    }
+  ],
+  "observations": [
+    "2801 彰銀(82分，金融集中不追)",
+    "2880 華南金",
+    "2891 中信金",
+    "2412 中華電(無超強鏈對齊)",
+    "2542 興富發(無時事提及)",
+    "2027 大成鋼(與中鋼重疊)",
+    "3231 緯創/2356 英業達/2317 鴻海/2382 廣達(動能>+100%，不啟動覆寫)",
+    "2377 微星(未在TOP50且月線+3.9%→法人現身門檻)"
+  ],
+  "track_b_recommendations": [],
+  "track_b_observations": [],
+  "tomorrow_recommendations": [],
+  "stale_series": [
+    {
+      "stock_code": "2867",
+      "last_date": "2026-08-19",
+      "note": "settlement_checker 查詢失敗/序列停滯，凍結"
+    }
+  ]
+}
