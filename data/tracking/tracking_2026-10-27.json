@@ -54,7 +54,12 @@
         "dossier": "事件0，mentions 16"
       },
       "intraday_price": 54.8,
-      "intraday_return_pct": -0.72
+      "intraday_return_pct": -0.72,
+      "actual_close": 55.0,
+      "return_pct": -0.36,
+      "holding_status": "續抱 D0，不判定；10-22 T86 L0",
+      "close_price": 55.0,
+      "change_percent": -0.36
     },
     {
       "stock_code": "2884",
@@ -91,7 +96,12 @@
         "dossier": "事件0，mentions 21"
       },
       "intraday_price": 49.25,
-      "intraday_return_pct": -1.01
+      "intraday_return_pct": -1.01,
+      "actual_close": 49.45,
+      "return_pct": -0.6,
+      "holding_status": "續抱 D0，不判定；10-22 T86 L0",
+      "close_price": 49.45,
+      "change_percent": -0.6
     },
     {
       "stock_code": "2603",
@@ -128,7 +138,12 @@
         "dossier": "事件0，mentions 46（含長榮航誤配）"
       },
       "intraday_price": 260.0,
-      "intraday_return_pct": 0.0
+      "intraday_return_pct": 0.0,
+      "actual_close": 261.5,
+      "return_pct": 0.58,
+      "holding_status": "續抱 D0，不判定；10-22 T86 L0",
+      "close_price": 261.5,
+      "change_percent": 0.58
     },
     {
       "stock_code": "1101",
@@ -164,12 +179,16 @@
         "dossier": "事件0，mentions 18"
       },
       "intraday_price": 27.95,
-      "intraday_return_pct": 0.0
+      "intraday_return_pct": 0.0,
+      "actual_close": 28.1,
+      "return_pct": 0.54,
+      "holding_status": "續抱 D0，不判定；10-22 T86 L0",
+      "close_price": 28.1,
+      "change_percent": 0.54
     }
   ],
   "carry_over": [
     "2002",
-    "2892",
     "3706",
     "2885",
     "3702",
@@ -186,35 +205,15 @@
       "stop_loss": 17.28,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 6,
-      "holding_days_label": "D7/10",
+      "holding_days": 8,
+      "holding_days_label": "D8/10",
       "actual_close_prev": 19.55,
       "return_pct_prev": 1.8,
-      "holding_status": "續抱；10-22 T86 L0（序列末日10-22，無新交易日）",
-      "actual_close": 19.55,
-      "return_pct": 1.8,
+      "holding_status": "續抱；10-22 T86 L0（盤後 T86 未公布）",
+      "actual_close": 19.75,
+      "return_pct": 2.86,
       "intraday_price": 19.7,
       "intraday_return_pct": 2.6
-    },
-    {
-      "stock_code": "2892",
-      "stock_name": "第一金",
-      "recommend_date": "2026-10-13",
-      "recommend_price": 39.7,
-      "target_price": 42.88,
-      "stop_loss_pct": -10,
-      "stop_loss": 35.73,
-      "settlement_days": 10,
-      "result": "holding",
-      "holding_days": 6,
-      "holding_days_label": "D7/10",
-      "actual_close_prev": 42.35,
-      "return_pct_prev": 6.7,
-      "holding_status": "續抱；10-22 T86 L0（序列末日10-22，無新交易日）",
-      "actual_close": 42.35,
-      "return_pct": 6.7,
-      "intraday_price": 43.0,
-      "intraday_return_pct": 8.31
     },
     {
       "stock_code": "3706",
@@ -226,13 +225,13 @@
       "stop_loss": 72.63,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 0,
-      "holding_days_label": "D1/10",
+      "holding_days": 2,
+      "holding_days_label": "D2/10",
       "actual_close_prev": 80.5,
       "return_pct_prev": -0.2,
-      "holding_status": "續抱；10-22 T86 L0（序列末日10-22，無新交易日）",
-      "actual_close": 80.5,
-      "return_pct": -0.2,
+      "holding_status": "續抱；10-22 T86 L0（盤後 T86 未公布）",
+      "actual_close": 80.4,
+      "return_pct": -0.37,
       "intraday_price": 80.5,
       "intraday_return_pct": -0.25
     },
@@ -246,11 +245,13 @@
       "stop_loss": 64.17,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 0,
-      "holding_days_label": "D0/10",
-      "holding_status": "續抱 D0；10-22 T86 L0",
+      "holding_days": 1,
+      "holding_days_label": "D1/10",
+      "holding_status": "續抱；10-22 T86 L0（盤後 T86 未公布）",
       "intraday_price": 72.6,
-      "intraday_return_pct": 1.82
+      "intraday_return_pct": 1.82,
+      "actual_close": 73.2,
+      "return_pct": 2.66
     },
     {
       "stock_code": "3702",
@@ -262,11 +263,13 @@
       "stop_loss": 103.5,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 0,
-      "holding_days_label": "D0/10",
-      "holding_status": "續抱 D0；10-22 T86 L0",
+      "holding_days": 1,
+      "holding_days_label": "D1/10",
+      "holding_status": "續抱；10-22 T86 L0（盤後 T86 未公布）",
       "intraday_price": 116.5,
-      "intraday_return_pct": 1.3
+      "intraday_return_pct": 1.3,
+      "actual_close": 116.5,
+      "return_pct": 1.3
     }
   ],
   "module_a_result": {
@@ -328,8 +331,69 @@
       "reason": "已決不重評"
     }
   ],
-  "tomorrow_opening_exits": [],
-  "removed_stocks": [],
+  "tomorrow_opening_exits": [
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "category": "已決事項（v8.3.7）",
+      "reason": "10-21 T86 L4；收盤 216.0<停損 235.98，鐵律①成立"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電零股",
+      "category": "已決事項（v8.3.7）",
+      "reason": "10-21 T86 L4 賣超佔 59%（反轉掃描）"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "category": "已決事項（v8.3.7）",
+      "reason": "收盤 69.4<停損 73.26（Step 4-1）"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "category": "已決事項（v8.3.7）",
+      "reason": "收盤 103.0<停損 147.6（Step 4-1）；10-27 16:00 法說"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "category": "已決事項（v8.3.7）",
+      "reason": "收盤 153.0<停損 256.5（Step 4-1）"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "category": "已決事項（v8.3.7）",
+      "reason": "10-20 L4、損益>停利 20%（已決不重評）"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "category": "已決事項（v8.3.7）",
+      "reason": "已決不重評"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "track": "A",
+      "recommend_date": "2026-10-13",
+      "recommend_price": 39.7,
+      "settled_price": 43.15,
+      "last_close": 43.15,
+      "return_pct": 8.7,
+      "result": "success",
+      "holding_days": "D8/10",
+      "removal_reason": "收盤 43.15 ≥ 目標 42.88（D8/10，settlement_checker 10-27 盤後）；10-22 T86 法人 +9,366 張續買，成功入帳收盤價",
+      "success_note": "收盤 43.15 ≥ 目標 42.88",
+      "settled_by": "settlement_checker 目標價達成（盤後收盤價入帳）",
+      "settled_date": "2026-10-27",
+      "sync_note": "v8.3.7 三處同步：①tracking_2026-10-13.json ②本檔 removed_stocks ③predictions.json"
+    }
+  ],
   "stop_loss_check_v8310": [
     {
       "stock_code": "6770",
@@ -451,5 +515,74 @@
       ]
     },
     "note": "2330零股無停損價，已決L4"
+  },
+  "stop_loss_check_after_20261027": [
+    {
+      "stock_code": "6770",
+      "close": 69.4,
+      "stop_loss": 73.26,
+      "hit": true
+    },
+    {
+      "stock_code": "2337",
+      "close": 103.0,
+      "stop_loss": 147.6,
+      "hit": true
+    },
+    {
+      "stock_code": "2313",
+      "close": 216.0,
+      "stop_loss": 235.98,
+      "hit": true
+    },
+    {
+      "stock_code": "3090",
+      "close": 153.0,
+      "stop_loss": 256.5,
+      "hit": true
+    },
+    {
+      "stock_code": "1301",
+      "close": 74.4,
+      "stop_loss": 54.08,
+      "hit": false
+    },
+    {
+      "stock_code": "4938",
+      "close": 105.0,
+      "stop_loss": 76.5,
+      "hit": false
+    }
+  ],
+  "after_market_note": "14:31 執行，10-27 T86 未公布，法人資料為 10-22；明日推薦 0 檔，交 10-28 盤前以 10-27 T86 重評",
+  "yesterday_verification": {
+    "date": "2026-10-27",
+    "settled_today": {
+      "success": 1,
+      "fail": 0
+    },
+    "settled_accuracy": "55.2%",
+    "settled_count": 1,
+    "success_count": 413,
+    "fail_count": 335,
+    "holding_count": 175,
+    "note": "2892 第一金 success +8.7%",
+    "accuracy": 55.2,
+    "success": 1,
+    "fail": 0,
+    "cumulative": {
+      "success": 413,
+      "fail": 335,
+      "settled": 748
+    },
+    "results": [
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "result": "success",
+        "settled_price": 43.15,
+        "return_pct": 8.7
+      }
+    ]
   }
 }

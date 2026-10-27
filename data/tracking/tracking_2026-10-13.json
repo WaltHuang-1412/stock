@@ -345,7 +345,7 @@
       "score": 93,
       "rating": "⭐⭐⭐⭐⭐",
       "track": "軌道A（TOP50 avg_rank 26.5）＋訊號A L2",
-      "result": "holding",
+      "result": "success",
       "reason": "10-12 法人 +6,051 張（外資 +5,561、佔成交 35.9%）、近5天 +8,284、10日累計 +17K、真連買 2 天；動能 -38.2%（+15）；訊號A L2（+10）；Q2 EPS YoY +43.5%（+3）；公股金控投信四合一＋定期定額；反轉 L0；5日 +0.3% 尚未反映",
       "risks": "真連買僅 2 天；投信僅 +15 張；產業分數屬待審區 tier_from_tracker（13 分）；催化僅「觀察中／中」級；營收快取落後（2026-08）因子歸零；與兆豐金同屬金融（同族群合計倉位建議 ≤20%）",
       "score_breakdown": {
@@ -361,10 +361,14 @@
         "訊號A": 10,
         "反轉": 0
       },
-      "actual_close": 40.5,
-      "close_price": 40.5,
-      "return_pct": 2.02,
-      "change_percent": 2.02
+      "actual_close": 43.15,
+      "close_price": 43.15,
+      "return_pct": 8.7,
+      "change_percent": 2.02,
+      "settled_date": "2026-10-27",
+      "settled_price": 43.15,
+      "success_note": "收盤 43.15 ≥ 目標 42.88（D8/10，settlement_checker 10-27 盤後）；10-22 T86 法人 +9,366 張續買，成功入帳收盤價",
+      "sync_note": "v8.3.7 三處同步：①本檔 ②tracking_2026-10-27 removed_stocks ③predictions.json"
     },
     {
       "stock_code": "8046",
