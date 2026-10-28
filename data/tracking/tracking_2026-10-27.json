@@ -31,7 +31,7 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 111,
-      "result": "holding",
+      "result": "fail",
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "score_breakdown": {
@@ -55,11 +55,15 @@
       },
       "intraday_price": 54.8,
       "intraday_return_pct": -0.72,
-      "actual_close": 55.0,
-      "return_pct": -0.36,
-      "holding_status": "續抱 D0，不判定；10-22 T86 L0",
-      "close_price": 55.0,
-      "change_percent": -0.36
+      "actual_close": 53.9,
+      "return_pct": -2.36,
+      "holding_status": "10-28 鐵律 L4 出場結算",
+      "close_price": 53.9,
+      "change_percent": -0.36,
+      "settled_date": "2026-10-28",
+      "settled_price": 53.9,
+      "sync_note": "v8.3.7 三處同步：①本檔 ②tracking_2026-10-28.json removed_stocks ③predictions.json",
+      "fail_reason": "鐵律③ L4（10-27 T86 賣超 -1,251 張佔 8.1%~8.5% ≥8%，不受 v8.3.3 待複核保護）→ 10-28 盤前已決開盤出場（v8.3.7 不重評）；入帳 10-28 收盤 53.9（v8.3.2），低於推薦價 55.2 記 fail"
     },
     {
       "stock_code": "2884",
@@ -157,7 +161,7 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 82,
-      "result": "holding",
+      "result": "success",
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "score_breakdown": {
@@ -180,11 +184,15 @@
       },
       "intraday_price": 27.95,
       "intraday_return_pct": 0.0,
-      "actual_close": 28.1,
-      "return_pct": 0.54,
-      "holding_status": "續抱 D0，不判定；10-22 T86 L0",
-      "close_price": 28.1,
-      "change_percent": 0.54
+      "actual_close": 28.0,
+      "return_pct": 0.18,
+      "holding_status": "10-28 鐵律 L4 出場結算",
+      "close_price": 28.0,
+      "change_percent": 0.54,
+      "settled_date": "2026-10-28",
+      "settled_price": 28.0,
+      "sync_note": "v8.3.7 三處同步：①本檔 ②tracking_2026-10-28.json removed_stocks ③predictions.json",
+      "success_note": "鐵律③ L4（10-27 T86 賣超 -8,933 張佔 20.4%~22.9% ≥8%，外資 -11K）→ 10-28 盤前已決開盤出場（v8.3.7 不重評）；入帳 10-28 收盤 28.0（v8.3.2），高於推薦價 27.95 記 success"
     }
   ],
   "carry_over": [

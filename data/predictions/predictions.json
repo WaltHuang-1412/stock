@@ -7548,10 +7548,10 @@
     ]
   },
   "settled_accuracy": "55.2%",
-  "settled_count": 748,
-  "holding_count": 175,
-  "total_success": 413,
-  "total_fail": 335,
+  "settled_count": 750,
+  "holding_count": 177,
+  "total_success": 414,
+  "total_fail": 336,
   "2026-03-30": {
     "predictions": [
       {
@@ -18798,10 +18798,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 111,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-10-28",
+        "settled_price": 53.9,
+        "holding_days": 1,
+        "return_pct": -2.36,
+        "fail_reason": "鐵律③ L4（10-27 T86 賣超 -1,251 張佔 8.1%~8.5% ≥8%，不受 v8.3.3 待複核保護）→ 10-28 盤前已決開盤出場（v8.3.7 不重評）；入帳 10-28 收盤 53.9（v8.3.2），低於推薦價 55.2 記 fail"
       },
       {
         "symbol": "2884",
@@ -18843,6 +18845,74 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 82,
+        "result": "success",
+        "settled_date": "2026-10-28",
+        "settled_price": 28.0,
+        "holding_days": 1,
+        "return_pct": 0.18,
+        "fail_reason": "鐵律③ L4（10-27 T86 賣超 -8,933 張佔 20.4%~22.9% ≥8%，外資 -11K）→ 10-28 盤前已決開盤出場（v8.3.7 不重評）；入帳 10-28 收盤 28.0（v8.3.2），高於推薦價 27.95 記 success"
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-10-28": {
+    "predictions": [
+      {
+        "symbol": "2609",
+        "name": "陽明",
+        "recommend_price": 63.0,
+        "target_price": 68.04,
+        "stop_loss": 56.7,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10-15%",
+        "score": 96,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2801",
+        "name": "彰銀",
+        "recommend_price": 30.2,
+        "target_price": 32.62,
+        "stop_loss": 27.18,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 84,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2377",
+        "name": "微星",
+        "recommend_price": 166.0,
+        "target_price": 179.28,
+        "stop_loss": 149.4,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 81,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "3045",
+        "name": "台灣大",
+        "recommend_price": 134.5,
+        "target_price": 145.26,
+        "stop_loss": 121.05,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 79,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
