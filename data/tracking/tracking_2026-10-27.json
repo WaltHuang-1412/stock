@@ -77,7 +77,7 @@
       "settlement_days": 10,
       "position": "10%",
       "score": 106,
-      "result": "holding",
+      "result": "fail",
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "score_breakdown": {
@@ -101,11 +101,15 @@
       },
       "intraday_price": 49.25,
       "intraday_return_pct": -1.01,
-      "actual_close": 49.45,
-      "return_pct": -0.6,
-      "holding_status": "續抱 D0，不判定；10-22 T86 L0",
-      "close_price": 49.45,
-      "change_percent": -0.6
+      "actual_close": 49.0,
+      "return_pct": -1.51,
+      "holding_status": "2026-10-29 結算",
+      "close_price": 49.0,
+      "change_percent": -0.6,
+      "settled_date": "2026-10-29",
+      "settled_price": 49.0,
+      "sync_note": "v8.3.7 三處同步：①本檔 ②tracking_2026-10-29.json removed_stocks ③predictions.json",
+      "fail_reason": "鐵律③ L4（今日 T86 末日 10-28 賣超 -7,972 張佔日均量 33.0%，≥8%）→ 10-29 盤前已決開盤出場；入帳收盤 49.0（v8.3.2），低於推薦價 49.75"
     },
     {
       "stock_code": "2603",
