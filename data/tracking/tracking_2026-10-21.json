@@ -29,7 +29,7 @@
       "settlement_days": 10,
       "position": "10%",
       "score": 93,
-      "result": "holding",
+      "result": "fail",
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "score_breakdown": {
@@ -54,12 +54,16 @@
         "dossier": "stock_dossier.json：事件 0，mentions 11",
         "pattern_today": "檔案 2026-10-05 已逾 3 天，跳過"
       },
-      "actual_close": 81.3,
+      "actual_close": 76.8,
       "change_pct": 0.74,
-      "return_pct": 0.74,
-      "holding_status": "D0 續抱；10-21 T86 +1,216 張 L0",
-      "close_price": 81.3,
-      "change_percent": 0.74
+      "return_pct": -4.83,
+      "holding_status": "2026-10-30 結算",
+      "close_price": 76.8,
+      "change_percent": 0.74,
+      "settled_date": "2026-10-30",
+      "settled_price": 76.8,
+      "fail_reason": "鐵律③ L4：賣超 -2,515 張佔日均量 65.6%（≥8%，不適用待複核）→ 10-30 盤前已決開盤出場；入帳收盤 76.8（v8.3.2），低於推薦價 80.7",
+      "sync_note": "v8.3.7 三處同步：①本檔 ②tracking_2026-10-30.json removed_stocks ③predictions.json"
     }
   ],
   "carry_over": [

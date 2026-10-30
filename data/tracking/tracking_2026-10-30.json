@@ -1,7 +1,7 @@
 {
   "date": "2026-10-30",
   "version": "v8.3.11",
-  "phase": "before_market",
+  "phase": "after_market",
   "settings": {
     "stop_loss_pct": -10,
     "settlement_days": 10
@@ -58,40 +58,21 @@
       "intraday_price": 49.0,
       "intraday_return_pct": 0.0,
       "intraday_time": "12:48",
-      "holding_status": "持有中（盤中複查籌碼健康，未觸停損）"
+      "holding_status": "續抱（D0，反轉健康）",
+      "actual_close": 49.05,
+      "return_pct": 0.1,
+      "close_price": 49.05,
+      "change_percent": 0.1
     }
   ],
   "carry_over": [
-    "3706",
     "2885",
-    "3702",
     "2603",
     "2609",
     "2801",
-    "2377",
     "3045"
   ],
   "carry_over_recommendations": [
-    {
-      "stock_code": "3706",
-      "stock_name": "神達",
-      "recommend_date": "2026-10-21",
-      "recommend_price": 80.7,
-      "target_price": 87.16,
-      "stop_loss_pct": -10,
-      "stop_loss": 72.63,
-      "settlement_days": 10,
-      "result": "holding",
-      "holding_days": 4,
-      "holding_days_label": "D4/10",
-      "current_price": 79.5,
-      "return_pct": -1.49,
-      "holding_status": "開盤出場（L4 爆量賣超，盤中12:48複查仍L4，≥8%不適用待複核；盤後以收盤價入帳）",
-      "intraday_price": 77.0,
-      "intraday_return_pct": -4.58,
-      "intraday_time": "12:48",
-      "actual_close": 79.5
-    },
     {
       "stock_code": "2885",
       "stock_name": "元大金",
@@ -102,35 +83,15 @@
       "stop_loss": 64.17,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 3,
-      "holding_days_label": "D3/10",
-      "current_price": 73.4,
-      "return_pct": 2.95,
-      "holding_status": "持有中（盤中複查籌碼健康，未觸停損）",
+      "holding_days": 4,
+      "holding_days_label": "D4/10",
+      "current_price": 72.6,
+      "return_pct": 1.82,
+      "holding_status": "續抱（settlement_checker 10-30 盤後輸出；反轉 L0，T86 末日 10-29）",
       "intraday_price": 71.9,
       "intraday_return_pct": 0.84,
       "intraday_time": "12:48",
-      "actual_close": 73.4
-    },
-    {
-      "stock_code": "3702",
-      "stock_name": "大聯大",
-      "recommend_date": "2026-10-22",
-      "recommend_price": 115.0,
-      "target_price": 124.2,
-      "stop_loss_pct": -10,
-      "stop_loss": 103.5,
-      "settlement_days": 10,
-      "result": "holding",
-      "holding_days": 3,
-      "holding_days_label": "D3/10",
-      "current_price": 110.0,
-      "return_pct": -4.35,
-      "holding_status": "開盤出場（L4 爆量賣超，盤中12:48複查仍L4，≥8%不適用待複核；盤後以收盤價入帳）",
-      "intraday_price": 109.0,
-      "intraday_return_pct": -5.22,
-      "intraday_time": "12:48",
-      "actual_close": 110.0
+      "actual_close": 72.6
     },
     {
       "stock_code": "2603",
@@ -142,15 +103,15 @@
       "stop_loss": 234.0,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 2,
-      "holding_days_label": "D2/10",
-      "current_price": 261.0,
-      "return_pct": 0.38,
-      "holding_status": "持有中（盤中複查籌碼健康，未觸停損）",
+      "holding_days": 3,
+      "holding_days_label": "D3/10",
+      "current_price": 271.5,
+      "return_pct": 4.42,
+      "holding_status": "續抱（settlement_checker 10-30 盤後輸出；反轉 L0，T86 末日 10-29）",
       "intraday_price": 270.5,
       "intraday_return_pct": 4.04,
       "intraday_time": "12:48",
-      "actual_close": 261.0
+      "actual_close": 271.5
     },
     {
       "stock_code": "2609",
@@ -162,15 +123,15 @@
       "stop_loss": 56.7,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
-      "current_price": 62.0,
-      "return_pct": -1.59,
-      "holding_status": "持有中（盤中複查籌碼健康，未觸停損）",
+      "holding_days": 2,
+      "holding_days_label": "D2/10",
+      "current_price": 63.5,
+      "return_pct": 0.79,
+      "holding_status": "續抱（settlement_checker 10-30 盤後輸出；反轉 L0，T86 末日 10-29）",
       "intraday_price": 63.4,
       "intraday_return_pct": 0.63,
       "intraday_time": "12:48",
-      "actual_close": 62.0
+      "actual_close": 63.5
     },
     {
       "stock_code": "2801",
@@ -182,35 +143,15 @@
       "stop_loss": 27.18,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
-      "current_price": 30.5,
-      "return_pct": 0.99,
-      "holding_status": "持有中（盤中複查籌碼健康，未觸停損）",
+      "holding_days": 2,
+      "holding_days_label": "D2/10",
+      "current_price": 30.7,
+      "return_pct": 1.66,
+      "holding_status": "續抱（settlement_checker 10-30 盤後輸出；反轉 L0，T86 末日 10-29）",
       "intraday_price": 30.6,
       "intraday_return_pct": 1.32,
       "intraday_time": "12:48",
-      "actual_close": 30.5
-    },
-    {
-      "stock_code": "2377",
-      "stock_name": "微星",
-      "recommend_date": "2026-10-28",
-      "recommend_price": 166.0,
-      "target_price": 179.28,
-      "stop_loss_pct": -10,
-      "stop_loss": 149.4,
-      "settlement_days": 10,
-      "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
-      "current_price": 160.0,
-      "return_pct": -3.61,
-      "holding_status": "開盤出場（L4 爆量賣超，盤中12:48複查仍L4，≥8%不適用待複核；盤後以收盤價入帳）",
-      "intraday_price": 159.0,
-      "intraday_return_pct": -4.22,
-      "intraday_time": "12:48",
-      "actual_close": 160.0
+      "actual_close": 30.7
     },
     {
       "stock_code": "3045",
@@ -222,15 +163,15 @@
       "stop_loss": 121.05,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
-      "current_price": 134.5,
-      "return_pct": 0.0,
-      "holding_status": "持有中（盤中複查籌碼健康，未觸停損）",
+      "holding_days": 2,
+      "holding_days_label": "D2/10",
+      "current_price": 133.5,
+      "return_pct": -0.74,
+      "holding_status": "續抱（settlement_checker 10-30 盤後輸出；反轉 L0，T86 末日 10-29）",
       "intraday_price": 134.0,
       "intraday_return_pct": -0.37,
       "intraday_time": "12:48",
-      "actual_close": 134.5
+      "actual_close": 133.5
     }
   ],
   "opening_exits_today": [
@@ -295,8 +236,103 @@
       "reason": "L4 爆量賣超 -3,171 張佔 55.2%；佔比遠高於 8%，不適用 v8.3.3 待複核，開盤出場，盤後以收盤價入帳"
     }
   ],
-  "tomorrow_opening_exits": [],
-  "removed_stocks": [],
+  "tomorrow_opening_exits": [
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "category": "已決事項（v8.3.7）",
+      "reason": "收盤202.0<停損235.98"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電零股",
+      "category": "已決事項（v8.3.7）",
+      "reason": "L4 賣超（已決）"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "category": "已決事項（v8.3.7）",
+      "reason": "收盤66.6<停損73.26"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "category": "已決事項（v8.3.7）",
+      "reason": "收盤95.4<停損147.6；L4 -19,002 張佔 46.7%"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "category": "已決事項（v8.3.7）",
+      "reason": "收盤148.5<停損256.5；L4 8.5%"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "category": "已決事項（v8.3.7）",
+      "reason": "10-20 L4、損益>停利20%"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "category": "已決事項（v8.3.7）",
+      "reason": "已決不重評"
+    }
+  ],
+  "removed_stocks": [
+    {
+      "stock_code": "3706",
+      "stock_name": "神達",
+      "track": "A",
+      "recommend_date": "2026-10-21",
+      "recommend_price": 80.7,
+      "settled_price": 76.8,
+      "last_close": 76.8,
+      "return_pct": -4.83,
+      "result": "fail",
+      "holding_days": "D5/10",
+      "removal_reason": "鐵律③ L4：賣超 -2,515 張佔日均量 65.6%（≥8%，不適用待複核）→ 10-30 盤前已決開盤出場；入帳收盤 76.8（v8.3.2），低於推薦價 80.7",
+      "fail_reason": "鐵律③ L4：賣超 -2,515 張佔日均量 65.6%（≥8%，不適用待複核）→ 10-30 盤前已決開盤出場；入帳收盤 76.8（v8.3.2），低於推薦價 80.7",
+      "settled_by": "已決事項開盤出場（v8.3.2 收盤價入帳）",
+      "settled_date": "2026-10-30",
+      "sync_note": "v8.3.7 三處同步：①tracking_2026-10-21.json ②本檔 removed_stocks ③predictions.json"
+    },
+    {
+      "stock_code": "3702",
+      "stock_name": "大聯大",
+      "track": "A",
+      "recommend_date": "2026-10-22",
+      "recommend_price": 115.0,
+      "settled_price": 108.5,
+      "last_close": 108.5,
+      "return_pct": -5.65,
+      "result": "fail",
+      "holding_days": "D4/10",
+      "removal_reason": "鐵律③ L4：賣超 -4,336 張佔日均量 45.6%（≥8%，不適用待複核）→ 10-30 盤前已決開盤出場；入帳收盤 108.5（v8.3.2），低於推薦價 115.0",
+      "fail_reason": "鐵律③ L4：賣超 -4,336 張佔日均量 45.6%（≥8%，不適用待複核）→ 10-30 盤前已決開盤出場；入帳收盤 108.5（v8.3.2），低於推薦價 115.0",
+      "settled_by": "已決事項開盤出場（v8.3.2 收盤價入帳）",
+      "settled_date": "2026-10-30",
+      "sync_note": "v8.3.7 三處同步：①tracking_2026-10-22.json ②本檔 removed_stocks ③predictions.json"
+    },
+    {
+      "stock_code": "2377",
+      "stock_name": "微星",
+      "track": "A",
+      "recommend_date": "2026-10-28",
+      "recommend_price": 166.0,
+      "settled_price": 157.5,
+      "last_close": 157.5,
+      "return_pct": -5.12,
+      "result": "fail",
+      "holding_days": "D2/10",
+      "removal_reason": "鐵律③ L4：賣超 -3,171 張佔日均量 52.9%（≥8%，不適用待複核）→ 10-30 盤前已決開盤出場；入帳收盤 157.5（v8.3.2），低於推薦價 166.0",
+      "fail_reason": "鐵律③ L4：賣超 -3,171 張佔日均量 52.9%（≥8%，不適用待複核）→ 10-30 盤前已決開盤出場；入帳收盤 157.5（v8.3.2），低於推薦價 166.0",
+      "settled_by": "已決事項開盤出場（v8.3.2 收盤價入帳）",
+      "settled_date": "2026-10-30",
+      "sync_note": "v8.3.7 三處同步：①tracking_2026-10-28.json ②本檔 removed_stocks ③predictions.json"
+    }
+  ],
   "stop_loss_check_v8310": [
     {
       "stock_code": "6770",
@@ -398,5 +434,86 @@
       "stop_loss": 76.5,
       "hit": false
     }
-  ]
+  ],
+  "after_market_check_20261030": {
+    "t86": "10-30 T86 未公布（14:3x），法人欄位為 10-29 T86",
+    "stale_series": [
+      "2867"
+    ],
+    "holdings_stop_loss": {
+      "6770": [
+        66.6,
+        73.26,
+        true
+      ],
+      "2337": [
+        95.4,
+        147.6,
+        true
+      ],
+      "2313": [
+        202.0,
+        235.98,
+        true
+      ],
+      "3090": [
+        148.5,
+        256.5,
+        true
+      ],
+      "1301": [
+        72.5,
+        54.08,
+        false
+      ],
+      "4938": [
+        102.5,
+        76.5,
+        false
+      ]
+    }
+  },
+  "yesterday_verification": {
+    "date": "2026-10-30",
+    "settled_today": {
+      "success": 0,
+      "fail": 3
+    },
+    "settled_accuracy": "55.0%",
+    "settled_count": 3,
+    "success_count": 415,
+    "fail_count": 340,
+    "holding_count": 173,
+    "accuracy": 55.0,
+    "success": 0,
+    "fail": 3,
+    "cumulative": {
+      "success": 415,
+      "fail": 340,
+      "settled": 755
+    },
+    "results": [
+      {
+        "stock_code": "3706",
+        "stock_name": "神達",
+        "result": "fail",
+        "settled_price": 76.8,
+        "return_pct": -4.83
+      },
+      {
+        "stock_code": "3702",
+        "stock_name": "大聯大",
+        "result": "fail",
+        "settled_price": 108.5,
+        "return_pct": -5.65
+      },
+      {
+        "stock_code": "2377",
+        "stock_name": "微星",
+        "result": "fail",
+        "settled_price": 157.5,
+        "return_pct": -5.12
+      }
+    ]
+  }
 }

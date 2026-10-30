@@ -110,15 +110,19 @@
         "EPS": 5,
         "動能": 15
       },
-      "result": "holding",
-      "actual_close": 168.5,
-      "close_price": 168.5,
-      "return_pct": 1.51,
+      "result": "fail",
+      "actual_close": 157.5,
+      "close_price": 157.5,
+      "return_pct": -5.12,
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "recommend_date": "2026-10-28",
-      "holding_status": "續抱 D0，不判定；10-27 T86 L0（10-28 T86 盤後尚未公布）",
-      "change_percent": 1.51
+      "holding_status": "2026-10-30 結算",
+      "change_percent": 1.51,
+      "settled_date": "2026-10-30",
+      "settled_price": 157.5,
+      "fail_reason": "鐵律③ L4：賣超 -3,171 張佔日均量 52.9%（≥8%，不適用待複核）→ 10-30 盤前已決開盤出場；入帳收盤 157.5（v8.3.2），低於推薦價 166.0",
+      "sync_note": "v8.3.7 三處同步：①本檔 ②tracking_2026-10-30.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "3045",
