@@ -1,0 +1,808 @@
+{
+  "date": "2026-10-30",
+  "window_days": 5,
+  "source_status": {
+    "法說會(MOPS)": "ok",
+    "除權息(TWSE)": "ok",
+    "重大訊息(TWSE+TPEx)": "ok"
+  },
+  "stocks": {
+    "2884": {
+      "name": "玉山金",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 6,
+          "text": "- **台股影響鏈**：台積電(2330)→；國泰金(2882)→；中信金(2891)↑；永豐金(2890)↑；富邦金(2881)↑；華南金(2880)↑；第一金(2892)↑；凱基金(2883)↑；玉山金(2884)↑；臺企銀(2834)→"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 42,
+          "text": "- **台股影響鏈**：台積電(2330)→；聯電(2303)↓；聯發科(2454)→；台達電(2308)→；友達(2409)↓；群創(3481)↓；穩懋(3105)↑；華新科(2492)↑；國巨(2327)↑；日月光投控(3711)↑；威剛(3260)↑；金控群(2881/2882/2884/2886/2891)→；長榮(2603)↑；陽明(2609)↑"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 73,
+          "text": "…亞科(2408)↑；群聯(8299)↑；欣興(3037)↑；統一超(2912)↑；寶雅(5904)↑；萬海(2615)↑；陽明(2609)↑；中鋼(2002)↑；金控群(2891/2886/5880/2883/2885/2881/2882/2884)↑；聯電(2303)→；瑞儀(6176)→；致伸(4915)→；台達電(2308)↑；友達(2409)↓；譜瑞-KY(4966)↓；貿聯-KY(3665)↓；元太(8069)↓…"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 123,
+          "text": "- **台股影響鏈**：玉山金(2884)↑；兆豐金(2886)↑；元大金(2885)↑；國巨(2327)↓；富邦金(2881)↓"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 135,
+          "text": "- **台股影響鏈**：國泰金(2882)→；玉山金(2884)↑；合庫金(5880)↓ 青安逾放；彰銀(2801)→；第一金(2892)→；華南金(2880)→"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 176,
+          "text": "- **台股影響鏈**：國泰金(2882)→；富邦金(2881)→；中信金(2891)↑；玉山金(2884)↑；台新新光金(2887)→；兆豐金(2886)↑；華南金(2880)↑；第一金(2892)↑；永豐金(2890)→"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 224,
+          "text": "- **台股影響鏈**：台灣大(3045)↑；精誠(6214)↑；遠傳(4904)↑；中華電(2412)↑；兆豐金(2886)↑；玉山金(2884)↑；南亞(1303)↑；台泥(1101)↑；長榮(2603)↑"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 638,
+          "text": "| 2884 | 玉山金 | 98.4 | +19.3% | +21.3% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 868,
+          "text": "| 2884 | 玉山金 | 98.4 | +19.3% | +21.3% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 907,
+          "text": "| 2884 | 玉山金 | 98.4 | +19.3% | +21.3% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 1035,
+          "text": "| 2884 | 玉山金 | 98.4 | +19.3% | +21.3% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 78,
+          "text": "\"code\": \"2884\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 79,
+          "text": "\"name\": \"玉山金\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2314,
+          "text": "\"code\": \"2884\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2315,
+          "text": "\"name\": \"玉山金\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2555,
+          "text": "\"code\": \"2884\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2556,
+          "text": "\"name\": \"玉山金\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 3618,
+          "text": "\"code\": \"2884\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 3619,
+          "text": "\"name\": \"玉山金\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4473,
+          "text": "\"code\": \"2884\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4474,
+          "text": "\"name\": \"玉山金\","
+        }
+      ]
+    },
+    "2412": {
+      "name": "中華電",
+      "events": [
+        {
+          "type": "法說會",
+          "date": "2026-11-04",
+          "days_until": 5,
+          "detail": "15:00 電話會議 115年第3季營運成果資料於法人說明會當日14:30後至https://www.cht.com.tw/chtir下載"
+        }
+      ],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 168,
+          "text": "- **台股影響鏈**：穩懋(3105)↑；昇達科(3491)↑；華通(2313)↑；啟碁(6285)↑；耀登(3138)↑；鴻海(2317)↑；中華電(2412)→；遠傳(4904)↑；昆桐(7965)↑"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 224,
+          "text": "- **台股影響鏈**：台灣大(3045)↑；精誠(6214)↑；遠傳(4904)↑；中華電(2412)↑；兆豐金(2886)↑；玉山金(2884)↑；南亞(1303)↑；台泥(1101)↑；長榮(2603)↑"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 227,
+          "text": "- **台股影響鏈**：意藍(5258)↑；伊雲谷(6689)↑；華經(2468)↑；邁達特(6112)↑；智聯服務(6751)↑；普鴻(6590)↑；中華電(2412)↑；網家(8044)↓"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 1017,
+          "text": "| 2412 | 中華電 | 233.1 | 🔺+25.6% | +9.5% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 3470,
+          "text": "\"code\": \"2412\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 3471,
+          "text": "\"name\": \"中華電\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4459,
+          "text": "\"code\": \"2412\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4460,
+          "text": "\"name\": \"中華電\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4563,
+          "text": "\"code\": \"2412\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4564,
+          "text": "\"name\": \"中華電\","
+        }
+      ]
+    },
+    "5880": {
+      "name": "合庫金",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 73,
+          "text": "…)↑；十銓(4967)↑；台光電(2383)↑；南亞科(2408)↑；群聯(8299)↑；欣興(3037)↑；統一超(2912)↑；寶雅(5904)↑；萬海(2615)↑；陽明(2609)↑；中鋼(2002)↑；金控群(2891/2886/5880/2883/2885/2881/2882/2884)↑；聯電(2303)→；瑞儀(6176)→；致伸(4915)→；台達電(2308)↑；友達(2409)↓；譜瑞-KY(4966)↓；貿聯-KY(3665)↓；元太(8069)↓…"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 135,
+          "text": "- **台股影響鏈**：國泰金(2882)→；玉山金(2884)↑；合庫金(5880)↓ 青安逾放；彰銀(2801)→；第一金(2892)→；華南金(2880)→"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 905,
+          "text": "| 5880 | 合庫金 | 62.8 | 🔺+23.6% | +18.3% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2562,
+          "text": "\"code\": \"5880\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2563,
+          "text": "\"name\": \"合庫金\","
+        }
+      ]
+    },
+    "9904": {
+      "name": "寶成",
+      "events": [],
+      "mentions": []
+    },
+    "2542": {
+      "name": "興富發",
+      "events": [],
+      "mentions": []
+    },
+    "2885": {
+      "name": "元大金",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 73,
+          "text": "…)↑；台光電(2383)↑；南亞科(2408)↑；群聯(8299)↑；欣興(3037)↑；統一超(2912)↑；寶雅(5904)↑；萬海(2615)↑；陽明(2609)↑；中鋼(2002)↑；金控群(2891/2886/5880/2883/2885/2881/2882/2884)↑；聯電(2303)→；瑞儀(6176)→；致伸(4915)→；台達電(2308)↑；友達(2409)↓；譜瑞-KY(4966)↓；貿聯-KY(3665)↓；元太(8069)↓…"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 123,
+          "text": "- **台股影響鏈**：玉山金(2884)↑；兆豐金(2886)↑；元大金(2885)↑；國巨(2327)↓；富邦金(2881)↓"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 866,
+          "text": "| 2885 | 元大金 | 195.9 | 🔺+57.9% | +116.3% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2328,
+          "text": "\"code\": \"2885\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2329,
+          "text": "\"name\": \"元大金\","
+        }
+      ]
+    },
+    "2801": {
+      "name": "彰銀",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 135,
+          "text": "- **台股影響鏈**：國泰金(2882)→；玉山金(2884)↑；合庫金(5880)↓ 青安逾放；彰銀(2801)→；第一金(2892)→；華南金(2880)→"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 906,
+          "text": "| 2801 | 彰銀 | 46.1 | 🔺+21.1% | +14.3% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 1189,
+          "text": "7. **彰銀主辦世平聯貸案** （2026-10-30 00:52）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 1233,
+          "text": "5. **彰銀統籌主辦世平集團新臺幣196.6億元暨美金5.122億元聯貸案完成簽約** （2026-10-29 23:17）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 1234,
+          "text": "> 【財訊快報／記者劉居全報導】彰化銀行(2801)及兆豐銀行統籌主辦世平興業股份有限公司、世平國際(香港)有限公司暨WPI Technology Pte. Ltd.等值新臺幣196.6億元暨美金5.12"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 1351,
+          "text": "23. **9銀行挺半導體通路龍頭 彰銀兆豐銀統籌大聯大旗下世平集團逾363億元聯貸案簽約** （2026-10-29 19:16）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 1352,
+          "text": "> 彰銀、兆豐銀行統籌主辦大聯大旗下世平集團聯貸案，今日簽約，金額含等值新台幣196.6億元與5.122億元。&#10;資金將充實世平集團中期營運周轉金，銀行團踴躍參與，顯示對其經營體質與發展前景肯定。&#10;世平集團稱將因應全球半導體供應鏈重組與AI升級，持續深耕高附加價值應用市場。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2569,
+          "text": "\"code\": \"2801\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2570,
+          "text": "\"name\": \"彰銀\","
+        }
+      ]
+    },
+    "3045": {
+      "name": "台灣大",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 223,
+          "text": "- **強度**：觀察中 | **方向**：→ | **持續**：14天（首見10/16）| **最後訊號**：10/28（台灣大創135元新高，收購精誠公開收購至11/5；國泰金站穩月線）"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 224,
+          "text": "- **台股影響鏈**：台灣大(3045)↑；精誠(6214)↑；遠傳(4904)↑；中華電(2412)↑；兆豐金(2886)↑；玉山金(2884)↑；南亞(1303)↑；台泥(1101)↑；長榮(2603)↑"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4432,
+          "text": "\"text\": \"14天（首見10/16）| **最後訊號**：10/28（台灣大創135元新高，收購精誠公開收購至11/5；國泰金站穩月線）\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4438,
+          "text": "\"code\": \"3045\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4439,
+          "text": "\"name\": \"台灣大\","
+        }
+      ]
+    },
+    "2603": {
+      "name": "長榮",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 12,
+          "text": "- **台股影響鏈**：台塑化(6505)↑；南亞(1303)→；台化(1326)→；台塑(1301)→；長榮(2603)↑；陽明(2609)↑；萬海(2615)↑；慧洋-KY(2637)↑；台驊(2636)↑；長榮航(2618)↓ 燃油；華航(2610)↓；星宇(2646)↓"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 42,
+          "text": "- **台股影響鏈**：台積電(2330)→；聯電(2303)↓；聯發科(2454)→；台達電(2308)→；友達(2409)↓；群創(3481)↓；穩懋(3105)↑；華新科(2492)↑；國巨(2327)↑；日月光投控(3711)↑；威剛(3260)↑；金控群(2881/2882/2884/2886/2891)→；長榮(2603)↑；陽明(2609)↑"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 65,
+          "text": "- **台股影響鏈**：台積電(2330)→ 外資提款；長榮(2603)→；國泰金(2882)→ 匯損與避險成本"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 138,
+          "text": "- **台股影響鏈**：長榮(2603)↑；陽明(2609)↑；萬海(2615)↑；裕民(2606)↑；慧洋-KY(2637)↑；台驊(2636)↑"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 173,
+          "text": "- **台股影響鏈**：雷虎(8033)↑；漢翔(2634)↑；長榮航太(2645)↑；中光電(3718)↑；信邦(3023)↑；大亞(1609)↑"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 195,
+          "text": "- **強度**：觀察中 | **方向**：→ | **持續**：1天（首見10/30，今日2則）| **最後訊號**：10/30（長榮、陽明有望規劃逐步復航紅海；歐洲與地中海港口工會傳10/30跨國罷工，恐引發塞港；官方擬砸24.5億元助航運產業升級）"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 196,
+          "text": "- **台股影響鏈**：長榮(2603)→；陽明(2609)→；萬海(2615)→"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 224,
+          "text": "- **台股影響鏈**：台灣大(3045)↑；精誠(6214)↑；遠傳(4904)↑；中華電(2412)↑；兆豐金(2886)↑；玉山金(2884)↑；南亞(1303)↑；台泥(1101)↑；長榮(2603)↑"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 241,
+          "text": "- **台股影響鏈**：漢翔(2634)↑；長榮航太(2645)↑；台積電(2330)→；長榮(2603)→"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 651,
+          "text": "| 2603 | 長榮 | 489.9 | 🔺+48.6% | +9.8% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 706,
+          "text": "| 2603 | 長榮 | 489.9 | 🔺+48.6% | +9.8% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 734,
+          "text": "| 2603 | 長榮 | 489.9 | 🔺+48.6% | +9.8% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 919,
+          "text": "| 2603 | 長榮 | 489.9 | 🔺+48.6% | +9.8% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 1027,
+          "text": "| 2645 | 長榮航太 | 18.5 | 🔺+26.0% | +14.9% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 1526,
+          "text": "> 全球貨櫃航運11月面臨兩大變數，長榮、陽明有望規劃逐步復航紅海；另外，歐洲及地中海港口工會傳出10月30日發動跨國罷工，恐引發塞港連鎖效應。兩股力量相互拉扯，牽動長榮、陽明、萬海三雄船舶調度及運價走勢。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 141,
+          "text": "\"code\": \"2603\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 142,
+          "text": "\"name\": \"長榮\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 177,
+          "text": "\"name\": \"長榮航\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 860,
+          "text": "\"code\": \"2603\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 861,
+          "text": "\"name\": \"長榮\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1101,
+          "text": "\"code\": \"2603\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1102,
+          "text": "\"name\": \"長榮\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2610,
+          "text": "\"code\": \"2603\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2611,
+          "text": "\"name\": \"長榮\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 3545,
+          "text": "\"name\": \"長榮航太\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 3573,
+          "text": "\"name\": \"長榮航\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 3574,
+          "text": "\"context\": \"長榮航太(2645)↑\""
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4034,
+          "text": "\"text\": \"1天（首見10/30，今日2則）| **最後訊號**：10/30（長榮、陽明有望規劃逐步復航紅海；歐洲與地中海港口工會傳10/30跨國罷工，恐引發塞港；官方擬砸24.5億元助航運產業升級）\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4040,
+          "text": "\"code\": \"2603\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4041,
+          "text": "\"name\": \"長榮\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4494,
+          "text": "\"code\": \"2603\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4495,
+          "text": "\"name\": \"長榮\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4773,
+          "text": "\"name\": \"長榮航太\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4786,
+          "text": "\"code\": \"2603\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4787,
+          "text": "\"name\": \"長榮\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4794,
+          "text": "\"name\": \"長榮航\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4795,
+          "text": "\"context\": \"長榮航太(2645)↑\""
+        }
+      ]
+    },
+    "2609": {
+      "name": "陽明",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 12,
+          "text": "- **台股影響鏈**：台塑化(6505)↑；南亞(1303)→；台化(1326)→；台塑(1301)→；長榮(2603)↑；陽明(2609)↑；萬海(2615)↑；慧洋-KY(2637)↑；台驊(2636)↑；長榮航(2618)↓ 燃油；華航(2610)↓；星宇(2646)↓"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 42,
+          "text": "- **台股影響鏈**：台積電(2330)→；聯電(2303)↓；聯發科(2454)→；台達電(2308)→；友達(2409)↓；群創(3481)↓；穩懋(3105)↑；華新科(2492)↑；國巨(2327)↑；日月光投控(3711)↑；威剛(3260)↑；金控群(2881/2882/2884/2886/2891)→；長榮(2603)↑；陽明(2609)↑"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 73,
+          "text": "…3563)↑；全新(2455)↑；穩懋(3105)↑；鴻勁(7769)↑；十銓(4967)↑；台光電(2383)↑；南亞科(2408)↑；群聯(8299)↑；欣興(3037)↑；統一超(2912)↑；寶雅(5904)↑；萬海(2615)↑；陽明(2609)↑；中鋼(2002)↑；金控群(2891/2886/5880/2883/2885/2881/2882/2884)↑；聯電(2303)→；瑞儀(6176)→；致伸(4915)→；台達電(2308)↑；友達(2409)↓；譜瑞-KY(4966)↓；貿聯-KY(3665)↓；元太(8069)↓…"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 138,
+          "text": "- **台股影響鏈**：長榮(2603)↑；陽明(2609)↑；萬海(2615)↑；裕民(2606)↑；慧洋-KY(2637)↑；台驊(2636)↑"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 195,
+          "text": "- **強度**：觀察中 | **方向**：→ | **持續**：1天（首見10/30，今日2則）| **最後訊號**：10/30（長榮、陽明有望規劃逐步復航紅海；歐洲與地中海港口工會傳10/30跨國罷工，恐引發塞港；官方擬砸24.5億元助航運產業升級）"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 196,
+          "text": "- **台股影響鏈**：長榮(2603)→；陽明(2609)→；萬海(2615)→"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 649,
+          "text": "| 2609 | 陽明 | 216.1 | 🔺+56.2% | +11.9% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 703,
+          "text": "| 2609 | 陽明 | 216.1 | 🔺+56.2% | +11.9% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 918,
+          "text": "| 2609 | 陽明 | 216.1 | 🔺+56.2% | +11.9% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 1526,
+          "text": "> 全球貨櫃航運11月面臨兩大變數，長榮、陽明有望規劃逐步復航紅海；另外，歐洲及地中海港口工會傳出10月30日發動跨國罷工，恐引發塞港連鎖效應。兩股力量相互拉扯，牽動長榮、陽明、萬海三雄船舶調度及運價走勢。"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 1529,
+          "text": "> 全球航運面臨多重挑戰。陽明海運董事長、輪船公會全聯會主席蔡豐明昨（29）日表示，政府規劃投入24.5億元推動航運產業升級，協助航商強化營運效率與國際競爭力，業界期待政府持續給予政策及資源支持。"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 148,
+          "text": "\"code\": \"2609\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 149,
+          "text": "\"name\": \"陽明\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 867,
+          "text": "\"code\": \"2609\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 868,
+          "text": "\"name\": \"陽明\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1383,
+          "text": "\"code\": \"2609\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1384,
+          "text": "\"name\": \"陽明\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2617,
+          "text": "\"code\": \"2609\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2618,
+          "text": "\"name\": \"陽明\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4034,
+          "text": "\"text\": \"1天（首見10/30，今日2則）| **最後訊號**：10/30（長榮、陽明有望規劃逐步復航紅海；歐洲與地中海港口工會傳10/30跨國罷工，恐引發塞港；官方擬砸24.5億元助航運產業升級）\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4047,
+          "text": "\"code\": \"2609\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4048,
+          "text": "\"name\": \"陽明\","
+        }
+      ]
+    },
+    "1301": {
+      "name": "台塑",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 12,
+          "text": "- **台股影響鏈**：台塑化(6505)↑；南亞(1303)→；台化(1326)→；台塑(1301)→；長榮(2603)↑；陽明(2609)↑；萬海(2615)↑；慧洋-KY(2637)↑；台驊(2636)↑；長榮航(2618)↓ 燃油；華航(2610)↓；星宇(2646)↓"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 69,
+          "text": "- **台股影響鏈**：台積電(2330)↓；中鋼(2002)→；鴻海(2317)↓；台達電(2308)↓；廣達(2382)↓；東陽(1319)↑；台塑(1301)→"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 142,
+          "text": "### 塑化股與南亞獲利暴增：外資調升＋台塑集團電子材料布局"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 144,
+          "text": "- **台股影響鏈**：台塑化(6505)↑；南亞(1303)↑；台塑(1301)↑；台化(1326)→"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 650,
+          "text": "| 6505 | 台塑化 | 819.1 | 🔺+50.3% | +16.7% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 934,
+          "text": "### 🟢 塑化股與南亞獲利暴增：外資調升＋台塑集團電子材料布局（✅ 有支撐）"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 938,
+          "text": "| 6505 | 台塑化 | 819.1 | 🔺+50.3% | +16.7% |"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 941,
+          "text": "| 1301 | 台塑 | 139.9 | +6.8% | -1.5% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 114,
+          "text": "\"name\": \"台塑化\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 134,
+          "text": "\"code\": \"1301\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 135,
+          "text": "\"name\": \"台塑\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1169,
+          "text": "\"code\": \"1301\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 1170,
+          "text": "\"name\": \"台塑\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2768,
+          "text": "\"theme\": \"塑化股與南亞獲利暴增：外資調升＋台塑集團電子材料布局\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2782,
+          "text": "\"name\": \"台塑化\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2795,
+          "text": "\"code\": \"1301\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2796,
+          "text": "\"name\": \"台塑\","
+        }
+      ]
+    },
+    "4938": {
+      "name": "和碩",
+      "events": [],
+      "mentions": [
+        {
+          "file": "topic_tracker.md",
+          "line": 36,
+          "text": "- **台股影響鏈**：廣達(2382)↑；鴻海(2317)↑；緯創(3231)→；緯穎(6669)↑；和碩(4938)↑；京元電(2449)↑；光寶科(2301)↑；台達電(2308)→"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 109,
+          "text": "- **台股影響鏈**：鴻海(2317)↑；和碩(4938)↑；廣達(2382)↑；台積電(2330)↑；新日興(3376)↓；大立光(3008)→；臻鼎-KY(4958)↑；訊連(5203)↓ 遭蘋果平台下架"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 182,
+          "text": "- **台股影響鏈**：鴻海(2317)↓；和碩(4938)↓；華碩(2357)↓；宏碁(2353)↓；微星(2377)→；技嘉(2376)→；群聯(8299)↑；譜瑞-KY(4966)↓"
+        },
+        {
+          "file": "topic_tracker.md",
+          "line": 203,
+          "text": "- **台股影響鏈**：華碩(2357)→；宏碁(2353)→；仁寶(2324)→；英業達(2356)→；和碩(4938)→"
+        },
+        {
+          "file": "market_intelligence.md",
+          "line": 851,
+          "text": "| 4938 | 和碩 | 883.0 | 🔺+34.1% | +1.5% |"
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 734,
+          "text": "\"code\": \"4938\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 735,
+          "text": "\"name\": \"和碩\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2122,
+          "text": "\"code\": \"4938\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 2123,
+          "text": "\"name\": \"和碩\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 3761,
+          "text": "\"code\": \"4938\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 3762,
+          "text": "\"name\": \"和碩\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4141,
+          "text": "\"code\": \"4938\","
+        },
+        {
+          "file": "industry_signals.json",
+          "line": 4142,
+          "text": "\"name\": \"和碩\","
+        }
+      ]
+    }
+  }
+}
