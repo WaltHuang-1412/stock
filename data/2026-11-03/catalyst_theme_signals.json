@@ -1,0 +1,381 @@
+{
+  "date": "2026-11-03",
+  "lookback_dates": [
+    "2026-11-03",
+    "2026-11-02",
+    "2026-10-30",
+    "2026-10-29",
+    "2026-10-28",
+    "2026-10-27",
+    "2026-10-26"
+  ],
+  "leader_trends": {
+    "Micron": {
+      "cumulative": -1.99,
+      "consecutive_up": 0,
+      "latest_change": -5.78,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "NVIDIA": {
+      "cumulative": -4.75,
+      "consecutive_up": 0,
+      "latest_change": -1.26,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Apple": {
+      "cumulative": -2.83,
+      "consecutive_up": 0,
+      "latest_change": -1.83,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "AMD": {
+      "cumulative": -7.25,
+      "consecutive_up": 0,
+      "latest_change": -7.52,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Tesla": {
+      "cumulative": 7.72,
+      "consecutive_up": 1,
+      "latest_change": 1.0,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    },
+    "Super Micro": {
+      "cumulative": -9.45,
+      "consecutive_up": 0,
+      "latest_change": -7.62,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Broadcom": {
+      "cumulative": 0.02,
+      "consecutive_up": 0,
+      "latest_change": -1.18,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Lam Research": {
+      "cumulative": -0.62,
+      "consecutive_up": 0,
+      "latest_change": -4.83,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Applied Materials": {
+      "cumulative": 0.28,
+      "consecutive_up": 0,
+      "latest_change": -3.99,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Western Digital": {
+      "cumulative": -3.49,
+      "consecutive_up": 0,
+      "latest_change": -7.52,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Dell": {
+      "cumulative": -12.96,
+      "consecutive_up": 0,
+      "latest_change": -7.43,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "ASML": {
+      "cumulative": -1.9,
+      "consecutive_up": 0,
+      "latest_change": -2.54,
+      "signal_level": "none",
+      "days_tracked": 7
+    }
+  },
+  "preposition_candidates": [
+    {
+      "code": "1513",
+      "name": "中興電",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -634,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": -488.1818181818182,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -299,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-634為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "1519",
+      "name": "華城",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -1803,
+        "buy_days": 3,
+        "sell_days": 7,
+        "momentum_pct": -12.367491166077738,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -1530,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-1,803為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "1503",
+      "name": "士電",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -643,
+        "buy_days": 3,
+        "sell_days": 7,
+        "momentum_pct": -500,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -516,
+        "reversal_level": "Level 3",
+        "exclusion_reason": "反轉Level 3排除｜累計-643為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "2049",
+      "name": "上銀",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": 2699,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": 500,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 4194,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜動能+500%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "2231",
+      "name": "為升",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -39,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 166.37931034482762,
+        "consecutive_buy": 4,
+        "cumulative_foreign": 14,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "累計-39為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "5284",
+      "name": "jpp-KY",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -268,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": -119.04761904761902,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -220,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-268為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3706",
+      "name": "神達",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -1353,
+        "buy_days": 6,
+        "sell_days": 4,
+        "momentum_pct": -234.20986093552463,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -3686,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-1,353為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -10657,
+        "buy_days": 1,
+        "sell_days": 9,
+        "momentum_pct": -57.976276930525295,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -20442,
+        "reversal_level": "Level 3",
+        "exclusion_reason": "反轉Level 3排除｜累計-10,657為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "8111",
+      "name": "至上",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": null,
+        "buy_days": null,
+        "sell_days": null,
+        "momentum_pct": null,
+        "consecutive_buy": null,
+        "cumulative_foreign": null,
+        "reversal_level": "unknown",
+        "exclusion_reason": "數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "2327",
+      "name": "國巨",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -36136,
+        "buy_days": 3,
+        "sell_days": 7,
+        "momentum_pct": 76.32704746911256,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -33837,
+        "reversal_level": "Level 3",
+        "exclusion_reason": "反轉Level 3排除｜累計-36,136為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "1477",
+      "name": "聚陽",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "signal_level": "moderate",
+      "leader_cumulative": 7.72,
+      "leader_consecutive_up": 1,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {}
+    }
+  ],
+  "already_in_top50": [
+    {
+      "code": "1504",
+      "name": "東元",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 7.72,
+      "tw_5d_change": -0.5738793601115971
+    },
+    {
+      "code": "2347",
+      "name": "聯強",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 7.72,
+      "tw_5d_change": 0.20140678962310177
+    },
+    {
+      "code": "2371",
+      "name": "大同",
+      "tw_industry": "電動車",
+      "us_leader": "Tesla",
+      "leader_cumulative": 7.72,
+      "tw_5d_change": 5.300353499782643
+    }
+  ],
+  "already_moved_count": 0
+}
