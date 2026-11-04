@@ -1,7 +1,7 @@
 {
   "date": "2026-11-04",
   "version": "v8.3.11",
-  "phase": "before_market",
+  "phase": "after_market",
   "settings": {
     "stop_loss_pct": -10,
     "settlement_days": 10
@@ -45,7 +45,13 @@
       "result": "holding",
       "holding_days": 0,
       "holding_days_label": "D0/10",
-      "track": "A"
+      "track": "A",
+      "actual_close": 56.4,
+      "current_price": 56.4,
+      "return_pct": -1.4,
+      "holding_status": "⛔ 盤後 T86 -3,675 張佔均量24.3% → L4，次日(11-05)開盤出場（已決事項）",
+      "close_price": 56.4,
+      "change_percent": -1.4
     },
     {
       "stock_code": "2317",
@@ -72,7 +78,13 @@
       "result": "holding",
       "holding_days": 0,
       "holding_days_label": "D0/10",
-      "track": "A"
+      "track": "A",
+      "actual_close": 240.0,
+      "current_price": 240.0,
+      "return_pct": -2.24,
+      "holding_status": "⛔ 盤後 T86 -14,132 張佔均量37.9% → L4，次日(11-05)開盤出場（已決事項）",
+      "close_price": 240.0,
+      "change_percent": -2.24
     }
   ],
   "carry_over": [
@@ -98,12 +110,15 @@
       "stop_loss": 64.17,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 6,
-      "holding_days_label": "D6/10",
-      "current_price": 69.2,
-      "return_pct": -2.95,
+      "holding_days": 7,
+      "holding_days_label": "D7/10",
+      "current_price": 69.0,
+      "return_pct": -3.23,
       "track": "A",
-      "holding_status": "續抱"
+      "holding_status": "續抱",
+      "actual_close": 69.0,
+      "close_price": 69.0,
+      "change_percent": -3.23
     },
     {
       "stock_code": "2609",
@@ -116,12 +131,15 @@
       "stop_loss": 56.7,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 4,
-      "holding_days_label": "D4/10",
-      "current_price": 62.1,
-      "return_pct": -1.43,
+      "holding_days": 5,
+      "holding_days_label": "D5/10",
+      "current_price": 62.3,
+      "return_pct": -1.11,
       "track": "A",
-      "holding_status": "續抱"
+      "holding_status": "續抱",
+      "actual_close": 62.3,
+      "close_price": 62.3,
+      "change_percent": -1.11
     },
     {
       "stock_code": "2801",
@@ -134,12 +152,15 @@
       "stop_loss": 27.18,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 4,
-      "holding_days_label": "D4/10",
-      "current_price": 29.7,
-      "return_pct": -1.66,
+      "holding_days": 5,
+      "holding_days_label": "D5/10",
+      "current_price": 29.35,
+      "return_pct": -2.81,
       "track": "A",
-      "holding_status": "續抱"
+      "holding_status": "續抱",
+      "actual_close": 29.35,
+      "close_price": 29.35,
+      "change_percent": -2.81
     },
     {
       "stock_code": "3045",
@@ -152,12 +173,15 @@
       "stop_loss": 121.05,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 4,
-      "holding_days_label": "D4/10",
-      "current_price": 133.0,
-      "return_pct": -1.12,
+      "holding_days": 5,
+      "holding_days_label": "D5/10",
+      "current_price": 135.0,
+      "return_pct": 0.37,
       "track": "A",
-      "holding_status": "續抱"
+      "holding_status": "續抱",
+      "actual_close": 135.0,
+      "close_price": 135.0,
+      "change_percent": 0.37
     },
     {
       "stock_code": "2884",
@@ -170,12 +194,15 @@
       "stop_loss": 44.1,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 2,
-      "holding_days_label": "D2/10",
-      "current_price": 47.4,
-      "return_pct": -3.27,
+      "holding_days": 3,
+      "holding_days_label": "D3/10",
+      "current_price": 47.6,
+      "return_pct": -2.86,
       "track": "A",
-      "holding_status": "續抱"
+      "holding_status": "續抱",
+      "actual_close": 47.6,
+      "close_price": 47.6,
+      "change_percent": -2.86
     },
     {
       "stock_code": "2886",
@@ -188,13 +215,16 @@
       "stop_loss": 49.32,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
-      "current_price": 53.2,
-      "return_pct": -2.92,
+      "holding_days": 2,
+      "holding_days_label": "D2/10",
+      "current_price": 53.5,
+      "return_pct": -2.37,
       "track": "A",
       "holding_status": "續抱",
-      "today_score": 70
+      "today_score": 70,
+      "actual_close": 53.5,
+      "close_price": 53.5,
+      "change_percent": -2.37
     },
     {
       "stock_code": "2002",
@@ -207,13 +237,16 @@
       "stop_loss": 17.32,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
-      "current_price": 19.35,
-      "return_pct": 0.52,
+      "holding_days": 2,
+      "holding_days_label": "D2/10",
+      "current_price": 19.15,
+      "return_pct": -0.52,
       "track": "A",
       "holding_status": "續抱",
-      "today_score": 91
+      "today_score": 91,
+      "actual_close": 19.15,
+      "close_price": 19.15,
+      "change_percent": -0.52
     },
     {
       "stock_code": "6505",
@@ -226,12 +259,15 @@
       "stop_loss": 88.47,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
-      "current_price": 94.9,
-      "return_pct": -3.46,
+      "holding_days": 2,
+      "holding_days_label": "D2/10",
+      "current_price": 97.6,
+      "return_pct": -0.71,
       "track": "A",
-      "holding_status": "續抱"
+      "holding_status": "續抱",
+      "actual_close": 97.6,
+      "close_price": 97.6,
+      "change_percent": -0.71
     },
     {
       "stock_code": "2610",
@@ -244,21 +280,31 @@
       "stop_loss": 18.54,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 0,
-      "holding_days_label": "D0/10",
-      "current_price": 20.7,
-      "return_pct": 0.49,
+      "holding_days": 1,
+      "holding_days_label": "D1/10",
+      "current_price": 20.5,
+      "return_pct": -0.49,
       "track": "A",
-      "holding_status": "續抱"
+      "holding_status": "續抱",
+      "actual_close": 20.5,
+      "close_price": 20.5,
+      "change_percent": -0.49
     }
   ],
   "tomorrow_opening_exits": [
     {
-      "stock_code": "2603",
-      "stock_name": "長榮",
+      "stock_code": "2356",
+      "stock_name": "英業達",
       "category": "已決事項（推薦追蹤 L4，v8.3.7）",
-      "reason": "11-03完整T86賣超-988張佔均量8.8%≥8%→L4；收盤266.5(+2.5%)；今日開盤出場；11-04盤前重掃仍L4 8.8%，未重啟待複核；結算時settled_price用當日收盤價",
-      "origin_recommend_date": "2026-10-27"
+      "reason": "11-04 完整T86 三大法人-3,675張（外資-6,798）佔均量24.3%≥8%→L4；10日累計+35K為正但佔比遠超8%不受待複核保護；收盤56.4；次日開盤出場，settled_price用11-05收盤",
+      "origin_recommend_date": "2026-11-04"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "category": "已決事項（推薦追蹤 L4，v8.3.7）",
+      "reason": "11-04 完整T86 三大法人-14,132張（外資-17K）佔均量37.9%≥8%→L4；10日累計+72K為正但佔比遠超8%不受保護；收盤240.0；次日開盤出場，settled_price用11-05收盤",
+      "origin_recommend_date": "2026-11-04"
     },
     {
       "stock_code": "2313",
@@ -303,7 +349,25 @@
       "reason": "已決不重評；今日籌碼L0、累計+14,482張，原樣沿用"
     }
   ],
-  "removed_stocks": [],
+  "removed_stocks": [
+    {
+      "stock_code": "2603",
+      "stock_name": "長榮",
+      "track": "A",
+      "recommend_date": "2026-10-27",
+      "recommend_price": 260.0,
+      "settled_price": 268.0,
+      "last_close": 268.0,
+      "return_pct": 3.08,
+      "result": "success",
+      "holding_days": "D6/10",
+      "removal_reason": "鐵律③ L4（11-03 T86 賣超 -988 張佔均量 8.8% ≥8%）→ 11-04 盤前已決開盤出場（v8.3.7 Step 4-0）；入帳收盤 268.0（v8.3.2）高於推薦價 260.0。⚠️ 揭露：11-04 完整 T86 已翻買 +1,918 張（L0），出場依已決事項不重評",
+      "success_note": "鐵律③ L4（11-03 T86 賣超 -988 張佔均量 8.8% ≥8%）→ 11-04 盤前已決開盤出場（v8.3.7 Step 4-0）；入帳收盤 268.0（v8.3.2）高於推薦價 260.0。⚠️ 揭露：11-04 完整 T86 已翻買 +1,918 張（L0），出場依已決事項不重評",
+      "settled_by": "已決事項開盤出場（v8.3.7 Step 4-0；盤後收盤價入帳 v8.3.2）",
+      "settled_date": "2026-11-04",
+      "sync_note": "v8.3.7 三處同步：①tracking_2026-10-27.json ②本檔 removed_stocks ③predictions.json"
+    }
+  ],
   "track_b_recommendations": [],
   "track_b_observations": [
     {
@@ -417,5 +481,40 @@
     "stop_loss": "12檔皆未觸及停損",
     "l4_holdings": "僅2603長榮(8.8%已決)及持倉已決5檔",
     "pending_review_2603": "已決事項原樣沿用，不重啟待複核"
+  },
+  "after_market_checks": {
+    "t86_1104": "16:33 已公布，手動 fetch_all_institutional 寫入快取",
+    "settle": "2603長榮 success +3.08%",
+    "stale_series": "2867 凍結",
+    "two_day_drawdown": "推薦追蹤12檔最大 2356 -5.37%，未達-10%；持倉2313 -10.98%(已決出場)",
+    "stop_loss": "推薦追蹤皆未觸及；持倉 6770/2337/2313/3090 觸及(已決)"
+  },
+  "yesterday_verification": {
+    "date": "2026-11-04",
+    "settled_today": {
+      "success": 1,
+      "fail": 0
+    },
+    "settled_accuracy": "55.0%",
+    "settled_count": 1,
+    "success_count": 416,
+    "fail_count": 340,
+    "holding_count": 178,
+    "accuracy": 55.0,
+    "success": 1,
+    "fail": 0,
+    "cumulative": {
+      "success": 416,
+      "fail": 340,
+      "settled": 756
+    },
+    "results": [
+      {
+        "stock_code": "2603",
+        "stock_name": "長榮",
+        "result": "success",
+        "note": "鐵律③L4已決開盤出場，收盤268.0>推薦價260.0，+3.08%；2867凍結"
+      }
+    ]
   }
 }

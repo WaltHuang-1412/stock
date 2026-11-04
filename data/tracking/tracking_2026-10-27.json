@@ -123,7 +123,7 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 94,
-      "result": "holding",
+      "result": "success",
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "score_breakdown": {
@@ -147,11 +147,15 @@
       },
       "intraday_price": 260.0,
       "intraday_return_pct": 0.0,
-      "actual_close": 261.5,
-      "return_pct": 0.58,
+      "actual_close": 268.0,
+      "return_pct": 3.08,
       "holding_status": "續抱 D0，不判定；10-22 T86 L0",
       "close_price": 261.5,
-      "change_percent": 0.58
+      "change_percent": 0.58,
+      "settled_date": "2026-11-04",
+      "settled_price": 268.0,
+      "success_note": "鐵律③ L4（11-03 T86 賣超 -988 張佔均量 8.8% ≥8%）→ 11-04 盤前已決開盤出場（v8.3.7 Step 4-0）；入帳收盤 268.0（v8.3.2）高於推薦價 260.0。⚠️ 揭露：11-04 完整 T86 已翻買 +1,918 張（L0），出場依已決事項不重評",
+      "sync_note": "v8.3.7 三處同步：①本檔 ②tracking_2026-11-04.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "1101",
