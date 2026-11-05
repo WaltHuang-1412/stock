@@ -1,7 +1,7 @@
 {
   "date": "2026-11-05",
   "version": "v8.3.11",
-  "phase": "before_market",
+  "phase": "after_market",
   "settings": {
     "stop_loss_pct": -10,
     "settlement_days": 10
@@ -322,70 +322,129 @@
   ],
   "tomorrow_opening_exits": [
     {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "category": "新判定（推薦追蹤 L4，v8.3.3 不適用）",
+      "reason": "11-05 完整T86 三大法人-2,431張佔均量14.0%≥8%→L4；收盤60.0（-4.8%）；次日開盤出場，settled_price用11-06收盤",
+      "origin_recommend_date": "2026-10-28"
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "category": "新判定（推薦追蹤 L4，v8.3.3 不適用）",
+      "reason": "11-05 完整T86 三大法人-5,201張佔均量21.3%≥8%→L4；收盤28.7（-5.0%，距停損27.18約5.3%）；次日開盤出場，settled_price用11-06收盤",
+      "origin_recommend_date": "2026-10-28"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "category": "新判定（推薦追蹤 L4，v8.3.3 不適用）",
+      "reason": "11-05 完整T86 三大法人-3,316張佔均量10.8%≥8%→L4；收盤18.95（-1.6%）；次日開盤出場，settled_price用11-06收盤",
+      "origin_recommend_date": "2026-11-02"
+    },
+    {
       "stock_code": "2313",
       "stock_name": "華通",
       "category": "已決事項（持倉）",
       "reason": "收盤186.0<停損235.98；L4 22.3%",
-      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交",
-      "carried_from": "2026-11-05 盤前（防盤後中斷漏讀；盤後將覆寫）"
+      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交，請使用者確認"
     },
     {
       "stock_code": "2330",
       "stock_name": "台積電零股",
       "category": "已決事項（持倉）",
       "reason": "L4 24.9%（11-04重掃）",
-      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交",
-      "carried_from": "2026-11-05 盤前（防盤後中斷漏讀；盤後將覆寫）"
+      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交，請使用者確認"
     },
     {
       "stock_code": "6770",
       "stock_name": "力積電",
       "category": "已決事項（持倉）",
       "reason": "收盤60.2<停損73.26；L4 30.9%",
-      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交",
-      "carried_from": "2026-11-05 盤前（防盤後中斷漏讀；盤後將覆寫）"
+      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交，請使用者確認"
     },
     {
       "stock_code": "2337",
       "stock_name": "旺宏",
       "category": "已決事項（持倉）",
       "reason": "收盤88.3<停損147.6；L4 23.1%",
-      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交",
-      "carried_from": "2026-11-05 盤前（防盤後中斷漏讀；盤後將覆寫）"
+      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交，請使用者確認"
     },
     {
       "stock_code": "3090",
       "stock_name": "日電貿",
       "category": "已決事項（持倉）",
       "reason": "收盤137.0<停損256.5；籌碼狀態不明(累計-966張)",
-      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交",
-      "carried_from": "2026-11-05 盤前（防盤後中斷漏讀；盤後將覆寫）"
+      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交，請使用者確認"
     },
     {
       "stock_code": "1301",
       "stock_name": "台塑",
       "category": "已決事項（持倉）",
       "reason": "已決(10-20 L4、損益>停利)；11-04重掃L4 54.7%",
-      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交",
-      "carried_from": "2026-11-05 盤前（防盤後中斷漏讀；盤後將覆寫）"
+      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交，請使用者確認"
     },
     {
       "stock_code": "4938",
       "stock_name": "和碩",
       "category": "已決事項（持倉）",
       "reason": "已決不重評；今日籌碼L0、累計+14,482張，原樣沿用",
-      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交",
-      "carried_from": "2026-11-05 盤前（防盤後中斷漏讀；盤後將覆寫）"
-    },
+      "note": "my_holdings.yaml 持倉；流程無法確認是否已成交，請使用者確認"
+    }
+  ],
+  "removed_stocks": [
     {
       "stock_code": "6505",
       "stock_name": "台塑化",
-      "category": "推薦追蹤（鐵律①觸及停損價）",
-      "reason": "11-05盤中87.9<停損88.47；盤後以收盤價確認結算",
-      "note": "盤中12:30新增，盤後確認"
+      "track": "A",
+      "recommend_date": "2026-11-02",
+      "recommend_price": 98.3,
+      "settled_price": 87.9,
+      "last_close": 87.9,
+      "return_pct": -10.58,
+      "result": "fail",
+      "holding_days": "D3/10",
+      "removal_reason": "鐵律① 收盤 87.9 ≤ 停損 88.47（油價選後單日約-8%、台塑化-9.9%單日；11-05 T86 同步轉 L4 賣超-9,318張佔均量34.2%）；入帳收盤價 87.9",
+      "fail_reason": "鐵律① 收盤 87.9 ≤ 停損 88.47（油價選後單日約-8%、台塑化-9.9%單日；11-05 T86 同步轉 L4 賣超-9,318張佔均量34.2%）；入帳收盤價 87.9",
+      "settled_by": "settlement_checker 自動判定（收盤≤停損）",
+      "settled_date": "2026-11-05",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-05.json removed_stocks ③predictions.json"
+    },
+    {
+      "stock_code": "2356",
+      "stock_name": "英業達",
+      "track": "A",
+      "recommend_date": "2026-11-04",
+      "recommend_price": 57.2,
+      "settled_price": 55.0,
+      "last_close": 55.0,
+      "return_pct": -3.85,
+      "result": "fail",
+      "holding_days": "D1/10",
+      "removal_reason": "鐵律③ L4 已決事項（11-04 完整T86 賣超-3,675張佔均量24.3%）→ 11-05 開盤出場；入帳收盤 55.0（v8.3.2）低於推薦價 57.2。⚠️ 揭露：11-05 T86 已轉買 +135 張（L0），依已決事項不重評",
+      "fail_reason": "鐵律③ L4 已決事項（11-04 完整T86 賣超-3,675張佔均量24.3%）→ 11-05 開盤出場；入帳收盤 55.0（v8.3.2）低於推薦價 57.2。⚠️ 揭露：11-05 T86 已轉買 +135 張（L0），依已決事項不重評",
+      "settled_by": "已決事項開盤出場（v8.3.7 Step 4-0；盤後收盤價入帳 v8.3.2）",
+      "settled_date": "2026-11-05",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-05.json removed_stocks ③predictions.json"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "track": "A",
+      "recommend_date": "2026-11-04",
+      "recommend_price": 245.5,
+      "settled_price": 235.0,
+      "last_close": 235.0,
+      "return_pct": -4.28,
+      "result": "fail",
+      "holding_days": "D1/10",
+      "removal_reason": "鐵律③ L4 已決事項（11-04 完整T86 賣超-14,132張佔均量37.9%）→ 11-05 開盤出場；入帳收盤 235.0（v8.3.2）低於推薦價 245.5。11-05 T86 續賣-5,701張（13.9%，L4），出場正確",
+      "fail_reason": "鐵律③ L4 已決事項（11-04 完整T86 賣超-14,132張佔均量37.9%）→ 11-05 開盤出場；入帳收盤 235.0（v8.3.2）低於推薦價 245.5。11-05 T86 續賣-5,701張（13.9%，L4），出場正確",
+      "settled_by": "已決事項開盤出場（v8.3.7 Step 4-0；盤後收盤價入帳 v8.3.2）",
+      "settled_date": "2026-11-05",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-05.json removed_stocks ③predictions.json"
     }
   ],
-  "removed_stocks": [],
   "track_b_recommendations": [],
   "track_b_observations": [
     {
@@ -462,9 +521,8 @@
   ],
   "stale_series": [
     {
-      "stock_code": "2867",
-      "stock_name": "三商壽",
-      "note": "收盤序列查詢失敗/停滯（併購停止買賣），判定凍結，不結算、D 不推進"
+      "symbol": "2867",
+      "note": "查詢失敗/序列停滯（併購停止買賣），凍結，不結算、不推進D計數（重跑 get_close_series 仍為 None）"
     }
   ],
   "module_a": {
@@ -503,5 +561,74 @@
     "reversal": "2356 L4 25.7%、2317 L4 34.4%（均為已決事項）；其餘L0/健康",
     "detector": "強訊號 1528(-9.9%)、7721(-10%) 型態轉弱；2412 法說會當日不開新倉；4977 chip 真連買1天、近5日-1,232張 不推薦",
     "frozen": "2867 三商壽序列停滯凍結"
+  },
+  "after_market_checks": {
+    "t86_2026-11-05": "16:3x 後手動 fetch_all_institutional 寫入快取",
+    "closes": "11檔序列末日皆2026-11-05（2867除外）",
+    "stop_loss_4_1": {
+      "6770": "54.8<73.26 HIT",
+      "2337": "79.7<147.6 HIT",
+      "2313": "165.5<235.98 HIT",
+      "3090": "128.0<256.5 HIT",
+      "1301": "65.1>54.08 ok",
+      "4938": "97.2>76.5 ok",
+      "2330": "無停損欄"
+    },
+    "tracked_stop_loss": "除 6505 外未觸及",
+    "two_day_drop": "最大 6505 -7.38%、2356 -3.85%、2317 -4.28%，無 <-10%"
+  },
+  "after_market_holding_status": {
+    "續抱": [
+      "2885 元大金 D8",
+      "2884 玉山金 D4",
+      "2886 兆豐金 D3",
+      "2610 華航 D2",
+      "3045 台灣大 D6"
+    ],
+    "次日開盤出場": [
+      "2609",
+      "2801",
+      "2002"
+    ]
+  },
+  "yesterday_verification": {
+    "date": "2026-11-05",
+    "settled_today": {
+      "success": 0,
+      "fail": 3
+    },
+    "settled_accuracy": "54.8%",
+    "settled_count": 759,
+    "success_count": 416,
+    "fail_count": 343,
+    "holding_count": 175,
+    "accuracy": 54.8,
+    "success": 0,
+    "fail": 3,
+    "cumulative": {
+      "success": 416,
+      "fail": 343,
+      "settled": 759
+    },
+    "results": [
+      {
+        "stock_code": "6505",
+        "stock_name": "台塑化",
+        "result": "fail",
+        "note": "鐵律①收盤87.9≤停損88.47，-10.58%"
+      },
+      {
+        "stock_code": "2356",
+        "stock_name": "英業達",
+        "result": "fail",
+        "note": "鐵律③L4已決開盤出場，收盤55.0<推薦價57.2，-3.85%"
+      },
+      {
+        "stock_code": "2317",
+        "stock_name": "鴻海",
+        "result": "fail",
+        "note": "鐵律③L4已決開盤出場，收盤235.0<推薦價245.5，-4.28%"
+      }
+    ]
   }
 }

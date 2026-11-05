@@ -42,16 +42,20 @@
         "EPS": 5,
         "外資持股比": 0
       },
-      "result": "holding",
+      "result": "fail",
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "track": "A",
-      "actual_close": 56.4,
+      "actual_close": 55.0,
       "current_price": 56.4,
-      "return_pct": -1.4,
+      "return_pct": -3.85,
       "holding_status": "⛔ 盤後 T86 -3,675 張佔均量24.3% → L4，次日(11-05)開盤出場（已決事項）",
       "close_price": 56.4,
-      "change_percent": -1.4
+      "change_percent": -1.4,
+      "settled_date": "2026-11-05",
+      "settled_price": 55.0,
+      "fail_reason": "鐵律③ L4 已決事項（11-04 完整T86 賣超-3,675張佔均量24.3%）→ 11-05 開盤出場；入帳收盤 55.0（v8.3.2）低於推薦價 57.2。⚠️ 揭露：11-05 T86 已轉買 +135 張（L0），依已決事項不重評",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-05.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2317",
@@ -75,16 +79,20 @@
         "動能": -10,
         "EPS": 3
       },
-      "result": "holding",
+      "result": "fail",
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "track": "A",
-      "actual_close": 240.0,
+      "actual_close": 235.0,
       "current_price": 240.0,
-      "return_pct": -2.24,
+      "return_pct": -4.28,
       "holding_status": "⛔ 盤後 T86 -14,132 張佔均量37.9% → L4，次日(11-05)開盤出場（已決事項）",
       "close_price": 240.0,
-      "change_percent": -2.24
+      "change_percent": -2.24,
+      "settled_date": "2026-11-05",
+      "settled_price": 235.0,
+      "fail_reason": "鐵律③ L4 已決事項（11-04 完整T86 賣超-14,132張佔均量37.9%）→ 11-05 開盤出場；入帳收盤 235.0（v8.3.2）低於推薦價 245.5。11-05 T86 續賣-5,701張（13.9%，L4），出場正確",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-05.json removed_stocks ③predictions.json"
     }
   ],
   "carry_over": [

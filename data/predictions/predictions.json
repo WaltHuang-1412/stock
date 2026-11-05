@@ -7547,11 +7547,11 @@
       }
     ]
   },
-  "settled_accuracy": "55.0%",
-  "settled_count": 756,
-  "holding_count": 178,
+  "settled_accuracy": "54.8%",
+  "settled_count": 759,
+  "holding_count": 175,
   "total_success": 416,
-  "total_fail": 340,
+  "total_fail": 343,
   "2026-03-30": {
     "predictions": [
       {
@@ -18997,10 +18997,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 80,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-11-05",
+        "settled_price": 87.9,
+        "holding_days": 1,
+        "return_pct": -10.58,
+        "fail_reason": "鐵律① 收盤 87.9 ≤ 停損 88.47（油價選後單日約-8%、台塑化-9.9%單日；11-05 T86 同步轉 L4 賣超-9,318張佔均量34.2%）；入帳收盤價 87.9"
       }
     ],
     "settled_accuracy": null,
@@ -19039,10 +19041,12 @@
         "settlement_days": 10,
         "position": "10%",
         "score": 84,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-11-05",
+        "settled_price": 55.0,
+        "holding_days": 1,
+        "return_pct": -3.85,
+        "fail_reason": "鐵律③ L4 已決事項（11-04 完整T86 賣超-3,675張佔均量24.3%）→ 11-05 開盤出場；入帳收盤 55.0（v8.3.2）低於推薦價 57.2。⚠️ 揭露：11-05 T86 已轉買 +135 張（L0），依已決事項不重評"
       },
       {
         "symbol": "2317",
@@ -19054,10 +19058,12 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 71,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-11-05",
+        "settled_price": 235.0,
+        "holding_days": 1,
+        "return_pct": -4.28,
+        "fail_reason": "鐵律③ L4 已決事項（11-04 完整T86 賣超-14,132張佔均量37.9%）→ 11-05 開盤出場；入帳收盤 235.0（v8.3.2）低於推薦價 245.5。11-05 T86 續賣-5,701張（13.9%，L4），出場正確"
       }
     ],
     "settled_accuracy": null,
