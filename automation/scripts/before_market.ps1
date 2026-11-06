@@ -179,6 +179,15 @@ if ($MarketStatus -eq "snapshot") {
         }
     }
 
+    # chartlab 位置閘門（影子模式）：只記錄候選股的支撐／量價／結構標記，不影響評分與推薦。
+    # 不依賴 Claude 是否照 CLAUDE.md 執行；失敗只記 log，不影響後續驗證與推送。
+    try {
+        Write-Output "[shadow] chartlab 位置閘門（影子模式）..." | Tee-Object -FilePath $LogFile -Append
+        python "$ProjectDir\scripts\chartlab_gate_shadow.py" 2>&1 | Tee-Object -FilePath $LogFile -Append
+    } catch {
+        Write-Output "[shadow] chartlab 位置閘門失敗（略過）：$_" | Tee-Object -FilePath $LogFile -Append
+    }
+
     # 驗證
     Write-Output "" | Tee-Object -FilePath $LogFile -Append
     Write-Output "========================================" | Tee-Object -FilePath $LogFile -Append

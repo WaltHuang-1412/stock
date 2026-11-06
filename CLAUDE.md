@@ -834,6 +834,16 @@ python3 scripts/check_price_position.py [候選股代碼...]
 
 > 依據：MA20 回測 282 筆，月線上 67.9% vs 月線下 60.4%，差距 7.5%。MA60 作為趨勢確認修正，±1 分。52 週高低位置回測無效，不採用。結果存入 `data/YYYY-MM-DD/price_position_check.json`（欄位 `adj` = 最終得分）。
 
+**chartlab 位置閘門（影子模式，2026-11-06 起）**：跑完 `check_price_position.py` 後接著執行：
+
+```bash
+python3 scripts/chartlab_gate_shadow.py
+```
+
+- 讀 `price_position_check.json` 的候選股，呼叫 `../chartlab/gate_batch.py`，輸出 `data/YYYY-MM-DD/chartlab_gate.json`，並 append 到 `data/shadow/chartlab_gate_log.jsonl`。
+- **只記錄，不計分、不改推薦、不寫進報告的決策欄位。** 目的是累積 2~4 週後與結算結果比對（標「暫緩」的是否真的較差），驗證前不得影響評分。
+- 失敗不得中斷盤前流程（腳本一律 exit 0）。只在盤前或盤後執行，盤中執行最後一根K線未收完。
+
 ---
 
 **大盤局勢參考**（market-intelligence 產出 `market_regime.json`）：
