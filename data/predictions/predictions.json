@@ -7547,11 +7547,11 @@
       }
     ]
   },
-  "settled_accuracy": "54.8%",
-  "settled_count": 759,
-  "holding_count": 175,
+  "settled_accuracy": "54.6%",
+  "settled_count": 762,
+  "holding_count": 172,
   "total_success": 416,
-  "total_fail": 343,
+  "total_fail": 346,
   "2026-03-30": {
     "predictions": [
       {
@@ -18878,10 +18878,12 @@
         "settlement_days": 10,
         "position": "10-15%",
         "score": 96,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-11-06",
+        "settled_price": 57.1,
+        "holding_days": 1,
+        "return_pct": -9.37,
+        "fail_reason": "鐵律③ L4 已決事項（11-05 完整T86 賣超-2,431張佔均量14.0%）→ 11-06 開盤出場；入帳收盤 57.1（v8.3.2）低於推薦價 63.0（距停損 56.7 僅 0.7%，未觸停損）。⚠️揭露：11-06 T86 已轉買 +373 張（L0），依已決事項不重評"
       },
       {
         "symbol": "2801",
@@ -18893,10 +18895,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 84,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-11-06",
+        "settled_price": 27.9,
+        "holding_days": 1,
+        "return_pct": -7.62,
+        "fail_reason": "鐵律③ L4 已決事項（11-05 完整T86 賣超-5,201張佔均量21.3%）→ 11-06 開盤出場；入帳收盤 27.9（v8.3.2）低於推薦價 30.2（未觸停損 27.18）。⚠️揭露：11-06 T86 已轉買 +3,190 張（L0），依已決事項不重評"
       },
       {
         "symbol": "2377",
@@ -18982,10 +18986,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 83,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-11-06",
+        "settled_price": 18.55,
+        "holding_days": 1,
+        "return_pct": -3.64,
+        "fail_reason": "鐵律③ L4 已決事項（11-05 完整T86 賣超-3,316張佔均量10.8%）→ 11-06 開盤出場；入帳收盤 18.55（v8.3.2）低於推薦價 19.25；11-06 T86 續賣 -30,689 張（佔均量85.3%），出場方向正確"
       },
       {
         "symbol": "6505",

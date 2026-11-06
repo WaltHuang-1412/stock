@@ -1,7 +1,7 @@
 {
   "date": "2026-11-06",
   "version": "v8.3.11",
-  "phase": "intraday",
+  "phase": "after_market",
   "settings": {
     "stop_loss_pct": -10,
     "settlement_days": 10
@@ -39,14 +39,14 @@
       "stop_loss": 64.17,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 8,
-      "holding_days_label": "D8/10",
-      "current_price": 69.1,
-      "return_pct": -3.09,
+      "holding_days": 9,
+      "holding_days_label": "D9/10",
+      "current_price": 66.9,
+      "return_pct": -6.17,
       "track": "A",
       "holding_status": "續抱（⏳沿用進行中追蹤，進場價/停損不變）",
-      "actual_close": 69.1,
-      "close_price": 69.1,
+      "actual_close": 66.9,
+      "close_price": 66.9,
       "change_percent": -3.23,
       "carry_note": "沿用進行中追蹤（進場價/停損取自來源檔，不重複建倉）",
       "intraday_price": 67.5,
@@ -63,14 +63,14 @@
       "stop_loss": 121.05,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 6,
-      "holding_days_label": "D6/10",
-      "current_price": 132.5,
-      "return_pct": -1.49,
+      "holding_days": 7,
+      "holding_days_label": "D7/10",
+      "current_price": 133.0,
+      "return_pct": -1.12,
       "track": "A",
       "holding_status": "續抱（⏳沿用進行中追蹤，進場價/停損不變）",
-      "actual_close": 132.5,
-      "close_price": 132.5,
+      "actual_close": 133.0,
+      "close_price": 133.0,
       "change_percent": 0.37,
       "carry_note": "沿用進行中追蹤（進場價/停損取自來源檔，不重複建倉）",
       "intraday_price": 132.5,
@@ -87,14 +87,14 @@
       "stop_loss": 44.1,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 4,
-      "holding_days_label": "D4/10",
-      "current_price": 47.95,
-      "return_pct": -2.14,
+      "holding_days": 5,
+      "holding_days_label": "D5/10",
+      "current_price": 47.0,
+      "return_pct": -4.08,
       "track": "A",
       "holding_status": "續抱（⏳沿用進行中追蹤，進場價/停損不變）",
-      "actual_close": 47.95,
-      "close_price": 47.95,
+      "actual_close": 47.0,
+      "close_price": 47.0,
       "change_percent": -2.86,
       "carry_note": "沿用進行中追蹤（進場價/停損取自來源檔，不重複建倉）",
       "intraday_price": 47.45,
@@ -111,15 +111,15 @@
       "stop_loss": 49.32,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 3,
-      "holding_days_label": "D3/10",
-      "current_price": 54.0,
-      "return_pct": -1.46,
+      "holding_days": 4,
+      "holding_days_label": "D4/10",
+      "current_price": 53.5,
+      "return_pct": -2.37,
       "track": "A",
       "holding_status": "續抱（⏳沿用進行中追蹤，進場價/停損不變）",
       "today_score": 70,
-      "actual_close": 54.0,
-      "close_price": 54.0,
+      "actual_close": 53.5,
+      "close_price": 53.5,
       "change_percent": -2.37,
       "carry_note": "沿用進行中追蹤（進場價/停損取自來源檔，不重複建倉）",
       "intraday_price": 53.8,
@@ -136,21 +136,29 @@
       "stop_loss": 18.54,
       "settlement_days": 10,
       "result": "holding",
-      "holding_days": 2,
-      "holding_days_label": "D2/10",
-      "current_price": 21.65,
-      "return_pct": 5.1,
+      "holding_days": 3,
+      "holding_days_label": "D3/10",
+      "current_price": 21.2,
+      "return_pct": 2.91,
       "track": "A",
       "holding_status": "續抱（⏳沿用進行中追蹤，進場價/停損不變）",
-      "actual_close": 21.65,
-      "close_price": 21.65,
+      "actual_close": 21.2,
+      "close_price": 21.2,
       "change_percent": -0.49,
       "carry_note": "沿用進行中追蹤（進場價/停損取自來源檔，不重複建倉）",
       "intraday_price": 21.1,
       "intraday_return_pct": 2.43
     }
   ],
-  "tomorrow_opening_exits": [],
+  "tomorrow_opening_exits": [
+    {
+      "stock_code": "2885",
+      "stock_name": "元大金",
+      "category": "新判定（推薦追蹤 L4，v8.3.3 不適用）",
+      "reason": "11-06 完整T86 三大法人-6,393張佔均量26.8%≥8%→L4（10日累計仍+33K、外資近5日-28K、真連買0天）；收盤66.9（-6.2%，距停損64.17約4.1%）；11-09 開盤出場（亦為D10），settled_price用11-09收盤",
+      "origin_recommend_date": "2026-10-22"
+    }
+  ],
   "opening_exits_today": [
     {
       "stock_code": "2609",
@@ -222,7 +230,59 @@
       "reason": "已決不重評，原樣沿用"
     }
   ],
-  "removed_stocks": [],
+  "removed_stocks": [
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "track": "A",
+      "recommend_date": "2026-10-28",
+      "recommend_price": 63.0,
+      "settled_price": 57.1,
+      "last_close": 57.1,
+      "return_pct": -9.37,
+      "result": "fail",
+      "holding_days": "D7/10",
+      "removal_reason": "鐵律③ L4 已決事項（11-05 完整T86 賣超-2,431張佔均量14.0%）→ 11-06 開盤出場；入帳收盤 57.1（v8.3.2）低於推薦價 63.0（距停損 56.7 僅 0.7%，未觸停損）。⚠️揭露：11-06 T86 已轉買 +373 張（L0），依已決事項不重評",
+      "fail_reason": "鐵律③ L4 已決事項（11-05 完整T86 賣超-2,431張佔均量14.0%）→ 11-06 開盤出場；入帳收盤 57.1（v8.3.2）低於推薦價 63.0（距停損 56.7 僅 0.7%，未觸停損）。⚠️揭露：11-06 T86 已轉買 +373 張（L0），依已決事項不重評",
+      "settled_by": "已決事項開盤出場（v8.3.7 Step 4-0；盤後收盤價入帳 v8.3.2）",
+      "settled_date": "2026-11-06",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-06.json removed_stocks ③predictions.json"
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "track": "A",
+      "recommend_date": "2026-10-28",
+      "recommend_price": 30.2,
+      "settled_price": 27.9,
+      "last_close": 27.9,
+      "return_pct": -7.62,
+      "result": "fail",
+      "holding_days": "D7/10",
+      "removal_reason": "鐵律③ L4 已決事項（11-05 完整T86 賣超-5,201張佔均量21.3%）→ 11-06 開盤出場；入帳收盤 27.9（v8.3.2）低於推薦價 30.2（未觸停損 27.18）。⚠️揭露：11-06 T86 已轉買 +3,190 張（L0），依已決事項不重評",
+      "fail_reason": "鐵律③ L4 已決事項（11-05 完整T86 賣超-5,201張佔均量21.3%）→ 11-06 開盤出場；入帳收盤 27.9（v8.3.2）低於推薦價 30.2（未觸停損 27.18）。⚠️揭露：11-06 T86 已轉買 +3,190 張（L0），依已決事項不重評",
+      "settled_by": "已決事項開盤出場（v8.3.7 Step 4-0；盤後收盤價入帳 v8.3.2）",
+      "settled_date": "2026-11-06",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-06.json removed_stocks ③predictions.json"
+    },
+    {
+      "stock_code": "2002",
+      "stock_name": "中鋼",
+      "track": "A",
+      "recommend_date": "2026-11-02",
+      "recommend_price": 19.25,
+      "settled_price": 18.55,
+      "last_close": 18.55,
+      "return_pct": -3.64,
+      "result": "fail",
+      "holding_days": "D4/10",
+      "removal_reason": "鐵律③ L4 已決事項（11-05 完整T86 賣超-3,316張佔均量10.8%）→ 11-06 開盤出場；入帳收盤 18.55（v8.3.2）低於推薦價 19.25；11-06 T86 續賣 -30,689 張（佔均量85.3%），出場方向正確",
+      "fail_reason": "鐵律③ L4 已決事項（11-05 完整T86 賣超-3,316張佔均量10.8%）→ 11-06 開盤出場；入帳收盤 18.55（v8.3.2）低於推薦價 19.25；11-06 T86 續賣 -30,689 張（佔均量85.3%），出場方向正確",
+      "settled_by": "已決事項開盤出場（v8.3.7 Step 4-0；盤後收盤價入帳 v8.3.2）",
+      "settled_date": "2026-11-06",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-06.json removed_stocks ③predictions.json"
+    }
+  ],
   "track_b_recommendations": [],
   "track_b_observations": [
     "2637 慧洋-KY（油輪，Brent+6.18%）：L0、連買6天、月線下，單一事件題材未建倉",
@@ -278,7 +338,46 @@
     "2412 中華電",
     "1216 統一"
   ],
-  "yesterday_verification": "6505 台塑化/2356 英業達/2317 鴻海 昨日 fail 出場（見 11-05 tracking）",
+  "yesterday_verification": {
+    "date": "2026-11-06",
+    "settled_today": {
+      "success": 0,
+      "fail": 3
+    },
+    "settled_accuracy": "54.6%",
+    "settled_count": 762,
+    "success_count": 416,
+    "fail_count": 346,
+    "holding_count": 172,
+    "accuracy": 54.6,
+    "success": 0,
+    "fail": 3,
+    "cumulative": {
+      "success": 416,
+      "fail": 346,
+      "settled": 762
+    },
+    "results": [
+      {
+        "stock_code": "2609",
+        "stock_name": "陽明",
+        "result": "fail",
+        "note": "鐵律③L4已決開盤出場，收盤57.1<推薦價63.0，-9.37%"
+      },
+      {
+        "stock_code": "2801",
+        "stock_name": "彰銀",
+        "result": "fail",
+        "note": "鐵律③L4已決開盤出場，收盤27.9<推薦價30.2，-7.62%"
+      },
+      {
+        "stock_code": "2002",
+        "stock_name": "中鋼",
+        "result": "fail",
+        "note": "鐵律③L4已決開盤出場，收盤18.55<推薦價19.25，-3.64%"
+      }
+    ]
+  },
   "intraday_check": {
     "time": "12:30",
     "stop_loss_hit_new": [
@@ -294,5 +393,20 @@
       "4938": "93.0>76.5 未觸",
       "2330": "無停損欄位"
     }
+  },
+  "tomorrow_recommendations": [],
+  "after_market_checks": {
+    "t86_source": "手動 fetch_all_institutional(20261106) 寫入 twse_t86_20261106.json（16:3x 取得，16,131 筆含 TWSE/TPEx，缺口僅為權證）",
+    "reversal_alert": "15 檔含今日T86；chip_analysis 以執行期包裝從今日起算",
+    "stale_series": "2867 三商壽序列仍為 None，凍結不結算",
+    "two_day_drop": "無 <-10%（2885 近2日 -3.0%）",
+    "closes_date_aligned": "13 檔序列末日皆 2026-11-06"
+  },
+  "after_market_holding_status": {
+    "2885": "🛑 L4 26.8%→11-09開盤出場",
+    "3045": "續抱 L0",
+    "2884": "續抱（外資近5日-19K、投信買）",
+    "2886": "續抱 真連買7天",
+    "2610": "續抱 真連買5天，Q3財報11/14前公布"
   }
 }

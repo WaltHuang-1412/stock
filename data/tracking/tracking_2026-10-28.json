@@ -48,15 +48,19 @@
         "EPS": 5,
         "動能": 15
       },
-      "result": "holding",
-      "actual_close": 62.9,
-      "close_price": 62.9,
-      "return_pct": -0.16,
+      "result": "fail",
+      "actual_close": 57.1,
+      "close_price": 57.1,
+      "return_pct": -9.37,
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "recommend_date": "2026-10-28",
       "holding_status": "續抱 D0，不判定；10-27 T86 L0（10-28 T86 盤後尚未公布）",
-      "change_percent": -0.16
+      "change_percent": -0.16,
+      "settled_date": "2026-11-06",
+      "settled_price": 57.1,
+      "fail_reason": "鐵律③ L4 已決事項（11-05 完整T86 賣超-2,431張佔均量14.0%）→ 11-06 開盤出場；入帳收盤 57.1（v8.3.2）低於推薦價 63.0（距停損 56.7 僅 0.7%，未觸停損）。⚠️揭露：11-06 T86 已轉買 +373 張（L0），依已決事項不重評",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-06.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2801",
@@ -79,15 +83,19 @@
         "EPS": 3,
         "動能": 15
       },
-      "result": "holding",
-      "actual_close": 29.95,
-      "close_price": 29.95,
-      "return_pct": -0.83,
+      "result": "fail",
+      "actual_close": 27.9,
+      "close_price": 27.9,
+      "return_pct": -7.62,
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "recommend_date": "2026-10-28",
       "holding_status": "續抱 D0，不判定；10-27 T86 L0（10-28 T86 盤後尚未公布）",
-      "change_percent": -0.83
+      "change_percent": -0.83,
+      "settled_date": "2026-11-06",
+      "settled_price": 27.9,
+      "fail_reason": "鐵律③ L4 已決事項（11-05 完整T86 賣超-5,201張佔均量21.3%）→ 11-06 開盤出場；入帳收盤 27.9（v8.3.2）低於推薦價 30.2（未觸停損 27.18）。⚠️揭露：11-06 T86 已轉買 +3,190 張（L0），依已決事項不重評",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-06.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2377",
