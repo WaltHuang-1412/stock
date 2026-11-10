@@ -1,80 +1,162 @@
 {
- "date": "2026-11-10",
- "version": "v8.3.11",
- "phase": "before_market",
- "settings": {
-  "stop_loss_pct": -10,
-  "settlement_days": 10
- },
- "market_context": {
-  "as_of": "2026-11-09",
-  "taiex_close": 41661.7,
-  "taiex_chg_pct": 4.92,
-  "regime": "修正（score 0，MI；taiex 已校正，資料日 11-09）",
-  "vix": 19.92,
-  "ai_bubble_stage": "破裂確認（topic_tracker 維持，僅參考）",
-  "us": "NASDAQ +2.74%、S&P +2.35%、費半 +6.85%、台積電ADR +3.51%、AMD +13.26%、MU +6.25%；輝達 -4.27%",
-  "foreign_11_09": "外資 -900.56億（連賣8日、近5日 -5,409億）、投信 +267.49億（連買10日）",
-  "policy": "11/10 21:30 美國CPI；國安基金護盤；期貨外資淨空單10萬口"
- },
- "defense_ratio": "25-40%（MI market_regime）；VIX<20 但外資連賣8日，今日1新推薦（記憶體封測）＋1沿用（銀行）",
- "recommendations": [
-  {
-   "stock_code": "5876",
-   "stock_name": "上海商銀",
-   "industry": "金融（銀行，tier_from_tracker 待審區）",
-   "recommend_price": 51.0,
-   "target_price": 55.08,
-   "stop_loss_pct": -10,
-   "stop_loss": 45.9,
-   "settlement_days": 10,
-   "position": "5-10%",
-   "score": 88,
-   "result": "holding",
-   "holding_days": 0,
-   "track": "A",
-   "reason": "⏳沿用｜今日重評 88 分：訊號A L3（連買10天、10日累計+21K、外資近5日+1,860）；反轉L0；動能-37.7%；營收 2026-10 YoY-7.7%（不調整）；月線乖離-3.3%；⚠️不在 TOP50、催化僅「房市信貸／銀行」中度、分數靠訊號A與動能加分撐；今日公告10月自結損益",
-   "recommend_date": "2026-11-09",
-   "holding_days_label": "D0/10（settlement_checker 11-09 收盤；今日收盤為 D1）",
-   "carry_note": "⏳沿用進行中追蹤，維持原進場價 51.0／停損 45.9 不變，不重複建倉"
+  "date": "2026-11-10",
+  "version": "v8.3.11",
+  "phase": "intraday",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
   },
-  {
-   "stock_code": "6239",
-   "stock_name": "力成",
-   "industry": "記憶體／半導體封測（AI tier_2、記憶體 tier_2、半導體 tier_1）",
-   "recommend_price": 223.5,
-   "target_price": 241.38,
-   "stop_loss_pct": -10,
-   "stop_loss": 201.15,
-   "settlement_days": 10,
-   "position": "5-10%",
-   "score": 78,
-   "result": "holding",
-   "holding_days": 0,
-   "track": "B",
-   "reason": "🛤️軌道B（時事）｜DRAM與記憶體🔴超強（MU +6.25%）＋AI晶片測試；反轉L0；外資近5日+276、投信同步買；10日累計+11K；動能-90%（買盤降溫、非出貨）；營收2026-10 YoY+25.2%且5日回檔-13.2% +5；Q3 EPS 3.55（YoY+71%）+5；月線乖離-13.4%（價格位置僅1分）；外資持股比週減 -3。⚠️不在TOP50、外資近5日僅微幅+276、昨日已+9.8% 反彈、11/10 CPI 夜間風險"
+  "market_context": {
+    "as_of": "2026-11-09",
+    "taiex_close": 41661.7,
+    "taiex_chg_pct": 4.92,
+    "regime": "修正（score 0，MI；taiex 已校正，資料日 11-09）",
+    "vix": 19.92,
+    "ai_bubble_stage": "破裂確認（topic_tracker 維持，僅參考）",
+    "us": "NASDAQ +2.74%、S&P +2.35%、費半 +6.85%、台積電ADR +3.51%、AMD +13.26%、MU +6.25%；輝達 -4.27%",
+    "foreign_11_09": "外資 -900.56億（連賣8日、近5日 -5,409億）、投信 +267.49億（連買10日）",
+    "policy": "11/10 21:30 美國CPI；國安基金護盤；期貨外資淨空單10萬口"
+  },
+  "defense_ratio": "25-40%（MI market_regime）；VIX<20 但外資連賣8日，今日1新推薦（記憶體封測）＋1沿用（銀行）",
+  "recommendations": [
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "industry": "金融（銀行，tier_from_tracker 待審區）",
+      "recommend_price": 51.0,
+      "target_price": 55.08,
+      "stop_loss_pct": -10,
+      "stop_loss": 45.9,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 88,
+      "result": "holding",
+      "holding_days": 0,
+      "track": "A",
+      "reason": "⏳沿用｜今日重評 88 分：訊號A L3（連買10天、10日累計+21K、外資近5日+1,860）；反轉L0；動能-37.7%；營收 2026-10 YoY-7.7%（不調整）；月線乖離-3.3%；⚠️不在 TOP50、催化僅「房市信貸／銀行」中度、分數靠訊號A與動能加分撐；今日公告10月自結損益",
+      "recommend_date": "2026-11-09",
+      "holding_days_label": "D0/10（settlement_checker 11-09 收盤；今日收盤為 D1）",
+      "carry_note": "⏳沿用進行中追蹤，維持原進場價 51.0／停損 45.9 不變，不重複建倉"
+    },
+    {
+      "stock_code": "6239",
+      "stock_name": "力成",
+      "industry": "記憶體／半導體封測（AI tier_2、記憶體 tier_2、半導體 tier_1）",
+      "recommend_price": 223.5,
+      "target_price": 241.38,
+      "stop_loss_pct": -10,
+      "stop_loss": 201.15,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 78,
+      "result": "holding",
+      "holding_days": 0,
+      "track": "B",
+      "reason": "🛤️軌道B（時事）｜DRAM與記憶體🔴超強（MU +6.25%）＋AI晶片測試；反轉L0；外資近5日+276、投信同步買；10日累計+11K；動能-90%（買盤降溫、非出貨）；營收2026-10 YoY+25.2%且5日回檔-13.2% +5；Q3 EPS 3.55（YoY+71%）+5；月線乖離-13.4%（價格位置僅1分）；外資持股比週減 -3。⚠️不在TOP50、外資近5日僅微幅+276、昨日已+9.8% 反彈、11/10 CPI 夜間風險"
+    }
+  ],
+  "carry_over": [
+    "5876",
+    "3045",
+    "2884",
+    "2886",
+    "2610",
+    "1101",
+    "2412"
+  ],
+  "carry_over_recommendations": [],
+  "opening_exits_today": [
+    {
+      "stock_code": "1101",
+      "stock_name": "台泥",
+      "note": "已決事項（11-09 L4 9.2%）開盤出場；盤中重掃 L4 9.7%；盤中價 27.2；入帳用今日收盤，盤後處理"
+    },
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電",
+      "note": "已決事項（11-09 L4 邊緣 6.0%）開盤出場；盤中重掃 L4 5.2%；盤中價 158.5；入帳用今日收盤，盤後處理"
+    }
+  ],
+  "removed_stocks": [],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "6443",
+      "stock_name": "元晶",
+      "verdict": "排除",
+      "reason": "偵測器強訊號65，但營收YoY-15.4%連續衰退18個月(-5)、近5日已漲16.6%（>10%預設不評分）、TWSE注意股；外資持股比+0.59%(+5)不足抵銷"
+    },
+    {
+      "stock_code": "1231",
+      "stock_name": "聯華食",
+      "verdict": "排除",
+      "reason": "中訊號55；累計僅+602張、營收快取落後（本因子0）、今日-3.8%型態轉弱，無催化對應"
+    }
+  ],
+  "stale_series": [
+    {
+      "symbol": "2867",
+      "name": "三商壽",
+      "note": "推薦日 2026-08-17；get_close_series 查詢失敗（併購停牌，序列停滯），凍結判定、不結算、D 不推進"
+    }
+  ],
+  "watchlist": [],
+  "intraday_prices": {
+    "time": "2026-11-10 12:40",
+    "source": "Yahoo regularMarketPrice（單一時點）；D 值照抄 settlement_checker 盤中輸出",
+    "items": {
+      "1101": {
+        "recommend_price": 26.75,
+        "intraday_price": 27.2,
+        "pct": 1.68,
+        "holding_days_label": "D1/10"
+      },
+      "2412": {
+        "recommend_price": 163.5,
+        "intraday_price": 158.5,
+        "pct": -3.06,
+        "holding_days_label": "D1/10"
+      },
+      "5876": {
+        "recommend_price": 51.0,
+        "intraday_price": 51.0,
+        "pct": 0.0,
+        "holding_days_label": "D1/10"
+      },
+      "3045": {
+        "recommend_price": 134.5,
+        "intraday_price": 128.0,
+        "pct": -4.83,
+        "holding_days_label": "D9/10"
+      },
+      "2884": {
+        "recommend_price": 49.0,
+        "intraday_price": 47.3,
+        "pct": -3.47,
+        "holding_days_label": "D7/10"
+      },
+      "2886": {
+        "recommend_price": 54.8,
+        "intraday_price": 53.4,
+        "pct": -2.55,
+        "holding_days_label": "D6/10"
+      },
+      "2610": {
+        "recommend_price": 20.6,
+        "intraday_price": 22.7,
+        "pct": 10.19,
+        "holding_days_label": "D5/10"
+      },
+      "6239": {
+        "recommend_price": 223.5,
+        "intraday_price": 229.0,
+        "pct": 2.46,
+        "holding_days_label": "D0/10"
+      }
+    }
+  },
+  "intraday_notes": {
+    "2610": "盤中22.7≥目標22.25，惟結算以收盤價為準，盤後判定",
+    "3045": "D9，明日D10到期；現價128.0<推薦價134.5，若收盤不高於推薦價將判fail；11/12法說在到期日之後"
   }
- ],
- "carry_over": [
-  "5876",
-  "3045",
-  "2884",
-  "2886",
-  "2610",
-  "1101",
-  "2412"
- ],
- "carry_over_recommendations": [],
- "opening_exits_today": [],
- "removed_stocks": [],
- "track_b_recommendations": [],
- "track_b_observations": [],
- "stale_series": [
-  {
-   "symbol": "2867",
-   "name": "三商壽",
-   "note": "推薦日 2026-08-17；get_close_series 查詢失敗（併購停牌，序列停滯），凍結判定、不結算、D 不推進"
-  }
- ],
- "watchlist": []
 }
