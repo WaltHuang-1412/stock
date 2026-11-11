@@ -1,0 +1,227 @@
+{
+  "date": "2026-11-11",
+  "version": "v8.3.11",
+  "phase": "before_market",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": "MI market_regime=偏多(score 1)但台股收42,712仍在月季線下（-8.9%/-10.1%）；VIX 19.46；外資連賣9日、投信連買10日；NVDA -5.47% L2；昨晚公布10月CPI高於預期、12月升息機率約91%",
+  "defense_ratio": "15-25%（MI market_regime stock_defense_ratio）；VIX<20；今日僅1檔新推薦",
+  "recommendations": [
+    {
+      "stock_code": "1802",
+      "stock_name": "台玻",
+      "industry": "ABF載板/PCB基板（玻纖布，tier_from_tracker 待審區）",
+      "recommend_price": 69.8,
+      "target_price": 75.38,
+      "stop_loss_pct": -10,
+      "stop_loss": 62.82,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 97,
+      "track": "A",
+      "entry_condition": "11-10 收盤為漲停（+9.9%）；11-11 開盤價>71.9（+3%）不買，不追高",
+      "reason": "🛤️軌道A（法人）｜法人 TOP1（三大法人+85,285張佔成交49.9%，外資近5日+44K，10日累計+95K，真連買3天、外資+投信同步）；反轉L0；動能-13.2%（佈局完成中）；對應「PCB輪動延伸至玻纖布（Low Dk2）」催化；Q3 EPS 0.93（YoY+830%、毛利率QoQ+8.3pp）+5；外資持股比週增+0.64% +5；月季線雙上；營收10月YoY+56.5%（5日漲3.1%不加分）。⚠️昨日漲停、單日買超佔10日累計約9成（過量買超-5）；催化屬tier_from_tracker待審區，產業邏輯14分；昨晚CPI偏高、11/12初領失業金與11/13 PPI待公布。",
+      "score_breakdown": {
+        "時事": 17,
+        "法人": 25,
+        "產業": 14,
+        "技術": 13,
+        "價位": 13,
+        "動能": 10,
+        "過量買超": -5,
+        "EPS": 5,
+        "外資持股比": 5,
+        "營收": 0
+      },
+      "result": "holding",
+      "holding_days": 0,
+      "recommend_date": "2026-11-11"
+    }
+  ],
+  "carry_over": [
+    "5876",
+    "3045",
+    "2884",
+    "2886",
+    "6239"
+  ],
+  "carry_over_recommendations": [
+    {
+      "stock_code": "3045",
+      "stock_name": "台灣大",
+      "industry": "電信",
+      "recommend_price": 134.5,
+      "target_price": 145.26,
+      "stop_loss_pct": -10,
+      "stop_loss": 121.05,
+      "settlement_days": 10,
+      "position": "沿用",
+      "score": 79,
+      "result": "holding",
+      "holding_days": 9,
+      "track": "A",
+      "recommend_date": "2026-10-28",
+      "holding_days_label": "D9/10（settlement_checker 11-10 收盤；今日收盤為 D10 到期）",
+      "carry_note": "⏳沿用",
+      "holding_status": "D9 昨收128.0（-4.8%）；今日D10到期以收盤 vs 134.5 結算；今日10月營運成績、11-12 16:00 法說；L2（賣超-254張）",
+      "reason": "⏳沿用進行中追蹤，維持原進場價／停損不變，不重複建倉",
+      "actual_close": 128.0,
+      "close_price": 128.0,
+      "change_pct": -4.8
+    },
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "industry": "金融",
+      "recommend_price": 49.0,
+      "target_price": 52.92,
+      "stop_loss_pct": -10,
+      "stop_loss": 44.1,
+      "settlement_days": 10,
+      "position": "沿用",
+      "score": 96,
+      "result": "holding",
+      "holding_days": 7,
+      "track": "A",
+      "recommend_date": "2026-10-30",
+      "holding_days_label": "D7/10",
+      "carry_note": "⏳沿用",
+      "holding_status": "⚠️待複核（11-10 T86 L4 7.5%<8%、10日累計+20K）；複核①盤前同源T86、12:30與盤後各複核；今日09:00法說",
+      "reason": "⏳沿用進行中追蹤，維持原進場價／停損不變，不重複建倉",
+      "actual_close": 46.95,
+      "close_price": 46.95,
+      "change_pct": -4.2
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "industry": "金融",
+      "recommend_price": 54.8,
+      "target_price": 59.18,
+      "stop_loss_pct": -10,
+      "stop_loss": 49.32,
+      "settlement_days": 10,
+      "position": "沿用",
+      "score": 91,
+      "result": "holding",
+      "holding_days": 6,
+      "track": "A",
+      "recommend_date": "2026-11-02",
+      "holding_days_label": "D6/10",
+      "carry_note": "⏳沿用",
+      "holding_status": "⏳續抱；L0、真連買9天；營收快取落後0分",
+      "reason": "⏳沿用進行中追蹤，維持原進場價／停損不變，不重複建倉",
+      "actual_close": 53.0,
+      "close_price": 53.0,
+      "change_pct": -3.3
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "industry": "金融",
+      "recommend_price": 51.0,
+      "target_price": 55.08,
+      "stop_loss_pct": -10,
+      "stop_loss": 45.9,
+      "settlement_days": 10,
+      "position": "沿用",
+      "score": 89,
+      "result": "holding",
+      "holding_days": 1,
+      "track": "A",
+      "recommend_date": "2026-11-09",
+      "holding_days_label": "D1/10",
+      "carry_note": "⏳沿用",
+      "holding_status": "⚠️待複核（11-10 T86 L4 5.6%<8%、10日累計+15K，邊緣值）；12:30與盤後各複核",
+      "reason": "⏳沿用進行中追蹤，維持原進場價／停損不變，不重複建倉",
+      "actual_close": 51.0,
+      "close_price": 51.0,
+      "change_pct": 0.0
+    }
+  ],
+  "opening_exits_today": [
+    {
+      "stock_code": "6239",
+      "stock_name": "力成",
+      "category": "推薦追蹤 D0，反轉 L4",
+      "reason": "11-10 T86 賣超-1,895張佔均量18.3%≥8% → 11-11 開盤出場，入帳用 11-11 收盤；已決事項原樣沿用"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "category": "持倉｜已決事項（鐵律①觸及停損價）",
+      "reason": "收盤59.2<停損73.26；原樣沿用"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "category": "持倉｜已決事項（鐵律①觸及停損價）",
+      "reason": "收盤82.1<停損147.6；原樣沿用"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "category": "持倉｜已決事項（鐵律①）",
+      "reason": "收盤182.5<停損235.98；原樣沿用"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "category": "持倉｜已決事項（鐵律①）",
+      "reason": "收盤136.0<停損256.5；原樣沿用"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電",
+      "category": "持倉（零股）｜已決事項",
+      "reason": "今日L4 7.8%；原樣沿用"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "category": "持倉｜已決事項",
+      "reason": "收盤69.9>停損54.08未觸發；沿用11-06出場決議"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "category": "持倉｜已決事項（維持已決）",
+      "reason": "收盤96.2>停損76.5未觸發；今日L0；11-12法說；原樣沿用"
+    }
+  ],
+  "removed_stocks": [],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "note": "評分約76（法人25/時事20/產業15/技術11/價位13/動能-10/EPS+2），過門檻；但今日（11-11）公布Q3財報＋變動會計估計，依v8.3.1「財報公布當日不開新倉」改觀察；若盤後評估仍強可明日再議"
+    }
+  ],
+  "stale_series": [
+    {
+      "symbol": "2867",
+      "name": "三商壽",
+      "note": "推薦日 2026-08-17；get_close_series 查詢失敗（併購停牌），凍結判定、不結算、D 不推進"
+    }
+  ],
+  "watchlist": [],
+  "pending_review": [
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "first_review": "11-10 盤後完整T86 L4 7.5%（<8%，10日累計+20K）；11-11 盤前重掃仍同源T86 7.5%",
+      "rule": "11-11 12:30 與盤後各複核一次，兩次皆≥5%才於11-12開盤出場；任一降級維持追蹤"
+    },
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "first_review": "11-10 盤後完整T86 L4 5.6%（<8%，10日累計+15K）；11-11 盤前重掃同源5.6%",
+      "rule": "同上；邊緣值"
+    }
+  ],
+  "tomorrow_opening_exits": [],
+  "tomorrow_recommendations": []
+}
