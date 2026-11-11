@@ -7548,10 +7548,10 @@
     ]
   },
   "settled_accuracy": "54.6%",
-  "settled_count": 766,
-  "holding_count": 172,
-  "total_success": 418,
-  "total_fail": 348,
+  "settled_count": 768,
+  "holding_count": 171,
+  "total_success": 419,
+  "total_fail": 349,
   "2026-03-30": {
     "predictions": [
       {
@@ -18931,10 +18931,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 79,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-11-11",
+        "settled_price": 129.0,
+        "holding_days": 1,
+        "return_pct": -4.09,
+        "fail_reason": "D10 到期，收盤 129.0 ≤ 推薦價 134.5（未觸停損 121.05）；到期結算"
       }
     ],
     "settled_accuracy": null,
@@ -19146,6 +19148,29 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 78,
+        "result": "success",
+        "settled_date": "2026-11-11",
+        "settled_price": 242.0,
+        "holding_days": 1,
+        "return_pct": 8.28,
+        "fail_reason": "收盤 242.0 ≥ 目標 241.38（settlement_checker 機械判定）；原決議 11-10 T86 L4 18.3% 開盤出場，入帳用收盤（v8.3.2）。⚠️揭露：11-11 T86 +2,278 張，今日反轉為狀態不明（累計-306張）"
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-11-11": {
+    "predictions": [
+      {
+        "symbol": "1802",
+        "name": "台玻",
+        "recommend_price": 69.8,
+        "target_price": 75.38,
+        "stop_loss": 62.82,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 97,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,

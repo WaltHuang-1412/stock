@@ -153,15 +153,19 @@
         "EPS": 3,
         "動能": 10
       },
-      "result": "holding",
-      "actual_close": 132.5,
-      "close_price": 132.5,
-      "return_pct": -1.49,
+      "result": "fail",
+      "actual_close": 129.0,
+      "close_price": 129.0,
+      "return_pct": -4.09,
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "recommend_date": "2026-10-28",
-      "holding_status": "續抱 D0，不判定；10-27 T86 L0（10-28 T86 盤後尚未公布）",
-      "change_percent": -1.49
+      "holding_status": "D10/10 結算",
+      "change_percent": -1.49,
+      "settled_date": "2026-11-11",
+      "settled_price": 129.0,
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-11.json removed_stocks ③predictions.json",
+      "fail_reason": "D10 到期，收盤 129.0 ≤ 推薦價 134.5（未觸停損 121.05）；到期結算"
     }
   ],
   "carry_over": [

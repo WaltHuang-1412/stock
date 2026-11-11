@@ -55,17 +55,21 @@
       "settlement_days": 10,
       "position": "5-10%",
       "score": 78,
-      "result": "holding",
+      "result": "success",
       "holding_days": 0,
       "track": "B",
       "reason": "🛤️軌道B（時事）｜DRAM與記憶體🔴超強（MU +6.25%）＋AI晶片測試；反轉L0；外資近5日+276、投信同步買；10日累計+11K；動能-90%（買盤降溫、非出貨）；營收2026-10 YoY+25.2%且5日回檔-13.2% +5；Q3 EPS 3.55（YoY+71%）+5；月線乖離-13.4%（價格位置僅1分）；外資持股比週減 -3。⚠️不在TOP50、外資近5日僅微幅+276、昨日已+9.8% 反彈、11/10 CPI 夜間風險",
-      "actual_close": 230.0,
-      "close_price": 230.0,
+      "actual_close": 242.0,
+      "close_price": 242.0,
       "change_pct": 2.91,
-      "return_pct": 2.91,
-      "holding_status": "D0 L4 賣超-1,895張佔18.3%≥8% → 次日開盤出場",
+      "return_pct": 8.28,
+      "holding_status": "D1/10 結算",
       "recommend_date": "2026-11-10",
-      "change_percent": 2.91
+      "change_percent": 2.91,
+      "settled_date": "2026-11-11",
+      "settled_price": 242.0,
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-11.json removed_stocks ③predictions.json",
+      "success_note": "收盤 242.0 ≥ 目標 241.38（settlement_checker 機械判定）；原決議 11-10 T86 L4 18.3% 開盤出場，入帳用收盤（v8.3.2）。⚠️揭露：11-11 T86 +2,278 張，今日反轉為狀態不明（累計-306張）"
     }
   ],
   "carry_over": [
