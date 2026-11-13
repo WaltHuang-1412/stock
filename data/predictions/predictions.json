@@ -7547,11 +7547,11 @@
       }
     ]
   },
-  "settled_accuracy": "54.6%",
-  "settled_count": 769,
+  "settled_accuracy": "54.5%",
+  "settled_count": 770,
   "holding_count": 171,
   "total_success": 420,
-  "total_fail": 349,
+  "total_fail": 350,
   "2026-03-30": {
     "predictions": [
       {
@@ -18954,10 +18954,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 96,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-11-13",
+        "settled_price": 48.3,
+        "holding_days": 1,
+        "return_pct": -1.43,
+        "fail_reason": "D10 到期，收盤 48.3 ≤ 推薦價 49.0 → fail（settlement_checker 機械判定，-1.43%）；期間未觸停損 44.1，亦未達目標 52.92；最低收盤約 47.2（11-12），終點以 10 日收盤 vs 推薦價判定"
       }
     ],
     "settled_accuracy": null,
@@ -19194,6 +19196,27 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 79,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-11-13": {
+    "predictions": [
+      {
+        "symbol": "2801",
+        "name": "彰銀",
+        "recommend_price": 28.4,
+        "target_price": 30.67,
+        "stop_loss": 25.56,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 76,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,

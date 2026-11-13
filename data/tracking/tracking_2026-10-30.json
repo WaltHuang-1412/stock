@@ -51,18 +51,22 @@
         "EPS": 3,
         "動能": 15
       },
-      "result": "holding",
+      "result": "fail",
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "track": "A",
       "intraday_price": 49.0,
       "intraday_return_pct": 0.0,
       "intraday_time": "12:48",
-      "holding_status": "續抱（D0，反轉健康）",
-      "actual_close": 49.05,
-      "return_pct": 0.1,
-      "close_price": 49.05,
-      "change_percent": 0.1
+      "holding_status": "D10/10 結算 fail",
+      "actual_close": 48.3,
+      "return_pct": -1.43,
+      "close_price": 48.3,
+      "change_percent": 0.1,
+      "settled_date": "2026-11-13",
+      "settled_price": 48.3,
+      "fail_reason": "D10 到期，收盤 48.3 ≤ 推薦價 49.0 → fail（settlement_checker 機械判定，-1.43%）；期間未觸停損 44.1，亦未達目標 52.92；最低收盤約 47.2（11-12），終點以 10 日收盤 vs 推薦價判定",
+      "sync_note": "v8.3.7 三處同步：①來源tracking_2026-10-30.json ②tracking_2026-11-13.json removed_stocks ③predictions.json"
     }
   ],
   "carry_over": [
