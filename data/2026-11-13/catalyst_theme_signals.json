@@ -1,0 +1,493 @@
+{
+  "date": "2026-11-13",
+  "lookback_dates": [
+    "2026-11-13",
+    "2026-11-12",
+    "2026-11-11",
+    "2026-11-10",
+    "2026-11-09",
+    "2026-11-06",
+    "2026-11-05"
+  ],
+  "leader_trends": {
+    "Micron": {
+      "cumulative": -3.89,
+      "consecutive_up": 0,
+      "latest_change": -1.59,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "NVIDIA": {
+      "cumulative": -20.86,
+      "consecutive_up": 0,
+      "latest_change": -4.34,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Apple": {
+      "cumulative": 6.9,
+      "consecutive_up": 0,
+      "latest_change": -0.21,
+      "signal_level": "moderate",
+      "days_tracked": 7
+    },
+    "AMD": {
+      "cumulative": 22.53,
+      "consecutive_up": 5,
+      "latest_change": 5.86,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Tesla": {
+      "cumulative": 0.72,
+      "consecutive_up": 5,
+      "latest_change": 1.69,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Super Micro": {
+      "cumulative": -13.2,
+      "consecutive_up": 0,
+      "latest_change": -11.3,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Broadcom": {
+      "cumulative": 10.53,
+      "consecutive_up": 5,
+      "latest_change": 5.54,
+      "signal_level": "strong",
+      "days_tracked": 7
+    },
+    "Lam Research": {
+      "cumulative": 3.92,
+      "consecutive_up": 0,
+      "latest_change": -0.89,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Applied Materials": {
+      "cumulative": 1.73,
+      "consecutive_up": 0,
+      "latest_change": -3.58,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Western Digital": {
+      "cumulative": -8.23,
+      "consecutive_up": 0,
+      "latest_change": -0.67,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "Dell": {
+      "cumulative": -6.99,
+      "consecutive_up": 0,
+      "latest_change": -0.67,
+      "signal_level": "none",
+      "days_tracked": 7
+    },
+    "ASML": {
+      "cumulative": -2.73,
+      "consecutive_up": 0,
+      "latest_change": -2.43,
+      "signal_level": "none",
+      "days_tracked": 7
+    }
+  },
+  "preposition_candidates": [
+    {
+      "code": "3008",
+      "name": "大立光",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "signal_level": "moderate",
+      "leader_cumulative": 6.9,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -12,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 194.36619718309862,
+        "consecutive_buy": 2,
+        "cumulative_foreign": 491,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-12為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "2474",
+      "name": "可成",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "signal_level": "moderate",
+      "leader_cumulative": 6.9,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -536,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 122.09302325581395,
+        "consecutive_buy": 3,
+        "cumulative_foreign": -2325,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-536為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "4938",
+      "name": "和碩",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "signal_level": "moderate",
+      "leader_cumulative": 6.9,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": 6424,
+        "buy_days": 7,
+        "sell_days": 3,
+        "momentum_pct": -99.24717691342535,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -5825,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3673",
+      "name": "TPK-KY",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "signal_level": "moderate",
+      "leader_cumulative": 6.9,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -1952,
+        "buy_days": 5,
+        "sell_days": 5,
+        "momentum_pct": 133.60544217687075,
+        "consecutive_buy": 1,
+        "cumulative_foreign": -1087,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-1,952為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "6415",
+      "name": "矽力-KY",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "signal_level": "moderate",
+      "leader_cumulative": 6.9,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": 2461,
+        "buy_days": 7,
+        "sell_days": 3,
+        "momentum_pct": -80.76550387596897,
+        "consecutive_buy": 0,
+        "cumulative_foreign": 2031,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3035",
+      "name": "智原",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "signal_level": "moderate",
+      "leader_cumulative": 6.9,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -4495,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": 133.28880973582665,
+        "consecutive_buy": 4,
+        "cumulative_foreign": -3903,
+        "reversal_level": "unknown",
+        "exclusion_reason": "累計-4,495為負｜數據不足無法評分",
+        "passed": false
+      }
+    },
+    {
+      "code": "2392",
+      "name": "正崴",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "signal_level": "moderate",
+      "leader_cumulative": 6.9,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -2679,
+        "buy_days": 0,
+        "sell_days": 10,
+        "momentum_pct": 18.741542625169156,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -2526,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-2,679為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3023",
+      "name": "信邦",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "signal_level": "moderate",
+      "leader_cumulative": 6.9,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": 824,
+        "buy_days": 5,
+        "sell_days": 4,
+        "momentum_pct": 342.10526315789474,
+        "consecutive_buy": 3,
+        "cumulative_foreign": -1839,
+        "reversal_level": "Level 0",
+        "exclusion_reason": "動能+342%>100%排除",
+        "passed": false
+      }
+    },
+    {
+      "code": "3017",
+      "name": "奇鋐",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "signal_level": "moderate",
+      "leader_cumulative": 6.9,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -1098,
+        "buy_days": 4,
+        "sell_days": 6,
+        "momentum_pct": -500,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -4657,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-1,098為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "2354",
+      "name": "鴻準",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "signal_level": "moderate",
+      "leader_cumulative": 6.9,
+      "leader_consecutive_up": 0,
+      "maturity": "early",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 80,
+      "chip_data": {
+        "cumulative_total": -7652,
+        "buy_days": 1,
+        "sell_days": 9,
+        "momentum_pct": -500,
+        "consecutive_buy": 0,
+        "cumulative_foreign": -6970,
+        "reversal_level": "Level 4",
+        "exclusion_reason": "反轉Level 4排除｜累計-7,652為負",
+        "passed": false
+      }
+    },
+    {
+      "code": "3443",
+      "name": "創意",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 22.53,
+      "leader_consecutive_up": 5,
+      "maturity": "mature",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 73,
+      "chip_data": {}
+    },
+    {
+      "code": "3707",
+      "name": "漢磊",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 22.53,
+      "leader_consecutive_up": 5,
+      "maturity": "mature",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 73,
+      "chip_data": {}
+    },
+    {
+      "code": "3711",
+      "name": "日月光",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 22.53,
+      "leader_consecutive_up": 5,
+      "maturity": "mature",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 73,
+      "chip_data": {}
+    },
+    {
+      "code": "3189",
+      "name": "景碩",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 22.53,
+      "leader_consecutive_up": 5,
+      "maturity": "mature",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 73,
+      "chip_data": {}
+    },
+    {
+      "code": "8046",
+      "name": "南電",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "signal_level": "strong",
+      "leader_cumulative": 22.53,
+      "leader_consecutive_up": 5,
+      "maturity": "mature",
+      "tw_5d_change": null,
+      "in_top50": false,
+      "score": 73,
+      "chip_data": {}
+    }
+  ],
+  "already_in_top50": [
+    {
+      "code": "3231",
+      "name": "緯創",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "leader_cumulative": 6.9,
+      "tw_5d_change": -0.8522727272727272
+    },
+    {
+      "code": "3037",
+      "name": "欣興",
+      "tw_industry": "蘋果供應鏈",
+      "us_leader": "Apple",
+      "leader_cumulative": 6.9,
+      "tw_5d_change": -8.2039911308204
+    },
+    {
+      "code": "2449",
+      "name": "京元電",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 22.53,
+      "tw_5d_change": -10.256410256410255
+    },
+    {
+      "code": "2368",
+      "name": "金像電",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 22.53,
+      "tw_5d_change": 1.3402061855670102
+    },
+    {
+      "code": "2367",
+      "name": "燿華",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 22.53,
+      "tw_5d_change": -3.108800506939686
+    },
+    {
+      "code": "6239",
+      "name": "力成",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 22.53,
+      "tw_5d_change": 0.6237006237006237
+    },
+    {
+      "code": "2303",
+      "name": "聯電",
+      "tw_industry": "AI晶片/IC設計",
+      "us_leader": "AMD",
+      "leader_cumulative": 22.53,
+      "tw_5d_change": -1.4218009478672986
+    },
+    {
+      "code": "4904",
+      "name": "遠傳",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": 10.53,
+      "tw_5d_change": -5.263157894736842
+    },
+    {
+      "code": "4906",
+      "name": "正文",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": 10.53,
+      "tw_5d_change": -2.3480725715579758
+    },
+    {
+      "code": "2332",
+      "name": "友訊",
+      "tw_industry": "網通",
+      "us_leader": "Broadcom",
+      "leader_cumulative": 10.53,
+      "tw_5d_change": -2.631583350296838
+    }
+  ],
+  "already_moved_count": 4
+}
