@@ -1,7 +1,7 @@
 {
   "date": "2026-11-13",
   "version": "v8.3.11",
-  "phase": "before_market",
+  "phase": "intraday",
   "settings": {
     "stop_loss_pct": -10,
     "settlement_days": 10
@@ -150,34 +150,19 @@
   "track_b_recommendations": [],
   "track_b_observations": [
     {
-      "stock_code": "5880",
-      "stock_name": "合庫金",
-      "score": 75,
-      "reason": "法人佳（TOP50 第22、10日+43K、外資5日+5.6K、L0）但 topic_tracker 兩處標↓（房市信貸、森崴案授信）→ 催化方向相反，未過準確率篩選①"
+      "stock_code": "2465",
+      "stock_name": "麗臺",
+      "note": "注意股、動能+487.6%、5日+41.6%，排除"
     },
     {
-      "stock_code": "2892",
-      "stock_name": "第一金",
-      "score": 72,
-      "reason": "動能 +150%>100%，僅能靠超強催化覆寫；09-24~10-06 覆寫推薦 14/14 於 D0-D1 轉 L4（待回測未立法）→ 不用覆寫；今日 10月自結盈餘重訊"
+      "stock_code": "6443",
+      "stock_name": "元晶",
+      "note": "今日-5%爆量下殺、營收衰退18月、動能+123.6%，排除"
     },
     {
-      "stock_code": "2618",
-      "stock_name": "長榮航",
-      "score": 70,
-      "reason": "昨日盤後暫定推薦，但今日 Brent +4~5%、topic_tracker『中東地緣』標長榮航↓油價成本 → 時事 18→10，催化方向相反，不推薦"
-    },
-    {
-      "stock_code": "2610",
-      "stock_name": "華航",
-      "score": 66,
-      "reason": "5日+5.3%（-10）、同為航空油價成本↓"
-    },
-    {
-      "stock_code": "2542",
-      "stock_name": "興富發",
-      "score": 70,
-      "reason": "TOP50 第40、L0，但營建受升息預期壓抑、月季線雙下（pp 6）→ 觀察"
+      "stock_code": "6589",
+      "stock_name": "台康生技",
+      "note": "動能+500%、5日+18.3%，排除"
     }
   ],
   "stale_series": [
@@ -190,5 +175,18 @@
   "watchlist": [],
   "pending_review": [],
   "tomorrow_opening_exits": [],
-  "tomorrow_recommendations": []
+  "tomorrow_recommendations": [],
+  "intraday_check": {
+    "time": "12:30",
+    "taiex": 43728.8,
+    "taiex_pct": 1.48,
+    "prices": {
+      "2884": 48.0,
+      "2886": 55.4,
+      "5876": 53.0,
+      "2412": 163.5,
+      "2801": 28.9
+    },
+    "note": "全部 L0、無停損；2884 D10 盤後結算（目前收盤<=49.0 偏 fail）"
+  }
 }
