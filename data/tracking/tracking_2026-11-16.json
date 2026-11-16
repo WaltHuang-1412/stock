@@ -36,7 +36,10 @@
         "EPS": 0,
         "營收": 0,
         "外資持股比": 0
-      }
+      },
+      "intraday_price": 48.2,
+      "intraday_change_pct": -0.21,
+      "intraday_time": "12:30"
     },
     {
       "stock_code": "4904",
@@ -65,7 +68,10 @@
         "EPS": 0,
         "營收": 0,
         "外資持股比": 0
-      }
+      },
+      "intraday_price": 110.5,
+      "intraday_change_pct": 0.91,
+      "intraday_time": "12:30"
     }
   ],
   "carry_over": [
@@ -100,9 +106,11 @@
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "track": "A",
-      "intraday_price": 54.1,
+      "intraday_price": 54.9,
       "intraday_return_pct": -1.28,
-      "premarket_note": "D9→今日 D10（盤後依收盤結算；注意 Yahoo 缺棒可能使 D 少算1天，須人工+1核對）"
+      "premarket_note": "D9→今日 D10（盤後依收盤結算；注意 Yahoo 缺棒可能使 D 少算1天，須人工+1核對）",
+      "intraday_change_pct": 0.18,
+      "intraday_time": "12:30"
     },
     {
       "stock_code": "5876",
@@ -119,11 +127,13 @@
       "holding_days": 0,
       "track": "A",
       "reason": "🛤️軌道A｜📶訊號A L3（連買10天、10日累計+26K、外資近5日+342）；反轉L0；動能-49.8%；營收YoY+10.7%且5日回檔-6.4% +5；月線乖離-3.9%；⚠️當日不在TOP50、時事無提及（催化對齊弱，產業邏輯以13-16計，分數靠加減分撐）",
-      "intraday_price": 51.6,
+      "intraday_price": 53.2,
       "intraday_return_pct": 1.18,
       "change_pct": 0.78,
       "recommend_date": "2026-11-09",
-      "premarket_note": "D4；11/20 法說"
+      "premarket_note": "D4；11/20 法說",
+      "intraday_change_pct": 4.31,
+      "intraday_time": "12:30"
     },
     {
       "stock_code": "2412",
@@ -152,13 +162,14 @@
         "營收": 0,
         "外資持股比": 0
       },
-      "intraday_price": 162.0,
-      "intraday_change_pct": 0.6,
+      "intraday_price": 164.5,
+      "intraday_change_pct": 2.17,
       "intraday_holding_label": "D0/10",
       "intraday_note": "L0；今日T86 +3,501張，外資10日+32K；續抱，開盤條件(≤165.83)成立",
       "change_pct": 0.62,
       "漲跌幅": 0.62,
-      "premarket_note": "D1；11/18 JPMorgan 法說；Broadcom L1(-5)"
+      "premarket_note": "D1；11/18 JPMorgan 法說；Broadcom L1(-5)",
+      "intraday_time": "12:30"
     },
     {
       "stock_code": "2801",
@@ -187,7 +198,10 @@
         "營收": 0,
         "外資持股比": 0
       },
-      "premarket_note": "D0（推薦日11-13，今日盤後為D1）"
+      "premarket_note": "D0（推薦日11-13，今日盤後為D1）",
+      "intraday_price": 28.5,
+      "intraday_change_pct": 0.35,
+      "intraday_time": "12:30"
     }
   ],
   "opening_exits_today": [
@@ -236,7 +250,32 @@
   ],
   "removed_stocks": [],
   "track_b_recommendations": [],
-  "track_b_observations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "2597",
+      "stock_name": "潤弘",
+      "detector_score": 60,
+      "note": "偵測器強訊號但籌碼動能 +147.6%（>100%）→ 直接排除；無超強催化覆寫"
+    },
+    {
+      "stock_code": "3714",
+      "stock_name": "富采",
+      "detector_score": 45,
+      "note": "盤中 -9.6% 爆量，型態轉弱，不列未反映"
+    },
+    {
+      "stock_code": "2476",
+      "stock_name": "鉅祥",
+      "detector_score": 55,
+      "note": "中訊號觀察，未評分"
+    },
+    {
+      "stock_code": "6958",
+      "stock_name": "日盛台駿",
+      "detector_score": 50,
+      "note": "中訊號觀察，未評分"
+    }
+  ],
   "stale_series": [
     {
       "symbol": "2867",
@@ -279,5 +318,17 @@
       "score": 84,
       "reason": "Module A L2、L0、外資5日+6.0K；催化僅列於財報彙整、無強催化對齊"
     }
-  ]
+  ],
+  "intraday_checked": {
+    "time": "12:30",
+    "stop_loss_rechecked": {
+      "6770": 53.7,
+      "2337": 72.7,
+      "2313": 193.5,
+      "3090": 124.0,
+      "1301": 67.3,
+      "4938": 87.0
+    },
+    "note": "六檔持倉皆維持已決出場；1301 盤中 67.3>停損54.08 但依 11-06 決議出場"
+  }
 }
