@@ -38,17 +38,21 @@
         "價格位置": 13,
         "動能": 15
       },
-      "result": "holding",
+      "result": "fail",
       "holding_days": 0,
       "holding_days_label": "D0/10",
       "track": "A",
       "intraday_price": 54.1,
       "intraday_return_pct": -1.28,
-      "actual_close": 54.1,
-      "return_pct": -1.28,
-      "holding_status": "D0，未觸目標/停損，持有中",
-      "close_price": 54.1,
-      "change_percent": -1.28
+      "actual_close": 54.5,
+      "return_pct": -0.55,
+      "holding_status": "D10/10 結算 fail",
+      "close_price": 54.5,
+      "change_percent": -1.28,
+      "settled_date": "2026-11-16",
+      "settled_price": 54.5,
+      "fail_reason": "D10 到期，收盤 54.5 ≤ 推薦價 54.8 → fail（settlement_checker 機械判定，-0.55%）；期間未觸停損 49.32，亦未達目標 59.18；終點以 10 日收盤 vs 推薦價判定",
+      "sync_note": "v8.3.7 三處同步：①來源tracking_2026-11-02.json ②tracking_2026-11-16.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "2002",

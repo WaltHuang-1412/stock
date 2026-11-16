@@ -7548,10 +7548,10 @@
     ]
   },
   "settled_accuracy": "54.5%",
-  "settled_count": 770,
-  "holding_count": 171,
+  "settled_count": 771,
+  "holding_count": 172,
   "total_success": 420,
-  "total_fail": 350,
+  "total_fail": 351,
   "2026-03-30": {
     "predictions": [
       {
@@ -18977,10 +18977,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 91,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-11-16",
+        "settled_price": 54.5,
+        "holding_days": 1,
+        "return_pct": -0.55,
+        "fail_reason": "D10 到期，收盤 54.5 ≤ 推薦價 54.8 → fail（settlement_checker 機械判定，-0.55%）；期間未觸停損 49.32，亦未達目標 59.18；終點以 10 日收盤 vs 推薦價判定"
       },
       {
         "symbol": "2002",
@@ -19217,6 +19219,42 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 76,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-11-16": {
+    "predictions": [
+      {
+        "symbol": "2884",
+        "name": "玉山金",
+        "recommend_price": 48.3,
+        "target_price": 52.16,
+        "stop_loss": 43.47,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "10%",
+        "score": 102,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "4904",
+        "name": "遠傳",
+        "recommend_price": 109.5,
+        "target_price": 118.26,
+        "stop_loss": 98.55,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 89,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
