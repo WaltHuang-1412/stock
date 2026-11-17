@@ -1,7 +1,7 @@
 {
   "date": "2026-11-17",
   "version": "v8.3.11",
-  "phase": "before_market",
+  "phase": "intraday",
   "settings": {
     "stop_loss_pct": -10,
     "settlement_days": 10
@@ -36,7 +36,13 @@
         "EPS": 0,
         "營收": 0,
         "外資持股比": 0
-      }
+      },
+      "intraday_price": 54.2,
+      "intraday_change_pct": -0.55,
+      "intraday_return_pct": -0.55,
+      "intraday_time": "2026-11-17 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L0",
+      "intraday_strategy": "續抱"
     }
   ],
   "carry_over": [
@@ -60,7 +66,13 @@
       "score": 89,
       "track": "A",
       "recommend_date": "2026-11-09",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 53.2,
+      "intraday_change_pct": 0.19,
+      "intraday_return_pct": 4.31,
+      "intraday_time": "2026-11-17 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L0",
+      "intraday_strategy": "續抱"
     },
     {
       "stock_code": "2412",
@@ -75,7 +87,13 @@
       "position": "5-10%",
       "score": 79,
       "track": "A",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 164.5,
+      "intraday_change_pct": 0.61,
+      "intraday_return_pct": 2.17,
+      "intraday_time": "2026-11-17 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L0",
+      "intraday_strategy": "續抱"
     },
     {
       "stock_code": "2801",
@@ -90,7 +108,13 @@
       "position": "5%",
       "score": 76,
       "track": "A",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 28.2,
+      "intraday_change_pct": -0.7,
+      "intraday_return_pct": -0.7,
+      "intraday_time": "2026-11-17 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L0",
+      "intraday_strategy": "續抱"
     },
     {
       "stock_code": "2884",
@@ -105,7 +129,13 @@
       "position": "10%",
       "score": 102,
       "track": "A",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 47.2,
+      "intraday_change_pct": -2.28,
+      "intraday_return_pct": -2.28,
+      "intraday_time": "2026-11-17 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L0（健康）",
+      "intraday_strategy": "續抱"
     },
     {
       "stock_code": "4904",
@@ -120,7 +150,13 @@
       "position": "5%",
       "score": 89,
       "track": "A",
-      "result": "holding"
+      "result": "holding",
+      "intraday_price": 108.5,
+      "intraday_change_pct": -0.46,
+      "intraday_return_pct": -0.91,
+      "intraday_time": "2026-11-17 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L4 5.2%（盤前 L2 4.4%，同筆 -496 張）→ 待複核",
+      "intraday_strategy": "待複核（盤後重跑 reversal_alert）"
     }
   ],
   "opening_exits_today": [
@@ -178,10 +214,34 @@
   "track_b_recommendations": [],
   "track_b_observations": [
     {
+      "stock_code": "2353",
+      "stock_name": "宏碁",
+      "score": 79,
+      "reason": "盤中估分約 79（營收 +5、EPS +5、動能 -98.7% +15）但篩選①催化對齊不過（PC 寒冬鏈↓ 與邊緣AI鏈↑ 矛盾）、真連買 1 天、外資5日 +870、月季線雙下 → 不推，觀察"
+    },
+    {
+      "stock_code": "2646",
+      "stock_name": "星宇航空",
+      "score": 72,
+      "reason": "營收年增 +59.5%＋回檔 +5、EPS +5、訊號A L2；航空催化方向矛盾、月季線雙下 → <75"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "score": 72,
+      "reason": "沿用盤前：不在 TOP50、11/16 法人僅 +17 張、金融集中 → <75"
+    },
+    {
       "stock_code": "3045",
       "stock_name": "台灣大",
       "score": 70,
-      "reason": "L0、真連買4天、外資5日+1,128、動能-53%；『AI以外資金輪動』中↑；但不在 TOP50（法人今日僅+561 張）、電信已有 2412/4904 兩檔追蹤（4904 今日 L2）、估分約 70 邊緣 → 觀察"
+      "reason": "沿用盤前：不在 TOP50、電信已 2 檔追蹤（4904 待複核）→ <75"
+    },
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "score": 69,
+      "reason": "沿用盤前：動能 +72.6%（-10）、月季線雙下 → <75"
     }
   ],
   "stale_series": [
@@ -191,7 +251,17 @@
       "note": "推薦日 2026-08-17；get_close_series 查詢失敗（併購停牌），凍結判定、不結算、D 計數不推進"
     }
   ],
-  "pending_review": [],
+  "pending_review": [
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "recommend_date": "2026-11-16",
+      "type": "盤中新增 L4（v8.3.2）",
+      "detail": "11/16 T86 賣超 -496 張；盤前佔比 4.4%（L2）→ 盤中 5.2%（L4），張數未變；<8%、10日累計三大法人 +12K 為正、未觸停損、2日 -0.9%",
+      "review_plan": "盤後重跑 reversal_alert：仍為 L3/L4 → 2026-11-18 開盤出場；降級 → 維持追蹤並揭露",
+      "review_1_intraday": "L4 5.2%（11/16 T86）"
+    }
+  ],
   "tomorrow_opening_exits": [],
   "tomorrow_observations": [
     {
@@ -225,5 +295,12 @@
       "reason": "reversal_alert 預設呼叫 L0，前日盤後含當日包裝呼叫 L1（買超減速 -43.5%）兩者不一致；月季線雙下 -10.7%；營建水泥冷門型態勝率 28.6% → 不推薦"
     }
   ],
-  "watchlist": []
+  "watchlist": [],
+  "intraday_taiex": {
+    "price": 40307.06,
+    "prev_close": 41040.08,
+    "change_pct": -1.79,
+    "time": "12:12"
+  },
+  "intraday_note": "今日無盤中新推薦；偵測器強訊號 1341／6924／6807／1540 皆排除（2412 已在追蹤）；偵測器即時行情僅取得 31/505 檔"
 }
