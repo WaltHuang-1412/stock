@@ -538,6 +538,9 @@ def create_simple_json(data: Dict[str, Any]) -> Dict[str, Any]:
                     simple_data['黃金'] = info['change_pct']
                 elif name == 'VIX恐慌指數':
                     simple_data['VIX'] = info['change_pct']
+                    # 2026-11-18：'VIX' 為單日漲跌幅%（非水位）；水位另存，避免誤讀（11-18 檔 VIX=11.13 實為 +11.13%，水位 25.46）
+                    if info.get('price') is not None:
+                        simple_data['VIX水位'] = info['price']
 
     return simple_data
 
