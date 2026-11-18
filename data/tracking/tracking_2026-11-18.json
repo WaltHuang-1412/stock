@@ -1,7 +1,7 @@
 {
   "date": "2026-11-18",
   "version": "v8.3.11",
-  "phase": "before_market",
+  "phase": "intraday",
   "settings": {
     "stop_loss_pct": -10,
     "settlement_days": 10
@@ -44,7 +44,13 @@
       "prev_close": 54.7,
       "prev_close_return_pct": 0.37,
       "reversal_today": "L0",
-      "strategy_today": "續抱"
+      "strategy_today": "續抱",
+      "intraday_price": 52.0,
+      "intraday_change_pct": -4.94,
+      "intraday_return_pct": -4.59,
+      "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L0",
+      "intraday_strategy": "續抱（不加碼；今日 Q3 財報公告）"
     },
     {
       "stock_code": "2892",
@@ -74,7 +80,13 @@
         "營收": 0,
         "外資持股比": 0
       },
-      "dossier": "法說會／除權息／重大訊息無事件，三來源 ok；mentions 皆為產業鏈名單／MI 表格列，無利空"
+      "dossier": "法說會／除權息／重大訊息無事件，三來源 ok；mentions 皆為產業鏈名單／MI 表格列，無利空",
+      "intraday_price": 40.55,
+      "intraday_change_pct": -3.68,
+      "intraday_return_pct": -3.68,
+      "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L0",
+      "intraday_strategy": "續抱（觀察）"
     }
   ],
   "carry_over": [
@@ -105,7 +117,13 @@
       "reversal_today": "L0",
       "strategy_today": "續抱",
       "prev_close": 53.3,
-      "prev_close_return_pct": 4.51
+      "prev_close_return_pct": 4.51,
+      "intraday_price": 52.7,
+      "intraday_change_pct": -1.13,
+      "intraday_return_pct": 3.33,
+      "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L0",
+      "intraday_strategy": "續抱；11/20 法說"
     },
     {
       "stock_code": "2412",
@@ -127,7 +145,13 @@
       "reversal_today": "L4",
       "strategy_today": "開盤出場（已決事項）",
       "prev_close": 164.5,
-      "prev_close_return_pct": 2.17
+      "prev_close_return_pct": 2.17,
+      "intraday_price": 164.0,
+      "intraday_change_pct": -0.3,
+      "intraday_return_pct": 1.86,
+      "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L4（已決）",
+      "intraday_strategy": "開盤出場（已決事項，入帳價用收盤）"
     },
     {
       "stock_code": "2801",
@@ -149,7 +173,13 @@
       "reversal_today": "狀態不明",
       "strategy_today": "續抱（觀察）",
       "prev_close": 28.15,
-      "prev_close_return_pct": -0.88
+      "prev_close_return_pct": -0.88,
+      "intraday_price": 27.5,
+      "intraday_change_pct": -2.31,
+      "intraday_return_pct": -3.17,
+      "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "狀態不明（今日+710張、累計-312）",
+      "intraday_strategy": "續抱（觀察）"
     },
     {
       "stock_code": "2884",
@@ -171,7 +201,13 @@
       "reversal_today": "L4",
       "strategy_today": "開盤出場（已決事項）",
       "prev_close": 46.65,
-      "prev_close_return_pct": -3.42
+      "prev_close_return_pct": -3.42,
+      "intraday_price": 42.3,
+      "intraday_change_pct": -9.32,
+      "intraday_return_pct": -12.42,
+      "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L4（已決）",
+      "intraday_strategy": "開盤出場（已決事項）；盤中同時觸及鐵律①②"
     },
     {
       "stock_code": "4904",
@@ -193,7 +229,13 @@
       "reversal_today": "L0",
       "strategy_today": "續抱",
       "prev_close": 108.5,
-      "prev_close_return_pct": -0.91
+      "prev_close_return_pct": -0.91,
+      "intraday_price": 108.5,
+      "intraday_change_pct": 0.0,
+      "intraday_return_pct": -0.91,
+      "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
+      "intraday_reversal": "L0",
+      "intraday_strategy": "續抱；11/19 法說"
     }
   ],
   "opening_exits_today": [
@@ -255,7 +297,42 @@
   "removed_stocks": [],
   "track_b_recommendations": [],
   "track_b_observations": [
-    "軌道B 展開（Fed 升息金控鏈／中東航運／電信防禦）：2881、2615、3045、2834 為 L4；2890、2885、6505、2880、2603 動能>100% 或累計為負；2637 累計僅 +840 張；0 檔可推"
+    {
+      "stock_code": "2609",
+      "stock_name": "陽明",
+      "score": 65,
+      "reason": "航運催化↑超強、營收+82%、真連買3天、外資5日+14K；但動能+500%（追高排除，盤前已排）、月季線雙下（價格位置6）→ 不推"
+    },
+    {
+      "stock_code": "2618",
+      "stock_name": "長榮航",
+      "score": 72,
+      "reason": "真連買10天、累計+123K、營收+22.6%、價格位置11、動能+24%；但篩選①催化對立（中東鏈標『↓油價成本』）→ 不推，觀察"
+    },
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "score": 0,
+      "reason": "真連買10天、累計+212K；今日14:00法說會，當日不開新倉（未評分）"
+    },
+    {
+      "stock_code": "5880",
+      "stock_name": "合庫金",
+      "score": 62,
+      "reason": "營收連3月衰退-5、月線下（價格位置8）、金融已集中5檔追蹤、今日金融股普遍-4%以上 → <75"
+    },
+    {
+      "stock_code": "2486",
+      "stock_name": "一詮",
+      "score": 55,
+      "reason": "偵測器強訊號60，但真連買僅1天、10日累計僅+1,500張、不在TOP50買超 → 法人現身門檻不過，不推"
+    },
+    {
+      "stock_code": "2911",
+      "stock_name": "麗嬰房",
+      "score": 40,
+      "reason": "偵測器強訊號60，但法人累計僅+134張（無實質法人）、接近注意門檻 → 排除"
+    }
   ],
   "stale_series": [
     {
@@ -298,5 +375,7 @@
     "eps_cache_financials": "金融股 EPS 快取為 Q2，視為 0",
     "revenue_cache": "15 檔皆 2026-10",
     "foreign_ratio": "15 檔皆 ≥2026-11-11"
-  }
+  },
+  "intraday_taiex": "加權 40,416（+324 點、+0.81%，前收 40,092）；Yahoo 12:12",
+  "intraday_note": "無盤中新推薦；追蹤中 2884 玉山金盤中 42.3 同時觸及鐵律①（<停損43.47）與②（2日-12.4%），已是已決開盤出場；2412 已決出場；其餘未觸停損。"
 }
