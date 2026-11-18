@@ -22,7 +22,7 @@
       "position": "10%",
       "score": 102,
       "track": "A",
-      "result": "holding",
+      "result": "fail",
       "entry_condition": "開盤價>49.75（+3%）不買",
       "reason": "🛤️軌道A（法人）+📶訊號A（預埋）L3｜TOP50 avg_rank 23.0；10日累計三大 +29K、外資近5日 +31K；L0；連買3天、動能 -71%；『聯準會利率政策』超強↑且新聞點名升息受惠股；月線下 -0.1%、季線上 +7.0%；5日 +0.4%。⚠️ 11/17 15:30 與 11/18 法說（前一日進場，雙向波動）；投信近5日 -29K；營收／EPS 快取落後視為0；金融集中；2884 上一筆 10-30 推薦於 11-13 D10 判 fail（-1.43%）。",
       "score_breakdown": {
@@ -40,11 +40,15 @@
       "intraday_price": 48.2,
       "intraday_change_pct": -0.21,
       "intraday_time": "12:30",
-      "actual_close": 48.3,
+      "actual_close": 42.15,
       "close_price": 48.3,
-      "return_pct": 0.0,
+      "return_pct": -12.73,
       "holding_status": "D0 續抱；L0（今日 +8,819 張）；11/17 15:30 法說、11/18 法說（前一日進場，雙向波動）",
-      "change_percent": 0.0
+      "change_percent": 0.0,
+      "settled_date": "2026-11-18",
+      "settled_price": 42.15,
+      "fail_reason": "收盤 42.15 ≤ 停損 43.47（settlement_checker 機械判定，D2，-12.73%）；2 日累計 -12.73%、11-17 L4（10%）／11-18 T86 賣超 -46,813 張（佔日均量 129%）",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-18.json removed_stocks ③predictions.json"
     },
     {
       "stock_code": "4904",

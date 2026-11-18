@@ -1,7 +1,7 @@
 {
   "date": "2026-11-18",
   "version": "v8.3.11",
-  "phase": "intraday",
+  "phase": "after_market",
   "settings": {
     "stop_loss_pct": -10,
     "settlement_days": 10
@@ -38,9 +38,9 @@
         "營收": 0,
         "外資持股比": 0
       },
-      "holding_days": 0,
-      "holding_days_label": "D0/10",
-      "holding_status": "D0；L0（今日 +3,222 張、真連買 10 天、10日累計 +61K）→ 續抱；11/18 公告 Q3 財報",
+      "holding_days": 1,
+      "holding_days_label": "D1/10",
+      "holding_status": "D1；11-18 T86 -2,348 張 L4（佔均量 9.0%≥8%，不受待複核保護；10日累計 +48K 為正但佔比≥8%）→ 次日 11-19 開盤出場；今日 Q3 財報日、收 52.6（-3.5%）",
       "prev_close": 54.7,
       "prev_close_return_pct": 0.37,
       "reversal_today": "L0",
@@ -50,7 +50,13 @@
       "intraday_return_pct": -4.59,
       "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
       "intraday_reversal": "L0",
-      "intraday_strategy": "續抱（不加碼；今日 Q3 財報公告）"
+      "intraday_strategy": "續抱（不加碼；今日 Q3 財報公告）",
+      "actual_close": 52.6,
+      "close_price": 52.6,
+      "return_pct": -3.49,
+      "change_pct": -3.84,
+      "change_percent": -3.84,
+      "漲跌幅": -3.84
     },
     {
       "stock_code": "2892",
@@ -86,7 +92,16 @@
       "intraday_return_pct": -3.68,
       "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
       "intraday_reversal": "L0",
-      "intraday_strategy": "續抱（觀察）"
+      "intraday_strategy": "續抱（觀察）",
+      "actual_close": 41.0,
+      "close_price": 41.0,
+      "return_pct": -2.61,
+      "holding_days_label": "D0/10",
+      "holding_days": 0,
+      "holding_status": "D0；L1（買超減速 -55.5%；今日 T86 仍買超，真連買 10 天、累計 +37K）→ 續抱不加碼；收 41.0（-2.6%），距停損 37.89 約 7.6%",
+      "change_pct": -2.61,
+      "change_percent": -2.61,
+      "漲跌幅": -2.61
     }
   ],
   "carry_over": [
@@ -111,9 +126,9 @@
       "track": "A",
       "recommend_date": "2026-11-09",
       "result": "holding",
-      "holding_days": 6,
-      "holding_days_label": "D6/10",
-      "holding_status": "D6；L0（今日 +2,250 張、真連買 5 天、10日累計 +10,002 張）；11/20 法說（D9）→ 續抱，法說前評估減碼",
+      "holding_days": 7,
+      "holding_days_label": "D7/10",
+      "holding_status": "D7；L0（今日 +1,800 張、真連買 6 天、累計 +11.8K）→ 續抱；11/20 法說（D9），法說前評估減碼；距目標 4.1%",
       "reversal_today": "L0",
       "strategy_today": "續抱",
       "prev_close": 53.3,
@@ -123,7 +138,11 @@
       "intraday_return_pct": 3.33,
       "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
       "intraday_reversal": "L0",
-      "intraday_strategy": "續抱；11/20 法說"
+      "intraday_strategy": "續抱；11/20 法說",
+      "actual_close": 52.9,
+      "close_price": 52.9,
+      "return_pct": 3.73,
+      "change_pct": -1.13
     },
     {
       "stock_code": "2412",
@@ -139,9 +158,9 @@
       "score": 79,
       "track": "A",
       "result": "holding",
-      "holding_days": 3,
-      "holding_days_label": "D3/10",
-      "holding_status": "D3；L4（11-17 T86 -3,151 張，佔日均量 26.6%≥8%）→ 已決事項：11/18 開盤出場，入帳價用 11-18 收盤",
+      "holding_days": 4,
+      "holding_days_label": "D4/10",
+      "holding_status": "D4；已決事項 11-18 開盤出場，入帳收盤 164.5，+2.17% → 結算 success（鐵律③ L4）",
       "reversal_today": "L4",
       "strategy_today": "開盤出場（已決事項）",
       "prev_close": 164.5,
@@ -151,7 +170,11 @@
       "intraday_return_pct": 1.86,
       "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
       "intraday_reversal": "L4（已決）",
-      "intraday_strategy": "開盤出場（已決事項，入帳價用收盤）"
+      "intraday_strategy": "開盤出場（已決事項，入帳價用收盤）",
+      "actual_close": 164.5,
+      "close_price": 164.5,
+      "return_pct": 2.17,
+      "change_pct": -0.3
     },
     {
       "stock_code": "2801",
@@ -167,9 +190,9 @@
       "score": 76,
       "track": "A",
       "result": "holding",
-      "holding_days": 2,
-      "holding_days_label": "D2/10",
-      "holding_status": "D2；reversal 狀態不明（今日 +710 張、累計 -312 張）；距停損 9.2%、未觸鐵律 → 續抱並列觀察",
+      "holding_days": 3,
+      "holding_days_label": "D3/10",
+      "holding_status": "D3；11-18 T86 -5,431 張 L4（佔均量 28.4%≥8%；10日累計 -5,743 為負）→ 次日 11-19 開盤出場；收 27.55（-3.0%）",
       "reversal_today": "狀態不明",
       "strategy_today": "續抱（觀察）",
       "prev_close": 28.15,
@@ -179,7 +202,11 @@
       "intraday_return_pct": -3.17,
       "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
       "intraday_reversal": "狀態不明（今日+710張、累計-312）",
-      "intraday_strategy": "續抱（觀察）"
+      "intraday_strategy": "續抱（觀察）",
+      "actual_close": 27.55,
+      "close_price": 27.55,
+      "return_pct": -2.99,
+      "change_pct": -2.31
     },
     {
       "stock_code": "2884",
@@ -195,9 +222,9 @@
       "score": 102,
       "track": "A",
       "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
-      "holding_status": "D1；L4（11-17 T86 -3,291 張，佔日均量 10.1%≥8%）→ 已決事項：11/18 開盤出場；11/18 16:30 法說",
+      "holding_days": 2,
+      "holding_days_label": "D2/10",
+      "holding_status": "D2；收盤 42.15 ≤ 停損 43.47 → fail（鐵律①②③）",
       "reversal_today": "L4",
       "strategy_today": "開盤出場（已決事項）",
       "prev_close": 46.65,
@@ -207,7 +234,11 @@
       "intraday_return_pct": -12.42,
       "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
       "intraday_reversal": "L4（已決）",
-      "intraday_strategy": "開盤出場（已決事項）；盤中同時觸及鐵律①②"
+      "intraday_strategy": "開盤出場（已決事項）；盤中同時觸及鐵律①②",
+      "actual_close": 42.15,
+      "close_price": 42.15,
+      "return_pct": -12.73,
+      "change_pct": -9.32
     },
     {
       "stock_code": "4904",
@@ -223,9 +254,9 @@
       "score": 89,
       "track": "A",
       "result": "holding",
-      "holding_days": 1,
-      "holding_days_label": "D1/10",
-      "holding_status": "D1；L0（11-17 T86 +576 張、10日累計 +11,998 張；待複核已降級）；11/19 法說（明日）→ 續抱，法說前後雙向波動",
+      "holding_days": 2,
+      "holding_days_label": "D2/10",
+      "holding_status": "D2；L0（今日 +1,217 張、累計 +9.6K）→ 續抱不加碼；11/19 法說（前一日，雙向波動）",
       "reversal_today": "L0",
       "strategy_today": "續抱",
       "prev_close": 108.5,
@@ -235,7 +266,11 @@
       "intraday_return_pct": -0.91,
       "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
       "intraday_reversal": "L0",
-      "intraday_strategy": "續抱；11/19 法說"
+      "intraday_strategy": "續抱；11/19 法說",
+      "actual_close": 109.0,
+      "close_price": 109.0,
+      "return_pct": -0.46,
+      "change_pct": 0.0
     }
   ],
   "opening_exits_today": [
@@ -294,7 +329,42 @@
       "reason": "L4（今日賣超 -5,508 張，16.5%）；原樣沿用"
     }
   ],
-  "removed_stocks": [],
+  "removed_stocks": [
+    {
+      "stock_code": "2884",
+      "stock_name": "玉山金",
+      "track": "A",
+      "recommend_date": "2026-11-16",
+      "recommend_price": 48.3,
+      "settled_price": 42.15,
+      "last_close": 42.15,
+      "return_pct": -12.73,
+      "result": "fail",
+      "holding_days": "D2/10",
+      "removal_reason": "收盤 42.15 ≤ 停損 43.47（settlement_checker 機械判定，D2，-12.73%）；2 日累計 -12.73%、11-17 L4（10%）／11-18 T86 賣超 -46,813 張（佔日均量 129%）",
+      "fail_reason": "收盤 42.15 ≤ 停損 43.47（settlement_checker 機械判定，D2，-12.73%）；2 日累計 -12.73%、11-17 L4（10%）／11-18 T86 賣超 -46,813 張（佔日均量 129%）",
+      "settled_by": "settlement_checker 停損（盤後收盤價）",
+      "settled_date": "2026-11-18",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-18.json removed_stocks ③predictions.json"
+    },
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電",
+      "track": "A",
+      "recommend_date": "2026-11-12",
+      "recommend_price": 161.0,
+      "settled_price": 164.5,
+      "last_close": 164.5,
+      "return_pct": 2.17,
+      "result": "success",
+      "holding_days": "D4/10",
+      "removal_reason": "已決事項（11-17 T86 L4 26.6% 鐵律③）→ 11-18 開盤出場，入帳價用收盤 164.5（v8.3.2）高於推薦價 161.0；今日 T86 仍 -986 張（7.8% L4）",
+      "success_note": "已決事項（11-17 T86 L4 26.6% 鐵律③）→ 11-18 開盤出場，入帳價用收盤 164.5（v8.3.2）高於推薦價 161.0；今日 T86 仍 -986 張（7.8% L4）",
+      "settled_by": "已決事項鐵律③出場（入帳用盤後收盤價）",
+      "settled_date": "2026-11-18",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-18.json removed_stocks ③predictions.json"
+    }
+  ],
   "track_b_recommendations": [],
   "track_b_observations": [
     {
@@ -342,32 +412,77 @@
     }
   ],
   "pending_review": [],
-  "tomorrow_opening_exits": [],
+  "tomorrow_opening_exits": [
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "category": "追蹤（新決議）",
+      "reason": "鐵律③ L4：11-18 T86 -2,348 張，佔日均量 9.0%≥8%；今日 Q3 財報日；收 52.6（-3.5%）；次日 11-19 開盤出場，入帳價用 11-19 收盤"
+    },
+    {
+      "stock_code": "2801",
+      "stock_name": "彰銀",
+      "category": "追蹤（新決議）",
+      "reason": "鐵律③ L4：11-18 T86 -5,431 張，佔日均量 28.4%；10日累計 -5,743 為負；次日 11-19 開盤出場，入帳價用 11-19 收盤"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "category": "持倉（已決事項）",
+      "reason": "鐵律① 收盤 51.9<停損 73.26；今日 L4（-6,115 張，6.5%）"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "category": "持倉（已決事項）",
+      "reason": "鐵律① 收盤 69.9<停損 147.6；今日 L4（-9,712 張，23.3%）"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "category": "持倉（已決事項）",
+      "reason": "鐵律① 收盤 187.5<停損 235.98；TWSE 注意股"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "category": "持倉（已決事項）",
+      "reason": "鐵律① 收盤 116.0<停損 256.5；今日 L2"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "category": "持倉（已決事項）",
+      "reason": "11-06 出場決議原樣沿用；收盤 64.4>停損 54.08；今日 L4（-2,789 張，9.1%）"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "category": "持倉（已決事項）",
+      "reason": "11/12 法說後維持已決；收盤 85.4>停損 76.5"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電零股",
+      "category": "持倉（已決事項）",
+      "reason": "L4（-6,896 張，18.4%）；原樣沿用"
+    }
+  ],
   "watchlist": [
     {
       "stock_code": "2610",
       "stock_name": "華航",
-      "note": "訊號A L3、真連買10天、外資5日 +74K、L0；但 11/18 14:00 法說會（當日不開新倉）；估分約 110（基礎 75＋動能15＋L3 15＋EPS 5）"
+      "note": "真連買10天、累計 +210K、EPS YoY+47%（+5）、月季線雙上；L1 買超減速、油價成本對立；今日 14:00 法說後再評"
     },
     {
       "stock_code": "2618",
       "stock_name": "長榮航",
-      "note": "訊號A L2；篩選①催化對立（中東鏈標「↓ 油價成本」，今日 Brent +1.77%）；估分約 90"
+      "note": "真連買10天、累計 +120K、EPS +2、月季線雙上；L1；油價成本對立"
     },
     {
-      "stock_code": "2887",
-      "stock_name": "台新新光金",
-      "note": "昨日 L4、今日 L0（+6,763 張）反覆；月季線雙下、營收年減 14.6%；基礎約 60"
-    },
-    {
-      "stock_code": "2883",
-      "stock_name": "凱基金",
-      "note": "昨日 L4、今日 L0；月季線雙下、營收年減 51%；基礎約 62"
-    },
-    {
-      "stock_code": "1101",
-      "stock_name": "台泥",
-      "note": "動能 -78%、EPS +5，但基礎約 68、外資5日僅 +987 張、催化僅中度"
+      "stock_code": "9933",
+      "stock_name": "中鼎",
+      "note": "真連買7天、累計 +55K、外資持股比 +1.83%（+5）；動能 +106% 追高排除"
     }
   ],
   "data_quality": {
@@ -377,5 +492,88 @@
     "foreign_ratio": "15 檔皆 ≥2026-11-11"
   },
   "intraday_taiex": "加權 40,416（+324 點、+0.81%，前收 40,092）；Yahoo 12:12",
-  "intraday_note": "無盤中新推薦；追蹤中 2884 玉山金盤中 42.3 同時觸及鐵律①（<停損43.47）與②（2日-12.4%），已是已決開盤出場；2412 已決出場；其餘未觸停損。"
+  "intraday_note": "無盤中新推薦；追蹤中 2884 玉山金盤中 42.3 同時觸及鐵律①（<停損43.47）與②（2日-12.4%），已是已決開盤出場；2412 已決出場；其餘未觸停損。",
+  "tomorrow_recommendations": [],
+  "tomorrow_note": "0 檔：2610 華航／2618 長榮航雖法人連買 10 天，但篩選①催化對立（Brent 93、油價成本↑）；其餘動能>+100% 追高或外資近5日為負；空頭局勢、金融股追蹤集中",
+  "after_market_note": "盤後 T86（16:32 公布）已手工寫入快取後以含今日資料重跑 reversal_alert／chip_analysis",
+  "yesterday_verification": {
+    "accuracy": "54.5%",
+    "settled_count": 773,
+    "success": 421,
+    "fail": 352,
+    "settled_today": 2,
+    "note": "今日結算 2 筆（2884 fail／2412 success）；其餘 holding 不計入準確率；統計取自 update_predictions 輸出",
+    "results": [
+      {
+        "stock_code": "2886",
+        "stock_name": "兆豐金",
+        "recommend_date": "2026-11-17",
+        "recommend_price": 54.5,
+        "close_price": 52.6,
+        "return_pct": -3.49,
+        "result": "holding",
+        "note": "D1；11-18 T86 -2,348 張 L4（佔均量 9.0%≥8%，不受待複核保護；10日累計 +48K 為正但佔比≥8%）→ 次日 11-19 開盤出場；今日 Q3 財報日、收 52.6（-3.5%）"
+      },
+      {
+        "stock_code": "2892",
+        "stock_name": "第一金",
+        "recommend_date": "2026-11-18",
+        "recommend_price": 42.1,
+        "close_price": 41.0,
+        "return_pct": -2.61,
+        "result": "holding",
+        "note": "D0；L1（買超減速 -55.5%；今日 T86 仍買超，真連買 10 天、累計 +37K）→ 續抱不加碼；收 41.0（-2.6%），距停損 37.89 約 7.6%"
+      },
+      {
+        "stock_code": "5876",
+        "stock_name": "上海商銀",
+        "recommend_date": "2026-11-09",
+        "recommend_price": 51.0,
+        "close_price": 52.9,
+        "return_pct": 3.73,
+        "result": "holding",
+        "note": "D7；L0（今日 +1,800 張、真連買 6 天、累計 +11.8K）→ 續抱；11/20 法說（D9），法說前評估減碼；距目標 4.1%"
+      },
+      {
+        "stock_code": "2412",
+        "stock_name": "中華電",
+        "recommend_date": "2026-11-12",
+        "recommend_price": 161.0,
+        "close_price": 164.5,
+        "return_pct": 2.17,
+        "result": "holding",
+        "note": "D4；已決事項 11-18 開盤出場，入帳收盤 164.5，+2.17% → 結算 success（鐵律③ L4）"
+      },
+      {
+        "stock_code": "2801",
+        "stock_name": "彰銀",
+        "recommend_date": "2026-11-13",
+        "recommend_price": 28.4,
+        "close_price": 27.55,
+        "return_pct": -2.99,
+        "result": "holding",
+        "note": "D3；11-18 T86 -5,431 張 L4（佔均量 28.4%≥8%；10日累計 -5,743 為負）→ 次日 11-19 開盤出場；收 27.55（-3.0%）"
+      },
+      {
+        "stock_code": "2884",
+        "stock_name": "玉山金",
+        "recommend_date": "2026-11-16",
+        "recommend_price": 48.3,
+        "close_price": 42.15,
+        "return_pct": -12.73,
+        "result": "holding",
+        "note": "D2；收盤 42.15 ≤ 停損 43.47 → fail（鐵律①②③）"
+      },
+      {
+        "stock_code": "4904",
+        "stock_name": "遠傳",
+        "recommend_date": "2026-11-16",
+        "recommend_price": 109.5,
+        "close_price": 109.0,
+        "return_pct": -0.46,
+        "result": "holding",
+        "note": "D2；L0（今日 +1,217 張、累計 +9.6K）→ 續抱不加碼；11/19 法說（前一日，雙向波動）"
+      }
+    ]
+  }
 }
