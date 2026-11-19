@@ -22,7 +22,7 @@
       "position": "5%",
       "score": 76,
       "track": "A",
-      "result": "holding",
+      "result": "fail",
       "entry_condition": "開盤價>29.25（+3%）不買，不追高",
       "reason": "🛤️軌道A｜法人 TOP50 買超第34（avg_rank 34.5，+2,923張佔成交14.7%）；10 日累計三大法人 +8.5K、外資近5日 +560（邊緣為正）；反轉L0；動能 -127%（佈局中，+15）；月線下 -3.2%、季線上 +3.0%；5日 -1.0%。⚠️弱訊號：真連買僅2天、外資近5日僅+560；topic_tracker 兩面：『AI以外資金輪動』↑、『離岸風電森崴案：公股行庫授信』↓（觀察中，最後訊號11/09）；Q3 財報申報期限11/14、可能於持有期首日公布→EPS/營收加減分視為0；與已追蹤 2884/2886/5876 同屬金融，組合金融集中。",
       "score_breakdown": {
@@ -36,11 +36,15 @@
         "營收": 0,
         "外資持股比": 0
       },
-      "actual_close": 29.0,
+      "actual_close": 26.9,
       "close_price": 29.0,
-      "return_pct": 2.11,
+      "return_pct": -5.28,
       "holding_status": "D0 續抱；L1（買超減速，近5日 -170 張/日，累計仍為正）；D0 不結算；Q3 財報申報期限 11/14",
-      "change_percent": 2.11
+      "change_percent": 2.11,
+      "settled_date": "2026-11-19",
+      "settled_price": 26.9,
+      "fail_reason": "已決事項（11-18 T86 L4 28.4%、10日累計為負）→ 11-19 開盤出場，入帳價用收盤 26.9（v8.3.2）低於推薦價 28.4；今日 T86 仍 -1,441 張（L4 6.6%）",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-19.json removed_stocks ③predictions.json"
     }
   ],
   "carry_over": [
