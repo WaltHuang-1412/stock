@@ -71,7 +71,7 @@
       "position": "5%",
       "score": 99,
       "track": "A",
-      "result": "holding",
+      "result": "fail",
       "entry_condition": "開盤價>43.36（+3%）不買",
       "reason": "🛤️軌道A（法人）＋📶訊號A（預埋）L3｜TOP50 第20（avg_rank 26.0，今日 +2,475 張）；真連買 10 天、10日累計三大 +41K、外資5日 +25K、10日賣超 0 天；反轉 L0；動能 -45.5%（佈局完成）；Fed 升息金控鏈（超強）↑；月線 -0.8%、季線上 +6.7%。基礎五維度 69（<70），總分靠動能 +15 與訊號A L3 +15 兩項達 99（結構性膨脹，已知）。⚠️ 投信近5日 -16K 且今日 -6,922 張、外資撐盤；營收年減 3.2%；EPS 快取為 Q2（金融 Q3 未公布，視為0）；金融集中（追蹤 5876/2801/2886）；空頭局勢降倉 5%；賺賠比 0.8:1（開盤高3%才買剩 +4.8%）",
       "score_breakdown": {
@@ -93,15 +93,19 @@
       "intraday_time": "2026-11-18 12:12（Yahoo regularMarketPrice）",
       "intraday_reversal": "L0",
       "intraday_strategy": "續抱（觀察）",
-      "actual_close": 41.0,
+      "actual_close": 37.6,
       "close_price": 41.0,
-      "return_pct": -2.61,
+      "return_pct": -10.69,
       "holding_days_label": "D0/10",
       "holding_days": 0,
       "holding_status": "D0；L1（買超減速 -55.5%；今日 T86 仍買超，真連買 10 天、累計 +37K）→ 續抱不加碼；收 41.0（-2.6%），距停損 37.89 約 7.6%",
       "change_pct": -2.61,
       "change_percent": -2.61,
-      "漲跌幅": -2.61
+      "漲跌幅": -2.61,
+      "settled_date": "2026-11-20",
+      "settled_price": 37.6,
+      "fail_reason": "收盤 37.6 ≤ 停損 37.89（鐵律停損，-10.69%）；2 日累計 41.0→37.6 = -8.3%；今日 T86 仍買 +7,673 張，但金融股同步重挫、價格先破停損",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-20.json removed_stocks ③predictions.json"
     }
   ],
   "carry_over": [

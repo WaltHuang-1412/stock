@@ -7548,10 +7548,10 @@
     ]
   },
   "settled_accuracy": "54.3%",
-  "settled_count": 775,
-  "holding_count": 172,
+  "settled_count": 776,
+  "holding_count": 173,
   "total_success": 421,
-  "total_fail": 354,
+  "total_fail": 355,
   "2026-03-30": {
     "predictions": [
       {
@@ -19305,10 +19305,12 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 99,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-11-20",
+        "settled_price": 37.6,
+        "holding_days": 1,
+        "return_pct": -10.69,
+        "fail_reason": "收盤 37.6 ≤ 停損 37.89（鐵律停損，-10.69%）；2 日累計 41.0→37.6 = -8.3%；今日 T86 仍買 +7,673 張，但金融股同步重挫、價格先破停損"
       }
     ],
     "settled_accuracy": null,
@@ -19341,6 +19343,42 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 84,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-11-20": {
+    "predictions": [
+      {
+        "symbol": "2412",
+        "name": "中華電",
+        "recommend_price": 166.0,
+        "target_price": 179.28,
+        "stop_loss": 149.4,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 99,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2886",
+        "name": "兆豐金",
+        "recommend_price": 53.4,
+        "target_price": 57.67,
+        "stop_loss": 48.06,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5%",
+        "score": 96,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
