@@ -63,7 +63,7 @@
       "position": "5%",
       "score": 89,
       "track": "A",
-      "result": "holding",
+      "result": "fail",
       "entry_condition": "開盤價>112.79（+3%）不買；11/19 法說當天不加碼",
       "reason": "🛤️軌道A（法人）+📶訊號A（預埋）L2｜TOP50 avg_rank 26.0、買超佔成交 44%；10日累計 +14K、外資近5日 +6.4K；L0；連買3天、動能 -37%；『金融、電信有承接』（中度）↑；月線下 -2.0%、季線上 +2.5%；5日 -3.6%。⚠️ 催化弱對齊；11/19 10:50 法說（D3）；EPS 快取 Q2 落後視為0；Module A 加分未驗證有效。",
       "score_breakdown": {
@@ -81,11 +81,15 @@
       "intraday_price": 110.5,
       "intraday_change_pct": 0.91,
       "intraday_time": "12:30",
-      "actual_close": 109.0,
+      "actual_close": 103.0,
       "close_price": 109.0,
-      "return_pct": -0.46,
+      "return_pct": -5.94,
       "holding_status": "D0 續抱；L2（前期買超 +9,796 張，今日賣超 -496 張佔 4.4%，單日反轉；未達 L3/L4 出場）；11/19 10:50 法說",
-      "change_percent": -0.46
+      "change_percent": -0.46,
+      "settled_date": "2026-11-23",
+      "settled_price": 103.0,
+      "fail_reason": "已決事項（11-20 T86 L4 賣超 -2,011 張佔均量 21.2%）→ 11-23 開盤出場，入帳價用收盤 103.0（v8.3.2）低於推薦價 109.5；今日 T86 僅賣 -202 張（L2），賣壓已減但依已決事項不重評",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-23.json removed_stocks ③predictions.json"
     }
   ],
   "carry_over": [
