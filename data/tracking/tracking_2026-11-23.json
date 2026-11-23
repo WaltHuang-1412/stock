@@ -52,7 +52,9 @@
       "change_pct": -1.75,
       "漲跌幅": "-1.75%",
       "carry_over": true,
-      "holding_status": "D1（照抄 settlement_checker，收 21.3 距停損 20.61 約 3.3%）；今日 L0 買超 +6,940 張、真連買 10 天"
+      "holding_status": "D1（照抄 settlement_checker，收 21.3 距停損 20.61 約 3.3%）；今日 L0 買超 +6,940 張、真連買 10 天",
+      "intraday_price": 21.1,
+      "intraday_change_pct": -7.86
     },
     {
       "stock_code": "2886",
@@ -82,7 +84,9 @@
       "holding_days_label": "D0/10",
       "holding_days": 0,
       "carry_over": true,
-      "holding_status": "D0（照抄 settlement_checker）；今日 L0 買超 +4,926 張"
+      "holding_status": "D0（照抄 settlement_checker）；今日 L0 買超 +4,926 張",
+      "intraday_price": 50.3,
+      "intraday_change_pct": -5.81
     }
   ],
   "carry_over": [
@@ -110,7 +114,9 @@
       "holding_days": 9,
       "holding_days_label": "D9/10",
       "carry_over": true,
-      "holding_status": "D9（checker 11-23 盤前）；今日收盤為 D10 → 依收盤 vs 推薦價 51.0 結算（盤後才寫帳）；昨收 49.6 低於推薦價，L0 買超"
+      "holding_status": "D9（checker 11-23 盤前）；今日收盤為 D10 → 依收盤 vs 推薦價 51.0 結算（盤後才寫帳）；昨收 49.6 低於推薦價，L0 買超",
+      "intraday_price": 49.05,
+      "intraday_change_pct": -3.82
     },
     {
       "stock_code": "4904",
@@ -129,7 +135,9 @@
       "holding_days": 4,
       "holding_days_label": "D4/10",
       "carry_over": true,
-      "holding_status": "D4；🔴 L4（今日賣超 -2,011 張，佔日均量 21.2%≥8%；10 日累計 +5.9K 但佔比遠離門檻，不適用待複核）→ 次日開盤出場；收 103.0（-5.9%）"
+      "holding_status": "D4；🔴 L4（今日賣超 -2,011 張，佔日均量 21.2%≥8%；10 日累計 +5.9K 但佔比遠離門檻，不適用待複核）→ 次日開盤出場；收 103.0（-5.9%）",
+      "intraday_price": 104.0,
+      "intraday_change_pct": -5.02
     },
     {
       "stock_code": "1101",
@@ -148,7 +156,9 @@
       "holding_days": 1,
       "holding_days_label": "D1/10",
       "carry_over": true,
-      "holding_status": "D1；🔴 L4（今日賣超 -7,088 張，佔日均量 23.2%≥8%）→ 次日開盤出場；收 24.35（-7.2%）"
+      "holding_status": "D1；🔴 L4（今日賣超 -7,088 張，佔日均量 23.2%≥8%）→ 次日開盤出場；收 24.35（-7.2%）",
+      "intraday_price": 24.35,
+      "intraday_change_pct": -7.24
     },
     {
       "stock_code": "2892",
@@ -203,7 +213,9 @@
       "holding_days_label": "D0/10",
       "holding_days": 0,
       "carry_over": true,
-      "holding_status": "D0；🚫 今日美股龍頭預警 Level 3（Broadcom -12.19%，對應表將中華電列入網通鏈）→ 不列入推薦評分、不加碼；既有追蹤續行不重複建倉。對應關係疑為對應表誤列（電信非 AVGO 供應鏈），但 Level 3 禁止忽略；今日 L0 買超 +6,259 張；⚠️ 11/24 09:00 UBS 法說會（明日）"
+      "holding_status": "D0；🚫 今日美股龍頭預警 Level 3（Broadcom -12.19%，對應表將中華電列入網通鏈）→ 不列入推薦評分、不加碼；既有追蹤續行不重複建倉。對應關係疑為對應表誤列（電信非 AVGO 供應鏈），但 Level 3 禁止忽略；今日 L0 買超 +6,259 張；⚠️ 11/24 09:00 UBS 法說會（明日）",
+      "intraday_price": 165.5,
+      "intraday_change_pct": -0.3
     }
   ],
   "opening_exits_today": [
@@ -309,5 +321,6 @@
     "dossier": "法說會 MOPS 上櫃來源 DNS 失敗（partial），上櫃個股法說會事件風險未確認；本日名單皆為上市股，影響有限",
     "news": "鉅亨網新聞來源錯誤，其餘來源 ok；tw_market_news.json 一度被 > 轉向覆寫，已重跑修復"
   },
-  "watchlist": []
+  "watchlist": [],
+  "intraday_note": "12:30 盤中：偵測器逾時未取得；無盤中新推薦；追蹤股皆未觸停損；5876 D10 盤後結算"
 }
