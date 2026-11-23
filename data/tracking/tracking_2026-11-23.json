@@ -1,0 +1,313 @@
+{
+  "date": "2026-11-23",
+  "version": "v8.3.11",
+  "phase": "before_market",
+  "settings": {
+    "stop_loss_pct": -10,
+    "settlement_days": 10
+  },
+  "market_context": {
+    "taiex_1120_close": 36033.29,
+    "taiex_1120_chg_pct": -6.04,
+    "regime": "恐慌",
+    "regime_score": -7,
+    "vix": 35.89,
+    "sox_1120_pct": -10.73,
+    "nasdaq_1120_pct": -5.28,
+    "limit_short": "限空令3.0（全面禁平盤以下放空、融券保證金150%）今日上路",
+    "foreign_1120_net_100m": -94.13,
+    "foreign_5d_net_100m": -2185.72
+  },
+  "defense_ratio": "60-75%（恐慌局勢；Step 9 矩陣 VIX>30＋催化超強者為偏空催化，採 regime 檔值）",
+  "recommendations": [
+    {
+      "stock_code": "2610",
+      "stock_name": "華航",
+      "industry": "航空（industry_chains 航空 tier_0 航空客運）",
+      "recommend_date": "2026-11-19",
+      "recommend_price": 22.9,
+      "target_price": 24.73,
+      "stop_loss_pct": -10,
+      "stop_loss": 20.61,
+      "settlement_days": 10,
+      "position": "5%",
+      "track": "A",
+      "score": 107,
+      "result": "holding",
+      "entry_condition": "開盤價>23.59（+3%）不買",
+      "reason": "⏳沿用進行中追蹤（D1/10），維持原進場價 22.9／停損 20.61 不變，不重複建倉。🛤️軌道A（法人）＋📶訊號A（預埋）L3｜今日 +6,940 張（連買 10 天、10日累計 +164K、外資5日 +41K）、反轉 L0、動能 -66.3%（佈局完成 +15）；EPS Q3 YoY+46.9%／毛利率 QoQ+6.3pp（+5）、營收 10月 YoY+22.4%+5日回檔 8.2%（+5）；價位 8（月線 -1.6%／季線上）；⚠️ 風險：距停損僅 3.3%，油價／中東為航空逆風（華航 topic 標↓），收盤≤20.61 即鐵律停損。",
+      "score_breakdown": {
+        "時事": 12,
+        "法人": 20,
+        "產業": 14,
+        "技術": 13,
+        "價格位置": 8,
+        "動能": 15,
+        "訊號A_L3": 15,
+        "EPS": 5,
+        "營收": 5
+      },
+      "holding_days_label": "D1/10",
+      "holding_days": 1,
+      "change_pct": -1.75,
+      "漲跌幅": "-1.75%",
+      "carry_over": true,
+      "holding_status": "D1（照抄 settlement_checker，收 21.3 距停損 20.61 約 3.3%）；今日 L0 買超 +6,940 張、真連買 10 天"
+    },
+    {
+      "stock_code": "2886",
+      "stock_name": "兆豐金",
+      "industry": "金融（industry_chains 金融 tier_0 金控）",
+      "recommend_date": "2026-11-20",
+      "recommend_price": 53.4,
+      "target_price": 57.67,
+      "stop_loss_pct": -10,
+      "stop_loss": 48.06,
+      "settlement_days": 10,
+      "position": "5%",
+      "track": "A",
+      "score": 91,
+      "result": "holding",
+      "entry_condition": "開盤價>55.0（+3%）不買",
+      "reason": "⏳沿用進行中追蹤（D0/10），維持原進場價 53.4／停損 48.06 不變，不重複建倉。🛤️軌道A（法人）＋📶訊號A（預埋）L2｜今日 +4,926 張（投信 +13.4M 股、外資 -12.1M 股）、外資5日 +16K、10日累計 +55K、反轉 L0、動能 -35.1%（佈局完成 +15）；EPS Q3 YoY+14.7%、營收 10月 YoY-10.3%（皆不加減分）；價位 8（月線 -4.0%／季線上）；⚠️ 11/24 14:30 法說（明日，雙向波動風險）；金融集中度已是上限，不加碼。",
+      "score_breakdown": {
+        "時事": 14,
+        "法人": 18,
+        "產業": 15,
+        "技術": 11,
+        "價格位置": 8,
+        "動能": 15,
+        "訊號A_L2": 10
+      },
+      "holding_days_label": "D0/10",
+      "holding_days": 0,
+      "carry_over": true,
+      "holding_status": "D0（照抄 settlement_checker）；今日 L0 買超 +4,926 張"
+    }
+  ],
+  "carry_over": [
+    "5876",
+    "4904",
+    "1101",
+    "2892",
+    "2412"
+  ],
+  "carry_over_recommendations": [
+    {
+      "stock_code": "5876",
+      "stock_name": "上海商銀",
+      "industry": "金融（銀行，tier_from_tracker 待審區）",
+      "recommend_price": 51.0,
+      "target_price": 55.08,
+      "stop_loss_pct": -10,
+      "stop_loss": 45.9,
+      "settlement_days": 10,
+      "position": "5-10%",
+      "score": 89,
+      "track": "A",
+      "recommend_date": "2026-11-09",
+      "result": "holding",
+      "holding_days": 9,
+      "holding_days_label": "D9/10",
+      "carry_over": true,
+      "holding_status": "D9（checker 11-23 盤前）；今日收盤為 D10 → 依收盤 vs 推薦價 51.0 結算（盤後才寫帳）；昨收 49.6 低於推薦價，L0 買超"
+    },
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "industry": "電信",
+      "recommend_price": 109.5,
+      "target_price": 118.26,
+      "stop_loss_pct": -10,
+      "stop_loss": 98.55,
+      "settlement_days": 10,
+      "position": "5%",
+      "score": 89,
+      "track": "A",
+      "recommend_date": "2026-11-16",
+      "result": "holding",
+      "holding_days": 4,
+      "holding_days_label": "D4/10",
+      "carry_over": true,
+      "holding_status": "D4；🔴 L4（今日賣超 -2,011 張，佔日均量 21.2%≥8%；10 日累計 +5.9K 但佔比遠離門檻，不適用待複核）→ 次日開盤出場；收 103.0（-5.9%）"
+    },
+    {
+      "stock_code": "1101",
+      "stock_name": "台泥",
+      "industry": "營建水泥（industry_chains tier_1 水泥）",
+      "recommend_price": 26.25,
+      "target_price": 28.35,
+      "stop_loss_pct": -10,
+      "stop_loss": 23.63,
+      "settlement_days": 10,
+      "position": "5%",
+      "score": 84,
+      "track": "A",
+      "recommend_date": "2026-11-19",
+      "result": "holding",
+      "holding_days": 1,
+      "holding_days_label": "D1/10",
+      "carry_over": true,
+      "holding_status": "D1；🔴 L4（今日賣超 -7,088 張，佔日均量 23.2%≥8%）→ 次日開盤出場；收 24.35（-7.2%）"
+    },
+    {
+      "stock_code": "2892",
+      "stock_name": "第一金",
+      "industry": "金融（金控；industry_chains 僅登錄 tier_from_tracker 待審區，產業邏輯一律 13-16）",
+      "recommend_price": 42.1,
+      "target_price": 45.47,
+      "stop_loss_pct": -10,
+      "stop_loss": 37.89,
+      "settlement_days": 10,
+      "position": "5%",
+      "score": 99,
+      "track": "A",
+      "recommend_date": "2026-11-18",
+      "result": "fail",
+      "holding_days": 2,
+      "holding_days_label": "D2/10",
+      "carry_over": true,
+      "holding_status": "已於 11-20 結算 fail（收盤 37.6≤停損 37.89），僅供記錄",
+      "settled_date": "2026-11-20",
+      "settled_price": 37.6,
+      "fail_reason": "收盤 37.6 ≤ 停損 37.89（鐵律停損，-10.69%）；2 日累計 41.0→37.6 = -8.3%；今日 T86 仍買 +7,673 張，但金融股同步重挫、價格先破停損",
+      "sync_note": "v8.3.7 三處同步：①來源tracking ②tracking_2026-11-20.json removed_stocks ③predictions.json"
+    },
+    {
+      "stock_code": "2412",
+      "stock_name": "中華電",
+      "industry": "電信（industry_chains 電信 tier_0 電信龍頭）",
+      "recommend_date": "2026-11-20",
+      "recommend_price": 166.0,
+      "target_price": 179.28,
+      "stop_loss_pct": -10,
+      "stop_loss": 149.4,
+      "settlement_days": 10,
+      "position": "5%",
+      "track": "A",
+      "score": null,
+      "result": "holding",
+      "entry_condition": "開盤價>171.0（+3%）不買",
+      "reason": "🛤️軌道A（法人）＋📶訊號A（預埋）L2｜TOP50 平均排名 7.5（今日 +7.1K 張）、外資5日 +8.2K、10日累計 +20K、10日賣超 3 天；反轉 L0；動能 -39.5%（佈局中 +10）；EPS Q3 YoY+28.7%（+3）、營收 YoY+13.4%（不加分）；月線 +3.15%／季線上；催化：台股市場動態（超強）逆勢創高、電信避險（中度）↑；美股 Broadcom -2.09% 觸 Level 1（網通鏈含中華電）-5。法人現身門檻通過（在 TOP50 買超名單）。賺賠比約 0.8:1（目標 +8%／停損 -10%）。",
+      "score_breakdown": {
+        "時事": 20,
+        "法人": 21,
+        "產業": 17,
+        "技術": 12,
+        "價格位置": 11,
+        "動能": 10,
+        "訊號A_L2": 10,
+        "EPS": 3,
+        "龍頭預警_L1": -5
+      },
+      "holding_days_label": "D0/10",
+      "holding_days": 0,
+      "carry_over": true,
+      "holding_status": "D0；🚫 今日美股龍頭預警 Level 3（Broadcom -12.19%，對應表將中華電列入網通鏈）→ 不列入推薦評分、不加碼；既有追蹤續行不重複建倉。對應關係疑為對應表誤列（電信非 AVGO 供應鏈），但 Level 3 禁止忽略；今日 L0 買超 +6,259 張；⚠️ 11/24 09:00 UBS 法說會（明日）"
+    }
+  ],
+  "opening_exits_today": [
+    {
+      "stock_code": "4904",
+      "stock_name": "遠傳",
+      "category": "追蹤（已決事項 L4）",
+      "reason": "11-20 T86 賣超 -2,011 張佔 21.2%≥8%（原樣抄入，不重評）"
+    },
+    {
+      "stock_code": "1101",
+      "stock_name": "台泥",
+      "category": "追蹤（已決事項 L4）",
+      "reason": "11-20 T86 賣超 -7,088 張佔 23.2%≥8%（原樣抄入，不重評）"
+    },
+    {
+      "stock_code": "6770",
+      "stock_name": "力積電",
+      "category": "持倉（已決事項）",
+      "reason": "鐵律① 收盤 44.1<停損 73.26（今日再比對：觸及）"
+    },
+    {
+      "stock_code": "2337",
+      "stock_name": "旺宏",
+      "category": "持倉（已決事項）",
+      "reason": "鐵律① 收盤 58.9<停損 147.6（觸及）"
+    },
+    {
+      "stock_code": "2313",
+      "stock_name": "華通",
+      "category": "持倉（已決事項）",
+      "reason": "鐵律① 收盤 152.5<停損 235.98（觸及）；今日 L3 近2日累計 -3,891 張"
+    },
+    {
+      "stock_code": "3090",
+      "stock_name": "日電貿",
+      "category": "持倉（已決事項）",
+      "reason": "鐵律① 收盤 95.0<停損 256.5（觸及）"
+    },
+    {
+      "stock_code": "1301",
+      "stock_name": "台塑",
+      "category": "持倉（已決事項）",
+      "reason": "11-06 出場決議沿用；今日仍 L4 -1,920 張 5.2%（停損 54.08 未觸，收 56.1 距 3.7%）"
+    },
+    {
+      "stock_code": "4938",
+      "stock_name": "和碩",
+      "category": "持倉（已決事項）",
+      "reason": "11/12 已決維持；今日 L3 近2日累計 -446 張（停損 76.5 未觸，收 78.1 距 2.1%）"
+    },
+    {
+      "stock_code": "2330",
+      "stock_name": "台積電零股",
+      "category": "持倉（已決事項）",
+      "reason": "L4 已決沿用；今日仍 L4 -10,902 張 22.9%，且列 TWSE 注意股；收 2,000"
+    }
+  ],
+  "removed_stocks": [],
+  "track_b_recommendations": [],
+  "track_b_observations": [
+    {
+      "stock_code": "2887",
+      "stock_name": "台新新光金",
+      "note": "90分（TOP4 買超 +24.9K、外資5日 +45K、L0、訊號A L2、動能-57%）；但金融已 2/3 超過單一產業 50% 上限、價位 1 分（月季線下 -15%/-17%）、EPS 快取 Q2 視為0、11/27 法說；列觀察不建倉"
+    },
+    {
+      "stock_code": "2891",
+      "stock_name": "中信金",
+      "note": "訊號A L3 但外資5日 -9.6K 未過準確率篩選②、營收連續衰退 -5、價位 3，不推薦"
+    },
+    {
+      "stock_code": "2890",
+      "stock_name": "永豐金",
+      "note": "動能 +259%>100% 排除（無超強催化覆寫）"
+    },
+    {
+      "stock_code": "2355",
+      "stock_name": "敬鵬",
+      "note": "TWSE 注意股（近10日2次），不推薦"
+    },
+    {
+      "stock_code": "2317",
+      "stock_name": "鴻海",
+      "note": "L4 排除；2881 富邦金 L4 排除；2609 陽明 L2 -15"
+    }
+  ],
+  "stale_series": [
+    {
+      "symbol": "2867",
+      "name": "三商壽",
+      "note": "get_close_series 查詢失敗（併購停牌），凍結判定、不結算、D 計數不推進"
+    }
+  ],
+  "pending_review": [],
+  "tomorrow_opening_exits": [],
+  "data_quality": {
+    "foreign_ratio": "16 檔皆 ≥2026-11-16 非過期",
+    "eps_stale_financials": "2892/2887/2883/2880/5880/2890 EPS 快取為 Q2（金控 Q3 申報期限 11/14 已過但快取未更新），視為0",
+    "revenue": "5 檔皆 2026-10 非過期",
+    "topic_tracker": "取自 outputs/topic_tracker.md（盤前 08:46 版）",
+    "market_regime_taiex": "regime 檔 taiex.current=36,033.29 為 11/20 值（fix 後），與 Yahoo ^TWII 一致",
+    "dossier": "法說會 MOPS 上櫃來源 DNS 失敗（partial），上櫃個股法說會事件風險未確認；本日名單皆為上市股，影響有限",
+    "news": "鉅亨網新聞來源錯誤，其餘來源 ok；tw_market_news.json 一度被 > 轉向覆寫，已重跑修復"
+  },
+  "watchlist": []
+}

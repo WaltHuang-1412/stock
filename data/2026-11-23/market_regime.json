@@ -1,0 +1,76 @@
+{
+  "date": "2026-11-23",
+  "regime": "恐慌",
+  "score": -7,
+  "details": [
+    "台股遠在年線下-8.6%",
+    "台股在季線下-21.2%",
+    "VIX 35.9（恐慌）",
+    "S&P500在季線下-9.5%",
+    "外資連賣 5 日（近5日 -2186 億）"
+  ],
+  "taiex": {
+    "current": 36033.29,
+    "as_of": "2026-11-20",
+    "ma20": 42719.57,
+    "ma60": 45710.92,
+    "ma240": 39408.23,
+    "high_52w": 49822.55,
+    "low_52w": 26504.24,
+    "vs_ma20": -15.65,
+    "vs_ma60": -21.17,
+    "vs_ma240": -8.56,
+    "source": "Yahoo ^TWII (fix_market_regime_taiex.py)"
+  },
+  "sp500": {
+    "current": 6910.39013671875,
+    "ma60": 7633.0,
+    "vs_ma60": -9.47
+  },
+  "vix": 35.88999938964844,
+  "institutional": {
+    "foreign": {
+      "today_net": -94.13,
+      "consecutive_days": -5,
+      "net_5d": -2185.72,
+      "net_10d": -3153.59
+    },
+    "trust": {
+      "today_net": -87.49,
+      "consecutive_days": -1,
+      "net_5d": -85.76,
+      "net_10d": 903.9
+    },
+    "dealer": {
+      "today_net": -340.84,
+      "consecutive_days": -5,
+      "net_5d": -1031.88,
+      "net_10d": -1453.35
+    },
+    "total": {
+      "today_net": -522.46,
+      "net_5d": -3303.36,
+      "net_10d": -3703.04
+    }
+  },
+  "etf_buy_multiplier": 5,
+  "stock_defense_ratio": "60-75%",
+  "settlement": {
+    "settlement_date": "2026-11-18",
+    "is_settlement_week": false,
+    "days_from_settlement": 5,
+    "status": "非結算週"
+  },
+  "taiex_original": {
+    "current": 36033.2890625,
+    "ma20": 42720.0,
+    "ma60": 45711.0,
+    "ma240": 39408.0,
+    "high_52w": 49822.55078125,
+    "low_52w": 24016.779296875,
+    "vs_ma20": -15.65,
+    "vs_ma60": -21.17,
+    "vs_ma240": -8.56
+  },
+  "taiex_fixed_at": "2026-11-23 09:05:45"
+}
