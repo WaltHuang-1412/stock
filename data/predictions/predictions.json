@@ -7548,10 +7548,10 @@
     ]
   },
   "settled_accuracy": "54.0%",
-  "settled_count": 779,
-  "holding_count": 170,
+  "settled_count": 780,
+  "holding_count": 171,
   "total_success": 421,
-  "total_fail": 358,
+  "total_fail": 359,
   "2026-03-30": {
     "predictions": [
       {
@@ -19385,6 +19385,44 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 96,
+        "result": "fail",
+        "settled_date": "2026-11-26",
+        "settled_price": 48.25,
+        "holding_days": 1,
+        "return_pct": -9.64,
+        "fail_reason": "鐵律出場：11-25 法人爆量賣超 L4（-5,930 張佔 11.1%）列今日開盤出場；盤中另達 2 日累計跌幅超過 -10%；今日 T86 續賣 -14,071 張（佔 20.4%）。入帳價用當日收盤 48.25（停損 48.06 未觸，當日低點 48.25）"
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-11-26": {
+    "predictions": [
+      {
+        "symbol": "2379",
+        "name": "瑞昱",
+        "recommend_price": 699.0,
+        "target_price": 754.92,
+        "stop_loss": 629.1,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 94,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2615",
+        "name": "萬海",
+        "recommend_price": 100.5,
+        "target_price": 108.54,
+        "stop_loss": 90.45,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 76,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
