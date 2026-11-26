@@ -14,7 +14,7 @@ Yahoo Finance API 替代方案（不依賴 yfinance）
 
 import requests
 import json
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 
 HEADERS = {'User-Agent': 'Mozilla/5.0'}
@@ -95,10 +95,12 @@ def get_5day_change(code):
     """
     取得 5 日漲幅（定義：T-1 收盤 vs T-6 收盤，共 5 個交易日間距）
 
-    T-1 = 前一交易日收盤（優先取 meta.previousClose，避免盤中即時價混入）
-    T-6 = 6 個交易日資料的第一筆收盤（range='6d'）
-
+    T-1 = 最近一個「已收盤」交易日；盤中（13:35 前）今日未完成的 K 棒一律排除。
     與 fetch_institutional_top30.py 的計算基礎一致。
+
+    2026-11-26 修正：舊版以「range=6d 回傳筆數 >= 6」判定盤中並改取 closes[-2]，
+    但盤前實測也回傳 6 筆 → 漏掉最近一個交易日（11-25 重挫日被整天略過，
+    2303 實算 -6.0% 卻回傳 +4.4%）。改為依 K 棒日期判斷。
 
     Args:
         code: 股票代號（如 '2330'）
@@ -106,33 +108,40 @@ def get_5day_change(code):
     Returns:
         float: 5日漲幅百分比，失敗返回 None
     """
-    result = _fetch_chart(code, range_str='6d')
+    result = _fetch_chart(code, range_str='1mo')
     if not result:
         return None
 
     try:
+        tpe = timezone(timedelta(hours=8))
+        now = datetime.now(tpe)
+        meta = result.get('meta', {})
+        mkt_ts = meta.get('regularMarketTime')
+        mkt_date = datetime.fromtimestamp(mkt_ts, tpe).date() if mkt_ts else None
+
         quote = result['indicators']['quote'][0]
-        closes = [c for c in quote['close'] if c is not None]
-        if len(closes) < 2:
+        volumes = quote.get('volume') or [None] * len(result['timestamp'])
+        bars = {}
+        for ts, close, vol in zip(result['timestamp'], quote['close'], volumes):
+            day = datetime.fromtimestamp(ts, tpe).date()
+            # 今日尚未收盤的 K 棒不算
+            if day >= now.date() and (now.hour, now.minute) < (13, 35):
+                continue
+            # 最新一日 close=None 時以 meta.regularMarketPrice 補值
+            if close is None and day == mkt_date:
+                close = meta.get('regularMarketPrice')
+            # 休市假 K 棒（成交量 0）與缺值略過
+            if close is None or vol == 0:
+                continue
+            bars[day] = close
+
+        closes = [bars[d] for d in sorted(bars)]
+        if len(closes) < 6:
             return None
 
-        # T-6（最舊一筆，6d 範圍的起點）
-        first = closes[0]
-
-        # T-1 偵測邏輯：
-        #   盤前查詢（8AM）：Yahoo Finance 只回傳歷史收盤，len(closes) == 5
-        #                    closes[-1] = 昨收，直接使用
-        #   盤中查詢（9-14時）：Yahoo Finance 多加一筆即時價，len(closes) == 6
-        #                       closes[-1] = 即時價（非昨收），改用 closes[-2]
-        # 注意：不用 regularMarketPrice 比較，因為盤前 closes[-1] = mktPrice = 昨收，
-        #        會誤判成「盤中」。改用 len(closes) >= 6 更可靠。
-        if len(closes) >= 6:
-            last = closes[-2]   # 盤中：第6筆是即時價，取第5筆（昨收）
-        else:
-            last = closes[-1]   # 盤前/盤後：最後一筆即為昨收
-
+        first, last = closes[-6], closes[-1]
         return (last - first) / first * 100
-    except (KeyError, IndexError):
+    except (KeyError, IndexError, TypeError):
         pass
 
     return None
