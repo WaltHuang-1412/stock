@@ -18,11 +18,15 @@ import json
 import time
 import requests
 import warnings
+from datetime import date, datetime
 from pathlib import Path
 
 warnings.filterwarnings('ignore')
 
 CACHE_DIR = Path(__file__).parent.parent / 'data' / 'cache'
+
+# 只對最近這麼多天內的初版快取做修訂重抓（避免回測讀舊資料時大量打 API）
+REVISION_WINDOW_DAYS = 20
 
 # 快取檔案內儲存實際 API 回傳日期的 key（用於讀取時驗證）
 METADATA_KEY = '__cache_date__'
@@ -113,12 +117,45 @@ def fetch_all_institutional(date_str):
                     pass
                 # 繼續走 API 流程
             else:
+                # 資料日當天寫入的快取是初版，TWSE 之後會修訂（主要是投信），
+                # 隔日起重抓一次；重抓失敗或資料不完整就沿用舊快取。
+                if _is_preliminary(cache_file, date_str):
+                    fresh = _download(date_str, previous=data)
+                    if fresh:
+                        return fresh
                 _memory_cache[date_str] = data
                 return data
         except (json.JSONDecodeError, IOError):
             pass  # 快取損壞，重新下載
 
-    # 3. 從 TWSE API 下載（中文版，含公司名稱）
+    return _download(date_str)
+
+
+def _is_preliminary(cache_file, date_str):
+    """快取是否為資料日當天寫入的初版（且現在已過資料日、仍在重抓期限內）"""
+    data_day = datetime.strptime(date_str, '%Y%m%d').date()
+    if not 0 < (date.today() - data_day).days <= REVISION_WINDOW_DAYS:
+        return False
+    return date.fromtimestamp(cache_file.stat().st_mtime) <= data_day
+
+
+def _is_same_day_revision(result, previous):
+    """重抓結果是否為同一天資料的修訂版：筆數沒有縮水，且絕大多數個股數字不變"""
+    old_codes = [c for c in previous if c != METADATA_KEY]
+    common = [c for c in old_codes if c in result]
+    if len(result) < 0.9 * len(old_codes) or len(common) < 0.9 * len(old_codes):
+        return False
+    same = sum(1 for c in common if result[c]['total'] == previous[c].get('total'))
+    return same >= 0.9 * len(common)
+
+
+def _download(date_str, previous=None):
+    """
+    從 TWSE API 下載並寫入快取（中文版，含公司名稱）
+
+    previous 給定時為「修訂重抓」：改以和舊快取比對來驗證，不符就回傳空 dict。
+    """
+    cache_file = _cache_path(date_str)
     url = f'https://www.twse.com.tw/rwd/zh/fund/T86?date={date_str}&selectType=ALL&response=json'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)',
@@ -192,10 +229,13 @@ def fetch_all_institutional(date_str):
 
     # 寫入磁碟快取（資料筆數足夠才存，避免不完整資料污染快取）
     # 正常交易日約 13,000-17,000 檔，低於 10,000 視為不完整
-    if len(result) >= 10000:
+    if previous is not None and not _is_same_day_revision(result, previous):
+        return {}
+
+    if previous is not None or len(result) >= 10000:
         # 二次驗證：比對近期快取，偵測 TWSE echo-date 問題
         # TWSE ��時對歷史查詢回傳最近資料但把 response['date'] 設成請求日期
-        dup_date = _find_duplicate_cache(result, date_str)
+        dup_date = None if previous is not None else _find_duplicate_cache(result, date_str)
         if dup_date:
             # 資料是 stale 的，拒絕快取，下次查詢會重試
             return {}
