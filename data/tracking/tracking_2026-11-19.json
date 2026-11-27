@@ -22,7 +22,7 @@
       "position": "5%",
       "track": "A",
       "score": 101,
-      "result": "holding",
+      "result": "fail",
       "entry_condition": "開盤價>23.59（+3%）不買",
       "reason": "🛤️軌道A（法人）＋📶訊號A（預埋）L3｜TOP50 第5（avg_rank 12.0，今日 +6,149 張，外資+4,146／投信+2,665）；真連買 10 天、10日累計 +209K、10日賣超 0 天；反轉 L0；動能 -58.8%（佈局完成 +15）；EPS Q3 YoY+46.9%（+5）、營收 +22.4%（不加分）；月線 +6.5%／季線上（13 分）；WTI -4.67% 至 83.26（近3個月低）、台股市場動態（超強）↑、法人點名年底作帳。⚠️ 催化部分對立：topic_tracker 中東鏈仍標華航↓油價成本（昨日因此列觀察，今日油價回落條件改善但未翻轉）；11-18 14:00 法說內容未納入（搜尋查無原文）；外資當日賣 766 億的空頭局勢降倉 5%；賺賠比 0.8:1",
       "score_breakdown": {
@@ -37,15 +37,19 @@
         "外資持股比": 0
       },
       "dossier": "法說會／除權息／重大訊息無事件（法說已於 11-18 召開），三來源 ok；mentions 18 筆：中東鏈↓、台股市場動態↑、點名關注",
-      "actual_close": 22.5,
-      "close_price": 22.5,
-      "return_pct": -1.75,
-      "holding_days_label": "D0/10",
-      "holding_days": 0,
-      "holding_status": "D0；L1（買超減速 -59%，今日仍 +4,760 張、真連買 10 天、累計 +165K）→ 續抱；收 22.5（-1.8%），距停損 20.61 約 8.4%",
+      "actual_close": 21.6,
+      "close_price": 21.6,
+      "return_pct": -5.68,
+      "holding_days_label": "D6/10",
+      "holding_days": 6,
+      "holding_status": "已結算 fail",
       "change_pct": -1.75,
-      "change_percent": -1.75,
-      "漲跌幅": "-1.75%"
+      "change_percent": -5.68,
+      "漲跌幅": "-1.75%",
+      "settled_date": "2026-11-27",
+      "settled_price": 21.6,
+      "sync_note": "v8.3.7 三處同步：①來源 tracking ②tracking_2026-11-27.json removed_stocks ③predictions.json",
+      "fail_reason": "鐵律出場：11-26 法人爆量賣超 L4（-5,380 張佔 10.4%）列 11-27 開盤出場；入帳價用當日收盤 21.6（停損 20.61 未觸，當日低點 21.05）。今日 T86 翻買 +1,938 張，已決事項不重評"
     },
     {
       "stock_code": "2892",

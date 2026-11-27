@@ -7547,11 +7547,11 @@
       }
     ]
   },
-  "settled_accuracy": "54.0%",
-  "settled_count": 780,
-  "holding_count": 171,
-  "total_success": 421,
-  "total_fail": 359,
+  "settled_accuracy": "53.9%",
+  "settled_count": 783,
+  "holding_count": 170,
+  "total_success": 422,
+  "total_fail": 361,
   "2026-03-30": {
     "predictions": [
       {
@@ -19332,10 +19332,12 @@
         "settlement_days": 10,
         "position": "5%",
         "score": 101,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "fail",
+        "settled_date": "2026-11-27",
+        "settled_price": 21.6,
+        "holding_days": 1,
+        "return_pct": -5.68,
+        "fail_reason": "鐵律出場：11-26 法人爆量賣超 L4（-5,380 張佔 10.4%）列 11-27 開盤出場；入帳價用當日收盤 21.6（停損 20.61 未觸，當日低點 21.05）。今日 T86 翻買 +1,938 張，已決事項不重評"
       },
       {
         "symbol": "1101",
@@ -19408,10 +19410,12 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 94,
-        "result": "holding",
-        "settled_date": null,
-        "settled_price": null,
-        "holding_days": 1
+        "result": "success",
+        "settled_date": "2026-11-27",
+        "settled_price": 755.0,
+        "holding_days": 1,
+        "return_pct": 8.01,
+        "fail_reason": "收盤 755.0 ≥ 目標價 754.92，到目標價結算（settlement_checker）；當日高 755，與 TWSE 收盤一致"
       },
       {
         "symbol": "2615",
@@ -19423,6 +19427,44 @@
         "settlement_days": 10,
         "position": "5-10%",
         "score": 76,
+        "result": "fail",
+        "settled_date": "2026-11-27",
+        "settled_price": 99.0,
+        "holding_days": 1,
+        "return_pct": -1.49,
+        "fail_reason": "鐵律出場：11-26 法人爆量賣超 L4（-2,026 張佔 9.3%）列 11-27 開盤出場；入帳價用當日收盤 99.0（停損 90.45 未觸，當日低點 99.0）。今日 T86 +179 張（反轉 L1），已決事項不重評"
+      }
+    ],
+    "settled_accuracy": null,
+    "settled_count": 0
+  },
+  "2026-11-27": {
+    "predictions": [
+      {
+        "symbol": "2880",
+        "name": "華南金",
+        "recommend_price": 44.2,
+        "target_price": 47.74,
+        "stop_loss": 39.78,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 90,
+        "result": "holding",
+        "settled_date": null,
+        "settled_price": null,
+        "holding_days": 1
+      },
+      {
+        "symbol": "2603",
+        "name": "長榮",
+        "recommend_price": 254.0,
+        "target_price": 274.32,
+        "stop_loss": 228.6,
+        "stop_loss_pct": -10,
+        "settlement_days": 10,
+        "position": "5-10%",
+        "score": 78,
         "result": "holding",
         "settled_date": null,
         "settled_price": null,
